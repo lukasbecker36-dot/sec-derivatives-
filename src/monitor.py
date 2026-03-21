@@ -46,6 +46,41 @@ def run_all(output_dir: Path = OUTPUT_DIR, since: str = '') -> list[dict]:
     return results
 
 
+def run_from_configs(configs, output_dir: Path = OUTPUT_DIR, since: str = '') -> list[dict]:
+    """Run extraction for a pre-supplied list of IssuerConfig objects.
+
+    Same as run_all() but accepts configs directly rather than
+    discovering from profiles/*.yaml. Used by scheduler.py.
+    """
+    results = []
+    for config in configs:
+        try:
+            logger.info(f'Processing {config.issuer} ({config.ticker})...')
+            result = run_issuer(config, output_dir, since=since)
+            results.append(result)
+
+            if result['processed'] > 0:
+                logger.info(f"  Processed {result['processed']} new filings")
+            else:
+                logger.info('  No new filings')
+
+            if result['errors']:
+                for err in result['errors']:
+                    logger.error(f"  Error: {err['period_end']}: {err['error']}")
+
+        except Exception as e:
+            logger.error(f'Failed to process {config.ticker}: {e}')
+            results.append({
+                'issuer': config.issuer,
+                'ticker': config.ticker,
+                'processed': 0,
+                'errors': [{'period_end': 'N/A', 'error': str(e)}],
+                'total_available': 0,
+            })
+
+    return results
+
+
 def run_single(ticker: str, output_dir: Path = OUTPUT_DIR, since: str = '') -> dict:
     """Run extraction for a single issuer by ticker or filename."""
     issuer_paths = list_issuers()

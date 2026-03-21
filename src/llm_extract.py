@@ -28,7 +28,7 @@ Fields to extract:
 
 Prior period values (for plausibility checking):
 {prior_values}
-
+{filer_context_block}
 If any extracted value differs from the prior period by more than 50%, \
 add a "flag" key for that field explaining why.
 
@@ -52,19 +52,22 @@ RETRY_SYSTEM = """You are a financial data extraction assistant. Return ONLY val
 No preamble, no markdown fences, no explanation. Just the JSON object."""
 
 
-def build_extraction_prompt(section_text: str, schema: dict, context: dict) -> str:
+def build_extraction_prompt(section_text: str, schema: dict, context: dict,
+                           filer_context: str = '') -> str:
     """Build the extraction prompt from section text and schema."""
     schema_json = json.dumps(
         {name: desc for name, desc in schema.items()},
         indent=2,
     )
     prior_json = json.dumps(context.get('prior_values', {}), indent=2)
+    filer_block = f'\nCompany-specific patterns from prior filings:\n{filer_context}\n' if filer_context else ''
     return USER_TEMPLATE.format(
         form_type=context.get('form_type', '10-Q'),
         issuer=context.get('issuer', 'Unknown'),
         period_end=context.get('period_end', 'Unknown'),
         schema=schema_json,
         prior_values=prior_json,
+        filer_context_block=filer_block,
         section_text=section_text,
     )
 
@@ -89,6 +92,7 @@ def extract_fields_llm(
     schema: dict[str, str],
     context: dict,
     client: anthropic.Anthropic | None = None,
+    filer_context: str = '',
 ) -> dict:
     """Send section text + output schema to Claude, get structured JSON back.
 
@@ -97,6 +101,7 @@ def extract_fields_llm(
         schema: Dict of {field_name: description} from the YAML config.
         context: {issuer, period_end, form_type, prior_values}.
         client: Optional Anthropic client (for testing/injection).
+        filer_context: Optional company-specific patterns from filer profile.
 
     Returns:
         Dict with 'fields', 'flags', 'notes' keys. On failure, fields have
@@ -105,7 +110,7 @@ def extract_fields_llm(
     if client is None:
         client = anthropic.Anthropic()
 
-    prompt = build_extraction_prompt(section_text, schema, context)
+    prompt = build_extraction_prompt(section_text, schema, context, filer_context=filer_context)
     issuer = context.get('issuer', 'unknown')
     section_name = context.get('section_name', 'unknown')
 

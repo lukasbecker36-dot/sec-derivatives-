@@ -3,8 +3,30 @@
 import re
 from .config import SectionConfig, IssuerConfig
 
+# Expanded cross-reference pattern
+XREF_PATTERN = re.compile(
+    r',\s*Note\s+\d+'
+    r'|(?:in |to )(?:the |our )?(?:notes|condensed|consolidated|accompanying)'
+    r'|for (?:disclosures|further details|a discussion)'
+    r'|(?:see|refer\s+to)\s+Note\s+\d+'
+    r'|(?:included|discussed|described)\s+in\s+(?:the\s+)?(?:notes|Note)'
+    r'|for (?:additional|more) (?:information|detail)',
+    re.IGNORECASE,
+)
 
-def extract_section(text: str, section_cfg: SectionConfig) -> str:
+
+def is_likely_cross_reference(text: str, min_length: int = 300) -> bool:
+    """Check if extracted section text is just a cross-reference stub.
+
+    Returns True if the text is short AND contains cross-reference patterns.
+    """
+    if len(text.strip()) >= min_length:
+        return False
+    return bool(XREF_PATTERN.search(text))
+
+
+def extract_section(text: str, section_cfg: SectionConfig,
+                    reject_stubs: bool = False) -> str:
     """Extract a single section from filing text using heading regex.
 
     Args:
@@ -21,11 +43,7 @@ def extract_section(text: str, section_cfg: SectionConfig) -> str:
     if not raw_matches:
         return ''
 
-    # Filter out cross-references ("in the notes to...", "in the consolidated...")
-    XREF_PATTERN = re.compile(
-        r',\s*Note\s+\d|(?:in |to )(?:the |our )?(?:notes|condensed|consolidated|accompanying)|for (?:disclosures|further details|a discussion)',
-        re.IGNORECASE,
-    )
+    # Filter out cross-references
     matches = []
     for m in raw_matches:
         after = text[m.end():m.end() + 100]
@@ -66,6 +84,10 @@ def extract_section(text: str, section_cfg: SectionConfig) -> str:
         )
         if found == 0:
             return ''  # No keywords found — likely wrong section
+
+    # Optional stub rejection for activation mode
+    if reject_stubs and is_likely_cross_reference(section_text):
+        return ''
 
     return section_text
 

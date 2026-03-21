@@ -6,6 +6,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 from .config import IssuerConfig, load_config
+from .filer_profile import get_or_create_profile, update_profile_after_extraction, save_profile, build_prompt_context
 from .filing_fetcher import fetch_filing_text, get_unprocessed_filings
 from .section_extract import extract_all_sections
 from .llm_extract import extract_fields_llm
@@ -61,6 +62,7 @@ def process_filing(
     filing_text: str,
     prior_row: dict | None = None,
     client=None,
+    profile: dict | None = None,
 ) -> dict:
     """Process a single filing through the full pipeline.
 
@@ -70,9 +72,13 @@ def process_filing(
         - alerts: list of alert strings
         - validation: list of validation results
         - llm_results: raw LLM results per section
+        - sections: dict of extracted section texts
     """
     # Stage 1: Section extraction
     sections = extract_all_sections(filing_text, config)
+
+    # Build filer context for LLM prompts
+    filer_context = build_prompt_context(profile)
 
     # Stage 2: LLM extraction per section
     row = {
@@ -100,7 +106,8 @@ def process_filing(
             'prior_values': prior_vals,
         }
 
-        llm_result = extract_fields_llm(section_text, schema, context, client=client)
+        llm_result = extract_fields_llm(section_text, schema, context, client=client,
+                                        filer_context=filer_context)
         all_llm_results[section_name] = llm_result
 
         # Flatten LLM fields into row
@@ -130,6 +137,7 @@ def process_filing(
         'alerts': alerts,
         'validation': validation,
         'llm_results': all_llm_results,
+        'sections': sections,
     }
 
 
@@ -212,6 +220,9 @@ def run_issuer(config: IssuerConfig, output_dir: Path = OUTPUT_DIR, client=None,
     unprocessed = get_unprocessed_filings(config.cik, csv_path, since=since)
     logger.info(f'{config.issuer}: {len(unprocessed)} unprocessed filings')
 
+    # Load filer profile
+    profile = get_or_create_profile(config.cik, config.ticker, config.issuer)
+
     processed = 0
     errors = []
 
@@ -225,11 +236,19 @@ def run_issuer(config: IssuerConfig, output_dir: Path = OUTPUT_DIR, client=None,
             )
 
             prior_row = _get_prior_row(csv_path)
-            result = process_filing(config, filing_meta, filing_text, prior_row, client=client)
+            result = process_filing(config, filing_meta, filing_text, prior_row,
+                                    client=client, profile=profile)
 
             append_csv_row(csv_path, result['row'], config)
             append_notes(notes_path, filing_meta['period_end'], filing_meta['form_type'], result['notes'])
             append_alerts(alert_path, filing_meta['period_end'], filing_meta['form_type'], result['alerts'])
+
+            # Update filer profile
+            profile = update_profile_after_extraction(
+                profile, filing_meta, filing_text,
+                result.get('sections', {}), result.get('llm_results', {}), config,
+            )
+            save_profile(profile)
 
             processed += 1
 

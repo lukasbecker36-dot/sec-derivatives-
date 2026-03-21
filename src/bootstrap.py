@@ -43,8 +43,8 @@ ARCHETYPE_SIGNALS = {
 }
 
 
-def _classify_archetype(text: str) -> str:
-    """Classify archetype from filing text using keyword signals."""
+def _classify_archetype_with_confidence(text: str) -> tuple[str, float]:
+    """Classify archetype from filing text, returning (archetype, confidence 0-1)."""
     scores = {}
     for archetype, patterns in ARCHETYPE_SIGNALS.items():
         score = 0
@@ -54,9 +54,17 @@ def _classify_archetype(text: str) -> str:
         scores[archetype] = score
 
     if not any(scores.values()):
-        return 'minimal_hedger'
+        return 'minimal_hedger', 0.0
 
-    return max(scores, key=scores.get)
+    best = max(scores, key=scores.get)
+    confidence = min(1.0, scores[best] / 5.0)
+    return best, confidence
+
+
+def _classify_archetype(text: str) -> str:
+    """Classify archetype from filing text using keyword signals."""
+    archetype, _ = _classify_archetype_with_confidence(text)
+    return archetype
 
 
 def _find_note_headings(text: str) -> list[str]:
@@ -244,6 +252,106 @@ def _build_config_yaml(cik, ticker, issuer_name, archetype, analysis):
         lines.append('')
 
     return '\n'.join(lines) + '\n'
+
+
+def bootstrap_issuer_for_activation(
+    cik: str,
+    ticker: str,
+    issuer_name: str,
+    filing_text: str,
+    client: anthropic.Anthropic | None = None,
+) -> dict:
+    """Activation-mode bootstrap: generate config from pre-fetched filing text.
+
+    Unlike bootstrap_issuer(), this accepts filing_text directly and returns
+    a metadata dict with confidence signals instead of just a Path.
+
+    Returns dict with: config_path, archetype, archetype_confidence,
+    note_headings_found, sections_found, llm_analysis, llm_analysis_failed, warnings
+    """
+    if client is None:
+        client = anthropic.Anthropic()
+
+    warnings = []
+
+    # Find note headings
+    note_headings = _find_note_headings(filing_text)
+
+    # Classify archetype with confidence
+    archetype, archetype_confidence = _classify_archetype_with_confidence(filing_text)
+    if archetype_confidence == 0.0:
+        warnings.append('No archetype keyword matches; defaulting to minimal_hedger')
+
+    # Extract sections for LLM analysis
+    analysis_sections = _extract_analysis_sections(filing_text)
+    sections_found = list(analysis_sections.keys())
+
+    if not analysis_sections:
+        warnings.append('No derivatives/market risk sections found in filing text')
+
+    # Send to Sonnet for analysis
+    llm_analysis_failed = False
+    combined_text = '\n\n---\n\n'.join(
+        f'[{name}]\n{content}' for name, content in analysis_sections.items()
+    )
+    company_info = f'{issuer_name} ({ticker})' if issuer_name else f'CIK {cik}'
+
+    prompt = ANALYSIS_PROMPT.format(
+        company_info=company_info,
+        note_headings=json.dumps(note_headings[:20]),
+        section_text=combined_text[:12000],
+    )
+
+    try:
+        response = client.messages.create(
+            model=SONNET_MODEL,
+            max_tokens=2048,
+            messages=[{'role': 'user', 'content': prompt}],
+        )
+        raw = response.content[0].text
+        log_llm_usage(
+            LLM_LOG, issuer_name or cik, 'bootstrap', SONNET_MODEL,
+            response.usage.input_tokens, response.usage.output_tokens,
+            (response.usage.input_tokens * 3.0 + response.usage.output_tokens * 15.0) / 1_000_000,
+        )
+
+        raw = re.sub(r'^```(?:json)?\s*', '', raw.strip())
+        raw = re.sub(r'\s*```$', '', raw)
+        analysis = json.loads(raw)
+    except Exception as e:
+        logger.warning(f'LLM analysis failed for {ticker}: {e}. Using archetype defaults only.')
+        analysis = {'key_fields': [], 'unusual_features': []}
+        llm_analysis_failed = True
+        warnings.append(f'LLM analysis failed: {e}')
+
+    # Generate YAML config
+    config_yaml = _build_config_yaml(
+        cik=cik,
+        ticker=ticker,
+        issuer_name=issuer_name,
+        archetype=archetype,
+        analysis=analysis,
+    )
+
+    # Write to profiles/
+    filename = ticker.lower() if ticker else cik.lstrip('0')
+    config_path = PROFILES_DIR / f'{filename}.yaml'
+    config_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(config_path, 'w', encoding='utf-8') as f:
+        f.write(config_yaml)
+
+    logger.info(f'Wrote activation draft config to {config_path}')
+
+    return {
+        'config_path': config_path,
+        'archetype': archetype,
+        'archetype_confidence': archetype_confidence,
+        'note_headings_found': note_headings,
+        'sections_found': sections_found,
+        'llm_analysis': analysis,
+        'llm_analysis_failed': llm_analysis_failed,
+        'warnings': warnings,
+    }
 
 
 def bootstrap_batch(cik_list_path: Path, client: anthropic.Anthropic | None = None):
