@@ -73,7 +73,7 @@ All 7 issuers have 8 filings extracted (last ~2 years, `--since 2024-01-01`):
 
 ```bash
 # Set API key (already set via setx, but bash sessions need export)
-export ANTHROPIC_API_KEY="<your-key-here>"
+export ANTHROPIC_API_KEY="<your-key-here>"  # set via GitHub secret or local env
 
 # Single issuer
 python -m src.monitor --issuer BA --since 2024-01-01

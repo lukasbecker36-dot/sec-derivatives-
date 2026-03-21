@@ -1,0 +1,86 @@
+name: SEC Derivatives Scheduler
+
+on:
+  schedule:
+    # Run daily at 06:00 UTC (after US markets close + SEC filing window)
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      max_activations:
+        description: 'Max new activations this run'
+        default: '10'
+        type: string
+      dry_run:
+        description: 'Dry run (check only, no activation)'
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  run-scheduler:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scheduler
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          MAX_ACT="${{ github.event.inputs.max_activations || '10' }}"
+          DRY_RUN="${{ github.event.inputs.dry_run || 'false' }}"
+
+          ARGS="--max-activations $MAX_ACT --since 2025-01-01 --json-summary summary.json --verbose"
+
+          if [ "$DRY_RUN" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+
+          python -m src.scheduler $ARGS
+
+      - name: Upload summary artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: run-summary
+          path: summary.json
+
+      - name: Commit registry and profile changes
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add registry/ profiles/ filer_profiles/
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            SUMMARY=$(python -c "
+          import json
+          try:
+              with open('summary.json') as f:
+                  s = json.load(f)
+              parts = []
+              if s.get('active_new_filings'): parts.append(f\"{s['active_new_filings']} filings processed\")
+              if s.get('activations_succeeded'): parts.append(f\"{s['activations_succeeded']} activated\")
+              if s.get('activations_needs_review'): parts.append(f\"{s['activations_needs_review']} need review\")
+              if s.get('activations_failed'): parts.append(f\"{s['activations_failed']} failed\")
+              print(', '.join(parts) if parts else 'registry check only')
+          except: print('scheduled run')
+          ")
+            git commit -m "chore(scheduler): $SUMMARY"
+            git push
+          fi
