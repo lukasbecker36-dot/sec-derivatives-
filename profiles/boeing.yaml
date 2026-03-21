@@ -1,0 +1,53 @@
+issuer: Boeing
+ticker: BA
+cik: "0000012927"
+archetype: active_fx_commodity_hedger
+sector: industrials
+extraction_mode: llm
+
+# Additional Boeing-specific fields beyond archetype
+fields:
+  fx_designated_asset:
+    description: "Fair value of FX designated hedge assets, in millions"
+    section: derivatives_note
+  fx_designated_liability:
+    description: "Fair value of FX designated hedge liabilities (negative), in millions"
+    section: derivatives_note
+  commodity_designated_asset:
+    description: "Fair value of commodity designated hedge assets, in millions"
+    section: derivatives_note
+  commodity_designated_liability:
+    description: "Fair value of commodity designated hedge liabilities (negative), in millions"
+    section: derivatives_note
+  fx_not_designated_asset:
+    description: "Fair value of FX non-designated derivative assets, in millions"
+    section: derivatives_note
+  fx_not_designated_liability:
+    description: "Fair value of FX non-designated derivative liabilities (negative), in millions"
+    section: derivatives_note
+  commodity_not_designated_asset:
+    description: "Fair value of commodity non-designated derivative assets, in millions"
+    section: derivatives_note
+  commodity_not_designated_liability:
+    description: "Fair value of commodity non-designated derivative liabilities (negative), in millions"
+    section: derivatives_note
+  fx_reclass_revenue:
+    description: "FX reclassification from AOCI to revenue, in millions"
+    section: derivatives_note
+  fx_reclass_cost:
+    description: "FX reclassification from AOCI to costs, in millions"
+    section: derivatives_note
+  fx_reclass_ga:
+    description: "FX reclassification from AOCI to G&A, in millions"
+    section: derivatives_note
+  commodity_reclass_cost:
+    description: "Commodity reclassification from AOCI to costs, in millions"
+    section: derivatives_note
+  commodity_reclass_ga:
+    description: "Commodity reclassification from AOCI to G&A, in millions"
+    section: derivatives_note
+
+alert_thresholds:
+  fx_designated_notional: 0.15
+  commodity_designated_notional: 0.20
+  total_derivative_asset: 0.25

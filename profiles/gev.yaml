@@ -1,0 +1,65 @@
+issuer: GE Vernova
+ticker: GEV
+cik: "0001996810"
+archetype: active_fx_commodity_hedger
+sector: industrials
+extraction_mode: llm
+
+# GEV uses "Financial Instruments" note heading; FX cash flow + net investment hedges
+sections:
+  derivatives_note:
+    heading: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]?\s*Financial Instruments'
+    match_strategy: last
+    validation_keywords: [notional, hedge, derivative, fair value]
+    end_boundary: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]?\s*(?!Financial Instruments)'
+    max_length: 12000
+  market_risk:
+    heading: 'Quantitative and Qualitative Disclosures About Market Risk'
+    match_strategy: last
+    end_boundary: 'Item\s*[\s\xa0]*[489]'
+    max_length: 8000
+
+# GEV: FX hedges (cash flow + net investment), some commodity
+fields:
+  fx_designated_notional:
+    description: "Notional amount of FX derivatives designated as hedging instruments, in millions"
+    section: derivatives_note
+  fx_not_designated_notional:
+    description: "Notional amount of FX derivatives NOT designated as hedging instruments, in millions"
+    section: derivatives_note
+  net_investment_hedge_notional:
+    description: "Notional amount of net investment hedges, in millions"
+    section: derivatives_note
+  total_derivative_asset:
+    description: "Total derivative assets at fair value, in millions"
+    section: derivatives_note
+  total_derivative_liability:
+    description: "Total derivative liabilities at fair value, in millions"
+    section: derivatives_note
+  cash_flow_hedge_aoci_balance:
+    description: "AOCI balance related to cash flow hedges, in millions"
+    section: derivatives_note
+  expected_12mo_reclass_from_aoci:
+    description: "Amount expected to be reclassified from AOCI to earnings in next 12 months, in millions"
+    section: derivatives_note
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: derivatives_note
+  fx_sensitivity_10pct:
+    description: "FX sensitivity — change in fair value from 10% adverse move, in millions"
+    section: market_risk
+
+qualitative:
+  sections_to_search: [derivatives_note, market_risk]
+  categories:
+    New instruments: [option, collar, structured forward, swaption]
+    Collateral/CSA: [collateral, ISDA, CSA, credit support annex, margin]
+    Policy changes: [hedge ratio, de-designat, 'discontinued.*hedg', designation]
+    Counterparty: [counterpart]
+    Net investment hedges: [net investment, foreign subsidiary]
+    Interest rate risk: [interest rate, 'floating.rate', basis point]
+    Sensitivity: ['10% increase', '10% decrease', sensitivity]
+
+alert_thresholds:
+  fx_designated_notional: 0.15
+  total_derivative_asset: 0.25

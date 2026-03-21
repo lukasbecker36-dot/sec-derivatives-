@@ -1,0 +1,44 @@
+issuer: Meta Platforms
+ticker: META
+cik: "0001326801"
+archetype: minimal_hedger
+sector: technology
+extraction_mode: llm
+
+# Override section heading: Meta used "Fair Value Measurements" (2012-2022)
+# then switched to "Financial Instruments" (2023+)
+sections:
+  financial_instruments:
+    heading: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]\s*(?:Financial Instruments|Fair Value Measure)'
+    match_strategy: first
+    validation_keywords: [fair value, securities, cash]
+    end_boundary: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]\s*(?!Financial Instruments|Fair Value Measure)'
+    max_length: 10000
+
+# Additional fields beyond archetype
+fields:
+  unrealized_gains_equity:
+    description: "Unrealized gains on marketable equity securities, in millions"
+    section: financial_instruments
+  debt_securities_due_1yr:
+    description: "Marketable debt securities due within one year, in millions"
+    section: financial_instruments
+  debt_securities_due_1to5yr:
+    description: "Marketable debt securities due after one year to five years, in millions"
+    section: financial_instruments
+  total_marketable_debt_securities:
+    description: "Total marketable debt securities by maturity, in millions"
+    section: financial_instruments
+  fx_forward_pnl:
+    description: "Realized gains/losses on FX forward contracts, in millions. 'not material' if stated."
+    section: market_risk
+  non_marketable_equity_cv:
+    description: "Carrying value of non-marketable equity (measurement alternative), in millions"
+    section: market_risk
+  equity_method_investments_cv:
+    description: "Carrying value of equity method investments, in millions"
+    section: market_risk
+
+alert_thresholds:
+  total_marketable_securities_fv: 0.15
+  ir_sensitivity_100bp: 0.25

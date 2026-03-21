@@ -1,0 +1,83 @@
+issuer: Ford Motor Company
+ticker: F
+cik: "0000037996"
+archetype: active_fx_commodity_hedger
+sector: industrials
+extraction_mode: llm
+
+# Ford uses "Derivative Financial Instruments" note heading
+sections:
+  derivatives_note:
+    heading: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]\s*Derivative Financial Instruments'
+    match_strategy: last
+    validation_keywords: [notional, hedge, derivative]
+    end_boundary: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]\s*(?!Derivative)'
+    max_length: 12000
+  market_risk:
+    heading: 'Quantitative and Qualitative Disclosures About Market Risk'
+    match_strategy: last
+    end_boundary: 'Item\s*[\s\xa0]*[489]'
+    max_length: 8000
+
+# Ford-specific fields
+fields:
+  fx_cash_flow_hedge_notional:
+    description: "Notional amount of foreign currency cash flow hedges, in millions"
+    section: derivatives_note
+  fx_fair_value_hedge_notional:
+    description: "Notional amount of foreign currency fair value hedges, in millions"
+    section: derivatives_note
+  fx_not_designated_notional:
+    description: "Notional amount of foreign currency derivatives not designated as hedges, in millions"
+    section: derivatives_note
+  commodity_cash_flow_hedge_notional:
+    description: "Notional amount of commodity cash flow hedges, in millions"
+    section: derivatives_note
+  ir_cash_flow_hedge_notional:
+    description: "Notional amount of interest rate cash flow hedges, in millions"
+    section: derivatives_note
+  ir_fair_value_hedge_notional:
+    description: "Notional amount of interest rate fair value hedges, in millions"
+    section: derivatives_note
+  ir_not_designated_notional:
+    description: "Notional amount of interest rate derivatives not designated as hedges, in millions"
+    section: derivatives_note
+  total_derivative_asset:
+    description: "Total derivative assets at fair value, in millions"
+    section: derivatives_note
+  total_derivative_liability:
+    description: "Total derivative liabilities at fair value, in millions"
+    section: derivatives_note
+  collateral_held:
+    description: "Cash collateral held from counterparties, in millions"
+    section: derivatives_note
+  collateral_posted:
+    description: "Cash collateral posted to counterparties, in millions"
+    section: derivatives_note
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: derivatives_note
+  fx_sensitivity_10pct:
+    description: "FX sensitivity — change in fair value from 10% adverse move on foreign currency forwards, in millions"
+    section: market_risk
+  commodity_sensitivity_10pct:
+    description: "Commodity sensitivity — change from 10% adverse price move on commodity forwards, in millions"
+    section: market_risk
+  ir_sensitivity_100bp:
+    description: "Interest rate sensitivity — change in Ford Credit pre-tax cash flow from 1% parallel shift, in millions"
+    section: market_risk
+
+qualitative:
+  sections_to_search: [derivatives_note, market_risk]
+  categories:
+    New instruments: [option, collar, structured forward, swaption]
+    Collateral/CSA: [collateral, ISDA, CSA, credit support annex, margin]
+    Policy changes: [hedge ratio, de-designat, 'discontinued.*hedg', designation]
+    Counterparty: [counterpart]
+    Interest rate risk: [interest rate, 'floating.rate', basis point]
+    Sensitivity: ['10% increase', '10% decrease', sensitivity]
+    Ford Credit: [Ford Credit, Ford Motor Credit]
+
+alert_thresholds:
+  fx_cash_flow_hedge_notional: 0.15
+  total_derivative_asset: 0.25

@@ -1,0 +1,109 @@
+# Archetype: Minimal Hedger
+# Examples: Meta (pre-2025), companies with no or minimal derivatives
+# Mainly financial instruments fair value and market risk sensitivities.
+
+sections:
+  financial_instruments:
+    heading: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]\s*Financial Instruments'
+    match_strategy: first
+    validation_keywords: [fair value, securities, cash]
+    end_boundary: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]\s*(?!Financial Instruments)'
+    max_length: 10000
+  market_risk:
+    heading: 'Quantitative and Qualitative Disclosures About Market Risk'
+    match_strategy: last
+    end_boundary: 'Item\s*[\s\xa0]*[489]'
+    max_length: 8000
+
+fields:
+  total_cash_equivalents_fv:
+    description: "Total cash equivalents at fair value, in millions"
+    section: financial_instruments
+  total_marketable_securities_fv:
+    description: "Total marketable securities at fair value, in millions"
+    section: financial_instruments
+  marketable_equity_securities_fv:
+    description: "Marketable equity securities at fair value, in millions"
+    section: financial_instruments
+  corporate_debt_securities_fv:
+    description: "Corporate debt securities at fair value (under marketable securities), in millions"
+    section: financial_instruments
+  gross_unrealized_gains_debt:
+    description: "Gross unrealized gains on marketable debt securities, in millions. 0 if 'not material'."
+    section: financial_instruments
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: market_risk
+  fx_forwards_outstanding:
+    description: "FX forward contracts outstanding notional, in millions. 0 if none."
+    section: market_risk
+  fx_transaction_gain_loss:
+    description: "Foreign currency transaction gains/losses (net), in millions"
+    section: market_risk
+  ir_sensitivity_100bp:
+    description: "Interest rate sensitivity — change in fair value from 100bp move, in millions"
+    section: market_risk
+  fixed_rate_notes_billion:
+    description: "Fixed-rate notes outstanding, in billions"
+    section: market_risk
+  marketable_equity_value:
+    description: "Marketable equity securities value for equity price risk, in millions"
+    section: market_risk
+  equity_sensitivity_10pct:
+    description: "Equity sensitivity — change from 10% adverse price move, in millions"
+    section: market_risk
+
+qualitative:
+  sections_to_search: [financial_instruments, market_risk]
+  categories:
+    FX forwards / hedging policy:
+      - forward contract
+      - 'hedge.*foreign'
+      - 'foreign currency.*hedg'
+      - 'entered into.*derivative'
+      - 'not entered into.*derivative'
+      - not designated as hedg
+      - hedging instrument
+    FX exposure:
+      - 'foreign currency.*risk'
+      - exchange rate
+      - 'strengthening of the U\.S\. dollar'
+      - foreign currency transaction
+      - remeasur
+    Debt / notes issuance:
+      - senior notes
+      - aggregate principal
+      - 'fixed.rate'
+      - notes outstanding
+    Interest rate risk:
+      - interest rate
+      - basis point
+      - 'floating.rate'
+    Equity investments:
+      - marketable equity
+      - non-marketable equity
+      - equity method
+      - equity price risk
+      - measurement alternative
+      - impair
+    Cash / liquidity:
+      - money market fund
+      - time deposit
+      - preservation of capital
+    Counterparty / credit:
+      - counterpart
+      - credit loss
+      - credit risk
+    Valuation:
+      - fair value
+      - 'Level [123]'
+      - unobservable
+    New developments:
+      - '[Bb]eginning in \d{4}'
+      - '[Ss]tarted'
+      - for the first time
+      - commenced
+
+dashboard_mapping:
+  total_derivatives_notional: fx_forwards_outstanding
+  fx_hedging_notional: fx_forwards_outstanding

@@ -1,0 +1,94 @@
+# Archetype: Active FX & Commodity Hedger
+# Examples: Boeing, 3M, Caterpillar
+# Large derivatives note with designated hedges across FX and commodities.
+
+sections:
+  derivatives_note:
+    heading: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]\s*Derivative Financial Instruments'
+    match_strategy: last
+    validation_keywords: [notional, hedge, derivative]
+    end_boundary: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]\s*(?!Derivative)'
+    max_length: 10000
+  market_risk:
+    heading: 'Quantitative and Qualitative Disclosures About Market Risk'
+    match_strategy: last
+    end_boundary: 'Item\s*[\s\xa0]*[489]'
+    max_length: 8000
+
+fields:
+  fx_designated_notional:
+    description: "Notional amount of FX derivatives designated as hedging instruments, in millions"
+    section: derivatives_note
+  fx_not_designated_notional:
+    description: "Notional amount of FX derivatives NOT designated as hedging instruments, in millions"
+    section: derivatives_note
+  commodity_designated_notional:
+    description: "Notional amount of commodity derivatives designated as hedging instruments, in millions"
+    section: derivatives_note
+  commodity_not_designated_notional:
+    description: "Notional amount of commodity derivatives NOT designated as hedging instruments, in millions"
+    section: derivatives_note
+  total_notional:
+    description: "Total notional amount of all derivatives, in millions"
+    section: derivatives_note
+  total_derivative_asset:
+    description: "Total derivative assets at fair value, in millions"
+    section: derivatives_note
+  total_derivative_liability:
+    description: "Total derivative liabilities at fair value (negative number), in millions"
+    section: derivatives_note
+  net_asset:
+    description: "Net derivative asset after netting, in millions"
+    section: derivatives_note
+  net_liability:
+    description: "Net derivative liability after netting (negative number), in millions"
+    section: derivatives_note
+  fx_oci_gain_loss:
+    description: "FX derivatives gain/loss recognized in OCI (net of tax), in millions"
+    section: derivatives_note
+  commodity_oci_gain_loss:
+    description: "Commodity derivatives gain/loss recognized in OCI (net of tax), in millions"
+    section: derivatives_note
+  expected_12mo_reclass_from_aoci:
+    description: "Amount expected to be reclassified from AOCI to earnings in next 12 months, in millions. Negative if losses."
+    section: derivatives_note
+  hedge_ineffectiveness:
+    description: "Hedge ineffectiveness amount, in millions. 0 if insignificant/immaterial."
+    section: derivatives_note
+  credit_contingent_liability_fv:
+    description: "Fair value of credit-risk-related contingent features in net liability position, in millions"
+    section: derivatives_note
+  collateral_posted:
+    description: "Collateral posted, in millions. 0 if none posted."
+    section: derivatives_note
+  fx_sensitivity_10pct:
+    description: "FX sensitivity — change in fair value from 10% adverse move, in millions"
+    section: market_risk
+  commodity_sensitivity_10pct:
+    description: "Commodity sensitivity — change from 10% adverse price move, in millions"
+    section: market_risk
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: derivatives_note
+
+qualitative:
+  sections_to_search: [derivatives_note, market_risk]
+  categories:
+    New instruments: [option, collar, structured forward, swaption, 'cap\b', 'floor\b']
+    Collateral/CSA: [collateral, ISDA, CSA, credit support annex, margin]
+    Policy changes: [hedge ratio, de-designat, 'discontinued.*hedg', designation]
+    Counterparty: [counterpart]
+    Interest rate risk: [interest rate, 'floating.rate', basis point]
+    Sensitivity: ['10% increase', '10% decrease', sensitivity]
+    Event-driven: [deal contingent, contingent forward, 'acquisition.*hedg']
+
+alert_thresholds:
+  fx_designated_notional: 0.15
+  commodity_designated_notional: 0.20
+  total_derivative_asset: 0.25
+
+dashboard_mapping:
+  total_derivatives_notional: total_notional
+  total_derivative_asset: total_derivative_asset
+  total_derivative_liability: total_derivative_liability
+  fx_hedging_notional: "fx_designated_notional + fx_not_designated_notional"

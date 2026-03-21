@@ -1,0 +1,73 @@
+issuer: Philip Morris International
+ticker: PM
+cik: "0001413329"
+archetype: active_fx_commodity_hedger
+sector: consumer_staples
+extraction_mode: llm
+
+# PM uses "Financial Instruments" note heading with commodity + FX hedges
+sections:
+  derivatives_note:
+    heading: 'Note\s+\d+\.\s+Financial Instruments'
+    match_strategy: first
+    validation_keywords: [notional, hedge, derivative, fair value]
+    end_boundary: 'Note\s+\d+\.\s+(?!Financial Instruments)'
+    max_length: 12000
+  market_risk:
+    heading: '(?:Quantitative and Qualitative Disclosures About )?Market Risk'
+    match_strategy: last
+    validation_keywords: [interest rate, foreign exchange, sensitivity]
+    end_boundary: 'Item\s*[\s\xa0]*[489]|Cautionary Factors|Forward-Looking'
+    max_length: 8000
+
+# PM-specific fields: heavy commodity hedging (leaf tobacco), FX, some IR
+fields:
+  fx_designated_notional:
+    description: "Notional amount of FX derivatives designated as hedging instruments, in millions"
+    section: derivatives_note
+  fx_not_designated_notional:
+    description: "Notional amount of FX derivatives NOT designated as hedging instruments, in millions"
+    section: derivatives_note
+  commodity_designated_notional:
+    description: "Notional amount of commodity (e.g. tobacco leaf) derivatives designated as hedging instruments, in millions"
+    section: derivatives_note
+  commodity_not_designated_notional:
+    description: "Notional amount of commodity derivatives NOT designated as hedging instruments, in millions"
+    section: derivatives_note
+  total_derivative_asset:
+    description: "Total derivative assets at fair value, in millions"
+    section: derivatives_note
+  total_derivative_liability:
+    description: "Total derivative liabilities at fair value, in millions"
+    section: derivatives_note
+  expected_12mo_reclass_from_aoci:
+    description: "Amount expected to be reclassified from AOCI to earnings in next 12 months, in millions"
+    section: derivatives_note
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: derivatives_note
+  fx_sensitivity_10pct:
+    description: "FX sensitivity — change in fair value from 10% adverse move, in millions"
+    section: market_risk
+  commodity_sensitivity_10pct:
+    description: "Commodity sensitivity — change from 10% adverse price move, in millions"
+    section: market_risk
+  ir_sensitivity_100bp:
+    description: "Interest rate sensitivity — change in fair value from 100bp move, in millions"
+    section: market_risk
+
+qualitative:
+  sections_to_search: [derivatives_note, market_risk]
+  categories:
+    New instruments: [option, collar, structured forward, swaption]
+    Collateral/CSA: [collateral, ISDA, CSA, credit support annex, margin]
+    Policy changes: [hedge ratio, de-designat, 'discontinued.*hedg', designation]
+    Counterparty: [counterpart]
+    Commodity hedging: [tobacco, leaf, commodity, aluminum]
+    Interest rate risk: [interest rate, 'floating.rate', basis point]
+    Sensitivity: ['10% increase', '10% decrease', sensitivity]
+
+alert_thresholds:
+  fx_designated_notional: 0.15
+  commodity_designated_notional: 0.20
+  total_derivative_asset: 0.25

@@ -1,0 +1,72 @@
+issuer: Merck & Co.
+ticker: MRK
+cik: "0000310158"
+archetype: active_ir_fx_hedger
+sector: healthcare
+extraction_mode: llm
+
+# Merck uses "6. Financial Instruments" (number + dot, no "Note" prefix)
+sections:
+  derivatives_note:
+    heading: '(?<!\d)\d{1,2}\.\s+Financial Instruments'
+    match_strategy: last
+    validation_keywords: [notional, hedge, derivative, swap, interest rate]
+    end_boundary: '(?<!\d)\d{1,2}\.\s+(?!Financial Instruments)'
+    max_length: 12000
+  market_risk:
+    heading: 'Quantitative and Qualitative Disclosures About Market Risk'
+    match_strategy: last
+    end_boundary: 'Item\s*[\s\xa0]*[489]'
+    max_length: 8000
+
+# Merck: heavy IR swaps (14 mentions in scan), FX hedges, designated hedging
+fields:
+  ir_swap_notional:
+    description: "Notional amount of interest rate swap derivatives, in millions"
+    section: derivatives_note
+  ir_designated_notional:
+    description: "Notional amount of IR derivatives designated as fair value hedges, in millions"
+    section: derivatives_note
+  fx_forward_notional:
+    description: "Notional amount of FX forward/option derivatives, in millions"
+    section: derivatives_note
+  fx_designated_notional:
+    description: "Notional amount of FX derivatives designated as cash flow hedges, in millions"
+    section: derivatives_note
+  fx_not_designated_notional:
+    description: "Notional amount of FX derivatives NOT designated as hedges, in millions"
+    section: derivatives_note
+  total_derivative_asset:
+    description: "Total derivative assets at fair value, in millions"
+    section: derivatives_note
+  total_derivative_liability:
+    description: "Total derivative liabilities at fair value, in millions"
+    section: derivatives_note
+  expected_12mo_reclass_from_aoci:
+    description: "Amount expected to be reclassified from AOCI to earnings in next 12 months, in millions"
+    section: derivatives_note
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: derivatives_note
+  ir_sensitivity_100bp:
+    description: "Interest rate sensitivity — change in fair value from 100bp move, in millions"
+    section: market_risk
+  fx_sensitivity_10pct:
+    description: "FX sensitivity — change in fair value from 10% adverse move, in millions"
+    section: market_risk
+
+qualitative:
+  sections_to_search: [derivatives_note, market_risk]
+  categories:
+    New instruments: [option, collar, structured forward, swaption, cross-currency]
+    Collateral/CSA: [collateral, ISDA, CSA, credit support annex]
+    Policy changes: [hedge ratio, de-designat, 'discontinued.*hedg']
+    Counterparty: [counterpart]
+    Interest rate risk: [interest rate, 'floating.rate', basis point, swap]
+    Sensitivity: ['10% increase', '10% decrease', sensitivity]
+    Debt hedging: [fixed-to-floating, floating-to-fixed, debt issuance]
+
+alert_thresholds:
+  ir_swap_notional: 0.15
+  fx_forward_notional: 0.15
+  total_derivative_asset: 0.25

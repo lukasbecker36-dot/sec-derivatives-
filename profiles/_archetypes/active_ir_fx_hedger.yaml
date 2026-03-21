@@ -1,0 +1,58 @@
+# Archetype: Active IR & FX Hedger
+# Examples: Big tech with debt issuance + FX exposure (Apple, Google, Microsoft)
+# Interest rate swaps, FX forwards, possibly not designated as hedges.
+
+sections:
+  derivatives_note:
+    heading: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]\s*Derivative(?:s|\s+Financial\s+Instruments)'
+    match_strategy: last
+    validation_keywords: [notional, derivative, swap]
+    end_boundary: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]\s*(?!Derivative)'
+    max_length: 10000
+  market_risk:
+    heading: 'Quantitative and Qualitative Disclosures About Market Risk'
+    match_strategy: last
+    end_boundary: 'Item\s*[\s\xa0]*[489]'
+    max_length: 8000
+
+fields:
+  ir_swap_notional:
+    description: "Notional amount of interest rate swap derivatives, in millions"
+    section: derivatives_note
+  fx_forward_notional:
+    description: "Notional amount of FX forward/option derivatives, in millions"
+    section: derivatives_note
+  total_derivative_asset:
+    description: "Total derivative assets at fair value, in millions"
+    section: derivatives_note
+  total_derivative_liability:
+    description: "Total derivative liabilities at fair value, in millions"
+    section: derivatives_note
+  expected_12mo_reclass_from_aoci:
+    description: "Amount expected to be reclassified from AOCI to earnings in next 12 months, in millions"
+    section: derivatives_note
+  ir_sensitivity_100bp:
+    description: "Interest rate sensitivity — change in fair value from 100bp move, in millions"
+    section: market_risk
+  fx_sensitivity_10pct:
+    description: "FX sensitivity — change in fair value from 10% adverse move, in millions"
+    section: market_risk
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: derivatives_note
+
+qualitative:
+  sections_to_search: [derivatives_note, market_risk]
+  categories:
+    New instruments: [option, collar, structured forward, swaption]
+    Collateral/CSA: [collateral, ISDA, CSA, credit support annex]
+    Policy changes: [hedge ratio, de-designat, 'discontinued.*hedg']
+    Counterparty: [counterpart]
+    Interest rate risk: [interest rate, 'floating.rate', basis point]
+    Sensitivity: ['10% increase', '10% decrease', sensitivity]
+
+dashboard_mapping:
+  total_derivatives_notional: "ir_swap_notional + fx_forward_notional"
+  total_derivative_asset: total_derivative_asset
+  total_derivative_liability: total_derivative_liability
+  fx_hedging_notional: fx_forward_notional

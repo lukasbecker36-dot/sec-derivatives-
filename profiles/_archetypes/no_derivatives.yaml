@@ -1,0 +1,33 @@
+# Archetype: No Derivatives
+# Companies that explicitly state no derivatives usage.
+# Extract market risk sensitivities only.
+
+sections:
+  market_risk:
+    heading: 'Quantitative and Qualitative Disclosures About Market Risk'
+    match_strategy: last
+    end_boundary: 'Item\s*[\s\xa0]*[489]'
+    max_length: 8000
+
+fields:
+  has_derivatives:
+    description: "Does the company use derivatives? Should be 'No' for this archetype."
+    section: market_risk
+  ir_sensitivity_100bp:
+    description: "Interest rate sensitivity — change in fair value from 100bp move, in millions"
+    section: market_risk
+  fx_sensitivity_10pct:
+    description: "FX sensitivity — change in fair value from 10% adverse move, in millions"
+    section: market_risk
+  equity_sensitivity_10pct:
+    description: "Equity sensitivity — change from 10% adverse price move, in millions"
+    section: market_risk
+
+qualitative:
+  sections_to_search: [market_risk]
+  categories:
+    Interest rate risk: [interest rate, basis point, 'floating.rate']
+    FX exposure: ['foreign currency.*risk', exchange rate]
+    Sensitivity: ['10% increase', '10% decrease', sensitivity]
+
+dashboard_mapping: {}
