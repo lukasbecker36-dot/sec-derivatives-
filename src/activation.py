@@ -23,8 +23,8 @@ logger = logging.getLogger(__name__)
 class ActivationResult:
     ticker: str
     cik: str
-    success: bool
-    new_status: str  # 'active' | 'active_needs_review' | 'failed_activation'
+    success: bool = False
+    new_status: str = 'failed_activation'
     config_path: str = ''
     filing_date: str = ''
     form_type: str = ''
