@@ -107,6 +107,10 @@ def get_registered(rows: list[dict]) -> list[dict]:
     return get_by_status(rows, 'registered')
 
 
+def get_failed(rows: list[dict]) -> list[dict]:
+    return get_by_status(rows, 'failed_activation')
+
+
 def find_issuer(rows: list[dict], ticker: str) -> dict | None:
     ticker_lower = ticker.lower()
     for r in rows:
