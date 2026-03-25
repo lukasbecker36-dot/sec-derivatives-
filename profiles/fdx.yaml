@@ -1,0 +1,31 @@
+issuer: FedEx
+ticker: FDX
+cik: "1048911"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_currency_exposures:
+    description: "List of foreign currencies with exchange rate risk"
+    section: market_risk
+  fuel_price_risk:
+    description: "Market risk for vehicle and jet fuel price changes"
+    section: market_risk
+  fuel_surcharge_mitigation:
+    description: "Use of indexed fuel surcharges to mitigate fuel price risk"
+    section: market_risk
+  fx_impact_direction:
+    description: "Effect of currency movements on financial results"
+    section: market_risk
+  expense_currency_denomination:
+    description: "Currency composition of expenses (primarily USD)"
+    section: market_risk
+
+# Unusual features identified:
+#   - No actual derivatives disclosed despite market risk section
+#   - Relies on operational hedges (indexed fuel surcharges) rather than financial derivatives
+#   - No quantitative sensitivity analysis or tabular data provided
+#   - References Annual Report for additional fuel discussion rather than including details
+

@@ -73,28 +73,46 @@ def _find_note_headings(text: str) -> list[str]:
     return re.findall(pattern, text)
 
 
+def _filter_toc_matches(text: str, matches) -> list[re.Match]:
+    """Filter out table-of-contents matches (heading followed by a page number)."""
+    all_matches = list(matches)
+    real = []
+    for m in all_matches:
+        after = text[m.end():m.end() + 20].strip()
+        # ToC entries look like "...Market Risk 47 ITEM 4..." (page number right after)
+        if re.match(r'^\d{1,3}\s', after):
+            continue
+        real.append(m)
+    # If all matches were filtered (only ToC entries), return last one as fallback
+    return real if real else all_matches
+
+
 def _extract_analysis_sections(text: str) -> dict[str, str]:
     """Extract derivatives note and market risk section for LLM analysis."""
     sections = {}
 
     # Derivatives note
     for heading_pat in [
-        r'Note\s+\d+\s*[.\u2013\u2014\u2014\u2013-]\s*Derivative',
-        r'Note\s+\d+\s*[.\u2013\u2014\u2014\u2013-]\s*Financial Instruments',
+        r'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012\u2014\u2013-]\s*Derivative',
+        r'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012\u2014\u2013-]\s*Financial Instruments',
+        r'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012\u2014\u2013-]\s*Hedging',
     ]:
-        matches = list(re.finditer(heading_pat, text, re.I))
+        matches = _filter_toc_matches(text, re.finditer(heading_pat, text, re.I))
         if matches:
             start = matches[-1].start()
-            end_m = re.search(r'Note\s+\d+\s*[.\u2013\u2014\u2014\u2013-]\s*(?!Derivative|Financial Instruments)', text[start + 50:], re.I)
+            end_m = re.search(r'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012\u2014\u2013-]\s*(?!Derivative|Financial Instruments|Hedging)', text[start + 50:], re.I)
             end = start + 50 + end_m.start() if end_m else start + 10000
             sections['derivatives_or_instruments'] = text[start:end][:8000]
             break
 
     # Market risk
-    matches = list(re.finditer(r'Quantitative and Qualitative Disclosures About Market Risk', text))
+    matches = _filter_toc_matches(
+        text,
+        re.finditer(r'Quantitative and Qualitative Disclosures About Market Risk', text, re.I),
+    )
     if matches:
         start = matches[-1].start()
-        end_m = re.search(r'Item\s*[\s\xa0]*[489]', text[start + 80:])
+        end_m = re.search(r'Item\s*[\s\xa0]*[489]', text[start + 80:], re.I)
         end = start + 80 + end_m.start() if end_m else start + 8000
         sections['market_risk'] = text[start:end][:8000]
 
