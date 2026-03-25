@@ -1,6 +1,6 @@
 # SEC Derivatives & Market Risk Extractor — Handover Note
 
-**Date:** 2026-03-22
+**Date:** 2026-03-25
 **Project:** `C:\Users\lukas\sec-derivatives`
 **Repo:** `github.com/lukasbecker36-dot/sec-derivatives-` (private)
 
@@ -46,21 +46,22 @@ scheduler.py (daily GitHub Actions)
 | `src/utils.py` | Dollar parsing, text cleaning, rate limiter, sentence extraction |
 | `src/filing_fetcher.py` | EDGAR API: discover filings, fetch text, diff against CSV |
 | `src/config.py` | YAML config loading with archetype inheritance (deep merge) |
-| `src/section_extract.py` | Regex-based section slicing with cross-reference filtering |
+| `src/section_extract.py` | Regex-based section slicing with cross-reference filtering, ToC filtering, OCR-tolerant fuzzy matching |
 | `src/llm_extract.py` | Haiku extraction with retry on JSON parse failure |
 | `src/engine.py` | Pipeline orchestration, CSV/notes/alerts output, filer profile integration |
 | `src/qualitative.py` | Keyword sentence matching, [NEW] tagging |
 | `src/change_detect.py` | Period-over-period alerts (numeric thresholds, appeared/disappeared) |
 | `src/validate.py` | Sanity checks: completeness, positivity, units, plausibility |
-| `src/bootstrap.py` | Auto-generate YAML config from CIK (Sonnet), activation-mode bootstrap with confidence scoring |
+| `src/bootstrap.py` | Auto-generate YAML config from CIK (Sonnet), activation-mode bootstrap with confidence scoring, ToC filtering, section name remapping |
 | `src/monitor.py` | CLI entry point with --issuer, --since, --watch; run_from_configs() for scheduler |
 | `src/alerts.py` | Cross-issuer dashboard, trend breaks, story leads (Sonnet) |
 | `src/registry.py` | Universe CSV management, issuer lifecycle states, seeding |
-| `src/activation.py` | Lazy activation pipeline: detect filing → bootstrap → extract → score → promote/fail |
+| `src/activation.py` | Lazy activation pipeline: detect filing → bootstrap → extract → score → promote/fail. Prefers 10-K for bootstrap when 10-Q triggers activation. |
 | `src/scheduler.py` | Two-pass daily orchestrator (active + registered issuers), CLI + GitHub Actions |
+| `src/notify.py` | Email digest after scheduler runs (SMTP/Gmail, alerts + activations + errors) |
 | `src/filer_profile.py` | Per-CIK JSON profiles: structural features, language patterns, prompt injection |
 
-**Tests:** 133 unit tests, all passing. Run: `python -m pytest tests/ -q`
+**Tests:** 143 unit tests, all passing. Run: `python -m pytest tests/ -q`
 
 ---
 
@@ -94,13 +95,13 @@ Per-CIK JSON files in `filer_profiles/` capturing company-specific reporting pat
 
 Profiles are injected into LLM extraction prompts as "known company-specific patterns" to improve accuracy over time. Created lazily on first filing processed.
 
-7 profiles seeded from existing active issuers with historical tracking data.
+11 profiles for active issuers (7 seeded + 4 auto-created during activation).
 
 ---
 
 ## Issuers configured and live-tested
 
-All 7 active issuers have 12 filings extracted (8 historical + 4 from first automated run):
+11 active issuers (7 original + 4 auto-activated on 2026-03-25):
 
 | Ticker | Issuer | CIK | Archetype | Data quality |
 |--------|--------|-----|-----------|-------------|
@@ -111,6 +112,10 @@ All 7 active issuers have 12 filings extracted (8 historical + 4 from first auto
 | INTC | Intel | 0000050863 | active_ir_fx_hedger | Excellent. IR swaps, FX forwards, equity hedges all tracked. |
 | GEV | GE Vernova | 0001996810 | active_fx_commodity_hedger | Excellent. Clean progression, net investment hedges, AOCI. |
 | MRK | Merck | 0000310158 | active_ir_fx_hedger | Good. FX forwards $32-44B, IR swaps. Market risk sensitivity only in 10-Ks. |
+| ACN | Accenture | 0001467373 | minimal_hedger | Auto-activated (0.76). Market risk only, no derivatives note. |
+| MU | Micron Technology | 0000723125 | minimal_hedger | Auto-activated. Market risk only, no financial_instruments section found. |
+| FDX | FedEx | 0001048911 | minimal_hedger | Auto-activated (0.82). FX + fuel exposure, no derivatives. |
+| ORCL | Oracle | 0001341439 | minimal_hedger | Auto-activated (0.86). FX forwards, $2.1B equity investments, sensitivity analysis. Bootstrapped from 10-K (10-Q cross-references). |
 
 ---
 
@@ -154,6 +159,10 @@ python -m src.alerts
 - Commits registry/profile/config changes back to repo
 - Uploads JSON run summary as artifact
 - API key stored as GitHub secret `ANTHROPIC_API_KEY`
+- **Email notifications** sent to `lukasbecker36@gmail.com` after each run with activity
+  - Digest includes: overview, per-issuer alerts, activation outcomes, errors
+  - Quiet runs (no new filings, no activations) skip the email
+  - SMTP via Gmail; secrets `SMTP_USER` and `SMTP_PASSWORD` (app password) configured in GitHub Actions
 
 **Skip-if-recently-checked:** Registered issuers checked within the last 3 days are skipped to reduce EDGAR load. On daily runs, the full universe cycles through in ~3 days.
 
@@ -175,22 +184,32 @@ Key YAML fields: `sections` (heading regex, match_strategy, end_boundary, max_le
 
 ## Known issues and gaps
 
+### Fixed (2026-03-25)
+- ~~**First activation batch failed**~~ — `ActivationResult` constructor bug fixed, `activation_fail_count` int('') parsing bug fixed.
+- ~~**ACN, FDX, GIS, MU, ORCL stuck**~~ — All successfully activated (ACN 0.76, FDX 0.82, ORCL 0.86, MU active_needs_review). GIS will activate on next filing.
+- ~~**Section extraction missed ALL CAPS headings**~~ — Bootstrap market_risk regex now case-insensitive.
+- ~~**OCR artifacts broke heading matches**~~ — `section_extract.py` now has fuzzy matching with optional mid-word whitespace (handles "Qualitat ive" etc.).
+- ~~**ToC entries matched instead of actual sections**~~ — Both bootstrap and runtime extraction now filter matches followed by page numbers.
+- ~~**10-Q cross-references gave empty configs**~~ — Activation now bootstraps from 10-K when 10-Q triggers, and also uses 10-K for initial extraction.
+- ~~**LLM-invented section names**~~ — Bootstrap now remaps non-standard section names to valid archetype sections.
+- ~~**API key expired**~~ — New key set locally and in GitHub Actions secrets (2026-03-25).
+
 ### Must fix
 1. **PM 2025 10-K empty** — the annual report uses a different note heading format or numbering than the 10-Qs. The `Note\s+\d+\.\s+Financial Instruments` pattern doesn't match. Need to check the actual 10-K heading.
 
-2. **MRK market_risk empty in 10-Qs** — Merck's 10-Qs cross-reference market risk to the prior 10-K ("see Item 7 in our 2024 Form 10-K") instead of repeating the data. The `ir_sensitivity_100bp` and `fx_sensitivity_10pct` fields are only available in 10-Ks. This is by design on Merck's side, but means quarterly sensitivity data is missing.
+2. **MRK market_risk empty in 10-Qs** — Merck's 10-Qs cross-reference market risk to the prior 10-K ("see Item 7 in our 2024 Form 10-K") instead of repeating the data. This is by design on Merck's side, but means quarterly sensitivity data is missing.
 
 ### Should fix
-3. **First activation batch failed** — 5 issuers (ACN, FDX, GIS, MU, ORCL) failed activation on the first automated run due to a bug (now fixed). They are in `failed_activation` status and will need to be retried or manually re-triggered.
+3. **Bootstrap quality** — `src/bootstrap.py` auto-generates YAML configs but they're stubs that need manual review. The auto-classifier tends to default to `minimal_hedger`. The activation scoring system mitigates this by flagging weak configs as `active_needs_review`.
 
-4. **Bootstrap quality** — `src/bootstrap.py` auto-generates YAML configs but they're stubs that need manual review. The auto-classifier tends to default to `minimal_hedger`. The activation scoring system mitigates this by flagging weak configs as `active_needs_review`.
+4. **MU/ACN `financial_instruments` section empty** — these companies may not have a "Note X — Financial Instruments" heading that matches the archetype regex. Consider adding alternative heading patterns or making the section optional for `minimal_hedger`.
 
 ### Nice to have
 5. **Backfill validation** — spot-check LLM-extracted values against the original bespoke scripts for Meta and Boeing to measure accuracy.
 
-6. **10-K vs 10-Q heading divergence** — some issuers use different note numbering in annual vs quarterly filings. Filer profiles will capture heading variations over time, which could be used to add `heading_10k` overrides automatically.
+6. **Dashboard/alerts module untested live** — `src/alerts.py` (cross-issuer dashboard, story leads) is written but hasn't been run against real data yet.
 
-7. **Dashboard/alerts module untested live** — `src/alerts.py` (cross-issuer dashboard, story leads) is written but hasn't been run against real data yet.
+7. **Subscription-based extraction** — explore using Claude Code scheduled agents for extraction (using subscription tokens) instead of API calls to eliminate API key dependency.
 
 ---
 
@@ -244,8 +263,8 @@ Install: `pip install -r requirements.txt`
 
 ## What to do next
 
-1. **Retry failed activations** — ACN, FDX, GIS, MU, ORCL failed due to a now-fixed bug. Reset their status to `registered` in universe.csv or wait for the automatic retry after 30 days.
-2. **Monitor activation quality** — check `registry/review_queue.csv` and `registry/activation_log.csv` after a few daily runs to see how the scoring is working.
-3. **Fix PM 2025 10-K** — check heading, add fallback pattern.
-4. **Run `src/alerts.py`** — generate cross-issuer dashboard and story leads.
+1. **Monitor activation quality** — check `registry/review_queue.csv` and `registry/activation_log.csv` after a few daily runs. Email digests will flag activations and errors. GitHub Actions workflow is enabled and running daily at 06:00 UTC.
+2. **Fix PM 2025 10-K** — check heading, add fallback pattern.
+3. **Review MU and ORCL configs** — both are `active_needs_review`/`active` but may benefit from manual config tuning.
+4. **Run `src/alerts.py`** — generate cross-issuer dashboard and story leads (now have 11 issuers with data).
 5. **Validate extraction accuracy** — compare a few quarters against hand-checked values.
