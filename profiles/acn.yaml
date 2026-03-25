@@ -1,0 +1,22 @@
+issuer: Accenture
+ticker: ACN
+cik: "1467373"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  market_risk_reference:
+    description: "Reference to market risk disclosures in 10-K Item 7A"
+    section: market_risk
+  borrowings_reference:
+    description: "Reference to Note 9 for borrowings and debt information"
+    section: market_risk
+
+# Unusual features identified:
+#   - Section contains only cross-references to other parts of filing rather than actual market risk data
+#   - No quantitative derivative or market risk information present in this excerpt
+#   - References future date (August 31, 2025) which may be an error
+#   - Appears to be incomplete section or summary rather than full disclosure
+

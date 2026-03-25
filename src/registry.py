@@ -166,7 +166,7 @@ def mark_active_needs_review(rows: list[dict], ticker: str, config_path: str) ->
 
 def mark_failed(rows: list[dict], ticker: str) -> list[dict]:
     row = find_issuer(rows, ticker)
-    fail_count = int(row.get('activation_fail_count', 0)) + 1 if row else 1
+    fail_count = int(row.get('activation_fail_count', '') or 0) + 1 if row else 1
     return update_issuer(rows, ticker, status='failed_activation',
                          activation_fail_count=str(fail_count))
 
