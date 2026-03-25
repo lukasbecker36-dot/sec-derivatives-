@@ -1,7 +1,48 @@
 issuer: Micron Technology
 ticker: MU
 cik: "723125"
-archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+archetype: active_ir_fx_hedger
+sector: technology
 extraction_mode: llm
 
+# Micron uses FX forwards (JPY, SGD, EUR, TWD) and has IR exposure from
+# long-term debt.  Their derivatives note heading varies across filings:
+#   "Hedging Activities", "Derivatives", "Hedging Activities and Derivatives"
+# The archetype default regex (Note X — Derivative...) may miss these.
+sections:
+  derivatives_note:
+    heading: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012\u2014\u2013-]\s*(?:Derivative|Hedging\s+Activit|Financial\s+Instrument)'
+    match_strategy: last
+    validation_keywords: [notional, derivative, forward, hedge]
+    end_boundary: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012\u2014\u2013-]\s*(?!Derivative|Hedging|Financial\s+Instrument)'
+    max_length: 12000
+
+# Override fields for Micron's disclosure style
+fields:
+  fx_forward_notional:
+    description: "Notional amount of foreign currency forward/option contracts, in millions"
+    section: derivatives_note
+  ir_swap_notional:
+    description: "Notional amount of interest rate swap derivatives, in millions. 0 if none mentioned."
+    section: derivatives_note
+  total_derivative_asset:
+    description: "Total derivative assets at fair value, in millions"
+    section: derivatives_note
+  total_derivative_liability:
+    description: "Total derivative liabilities at fair value, in millions"
+    section: derivatives_note
+  fx_gain_loss:
+    description: "Net gain/loss on FX derivatives recognized in earnings, in millions"
+    section: derivatives_note
+  expected_12mo_reclass_from_aoci:
+    description: "Amount expected to be reclassified from AOCI to earnings in next 12 months, in millions"
+    section: derivatives_note
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: derivatives_note
+  ir_sensitivity_100bp:
+    description: "Interest rate sensitivity — change in fair value from 100bp move, in millions"
+    section: market_risk
+  fx_sensitivity_10pct:
+    description: "FX sensitivity — change in fair value from 10% adverse move, in millions"
+    section: market_risk
