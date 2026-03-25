@@ -147,6 +147,39 @@ class TestPassRegistered:
         mock_check.assert_not_called()
 
 
+    @patch('src.scheduler.activate_issuer')
+    @patch('src.scheduler.check_new_filing')
+    @patch('src.scheduler.append_activation_event')
+    @patch('src.scheduler.append_review_item')
+    def test_failed_issuer_skips_cutoff(self, mock_review, mock_log, mock_check, mock_activate):
+        """Failed issuers should bypass the cutoff_date filter so previously
+        detected filings aren't filtered out after aging past the window."""
+        from src.activation import ActivationResult
+        mock_check.return_value = {
+            'period_end': '2025-02-22', 'form_type': '10-Q',
+            'accession_number': 'a1', 'primary_document': 'd1',
+        }
+        mock_activate.return_value = ActivationResult(
+            ticker='GIS', cik='40704', success=True,
+            new_status='active', config_path='profiles/gis.yaml',
+            score=0.75, reasons=['Good'],
+        )
+
+        universe = [_make_row('GIS', 'failed_activation', cik='40704',
+                              activation_fail_count='1')]
+        summary = RunSummary()
+
+        # cutoff_date is AFTER the filing date — would normally filter it out
+        result = _pass_registered(universe, '2025-02-23', 10,
+                                  Path('/tmp/out'), False, summary,
+                                  check_interval_days=0)
+        # check_new_filing should be called with empty cutoff for failed issuers
+        mock_check.assert_called_once()
+        _, kwargs = mock_check.call_args
+        assert kwargs.get('cutoff_date') == ''
+        assert summary.activations_attempted == 1
+
+
 class TestRunSummary:
     def test_summary_to_dict(self):
         summary = RunSummary(

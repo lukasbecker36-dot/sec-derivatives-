@@ -15,7 +15,7 @@ from .config import load_config
 from .engine import OUTPUT_DIR
 from .monitor import run_from_configs
 from .registry import (
-    load_universe, save_universe, get_active, get_registered,
+    load_universe, save_universe, get_active, get_registered, get_failed,
     update_last_checked, mark_activating, mark_active,
     mark_active_needs_review, mark_failed,
     append_activation_event, append_review_item,
@@ -104,36 +104,41 @@ def _pass_registered(universe: list[dict], cutoff_date: str,
                      max_activations: int, output_dir: Path,
                      dry_run: bool, summary: RunSummary,
                      check_interval_days: int = 3) -> list[dict]:
-    """Pass 2: Check registered issuers for new filings, trigger activation."""
+    """Pass 2: Check registered and failed_activation issuers for new filings, trigger activation."""
     registered_rows = get_registered(universe)
+    failed_rows = get_failed(universe)
+    candidate_rows = registered_rows + failed_rows
 
-    if not registered_rows:
-        logger.info('Pass 2: No registered issuers to check')
+    if not candidate_rows:
+        logger.info('Pass 2: No registered/failed issuers to check')
         return universe
 
-    logger.info(f'Pass 2: Checking {len(registered_rows)} registered issuers...')
+    logger.info(f'Pass 2: Checking {len(candidate_rows)} issuers ({len(registered_rows)} registered, {len(failed_rows)} failed)...')
 
     client = None
     activations_done = 0
     now = _now_iso()
     skip_before = (datetime.now(timezone.utc) - timedelta(days=check_interval_days)).strftime('%Y-%m-%dT%H:%M:%SZ')
 
-    for row in registered_rows:
+    for row in candidate_rows:
         ticker = row.get('ticker', '')
         cik = row.get('cik', '')
+        is_failed = row.get('status') == 'failed_activation'
 
-        # Skip if recently checked
+        # Skip if recently checked (failed issuers always retry)
         last_checked = row.get('last_checked_at', '')
-        if last_checked and last_checked >= skip_before:
+        if not is_failed and last_checked and last_checked >= skip_before:
             summary.registered_skipped += 1
             continue
 
         summary.registered_checked += 1
 
-        # Check for new filing
+        # Check for new filing — skip cutoff for failed retries so previously
+        # detected filings aren't filtered out after aging past the window
         last_seen = row.get('last_filing_date_seen', '')
+        effective_cutoff = '' if is_failed else cutoff_date
         new_filing = check_new_filing(cik, last_known_date=last_seen,
-                                      cutoff_date=cutoff_date)
+                                      cutoff_date=effective_cutoff)
 
         # Update last checked
         filing_date_seen = new_filing['period_end'] if new_filing else ''
