@@ -7,20 +7,29 @@ extraction_mode: llm
 
 # Additional fields identified by LLM analysis (review and adjust)
 fields:
-  net_unrealized_losses_cash_flow_hedges:
-    description: "unrealized losses on cash flow hedges reported in OCI"
-    section: comprehensive_income_statement
-  accumulated_other_comprehensive_loss:
-    description: "cumulative OCI balance including hedge effects"
-    section: balance_sheet
-  other_comprehensive_loss_detail:
-    description: "breakdown of OCI components including hedge losses"
-    section: comprehensive_income_statement
+  non_marketable_equity_investments:
+    description: "total value of non-marketable equity and convertible debt investments"
+    section: market_risk
+  principal_currency_exposures:
+    description: "list of primary foreign currencies with exposure"
+    section: market_risk
+  foreign_currency_forward_contracts:
+    description: "description of hedging program and contract characteristics"
+    section: market_risk
+  sensitivity_analysis_table:
+    description: "hypothetical potential losses from market rate changes"
+    section: market_risk
+  foreign_exchange_earnings_impact:
+    description: "potential earnings impact from 10% FX rate decrease"
+    section: market_risk
+  foreign_exchange_fair_value_impact:
+    description: "potential fair value impact on cash and receivables from 10% FX rate decrease"
+    section: market_risk
 
 # Unusual features identified:
-#   - market_risk section appears to be table of contents only, not actual disclosures
-#   - derivatives information found in financial statements rather than dedicated market risk section
-#   - cash flow hedge losses reported in OCI but no detailed breakdown or fair value disclosures
-#   - no quantitative market risk metrics or sensitivity analysis provided
-#   - missing typical derivatives footnote disclosures
+#   - no_notional_amounts_disclosed
+#   - no_maturity_analysis_provided
+#   - limited_hedge_accounting_disclosure
+#   - sensitivity_analysis_uses_earnings_impact_rather_than_derivative_fair_values
+#   - non_marketable_investments_included_in_market_risk_section
 

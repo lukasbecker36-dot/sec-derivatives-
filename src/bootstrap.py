@@ -108,7 +108,7 @@ def _extract_analysis_sections(text: str) -> dict[str, str]:
     # Market risk
     matches = _filter_toc_matches(
         text,
-        re.finditer(r'Quantitative and Qualitative Disclosures About Market Risk', text, re.I),
+        re.finditer(r'Quantitative\s+and\s+Qualitat\s*ive\s+Disclosures\s+About\s+Market\s+Risk', text, re.I),
     )
     if matches:
         start = matches[-1].start()
@@ -248,6 +248,8 @@ def _build_config_yaml(cik, ticker, issuer_name, archetype, analysis):
     ]
 
     # Add extra fields from LLM analysis
+    # Map LLM-invented section names to archetype sections
+    VALID_SECTIONS = {'financial_instruments', 'market_risk', 'derivatives_note'}
     extra_fields = analysis.get('key_fields', [])
     if extra_fields:
         lines.append('# Additional fields identified by LLM analysis (review and adjust)')
@@ -255,7 +257,10 @@ def _build_config_yaml(cik, ticker, issuer_name, archetype, analysis):
         for fld in extra_fields:
             name = fld.get('name', 'unknown_field').replace(' ', '_').lower()
             desc = fld.get('description', 'TODO')
-            section = fld.get('section', 'derivatives_note')
+            section = fld.get('section', 'market_risk')
+            # Remap non-standard section names to valid archetype sections
+            if section not in VALID_SECTIONS:
+                section = 'market_risk'
             lines.append(f'  {name}:')
             lines.append(f'    description: "{desc}"')
             lines.append(f'    section: {section}')

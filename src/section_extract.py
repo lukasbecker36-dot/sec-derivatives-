@@ -39,14 +39,40 @@ def extract_section(text: str, section_cfg: SectionConfig,
     if not section_cfg.heading:
         return ''
 
-    raw_matches = list(re.finditer(section_cfg.heading, text, re.IGNORECASE))
+    # Convert literal spaces in heading to \s+ so patterns match tabs, line
+    # breaks, and OCR artifacts (e.g. "Qualitat ive") in filing text.
+    heading_pat = re.sub(r' +', r'\\s+', section_cfg.heading)
+
+    # Also build an OCR-tolerant pattern (allow optional whitespace within
+    # words to handle mid-word splits from HTML extraction)
+    words = section_cfg.heading.split()
+    if all(w.isalpha() for w in words):
+        fuzzy_words = [r'\s*'.join(w) for w in words]
+        fuzzy_pat = r'\s+'.join(fuzzy_words)
+    else:
+        fuzzy_pat = heading_pat  # keep original for regex-heavy headings
+
+    # Try both patterns and combine matches
+    raw_matches = list(re.finditer(heading_pat, text, re.IGNORECASE))
+    if fuzzy_pat != heading_pat:
+        fuzzy_matches = list(re.finditer(fuzzy_pat, text, re.IGNORECASE))
+        seen_positions = {m.start() for m in raw_matches}
+        for m in fuzzy_matches:
+            if m.start() not in seen_positions:
+                raw_matches.append(m)
+        raw_matches.sort(key=lambda m: m.start())
+
     if not raw_matches:
         return ''
 
-    # Filter out cross-references
+    # Filter out cross-references and table-of-contents entries
     matches = []
     for m in raw_matches:
         after = text[m.end():m.end() + 100]
+        after_stripped = text[m.end():m.end() + 20].strip()
+        # Skip ToC entries (heading followed immediately by a page number)
+        if re.match(r'^\d{1,3}\s', after_stripped):
+            continue
         if not XREF_PATTERN.search(after):
             matches.append(m)
 

@@ -15,8 +15,12 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
-    "non_gaap_metrics": [],
+    "recurring_phrases": [
+      "cross-currency"
+    ],
+    "non_gaap_metrics": [
+      "constant currency"
+    ],
     "unusual_disclosure_patterns": [],
     "known_issues": []
   },
@@ -25,55 +29,11 @@
       "filing_date": "2026-02-28",
       "form_type": "10-Q",
       "period_end": "2026-02-28",
-      "processed_at": "2026-03-25T01:47:05Z",
+      "processed_at": "2026-03-25T02:24:14Z",
       "sections_found": [
         "market_risk"
       ],
-      "fields_extracted": 1,
-      "fields_null": 6
-    },
-    {
-      "filing_date": "2025-02-28",
-      "form_type": "10-Q",
-      "period_end": "2025-02-28",
-      "processed_at": "2026-03-25T01:52:28Z",
-      "sections_found": [
-        "market_risk"
-      ],
-      "fields_extracted": 1,
-      "fields_null": 6
-    },
-    {
-      "filing_date": "2025-05-31",
-      "form_type": "10-K",
-      "period_end": "2025-05-31",
-      "processed_at": "2026-03-25T01:52:34Z",
-      "sections_found": [
-        "market_risk"
-      ],
-      "fields_extracted": 1,
-      "fields_null": 6
-    },
-    {
-      "filing_date": "2025-08-31",
-      "form_type": "10-Q",
-      "period_end": "2025-08-31",
-      "processed_at": "2026-03-25T01:52:38Z",
-      "sections_found": [
-        "market_risk"
-      ],
-      "fields_extracted": 1,
-      "fields_null": 6
-    },
-    {
-      "filing_date": "2025-11-30",
-      "form_type": "10-Q",
-      "period_end": "2025-11-30",
-      "processed_at": "2026-03-25T01:52:43Z",
-      "sections_found": [
-        "market_risk"
-      ],
-      "fields_extracted": 1,
+      "fields_extracted": 7,
       "fields_null": 6
     }
   ]

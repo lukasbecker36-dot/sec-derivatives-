@@ -211,11 +211,26 @@ def activate_issuer(
             cik, filing_meta['accession_number'], filing_meta['primary_document']
         )
 
-        # Step 2: Bootstrap config
+        # Step 2: Bootstrap config — prefer 10-K for fuller disclosures
+        bootstrap_text = filing_text
+        bootstrap_filing_meta = filing_meta
+        tenk_fallback = False
+        if filing_meta.get('form_type') == '10-Q':
+            all_filings = discover_filings(cik)
+            ten_ks = [f for f in all_filings if f['form_type'] == '10-K']
+            if ten_ks:
+                latest_10k = ten_ks[-1]
+                logger.info(f'Activating {ticker}: using 10-K {latest_10k["period_end"]} for bootstrap + initial extraction...')
+                bootstrap_text = fetch_filing_text(
+                    cik, latest_10k['accession_number'], latest_10k['primary_document']
+                )
+                bootstrap_filing_meta = latest_10k
+                tenk_fallback = True
+
         logger.info(f'Activating {ticker}: bootstrapping config...')
         bootstrap_result = bootstrap_issuer_for_activation(
             cik=cik, ticker=ticker, issuer_name=issuer_name,
-            filing_text=filing_text, client=client,
+            filing_text=bootstrap_text, client=client,
         )
 
         # Step 3: Score bootstrap
@@ -235,9 +250,13 @@ def activate_issuer(
         config_path = bootstrap_result['config_path']
         config = load_config(config_path)
 
+        # Use 10-K text for initial extraction when bootstrapped from 10-K
+        extract_text = bootstrap_text if tenk_fallback else filing_text
+        extract_meta = bootstrap_filing_meta if tenk_fallback else filing_meta
+
         logger.info(f'Activating {ticker}: running extraction...')
         process_result = process_filing(
-            config, filing_meta, filing_text, prior_row=None, client=client,
+            config, extract_meta, extract_text, prior_row=None, client=client,
         )
 
         # Step 5: Score extraction
