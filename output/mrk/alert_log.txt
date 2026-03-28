@@ -1,0 +1,36 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-03-28 ===
+[NUMERIC] fx_forward_notional: $42,872M → $36,352M (-15.2%) — exceeds 15% threshold
+[NUMERIC] total_derivative_liability: $492M → $324M (-34.1%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $298M → $178M (-40.3%) — exceeds 20% threshold
+[LLM_FLAG] fx_forward_notional decreased from 42,872 to 36,352 (15% decrease) - within acceptable range
+[LLM_FLAG] total_derivative_asset decreased from 316 to 323 (2% increase) - within acceptable range
+[LLM_FLAG] total_derivative_liability decreased from 492 to 324 (34% decrease) - notable but within 50% threshold
+[LLM_FLAG] expected_12mo_reclass_from_aoci decreased from 298 to 178 (40% decrease) - within acceptable range but represents material change in expected reclassifications
+[LLM_FLAG] ir_designated_notional increased from 1,500 to 1,750 (17% increase) - within acceptable range
+[LLM_FLAG] fx_designated_notional increased from 12,649 to 12,949 (2% increase) - within acceptable range
+[LLM_FLAG] fx_not_designated_notional decreased from 28,473 to 25,579 (10% decrease) - within acceptable range
+[LLM_FLAG] The provided text is an incorporation by reference to Item 7 and does not contain the actual quantitative market risk disclosure data. The specific sensitivity metrics would be found in the referenced MD&A section under 'Financial Instruments Market Risk Disclosures' which is not included in this excerpt.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-03-28 ===
+[NUMERIC] total_derivative_asset: $546M → $316M (-42.1%) — exceeds 25% threshold
+[NUMERIC] total_derivative_liability: $855M → $492M (-42.5%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $473M → $298M (-37.0%) — exceeds 20% threshold
+[LLM_FLAG] expected_12mo_reclass_from_aoci decreased from $473M to $298M (-37%), within acceptable variance but notable decline
+[LLM_FLAG] total_derivative_asset decreased from $546M to $316M (-42%), primarily due to reduction in foreign exchange contract assets
+[LLM_FLAG] total_derivative_liability increased from $345M to $492M (+43%), exceeding 50% threshold; driven by increased forward exchange contract liabilities
+[LLM_FLAG] fx_designated_notional decreased from $13,653M to $12,649M (-7%), consistent with operational changes
+[LLM_FLAG] fx_not_designated_notional increased from $29,291M to $28,473M (-3%), relatively stable
+[LLM_FLAG] The provided filing text references the 2024 Form 10-K rather than containing the actual quantitative disclosures. The excerpt only contains a section header reference without the detailed numerical data needed for extraction.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-03-28 ===
+[NUMERIC] total_derivative_asset: $410M → $546M (+33.2%) — exceeds 25% threshold
+[NUMERIC] total_derivative_liability: $268M → $855M (+219.0%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $16M → $473M (+2856.2%) — exceeds 20% threshold
+[LLM_FLAG] fx_forward_notional increased 7.2% from 41,360M to 44,310M, within normal range
+[LLM_FLAG] total_derivative_asset decreased 33.2% from 410M to 546M, which is opposite the expected direction but within reasonable bounds
+[LLM_FLAG] expected_12mo_reclass_from_aoci increased significantly from 16M to 473M (2,856% increase), which exceeds the 50% threshold and warrants explanation: The filing states 'At June 30, 2025, the Company estimates $ 473 million of pretax net unrealized losses on derivatives maturing within the next 12 months that hedge foreign currency denominated sales over that same period will be reclassified from AOCL to Sales.' This is a material swing from unrealized gains to unrealized losses, likely due to significant foreign exchange rate volatility during the first half of 2025.
+[LLM_FLAG] ir_swap_notional remained stable at 1,750M, consistent with prior period
+[LLM_FLAG] fx_designated_notional increased 12.9% from 12,088M to 13,653M, within normal range
+[LLM_FLAG] fx_not_designated_notional increased 2.7% from 28,522M to 29,291M, within normal range
+[LLM_FLAG] Filing text provided only references the location of market risk disclosures in the 2024 Form 10-K but does not include the actual quantitative sensitivity data itself. The text is a cross-reference statement rather than the detailed disclosure section.
+

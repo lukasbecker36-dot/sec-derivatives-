@@ -1,0 +1,41 @@
+issuer: Paychex
+ticker: PAYX
+cik: "723531"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  average_interest_rate:
+    description: "Average interest rate earned on combined portfolios"
+    section: market_risk
+  federal_funds_rate:
+    description: "Federal Funds rate range as of period end"
+    section: market_risk
+  afs_duration:
+    description: "Average duration of available-for-sale securities"
+    section: market_risk
+  maturity_schedule:
+    description: "Amortized cost and fair value by maturity buckets"
+    section: market_risk
+  sensitivity_analysis:
+    description: "Impact of 25 basis point change on earnings"
+    section: market_risk
+  portfolio_allocation:
+    description: "Percentage allocation between short-term and AFS securities"
+    section: market_risk
+  unrealized_losses:
+    description: "Net unrealized losses on AFS securities"
+    section: market_risk
+  total_portfolio_value:
+    description: "Average total investment portfolio value"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative instruments disclosed - pure interest rate risk exposure through securities portfolios
+#   - Market risk disclosure focused entirely on available-for-sale securities and short-term investments
+#   - Includes client funds exposure which is atypical for most companies
+#   - VRDNs classified by contractual maturity despite trading as short-term instruments
+#   - Specific basis point sensitivity disclosed for tax-exempt vs taxable rate relationships
+

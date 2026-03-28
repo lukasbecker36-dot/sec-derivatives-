@@ -1,48 +1,42 @@
 issuer: Micron Technology
 ticker: MU
 cik: "723125"
-archetype: active_ir_fx_hedger
-sector: technology
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
 extraction_mode: llm
 
-# Micron uses FX forwards (JPY, SGD, EUR, TWD) and has IR exposure from
-# long-term debt.  Their derivatives note heading varies across filings:
-#   "Hedging Activities", "Derivatives", "Hedging Activities and Derivatives"
-# The archetype default regex (Note X — Derivative...) may miss these.
-sections:
-  derivatives_note:
-    heading: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012\u2014\u2013-]\s*(?:Derivative|Hedging\s+Activit|Financial\s+Instrument)'
-    match_strategy: last
-    validation_keywords: [notional, derivative, forward, hedge]
-    end_boundary: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012\u2014\u2013-]\s*(?!Derivative|Hedging|Financial\s+Instrument)'
-    max_length: 12000
-
-# Override fields for Micron's disclosure style
+# Additional fields identified by LLM analysis (review and adjust)
 fields:
-  fx_forward_notional:
-    description: "Notional amount of foreign currency forward/option contracts, in millions"
-    section: derivatives_note
-  ir_swap_notional:
-    description: "Notional amount of interest rate swap derivatives, in millions. 0 if none mentioned."
-    section: derivatives_note
-  total_derivative_asset:
-    description: "Total derivative assets at fair value, in millions"
-    section: derivatives_note
-  total_derivative_liability:
-    description: "Total derivative liabilities at fair value, in millions"
-    section: derivatives_note
-  fx_gain_loss:
-    description: "Net gain/loss on FX derivatives recognized in earnings, in millions"
-    section: derivatives_note
-  expected_12mo_reclass_from_aoci:
-    description: "Amount expected to be reclassified from AOCI to earnings in next 12 months, in millions"
-    section: derivatives_note
-  has_derivatives:
-    description: "Does the company use derivatives? Yes/No/No mention"
-    section: derivatives_note
-  ir_sensitivity_100bp:
-    description: "Interest rate sensitivity — change in fair value from 100bp move, in millions"
+  notional_amounts:
+    description: "contractual amounts by hedge type and designation"
     section: market_risk
-  fx_sensitivity_10pct:
-    description: "FX sensitivity — change in fair value from 10% adverse move, in millions"
+  fair_value_assets:
+    description: "positive fair values included in receivables and other noncurrent assets"
     section: market_risk
+  fair_value_liabilities:
+    description: "negative fair values included in accounts payable and other noncurrent liabilities"
+    section: market_risk
+  cash_flow_hedge_effects:
+    description: "gains/losses in AOCI and reclassifications to earnings"
+    section: market_risk
+  expected_reclassifications:
+    description: "pre-tax gains expected to be reclassified in next 12 months"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "hypothetical 1% rate change impact on debt fair value and interest expense"
+    section: market_risk
+  fx_sensitivity:
+    description: "hypothetical 10% adverse FX change impact on foreign currency exposures"
+    section: market_risk
+  hedged_item_fair_value:
+    description: "fair value of hedged cash and debt securities"
+    section: market_risk
+
+# Unusual features identified:
+#   - Combined notional and fair value data in single consolidated table
+#   - Separates hedge accounting designation status clearly in table structure
+#   - Includes specific balance sheet line item references for fair values
+#   - Mentions settlement of interest rate swaps upon debt prepayment
+#   - Provides forward-looking expected reclassification amounts
+#   - Uses rolling hedge strategy with varying maturity periods by hedge type
+

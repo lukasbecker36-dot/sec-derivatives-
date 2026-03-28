@@ -1,0 +1,42 @@
+issuer: Adobe Inc.
+ticker: ADBE
+cik: "796343"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cash_flow_hedge_notional_amounts:
+    description: "gross notional amounts of outstanding cash flow hedges by year"
+    section: market_risk
+  fair_value_derivatives_table:
+    description: "fair value of asset and liability derivatives by type and designation"
+    section: market_risk
+  foreign_currency_exposures:
+    description: "significant foreign currency revenue exposures by currency"
+    section: market_risk
+  total_fx_contracts_notional:
+    description: "gross notional amounts of all outstanding foreign exchange contracts"
+    section: market_risk
+  sensitivity_analysis_results:
+    description: "hypothetical fair value changes from 10% FX rate shifts"
+    section: market_risk
+  interest_rate_swap_notional:
+    description: "notional amount of interest rate swaps"
+    section: market_risk
+  expected_derivative_losses:
+    description: "net derivative losses expected to be recognized within specified timeframes"
+    section: market_risk
+  long_term_investment_exposure:
+    description: "absolute notional equivalent of non-USD functional currency exposures"
+    section: market_risk
+
+# Unusual features identified:
+#   - combines derivatives note and market risk disclosures in single extraction
+#   - includes treasury lock agreements settled in prior period but still being amortized
+#   - provides detailed breakdown of expected derivative loss recognition timing
+#   - includes collateral posting mechanics description
+#   - contains comprehensive foreign currency exposure data in both sections
+#   - fair value hedges introduced during fiscal 2025 with SOFR OIS conversion
+

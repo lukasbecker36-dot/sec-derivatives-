@@ -1,0 +1,36 @@
+=== 10-K | Period ending 2025-12-27 | Processed 2026-03-28 ===
+[NUMERIC] total_derivative_asset: $823M → $1,041M (+26.5%) — exceeds 25% threshold
+[NUMERIC] total_derivative_liability: $7,078M → $4,124M (-41.7%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional: DECREASED 0% from $9,700M to $9,700M - within tolerance but note absolute notional decreased from $12.0B mentioned for Dec 28, 2024 in text (prior period shows $9.7B which appears to be the designated hedging notional only)
+[LLM_FLAG] total_derivative_liability: DECREASED 42% from $7,078M (prior period) to $4,124M - significant decline of approximately $2,954M. The prior period figure of $7,078M appears to have combined multiple line items; current period shows $4,124M in total derivatives
+[LLM_FLAG] fx_forward_notional: DECREASED 8% from $20,967M to $22,740M - actually INCREASED by 8%, so prior period comparison shows decrease from subsequent year perspective
+[LLM_FLAG] The provided filing text contains only a section header 'Quantitative and Qualitative Disclosures About Market Risk' with no actual content or numeric data. Unable to extract sensitivity values without the full disclosure text.
+
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-03-28 ===
+[NUMERIC] ir_swap_notional: $12,000M → $9,700M (-19.2%) — exceeds 15% threshold
+[NUMERIC] fx_forward_notional: $18,123M → $20,967M (+15.7%) — exceeds 15% threshold
+[NUMERIC] total_derivative_liability: $1,457M → $7,078M (+385.8%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional decreased 19.2% from $12,000M to $9,700M - within normal range but notable decrease
+[LLM_FLAG] fx_forward_notional decreased 17.6% from $18,123M to $20,967M - actually increased 15.7%, prior value may have been understated or mix changed
+[LLM_FLAG] total_derivative_liability increased 386% from $1,457M to $7,078M - significant increase driven by Escrowed Shares liability ($5,611M) and Ireland SCIP arrangement ($755M) not present in prior period
+[LLM_FLAG] total_derivative_asset decreased 16.3% from $983M to $823M - within normal volatility
+[LLM_FLAG] equity_hedge_notional decreased 1.7% from $2,467M to $2,507M - increase of 1.6%, prior figure appears accurate
+[LLM_FLAG] No quantitative sensitivity data found in the provided text. Only section header 'Quantitative and Qualitative Disclosures About Market Risk Page 45' was provided without the actual content containing interest rate or FX sensitivity metrics.
+
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-03-28 ===
+[NUMERIC] total_derivative_asset: $476M → $983M (+106.5%) — exceeds 25% threshold
+[NUMERIC] equity_hedge_notional: $2M → $2,467M (+123250.0%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: equity_hedge_notional changed from 2 to 2,467 (1234x)
+[LLM_FLAG] fx_forward_notional decreased from 20,303 to 18,123 (10.7% decline) - within acceptable range
+[LLM_FLAG] total_derivative_asset increased from 476 to 983 (106.5% increase) - exceeds 50% threshold; primarily driven by increased foreign currency and equity contracts notional, likely due to market movements and hedging strategy changes
+[LLM_FLAG] total_derivative_liability decreased from 1,561 to 1,457 (6.7% decline) - within acceptable range
+[LLM_FLAG] equity_hedge_notional: Using 'Other' category notional of 2,467 vs prior period 2.0 is a significant jump; this likely includes embedded derivative in Ireland SCIP arrangement as noted in footnote 4, not purely equity swaps
+[LLM_FLAG] The filing text provided only shows the section header 'Quantitative and Qualitative Disclosures About Market Risk Page 42' with no actual content. Cannot extract sensitivity metrics without the detailed disclosure text.
+
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-03-28 ===
+[LLM_FLAG] Total derivative assets decreased 56% from $1,082M (Dec 28, 2024) to $476M (Mar 29, 2025) - significant decline warrants review but plausible given quarterly volatility
+[LLM_FLAG] Total derivative liabilities decreased 17% from $1,867M to $1,561M - moderate decrease
+[LLM_FLAG] Foreign currency contract notional decreased 20% from $25,472M to $20,303M - material change but within normal operating range
+[LLM_FLAG] equity_hedge_notional value of $2M represents only the fair value of equity contracts, not a clear notional amount; the filing does not explicitly state an equity derivative notional amount
+[LLM_FLAG] No specific quantitative market risk sensitivity values found in the provided filing excerpt. Only section header 'Quantitative and Qualitative Disclosures About Market Risk Page 35' was provided without the detailed content containing interest rate sensitivity or FX sensitivity figures.
+

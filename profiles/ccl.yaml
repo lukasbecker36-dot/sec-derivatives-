@@ -1,0 +1,41 @@
+issuer: Carnival
+ticker: CCL
+cik: "815097"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fuel_price_exposure:
+    description: "exposure to fuel price changes from ship consumption"
+    section: market_risk
+  functional_currencies:
+    description: "primary operational currencies (USD, EUR, GBP, AUD)"
+    section: market_risk
+  fx_rates_table:
+    description: "foreign exchange rates for USD to AUD, CAD, EUR, GBP"
+    section: market_risk
+  fx_sensitivity_assets_liabilities:
+    description: "impact on assets ($1.4B lower) and liabilities ($1.3B higher) from FX changes"
+    section: market_risk
+  newbuild_euro_commitment:
+    description: "EUR-denominated newbuild contract payments totaling $8.4 billion"
+    section: market_risk
+  newbuild_fx_sensitivity:
+    description: "$84 million change per 1% EUR/USD rate change"
+    section: market_risk
+  debt_composition:
+    description: "breakdown of fixed/floating rate debt in USD and EUR"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "$42 million annual interest expense change per 100bp rate change"
+    section: market_risk
+
+# Unusual features identified:
+#   - Market risk disclosure embedded in broader section rather than separate derivatives note
+#   - No detailed derivative instruments table or notional amounts disclosed
+#   - Only mentions potential use of FX derivatives without specifics
+#   - Substantial newbuild FX exposure ($8.4B) with minimal hedging detail
+#   - Mixed currency debt structure (USD and EUR components)
+

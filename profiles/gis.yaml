@@ -1,0 +1,35 @@
+issuer: General Mills
+ticker: GIS
+cik: "40704"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  commodity_derivatives_notional:
+    description: "Net notional value of commodity derivatives with agricultural and energy breakdowns"
+    section: market_risk
+  interest_rate_swap_amounts:
+    description: "Specific notional amounts for interest rate swaps (€750M, $350M, $750M, $500M)"
+    section: market_risk
+  commodity_mark_to_market_losses:
+    description: "Net loss on mark-to-market valuation of commodity positions by fiscal year"
+    section: market_risk
+  marketable_securities_fair_value:
+    description: "Cost vs fair value of debt and equity securities with unrealized gains/losses"
+    section: market_risk
+  treasury_locks_activity:
+    description: "Treasury lock transactions and associated gains/losses"
+    section: market_risk
+  hedge_accounting_designations:
+    description: "Cash flow hedges vs fair value hedges for interest rate instruments"
+    section: market_risk
+
+# Unusual features identified:
+#   - Commodity derivatives explicitly do not qualify for hedge accounting but gains/losses are reclassified between segments and unallocated corporate items for management reporting
+#   - Detailed narrative of specific interest rate swap transactions with exact dates and amounts during fiscal 2025
+#   - Treasury locks terminated in conjunction with debt issuances with gains deferred to AOCI
+#   - Mark-to-market revaluation of grain inventories reported separately from derivative positions
+#   - Interest rate swap called early by counterparty with cessation of hedge accounting
+

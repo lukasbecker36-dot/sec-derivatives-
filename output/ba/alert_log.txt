@@ -1,0 +1,83 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-03-28 ===
+[NUMERIC] fx_designated_notional: $4,252M → $5,736M (+34.9%) — exceeds 15% threshold
+[NUMERIC] fx_not_designated_notional: $521M → $320M (-38.6%) — exceeds 20% threshold
+[NUMERIC] commodity_not_designated_notional: $32M → $129M (+303.1%) — exceeds 20% threshold
+[NUMERIC] total_notional: $5,274M → $6,620M (+25.5%) — exceeds 20% threshold
+[NUMERIC] net_asset: $157M → $193M (+22.9%) — exceeds 20% threshold
+[NUMERIC] fx_oci_gain_loss: $166M → $210M (+26.5%) — exceeds 20% threshold
+[NUMERIC] commodity_oci_gain_loss: $15M → $52M (+246.7%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-11M → $16M (+245.5%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($425M)
+[NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($38M)
+[NUMERIC] commodity_designated_asset: $63M → $92M (+46.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_asset: $6M → $3M (-50.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] commodity_not_designated_asset: was $0M, now missing
+[DISAPPEARED_FIELD] commodity_not_designated_liability: was $0M, now missing
+[NEW_FIELD] fx_reclass_revenue: appeared for first time ($1M)
+[NUMERIC] fx_reclass_cost: $-21M → $-29M (-38.1%) — exceeds 20% threshold
+[NUMERIC] fx_reclass_ga: $-4M → $2M (+150.0%) — exceeds 20% threshold
+[LLM_FLAG] fx_designated_notional increased 35% from $4,252M to $5,736M - within expected range for active hedging program
+[LLM_FLAG] commodity_designated_notional increased 11.5% from $469M to $435M - actually decreased slightly but within normal range
+[LLM_FLAG] total_notional increased 25.4% from $5,274M to $6,620M - reflects expanded hedging activity
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed significantly from -$11M loss expected to +$16M gain expected - reversal of previous loss expectations
+[LLM_FLAG] commodity_not_designated_notional of $129M noted in 2025 with no corresponding 2024 comparison value shown, and aluminum hedges mentioned as expired in 2025
+[LLM_FLAG] Note on total_notional calculation: Filing shows $6,491M which excludes commodity not designated amount of $129M; total should be $6,620M if $129M is included
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-03-28 ===
+[NUMERIC] fx_not_designated_notional: $225M → $521M (+131.6%) — exceeds 20% threshold
+[NUMERIC] commodity_not_designated_notional: $61M → $32M (-47.5%) — exceeds 20% threshold
+[NUMERIC] net_liability: $-26M → $-40M (-53.8%) — exceeds 20% threshold
+[NUMERIC] commodity_oci_gain_loss: $5M → $15M (+200.0%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-8M → $-11M (-37.5%) — exceeds 20% threshold
+[NUMERIC] credit_contingent_liability_fv: $4M → $3M (-25.0%) — exceeds 20% threshold
+[NUMERIC] fx_designated_liability: $-48M → $-66M (-37.5%) — exceeds 20% threshold
+[NUMERIC] commodity_designated_liability: $-8M → $-1M (+87.5%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_asset: $8M → $6M (-25.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_liability: $-9M → $-11M (-22.2%) — exceeds 20% threshold
+[NUMERIC] fx_reclass_cost: $-12M → $-21M (-75.0%) — exceeds 20% threshold
+[NUMERIC] fx_reclass_ga: $-9M → $-4M (+55.6%) — exceeds 20% threshold
+[NUMERIC] commodity_reclass_ga: $3M → $5M (+66.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_designated_notional: decreased from $4,797M to $4,252M (-11.4%), within normal variation
+[LLM_FLAG] fx_not_designated_notional: increased from $225M to $521M (+131.6%), significant increase - may indicate increased unhedged FX exposure
+[LLM_FLAG] commodity_designated_notional: increased from $478M to $469M (-1.9%), within normal variation
+[LLM_FLAG] commodity_not_designated_notional: decreased from $61M to $32M (-47.5%), approaching 50% threshold
+[LLM_FLAG] total_notional: decreased from $5,561M to $5,274M (-5.2%), within normal variation
+[LLM_FLAG] total_derivative_asset: decreased from $222M to $195M (-12.2%), within normal variation
+[LLM_FLAG] total_derivative_liability: increased from -$65M to -$78M (20% increase in liability), within normal variation
+[LLM_FLAG] net_asset: decreased from $183M to $157M (-14.2%), within normal variation
+[LLM_FLAG] net_liability: increased from -$26M to -$40M (53.8% increase in liability), exceeds 50% threshold - represents shift from net asset position
+[LLM_FLAG] expected_12mo_reclass_from_aoci: changed from -$8M (pre-tax presumed) to -$11M (pre-tax stated), 37.5% increase in expected loss reclassification
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-03-28 ===
+[NUMERIC] fx_not_designated_notional: $121M → $225M (+86.0%) — exceeds 20% threshold
+[NUMERIC] commodity_designated_notional: $361M → $478M (+32.4%) — exceeds 20% threshold
+[NUMERIC] commodity_not_designated_notional: $104M → $61M (-41.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $113M → $222M (+96.5%) — exceeds 25% threshold
+[NUMERIC] total_derivative_liability: $-153M → $-65M (+57.5%) — exceeds 20% threshold
+[NEW_FIELD] net_asset: appeared for first time ($183M)
+[NUMERIC] net_liability: $-120M → $-26M (+78.3%) — exceeds 20% threshold
+[NUMERIC] fx_oci_gain_loss: $67M → $201M (+200.0%) — exceeds 20% threshold
+[NUMERIC] commodity_oci_gain_loss: $1M → $5M (+400.0%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-50M → $-8M (+84.0%) — exceeds 20% threshold
+[NUMERIC] credit_contingent_liability_fv: $14M → $4M (-71.4%) — exceeds 20% threshold
+[NUMERIC] fx_designated_asset: $51M → $153M (+200.0%) — exceeds 20% threshold
+[NUMERIC] fx_designated_liability: $-129M → $-48M (+62.8%) — exceeds 20% threshold
+[NUMERIC] commodity_designated_liability: $-12M → $-8M (+33.3%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_asset: $1M → $8M (+700.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_liability: $-12M → $-9M (+25.0%) — exceeds 20% threshold
+[NEW_FIELD] commodity_not_designated_asset: appeared for first time ($0M)
+[NEW_FIELD] commodity_not_designated_liability: appeared for first time ($0M)
+[NUMERIC] fx_reclass_cost: $-4M → $-12M (-200.0%) — exceeds 20% threshold
+[NUMERIC] commodity_reclass_cost: $-11M → $-18M (-63.6%) — exceeds 20% threshold
+[NUMERIC] commodity_reclass_ga: $2M → $3M (+50.0%) — exceeds 20% threshold
+[LLM_FLAG] fx_designated_notional decreased from $5,123M to $4,797M (-6.4%) - within tolerance but declining trend
+[LLM_FLAG] total_derivative_liability improved from -$153M to -$65M (57.5% improvement, favorable but >50% change)
+[LLM_FLAG] net_liability improved from -$120M to -$26M (78.3% improvement, favorable but >50% change)
+[LLM_FLAG] fx_oci_gain_loss increased significantly from $67M to $201M (+200% approximately, pre-tax vs net-of-tax comparison issue)
+[LLM_FLAG] credit_contingent_liability_fv decreased from $14M to $4M (-71.4%, significant change)
+[LLM_FLAG] fx_designated_asset tripled from $51M to $153M (+200%, significant improvement)
+[LLM_FLAG] fx_designated_liability reduced from -$129M to -$48M (63% reduction, favorable)
+[LLM_FLAG] commodity_not_designated_asset changed from nil disclosure to 0 (not found in current period table)
+[LLM_FLAG] commodity_not_designated_liability changed from nil disclosure to 0 (not found in current period table)
+[LLM_FLAG] The filing section provided is minimal and contains only a statement that there have been no significant changes to market risk since December 31, 2024. No quantitative sensitivity data for FX or commodities is included in this excerpt.
+

@@ -1,0 +1,47 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-03-28 ===
+[NUMERIC] fx_designated_notional: $16,248M → $22,650M (+39.4%) — exceeds 15% threshold
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2,900M, now missing
+[DISAPPEARED_FIELD] commodity_sensitivity_10pct: was $178M, now missing
+[NUMERIC] collateral_held: $28M → $5M (-82.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $69M, now missing
+[LLM_FLAG] collateral_posted decreased from $114M to $102M (10.5% decrease - within normal range)
+[LLM_FLAG] collateral_held decreased significantly from $27M to $5M (81.5% decrease - material change)
+[LLM_FLAG] total_derivative_asset increased from $1,428M to $1,926M (34.8% increase - within plausibility)
+[LLM_FLAG] total_derivative_liability decreased from $2,234M to $1,167M (47.8% decrease - significant improvement)
+[LLM_FLAG] total_notional increased from $145,157M to $161,581M (11.3% increase - within plausibility)
+[LLM_FLAG] fx_not_designated_notional increased from $20,799M to $24,934M (19.9% increase)
+[LLM_FLAG] ir_not_designated_notional increased from $76,977M to $87,293M (13.4% increase)
+[LLM_FLAG] FX sensitivity: Text states exposure is 'insignificant' but does not provide quantitative metric. Prior period was $2,900M. Unable to extract numerical value.
+[LLM_FLAG] Commodity sensitivity: No disclosure of commodity derivative sensitivity in provided text.
+[LLM_FLAG] Interest rate sensitivity: No disclosure of interest rate sensitivity metric (change in Ford Credit pre-tax cash flow from 1% parallel shift) in provided text.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-03-28 ===
+[NUMERIC] total_derivative_liability: $1,751M → $1,275M (-27.2%) — exceeds 20% threshold
+[NUMERIC] collateral_held: $38M → $28M (-26.3%) — exceeds 20% threshold
+[NUMERIC] ir_sensitivity_100bp: $94M → $69M (-26.6%) — exceeds 20% threshold
+[LLM_FLAG] fx_designated_notional decreased 9.3% from $17,900M to $16,248M - within normal variance
+[LLM_FLAG] fx_not_designated_notional decreased 15.5% from $26,220M to $22,138M - within normal variance
+[LLM_FLAG] commodity_designated_notional decreased 2.1% from $966M to $946M - minor change
+[LLM_FLAG] commodity_not_designated_notional decreased 10.5% from $882M to $789M - within normal variance
+[LLM_FLAG] total_derivative_asset increased 1.0% from $1,924M to $1,943M - stable
+[LLM_FLAG] total_derivative_liability decreased 27.2% from $1,751M to $1,275M - significant but not unreasonable
+[LLM_FLAG] collateral_posted decreased 9.6% from $125M to $114M - minor change
+[LLM_FLAG] fx_sensitivity_10pct increased from $2,800M to $2,900M (3.6% change) - within normal range
+[LLM_FLAG] commodity_sensitivity_10pct decreased from $186M to $178M (4.3% change) - within normal range
+[LLM_FLAG] ir_sensitivity_100bp decreased from $94M to $69M (26.6% decrease) - significant but plausible change in Ford Credit's interest rate exposure
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-03-28 ===
+[NUMERIC] fx_not_designated_notional: $20,604M → $26,220M (+27.3%) — exceeds 20% threshold
+[NUMERIC] collateral_held: $26M → $38M (+46.2%) — exceeds 20% threshold
+[NUMERIC] ir_sensitivity_100bp: $67M → $94M (+40.3%) — exceeds 20% threshold
+[LLM_FLAG] fx_not_designated_notional increased 27.3% from 20,604 to 26,220 - significant increase in undesignated FX derivatives
+[LLM_FLAG] ir_not_designated_notional increased 14.7% from 78,371 to 90,266 - notable increase in undesignated interest rate derivatives
+[LLM_FLAG] total_notional increased 7.1% from 149,013 to 159,599 - modest increase overall derivative portfolio
+[LLM_FLAG] ir_sensitivity_100bp: Value increased from $67M to $94M (40% increase). The filing explains this is a hypothetical 1% parallel shift scenario; the metric appears to measure the magnitude of cash flow sensitivity rather than a net impact direction.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-03-28 ===
+[LLM_FLAG] Total notional increased from $145,157M to $149,013M (2.7% increase) - within normal range
+[LLM_FLAG] Total derivative assets increased from $1,428M to $1,599M (12% increase) - reasonable movement
+[LLM_FLAG] Total derivative liabilities decreased from $2,234M to $1,647M (26% decrease) - favorable for the company
+[LLM_FLAG] Collateral posted decreased slightly from $127M to $119M (6% decrease) - immaterial change
+

@@ -1,0 +1,65 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-03-28 ===
+[NUMERIC] total_cash_equivalents_fv: $6,023M → $31,482M (+422.7%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $34,261M → $45,719M (+33.4%) — exceeds 15% threshold
+[NUMERIC] corporate_debt_securities_fv: $13,014M → $17,477M (+34.3%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($352M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($711M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($59M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($5,990M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($599M)
+[NUMERIC] unrealized_gains_equity: $548M → $413M (-24.6%) — exceeds 20% threshold
+[NUMERIC] debt_securities_due_1yr: $2,700M → $13,023M (+382.3%) — exceeds 20% threshold
+[NUMERIC] total_marketable_debt_securities: $28,133M → $39,727M (+41.2%) — exceeds 20% threshold
+[NEW_FIELD] non_marketable_equity_cv: appeared for first time ($20,080M)
+[NEW_FIELD] equity_method_investments_cv: appeared for first time ($7,450M)
+[LLM_FLAG] total_cash_equivalents_fv increased 423% from $6,023M to $31,482M - significant increase driven by substantial growth in money market funds ($27,928M vs $36,165M in 2024) and addition of corporate debt securities in cash equivalents ($1,603M)
+[LLM_FLAG] total_marketable_securities_fv increased 33% from $34,261M to $45,719M - moderate increase consistent with business growth
+[LLM_FLAG] marketable_equity_securities_fv decreased 2% from $6,128M to $5,992M - minor change
+[LLM_FLAG] corporate_debt_securities_fv increased 34% from $13,014M to $17,477M - growth in corporate debt holdings
+[LLM_FLAG] gross_unrealized_gains_debt increased 7% from $281M to $300M - modest increase
+[LLM_FLAG] unrealized_gains_equity decreased 25% from $548M to $413M - decline in equity appreciation
+[LLM_FLAG] debt_securities_due_1yr increased 382% from $2,700M to $13,023M - significant increase in near-term debt maturity concentration
+[LLM_FLAG] debt_securities_due_1to5yr increased 5% from $25,433M to $26,704M - moderate increase
+[LLM_FLAG] total_marketable_debt_securities increased 41% from $28,133M to $39,727M - significant increase in total debt securities portfolio
+[LLM_FLAG] has_derivatives changed from 'No mention' to 'Yes' - Meta began using FX forward contracts in 2025 for cash management purposes
+[LLM_FLAG] fixed_rate_notes_billion increased 103% from $29.0B (2024) to $59.0B (2025) - significant new debt issuance
+[LLM_FLAG] marketable_equity_value increased 387% from $1.23B (2024) to $5.99B (2025) - substantial increase in public equity holdings
+[LLM_FLAG] non_marketable_equity_cv increased 234% from $6.02B (2024) to $20.08B (2025) - significant increase in private equity investments
+[LLM_FLAG] equity_method_investments_cv increased 14,240% from $52M (2024) to $7.45B (2025) - major acquisition or investment in equity method company
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-03-28 ===
+[NUMERIC] marketable_equity_securities_fv: $4,861M → $6,128M (+26.1%) — exceeds 20% threshold
+[NEW_FIELD] unrealized_gains_equity: appeared for first time ($548M)
+[NUMERIC] debt_securities_due_1yr: $3,388M → $2,700M (-20.3%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv decreased 17.0% from 7,261 to 6,023 million - significant but within threshold
+[LLM_FLAG] total_marketable_securities_fv decreased 2.3% from 35,066 to 34,261 million - expected variation
+[LLM_FLAG] marketable_equity_securities_fv increased 26.1% from 4,861 to 6,128 million - moderate increase, plausible given market conditions
+[LLM_FLAG] corporate_debt_securities_fv decreased 6.1% from 13,854 to 13,014 million - expected variation
+[LLM_FLAG] gross_unrealized_gains_debt increased significantly from 0 to 281 million - represents shift from 'not material' to material gains
+[LLM_FLAG] unrealized_gains_equity increased from prior period comparison (548 vs 7,261 prior cash equivalents) - note uses 9-month ended value, different metric
+[LLM_FLAG] debt_securities_due_1yr decreased 20.2% from 3,388 to 2,700 million - expected maturity progression
+[LLM_FLAG] debt_securities_due_1to5yr decreased 5.1% from 26,817 to 25,433 million - expected variation
+[LLM_FLAG] total_marketable_debt_securities decreased 6.9% from 30,205 to 28,133 million - expected variation
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-03-28 ===
+[NUMERIC] total_cash_equivalents_fv: $24,588M → $7,261M (-70.5%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $41,480M → $35,066M (-15.5%) — exceeds 15% threshold
+[NUMERIC] marketable_equity_securities_fv: $3,086M → $4,861M (+57.5%) — exceeds 20% threshold
+[NUMERIC] debt_securities_due_1yr: $7,007M → $3,388M (-51.6%) — exceeds 20% threshold
+[NUMERIC] total_marketable_debt_securities: $38,394M → $30,205M (-21.3%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv: Declined 70.5% from $24,588M to $7,261M - significant decrease in cash equivalents position
+[LLM_FLAG] total_marketable_securities_fv: Declined 15.4% from $41,480M to $35,066M - moderate decrease
+[LLM_FLAG] marketable_equity_securities_fv: Increased 57.5% from $3,086M to $4,861M - notable increase in equity holdings
+[LLM_FLAG] corporate_debt_securities_fv: Declined 19.6% from $17,212M to $13,854M (marketable portion) - substantial decrease in corporate debt
+[LLM_FLAG] debt_securities_due_1yr: Declined 51.6% from $7,007M to $3,388M - notable shift away from near-term maturities
+[LLM_FLAG] debt_securities_due_1to5yr: Declined 14.5% from $31,387M to $26,817M - moderate decrease in intermediate-term bonds
+[LLM_FLAG] total_marketable_debt_securities: Declined 21.4% from $38,394M to $30,205M - substantial decrease overall
+[LLM_FLAG] Filing text appears to be incomplete - only contains a reference to the quantitative and qualitative disclosures section header, not the actual disclosure content needed to extract requested fields.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-03-28 ===
+[LLM_FLAG] Total cash equivalents decreased from $36,671M (12/31/2024) to $24,588M (3/31/2025), a 33% decrease. This is within acceptable variance but reflects significant reduction in cash position.
+[LLM_FLAG] Marketable equity securities increased from $1,226M (12/31/2024) to $3,086M (3/31/2025), a 152% increase. This represents a notable increase in equity exposure in Q1 2025.
+[LLM_FLAG] Total marketable securities increased from $33,926M (12/31/2024) to $41,480M (3/31/2025), a 22% increase.
+[LLM_FLAG] Provided text is only a section header referencing the 10-K annual report for year ended December 31, 2024, not actual 10-Q disclosure for period ending 2025-03-31. No substantive market risk disclosure data present in excerpt.
+
