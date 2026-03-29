@@ -1,0 +1,27 @@
+=== 10-Q | Period ending 2026-02-27 | Processed 2026-03-29 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $2,700M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, interest_rate_swap_notional)
+[LLM_FLAG] This 10-Q filing section contains only a reference statement indicating no material changes from the prior 10-K. Detailed market risk disclosures are not included in this excerpt and would be found in the Annual Report on Form 10-K for fiscal year ended November 28, 2025. All quantitative metrics cannot be extracted from this section alone.
+
+=== 10-Q | Period ending 2025-08-29 | Processed 2026-03-29 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
+=== 10-Q | Period ending 2025-05-30 | Processed 2026-03-29 ===
+[NUMERIC] fixed_rate_notes_billion: $1M → $3M (+125.0%) — exceeds 20% threshold
+[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($2,700M)
+[LLM_FLAG] fixed_rate_notes_billion increased from 1.2B (prior period) to 2.7B (current period) - an increase of 125%, which exceeds the 50% threshold. This appears to be driven by new interest rate swaps entered during the six-month period ending May 30, 2025.
+[LLM_FLAG] The filing section appears to be truncated or partial - it references 'There have been no other material changes in our market risk exposures' suggesting the complete disclosure should reference the 10-K filing for full details on derivatives, FX exposures, and sensitivity analyses.
+
+=== 10-Q | Period ending 2025-02-28 | Processed 2026-03-29 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $6,540M, now missing
+[NUMERIC] fixed_rate_notes_billion: $6M → $1M (-80.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_fx_contracts_notional: was $6,540M, now missing
+[DISAPPEARED_FIELD] sensitivity_analysis_results: was $456M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $2,700M, now missing
+[DISAPPEARED_FIELD] long_term_investment_exposure: was $1,320M, now missing
+[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (fx_forwards_outstanding, total_fx_contracts_notional, sensitivity_analysis_results, interest_rate_swap_notional, long_term_investment_exposure)
+[LLM_FLAG] CRITICAL: fixed_rate_notes_billion decreased from $6.15B to $1.20B (80.5% decline) - significant reduction in hedged debt exposure, likely due to debt repayment or refinancing in January 2025
+[LLM_FLAG] Missing prior period disclosures: FX forwards ($6.54B), sensitivity analysis ($456M), interest rate swaps ($2.7B notional), and long-term investment exposure ($1.32B) are not mentioned in this quarterly excerpt - this appears to be a partial disclosure that references the full 10-K for complete market risk information
+

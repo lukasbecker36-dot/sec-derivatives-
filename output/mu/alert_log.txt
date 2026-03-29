@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-02-26 | Processed 2026-03-29 ===
+[LLM_FLAG] Prior period indicated 'Yes' for has_derivatives, but current filing provides no detailed derivatives disclosure. Filing states disclosures are in 10-K and that there were 'no material changes' during the six-month period, which may explain the lack of detail in this 10-Q excerpt.
+
+=== 10-Q | Period ending 2025-11-27 | Processed 2026-03-29 ===
+[LLM_FLAG] This is a 10-Q interim filing (period ending November 27, 2025) that explicitly states 'There have been no material changes to our market risk during the three months ended November 27, 2025' and refers readers to the annual Form 10-K for year ended August 28, 2025 for quantitative and qualitative disclosures. No detailed market risk disclosure is provided in this excerpt.
+
+=== 10-Q | Period ending 2025-05-29 | Processed 2026-03-29 ===
+[LLM_FLAG] Filing excerpt is minimal and appears to be a cross-reference statement directing readers to the Form 10-K. Detailed market risk quantitative disclosures are not included in this excerpt.
+
+=== 10-Q | Period ending 2025-02-27 | Processed 2026-03-29 ===
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $11M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity: was $572M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fixed_rate_notes_billion, fx_sensitivity)
+[LLM_FLAG] This is a condensed disclosure that explicitly defers detailed market risk information to the 10-K filing. The section states 'There have been no material changes to our market risk during the six months ended February 27, 2025,' indicating minimal changes from prior period but providing no specific numerical data. All specific values must be obtained from the August 29, 2024 10-K.
+
 === 10-Q | Period ending 2026-02-26 | Processed 2026-03-28 ===
 [LLM_FLAG] Fixed-rate debt increased significantly from $8.52B to $10.55B (23.8% increase year-over-year), consistent with disclosed borrowing activity
 [LLM_FLAG] Floating-rate debt decreased substantially from $2.89B to $984M (65.9% decrease), indicating debt refinancing or repayment activity

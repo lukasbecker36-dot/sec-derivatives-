@@ -1,0 +1,29 @@
+=== 10-Q | Period ending 2026-02-28 | Processed 2026-03-29 ===
+[LLM_FLAG] Fixed rate USD decreased from 57% to 52% (5 percentage point change)
+[LLM_FLAG] EUR fixed rate increased from 29% to 33% (4 percentage point change)
+[LLM_FLAG] Floating rate USD increased from 3% to 5% (2 percentage point change)
+[LLM_FLAG] EUR floating rate decreased slightly from 11% to 11% (no material change)
+
+=== 10-Q | Period ending 2025-08-31 | Processed 2026-03-29 ===
+[LLM_FLAG] Debt composition shows EUR fixed rate increased from 24% to 29% (4 percentage point increase or 20.8% relative change - within acceptable range)
+[LLM_FLAG] Fixed rate USD decreased from 58% to 57% (1 percentage point decrease)
+[LLM_FLAG] Floating rate USD decreased from 7% to 3% (4 percentage point decrease or 57.1% relative change - exceeds 50% threshold)
+[LLM_FLAG] Most detailed market risk metrics are referenced as being in Note 10 and Form 10-K but not provided in this excerpt
+
+=== 10-Q | Period ending 2025-05-31 | Processed 2026-03-29 ===
+[LLM_FLAG] Fixed rate USD debt decreased from 61% to 58% (3 percentage point change)
+[LLM_FLAG] EUR fixed rate debt increased from 23% to 24% (1 percentage point change)
+[LLM_FLAG] Floating rate USD debt unchanged at 7%
+[LLM_FLAG] EUR floating rate debt increased from 10% to 11% (1 percentage point change)
+[LLM_FLAG] Text states 'no material changes to our exposure to market risks since 2024 Form 10-K' but minimal disclosure provided in this excerpt
+
+=== 10-Q | Period ending 2025-02-28 | Processed 2026-03-29 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $42M, now missing
+[DISAPPEARED_FIELD] newbuild_euro_commitment: was $8,400M, now missing
+[DISAPPEARED_FIELD] newbuild_fx_sensitivity: was $84M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $42M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (ir_sensitivity_100bp, newbuild_euro_commitment, newbuild_fx_sensitivity, interest_rate_sensitivity)
+[LLM_FLAG] Debt composition has changed: Fixed rate USD decreased from 54% to 61%; EUR fixed rate decreased from 31% to 23%; Floating rate USD increased from 5% to 7%; EUR floating rate unchanged at 10%
+[LLM_FLAG] This appears to be an excerpt from a 10-Q filing with limited market risk disclosures; full details likely in Note 10 and 10-K referenced in text
+[LLM_FLAG] Multiple critical fields not found in provided text: ir_sensitivity_100bp, fx_forwards_outstanding, fuel_price_exposure, fx_rates_table, newbuild_euro_commitment, newbuild_fx_sensitivity, and others
+
