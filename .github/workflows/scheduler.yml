@@ -57,6 +57,29 @@ jobs:
           name: run-summary
           path: summary.json
 
+      - name: Generate email summary
+        id: email_check
+        run: |
+          python3 scripts/build_email_summary.py summary.json > email_body.html
+          if [ -s email_body.html ]; then
+            echo "has_news=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_news=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Send email notification
+        if: steps.email_check.outputs.has_news == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: "SEC Derivatives — New filing updates"
+          to: Lukas.becker@infopro-digital.com
+          from: SEC Derivatives Bot <${{ secrets.SMTP_USERNAME }}>
+          html_body: file://email_body.html
+
       - name: Commit registry and profile changes
         if: ${{ github.event.inputs.dry_run != 'true' }}
         run: |
