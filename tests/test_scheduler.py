@@ -146,6 +146,50 @@ class TestPassRegistered:
         assert summary.registered_checked == 0
         mock_check.assert_not_called()
 
+    @patch('src.scheduler.activate_issuer')
+    @patch('src.scheduler.check_new_filing')
+    @patch('src.scheduler.append_activation_event')
+    @patch('src.scheduler.append_review_item')
+    def test_retries_failed_activation(self, mock_review, mock_log, mock_check, mock_activate):
+        from src.activation import ActivationResult
+        mock_check.return_value = {
+            'period_end': '2025-03-31', 'form_type': '10-Q',
+            'accession_number': 'a1', 'primary_document': 'd1',
+        }
+        mock_activate.return_value = ActivationResult(
+            ticker='ACN', cik='1467373', success=True,
+            new_status='active', config_path='profiles/acn.yaml',
+            score=0.75, reasons=['Good'],
+        )
+
+        universe = [_make_row('ACN', 'failed_activation', cik='1467373',
+                              activation_fail_count='1')]
+        summary = RunSummary()
+
+        result = _pass_registered(universe, '2025-01-01', 10,
+                                  Path('/tmp/out'), False, summary,
+                                  check_interval_days=0)
+        assert summary.activations_attempted == 1
+        assert summary.activations_succeeded == 1
+
+    @patch('src.scheduler.check_new_filing')
+    def test_failed_issuers_skip_recency_check(self, mock_check):
+        """Failed issuers should always be retried regardless of last_checked_at."""
+        from datetime import datetime, timezone
+        now = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+        mock_check.return_value = None
+
+        universe = [_make_row('ACN', 'failed_activation', cik='1467373',
+                              last_checked_at=now, activation_fail_count='1')]
+        summary = RunSummary()
+
+        result = _pass_registered(universe, '2025-01-01', 10,
+                                  Path('/tmp/out'), False, summary,
+                                  check_interval_days=3)
+        assert summary.registered_skipped == 0
+        assert summary.registered_checked == 1
+        mock_check.assert_called_once()
+
 
     @patch('src.scheduler.activate_issuer')
     @patch('src.scheduler.check_new_filing')
