@@ -1,0 +1,40 @@
+issuer: Delta Air Lines
+ticker: DAL
+cik: "27904"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fuel_price_sensitivity:
+    description: "fuel price impact per gallon change"
+    section: market_risk
+  interest_rate_sensitivity_fair_value:
+    description: "fair value impact of 100bp rate change on fixed debt"
+    section: market_risk
+  interest_rate_sensitivity_expense:
+    description: "annual expense impact of 100bp rate change on variable debt"
+    section: market_risk
+  foreign_currency_investment_exposure:
+    description: "fair value of foreign currency denominated investments"
+    section: market_risk
+  foreign_currency_sensitivity:
+    description: "10% currency change impact"
+    section: market_risk
+  equity_investment_fair_value:
+    description: "total fair value of equity investments"
+    section: market_risk
+  equity_investment_sensitivity:
+    description: "10% equity price change impact"
+    section: market_risk
+  debt_amounts:
+    description: "fixed-rate, variable-rate debt and lease amounts"
+    section: market_risk
+
+# Unusual features identified:
+#   - fuel derivatives limited to Monroe's inventory rather than operational hedging
+#   - no open foreign currency derivatives at period end
+#   - sensitivity analysis explicitly excludes demand and economic factors
+#   - references to external notes for detailed derivative information
+
