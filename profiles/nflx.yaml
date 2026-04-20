@@ -1,0 +1,41 @@
+issuer: Netflix
+ticker: NFLX
+cik: "1065280"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  debt_amount:
+    description: "total debt outstanding"
+    section: market_risk
+  foreign_currency_revenue_percentage:
+    description: "percentage of revenue in non-USD currencies"
+    section: market_risk
+  foreign_currency_expense_percentage:
+    description: "percentage of operating expenses in non-USD currencies"
+    section: market_risk
+  constant_currency_impact:
+    description: "revenue impact on constant currency basis"
+    section: market_risk
+  fx_sensitivity_revenue_hedges:
+    description: "AOCI impact from 10% USD weakening on revenue hedges"
+    section: market_risk
+  fx_sensitivity_content_hedges:
+    description: "AOCI impact from 10% USD strengthening on content hedges"
+    section: market_risk
+  fx_sensitivity_monetary_items:
+    description: "income impact from 10% adverse exchange rate change on monetary items"
+    section: market_risk
+  primary_currencies:
+    description: "main foreign currencies with exposure"
+    section: market_risk
+
+# Unusual features identified:
+#   - comprehensive hedge designation details with specific AOCI impacts
+#   - multiple hedge types (cash flow, net investment, fair value) in single disclosure
+#   - detailed sensitivity analysis with specific dollar amounts and directional changes
+#   - includes both derivative and non-derivative hedging instruments
+#   - separates hedging strategies by underlying exposure type (revenue vs content vs net investment)
+

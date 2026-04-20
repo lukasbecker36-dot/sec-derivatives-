@@ -1,0 +1,35 @@
+issuer: Fastenal
+ticker: FAST
+cik: "815556"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  tariff_impact:
+    description: "qualitative assessment and quantitative impact of tariffs on net income"
+    section: market_risk
+  steel_price_impact:
+    description: "qualitative assessment and quantitative impact of commodity steel prices on net income"
+    section: market_risk
+  energy_price_impact:
+    description: "qualitative assessment and quantitative impact of commodity energy prices on net income"
+    section: market_risk
+  fx_exposure:
+    description: "primary currency exposures and impact on net income"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "floating rate debt exposure and sensitivity analysis"
+    section: market_risk
+  hedging_policy:
+    description: "company's approach to hedging market risks"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative instruments disclosed despite market risk exposures
+#   - Company explicitly states it does not hedge foreign currency or interest rate risk
+#   - All market risk impacts described as 'immaterial' with only one quantitative sensitivity metric provided
+#   - Focus on operational market risks rather than financial derivatives
+#   - Forward-looking statement about potential tariff impacts in future quarters
+

@@ -1,0 +1,38 @@
+issuer: PepsiCo
+ticker: PEP
+cik: "77476"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  market_risks:
+    description: "commodity prices, foreign exchange rates, interest rates"
+    section: market_risk
+  hedge_types:
+    description: "cash flow, fair value, net investment hedges"
+    section: market_risk
+  derivative_terms:
+    description: "maximum terms by instrument type (e.g., 2 years for commodities, 6 years for interest rate swaps)"
+    section: market_risk
+  variable_debt_percentage:
+    description: "percentage of total debt subject to variable rates after swaps"
+    section: market_risk
+  credit_contingent_fair_value:
+    description: "fair value of derivatives with credit-risk contingent features in net liability position"
+    section: market_risk
+  collateral_posted:
+    description: "amount of collateral posted under derivative contracts"
+    section: market_risk
+  hedge_effectiveness_method:
+    description: "spot method for net investment hedges"
+    section: market_risk
+
+# Unusual features identified:
+#   - No quantitative tables for notional amounts or fair values in main derivatives section
+#   - Credit-risk contingent features with specific rating thresholds (A2/A Moody's/S&P)
+#   - References market risk disclosure in Item 7 rather than providing full quantitative analysis
+#   - Detailed term limitations by instrument type
+#   - Spot method explicitly mentioned for hedge effectiveness testing
+
