@@ -1,3 +1,34 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-21 ===
+[NUMERIC] fx_sensitivity_content_hedges: $-210M → $-274M (-30.5%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_monetary_items: $-54M → $-32M (+40.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_sensitivity_revenue_hedges increased by 3% from prior period ($2,263M vs $2,298M) - within normal range
+[LLM_FLAG] fx_sensitivity_content_hedges increased by 30% from prior period ($274M vs $210M) - moderate change, within acceptable range
+[LLM_FLAG] fx_sensitivity_monetary_items increased significantly by 41% from prior period ($32M vs $54M) but absolute value decreased - note prior period had $54M shown as negative impact
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-21 ===
+[NUMERIC] fx_sensitivity_monetary_items: $-10M → $-54M (-440.0%) — exceeds 20% threshold
+[LLM_FLAG] fx_sensitivity_revenue_hedges: -2198 vs prior -2224 (1.2% decrease, within acceptable range)
+[LLM_FLAG] fx_sensitivity_content_hedges: -210 vs prior -195 (7.7% increase, within acceptable range)
+[LLM_FLAG] fx_sensitivity_monetary_items: -54 vs prior -10 (440% increase, significant change but company added new sensitivity details)
+[LLM_FLAG] primary_currencies: Argentine peso added to prior list, likely due to increased business exposure in Argentina
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-21 ===
+[NUMERIC] constant_currency_impact: $311M → $379M (+21.9%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_monetary_items: $-46M → $-10M (+78.3%) — exceeds 20% threshold
+[LLM_FLAG] fx_sensitivity_revenue_hedges: Increased from -$1,908M (prior period) to -$2,224M (316 basis point increase). This represents a 16.6% increase in AOCI sensitivity, potentially due to larger hedge positions or increased volatility in foreign currencies
+[LLM_FLAG] fx_sensitivity_content_hedges: Decreased from -$201M (prior period) to -$195M (3% decrease). Minor change, within reasonable variance
+[LLM_FLAG] fx_sensitivity_monetary_items: Decreased significantly from -$46M (prior period) to -$10M (78% decrease). This substantial change may reflect reduced net monetary asset exposure or improved hedging effectiveness
+[LLM_FLAG] fixed_rate_notes_billion: Decreased from $15.1B (prior period) to $14.5B (4% decrease). Likely reflects debt repayment activity
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-21 ===
+[NUMERIC] fx_sensitivity_monetary_items: $-1M → $-46M (-4500.0%) — exceeds 20% threshold
+[LLM_FLAG] fx_sensitivity_revenue_hedges: Changed from -2296.0 to -1908.0 (17% decrease) - within expected range but notable change
+[LLM_FLAG] fx_sensitivity_content_hedges: Changed from -237.0 to -201.0 (15% decrease) - within expected range
+[LLM_FLAG] debt_amount: Increased from 14500.0 to 15100.0 (4% increase) - modest increase in debt outstanding
+[LLM_FLAG] foreign_currency_revenue_percentage: Decreased from 56.0% to 55.0% (2% decrease) - relatively stable
+[LLM_FLAG] foreign_currency_expense_percentage: Decreased from 31.0% to 29.0% (6% decrease) - modest change
+[LLM_FLAG] constant_currency_impact: Increased from 271.0 to 311.0 (15% increase) - larger FX headwind in Q1 2025
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-04-20 ===
 [LLM_FLAG] fx_sensitivity_monetary_items shows 97% decrease from prior period ($38M to $1M) - significant decline warrants investigation into whether exposure has changed materially or if hedging activities have been adjusted
 

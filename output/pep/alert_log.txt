@@ -1,3 +1,37 @@
+=== 10-Q | Period ending 2026-03-21 | Processed 2026-04-21 ===
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $2,611M, now missing
+[NUMERIC] gross_unrealized_gains_debt: $1,067M → $745M (-30.2%) — exceeds 20% threshold
+[LLM_FLAG] corporate_debt_securities_fv decreased from 2,344 million to 1,998 million (14.8% decrease) - plausible given market conditions but within normal range
+[LLM_FLAG] gross_unrealized_gains_debt decreased from 1,067 million to 745 million (30.2% decrease) - significant but plausible given market interest rate movements
+[LLM_FLAG] marketable_equity_securities_fv (index funds) decreased slightly from 341 to 336 million (1.5%) - minor change
+[LLM_FLAG] Provided text is a cross-reference section only, not substantive disclosure. All quantitative and qualitative market risk details are referenced in other sections (Item 2, Item 1A, Item 7, and Note 9 to consolidated financial statements). Actual derivative and market risk data cannot be extracted from this excerpt.
+
+=== 10-Q | Period ending 2025-09-06 | Processed 2026-04-21 ===
+[NUMERIC] total_marketable_securities_fv: $1,219M → $2,611M (+114.2%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $958M → $325M (-66.1%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $261M → $2,344M (+798.1%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $526M → $1,067M (+102.9%) — exceeds 20% threshold
+[LLM_FLAG] marketable_equity_securities_fv: Value decreased from 958 to 325 (66% decrease). This represents a shift in composition, primarily due to Index funds declining from $336M to $325M.
+[LLM_FLAG] corporate_debt_securities_fv: Value increased from 261 to 2344 (798% increase). This is a substantial change primarily driven by acquisition of Celsius convertible preferred shares ($2,077M) and other Level 3 available-for-sale debt securities ($267M) in August 2025.
+[LLM_FLAG] gross_unrealized_gains_debt: Value increased from 526 to 1067 (103% increase). This significant gain is directly attributed to the Celsius investment, which recorded net unrealized gains of $722M for the 36-week period.
+[LLM_FLAG] This filing excerpt is only a header/introductory section with cross-references to other disclosure locations. Actual quantitative and qualitative market risk data is not contained in the text provided. All substantive disclosure is referenced as being in Note 9 to consolidated financial statements and other sections of the filing.
+
+=== 10-Q | Period ending 2025-06-14 | Processed 2026-04-21 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $44M, now missing
+[NUMERIC] gross_unrealized_gains_debt: $430M → $526M (+22.3%) — exceeds 20% threshold
+[LLM_FLAG] gross_unrealized_gains_debt: Value decreased from 430 million (prior period) to 526 million (current period), which is a 22% increase - within normal variance and not flagged as anomalous.
+[LLM_FLAG] total_marketable_securities_fv: Value decreased from 1,372 million to 1,219 million, a decrease of 11%, which is within reasonable bounds but reflects decreased valuations on Celsius investment (from 888 to 958 appears contradictory with overall decline - this is due to composition change with 'Other' category increasing from 256 to 261).
+
+=== 10-Q | Period ending 2025-03-22 | Processed 2026-04-21 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($44M)
+[NUMERIC] total_marketable_securities_fv: $2,127M → $1,372M (-35.5%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $341M → $888M (+160.4%) — exceeds 20% threshold
+[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($242M)
+[NUMERIC] gross_unrealized_gains_debt: $860M → $430M (-50.0%) — exceeds 20% threshold
+[LLM_FLAG] gross_unrealized_gains_debt: Value decreased 50.0% from prior period ($860M to $430M). This represents a significant decline in unrealized gains on debt securities, likely due to interest rate changes or portfolio composition shifts during the quarter.
+[LLM_FLAG] total_marketable_securities_fv: Value increased 64.5% from prior period ($2,127M to $1,372M appears inconsistent with total assets of $1,546M shown in table). Reconciliation note: The $1,372M calculation represents available-for-sale securities ($1,130M) + index funds ($314M) + prepaid forwards ($9M), but excludes derivative assets. The table shows total assets of $1,546M including derivatives. Prior period comparison is unclear due to classification differences.
+[LLM_FLAG] The provided filing text only contains a cross-reference section header with no substantive quantitative or qualitative market risk disclosures. All substantive data would be found in Note 9 of the 2024 Form 10-K and the referenced sections of Item 2 and Item 7, which are not provided in this excerpt.
+
 === 10-Q | Period ending 2026-03-21 | Processed 2026-04-20 ===
 [LLM_FLAG] Provided text is only a section header/reference that redirects to Item 7 MD&A - the actual quantitative and qualitative disclosures about market risk are not included in the excerpt provided.
 

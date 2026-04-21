@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-21 ===
+[NUMERIC] ir_sensitivity_100bp: $0M → $0M (+33.3%) — exceeds 20% threshold
+[LLM_FLAG] steel_price_impact: Direction of steel prices changed from lower (prior period) to higher (current period), but materiality assessment remains consistent
+[LLM_FLAG] ir_sensitivity_100bp: Increased from $0.3M to $0.4M (33% increase), likely reflecting higher debt levels or floating rate exposure in nine-month period vs. six-month prior period comparison
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-21 ===
+[NUMERIC] ir_sensitivity_100bp: $0M → $0M (+200.0%) — exceeds 20% threshold
+[LLM_FLAG] IR_SENSITIVITY_100BP: Increased from $0.1M (prior period) to $0.3M (current period) - 200% increase. This reflects a tripling of interest rate sensitivity. Likely due to increased floating rate debt levels under Credit Facility.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-21 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-04-20 ===
 [LLM_FLAG] extraction_failed: Expecting ',' delimiter: line 6 column 83 (char 180)
 

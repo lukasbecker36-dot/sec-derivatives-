@@ -25,7 +25,9 @@
       "notional amount",
       "unrealized gain",
       "designated as hedging",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "net investment hedging",
+      "cash flow hedging"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -43,6 +45,42 @@
       ],
       "fields_extracted": 4,
       "fields_null": 15
+    },
+    {
+      "filing_date": "2025-03-22",
+      "form_type": "10-Q",
+      "period_end": "2025-03-22",
+      "processed_at": "2026-04-21T07:24:00Z",
+      "sections_found": [
+        "financial_instruments",
+        "market_risk"
+      ],
+      "fields_extracted": 6,
+      "fields_null": 13
+    },
+    {
+      "filing_date": "2025-06-14",
+      "form_type": "10-Q",
+      "period_end": "2025-06-14",
+      "processed_at": "2026-04-21T07:24:12Z",
+      "sections_found": [
+        "financial_instruments",
+        "market_risk"
+      ],
+      "fields_extracted": 5,
+      "fields_null": 14
+    },
+    {
+      "filing_date": "2025-09-06",
+      "form_type": "10-Q",
+      "period_end": "2025-09-06",
+      "processed_at": "2026-04-21T07:24:27Z",
+      "sections_found": [
+        "financial_instruments",
+        "market_risk"
+      ],
+      "fields_extracted": 6,
+      "fields_null": 13
     }
   ]
 }
