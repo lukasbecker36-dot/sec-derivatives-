@@ -18,7 +18,13 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "net investment hedge",
+      "cash flow hedge",
+      "foreign exchange forward",
+      "notional amount",
+      "aoci"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -119,6 +125,18 @@
       ],
       "fields_extracted": 14,
       "fields_null": 6
+    },
+    {
+      "filing_date": "2026-03-31",
+      "form_type": "10-Q",
+      "period_end": "2026-03-31",
+      "processed_at": "2026-04-23T07:23:11Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 16,
+      "fields_null": 4
     }
   ]
 }

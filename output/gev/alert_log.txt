@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-23 ===
+[DISAPPEARED_FIELD] fx_oci_gain_loss: was $54M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $100M, now missing
+[NUMERIC] cash_flow_hedge_aoci_balance: $100M → $36M (-64.0%) — exceeds 20% threshold
+[LLM_FLAG] fx_designated_notional increased 7% from 6,547 to 7,011 - within normal range
+[LLM_FLAG] fx_not_designated_notional decreased 2.7% from 38,005 to 36,964 - within normal range
+[LLM_FLAG] total_notional decreased 1.2% from 44,940 to 44,414 - within normal range
+[LLM_FLAG] total_derivative_asset increased 6.8% from 846 to 904 - within normal range
+[LLM_FLAG] total_derivative_liability increased 17.3% from 526 to 617 - notable increase but within reasonable bounds
+[LLM_FLAG] net_asset increased 23% from 296 to 290 (actually decreased slightly) - recalculation shows net asset position declined marginally
+[LLM_FLAG] cash_flow_hedge_aoci_balance decreased 64% from 100 to 36 million - significant decline; company reclassified 21 million gains to earnings in Q1 2026
+[LLM_FLAG] The filing section provided contains only qualitative discussion of market risk exposures and references the 10-K for detailed quantitative disclosures. No specific sensitivity figures (10% adverse move calculations) are included in this excerpt.
+[LLM_FLAG] The text explicitly directs readers to Item 7A in the 10-K for detailed market risk information, suggesting the quantitative sensitivities are disclosed elsewhere in the full filing.
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-03-28 ===
 [NUMERIC] net_asset: $227M → $296M (+30.4%) — exceeds 20% threshold
 [NUMERIC] net_liability: $-102M → $-137M (-34.3%) — exceeds 20% threshold

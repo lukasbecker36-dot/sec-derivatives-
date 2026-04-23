@@ -1,3 +1,31 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-23 ===
+[DROPPED_TO_ZERO] commodity_not_designated_notional: $129M → $0M
+[NUMERIC] total_derivative_liability: $-88M → $-127M (-44.3%) — exceeds 20% threshold
+[NUMERIC] net_liability: $-43M → $-60M (-39.5%) — exceeds 20% threshold
+[NUMERIC] fx_oci_gain_loss: $210M → $-25M (-111.9%) — exceeds 20% threshold
+[NUMERIC] commodity_oci_gain_loss: $52M → $17M (-67.3%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $16M → $8M (-50.0%) — exceeds 20% threshold
+[NUMERIC] credit_contingent_liability_fv: $3M → $4M (+33.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $425M, now missing
+[DISAPPEARED_FIELD] commodity_sensitivity_10pct: was $38M, now missing
+[NUMERIC] fx_designated_liability: $-77M → $-124M (-61.0%) — exceeds 20% threshold
+[NUMERIC] commodity_designated_asset: $92M → $111M (+20.7%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_asset: $3M → $4M (+33.3%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_liability: $-10M → $-3M (+70.0%) — exceeds 20% threshold
+[NEW_FIELD] commodity_not_designated_asset: appeared for first time ($0M)
+[NEW_FIELD] commodity_not_designated_liability: appeared for first time ($0M)
+[NUMERIC] fx_reclass_cost: $-29M → $-6M (+79.3%) — exceeds 20% threshold
+[NUMERIC] fx_reclass_ga: $2M → $11M (+450.0%) — exceeds 20% threshold
+[NUMERIC] commodity_reclass_cost: $-18M → $2M (+111.1%) — exceeds 20% threshold
+[NUMERIC] commodity_reclass_ga: $6M → $2M (-66.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_designated_notional decreased 0.7% from 5,736 to 5,694 - minor and expected
+[LLM_FLAG] fx_oci_gain_loss changed significantly from +210 (prior period) to -25 (current quarter) - represents a swing in FX mark-to-market during Q1 2026
+[LLM_FLAG] total_derivative_liability increased in absolute value from -88 to -127 (44.3% increase) - indicates deterioration in derivative positions
+[LLM_FLAG] expected_12mo_reclass_from_aoci decreased from prior implied 16 to 8 (50% decrease) - rounding and portfolio changes could explain this
+[LLM_FLAG] No specific FX sensitivity values disclosed in this section
+[LLM_FLAG] No specific commodity sensitivity values disclosed in this section
+[LLM_FLAG] Filing states 'no significant changes' to market risk since December 31, 2025 but does not provide updated quantitative sensitivity figures
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-03-28 ===
 [NUMERIC] fx_designated_notional: $4,252M → $5,736M (+34.9%) — exceeds 15% threshold
 [NUMERIC] fx_not_designated_notional: $521M → $320M (-38.6%) — exceeds 20% threshold

@@ -15,7 +15,13 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "cash flow hedge",
+      "commodity swap",
+      "notional amount",
+      "designated as hedging",
+      "aoci"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -90,6 +96,18 @@
       "period_end": "2025-12-31",
       "processed_at": "",
       "sections_found": [],
+      "fields_extracted": 29,
+      "fields_null": 2
+    },
+    {
+      "filing_date": "2026-03-31",
+      "form_type": "10-Q",
+      "period_end": "2026-03-31",
+      "processed_at": "2026-04-23T07:22:54Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
       "fields_extracted": 29,
       "fields_null": 2
     }
