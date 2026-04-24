@@ -1,0 +1,41 @@
+issuer: CenterPoint Energy
+ticker: CNP
+cik: "1130310"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  floating_rate_obligations:
+    description: "amounts and sensitivity analysis for floating rate debt"
+    section: market_risk
+  fixed_rate_debt:
+    description: "principal amounts and fair values of fixed-rate debt"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "100 basis point increase impact on interest expense"
+    section: market_risk
+  fair_value_sensitivity:
+    description: "10% interest rate decline impact on fair value"
+    section: market_risk
+  zens_derivative_component:
+    description: "fair value and sensitivity of derivative component liability"
+    section: market_risk
+  equity_holdings:
+    description: "shares of AT&T, Charter, and WBD held for ZENS obligations"
+    section: market_risk
+  equity_sensitivity:
+    description: "10% market value decrease impact"
+    section: market_risk
+  commodity_risk_exposure:
+    description: "exposure during severe weather events"
+    section: market_risk
+
+# Unusual features identified:
+#   - ZENS obligation bifurcated into debt and derivative components
+#   - Equity securities held specifically to offset ZENS derivative exposure
+#   - Market risk disclosure integrated across multiple entity levels (CenterPoint Energy, Houston Electric, CERC)
+#   - Commodity risk primarily weather-related rather than trading activities
+#   - No traditional derivatives notional amounts or fair value hierarchy tables
+

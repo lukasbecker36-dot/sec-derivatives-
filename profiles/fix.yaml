@@ -1,0 +1,35 @@
+issuer: Comfort Systems USA
+ticker: FIX
+cik: "1035983"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  market_risk_exposure:
+    description: "types of market risk exposure"
+    section: market_risk
+  derivative_usage:
+    description: "purpose and extent of derivative use"
+    section: market_risk
+  fixed_rate_debt_schedule:
+    description: "principal amounts and interest rates by maturity year"
+    section: market_risk
+  variable_rate_debt:
+    description: "variable rate debt amounts and current rates"
+    section: market_risk
+  revolving_credit_rate:
+    description: "weighted average interest rate on credit facility"
+    section: market_risk
+  contingent_earnout_valuation:
+    description: "fair value methodology for earnout payments"
+    section: market_risk
+
+# Unusual features identified:
+#   - minimal derivative disclosure with no specifics on instrument types or amounts
+#   - debt maturity table serves as primary quantitative disclosure
+#   - includes contingent earnout fair value methodology in market risk section
+#   - no traditional derivative fair value or notional amount tables
+#   - commodities risk mentioned but dismissed as immaterial
+

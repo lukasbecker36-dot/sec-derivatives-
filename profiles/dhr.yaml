@@ -1,0 +1,38 @@
+issuer: Danaher Corporation
+ticker: DHR
+cik: "313616"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  original_notional_amount:
+    description: "original notional value of derivative contracts"
+    section: market_risk
+  notional_amount_outstanding:
+    description: "current outstanding notional value"
+    section: market_risk
+  gain_loss_recognized_oci:
+    description: "pretax gain/loss recognized in accumulated OCI"
+    section: market_risk
+  amounts_reclassified_from_oci:
+    description: "amounts reclassified from OCI to earnings"
+    section: market_risk
+  hedge_designation:
+    description: "net investment hedges vs cash flow hedges classification"
+    section: market_risk
+  maturity_dates:
+    description: "maturity date ranges for derivative instruments"
+    section: market_risk
+  hedged_currencies:
+    description: "currencies being hedged (Danish kroner, Japanese yen, euro, Swiss franc)"
+    section: market_risk
+
+# Unusual features identified:
+#   - includes both derivative and non-derivative hedging instruments in same note
+#   - detailed breakdown by hedge accounting designation (net investment vs cash flow)
+#   - includes settled interest rate swaps with ongoing OCI reclassifications
+#   - cross-currency swaps serve dual purpose of currency and interest rate hedging
+#   - references external section for quantitative market risk disclosures
+

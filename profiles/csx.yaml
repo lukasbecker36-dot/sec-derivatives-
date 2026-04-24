@@ -1,0 +1,41 @@
+issuer: CSX Corporation
+ticker: CSX
+cik: "277948"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  swap_fair_values:
+    description: "fair value amounts for each swap group"
+    section: market_risk
+  notional_amounts:
+    description: "cumulative notional amounts ($250M, $250M, $800M)"
+    section: market_risk
+  hedge_designation:
+    description: "fair value hedges classification"
+    section: market_risk
+  underlying_debt_maturity:
+    description: "maturity dates of hedged notes (2055, 2033, 2036-2040)"
+    section: market_risk
+  hedge_duration:
+    description: "10 years of interest rate risk hedged"
+    section: market_risk
+  reference_rate:
+    description: "SOFR as the floating rate benchmark"
+    section: market_risk
+  sensitivity_analysis:
+    description: "10% hypothetical change impact on swap fair values"
+    section: market_risk
+  debt_fair_value_sensitivity:
+    description: "$757M potential decrease from 43 bps Treasury rate increase"
+    section: market_risk
+
+# Unusual features identified:
+#   - narratively structured without tabular presentation
+#   - includes settled forward starting swaps discussion
+#   - combines derivatives and debt fair value sensitivities
+#   - presents asset and liability positions for different swap vintages
+#   - specific basis points translation for Treasury rate sensitivity
+

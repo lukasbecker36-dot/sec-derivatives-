@@ -1,0 +1,42 @@
+issuer: Elevance Health
+ticker: ELV
+cik: "1156039"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  interest_rate_sensitivity_100bp_decrease:
+    description: "Fair value increase from 100 basis point decrease in interest rates"
+    section: market_risk
+  interest_rate_sensitivity_100bp_increase:
+    description: "Fair value decrease from 100 basis point increase in interest rates"
+    section: market_risk
+  equity_sensitivity_10pct_decrease:
+    description: "Fair value decrease from 10% decrease in equity values"
+    section: market_risk
+  equity_sensitivity_10pct_increase:
+    description: "Fair value increase from 10% increase in equity values"
+    section: market_risk
+  equity_percentage_of_portfolio:
+    description: "Percentage of marketable investments that are equity securities"
+    section: market_risk
+  corporate_securities_percentage:
+    description: "Percentage of fixed maturity securities that are corporate securities"
+    section: market_risk
+  average_credit_rating_overall:
+    description: "Average credit rating of overall fixed maturity portfolio"
+    section: market_risk
+  average_credit_rating_corporate:
+    description: "Average credit rating of corporate fixed maturity portfolio"
+    section: market_risk
+
+# Unusual features identified:
+#   - This is market risk disclosure for an insurance company focused on investment portfolio risks rather than traditional derivatives
+#   - No actual derivative instruments disclosed despite being market risk section
+#   - Heavy focus on insurance investment portfolio management
+#   - Uses basis point sensitivity analysis for interest rate risk
+#   - Includes both quantitative sensitivity analysis and qualitative risk management discussion
+#   - References ability to hold securities to maturity to avoid market risk realization
+

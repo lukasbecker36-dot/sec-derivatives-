@@ -1,0 +1,42 @@
+issuer: D. R. Horton
+ticker: DHI
+cik: "882184"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  notional_amount_hedging_instruments:
+    description: "Total notional amount of hedging instruments for uncommitted mortgage loans and IRLCs"
+    section: market_risk
+  uncommitted_irlcs_notional:
+    description: "Notional amount of uncommitted interest rate lock commitments"
+    section: market_risk
+  uncommitted_mortgage_loans_notional:
+    description: "Notional amount of uncommitted mortgage loans held for sale"
+    section: market_risk
+  mbs_balance:
+    description: "MBS totaling amount without assigned IRLCs or closed loans"
+    section: market_risk
+  debt_maturity_schedule:
+    description: "Principal cash flows by scheduled maturity for debt obligations"
+    section: market_risk
+  fixed_rate_debt_amounts:
+    description: "Fixed rate debt amounts by maturity year"
+    section: market_risk
+  variable_rate_debt_amounts:
+    description: "Variable rate debt amounts by maturity year"
+    section: market_risk
+  debt_fair_values:
+    description: "Estimated fair value of debt obligations"
+    section: market_risk
+
+# Unusual features identified:
+#   - Economic hedges without hedge accounting designation
+#   - Mortgage banking operations creating unique derivative exposure
+#   - MBS purchased in advance of loan commitments
+#   - Below-market rate financing program using hedging instruments
+#   - Net fair value changes described as 'not significant' rather than quantified
+#   - Mortgage repurchase facilities classified in current maturity despite being debt
+

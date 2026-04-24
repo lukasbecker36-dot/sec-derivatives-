@@ -1,0 +1,28 @@
+issuer: Dover Corporation
+ticker: DOV
+cik: "29905"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cash_flow_hedge_fair_value_changes:
+    description: "changes in fair value of cash flow hedges"
+    section: market_risk
+  hedge_reclassification_amounts:
+    description: "net losses/gains reclassified from hedges into earnings"
+    section: market_risk
+  pension_plan_investments:
+    description: "fair value hierarchy levels for pension investments"
+    section: financial_instruments
+  level_3_asset_rollforward:
+    description: "changes in Level 3 fair value measurements"
+    section: financial_instruments
+
+# Unusual features identified:
+#   - derivatives information split across multiple notes rather than consolidated
+#   - market risk section refers to MD&A instead of providing quantitative details
+#   - heavy focus on pension plan investments rather than trading derivatives
+#   - limited derivative instrument disclosure - only mentions foreign currency forwards briefly
+

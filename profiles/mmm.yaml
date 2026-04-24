@@ -1,0 +1,37 @@
+issuer: 3M
+ticker: MMM
+cik: "66740"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  derivative_types:
+    description: "types of derivatives used for risk management"
+    section: market_risk
+  risk_factors:
+    description: "foreign exchange rates, interest rates, commodity prices"
+    section: market_risk
+  hedging_purpose:
+    description: "manage risks associated with foreign exchange rate and interest rate fluctuations"
+    section: market_risk
+  governance_structure:
+    description: "senior management oversight of risk management and derivative activities"
+    section: market_risk
+  sensitivity_analysis:
+    description: "hypothetical changes in foreign currency spot exchange rates and interest rates"
+    section: market_risk
+  excluded_items:
+    description: "cash equivalents, accounts receivable, accounts payable, available-for-sale marketable securities"
+    section: market_risk
+  cross_references:
+    description: "references to other notes for additional derivative information"
+    section: market_risk
+
+# Unusual features identified:
+#   - incomplete section text provided
+#   - market risk disclosure separate from derivatives note
+#   - references comprehensive cross-note information structure
+#   - excludes short-term items from sensitivity analysis
+

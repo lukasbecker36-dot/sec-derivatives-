@@ -1,0 +1,44 @@
+issuer: Comcast
+ticker: CMCSA
+cik: "1166691"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  derivative_impact_on_interest_expense:
+    description: "Annual impact of interest rate derivatives on consolidated interest expense"
+    section: market_risk
+  debt_maturity_schedule:
+    description: "Principal amounts of debt by contractual year of maturity"
+    section: market_risk
+  swap_notional_amounts:
+    description: "Notional amounts of fixed-to-variable interest rate swaps by maturity"
+    section: market_risk
+  swap_rates:
+    description: "Average pay and receive rates for interest rate swaps"
+    section: market_risk
+  fair_values:
+    description: "Estimated fair values of debt and derivative instruments"
+    section: market_risk
+  foreign_currency_exposure:
+    description: "Primary foreign currencies of exposure"
+    section: market_risk
+  hedge_designation_types:
+    description: "Types of hedge accounting designations used"
+    section: market_risk
+  fx_sensitivity_analysis:
+    description: "Results of hypothetical 10% currency shift analysis"
+    section: market_risk
+  collateral_requirements:
+    description: "Status of collateral posting under derivative agreements"
+    section: market_risk
+
+# Unusual features identified:
+#   - Combined debt and derivatives maturity table with fair values
+#   - Separation event impact noted in footnotes (Versant notes removal)
+#   - Specific hedge period limitation mentioned (30 months for FX forecasted transactions)
+#   - Credit rating-based collateral thresholds
+#   - Multi-currency exposure analysis with materiality assessment
+

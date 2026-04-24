@@ -1,0 +1,35 @@
+issuer: EQT Corporation
+ticker: EQT
+cik: "33213"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  hypothetical_sensitivity_analysis:
+    description: "10% NYMEX price change impact on fair value for 2025 and 2024"
+    section: market_risk
+  hedge_objectives:
+    description: "protect cash flows from commodity price risk"
+    section: market_risk
+  hedged_items:
+    description: "forecasted sales of production and basis"
+    section: market_risk
+  counterparty_credit_risk:
+    description: "exposure to financial institutions and monitoring processes"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "1% rate increase impact on interest expense"
+    section: market_risk
+  credit_rating_impact:
+    description: "interest rates fluctuate based on credit ratings for revolving credit and 7.000% senior notes"
+    section: market_risk
+
+# Unusual features identified:
+#   - Contains specific dollar amounts for hypothetical sensitivity analysis ($100M, $283M, $93M, $340M)
+#   - Includes credit rating agencies by name (Moody's, S&P, Fitch)
+#   - References subsidiary Eureka's separate revolving credit facility
+#   - Mentions variable interest entity deconsolidation impact
+#   - Text appears to be cut off mid-sentence at the end
+
