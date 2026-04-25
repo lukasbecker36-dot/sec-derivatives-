@@ -1,0 +1,45 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-25 ===
+[NUMERIC] notional_amount_hedging_instruments: $3,500M → $6,200M (+77.1%) — exceeds 20% threshold
+[NUMERIC] uncommitted_irlcs_notional: $2,100M → $3,400M (+61.9%) — exceeds 20% threshold
+[NUMERIC] uncommitted_mortgage_loans_notional: $1,500M → $2,000M (+33.3%) — exceeds 20% threshold
+[NUMERIC] mbs_balance: $794M → $1,100M (+38.6%) — exceeds 20% threshold
+[LLM_FLAG] notional_amount_hedging_instruments increased 77% from $3,500M to $6,200M - significant increase driven by higher uncommitted IRLCs ($3.4B vs $2.1B) and uncommitted mortgage loans ($2.0B vs $1.5B)
+[LLM_FLAG] uncommitted_irlcs_notional increased 62% from $2,100M to $3,400M - substantial growth in interest rate lock commitments
+[LLM_FLAG] uncommitted_mortgage_loans_notional increased 33% from $1,500M to $2,000M - notable increase in funded uncommitted loans
+[LLM_FLAG] mbs_balance increased 39% from $793.5M to $1,100M - significant growth in mortgage-backed securities holdings
+[LLM_FLAG] variable_rate_debt increased 63% from $1,589M to $2,593.2M - substantial increase in variable rate obligations, primarily short-term mortgage repurchase facilities maturing in Q3 2026
+[LLM_FLAG] fixed_rate_debt increased 0.3% from $3,990.2M to $4,001.1M - minimal change, within normal range
+[LLM_FLAG] debt_fair_values changed significantly - total increased from $5,606.2M to $6,562.5M due to increase in variable rate debt
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-04-25 ===
+[NUMERIC] notional_amount_hedging_instruments: $4,400M → $3,500M (-20.5%) — exceeds 20% threshold
+[NUMERIC] uncommitted_irlcs_notional: $2,700M → $2,100M (-22.2%) — exceeds 20% threshold
+[NUMERIC] uncommitted_mortgage_loans_notional: $1,900M → $1,500M (-21.1%) — exceeds 20% threshold
+[LLM_FLAG] notional_amount_hedging_instruments: Decreased from $4,400.0M to $3,500.0M (-20.5%) - within 50% threshold but notable decline
+[LLM_FLAG] uncommitted_irlcs_notional: Decreased from $2,700.0M to $2,100.0M (-22.2%) - within 50% threshold but material decline
+[LLM_FLAG] uncommitted_mortgage_loans_notional: Decreased from $1,900.0M to $1,500.0M (-21.1%) - within 50% threshold but material decline
+[LLM_FLAG] mbs_balance: Increased from $880.5M to $793.5M but text shows September 2025 was $677.5M, so comparing to incorrect prior period baseline
+[LLM_FLAG] fixed_rate_notes_billion: Decreased from $4.5597B to $3.9902B (-12.4%) - significant decrease in debt principal outstanding
+[LLM_FLAG] debt_maturity_schedule: Substantially different structure - this table uses 9-month period ending September 2026 instead of calendar year 2025 for current period
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-25 ===
+[LLM_FLAG] fixed_rate_notes_billion changed from 4.0531 to 4.5597 (12.4% increase) - consistent with debt maturity schedule showing new issuances
+[LLM_FLAG] notional_amount_hedging_instruments changed from 4300 to 4400 (2.3% increase) - minor, within normal variation
+[LLM_FLAG] uncommitted_mortgage_loans_notional changed from 1800 to 1900 (5.6% increase) - consistent with business activity
+[LLM_FLAG] mbs_balance changed from 1100 to 880.5 (19.9% decrease) - significant change but below 50% threshold
+[LLM_FLAG] variable_rate_debt_amounts changed significantly in total from 2497.4 to 2724.2 (9.1% increase) and maturity distribution shifted notably
+[LLM_FLAG] Debt maturity schedule structure changed - fiscal year ending September 30 2025 Q4 data now provided separately ($1,704.2M variable rate due in Q4 2025)
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-25 ===
+[NUMERIC] uncommitted_irlcs_notional: $2,000M → $2,700M (+35.0%) — exceeds 20% threshold
+[NUMERIC] uncommitted_mortgage_loans_notional: $2,300M → $1,800M (-21.7%) — exceeds 20% threshold
+[NUMERIC] mbs_balance: $678M → $1,100M (+62.4%) — exceeds 20% threshold
+[LLM_FLAG] notional_amount_hedging_instruments increased from 4,200 to 4,300 million (2.4% change, within normal range)
+[LLM_FLAG] uncommitted_irlcs_notional increased significantly from 2,000 to 2,700 million (35% increase)
+[LLM_FLAG] uncommitted_mortgage_loans_notional decreased from 2,300 to 1,800 million (21.7% decrease)
+[LLM_FLAG] mbs_balance increased significantly from 677.5 to 1,100 million (62.4% increase)
+[LLM_FLAG] fixed_rate_notes_billion decreased from 3.9905 to 4.0531 billion (1.6% increase, minimal change)
+[LLM_FLAG] variable_rate_debt_amounts increased from 2,008.3 to 2,497.4 million (24.3% increase)
+[LLM_FLAG] Total debt increased from 5,998.8 to 6,550.5 million (9.2% increase)
+[LLM_FLAG] Maturity structure has changed with different timing of repayments, particularly in near-term periods
+

@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-25 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $2M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_forwards_outstanding, interest_rate_sensitivity)
+[LLM_FLAG] INSUFFICIENT DATA: The provided text is only a section header and reference to the Annual Report 10-K, not the actual detailed disclosures. Most quantitative fields cannot be extracted.
+[LLM_FLAG] PERIOD MISMATCH: Request is for Q1 2026 (2026-03-31) but provided text references 10-K for year ended December 31, 2025, which would be from 2026-02-23 or later filing date.
+[LLM_FLAG] NO ACTUAL FILING CONTENT: The excerpt provided contains only introductory language pointing to the Market Risk section, not the section itself.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-25 ===
+[LLM_FLAG] hypothetical_sensitivity_analysis: 2025 decrease impact decreased from $146M to $89M (-39%) and increase impact decreased from -$144M to -$75M (-48%), both within 50% threshold but notable reduction in sensitivity year-over-year
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-25 ===
+[NUMERIC] interest_rate_sensitivity: $1M → $2M (+100.0%) — exceeds 20% threshold
+[LLM_FLAG] hypothetical_sensitivity_analysis: 2025 NYMEX decrease impact decreased 48% from $299M to $146M; 2025 NYMEX increase impact decreased 52% from $302M to $144M. This is a significant decline in sensitivity, likely due to changes in derivative portfolio composition or hedge amounts as of June 30, 2025 vs December 31, 2024.
+[LLM_FLAG] interest_rate_sensitivity: 2025 value of $2M is 100% lower than prior period value of $1M. This change indicates increased exposure from revolving credit facility borrowings during the first half of 2025.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-25 ===
+[NUMERIC] interest_rate_sensitivity: $3M → $1M (-66.7%) — exceeds 20% threshold
+[LLM_FLAG] Hypothetical sensitivity analysis 10% decrease impact increased from $100M (2024) to $299M (2025) - 199% change. This is likely due to changes in derivative positions held rather than a methodology change.
+[LLM_FLAG] Interest rate sensitivity decreased from $3M (prior period) to $1M (current period) - 67% decrease. This reflects lower borrowings under revolving credit facilities during Q1 2025 compared to the prior period.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-04-24 ===
 [LLM_FLAG] Hypothetical sensitivity analysis shows significant decrease in 2025 vs 2024: 10% NYMEX decrease impact declined 64.7% ($283M to $100M), and 10% NYMEX increase impact declined 72.6% ($340M to $93M). This likely reflects reduced derivative hedge positions or lower volatility in the current period.
 

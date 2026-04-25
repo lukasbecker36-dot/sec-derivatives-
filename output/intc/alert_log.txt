@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-04-25 ===
+[NUMERIC] fx_forward_notional: $22,740M → $19,177M (-15.7%) — exceeds 15% threshold
+[NUMERIC] total_derivative_asset: $1,041M → $444M (-57.3%) — exceeds 25% threshold
+[LLM_FLAG] fx_forward_notional decreased 15.7% from $22,740M to $19,177M - within normal range but notable decline
+[LLM_FLAG] equity_hedge_notional decreased 7.5% from $2,689M to $2,488M - within normal range
+[LLM_FLAG] total_derivative_asset decreased 57.3% from $1,041M to $444M - exceeds 50% threshold, likely due to mark-to-market valuation changes and reduced escrowed shares liability impact
+[LLM_FLAG] total_derivative_liability increased 19.9% from $4,124M to $4,947M - notable increase driven by escrowed shares and Ireland SCIP arrangement fair value changes
+[LLM_FLAG] Market Risk section header found but no quantitative sensitivity data provided in the excerpt. The filing text appears to be incomplete or truncated, showing only the section heading on page 39 without the actual sensitivity calculations.
+
 === 10-K | Period ending 2025-12-27 | Processed 2026-03-28 ===
 [NUMERIC] total_derivative_asset: $823M → $1,041M (+26.5%) — exceeds 25% threshold
 [NUMERIC] total_derivative_liability: $7,078M → $4,124M (-41.7%) — exceeds 20% threshold

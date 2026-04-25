@@ -1,0 +1,19 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-25 ===
+[LLM_FLAG] Revolving credit rate decreased from 5.4% (September 30, 2025) to 5.0% (December 31, 2025) - 7.4% change, within normal range for interest rate movements
+[LLM_FLAG] No outstanding borrowings on revolving credit facility maintained from prior period
+[LLM_FLAG] No new quantitative market risk sensitivity disclosures provided in this section
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-25 ===
+[NEW_FIELD] revolving_credit_rate: appeared for first time ($5M)
+[LLM_FLAG] Revolving credit rate increased from prior period context (implied 0% with no borrowings to 5.4% as of Sept 30, 2025), indicating new borrowings were drawn on the facility
+[LLM_FLAG] No specific quantitative sensitivity analyses provided for interest rate or equity price risks, which is typical for standard market risk disclosures but limits precision
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-25 ===
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[DISAPPEARED_FIELD] revolving_credit_rate: was $5M, now missing
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (fixed_rate_notes_billion, revolving_credit_rate)
+[LLM_FLAG] No quantitative market risk sensitivity disclosures (100bp interest rate move, 10% equity price move) provided in this section
+[LLM_FLAG] Specific fixed-rate debt principal amounts and maturity schedule not disclosed in this excerpt
+[LLM_FLAG] No revolving credit facility borrowing rate disclosed (prior period showed 5.0%); facility had zero balance at period end
+[LLM_FLAG] Fixed-rate notes outstanding amount not disclosed in this section (prior period showed $0.045226 billion)
+

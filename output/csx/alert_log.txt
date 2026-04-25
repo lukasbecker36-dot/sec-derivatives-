@@ -1,0 +1,24 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-25 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[DISAPPEARED_FIELD] underlying_debt_maturity: was $2,055M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, underlying_debt_maturity)
+[LLM_FLAG] Insufficient data: The provided filing text is only a header reference to the Quantitative and Qualitative Disclosures about Market Risk section without the actual content. No substantive market risk disclosures are present to extract.
+[LLM_FLAG] Unable to verify changes from prior period due to incomplete filing text.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-25 ===
+[LLM_FLAG] swap_fair_values: Increased from $10 million to $11 million (10% increase), within normal range
+[LLM_FLAG] No significant deviations from prior period patterns detected
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-25 ===
+[LLM_FLAG] swap_fair_values: Increased from $8 million asset (Q1 2025) to $10 million asset (Q2 2025) - 25% increase, within acceptable range
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-25 ===
+[NUMERIC] fixed_rate_notes_billion: $1M → $0M (-80.8%) — exceeds 20% threshold
+[NEW_FIELD] underlying_debt_maturity: appeared for first time ($2,055M)
+[DISAPPEARED_FIELD] debt_fair_value_sensitivity: was $757M, now missing
+[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (debt_fair_value_sensitivity)
+[LLM_FLAG] swap_fair_values: Changed from prior period ($9M + $14M + $87L = $(64)M net) to current Q1 2025 ($8M asset). Prior disclosure mentioned three swap groups; current text only mentions new Q1 2025 swaps. This appears to be an update for new contracts entered in Q1 2025, not a decrease in total swap values.
+[LLM_FLAG] notional_amounts: Prior period showed $250M, $250M, $800M ($1.3B total). Current text only mentions $250M for 2055 notes. Incomplete disclosure or these may be new swaps separate from prior swaps.
+[LLM_FLAG] fixed_rate_notes_billion: Prior was $1.3B; current shows only $0.25B mentioned in the provided excerpt, likely incomplete disclosure in excerpt provided.
+

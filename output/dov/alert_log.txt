@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-25 ===
+[LLM_FLAG] The provided text is a boilerplate reference directing to the Form 10-K rather than actual market risk disclosures. No substantive quantitative or qualitative data on market risk is present in this excerpt.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-25 ===
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $86,614M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $109,284M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-04-24 ===
 [LLM_FLAG] total_cash_equivalents_fv and total_marketable_securities_fv not found: The filing section presents pension plan investment fair values under ASC 820 rather than separately disclosed marketable securities and cash equivalents as financial instruments
 [LLM_FLAG] marketable_equity_securities_fv confidence is medium: Value combines equity holdings from both U.S. and Non-U.S. pension plans, but these represent pension assets rather than marketable securities held as financial instruments
