@@ -1,0 +1,35 @@
+issuer: Dow Inc.
+ticker: DOW
+cik: "1751788"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  notional_amounts_designated_hedges:
+    description: "notional amounts for interest rate and foreign currency contracts designated as hedges"
+    section: market_risk
+  notional_amounts_non_designated:
+    description: "notional amounts for derivatives not designated as hedges"
+    section: market_risk
+  commodity_notional_volumes:
+    description: "hydrocarbon derivatives notional volumes in barrels of oil equivalent"
+    section: market_risk
+  maximum_maturity_dates:
+    description: "maximum maturity dates by derivative type for hedging instruments"
+    section: market_risk
+  var_by_exposure_type:
+    description: "value-at-risk amounts by commodity, equity, foreign exchange, and interest rate exposures"
+    section: market_risk
+  composite_var:
+    description: "total daily VAR for all positions"
+    section: market_risk
+
+# Unusual features identified:
+#   - commodity derivatives measured in volume units rather than monetary amounts
+#   - multi-leg option positions reflected at maximum notional position at expiration
+#   - VAR methodology uses 97.5% confidence level instead of standard 95%
+#   - separate disclosure of insurance subsidiary investment activities
+#   - derivatives used for hedging non-qualified employee benefit plans
+

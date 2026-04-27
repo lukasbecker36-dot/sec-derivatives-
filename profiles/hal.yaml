@@ -1,0 +1,31 @@
+issuer: Halliburton
+ticker: HAL
+cik: "45012"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  debt_fair_value_level_1:
+    description: "Level 1 fair value measurements for debt"
+    section: market_risk
+  debt_fair_value_level_2:
+    description: "Level 2 fair value measurements for debt"
+    section: market_risk
+  total_debt_fair_value:
+    description: "Total fair value of debt"
+    section: market_risk
+  total_debt_carrying_value:
+    description: "Carrying value of total debt"
+    section: market_risk
+  market_risk_reference:
+    description: "Cross-reference to market risk disclosures in other sections"
+    section: market_risk
+
+# Unusual features identified:
+#   - Market risk section only contains cross-references to other sections rather than quantitative disclosures
+#   - No traditional derivative instruments disclosed - only debt fair value measurements
+#   - Fair value table uses hierarchical levels (Level 1, Level 2) but appears incomplete as presented
+#   - Note heading appears in table of contents but actual derivatives content is minimal
+

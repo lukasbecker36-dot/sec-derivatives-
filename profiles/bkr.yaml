@@ -1,0 +1,41 @@
+issuer: Baker Hughes
+ticker: BKR
+cik: "1701605"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  derivative_assets_fair_value:
+    description: "Fair value of derivative assets by level"
+    section: market_risk
+  derivative_liabilities_fair_value:
+    description: "Fair value of derivative liabilities by level"
+    section: market_risk
+  interest_rate_swap_notional:
+    description: "Notional amount of interest rate swaps ($500 million)"
+    section: market_risk
+  foreign_currency_forward_notional:
+    description: "Notional amounts of foreign currency forward contracts ($4.0B and $3.0B)"
+    section: market_risk
+  hedge_designation:
+    description: "Fair value hedge designation for interest rate swaps"
+    section: market_risk
+  fx_sensitivity:
+    description: "1% USD appreciation/depreciation impact (<$15M pre-tax)"
+    section: market_risk
+  investment_securities_fair_value:
+    description: "Fair value and unrealized gains/losses on investment securities"
+    section: market_risk
+  long_term_debt_schedule:
+    description: "Fixed rate debt maturity schedule with weighted average rates"
+    section: market_risk
+
+# Unusual features identified:
+#   - Investment securities (equity and debt) included in financial instruments note alongside derivatives
+#   - Fair value hedge accounting with explicit mention of no ineffectiveness
+#   - Foreign currency sensitivity analysis provided in dollar terms rather than percentage
+#   - Equity securities primarily comprised of single investment in Abu Dhabi National Oil Company Drilling
+#   - Interest rate swaps convert only portion of fixed rate debt to floating
+

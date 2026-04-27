@@ -1,0 +1,35 @@
+issuer: J.B. Hunt
+ticker: JBHT
+cik: "728535"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  interest_rate_sensitivity:
+    description: "Impact of 1% rate increase on pretax earnings"
+    section: market_risk
+  variable_rate_debt_level:
+    description: "Current borrowing level subject to variable rates"
+    section: market_risk
+  average_variable_rate:
+    description: "Average interest rate on senior credit facility and term loan"
+    section: market_risk
+  fixed_rate_range:
+    description: "Interest rate range on senior notes"
+    section: market_risk
+  foreign_currency_materiality:
+    description: "Assessment of foreign currency risk materiality"
+    section: market_risk
+  fuel_hedging_status:
+    description: "Status of fuel price hedging instruments"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative instruments disclosed despite multiple risk exposures
+#   - Explicit statement of no hedging for fuel price risk
+#   - Explicit statement of no foreign currency derivatives
+#   - Market risk disclosure without any derivatives usage
+#   - Sensitivity analysis provided without hedging context
+

@@ -1,0 +1,38 @@
+issuer: Kinder Morgan
+ticker: KMI
+cik: "1506307"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  commodity_sensitivity_analysis:
+    description: "Fair value impact from 10% commodity price movement by commodity type"
+    section: market_risk
+  commodity_derivative_fair_values:
+    description: "Crude oil, Natural gas, and NGL derivative fair value sensitivities"
+    section: market_risk
+  fixed_rate_debt_balances:
+    description: "Carrying value and estimated fair value of fixed rate debt"
+    section: market_risk
+  variable_rate_debt_balances:
+    description: "Carrying value and estimated fair value of variable rate debt"
+    section: market_risk
+  interest_rate_swap_notionals:
+    description: "Notional amounts of fixed-to-variable and variable-to-fixed swaps"
+    section: market_risk
+  debt_fair_value_sensitivity:
+    description: "Fair value change from 10% interest rate movement"
+    section: market_risk
+  variable_debt_earnings_sensitivity:
+    description: "Earnings impact from 10% interest rate change on variable debt"
+    section: market_risk
+
+# Unusual features identified:
+#   - Combines both commodity and interest rate risk in single market risk section
+#   - Uses 10% sensitivity analysis for both commodity and interest rate exposures
+#   - Includes basis point calculations for interest rate sensitivity
+#   - Text appears to cut off mid-sentence at end
+#   - Debt table includes fair value adjustments in carrying values
+

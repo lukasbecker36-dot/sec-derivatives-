@@ -1,0 +1,22 @@
+issuer: Procter & Gamble
+ticker: PG
+cik: "80424"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cross_reference_md_and_a:
+    description: "Reference to Other Information section in MD&A"
+    section: market_risk
+  cross_reference_note_9:
+    description: "Reference to Note 9 to Consolidated Financial Statements"
+    section: market_risk
+
+# Unusual features identified:
+#   - Market risk disclosure uses incorporation by reference instead of detailed information
+#   - No actual derivatives data in this section - refers to MD&A and Note 9
+#   - Very brief disclosure compared to typical market risk sections
+#   - Cross-references two separate sections for complete market risk information
+

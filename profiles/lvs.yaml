@@ -1,0 +1,35 @@
+issuer: Las Vegas Sands
+ticker: LVS
+cik: "1300514"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  notional_values:
+    description: "notional amounts for specific swap agreements"
+    section: market_risk
+  hedge_designations:
+    description: "cash flow hedges and net investment hedges"
+    section: market_risk
+  expiration_dates:
+    description: "maturity dates for derivative instruments"
+    section: market_risk
+  debt_fair_value:
+    description: "fair value vs contractual value of debt"
+    section: market_risk
+  sensitivity_analysis:
+    description: "hypothetical basis point and exchange rate changes"
+    section: market_risk
+  foreign_currency_exposures:
+    description: "USD/SGD and USD/pataca exchange rate risks"
+    section: market_risk
+
+# Unusual features identified:
+#   - derivatives section ends with incomplete sentence 'Refer to'
+#   - narrative format without tabular presentation of notional amounts or fair values
+#   - specific naming convention for swap groups (2021 SCL Swap, 2024 SCL Swaps, etc.)
+#   - mix of expired and active instruments in same disclosure period
+#   - pataca currency pegged to HKD relationship explicitly mentioned
+

@@ -1,0 +1,37 @@
+issuer: Teledyne Technologies
+ticker: TDY
+cik: "1094285"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  notional_amounts:
+    description: "notional amounts by instrument type and designation status"
+    section: market_risk
+  fair_value_assets:
+    description: "fair value of derivative assets by instrument type"
+    section: market_risk
+  fair_value_liabilities:
+    description: "fair value of derivative liabilities by instrument type"
+    section: market_risk
+  hedge_designation:
+    description: "whether derivatives are designated as hedging instruments"
+    section: market_risk
+  maturity_dates:
+    description: "maturity ranges for derivative contracts"
+    section: market_risk
+  hedge_effectiveness_gains_losses:
+    description: "gains/losses in AOCI and reclassifications to income"
+    section: market_risk
+  non_designated_hedge_gains_losses:
+    description: "gains/losses on non-designated hedges recognized in earnings"
+    section: market_risk
+
+# Unusual features identified:
+#   - Cross-currency swaps used for both net investment hedging and interest rate risk conversion
+#   - Large notional amount difference between designated ($582.2M) and non-designated ($815.6M) hedges
+#   - Specific currency breakdowns for forward contracts (CAD, GBP, EUR)
+#   - Market risk disclosure references separate section rather than being included inline
+

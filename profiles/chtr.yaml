@@ -1,0 +1,28 @@
+issuer: Charter Communications
+ticker: CHTR
+cik: "1091667"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cross_currency_notional_amount:
+    description: "£1.275 billion aggregate principal amount"
+    section: market_risk
+  cross_currency_fair_value_2025:
+    description: "$406 million fair value as of December 31, 2025"
+    section: market_risk
+  cross_currency_fair_value_2024:
+    description: "$504 million fair value as of December 31, 2024"
+    section: market_risk
+  hedge_purpose:
+    description: "manage foreign exchange risk on Sterling Notes"
+    section: market_risk
+
+# Unusual features identified:
+#   - Fair values reported in narrative text rather than tabular format
+#   - Cross-reference to Note 13 suggests additional derivative details in footnotes
+#   - Specific mention of Sterling Notes as underlying hedged item
+#   - Fair values reported as liabilities on balance sheet
+
