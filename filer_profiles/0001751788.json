@@ -26,7 +26,8 @@
       "notional amount",
       "mark-to-market",
       "unrealized loss",
-      "designated as hedging"
+      "designated as hedging",
+      "unrealized gain"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -44,6 +45,42 @@
       ],
       "fields_extracted": 7,
       "fields_null": 11
+    },
+    {
+      "filing_date": "2025-03-31",
+      "form_type": "10-Q",
+      "period_end": "2025-03-31",
+      "processed_at": "2026-04-28T08:08:36Z",
+      "sections_found": [
+        "financial_instruments",
+        "market_risk"
+      ],
+      "fields_extracted": 5,
+      "fields_null": 13
+    },
+    {
+      "filing_date": "2025-06-30",
+      "form_type": "10-Q",
+      "period_end": "2025-06-30",
+      "processed_at": "2026-04-28T08:08:48Z",
+      "sections_found": [
+        "financial_instruments",
+        "market_risk"
+      ],
+      "fields_extracted": 5,
+      "fields_null": 13
+    },
+    {
+      "filing_date": "2025-09-30",
+      "form_type": "10-Q",
+      "period_end": "2025-09-30",
+      "processed_at": "2026-04-28T08:08:59Z",
+      "sections_found": [
+        "financial_instruments",
+        "market_risk"
+      ],
+      "fields_extracted": 5,
+      "fields_null": 13
     }
   ]
 }

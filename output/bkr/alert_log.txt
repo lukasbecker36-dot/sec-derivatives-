@@ -1,0 +1,31 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-28 ===
+[LLM_FLAG] total_marketable_securities_fv decreased from $1,298.0M (Dec 31, 2025) to $1,198.0M (Mar 31, 2026), a 7.7% decline within normal range but driven by equity securities decline from $1,217M to $1,170M
+[LLM_FLAG] marketable_equity_securities_fv decreased by 3.9% from $1,274.0M to $1,170.0M; the Dec 31, 2025 value of $1,217M shown in filing differs from prior period input of $1,274.0M - this suggests the prior period input may have been from a different quarter or year
+[LLM_FLAG] This filing excerpt is incomplete - it references prior year disclosure ('see Item 7A Quantitative and Qualitative Disclosures about Market Risk in our 2025 Annual Report') rather than providing specific derivative and market risk details for the 2026 Q1 period
+[LLM_FLAG] The excerpt only states market risk exposure has not changed materially since December 31, 2025, without providing quantitative metrics for verification
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-28 ===
+[NUMERIC] corporate_debt_securities_fv: $15M → $24M (+60.0%) — exceeds 20% threshold
+[LLM_FLAG] marketable_equity_securities_fv increased from 1,277 to 1,274 (minimal change, -0.2%, within acceptable range)
+[LLM_FLAG] corporate_debt_securities_fv increased from 15 to 24 (60% increase exceeds 50% threshold - change from Non-U.S. debt securities amortized cost adjustment)
+[LLM_FLAG] Filing excerpt contains only a brief reference to market risk disclosure; full quantitative details are stated to be in the 2024 Annual Report. This excerpt is insufficient for extracting specific derivative, debt, or sensitivity values.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-28 ===
+[LLM_FLAG] total_marketable_securities_fv increased 10.5% from $1,284M (Dec 31, 2024) to $1,292M (Jun 30, 2025), within normal range
+[LLM_FLAG] marketable_equity_securities_fv decreased slightly from $1,281M to $1,277M (-0.3%), within normal range
+[LLM_FLAG] corporate_debt_securities_fv increased 400% from $3M (Dec 31, 2024) to $15M (Jun 30, 2025), exceeding 50% threshold - likely due to company investment activity and timing of non-U.S. debt security holdings
+[LLM_FLAG] Limited disclosure in this excerpt - text references 'Quantitative and Qualitative Disclosures about Market Risk' in 2024 Annual Report and states exposure has not changed materially, but provides no specific quantitative metrics for comparison
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-28 ===
+[NUMERIC] corporate_debt_securities_fv: $24M → $15M (-37.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $4,000M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $6M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $500M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity: was $15M, now missing
+[VALIDATION] Likely extraction failure: 4/8 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, interest_rate_swap_notional, fx_sensitivity)
+[LLM_FLAG] total_marketable_securities_fv decreased from 1,241.0 to 1,169.0 (5.8% decrease) - within acceptable variance
+[LLM_FLAG] marketable_equity_securities_fv decreased from 1,217.0 to 1,154.0 (5.2% decrease) - within acceptable variance, primarily due to net losses of $140 million recorded to earnings during Q1 2025
+[LLM_FLAG] corporate_debt_securities_fv increased from 24.0 to 15.0 (37.5% decrease) - significant decrease but remains plausible as Non-U.S. debt securities matured within one year
+[LLM_FLAG] Provided text is extremely limited - only a transition sentence referencing detailed market risk disclosures in the 2024 Annual Report. Most derivative and market risk data fields cannot be extracted from this excerpt alone.
+[LLM_FLAG] The filing states 'Our exposure to market risk has not changed materially since December 31, 2024' which suggests prior period values should remain valid, but specific numbers are not provided in this section.
+

@@ -1,0 +1,28 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-28 ===
+[NUMERIC] fx_transaction_gain_loss: $-17M → $-5M (+70.6%) — exceeds 20% threshold
+[LLM_FLAG] IR_SENSITIVITY_100BP decreased from $281 million to $234 million (16.7% decline) - likely due to changes in debt composition or interest rate environment between September 30, 2025 and March 31, 2026
+[LLM_FLAG] FX_TRANSACTION_GAIN_LOSS swing from -$17.0 million loss to -$5.0 million loss (71% improvement) - represents quarterly vs period-to-date comparison difference; Q2 2026 three-month period shows better FX position
+[LLM_FLAG] DEBT_FAIR_VALUE decreased from $15.76 billion to $15.61 billion (~$150 million decline) and contractual value decreased from $15.78 billion to $15.70 billion (~$80 million decline) - plausible given debt repayment activity
+[LLM_FLAG] HIBOR/SORA sensitivity increased from $54 million to $61 million (13% increase) - modest increase consistent with interest rate environment changes
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-28 ===
+[NUMERIC] fx_transaction_gain_loss: $-26M → $-17M (+34.6%) — exceeds 20% threshold
+[LLM_FLAG] fx_transaction_gain_loss: $17 million loss in current period vs $26 million loss in prior period (35% improvement in exposure)
+[LLM_FLAG] ir_sensitivity_100bp: $281 million in current period vs $296 million in prior period (5% decrease, within reasonable range)
+[LLM_FLAG] debt_fair_value: Fair value decreased from $15.66B to $15.76B and contractual value increased from $15.84B to $15.78B (modest changes consistent with market conditions)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-28 ===
+[NUMERIC] fx_transaction_gain_loss: $-1M → $-26M (-2500.0%) — exceeds 20% threshold
+[LLM_FLAG] fx_transaction_gain_loss: Increased from -$1 million (prior period) to -$26 million (current period), a 2,500% adverse change. This is significant and primarily attributable to U.S. dollar denominated debt issued by SCL as disclosed.
+[LLM_FLAG] ir_sensitivity_100bp: Increased from $273 million to $296 million, an 8.4% increase. Plausible given potential debt composition changes.
+[LLM_FLAG] ir_sofr_hibor_sora_sensitivity: Increased from $28 million (prior period) to $54 million (current period), a 92.9% increase. Significant change warrants attention to potential changes in debt structure or floating rate exposure.
+[LLM_FLAG] debt_fair_value: Fair value increased from $13.54 billion to $15.66 billion (+15.7%); contractual value increased from $13.82 billion to $15.84 billion (+14.6%). Material increases likely reflect new debt issuances during the period.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-28 ===
+[NUMERIC] fx_transaction_gain_loss: $-21M → $-1M (+95.2%) — exceeds 20% threshold
+[LLM_FLAG] FX transaction loss decreased significantly from -$21 million (prior period) to -$1 million (current period) — a 95% decrease. Plausible as this represents only 3 months vs. what may have been 6 months in prior period, but worth noting.
+[LLM_FLAG] IR sensitivity increased from $259 million to $273 million — a 5.4% increase, within normal range.
+[LLM_FLAG] Debt fair value decreased from $15.78 billion to $13.54 billion — a 14% decrease in fair value, likely due to debt repayment or refinancing activities.
+[LLM_FLAG] Interest rate cost sensitivity decreased from $54 million (implied annual) to $28 million — approximately 48% decrease. This may reflect reduced HIBOR/SORA-indexed debt or changed rate environment.
+[LLM_FLAG] USD/pataca sensitivity changed from $14 million to $17 million — a 21% increase, within normal variance range.
+

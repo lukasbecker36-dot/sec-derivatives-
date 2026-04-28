@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-28 ===
+[DISAPPEARED_FIELD] cross_currency_fair_value_2025: was $406M, now missing
+[DISAPPEARED_FIELD] cross_currency_fair_value_2024: was $504M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (cross_currency_fair_value_2025, cross_currency_fair_value_2024)
+[LLM_FLAG] Filing text is minimal and contains only a reference statement to prior 10-K disclosure. No detailed market risk quantitative data is provided in this excerpt. This appears to be a condensed disclosure indicating 'no material changes' rather than a full restatement of derivative and market risk positions.
+[LLM_FLAG] Prior period had cross_currency_fair_value values (406M and 504M) but these are not reproduced or referenced in the current filing text provided.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-28 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (fx_forwards_outstanding)
+[LLM_FLAG] The provided filing excerpt contains only a brief reference statement indicating no material changes to interest rate risk disclosures. Most quantitative market risk metrics are not disclosed in this excerpt; they are referenced as being in the 2024 10-K. The extracted values for cross-currency derivatives are based on prior period data carried forward per the filing's statement of no material changes.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-04-27 ===
 [LLM_FLAG] Cross-currency fair value decreased 19.4% from $504 million (2024) to $406 million (2025), which is within normal range for derivative revaluations based on currency and interest rate movements
 

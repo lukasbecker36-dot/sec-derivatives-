@@ -1,3 +1,31 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-28 ===
+[NUMERIC] marketable_equity_securities_fv: $180M → $232M (+28.9%) — exceeds 20% threshold
+[LLM_FLAG] total_marketable_securities_fv: Value decreased from 2,063 to 2,228 million (8.0% increase, within 50% threshold but note this is debt securities only)
+[LLM_FLAG] marketable_equity_securities_fv: Value increased from 180 to 232 million (28.9% increase). Change driven by 'not readily determinable fair value' component (224 vs 225) and 'readily determinable' component (8 vs 9)
+[LLM_FLAG] gross_unrealized_gains_debt: No explicit disclosure provided in filing. Debt securities show cost of $2,391M and fair value of $2,228M, indicating net unrealized losses, not gains
+[LLM_FLAG] The provided filing text is merely a cross-reference to the full 10-K for year ended December 31, 2025, and does not contain the actual quantitative and qualitative disclosures about market risk. All market risk data fields cannot be extracted from this excerpt.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-28 ===
+[LLM_FLAG] marketable_equity_securities_fv increased from $157.0M to $180.0M (14.6% increase) - within acceptable range but notable increase driven by addition of $17M in 'not readily determinable fair value' investments
+[LLM_FLAG] This excerpt is a reference section only, directing readers to the 2024 10-K for detailed market risk disclosures. No substantive derivative or market risk data is contained in the provided text.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-28 ===
+[LLM_FLAG] marketable_equity_securities_fv differs from prior period by -1.9% (157 vs 160): immaterial change, within normal variation
+[LLM_FLAG] total_marketable_securities_fv differs from prior period by -0.5% (2021 vs 2031): immaterial change, within normal variation
+[LLM_FLAG] gross_unrealized_gains_debt remains at 0.0, consistent with prior period; no explicit disclosure provided in current filing
+[LLM_FLAG] Provided text is a boilerplate reference section directing readers to prior year 10-K disclosures for market risk analysis, not substantive current period disclosure
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-28 ===
+[NUMERIC] marketable_equity_securities_fv: $234M → $160M (-31.6%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $704M → $2,031M (+188.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] composite_var: was $182M, now missing
+[LLM_FLAG] total_marketable_securities_fv decreased from $2,203M (Dec 31, 2024) to $2,031M (Mar 31, 2025), a 7.8% decline. While this is within the 50% threshold, it reflects the net unrealized loss position shown in the cost vs. fair value table.
+[LLM_FLAG] marketable_equity_securities_fv increased from $234M (prior period implied from readily + not readily determinable: $14M + $153M = $167M at Dec 31, 2024 based on Note) to $160M at Mar 31, 2025. The prior period value of $234M appears inconsistent with disclosed values; using disclosed table values of $11M + $149M = $160M for current period.
+[LLM_FLAG] corporate_debt_securities_fv: Prior period value of $704M cannot be reconciled with current disclosure showing total debt securities fair value of $2,031M. This suggests the prior value may have been a subset (e.g., only investment-grade corporate debt). Current extraction uses total available-for-sale debt securities.
+[LLM_FLAG] gross_unrealized_gains_debt: No material unrealized gains disclosed on debt securities. The fair value table shows cost exceeds fair value ($2,248M vs $2,031M), indicating unrealized losses. Marked as 0 per instructions.
+[LLM_FLAG] Filing excerpt provided contains only a cross-reference to Form 10-K disclosures without actual quantitative data. The excerpt refers readers to the 2024 10-K for market risk details but does not contain the substantive derivatives, VAR, or sensitivity data itself.
+[LLM_FLAG] Period ending 2025-03-31 is Q1 2025, but excerpt only references 'year ended December 31, 2024' 10-K filing.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-04-27 ===
 [LLM_FLAG] Foreign exchange VAR increased 78% from $23M (2024) to $41M (2025), attributed to increased exposure
 [LLM_FLAG] Equity securities VAR increased 45% from $11M (2024) to $16M (2025), attributed to increased volatility
