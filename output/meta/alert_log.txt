@@ -1,3 +1,29 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-01 ===
+[NUMERIC] total_cash_equivalents_fv: $31,482M → $19,280M (-38.8%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $45,719M → $57,754M (+26.3%) — exceeds 15% threshold
+[NUMERIC] marketable_equity_securities_fv: $5,992M → $4,323M (-27.9%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $17,477M → $21,627M (+23.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $300M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $352M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $711M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $59M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $5,990M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $599M, now missing
+[DISAPPEARED_FIELD] unrealized_gains_equity: was $413M, now missing
+[DISAPPEARED_FIELD] debt_securities_due_1yr: was $13,023M, now missing
+[DISAPPEARED_FIELD] debt_securities_due_1to5yr: was $26,704M, now missing
+[DISAPPEARED_FIELD] total_marketable_debt_securities: was $39,727M, now missing
+[DISAPPEARED_FIELD] non_marketable_equity_cv: was $20,080M, now missing
+[DISAPPEARED_FIELD] equity_method_investments_cv: was $7,450M, now missing
+[VALIDATION] Likely extraction failure: 13/17 previously-populated fields are now null (gross_unrealized_gains_debt, fx_forwards_outstanding, fx_transaction_gain_loss, ir_sensitivity_100bp, fixed_rate_notes_billion...)
+[LLM_FLAG] total_cash_equivalents_fv decreased 38.8% from $31,482M to $19,280M - significant decline in money market funds ($27,928M to $14,372M) suggests potential liquidity management changes
+[LLM_FLAG] total_marketable_securities_fv increased 26.3% from $45,719M to $57,754M - driven by increase in corporate debt securities ($17,477M to $21,627M) and U.S. government securities
+[LLM_FLAG] marketable_equity_securities_fv decreased 27.8% from $5,992M to $4,323M - notable reduction in equity holdings
+[LLM_FLAG] corporate_debt_securities_fv (in marketable securities) increased 23.7% from $17,477M to $21,627M - shift toward debt instruments
+[LLM_FLAG] Unrealized gains data (gross_unrealized_gains_debt, unrealized_gains_equity) not provided in this fair value measurement table - typically disclosed in a separate table in the note
+[LLM_FLAG] Provided text is only a section header/title with no substantive quantitative disclosures. The actual Quantitative and Qualitative Disclosures About Market Risk section content from the 10-K or 10-Q is not included in the filing text provided.
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-03-28 ===
 [NUMERIC] total_cash_equivalents_fv: $6,023M → $31,482M (+422.7%) — exceeds 20% threshold
 [NUMERIC] total_marketable_securities_fv: $34,261M → $45,719M (+33.4%) — exceeds 15% threshold

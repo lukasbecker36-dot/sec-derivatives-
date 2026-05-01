@@ -1,0 +1,35 @@
+issuer: Veralto
+ticker: VLTO
+cik: "1967680"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cross_currency_swap_notional:
+    description: "notional amount of cross-currency swap contracts"
+    section: market_risk
+  foreign_debt_notional:
+    description: "notional amount of foreign currency denominated debt"
+    section: market_risk
+  oci_gains_losses:
+    description: "gains/losses recognized in other comprehensive income"
+    section: market_risk
+  amounts_reclassified:
+    description: "amounts reclassified from OCI to earnings"
+    section: market_risk
+  derivative_fair_values:
+    description: "fair values of derivative instruments on balance sheet"
+    section: market_risk
+  maturity_dates:
+    description: "maturity dates of derivative and hedging instruments"
+    section: market_risk
+
+# Unusual features identified:
+#   - Mix of derivative and non-derivative instruments in same hedging program
+#   - Cross-currency swaps converting both currency exposure and interest rates
+#   - Foreign currency debt used as non-derivative hedging instrument
+#   - Future-dated derivative entry (July 29, 2025)
+#   - Market risk section references Item 7 instead of providing direct disclosures
+

@@ -1,0 +1,31 @@
+issuer: General Dynamics
+ticker: GD
+cik: "40533"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_forward_notional:
+    description: "notional amount of forward exchange contracts outstanding"
+    section: market_risk
+  fx_sensitivity_recognized:
+    description: "hypothetical pretax losses from 10% adverse rate movement - recognized"
+    section: market_risk
+  fx_sensitivity_unrecognized:
+    description: "hypothetical pretax losses from 10% adverse rate movement - unrecognized"
+    section: market_risk
+  fixed_rate_debt_principal:
+    description: "principal amount of fixed-rate debt"
+    section: market_risk
+  primary_currencies:
+    description: "Canadian dollar, euro and Swiss franc"
+    section: market_risk
+
+# Unusual features identified:
+#   - Sensitivity analysis splits losses into 'Recognized' and 'Unrecognized' categories
+#   - References external note for commodity price and investment risk details
+#   - Uses 10% adverse rate movement for sensitivity analysis rather than standard basis point movements
+#   - Explicitly states hedged instruments offset underlying exposure losses
+

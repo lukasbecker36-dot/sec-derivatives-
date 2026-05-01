@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-01 ===
+[NUMERIC] fx_designated_notional: $22,650M → $16,384M (-27.7%) — exceeds 15% threshold
+[NEW_FIELD] fx_oci_gain_loss: appeared for first time ($28M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($3,000M)
+[NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($215M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($66M)
+[LLM_FLAG] total_derivative_asset decreased 11.2% from 1926 to 1711 - within normal volatility
+[LLM_FLAG] total_derivative_liability decreased 1.7% from 1167 to 1147 - minor decrease
+[LLM_FLAG] collateral_posted increased 8.8% from 102 to 111 - within normal range
+[LLM_FLAG] fx_designated_notional decreased 27.8% from 17750 to 16384 - moderate decrease, plausible due to hedging activity
+[LLM_FLAG] commodity_designated_notional increased 5.9% from 940 to 995 - within normal range
+[LLM_FLAG] ir_fair_value_hedge_notional increased 15.4% from 22740 to 26487 - moderate increase, plausible
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-03-28 ===
 [NUMERIC] fx_designated_notional: $16,248M → $22,650M (+39.4%) — exceeds 15% threshold
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2,900M, now missing

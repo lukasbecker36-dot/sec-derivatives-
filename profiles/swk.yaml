@@ -1,0 +1,22 @@
+issuer: Stanley Black & Decker
+ticker: SWK
+cik: "93556"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  market_risk_reference:
+    description: "Extract reference to Item 7 Market Risk section"
+    section: market_risk
+  financial_instruments_note_reference:
+    description: "Extract reference to Note H Financial Instruments"
+    section: market_risk
+
+# Unusual features identified:
+#   - Entire market risk disclosure incorporated by reference rather than presented directly
+#   - References two separate locations: Item 7 and Note H
+#   - No actual derivative or market risk data present in this section
+#   - Truncated text - appears to end mid-sentence
+

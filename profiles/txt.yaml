@@ -1,0 +1,42 @@
+issuer: Textron
+ticker: TXT
+cik: "217346"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_currency_notional_amounts:
+    description: "notional amounts of foreign currency exchange contracts"
+    section: market_risk
+  foreign_currency_fair_values:
+    description: "fair value assets and liabilities of foreign currency contracts"
+    section: market_risk
+  interest_rate_swap_notional:
+    description: "notional amounts of interest rate swap agreements"
+    section: market_risk
+  interest_rate_swap_fair_values:
+    description: "fair value of interest rate swap agreements"
+    section: market_risk
+  weighted_average_fixed_rates:
+    description: "effective fixed rates from interest rate swaps"
+    section: market_risk
+  sensitivity_analysis_table:
+    description: "carrying value, fair value, and sensitivity to 10% changes"
+    section: market_risk
+  debt_fair_values:
+    description: "carrying and estimated fair values of debt not at fair value"
+    section: market_risk
+  finance_receivables_fair_values:
+    description: "carrying and estimated fair values of finance receivables"
+    section: market_risk
+
+# Unusual features identified:
+#   - fair value hierarchy disclosure integrated with derivatives section
+#   - finance group derivatives separate from manufacturing group
+#   - sensitivity analysis uses 10% change scenarios for both interest rates and FX
+#   - includes both recorded and not recorded at fair value sections
+#   - weighted-average fixed rates provided for interest rate swaps
+#   - maturities ranging disclosure format for swaps
+

@@ -1,0 +1,32 @@
+issuer: Seagate Technology
+ticker: STX
+cik: "1137789"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_currency_forwards_notional:
+    description: "notional amounts by currency for FX forwards"
+    section: market_risk
+  foreign_currency_forwards_fair_value:
+    description: "estimated fair value of FX forward contracts"
+    section: market_risk
+  total_return_swap_description:
+    description: "details of TRS for SDCP equity risk management"
+    section: market_risk
+  debt_maturity_schedule:
+    description: "fixed rate debt by maturity year with interest rates"
+    section: market_risk
+  money_market_investments:
+    description: "floating rate cash investments with average rates"
+    section: market_risk
+
+# Unusual features identified:
+#   - TRS linked to employee deferred compensation plan
+#   - all FX forwards have zero fair value
+#   - comprehensive debt maturity table with weighted average rates
+#   - explicit prohibition on speculative derivatives trading
+#   - counterparty credit risk management details included
+

@@ -1,0 +1,18 @@
+issuer: Fortive
+ticker: FTV
+cik: "1659166"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cross_reference_location:
+    description: "reference to Item 7 MD&A section containing actual market risk disclosures"
+    section: market_risk
+
+# Unusual features identified:
+#   - cross_reference_only
+#   - no_direct_disclosures
+#   - redirects_to_mda_section
+

@@ -1,0 +1,58 @@
+issuer: Coca-Cola Company (The)
+ticker: KO
+cik: "21344"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_currency_notional_current:
+    description: "Total notional values of foreign currency derivatives - current year"
+    section: market_risk
+  foreign_currency_notional_prior:
+    description: "Total notional values of foreign currency derivatives - prior year"
+    section: market_risk
+  fx_hedge_accounting_fair_value:
+    description: "Fair value of foreign currency derivatives qualifying for hedge accounting"
+    section: market_risk
+  fx_non_hedge_fair_value:
+    description: "Fair value of foreign currency derivatives not qualifying for hedge accounting"
+    section: market_risk
+  fx_sensitivity_hedge:
+    description: "Sensitivity analysis for 10% USD weakening on hedge accounting derivatives"
+    section: market_risk
+  fx_sensitivity_non_hedge:
+    description: "Sensitivity analysis for 10% USD weakening on non-hedge derivatives"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "Impact of 1 percentage point increase in interest rates on interest expense"
+    section: market_risk
+  debt_securities_sensitivity:
+    description: "Impact of 1 percentage point increase on fair value of debt securities"
+    section: market_risk
+  commodity_notional_current:
+    description: "Total notional values of commodity derivatives - current year"
+    section: market_risk
+  commodity_notional_prior:
+    description: "Total notional values of commodity derivatives - prior year"
+    section: market_risk
+  commodity_hedge_fair_value:
+    description: "Fair value of commodity derivatives qualifying for hedge accounting"
+    section: market_risk
+  commodity_non_hedge_fair_value:
+    description: "Fair value of commodity derivatives not qualifying for hedge accounting"
+    section: market_risk
+  commodity_sensitivity_hedge:
+    description: "Sensitivity analysis for 10% decrease in commodity prices on hedge accounting derivatives"
+    section: market_risk
+  commodity_sensitivity_non_hedge:
+    description: "Sensitivity analysis for 10% decrease in commodity prices on non-hedge derivatives"
+    section: market_risk
+
+# Unusual features identified:
+#   - Sensitivity analysis uses different scenarios for different risk types (10% FX weakening vs 10% commodity price decrease)
+#   - Separates hedge accounting vs non-hedge accounting derivatives consistently across all risk categories
+#   - Includes both notional amounts and fair values but presents them in narrative format rather than tables
+#   - Geographic revenue disclosure ($28.8 billion from non-US operations) embedded within FX risk section
+
