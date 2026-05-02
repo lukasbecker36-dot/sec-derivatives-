@@ -1,0 +1,28 @@
+=== 10-Q | Period ending 2026-04-03 | Processed 2026-05-02 ===
+[LLM_FLAG] Provided text is only a header/reference to 'Quantitative and Qualitative Disclosures About Market Risk' section with page number. Actual market risk disclosure content is not included in the provided excerpt.
+
+=== 10-Q | Period ending 2025-10-03 | Processed 2026-05-02 ===
+[LLM_FLAG] Prior period indicated 'has_derivatives: Yes' but current filing text contains only a header reference to Form 10-K with no actual market risk disclosures
+[LLM_FLAG] Filing text provided is incomplete - appears to be only a section heading/reference without substantive disclosure content
+
+=== 10-Q | Period ending 2025-06-27 | Processed 2026-05-02 ===
+[LLM_FLAG] Provided excerpt is only a reference header to the Quantitative and Qualitative Disclosures About Market Risk section from prior year Form 10-K, not the actual detailed disclosures needed. Full market risk disclosure section is required to extract specific numerical values.
+
+=== 10-Q | Period ending 2025-03-28 | Processed 2026-05-02 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $201M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $12M, now missing
+[DISAPPEARED_FIELD] foreign_currency_forward_notional: was $201M, now missing
+[DISAPPEARED_FIELD] cumulative_translation_impact: was $-265M, now missing
+[DISAPPEARED_FIELD] foreign_business_percentage: was $10M, now missing
+[DISAPPEARED_FIELD] long_term_debt_carrying_value: was $11,530M, now missing
+[DISAPPEARED_FIELD] long_term_debt_fair_value: was $11,179M, now missing
+[VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, foreign_currency_forward_notional, cumulative_translation_impact, foreign_business_percentage...)
+[LLM_FLAG] Provided text is only a header/reference to the full disclosure section. The actual quantitative market risk data is not included in the excerpt provided. This appears to be a reference line rather than the complete disclosure section.
+
+=== 10-K | Period ending 2025-01-03 | Processed 2026-05-02 ===
+[NUMERIC] cumulative_translation_impact: $-185M → $-265M (-43.2%) — exceeds 20% threshold
+[LLM_FLAG] fx_forwards_outstanding decreased from $203 million to $201 million (1% decrease - within normal range)
+[LLM_FLAG] cumulative_translation_impact changed from -$185 million loss to -$265 million loss (43% increase in magnitude - significant deterioration in cumulative translation position)
+[LLM_FLAG] long_term_debt_carrying_value increased from $10,876 million to $11,530 million (6% increase - plausible given debt activity)
+[LLM_FLAG] long_term_debt_fair_value changed from $10,913 million to $11,179 million (2.4% increase - reasonable given interest rate environment)
+

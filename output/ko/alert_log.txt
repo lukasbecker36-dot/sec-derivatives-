@@ -1,3 +1,29 @@
+=== 10-Q | Period ending 2026-04-03 | Processed 2026-05-02 ===
+[LLM_FLAG] Filing contains only a reference to prior 10-K with no material changes disclosure. No detailed derivative or market risk information is provided in this 10-Q section.
+
+=== 10-Q | Period ending 2025-09-26 | Processed 2026-05-02 ===
+[LLM_FLAG] Section contains only a blanket reference to prior year 10-K filing with no material changes disclosure - this is a 'incorporation by reference' approach rather than detailed quantitative data. All specific numerical values are unavailable in this excerpt.
+
+=== 10-Q | Period ending 2025-03-28 | Processed 2026-05-02 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $21,128M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $120M, now missing
+[DISAPPEARED_FIELD] foreign_currency_notional_current: was $21,128M, now missing
+[DISAPPEARED_FIELD] foreign_currency_notional_prior: was $18,442M, now missing
+[DISAPPEARED_FIELD] fx_hedge_accounting_fair_value: was $48M, now missing
+[DISAPPEARED_FIELD] fx_non_hedge_fair_value: was $57M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_hedge: was $-609M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_non_hedge: was $-123M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $120M, now missing
+[DISAPPEARED_FIELD] debt_securities_sensitivity: was $-39M, now missing
+[DISAPPEARED_FIELD] commodity_notional_current: was $535M, now missing
+[DISAPPEARED_FIELD] commodity_notional_prior: was $386M, now missing
+[DISAPPEARED_FIELD] commodity_hedge_fair_value: was $-9M, now missing
+[DISAPPEARED_FIELD] commodity_non_hedge_fair_value: was $-2M, now missing
+[DISAPPEARED_FIELD] commodity_sensitivity_hedge: was $3M, now missing
+[DISAPPEARED_FIELD] commodity_sensitivity_non_hedge: was $-33M, now missing
+[VALIDATION] Likely extraction failure: 16/16 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, foreign_currency_notional_current, foreign_currency_notional_prior, fx_hedge_accounting_fair_value...)
+[LLM_FLAG] All derivative and sensitivity fields are null. The 10-Q filing contains only a reference to the 10-K filing (year ended December 31, 2024) and states 'no material changes' to market risk disclosures. Detailed quantitative data would need to be extracted from the full 10-K filing, not this abbreviated 10-Q section.
+
 === 10-Q | Period ending 2026-04-03 | Processed 2026-05-01 ===
 [LLM_FLAG] fx_forwards_outstanding increased 14.6% from $18,442M to $21,128M year-over-year, which is notable but not exceeding 50% threshold
 [LLM_FLAG] commodity_notional_current increased 38.6% from $386M to $535M year-over-year, which is significant but not exceeding 50% threshold

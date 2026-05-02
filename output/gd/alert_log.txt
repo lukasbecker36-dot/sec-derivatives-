@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2025-03-30 | Processed 2026-05-02 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $8,500M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $8M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_recognized: was $-68M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_unrecognized: was $-498M, now missing
+[DISAPPEARED_FIELD] fixed_rate_debt_principal: was $8,000M, now missing
+[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, fx_sensitivity_recognized, fx_sensitivity_unrecognized, fixed_rate_debt_principal)
+[LLM_FLAG] Material disclosure deferred: The 10-Q explicitly states there are no material changes from the 10-K and provides no actual quantitative or qualitative data on derivatives, FX exposure, interest rate sensitivity, debt composition, or equity holdings. All market risk disclosures must be obtained from the 2024 10-K filing.
+
 === 10-Q | Period ending 2026-04-05 | Processed 2026-05-01 ===
 [LLM_FLAG] fx_forwards_outstanding increased 37% from $6.2B (2024) to $8.5B (2025) - significant increase in notional exposure
 [LLM_FLAG] fx_sensitivity_recognized loss increased 89% from $36M (2024) to $68M (2025) - notable deterioration in near-term FX risk

@@ -1,0 +1,33 @@
+=== 10-Q | Period ending 2026-04-03 | Processed 2026-05-02 ===
+[LLM_FLAG] fx_forwards_outstanding: Increased from $182M (prior period) to $214M (17.6% increase) - within normal range
+[LLM_FLAG] fixed_rate_notes_billion: Decreased from $4.546B to $3.905B (14.1% decrease) - likely due to 2028 maturity debt reduction from $1,000M to $399M
+[LLM_FLAG] money_market_investments: Decreased from $342M to $281M (17.8% decrease) - within normal operating variance
+[LLM_FLAG] foreign_currency_forwards_notional: GBP increased from $19M to $30M (57.9%), CNY increased from $27M to $39M (44.4%), SGD increased from $59M to $76M (28.8%), THB decreased from $77M to $69M (10.4%) - significant changes in individual currency positions
+
+=== 10-Q | Period ending 2026-01-02 | Processed 2026-05-02 ===
+[NUMERIC] fixed_rate_notes_billion: $8M → $5M (-45.9%) — exceeds 20% threshold
+[LLM_FLAG] fx_forwards_outstanding increased 6.4% from $171M to $182M - within normal range
+[LLM_FLAG] money_market_investments increased 26.7% from $270M to $342M
+[LLM_FLAG] fixed_rate_notes decreased 9.8% from $5,046M to $4,546M - likely due to debt maturity and repayment of 2026 obligations
+[LLM_FLAG] 2028 fixed-rate debt decreased from $1,500M to $1,000M
+[LLM_FLAG] money_market average interest rate decreased from 4.0% to 3.71%
+
+=== 10-Q | Period ending 2025-10-03 | Processed 2026-05-02 ===
+[NUMERIC] fx_forwards_outstanding: $247M → $171M (-30.8%) — exceeds 20% threshold
+[NUMERIC] fixed_rate_notes_billion: $5M → $8M (+61.8%) — exceeds 20% threshold
+[LLM_FLAG] fx_forwards_outstanding decreased from 247 to 171 (30.8% decrease) - plausible quarterly variation
+[LLM_FLAG] fixed_rate_notes_billion increased from 5.193 to 8.403 (61.6% increase) - significant increase suggests new debt issuance, flag for verification
+[LLM_FLAG] money_market_investments floating rate increased from 171 to 270 (57.9% increase) - plausible increase in cash position
+[LLM_FLAG] fx_forwards_notional composition changed: Singapore Dollar decreased from 154 to 60; Thai Baht increased from 47 to 66; Chinese Renminbi decreased from 31 to 29; British Pound Sterling increased from 15 to 16 - significant reallocation of hedging activities
+
+=== 10-Q | Period ending 2025-03-28 | Processed 2026-05-02 ===
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $0M, now missing
+[LLM_FLAG] FX forwards outstanding decreased from $280M to $247M (11.8% decrease) - within normal range
+[LLM_FLAG] Fixed-rate debt decreased from $6,318M to $5,193M (17.8% decrease) - significant reduction, likely due to debt repayment
+[LLM_FLAG] Money market investments decreased from $254M to $171M (32.7% decrease) - material change, possible cash deployment
+[LLM_FLAG] Interest rate on 'Thereafter' debt increased from 7.31% to 7.44% - minor change
+[LLM_FLAG] FX forward fair value remained at $0.0 in both periods - no unrealized gains or losses
+[LLM_FLAG] Chinese Renminbi notional decreased from $34M to $31M (8.8% decrease)
+[LLM_FLAG] Singapore Dollar notional increased from $127M to $154M (21.3% increase)
+[LLM_FLAG] Thai Baht notional decreased from $100M to $47M (53% decrease) - significant reduction
+
