@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-05 ===
+[NUMERIC] ir_swap_notional: $1,750M → $2,500M (+42.9%) — exceeds 15% threshold
+[NUMERIC] fx_forward_notional: $36,352M → $42,106M (+15.8%) — exceeds 15% threshold
+[NUMERIC] total_derivative_asset: $323M → $562M (+74.0%) — exceeds 25% threshold
+[NUMERIC] total_derivative_liability: $324M → $229M (-29.3%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $178M → $69M (-61.2%) — exceeds 20% threshold
+[NUMERIC] ir_designated_notional: $1,750M → $2,500M (+42.9%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional increased 43% from $1,750M to $2,500M due to entry into two forward starting swaps of $250M each in February 2026, plus existing contracts of $2,000M
+[LLM_FLAG] expected_12mo_reclass_from_aoci decreased 61% from $178M to $69M, within reasonable variance for quarterly estimates
+[LLM_FLAG] fx_designated_notional increased 3% from $12,949M to $13,317M, within normal range
+[LLM_FLAG] total_derivative_asset increased 74% from $323M to $562M, driven by favorable FX movements and mark-to-market gains on derivatives
+[LLM_FLAG] The filing text provided only contains a cross-reference to the 2025 Form 10-K and does not include the actual 'Quantitative and Qualitative Disclosures about Market Risk' section with specific sensitivity metrics.
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-03-28 ===
 [NUMERIC] fx_forward_notional: $42,872M → $36,352M (-15.2%) — exceeds 15% threshold
 [NUMERIC] total_derivative_liability: $492M → $324M (-34.1%) — exceeds 20% threshold
