@@ -140,11 +140,10 @@ def _pass_registered(universe: list[dict], cutoff_date: str,
         new_filing = check_new_filing(cik, last_known_date=last_seen,
                                       cutoff_date=effective_cutoff)
 
-        # Update last checked
-        filing_date_seen = new_filing['period_end'] if new_filing else ''
+        # Update last_checked_at timestamp (but NOT last_filing_date_seen yet —
+        # that only gets updated after activation succeeds or explicitly skips)
         try:
-            universe = update_last_checked(universe, ticker, now,
-                                           filing_date_seen=filing_date_seen)
+            universe = update_last_checked(universe, ticker, now)
         except KeyError:
             pass
 
@@ -222,6 +221,13 @@ def _pass_registered(universe: list[dict], cutoff_date: str,
                                    form_type=new_filing['form_type'])
                 summary.review_items_added += 1
 
+            # Now that activation completed, record the filing date as seen
+            try:
+                universe = update_last_checked(universe, ticker, _now_iso(),
+                                               filing_date_seen=new_filing['period_end'])
+            except KeyError:
+                pass
+
             append_activation_event(ticker, cik, 'activating', result.new_status,
                                     filing_date=new_filing['period_end'],
                                     form_type=new_filing['form_type'],
@@ -267,7 +273,7 @@ def run_scheduled(
     Args:
         since: Date cutoff for active issuers' filing processing.
         cutoff_date: Only trigger activation for filings after this date.
-                     Defaults to 30 days ago if not set.
+                     Defaults to 120 days ago if not set (covers full quarter + filing window).
         max_activations: Max new activations per run.
         dry_run: Check but don't activate.
         check_interval_days: Skip registered issuers checked within this many days.
@@ -275,7 +281,7 @@ def run_scheduled(
     summary = RunSummary(started_at=_now_iso())
 
     if not cutoff_date:
-        cutoff_date = (datetime.now(timezone.utc) - timedelta(days=30)).strftime('%Y-%m-%d')
+        cutoff_date = (datetime.now(timezone.utc) - timedelta(days=120)).strftime('%Y-%m-%d')
 
     # Load universe
     universe = load_universe()

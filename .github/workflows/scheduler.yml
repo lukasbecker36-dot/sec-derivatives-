@@ -8,7 +8,7 @@ on:
     inputs:
       max_activations:
         description: 'Max new activations this run'
-        default: '10'
+        default: '50'
         type: string
       dry_run:
         description: 'Dry run (check only, no activation)'
@@ -21,7 +21,7 @@ permissions:
 jobs:
   run-scheduler:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90
 
     steps:
       - name: Checkout
@@ -39,7 +39,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          MAX_ACT="${{ github.event.inputs.max_activations || '10' }}"
+          MAX_ACT="${{ github.event.inputs.max_activations || '50' }}"
           DRY_RUN="${{ github.event.inputs.dry_run || 'false' }}"
 
           ARGS="--max-activations $MAX_ACT --since 2025-01-01 --json-summary summary.json --verbose"
