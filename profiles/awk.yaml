@@ -1,0 +1,41 @@
+issuer: American Water Works
+ticker: AWK
+cik: "1410636"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  treasury_lock_count:
+    description: "number of treasury lock agreements"
+    section: market_risk
+  treasury_lock_notional:
+    description: "aggregate notional amount of treasury locks"
+    section: market_risk
+  treasury_lock_terms:
+    description: "terms/maturities of treasury locks"
+    section: market_risk
+  treasury_lock_termination_dates:
+    description: "when treasury locks terminate"
+    section: market_risk
+  treasury_lock_average_rate:
+    description: "average fixed rate of treasury locks"
+    section: market_risk
+  treasury_lock_fair_value:
+    description: "fair value position of treasury locks"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "hypothetical 1% rate change impact on interest expense"
+    section: market_risk
+  treasury_lock_sensitivity:
+    description: "hypothetical 1% adverse rate change impact on treasury lock fair value"
+    section: market_risk
+
+# Unusual features identified:
+#   - detailed sensitivity analysis for treasury locks
+#   - discussion of commodity price risk management through regulatory rate recovery
+#   - extensive discussion of non-derivative market risks (equity price, credit, economic)
+#   - retirement trust asset exposure discussion
+#   - no formal hedge accounting designation mentioned despite derivatives usage
+

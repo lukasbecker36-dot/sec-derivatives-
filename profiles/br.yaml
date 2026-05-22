@@ -1,0 +1,41 @@
+issuer: Broadridge Financial Solutions
+ticker: BR
+cik: "1383312"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  variable_rate_debt_amount:
+    description: "Total floating rate debt exposure"
+    section: market_risk
+  variable_rate_debt_percentage:
+    description: "Percentage of total debt that is variable rate"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "Impact on pre-tax earnings from 100bp rate increase"
+    section: market_risk
+  non_us_revenue_percentage:
+    description: "Percentage of revenues earned outside US"
+    section: market_risk
+  cross_currency_swap_notional:
+    description: "Aggregate notional amount of EUR cross-currency swaps"
+    section: market_risk
+  cross_currency_swap_fair_value:
+    description: "Fair value of cross-currency swap derivatives"
+    section: market_risk
+  hedge_designation:
+    description: "Type of hedge designation for derivatives"
+    section: market_risk
+  foreign_currencies:
+    description: "List of foreign currencies with exposure"
+    section: market_risk
+
+# Unusual features identified:
+#   - Interest rate sensitivity analysis includes offset from interest earned on cash balances
+#   - Cross-currency swaps designated as net investment hedges rather than cash flow hedges
+#   - Detailed breakdown of floating rate debt components with specific rate formulas
+#   - Multiple reference rates mentioned (SOFR, CORRA, EURIBOR, TIBOR, SONIA, STIBOR)
+#   - Fair value amounts provided inline rather than in tabular format
+

@@ -1,0 +1,22 @@
+issuer: Ametek
+ticker: AME
+cik: "1037868"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  primary_market_risks:
+    description: "interest rates and foreign currency exchange rates"
+    section: market_risk
+  debt_structure:
+    description: "short-term variable rate debt and long-term fixed rate debt"
+    section: market_risk
+
+# Unusual features identified:
+#   - No specific derivative instruments mentioned despite market risk disclosure
+#   - Very brief qualitative-only discussion without quantitative metrics
+#   - References detailed information in separate Notes section
+#   - Focuses on natural hedging through diversified business activities
+

@@ -1,0 +1,35 @@
+issuer: Booking Holdings
+ticker: BKNG
+cik: "1075531"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  interest_rate_sensitivity:
+    description: "hypothetical 100 basis point decrease impact on debt fair value"
+    section: market_risk
+  fx_impact_on_bookings:
+    description: "foreign currency impact on gross bookings growth rates"
+    section: market_risk
+  fx_impact_on_revenues:
+    description: "foreign currency benefit percentage on revenue growth"
+    section: market_risk
+  equity_price_sensitivity:
+    description: "hypothetical 10% decrease impact on equity investments"
+    section: market_risk
+  euro_debt_hedge_designation:
+    description: "Euro-denominated debt portions designated as net investment hedge"
+    section: market_risk
+  derivative_policies:
+    description: "internal policies for derivative usage and restrictions"
+    section: market_risk
+
+# Unusual features identified:
+#   - No tabular presentation of derivative instruments
+#   - Sensitivity analysis uses hypothetical scenarios rather than VaR
+#   - Euro-denominated debt used as hedging instrument for net investment
+#   - Constant currency vs reported currency growth metrics provided
+#   - Mix of transactional and translational FX exposures discussed
+

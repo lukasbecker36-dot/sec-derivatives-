@@ -1,0 +1,43 @@
+issuer: Boston Scientific
+ticker: BSX
+cik: "885725"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  currency_derivative_notional_current:
+    description: "currency derivative contract amounts for current period"
+    section: market_risk
+  currency_derivative_notional_prior:
+    description: "currency derivative contract amounts for prior period"
+    section: market_risk
+  fx_sensitivity_appreciation_current:
+    description: "fair value impact of 10% USD appreciation for current period"
+    section: market_risk
+  fx_sensitivity_appreciation_prior:
+    description: "fair value impact of 10% USD appreciation for prior period"
+    section: market_risk
+  fx_sensitivity_depreciation_current:
+    description: "fair value impact of 10% USD depreciation for current period"
+    section: market_risk
+  fx_sensitivity_depreciation_prior:
+    description: "fair value impact of 10% USD depreciation for prior period"
+    section: market_risk
+  interest_rate_derivative_outstanding:
+    description: "outstanding interest rate derivative instruments"
+    section: market_risk
+  fixed_rate_debt_amount:
+    description: "aggregate principal amount of fixed rate debt"
+    section: market_risk
+  fixed_rate_debt_percentage:
+    description: "percentage of total debt at fixed rates"
+    section: market_risk
+
+# Unusual features identified:
+#   - embedded sensitivity analysis with specific dollar impacts for FX derivatives
+#   - no formal tabular presentation of notional amounts
+#   - explicit statement of no interest rate derivatives outstanding
+#   - references European manufacturing operations as nonderivative hedging mechanism
+

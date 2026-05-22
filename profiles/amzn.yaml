@@ -1,0 +1,38 @@
+issuer: Amazon
+ticker: AMZN
+cik: "1018724"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fair_value_by_instrument:
+    description: "Fair value amounts by instrument type and fair value hierarchy level"
+    section: market_risk
+  unrealized_gains_losses:
+    description: "Gross unrealized gains and losses by instrument type"
+    section: market_risk
+  maturity_schedule:
+    description: "Principal cash flows by expected maturity for debt securities"
+    section: market_risk
+  weighted_average_rates:
+    description: "Weighted average interest rates by instrument type and maturity"
+    section: market_risk
+  equity_securities_gains:
+    description: "Unrealized gains/losses on equity securities recorded in other income"
+    section: market_risk
+  restricted_cash_amounts:
+    description: "Amounts of restricted cash, equivalents and securities"
+    section: market_risk
+  long_term_debt_face_value:
+    description: "Face value of long-term debt including current portion"
+    section: market_risk
+
+# Unusual features identified:
+#   - Future year 2025 data presented alongside 2024
+#   - No traditional derivatives like swaps or forwards disclosed
+#   - Focus on investment securities rather than hedging instruments
+#   - Equity securities fair value not shown in detail table
+#   - Maturity analysis includes weighted average rates by year
+

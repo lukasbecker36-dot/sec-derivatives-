@@ -1,0 +1,28 @@
+issuer: Broadcom
+ticker: AVGO
+cik: "1730168"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_sensitivity_impact:
+    description: "hypothetical 10% change in currency exchange rates impact"
+    section: market_risk
+  fixed_rate_debt_principal:
+    description: "principal amount of fixed-rate borrowings outstanding"
+    section: market_risk
+  fixed_rate_debt_fair_value:
+    description: "estimated aggregate fair value of fixed-rate borrowings"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "hypothetical 50 basis point change impact on fair value"
+    section: market_risk
+
+# Unusual features identified:
+#   - combines both foreign exchange and interest rate risk in single section
+#   - provides sensitivity analysis but no tabular presentation of derivative positions
+#   - focuses on fair value sensitivity rather than cash flow impacts
+#   - mentions treasury rate locks for anticipated future debt issuances
+

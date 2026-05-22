@@ -1,0 +1,35 @@
+issuer: Alliant Energy
+ticker: LNT
+cik: "352541"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  notional_amounts_by_commodity:
+    description: "gross notional amounts for electricity, natural gas, diesel fuel by entity and settlement years"
+    section: market_risk
+  fair_value_assets_liabilities:
+    description: "current and non-current derivative assets and liabilities by entity"
+    section: market_risk
+  balance_sheet_netting:
+    description: "gross vs net presentation of derivative positions by counterparty"
+    section: market_risk
+  interest_rate_swap_terms:
+    description: "notional amounts, fixed rates, maturity dates for interest rate derivatives"
+    section: market_risk
+  hedge_accounting_impacts:
+    description: "cash flow hedge designation and OCI treatment for interest rate derivatives"
+    section: market_risk
+  credit_contingent_features:
+    description: "credit rating requirements and collateral posting obligations"
+    section: market_risk
+
+# Unusual features identified:
+#   - regulatory cost recovery mechanisms creating offsetting regulatory assets/liabilities
+#   - separate presentation for three entities (Alliant Energy, IPL, WPL)
+#   - Financial Transmission Rights (FTRs) for transmission congestion management
+#   - forward starting interest rate swap for forecasted borrowings
+#   - detailed breakdown by commodity type with multi-year settlement periods
+

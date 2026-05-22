@@ -1,0 +1,38 @@
+issuer: Amphenol
+ticker: APH
+cik: "820313"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_forward_fair_value:
+    description: "fair value of foreign exchange forward contracts"
+    section: market_risk
+  fx_sensitivity:
+    description: "10% change impact on FX hedge values"
+    section: market_risk
+  treasury_lock_notional:
+    description: "notional amounts of treasury lock derivatives ($1,500.0 10-year, $1,000.0 30-year)"
+    section: market_risk
+  treasury_lock_settlement_loss:
+    description: "cumulative loss on treasury lock settlement ($88.0 pre-tax, $67.4 after-tax)"
+    section: market_risk
+  floating_rate_exposure:
+    description: "percentage of outstanding borrowings subject to floating rates (3%)"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "10% change impact on interest expense"
+    section: market_risk
+  counterparty_concentration:
+    description: "concentration of exposure with counterparties"
+    section: market_risk
+
+# Unusual features identified:
+#   - Treasury lock derivatives settled during the period with specific loss amounts disclosed
+#   - Narrative-only presentation without tabular format for derivative positions
+#   - Fair value described as 'not material' rather than specific amounts
+#   - Text appears to be cut off mid-sentence at the end
+#   - Mixed currency exposures (USD and EUR) with complex debt structure
+

@@ -1,0 +1,34 @@
+issuer: AT&T
+ticker: T
+cik: "732717"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cross_currency_swaps_notional:
+    description: "notional value of outstanding cross-currency swaps"
+    section: market_risk
+  cross_currency_swaps_fair_value:
+    description: "fair value of outstanding cross-currency swaps"
+    section: market_risk
+  interest_rate_swaps_outstanding:
+    description: "number or value of interest rate swaps at period end"
+    section: market_risk
+  interest_rate_locks_outstanding:
+    description: "number or value of interest rate locks at period end"
+    section: market_risk
+  foreign_exchange_forwards_outstanding:
+    description: "outstanding foreign exchange forward contracts"
+    section: market_risk
+  derivatives_policy:
+    description: "policy statement on derivatives usage"
+    section: market_risk
+
+# Unusual features identified:
+#   - derivatives data presented in narrative format rather than tabular
+#   - specific notional and fair value amounts embedded in text paragraphs
+#   - explicit zero balances reported for certain derivative types
+#   - foreign-denominated debt hedge accounting described in detail
+

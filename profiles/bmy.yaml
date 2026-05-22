@@ -1,0 +1,32 @@
+issuer: Bristol Myers Squibb
+ticker: BMY
+cik: "14272"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  derivatives_qualifying_as_cash_flow_hedges:
+    description: "accumulated OCI balance for cash flow hedges"
+    section: market_risk
+  net_investment_hedge_gains:
+    description: "gains included in foreign currency translation"
+    section: market_risk
+  foreign_exchange_sensitivity_10pct:
+    description: "impact of 10% currency appreciation on FX contract fair values"
+    section: market_risk
+  cross_currency_swap_sensitivity_10pct:
+    description: "impact of 10% currency appreciation on cross-currency swap fair values"
+    section: market_risk
+  primary_currency_exposures:
+    description: "main foreign currencies creating translation exposure"
+    section: market_risk
+
+# Unusual features identified:
+#   - References Note 9 for further information but content appears incomplete
+#   - Includes both designated and non-designated hedge accounting treatments
+#   - Provides sensitivity analysis in dollar amounts rather than percentages
+#   - Cross-currency swaps show opposite directional impacts between years
+#   - Put options mentioned but limited detail provided
+

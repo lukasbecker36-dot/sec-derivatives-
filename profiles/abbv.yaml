@@ -1,0 +1,37 @@
+issuer: AbbVie
+ticker: ABBV
+cik: "1551152"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_currency_contract_amounts:
+    description: "notional amounts by currency for forward contracts"
+    section: market_risk
+  weighted_average_exchange_rates:
+    description: "weighted average rates for each currency forward"
+    section: market_risk
+  fair_value_receivable_payable:
+    description: "net fair values of currency forwards by currency"
+    section: market_risk
+  fx_sensitivity_amount:
+    description: "impact of 10% currency appreciation on forward contracts"
+    section: market_risk
+  euro_notes_hedge_designation:
+    description: "€3.1 billion Euro notes designated as net investment hedges"
+    section: market_risk
+  interest_rate_swap_sensitivity:
+    description: "impact of 100bp rate increase on swap fair values"
+    section: market_risk
+  debt_fair_value_sensitivity:
+    description: "impact of 100bp rate increase on long-term debt fair value"
+    section: market_risk
+
+# Unusual features identified:
+#   - Combined notional amounts and fair values in single table
+#   - Specific mention of unsecured senior Euro notes as hedging instruments
+#   - Uses 'receivable/(payable)' terminology for fair values
+#   - Includes 'All other currencies' aggregate line item
+

@@ -1,0 +1,41 @@
+issuer: AutoZone
+ticker: AZO
+cik: "866787"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  outstanding_derivatives_status:
+    description: "whether any derivatives are currently outstanding"
+    section: market_risk
+  variable_rate_debt:
+    description: "amount of variable rate debt outstanding"
+    section: market_risk
+  fixed_rate_debt:
+    description: "amount of fixed rate debt outstanding"
+    section: market_risk
+  debt_fair_value:
+    description: "estimated fair value of total debt"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "impact of 1% rate increase on fixed rate debt fair value"
+    section: market_risk
+  mexican_net_assets:
+    description: "net asset exposure in Mexican subsidiaries"
+    section: market_risk
+  fx_rate_change:
+    description: "annual change in Mexican peso exchange rate"
+    section: market_risk
+  fx_sensitivity:
+    description: "potential loss from 10% adverse FX rate change"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative instruments currently outstanding despite describing hedging program
+#   - Detailed debt fair value disclosure integrated with derivatives section
+#   - No hedging for foreign currency exposure despite material Mexican operations
+#   - Forward-looking date reference (August 30, 2025)
+#   - No tabular presentation of derivative positions
+

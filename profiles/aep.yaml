@@ -1,0 +1,36 @@
+issuer: American Electric Power
+ticker: AEP
+cik: "4904"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  counterparty_credit_exposure:
+    description: "credit exposure by counterparty grade with collateral netting"
+    section: market_risk
+  var_trading_portfolio:
+    description: "VaR metrics for trading portfolio (end, high, average, low)"
+    section: market_risk
+  var_non_trading_portfolio:
+    description: "VaR metrics for non-trading portfolio (end, high, average, low)"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "100 basis point impact on pretax interest expense"
+    section: market_risk
+  mtm_derivative_assets_liabilities:
+    description: "MTM derivative contract net assets/liabilities by segment"
+    section: market_risk
+  credit_exposure_percentage:
+    description: "credit exposure to sub-investment grade counterparties as percentage"
+    section: market_risk
+
+# Unusual features identified:
+#   - VaR calculated using variance-covariance method with 95% confidence level
+#   - Separate trading and non-trading portfolio VaR reporting
+#   - Credit exposure includes both derivative and non-derivative risk management contracts
+#   - Agent structure where AEPSC transacts on behalf of subsidiaries
+#   - Stress testing using historical price movements methodology
+#   - Market risk limitations disclosure addressing model constraints
+

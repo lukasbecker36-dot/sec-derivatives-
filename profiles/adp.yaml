@@ -1,0 +1,18 @@
+issuer: Automatic Data Processing
+ticker: ADP
+cik: "8670"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  market_risk_reference:
+    description: "cross-reference to Item 7 market risk disclosures"
+    section: market_risk
+
+# Unusual features identified:
+#   - Contains only cross-reference to Item 7 rather than actual market risk disclosures
+#   - Very brief section with minimal content
+#   - References page 43 for actual quantitative and qualitative market risk disclosures
+

@@ -1,0 +1,35 @@
+issuer: APA Corporation
+ticker: APA
+cik: "1841666"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  natural_gas_derivatives_fair_value:
+    description: "Fair value of natural gas derivatives in net liability position"
+    section: market_risk
+  price_sensitivity_analysis:
+    description: "Impact of 10% price changes on derivative liability values"
+    section: market_risk
+  commodity_price_realizations:
+    description: "Average prices received for oil, gas, and NGLs"
+    section: market_risk
+  revenue_sensitivity:
+    description: "Revenue impact from $1 price changes per commodity unit"
+    section: market_risk
+  foreign_exchange_contracts:
+    description: "Notional amounts and terms of FX contracts"
+    section: market_risk
+  fixed_rate_debt:
+    description: "Outstanding debt amounts and weighted average interest rate"
+    section: market_risk
+
+# Unusual features identified:
+#   - Derivatives disclosure split between Note 4 reference and Item 7A market risk section
+#   - Only natural gas derivatives disclosed with fair values, no oil derivatives mentioned with values
+#   - Foreign exchange contracts entered into subsequent to period end
+#   - No cash flow hedge accounting designation mentioned for current derivatives
+#   - Detailed commodity price sensitivity analysis included in market risk section rather than derivatives note
+

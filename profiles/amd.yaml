@@ -1,0 +1,47 @@
+issuer: Advanced Micro Devices
+ticker: AMD
+cik: "2488"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  designated_hedge_notional_current:
+    description: "notional value of foreign currency forward contracts designated as cash flow hedges - current period"
+    section: market_risk
+  designated_hedge_notional_prior:
+    description: "notional value of foreign currency forward contracts designated as cash flow hedges - prior period"
+    section: market_risk
+  designated_hedge_fair_value_current:
+    description: "fair value of designated hedge contracts - current period"
+    section: market_risk
+  designated_hedge_fair_value_prior:
+    description: "fair value of designated hedge contracts - prior period"
+    section: market_risk
+  designated_hedge_maturity:
+    description: "maturity period for designated hedge contracts"
+    section: market_risk
+  non_designated_hedge_notional_current:
+    description: "notional value of foreign currency forward contracts not designated as hedges - current period"
+    section: market_risk
+  non_designated_hedge_notional_prior:
+    description: "notional value of foreign currency forward contracts not designated as hedges - prior period"
+    section: market_risk
+  non_designated_hedge_fair_value_current:
+    description: "fair value of non-designated hedge contracts - current period"
+    section: market_risk
+  non_designated_hedge_fair_value_prior:
+    description: "fair value of non-designated hedge contracts - prior period"
+    section: market_risk
+  non_designated_hedge_maturity:
+    description: "maturity period for non-designated hedge contracts"
+    section: market_risk
+
+# Unusual features identified:
+#   - derivatives section embedded within broader financial instruments note
+#   - fair values described as 'not material' rather than providing specific amounts
+#   - notional amounts provided in narrative rather than tabular format
+#   - no separate derivatives fair value hierarchy table
+#   - cash flow classification disclosure for hedge derivatives
+
