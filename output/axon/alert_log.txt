@@ -1,0 +1,19 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $1M, now missing
+[LLM_FLAG] ir_sensitivity_100bp: Prior period disclosed $0.7 million sensitivity; current period states 'no investments are subject to interest rate risk' which appears to be a material change in disclosure approach rather than actual change in risk profile.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
+[NUMERIC] ir_sensitivity_100bp: $2M → $1M (-63.2%) — exceeds 20% threshold
+[LLM_FLAG] IR_SENSITIVITY_100BP: Declined from $1.9 million to $0.7 million (63% decrease). This represents a significant change in interest rate sensitivity, likely due to different investment portfolio composition or maturity structure as of September 30, 2025.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
+[LLM_FLAG] ir_sensitivity_100bp: Decreased from $2.1M to $1.9M (-9.5%). This modest change is likely due to changes in investment portfolio composition and interest rate environment as of June 30, 2025 compared to prior period.
+[LLM_FLAG] outstanding_letters_of_credit: Increased from $8.7M to $8.9M (+2.3%). Immaterial change, likely due to routine business operations.
+[LLM_FLAG] available_borrowing_capacity: Decreased slightly from $291.3M to $291.1M (-0.07%). Consistent with the increase in letters of credit.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[NUMERIC] ir_sensitivity_100bp: $0M → $2M (+950.0%) — exceeds 20% threshold
+[LLM_FLAG] IR_SENSITIVITY_100BP increased 950% from $0.2M to $2.1M - significant change warrants investigation. This represents a material change in interest rate risk exposure on the investment portfolio.
+[LLM_FLAG] OUTSTANDING_LETTERS_OF_CREDIT decreased from $8.9M to $8.7M (2.2% decrease) - minor change but within normal variance.
+[LLM_FLAG] AVAILABLE_BORROWING_CAPACITY increased from $291.1M to $291.3M (0.1% increase) - consistent with slight reduction in letters of credit.
+

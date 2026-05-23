@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
+[NUMERIC] marketable_equity_value: $198M → $274M (+38.4%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv decreased from 1094.908 to 1059.834 (-3.2%), which is within acceptable variance but represents a slight decline in cash position
+[LLM_FLAG] total_marketable_securities_fv remains at 0.0, consistent with prior period
+[LLM_FLAG] marketable_equity_value increased 38.6% from $198.2M (Dec 2025) to $274.4M (Mar 2026) - significant increase in private company investments, may warrant investigation into new investments or fair value adjustments
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
+[LLM_FLAG] total_cash_equivalents_fv increased from 901.157 to 1004.589 (11.5% increase) - this is within normal range but represents significant cash position growth
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
+[LLM_FLAG] total_cash_equivalents_fv decreased from 873.0 to 901.157 million (3.2% increase within 50% threshold, no flag needed despite reversal from prior note that showed 1,043.887 in December 2024)
+[LLM_FLAG] Prior period comparison note: December 31, 2024 cash equivalents were 1,043.887 million; June 30, 2025 shows 901.157 million (13.7% decrease), indicating seasonal cash flow patterns
+[LLM_FLAG] marketable_equity_value increased from $188.2M (Dec 31, 2024) to $198.2M (June 30, 2025), representing a 5.3% increase - within normal variance
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($873M)
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($0M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($188M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
 [LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKknzZTLDXo11PCQmQo'}
 

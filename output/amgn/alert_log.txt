@@ -1,3 +1,33 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
+[DISAPPEARED_FIELD] marketable_equity_value: was $7,500M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $750M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (marketable_equity_value, equity_sensitivity_10pct)
+[LLM_FLAG] Provided text contains only a section header and page reference with no substantive market risk disclosure content. Unable to extract any quantitative or qualitative derivatives/hedging data.
+[LLM_FLAG] Filing appears to be truncated or incomplete - references full disclosure in Form 10-K rather than providing details in this 10-Q section.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
+[NEW_FIELD] marketable_equity_value: appeared for first time ($7,500M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($750M)
+[LLM_FLAG] This filing section focuses exclusively on equity price risk and does not contain comprehensive derivative disclosures that would typically appear in a complete market risk section. The prior period also had 'No mention' of derivatives, so consistency is maintained.
+[LLM_FLAG] Equity sensitivity value of $750M (at 10%) is calculated/extrapolated from the disclosed 20% sensitivity ($1.5B), not directly stated in text.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
+[DISAPPEARED_FIELD] marketable_equity_value: was $6,000M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $600M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (marketable_equity_value, equity_sensitivity_10pct)
+[LLM_FLAG] Provided text is only a section header referencing quantitative and qualitative disclosures but does not contain the actual disclosure content. Text directs reader to 2024 Form 10-K for market risk information. Cannot extract financial metrics from section reference alone.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $7,800M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $240M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $53M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $6,700M, now missing
+[DISAPPEARED_FIELD] cross_currency_swap_notional: was $2,700M, now missing
+[VALIDATION] Likely extraction failure: 5/7 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, fixed_rate_notes_billion, interest_rate_swap_notional, cross_currency_swap_notional)
+[LLM_FLAG] PARTIAL DISCLOSURE: Provided text appears to be excerpt only covering equity price risk; derivative disclosure section referenced as being in 10-K for December 31, 2024, not fully provided here
+[LLM_FLAG] EQUITY SENSITIVITY CHANGE: Equity sensitivity increased from $700M (10% on $7.0B) to $600M (10% on $6.0B), suggesting portfolio value decreased from $7.0B to $6.0B (-14.3%)
+[LLM_FLAG] EQUITY PORTFOLIO VALUE CHANGE: Aggregate equity investment value implied to be $6.0B as of March 31, 2025 vs $4.75B as of December 31, 2024 (26.3% increase), with stated 20% adverse scenario losses of $1.2B vs $950M respectively
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
 [LLM_FLAG] Equity sensitivity 10% calculated from stated 20% sensitivity; actual 10% sensitivity not explicitly disclosed
 [LLM_FLAG] Marketable equity value of $7,000M derived by reversing 20% loss calculation ($1.4B / 0.20); document does not explicitly state the portfolio value

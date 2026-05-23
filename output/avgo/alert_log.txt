@@ -1,0 +1,25 @@
+=== 10-Q | Period ending 2026-02-01 | Processed 2026-05-23 ===
+[NUMERIC] ir_sensitivity_100bp: $137M → $4,000M (+2819.7%) — exceeds 20% threshold
+[LLM_FLAG] ir_sensitivity_100bp: Value of 4000 (extrapolated from 50bp) is substantially higher than prior period 137.0 - this represents a change of approximately 2800%, likely due to significant increase in debt principal outstanding ($68.0B vs prior ~$65.8B) combined with higher interest rate sensitivity
+[LLM_FLAG] fixed_rate_debt_principal: Increased from 65800 to 68000 (3.3% increase), consistent with company's debt management patterns
+[LLM_FLAG] fixed_rate_debt_fair_value: Increased from 62500 to 65700 (5.1% increase), reflecting updated fair value estimates
+[LLM_FLAG] interest_rate_sensitivity: Increased from 1800 to 2000 (11.1% increase), consistent with prior sensitivity metrics and increased debt outstanding
+
+=== 10-Q | Period ending 2025-08-03 | Processed 2026-05-23 ===
+[NUMERIC] ir_sensitivity_100bp: $61M → $137M (+124.6%) — exceeds 20% threshold
+[LLM_FLAG] fixed_rate_debt_principal increased 10.6% from $59.5B to $65.8B (within 50% threshold but notable increase)
+[LLM_FLAG] fixed_rate_debt_fair_value increased 13.6% from $55.0B to $62.5B
+[LLM_FLAG] ir_sensitivity_100bp relates to floating-rate term loans ($137M) which were eliminated by August 3, 2025; prior period measured 100bp sensitivity on different instrument type (see notes)
+
+=== 10-Q | Period ending 2025-05-04 | Processed 2026-05-23 ===
+[LLM_FLAG] fixed_rate_debt_principal increased from $58.8B to $59.5B (1.2% increase, within tolerance)
+[LLM_FLAG] fixed_rate_debt_fair_value increased from $53.9B to $55.0B (2.0% increase, within tolerance)
+[LLM_FLAG] ir_sensitivity_100bp remained stable at $61.0M (exact match with prior period)
+
+=== 10-Q | Period ending 2025-02-02 | Processed 2026-05-23 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($61M)
+[LLM_FLAG] fixed_rate_notes_billion decreased from $67.1B to $58.8B (-12.3%) - material decline but within 50% threshold
+[LLM_FLAG] fixed_rate_debt_principal decreased from $67.1B to $58.8B (-12.3%) - consistent with notes decrease
+[LLM_FLAG] fixed_rate_debt_fair_value decreased from $64.6B to $53.9B (-16.6%) - larger decline in fair value due to rising interest rates
+[LLM_FLAG] ir_sensitivity_100bp at $61M relates to term loans, not the $1.7B sensitivity for fixed-rate notes (different instruments with different sensitivities)
+

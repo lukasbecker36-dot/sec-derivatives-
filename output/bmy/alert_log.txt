@@ -1,3 +1,40 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
+[NUMERIC] total_cash_equivalents_fv: $10,916M → $7,187M (-34.2%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $529M → $322M (-39.1%) — exceeds 20% threshold
+[LLM_FLAG] total_marketable_securities_fv increased 8.4% from 1,183 to 1,282 million (within acceptable range)
+[LLM_FLAG] marketable_equity_securities_fv decreased 39.1% from 529 to 322 million (within 50% threshold but notable decline)
+[LLM_FLAG] corporate_debt_securities_fv decreased 8.5% from 461 to 422 million (within acceptable range)
+[LLM_FLAG] gross_unrealized_gains_debt not disclosed in provided text - unable to extract this field
+[LLM_FLAG] Filing text is extremely limited and appears to be a transition/boilerplate statement referring readers to the 2025 Form 10-K for detailed market risk disclosures rather than providing quantitative/qualitative details in the 10-Q
+[LLM_FLAG] The statement 'There have been no material changes to our market risk during the three months ended March 31, 2026' suggests derivative and hedging details are unchanged from prior period but actual values are not restated
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
+[NUMERIC] total_cash_equivalents_fv: $8,189M → $10,916M (+33.3%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $277M → $529M (+91.0%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv increased 33.2% from $8,189.0M to $10,916.0M (within 50% threshold but significant increase)
+[LLM_FLAG] total_marketable_securities_fv decreased 12.4% from $1,350.0M to $1,183.0M (within normal range)
+[LLM_FLAG] marketable_equity_securities_fv increased 91.0% from $277.0M to $529.0M (exceeds 50% threshold - significant increase driven by Level 1 equity holdings increasing from $247M to $356M and Level 3 equity investments of $85M related to newly-formed Bain Capital Life Sciences partnership)
+[LLM_FLAG] Filing excerpt is very brief and appears to be a reference to prior 2024 Form 10-K disclosures. Most quantitative market risk data fields cannot be extracted from this excerpt alone.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
+[NUMERIC] total_cash_equivalents_fv: $6,800M → $8,189M (+20.4%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv increased 20.3% from $6,800M to $8,189M - within normal range
+[LLM_FLAG] total_marketable_securities_fv increased 7.9% from $1,251M to $1,350M - within normal range
+[LLM_FLAG] marketable_equity_securities_fv increased 1.5% from $273M to $277M - within normal range
+[LLM_FLAG] corporate_debt_securities_fv decreased 5.2% from $542M to $514M - within normal range
+[LLM_FLAG] Filing section is truncated/abbreviated - references 2024 Form 10-K for detailed disclosures and states 'no material changes' during the period, suggesting quantitative details are not repeated in this 10-Q section
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($6,800M)
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1,251M)
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($273M)
+[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($542M)
+[DISAPPEARED_FIELD] foreign_exchange_sensitivity_10pct: was $428M, now missing
+[DISAPPEARED_FIELD] cross_currency_swap_sensitivity_10pct: was $8M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (foreign_exchange_sensitivity_10pct, cross_currency_swap_sensitivity_10pct)
+[LLM_FLAG] Filing excerpt references 2024 Form 10-K for detailed market risk disclosures - most quantitative data not provided in this section
+[LLM_FLAG] Company states 'no material changes' to market risk, suggesting values remain consistent with prior period
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
 [LLM_FLAG] The provided filing text does not contain financial instrument valuations or fair value measurement disclosures. The excerpt covers capital expenditures and contractual obligations rather than investment portfolios. Reference is made to 'Note 9. Financial Instruments and Fair Value Measurements' but that note content is not included in the provided text.
 

@@ -1,3 +1,37 @@
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-05-23 ===
+[NUMERIC] total_cash_equivalents_fv: $1,788M → $2,679M (+49.8%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $4,368M → $8,271M (+89.4%) — exceeds 20% threshold
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($6M)
+[NUMERIC] corporate_debt_securities_fv: $3,258M → $5,955M (+82.8%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $2M → $1M (-50.0%) — exceeds 20% threshold
+[LLM_FLAG] total_marketable_securities_fv increased 89% from $4,368M to $8,271M - significant increase driven by substantial growth in corporate debt securities ($3,107M to $4,446M in short-term investments) and addition of long-term investments ($295M) and marketable equity securities ($6M)
+[LLM_FLAG] corporate_debt_securities_fv increased 83% from $3,258M to $5,955M - substantial growth reflects expansion of both cash equivalents and short-term debt security holdings
+[LLM_FLAG] gross_unrealized_gains_debt decreased 50% from $2M to $1M - decline reflects market rate changes and portfolio composition shifts between prior and current periods
+
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-05-23 ===
+[NUMERIC] total_cash_equivalents_fv: $3,623M → $1,788M (-50.6%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $1,426M → $4,368M (+206.3%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $2,063M → $3,258M (+57.9%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $1M → $2M (+100.0%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv decreased 51% from 3,623 to 1,788 - significant decline in money market funds (1,496 to 732) and net changes in other cash equivalents
+[LLM_FLAG] total_marketable_securities_fv increased 206% from 1,426 to 4,368 - substantial increase primarily due to corporate debt securities growth from 814 to 1,525 in short-term investments
+[LLM_FLAG] corporate_debt_securities_fv increased 58% from 2,063 to 3,258 - reflects increase in both cash equivalents (1,733 vs 806) and short-term investments (1,525 vs 814)
+[LLM_FLAG] gross_unrealized_gains_debt changed from 1 to 2 million - modest improvement in debt securities valuation position
+
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-05-23 ===
+[NUMERIC] total_cash_equivalents_fv: $4,715M → $3,623M (-23.2%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $1,968M → $1,426M (-27.5%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv increased 23% from prior period ($4,715M to $3,623M) - decrease reflects different composition of cash equivalents between periods
+[LLM_FLAG] total_marketable_securities_fv decreased 28% from prior period ($1,968M to $1,425M) - decline consistent with overall reduction in short-term investments
+[LLM_FLAG] corporate_debt_securities_fv increased 7% from prior period ($1,928M to $2,063M) - modest increase within normal range
+
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-05-23 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($4,715M)
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1,968M)
+[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($1,928M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($1M)
+[LLM_FLAG] Filing section is a brief disclosure stating no material changes since prior year; does not contain detailed market risk quantitative data. Refers to full disclosure in 2024 10-K for specific details.
+
 === 10-Q | Period ending 2026-03-28 | Processed 2026-05-22 ===
 [LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKZtnWSWzM5ao114QLW'}
 

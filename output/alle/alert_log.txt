@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
+[LLM_FLAG] The provided text is a reference/boilerplate statement directing readers to the Form 10-K for the year ended December 31, 2025, rather than actual market risk disclosures. This is not substantive disclosure content for the Q1 2026 period ending 2026-03-31.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
+[LLM_FLAG] Filing section focuses on currency hedging derivatives and does not contain information about cash equivalents, marketable securities, or debt securities fair values. This appears to be Note 8 focused on financial instruments hedging activities rather than balance sheet cash and securities.
+[LLM_FLAG] The provided filing text is incomplete - it only contains a header reference to the Quantitative and Qualitative Disclosures About Market Risk section and a reference to the 10-K, but does not include the actual disclosure content. All requested fields cannot be extracted from this limited text.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
+[LLM_FLAG] This filing excerpt contains only currency hedging derivative information from Note 8, not marketable securities or cash equivalents data. The requested fields typically appear in liquidity/investments disclosure sections (often Note 6 or similar), which are not included in this excerpt.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
+[DISAPPEARED_FIELD] sensitivity_analysis_loss: was $4M, now missing
+[DISAPPEARED_FIELD] total_debt: was $2,000M, now missing
+[DISAPPEARED_FIELD] fixed_rate_percentage: was $90M, now missing
+[DISAPPEARED_FIELD] revolving_facility_outstanding: was $191M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $2M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (fixed_rate_notes_billion, sensitivity_analysis_loss, total_debt, fixed_rate_percentage, revolving_facility_outstanding...)
+[LLM_FLAG] Provided text is only a boilerplate reference to the full disclosure in the 2024 10-K; no actual market risk quantitative or qualitative data is present in the excerpt
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
 [LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKnTkUxknK71nyZBihh'}
 

@@ -19,7 +19,12 @@
       "cash flow hedge",
       "fair value hedge",
       "economic hedge",
-      "commodity contract"
+      "commodity contract",
+      "interest rate swap",
+      "mark-to-market",
+      "unrealized gain",
+      "aoci",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -36,6 +41,39 @@
       ],
       "fields_extracted": 9,
       "fields_null": 4
+    },
+    {
+      "filing_date": "2025-03-31",
+      "form_type": "10-Q",
+      "period_end": "2025-03-31",
+      "processed_at": "2026-05-23T08:16:34Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 10,
+      "fields_null": 3
+    },
+    {
+      "filing_date": "2025-06-30",
+      "form_type": "10-Q",
+      "period_end": "2025-06-30",
+      "processed_at": "2026-05-23T08:16:40Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 0,
+      "fields_null": 13
+    },
+    {
+      "filing_date": "2025-09-30",
+      "form_type": "10-Q",
+      "period_end": "2025-09-30",
+      "processed_at": "2026-05-23T08:16:46Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 0,
+      "fields_null": 13
     }
   ]
 }
