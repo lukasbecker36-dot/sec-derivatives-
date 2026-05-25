@@ -1,0 +1,25 @@
+issuer: Carvana
+ticker: CVNA
+cik: "1690820"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  total_outstanding_debt:
+    description: "total debt amount under short-term revolving facilities"
+    section: market_risk
+  interest_rate_type:
+    description: "variable interest rate structure (prime rate or SOFR plus spread)"
+    section: market_risk
+  debt_maturity:
+    description: "debt maturity terms (generally within one year)"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative instruments disclosed despite having interest rate risk exposure
+#   - Very brief market risk disclosure with minimal quantitative analysis
+#   - Only mentions debt instruments but no hedging activities
+#   - Section appears truncated in the provided text
+

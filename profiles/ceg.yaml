@@ -1,0 +1,40 @@
+issuer: Constellation Energy
+ticker: CEG
+cik: "1868275"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fair_value_by_level:
+    description: "Fair values categorized by Level 1, 2, 3 hierarchy with maturity breakdown"
+    section: market_risk
+  level_3_unobservable_inputs:
+    description: "Forward power/gas prices, volatility percentages with ranges and averages"
+    section: market_risk
+  collateral_amounts:
+    description: "Cash collateral posted/received on positions"
+    section: market_risk
+  commodity_derivative_roll_forward:
+    description: "Changes in derivative net assets from beginning to end of period"
+    section: market_risk
+  market_risk_sensitivity:
+    description: "Impact of hypothetical $5/MWh price reduction on earnings"
+    section: market_risk
+  fair_value_maturity_profile:
+    description: "Fair values by year from 2026-2031 and beyond"
+    section: market_risk
+  hedge_settlement_timeline:
+    description: "Expected settlement period for economic hedges (2026-2028)"
+    section: market_risk
+
+# Unusual features identified:
+#   - Extensive Level 3 derivative valuations with detailed unobservable inputs
+#   - Significant collateral netting in fair value presentations
+#   - Integration of nuclear Production Tax Credit (PTC) as risk management tool
+#   - Geopolitical risk disclosure related to Russian uranium supply
+#   - Roll-forward table showing derivative activity changes over time
+#   - Fair value table with maturity buckets extending to 2031 and beyond
+#   - Energy-specific derivatives (power, gas, nuclear fuel) rather than traditional financial derivatives
+

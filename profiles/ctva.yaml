@@ -1,0 +1,31 @@
+issuer: Corteva
+ticker: CTVA
+cik: "1755672"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_currency_contracts_fair_value:
+    description: "fair value of foreign currency contracts"
+    section: market_risk
+  foreign_currency_sensitivity:
+    description: "sensitivity analysis for 10% adverse change in FX rates"
+    section: market_risk
+  primary_currencies:
+    description: "Brazilian real, Euro, Canadian dollar, Argentine peso"
+    section: market_risk
+  hedging_activities:
+    description: "hedging of foreign currency exposures, forecasted transactions, investments in subsidiaries, and commodity price risks"
+    section: market_risk
+  credit_risk_policies:
+    description: "credit exposure limits and monitoring processes"
+    section: market_risk
+
+# Unusual features identified:
+#   - Fair value table shows data for 2025 (future date) suggesting this may be a projected or amended filing
+#   - References Note 19 - Financial Instruments but that note content is not fully included in this section
+#   - Combines both derivatives disclosure and broader market risk discussion in single section
+#   - Includes detailed credit risk discussion beyond just derivatives
+

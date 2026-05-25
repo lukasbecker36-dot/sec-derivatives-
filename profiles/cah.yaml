@@ -1,0 +1,38 @@
+issuer: Cardinal Health
+ticker: CAH
+cik: "721371"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_currencies:
+    description: "List of principal foreign currency exposures"
+    section: market_risk
+  transactional_var:
+    description: "VAR estimate for transactional exposure ($13 million)"
+    section: market_risk
+  translational_var:
+    description: "VAR estimate for translational exposure ($3 million)"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "50 basis point sensitivity for interest expense ($12 million)"
+    section: market_risk
+  interest_income_sensitivity:
+    description: "50 basis point sensitivity for interest income ($14 million)"
+    section: market_risk
+  commodity_exposure:
+    description: "Forecasted direct commodity exposure ($491 million)"
+    section: market_risk
+  commodity_sensitivity:
+    description: "10% commodity price fluctuation impact ($49 million)"
+    section: market_risk
+
+# Unusual features identified:
+#   - Uses VAR methodology for foreign exchange exposure with 95% confidence level
+#   - No outstanding commodity hedging contracts at year-end
+#   - Specific mention of 15 different foreign currencies
+#   - Commodity exposure decreased $86 million year-over-year
+#   - Interest rate sensitivity provided for both expense and income impacts
+

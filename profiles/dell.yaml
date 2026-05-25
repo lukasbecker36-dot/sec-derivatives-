@@ -1,0 +1,44 @@
+issuer: Dell Technologies
+ticker: DELL
+cik: "1571996"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  notional_amounts_fx_designated:
+    description: "notional amounts for FX contracts designated as cash flow hedges"
+    section: market_risk
+  notional_amounts_fx_non_designated:
+    description: "notional amounts for FX contracts not designated as hedges"
+    section: market_risk
+  notional_amounts_interest_rate:
+    description: "notional amounts for interest rate contracts not designated as hedges"
+    section: market_risk
+  cash_flow_hedge_gains_losses_oci:
+    description: "gains/losses recognized in accumulated OCI for cash flow hedges"
+    section: market_risk
+  cash_flow_hedge_reclassifications:
+    description: "amounts reclassified from OCI to income for cash flow hedges"
+    section: market_risk
+  non_designated_hedge_gains_losses:
+    description: "gains/losses on derivatives not designated as hedges"
+    section: market_risk
+  derivative_fair_values_gross:
+    description: "gross fair values of derivatives by balance sheet location"
+    section: market_risk
+  var_foreign_currency:
+    description: "Value-at-Risk for foreign currency hedge instruments"
+    section: market_risk
+  variable_rate_debt_exposure:
+    description: "amount of borrowings exposed to interest rate fluctuations"
+    section: market_risk
+
+# Unusual features identified:
+#   - Cross-currency amortizing swaps with notional values that amortize with securitized assets
+#   - Extensive use of non-designated hedges for Dell Financial Services operations
+#   - Separate VAR disclosure for foreign currency instruments in market risk section
+#   - Interest rate swaps used to convert fixed rates to floating rates to match funding profiles
+#   - Multi-currency operations across Euro, Indian Rupee, Japanese Yen, British Pound, Canadian Dollar, and Australian Dollar
+

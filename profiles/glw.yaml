@@ -1,0 +1,35 @@
+issuer: Corning Inc.
+ticker: GLW
+cik: "24741"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  primary_currencies:
+    description: "Japanese yen, South Korean won, Chinese yuan, New Taiwan dollar, Mexican peso and euro"
+    section: market_risk
+  sensitivity_analysis_total:
+    description: "10% adverse movement could result in $1.0 billion loss in fair value"
+    section: market_risk
+  sensitivity_analysis_jpy:
+    description: "10% adverse movement in JPY could result in $0.4 billion loss in fair value"
+    section: market_risk
+  hedge_types:
+    description: "cash flow hedges, net investment hedges, and undesignated economic hedges"
+    section: market_risk
+  counterparty_risk:
+    description: "diverse group of highly-rated major financial institutions, no collateral required"
+    section: market_risk
+  jpy_debt_hedging:
+    description: "cross currency swaps to lock in unrealized FX gains on JPY-denominated debt"
+    section: market_risk
+
+# Unusual features identified:
+#   - narrative-only format with no tabular data
+#   - specific focus on Japanese yen debt hedging strategy
+#   - mentions unrealized FX gains being locked in through swaps
+#   - provides currency-specific sensitivity analysis for JPY separately
+#   - includes forward-looking dates (2025, 2024)
+

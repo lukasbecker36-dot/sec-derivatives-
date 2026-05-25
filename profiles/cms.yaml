@@ -1,0 +1,29 @@
+issuer: CMS Energy
+ticker: CMS
+cik: "811156"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fixed_rate_financing_potential_loss_cms:
+    description: "potential loss in fair value for CMS Energy fixed-rate debt"
+    section: market_risk
+  fixed_rate_financing_potential_loss_consumers:
+    description: "potential loss in fair value for Consumers fixed-rate debt"
+    section: market_risk
+  variable_rate_exposure:
+    description: "annual earnings exposure from variable-rate financing"
+    section: market_risk
+  sensitivity_assumption:
+    description: "hypothetical adverse change percentage used in analysis"
+    section: market_risk
+
+# Unusual features identified:
+#   - combines both CMS Energy consolidated and subsidiary Consumers data in same table
+#   - focuses heavily on debt interest rate risk rather than commodity derivatives
+#   - uses 10% adverse change assumption for sensitivity analysis
+#   - explicitly states variable rate exposure is immaterial
+#   - includes caveat that losses only realized if debt transferred to other creditors
+

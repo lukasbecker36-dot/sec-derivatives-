@@ -1,0 +1,39 @@
+issuer: ConocoPhillips
+ticker: COP
+cik: "1163165"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  commodity_derivative_fair_values:
+    description: "gross fair values of commodity derivatives by balance sheet classification"
+    section: market_risk
+  commodity_derivative_gains_losses:
+    description: "gains and losses from commodity derivatives by income statement line"
+    section: market_risk
+  net_commodity_exposures:
+    description: "open position long/short by commodity type in volumetric units"
+    section: market_risk
+  interest_rate_swap_gains:
+    description: "gains from dedesignated interest rate swaps in equity earnings"
+    section: market_risk
+  debt_maturity_schedule:
+    description: "fixed and floating rate debt by maturity with weighted average rates"
+    section: market_risk
+  var_disclosure:
+    description: "Value at Risk methodology and results"
+    section: market_risk
+  financial_instruments_by_type:
+    description: "cash equivalents and investments by security type and maturity"
+    section: market_risk
+
+# Unusual features identified:
+#   - NPNS (Normal Purchase Normal Sale) exception disclosure for crude and gas contracts
+#   - PALNG subsidiary interest rate swaps with dedesignation during periods
+#   - Net presentation of derivative balances with right of setoff
+#   - Extensive financial instruments portfolio beyond typical derivatives
+#   - VaR results described as immaterial rather than quantified
+#   - Commodity exposures presented in volumetric units (BCF) rather than notional amounts
+

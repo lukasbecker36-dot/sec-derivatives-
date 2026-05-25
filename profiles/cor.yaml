@@ -1,0 +1,25 @@
+issuer: Cencora
+ticker: COR
+cik: "1140859"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  interest_rate_risk:
+    description: "effects of changing interest rates"
+    section: market_risk
+  foreign_currency_risk:
+    description: "foreign currency exchange rate risk"
+    section: market_risk
+  equity_price_risk:
+    description: "changes in price of company's common stock"
+    section: market_risk
+
+# Unusual features identified:
+#   - Market risk disclosure incorporates content by reference rather than providing detailed quantitative analysis
+#   - No specific derivative instruments or hedging activities mentioned despite market risk exposure
+#   - Very brief disclosure with limited quantitative detail
+#   - References separate 'Market Risk' section not included in provided text
+

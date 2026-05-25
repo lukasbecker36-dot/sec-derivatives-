@@ -1,0 +1,35 @@
+issuer: CF Industries
+ticker: CF
+cik: "1324404"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  natural_gas_notional_amounts:
+    description: "MMBtu amounts for open natural gas derivative contracts"
+    section: market_risk
+  natural_gas_sensitivity:
+    description: "$1.00 per MMBtu change impact on fair value (~$13 million)"
+    section: market_risk
+  production_cost_sensitivity:
+    description: "Cost impact per ton of products from $1.00 MMBtu natural gas price change"
+    section: market_risk
+  contract_maturity_periods:
+    description: "Derivative contract periods (through March 2027)"
+    section: market_risk
+  senior_notes_details:
+    description: "Fixed rate debt totaling $3.25 billion principal with specific maturity dates"
+    section: market_risk
+  foreign_currency_exposures:
+    description: "Canadian dollar, British pound, and euro exposure"
+    section: market_risk
+
+# Unusual features identified:
+#   - No hedge accounting applied to derivatives causing earnings volatility
+#   - Collateral posting requirements under ISDA agreements
+#   - Natural gas derivatives settle using NYMEX futures price index
+#   - Company may purchase nitrogen products on open market
+#   - Generally no foreign currency hedges maintained
+

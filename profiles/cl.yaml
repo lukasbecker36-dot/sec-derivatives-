@@ -1,0 +1,19 @@
+issuer: Colgate-Palmolive
+ticker: CL
+cik: "21665"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cross_reference:
+    description: "reference to detailed market risk discussion in other section"
+    section: market_risk
+
+# Unusual features identified:
+#   - market_risk_section_is_cross_reference_only
+#   - actual_derivatives_data_located_in_md_a_section
+#   - no_quantitative_data_in_this_section
+#   - refers_to_part_ii_item_7_for_details
+

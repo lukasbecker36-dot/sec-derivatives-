@@ -1,0 +1,19 @@
+issuer: Cigna
+ticker: CI
+cik: "1739940"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  market_risk_reference:
+    description: "Reference to MD&A Market Risk section"
+    section: market_risk
+
+# Unusual features identified:
+#   - Section only contains incorporation by reference to MD&A
+#   - No actual derivative or market risk data in this section
+#   - Extremely brief disclosure - single sentence reference
+#   - Market risk information located in separate MD&A section rather than notes
+

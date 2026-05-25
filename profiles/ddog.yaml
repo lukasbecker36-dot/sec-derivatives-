@@ -1,0 +1,44 @@
+issuer: Datadog
+ticker: DDOG
+cik: "1561550"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cash_equivalents_amount:
+    description: "$0.3 billion cash equivalents"
+    section: market_risk
+  marketable_securities_amount:
+    description: "$4.1 billion marketable securities"
+    section: market_risk
+  marketable_securities_types:
+    description: "corporate debt, commercial paper, CDs, treasury securities, agency securities"
+    section: market_risk
+  convertible_notes_amount:
+    description: "$1.0 billion 2029 Notes issued December 2024"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "10% rate change would not be material"
+    section: market_risk
+  fx_sensitivity:
+    description: "10% USD change would not be material"
+    section: market_risk
+  hedging_status:
+    description: "no hedging arrangements entered into for fiscal 2025"
+    section: market_risk
+  revenue_currency:
+    description: "all sales denominated in USD"
+    section: market_risk
+  operating_locations:
+    description: "primarily US, France, Ireland"
+    section: market_risk
+
+# Unusual features identified:
+#   - convertible notes fair value disclosure but carried at face value
+#   - explicitly states no trading or speculative investments
+#   - no traditional derivative instruments mentioned
+#   - hypothetical sensitivity analysis provided without quantified impacts
+#   - all revenue in USD eliminates revenue FX risk
+
