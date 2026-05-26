@@ -1,0 +1,24 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $90M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_forwards_outstanding, net_derivative_position)
+[LLM_FLAG] The provided text is only a header/reference statement directing readers to the Form 10-K for the year ended December 31, 2025. The actual quantitative and qualitative disclosures about market risk are not included in this excerpt. All fields cannot be extracted.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
+[NUMERIC] net_derivative_position: $49M → $90M (+83.7%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position increased 84% from $49 million (prior period) to $90 million - significant increase likely due to commodity price environment changes
+[LLM_FLAG] sensitivity_analysis shows opposite directional impact compared to prior period - 10% increase now decreases position (vs increased in prior period), indicating shift in derivative positioning or commodity price expectations
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
+[NUMERIC] net_derivative_position: $273M → $49M (-82.1%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position decreased 82% from $273 million (prior period) to $49 million (current period) - significant decline in commodity derivative asset position
+[LLM_FLAG] sensitivity_analysis shows much smaller impacts in current period ($10M/$9M swings) compared to prior period ($2M/$15M swings), consistent with lower net derivative position
+[LLM_FLAG] weighted_average_variable rate on swaps changed from 6.10% to 5.81% - reflects lower interest rate environment
+[LLM_FLAG] credit_facility margins appear slightly different from prior period - Alternate base rate margin ranges narrowed from 0.125%-1.000% to 0.000%-0.750% for revolving facility
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
+[NUMERIC] net_derivative_position: $198M → $273M (+37.9%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position increased 38% from $198 million to $273 million - primarily driven by commodity derivatives ($273M vs implied $198M prior); change of $75 million is material and should be verified
+[LLM_FLAG] sensitivity_analysis changed significantly: impact of 10% moves reduced from $3M/-$60M range to $2M/-$15M range, suggesting different derivative positions or market valuations
+[LLM_FLAG] interest rate swaps notional amount ($900 million) and net liability position ($113 million) not disclosed in prior period for comparison
+

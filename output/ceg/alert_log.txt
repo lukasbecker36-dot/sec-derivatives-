@@ -1,0 +1,29 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] collateral_amounts: $776M → $1,683M (+116.9%) — exceeds 20% threshold
+[LLM_FLAG] equity_sensitivity_10pct: 1072 vs prior 1061 - minimal 1% increase, within reasonable variation for NDT trust asset value changes
+[LLM_FLAG] fair_value_by_level total increased dramatically: 2493 vs prior 182 (1271% increase) - primarily driven by Calpine acquisition in January 2026 which added 1,403M in contracts acquired at acquisition date
+[LLM_FLAG] collateral_amounts: 1683 vs prior 776 - 117% increase, consistent with significant increase in derivative positions from Calpine acquisition
+[LLM_FLAG] commodity_derivative_roll_forward: Prior period reflected full year 2025 while current period reflects only Q1 2026 (3 months); the large jump to 2,493 is primarily attributable to 1,403M in Calpine contract acquisitions
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
+[LLM_FLAG] PLAUSIBILITY: equity_sensitivity_10pct increased 8.2% from prior period ($981M to $1,061M) - within acceptable variance
+[LLM_FLAG] PLAUSIBILITY: commodity_derivative_roll_forward ending balance decreased 57% from prior period ($424M to $182M) - significant change but explained by total change in fair value of -$317M (marked-to-market adjustment) and reclassification to realized at settlement
+[LLM_FLAG] PLAUSIBILITY: fair_value_by_level total decreased 57% - consistent with commodity derivative decline; Level 3 changed from +$137M to -$55M, suggesting adverse mark-to-market on model-based valuations
+[LLM_FLAG] PLAUSIBILITY: collateral_amounts decreased 8.4% from prior period ($847M to $776M) - within acceptable variance, correlates with lower derivative net asset position
+[LLM_FLAG] NOTE: market_risk_sensitivity disclosed at 2026 level ($219M) compared to prior period statement of 'not material for 2025 and 2026' - represents material change in 2026 exposure year
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
+[NUMERIC] collateral_amounts: $1,063M → $847M (-20.3%) — exceeds 20% threshold
+[LLM_FLAG] equity_sensitivity_10pct: Value changed from 948 to 981 (3.5% increase). This appears reasonable and within normal variance; not a material change.
+[LLM_FLAG] collateral_amounts: Value changed from 1063 to 847 (20.3% decrease). This is within 50% threshold.
+[LLM_FLAG] fair_value_by_level: Total fair value changed from 435 to 424 (2.5% decrease). Level 3 changed from -18 to 137 (major shift). This represents a significant change in Level 3 positioning; likely due to mark-to-market movements and portfolio changes during the six-month period.
+[LLM_FLAG] commodity_derivative_roll_forward: Structure is comparable to prior period but individual components differ; changes appear reasonable given six-month period operations and market movements.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
+[NUMERIC] collateral_amounts: $1,352M → $1,063M (-21.4%) — exceeds 20% threshold
+[LLM_FLAG] equity_sensitivity_10pct: 948 is 13.7% LOWER than prior period value of 1,099 - likely due to different equity price assumptions or changes in NDT trust fund composition and market values at March 31, 2025 vs prior period
+[LLM_FLAG] collateral_amounts: 1,063 is 21.3% LOWER than prior period value of 1,352 - represents net collateral positions at Q1 2025 vs prior reporting date
+[LLM_FLAG] commodity_derivative_roll_forward: ending balance of 435 is 13.7% LOWER than prior period ending balance of 504 - decline driven by lower fair value changes and reclassifications
+[LLM_FLAG] fair_value_by_level: Level 3 position is NEGATIVE 18 (prior: 140) - significant decrease of 112.9% indicates material shift in unobservable input valuations, level 1 increased from 142 to 280 (97% increase)
+

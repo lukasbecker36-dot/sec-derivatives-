@@ -1,3 +1,35 @@
+=== 10-Q | Period ending 2026-04-25 | Processed 2026-05-26 ===
+[LLM_FLAG] fixed_rate_notes_billion decreased from 24.8 billion in prior period to 23.0 billion (7.3% decrease), within acceptable range
+[LLM_FLAG] debt_principal_amount decreased from 24,800 million to 23,000 million (7.3% decrease), consistent with fixed-rate notes decrease
+
+=== 10-Q | Period ending 2025-10-25 | Processed 2026-05-26 ===
+[LLM_FLAG] fixed_rate_notes_billion decreased from 25.3 to 24.8 (1.98% change, within acceptable range)
+[LLM_FLAG] debt_principal_amount decreased from 25,300 to 24,800 million (1.98% change, within acceptable range)
+[LLM_FLAG] This filing section is primarily Risk Factors and does not contain detailed quantitative market risk disclosures typically found in Item 7A
+
+=== 10-Q | Period ending 2025-04-26 | Processed 2026-05-26 ===
+[NUMERIC] fixed_rate_notes_billion: $20M → $25M (+24.6%) — exceeds 20% threshold
+[NUMERIC] debt_principal_amount: $20,300M → $25,300M (+24.6%) — exceeds 20% threshold
+[LLM_FLAG] debt_principal_amount increased from 20,300 million to 25,300 million (24.4% increase) - within acceptable range but represents significant increase in debt outstanding as of Q3 FY2025
+
+=== 10-Q | Period ending 2025-01-25 | Processed 2026-05-26 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $8,978M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-16M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-1M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $383M, now missing
+[DISAPPEARED_FIELD] fx_forward_notional_purchased: was $4,498M, now missing
+[DISAPPEARED_FIELD] fx_forward_notional_sold: was $4,480M, now missing
+[DISAPPEARED_FIELD] fx_forward_fair_value_purchased: was $-21M, now missing
+[DISAPPEARED_FIELD] fx_forward_fair_value_sold: was $22M, now missing
+[DISAPPEARED_FIELD] available_for_sale_debt_fair_value: was $7,381M, now missing
+[DISAPPEARED_FIELD] financing_receivables_carrying_value: was $6,500M, now missing
+[DISAPPEARED_FIELD] marketable_equity_fair_value: was $383M, now missing
+[DISAPPEARED_FIELD] privately_held_investments_carrying_amount: was $1,900M, now missing
+[VALIDATION] Likely extraction failure: 12/14 previously-populated fields are now null (fx_forwards_outstanding, fx_transaction_gain_loss, ir_sensitivity_100bp, marketable_equity_value, fx_forward_notional_purchased...)
+[LLM_FLAG] Debt principal amount decreased from $24,800M to $20,300M (18% reduction). This is plausible as debt may have matured or been repaid, but the magnitude suggests significant debt management activity.
+[LLM_FLAG] Commercial paper outstanding noted as $10.9 billion as of January 25, 2025, which is a significant financing component not fully captured in the fixed-rate notes figure.
+[LLM_FLAG] This filing section is primarily risk factor and equity repurchase disclosure, not quantitative market risk disclosure. The actual quantitative derivatives and market risk data would be in a separate 'Quantitative and Qualitative Disclosures About Market Risk' section referenced but not provided in this excerpt.
+
 === 10-Q | Period ending 2026-04-25 | Processed 2026-05-25 ===
 [LLM_FLAG] Marketable equity fair value decreased 20% from $481M (2024) to $383M (2025), a material decline that may warrant review of individual position changes
 [LLM_FLAG] Available-for-sale debt investments decreased significantly from $9,865M (2024 fair value at 0 BPS) to $7,381M (2025 fair value at 0 BPS), a decline of approximately 25%, likely reflecting changes in portfolio composition or market conditions

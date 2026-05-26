@@ -1,0 +1,15 @@
+=== 10-Q | Period ending 2025-11-01 | Processed 2026-05-26 ===
+[NUMERIC] fixed_rate_notes_billion: $0M → $1M (+106.7%) — exceeds 20% threshold
+[NUMERIC] outstanding_borrowings: $0M → $1M (+106.7%) — exceeds 20% threshold
+[LLM_FLAG] fixed_rate_notes_billion increased from 0.3 to 0.62 (over 100% increase) - this represents $620M in commercial paper program borrowings versus prior $300M in fixed-rate notes
+[LLM_FLAG] outstanding_borrowings increased from 0.3 to 0.62 (over 100% increase) - shift from credit facility borrowings to commercial paper program
+
+=== 10-Q | Period ending 2025-08-02 | Processed 2026-05-26 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NUMERIC] fixed_rate_notes_billion: $1M → $0M (-70.0%) — exceeds 20% threshold
+[LLM_FLAG] fixed_rate_notes_billion differs from prior period (0.3 vs 1.0): The company now has $300M outstanding under commercial paper program versus prior period's $0. This represents a 70% difference and reflects current borrowing activity.
+
+=== 10-Q | Period ending 2025-05-03 | Processed 2026-05-26 ===
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
+[LLM_FLAG] fixed_rate_notes_billion: Prior period showed 0 senior notes outstanding; current period shows $1.0 billion redeemed (post-period event on May 15, 2025). However, this is disclosed as a subsequent event and does not represent a balance sheet increase, so no inconsistency with May 3, 2025 balance.
+

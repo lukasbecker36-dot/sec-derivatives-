@@ -1,0 +1,16 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $5M, now missing
+[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (ir_sensitivity_100bp)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
+[NUMERIC] ir_sensitivity_100bp: $3M → $5M (+66.7%) — exceeds 20% threshold
+[LLM_FLAG] IR_SENSITIVITY_100BP: Increased from $3.0M to $5.0M (67% increase). This is due to increased term loan borrowings from $0 to $400M outstanding as of Sept 30, 2025.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
+[NUMERIC] ir_sensitivity_100bp: $2M → $3M (+50.0%) — exceeds 20% threshold
+[LLM_FLAG] ir_sensitivity_100bp increased from $2.0M to $3.0M (50% increase); likely due to increased floating rate debt outstanding under term loan ($650M as of June 30, 2025)
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
+

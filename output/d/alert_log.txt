@@ -1,0 +1,26 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
+[LLM_FLAG] Interest rate derivatives notional for Dominion Energy decreased from $10.7B (Dec 31, 2025) to $8.9B (Mar 31, 2026) - approximately 17% decrease, within normal quarterly variation
+[LLM_FLAG] Interest rate derivatives notional for Virginia Power decreased from $8.1B (Dec 31, 2025) to $5.1B (Mar 31, 2026) - approximately 37% decrease, moderately significant but not flagged as >50%
+[LLM_FLAG] IR sensitivity (100bp) decreased from $459M (Dec 31, 2025) to $373M (Mar 31, 2026) for Dominion Energy - approximately 19% decrease, consistent with lower notional volumes
+[LLM_FLAG] FX forwards unchanged at €0.9B between quarters, consistent with CVOW project timeline
+[LLM_FLAG] Commodity price sensitivity improved (lower losses) for Dominion Energy at Mar 31, 2026 vs Dec 31, 2025 ($3M and $15M vs prior period baseline)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($456M)
+[LLM_FLAG] fx_forwards_outstanding decreased from €1.1 billion to €894 million (18.7% decrease), which is within normal variance
+[LLM_FLAG] ir_sensitivity_100bp for Dominion Energy increased significantly from $157 million (Dec 31, 2024) to $456 million (Sep 30, 2025), representing a 190% increase. This substantial change suggests either increased interest rate derivative positions or higher interest rate volatility/exposure as of the 2025 period
+[LLM_FLAG] interest_rate_derivatives_dominion increased from $10.8 billion to $13.9 billion notional (28.7% increase), consistent with the larger ir_sensitivity value
+[LLM_FLAG] virginia_power_10pct_commodity_sensitivity decreased from $82 million to $72 million (12.2% decrease), which is within acceptable variance
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
+[LLM_FLAG] fx_forwards_outstanding: Euro forwards outstanding decreased from €1.1 billion (Dec 31, 2024) to €811 million (Jun 30, 2025), representing a 26% decline, which is within normal range but notable
+[LLM_FLAG] ir_sensitivity_100bp: Disclosure only provides 10% interest rate sensitivity, not 100bp, different metric from typical disclosures
+[LLM_FLAG] commodity_price_sensitivity_dominion: Dominion Energy shows consistent decrease in fair value for both 10% price increases and decreases (both negative), which is unusual and differs from typical directional sensitivity
+[LLM_FLAG] interest_rate_derivatives: Dominion Energy interest rate derivatives notional decreased from $10.8 billion (Dec 31, 2024) to $10.1 billion (Jun 30, 2025); Virginia Power increased from $3.8 billion to $5.5 billion (44% increase)
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
+[LLM_FLAG] FX forwards outstanding decreased from €1.1 billion to €938 million (15% decline), within normal variance
+[LLM_FLAG] Interest rate derivatives for Dominion Energy increased from $10.8 billion to $13.6 billion (26% increase), notable but potentially due to debt management activities
+[LLM_FLAG] Virginia Power interest rate derivatives decreased slightly from $3.8 billion to $3.5 billion (8% decrease)
+[LLM_FLAG] Commodity price sensitivity shows different metric presentation (10% change impacts) vs prior period; Dominion Energy 10% price increase impact of -$30M is higher than prior -$18M (67% increase)
+

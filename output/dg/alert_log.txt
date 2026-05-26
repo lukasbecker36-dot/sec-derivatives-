@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2025-05-02 | Processed 2026-05-26 ===
+[LLM_FLAG] The filing section provided contains only a boilerplate statement referring to the 10-K rather than standalone disclosures. All values are inferred from prior period and the statement of 'no material changes.'
+
+=== 10-K | Period ending 2025-01-31 | Processed 2026-05-26 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($4M)
+[NUMERIC] sensitivity_analysis_current: $6M → $4M (-37.5%) — exceeds 20% threshold
+[LLM_FLAG] swap_entry_date changed from 'June 2021' in prior period to 'May 2021' in current filing - discrepancy of one month requires clarification
+[LLM_FLAG] sensitivity_analysis_current value of $3.5 million remains unchanged from prior period, which is unusual given this should represent 2024/2025 data with potentially different variable rate balances
+
 === 10-K | Period ending 2026-01-30 | Processed 2026-05-25 ===
 [LLM_FLAG] Sensitivity analysis increased 60% from $3.5 million (2024) to $5.6 million (2025), which exceeds the 50% threshold. This significant increase is attributed to increased cash and cash equivalents driven primarily from cash from operations, as stated in the filing.
 

@@ -1,0 +1,15 @@
+=== 10-Q | Period ending 2025-05-02 | Processed 2026-05-26 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $26M, now missing
+[DISAPPEARED_FIELD] var_foreign_currency: was $9M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_exposure: was $2,600M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (ir_sensitivity_100bp, var_foreign_currency, variable_rate_debt_exposure)
+[LLM_FLAG] Filing excerpt is incomplete - contains only a cross-reference statement directing to the Form 10-K. Detailed market risk disclosures are not included in this excerpt.
+[LLM_FLAG] Unable to verify if values have changed materially from prior period as specific quantitative data is not provided in the excerpt.
+[LLM_FLAG] Prior period shows 'has_derivatives': 'Yes' but current excerpt provides no derivative-specific information to confirm ongoing use.
+
+=== 10-K | Period ending 2025-01-31 | Processed 2026-05-26 ===
+[NUMERIC] var_foreign_currency: $6M → $9M (+50.0%) — exceeds 20% threshold
+[LLM_FLAG] ir_sensitivity_100bp decreased from $30 million to $26 million (13% decrease within tolerance)
+[LLM_FLAG] var_foreign_currency decreased from $15 million to $9 million (40% decrease within tolerance)
+[LLM_FLAG] variable_rate_debt_exposure decreased from $3,000 million to $2,600 million (13% decrease within tolerance)
+

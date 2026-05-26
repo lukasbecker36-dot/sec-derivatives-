@@ -1,0 +1,11 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
+[LLM_FLAG] Q1 2026 filing contains minimal quantitative risk disclosure; company explicitly refers to 2025 10-K Item 7A for detailed market risk information
+[LLM_FLAG] All specific derivative, debt maturity, and sensitivity data not provided in this 10-Q excerpt; refer to referenced 2025 10-K for complete risk disclosures
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $23M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion)
+[LLM_FLAG] Q1 2025 filing contains minimal market risk disclosure, incorporating prior year Form 10-K by reference. Unable to extract current period quantitative metrics or compare to prior period values.
+[LLM_FLAG] This abbreviated disclosure approach is typical for interim quarterly reports but prevents detailed extraction of most requested fields.
+
