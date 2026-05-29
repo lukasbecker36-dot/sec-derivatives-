@@ -1,0 +1,38 @@
+issuer: ExxonMobil
+ticker: XOM
+cik: "34088"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  derivative_assets_fair_value:
+    description: "fair value of derivative assets by hierarchy level"
+    section: market_risk
+  derivative_liabilities_fair_value:
+    description: "fair value of derivative liabilities by hierarchy level"
+    section: market_risk
+  counterparty_netting:
+    description: "netting effects for derivatives"
+    section: market_risk
+  collateral_netting:
+    description: "collateral netting amounts"
+    section: market_risk
+  notional_positions:
+    description: "net notional long/short positions by commodity"
+    section: market_risk
+  trading_gains_losses:
+    description: "realized and unrealized trading gains/losses"
+    section: market_risk
+  collateral_under_netting:
+    description: "collateral under master netting arrangements"
+    section: market_risk
+
+# Unusual features identified:
+#   - Trading derivatives presented net in Sales and other operating revenue rather than separate line item
+#   - Perfect offset hedge accounting for interest rate swaps explicitly mentioned
+#   - Specific mention that commodity derivatives do not use hedge accounting
+#   - Separate disclosure of collateral under master netting arrangements not offset on balance sheet
+#   - Fair value hierarchy disclosure integrated with derivatives table
+

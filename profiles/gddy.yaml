@@ -1,0 +1,38 @@
+issuer: GoDaddy
+ticker: GDDY
+cik: "1609711"
+archetype: active_ir_fx_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  derivative_assets:
+    description: "fair value of derivative assets by level"
+    section: market_risk
+  derivative_liabilities:
+    description: "fair value of derivative liabilities by level"
+    section: market_risk
+  aoci_realized_losses:
+    description: "realized losses in accumulated other comprehensive income"
+    section: market_risk
+  aoci_unrealized_losses:
+    description: "unrealized losses in accumulated other comprehensive income"
+    section: market_risk
+  fx_sensitivity:
+    description: "impact of hypothetical 10% change in FX rates"
+    section: market_risk
+  constant_currency_impact:
+    description: "impact on revenue growth in constant currency"
+    section: market_risk
+  primary_fx_exposures:
+    description: "most significant foreign currency exposures"
+    section: market_risk
+
+# Unusual features identified:
+#   - ASRs treated as derivative instruments and included in fair value hierarchy
+#   - Cross-currency swaps section appears cut off mid-sentence
+#   - Fair value tables include cash equivalents alongside derivatives
+#   - Separate AOCI disclosure for realized vs unrealized hedge losses
+#   - Constant currency metrics provided with basis point precision
+

@@ -1,0 +1,19 @@
+issuer: Emerson Electric
+ticker: EMR
+cik: "32604"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cross_reference:
+    description: "Item 7 Financial Instruments section reference"
+    section: market_risk
+
+# Unusual features identified:
+#   - Entire market risk disclosure is incorporated by reference to Item 7
+#   - No actual derivatives or market risk data in this section
+#   - Minimal standalone content - requires cross-reference resolution
+#   - Non-standard approach - most companies provide substantive disclosures here
+

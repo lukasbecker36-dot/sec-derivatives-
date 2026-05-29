@@ -1,0 +1,47 @@
+issuer: Henry Schein
+ticker: HSIC
+cik: "1000228"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_currency_forward_fair_value:
+    description: "Fair value of foreign currency forward contracts"
+    section: market_risk
+  eur_usd_forward_notional:
+    description: "Notional value of EUR/USD forward contracts in millions"
+    section: market_risk
+  eur_usd_forward_fair_value:
+    description: "Fair value of EUR/USD forward contracts"
+    section: market_risk
+  total_return_swap_notional:
+    description: "Notional value of total return swap"
+    section: market_risk
+  total_return_swap_rate:
+    description: "Financing blended rate for total return swap"
+    section: market_risk
+  interest_rate_swap_notional:
+    description: "Notional value of interest rate swap agreements"
+    section: market_risk
+  term_loan_hedged_portion:
+    description: "Percentage of term loan that is hedged"
+    section: market_risk
+  weighted_average_rate:
+    description: "Weighted average rate for term loan"
+    section: market_risk
+  hypothetical_currency_impact:
+    description: "Impact of 5% USD change on net income"
+    section: market_risk
+  hypothetical_euro_impact:
+    description: "Impact of 5% EUR increase on forward contract fair value"
+    section: market_risk
+
+# Unusual features identified:
+#   - Market risk disclosures are separate from Note 13 derivatives section
+#   - Total return swap used to hedge employee benefit plan obligations
+#   - Detailed sensitivity analysis for both currency and interest rate exposures
+#   - Interest rate swaps hedge 90% of term loan notional
+#   - Net investment hedge designation for EUR/USD forwards
+

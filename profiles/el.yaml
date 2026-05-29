@@ -1,0 +1,25 @@
+issuer: Estée Lauder Companies (The)
+ticker: EL
+cik: "1001250"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  net_investment_hedge_gains_losses:
+    description: "gains (losses) relating to net investment hedges"
+    section: market_risk
+  translation_adjustments_reallocation:
+    description: "cumulative translation adjustments reallocated from redeemable noncontrolling interest"
+    section: market_risk
+  market_risk_reference:
+    description: "reference to market risk disclosures in Item 7"
+    section: market_risk
+
+# Unusual features identified:
+#   - Market risk disclosures incorporated by reference rather than detailed in notes
+#   - Derivative note section appears truncated or incomplete
+#   - Focus on translation adjustments related to DECIEM acquisition rather than typical hedge accounting
+#   - No quantitative data tables present in extracted sections
+

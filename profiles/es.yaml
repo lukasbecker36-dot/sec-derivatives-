@@ -1,0 +1,33 @@
+issuer: Eversource Energy
+ticker: ES
+cik: "72741"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  collateral_held:
+    description: "collateral (letters of credit or cash) held from counterparties"
+    section: market_risk
+  cash_posted_iso:
+    description: "cash posted with ISO-NE related to energy transactions"
+    section: market_risk
+  debt_structure:
+    description: "fixed vs variable rate composition of long-term debt"
+    section: market_risk
+  counterparty_types:
+    description: "types of counterparties for credit risk assessment"
+    section: market_risk
+  collateral_trigger_events:
+    description: "events requiring additional collateral posting"
+    section: market_risk
+
+# Unusual features identified:
+#   - Regulated companies have no market risk exposure as economic impacts pass through to customers
+#   - No traditional derivatives tables or notional amounts disclosed
+#   - Focus on operational risk management rather than financial derivatives
+#   - Specific mention of ISO-NE cash posting requirements
+#   - Credit rating triggers for collateral requirements mentioned but amounts not quantified
+#   - Enterprise Risk Management program described in detail within market risk section
+

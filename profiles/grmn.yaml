@@ -1,0 +1,35 @@
+issuer: Garmin
+ticker: GRMN
+cik: "1121788"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_currency_gain_loss:
+    description: "Net foreign currency gains/losses for the period"
+    section: market_risk
+  currency_specific_impacts:
+    description: "Gains/losses by individual currency (Euro, Polish Zloty, Swiss Franc, Taiwan Dollar)"
+    section: market_risk
+  currency_translation_adjustment:
+    description: "Translation adjustment recorded in accumulated OCI"
+    section: market_risk
+  fx_sensitivity_analysis:
+    description: "10% adverse change impact on income before taxes"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "100 basis point increase impact on portfolio fair value"
+    section: market_risk
+  marketable_securities_exposure:
+    description: "Unrealized gains/losses on available-for-sale debt securities"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative instruments disclosed - company explicitly states no hedging of FX risk
+#   - Market risk section covers operational risks (pricing, raw materials) alongside financial risks
+#   - Detailed currency-by-currency breakdown of FX impacts with percentage changes
+#   - No debt-related interest rate risk due to debt-free balance sheet
+#   - Sensitivity analysis uses 10% FX change (vs typical 10% or 15%) and 100bp interest rate shift
+

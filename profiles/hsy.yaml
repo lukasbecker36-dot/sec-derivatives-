@@ -1,0 +1,42 @@
+issuer: Hershey Company (The)
+ticker: HSY
+cik: "47111"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_currency_forward_contracts_purchase:
+    description: "contract amounts and currencies for foreign currency forwards to purchase"
+    section: market_risk
+  foreign_currency_forward_contracts_sell:
+    description: "contract amounts and currencies for foreign currency forwards to sell"
+    section: market_risk
+  foreign_currency_forwards_fair_value:
+    description: "net fair value of foreign currency forward contracts"
+    section: market_risk
+  interest_rate_sensitivity_variable_debt:
+    description: "hypothetical impact of 100bp rate increase on variable rate debt"
+    section: market_risk
+  interest_rate_sensitivity_fixed_debt:
+    description: "hypothetical impact of 100bp rate increase on fixed rate debt fair value"
+    section: market_risk
+  foreign_currency_sensitivity:
+    description: "impact of 10% unfavorable FX rate change on derivatives fair value"
+    section: market_risk
+  commodity_hedging_horizon:
+    description: "time periods for commodity derivative hedging (3-24 months)"
+    section: market_risk
+  major_commodities:
+    description: "list of significant raw materials hedged and unhedged"
+    section: market_risk
+
+# Unusual features identified:
+#   - Includes detailed commodity market factors analysis with climate change risks
+#   - Specifically mentions living income premiums as a commodity risk factor
+#   - Covers diesel fuel derivatives for transportation cost hedging
+#   - Notes limited liquidity in dairy futures markets affecting hedging strategy
+#   - Provides cocoa futures price changes and production forecasts
+#   - Uses both exchange-traded and OTC derivatives with counterparty risk mitigation
+

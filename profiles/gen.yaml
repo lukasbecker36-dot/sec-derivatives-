@@ -1,0 +1,47 @@
+issuer: Gen Digital
+ticker: GEN
+cik: "849399"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_forward_notional_current:
+    description: "notional amounts of foreign exchange contracts not designated as hedging instruments - current period"
+    section: market_risk
+  fx_forward_notional_prior:
+    description: "notional amounts of foreign exchange contracts not designated as hedging instruments - prior period"
+    section: market_risk
+  interest_rate_swap_notional_current:
+    description: "notional amount of interest rate swaps designated as cash flow hedges - current period"
+    section: market_risk
+  interest_rate_swap_notional_prior:
+    description: "notional amount of interest rate swaps designated as cash flow hedges - prior period"
+    section: market_risk
+  swap_fixed_rates:
+    description: "fixed rates on interest rate swaps"
+    section: market_risk
+  variable_debt_outstanding:
+    description: "outstanding debt with variable interest rates"
+    section: market_risk
+  fixed_debt_carrying_amount:
+    description: "carrying amount of fixed-rate Senior Notes"
+    section: market_risk
+  fixed_debt_fair_value:
+    description: "fair value of fixed-rate Senior Notes"
+    section: market_risk
+  sofr_sensitivity:
+    description: "impact of 100 basis point change in SOFR on interest expense"
+    section: market_risk
+  revolving_credit_facility:
+    description: "available revolving credit facility amount"
+    section: market_risk
+
+# Unusual features identified:
+#   - Interest rate swaps matured during the reporting period (March 31, 2026)
+#   - Notional amounts embedded in narrative text rather than tabular format
+#   - Activity described as 'immaterial' without specific quantification
+#   - Fixed rates on swaps provided with high precision (3.762% and 3.55%)
+#   - Market risk section includes revolving credit facility exposure details
+

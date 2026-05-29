@@ -1,0 +1,18 @@
+issuer: HCA Healthcare
+ticker: HCA
+cik: "860730"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cross_reference:
+    description: "Reference to Item 7 Market Risk section"
+    section: market_risk
+
+# Unusual features identified:
+#   - Section contains only cross-reference to Item 7 MD&A
+#   - No actual derivative or market risk data in this section
+#   - Substantive disclosures located elsewhere in filing
+

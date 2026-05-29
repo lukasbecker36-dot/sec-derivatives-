@@ -1,0 +1,41 @@
+issuer: Honeywell
+ticker: HON
+cik: "773840"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  notional_amounts:
+    description: "notional values by instrument type and hedge designation"
+    section: market_risk
+  fair_value_assets:
+    description: "positive fair values of derivative positions"
+    section: market_risk
+  fair_value_liabilities:
+    description: "negative fair values of derivative positions"
+    section: market_risk
+  hedge_designation:
+    description: "classification as fair value, cash flow, net investment, or undesignated hedges"
+    section: market_risk
+  foreign_currency_notional:
+    description: "total foreign currency contract notional amounts"
+    section: market_risk
+  net_investment_hedge_debt:
+    description: "carrying value of debt designated as net investment hedges"
+    section: market_risk
+  fair_value_hedge_adjustments:
+    description: "cumulative basis adjustments for fair value hedged items"
+    section: market_risk
+  hedge_effectiveness_gains_losses:
+    description: "gains and losses recognized in earnings from hedge relationships"
+    section: market_risk
+
+# Unusual features identified:
+#   - includes foreign currency denominated debt as hedge instruments in addition to derivatives
+#   - presents combined table with notional amounts and fair values by hedge designation
+#   - shows cumulative fair value hedge adjustments separately
+#   - provides detailed income statement line item allocation for hedge gains/losses
+#   - includes specific currency exposure details (USD, EUR, CAD, GBP, MXN, CNY, INR)
+

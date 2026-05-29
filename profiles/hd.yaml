@@ -1,0 +1,35 @@
+issuer: Home Depot (The)
+ticker: HD
+cik: "354950"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  floating_rate_debt_principal:
+    description: "Total floating-rate debt principal amount"
+    section: market_risk
+  floating_rate_debt_percentage:
+    description: "Percentage of senior notes portfolio that is floating-rate"
+    section: market_risk
+  interest_rate_swap_fair_value:
+    description: "Aggregate fair value position of interest rate swaps"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "Annual interest expense impact from 1% rate increase"
+    section: market_risk
+  foreign_currency_hedge_materiality:
+    description: "Materiality assessment of foreign currency hedging arrangements"
+    section: market_risk
+  commodity_derivative_usage:
+    description: "Whether commodity derivatives are used"
+    section: market_risk
+
+# Unusual features identified:
+#   - No tabular presentation of derivative notionals or fair values
+#   - Foreign currency derivatives mentioned but described as 'not material'
+#   - Explicit statement that no commodity derivatives are used
+#   - Interest rate sensitivity analysis provided in narrative form only
+#   - Fair value hedge accounting relationship explicitly described for interest rate swaps
+

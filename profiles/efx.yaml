@@ -1,0 +1,47 @@
+issuer: Equifax
+ticker: EFX
+cik: "33185"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_sensitivity_revenue_2025:
+    description: "Revenue impact from 10% USD weakening in 2025"
+    section: market_risk
+  fx_sensitivity_operating_profit_2025:
+    description: "Pre-tax operating profit impact from 10% USD weakening in 2025"
+    section: market_risk
+  fx_sensitivity_revenue_2024:
+    description: "Revenue impact from 10% USD weakening in 2024"
+    section: market_risk
+  fx_sensitivity_operating_profit_2024:
+    description: "Pre-tax operating profit impact from 10% USD weakening in 2024"
+    section: market_risk
+  weighted_average_cost_of_debt:
+    description: "Weighted average cost of debt percentage"
+    section: market_risk
+  weighted_average_life_of_debt:
+    description: "Weighted average life of debt in years"
+    section: market_risk
+  fixed_rate_debt_percentage:
+    description: "Percentage of debt that is fixed-rate"
+    section: market_risk
+  variable_rate_debt_percentage:
+    description: "Percentage of debt that is variable-rate"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "Interest expense impact from 100 basis point increase in variable rates"
+    section: market_risk
+  primary_foreign_currencies:
+    description: "List of primary foreign currencies for operations"
+    section: market_risk
+
+# Unusual features identified:
+#   - High-level qualitative disclosure with limited quantitative detail
+#   - No notional amounts or fair values disclosed
+#   - No hedge accounting designation mentioned
+#   - Sensitivity analysis provided for both FX and interest rate risk
+#   - References future years (2025) suggesting forward-looking projections
+
