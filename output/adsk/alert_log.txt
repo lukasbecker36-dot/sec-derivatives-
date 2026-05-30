@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-04-30 | Processed 2026-05-30 ===
+[NUMERIC] forward_contracts_sold_fair_value: $12M → $-13M (-208.3%) — exceeds 20% threshold
+[NUMERIC] option_contracts_purchased_fair_value: $12M → $15M (+25.0%) — exceeds 20% threshold
+[NUMERIC] option_contracts_sold_fair_value: $-18M → $-7M (+61.1%) — exceeds 20% threshold
+[NUMERIC] usd_depreciation_sensitivity: $-150M → $-94M (+37.3%) — exceeds 20% threshold
+[NUMERIC] cash_equivalents_marketable_securities: $1,830M → $2,410M (+31.7%) — exceeds 20% threshold
+[LLM_FLAG] usd_depreciation_sensitivity: Changed from -158M to -94M (40% decrease), likely due to changes in derivative positions and currency exposure mix
+[LLM_FLAG] forward_contracts_purchased_notional: Decreased from 1,743M to 1,685M (3% decrease), minor change
+[LLM_FLAG] forward_contracts_sold_notional: Decreased from 2,166M to 1,603M (26% decrease), moderate decrease in sold positions
+[LLM_FLAG] option_contracts_purchased_notional: Increased from 1,597M to 1,868M (17% increase), reflecting increased hedging activity
+[LLM_FLAG] option_contracts_sold_notional: Increased from 1,698M to 1,983M (17% increase), consistent with increased hedging activity
+
 === 10-Q | Period ending 2025-10-31 | Processed 2026-05-23 ===
 [NUMERIC] fx_forwards_outstanding: $2,895M → $3,611M (+24.7%) — exceeds 20% threshold
 [NUMERIC] forward_contracts_purchased_fair_value: $6M → $-2M (-133.3%) — exceeds 20% threshold

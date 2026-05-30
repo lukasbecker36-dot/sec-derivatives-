@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
+[LLM_FLAG] Excerpt provided contains only introductory disclosure and reference to Note 8; quantitative metrics (FX forwards notional, interest rate sensitivity, equity sensitivity, etc.) are not included in the provided text and would be found in the full Note 8 disclosure
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
+[LLM_FLAG] This section is introductory/overview text only. Quantitative metrics (FX forwards outstanding, sensitivities, gain/loss amounts, debt amounts) are not disclosed in this excerpt. The detailed data would be in Note 8 which is referenced but not provided in this filing text.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
+[LLM_FLAG] Note number changed from Note 9 (prior period) to Note 8 (current period) - verify this is intentional reorganization and not a data error
+[LLM_FLAG] Extracted text is limited to introductory disclosure paragraph; quantitative market risk sensitivity data not included in provided text
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
+[LLM_FLAG] Change in reference_location from prior period (prior: Part II, Item 7 of Form 10-K; current: Part I, Item 1 of Form 10-Q). This is expected as filing is 10-Q not 10-K.
+[LLM_FLAG] Change from 'No mention' to 'Yes' for has_derivatives. Filing now explicitly discloses derivative use, likely because this section was not included in prior period extraction or prior period was different fiscal document.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
 [LLM_FLAG] Provided text is only the section header that incorporates by reference the actual market risk disclosure from Part II, Item 7. Specific quantitative metrics cannot be extracted from this excerpt alone.
 

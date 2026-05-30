@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
+[DROPPED_TO_ZERO] fx_forwards_outstanding: $3,733M → $0M
+[NUMERIC] non_marketable_equity_investments: $47M → $123M (+161.7%) — exceeds 20% threshold
+[LLM_FLAG] Non-marketable equity investments increased 162% from $47 million (prior period) to $123 million (current period). This significant increase warrants investigation into new investments or revaluations.
+[LLM_FLAG] FX forwards outstanding dropped from $3,733 million to $0. This represents a complete elimination of hedging activity that was material in the prior period. The filing text contains no explanation for this substantial change in hedging strategy.
+[LLM_FLAG] Pounds Sterling currency exposure is newly mentioned in primary foreign currencies (not in prior period list), suggesting expanded UK operations or increased transaction exposure.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
+[LLM_FLAG] fx_forwards_outstanding increased significantly from £2.0 billion (approximately $2,530 million at typical 1.27 GBP/USD) in prior period to £2.8 billion (approximately $3,733 million at 1.33 GBP/USD) - increase of 47.5%. This is explained by the Deal-Contingent Forward entered into on May 6, 2025 for the Deliveroo Transaction.
+[LLM_FLAG] non_marketable_equity_investments increased from $41 million to $47 million (14.6% increase) - within normal range but represents positive movement in portfolio value.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] non_marketable_equity_investments: appeared for first time ($41M)
+[LLM_FLAG] FX_FORWARDS_OUTSTANDING: New derivative activity in current period. Prior period showed 0 notional; current period shows £2.8 billion (~$4.2 billion) Deal-Contingent Forward related to Deliveroo Transaction acquisition. Represents major change due to new deal announcement.
+[LLM_FLAG] NON_MARKETABLE_EQUITY_INVESTMENTS: Decreased from $43 million (2025 prior) to $41 million (current period), representing ~5% decline within normal variance
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
+[LLM_FLAG] Non-marketable equity investments decreased from 69 million (Q1 2025 prior period) to 43 million as of March 31, 2025 - 37.7% decrease indicates potential impairments or dispositions
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
 [LLM_FLAG] Non-marketable equity investments increased 64% from 2024 ($42M) to 2025 ($69M), exceeding 50% threshold - company made significant new investments in private companies during 2025
 

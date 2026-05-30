@@ -1,0 +1,38 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
+[DROPPED_TO_ZERO] floating_rate_debt_amount: $216M → $0M
+[DROPPED_TO_ZERO] floating_rate_debt_ratio: $1M → $0M
+[LLM_FLAG] Floating rate debt decreased to $0 million from $216 million in prior period - significant change of 100%
+[LLM_FLAG] Total net credit exposure increased to $1,652 million from $1,077 million - increase of 53.5%, primarily driven by higher internally rated investment grade counterparties ($612M vs $381M prior)
+[LLM_FLAG] Interest rate sensitivity for DTE Energy increased 24% (from -$906M to -$981M for 10% increase scenario)
+[LLM_FLAG] Gas commodity contract sensitivity decreased significantly from $21M to $18M for 10% increase
+[LLM_FLAG] Power commodity contract sensitivity increased from $5M to $8M for 10% increase
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
+[NUMERIC] floating_rate_debt_amount: $597M → $216M (-63.8%) — exceeds 20% threshold
+[NUMERIC] floating_rate_debt_ratio: $3M → $1M (-65.4%) — exceeds 20% threshold
+[LLM_FLAG] SIGNIFICANT CHANGE: floating_rate_debt_amount decreased from $597M (Q3 2024) to $216M (Q3 2025), a 64% reduction. Recommend verification that this represents actual debt reduction and not a reclassification.
+[LLM_FLAG] SIGNIFICANT CHANGE: floating_rate_debt_ratio decreased from 2.6% to 0.9%, representing a 65% decrease that aligns with the floating rate debt amount reduction.
+[LLM_FLAG] SIGNIFICANT CHANGE: credit_exposure_table total_net_credit_exposure decreased from $1,221M to $1,077M, a 12% decrease. Individual line items show changes: investment_grade_a_or_greater decreased from $394M to $371M; investment_grade_bbb_plus_bbb decreased from $332M to $289M; internally_rated_investment_grade decreased from $444M to $381M.
+[LLM_FLAG] MODERATE CHANGE: sensitivity_analysis_table interest_rate_risk metrics increased: DTE Energy increased from -$823M/-$883M to -$906M/-$967M (10% change); DTE Electric increased from -$534M/-$582M to -$524M/-$569M (1-2% change). Changes suggest increased interest rate exposure.
+[LLM_FLAG] MODERATE CHANGE: commodity gas contracts sensitivity increased from $40M to $21M (48% decrease) on 10% increase scenario, suggesting reduced gas contract exposure.
+[LLM_FLAG] FX forwards notional amount not disclosed in this section; amount and specific exposure unknown.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
+[LLM_FLAG] Credit exposure total increased 16% from prior period ($1,221M vs $1,455M prior reported) - primarily driven by decrease in internally rated investment grade counterparties (444M vs 424M) and increase in A- and Greater rated counterparties (394M vs 555M). Overall net credit exposure decreased.
+[LLM_FLAG] Interest rate sensitivity changed from prior period: DTE Energy 10% increase moved from -789M to -823M (4.3% change, within tolerance). DTE Electric 10% increase moved from -484M to -534M (10.3% change, within tolerance).
+[LLM_FLAG] Gas contracts sensitivity increased from prior: 10% increase moved from 48M to 40M (17% decrease), and 10% decrease moved from -48M to -40M. This represents a meaningful but less than 50% change.
+[LLM_FLAG] Floating rate debt increased from $513M to $597M (16.4% increase), and floating rate debt ratio increased from 2.3% to 2.6%.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
+[NUMERIC] floating_rate_debt_amount: $1M → $513M (+56900.0%) — exceeds 20% threshold
+[NUMERIC] floating_rate_debt_ratio: $4M → $2M (-34.3%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: floating_rate_debt_amount changed from 1 to 513 (570x)
+[LLM_FLAG] credit_exposure_table: Total net credit exposure increased from $1,602 million to $1,455 million (9.2% decrease - within 50% threshold but notable decrease)
+[LLM_FLAG] sensitivity_analysis_table: Environmental contracts 10% increase changed from -5 to -8 (60% increase - exceeds 50% threshold)
+[LLM_FLAG] sensitivity_analysis_table: Gas contracts increased from 22 to 48 (118% increase - exceeds 50% threshold significantly)
+[LLM_FLAG] sensitivity_analysis_table: Power contracts changed from 5 to -3 (reversal in sign - significant change)
+[LLM_FLAG] sensitivity_analysis_table: Interest rate risk DTE Energy 10% increase changed from -904 to -789 (12.7% decrease - within threshold)
+[LLM_FLAG] sensitivity_analysis_table: Interest rate risk DTE Electric 10% increase changed from -538 to -484 (10% decrease - within threshold)
+[LLM_FLAG] floating_rate_debt_amount: Increased from $0.9 million to $513 million (56,900% increase - exceeds 50% threshold dramatically)
+[LLM_FLAG] floating_rate_debt_ratio: Decreased from 3.5% to 2.3% but underlying debt amount changed significantly
+

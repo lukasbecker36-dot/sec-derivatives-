@@ -1,0 +1,17 @@
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-05-30 ===
+[LLM_FLAG] Filing contains minimal disclosure - refers entirely to prior year 10-K for market risk details. No specific quantitative data provided in this 10-Q section.
+
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-05-30 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $300M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $2M, now missing
+[DISAPPEARED_FIELD] foreign_currency_forward_fair_value: was $-20M, now missing
+[DISAPPEARED_FIELD] eur_usd_forward_notional: was $300M, now missing
+[DISAPPEARED_FIELD] eur_usd_forward_fair_value: was $-20M, now missing
+[DISAPPEARED_FIELD] total_return_swap_notional: was $117M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $675M, now missing
+[DISAPPEARED_FIELD] hypothetical_currency_impact: was $6M, now missing
+[DISAPPEARED_FIELD] hypothetical_euro_impact: was $-18M, now missing
+[VALIDATION] Likely extraction failure: 9/9 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, foreign_currency_forward_fair_value, eur_usd_forward_notional, eur_usd_forward_fair_value...)
+[LLM_FLAG] All detailed derivative and market risk metrics are null - the filing text references Item 7A of the 10-K for year ended December 28, 2024, indicating this 10-Q contains only a cross-reference rather than full disclosure
+[LLM_FLAG] This is a minimal disclosure approach typical of 10-Q filings when there are no material changes from the prior 10-K
+

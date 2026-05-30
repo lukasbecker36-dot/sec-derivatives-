@@ -15,7 +15,13 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "economic hedging",
+      "commodity derivative",
+      "unrealized loss",
+      "accumulated other comprehensive",
+      "unrealized gain"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -31,6 +37,39 @@
       ],
       "fields_extracted": 1,
       "fields_null": 17
+    },
+    {
+      "filing_date": "2025-03-31",
+      "form_type": "10-Q",
+      "period_end": "2025-03-31",
+      "processed_at": "2026-05-30T08:21:58Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 14,
+      "fields_null": 4
+    },
+    {
+      "filing_date": "2025-06-30",
+      "form_type": "10-Q",
+      "period_end": "2025-06-30",
+      "processed_at": "2026-05-30T08:22:11Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 15,
+      "fields_null": 3
+    },
+    {
+      "filing_date": "2025-09-30",
+      "form_type": "10-Q",
+      "period_end": "2025-09-30",
+      "processed_at": "2026-05-30T08:22:28Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 15,
+      "fields_null": 3
     }
   ]
 }

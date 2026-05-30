@@ -17,7 +17,9 @@
   "idiosyncrasies": {
     "recurring_phrases": [],
     "non_gaap_metrics": [],
-    "unusual_disclosure_patterns": [],
+    "unusual_disclosure_patterns": [
+      "market_risk: The filing section for Market Risk is unusually brief and provides no substantive disclosure. It appears to be a placeholder or incorporation by reference to the 2024 Form 10-K. No numerical data on d"
+    ],
     "known_issues": []
   },
   "history": [
@@ -31,6 +33,39 @@
       ],
       "fields_extracted": 10,
       "fields_null": 2
+    },
+    {
+      "filing_date": "2025-03-31",
+      "form_type": "10-Q",
+      "period_end": "2025-03-31",
+      "processed_at": "2026-05-30T08:32:09Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 1,
+      "fields_null": 11
+    },
+    {
+      "filing_date": "2025-09-30",
+      "form_type": "10-Q",
+      "period_end": "2025-09-30",
+      "processed_at": "2026-05-30T08:32:14Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 1,
+      "fields_null": 11
+    },
+    {
+      "filing_date": "2025-12-31",
+      "form_type": "10-Q",
+      "period_end": "2025-12-31",
+      "processed_at": "2026-05-30T08:32:17Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 1,
+      "fields_null": 11
     }
   ]
 }
