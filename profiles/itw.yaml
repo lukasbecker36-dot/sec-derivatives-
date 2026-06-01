@@ -1,0 +1,28 @@
+issuer: Illinois Tool Works
+ticker: ITW
+cik: "49826"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  market_risk_exposures:
+    description: "currency exchange rates, commodity price volatility, interest rate changes"
+    section: market_risk
+  interest_rate_risk:
+    description: "exposure to fair value changes on fixed rate debt"
+    section: market_risk
+  speculative_activity:
+    description: "statement that company does not engage in speculative/leveraged transactions"
+    section: market_risk
+  trading_instruments:
+    description: "statement that company does not hold/issue instruments for trading"
+    section: market_risk
+
+# Unusual features identified:
+#   - Very brief market risk disclosure with minimal quantitative detail
+#   - No derivative instruments mentioned despite exposure to FX, commodity, and interest rate risks
+#   - Section appears truncated - references Note 10 but text cuts off
+#   - No hedging strategies disclosed despite identified market exposures
+

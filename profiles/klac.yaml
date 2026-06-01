@@ -1,0 +1,41 @@
+issuer: KLA Corporation
+ticker: KLAC
+cik: "319201"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  notional_amounts_cash_flow_hedge:
+    description: "Outstanding notional amounts for cash flow hedge contracts by type (purchase/sell)"
+    section: market_risk
+  oci_gains_losses:
+    description: "Gains/losses on derivatives recognized in OCI by instrument type"
+    section: market_risk
+  earnings_reclassifications:
+    description: "Amounts reclassified from AOCI to earnings by income statement line item"
+    section: market_risk
+  unamortized_rate_lock_fair_value:
+    description: "Aggregate unamortized fair value of rate lock agreements"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "Impact of 100 bps rate increase on investment portfolio"
+    section: market_risk
+  fixed_income_portfolio_value:
+    description: "Total value of fixed income securities portfolio"
+    section: market_risk
+  senior_notes_fair_value:
+    description: "Fair value and book value of fixed rate Senior Notes"
+    section: market_risk
+  equity_security_sensitivity:
+    description: "Impact of 50% price decline on marketable equity investments"
+    section: market_risk
+
+# Unusual features identified:
+#   - separate market risk section outside derivative note
+#   - rate lock agreements with multi-year amortization periods
+#   - detailed breakdown of effectiveness assessment inclusions/exclusions
+#   - net investment hedge disclosure with no reclassifications
+#   - commitment fee disclosure in market risk section
+

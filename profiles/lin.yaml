@@ -1,0 +1,51 @@
+issuer: Linde plc
+ticker: LIN
+cik: "1707925"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  notional_amounts:
+    description: "notional amounts by instrument type and designation"
+    section: market_risk
+  fair_value_assets:
+    description: "fair value of derivative assets"
+    section: market_risk
+  fair_value_liabilities:
+    description: "fair value of derivative liabilities"
+    section: market_risk
+  hedge_designation:
+    description: "whether derivatives are designated as hedging instruments"
+    section: market_risk
+  instrument_purpose:
+    description: "purpose of each derivative type (balance sheet, forecasted transactions, etc.)"
+    section: market_risk
+  total_debt:
+    description: "total debt outstanding"
+    section: market_risk
+  fixed_rate_debt:
+    description: "amount and percentage of fixed-rate debt"
+    section: market_risk
+  floating_rate_debt:
+    description: "amount and percentage of floating-rate debt"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "impact of 100 basis point change on debt portfolio"
+    section: market_risk
+  foreign_currency_sensitivity:
+    description: "impact of 10% USD strengthening"
+    section: market_risk
+  foreign_currency_notional:
+    description: "total notional amount of foreign exchange contracts"
+    section: market_risk
+
+# Unusual features identified:
+#   - Credit default swaps issued to third parties related to government customer receivables
+#   - Credit Support Annexes (CSAs) with collateral posting arrangements
+#   - Foreign currency-denominated debt designated as net investment hedges
+#   - Maximum hedging periods specified (4 years for FX, 3 years for commodities)
+#   - Separate categorization of currency contracts for balance sheet items vs forecasted transactions
+#   - Incomplete sentence at end of foreign currency risk section suggesting truncated text
+

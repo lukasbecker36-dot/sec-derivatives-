@@ -1,0 +1,51 @@
+issuer: Keurig Dr Pepper
+ticker: KDP
+cik: "1418135"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_derivatives_notional:
+    description: "notional values of foreign currency derivative contracts"
+    section: market_risk
+  fx_derivatives_fair_value_hedge_accounting:
+    description: "fair value of FX derivatives qualifying for hedge accounting"
+    section: market_risk
+  fx_derivatives_fair_value_non_hedge:
+    description: "fair value of FX derivatives not qualifying for hedge accounting"
+    section: market_risk
+  fx_sensitivity_10pct_usd_weak:
+    description: "impact of 10% USD weakening on derivative fair values"
+    section: market_risk
+  interest_rate_derivatives_notional:
+    description: "aggregate notional value of interest rate derivative contracts"
+    section: market_risk
+  fixed_rate_debt_face_value:
+    description: "face value of fixed-rate debt excluding lease obligations"
+    section: market_risk
+  variable_rate_debt:
+    description: "variable-rate debt including commercial paper"
+    section: market_risk
+  interest_rate_sensitivity_1pct:
+    description: "potential impact on interest expense from 1% rate change"
+    section: market_risk
+  commodity_derivatives_notional:
+    description: "notional value of commodity derivative contracts"
+    section: market_risk
+  commodity_derivatives_fair_value:
+    description: "fair market value of commodity derivative contracts"
+    section: market_risk
+  commodity_sensitivity_10pct:
+    description: "impact of 10% commodity price change on derivative fair values"
+    section: market_risk
+
+# Unusual features identified:
+#   - extremely large FX notional amounts ($13+ billion) primarily for JDE Peet's acquisition
+#   - separate reporting of hedge vs non-hedge accounting derivatives for FX
+#   - contrasts hedge vs non-hedge sensitivities showing opposite directional impacts
+#   - interest rate derivatives include future debt issuances
+#   - maturity dates extend to 2046 for interest rate derivatives
+#   - extensive commodity exposure list but relatively small derivative notional
+

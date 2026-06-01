@@ -1,0 +1,18 @@
+issuer: Lilly (Eli)
+ticker: LLY
+cik: "59478"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cross_reference:
+    description: "Reference to Item 7 MD&A section"
+    section: market_risk
+
+# Unusual features identified:
+#   - Section contains only cross-reference to MD&A rather than actual market risk disclosures
+#   - Information incorporated by reference instead of being presented directly
+#   - No substantive market risk or derivatives data in this section
+

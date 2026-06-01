@@ -1,0 +1,38 @@
+issuer: Ingersoll Rand
+ticker: IR
+cik: "1699150"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  interest_rate_swap_notional:
+    description: "total notional amount of interest rate swaps converting fixed to variable rate"
+    section: market_risk
+  interest_rate_swap_count:
+    description: "number of outstanding interest rate swap contracts"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "hypothetical impact of 100 basis point rate changes on interest expense"
+    section: market_risk
+  fx_forward_contract_count:
+    description: "number of foreign currency forward contracts outstanding"
+    section: market_risk
+  revenue_by_currency:
+    description: "percentage breakdown of revenues by functional currency"
+    section: market_risk
+  gross_profit_by_currency:
+    description: "percentage breakdown of gross profit by functional currency"
+    section: market_risk
+  fx_sensitivity_analysis:
+    description: "hypothetical impact of 10% USD appreciation on revenues and gross profit by currency"
+    section: market_risk
+
+# Unusual features identified:
+#   - No traditional notional amounts table for derivatives
+#   - Interest rate sensitivity presented as simple annual impact rather than portfolio details
+#   - Foreign currency exposure shown as percentage of revenues/profits rather than notional amounts
+#   - Net investment hedge accounting described but no quantitative details provided
+#   - References Note 19 for detailed derivative information not included in this section
+

@@ -1,0 +1,26 @@
+issuer: Incyte
+ticker: INCY
+cik: "879169"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  marketable_securities_amount:
+    description: "total value of marketable securities subject to interest rate risk"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "impact assessment of 10% interest rate increase"
+    section: market_risk
+  investment_composition:
+    description: "types of investments (primarily U.S. government securities)"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative instruments disclosed - only traditional marketable securities
+#   - Very brief market risk disclosure with minimal quantitative analysis
+#   - Only discusses interest rate risk, no foreign exchange or commodity risk
+#   - No hedging activities mentioned
+#   - Sensitivity analysis conclusion states impact would not be material without specific amounts
+

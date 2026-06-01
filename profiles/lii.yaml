@@ -1,0 +1,19 @@
+issuer: Lennox International
+ticker: LII
+cik: "1069202"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cross_reference:
+    description: "reference to Item 7 Market Risk section"
+    section: market_risk
+
+# Unusual features identified:
+#   - Cross-reference only - no actual market risk data in this section
+#   - Refers to Item 7 for actual disclosures
+#   - Extremely brief section with minimal content
+#   - Note headings reference restructuring charges which are unrelated to market risk
+

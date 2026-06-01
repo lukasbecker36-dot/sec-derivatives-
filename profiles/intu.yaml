@@ -1,0 +1,28 @@
+issuer: Intuit
+ticker: INTU
+cik: "896878"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  investment_policy:
+    description: "diversification and quality standards for investments"
+    section: market_risk
+  derivative_holdings:
+    description: "explicit statement about derivative holdings"
+    section: market_risk
+  european_sovereign_debt:
+    description: "statement about European sovereign debt holdings"
+    section: market_risk
+  permitted_securities:
+    description: "types of securities allowed under investment policy"
+    section: market_risk
+
+# Unusual features identified:
+#   - Explicitly states no derivative financial instruments held
+#   - Focuses on investment portfolio risk rather than operational hedging
+#   - No quantitative risk metrics or sensitivity analysis provided
+#   - Conservative investment approach emphasized over risk management strategies
+

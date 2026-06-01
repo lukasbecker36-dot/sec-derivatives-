@@ -1,0 +1,44 @@
+issuer: International Flavors & Fragrances
+ticker: IFF
+cik: "51253"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_currency_forward_sensitivity:
+    description: "hypothetical 10% change impact on FX forwards fair value ($199 million)"
+    section: market_risk
+  cross_currency_swap_fair_value:
+    description: "net liability position fair value ($237 million)"
+    section: market_risk
+  cross_currency_swap_sensitivity:
+    description: "hypothetical 10% USD/EUR change impact ($211 million)"
+    section: market_risk
+  eur_debt_fair_value:
+    description: "EUR fixed rate debt fair value ($935 million)"
+    section: market_risk
+  eur_debt_sensitivity:
+    description: "hypothetical 10% FX change impact ($94 million)"
+    section: market_risk
+  usd_debt_fair_value:
+    description: "USD fixed rate debt fair value ($4.053 billion)"
+    section: market_risk
+  usd_debt_sensitivity:
+    description: "hypothetical 10% interest rate change impact ($405 million)"
+    section: market_risk
+  fair_value_hierarchy:
+    description: "Level 1, 2, 3 classification methodology"
+    section: market_risk
+  sofr_valuation_method:
+    description: "structured liabilities valued using Term SOFR swap curve"
+    section: market_risk
+
+# Unusual features identified:
+#   - sensitivity analysis uses hypothetical 10% changes across all risk factors
+#   - structured liabilities linked to inflation and currency risks
+#   - commodity exposure disclosed but no hedging except soy and natural gas
+#   - cross currency swaps used for net investment hedging
+#   - fair value changes recorded to Other expense, net rather than OCI
+

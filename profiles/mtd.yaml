@@ -1,0 +1,18 @@
+issuer: Mettler Toledo
+ticker: MTD
+cik: "1037646"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cross_reference_location:
+    description: "Reference to MD&A section containing actual market risk disclosures"
+    section: market_risk
+
+# Unusual features identified:
+#   - Cross-reference only - no actual market risk data in this section
+#   - Actual derivatives/market risk data located in MD&A section instead of Item 7A
+#   - Extremely brief disclosure with no quantitative information
+
