@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2025-04-04 | Processed 2026-06-02 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4M, now missing
+[DISAPPEARED_FIELD] notional_amount: was $500M, now missing
+[DISAPPEARED_FIELD] fair_value: was $4M, now missing
+[DISAPPEARED_FIELD] debt_amount: was $4,700M, now missing
+[DISAPPEARED_FIELD] variable_rate_exposure: was $1,000M, now missing
+[DISAPPEARED_FIELD] foreign_currency_exposure: was $8M, now missing
+[VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, notional_amount, fair_value, debt_amount...)
+[LLM_FLAG] This filing section is extremely abbreviated and contains only a reference to prior period disclosures without substantive detail. All specific quantitative data points are unavailable in this excerpt.
+[LLM_FLAG] The filing explicitly states 'no material changes' from the 10-K for year ended January 3, 2025, indicating detailed data should be found in that document rather than this 10-Q.
+
+=== 10-K | Period ending 2025-01-03 | Processed 2026-06-02 ===
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
+[NUMERIC] variable_rate_exposure: $500M → $1,000M (+100.0%) — exceeds 20% threshold
+[LLM_FLAG] fair_value decreased from $11 million to $4 million (63.6% decline) - likely due to market conditions and interest rate environment changes rather than structural change
+[LLM_FLAG] debt_amount increased from $4,600 million to $4,700 million (2.2% increase) - modest increase, plausible
+[LLM_FLAG] maturity_date not disclosed in current filing section - prior period showed August 2025; recommend checking Note 12 as referenced
+
 === 10-Q | Period ending 2026-04-03 | Processed 2026-06-01 ===
 [LLM_FLAG] Interest rate swap agreements matured in August 2025, which is after the January 2, 2026 reporting date. The notional amount and fair value provided are as of January 3, 2025 (prior year end), not January 2, 2026 (current period end). Current period swap status is not explicitly disclosed.
 

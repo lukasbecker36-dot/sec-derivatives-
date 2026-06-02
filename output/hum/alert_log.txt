@@ -1,0 +1,26 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
+[LLM_FLAG] fair_value_sensitivity increased from $764M to $773M (+1.2%), within normal variance
+[LLM_FLAG] investment_portfolio_duration decreased slightly from 3.6 to 3.5 years, consistent with typical quarterly movements
+[LLM_FLAG] credit_rating improved from AA- to A+, a significant upgrade that warrants investigation
+[LLM_FLAG] unrealized_loss_position increased from -$800M to -$900M, consistent with disclosed increase of $0.1B loss
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-02 ===
+[LLM_FLAG] investment_portfolio_duration: Decreased from 3.6 to 3.4 years (-5.6%), within acceptable range
+[LLM_FLAG] fair_value_sensitivity: Decreased from $788M to $764M (-3.0%), within acceptable range
+[LLM_FLAG] unrealized_loss_position: Improved from -$1,400M to -$900M (36% improvement), reflecting decrease in interest rate sensitivity and market conditions
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-02 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[LLM_FLAG] fair_value_sensitivity increased from $765.0M to $788.0M (3% increase) - within expected range due to duration change from 3.8 to 3.6 years and market conditions
+[LLM_FLAG] unrealized_loss_position improved by $400M (36% decrease) from prior period loss of $1.4B to $1.0B - reflects improvement in fair value of securities as noted in text
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-02 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $33M, now missing
+[NUMERIC] unrealized_loss_position: $-800M → $-1,100M (-37.5%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp)
+[LLM_FLAG] fair_value_sensitivity increased from $723M to $765M (+5.8%), within normal variance
+[LLM_FLAG] investment_portfolio_duration decreased from 3.6 to 3.4 years (-5.6%), consistent with market conditions
+[LLM_FLAG] unrealized_loss_position worsened from -$800M to -$1,100M (-37.5%), but filing explains this as improvement from -$1.4B at prior quarter-end
+[LLM_FLAG] ir_sensitivity_100bp not explicitly stated in Q1 2025 filing; prior period value of $33M cannot be verified against current 1% sensitivity of $765M due to different methodologies
+

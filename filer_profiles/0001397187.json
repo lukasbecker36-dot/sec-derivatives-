@@ -17,7 +17,9 @@
   "idiosyncrasies": {
     "recurring_phrases": [
       "net investment hedge",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "interest rate swap",
+      "unrealized gain"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -29,6 +31,50 @@
       "form_type": "10-K",
       "period_end": "2026-02-01",
       "processed_at": "2026-06-01T11:20:51Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 6,
+      "fields_null": 11
+    },
+    {
+      "filing_date": "2025-02-02",
+      "form_type": "10-K",
+      "period_end": "2025-02-02",
+      "processed_at": "2026-06-02T10:21:24Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 4,
+      "fields_null": 13
+    },
+    {
+      "filing_date": "2025-05-04",
+      "form_type": "10-Q",
+      "period_end": "2025-05-04",
+      "processed_at": "2026-06-02T10:21:34Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 6,
+      "fields_null": 11
+    },
+    {
+      "filing_date": "2025-08-03",
+      "form_type": "10-Q",
+      "period_end": "2025-08-03",
+      "processed_at": "2026-06-02T10:21:44Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 5,
+      "fields_null": 12
+    },
+    {
+      "filing_date": "2025-11-02",
+      "form_type": "10-Q",
+      "period_end": "2025-11-02",
+      "processed_at": "2026-06-02T10:21:56Z",
       "sections_found": [
         "market_risk"
       ],

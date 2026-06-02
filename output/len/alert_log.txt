@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2025-02-28 | Processed 2026-06-02 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_forwards_outstanding)
+[LLM_FLAG] The 10-Q excerpt does not contain detailed market risk disclosures - instead it references the prior fiscal year's Form 10-K (ended November 30, 2024). This is standard practice for 10-Q filings but means no new quantitative data is available for the quarter ended February 28, 2025.
+[LLM_FLAG] All substantive market risk data points are deferred rather than disclosed in this 10-Q section.
+
 === 10-Q | Period ending 2026-02-28 | Processed 2026-06-01 ===
 [LLM_FLAG] Critical limitation: The actual numerical tables referenced in the text are not included in the provided excerpt. Fields like interest_rate_sensitive_instruments, weighted_average_interest_rates, estimated_fair_values, and principal_cash_flows cannot be populated without the complete table data.
 [LLM_FLAG] Text appears to be incomplete, ending mid-sentence with 'See Management's Discussion and Analysis...' suggesting the full disclosure section was not provided.

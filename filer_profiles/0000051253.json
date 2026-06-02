@@ -16,7 +16,15 @@
   },
   "idiosyncrasies": {
     "recurring_phrases": [
-      "cross currency"
+      "cross currency",
+      "net investment hedge",
+      "cash flow hedging",
+      "commodity contract",
+      "notional value",
+      "designated as hedging",
+      "aoci",
+      "accumulated other comprehensive",
+      "interest rate swap"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -34,6 +42,42 @@
       ],
       "fields_extracted": 8,
       "fields_null": 13
+    },
+    {
+      "filing_date": "2025-03-31",
+      "form_type": "10-Q",
+      "period_end": "2025-03-31",
+      "processed_at": "2026-06-02T10:10:29Z",
+      "sections_found": [
+        "financial_instruments",
+        "market_risk"
+      ],
+      "fields_extracted": 4,
+      "fields_null": 17
+    },
+    {
+      "filing_date": "2025-06-30",
+      "form_type": "10-Q",
+      "period_end": "2025-06-30",
+      "processed_at": "2026-06-02T10:10:42Z",
+      "sections_found": [
+        "financial_instruments",
+        "market_risk"
+      ],
+      "fields_extracted": 4,
+      "fields_null": 17
+    },
+    {
+      "filing_date": "2025-09-30",
+      "form_type": "10-Q",
+      "period_end": "2025-09-30",
+      "processed_at": "2026-06-02T10:10:55Z",
+      "sections_found": [
+        "financial_instruments",
+        "market_risk"
+      ],
+      "fields_extracted": 6,
+      "fields_null": 15
     }
   ]
 }

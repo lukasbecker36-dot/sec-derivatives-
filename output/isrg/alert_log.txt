@@ -1,0 +1,39 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
+[NUMERIC] total_cash_equivalents_fv: $2,807M → $2,006M (-28.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $108M, now missing
+[NUMERIC] corporate_debt_securities_fv: $88M → $465M (+429.0%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv decreased 28.5% from prior period ($2,806.6M to $2,006.5M) - primarily due to reduction in money market funds (from $2,287.0M to $1,154.8M) and cash position changes
+[LLM_FLAG] total_marketable_securities_fv increased 6.2% from prior period ($5,625.9M to $5,972.7M) - primarily due to increase in corporate debt securities ($87.9M to $465.0M, a 428.8% increase) and U.S. treasuries allocation changes
+[LLM_FLAG] corporate_debt_securities_fv increased 428.8% from prior period ($87.9M to $465.0M) - significant portfolio shift towards corporate debt
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-02 ===
+[NUMERIC] marketable_equity_securities_fv: $86M → $108M (+26.2%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $123M → $88M (-28.4%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] gross_unrealized_gains_debt: $2M → $0M
+[LLM_FLAG] total_marketable_securities_fv increased 1.7% from prior period ($5,529.4M to $5,625.9M) - within normal range
+[LLM_FLAG] corporate_debt_securities_fv decreased 28.4% from prior period ($122.8M to $87.9M) - significant decline but within 50% threshold; attributable to portfolio reallocation and interest rate environment noted in filing
+[LLM_FLAG] gross_unrealized_gains_debt decreased from $2.2M to $0M - significant change; corporate debt securities now show unrealized losses of $1.2M due to interest rate increases
+[LLM_FLAG] Filing contains only a cross-reference statement to the 10-K filed for year ended December 31, 2024. All specific quantitative and qualitative disclosures about market risk are absent from this 10-Q section, as the company explicitly states 'no material changes' and directs readers to the prior annual report.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-02 ===
+[NUMERIC] total_cash_equivalents_fv: $2,364M → $3,403M (+44.0%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $166M → $123M (-26.1%) — exceeds 20% threshold
+[LLM_FLAG] total_marketable_securities_fv differs significantly from prior period: 5,529.4 vs 6,737.2 (18% decrease). This is plausible given changes in investment allocation and interest rate environment.
+[LLM_FLAG] corporate_debt_securities_fv differs from prior period: 122.8 vs 166.1 (26% decrease). Likely due to portfolio rebalancing or security maturities.
+[LLM_FLAG] gross_unrealized_gains_debt decreased from 2.3 to 2.2 (5% decrease). Change is immaterial but direction consistent with corporate debt securities reduction.
+[LLM_FLAG] This section contains only a boilerplate statement referring readers to the 2024 10-K for detailed market risk disclosures. No quantitative or qualitative market risk data is provided in this 10-Q filing section. All derivative-related metrics must be obtained from the referenced 2024 10-K Annual Report on Form 10-K.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-02 ===
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($85M)
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $19M, now missing
+[DISAPPEARED_FIELD] fx_revenue_sensitivity: was $-140M, now missing
+[DISAPPEARED_FIELD] fx_balance_sheet_sensitivity: was $-2M, now missing
+[DISAPPEARED_FIELD] foreign_currency_revenue_percentage: was $24M, now missing
+[DISAPPEARED_FIELD] portfolio_duration: was $1M, now missing
+[VALIDATION] Likely extraction failure: 5/9 previously-populated fields are now null (interest_rate_sensitivity, fx_revenue_sensitivity, fx_balance_sheet_sensitivity, foreign_currency_revenue_percentage, portfolio_duration)
+[LLM_FLAG] total_cash_equivalents_fv decreased 15.6% from 2801.9 to 2364.0 million - within acceptable variance
+[LLM_FLAG] total_marketable_securities_fv increased 8.1% from 6232.2 to 6737.2 million - within acceptable variance
+[LLM_FLAG] corporate_debt_securities_fv decreased 0.5% from 167.0 to 166.1 million - immaterial change
+[LLM_FLAG] gross_unrealized_gains_debt remained unchanged at 2.3 million
+[LLM_FLAG] Filing contains minimal disclosure - references prior year 10-K for all market risk details rather than repeating quantitative/qualitative disclosures in this 10-Q
+

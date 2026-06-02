@@ -1,0 +1,25 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
+[LLM_FLAG] Filing section contains minimal disclosure - company states 'no material changes' from Annual Report, referring readers to 10-K rather than providing detailed quantitative/qualitative risk metrics in the 10-Q. This is a common practice for interim filings but prevents extraction of specific market risk data.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-02 ===
+[LLM_FLAG] has_derivatives changed from 'No mention' to 'Yes' - material change in derivatives disclosure indicating new hedging activities in Q3 2025
+[LLM_FLAG] Provided text is limited summary; detailed quantitative data referenced in Notes 2, 5, and 18 but not included in extraction
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-02 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $13,033M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $690M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $13M, now missing
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $13,033M, now missing
+[DISAPPEARED_FIELD] fx_derivatives_fair_value_hedge_accounting: was $-13M, now missing
+[DISAPPEARED_FIELD] fx_derivatives_fair_value_non_hedge: was $-40M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct_usd_weak: was $1,180M, now missing
+[DISAPPEARED_FIELD] interest_rate_derivatives_notional: was $3,800M, now missing
+[DISAPPEARED_FIELD] fixed_rate_debt_face_value: was $13,214M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt: was $3,060M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity_1pct: was $69M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $595M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_fair_value: was $18M, now missing
+[DISAPPEARED_FIELD] commodity_sensitivity_10pct: was $60M, now missing
+[VALIDATION] Likely extraction failure: 14/14 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, fixed_rate_notes_billion, fx_derivatives_notional, fx_derivatives_fair_value_hedge_accounting...)
+[LLM_FLAG] Filing contains minimal disclosure language referring to Annual Report for market risk details. All specific quantitative data not provided in this 10-Q excerpt. Company indicates no material changes from prior period, suggesting values should be similar to prior period baseline, but specific numbers cannot be confirmed from this filing text alone.
+

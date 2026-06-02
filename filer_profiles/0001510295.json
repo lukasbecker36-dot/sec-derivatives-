@@ -16,7 +16,9 @@
   },
   "idiosyncrasies": {
     "recurring_phrases": [
-      "commodity derivative"
+      "commodity derivative",
+      "unrealized loss",
+      "unrealized gain"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -33,6 +35,39 @@
       ],
       "fields_extracted": 6,
       "fields_null": 5
+    },
+    {
+      "filing_date": "2025-03-31",
+      "form_type": "10-Q",
+      "period_end": "2025-03-31",
+      "processed_at": "2026-06-02T10:22:33Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 8,
+      "fields_null": 3
+    },
+    {
+      "filing_date": "2025-06-30",
+      "form_type": "10-Q",
+      "period_end": "2025-06-30",
+      "processed_at": "2026-06-02T10:22:43Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 8,
+      "fields_null": 3
+    },
+    {
+      "filing_date": "2025-09-30",
+      "form_type": "10-Q",
+      "period_end": "2025-09-30",
+      "processed_at": "2026-06-02T10:22:53Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 8,
+      "fields_null": 3
     }
   ]
 }

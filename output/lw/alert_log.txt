@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-02-22 | Processed 2026-06-02 ===
+[LLM_FLAG] Provided text appears to be only a section header reference to 'Quantitative and Qualitative Disclosures about Market Risk' with direction to Form 10-K; the actual market risk disclosure content is not included
+
+=== 10-Q | Period ending 2025-08-24 | Processed 2026-06-02 ===
+[LLM_FLAG] Change in has_derivatives from 'No mention' to 'Yes' - reflects that the provided text excerpt confirms use of commodity swaps, a significant change in disclosure status
+
+=== 10-Q | Period ending 2025-02-23 | Processed 2026-06-02 ===
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing
+[DISAPPEARED_FIELD] commodity_sensitivity_current: was $7M, now missing
+[DISAPPEARED_FIELD] commodity_sensitivity_prior: was $9M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_current: was $68M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_prior: was $63M, now missing
+[DISAPPEARED_FIELD] fixed_rate_debt_current: was $2,977M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_current: was $1,166M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity_current: was $12M, now missing
+[VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (fixed_rate_notes_billion, commodity_sensitivity_current, commodity_sensitivity_prior, fx_sensitivity_current, fx_sensitivity_prior...)
+[LLM_FLAG] The provided filing text is incomplete - it only contains a reference statement directing readers to the Annual Report on Form 10-K for the year ended May 26, 2024 for quantitative and qualitative market risk disclosures. The actual 10-Q filing section with substantive risk disclosures was not provided.
+
 === 10-Q | Period ending 2026-02-22 | Processed 2026-06-01 ===
 [LLM_FLAG] commodity_sensitivity_current decreased 26% from prior year ($6.8M vs $9.2M) - within normal variance but worth noting for trend analysis
 [LLM_FLAG] fixed_rate_debt_current increased 19.3% from prior year ($2,976.6M vs $2,495.0M) - significant increase in fixed-rate borrowing

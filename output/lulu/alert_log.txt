@@ -1,0 +1,37 @@
+=== 10-Q | Period ending 2025-11-02 | Processed 2026-06-02 ===
+[NEW_FIELD] fair_value_assets: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fair_value_liabilities: was $4M, now missing
+[NUMERIC] net_investment_hedge_gains_losses: $57M → $29M (-48.7%) — exceeds 20% threshold
+[NEW_FIELD] foreign_exchange_gains_losses: appeared for first time ($-15M)
+[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (fair_value_liabilities)
+[LLM_FLAG] sensitivity_analysis differs from prior period: -17.0 vs -19.0 (prior). This represents an 11% decrease, within normal ranges and likely due to changes in FX rates and contract notional amounts.
+[LLM_FLAG] fair_value_liabilities not found in this filing; prior period showed 4.2 million. Filing only discloses net asset position of 0.3 million, suggesting liabilities may be separately disclosed in Note 7 or entirely offset.
+[LLM_FLAG] net_investment_hedge_gains_losses of 29.4 million is 49% lower than prior period of 57.3 million, which is just below the 50% threshold. This is reasonable given the period-to-date basis (first three quarters) and FX volatility.
+
+=== 10-Q | Period ending 2025-08-03 | Processed 2026-06-02 ===
+[NUMERIC] fair_value_liabilities: $1M → $4M (+281.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] foreign_exchange_gains_losses: was $-21M, now missing
+[LLM_FLAG] fair_value_liabilities increased 282% from $1.1M to $4.2M; company notes net fair value declined from Feb 2, 2025 'primarily due to foreign currency exchange rate movement'
+[LLM_FLAG] net_investment_hedge_gains_losses increased 8.3% from $52.9M to $57.3M, within expected range
+[LLM_FLAG] sensitivity_analysis worsened by 13% from -$21.9M to -$19.0M, likely due to different FX rate movements and reduced hedge positions
+
+=== 10-Q | Period ending 2025-05-04 | Processed 2026-06-02 ===
+[DISAPPEARED_FIELD] fair_value_assets: was $2M, now missing
+[NEW_FIELD] fair_value_liabilities: appeared for first time ($1M)
+[NEW_FIELD] net_investment_hedge_gains_losses: appeared for first time ($53M)
+[NEW_FIELD] foreign_exchange_gains_losses: appeared for first time ($-21M)
+[NUMERIC] sensitivity_analysis: $-11M → $-22M (-99.1%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fair_value_assets)
+[LLM_FLAG] sensitivity_analysis differs from prior period (-21.9 vs -11.0): The change is explained by variations in the notional amount of forward currency contracts and the exchange rates used in the sensitivity calculation, which naturally fluctuate quarter to quarter.
+[LLM_FLAG] fair_value_liabilities increased significantly from prior period (1.1 vs 2.2 as assets): The current period shows a net liability position of $1.1 million rather than prior period asset position of $2.2 million. This swing reflects changing fair values of derivatives as FX rates moved during the quarter.
+
+=== 10-K | Period ending 2025-02-02 | Processed 2026-06-02 ===
+[NEW_FIELD] fair_value_assets: appeared for first time ($2M)
+[DISAPPEARED_FIELD] fair_value_liabilities: was $-6M, now missing
+[DISAPPEARED_FIELD] net_investment_hedge_gains_losses: was $120M, now missing
+[DISAPPEARED_FIELD] foreign_exchange_gains_losses: was $28M, now missing
+[NUMERIC] sensitivity_analysis: $-23M → $-11M (+52.8%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (fair_value_liabilities, net_investment_hedge_gains_losses, foreign_exchange_gains_losses)
+[LLM_FLAG] sensitivity_analysis: Prior period was -23.3, current period is -11.0 (53% decrease). This represents a significant reduction in FX sensitivity exposure.
+[LLM_FLAG] net_investment_hedge_gains_losses: Text mentions net investment hedge gains within the translation loss figure ($134.8 million increase in loss inclusive of net investment hedge gains), but the specific net investment hedge gain amount is not separately quantified and cannot be compared to prior period value of 120.4.
+
