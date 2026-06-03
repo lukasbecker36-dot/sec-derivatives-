@@ -19,6 +19,20 @@ LLM_LOG = Path(__file__).resolve().parent.parent / 'output' / 'llm_usage.log'
 
 SONNET_MODEL = 'claude-sonnet-4-20250514'
 
+# Pluggable override — when set, bootstrap functions call this instead of the
+# Anthropic API.  Used by cc_bridge.py.
+_analysis_override = None
+
+
+def set_analysis_override(fn):
+    """Replace the LLM analysis backend.
+
+    fn(prompt) -> raw JSON string (same format the API would return).
+    Pass None to restore API mode.
+    """
+    global _analysis_override
+    _analysis_override = fn
+
 # Keywords for archetype classification
 ARCHETYPE_SIGNALS = {
     'active_fx_commodity_hedger': [
@@ -195,17 +209,20 @@ def bootstrap_issuer(
     )
 
     try:
-        response = client.messages.create(
-            model=SONNET_MODEL,
-            max_tokens=2048,
-            messages=[{'role': 'user', 'content': prompt}],
-        )
-        raw = response.content[0].text
-        log_llm_usage(
-            LLM_LOG, issuer_name or cik, 'bootstrap', SONNET_MODEL,
-            response.usage.input_tokens, response.usage.output_tokens,
-            (response.usage.input_tokens * 3.0 + response.usage.output_tokens * 15.0) / 1_000_000,
-        )
+        if _analysis_override is not None:
+            raw = _analysis_override(prompt)
+        else:
+            response = client.messages.create(
+                model=SONNET_MODEL,
+                max_tokens=2048,
+                messages=[{'role': 'user', 'content': prompt}],
+            )
+            raw = response.content[0].text
+            log_llm_usage(
+                LLM_LOG, issuer_name or cik, 'bootstrap', SONNET_MODEL,
+                response.usage.input_tokens, response.usage.output_tokens,
+                (response.usage.input_tokens * 3.0 + response.usage.output_tokens * 15.0) / 1_000_000,
+            )
 
         # Parse analysis
         raw = re.sub(r'^```(?:json)?\s*', '', raw.strip())
@@ -326,17 +343,20 @@ def bootstrap_issuer_for_activation(
     )
 
     try:
-        response = client.messages.create(
-            model=SONNET_MODEL,
-            max_tokens=2048,
-            messages=[{'role': 'user', 'content': prompt}],
-        )
-        raw = response.content[0].text
-        log_llm_usage(
-            LLM_LOG, issuer_name or cik, 'bootstrap', SONNET_MODEL,
-            response.usage.input_tokens, response.usage.output_tokens,
-            (response.usage.input_tokens * 3.0 + response.usage.output_tokens * 15.0) / 1_000_000,
-        )
+        if _analysis_override is not None:
+            raw = _analysis_override(prompt)
+        else:
+            response = client.messages.create(
+                model=SONNET_MODEL,
+                max_tokens=2048,
+                messages=[{'role': 'user', 'content': prompt}],
+            )
+            raw = response.content[0].text
+            log_llm_usage(
+                LLM_LOG, issuer_name or cik, 'bootstrap', SONNET_MODEL,
+                response.usage.input_tokens, response.usage.output_tokens,
+                (response.usage.input_tokens * 3.0 + response.usage.output_tokens * 15.0) / 1_000_000,
+            )
 
         raw = re.sub(r'^```(?:json)?\s*', '', raw.strip())
         raw = re.sub(r'\s*```$', '', raw)

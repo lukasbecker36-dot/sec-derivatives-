@@ -1,9 +1,9 @@
 name: SEC Derivatives Scheduler
 
 on:
-  schedule:
-    # Run daily at 06:00 UTC (after US markets close + SEC filing window)
-    - cron: '0 6 * * *'
+  # schedule disabled — now runs via Claude Code scheduled routine
+  # schedule:
+  #   - cron: '0 6 * * *'
   workflow_dispatch:
     inputs:
       max_activations:

@@ -12,6 +12,20 @@ from .utils import log_llm_usage
 logger = logging.getLogger(__name__)
 
 MODEL = 'claude-haiku-4-5-20251001'
+
+# Pluggable override — when set, extract_fields_llm() delegates to this
+# instead of calling the Anthropic API.  Used by cc_bridge.py.
+_override_fn = None
+
+
+def set_override(fn):
+    """Replace the LLM extraction backend.
+
+    fn(section_text, schema, context, filer_context) -> dict with
+    'fields', 'flags', 'notes' keys.  Pass None to restore API mode.
+    """
+    global _override_fn
+    _override_fn = fn
 LLM_LOG = Path(__file__).resolve().parent.parent / 'output' / 'llm_usage.log'
 
 SYSTEM_PROMPT = """You are a financial data extraction assistant. You extract structured \
@@ -107,6 +121,9 @@ def extract_fields_llm(
         Dict with 'fields', 'flags', 'notes' keys. On failure, fields have
         confidence='extraction_failed'.
     """
+    if _override_fn is not None:
+        return _override_fn(section_text, schema, context, filer_context)
+
     if client is None:
         client = anthropic.Anthropic()
 
