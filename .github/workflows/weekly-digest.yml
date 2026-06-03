@@ -1,0 +1,53 @@
+name: Weekly Digest Email
+
+on:
+  schedule:
+    # Every Friday at 12:00 UTC (1pm BST)
+    - cron: '0 12 * * 5'
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Lookback window in days'
+        default: '7'
+        type: string
+
+jobs:
+  send-digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate digest
+        id: digest
+        run: |
+          DAYS="${{ github.event.inputs.days || '7' }}"
+          python scripts/build_weekly_digest.py --days "$DAYS" > digest.html
+
+          if [ -s digest.html ]; then
+            echo "has_content=true" >> "$GITHUB_OUTPUT"
+            echo "Generated digest ($(wc -c < digest.html) bytes)"
+          else
+            echo "has_content=false" >> "$GITHUB_OUTPUT"
+            echo "No activity in the last $DAYS days — skipping email"
+          fi
+
+      - name: Send email
+        if: steps.digest.outputs.has_content == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: "SEC Derivatives — Weekly Digest"
+          to: Lukas.becker@infopro-digital.com
+          from: SEC Derivatives Bot <${{ secrets.SMTP_USERNAME }}>
+          html_body: file://digest.html
