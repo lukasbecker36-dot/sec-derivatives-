@@ -1,0 +1,39 @@
+issuer: Phillips 66
+ticker: PSX
+cik: "1534701"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  commodity_derivative_types:
+    description: "Types of commodity derivatives (futures, forwards, swaps, options) by segment"
+    section: derivatives_note
+  var_amount:
+    description: "Value at Risk for derivative commodity instruments (Monte Carlo, 95% confidence, 1-day holding)"
+    section: market_risk
+  fixed_rate_debt_maturity_schedule:
+    description: "Principal cash flows and weighted-average interest rates by expected maturity date for fixed-rate debt"
+    section: market_risk
+  floating_rate_debt_maturity_schedule:
+    description: "Principal cash flows and weighted-average interest rates by expected maturity date for floating-rate debt"
+    section: market_risk
+  fixed_rate_debt_fair_value:
+    description: "Fair value of fixed-rate debt instruments"
+    section: market_risk
+  fx_forward_contracts:
+    description: "Foreign currency forward contracts related to asset dispositions"
+    section: market_risk
+  foreign_currency_transaction_gains_losses:
+    description: "Foreign currency transaction gains/losses by segment"
+    section: financial_instruments
+
+# Unusual features identified:
+#   - Derivatives note (Note 19) text not fully captured; only a cross-reference was extracted in derivatives_or_instruments section
+#   - Company policy is to remain exposed to commodity market prices and uses derivatives to convert fixed-price contracts back to floating
+#   - VaR disclosed as immaterial rather than providing a dollar amount
+#   - Foreign currency forwards used only for specific asset sale transactions, not ongoing hedging
+#   - Debt maturity schedule with interest rates presented in market_risk section rather than derivatives note
+#   - Multiple business segments (Midstream, Chemicals, Refining, Marketing and Specialties, Renewable Fuels) with foreign currency impacts
+

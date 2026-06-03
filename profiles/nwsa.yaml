@@ -1,0 +1,38 @@
+issuer: News Corp (Class A)
+ticker: NWSA
+cik: "1564708"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  interest_rate_swap_notional:
+    description: "Notional amount of interest rate swap contracts outstanding (~$475M)"
+    section: financial_instruments
+  interest_rate_swap_fair_value:
+    description: "Fair value of interest rate derivatives (Level 2 measurement)"
+    section: financial_instruments
+  sensitivity_adverse_10pct_interest_rate:
+    description: "Sensitivity from adverse 10% change in interest rates on derivative fair value"
+    section: market_risk
+  fixed_rate_debt_outstanding:
+    description: "Outstanding fixed-rate debt amount ($1,500M)"
+    section: market_risk
+  variable_rate_debt_outstanding:
+    description: "Outstanding variable-rate bank facility amount ($475M)"
+    section: market_risk
+  fx_revenue_sensitivity:
+    description: "Impact of one cent change in AUD/USD and GBP/USD on revenues and EBITDA"
+    section: market_risk
+  level3_equity_securities:
+    description: "Level 3 equity and other securities fair value and rollforward"
+    section: financial_instruments
+
+# Unusual features identified:
+#   - Interest rate swap is specifically to fix floating rate on Term A Loans
+#   - Fair value hierarchy table includes equity and other securities alongside derivatives
+#   - Level 3 rollforward for equity securities (DAZN investment) included in same note
+#   - Sensitivity table provided inline in market risk section with notional, fair value and sensitivity columns
+#   - Fiscal year ending June 30 rather than calendar year
+

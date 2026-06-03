@@ -1,0 +1,54 @@
+issuer: Occidental Petroleum
+ticker: OXY
+cik: "797468"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  marketing_derivative_fair_value:
+    description: "Fair value of marketing derivative contracts by maturity period and valuation source"
+    section: derivatives_note
+  fair_value_level1:
+    description: "Fair value from actively quoted prices"
+    section: derivatives_note
+  fair_value_level2:
+    description: "Fair value from other external sources"
+    section: derivatives_note
+  value_at_risk:
+    description: "Maximum potential negative one-day change in fair value at 95% confidence for trading activities"
+    section: market_risk
+  fixed_rate_debt_fair_value:
+    description: "Fair value of fixed rate debt outstanding"
+    section: market_risk
+  variable_rate_debt_notional:
+    description: "Notional value of variable rate debt outstanding"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "Change in fair value of fixed rate debt for 25bp Treasury rate change"
+    section: market_risk
+  commodity_price_sensitivity_wti:
+    description: "Impact on pre-tax cash from $1/bbl change in WTI price"
+    section: market_risk
+  commodity_price_sensitivity_brent:
+    description: "Impact on pre-tax cash from $1/bbl change in Brent price"
+    section: market_risk
+  commodity_price_sensitivity_natgas:
+    description: "Impact on pre-tax cash from $0.50/Mcf change in natural gas price"
+    section: market_risk
+  midland_gulf_coast_spread_sensitivity:
+    description: "Impact on pre-tax cash from $0.25 change in Midland-to-Gulf-Coast oil spread"
+    section: market_risk
+  debt_maturity_schedule:
+    description: "Long-term debt principal payments by year and type (fixed vs variable)"
+    section: market_risk
+
+# Unusual features identified:
+#   - Company enters into derivatives for both hedging AND trading purposes
+#   - Uses normal purchases and normal sales exclusions for physical commodity deliveries
+#   - Derivatives note text is truncated - full note with detailed tables likely exists in the filing
+#   - Fair value table for marketing derivatives segregated by maturity period and Level 1/2 sources
+#   - Uses value at risk (VaR) model for trading portfolio risk assessment
+#   - Detailed debt maturity schedule included in market risk section
+

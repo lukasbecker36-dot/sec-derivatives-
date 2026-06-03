@@ -1,0 +1,40 @@
+issuer: Microsoft
+ticker: MSFT
+cik: "789019"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_revenue_sensitivity:
+    description: "Earnings impact from 10% decrease in foreign exchange rates on revenue"
+    section: market_risk
+  fx_investment_sensitivity:
+    description: "Fair value impact from 10% decrease in FX rates on investments"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "Fair value impact from 100bp increase in US treasury rates"
+    section: market_risk
+  credit_spread_sensitivity:
+    description: "Fair value impact from 100bp increase in credit spreads"
+    section: market_risk
+  equity_price_sensitivity:
+    description: "Earnings impact from 10% decrease in equity market prices"
+    section: market_risk
+  interest_rate_swaps_on_debt:
+    description: "Interest rate swaps related to fixed-rate debt referenced in Note 5"
+    section: derivatives_note
+  long_term_debt_fair_value:
+    description: "Estimated fair value of long-term debt including current portion"
+    section: financial_instruments
+  principal_currency_exposures:
+    description: "Major currency exposures (Euro, JPY, GBP, CAD, AUD)"
+    section: market_risk
+
+# Unusual features identified:
+#   - Derivatives note text not fully extracted; only a debt-focused cross-reference to Note 5 Derivatives was captured
+#   - Sensitivity analysis table provided in market_risk section covers FX, interest rate, credit, and equity risks
+#   - Full derivatives notional and fair value tables likely exist in Note 5 but were not included in extracted text
+#   - Euro-denominated debt pays interest annually unlike other semi-annual debt
+

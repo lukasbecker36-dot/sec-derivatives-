@@ -1,0 +1,48 @@
+issuer: Nordson Corporation
+ticker: NDSN
+cik: "72331"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cross_currency_swap_notional:
+    description: "Notional amount of cross-currency swaps designated as net investment hedges ($863,904K at Oct 31, 2025)"
+    section: derivatives_note
+  interest_rate_swap_notional:
+    description: "Notional amount of interest rate swaps designated as fair value hedges ($300,000K)"
+    section: derivatives_note
+  fx_forward_notional:
+    description: "Notional amount of foreign currency forward contracts not designated as hedges ($1,137,956K)"
+    section: derivatives_note
+  derivative_fair_values_by_balance_sheet_location:
+    description: "Fair values split across prepaids, other assets, accrued liabilities, other long-term liabilities"
+    section: derivatives_note
+  cumulative_hedge_adjustment_debt:
+    description: "Cumulative adjustment to long-term debt from fair value hedge accounting ($11,486K)"
+    section: derivatives_note
+  carrying_value_hedged_debt:
+    description: "Carrying value of hedged debt ($311,486K)"
+    section: derivatives_note
+  gain_loss_by_derivative_type:
+    description: "Gains/losses recognized for each derivative type with income statement location"
+    section: derivatives_note
+  cross_currency_swap_currencies:
+    description: "Cross-currency swap currencies: USD vs EUR, JPY, TWD, SGD, CNY"
+    section: derivatives_note
+  interest_rate_sensitivity:
+    description: "Impact of 1% increase in interest rates on annual interest expense (~$7,000K)"
+    section: market_risk
+  fx_impact_on_sales_and_costs:
+    description: "Hypothetical impact of prior year exchange rates on sales and costs"
+    section: market_risk
+
+# Unusual features identified:
+#   - Three distinct derivative categories: FX forwards (not designated), cross-currency swaps (net investment hedges), and interest rate swaps (fair value hedges)
+#   - Cross-currency swaps hedge net investments in foreign subsidiaries across five currencies
+#   - Interest rate swaps are fair value hedges (receive-fixed, pay-variable based on SOFR)
+#   - Detailed balance sheet location table with comparative year data
+#   - Gain/loss table includes three years of data with specific income statement line items
+#   - Fiscal year ending October 31
+

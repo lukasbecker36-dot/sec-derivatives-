@@ -1,0 +1,31 @@
+issuer: PPG Industries
+ticker: PPG
+cik: "79879"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_derivative_notional:
+    description: "Notional amounts of foreign currency derivative instruments"
+    section: financial_instruments
+  interest_rate_derivative_notional:
+    description: "Notional amounts of interest rate derivative instruments"
+    section: financial_instruments
+  derivative_fair_values:
+    description: "Fair values of derivative assets and liabilities"
+    section: financial_instruments
+  hedge_designation:
+    description: "Whether derivatives are designated as hedges under ASC 815"
+    section: financial_instruments
+  gains_losses_on_derivatives:
+    description: "Gains and losses recognized on derivative instruments"
+    section: financial_instruments
+
+# Unusual features identified:
+#   - Market risk section is extremely brief, just a cross-reference to Note 11
+#   - No derivatives_or_instruments section was captured; all detail resides in Note 11 which was not extracted
+#   - Combined note covering financial instruments, hedging activities, and fair value measurements in a single note
+#   - Specific derivative types (forwards, swaps, options) not identifiable from the extracted text alone
+

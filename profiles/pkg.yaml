@@ -1,0 +1,18 @@
+issuer: Packaging Corporation of America
+ticker: PKG
+cik: "75677"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  market_risk_cross_reference:
+    description: "Cross-reference to Item 7A market risk discussion"
+    section: market_risk
+
+# Unusual features identified:
+#   - Section text is a bare cross-reference stub with no substantive derivatives or market risk disclosure
+#   - No derivative instruments identified in available text
+#   - No note headings found related to derivatives or financial instruments
+

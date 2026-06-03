@@ -1,0 +1,23 @@
+issuer: PulteGroup
+ticker: PHM
+cik: "822416"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  interest_rate_risk:
+    description: "Exposure to interest rate changes affecting mortgage financing and homebuilding operations"
+    section: market_risk
+  residential_mortgage_loans:
+    description: "Residential mortgage loans available-for-sale and related interest rate risk"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative instruments identified in the extracted text
+#   - Market risk section contains only forward-looking statement disclaimers and risk factors, not quantitative market risk data
+#   - As a homebuilder, primary market risk is interest rate exposure through mortgage financing availability rather than through derivative instruments
+#   - No derivatives_or_instruments section was captured from the filing
+#   - Note headings reference residential mortgage loans available-for-sale, suggesting potential interest rate lock commitments or forward sale commitments in the full filing that were not captured
+

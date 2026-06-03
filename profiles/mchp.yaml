@@ -1,0 +1,25 @@
+issuer: Microchip Technology
+ticker: MCHP
+cik: "827054"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  total_debt:
+    description: "Total current and long-term debt amount"
+    section: market_risk
+  fixed_rate_debt_flag:
+    description: "Confirmation that all debt is fixed rate"
+    section: market_risk
+  refinancing_instruments:
+    description: "Instruments mentioned for refinancing (Revolving Credit Facility, Commercial Paper)"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative instruments used; company has 100% fixed-rate debt
+#   - Only market_risk section found; no dedicated derivatives or financial instruments note with derivative content
+#   - Fair Value of Financial Instruments note exists but contains no derivative data, only debt fair values
+#   - Convertible debt instruments present but not derivative instruments per se
+

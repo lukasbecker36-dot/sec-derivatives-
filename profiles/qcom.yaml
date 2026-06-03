@@ -1,0 +1,43 @@
+issuer: Qualcomm
+ticker: QCOM
+cik: "804328"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  interest_rate_swap_notional:
+    description: "Aggregate notional amount of interest rate swaps designated as fair value hedges"
+    section: market_risk
+  interest_rate_swap_designation:
+    description: "Fair value hedge designation converting fixed-rate to floating-rate"
+    section: market_risk
+  fx_forward_contracts:
+    description: "Foreign currency forward contracts for hedging monetary assets/liabilities and net investments"
+    section: derivatives_note
+  fx_option_contracts:
+    description: "Foreign currency option contracts for hedging exposures"
+    section: derivatives_note
+  net_investment_hedges:
+    description: "Financial instruments designated as net investment hedges of foreign subsidiaries"
+    section: derivatives_note
+  interest_rate_sensitivity:
+    description: "Impact of 100 bps hypothetical increase on holdings and debt fair value"
+    section: market_risk
+  fx_sensitivity_korean_won:
+    description: "Impact of 10% adverse FX rate change on Korean withholding tax receivable (~$223M)"
+    section: market_risk
+  non_marketable_equity_investments:
+    description: "Aggregate carrying value of non-marketable equity investments in 150+ companies ($1.4B)"
+    section: market_risk
+
+# Unusual features identified:
+#   - Interest rate swaps are designated as fair value hedges (converting fixed to floating), not cash flow hedges
+#   - Notional amount of interest rate swaps disclosed in market risk section ($3.6B as of Sep 2025, up from $2.1B)
+#   - Significant Korean withholding tax receivable ($2.2B) creates material foreign currency exposure
+#   - Non-standard fiscal year ending in late September, not calendar year-end
+#   - Over 150 non-marketable equity investments with $1.4B carrying value creating equity price risk
+#   - Derivative details spread across multiple notes (Note 1, Note 2, Note 6, Note 10) rather than a single derivatives note
+#   - Both derivative and non-derivative financial instruments used for net investment hedging
+

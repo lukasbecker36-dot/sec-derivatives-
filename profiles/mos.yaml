@@ -1,0 +1,19 @@
+issuer: Mosaic Company (The)
+ticker: MOS
+cik: "1285785"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  market_risk_cross_reference:
+    description: "Cross-reference to Market Risk section in Part II Item 7 MD&A for full discussion"
+    section: market_risk
+
+# Unusual features identified:
+#   - Section 7A disclosure is a bare cross-reference to MD&A with no substantive content extracted
+#   - No derivative information available in the captured text; actual derivatives data may exist in referenced MD&A or notes
+#   - Mosaic is a commodity company (fertilizers) and likely has commodity/FX derivatives but this was not captured in the extracted section
+#   - Full derivatives analysis would require extracting the referenced Market Risk section from MD&A and any financial instruments footnote
+
