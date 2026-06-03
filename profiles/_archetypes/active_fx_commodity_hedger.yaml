@@ -80,7 +80,7 @@ qualitative:
     Counterparty: [counterpart]
     Interest rate risk: [interest rate, 'floating.rate', basis point]
     Sensitivity: ['10% increase', '10% decrease', sensitivity]
-    Event-driven: [deal contingent, contingent forward, 'acquisition.*hedg']
+    Event-driven: [deal contingent, contingent forward, 'acquisition.*hedg', 'merger.*hedg', 'transaction.*hedg']
 
 alert_thresholds:
   fx_designated_notional: 0.15

@@ -103,6 +103,12 @@ qualitative:
       - '[Ss]tarted'
       - for the first time
       - commenced
+    Event-driven:
+      - deal contingent
+      - contingent forward
+      - 'acquisition.*hedg'
+      - 'merger.*hedg'
+      - 'transaction.*hedg'
 
 dashboard_mapping:
   total_derivatives_notional: fx_forwards_outstanding

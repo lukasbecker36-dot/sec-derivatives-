@@ -50,6 +50,7 @@ qualitative:
     Counterparty: [counterpart]
     Interest rate risk: [interest rate, 'floating.rate', basis point]
     Sensitivity: ['10% increase', '10% decrease', sensitivity]
+    Event-driven: [deal contingent, contingent forward, 'acquisition.*hedg', 'merger.*hedg', 'transaction.*hedg']
 
 dashboard_mapping:
   total_derivatives_notional: "ir_swap_notional + fx_forward_notional"
