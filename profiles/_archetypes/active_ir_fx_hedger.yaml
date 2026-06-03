@@ -44,13 +44,68 @@ fields:
 qualitative:
   sections_to_search: [derivatives_note, market_risk]
   categories:
-    New instruments: [option, collar, structured forward, swaption]
-    Collateral/CSA: [collateral, ISDA, CSA, credit support annex]
-    Policy changes: [hedge ratio, de-designat, 'discontinued.*hedg']
-    Counterparty: [counterpart]
+    New instruments:
+      - option
+      - collar
+      - structured forward
+      - swaption
+      - total return swap
+      - credit default swap
+      - cross-currency swap
+      - knock-in
+      - knock-out
+      - zero-cost collar
+      - embedded derivative
+      - bifurcat
+    Collateral/CSA:
+      - collateral
+      - ISDA
+      - CSA
+      - credit support annex
+      - margin
+      - initial margin
+      - variation margin
+      - margin call
+      - central.?clear
+    Policy changes:
+      - hedge ratio
+      - de-designat
+      - 'discontinued.*hedg'
+      - novation
+      - terminat
+      - unwind
+      - restructur
+      - 'amended.*master'
+      - ineffective
+      - 'hedge.*ineffect'
+    Counterparty:
+      - counterpart
+      - 'single.*counterpart'
+      - 'credit.*rating'
+      - concentration
+    CVA/XVA:
+      - credit valuation adjust
+      - CVA
+      - DVA
+      - XVA
+      - debit valuation
+    Regulatory:
+      - Dodd-Frank
+      - EMIR
+      - 'margin\s+rule'
+      - 'swap\s+dealer'
+      - clearing requirement
     Interest rate risk: [interest rate, 'floating.rate', basis point]
     Sensitivity: ['10% increase', '10% decrease', sensitivity]
-    Event-driven: [deal contingent, contingent forward, 'acquisition.*hedg', 'merger.*hedg', 'transaction.*hedg']
+    Event-driven:
+      - deal contingent
+      - contingent forward
+      - 'acquisition.*hedg'
+      - 'merger.*hedg'
+      - 'transaction.*hedg'
+      - 'new.*hedging.*program'
+      - 'commenced.*hedg'
+      - 'initiated.*hedg'
 
 dashboard_mapping:
   total_derivatives_notional: "ir_swap_notional + fx_forward_notional"

@@ -94,6 +94,9 @@ qualitative:
       - counterpart
       - credit loss
       - credit risk
+      - 'single.*counterpart'
+      - 'credit.*rating'
+      - concentration
     Valuation:
       - fair value
       - 'Level [123]'
@@ -103,6 +106,46 @@ qualitative:
       - '[Ss]tarted'
       - for the first time
       - commenced
+      - 'new.*hedging.*program'
+      - 'initiated.*hedg'
+    New instruments:
+      - total return swap
+      - credit default swap
+      - cross-currency swap
+      - swaption
+      - collar
+      - knock-in
+      - knock-out
+      - embedded derivative
+      - bifurcat
+    Collateral/clearing:
+      - initial margin
+      - variation margin
+      - margin call
+      - central.?clear
+      - ISDA
+    Policy changes:
+      - de-designat
+      - 'discontinued.*hedg'
+      - novation
+      - terminat
+      - unwind
+      - restructur
+      - 'amended.*master'
+      - ineffective
+      - 'hedge.*ineffect'
+    CVA/XVA:
+      - credit valuation adjust
+      - CVA
+      - DVA
+      - XVA
+      - debit valuation
+    Regulatory:
+      - Dodd-Frank
+      - EMIR
+      - 'margin\s+rule'
+      - 'swap\s+dealer'
+      - clearing requirement
     Event-driven:
       - deal contingent
       - contingent forward
