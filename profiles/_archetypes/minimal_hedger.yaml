@@ -1,13 +1,22 @@
-# Archetype: Minimal Hedger
-# Examples: Meta (pre-2025), companies with no or minimal derivatives
-# Mainly financial instruments fair value and market risk sensitivities.
+# Archetype: Minimal Hedger (with derivatives footnote)
+# Examples: Meta, Alphabet, Apple, Amazon, PepsiCo, many tech/consumer companies
+# These companies may have significant derivatives programmes but were originally
+# classified as "minimal" based on keyword signals. The derivatives_note section
+# captures the actual footnote with notional tables, fair value breakdowns, and
+# designated/non-designated instruments.
 
 sections:
   financial_instruments:
-    heading: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]\s*Financial Instruments'
+    heading: 'Note\s+\d+\s*[.–—―�‒—–\-]\s*Financial Instruments'
     match_strategy: first
     validation_keywords: [fair value, securities, cash]
-    end_boundary: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]\s*(?!Financial Instruments)'
+    end_boundary: 'Note\s+\d+\s*[.–—―�‒—–\-]\s*(?!Financial Instruments)'
+    max_length: 10000
+  derivatives_note:
+    heading: 'Note\s+\d+\s*[.–—―�‒—–\-]\s*(?:Derivative|Hedging)'
+    match_strategy: last
+    validation_keywords: [notional, derivative, swap, forward, hedge]
+    end_boundary: 'Note\s+\d+\s*[.–—―�‒—–\-]\s*(?!Derivative|Hedging)'
     max_length: 10000
   market_risk:
     heading: 'Quantitative and Qualitative Disclosures About Market Risk'
@@ -16,6 +25,7 @@ sections:
     max_length: 8000
 
 fields:
+  # Financial instruments section
   total_cash_equivalents_fv:
     description: "Total cash equivalents at fair value, in millions"
     section: financial_instruments
@@ -31,17 +41,57 @@ fields:
   gross_unrealized_gains_debt:
     description: "Gross unrealized gains on marketable debt securities, in millions. 0 if 'not material'."
     section: financial_instruments
+
+  # Derivatives note section — notionals and fair values
   has_derivatives:
     description: "Does the company use derivatives? Yes/No/No mention"
-    section: market_risk
+    section: derivatives_note
+  fx_derivatives_notional:
+    description: "Total notional amount of foreign currency/FX derivative contracts (forwards + options + cross-currency swaps combined), in millions"
+    section: derivatives_note
+  fx_designated_notional:
+    description: "Notional amount of FX derivatives designated as hedging instruments, in millions. null if not split out."
+    section: derivatives_note
+  fx_not_designated_notional:
+    description: "Notional amount of FX derivatives NOT designated as hedging instruments, in millions. null if not split out."
+    section: derivatives_note
+  ir_swap_notional:
+    description: "Notional amount of interest rate swap/derivative contracts, in millions"
+    section: derivatives_note
+  commodity_derivatives_notional:
+    description: "Notional amount of commodity derivative contracts, in millions"
+    section: derivatives_note
+  equity_derivatives_notional:
+    description: "Notional amount of equity derivative contracts, in millions"
+    section: derivatives_note
+  total_derivative_asset:
+    description: "Total derivative assets at fair value, in millions"
+    section: derivatives_note
+  total_derivative_liability:
+    description: "Total derivative liabilities at fair value, in millions"
+    section: derivatives_note
+  net_derivative_position:
+    description: "Net derivative asset/(liability) position, in millions (positive = net asset)"
+    section: derivatives_note
+  cash_flow_hedge_aoci:
+    description: "Accumulated OCI balance related to cash flow hedges, in millions"
+    section: derivatives_note
+  expected_12mo_reclass_from_aoci:
+    description: "Amount expected to be reclassified from AOCI to earnings in next 12 months, in millions"
+    section: derivatives_note
+
+  # Market risk section — sensitivities
   fx_forwards_outstanding:
-    description: "FX forward contracts outstanding notional, in millions. 0 if none."
+    description: "FX forward contracts outstanding notional, in millions. 0 if none. Use only if derivatives_note fields above are empty."
     section: market_risk
   fx_transaction_gain_loss:
     description: "Foreign currency transaction gains/losses (net), in millions"
     section: market_risk
   ir_sensitivity_100bp:
     description: "Interest rate sensitivity — change in fair value from 100bp move, in millions"
+    section: market_risk
+  fx_sensitivity_10pct:
+    description: "FX sensitivity — change in fair value from 10% adverse move, in millions"
     section: market_risk
   fixed_rate_notes_billion:
     description: "Fixed-rate notes outstanding, in billions"
@@ -54,7 +104,7 @@ fields:
     section: market_risk
 
 qualitative:
-  sections_to_search: [financial_instruments, market_risk]
+  sections_to_search: [financial_instruments, derivatives_note, market_risk]
   categories:
     FX forwards / hedging policy:
       - forward contract
@@ -154,5 +204,7 @@ qualitative:
       - 'transaction.*hedg'
 
 dashboard_mapping:
-  total_derivatives_notional: fx_forwards_outstanding
-  fx_hedging_notional: fx_forwards_outstanding
+  total_derivatives_notional: "fx_derivatives_notional + ir_swap_notional + commodity_derivatives_notional"
+  fx_hedging_notional: fx_derivatives_notional
+  total_derivative_asset: total_derivative_asset
+  total_derivative_liability: total_derivative_liability
