@@ -1,0 +1,13 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $311M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_forwards_outstanding)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NUMERIC] fx_forwards_outstanding: $670M → $311M (-53.6%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NUMERIC] fx_forwards_outstanding: $496M → $670M (+35.0%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($496M)
+
