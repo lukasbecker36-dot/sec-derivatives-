@@ -1,3 +1,36 @@
+=== 10-Q | Period ending 2026-04-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2M)
+[NUMERIC] total_derivative_asset: $4M → $5M (+25.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $38M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $12M → $30M (+150.0%) — exceeds 20% threshold
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+
+=== 10-K | Period ending 2026-01-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $2M, now missing
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($38M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $31M → $12M (-61.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
+[VALIDATION] Likely extraction failure: 2/6 previously-populated fields are now null (fx_derivatives_notional, ir_sensitivity_100bp)
+
+=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-07-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] total_derivative_asset: $7M → $5M (-28.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $3M → $14M (+366.7%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2M)
+[NUMERIC] total_derivative_asset: $1M → $7M (+600.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $1M → $3M (+200.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $23M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $12M → $30M (+150.0%) — exceeds 20% threshold
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+
 === 10-K | Period ending 2026-01-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $68M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)

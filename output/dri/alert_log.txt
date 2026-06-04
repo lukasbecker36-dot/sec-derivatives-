@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-02-22 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-11-23 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-08-24 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_derivatives_notional: $2,025M → $35M (-98.3%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $2,025M → $815M (-59.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_swap_notional: was $2,025M, now missing
+[NUMERIC] cash_flow_hedge_aoci: $12M → $24M (+100.0%) — exceeds 20% threshold
+
+=== 10-K | Period ending 2025-05-25 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,025M)
+[NUMERIC] fx_designated_notional: $815M → $2,025M (+148.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] equity_derivatives_notional: was $2M, now missing
+[NUMERIC] cash_flow_hedge_aoci: $23M → $12M (-47.8%) — exceeds 20% threshold
+
 === 10-Q | Period ending 2025-11-23 | Processed 2026-05-26 ===
 [LLM_FLAG] ir_sensitivity_100bp changed from prior period $109.0M to $98.0M (10.1% decrease, within acceptable variance)
 [LLM_FLAG] fixed_rate_notes_billion increased slightly from prior period $2.16B to $2.18B (0.9% increase, within acceptable variance)

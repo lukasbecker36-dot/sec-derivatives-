@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
+[NUMERIC] fx_sensitivity_10pct: $10M → $2,026M (+20160.0%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (ir_sensitivity_100bp)
+[VALIDATION] Likely units mismatch: fx_sensitivity_10pct changed from 10 to 2,026 (203x)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NUMERIC] fx_sensitivity_10pct: $2,025M → $10M (-99.5%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: fx_sensitivity_10pct changed from 2,025 to 10 (0x)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $1M, now missing
 [DROPPED_TO_ZERO] variable_rate_facilities: $105M → $0M

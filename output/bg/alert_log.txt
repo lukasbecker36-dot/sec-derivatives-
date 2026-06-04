@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $6M, now missing
+[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (expected_12mo_reclass_from_aoci)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($6M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] ir_sensitivity_100bp: $11,269M → $15,589M (+38.3%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] ir_sensitivity_100bp: $6,717M → $11,269M (+67.8%) — exceeds 20% threshold
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
 [NUMERIC] fx_transaction_gain_loss: $56M → $24M (-57.1%) — exceeds 20% threshold
 [LLM_FLAG] fx_transaction_gain_loss decreased from $56 million (prior year) to $24 million (current period), a 57% decrease. However, this appears to be comparing different periods - prior year is full year 2025 ($42M in other comprehensive income) vs current period is three months ended March 31, 2026 ($24M), so the comparison may not be directly comparable.

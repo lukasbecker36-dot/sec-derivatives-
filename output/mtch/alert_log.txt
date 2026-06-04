@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
 [NUMERIC] total_cash_equivalents_fv: $461M → $320M (-30.5%) — exceeds 20% threshold
 [LLM_FLAG] total_cash_equivalents_fv decreased 30.5% from prior period (460.82 to 320.42 million) - plausible given market conditions and cash usage

@@ -1,3 +1,22 @@
+=== 10-K | Period ending 2026-01-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($30M)
+
+=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $1M → $31M (+3000.0%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-08-01 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $2M → $1M (-50.0%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-05-02 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $5,965M → $7,724M (+29.5%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $5,965M → $7,724M (+29.5%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $31M → $2M (-93.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $31M, now missing
+
 === 10-Q | Period ending 2025-05-02 | Processed 2026-05-26 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $26M, now missing
 [DISAPPEARED_FIELD] var_foreign_currency: was $9M, now missing

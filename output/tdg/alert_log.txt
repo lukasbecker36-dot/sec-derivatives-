@@ -1,4 +1,13 @@
 === 10-Q | Period ending 2025-12-27 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $57M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($57M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+
+=== 10-Q | Period ending 2025-12-27 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] variable_rate_debt_term_loans: was $11,124M, now missing
 [DISAPPEARED_FIELD] securitization_facility_balance: was $725M, now missing
 [DISAPPEARED_FIELD] fixed_rate_pct: was $75M, now missing

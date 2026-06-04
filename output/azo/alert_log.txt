@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-02-14 | Processed 2026-06-04 ===
+[NUMERIC] ir_sensitivity_100bp: $6M → $8M (+49.1%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-11-22 | Processed 2026-06-04 ===
+[NUMERIC] ir_sensitivity_100bp: $56M → $6M (-89.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-08-30 | Processed 2026-06-04 ===
+[NUMERIC] ir_sensitivity_100bp: $8M → $56M (+586.4%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+
+=== 10-Q | Period ending 2025-05-10 | Processed 2026-06-04 ===
+[NUMERIC] ir_sensitivity_100bp: $6M → $8M (+35.0%) — exceeds 20% threshold
+
 === 10-Q | Period ending 2026-02-14 | Processed 2026-05-23 ===
 [NUMERIC] ir_sensitivity_100bp: $443M → $305M (-31.2%) — exceeds 20% threshold
 [NUMERIC] variable_rate_debt: $570M → $851M (+49.4%) — exceeds 20% threshold

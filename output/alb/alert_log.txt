@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NUMERIC] ir_sensitivity_100bp: $31M → $1M (-96.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forward_fair_value: was $2,400M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_2024: was $18M, now missing
+[VALIDATION] Likely extraction failure: 2/4 previously-populated fields are now null (fx_forward_fair_value, variable_rate_debt_2024)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NUMERIC] ir_sensitivity_100bp: $1M → $31M (+3000.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_forward_fair_value: appeared for first time ($2,400M)
+[NEW_FIELD] variable_rate_debt_2024: appeared for first time ($18M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
 [NUMERIC] fx_forwards_outstanding: $3,900M → $1,600M (-59.0%) — exceeds 20% threshold
 [NUMERIC] fx_forward_notional: $3,900M → $1,600M (-59.0%) — exceeds 20% threshold

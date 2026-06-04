@@ -1,4 +1,15 @@
 === 10-Q | Period ending 2025-12-28 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $24M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-09-28 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($25M)
+
+=== 10-Q | Period ending 2025-12-28 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] interest_rate_swap_notional: was $3,600M, now missing
 [DISAPPEARED_FIELD] fx_sensitivity_korean_won: was $223M, now missing
 [DISAPPEARED_FIELD] non_marketable_equity_investments: was $1,400M, now missing

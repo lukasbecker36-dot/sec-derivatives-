@@ -18,7 +18,10 @@
     "recurring_phrases": [
       "interest rate swap",
       "notional amount",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "cash flow hedge",
+      "fair value hedge",
+      "commodity contract"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -68,6 +71,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 18
+    },
+    {
+      "filing_date": "2025-12-31",
+      "form_type": "10-K",
+      "period_end": "2025-12-31",
+      "processed_at": "2026-06-04T14:43:10Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 9,
+      "fields_null": 22
     }
   ]
 }

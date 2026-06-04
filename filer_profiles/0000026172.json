@@ -25,7 +25,10 @@
       "foreign exchange forward",
       "commodity swap",
       "notional value",
-      "unrealized gain"
+      "unrealized gain",
+      "notional amount",
+      "hedge ineffectiveness",
+      "designated as hedging"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -75,6 +78,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 15
+    },
+    {
+      "filing_date": "2025-12-31",
+      "form_type": "10-K",
+      "period_end": "2025-12-31",
+      "processed_at": "2026-06-04T14:43:02Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 7,
+      "fields_null": 21
     }
   ]
 }

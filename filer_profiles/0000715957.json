@@ -20,7 +20,9 @@
       "commodity contract",
       "notional amount",
       "unrealized gain",
-      "aoci"
+      "aoci",
+      "cash flow hedge",
+      "designated as hedging"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -70,6 +72,18 @@
       ],
       "fields_extracted": 6,
       "fields_null": 8
+    },
+    {
+      "filing_date": "2025-12-31",
+      "form_type": "10-K",
+      "period_end": "2025-12-31",
+      "processed_at": "2026-06-04T14:43:03Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 9,
+      "fields_null": 17
     }
   ]
 }

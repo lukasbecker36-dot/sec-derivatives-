@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] net_derivative_position: was $554M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (net_derivative_position)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($554M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NUMERIC] collateral_amounts: $776M → $1,683M (+116.9%) — exceeds 20% threshold

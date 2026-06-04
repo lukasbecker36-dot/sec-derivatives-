@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($30M)
+
+=== 10-K | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $31M, now missing
+[NUMERIC] cash_flow_hedge_aoci: $1M → $30M (+3650.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $226M, now missing
+[VALIDATION] Likely extraction failure: 2/6 previously-populated fields are now null (fx_not_designated_notional, fx_sensitivity_10pct)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
 [LLM_FLAG] Provided text is a brief transition section referring to the 10-K filing rather than containing detailed quantitative and qualitative disclosures about market risk
 

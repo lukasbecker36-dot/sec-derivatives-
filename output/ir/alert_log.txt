@@ -1,3 +1,26 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,333M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($31M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($31M)
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_designated_notional: was $1M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $1,333M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $30M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $30M, now missing
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
 [LLM_FLAG] Filing contains only qualitative disclosure of market risk with no quantitative details. Text explicitly states 'there have been no material changes to our market risk assessment previously disclosed in the 2025 Annual Report,' suggesting detailed quantitative data may be in the 2025 Annual Report rather than this 10-Q excerpt.
 

@@ -1,3 +1,25 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($31M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($122M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($26M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($31M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($132M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] fx_designated_notional: was $28M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $25M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $31M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $129M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, commodity_derivatives_notional, expected_12mo_reclass_from_aoci)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
 [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
 [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4M, now missing

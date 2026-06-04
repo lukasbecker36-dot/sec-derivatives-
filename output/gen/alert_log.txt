@@ -1,3 +1,33 @@
+=== 10-K | Period ending 2026-04-03 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $2M → $3M (+50.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $2M → $3M (+50.0%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $279M → $337M (+20.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $12M, now missing
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+[NEW_FIELD] variable_debt_outstanding: appeared for first time ($3M)
+
+=== 10-Q | Period ending 2026-01-02 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $3M → $2M (-33.3%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $3M → $2M (-33.3%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-10-03 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $202M → $3M (-98.5%) — exceeds 20% threshold
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($3M)
+[NUMERIC] ir_swap_notional: $2,023M → $238M (-88.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_asset: was $28M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $4M, now missing
+[VALIDATION] Likely extraction failure: 2/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability)
+
+=== 10-Q | Period ending 2025-07-04 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $20M → $202M (+910.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $28M → $4M (-85.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
+[DISAPPEARED_FIELD] variable_debt_outstanding: was $28M, now missing
+
 === 10-Q | Period ending 2026-01-02 | Processed 2026-05-30 ===
 [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
 [NEW_FIELD] fx_forward_notional_prior: appeared for first time ($0M)

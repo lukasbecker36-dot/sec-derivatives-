@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $3M, now missing
+[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (commodity_derivatives_notional)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($3M)
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
 [NUMERIC] ir_sensitivity_100bp: $19M → $2M (-91.6%) — exceeds 20% threshold
 [NUMERIC] commodity_derivative_fair_value_liability: $-141M → $-67M (+52.7%) — exceeds 20% threshold

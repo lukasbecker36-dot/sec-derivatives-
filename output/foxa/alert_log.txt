@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[DISAPPEARED_FIELD] stock_investments_fair_value: was $30M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_sensitivity_10pct, stock_investments_fair_value)
+
+=== 10-K | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+[NEW_FIELD] stock_investments_fair_value: appeared for first time ($30M)
+
 === 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
 [LLM_FLAG] This section contains only a boilerplate reference statement indicating no material changes from the 2025 Form 10-K. No quantitative market risk data is disclosed in this excerpt. The complete market risk disclosures would need to be found in the referenced 2025 Form 10-K filing.
 

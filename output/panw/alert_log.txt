@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-04-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2026-01-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($31M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-07-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $30M, now missing
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+
+=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
 === 10-Q | Period ending 2026-01-31 | Processed 2026-06-04 ===
 [NUMERIC] ir_sensitivity_100bp: $139M → $81M (-41.7%) — exceeds 20% threshold
 [LLM_FLAG] ir_sensitivity_100bp decreased significantly from $139M (10/31/2025) to $81M (1/31/2026) - >40% decline, suggesting portfolio duration shortened or size reduced

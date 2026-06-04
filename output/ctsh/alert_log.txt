@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $85M → $174M (+104.7%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $1M → $3M (+200.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_not_designated_notional: $71M → $1M (-98.6%) — exceeds 20% threshold
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_not_designated_notional: $20M → $71M (+255.0%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DROPPED_TO_ZERO] fx_designated_notional: $3M → $0M
+[NUMERIC] fx_not_designated_notional: $13M → $20M (+53.8%) — exceeds 20% threshold
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
 [LLM_FLAG] Filing text provided is incomplete - only a cross-reference to the Form 10-K annual report is included. The 10-Q section text itself does not contain any market risk or derivatives disclosures.
 

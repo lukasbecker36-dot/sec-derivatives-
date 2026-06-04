@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
 [NUMERIC] total_cash_equivalents_fv: $16,395M → $38,063M (+132.2%) — exceeds 20% threshold
 [NUMERIC] total_marketable_securities_fv: $69,401M → $88,777M (+27.9%) — exceeds 20% threshold

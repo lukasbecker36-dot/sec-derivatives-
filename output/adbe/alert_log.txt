@@ -1,3 +1,29 @@
+=== 10-Q | Period ending 2026-02-27 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] ir_swap_notional: $2,025M → $12M (-99.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_asset: was $180M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $2M, now missing
+[DISAPPEARED_FIELD] total_fx_contracts_notional: was $743,000M, now missing
+[VALIDATION] Likely extraction failure: 3/7 previously-populated fields are now null (total_derivative_asset, cash_flow_hedge_aoci, total_fx_contracts_notional)
+[VALIDATION] Likely units mismatch: ir_swap_notional changed from 2,025 to 12 (0x)
+
+=== 10-K | Period ending 2025-11-28 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] fx_designated_notional: was $29M, now missing
+[NUMERIC] ir_swap_notional: $29M → $2,025M (+6882.8%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_asset: appeared for first time ($180M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($2M)
+[NEW_FIELD] total_fx_contracts_notional: appeared for first time ($743,000M)
+
+=== 10-Q | Period ending 2025-08-29 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $3M, now missing
+
+=== 10-Q | Period ending 2025-05-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($30M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($3M)
+
 === 10-Q | Period ending 2026-02-27 | Processed 2026-03-29 ===
 [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
 [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing

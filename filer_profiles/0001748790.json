@@ -17,7 +17,16 @@
   "idiosyncrasies": {
     "recurring_phrases": [
       "cross currency",
-      "interest rate swap"
+      "interest rate swap",
+      "net investment hedge",
+      "cash flow hedge",
+      "fair value hedge",
+      "economic hedge",
+      "commodity swap",
+      "notional amount",
+      "designated as hedging",
+      "aoci",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [
       "adjusted earnings"
@@ -69,6 +78,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 14
+    },
+    {
+      "filing_date": "2025-06-30",
+      "form_type": "10-K",
+      "period_end": "2025-06-30",
+      "processed_at": "2026-06-04T14:42:52Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 6,
+      "fields_null": 21
     }
   ]
 }

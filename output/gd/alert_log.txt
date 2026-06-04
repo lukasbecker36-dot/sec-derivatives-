@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-04-05 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fixed_rate_debt_principal: was $31,000M, now missing
+[DISAPPEARED_FIELD] primary_currencies: was $8,500M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fixed_rate_debt_principal, primary_currencies)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fixed_rate_debt_principal: appeared for first time ($31,000M)
+[NEW_FIELD] primary_currencies: appeared for first time ($8,500M)
+
 === 10-Q | Period ending 2025-03-30 | Processed 2026-05-02 ===
 [DISAPPEARED_FIELD] fx_forwards_outstanding: was $8,500M, now missing
 [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $8M, now missing

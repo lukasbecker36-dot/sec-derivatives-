@@ -15,7 +15,9 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "net investment hedge"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -64,6 +66,18 @@
       ],
       "fields_extracted": 2,
       "fields_null": 8
+    },
+    {
+      "filing_date": "2025-06-30",
+      "form_type": "10-K",
+      "period_end": "2025-06-30",
+      "processed_at": "2026-06-04T14:43:07Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 1,
+      "fields_null": 21
     }
   ]
 }

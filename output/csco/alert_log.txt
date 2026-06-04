@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2025-10-25 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] debt_principal_amount: was $26,000M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (debt_principal_amount)
+
+=== 10-K | Period ending 2025-07-26 | Processed 2026-06-04 ===
+[NEW_FIELD] debt_principal_amount: appeared for first time ($26,000M)
+
 === 10-Q | Period ending 2026-04-25 | Processed 2026-05-26 ===
 [LLM_FLAG] fixed_rate_notes_billion decreased from 24.8 billion in prior period to 23.0 billion (7.3% decrease), within acceptable range
 [LLM_FLAG] debt_principal_amount decreased from 24,800 million to 23,000 million (7.3% decrease), consistent with fixed-rate notes decrease

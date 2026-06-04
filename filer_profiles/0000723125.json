@@ -15,7 +15,12 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "cash flow hedge",
+      "fair value hedge",
+      "interest rate swap",
+      "accumulated other comprehensive"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -64,6 +69,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 14
+    },
+    {
+      "filing_date": "2025-08-28",
+      "form_type": "10-K",
+      "period_end": "2025-08-28",
+      "processed_at": "2026-06-04T14:43:16Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 7,
+      "fields_null": 20
     }
   ]
 }

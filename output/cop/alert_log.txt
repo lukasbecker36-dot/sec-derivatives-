@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $31M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[VALIDATION] Likely extraction failure: 2/4 previously-populated fields are now null (cash_flow_hedge_aoci, fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $30M → $2,025M (+6650.0%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $63M → $31M (-50.8%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] cash_flow_hedge_aoci: $33M → $63M (+90.9%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] cash_flow_hedge_aoci: $20M → $33M (+65.0%) — exceeds 20% threshold
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
 [LLM_FLAG] Q1 2026 filing contains minimal quantitative risk disclosure; company explicitly refers to 2025 10-K Item 7A for detailed market risk information
 [LLM_FLAG] All specific derivative, debt maturity, and sensitivity data not provided in this 10-Q excerpt; refer to referenced 2025 10-K for complete risk disclosures

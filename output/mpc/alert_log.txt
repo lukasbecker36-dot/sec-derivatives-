@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
 [LLM_FLAG] Derivative losses increased significantly: realized loss increased from $51M (Q1 2025) to $390M (Q1 2026) - a 665% increase. Unrealized losses increased from $14M to $519M - a 3,607% increase. Combined net loss increased from $65M to $909M. This represents a 1,300% change exceeding the 50% threshold.
 [LLM_FLAG] Interest rate sensitivity (100bp) decreased slightly from $2,563M (prior period) to $2,561M (current period) - within reasonable variance but fixed-rate debt decreased from $31.362B to $31.018B.

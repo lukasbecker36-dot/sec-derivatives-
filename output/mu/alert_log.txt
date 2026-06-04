@@ -1,3 +1,27 @@
+=== 10-Q | Period ending 2026-02-26 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $12M, now missing
+[NUMERIC] fx_not_designated_notional: $4,953M → $6,942M (+40.2%) — exceeds 20% threshold
+[NUMERIC] commodity_derivatives_notional: $3,200M → $4,106M (+28.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $28M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $25M, now missing
+[VALIDATION] Likely extraction failure: 3/5 previously-populated fields are now null (fx_derivatives_notional, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci)
+
+=== 10-Q | Period ending 2025-11-27 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_not_designated_notional: $3,477M → $4,953M (+42.5%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $107M → $25M (-76.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+
+=== 10-K | Period ending 2025-08-28 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($12M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($3,477M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($3,271M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($25M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($107M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+
 === 10-Q | Period ending 2026-02-26 | Processed 2026-03-29 ===
 [LLM_FLAG] Prior period indicated 'Yes' for has_derivatives, but current filing provides no detailed derivatives disclosure. Filing states disclosures are in 10-K and that there were 'no material changes' during the six-month period, which may explain the lack of detail in this 10-Q excerpt.
 

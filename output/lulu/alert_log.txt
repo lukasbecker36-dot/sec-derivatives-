@@ -1,3 +1,29 @@
+=== 10-K | Period ending 2026-02-01 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($2,025M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($2,025M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($6,848M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($31M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $41,276M → $125,378M (+203.8%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-11-02 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $64,158M → $41,276M (-35.7%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-08-03 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-05-04 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] fx_designated_notional: was $2,024M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $2,024M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $647M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $77M, now missing
+[NUMERIC] net_derivative_position: $2,167,657M → $1,411,176M (-34.9%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $8M → $65,223M (+815187.5%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 4/6 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, total_derivative_asset, total_derivative_liability)
+[VALIDATION] Likely units mismatch: expected_12mo_reclass_from_aoci changed from 8 to 65,223 (8153x)
+
 === 10-Q | Period ending 2025-11-02 | Processed 2026-06-02 ===
 [NEW_FIELD] fair_value_assets: appeared for first time ($0M)
 [DISAPPEARED_FIELD] fair_value_liabilities: was $4M, now missing

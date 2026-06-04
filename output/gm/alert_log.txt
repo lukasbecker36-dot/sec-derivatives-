@@ -1,3 +1,31 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $25M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $2M, now missing
+[NUMERIC] cash_flow_hedge_aoci: $385M → $163M (-57.7%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $2,024M → $231M (-88.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10,000M, now missing
+[VALIDATION] Likely extraction failure: 3/8 previously-populated fields are now null (fx_derivatives_notional, commodity_derivatives_notional, fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_derivatives_notional: $2M → $25M (+1150.0%) — exceeds 20% threshold
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($2M)
+[NUMERIC] cash_flow_hedge_aoci: $246M → $385M (+56.5%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $291M → $2,024M (+595.5%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10,000M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2M)
+[NUMERIC] cash_flow_hedge_aoci: $489M → $246M (-49.7%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $480M → $291M (-39.4%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] cash_flow_hedge_aoci: $141M → $489M (+246.8%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $231M → $480M (+107.8%) — exceeds 20% threshold
+
 === 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
 [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $353M, now missing
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $4M, now missing

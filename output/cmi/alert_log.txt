@@ -1,3 +1,28 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] fx_designated_notional: was $31M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $31M, now missing
+[NUMERIC] total_derivative_asset: $16M → $1M (-93.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $29M → $23M (-20.7%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($5M)
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $40M, now missing
+[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, ir_sensitivity_100bp)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] total_derivative_asset: $1M → $16M (+1500.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $20M → $29M (+45.0%) — exceeds 20% threshold
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($40M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] total_derivative_liability: $40M → $20M (-50.0%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] total_derivative_liability: $11M → $40M (+263.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $24M, now missing
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
 [LLM_FLAG] Filing text is limited to a cross-reference to Item 7A of the 2025 Form 10-K with a statement that there have been no material changes. Detailed derivative and market risk disclosures are not included in this 10-Q excerpt.
 

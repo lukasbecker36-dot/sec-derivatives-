@@ -1,4 +1,16 @@
 === 10-Q | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $15M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $30M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $30M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_not_designated_notional, ir_sensitivity_100bp, fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($15M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($30M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($30M)
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] fx_forwards_outstanding: was $1,518M, now missing
 [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-2M, now missing
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $7M, now missing
