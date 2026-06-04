@@ -1,0 +1,25 @@
+issuer: Steel Dynamics
+ticker: STLD
+cik: "1022671"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  commodity_contracts_notional:
+    description: "Notional amount/volume of commodity contracts"
+    section: market_risk
+  commodity_contracts_fair_value:
+    description: "Fair value of commodity contracts"
+    section: market_risk
+  futures_contracts_notional:
+    description: "Notional amount/volume of futures contracts"
+    section: market_risk
+  futures_contracts_fair_value:
+    description: "Fair value of futures contracts"
+    section: market_risk
+  commodity_price_sensitivity:
+    description: "Impact of commodity price changes on results"
+    section: market_risk
+

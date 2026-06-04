@@ -1,0 +1,29 @@
+issuer: Trade Desk (The)
+ticker: TTD
+cik: "1671933"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  interest_rate_sensitivity:
+    description: "Impact of 1pp interest rate change on investment income"
+    section: market_risk
+  fx_sensitivity_10pct:
+    description: "Foreign currency loss from immediate 10% adverse FX change"
+    section: market_risk
+  primary_fx_exposures:
+    description: "Primary non-USD currencies (EUR, GBP, CAD, AUD, JPY, INR, IDR, HKD, NZD, KRW, SGD)"
+    section: market_risk
+  fx_forward_fair_value:
+    description: "Fair value of forward contracts"
+    section: market_risk
+
+# Unusual features identified:
+#   - No amount owed on credit facility - minimal interest rate risk
+#   - Enters into forward contracts to hedge FX risk but no assurance of effectiveness
+#   - Does not use derivative instruments for interest rate exposure management
+#   - XBRL shows ForwardContractsMember with fair values at both year-end dates
+#   - FederalFundsEffectiveSwapRateMember in XBRL is just a reference rate, not an actual swap
+

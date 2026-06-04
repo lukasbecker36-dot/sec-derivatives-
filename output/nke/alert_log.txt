@@ -1,0 +1,18 @@
+=== 10-Q | Period ending 2025-08-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_forward_var: was $107M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $2,400M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_fair_value: was $21M, now missing
+[DISAPPEARED_FIELD] long_term_debt_principal: was $8,000M, now missing
+[DISAPPEARED_FIELD] long_term_debt_fair_value: was $6,673M, now missing
+[DISAPPEARED_FIELD] average_monthly_fx_derivative_change: was $200M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (fx_forward_var, interest_rate_swap_notional, interest_rate_swap_fair_value, long_term_debt_principal, long_term_debt_fair_value...)
+
+=== 10-K | Period ending 2025-05-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_forward_var: appeared for first time ($107M)
+[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($2,400M)
+[NEW_FIELD] interest_rate_swap_fair_value: appeared for first time ($21M)
+[NEW_FIELD] long_term_debt_principal: appeared for first time ($8,000M)
+[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($6,673M)
+[NEW_FIELD] average_monthly_fx_derivative_change: appeared for first time ($200M)
+[LLM_FLAG] FX VaR increased from $57M (FY2024) to $107M (FY2025), nearly doubling, due to higher FX volatilities and increased trade volumes
+

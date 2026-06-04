@@ -15,7 +15,12 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "interest rate swap",
+      "foreign exchange forward",
+      "notional amount",
+      "mark-to-market"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -29,6 +34,50 @@
       "sections_found": [],
       "fields_extracted": 0,
       "fields_null": 0
+    },
+    {
+      "filing_date": "2025-03-31",
+      "form_type": "10-Q",
+      "period_end": "2025-03-31",
+      "processed_at": "2026-06-04T09:25:14Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 12,
+      "fields_null": 3
+    },
+    {
+      "filing_date": "2025-06-30",
+      "form_type": "10-Q",
+      "period_end": "2025-06-30",
+      "processed_at": "2026-06-04T09:25:14Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 12,
+      "fields_null": 3
+    },
+    {
+      "filing_date": "2025-09-30",
+      "form_type": "10-Q",
+      "period_end": "2025-09-30",
+      "processed_at": "2026-06-04T09:25:15Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 12,
+      "fields_null": 3
+    },
+    {
+      "filing_date": "2025-12-31",
+      "form_type": "10-K",
+      "period_end": "2025-12-31",
+      "processed_at": "2026-06-04T09:25:15Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 12,
+      "fields_null": 3
     }
   ]
 }

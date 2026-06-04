@@ -15,8 +15,23 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
-    "non_gaap_metrics": [],
+    "recurring_phrases": [
+      "net investment hedge",
+      "cash flow hedging",
+      "economic hedge",
+      "cross-currency",
+      "interest rate swap",
+      "commodity contract",
+      "notional amount",
+      "accumulated other comprehensive",
+      "net investment hedging",
+      "cash flow hedge",
+      "commodity derivative",
+      "mark-to-market"
+    ],
+    "non_gaap_metrics": [
+      "constant currency"
+    ],
     "unusual_disclosure_patterns": [],
     "known_issues": []
   },
@@ -29,6 +44,54 @@
       "sections_found": [],
       "fields_extracted": 0,
       "fields_null": 0
+    },
+    {
+      "filing_date": "2025-03-31",
+      "form_type": "10-Q",
+      "period_end": "2025-03-31",
+      "processed_at": "2026-06-04T09:25:14Z",
+      "sections_found": [
+        "financial_instruments",
+        "market_risk"
+      ],
+      "fields_extracted": 1,
+      "fields_null": 11
+    },
+    {
+      "filing_date": "2025-06-30",
+      "form_type": "10-Q",
+      "period_end": "2025-06-30",
+      "processed_at": "2026-06-04T09:25:14Z",
+      "sections_found": [
+        "financial_instruments",
+        "market_risk"
+      ],
+      "fields_extracted": 1,
+      "fields_null": 11
+    },
+    {
+      "filing_date": "2025-09-30",
+      "form_type": "10-Q",
+      "period_end": "2025-09-30",
+      "processed_at": "2026-06-04T09:25:14Z",
+      "sections_found": [
+        "financial_instruments",
+        "market_risk"
+      ],
+      "fields_extracted": 1,
+      "fields_null": 11
+    },
+    {
+      "filing_date": "2025-12-31",
+      "form_type": "10-K",
+      "period_end": "2025-12-31",
+      "processed_at": "2026-06-04T09:25:14Z",
+      "sections_found": [
+        "financial_instruments",
+        "market_risk"
+      ],
+      "fields_extracted": 1,
+      "fields_null": 11
     }
   ]
 }

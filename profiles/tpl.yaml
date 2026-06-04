@@ -1,0 +1,20 @@
+issuer: Texas Pacific Land Corporation
+ticker: TPL
+cik: "1811074"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cash_and_equivalents_composition:
+    description: "Composition of cash equivalents (US Treasury Bills and commercial paper)"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivatives of any kind - purely a land/royalty company
+#   - Extremely minimal market risk disclosure (under 200 words)
+#   - Financial instruments limited to cash equivalents (US Treasury Bills and commercial paper)
+#   - XBRL shows FederalFundsEffectiveSwapRateMember only as a reference rate for credit facility, not an actual swap
+#   - No foreign currency exposure
+

@@ -1,0 +1,39 @@
+issuer: Ralph Lauren Corporation
+ticker: RL
+cik: "1037038"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_forwards_notional_designated:
+    description: "Notional amount of FX forward contracts designated as cash flow hedges"
+    section: financial_instruments
+  fx_forwards_notional_undesignated:
+    description: "Notional amount of FX forward contracts not designated as hedging instruments"
+    section: financial_instruments
+  net_investment_hedge_notional:
+    description: "Notional amount of net investment hedges"
+    section: financial_instruments
+  fx_forwards_fair_value_asset:
+    description: "Fair value of FX forward contracts in asset position"
+    section: financial_instruments
+  fx_forwards_fair_value_liability:
+    description: "Fair value of FX forward contracts in liability position"
+    section: financial_instruments
+  hedge_gain_loss_oci:
+    description: "Gain/loss on cash flow hedges recognized in OCI"
+    section: financial_instruments
+  hedge_gain_loss_reclassified:
+    description: "Gain/loss reclassified from AOCI to earnings"
+    section: financial_instruments
+
+# Unusual features identified:
+#   - Market risk section in 10-K cross-references Item 7 Market Risk Management rather than providing data directly
+#   - Uses both designated cash flow hedges and non-designated FX forwards
+#   - Has net investment hedges for foreign subsidiary investments
+#   - XBRL tags confirm ForeignExchangeForwardMember with both DesignatedAsHedgingInstrument and Nondesignated
+#   - Fiscal year ends on Saturday closest to March 31 (non-standard calendar)
+#   - Multiple debt instruments: 3.750%, 2.950%, 5.000% senior notes
+

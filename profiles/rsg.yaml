@@ -1,0 +1,36 @@
+issuer: Republic Services
+ticker: RSG
+cik: "1060391"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fixed_rate_debt_outstanding:
+    description: "Total fixed rate debt outstanding by maturity"
+    section: market_risk
+  variable_rate_debt_outstanding:
+    description: "Total variable rate debt outstanding by maturity"
+    section: market_risk
+  total_debt_fair_value:
+    description: "Fair value of total debt as of balance sheet date"
+    section: market_risk
+  ir_sensitivity_100bp:
+    description: "Impact of 100bp change on annualized interest expense for variable rate debt"
+    section: market_risk
+  fixed_rate_debt_maturity_profile:
+    description: "Expected maturity schedule of fixed rate debt by year"
+    section: market_risk
+  variable_rate_debt_maturity_profile:
+    description: "Expected maturity schedule of variable rate debt by year"
+    section: market_risk
+
+# Unusual features identified:
+#   - Has used interest rate swaps in the past as cash flow hedges but unclear if currently active
+#   - Provides detailed maturity schedule table for both fixed and variable rate debt
+#   - Fixed rate debt: $11,157M total, fair value $10,945M
+#   - Variable rate debt: $2,553M total, fair value $2,546M
+#   - 100bp sensitivity: ~$26M impact on variable rate debt interest expense
+#   - Excludes $129M of non-cash discounts/premiums/FV adjustments from debt amounts
+
