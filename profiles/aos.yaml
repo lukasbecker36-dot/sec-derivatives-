@@ -1,0 +1,12 @@
+issuer: A. O. Smith
+ticker: AOS
+cik: "91142"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Unusual features identified:
+#   - Market risk section contains only a cross-reference: 'See Market Risk above' with no substantive disclosure
+#   - No derivative instruments or market risk quantitative data present in extracted section
+#   - Only note heading found is 'Organization and Significant Accounting Policies' suggesting derivatives note was not captured
+
