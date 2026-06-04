@@ -1,0 +1,23 @@
+issuer: W. W. Grainger
+ticker: GWW
+cik: "277135"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_sales_pct:
+    description: "Percentage of net sales denominated in non-USD currencies"
+    section: market_risk
+  fx_sensitivity_10pct:
+    description: "Materiality of hypothetical 10% change in USD value on net earnings"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative instruments used
+#   - Very minimal market risk disclosure
+#   - Only FX and commodity price risks discussed qualitatively
+#   - Primary FX exposures are JPY, MXN, CAD, GBP
+#   - Commodity price risk managed through operational strategies not derivatives
+

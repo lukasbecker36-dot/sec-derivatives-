@@ -1,0 +1,33 @@
+issuer: Zebra Technologies
+ticker: ZBRA
+cik: "877212"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  variable_rate_debt_total:
+    description: "Total variable rate debt outstanding (~$2.0B of $2.5B total)"
+    section: market_risk
+  ir_sensitivity_1pct:
+    description: "Change in annual interest expense for 1% change in rates (~$20M)"
+    section: market_risk
+  fx_sensitivity_1pct:
+    description: "Change in pre-tax income for 1% change in FX rates (~$2M including derivatives)"
+    section: market_risk
+  primary_fx_exposures:
+    description: "Primary currency exposures (EUR, GBP, CZK)"
+    section: market_risk
+  countries_of_operation:
+    description: "Number of countries where products are offered (approximately 179)"
+    section: market_risk
+
+# Unusual features identified:
+#   - Market risk section provides only high-level disclosure - details deferred to Note 11 (Derivative Instruments)
+#   - Note 11 content was not extracted in the filing section text
+#   - Very high proportion of variable rate debt (~80% of total $2.5B)
+#   - Czech Koruna (CZK) exposure is unusual - likely related to manufacturing operations
+#   - Sensitivity analysis uses 1% (not 10%) for both IR and FX - different from typical 100bp/10% convention
+#   - FX sensitivity explicitly stated as inclusive of derivative contract impact
+

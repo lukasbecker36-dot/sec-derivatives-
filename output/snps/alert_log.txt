@@ -1,0 +1,15 @@
+=== 10-Q | Period ending 2026-01-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $1,508M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $10M, now missing
+[DISAPPEARED_FIELD] fx_forwards_notional: was $1,508M, now missing
+[DISAPPEARED_FIELD] fx_contracts_notional: was $1,508M, now missing
+[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $3M, now missing
+[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, fx_forwards_notional, fx_contracts_notional, foreign_currency_sensitivity)
+
+=== 10-K | Period ending 2025-10-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($1,508M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)
+[NEW_FIELD] fx_forwards_notional: appeared for first time ($1,508M)
+[NEW_FIELD] fx_contracts_notional: appeared for first time ($1,508M)
+[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($3M)
+

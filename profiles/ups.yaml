@@ -1,0 +1,67 @@
+issuer: United Parcel Service
+ticker: UPS
+cik: "1090727"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  has_derivatives:
+    description: "Whether the company uses derivatives"
+    section: market_risk
+  fx_hedge_eur_notional:
+    description: "EUR currency hedge notional amount, in local currency millions"
+    section: market_risk
+  fx_hedge_gbp_notional:
+    description: "GBP currency hedge notional amount, in local currency millions"
+    section: market_risk
+  fx_hedge_cad_notional:
+    description: "CAD currency hedge notional amount, in local currency millions"
+    section: market_risk
+  fx_hedge_hkd_notional:
+    description: "HKD currency hedge notional amount, in local currency millions"
+    section: market_risk
+  fx_hedge_cnh_notional:
+    description: "CNH currency hedge notional amount, in local currency millions"
+    section: market_risk
+  fx_asset_derivatives_current_fv:
+    description: "Fair value of current FX asset derivatives, in millions"
+    section: market_risk
+  fx_asset_derivatives_noncurrent_fv:
+    description: "Fair value of non-current FX asset derivatives, in millions"
+    section: market_risk
+  fx_liability_derivatives_current_fv:
+    description: "Fair value of current FX liability derivatives, in millions"
+    section: market_risk
+  fx_liability_derivatives_noncurrent_fv:
+    description: "Fair value of non-current FX liability derivatives, in millions"
+    section: market_risk
+  fx_cash_flow_hedge_revenue_gain_loss:
+    description: "Gain/loss reclassified from AOCI to revenue for FX cash flow hedges, in millions"
+    section: market_risk
+  ir_cash_flow_hedge_interest_expense:
+    description: "Gain/loss reclassified from AOCI to interest expense for IR cash flow hedges, in millions"
+    section: market_risk
+  fair_value_hedge_carrying_amount:
+    description: "Carrying amount of hedged liabilities in fair value hedges, in millions"
+    section: market_risk
+  fair_value_hedge_basis_adjustment:
+    description: "Cumulative fair value hedge basis adjustment, in millions"
+    section: market_risk
+  commodity_contracts_outstanding:
+    description: "Whether any commodity hedge contracts are outstanding"
+    section: market_risk
+
+# Unusual features identified:
+#   - Very comprehensive derivatives program with both FX and IR hedges, plus historical commodity hedging
+#   - FX hedges denominated in 5 currencies (EUR, GBP, CAD, HKD, CNH) with notionals in local currency
+#   - Uses both cash flow hedges and fair value hedges for interest rate risk
+#   - Net investment hedges using foreign currency denominated debt instruments
+#   - Master netting arrangements with $250M threshold but elects gross balance sheet presentation
+#   - No commodity hedge positions outstanding despite having a commodity risk management program
+#   - Forward starting interest rate swaps used to lock borrowing costs on anticipated debt issuances
+#   - Detailed AOCI roll-forward and income statement impact tables for designated hedges
+#   - Fuel surcharges are primary means of commodity risk management rather than derivatives
+#   - Archetype should be 'active_ir_fx_hedger' given the scale and complexity of the hedging program
+

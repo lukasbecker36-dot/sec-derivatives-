@@ -15,7 +15,12 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "cross-currency",
+      "interest rate swap",
+      "unrealized gain",
+      "accumulated other comprehensive"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -29,6 +34,50 @@
       "sections_found": [],
       "fields_extracted": 0,
       "fields_null": 0
+    },
+    {
+      "filing_date": "2025-03-29",
+      "form_type": "10-Q",
+      "period_end": "2025-03-29",
+      "processed_at": "2026-06-04T11:26:23Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 1,
+      "fields_null": 20
+    },
+    {
+      "filing_date": "2025-06-28",
+      "form_type": "10-Q",
+      "period_end": "2025-06-28",
+      "processed_at": "2026-06-04T11:26:23Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 1,
+      "fields_null": 20
+    },
+    {
+      "filing_date": "2025-09-27",
+      "form_type": "10-Q",
+      "period_end": "2025-09-27",
+      "processed_at": "2026-06-04T11:26:23Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 1,
+      "fields_null": 20
+    },
+    {
+      "filing_date": "2025-12-31",
+      "form_type": "10-K",
+      "period_end": "2025-12-31",
+      "processed_at": "2026-06-04T11:26:23Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 4,
+      "fields_null": 17
     }
   ]
 }

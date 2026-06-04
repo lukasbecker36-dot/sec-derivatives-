@@ -1,0 +1,31 @@
+issuer: Verisign
+ticker: VRSN
+cik: "1014473"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_forward_notional:
+    description: "Total notional amount of foreign currency forward contracts"
+    section: market_risk
+  fixed_income_securities:
+    description: "Total fixed income securities (US Treasury bills)"
+    section: market_risk
+  senior_notes_fair_value:
+    description: "Aggregate fair value of senior notes"
+    section: market_risk
+  cash_and_equivalents:
+    description: "Cash, cash equivalents and restricted cash"
+    section: market_risk
+  marketable_securities:
+    description: "Marketable securities balance"
+    section: market_risk
+
+# Unusual features identified:
+#   - FX forwards not designated for hedge accounting
+#   - Very simple investment portfolio - primarily US Treasury bills
+#   - Market risk section includes both interest rate and FX forward discussion
+#   - Cash equivalents and investments detailed in separate Financial Instruments note
+

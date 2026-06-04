@@ -1,0 +1,29 @@
+issuer: Williams-Sonoma, Inc.
+ticker: WSM
+cik: "719955"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_sales_denominated_usd:
+    description: "Whether majority of international purchases are denominated in USD"
+    section: market_risk
+  fx_hypothetical_10pct_impact:
+    description: "Whether a hypothetical 10% change in FX rates would have material impact"
+    section: market_risk
+  credit_facility_variable_rate:
+    description: "Whether borrowings exist under variable rate credit facility"
+    section: market_risk
+  may_hedge_fx_forward:
+    description: "Statement that company may hedge FX exposure with forward contracts in future"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivatives currently in use - company states it 'may hedge' in the future with FX forwards
+#   - Substantially all purchases and sales denominated in USD despite global operations
+#   - No borrowings under credit facility during the fiscal year
+#   - Disclosure is purely qualitative with no quantitative derivative data
+#   - Should be classified as no_derivatives archetype
+

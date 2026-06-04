@@ -1,0 +1,19 @@
+issuer: Union Pacific Corporation
+ticker: UNP
+cik: "100885"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  has_derivatives:
+    description: "Whether the company uses derivatives"
+    section: market_risk
+
+# Unusual features identified:
+#   - Market risk section contains only a cross-reference to Item 7 MD&A — no substantive disclosure in this section
+#   - All market risk information is in MD&A 'Other Matters' section rather than the standard Item 7A location
+#   - Section text is extremely short — may need to extract from MD&A instead
+#   - Insufficient data for meaningful extraction from this section alone
+

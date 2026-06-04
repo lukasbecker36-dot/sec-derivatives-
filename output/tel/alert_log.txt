@@ -1,0 +1,13 @@
+=== 10-Q | Period ending 2025-12-26 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] xccy_swap_unrealized_sensitivity: was $594M, now missing
+[DISAPPEARED_FIELD] commodity_hedge_fair_value: was $80M, now missing
+[DISAPPEARED_FIELD] commodity_hedge_notional: was $569M, now missing
+[DISAPPEARED_FIELD] commodity_sensitivity: was $65M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (xccy_swap_unrealized_sensitivity, commodity_hedge_fair_value, commodity_hedge_notional, commodity_sensitivity)
+
+=== 10-K | Period ending 2025-09-26 | Processed 2026-06-04 ===
+[NEW_FIELD] xccy_swap_unrealized_sensitivity: appeared for first time ($594M)
+[NEW_FIELD] commodity_hedge_fair_value: appeared for first time ($80M)
+[NEW_FIELD] commodity_hedge_notional: appeared for first time ($569M)
+[NEW_FIELD] commodity_sensitivity: appeared for first time ($65M)
+

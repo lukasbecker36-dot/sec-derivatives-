@@ -1,0 +1,50 @@
+issuer: Williams Companies
+ticker: WMB
+cik: "107263"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  commodity_derivative_fair_value_total:
+    description: "Total net fair value of commodity derivative contracts"
+    section: market_risk
+  commodity_derivative_fair_value_by_level:
+    description: "Fair value of commodity derivatives by fair value hierarchy level (Level 1, 2, 3)"
+    section: market_risk
+  commodity_derivative_fair_value_by_maturity:
+    description: "Fair value of commodity derivatives by maturity bucket"
+    section: market_risk
+  var_one_day_95pct:
+    description: "Value at Risk (1-day, 95% confidence) for commodity portfolio"
+    section: market_risk
+  long_term_debt_fixed_rate_total:
+    description: "Total fixed rate long-term debt and fair value"
+    section: market_risk
+  long_term_debt_variable_rate_total:
+    description: "Total variable rate debt"
+    section: market_risk
+  commercial_paper_outstanding:
+    description: "Commercial paper outstanding amount"
+    section: market_risk
+  cash_collateral_level1:
+    description: "Net cash collateral excluded from Level 1 commodity derivatives"
+    section: market_risk
+  transco_fixed_rate_debt:
+    description: "Transco subsidiary fixed rate debt detail by maturity"
+    section: market_risk
+  nwp_debt_detail:
+    description: "NWP subsidiary debt detail (fixed and variable)"
+    section: market_risk
+
+# Unusual features identified:
+#   - Energy company with extensive commodity derivatives - not designated as hedges (economic hedges only)
+#   - Fair value table by measurement level AND maturity - dual-dimension breakdown
+#   - Value at Risk (VaR) disclosure using parametric model with 95% confidence/1-day holding period
+#   - Subsidiary-level debt breakdowns for Transco, NWP, and parent
+#   - Other financing obligations disclosed separately for Transco
+#   - Commodity derivatives used for upstream production hedging and NGL margin locking
+#   - Interest rate derivatives mentioned but details deferred to another note
+#   - Very large debt portfolio ($28.7B fixed rate) typical of midstream energy company
+
