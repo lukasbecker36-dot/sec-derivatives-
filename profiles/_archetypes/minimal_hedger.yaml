@@ -42,6 +42,27 @@ fields:
     description: "Gross unrealized gains on marketable debt securities, in millions. 0 if 'not material'."
     section: financial_instruments
 
+  # Financial instruments section — derivative fields (many companies include
+  # derivative notionals inside their Financial Instruments note, not a separate note)
+  fi_fx_derivatives_notional:
+    description: "Total notional amount of foreign currency/FX derivative contracts (forwards + options + cross-currency swaps combined), in millions"
+    section: financial_instruments
+  fi_fx_designated_notional:
+    description: "Notional amount of FX derivatives designated as hedging instruments, in millions. null if not split out."
+    section: financial_instruments
+  fi_fx_not_designated_notional:
+    description: "Notional amount of FX derivatives NOT designated as hedging instruments, in millions. null if not split out."
+    section: financial_instruments
+  fi_ir_swap_notional:
+    description: "Notional amount of interest rate swap/derivative contracts, in millions"
+    section: financial_instruments
+  fi_total_derivative_asset:
+    description: "Total derivative assets at fair value, in millions"
+    section: financial_instruments
+  fi_total_derivative_liability:
+    description: "Total derivative liabilities at fair value, in millions"
+    section: financial_instruments
+
   # Derivatives note section — notionals and fair values
   has_derivatives:
     description: "Does the company use derivatives? Yes/No/No mention"
