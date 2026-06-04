@@ -1,0 +1,16 @@
+=== 10-K | Period ending 2026-01-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $68M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+
+=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-04 ===
+[NUMERIC] ir_sensitivity_100bp: $114M → $68M (-40.4%) — exceeds 20% threshold
+[LLM_FLAG] IR sensitivity dropped sharply from $114M (Jul 2025) to $68M (Oct 2025), a 40% decline, driven by cash/securities declining from $8.2B to $6.8B — likely reflecting share repurchases or other capital deployment
+[LLM_FLAG] Cash/equivalents/marketable securities decreased from $8.0B (Jan 2025) to $6.8B (Oct 2025), a $1.2B reduction
+[LLM_FLAG] Investment portfolio now includes supranational securities not mentioned in prior quarters
+
+=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($111M)
+
+=== 10-K | Period ending 2025-01-31 | Processed 2026-06-04 ===
+[LLM_FLAG] Section text appears truncated — the market risk disclosure for the 10-K ends mid-sentence with a cross-reference to Note 10, Derivative Instruments, but the quantitative detail from that note is not included in the extracted section
+

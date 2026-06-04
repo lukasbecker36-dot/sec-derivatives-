@@ -1,0 +1,16 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($9M)
+[NEW_FIELD] fixed_rate_debt_total: appeared for first time ($8,730M)
+[NEW_FIELD] variable_rate_debt_total: appeared for first time ($1,902M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NUMERIC] fx_swap_notional_aggregate: $3,100M → $4,100M (+32.3%) — exceeds 20% threshold
+[LLM_FLAG] FX swap aggregate notional increased significantly from $3.1B (Q2) to $4.1B (Q3), a 32% increase. The January 2026 swap ($800M) likely matured/rolled, and new swaps were added extending to August 2030.
+[LLM_FLAG] Maturity range shifted from 'January 2026 to December 2029' to 'October 2027 to August 2030', indicating the nearest-term swap expired and longer-dated swaps were added.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($19M)
+[NEW_FIELD] fx_swap_notional_aggregate: appeared for first time ($2,900M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($600M)
+

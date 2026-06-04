@@ -1,0 +1,15 @@
+=== 10-Q | Period ending 2026-01-02 | Processed 2026-06-04 ===
+[LLM_FLAG] FX derivative sensitivity increased from $70M to $78M quarter-over-quarter (11.4% increase), suggesting growing FX derivative notional positions
+
+=== 10-Q | Period ending 2025-10-03 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_net_transaction_gains_losses: appeared for first time ($-70M)
+
+=== 10-K | Period ending 2025-06-27 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $25M, now missing
+[DISAPPEARED_FIELD] fx_net_transaction_gains_losses: was $-68M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_sensitivity_100bp, fx_net_transaction_gains_losses)
+
+=== 10-Q | Period ending 2025-03-28 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($25M)
+[NEW_FIELD] fx_net_transaction_gains_losses: appeared for first time ($-68M)
+
