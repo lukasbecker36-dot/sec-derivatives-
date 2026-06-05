@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html><head><meta charset="utf-8">
 <style>
-  body { font-family: Georgia, 'Times New Roman', serif; max-width: 680px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.6; }
-  h1 { font-size: 1.5em; border-bottom: 2px solid #1a1a1a; padding-bottom: 8px; margin-bottom: 4px; }
-  .date-range { font-size: 0.9em; color: #555; margin-bottom: 24px; }
-  h2 { font-size: 1.15em; color: #333; margin-top: 28px; margin-bottom: 12px; }
-  p { margin: 0 0 14px 0; }
+  body { font-family: Georgia, 'Times New Roman', serif; max-width: 680px; margin: 0 auto; padding: 24px; color: #1a1a1a; line-height: 1.6; }
+  h1 { font-size: 22px; border-bottom: 2px solid #1a1a1a; padding-bottom: 8px; margin-bottom: 6px; }
+  .date-range { font-size: 14px; color: #555; margin-bottom: 20px; }
+  h2 { font-size: 15px; color: #333; text-transform: uppercase; letter-spacing: 1px; margin-top: 28px; margin-bottom: 12px; }
+  p { margin: 0 0 14px 0; font-size: 15px; }
   .lead { margin-bottom: 18px; }
-  .lead strong { color: #1a1a1a; }
-  .summary { background: #f7f7f5; padding: 14px 18px; border-left: 3px solid #333; margin-bottom: 24px; }
-  footer { margin-top: 36px; padding-top: 12px; border-top: 1px solid #ccc; font-size: 0.8em; color: #888; }
+  .lead strong { color: #000; }
+  .summary { background: #f7f7f5; padding: 14px 18px; border-left: 3px solid #333; margin-bottom: 24px; font-size: 15px; }
   .ticker { font-family: 'SF Mono', 'Consolas', monospace; font-size: 0.9em; background: #eee; padding: 1px 4px; border-radius: 2px; }
+  footer { margin-top: 32px; padding-top: 12px; border-top: 1px solid #ccc; font-size: 12px; color: #888; }
 </style>
 </head><body>
 
 <h1>SEC Derivatives Weekly</h1>
-<div class="date-range">27 May &ndash; 3 June 2026</div>
+<div class="date-range">29 May &ndash; 5 June 2026</div>
 
 <div class="summary">
-Biggest week yet for the monitoring universe &mdash; 149 new issuers processed across three activation runs, bringing names like Microsoft, Nvidia, IBM, GM, and Eli Lilly into scope. On the data side, Marathon Petroleum's commodity derivative losses in Q1 2026 dwarf anything we've seen, and DoorDash's Deliveroo-linked FX forward has fully unwound.
+The monitoring universe nearly doubled this week as 205 new issuers were activated across four processing runs. Cognizant doubled its FX hedge book in a single quarter, Hilton let a $1.6B rate swap mature without replacement, and Ford is rotating its $164B derivatives portfolio away from FX and into rates. Apple's unrealised gains on debt cratered 70%.
 </div>
 
 <h2>Story Leads</h2>
 
 <div class="lead">
-<p><strong>Marathon Petroleum's commodity derivatives blow up in Q1.</strong>
-<span class="ticker">MPC</span> reported $390M in realized losses and $519M in unrealized losses on commodity derivative positions in Q1 2026 alone. For context, the prior nine months (through Sept 2025) showed cumulative realized losses of just $59M with a $22M unrealized gain. MPC doesn't designate these as hedges for accounting purposes. Worth asking: what drove the swing &mdash; crude price moves, position sizing, or a strategy shift?</p>
+<p><strong>Cognizant doubles FX hedges, kills non-designated book.</strong>
+<span class="ticker">CTSH</span> designated FX notional jumped from $85M to $174M (+105%) in Q1 2026 while non-designated positions collapsed from $71M to just $3M. This is a textbook shift toward hedge accounting treatment &mdash; smoothing P&amp;L volatility by qualifying hedges for AOCI deferral. With Cognizant growing its offshore delivery model, the move suggests treasury expects sustained FX exposure and wants it off the income statement.</p>
 </div>
 
 <div class="lead">
-<p><strong>DoorDash's $4.2B Deliveroo FX forward appears and vanishes.</strong>
-<span class="ticker">DASH</span> put on a deal-contingent GBP forward worth roughly &pound;2.8B (~$4.2B) in mid-2025 to hedge the Deliveroo acquisition. By Q1 2026 the forward has dropped back to zero &mdash; deal closed or unwound. Meanwhile, non-marketable equity investments nearly tripled from $47M to $123M. A clean case study of M&amp;A-linked derivatives activity.</p>
+<p><strong>DoorDash unwinds $3.7B Deliveroo FX forward.</strong>
+<span class="ticker">DASH</span> put on a deal-contingent GBP forward worth &pound;2.8B (~$3.7B) in mid-2025 for the Deliveroo acquisition. By Q1 2026 the forward is gone &mdash; either the deal settled and the hedge did its job, or the transaction fell through. At the same time, non-marketable equity investments nearly tripled to $123M and the filing notes new GBP exposure. Clean M&amp;A derivatives case study either way.</p>
 </div>
 
 <div class="lead">
-<p><strong>Edison International's derivative book collapses.</strong>
-<span class="ticker">EIX</span> gross derivative assets fell from $196M (June 2025) to just $19M in Q1 2026 &mdash; a 90% drop. Congestion revenue rights notional plunged from 5,751 GWh to 1,232 GWh. Electricity notionals are fluctuating quarter-to-quarter. Is SCE significantly reducing its commodity hedging, or is this a seasonal pattern?</p>
+<p><strong>Ford reshuffles $164B derivatives book: less FX, more rates.</strong>
+<span class="ticker">F</span> cut FX cash flow hedge notional 28% from $22.7B to $16.4B, while IR fair value hedges jumped 16% to $26.5B. Total notional grew modestly to $163.6B. Ford Credit appears to be rotating out of FX protection and into rate positioning. New sensitivity disclosure puts a 10% currency move at $3B and a 100bp rate shift at $66M &mdash; meaningful numbers for a company this leveraged.</p>
 </div>
 
 <div class="lead">
-<p><strong>GoDaddy's IR swap program drives AOCI swing.</strong>
-<span class="ticker">GDDY</span> went from zero derivative liabilities in Dec 2024 to $164M by June 2025. The position has since moderated to $103M, and AOCI on derivatives swung from -$39M to +$5.9M in Q1 2026. This looks like a new interest rate hedging programme that's now working in the company's favour.</p>
+<p><strong>Hilton's $1.6B interest rate swap matures &mdash; not replaced.</strong>
+<span class="ticker">HLT</span> IR swap notional dropped from $1.6B to zero when the position matured in March 2026. The filing confirms this was expected, but Hilton hasn't put on a replacement hedge. With $3.1B in variable-rate debt on the books, the company is now fully exposed to rate movements &mdash; a bet that rates are heading lower?</p>
 </div>
 
 <div class="lead">
-<p><strong>DTE Energy eliminates floating-rate debt exposure.</strong>
-<span class="ticker">DTE</span> took floating-rate debt from $597M (2.6% of total) in Q2 2025 down to $216M in Q3, and to zero in Q1 2026. At the same time, net credit exposure on energy trading rebounded from $1.08B to $1.65B. A deliberate de-risking on rates while expanding commodity trading counterparty exposure.</p>
+<p><strong>Boeing commodity hedges expire, FX book swings underwater.</strong>
+<span class="ticker">BA</span> non-designated commodity notional fell from $129M to zero as aluminium hedges expired without renewal. FX OCI swung from a +$210M gain to a &minus;$25M loss &mdash; a $235M reversal in Q1. Derivative liabilities rose 44% to $127M. Boeing's filing says "no significant changes" to market risk, which sits oddly against the numbers.</p>
 </div>
 
 <div class="lead">
-<p><strong>Autodesk restructures FX hedge mix.</strong>
-<span class="ticker">ADSK</span> cut sold forward notionals 26% (from $2.17B to $1.60B) while growing option notionals 17% in both directions. USD depreciation sensitivity improved 37% to -$94M. Looks like a conscious shift from forwards to options &mdash; paying for more flexibility.</p>
+<p><strong>Apple's debt portfolio marks down hard.</strong>
+<span class="ticker">AAPL</span> gross unrealised gains on debt securities fell 70% from $280M to $83M in Q1 2026, tracking the rate backup. The $101B marketable securities portfolio is under pressure. Not a derivatives story strictly, but important context for the largest corporate treasury in the S&amp;P 500.</p>
 </div>
 
 <h2>Universe Update</h2>
-<p>Three activation runs (May 29, June 1, June 3) processed 149 issuers: 78 went fully active, 58 flagged for review, and 13 failed. The universe now stands at 194 active, 84 needs-review, 89 registered, and 16 failed. Notable new entries include <span class="ticker">MSFT</span>, <span class="ticker">NVDA</span>, <span class="ticker">IBM</span>, <span class="ticker">GM</span>, <span class="ticker">LMT</span>, <span class="ticker">LIN</span>, <span class="ticker">LLY</span>, <span class="ticker">JNJ</span>, <span class="ticker">GILD</span>, and <span class="ticker">PFE</span>. McDonald's (<span class="ticker">MCD</span>) and NextEra (<span class="ticker">NEE</span>) both failed activation &mdash; likely section extraction issues worth investigating.</p>
+<p>Four activation runs (May 29, June 1, 3, 4) processed 242 issuers: 78 went fully active, 127 flagged for review, and 37 failed. The universe now stands at 194 active, 178 needs-review, 9 still registered, and 2 stuck in failed-activation. Notable new entries this week include <span class="ticker">MSFT</span>, <span class="ticker">NVDA</span>, <span class="ticker">TSLA</span>, <span class="ticker">CRM</span>, <span class="ticker">QCOM</span>, <span class="ticker">UNH</span>, <span class="ticker">LLY</span>, <span class="ticker">WMT</span>, <span class="ticker">UPS</span>, and <span class="ticker">DIS</span> (though Disney failed activation). The bulk of June 3&ndash;4 activations came via the Claude Code bridge at lower-than-usual extraction scores, so many will need config review. Utilities were the hardest-hit sector for failures: SO, NEE, PPL, WEC, XEL, NI, and PCG all scored below 0.34.</p>
 
 <h2>Data Notes</h2>
-<p>Many newly activated issuers show "No mention" for derivatives in 10-Q filings despite active programmes in their 10-K. This is the familiar cross-reference problem: 10-Qs defer to the annual report rather than repeating disclosures. GM, Linde, and Gilead all exhibit this pattern &mdash; their 10-K data is rich but quarterly tracking will show gaps. Several issuers (Exelon, Ecolab, Edwards Lifesciences) had section extraction failures returning only headers or cross-reference stubs instead of actual market risk text.</p>
+<p>Extraction artefacts persist: eBay's 10-K shows $2.025B values that are date strings leaking into financial fields. The cc_bridge extraction mode scores ~20 points below API-mode on average (0.46 median vs. 0.82 for API), likely due to prompt differences &mdash; worth tuning before the next mass activation wave. The familiar 10-Q cross-reference problem continues: many quarterly filings defer market risk disclosures to the 10-K with "no material changes" boilerplate, triggering phantom field-disappearance alerts. Gilead, DD (DuPont), and GM all show this pattern.</p>
 
-<footer>Automated digest from SEC Derivatives pipeline &middot; 3 June 2026</footer>
+<footer>Automated digest from SEC Derivatives pipeline &middot; 5 June 2026</footer>
 
 </body></html>
