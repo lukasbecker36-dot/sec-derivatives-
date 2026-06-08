@@ -4,10 +4,10 @@
 
 sections:
   derivatives_note:
-    heading: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]\s*Derivative(?:s|\s+Financial\s+Instruments)'
+    heading: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]?\s*Derivative(?:s|\s+Financial\s+Instruments)'
     match_strategy: last
     validation_keywords: [notional, derivative, swap]
-    end_boundary: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]\s*(?!Derivative)'
+    end_boundary: 'Note\s+\d+\s*[.\u2013\u2014\u2015\ufffd\u2012—–-]?\s*(?!Derivative)'
     max_length: 10000
   market_risk:
     heading: 'Quantitative and Qualitative Disclosures About Market Risk'
