@@ -118,6 +118,46 @@ def extract_section(text: str, section_cfg: SectionConfig,
     return section_text
 
 
+# Anchor phrases that reliably mark the derivatives notional table. Require a
+# derivative-context word nearby so we don't latch onto unrelated "notional"
+# mentions (e.g. a passing reference in a debt footnote).
+_NOTIONAL_ANCHOR = re.compile(
+    r'(?:'
+    r'notional\s+amounts?\s+of'           # "notional amounts of our derivatives"
+    r'|aggregate\s+notional'              # "aggregate notional"
+    r'|(?:total|outstanding)\s+notional'  # "total notional", "outstanding notional"
+    r'|with\s+(?:an?\s+)?(?:aggregate|total)\s+notional'
+    r')',
+    re.IGNORECASE,
+)
+_DERIV_CONTEXT = re.compile(
+    r'derivative|forward\s+contract|interest\s+rate\s+swap|cross-currency|'
+    r'currency\s+(?:forward|contract|swap)|hedg|commodity\s+contract',
+    re.IGNORECASE,
+)
+
+
+def extract_derivatives_by_content(text: str, max_length: int = 10000,
+                                   lookback: int = 400) -> str:
+    """Locate the derivatives notional disclosure by content, not heading.
+
+    Fallback for filers whose derivatives note heading doesn't match the
+    configured pattern (e.g. "5. Derivative Instruments", bare tables, or
+    all-caps variants). Finds the first 'notional amount(s) of ...' anchor that
+    has derivative context nearby and returns a window around it.
+
+    Returns '' if no confident anchor is found.
+    """
+    for m in _NOTIONAL_ANCHOR.finditer(text):
+        pos = m.start()
+        # Require derivative-context within a window around the anchor
+        ctx = text[max(0, pos - 200):pos + 300]
+        if _DERIV_CONTEXT.search(ctx):
+            start = max(0, pos - lookback)
+            return text[start:start + max_length]
+    return ''
+
+
 def extract_all_sections(text: str, config: IssuerConfig) -> dict[str, str]:
     """Extract all configured sections from filing text.
 
@@ -127,4 +167,15 @@ def extract_all_sections(text: str, config: IssuerConfig) -> dict[str, str]:
     sections = {}
     for name, section_cfg in config.sections.items():
         sections[name] = extract_section(text, section_cfg)
+
+    # Content fallback: if a derivatives note section is configured but the
+    # heading pattern matched nothing, try to locate the notional table by
+    # content so diversely-titled notes still get extracted.
+    if 'derivatives_note' in sections and not sections['derivatives_note']:
+        cfg = config.sections['derivatives_note']
+        fallback = extract_derivatives_by_content(text, max_length=cfg.max_length)
+        if fallback:
+            sections['derivatives_note'] = fallback
+
     return sections
+

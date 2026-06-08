@@ -2,7 +2,9 @@
 
 import pytest
 from src.config import SectionConfig, IssuerConfig
-from src.section_extract import extract_section, extract_all_sections
+from src.section_extract import (
+    extract_section, extract_all_sections, extract_derivatives_by_content,
+)
 
 
 SAMPLE_FILING = """
@@ -97,3 +99,53 @@ class TestExtractSection:
         )
         result = extract_section(SAMPLE_FILING, cfg)
         assert len(result) <= 50
+
+
+class TestDerivativesContentFallback:
+    """Content-anchored fallback for diversely-titled derivatives notes."""
+
+    def test_finds_notional_without_note_heading(self):
+        # Heading is "5. Derivative Instruments" — no "Note" prefix, so the
+        # standard heading regex misses it, but content anchoring should catch it.
+        text = (
+            'Some unrelated preamble about revenue recognition policies. '
+            '5. Derivative Instruments The Company uses forward contracts. '
+            'The notional amounts of our outstanding derivative instruments '
+            'were $4,237 million for purchased forwards and $1,200 million sold.'
+        )
+        result = extract_derivatives_by_content(text, max_length=5000)
+        assert 'notional amounts of our outstanding derivative' in result
+        assert '4,237' in result
+
+    def test_ignores_notional_without_derivative_context(self):
+        # "notional" appearing in an unrelated debt context must not match.
+        text = (
+            'The bonds were issued at a notional amount of $500 million '
+            'and mature in 2030. Interest is payable semi-annually.'
+        )
+        assert extract_derivatives_by_content(text) == ''
+
+    def test_returns_empty_when_no_notional(self):
+        text = 'This filing discusses only revenue and operating expenses.'
+        assert extract_derivatives_by_content(text) == ''
+
+    def test_fallback_wired_into_extract_all_sections(self):
+        text = (
+            'Item 1. Financial Statements. '
+            '5. Derivative Instruments and Hedging. '
+            'The aggregate notional of our foreign currency forward contracts '
+            'was $9,500 million as of the period end.'
+        )
+        config = IssuerConfig(
+            issuer='Test', ticker='TST', cik='1', archetype='minimal_hedger',
+            sections={
+                'derivatives_note': SectionConfig(
+                    heading=r'Note\s+\d+\s*[-–—.]\s*Derivatives',  # won't match
+                    match_strategy='last',
+                    max_length=8000,
+                ),
+            },
+        )
+        sections = extract_all_sections(text, config)
+        assert sections['derivatives_note']
+        assert '9,500' in sections['derivatives_note']
