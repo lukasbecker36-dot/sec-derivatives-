@@ -1,0 +1,11 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $37M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_transaction_gain_loss)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NUMERIC] fx_transaction_gain_loss: $-31M → $40M (+229.0%) — exceeds 20% threshold
+[LLM_FLAG] fx_transaction_gain_loss swung from net liability of $31M (Q1) to net asset of $40M (Q2) - change >50%
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-31M)
+

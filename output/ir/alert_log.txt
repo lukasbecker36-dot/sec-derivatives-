@@ -1,0 +1,43 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,333M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($31M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($31M)
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_designated_notional: was $1M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $1,333M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $30M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $30M, now missing
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
+[LLM_FLAG] Filing contains only qualitative disclosure of market risk with no quantitative details. Text explicitly states 'there have been no material changes to our market risk assessment previously disclosed in the 2025 Annual Report,' suggesting detailed quantitative data may be in the 2025 Annual Report rather than this 10-Q excerpt.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-02 ===
+[LLM_FLAG] This is a brief market risk disclosure stating 'no material changes' from 2024 Annual Report. Most quantitative metrics are not provided in this section and would need to be extracted from the full 10-Q disclosure elsewhere or the referenced 2024 Annual Report.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-02 ===
+[LLM_FLAG] This appears to be a high-level summary disclosure referring back to 2024 Annual Report ('no material changes to our market risk assessment previously disclosed in the 2024 Annual Report'). Specific quantitative metrics are absent from this 10-Q section.
+[LLM_FLAG] All numeric fields are null due to lack of specific quantitative disclosures in this excerpt. Detailed derivative position data, sensitivities, and currency breakdowns are not included in this section.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-02 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $10M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $1,000M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_count: was $9M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $10M, now missing
+[DISAPPEARED_FIELD] fx_forward_contract_count: was $10M, now missing
+[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (ir_sensitivity_100bp, interest_rate_swap_notional, interest_rate_swap_count, interest_rate_sensitivity, fx_forward_contract_count)
+[LLM_FLAG] This filing section is a brief disclosure statement indicating 'no material changes' to market risk from the 2024 Annual Report. It lacks detailed quantitative disclosures that would normally be found in a complete market risk section. All quantitative metrics are absent.
+[LLM_FLAG] The text explicitly refers to prior-year detailed disclosures ('as of March 31, 2025, there have been no material changes to our market risk assessment previously disclosed in the 2024 Annual Report'), suggesting this Q1 2025 filing does not repeat the full quantitative details.
+

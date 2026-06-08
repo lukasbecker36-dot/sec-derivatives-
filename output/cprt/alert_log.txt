@@ -1,0 +1,20 @@
+=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2,025M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-07-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($2,025M)
+
+=== 10-Q | Period ending 2025-10-31 | Processed 2026-05-26 ===
+[LLM_FLAG] Item 1 of Part II explicitly states: 'There have been no material changes to the information required under this Item from what was disclosed in our Annual Report on Form 10-K for the fiscal year ended July 31, 2025.' This 10-Q filing defers to the 10-K for detailed market risk disclosures, which explains the limited quantitative data in this section.
+[LLM_FLAG] No change in derivative usage or FX hedging strategy from prior period - consistent with prior disclosure of no FX forwards outstanding.
+
+=== 10-Q | Period ending 2025-04-30 | Processed 2026-05-26 ===
+[LLM_FLAG] This section provides minimal disclosure, explicitly referencing the prior 10-K filed September 30, 2024 with no material changes. Specific quantitative values cannot be extracted from this 10-Q excerpt alone.
+[LLM_FLAG] Most fields cannot be verified in this section and should be cross-referenced with the referenced 10-K filing for current period values.
+
+=== 10-Q | Period ending 2025-01-31 | Processed 2026-05-26 ===
+[DISAPPEARED_FIELD] translation_loss_amount: was $120M, now missing
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (translation_loss_amount)
+[LLM_FLAG] This 10-Q section explicitly states 'no material changes' from the 10-K and provides no new quantitative data. All specific values should be sourced from the July 31, 2024 10-K filing instead.
+

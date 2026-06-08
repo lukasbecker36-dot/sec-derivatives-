@@ -1,0 +1,59 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
+[NUMERIC] total_marketable_securities_fv: $47,626M → $95,410M (+100.3%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $38,848M → $86,495M (+122.6%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $57M → $13M (-77.2%) — exceeds 20% threshold
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($2,500M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($14M)
+[NUMERIC] marketable_equity_value: $4,800M → $3,800M (-20.8%) — exceeds 20% threshold
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($380M)
+[LLM_FLAG] total_cash_equivalents_fv increased 10.7% from 32,317 to 35,697 - within acceptable range
+[LLM_FLAG] corporate_debt_securities_fv increased 122.5% from 38,848 to 86,495 - significant increase exceeds 50% threshold, likely due to portfolio reallocation or acquisition of additional securities
+[LLM_FLAG] gross_unrealized_gains_debt decreased from 57 to 13 - 77.2% decline exceeds 50% threshold, likely due to changes in interest rate environment affecting bond valuations
+[LLM_FLAG] marketable_equity_value decreased from $4,800M to $3,800M (20.8% decline) - within normal range but worth noting
+[LLM_FLAG] fx_transaction_gain_loss of $2,500M appears to be a benefit from FX revaluation of International segment, not a net transaction loss - classification unclear
+[LLM_FLAG] Euro-denominated notes of €14.5 billion converted to USD equivalent would need EUR/USD exchange rate for accurate millions conversion; stored as-is
+[LLM_FLAG] Total equity/warrant/convertible investments are $96.5B but only $3.8B of equity in public companies are at fair value; $92.7B in private company investments valued at cost with adjustments
+[LLM_FLAG] Text explicitly states 'we believe that market sensitivities are not practicable' for private equity valuations - company disclaims quantitative FX/equity sensitivity for material portion of portfolio
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
+[NUMERIC] total_cash_equivalents_fv: $18,058M → $32,317M (+79.0%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $75,809M → $47,626M (-37.2%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $52,641M → $38,848M (-26.2%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $37M → $57M (+54.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $1,700M, now missing
+[LLM_FLAG] total_marketable_securities_fv decreased from 75,809 to ~49,445 (35% decline) - significant reduction in marketable securities portfolio
+[LLM_FLAG] corporate_debt_securities_fv decreased from 52,641 to 38,848 (26% decline) - material reduction in corporate debt holdings
+[LLM_FLAG] gross_unrealized_gains_debt decreased from 37 to 57 (54% increase, opposite direction expected) - however the filing shows 49 million specifically for corporate debt securities gains alone
+[LLM_FLAG] marketable_equity_value changed from $4,600M to $4,800M (4.3% increase) - within normal variance
+[LLM_FLAG] No FX transaction gain/loss reported in this excerpt despite prior period showing $1,700M; this section focuses on risk disclosure rather than historical results
+[LLM_FLAG] Equity sensitivity analysis not provided - company states market sensitivities 'are not practicable' due to complexity of private company valuations
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
+[NUMERIC] gross_unrealized_gains_debt: $16M → $37M (+131.2%) — exceeds 20% threshold
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($1,700M)
+[NUMERIC] marketable_equity_value: $3,800M → $4,600M (+21.1%) — exceeds 20% threshold
+[LLM_FLAG] total_marketable_securities_fv decreased 0.8% from $76,408.0M (prior period) to ~$75,809.0M - within normal range but reflects slight portfolio reduction
+[LLM_FLAG] marketable_equity_securities_fv decreased 4.8% from $3,001.0M to $3,149.0M - actually increased slightly, prior assumption was incorrect
+[LLM_FLAG] corporate_debt_securities_fv decreased 3.8% from $54,725.0M to $52,641.0M - modest decline within 50% threshold
+[LLM_FLAG] gross_unrealized_gains_debt increased 131.3% from $16.0M to $37.0M - significant increase driven by interest rate environment and portfolio composition changes
+[LLM_FLAG] marketable_equity_value increased from $3,800M to $4,600M (21% increase) - within normal range but driven by inclusion of Rivian equity and warrant investments
+[LLM_FLAG] fx_transaction_gain_loss of $1,700M represents segment sales increase, not recorded gains/losses; actual FX transaction gains/losses not quantified in text
+[LLM_FLAG] Total equity, warrant, and convertible debt investments of $23.2B includes private company holdings where market sensitivities are stated as not practicable
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[NUMERIC] total_cash_equivalents_fv: $45,922M → $18,357M (-60.0%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $69,585M → $54,725M (-21.4%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $50M → $16M (-68.0%) — exceeds 20% threshold
+[NEW_FIELD] marketable_equity_value: appeared for first time ($3,800M)
+[LLM_FLAG] total_marketable_securities_fv declined 5.0% from prior period (80,413 to 76,408), within acceptable range but notable decline
+[LLM_FLAG] gross_unrealized_gains_debt declined 68.0% from prior period (50 to 16), significant decrease - likely due to interest rate environment changes
+[LLM_FLAG] This section is primarily qualitative risk disclosure rather than quantitative derivative/financial instrument details
+[LLM_FLAG] Equity investment risk disclosure notes that 'market sensitivities are not practicable' for private company valuations
+[LLM_FLAG] The $3.8 billion marketable equity value relates to publicly traded equity investments only; total recorded equity investment value is $21.0 billion but includes private companies with non-practicable sensitivities
+[LLM_FLAG] Foreign currency exposure is quantified for foreign funds ($18.6 billion) but no derivative contracts mentioned for hedging purposes
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
+[LLM_FLAG] total_marketable_securities_fv increased from $55,080 million (December 31, 2024: $3,401 + $50,912 + $1,523 + $244) to $80,413 million (December 31, 2025), representing a 46% increase. This is driven primarily by a 36% increase in corporate debt securities ($50,912M to $69,585M) and a 54% increase in U.S. government and agency securities ($3,401M to $5,222M).
+[LLM_FLAG] gross_unrealized_gains_debt increased significantly from $3 million (December 31, 2024) to $50 million (December 31, 2025), representing a 1,567% increase in unrealized gains on corporate debt securities, likely due to interest rate environment changes.
+[LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKuBojMr7gEoEzArBk3'}
+

@@ -1,0 +1,19 @@
+issuer: Baxter International
+ticker: BAX
+cik: "10456"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  reference_location:
+    description: "Location of actual market risk disclosure"
+    section: market_risk
+
+# Unusual features identified:
+#   - Market risk disclosure is incorporated by reference to Item 7 rather than disclosed in this section
+#   - No actual derivatives or market risk data present in this section
+#   - Section contains only cross-reference to Financial Instrument Market Risk section
+#   - May require parsing Item 7 MD&A section for actual market risk data
+

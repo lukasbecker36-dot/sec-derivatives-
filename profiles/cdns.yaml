@@ -1,0 +1,41 @@
+issuer: Cadence Design Systems
+ticker: CDNS
+cik: "813672"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_forward_notional_amounts:
+    description: "notional principal amounts by currency"
+    section: market_risk
+  fx_forward_exchange_rates:
+    description: "weighted average contract rates per currency"
+    section: market_risk
+  fx_forward_fair_value:
+    description: "estimated fair value of forward contracts"
+    section: market_risk
+  fx_sensitivity_usd_decrease:
+    description: "impact of 10% USD decrease on fair value"
+    section: market_risk
+  fx_sensitivity_usd_increase:
+    description: "impact of 10% USD increase on fair value"
+    section: market_risk
+  debt_securities_fair_value:
+    description: "fair value of investments in debt securities"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "impact of 1% rate increase on debt securities value"
+    section: market_risk
+  credit_facility_rate_sensitivity:
+    description: "impact of quarter point rate change on annual interest expense"
+    section: market_risk
+
+# Unusual features identified:
+#   - forwards not designated as accounting hedges with MTM through other income
+#   - large acquisition-related EUR forward position mentioned
+#   - comprehensive multi-currency forward portfolio across 13 currencies
+#   - text appears cut off at end during equity price risk section
+#   - sensitivity analysis shows asymmetric impacts for USD strengthening vs weakening
+

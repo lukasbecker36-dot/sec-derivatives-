@@ -1,0 +1,19 @@
+issuer: Hasbro
+ticker: HAS
+cik: "46080"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cross_reference_location:
+    description: "Part II, Item 7 reference for actual market risk disclosures"
+    section: market_risk
+
+# Unusual features identified:
+#   - Market risk disclosures incorporated by reference to MD&A section
+#   - No actual market risk data in this section
+#   - Cross-reference disclosure pattern rather than direct disclosure
+#   - Would need to extract data from Part II Item 7 instead
+

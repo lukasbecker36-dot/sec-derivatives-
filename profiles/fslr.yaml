@@ -1,0 +1,35 @@
+issuer: First Solar
+ticker: FSLR
+cik: "1274494"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_sensitivity_amount:
+    description: "Impact of 10% FX rate change on net foreign currency income/loss"
+    section: market_risk
+  interest_rate_sensitivity_basis_points:
+    description: "100 basis point change impact on variable rate debt"
+    section: market_risk
+  marketable_securities_return:
+    description: "Annual return percentage on marketable securities"
+    section: market_risk
+  restricted_securities_sensitivity:
+    description: "Impact of 100bp rate change on restricted marketable securities"
+    section: market_risk
+  restricted_securities_maturity:
+    description: "Weighted-average maturity of restricted marketable securities"
+    section: market_risk
+  hedge_accounting_designation:
+    description: "ASC 815 cash flow hedge designation status"
+    section: market_risk
+
+# Unusual features identified:
+#   - No traditional notional amounts table for derivatives
+#   - Sensitivity analysis uses 10% FX change instead of standard percentage
+#   - Restricted marketable securities treated separately from regular marketable securities
+#   - References commodity derivatives but provides no quantitative details
+#   - Customer financing exposure discussed as indirect interest rate risk
+

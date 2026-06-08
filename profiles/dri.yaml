@@ -1,0 +1,51 @@
+issuer: Darden Restaurants
+ticker: DRI
+cik: "940944"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  notional_values:
+    description: "notional amounts by instrument type"
+    section: market_risk
+  derivative_assets:
+    description: "fair value of derivative assets"
+    section: market_risk
+  derivative_liabilities:
+    description: "fair value of derivative liabilities"
+    section: market_risk
+  number_of_shares_outstanding:
+    description: "shares for equity forwards"
+    section: market_risk
+  weighted_average_forward_rates:
+    description: "per share forward rates for equity instruments"
+    section: market_risk
+  aoci_gains_losses:
+    description: "gains/losses recognized in AOCI for cash flow hedges"
+    section: market_risk
+  aoci_reclassifications:
+    description: "gains/losses reclassified from AOCI to earnings"
+    section: market_risk
+  fair_value_hedge_effects:
+    description: "gains/losses on fair value hedges and hedged items"
+    section: market_risk
+  non_designated_hedge_effects:
+    description: "gains/losses on derivatives not designated as hedges"
+    section: market_risk
+  contract_maturities:
+    description: "maturity dates for different instrument types"
+    section: market_risk
+  market_risk_exposures:
+    description: "types of market risks the company is exposed to"
+    section: market_risk
+
+# Unusual features identified:
+#   - includes equity forwards for employee deferred compensation plan hedging
+#   - separate designated and non-designated categories for each instrument type
+#   - detailed maturity information provided in footnotes
+#   - includes weighted-average per share forward rates for equity instruments
+#   - shows both derivative and hedged item effects for fair value hedges
+#   - provides forward-looking reclassification expectations
+

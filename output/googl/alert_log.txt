@@ -1,0 +1,45 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
+[NUMERIC] total_cash_equivalents_fv: $16,395M → $38,063M (+132.2%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $69,401M → $88,777M (+27.9%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $1,229M → $505M (-58.9%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv increased 132% from prior period (16,395 to 38,063) - significant increase in money market funds (11,349 to 16,686) and addition of government bonds (0 to 2,946)
+[LLM_FLAG] gross_unrealized_gains_debt decreased 59% from prior period (1,229 to 505) - reflects changes in interest rate environment and portfolio composition
+[LLM_FLAG] The provided filing text is incomplete - it only contains a header reference to 'Quantitative and Qualitative Disclosures About Market Risk' and directs readers to the 10-K, without providing any actual market risk disclosures.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
+[NUMERIC] gross_unrealized_gains_debt: $702M → $1,229M (+75.1%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv increased 8.6% from $15,096M to $16,395M - within normal range
+[LLM_FLAG] total_marketable_securities_fv increased 1.8% from $68,147M to $69,401M - within normal range
+[LLM_FLAG] marketable_equity_securities_fv increased 0.6% from $5,910M to $5,946M - within normal range
+[LLM_FLAG] corporate_debt_securities_fv increased 0.8% from $21,558M to $21,733M - within normal range
+[LLM_FLAG] gross_unrealized_gains_debt increased 75.0% from $702M to $1,229M - significant increase likely due to interest rate environment changes benefiting debt securities valuations between Dec 2024 and Sept 2025
+[LLM_FLAG] The provided filing text is incomplete - it only contains a reference to the Annual Report on Form 10-K for the year ended December 31, 2024, without the actual quantitative and qualitative disclosures about market risk. No derivative or financial instrument data could be extracted from this excerpt.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
+[NUMERIC] total_cash_equivalents_fv: $9,945M → $15,096M (+51.8%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $4,744M → $5,910M (+24.6%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv increased 51.6% from 9,945 to 15,096 - primarily due to increase in money market funds from 8,154 to 5,473 (decreased) and cash from 12,407 to 11,623 (decreased), but time deposits increased from 2,217 to 3,735 and current marketable equity securities increased from 4,708 to 5,910, resulting in net reallocation within investment categories
+[LLM_FLAG] marketable_equity_securities_fv increased 24.6% from 4,744 to 5,910 - notable but within reasonable range for market appreciation
+[LLM_FLAG] corporate_debt_securities_fv increased 2.0% from 21,133 to 21,558 - remained relatively stable
+[LLM_FLAG] Insufficient text provided: Only a reference sentence to the 10-K filing was included. The actual quantitative and qualitative disclosures about market risk appear to be contained in the referenced 10-K for year ended December 31, 2024, not in this 10-Q excerpt.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($9,945M)
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($75,438M)
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($4,744M)
+[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($21,133M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($608M)
+[LLM_FLAG] gross_unrealized_gains_debt: Value of 1206 million represents sum of all marketable debt securities' gross unrealized gains (government bonds, corporate debt, and mortgage-backed securities combined across AOCI and net income categories). If only corporate debt securities were intended, the value would be 198 million. Clarification on scope needed.
+[LLM_FLAG] Provided text is only a header/reference statement directing to Form 10-K annual report. No substantive quantitative or qualitative market risk disclosures are included in the excerpt. Full Q1 2025 10-Q filing section needed for extraction.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
+[LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKqbn1dMPgshDr8RTF9'}
+[LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKrAnNpsRQk59nDsmSw'}
+

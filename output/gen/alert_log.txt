@@ -1,0 +1,76 @@
+=== 10-K | Period ending 2026-04-03 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $2M → $3M (+50.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $2M → $3M (+50.0%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $279M → $337M (+20.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $12M, now missing
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+[NEW_FIELD] variable_debt_outstanding: appeared for first time ($3M)
+
+=== 10-Q | Period ending 2026-01-02 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $3M → $2M (-33.3%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $3M → $2M (-33.3%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-10-03 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $202M → $3M (-98.5%) — exceeds 20% threshold
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($3M)
+[NUMERIC] ir_swap_notional: $2,023M → $238M (-88.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_asset: was $28M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $4M, now missing
+[VALIDATION] Likely extraction failure: 2/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability)
+
+=== 10-Q | Period ending 2025-07-04 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $20M → $202M (+910.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $28M → $4M (-85.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
+[DISAPPEARED_FIELD] variable_debt_outstanding: was $28M, now missing
+
+=== 10-Q | Period ending 2026-01-02 | Processed 2026-05-30 ===
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[NEW_FIELD] fx_forward_notional_prior: appeared for first time ($0M)
+[LLM_FLAG] total_cash_equivalents_fv decreased from 297.0 to 284 (-4.4%), within acceptable range but represents reduction in money market funds from 544 to 264
+[LLM_FLAG] The filing does not contain traditional marketable securities disclosures; instead shows money market funds, time deposits, and interest rate swaps as assets measured at fair value
+[LLM_FLAG] This filing section is primarily Risk Factors disclosure rather than quantitative market risk disclosures. The Item 7A 'Quantitative and Qualitative Disclosures About Market Risk' detailed tables with FX sensitivity, interest rate sensitivity, equity price risk sensitivity, and specific debt fair values are not included in the provided text.
+[LLM_FLAG] Total outstanding indebtedness mentioned as $8,494 million but no detailed breakdown by fixed vs. variable rate debt provided in this section
+
+=== 10-Q | Period ending 2025-10-03 | Processed 2026-05-30 ===
+[NUMERIC] total_cash_equivalents_fv: $443M → $297M (-33.0%) — exceeds 20% threshold
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_forward_notional_current: appeared for first time ($0M)
+[LLM_FLAG] total_cash_equivalents_fv decreased from 443 million (prior period March 28, 2025) to 297 million (current period October 3, 2025), a 33% decline. This is within the 50% threshold but represents a significant decrease in cash equivalents.
+[LLM_FLAG] The filing contains no marketable securities (debt or equity) measured at fair value on a recurring basis. Only money market funds, time deposits, and interest rate swaps are recorded at fair value.
+[LLM_FLAG] FX forwards notional changed from implicit prior assumption to explicit zero in current period - filing contains risk discussion but no actual FX forwards outstanding
+[LLM_FLAG] Interest rate swap notional remained flat at $1,000 million with no change from prior period
+[LLM_FLAG] Detailed hedge accounting and derivative fair value disclosures typically found in financial statements are not included in this risk disclosure section
+
+=== 10-Q | Period ending 2025-07-04 | Processed 2026-05-30 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($443M)
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $8M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
+[NEW_FIELD] interest_rate_swap_notional_prior: appeared for first time ($1,000M)
+[DISAPPEARED_FIELD] variable_debt_outstanding: was $5,905M, now missing
+[DISAPPEARED_FIELD] fixed_debt_carrying_amount: was $2,475M, now missing
+[DISAPPEARED_FIELD] fixed_debt_fair_value: was $2,475M, now missing
+[DISAPPEARED_FIELD] sofr_sensitivity: was $59M, now missing
+[VALIDATION] Likely extraction failure: 6/8 previously-populated fields are now null (ir_sensitivity_100bp, fixed_rate_notes_billion, variable_debt_outstanding, fixed_debt_carrying_amount, fixed_debt_fair_value...)
+[LLM_FLAG] interest_rate_swap_notional_current: Value of $1,000.0 million matches prior period exactly, consistent with the March 2023 maturity date of March 31, 2026 mentioned in the text.
+[LLM_FLAG] fixed_rate_notes_billion: Approximate amount of $2.45 billion can be inferred from $8,963 million total debt minus variable rate borrowings, but specific breakdown not explicitly provided in this text. Would require Note 10 reference.
+[LLM_FLAG] variable_debt_outstanding: Not explicitly stated in this risk factors section. Prior period shows $5,905 million but cannot confirm current period without additional financial statements.
+[LLM_FLAG] sofr_sensitivity: Not provided in current filing section. Prior period showed $59.0 million impact but this appears to be a quantitative disclosure that would be in a different section of the 10-Q.
+
+=== 10-K | Period ending 2025-03-28 | Processed 2026-05-30 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($8M)
+[NEW_FIELD] interest_rate_swap_notional_current: appeared for first time ($1,000M)
+[LLM_FLAG] Filing text provided contains only note heading 'Note 8. Financial Instruments and Fair Value Measurements' without the detailed table or disclosure content needed to extract specific fair value amounts
+[LLM_FLAG] variable_debt_outstanding increased from $5,825M to $5,905M (1.4% increase, within tolerance)
+[LLM_FLAG] fixed_debt_carrying_amount increased from $2,443M to $2,475M (1.3% increase, within tolerance)
+[LLM_FLAG] sofr_sensitivity increased from $58M to $59M (1.7% increase, within tolerance)
+[LLM_FLAG] revolving_credit_facility decreased from $1,495M to $1,494M (0.07% decrease, within tolerance)
+
+=== 10-K | Period ending 2026-04-03 | Processed 2026-05-29 ===
+[LLM_FLAG] Filing text provided only shows 'Note 8. Financial Instruments and Fair Value Measurements 66' with no actual disclosure content. Unable to extract requested financial data from this section header alone.
+

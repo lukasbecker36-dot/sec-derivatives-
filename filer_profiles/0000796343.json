@@ -22,7 +22,9 @@
       "foreign exchange forward",
       "notional amount",
       "designated as hedging",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "fair value hedge",
+      "unrealized gain"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -72,6 +74,18 @@
       ],
       "fields_extracted": 4,
       "fields_null": 11
+    },
+    {
+      "filing_date": "2025-11-28",
+      "form_type": "10-K",
+      "period_end": "2025-11-28",
+      "processed_at": "2026-06-04T14:42:50Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 8,
+      "fields_null": 19
     }
   ]
 }

@@ -1,0 +1,35 @@
+issuer: Archer Daniels Midland
+ticker: ADM
+cik: "7084"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  derivative_fair_values:
+    description: "assets and liabilities by contract type"
+    section: market_risk
+  pretax_gains_losses:
+    description: "P&L impact by derivative type and income statement line item"
+    section: market_risk
+  hedge_ratios:
+    description: "percentage of anticipated volumes hedged for corn, soybeans, natural gas"
+    section: market_risk
+  aoci_balances:
+    description: "accumulated other comprehensive income amounts for cash flow hedges"
+    section: market_risk
+  commodity_position_var:
+    description: "fair value and 10% adverse change impact for commodity positions"
+    section: market_risk
+  var_metrics:
+    description: "value-at-risk limits and monitoring frequency"
+    section: market_risk
+
+# Unusual features identified:
+#   - includes inventory fair values alongside derivatives but excludes from derivative tables
+#   - commodity position VaR reported as weekly highest/lowest/average rather than period-end
+#   - hedge ratios provided as ranges for different time periods and facilities
+#   - separate treatment of merchandising vs hedging derivatives
+#   - debt conversion option included in derivative gains/losses table
+

@@ -1,0 +1,25 @@
+issuer: Sherwin-Williams
+ticker: SHW
+cik: "89800"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  currency_swaps_notional:
+    description: "Notional amount of currency swaps"
+    section: market_risk
+  currency_swaps_fair_value:
+    description: "Fair value of currency swaps"
+    section: market_risk
+  hedge_ineffectiveness:
+    description: "Hedge ineffectiveness recognized in income"
+    section: market_risk
+  aoci_derivative_gain_loss:
+    description: "Derivative gains/losses in AOCI"
+    section: market_risk
+  foreign_currency_sensitivity:
+    description: "Impact of foreign currency rate changes on results"
+    section: market_risk
+

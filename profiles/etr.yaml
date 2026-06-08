@@ -1,0 +1,19 @@
+issuer: Entergy
+ticker: ETR
+cik: "65984"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cross_reference:
+    description: "reference to MD&A section for market risk details"
+    section: market_risk
+
+# Unusual features identified:
+#   - Complete cross-reference to MD&A instead of standalone disclosure
+#   - No quantitative data in this section
+#   - Minimal content - single sentence referral
+#   - Actual derivatives data likely in Note 16 - Risk Management and Fair Values
+

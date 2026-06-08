@@ -1,0 +1,50 @@
+issuer: IQVIA
+ticker: IQV
+cik: "1478242"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_forward_notional:
+    description: "contractual value of foreign exchange forward contracts"
+    section: market_risk
+  fx_forward_fair_value_sensitivity:
+    description: "potential gain/loss from 10% USD change on FX forwards"
+    section: market_risk
+  cross_currency_swap_notional:
+    description: "contractual value of cross-currency swaps"
+    section: market_risk
+  cross_currency_swap_sensitivity:
+    description: "potential loss from 10% USD decrease on cross-currency swaps"
+    section: market_risk
+  foreign_debt_amount:
+    description: "total foreign currency denominated debt in EUR and USD"
+    section: market_risk
+  foreign_debt_hedge_percentage:
+    description: "percentage of foreign debt designated as hedge"
+    section: market_risk
+  variable_rate_debt:
+    description: "total variable rate indebtedness"
+    section: market_risk
+  interest_rate_swap_notional:
+    description: "notional value of interest rate swaps"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "annual interest expense change per quarter-point rate change"
+    section: market_risk
+  marketable_securities_value:
+    description: "fair value of marketable equity securities"
+    section: market_risk
+  marketable_securities_sensitivity:
+    description: "potential loss from 10% market value decrease"
+    section: market_risk
+
+# Unusual features identified:
+#   - swap termination and replacement mentioned (February 2025)
+#   - includes operational FX exposure ($193M impact from 10% rate change)
+#   - uses different sensitivity scenarios (10% USD decrease vs general 10% change)
+#   - marketable securities included in market risk section
+#   - extensive geographic exposure (100+ countries, 60 currencies)
+

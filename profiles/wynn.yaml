@@ -1,0 +1,70 @@
+issuer: Wynn Resorts
+ticker: WYNN
+cik: "1174922"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  wml_convertible_bond_derivative_fair_value:
+    description: "Fair value of the bifurcated WML Convertible Bond conversion option derivative liability"
+    section: market_risk
+  wml_convertible_bond_derivative_gain_loss:
+    description: "Gain/loss from change in fair value of convertible bond embedded derivative"
+    section: market_risk
+  wml_stock_price:
+    description: "WML stock price used in binomial lattice model"
+    section: market_risk
+  wml_estimated_volatility:
+    description: "Estimated volatility used in derivative valuation"
+    section: market_risk
+  wml_risk_free_rate:
+    description: "Risk-free interest rate for derivative valuation"
+    section: market_risk
+  wml_expected_term:
+    description: "Expected term (years) for derivative valuation"
+    section: market_risk
+  fx_swap_notional_aggregate:
+    description: "Aggregate notional amount of foreign currency swaps (HKD/USD)"
+    section: market_risk
+  fx_swap_fair_value_net:
+    description: "Net fair value of foreign currency swaps"
+    section: market_risk
+  fx_swap_maturity_range:
+    description: "Maturity range of foreign currency swaps"
+    section: market_risk
+  fx_swap_gain_loss:
+    description: "Gain/loss on foreign currency swaps"
+    section: market_risk
+  ir_swap_notional:
+    description: "Notional value of interest rate swap on Retail Term Loan"
+    section: market_risk
+  ir_swap_fixed_rate:
+    description: "Fixed rate component of interest rate swap"
+    section: market_risk
+  ir_swap_maturity:
+    description: "Maturity of interest rate swap"
+    section: market_risk
+  ir_sensitivity_100bp:
+    description: "Change in annual interest expense for 100bp change in variable rates (after swap)"
+    section: market_risk
+  fixed_rate_debt_total:
+    description: "Total fixed rate long-term debt"
+    section: market_risk
+  variable_rate_debt_total:
+    description: "Total variable rate long-term debt"
+    section: market_risk
+  pct_fixed_rate_debt:
+    description: "Percentage of long-term debt at fixed rates"
+    section: market_risk
+
+# Unusual features identified:
+#   - Bifurcated embedded derivative from WML Convertible Bonds - valued using binomial lattice model (Level 3)
+#   - Foreign currency swaps are NOT designated as hedges despite hedging USD-denominated WML Senior Notes
+#   - Very large FX swap notional ($4.10 billion) for Macau gaming operations
+#   - Interest rate swap on Retail Term Loan designated as hedge
+#   - HKD/MOP/USD currency nexus creates unique FX risk profile for Macau gaming
+#   - Debt discount from embedded derivative being amortized over bond term using effective interest method
+#   - Detailed Level 3 valuation inputs disclosed (stock price, volatility, risk-free rate, expected term)
+

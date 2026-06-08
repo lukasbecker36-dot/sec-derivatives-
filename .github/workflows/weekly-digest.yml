@@ -1,0 +1,40 @@
+name: Weekly Digest Email
+
+on:
+  schedule:
+    # Every Friday at 12:00 UTC (1pm BST) — 3 hours after Claude Code generates the digest at 09:00 UTC
+    - cron: '0 12 * * 5'
+  workflow_dispatch:
+
+jobs:
+  send-digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check for digest
+        id: check
+        run: |
+          if [ -f WEEKLY_DIGEST.html ] && [ -s WEEKLY_DIGEST.html ]; then
+            echo "has_content=true" >> "$GITHUB_OUTPUT"
+            echo "Found WEEKLY_DIGEST.html ($(wc -c < WEEKLY_DIGEST.html) bytes)"
+          else
+            echo "has_content=false" >> "$GITHUB_OUTPUT"
+            echo "No WEEKLY_DIGEST.html found — Claude Code routine may not have run yet"
+          fi
+
+      - name: Send email
+        if: steps.check.outputs.has_content == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: "SEC Derivatives — Weekly Digest"
+          to: Lukas.becker@infopro-digital.com
+          from: SEC Derivatives Bot <${{ secrets.SMTP_USERNAME }}>
+          html_body: file://WEEKLY_DIGEST.html

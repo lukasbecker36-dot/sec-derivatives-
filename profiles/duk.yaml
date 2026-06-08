@@ -1,0 +1,33 @@
+issuer: Duke Energy
+ticker: DUK
+cik: "1326160"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  notional_amounts:
+    description: "contract notional values by instrument type"
+    section: market_risk
+  fair_value_assets:
+    description: "positive fair values of derivative instruments"
+    section: market_risk
+  fair_value_liabilities:
+    description: "negative fair values of derivative instruments"
+    section: market_risk
+  hedge_effectiveness:
+    description: "gains/losses on hedging instruments"
+    section: market_risk
+  investment_securities_fair_value:
+    description: "fair value of debt and equity investments"
+    section: market_risk
+  market_risk_sensitivity:
+    description: "quantitative market risk metrics"
+    section: market_risk
+
+# Unusual features identified:
+#   - derivatives and investments split across separate notes
+#   - market risk disclosure referenced in separate section outside notes
+#   - utility-specific energy derivatives likely present
+

@@ -1,0 +1,28 @@
+=== 10-Q | Period ending 2025-10-03 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $27M, now missing
+[DISAPPEARED_FIELD] fx_designated_notional: was $12M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $12M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $5M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $12M, now missing
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci)
+
+=== 10-K | Period ending 2025-06-27 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+
+=== 10-Q | Period ending 2026-01-02 | Processed 2026-06-04 ===
+[LLM_FLAG] FX derivative sensitivity increased from $70M to $78M quarter-over-quarter (11.4% increase), suggesting growing FX derivative notional positions
+
+=== 10-Q | Period ending 2025-10-03 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_net_transaction_gains_losses: appeared for first time ($-70M)
+
+=== 10-K | Period ending 2025-06-27 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $25M, now missing
+[DISAPPEARED_FIELD] fx_net_transaction_gains_losses: was $-68M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_sensitivity_100bp, fx_net_transaction_gains_losses)
+
+=== 10-Q | Period ending 2025-03-28 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($25M)
+[NEW_FIELD] fx_net_transaction_gains_losses: appeared for first time ($-68M)
+

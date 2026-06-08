@@ -1,0 +1,41 @@
+issuer: Align Technology
+ticker: ALGN
+cik: "1097149"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  notional_amounts_by_currency:
+    description: "gross notional value of foreign exchange forward contracts by currency"
+    section: market_risk
+  settlement_gains_losses:
+    description: "net gains/losses recognized from settlement of foreign currency forward contracts by year"
+    section: market_risk
+  fair_value_outstanding:
+    description: "fair value of foreign exchange forward contracts outstanding"
+    section: market_risk
+  fair_value_hierarchy_level:
+    description: "level classification for derivative fair value measurements"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "impact assessment of 10% change in interest rates"
+    section: market_risk
+  foreign_currency_sensitivity:
+    description: "impact assessment of 10% change in foreign currency exchange rates"
+    section: market_risk
+  hedging_currencies:
+    description: "primary currencies for which forward contracts are entered"
+    section: market_risk
+  contract_maturity:
+    description: "typical maturity period of forward contracts"
+    section: market_risk
+
+# Unusual features identified:
+#   - Fair value of outstanding derivatives described as 'not material' rather than providing specific amounts
+#   - Notional table includes 14 different currencies with detailed local currency amounts
+#   - Explicit statement that derivatives are not designated as hedging instruments
+#   - Settlement gains/losses recorded in 'Other income (expense), net' rather than typical derivative line items
+#   - Market risk section mentions inflation risk as separate category alongside traditional interest rate and FX risks
+

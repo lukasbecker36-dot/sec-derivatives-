@@ -1,0 +1,55 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($31M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($122M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($26M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($31M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($132M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] fx_designated_notional: was $28M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $25M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $31M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $129M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, commodity_derivatives_notional, expected_12mo_reclass_from_aoci)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4M, now missing
+[DISAPPEARED_FIELD] natural_gas_derivatives_fair_value: was $35M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, natural_gas_derivatives_fair_value)
+[LLM_FLAG] extraction_failed: Expecting ',' delimiter: line 11 column 147 (char 529)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
+[NUMERIC] natural_gas_derivatives_fair_value: $110M → $35M (-68.2%) — exceeds 20% threshold
+[LLM_FLAG] natural_gas_derivatives_fair_value: Decreased significantly from $110 million (prior period) to $35 million (current period) - 68% decrease; this represents a material change in the liability position
+[LLM_FLAG] fixed_rate_notes_billion: Decreased from $4.6 billion to $4.5 billion - 2.2% decrease; within normal range but shows debt reduction
+[LLM_FLAG] commodity_price_realizations: Oil price decreased 14% from $78.06 to $67.43; natural gas increased 57% from $1.43 to $2.25; NGL decreased 3% from $21.29 to $20.65 - significant volatility in oil and gas prices year-over-year
+[LLM_FLAG] revenue_sensitivity_oil: Increased from $21 million to $22 million per $1/barrel - 4.8% increase, likely due to higher production volumes
+[LLM_FLAG] fixed_rate_debt_rate: Increased from 5.64% to 5.66% - 2 basis points increase in weighted average interest rate
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
+[NUMERIC] natural_gas_derivatives_fair_value: $28M → $110M (+292.9%) — exceeds 20% threshold
+[LLM_FLAG] natural_gas_derivatives_fair_value: Value increased dramatically from $28.0 million (Q2 2024) to $110 million (Q2 2025), a 293% increase. However, this is primarily an asset position change and may reflect favorable market conditions for natural gas prices during this period.
+[LLM_FLAG] commodity_price_realizations: Oil prices decreased 20% from $82.28 to $65.58/barrel; Natural gas prices increased 29% from $1.77 to $2.28/Mcf; NGL prices decreased 5% from $21.68 to $20.49/barrel. Significant volatility noted.
+[LLM_FLAG] fixed_rate_debt: Weighted average interest rate increased slightly from 5.63% to 5.64%, which is immaterial.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] natural_gas_derivatives_fair_value: $77M → $28M (-63.6%) — exceeds 20% threshold
+[LLM_FLAG] natural_gas_derivatives_fair_value decreased significantly from $77.0 million (prior period) to $28 million (63.6% decline) - represents substantial improvement in liability position
+[LLM_FLAG] commodity_price_realizations show volatility: Oil down 9% ($80.65 to $73.73), Natural gas up 14% ($2.47 to $2.81), NGL up 10% ($26.20 to $28.75)
+[LLM_FLAG] revenue_sensitivity values are materially lower than prior period comparisons: Oil $21M vs prior $87M per $1/barrel; Natural gas $8M vs prior $33M per $0.10/Mcf; NGL $7M vs prior $28M per $1/barrel - these represent Q1 2025 specific daily production volumes rather than annualized
+[LLM_FLAG] fx_forwards_outstanding shows 0 current active positions, contrasting with prior period disclosure of £120 million notional (noted as post-December 31, 2025 entry), suggesting temporal difference in measurement
+[LLM_FLAG] fixed_rate_debt decreased from $4.5 billion to $4.6 billion (net basis, modest 2.2% increase), with interest rate declining from 5.66% to 5.63%
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
+[LLM_FLAG] fx_forwards_outstanding: FX contracts were entered into subsequent to December 31, 2025 (post-period), so they are not reflected as outstanding as of the balance sheet date. The £120 million notional amount is converted to approximately $148 million USD equivalent (assuming ~1.23 GBP/USD exchange rate), but should be verified against actual rate used.
+

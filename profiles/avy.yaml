@@ -1,0 +1,35 @@
+issuer: Avery Dennison
+ticker: AVY
+cik: "8818"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  notional_amounts:
+    description: "notional values by instrument type"
+    section: market_risk
+  fair_values_by_balance_sheet_location:
+    description: "fair values in current/non-current assets and liabilities"
+    section: market_risk
+  hedge_designations:
+    description: "fair value, cash flow, net investment hedge classifications"
+    section: market_risk
+  income_statement_impacts:
+    description: "gains/losses by hedge type and income statement line item"
+    section: market_risk
+  var_estimates:
+    description: "value-at-risk calculations for foreign exchange"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "basis point impact scenarios on variable rate debt"
+    section: market_risk
+
+# Unusual features identified:
+#   - combines zero-cost collars with foreign currency contracts for net investment hedging
+#   - includes terminated interest rate swaps with deferred gains/losses
+#   - uses variance-covariance VAR methodology with 95% confidence level
+#   - separates derivatives designated vs not designated as hedges in fair value table
+#   - includes translation impacts for net investment hedges separately
+

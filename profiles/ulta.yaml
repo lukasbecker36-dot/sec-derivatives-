@@ -1,0 +1,26 @@
+issuer: Ulta Beauty
+ticker: ULTA
+cik: "1403568"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  has_derivatives:
+    description: "Whether the company uses derivatives"
+    section: market_risk
+  outstanding_borrowings:
+    description: "Outstanding borrowings under credit facilities, in millions"
+    section: market_risk
+  fx_risk_description:
+    description: "Nature of foreign currency exposure through foreign subsidiaries"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative instruments used — states 'We do not hold or issue financial instruments for trading purposes'
+#   - Interest rate risk limited to variable rate borrowings under credit facilities ($62.3M outstanding as of Jan 31, 2026)
+#   - FX risk is translation risk only through foreign subsidiaries — no hedging
+#   - Very minimal market risk disclosure with no sensitivity analysis provided
+#   - Archetype should be 'no_derivatives' — company has no derivatives program
+

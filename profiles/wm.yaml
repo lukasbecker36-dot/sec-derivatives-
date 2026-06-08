@@ -1,0 +1,42 @@
+issuer: Waste Management
+ticker: WM
+cik: "823768"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  long_term_debt_total:
+    description: "Total long-term debt excluding accounting adjustments"
+    section: market_risk
+  debt_exposed_to_rate_changes_12mo:
+    description: "Debt exposed to market interest rate changes within next 12 months"
+    section: market_risk
+  commercial_paper_outstanding:
+    description: "Short-term borrowings under commercial paper program"
+    section: market_risk
+  tax_exempt_bonds_repricing:
+    description: "Tax-exempt bonds with term interest rate periods expiring within 12 months"
+    section: market_risk
+  variable_rate_interest_sensitivity_100bp:
+    description: "Increase in interest expense from 100bp increase on variable rate debt"
+    section: market_risk
+  fixed_rate_debt_fair_value_sensitivity_100bp:
+    description: "Decrease in fair value of debt from 100bp increase in interest rates"
+    section: market_risk
+  recycling_revenue_yield_change:
+    description: "Change in recycling revenues attributable to yield (commodity price changes)"
+    section: market_risk
+  recycled_commodity_price_change_pct:
+    description: "Year-over-year change in average market prices for single-stream recycled commodities"
+    section: market_risk
+
+# Unusual features identified:
+#   - Outstanding derivatives described as immaterial as of reporting date
+#   - Extensive commodity price discussion focused on recycled materials and renewable energy
+#   - Renewable Natural Gas (RNG) and RINs market exposure discussed at length
+#   - Tax-exempt bonds with variable term interest rate periods as a category
+#   - No traditional FX or interest rate derivative details
+#   - Renewable Energy segment with regulatory (RFS, LCFS) price exposure
+

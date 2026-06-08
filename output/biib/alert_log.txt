@@ -1,0 +1,28 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
+[NUMERIC] hypothetical_fx_impact_prior: $192M → $278M (+45.0%) — exceeds 20% threshold
+[LLM_FLAG] hypothetical_fx_impact_current decreased by 12.0% from prior period ($254.1M vs $289.4M prior), which is within normal range but reflects improved hedging or reduced FX exposure
+[LLM_FLAG] hedge_horizon changed from 24 months (prior period) to 18 months (current period), a material shift in hedging strategy disclosure
+[LLM_FLAG] primary_currencies expanded to include Polish zloty in addition to prior currencies
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
+[LLM_FLAG] hypothetical_fx_impact_current increased 51% from $191.7M (prior year-end) to $289.4M (current year-end) - significant increase warrants investigation of potential increased hedging activity or enhanced FX volatility
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
+[DISAPPEARED_FIELD] marketable_equity_value: was $147M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $15M, now missing
+[NUMERIC] hypothetical_fx_impact_current: $242M → $316M (+30.5%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 2/4 previously-populated fields are now null (marketable_equity_value, equity_sensitivity_10pct)
+[LLM_FLAG] hypothetical_fx_impact_current increased 65% from prior period ($315.8M vs $191.7M). This significant increase likely reflects either a larger portfolio of outstanding FX forward contracts or more unfavorable currency positioning as of June 30, 2025 compared to December 31, 2024.
+[LLM_FLAG] hedge_horizon changed from '15 months' in prior period to '24 months' in current period. This represents an expansion of the hedging time window.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[NEW_FIELD] marketable_equity_value: appeared for first time ($147M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($15M)
+[LLM_FLAG] hedge_horizon decreased from 21 months (prior) to 15 months (current) - this is a 28.6% reduction, within plausible operational changes
+[LLM_FLAG] hypothetical_fx_impact_current increased from $191.7M (prior year-end) to $241.9M (current year-end) - this is a 26.2% increase, consistent with potential changes in FX exposure levels
+[LLM_FLAG] primary_currencies list no longer includes Polish złoty - it was listed in prior period but absent in current filing
+[LLM_FLAG] marketable_equity_value derived from equity_sensitivity_10pct: if 10% adverse move = $14.7M impact, then base value ≈ $147M (calculated value, not explicitly stated)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
+[LLM_FLAG] hypothetical_fx_impact_current increased 45.2% from prior year ($278.0M vs $191.7M), which is just under the 50% threshold. This is plausible given foreign exchange volatility and changes in hedging positions.
+

@@ -1,0 +1,23 @@
+=== 10-Q | Period ending 2025-11-30 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+
+=== 10-K | Period ending 2025-08-31 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+
+=== 10-Q | Period ending 2026-02-28 | Processed 2026-06-02 ===
+[LLM_FLAG] Filing excerpt is minimal and references prior year 10-K for detailed market risk disclosure. No quantitative market risk data is presented in this excerpt.
+
+=== 10-Q | Period ending 2025-11-30 | Processed 2026-06-02 ===
+[LLM_FLAG] Prior period indicated 'Yes' for has_derivatives but current disclosure contains no specific derivatives information - company references 10-K for details rather than restating in 10-Q, which is standard practice for 'no material changes' filings
+
+=== 10-Q | Period ending 2025-05-31 | Processed 2026-06-02 ===
+[LLM_FLAG] Filing contains only boilerplate language referring to prior year 10-K; no specific quantitative derivatives or market risk disclosures provided in this section
+
+=== 10-Q | Period ending 2025-02-28 | Processed 2026-06-02 ===
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $100M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_outstanding: was $0M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (interest_rate_swap_notional, variable_rate_debt_outstanding)
+[LLM_FLAG] This filing section is extremely brief and references prior year 10-K disclosure for detailed market risk information. Most quantitative fields cannot be extracted from this text alone.
+[LLM_FLAG] The company explicitly states 'no material changes' which suggests values from prior year (August 31, 2024) should remain similar, but specific values are not disclosed in this 10-Q section.
+

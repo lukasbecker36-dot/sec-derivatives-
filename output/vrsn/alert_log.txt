@@ -1,0 +1,33 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NUMERIC] total_cash_equivalents_fv: $235M → $308M (+30.8%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $382M → $273M (-28.7%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($68M)
+[NEW_FIELD] fx_forward_notional: appeared for first time ($68M)
+[NEW_FIELD] fixed_income_securities: appeared for first time ($318M)
+[NEW_FIELD] senior_notes_fair_value: appeared for first time ($1,750M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NUMERIC] total_cash_equivalents_fv: $314M → $235M (-25.1%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $280M → $382M (+36.8%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NUMERIC] total_cash_equivalents_fv: $575M → $314M (-45.4%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $73M → $280M (+282.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $0M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $0M, now missing
+[VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (marketable_equity_securities_fv, corporate_debt_securities_fv)
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($575M)
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($73M)
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($0M)
+[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($0M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+

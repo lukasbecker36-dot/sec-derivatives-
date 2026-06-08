@@ -1,0 +1,28 @@
+issuer: Coterra
+ticker: CTRA
+cik: "858470"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  commodity_exposure:
+    description: "oil, natural gas and NGL production price risk"
+    section: market_risk
+  hedging_strategy:
+    description: "derivative instruments to hedge portion of production"
+    section: market_risk
+  governance:
+    description: "committee of senior management oversight"
+    section: market_risk
+  counterparty_risk:
+    description: "default risk limiting protection benefits"
+    section: market_risk
+
+# Unusual features identified:
+#   - References future date December 31, 2025 which appears to be an error
+#   - Very generic derivative instrument description without specific types
+#   - No quantitative data provided despite heading promising quantitative disclosures
+#   - Incomplete section ending with reference to consolidated financial statements note
+

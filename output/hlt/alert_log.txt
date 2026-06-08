@@ -1,0 +1,16 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
+[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($0M)
+[LLM_FLAG] Material change in interest_rate_swap_notional: Prior period had active swaps, current period has $0 outstanding due to March 2026 maturity of $1.6 billion notional swap. This is a 100% decrease but is explained in the filing.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $9M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $1,600M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_fair_value: was $7M, now missing
+[DISAPPEARED_FIELD] variable_interest_rate_receivable: was $4M, now missing
+[DISAPPEARED_FIELD] fixed_interest_rate_payable: was $2M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_amount: was $3,119M, now missing
+[DISAPPEARED_FIELD] fixed_rate_debt_amount: was $9,000M, now missing
+[VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (fixed_rate_notes_billion, interest_rate_swap_notional, interest_rate_swap_fair_value, variable_interest_rate_receivable, fixed_interest_rate_payable...)
+[LLM_FLAG] Provided text appears to be only the introductory section of the market risk disclosure; quantitative details (notional amounts, fair values, sensitivities) are not included in the excerpt provided
+[LLM_FLAG] Unable to verify specific derivative amounts, swap details, or debt balances from this excerpt alone
+

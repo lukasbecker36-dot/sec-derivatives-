@@ -1,0 +1,33 @@
+issuer: TKO Group Holdings
+ticker: TKO
+cik: "1973266"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  variable_rate_debt_ir_sensitivity:
+    description: "Impact of 1% increase in effective interest rates on annual interest expense"
+    section: market_risk
+  fx_sensitivity_10pct:
+    description: "Revenue and operating income impact of 10% USD appreciation"
+    section: market_risk
+  fx_revenue_impact:
+    description: "Decrease in revenues from 10% USD appreciation"
+    section: market_risk
+  fx_operating_income_impact:
+    description: "Decrease in operating income from 10% USD appreciation"
+    section: market_risk
+  primary_fx_exposure:
+    description: "Primary foreign currency exposure (British Pound)"
+    section: market_risk
+
+# Unusual features identified:
+#   - XBRL shows NotDesignatedAsCashFlowHedgeMember - FX contracts are not designated as hedges
+#   - Uses FX forward exchange contracts from time to time but not consistently
+#   - Primary FX exposure is British Pound (from international media/entertainment operations)
+#   - Significant floating rate debt exposure ($37M per 1% rate increase)
+#   - OtherSecuredLoansSwapMember in XBRL appears to relate to secured loan structures, not interest rate swaps
+#   - Relatively new public entity (formed from Endeavor Group restructuring)
+

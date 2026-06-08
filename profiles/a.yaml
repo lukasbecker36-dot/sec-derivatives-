@@ -1,0 +1,35 @@
+issuer: Agilent Technologies
+ticker: A
+cik: "1090872"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  hedging_timeframe:
+    description: "sales forecasts up to twelve months in advance"
+    section: market_risk
+  usd_revenue_percentage:
+    description: "percentage of revenue generated in U.S. dollars by year"
+    section: market_risk
+  fx_sensitivity_analysis:
+    description: "hypothetical 10 percent adverse movement in foreign exchange rates impact"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "hypothetical 10 percent adverse movement in interest rates impact on fixed rate debt"
+    section: market_risk
+  hedging_strategy:
+    description: "enterprise-wide basis hedging approach using derivatives"
+    section: market_risk
+  speculative_trading_policy:
+    description: "do not utilize derivatives for speculative trading purposes"
+    section: market_risk
+
+# Unusual features identified:
+#   - no tabular presentation of derivative positions
+#   - only qualitative sensitivity analysis results
+#   - covers acquisition-related FX hedging
+#   - mentions equity balance hedging
+#   - uses last month exchange rates for impact calculations
+

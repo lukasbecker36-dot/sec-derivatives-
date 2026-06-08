@@ -1,0 +1,88 @@
+{
+  "cik": "0001352010",
+  "ticker": "EPAM",
+  "issuer_name": "EPAM Systems",
+  "aliases": [],
+  "document_structure": {
+    "derivatives_note_heading": "",
+    "market_risk_heading": "",
+    "section_locations": {}
+  },
+  "filing_patterns": {
+    "typical_note_numbering": "",
+    "heading_variations_seen": [],
+    "uses_cross_reference_in_10q": false,
+    "market_risk_in_10k_only": false
+  },
+  "idiosyncrasies": {
+    "recurring_phrases": [
+      "cash flow hedge",
+      "foreign exchange forward",
+      "unrealized loss",
+      "accumulated other comprehensive"
+    ],
+    "non_gaap_metrics": [
+      "non-gaap",
+      "constant currency"
+    ],
+    "unusual_disclosure_patterns": [],
+    "known_issues": []
+  },
+  "history": [
+    {
+      "filing_date": "2026-03-31",
+      "form_type": "10-Q",
+      "period_end": "2026-03-31",
+      "processed_at": "2026-05-29T09:41:02Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 11,
+      "fields_null": 5
+    },
+    {
+      "filing_date": "2025-03-31",
+      "form_type": "10-Q",
+      "period_end": "2025-03-31",
+      "processed_at": "2026-05-30T08:26:23Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 10,
+      "fields_null": 6
+    },
+    {
+      "filing_date": "2025-06-30",
+      "form_type": "10-Q",
+      "period_end": "2025-06-30",
+      "processed_at": "2026-05-30T08:26:35Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 10,
+      "fields_null": 6
+    },
+    {
+      "filing_date": "2025-09-30",
+      "form_type": "10-Q",
+      "period_end": "2025-09-30",
+      "processed_at": "2026-05-30T08:26:45Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 10,
+      "fields_null": 6
+    },
+    {
+      "filing_date": "2025-12-31",
+      "form_type": "10-K",
+      "period_end": "2025-12-31",
+      "processed_at": "2026-06-04T14:43:06Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 0,
+      "fields_null": 16
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
+[LLM_FLAG] The provided filing text is incomplete - it only contains a cross-reference to Item 7A of the Form 10-K rather than actual quantitative and qualitative disclosures about market risk. Full market risk analysis would typically be found in a complete Item 7A section.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
+[LLM_FLAG] Filing section provided is only a reference header directing to Item 7A of Form 10-K; no actual quantitative or qualitative risk disclosure data is included in the submitted text
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $441M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion)
+[LLM_FLAG] Insufficient data: The provided text is only a section header/reference to Item 7A in the 10-K form. Full market risk disclosures are not included in the excerpt provided. Cannot verify changes from prior period (fx_forwards_outstanding: 440.6M, fixed_rate_notes_billion: 2.225B, has_derivatives: Yes).
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-25 ===
+[LLM_FLAG] The document section provided is primarily management and audit reports, consolidated financial statements, and notes to financial statements. The 'Quantitative and Qualitative Disclosures About Market Risk' section is referenced as appearing on page 50 but is not included in the provided text. Most market risk sensitivity metrics (IR sensitivity, equity sensitivity, FX transaction gains/losses) are not found in the excerpt provided.
+[LLM_FLAG] FX forwards notional of $440.6 million is confirmed but represents only the face value of unexpired contracts; no gain/loss impact is quantified in the text provided.
+

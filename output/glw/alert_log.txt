@@ -1,0 +1,22 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10,000M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10,000M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
+[DISAPPEARED_FIELD] sensitivity_analysis_total: was $1,000M, now missing
+[DISAPPEARED_FIELD] sensitivity_analysis_jpy: was $400M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (sensitivity_analysis_total, sensitivity_analysis_jpy)
+[LLM_FLAG] Insufficient text provided - only header reference to 'Quantitative and Qualitative Disclosures About Market Risks, contained in the 2024 Form 10-K' without actual content
+[LLM_FLAG] Cannot verify any data points from the actual 10-Q filing for period ending 2025-09-30
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
+[LLM_FLAG] Submitted filing text appears to be only a section header/reference ('Quantitative and Qualitative Disclosures About Market Risks, contained in the 2024 Form 10-K'). The actual detailed disclosures for the 2025-06-30 period ending 10-Q are not included in the provided text. Most quantitative fields could not be extracted from current period and were verified against prior period values only.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
+[LLM_FLAG] Provided text is only a section header reference to 2024 Form 10-K; actual disclosure details are not included in the excerpt
+[LLM_FLAG] Unable to verify current period values (Q1 2025) - all quantitative metrics are based on prior period or company patterns
+[LLM_FLAG] 10 fields out of 13 have 'not_found' or 'medium' confidence due to insufficient source text
+

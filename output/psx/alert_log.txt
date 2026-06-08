@@ -1,0 +1,23 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] commodity_derivatives_notional: $141M → $1M (-99.3%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: commodity_derivatives_notional changed from 141 to 1 (0x)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] commodity_derivatives_notional: $1M → $141M (+14000.0%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: commodity_derivatives_notional changed from 1 to 141 (141x)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] commodity_derivatives_notional: $2,024M → $1M (-100.0%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: commodity_derivatives_notional changed from 2,024 to 1 (0x)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($18,324M)
+[LLM_FLAG] fixed_rate_debt_total increased from $18,102M (2024) to $19,117M (2025), includes junior subordinated notes issued September 2025
+[LLM_FLAG] floating_rate_debt decreased from $1,760M (2024) to $400M (2025)
+

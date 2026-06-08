@@ -1,0 +1,37 @@
+issuer: Moderna
+ticker: MRNA
+cik: "1682852"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cash_and_investments:
+    description: "Cash, cash equivalents, restricted cash and investments in marketable securities"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "Decrease in fair value of marketable securities from 1pp rate increase"
+    section: market_risk
+  credit_facility_outstanding:
+    description: "Amount outstanding under variable-rate Credit Agreement"
+    section: market_risk
+  fx_forward_fair_value_sensitivity:
+    description: "Fair value decline from hypothetical 10% adverse FX movement"
+    section: market_risk
+  fx_forward_maturities:
+    description: "Maturity profile of outstanding balance sheet hedging derivatives (less than 3 months)"
+    section: market_risk
+  hedged_currencies:
+    description: "Currencies hedged: AUD, GBP, CAD, EUR"
+    section: market_risk
+  fx_revenue_percentage:
+    description: "Percentage of revenue denominated in foreign currencies"
+    section: market_risk
+
+# Unusual features identified:
+#   - FX forwards are used only for balance sheet hedging and are NOT designated as hedges under ASC 815
+#   - Cash flow hedging programs are mentioned as being in place but no cash flow hedges were active during 2025
+#   - Variable-rate credit facility ($1.5B, $600M drawn) with SOFR+5.50% creates interest rate exposure but no interest rate derivatives are used
+#   - Company is transitioning to receiving payments in local currencies, increasing future FX exposure
+

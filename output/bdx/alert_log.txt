@@ -1,0 +1,35 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_derivatives_notional: $2,025M → $31M (-98.5%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $2,025M → $30M (-98.5%) — exceeds 20% threshold
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($31M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($12M)
+
+=== 10-K | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_derivatives_notional: $30M → $2,025M (+6650.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $30M → $2,025M (+6650.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $30M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $12M, now missing
+[VALIDATION] Likely extraction failure: 2/4 previously-populated fields are now null (commodity_derivatives_notional, expected_12mo_reclass_from_aoci)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
+[LLM_FLAG] Filing contains minimal disclosure - only cross-reference to prior year (September 30, 2025) with statement of no material changes. Detailed market risk data not provided in this section.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-05-23 ===
+[LLM_FLAG] Provided text is a brief cross-reference statement indicating 'no material changes' since fiscal year end September 30, 2025. No actual quantitative or qualitative market risk disclosures are included in the excerpt. Full market risk disclosure likely appears elsewhere in the 10-Q filing, possibly by cross-reference to a prior filing.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
+[LLM_FLAG] The filing section contains only a cross-reference statement indicating no material changes since September 30, 2024. The actual quantitative and qualitative market risk disclosures appear to be located in the prior fiscal year's 10-K filing rather than repeated in this 10-Q interim period.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[DROPPED_TO_ZERO] total_cash_equivalents_fv: $18M → $0M
+[LLM_FLAG] total_cash_equivalents_fv decreased significantly from $18.0M (prior period estimate based on money market accounts) to $0M at March 31, 2025. The institutional money market accounts dropped from $285M (Sept 30, 2024) to $0M (March 31, 2025), representing a 100% decrease. This is a substantial change warranting verification.
+[LLM_FLAG] Filing section is heavily abbreviated - states 'no material changes' since fiscal year end 2024 and cross-references prior disclosures. Detailed quantitative and qualitative market risk data not provided in this excerpt.
+

@@ -1,0 +1,20 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $2M, now missing
+[DROPPED_TO_ZERO] revolving_facility_outstanding_amount: $233M → $0M
+[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (ir_sensitivity_100bp)
+[LLM_FLAG] revolving_facility_outstanding_amount changed from $233.0M to $0M (100% decrease) - company repaid all borrowings by Q3 2025
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] ir_sensitivity_100bp: $8M → $2M (-70.5%) — exceeds 20% threshold
+[NUMERIC] revolving_facility_outstanding_amount: $775M → $233M (-69.9%) — exceeds 20% threshold
+[LLM_FLAG] IR_SENSITIVITY_100BP differs significantly from prior period (2.3 vs 7.8, 71% decrease). This is due to lower outstanding revolving facility borrowings ($233.0M vs prior $775.0M implied higher balance), resulting in reduced interest rate sensitivity.
+[LLM_FLAG] FIXED_RATE_NOTES includes new 6.75% 2035 Notes not present in prior period disclosure. This suggests new debt issuance or improved disclosure completeness in current period.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($8M)
+[LLM_FLAG] Revolving facility outstanding amount increased significantly from $0 million (prior period) to $775.0 million (current period) — increase of >7500%, indicating substantial new borrowing activity
+

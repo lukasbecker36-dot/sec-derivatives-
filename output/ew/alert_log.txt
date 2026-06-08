@@ -1,0 +1,24 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
+[LLM_FLAG] Marketable equity value increased from $207.9M (prior period) to $241.5M (16.2% increase) - within acceptable variance but upward trend noted
+[LLM_FLAG] Provided text appears to be a brief transition section referencing the 10-K; most detailed risk disclosures likely located elsewhere in filing
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
+[LLM_FLAG] marketable_equity_value increased from $206.5M to $207.9M, a 0.7% change (within normal variation, no flag needed)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
+[NUMERIC] marketable_equity_value: $159M → $206M (+30.0%) — exceeds 20% threshold
+[LLM_FLAG] Marketable equity value increased from $158.8M (prior period) to $206.5M (30.1% increase) - within acceptable range but notable change
+[LLM_FLAG] Provided text appears to be only a portion of the market risk disclosure; filing refers to 'Quantitative and Qualitative Disclosures About Market Risk in our Annual Report on Form 10-K' suggesting more complete derivative and hedging information exists in referenced 10-K or other sections not provided
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $2,400M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $13M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
+[NUMERIC] marketable_equity_value: $227M → $159M (-30.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] notional_amount: was $2,400M, now missing
+[DISAPPEARED_FIELD] sensitivity_analysis: was $160M, now missing
+[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, fixed_rate_notes_billion, notional_amount, sensitivity_analysis)
+[LLM_FLAG] Filing text appears to be incomplete or only contains the investment risk section. The company references 'Quantitative and Qualitative Disclosures About Market Risk in our Annual Report on Form 10-K for the year ended December 31, 2024' indicating that detailed derivative and hedging disclosures may be in the 10-K rather than this 10-Q excerpt.
+[LLM_FLAG] Equity securities value of $158.8M is significantly lower than prior period value of $227.3M (-30.1%), which is within the 50% threshold but represents a notable decline.
+[LLM_FLAG] No derivatives disclosure present in provided text, despite prior period showing derivatives usage. This is consistent with the reference to the 10-K for detailed market risk disclosures.
+

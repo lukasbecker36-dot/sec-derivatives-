@@ -1,0 +1,19 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NUMERIC] fx_revenue_impact: $51M → $69M (+35.7%) — exceeds 20% threshold
+[LLM_FLAG] primary_fx_exposure changed from 'British Pound, Brazilian Real' to 'British Pound' only in the 10-K — Brazilian Real no longer mentioned as principal exposure
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NUMERIC] variable_rate_debt_ir_sensitivity: $27M → $37M (+37.0%) — exceeds 20% threshold
+[NUMERIC] fx_revenue_impact: $33M → $51M (+53.2%) — exceeds 20% threshold
+[NUMERIC] fx_operating_income_impact: $2M → $3M (+66.7%) — exceeds 20% threshold
+[LLM_FLAG] variable_rate_debt_ir_sensitivity increased from $27M to $37M (37% increase), suggesting increased variable-rate debt levels
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NUMERIC] fx_revenue_impact: $18M → $33M (+82.9%) — exceeds 20% threshold
+[NUMERIC] fx_operating_income_impact: $3M → $2M (-37.9%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] variable_rate_debt_ir_sensitivity: appeared for first time ($27M)
+[NEW_FIELD] fx_revenue_impact: appeared for first time ($18M)
+[NEW_FIELD] fx_operating_income_impact: appeared for first time ($3M)
+

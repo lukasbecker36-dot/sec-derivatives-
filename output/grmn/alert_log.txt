@@ -1,0 +1,19 @@
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $8M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+
+=== 10-K | Period ending 2025-12-27 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($8M)
+
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-05-30 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $8M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $41M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[DISAPPEARED_FIELD] foreign_currency_gain_loss: was $8M, now missing
+[DISAPPEARED_FIELD] currency_translation_adjustment: was $136M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_analysis: was $135M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $41M, now missing
+[VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (fx_forwards_outstanding, fx_transaction_gain_loss, ir_sensitivity_100bp, fixed_rate_notes_billion, foreign_currency_gain_loss...)
+[LLM_FLAG] The filing text is a boilerplate statement referencing the Annual Report on Form 10-K for fiscal year ended December 28, 2024, indicating that no detailed quantitative disclosures about market risk are provided in this 10-Q section. All specific market risk metrics are not disclosed in this excerpt.
+

@@ -1,0 +1,29 @@
+=== 10-Q | Period ending 2025-12-28 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $24M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-09-28 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($25M)
+
+=== 10-Q | Period ending 2025-12-28 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $3,600M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_korean_won: was $223M, now missing
+[DISAPPEARED_FIELD] non_marketable_equity_investments: was $1,400M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (interest_rate_swap_notional, fx_sensitivity_korean_won, non_marketable_equity_investments)
+
+=== 10-K | Period ending 2025-09-28 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[NUMERIC] interest_rate_swap_notional: $1,500M → $3,600M (+140.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_korean_won: appeared for first time ($223M)
+[NEW_FIELD] non_marketable_equity_investments: appeared for first time ($1,400M)
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (ir_sensitivity_100bp)
+[LLM_FLAG] interest_rate_swap_notional increased from $2.1B (Sep 2024) to $3.6B (Sep 2025), a 71% increase
+
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($1,500M)
+

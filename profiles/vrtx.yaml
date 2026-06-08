@@ -1,0 +1,32 @@
+issuer: Vertex Pharmaceuticals
+ticker: VRTX
+cik: "875320"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_forward_notional_cash_flow_hedges:
+    description: "Notional amount of FX forward contracts designated as cash flow hedges"
+    section: market_risk
+  fx_forward_net_liability:
+    description: "Net fair value (liability) of cash flow hedge FX forward contracts on balance sheet"
+    section: market_risk
+  fx_forward_sensitivity_10pct:
+    description: "Change in fair value from hypothetical 10% change in exchange rates"
+    section: market_risk
+  revolving_credit_facility_capacity:
+    description: "Capacity of unsecured revolving credit facility"
+    section: market_risk
+  revolving_credit_outstanding:
+    description: "Amount outstanding under credit facility"
+    section: market_risk
+
+# Unusual features identified:
+#   - Large FX forward program ($6.1B notional) hedging forecasted product revenues
+#   - Cash flow hedge designation for FX forwards on forecasted revenue
+#   - Euro is the most significant foreign currency exposure
+#   - No interest rate derivatives despite variable rate credit facility
+#   - Sensitivity analysis notes fair value change is fully offset by hedged revenues
+

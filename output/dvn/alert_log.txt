@@ -1,0 +1,35 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($31M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $30M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
+[LLM_FLAG] Commodity sensitivity increased 50% from $200 million (Q3 2025) to $300 million (Q1 2026) - a 50% increase in sensitivity to 10% forward curve movements. This could indicate higher derivative positions or increased market volatility.
+[LLM_FLAG] Production hedging period shifted from 'last three months of 2025, and for 2026 and 2027' to 'last nine months of 2026, as well as for 2027' - reflects natural progression through the year
+[LLM_FLAG] Term Loan interest rate decreased from 5.8% (Sept 2025) to 5.2% (March 2026) - a 60bp reduction
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
+[LLM_FLAG] fixed_rate_notes_billion decreased from $7.9B (Q2 2025) to $7.4B (Q3 2025) - a 6.3% decline, within normal range for quarterly debt management
+[LLM_FLAG] 10% commodity derivative sensitivity decreased from $270M (Q2 2025) to $200M (Q3 2025) - a 25.9% decline, likely reflecting changed market conditions and derivative positions
+[LLM_FLAG] total_debt decreased from $8.9B (Q2 2025) to $8.4B (Q3 2025) - a 5.6% decline
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
+[LLM_FLAG] Commodity derivative sensitivity decreased slightly from $275 million (March 31, 2025) to $270 million (June 30, 2025), a 1.8% decrease - within normal quarterly variance, no concern
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-25 ===
+[LLM_FLAG] Text appears to be incomplete - ends mid-sentence with reference to Note 3, suggesting full derivative and market risk disclosures are in supplementary notes not included in provided excerpt
+

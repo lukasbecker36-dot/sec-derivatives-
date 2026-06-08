@@ -1,0 +1,42 @@
+issuer: DuPont
+ticker: DD
+cik: "1666700"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fair_value_derivatives_table:
+    description: "Fair value of derivatives by type (net investment hedge, foreign currency, interest rate swaps) with gain/loss breakdown"
+    section: market_risk
+  notional_amounts_table:
+    description: "Notional amounts for designated and non-designated hedging instruments by type"
+    section: market_risk
+  net_investment_hedge_details:
+    description: "$1 billion cross currency swap details, USD/EUR exchange, interest rates, maturity Nov 2028"
+    section: market_risk
+  interest_rate_swap_details:
+    description: "2022 Swaps details including partial settlements, dedesignation events, basis adjustments"
+    section: market_risk
+  foreign_currency_sensitivity:
+    description: "10% adverse change impact on foreign currency contracts fair value"
+    section: market_risk
+  net_investment_hedge_sensitivity:
+    description: "10% USD weakening impact on cross currency swap fair value"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "10% SOFR appreciation impact on interest rate swap fair value"
+    section: market_risk
+  primary_currencies:
+    description: "EUR, CNY, JPY, CAD, INR as primary exchange rate exposures"
+    section: market_risk
+
+# Unusual features identified:
+#   - Complex partial debt redemption events with dedesignation and basis adjustment details
+#   - Special Mandatory Redemption event in 2025 affecting hedge accounting
+#   - Post-Electronics Separation capital structure references
+#   - Detailed hedge effectiveness assertions in sensitivity analysis
+#   - Foreign currency contracts presented net of bought/sold positions
+#   - Specific SOFR-based floating rate hedge mechanics described
+

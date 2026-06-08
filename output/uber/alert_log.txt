@@ -1,0 +1,28 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NUMERIC] fx_designated_notional: $1,100M → $12M (-98.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $1,100M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $31M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $31M, now missing
+[VALIDATION] Likely extraction failure: 3/5 previously-populated fields are now null (fx_not_designated_notional, total_derivative_asset, total_derivative_liability)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,100M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,100M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($31M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($31M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($12M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] credit_facility_drawn: appeared for first time ($0M)
+[LLM_FLAG] Section text is truncated — only the introductory paragraph and beginning of Interest Rate Risk section were captured. The full quantitative disclosures (FX details, equity securities, fixed-rate debt) are missing from the extraction.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[LLM_FLAG] Section text appears to be a misextraction: contains tax risk factors rather than the quantitative market risk disclosure. Identical pattern to Q1 and Q2 2025 extractions.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[LLM_FLAG] Section text appears to be a misextraction: contains tax risk factors rather than the quantitative market risk disclosure. Identical pattern to Q1 2025 extraction.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
+[LLM_FLAG] Section text appears to be a misextraction: contains tax risk factors rather than the quantitative market risk disclosure. The header references 'Interest Rate Risk' but the body is about tax liabilities, NOL carryforwards, and ownership changes.
+

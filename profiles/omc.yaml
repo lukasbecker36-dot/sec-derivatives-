@@ -1,0 +1,42 @@
+issuer: Omnicom Group
+ticker: OMC
+cik: "29989"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_forward_notional:
+    description: "Aggregate notional amount of outstanding forward foreign exchange contracts"
+    section: market_risk
+  cross_currency_swap_notional_jpy_usd:
+    description: "Notional value of Yen/USD cross-currency swaps for net investment hedge"
+    section: market_risk
+  cross_currency_swap_notional_gbp_eur:
+    description: "Notional value of Sterling/Euro cross-currency swaps for net investment hedge"
+    section: market_risk
+  swap_maturity_dates:
+    description: "Scheduled maturity years of cross-currency swaps"
+    section: market_risk
+  swap_fair_value_asset:
+    description: "Fair value of cross-currency swaps recorded in other assets"
+    section: market_risk
+  interest_expense_reduction:
+    description: "Reduction of interest expense from cross-currency swaps"
+    section: market_risk
+  var_estimate:
+    description: "Maximum one-day change in net fair value of derivatives at 95% confidence"
+    section: market_risk
+  international_revenue_pct:
+    description: "Percentage of revenue from international operations"
+    section: market_risk
+
+# Unusual features identified:
+#   - Uses cross-currency swaps as net investment hedges for Japanese and European subsidiaries
+#   - FX forwards designated as fair value hedges (not cash flow hedges)
+#   - Two separate cross-currency swap programs: Yen/USD and Sterling/Euro
+#   - Effectiveness of net investment hedges assessed based on changes in spot exchange rates
+#   - No interest rate swaps despite having long-term fixed-rate debt
+#   - Notional amounts for FX forwards and cross-currency swaps disclosed inline rather than in tables
+

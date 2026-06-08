@@ -1,0 +1,27 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $39M → $23M (-41.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $25M → $13M (-48.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $2,024M, now missing
+[NUMERIC] fx_not_designated_notional: $4M → $25M (+525.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $2,024M, now missing
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+[VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (fx_derivatives_notional, cash_flow_hedge_aoci)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $29M → $39M (+34.5%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,024M)
+[NUMERIC] fx_designated_notional: $13M → $29M (+123.1%) — exceeds 20% threshold
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($2,024M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($449M)
+

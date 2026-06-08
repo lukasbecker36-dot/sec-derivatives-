@@ -1,0 +1,31 @@
+issuer: EOG Resources
+ticker: EOG
+cik: "821189"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cross_reference_sections:
+    description: "referenced sections in Item 7 containing actual derivative disclosures"
+    section: market_risk
+  commodity_derivatives:
+    description: "financial commodity derivative transactions"
+    section: market_risk
+  financing_derivatives:
+    description: "derivative instruments related to financing activities"
+    section: market_risk
+  recent_developments:
+    description: "current period derivative activity and changes"
+    section: market_risk
+  outlook_derivatives:
+    description: "forward-looking derivative strategy and risk management"
+    section: market_risk
+
+# Unusual features identified:
+#   - Complete incorporation by reference - no actual derivative data in this section
+#   - Cross-references to multiple subsections within Item 7 MD&A
+#   - No quantitative tables or instrument details provided in market risk section itself
+#   - Requires following cross-references to extract actual derivative information
+

@@ -1,0 +1,31 @@
+issuer: Fair Isaac
+ticker: FICO
+cik: "814547"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_currency_forward_contracts:
+    description: "contract amounts and fair values by currency"
+    section: market_risk
+  cash_and_cash_equivalents:
+    description: "cost basis, carrying amount, and average yield"
+    section: market_risk
+  senior_notes:
+    description: "face value and fair value"
+    section: market_risk
+  revolving_credit_facility:
+    description: "outstanding borrowings and interest rate details"
+    section: market_risk
+  contract_maturity:
+    description: "maturity periods of forward contracts"
+    section: market_risk
+
+# Unusual features identified:
+#   - forward contracts entered into on period end dates with zero fair value at inception
+#   - foreign currency contracts table shows zero fair value despite having contract amounts
+#   - combines both derivative and non-derivative instruments in market risk disclosure
+#   - detailed SOFR-based interest rate structure for revolving credit facility
+

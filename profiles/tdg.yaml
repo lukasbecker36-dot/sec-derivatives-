@@ -1,0 +1,52 @@
+issuer: TransDigm Group
+ticker: TDG
+cik: "1260221"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  variable_rate_debt_term_loans:
+    description: "Outstanding balance of Term Loans Facility subject to variable rates"
+    section: market_risk
+  securitization_facility_balance:
+    description: "Outstanding balance of Securitization Facility"
+    section: market_risk
+  fixed_rate_pct:
+    description: "Percentage of gross debt at fixed rate (target >= 75%)"
+    section: market_risk
+  ir_sensitivity_1pct:
+    description: "Effect of hypothetical 1pp interest rate increase on annual interest costs"
+    section: market_risk
+  weighted_avg_interest_rate:
+    description: "Weighted average interest rate on term loans and securitization facility"
+    section: market_risk
+  ir_swap_notional:
+    description: "Notional of interest rate swaps designated as cash flow hedges"
+    section: derivatives_note
+  ir_cap_notional:
+    description: "Notional of interest rate caps"
+    section: derivatives_note
+  ir_collar_notional:
+    description: "Notional of interest rate collars"
+    section: derivatives_note
+  fx_forward_notional:
+    description: "Notional of foreign currency forward exchange contracts"
+    section: derivatives_note
+  ir_swap_fair_value:
+    description: "Fair value of interest rate swaps"
+    section: derivatives_note
+  fx_forward_gain_loss:
+    description: "Gain/loss on FX forwards designated as cash flow hedges (in net sales and cost of sales)"
+    section: derivatives_note
+
+# Unusual features identified:
+#   - Uses interest rate swaps AND caps AND collars - three distinct IR hedging instruments
+#   - Explicit policy to maintain at least 75% fixed rate / 25% variable rate debt allocation
+#   - Very large variable rate debt exposure ($11.1B term loans + $725M securitization)
+#   - FX forwards designated as cash flow hedges affecting both net sales and interest expense
+#   - XBRL shows specific swap rate details (3.2188% and 3.1075% fixed rates on individual swaps)
+#   - Securitization Facility bears interest at 3-month Term SOFR + 1.35%
+#   - Multiple tranches of term loans with different maturities
+

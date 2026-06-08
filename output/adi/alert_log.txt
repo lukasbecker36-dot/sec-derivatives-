@@ -1,0 +1,61 @@
+=== 10-Q | Period ending 2026-05-02 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_derivatives_notional: $31M → $2M (-93.5%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $31M → $2M (-93.5%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $31M → $2M (-93.5%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2026-01-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($31M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($31M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($31M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($3M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($3M)
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+
+=== 10-K | Period ending 2025-11-01 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $2M, now missing
+[DISAPPEARED_FIELD] fx_designated_notional: was $2M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $2M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional: was $2M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $3M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $3M, now missing
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional, ir_swap_notional, cash_flow_hedge_aoci...)
+
+=== 10-Q | Period ending 2025-08-02 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_derivatives_notional: $3M → $2M (-33.3%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $3M → $2M (-33.3%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $3M → $2M (-33.3%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-05-03 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_derivatives_notional: $1M → $3M (+200.0%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $1M → $3M (+200.0%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $1M → $3M (+200.0%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2026-01-31 | Processed 2026-05-23 ===
+[LLM_FLAG] No specific market risk quantitative data provided in this section. Filing references prior 10-K for detailed disclosure rather than repeating information.
+
+=== 10-Q | Period ending 2025-08-02 | Processed 2026-05-23 ===
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $8M, now missing
+[DISAPPEARED_FIELD] floating_rate_debt_sensitivity: was $14M, now missing
+[DISAPPEARED_FIELD] cash_marketable_securities_sensitivity: was $36M, now missing
+[DISAPPEARED_FIELD] swap_notional_amount: was $1,000M, now missing
+[DISAPPEARED_FIELD] swap_fair_value: was $13M, now missing
+[DISAPPEARED_FIELD] swap_sensitivity: was $46M, now missing
+[DISAPPEARED_FIELD] notes_principal_amount: was $8,647M, now missing
+[DISAPPEARED_FIELD] notes_fair_value: was $7,981M, now missing
+[DISAPPEARED_FIELD] notes_stressed_fair_value: was $7,339M, now missing
+[VALIDATION] Likely extraction failure: 9/9 previously-populated fields are now null (fixed_rate_notes_billion, floating_rate_debt_sensitivity, cash_marketable_securities_sensitivity, swap_notional_amount, swap_fair_value...)
+[LLM_FLAG] This filing section explicitly refers to the prior year 10-K for quantitative and qualitative disclosures about market risk, stating 'There were no material changes.' The provided text does not contain the actual quantitative data needed to extract most requested fields.
+
+=== 10-Q | Period ending 2025-02-01 | Processed 2026-05-23 ===
+[LLM_FLAG] This 10-Q section explicitly states 'There were no material changes in the three-month period ended February 1, 2025 to the information identified in the Annual Report on Form 10-K' and defers all market risk disclosures to the prior 10-K. All extracted values are from the prior period (November 2, 2024) carried forward without new substantive disclosure in the current 10-Q filing.
+
+=== 10-Q | Period ending 2026-05-02 | Processed 2026-05-22 ===
+[LLM_FLAG] cash_marketable_securities_sensitivity increased 83% from $19.9M (prior year) to $36.5M (current year) - represents significant increase in interest income sensitivity, likely due to higher cash balances or rate environment
+

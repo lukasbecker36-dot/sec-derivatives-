@@ -1,0 +1,29 @@
+issuer: Altria
+ticker: MO
+cik: "764180"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fair_value_debt:
+    description: "fair value of long-term debt in billions"
+    section: market_risk
+  rate_sensitivity_increase:
+    description: "decrease in fair value from 1% rate increase"
+    section: market_risk
+  rate_sensitivity_decrease:
+    description: "increase in fair value from 1% rate decrease"
+    section: market_risk
+  debt_characteristics:
+    description: "all fixed-rate debt notation"
+    section: market_risk
+
+# Unusual features identified:
+#   - Market risk section is extremely brief with only interest rate risk disclosed
+#   - No derivatives instruments found despite derivatives section header
+#   - No foreign exchange risk disclosure despite international operations
+#   - Financial Instruments note referenced but no actual derivative instruments detailed
+#   - Only sensitivity analysis is for debt fair value, not earnings impact
+

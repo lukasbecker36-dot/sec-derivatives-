@@ -1,0 +1,46 @@
+=== 10-Q | Period ending 2026-01-25 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] long_term_debt_principal: was $36,000M, now missing
+[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (long_term_debt_principal)
+
+=== 10-Q | Period ending 2026-04-26 | Processed 2026-05-23 ===
+[NUMERIC] available_for_sale_securities_value: $3,300M → $4,500M (+36.4%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity_securities: $37M → $48M (+29.7%) — exceeds 20% threshold
+[LLM_FLAG] available_for_sale_securities_value increased 36% from $3.3B to $4.5B
+[LLM_FLAG] interest_rate_sensitivity_securities increased 30% from $37M to $48M
+[LLM_FLAG] long_term_debt_principal decreased 18% from $6.5B to $5.3B
+[LLM_FLAG] long_term_debt_fair_value decreased 20% from $6.1B to $4.9B
+[LLM_FLAG] interest_rate_sensitivity_debt decreased 6% from $444M to $416M (within tolerance but notable)
+[LLM_FLAG] fx_hedge_sensitivity increased 17% from $182M to $213M
+
+=== 10-Q | Period ending 2026-01-25 | Processed 2026-05-23 ===
+[NUMERIC] ir_sensitivity_100bp: $389M → $29M (-92.5%) — exceeds 20% threshold
+[NUMERIC] long_term_debt_fair_value: $5,000M → $6,100M (+22.0%) — exceeds 20% threshold
+[LLM_FLAG] long_term_debt_principal increased 18% from $5.5B to $6.5B
+[LLM_FLAG] long_term_debt_fair_value increased 22% from $5.0B to $6.1B
+[LLM_FLAG] interest_rate_sensitivity_debt increased 14% from $389M to $444M (note: different measurement basis - 100bp decrease vs prior period methodology)
+[LLM_FLAG] fixed_rate_notes_billion increased 18% from $5.5B to $6.5B
+[LLM_FLAG] ir_sensitivity_100bp decreased 93% from $389M to $29M - this appears to be measuring only interest rate swap fair value change, not total debt sensitivity
+
+=== 10-Q | Period ending 2025-07-27 | Processed 2026-05-23 ===
+[NUMERIC] available_for_sale_securities_value: $2,400M → $3,500M (+45.8%) — exceeds 20% threshold
+[LLM_FLAG] available_for_sale_securities_value increased 45.8% from $2.4B to $3.5B - within 50% threshold but notable increase
+[LLM_FLAG] interest_rate_sensitivity_securities increased 12.1% from $33M to $37M - within normal variation
+[LLM_FLAG] fx_hedge_sensitivity increased 4.6% from $173M to $181M - small change, within normal variation
+[LLM_FLAG] ir_sensitivity_100bp (debt) increased 3.5% from $376M to $389M - within normal variation
+
+=== 10-Q | Period ending 2025-04-27 | Processed 2026-05-23 ===
+[NUMERIC] available_for_sale_securities_value: $3,700M → $2,400M (-35.1%) — exceeds 20% threshold
+[NUMERIC] fx_hedge_sensitivity: $144M → $173M (+20.1%) — exceeds 20% threshold
+[LLM_FLAG] available_for_sale_securities_value decreased from $3,700M to $2,400M (35% decrease) - significant change warrants attention
+[LLM_FLAG] interest_rate_sensitivity_securities decreased from $35M to $33M (6% decrease) - consistent with lower securities balance
+[LLM_FLAG] fx_hedge_sensitivity increased from $144M to $173M (20% increase) - within normal variance
+[LLM_FLAG] ir_sensitivity_100bp (debt) decreased from $405M to $376M (7% decrease) - consistent with prior period patterns
+
+=== 10-Q | Period ending 2025-01-26 | Processed 2026-05-23 ===
+[LLM_FLAG] long_term_debt_principal decreased 15.4% from $6.5B to $5.5B - company has reduced debt outstanding
+[LLM_FLAG] long_term_debt_fair_value decreased 19.4% from $6.2B to $5.0B - fair value reflects both principal reduction and market conditions
+[LLM_FLAG] ir_sensitivity_100bp decreased 12.3% from $462M to $405M - likely due to lower debt principal outstanding
+[LLM_FLAG] fx_hedge_sensitivity decreased 18.6% from $177M to $144M - smaller hedge position or reduced currency volatility exposure
+[LLM_FLAG] available_for_sale_securities_value increased 15.6% from $3.2B to $3.7B - larger investment portfolio
+[LLM_FLAG] interest_rate_sensitivity_securities decreased 2.8% from $36M to $35M - relatively minor change despite larger portfolio
+

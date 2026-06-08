@@ -1,0 +1,38 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $85M → $174M (+104.7%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $1M → $3M (+200.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_not_designated_notional: $71M → $1M (-98.6%) — exceeds 20% threshold
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_not_designated_notional: $20M → $71M (+255.0%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DROPPED_TO_ZERO] fx_designated_notional: $3M → $0M
+[NUMERIC] fx_not_designated_notional: $13M → $20M (+53.8%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
+[LLM_FLAG] Filing text provided is incomplete - only a cross-reference to the Form 10-K annual report is included. The 10-Q section text itself does not contain any market risk or derivatives disclosures.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
+[LLM_FLAG] Provided text is only a section header and reference to the 10-K filing, not the actual market risk disclosure section. No quantitative data is present in the supplied text.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
+[LLM_FLAG] The provided text is only a header/cross-reference statement directing to the 10-K filed on February 12, 2025. The actual quantitative and qualitative disclosure content is not included in the excerpt provided.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $4,058M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $15M, now missing
+[DISAPPEARED_FIELD] sensitivity_analysis_designated: was $310M, now missing
+[DISAPPEARED_FIELD] sensitivity_analysis_non_designated: was $4M, now missing
+[DISAPPEARED_FIELD] unrealized_loss_amount: was $84M, now missing
+[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fx_forwards_outstanding, fx_transaction_gain_loss, sensitivity_analysis_designated, sensitivity_analysis_non_designated, unrealized_loss_amount)
+[LLM_FLAG] Provided text appears to be a table of contents or header section only, referencing detailed disclosures in the 10-K rather than containing the actual quantitative and qualitative market risk disclosures
+

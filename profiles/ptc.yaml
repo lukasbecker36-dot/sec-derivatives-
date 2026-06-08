@@ -1,0 +1,42 @@
+issuer: PTC Inc.
+ticker: PTC
+cik: "857005"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_forward_notional:
+    description: "Notional amounts of foreign currency forward contracts (non-designated hedges)"
+    section: derivatives_note
+  fx_option_notional:
+    description: "Notional amounts of foreign currency option contracts for forecasted USD cash flows"
+    section: derivatives_note
+  net_investment_hedge_notional:
+    description: "Notional amounts of net investment hedge forward contracts (EUR, JPY)"
+    section: derivatives_note
+  derivative_fair_values:
+    description: "Fair values of derivative assets and liabilities on consolidated balance sheet"
+    section: derivatives_note
+  gains_losses_other_income:
+    description: "Gains and losses on non-designated FX forwards and options in Other income, net"
+    section: derivatives_note
+  aoci_net_investment_hedge:
+    description: "Amounts recorded in Accumulated other comprehensive loss for net investment hedges"
+    section: derivatives_note
+  fx_sensitivity_eur:
+    description: "Operating income impact of $0.10 change in USD/EUR exchange rate"
+    section: market_risk
+  fx_sensitivity_jpy:
+    description: "Operating income impact of 10 Yen change in JPY/USD exchange rate"
+    section: market_risk
+
+# Unusual features identified:
+#   - Majority of FX derivatives are non-designated (economic hedges only), gains/losses flow through earnings
+#   - Net investment hedges designated under ASC 815 for EUR and JPY functional subsidiaries
+#   - Time value changes on net investment hedges excluded from effectiveness assessment
+#   - FX forward contracts have short maturities (up to ~4 months); options up to ~14 months
+#   - Three distinct derivative programs: monetary asset/liability hedges, forecasted cash flow hedges (options), and net investment hedges
+#   - Quantitative FX sensitivity disclosed: ~$44M for EUR and ~$10M for JPY per unit change
+

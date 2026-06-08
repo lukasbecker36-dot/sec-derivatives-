@@ -1,0 +1,29 @@
+issuer: ON Semiconductor
+ticker: "ON"
+cik: "1097864"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_forward_notional:
+    description: "Notional amount of foreign exchange forward contracts"
+    section: market_risk
+  fixed_rate_debt_total:
+    description: "Total gross long-term fixed rate debt"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "Estimated impact of 50bp interest rate increase on annual interest expense for revolving credit facility"
+    section: market_risk
+  fx_sensitivity:
+    description: "Impact of hypothetical 10% weighted-average change in currency exchange rates on operating income"
+    section: market_risk
+
+# Unusual features identified:
+#   - FX forwards are explicitly undesignated hedges - used as economic hedges only
+#   - No borrowings outstanding on revolving credit facility so interest rate exposure is hypothetical
+#   - All long-term debt is fixed rate
+#   - Hedges multiple currencies: CNY, CZK, EUR, JPY, KRW, MYR, PHP, VND
+#   - References Note 15: Financial Instruments for detailed hedging activity but that note is not in extracted text
+

@@ -1,0 +1,25 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
+[LLM_FLAG] Excerpt contains only a header reference to market risk disclosures in the 10-K; detailed quantitative data not provided in this excerpt
+[LLM_FLAG] Unable to compare 2025 Q3 values against prior periods due to insufficient data in the provided text
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
+[LLM_FLAG] Provided text is only a reference header to the full 'Quantitative and Qualitative Disclosures About Market Risk' section and does not contain actual disclosure data. All specific numerical fields cannot be extracted.
+[LLM_FLAG] The excerpt references the 2024 10-K annual report rather than the requested 2025 Q2 10-Q filing period.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $19,568M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-81M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_amount: was $-2,000M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_sensitivity: was $-81M, now missing
+[DISAPPEARED_FIELD] debt_fair_value_sensitivity: was $-4,500M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, fixed_rate_notes_billion, fx_sensitivity_amount, interest_rate_swap_sensitivity...)
+[LLM_FLAG] The provided text is merely a section header/reference to the Form 10-K annual report. It does not contain the actual quantitative and qualitative disclosures about market risk. All specific numerical data fields cannot be extracted from this excerpt.
+

@@ -1,0 +1,20 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] debt_equity_investments: was $11M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (debt_equity_investments)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] debt_equity_investments: appeared for first time ($11M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
+[LLM_FLAG] This filing section is an incorporation by reference - all quantitative and qualitative disclosures are located in Note 5 and MD&A, not in this Item itself. Specific numerical values cannot be extracted from this excerpt alone.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
+[LLM_FLAG] This filing section is a cross-reference only. Actual quantitative data (sensitivity analysis, notional amounts, gains/losses) is incorporated by reference to Note 5 and MD&A sections which are not provided in this excerpt. Unable to extract specific numerical values or detailed disclosures.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
+[LLM_FLAG] Note reference changed from Note 4 (prior period) to Note 5 (current period) for derivative financial instruments - verify if this is a renumbering or structural change
+[LLM_FLAG] Excerpt provided is only the Item 7A header with reference to full disclosures; specific quantitative metrics not included in this section
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-25 ===
+[LLM_FLAG] This excerpt is a table of contents reference section only, not substantive disclosure. All quantitative values are not found in this text.
+

@@ -1,0 +1,32 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] commodity_derivatives_notional: $108M → $265M (+145.4%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $56M → $12M (-78.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $5M, now missing
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $12M → $56M (+366.7%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($5M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] commodity_derivatives_notional: $181M → $133M (-26.5%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] commodity_derivatives_notional: $117M → $181M (+54.7%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
+[LLM_FLAG] Filing excerpt provided is limited to 'Controls and Procedures' section heading and reference to 10-K, not the actual market risk disclosure content
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
+[LLM_FLAG] Filing excerpt only contains a cross-reference to the 10-K filing; actual quantitative and qualitative market risk disclosures are not included in the provided text
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $317M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $6M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_sensitivity_100bp, fixed_rate_notes_billion)
+[LLM_FLAG] The provided text is incomplete - it only contains a header reference to market risk disclosures in the Form 10-K, not the actual quantitative and qualitative disclosures themselves. All detailed risk metrics cannot be extracted from this section.
+[LLM_FLAG] The filing excerpt appears to be from a Controls and Procedures section that references but does not contain the market risk disclosure details needed for extraction.
+

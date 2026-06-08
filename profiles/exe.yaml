@@ -1,0 +1,28 @@
+issuer: Expand Energy
+ticker: EXE
+cik: "895126"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  derivative_fair_value_methods:
+    description: "established index prices, volatility curves and discount factors"
+    section: market_risk
+  counterparty_risk_mitigation:
+    description: "collateral posting requirements when obligations exceed defined thresholds"
+    section: market_risk
+  hedge_effectiveness:
+    description: "assessment of derivative instruments effectiveness in achieving risk management objectives"
+    section: market_risk
+  non_performance_risk_impact:
+    description: "impact of counterparty credit risk on derivative valuations"
+    section: market_risk
+
+# Unusual features identified:
+#   - Section text appears truncated - references 'See Note 13' but only shows partial content
+#   - Market risk section contains more detail than derivatives section
+#   - No specific hedge accounting designations mentioned despite hedge accounting terminology
+#   - Collateral posting arrangements mentioned for counterparty risk mitigation
+

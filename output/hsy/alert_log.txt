@@ -1,0 +1,61 @@
+=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+
+=== 10-Q | Period ending 2025-09-28 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2026-03-29 | Processed 2026-05-30 ===
+[NUMERIC] ir_sensitivity_100bp: $8M → $3M (-55.8%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_forwards_fair_value: $16M → $32M (+91.5%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity_variable_debt: $8M → $2M (-76.6%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_sensitivity: $16M → $32M (+91.5%) — exceeds 20% threshold
+[LLM_FLAG] ir_sensitivity_100bp: Current quarter value of $1.8 million is 77% lower than prior period value of $7.7 million. This reflects the specific quarter being measured (Q1 2026 vs full year 2025 comparison), with the filing showing $3.4 million for full 2025 as a comparison point. The Q1 2026 specific impact is lower due to the shorter period.
+[LLM_FLAG] foreign_currency_sensitivity: Value of $31.6 million decreased 92% from prior period of $16.5 million. Note: The prior period value appears to represent net fair value, while current disclosure provides the sensitivity measure (potential decline in fair value from 10% adverse change), which are different metrics.
+
+=== 10-Q | Period ending 2025-09-28 | Processed 2026-05-30 ===
+[NUMERIC] ir_sensitivity_100bp: $5M → $8M (+45.3%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_forwards_fair_value: $33M → $16M (-49.7%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity_variable_debt: $5M → $8M (+45.3%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_sensitivity: $33M → $16M (-49.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_forwards_fair_value decreased significantly from $32.8M (prior period) to $16.5M (current period) - 49.7% decrease. This is a plausible reduction in exposure but near the 50% threshold.
+[LLM_FLAG] interest_rate_sensitivity_fixed_debt increased from $264M (prior) to $273M (current) - 3.4% increase, within normal range.
+[LLM_FLAG] interest_rate_sensitivity_variable_debt increased from $5.3M (prior) to $7.7M (current) - 45.3% increase, plausible due to higher short-term debt position mentioned ($576M net debt vs. prior year implied position).
+
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-05-30 ===
+[NUMERIC] ir_sensitivity_100bp: $3M → $5M (+55.9%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity_variable_debt: $3M → $5M (+55.9%) — exceeds 20% threshold
+[LLM_FLAG] ir_sensitivity_100bp increased from 3.4 million (prior period) to 5.3 million (current period), but this is not a concern as the prior period was for full year 2024 and current period is only 6 months of 2025; the metric also changed from expense impact to income impact due to net cash position
+[LLM_FLAG] interest_rate_sensitivity_fixed_debt increased from 307.0 million to 264.0 million (14% decrease) - this is within acceptable range and reflects changed debt portfolio
+[LLM_FLAG] foreign_currency_forwards_fair_value increased from 29.0 million to 32.8 million (13% increase) - within acceptable range
+
+=== 10-Q | Period ending 2025-03-30 | Processed 2026-05-30 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
+[NEW_FIELD] foreign_currency_forwards_fair_value: appeared for first time ($29M)
+[NEW_FIELD] interest_rate_sensitivity_variable_debt: appeared for first time ($3M)
+[NEW_FIELD] interest_rate_sensitivity_fixed_debt: appeared for first time ($307M)
+[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($29M)
+[LLM_FLAG] Commodity derivative notional value decreased significantly from $667.4 million (Dec 31, 2024) to $274.7 million (Mar 30, 2025) - a 59% decline. This is substantial and warrants investigation; likely due to quarterly hedging adjustments and realized positions rolling off.
+
+=== 10-Q/A | Period ending 2025-03-30 | Processed 2026-05-30 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $354M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $9M, now missing
+[DISAPPEARED_FIELD] foreign_currency_forwards_fair_value: was $-1M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity_variable_debt: was $9M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity_fixed_debt: was $236M, now missing
+[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $-39M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, foreign_currency_forwards_fair_value, interest_rate_sensitivity_variable_debt, interest_rate_sensitivity_fixed_debt...)
+
+=== 10-Q | Period ending 2026-03-29 | Processed 2026-05-29 ===
+[LLM_FLAG] FX forwards outstanding increased 47.6% from $240.4M (95.0 + 259.0 - 184.2 - 140.2 = prior period calculation) to $354.0M in 2025, potentially due to increased hedging activity or business expansion
+[LLM_FLAG] Commodity derivative notional value increased 45.8% from $667.4M in 2024 to $973.1M in 2025, indicating significantly increased hedging of commodity price risk
+[LLM_FLAG] Interest rate sensitivity on variable debt increased 34.3% from $7.0M (2024) to $9.4M (2025), consistent with higher debt levels or interest rate environment
+

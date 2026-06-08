@@ -1,0 +1,28 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[NUMERIC] cash_equivalents_amount: $1M → $0M (-23.2%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (fx_forwards_outstanding)
+[LLM_FLAG] fx_forwards_outstanding: Notional amount of outstanding FX forward contracts is not disclosed in the provided text; prior period showed 0, but current filing indicates active hedging program without quantifying position size
+[LLM_FLAG] hedging_status: Changed from 'no hedging arrangements entered into' in prior period to active cash flow hedging program in current period. This is a material change in hedging policy.
+[LLM_FLAG] operating_locations: United Kingdom mentioned in prior period but not in current period text. Either operations ceased or disclosure narrowed to three primary locations.
+[LLM_FLAG] marketable_securities_amount: Increased from $3.6B to $4.3B (19.4% increase), which is plausible and within expected variation
+[LLM_FLAG] cash_equivalents_amount: Decreased from $0.5068B to $0.3893B (23.2% decrease), plausible working capital fluctuation
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
+[LLM_FLAG] cash_equivalents_amount increased 15% from $0.4395B to $0.5068B - within normal range
+[LLM_FLAG] marketable_securities_amount increased 5.9% from $3.4B to $3.6B - within normal range
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
+[NUMERIC] cash_equivalents_amount: $1M → $0M (-58.2%) — exceeds 20% threshold
+[LLM_FLAG] cash_equivalents_amount decreased from $1.0522 billion to $0.4395 billion (58% decrease) - significant reduction warrants investigation
+[LLM_FLAG] operating_locations now include United Kingdom explicitly, whereas prior period only noted 'primarily US, France, Ireland' - expansion noted
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
+[NUMERIC] fixed_rate_notes_billion: $1M → $1M (-25.2%) — exceeds 20% threshold
+[NUMERIC] cash_equivalents_amount: $0M → $1M (+250.7%) — exceeds 20% threshold
+[LLM_FLAG] marketable_securities_amount decreased from $4.1B to $3.4B (17% decline) - within normal range but lower
+[LLM_FLAG] cash_equivalents_amount increased from $0.3B to $1.0522B (251% increase) - significant change, flag for verification
+[LLM_FLAG] fixed_rate_notes outstanding changed from $1.0B (2029 Notes) to $0.7475B (2025 Notes) - different note issuance, appears to be maturity/repayment event
+[LLM_FLAG] convertible_notes_amount from prior period ($1.0B 2029 Notes) not found in current filing - only 2025 Notes disclosed from 2020
+

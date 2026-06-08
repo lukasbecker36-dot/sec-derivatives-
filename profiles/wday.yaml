@@ -1,0 +1,61 @@
+issuer: Workday, Inc.
+ticker: WDAY
+cik: "1327811"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cash_flow_hedge_notional_buy_usd:
+    description: "Notional value of cash flow hedges to buy USD"
+    section: market_risk
+  cash_flow_hedge_notional_sell_usd:
+    description: "Notional value of cash flow hedges to sell USD"
+    section: market_risk
+  non_designated_hedge_notional_buy_usd:
+    description: "Notional value of non-designated hedges to buy USD"
+    section: market_risk
+  non_designated_hedge_notional_sell_usd:
+    description: "Notional value of non-designated hedges to sell USD"
+    section: market_risk
+  aoci_reclassification_next_12m:
+    description: "Estimated net losses in AOCI to be reclassified to earnings within 12 months"
+    section: market_risk
+  derivative_asset_fair_value:
+    description: "Total derivative assets fair value"
+    section: market_risk
+  derivative_liability_fair_value:
+    description: "Total derivative liabilities fair value"
+    section: market_risk
+  cash_flow_hedge_gain_loss_oci:
+    description: "Net change in unrealized gains/losses on cash flow hedges recognized in OCI"
+    section: market_risk
+  cash_flow_hedge_reclassified_revenue:
+    description: "Gains/losses reclassified from AOCI into revenue"
+    section: market_risk
+  cash_flow_hedge_reclassified_costs:
+    description: "Gains/losses reclassified from AOCI into costs and expenses"
+    section: market_risk
+  non_designated_hedge_gain_loss:
+    description: "Gains/losses on non-designated hedges recognized in other income"
+    section: market_risk
+  net_settlement_amount:
+    description: "Net settlement amount after netting arrangements (asset/liability)"
+    section: market_risk
+  max_maturity_months:
+    description: "Maximum maturity of cash flow hedge contracts in months"
+    section: market_risk
+  number_of_counterparties:
+    description: "Number of major financial institution counterparties"
+    section: market_risk
+
+# Unusual features identified:
+#   - Very large FX hedging program - $3.0B cash flow hedges buying USD, $874M selling USD
+#   - Hedges both revenue and expense transactions with cash flow hedges
+#   - Contracts with up to 48-month maturities - longer than typical
+#   - Detailed fair value table by asset/liability and balance sheet location
+#   - Three-year P&L impact table showing hedge effectiveness
+#   - Nine financial institution counterparties disclosed
+#   - Gross presentation policy for derivatives on balance sheet despite master netting arrangements
+

@@ -1,0 +1,41 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $31M → $6,139M (+19703.2%) — exceeds 20% threshold
+[NEW_FIELD] ir_swap_notional: appeared for first time ($5M)
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $2,025M, now missing
+[NUMERIC] total_derivative_asset: $398M → $22,832M (+5636.7%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($31M)
+[DISAPPEARED_FIELD] net_derivative_position: was $6M, now missing
+[NUMERIC] cash_flow_hedge_aoci: $3M → $1M (-66.7%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $3M → $1M (-66.7%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: fx_designated_notional changed from 31 to 6,139 (198x)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $214M → $31M (-85.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_swap_notional: was $4M, now missing
+[NUMERIC] commodity_derivatives_notional: $742M → $2,025M (+172.9%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $1,142M → $398M (-65.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_liability: was $30M, now missing
+[NEW_FIELD] net_derivative_position: appeared for first time ($6M)
+[NUMERIC] cash_flow_hedge_aoci: $6M → $3M (-50.0%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $6M → $3M (-50.0%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] total_derivative_asset: $2,005M → $1,142M (-43.0%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $1M → $6M (+500.0%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $1M → $6M (+500.0%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] commodity_derivatives_notional: $978M → $717M (-26.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $596M → $2,005M (+236.4%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($30M)
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
+[LLM_FLAG] This appears to be a brief transitional disclosure referring readers to the 2024 Form 10-K for detailed market risk information. The filing states 'As of March 31, 2025, there has been no material change in this information,' indicating detailed quantitative and qualitative disclosures are located in the referenced 10-K, not in this 10-Q excerpt.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
+[LLM_FLAG] Provided text is only a section header ('Quantitative and Qualitative Disclosures about Market Risks 54') with no actual content. Unable to extract any data.
+

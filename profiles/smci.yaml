@@ -1,0 +1,47 @@
+issuer: Supermicro
+ticker: SMCI
+cik: "1375365"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  money_market_funds_fair_value:
+    description: "Fair value of money market funds (Level 1)"
+    section: market_risk
+  certificates_of_deposit_fair_value:
+    description: "Fair value of certificates of deposit (Level 2)"
+    section: market_risk
+  marketable_equity_security_fair_value:
+    description: "Fair value of investment in marketable equity security (Level 1)"
+    section: market_risk
+  auction_rate_security_fair_value:
+    description: "Fair value of auction rate security (Level 3)"
+    section: market_risk
+  total_assets_at_fair_value:
+    description: "Total assets measured at fair value"
+    section: market_risk
+  convertible_notes_2029_fair_value:
+    description: "Estimated fair value of 2029 Convertible Notes"
+    section: market_risk
+  convertible_notes_2028_fair_value:
+    description: "Estimated fair value of 2028 Convertible Notes"
+    section: market_risk
+  convertible_notes_2030_fair_value:
+    description: "Estimated fair value of 2030 Convertible Notes"
+    section: market_risk
+  total_lines_of_credit_term_loans:
+    description: "Total outstanding lines of credit and term loans at amortized cost"
+    section: market_risk
+  unrealized_gain_loss_equity_security:
+    description: "Unrealized gain/loss on marketable equity security recorded in other income"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative instruments used - company has zero derivatives exposure
+#   - Market risk section text was not captured (only a table of contents reference)
+#   - Fair value hierarchy table covers only financial instruments (money market funds, CDs, equity securities, auction rate security) - no derivatives
+#   - Level 3 asset is an auction rate security valued using discounted cash flow with liquidity discount
+#   - Three series of convertible notes outstanding (2028, 2029, 2030) disclosed at fair value for informational purposes only
+

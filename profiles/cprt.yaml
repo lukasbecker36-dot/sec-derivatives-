@@ -1,0 +1,38 @@
+issuer: Copart
+ticker: CPRT
+cik: "900075"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  interest_rate_sensitivity:
+    description: "10% adverse change impact on interest yield"
+    section: market_risk
+  foreign_currency_sensitivity:
+    description: "10% adverse change impact on USD relative to foreign currencies"
+    section: market_risk
+  translation_loss_amount:
+    description: "Cumulative foreign exchange translation loss"
+    section: market_risk
+  cash_investment_types:
+    description: "Types of cash equivalents held"
+    section: market_risk
+  credit_facility_terms:
+    description: "Interest rate structure for revolving credit facility"
+    section: market_risk
+  foreign_operations_currencies:
+    description: "List of foreign currencies and countries of operation"
+    section: market_risk
+  hedging_policy:
+    description: "Statement on hedging foreign exchange translation risk"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative instruments disclosed despite having foreign currency exposure
+#   - Explicitly states no hedging of foreign exchange translation risk
+#   - Uses hypothetical 10% adverse change scenarios for all risk assessments
+#   - Translation loss recorded directly to stockholders' equity through OCI
+#   - No borrowings outstanding under credit facility as of reporting date
+

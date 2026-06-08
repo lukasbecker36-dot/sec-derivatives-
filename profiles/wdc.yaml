@@ -1,0 +1,32 @@
+issuer: Western Digital
+ticker: WDC
+cik: "106040"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_forward_designated_cash_flow:
+    description: "Whether cash flow hedge designated FX forwards are outstanding"
+    section: market_risk
+  fx_forward_non_designated:
+    description: "Whether non-designated FX forward contracts are outstanding"
+    section: market_risk
+  fx_forward_max_maturity:
+    description: "Maximum maturity of FX forward contracts (12 months or less)"
+    section: market_risk
+  fx_net_transaction_gains_losses:
+    description: "Net realized and unrealized transaction and FX contract currency gains/losses"
+    section: market_risk
+  netting_arrangement_description:
+    description: "Description of netting arrangements with counterparties"
+    section: market_risk
+
+# Unusual features identified:
+#   - Minimal quantitative disclosure - no notional amounts or fair value tables provided in the derivatives note
+#   - Materiality threshold applied - states net gains/losses were 'not material'
+#   - Netting arrangements disclosed but effect stated as not material
+#   - Market risk section references the derivatives note but adds no quantitative detail
+#   - Very lean disclosure for a large-cap tech company
+

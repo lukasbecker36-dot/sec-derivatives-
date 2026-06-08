@@ -1,0 +1,24 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
+[LLM_FLAG] This filing section is introductory/navigation text only. Detailed quantitative disclosures about market risk appear to be referenced in Note 20 and Item 7A of the 2025 Annual Report (Form 10-K), not provided in this excerpt. Most numerical fields cannot be extracted from this section.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
+[LLM_FLAG] This filing section is introductory/boilerplate text that refers to Item 7A of the 2024 Annual Report (10-K) and Note 20 of the consolidated financial statements for detailed quantitative disclosures. The specific numerical risk metrics are not present in this excerpt and would be found in those referenced sections.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[DISAPPEARED_FIELD] aluminum_sensitivity_impact: was $3M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity_impact: was $7M, now missing
+[DISAPPEARED_FIELD] currency_sensitivity_earnings_impact: was $15M, now missing
+[DISAPPEARED_FIELD] currency_sensitivity_debt_impact: was $164M, now missing
+[DISAPPEARED_FIELD] net_investment_hedge_notional: was $1,050M, now missing
+[DISAPPEARED_FIELD] net_investment_sensitivity_impact: was $67M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (aluminum_sensitivity_impact, interest_rate_sensitivity_impact, currency_sensitivity_earnings_impact, currency_sensitivity_debt_impact, net_investment_hedge_notional...)
+[LLM_FLAG] Most quantitative market risk sensitivity metrics are not disclosed in this provided excerpt. The filing references Item 7A of the 2024 Form 10-K and Note 20 for detailed disclosures, suggesting this excerpt is incomplete.
+[LLM_FLAG] Aluminum hedge methods are not provided in this text excerpt despite being in prior period disclosures.
+

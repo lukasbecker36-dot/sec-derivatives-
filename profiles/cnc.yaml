@@ -1,0 +1,35 @@
+issuer: Centene Corporation
+ticker: CNC
+cik: "1071739"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  short_term_investments:
+    description: "total amount of short-term investments"
+    section: market_risk
+  long_term_investments:
+    description: "total amount of long-term investments including restricted deposits"
+    section: market_risk
+  restricted_deposits:
+    description: "amount of restricted deposits required by state statutes"
+    section: market_risk
+  investment_composition:
+    description: "types of investments held (municipal, corporate, Treasury, etc.)"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "hypothetical impact of 1% interest rate increase on fair value"
+    section: market_risk
+  investment_maturity_profile:
+    description: "maturity characteristics of short-term vs long-term investments"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative instruments disclosed despite market risk section
+#   - Focus entirely on investment portfolio interest rate risk rather than derivatives
+#   - Restricted deposits classified as long-term regardless of contractual maturity
+#   - Private equity investments included in interest rate sensitive portfolio
+#   - Sensitivity analysis uses round number (1%) without more granular scenarios
+

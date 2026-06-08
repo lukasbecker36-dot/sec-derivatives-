@@ -1,0 +1,55 @@
+=== 10-Q | Period ending 2026-03-27 | Processed 2026-06-04 ===
+[NUMERIC] variable_rate_exposure: $1,190M → $1,510M (+26.9%) — exceeds 20% threshold
+[NUMERIC] fx_contracts_notional: $440M → $1,900M (+332.0%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-12-26 | Processed 2026-06-04 ===
+[NUMERIC] variable_rate_exposure: $945M → $1,190M (+25.9%) — exceeds 20% threshold
+
+=== 10-K | Period ending 2025-09-26 | Processed 2026-06-04 ===
+[NUMERIC] variable_rate_exposure: $1,220M → $945M (-22.5%) — exceeds 20% threshold
+[NUMERIC] fx_contracts_notional: $1,080M → $492M (-54.5%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-27 | Processed 2026-06-04 ===
+[NUMERIC] fx_contracts_notional: $816M → $1,080M (+32.4%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2026-03-27 | Processed 2026-06-02 ===
+[DROPPED_TO_ZERO] fx_forwards_outstanding: $440M → $0M
+[NUMERIC] ir_sensitivity_100bp: $3M → $6M (+110.3%) — exceeds 20% threshold
+[NUMERIC] variable_rate_exposure: $1,190M → $1,510M (+26.9%) — exceeds 20% threshold
+[NUMERIC] fx_contracts_notional: $440M → $1,900M (+332.0%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity: $3M → $6M (+110.3%) — exceeds 20% threshold
+[LLM_FLAG] ir_sensitivity_100bp increased 110% from 2.9 to 6.1 million - significant increase in interest rate sensitivity, likely due to higher floating rate exposure or change in measurement period
+[LLM_FLAG] variable_rate_exposure increased 27% from 1190 to 1510 million - reflects change in borrowing structure with additional variable debt outstanding
+[LLM_FLAG] fx_contracts_notional increased 332% from 439.8 to 1900 million - significant increase due to PA Consulting Transaction foreign exchange contracts ($1.31 billion notional entered in January 2026)
+
+=== 10-Q | Period ending 2025-12-26 | Processed 2026-06-02 ===
+[NUMERIC] fx_forwards_outstanding: $1,080M → $440M (-59.3%) — exceeds 20% threshold
+[NUMERIC] ir_sensitivity_100bp: $9M → $3M (-67.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] treasury_lock_notional: was $500M, now missing
+[NUMERIC] fx_contracts_notional: $1,080M → $440M (-59.3%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity: $9M → $3M (-67.4%) — exceeds 20% threshold
+[LLM_FLAG] fx_forwards_outstanding decreased 59.4% from $1,080.0M to $439.8M - significant reduction in FX hedging notional value
+[LLM_FLAG] ir_sensitivity_100bp decreased 67.4% from $8.9M to $2.9M - likely due to lower outstanding variable rate borrowings
+[LLM_FLAG] treasury_lock_notional no longer mentioned - $500.0M treasury lock arrangements from prior period not present
+[LLM_FLAG] weighted_average_floating_borrowings decreased 1.7% from $1,190.0M to $1,170.0M - minor decline consistent with debt management
+
+=== 10-Q | Period ending 2025-06-27 | Processed 2026-06-02 ===
+[NUMERIC] fx_forwards_outstanding: $816M → $1,080M (+32.4%) — exceeds 20% threshold
+[NUMERIC] ir_sensitivity_100bp: $12M → $9M (-23.3%) — exceeds 20% threshold
+[NUMERIC] fx_contracts_notional: $816M → $1,080M (+32.4%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity: $6M → $9M (+53.4%) — exceeds 20% threshold
+[LLM_FLAG] fx_forwards_outstanding increased 32.4% from $815.8M to $1,080.0M - significant increase in notional value of exchange rate sensitive instruments
+[LLM_FLAG] ir_sensitivity_100bp increased 76.7% from $11.6M to $8.9M - note this is actually a decrease in dollar terms despite being described as 76.7% increase in absolute value; appears to be sensitivity based on 9-month period vs full year
+[LLM_FLAG] variable_rate_exposure decreased 8.95% from $1,340.0M to $1,220.0M - slight decline due to swap arrangement coverage
+[LLM_FLAG] weighted_average_floating_borrowings increased 2.6% from $1,160.0M to $1,190.0M
+
+=== 10-Q | Period ending 2025-03-28 | Processed 2026-06-02 ===
+[NUMERIC] fx_forwards_outstanding: $492M → $816M (+65.8%) — exceeds 20% threshold
+[NUMERIC] variable_rate_exposure: $945M → $1,340M (+41.8%) — exceeds 20% threshold
+[NUMERIC] fx_contracts_notional: $492M → $816M (+65.8%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity: $12M → $6M (-51.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_forwards_outstanding increased 66% from $491.9M to $815.8M - significant increase in exchange rate sensitive instruments
+[LLM_FLAG] ir_sensitivity_100bp decreased from $12.0M to $5.8M (52% decrease) - this reflects the six-month period calculation methodology rather than annualized
+[LLM_FLAG] variable_rate_exposure increased from $945.3M to $1,340M (42% increase) - reflects current period's outstanding variable rate debt
+[LLM_FLAG] weighted_average_floating_borrowings decreased from $1,200M to $1,160M (3% decrease) - relatively stable
+

@@ -1,0 +1,25 @@
+issuer: Charles River Laboratories
+ticker: CRL
+cik: "1100682"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  market_risk_reference:
+    description: "Cross-reference to Item 7 MD&A section"
+    section: market_risk
+  fair_value_note_reference:
+    description: "Cross-reference to Note 1 fair value policies"
+    section: market_risk
+  fair_value_measurements:
+    description: "Fair value measurement details"
+    section: market_risk
+
+# Unusual features identified:
+#   - Market risk section contains only cross-references with no substantive content
+#   - Actual market risk data likely located in referenced MD&A and Note 1 sections
+#   - No derivative instruments mentioned in available excerpt
+#   - Note headings suggest Fair Value disclosures are in Note 10, not Note 1 as referenced
+

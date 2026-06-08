@@ -1,0 +1,88 @@
+{
+  "cik": "0001467858",
+  "ticker": "GM",
+  "issuer_name": "General Motors",
+  "aliases": [],
+  "document_structure": {
+    "derivatives_note_heading": "",
+    "market_risk_heading": "",
+    "section_locations": {}
+  },
+  "filing_patterns": {
+    "typical_note_numbering": "",
+    "heading_variations_seen": [],
+    "uses_cross_reference_in_10q": false,
+    "market_risk_in_10k_only": false
+  },
+  "idiosyncrasies": {
+    "recurring_phrases": [
+      "interest rate swap",
+      "notional amount",
+      "accumulated other comprehensive",
+      "cash flow hedge",
+      "fair value hedge",
+      "commodity contract"
+    ],
+    "non_gaap_metrics": [],
+    "unusual_disclosure_patterns": [],
+    "known_issues": []
+  },
+  "history": [
+    {
+      "filing_date": "2026-03-31",
+      "form_type": "10-Q",
+      "period_end": "2026-03-31",
+      "processed_at": "2026-05-29T09:48:24Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 11,
+      "fields_null": 8
+    },
+    {
+      "filing_date": "2025-03-31",
+      "form_type": "10-Q",
+      "period_end": "2025-03-31",
+      "processed_at": "2026-05-30T08:36:51Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 1,
+      "fields_null": 18
+    },
+    {
+      "filing_date": "2025-06-30",
+      "form_type": "10-Q",
+      "period_end": "2025-06-30",
+      "processed_at": "2026-05-30T08:36:56Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 1,
+      "fields_null": 18
+    },
+    {
+      "filing_date": "2025-09-30",
+      "form_type": "10-Q",
+      "period_end": "2025-09-30",
+      "processed_at": "2026-05-30T08:37:02Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 1,
+      "fields_null": 18
+    },
+    {
+      "filing_date": "2025-12-31",
+      "form_type": "10-K",
+      "period_end": "2025-12-31",
+      "processed_at": "2026-06-04T14:43:10Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 9,
+      "fields_null": 22
+    }
+  ]
+}

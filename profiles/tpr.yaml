@@ -1,0 +1,43 @@
+issuer: Tapestry, Inc.
+ticker: TPR
+cik: "1116132"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_forward_cf_hedge_notional:
+    description: "Notional value of forward currency contracts designated as cash flow hedges"
+    section: market_risk
+  fx_forward_non_hedge_notional:
+    description: "Notional value of forward foreign currency contracts for intercompany balances (not hedges)"
+    section: market_risk
+  fx_forward_asset_fair_value:
+    description: "Fair value of forward currency contracts in current assets"
+    section: market_risk
+  fx_forward_liability_fair_value:
+    description: "Fair value of forward currency contracts in current liabilities"
+    section: market_risk
+  net_investment_hedge_notional:
+    description: "Aggregate notional of cross-currency swap and forward agreements for net investment hedges"
+    section: market_risk
+  net_investment_hedge_asset:
+    description: "Fair value of net investment hedge derivative assets"
+    section: market_risk
+  net_investment_hedge_liability:
+    description: "Fair value of net investment hedge derivative liabilities"
+    section: market_risk
+  cross_currency_swap_rate_range:
+    description: "Fixed rate payment range on cross-currency swap contracts"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "Impact of 100bp interest rate change on annual interest expense"
+    section: market_risk
+
+# Unusual features identified:
+#   - Three distinct derivative programs: cash flow hedges for FX, non-designated FX forwards for intercompany, and net investment hedges via cross-currency swaps
+#   - Net investment hedges cover EUR, JPY, and CNY denominated subsidiaries
+#   - Cross-currency swaps involve fixed-to-fixed rate exchanges at 5.5% to 6.4%
+#   - Large notional amounts on net investment hedges ($1.69 billion)
+

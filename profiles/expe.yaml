@@ -1,0 +1,42 @@
+issuer: Expedia Group
+ticker: EXPE
+cik: "1324424"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  debt_fair_value:
+    description: "fair value of debt securities"
+    section: market_risk
+  debt_sensitivity:
+    description: "50 basis point sensitivity analysis for debt"
+    section: market_risk
+  forward_contract_liability:
+    description: "net forward liabilities recorded in accrued expenses"
+    section: market_risk
+  cross_currency_swap_notional:
+    description: "notional amount of cross-currency swap in euros"
+    section: market_risk
+  cross_currency_swap_fair_value:
+    description: "fair value of cross-currency interest rate swap"
+    section: market_risk
+  fx_sensitivity_scenario:
+    description: "10% currency weakening/strengthening impact"
+    section: market_risk
+  historical_fx_losses:
+    description: "net foreign exchange losses for multiple years"
+    section: market_risk
+  revolving_credit_outstanding:
+    description: "outstanding borrowings under revolving credit facility"
+    section: market_risk
+
+# Unusual features identified:
+#   - Convertible notes with 0% interest rate
+#   - Credit rating adjustment clauses for certain notes
+#   - Cross-currency swap designated as net investment hedge
+#   - Detailed merchant revenue hedging explanation
+#   - Multi-year historical FX loss data with hedge impact breakdown
+#   - Hypothetical scenario analysis mixing currency directions
+

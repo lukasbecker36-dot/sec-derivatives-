@@ -1,0 +1,47 @@
+issuer: Nucor
+ticker: NUE
+cik: "73309"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  commodity_sensitivity_10pct:
+    description: "Hypothetical pre-tax earnings impact of 10% change in commodity derivative fair values"
+    section: market_risk
+  commodity_sensitivity_25pct:
+    description: "Hypothetical pre-tax earnings impact of 25% change in commodity derivative fair values"
+    section: market_risk
+  natural_gas_derivative_sensitivity:
+    description: "Natural gas derivative 10% impact ($7M) and 25% impact ($17M)"
+    section: market_risk
+  other_commodity_derivative_sensitivity:
+    description: "Other commodities derivative 10% impact ($24M) and 25% impact ($60M)"
+    section: market_risk
+  aoci_unrealized_losses:
+    description: "Net-of-tax unrealized losses in AOCI for designated hedges ($13M)"
+    section: market_risk
+  variable_rate_debt_pct:
+    description: "Percentage of long-term debt at variable rates (~24%)"
+    section: market_risk
+  fixed_rate_debt_pct:
+    description: "Percentage of long-term debt at fixed rates (~76%)"
+    section: market_risk
+  interest_rate_swap_status:
+    description: "No interest rate swap contracts outstanding at Dec 31, 2025"
+    section: market_risk
+  fx_derivative_status:
+    description: "Open foreign currency derivatives described as insignificant"
+    section: market_risk
+
+# Unusual features identified:
+#   - Sensitivity table uses both 10% and 25% adverse change scenarios for commodity derivatives
+#   - Commodity hedges span multiple metals: steel, scrap, aluminum, copper plus natural gas
+#   - Some hedges designated (deferred in AOCI) and some not designated (recognized in earnings each period)
+#   - DRI facilities provide physical hedging of scrap input costs
+#   - Natural gas production sold to third parties as partial physical offset to gas consumption
+#   - Interest rate swaps used periodically but none outstanding at period end
+#   - Foreign currency derivatives described as insignificant
+#   - Heading has a line break in 'Qualitat ive' suggesting OCR/parsing artifact
+

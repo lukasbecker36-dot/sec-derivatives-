@@ -1,0 +1,13 @@
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (gross_unrealized_gains_debt)
+[LLM_FLAG] The provided Note 7 section focuses on financial instruments and derivatives rather than cash equivalents and marketable securities typical of a liquidity/investment disclosure section. The requested fields are not present in this excerpt.
+[LLM_FLAG] Filing section is abbreviated - directs reader to 2024 Form 10-K Item 7A for detailed market risk disclosures. No specific derivative or market risk data provided in this excerpt.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[LLM_FLAG] Note 7 focuses on derivative instruments and long-term financial instruments but does not contain information on cash equivalents, marketable securities, or marketable equity securities typically found in liquidity/current assets sections of financial statements
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
+[LLM_FLAG] Provided text is only the header/introduction to Item 7A and does not contain actual quantitative disclosure data. Reference indicates detailed market risk information exists in 'Market Risks' section, but that section is not provided in the filing text.
+

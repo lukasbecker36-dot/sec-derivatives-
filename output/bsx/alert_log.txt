@@ -1,0 +1,36 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
+[NUMERIC] currency_derivative_notional_prior: $7,636M → $12,726M (+66.7%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_appreciation_prior: $322M → $804M (+149.7%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_depreciation_prior: $-394M → $-982M (-149.2%) — exceeds 20% threshold
+[LLM_FLAG] fixed_rate_notes_billion decreased from 11.326 billion to 10.935 billion (-3.4%), within acceptable range
+[LLM_FLAG] currency_derivative_notional_current increased from 12.087 billion to 13.633 billion (+12.8%), within acceptable range
+[LLM_FLAG] fx_sensitivity_appreciation_current decreased from 794 million to 784 million (-1.3%), minimal change
+[LLM_FLAG] fx_sensitivity_depreciation_current decreased from -970 million to -958 million (1.2% improvement), minimal change
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
+[LLM_FLAG] currency_derivative_notional_current: Increased 58.1% from $7.636B to $12.087B - significant increase in hedging notional amounts
+[LLM_FLAG] fx_sensitivity_appreciation_current: Increased 146.3% from $322M to $794M - proportional to the larger derivative notional
+[LLM_FLAG] fx_sensitivity_depreciation_current: Increased 146.2% from $394M to $970M - proportional to the larger derivative notional
+[LLM_FLAG] fixed_rate_notes_billion: Increased from $11.319B to $11.326B - minor increase of 0.06%, consistent with refinancing/debt management
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
+[NUMERIC] fx_sensitivity_appreciation_current: $554M → $736M (+32.9%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_depreciation_current: $-676M → $-899M (-33.0%) — exceeds 20% threshold
+[LLM_FLAG] currency_derivative_notional_current: Increased from $7.636B to $10.828B (41.8% increase) - within plausibility but significant expansion of hedging program
+[LLM_FLAG] fx_sensitivity_appreciation_current: Increased from $322M to $736M (128.6% increase) - proportional to derivative notional increase, plausible
+[LLM_FLAG] fx_sensitivity_depreciation_current: Increased from $394M to $899M (128.2% increase) - proportional to derivative notional increase, plausible
+[LLM_FLAG] fixed_rate_notes_billion: Increased from $11.243B to $11.319B (0.68% increase) - minimal change, plausible
+[LLM_FLAG] fixed_rate_debt_percentage: Increased from 100.0% to 98.0% - indicates some floating rate debt has been added or fixed rate debt reduced proportionally; implies variable rate debt now represents ~2% of total
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[NUMERIC] currency_derivative_notional_current: $12,726M → $9,546M (-25.0%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_appreciation_current: $804M → $554M (-31.1%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_depreciation_current: $-982M → $-676M (+31.2%) — exceeds 20% threshold
+[LLM_FLAG] currency_derivative_notional_current differs significantly from prior period: $9.546B (current) vs $7.636B (prior), a 25% increase. This is a substantial change but within the 50% threshold; likely reflects active hedging program expansion.
+[LLM_FLAG] fx_sensitivity_appreciation_current increased from $322M to $554M, a 72% increase exceeding the 50% threshold. This correlates with the larger notional amount of currency derivatives ($9.546B vs $7.636B), suggesting more derivative contracts at current period.
+[LLM_FLAG] fx_sensitivity_depreciation_current increased from -$394M to -$676M, a 72% increase exceeding the 50% threshold. Consistent with the larger derivative notional amount.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
+[LLM_FLAG] Currency derivative notional amount increased 66.6% from prior period ($7.636B to $12.726B), suggesting significant expansion of hedging activities
+[LLM_FLAG] FX sensitivity metrics increased substantially: USD appreciation impact up 149.4% ($322M to $804M) and depreciation impact up 149.2% ($394M to $982M), consistent with larger derivative notional amounts
+

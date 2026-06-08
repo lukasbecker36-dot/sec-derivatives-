@@ -1,0 +1,29 @@
+=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $1,200M, now missing
+[DISAPPEARED_FIELD] outstanding_debt_principal: was $22,000M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_sensitivity_10pct, outstanding_debt_principal)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1,200M)
+[NEW_FIELD] outstanding_debt_principal: appeared for first time ($22,000M)
+
+=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-02 ===
+[LLM_FLAG] This filing excerpt is incomplete - it references Note 8 for detailed fair value measurements and prior 2025 10-K for comprehensive market risk disclosures, but those details are not included in the provided text. Most quantitative fields cannot be extracted from this section alone.
+[LLM_FLAG] The section explicitly states 'Our exposures to market risk have not changed materially since December 31, 2025,' suggesting no significant changes from prior period, but specific metrics needed for plausibility comparison are not provided.
+
+=== 10-Q | Period ending 2025-09-28 | Processed 2026-06-02 ===
+[LLM_FLAG] This filing excerpt is limited to a brief reference section pointing to the 2024 Form 10-K and Note 8. Most quantitative market risk disclosures are not included in this excerpt, making comprehensive extraction impossible.
+
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-02 ===
+[LLM_FLAG] This excerpt is a brief overview paragraph referencing the full 2024 Form 10-K disclosure. Specific quantitative data points are not provided in this section. Detailed market risk metrics are stated to be found in Note 8 - Fair Value Measurements.
+
+=== 10-Q | Period ending 2025-03-30 | Processed 2026-06-02 ===
+[DISAPPEARED_FIELD] interest_rate_swaps_notional: was $1,300M, now missing
+[DISAPPEARED_FIELD] foreign_currency_hedges_notional: was $7,200M, now missing
+[DISAPPEARED_FIELD] derivative_fair_value_net: was $0M, now missing
+[DISAPPEARED_FIELD] outstanding_debt_fair_value: was $22,000M, now missing
+[DISAPPEARED_FIELD] outstanding_debt_principal: was $22,900M, now missing
+[DISAPPEARED_FIELD] trust_investments_value: was $2,000M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (interest_rate_swaps_notional, foreign_currency_hedges_notional, derivative_fair_value_net, outstanding_debt_fair_value, outstanding_debt_principal...)
+[LLM_FLAG] Excerpt is limited to introductory market risk disclosure. References 2024 Form 10-K and Note 8 for detailed quantitative data. Most specific financial metrics cannot be extracted from this excerpt alone.
+

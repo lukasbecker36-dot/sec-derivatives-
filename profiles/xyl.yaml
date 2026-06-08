@@ -1,0 +1,63 @@
+issuer: Xylem Inc.
+ticker: XYL
+cik: "1524472"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_forward_total_notional:
+    description: "Total purchase notional amounts of foreign exchange forward contracts"
+    section: market_risk
+  fx_forward_notional_by_pair:
+    description: "Notional amounts by currency pair (EUR, SEK, GBP, CAD, PLN, AUD)"
+    section: market_risk
+  cross_currency_swap_notional:
+    description: "Total notional amount of cross-currency swaps designated as net investment hedges"
+    section: market_risk
+  cash_flow_hedge_gain_loss_oci:
+    description: "Amount of gain/loss on cash flow hedges recognized in OCI"
+    section: market_risk
+  cash_flow_hedge_reclassified_revenue:
+    description: "Amount reclassified from OCI into revenue"
+    section: market_risk
+  cash_flow_hedge_reclassified_cost:
+    description: "Amount reclassified from OCI into cost of revenue"
+    section: market_risk
+  net_investment_hedge_gain_loss_oci:
+    description: "Amount of gain/loss on net investment hedges recognized in OCI"
+    section: market_risk
+  net_investment_hedge_interest_income:
+    description: "Income recognized in interest expense from net investment hedges"
+    section: market_risk
+  aoci_reclassification_next_12m:
+    description: "Estimated net gain on cash flow hedges to be reclassified to earnings in next 12 months"
+    section: market_risk
+  derivative_asset_cash_flow_current:
+    description: "Fair value of cash flow hedge derivative assets (current)"
+    section: market_risk
+  derivative_asset_net_investment_noncurrent:
+    description: "Fair value of net investment hedge derivative assets (non-current)"
+    section: market_risk
+  derivative_liability_cash_flow_current:
+    description: "Fair value of cash flow hedge derivative liabilities (current)"
+    section: market_risk
+  derivative_liability_net_investment_noncurrent:
+    description: "Fair value of net investment hedge derivative liabilities (non-current)"
+    section: market_risk
+  fx_sensitivity_10pct:
+    description: "Estimated impact of 10% change in FX rates"
+    section: market_risk
+  ir_sensitivity_1pct:
+    description: "Estimated impact of 1% change in interest rates"
+    section: market_risk
+
+# Unusual features identified:
+#   - Very large cross-currency swap program ($3.17B notional) designated as net investment hedges for Euro-denominated operations
+#   - Cross-currency swap income recognized in interest expense ($42M in 2025)
+#   - FX forwards hedge forecasted intercompany inventory purchases and sales across multiple currency pairs
+#   - Seven distinct currency pair exposures detailed individually
+#   - Net investment hedge loss of $344M in 2025 due to Euro/USD movement - very material
+#   - All derivative fair values measured at Level 2
+

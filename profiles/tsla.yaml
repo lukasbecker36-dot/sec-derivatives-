@@ -1,0 +1,26 @@
+issuer: Tesla, Inc.
+ticker: TSLA
+cik: "1318605"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_sensitivity_10pct:
+    description: "Impact of 10% adverse FX rate change on net income before taxes"
+    section: market_risk
+  primary_fx_exposures:
+    description: "Primary foreign currency exposures (Chinese yuan and euro)"
+    section: market_risk
+  monetary_asset_liability_fx_exposure:
+    description: "Total monetary assets/liabilities in non-local currencies"
+    section: market_risk
+
+# Unusual features identified:
+#   - Tesla explicitly does NOT typically hedge foreign currency risk
+#   - No derivative instruments used - pure market risk sensitivity disclosure only
+#   - Very large unhedged FX exposure ($1.70 billion sensitivity at 10% move)
+#   - Primary exposures are Chinese yuan and euro
+#   - No interest rate risk discussion - minimal debt exposure
+

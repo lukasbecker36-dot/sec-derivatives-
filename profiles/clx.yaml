@@ -1,0 +1,18 @@
+issuer: Clorox
+ticker: CLX
+cik: "21076"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  referenced_exhibit:
+    description: "Extract Exhibit 99.1 reference for market risk disclosures"
+    section: market_risk
+
+# Unusual features identified:
+#   - Market risk disclosures incorporated by reference to Exhibit 99.1 instead of being disclosed directly
+#   - No actual derivative or market risk data present in this section
+#   - Section contains only a cross-reference statement
+

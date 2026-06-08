@@ -1,0 +1,54 @@
+=== 10-Q | Period ending 2025-11-30 | Processed 2026-05-26 ===
+[NUMERIC] commodity_fair_value: $-1M → $14M (+1275.0%) — exceeds 20% threshold
+[NUMERIC] commodity_sensitivity: $29M → $-28M (-196.6%) — exceeds 20% threshold
+[LLM_FLAG] FX forwards notional decreased 10.8% from $3,303.3M to $2,947.6M - within normal range
+[LLM_FLAG] Commodity notional decreased 9.9% from $337.9M to $304.0M - within normal range
+[LLM_FLAG] Fixed debt notional decreased 3.8% from $10,759.6M to $10,356.2M - within normal range
+[LLM_FLAG] Net investment hedge contracts newly disclosed at $145.5M (was $0 in prior period) - substantial new position
+[LLM_FLAG] Pre-issuance hedge contracts decreased to $0 from $75.0M - fully matured/expired
+[LLM_FLAG] Commodity hedge ratio increased from 82% to 85% - modest improvement
+[LLM_FLAG] FX transaction gains/losses and equity-related fields not disclosed in this section
+
+=== 10-Q | Period ending 2025-08-31 | Processed 2026-05-26 ===
+[NUMERIC] foreign_currency_fair_value: $152M → $217M (+42.0%) — exceeds 20% threshold
+[NUMERIC] commodity_fair_value: $-18M → $-1M (+93.3%) — exceeds 20% threshold
+[NUMERIC] variable_debt_sensitivity: $2M → $2M (+25.0%) — exceeds 20% threshold
+[LLM_FLAG] fixed_debt_notional: decreased 7.2% from $11,161.8M to $10,357.3M - within normal range
+[LLM_FLAG] foreign_currency_fair_value: significant increase of 306% from $53.3M to $216.6M - suggests improved hedging position or FX rate movements favorable to company
+[LLM_FLAG] commodity_fair_value: improved 95% from $(23.9)M liability to $(1.2)M - substantial change but within context of normal commodity volatility
+[LLM_FLAG] net_investment_hedge_notional: new position of $145.5M in current period (was $0 prior period) - new hedging activity related to acquisitions or investments
+[LLM_FLAG] hedge_ratios: forecasted transactional FX exposures increased from 79% to 83%; forecasted commodity exposures increased from 73% to 82% - improved hedging coverage
+
+=== 10-Q | Period ending 2025-05-31 | Processed 2026-05-26 ===
+[NUMERIC] foreign_currency_fair_value: $21M → $152M (+640.3%) — exceeds 20% threshold
+[NUMERIC] commodity_fair_value: $-3M → $-18M (-459.4%) — exceeds 20% threshold
+[NEW_FIELD] net_investment_hedge_notional: appeared for first time ($146M)
+[DROPPED_TO_ZERO] preissuance_hedge_notional: $275M → $0M
+[NUMERIC] variable_debt_sensitivity: $5M → $2M (-69.8%) — exceeds 20% threshold
+[LLM_FLAG] foreign_currency_notional: Increased 1.7% from $3,221.8M to $3,275.5M - within normal range
+[LLM_FLAG] foreign_currency_fair_value: Decreased 46.4% from $284.9M to $152.5M - significant change but plausible given market conditions
+[LLM_FLAG] net_investment_hedge_notional: New position of $145.5M (was $0M in prior period) - represents new hedging activity
+[LLM_FLAG] fixed_debt_notional: Increased 4.6% from $11,165.7M to $11,258.1M - within normal range
+[LLM_FLAG] preissuance_hedge_notional: Changed from $275.0M to $0M - all pre-issuance hedges appear to have been settled/completed
+[LLM_FLAG] variable_debt_sensitivity: Increased 77.8% from $0.9M to $1.6M - plausible due to higher interest rate environment
+[LLM_FLAG] hedge_ratios: FX forecasted exposures changed from 72% to 79%; commodity hedges changed from 63% to 73% - both increased
+
+=== 10-K | Period ending 2025-02-28 | Processed 2026-05-26 ===
+[NUMERIC] fx_forwards_outstanding: $2,603M → $3,222M (+23.8%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_notional: $2,603M → $3,222M (+23.8%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_fair_value: $334M → $21M (-93.8%) — exceeds 20% threshold
+[NUMERIC] commodity_fair_value: $24M → $-3M (-113.4%) — exceeds 20% threshold
+[NUMERIC] commodity_sensitivity: $-32M → $28M (+188.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] net_investment_hedge_notional: was $146M, now missing
+[NUMERIC] preissuance_hedge_notional: $50M → $275M (+450.0%) — exceeds 20% threshold
+[NUMERIC] variable_debt_sensitivity: $3M → $5M (+89.3%) — exceeds 20% threshold
+[LLM_FLAG] Foreign currency notional increased 15.8% from $2,781.5M to $3,221.8M - within normal range
+[LLM_FLAG] Commodity notional decreased 19.0% from $397.5M to $322.1M - within normal range
+[LLM_FLAG] Foreign currency fair value decreased significantly from $305.8M to $20.6M (93.3% decline) - substantial change in asset position
+[LLM_FLAG] Commodity fair value improved from -$29.8M liability to -$3.2M liability - positive movement
+[LLM_FLAG] Fixed debt notional decreased 8.2% from $11,717.8M to $10,758.7M - modest reduction consistent with debt management
+[LLM_FLAG] Fixed debt fair value improved from -$10,775.8M to -$9,990.0M - favorable position change
+[LLM_FLAG] Hedge ratios changed: FX transactional from 73% to 72%; commodity from 79% to 63% - meaningful decrease in commodity hedging ratio
+[LLM_FLAG] Pre-issuance hedge contracts increased from $0 to $275.0M - new contracts for FY2025
+[LLM_FLAG] Variable debt interest rate sensitivity improved from $7.1M to $5.3M - beneficial change
+

@@ -1,0 +1,25 @@
+issuer: Chevron Corporation
+ticker: CVX
+cik: "93410"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  market_risk_reference:
+    description: "Cross-reference to MD&A section on market risk"
+    section: market_risk
+  derivative_instruments_reference:
+    description: "Cross-reference to Note 10 on derivative instruments"
+    section: market_risk
+  risk_types:
+    description: "Types of market risks disclosed (interest rate, foreign currency, commodity price)"
+    section: market_risk
+
+# Unusual features identified:
+#   - Section contains only cross-references with no actual quantitative data
+#   - No derivative instrument details provided in this section
+#   - All substantive market risk information deferred to other sections (MD&A and Note 10)
+#   - Unusually brief disclosure for Item 7A market risk requirements
+

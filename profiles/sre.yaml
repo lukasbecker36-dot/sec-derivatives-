@@ -1,0 +1,28 @@
+issuer: Sempra
+ticker: SRE
+cik: "1032208"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_contracts_notional:
+    description: "Notional amount of FX contracts"
+    section: market_risk
+  fx_contracts_fair_value:
+    description: "Fair value of FX contracts"
+    section: market_risk
+  interest_rate_contracts_notional:
+    description: "Notional amount of interest rate contracts"
+    section: market_risk
+  interest_rate_contracts_fair_value:
+    description: "Fair value of interest rate contracts"
+    section: market_risk
+  cross-currency_interest_rate_swaps_notional:
+    description: "Notional amount of cross-currency interest rate swaps"
+    section: market_risk
+  cross-currency_interest_rate_swaps_fair_value:
+    description: "Fair value of cross-currency interest rate swaps"
+    section: market_risk
+

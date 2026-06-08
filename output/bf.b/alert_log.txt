@@ -1,0 +1,28 @@
+=== 10-Q | Period ending 2025-07-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $16M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+
+=== 10-K | Period ending 2025-04-30 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($16M)
+
+=== 10-Q | Period ending 2026-01-31 | Processed 2026-05-23 ===
+[LLM_FLAG] This excerpt appears to be introductory/boilerplate language from the market risk section. Detailed quantitative metrics are not included in the provided text. The filing references that disclosures were provided in the 2025 Form 10-K with no material changes since April 30, 2025.
+
+=== 10-Q | Period ending 2025-07-31 | Processed 2026-05-23 ===
+[LLM_FLAG] This filing section is limited to a general risk management overview statement. Specific quantitative data for most market risk metrics is not provided in this excerpt. The text references 'no material changes' since April 30, 2025, and directs to the 2025 Form 10-K for detailed disclosures.
+[LLM_FLAG] All quantitative derivative notional amounts, sensitivity analyses, and balance sheet values are absent from this section.
+
+=== 10-Q | Period ending 2025-01-31 | Processed 2026-05-23 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $463M, now missing
+[DISAPPEARED_FIELD] currency_derivatives_notional_current: was $463M, now missing
+[DISAPPEARED_FIELD] currency_derivatives_notional_prior: was $566M, now missing
+[DISAPPEARED_FIELD] hypothetical_fx_sensitivity: was $-39M, now missing
+[DISAPPEARED_FIELD] cash_equivalents_balance: was $444M, now missing
+[DISAPPEARED_FIELD] commercial_paper_balance: was $313M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $0M, now missing
+[VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (fx_forwards_outstanding, currency_derivatives_notional_current, currency_derivatives_notional_prior, hypothetical_fx_sensitivity, cash_equivalents_balance...)
+[LLM_FLAG] This excerpt contains only introductory disclosure language referencing the 2024 Form 10-K. Specific quantitative data and detailed market risk disclosures are not included in this section. The filing states 'Since April 30, 2024, there have been no material changes to the market risks faced by us or to our risk management program as disclosed in our 2024 Form 10-K,' indicating that detailed disclosure should be found in the referenced 10-K rather than this 10-Q excerpt.
+
+=== 10-Q | Period ending 2026-01-31 | Processed 2026-05-22 ===
+[LLM_FLAG] Currency derivatives notional decreased from $566 million (April 30, 2024) to $463 million (April 30, 2025), a decline of 18.2%, which is within normal range but reflects reduced hedging.
+

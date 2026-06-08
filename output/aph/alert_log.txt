@@ -1,0 +1,23 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] treasury_lock_notional: appeared for first time ($2,500M)
+[NEW_FIELD] treasury_lock_settlement_loss: appeared for first time ($67M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
+[LLM_FLAG] This appears to be a qualitative disclosure section without detailed quantitative market risk metrics. Many standard quantitative fields are not provided in this excerpt.
+[LLM_FLAG] The text references Note 5 for derivative instrument details, suggesting quantitative information may be in that note rather than this section.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[DISAPPEARED_FIELD] floating_rate_exposure: was $3M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (floating_rate_exposure)
+[LLM_FLAG] This appears to be a general market risk disclosure section rather than a complete quantitative analysis. It lacks the detailed quantitative sensitivities and derivative fair value measurements typically found in full derivative and market risk disclosures.
+[LLM_FLAG] Prior period indicated 'has_derivatives': 'Yes' with specific treasury lock and forward contract positions, but current filing text contains no mention of any derivative instruments.
+[LLM_FLAG] Floating rate exposure percentage not quantified in provided text (prior period was 3%), though $638.9M USCP Notes are outstanding.
+

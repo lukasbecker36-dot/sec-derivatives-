@@ -1,0 +1,61 @@
+issuer: Waters Corporation
+ticker: WAT
+cik: "1000697"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_contract_notional_asset:
+    description: "Notional value of FX exchange contracts in asset position"
+    section: market_risk
+  fx_contract_fair_value_asset:
+    description: "Fair value of FX exchange contracts in other current assets"
+    section: market_risk
+  fx_contract_notional_liability:
+    description: "Notional value of FX exchange contracts in liability position"
+    section: market_risk
+  fx_contract_fair_value_liability:
+    description: "Fair value of FX exchange contracts in other current liabilities"
+    section: market_risk
+  cross_currency_swap_notional:
+    description: "Total notional value of interest rate cross-currency swap agreements"
+    section: market_risk
+  cross_currency_swap_fair_value_asset:
+    description: "Fair value of cross-currency swaps in other assets"
+    section: market_risk
+  cross_currency_swap_fair_value_liability:
+    description: "Fair value of cross-currency swaps in other liabilities"
+    section: market_risk
+  cross_currency_swap_aoci:
+    description: "Accumulated OCI from cross-currency swaps"
+    section: market_risk
+  ir_swap_notional_asset:
+    description: "Notional value of IR swap cash flow hedges in asset position"
+    section: market_risk
+  ir_swap_notional_liability:
+    description: "Notional value of IR swap cash flow hedges in liability position"
+    section: market_risk
+  ir_swap_aoci:
+    description: "Accumulated OCI from interest rate swap cash flow hedges"
+    section: market_risk
+  cross_currency_swap_interest_earned:
+    description: "Interest earned from cross-currency swap agreements"
+    section: market_risk
+  fx_sensitivity_10pct:
+    description: "Impact on pre-tax earnings from 10% adverse change in exchange rates on FX contracts"
+    section: market_risk
+  cross_currency_sensitivity_10pct:
+    description: "Change in fair value of cross-currency swaps from 10% adverse FX change"
+    section: market_risk
+
+# Unusual features identified:
+#   - Detailed derivative tables with notional and fair value for each instrument type
+#   - Interest rate cross-currency swaps ($900M notional) hedge EUR and JPY net asset investments
+#   - FX contracts not designated for hedge accounting - used for intercompany and 90-day maturity
+#   - Interest rate swaps designated as cash flow hedges for variable rate Credit Facility
+#   - Comprehensive P&L activity summary for all derivative types
+#   - Fiscal quarter ending on non-standard date (April 4)
+#   - Cross-currency swap interest income reported separately in income statement
+

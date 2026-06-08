@@ -1,0 +1,42 @@
+issuer: Lockheed Martin
+ticker: LMT
+cik: "936468"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  interest_rate_swaps_notional:
+    description: "aggregate notional amount of outstanding interest rate swaps"
+    section: market_risk
+  foreign_currency_hedges_notional:
+    description: "aggregate notional amount of outstanding foreign currency hedges"
+    section: market_risk
+  derivative_fair_value_net:
+    description: "net fair value of derivative instruments"
+    section: market_risk
+  outstanding_debt_fair_value:
+    description: "estimated fair value of outstanding debt"
+    section: market_risk
+  outstanding_debt_principal:
+    description: "outstanding principal amount of debt"
+    section: market_risk
+  primary_foreign_currencies:
+    description: "most significant foreign currency exposures"
+    section: market_risk
+  hedge_designations:
+    description: "types of hedge accounting designations used"
+    section: market_risk
+  trust_investments_value:
+    description: "value of investments in deferred compensation trust"
+    section: market_risk
+
+# Unusual features identified:
+#   - derivatives data presented in narrative format without tabular disclosure
+#   - notional amounts aggregated across instrument types rather than detailed breakdown
+#   - fair value described as 'not material' without specific amounts
+#   - includes non-derivative market risk exposures (deferred compensation trust investments)
+#   - sensitivity analysis limited to 10% scenarios without detailed impact amounts
+#   - counterparty credit risk discussion integrated with derivatives disclosure
+

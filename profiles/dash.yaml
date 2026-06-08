@@ -1,0 +1,31 @@
+issuer: DoorDash
+ticker: DASH
+cik: "1792789"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  investment_portfolio_sensitivity:
+    description: "Impact of 100 basis point interest rate increase"
+    section: market_risk
+  non_marketable_equity_investments:
+    description: "Carrying value amounts by year"
+    section: market_risk
+  foreign_currency_sensitivity:
+    description: "Impact of 10% exchange rate change"
+    section: market_risk
+  foreign_currency_gains_losses:
+    description: "Materiality statement for transaction gains/losses"
+    section: market_risk
+  primary_foreign_currencies:
+    description: "Euro, Pounds Sterling, Canadian dollars, Israeli shekel, Australian dollars"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative instruments disclosed despite market risk section
+#   - Explicitly states no hedging activities for interest rate exposures
+#   - Market sensitivity analysis deemed 'not practicable' for equity investments
+#   - Focus on operational exposures rather than derivative risk management
+

@@ -1,0 +1,28 @@
+issuer: ServiceNow
+ticker: NOW
+cik: "1373715"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_contracts_notional:
+    description: "Notional amount of FX contracts"
+    section: market_risk
+  fx_contracts_fair_value:
+    description: "Fair value of FX contracts"
+    section: market_risk
+  hedge_ineffectiveness:
+    description: "Hedge ineffectiveness recognized in income"
+    section: market_risk
+  aoci_derivative_gain_loss:
+    description: "Derivative gains/losses in AOCI"
+    section: market_risk
+  non_designated_gain_loss:
+    description: "Gain/loss on non-designated derivatives"
+    section: market_risk
+  foreign_currency_sensitivity:
+    description: "Impact of foreign currency rate changes on results"
+    section: market_risk
+

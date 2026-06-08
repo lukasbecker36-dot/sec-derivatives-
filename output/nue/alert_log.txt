@@ -1,0 +1,26 @@
+=== 10-Q | Period ending 2026-04-04 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] variable_rate_debt_pct: was $31M, now missing
+[DISAPPEARED_FIELD] fixed_rate_debt_pct: was $76M, now missing
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (variable_rate_debt_pct, fixed_rate_debt_pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] variable_rate_debt_pct: appeared for first time ($31M)
+[NEW_FIELD] fixed_rate_debt_pct: appeared for first time ($76M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NUMERIC] aoci_unrealized_losses: $-1M → $-13M (-1200.0%) — exceeds 20% threshold
+[NEW_FIELD] variable_rate_debt_pct: appeared for first time ($24M)
+[NEW_FIELD] fixed_rate_debt_pct: appeared for first time ($76M)
+
+=== 10-Q | Period ending 2025-10-04 | Processed 2026-06-04 ===
+[NUMERIC] aoci_unrealized_losses: $2M → $-1M (-150.0%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-07-05 | Processed 2026-06-04 ===
+[NUMERIC] aoci_unrealized_losses: $14M → $2M (-85.7%) — exceeds 20% threshold
+[LLM_FLAG] aoci_unrealized_losses: text shows $2M in unrealized GAINS (not losses)
+
+=== 10-Q | Period ending 2025-04-05 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] aoci_unrealized_losses: appeared for first time ($14M)
+[LLM_FLAG] aoci_unrealized_losses: schema expected losses ($13M) but text shows $14M in unrealized GAINS (not losses)
+

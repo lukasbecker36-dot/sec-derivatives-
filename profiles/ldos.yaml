@@ -1,0 +1,45 @@
+issuer: Leidos
+ticker: LDOS
+cik: "1336920"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  notional_amount:
+    description: "notional value of interest rate swap agreements"
+    section: market_risk
+  fair_value:
+    description: "fair value of interest rate swap agreements"
+    section: market_risk
+  maturity_date:
+    description: "maturity date of swap agreements"
+    section: market_risk
+  hedge_purpose:
+    description: "purpose of hedging activities"
+    section: market_risk
+  counterparty_type:
+    description: "type of counterparties to derivative agreements"
+    section: market_risk
+  debt_amount:
+    description: "total debt amounts for context"
+    section: market_risk
+  variable_rate_exposure:
+    description: "amount of variable rate debt being hedged"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "hypothetical impact of rate movements"
+    section: market_risk
+  foreign_currency_exposure:
+    description: "percentage of foreign operations"
+    section: market_risk
+
+# Unusual features identified:
+#   - Derivatives section appears truncated with reference to separate note
+#   - Market risk disclosure includes matured instruments (swaps matured in August 2025)
+#   - Fair value data presented as narrative rather than tabular format
+#   - No comprehensive derivatives table despite multiple instrument references
+#   - Foreign currency risk mentioned but no quantitative metrics provided
+#   - Hypothetical sensitivity analysis uses 10% movement rather than standard 100 basis points
+

@@ -1,0 +1,43 @@
+issuer: NRG Energy
+ticker: NRG
+cik: "1013871"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  commodity_var:
+    description: "Value-at-Risk for commodity portfolio (one-day, 95% CI, 36-month forward)"
+    section: market_risk
+  commodity_var_period_stats:
+    description: "Average, maximum, minimum VaR for commodity portfolio ($61M avg in 2025)"
+    section: market_risk
+  derivative_mark_to_market_var:
+    description: "VaR for derivative financial instruments subject to MTM ($145M at Dec 31, 2025)"
+    section: market_risk
+  counterparty_credit_exposure:
+    description: "Gross counterparty credit exposure ($1.7B) and net after collateral ($1.3B)"
+    section: market_risk
+  collateral_held:
+    description: "Cash and letters of credit collateral held ($408M)"
+    section: market_risk
+  credit_exposure_by_sector:
+    description: "Net exposure breakdown by industry sector (utilities/energy 74%, financial 26%)"
+    section: market_risk
+  credit_exposure_by_quality:
+    description: "Net exposure by credit quality (investment grade 67%, non-IG 33%)"
+    section: market_risk
+  exposure_rolloff_timeline:
+    description: "Percentage of exposure expected to roll off by end of 2027 (66%)"
+    section: market_risk
+
+# Unusual features identified:
+#   - Energy merchant/trader with extensive commodity derivative portfolio
+#   - Uses Monte Carlo simulation-based VaR model rather than simple sensitivity analysis
+#   - Separate VaR reported for full commodity portfolio vs mark-to-market derivative instruments
+#   - Detailed counterparty credit exposure analysis with sector and credit quality breakdown
+#   - References ASC 815 derivatives note (Note 6) but full note text not included in this section
+#   - Includes discussion of RTO/ISO participation and exchange-traded transaction clearing
+#   - Commodity derivatives span natural gas, electricity, coal, oil, and emissions credits
+

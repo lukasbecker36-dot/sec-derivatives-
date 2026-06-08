@@ -1,0 +1,37 @@
+issuer: Gartner
+ticker: IT
+cik: "749251"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  total_debt_principal:
+    description: "Total debt principal outstanding"
+    section: market_risk
+  floating_rate_debt:
+    description: "Portion of debt based on floating interest rates"
+    section: market_risk
+  cash_equivalents_amount:
+    description: "Total cash and cash equivalents"
+    section: market_risk
+  foreign_currency_sensitivity:
+    description: "Potential impact from 10% FX rate change"
+    section: market_risk
+  fx_forward_fair_value:
+    description: "Net unrealized gain/loss on FX forwards"
+    section: market_risk
+  derivative_valuation_level:
+    description: "Fair value hierarchy level for derivatives"
+    section: market_risk
+  interest_rate_swap_status:
+    description: "Status and purpose of interest rate swaps"
+    section: market_risk
+
+# Unusual features identified:
+#   - Interest rate swap contract expired prior to reporting date (September 30, 2025)
+#   - No floating rate debt despite having interest rate hedging history
+#   - FX sensitivity analysis only covers cash equivalents, not operational exposure
+#   - Market risk disclosure integrated with derivatives note references rather than standalone derivatives note
+

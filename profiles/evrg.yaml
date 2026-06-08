@@ -1,0 +1,38 @@
+issuer: Evergy
+ticker: EVRG
+cik: "1711269"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  var_end_value:
+    description: "End of period VaR value in millions"
+    section: market_risk
+  var_high_value:
+    description: "High VaR value during period in millions"
+    section: market_risk
+  var_average_value:
+    description: "Average VaR value during period in millions"
+    section: market_risk
+  var_low_value:
+    description: "Low VaR value during period in millions"
+    section: market_risk
+  variable_rate_debt_amount:
+    description: "Total amount of variable rate debt exposed to interest rate risk"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "Impact on income from 100 basis point change in interest rates"
+    section: market_risk
+  variable_debt_percentage:
+    description: "Percentage of total debt exposed to variable interest rates"
+    section: market_risk
+
+# Unusual features identified:
+#   - VaR disclosure limited to non-regulated energy marketing activities only
+#   - Regulated derivatives marked to regulatory assets/liabilities rather than earnings
+#   - Cost recovery mechanisms limit commodity price risk impact
+#   - VaR uses 30-day exponentially weighted volatilities with 95% confidence
+#   - Interest rate sensitivity includes AFUDC borrowed funds adjustment
+

@@ -1,0 +1,40 @@
+issuer: Allegion
+ticker: ALLE
+cik: "1579241"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  currency_derivatives_notional:
+    description: "gross notional amount of currency derivatives"
+    section: market_risk
+  currency_derivatives_fair_value:
+    description: "fair values of currency derivatives"
+    section: market_risk
+  maximum_term:
+    description: "maximum term of currency derivatives"
+    section: market_risk
+  sensitivity_analysis_loss:
+    description: "hypothetical loss from 10% adverse change in exchange rates"
+    section: market_risk
+  total_debt:
+    description: "total outstanding indebtedness"
+    section: market_risk
+  fixed_rate_percentage:
+    description: "percentage of debt with fixed-rate interest"
+    section: market_risk
+  revolving_facility_outstanding:
+    description: "outstanding borrowings under revolving facility"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "impact of 1% interest rate increase on annual expense"
+    section: market_risk
+
+# Unusual features identified:
+#   - fair values explicitly stated as not material rather than disclosed
+#   - no tabular presentation of derivative positions
+#   - commodity derivatives mentioned but none outstanding
+#   - sensitivity analysis embedded in narrative text rather than separate table
+

@@ -1,0 +1,50 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
+[NUMERIC] interest_rate_sensitivity: $9M → $2M (-71.6%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_intercompany: $34M → $15M (-57.0%) — exceeds 20% threshold
+[LLM_FLAG] ir_sensitivity_100bp: Current period shows $2.5 million (calculated from 10% rate increase) vs prior $8.8 million - 72% decrease. This represents a significant reduction, likely due to lower outstanding variable rate debt balances
+[LLM_FLAG] variable_rate_debt_schedule: Total decreased from $2,260.0 million to $2,119.8 million - 6% decrease, within normal range
+[LLM_FLAG] interest_rate_sensitivity: Decreased from $8.8 million to $2.5 million - 72% decrease, consistent with lower variable rate debt
+[LLM_FLAG] foreign_currency_exposure_percentage: Revenues increased from 31% to 34%, and operating expenses increased from 39% to 42% - both represent increased foreign currency exposure
+[LLM_FLAG] fx_sensitivity_intercompany: Decreased from $34.4 million to $14.8 million - 57% decrease, suggesting lower intercompany debt balances
+[LLM_FLAG] fx_sensitivity_eur_debt: Remained stable at $400.0 million (0% change)
+[LLM_FLAG] eur_denominated_debt: Remained essentially stable at approximately $8.7 billion (within rounding)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
+[NUMERIC] ir_sensitivity_100bp: $7M → $9M (+27.5%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity: $7M → $9M (+27.5%) — exceeds 20% threshold
+[LLM_FLAG] fx_forwards_outstanding changed from 0 to 0 (no change, but no explicit mention of FX forward contracts)
+[LLM_FLAG] variable_rate_debt_schedule total decreased from 2565.0 to 2260.0 million (-12%), primarily due to multicurrency credit facility reduction from 750.0 to 445.0 million (-40.7%)
+[LLM_FLAG] ir_sensitivity_100bp increased from 6.9 to 8.8 million (+27.5%) - likely due to changed interest rate environment, not significant enough to flag as >50%
+[LLM_FLAG] foreign_currency_exposure_percentage revenues increased from 30% to 31% (+1 percentage point) and expenses from 38% to 39% (+1 percentage point) - within normal range
+[LLM_FLAG] fx_sensitivity_intercompany decreased from 34.5 to 34.4 million (-0.3%) - minimal change
+[LLM_FLAG] fx_sensitivity_eur_debt stable at 400.0 million (0% change)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
+[NUMERIC] ir_sensitivity_100bp: $2M → $7M (+263.2%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity: $2M → $7M (+263.2%) — exceeds 20% threshold
+[NEW_FIELD] net_investment_hedge_amount: appeared for first time ($5,500M)
+[NUMERIC] fx_sensitivity_eur_debt: $900M → $400M (-55.6%) — exceeds 20% threshold
+[LLM_FLAG] ir_sensitivity_100bp: Value increased from 1.9M to 6.9M (263% increase). This reflects a significant increase in sensitivity, likely due to higher variable rate debt outstanding.
+[LLM_FLAG] variable_rate_debt_schedule: Total increased from 1410.0M to 2565.0M (82% increase). Substantial increase in variable rate debt exposure.
+[LLM_FLAG] interest_rate_sensitivity: Value increased from 1.9M to 6.9M (263% increase). Consistent with higher variable rate debt.
+[LLM_FLAG] foreign_currency_exposure_percentage: Revenues percentage decreased from 31% to 30% (minor change, within tolerance). Operating expenses percentage increased from 37% to 38% (minor change, within tolerance).
+[LLM_FLAG] eur_denominated_debt: Value increased from 8100.0M to 8800.0M (8.6% increase). Moderate increase in EUR debt.
+[LLM_FLAG] fx_sensitivity_intercompany: Value increased from 31.3M to 34.5M (10% increase). Slight increase in intercompany FX exposure.
+[LLM_FLAG] fx_sensitivity_eur_debt: Value decreased from 900.0M to 400.0M (56% decrease). Significant decrease, likely due to increased net investment hedge designation from 4.7B EUR, reducing unhedged EUR debt exposure.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2M)
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $36M, now missing
+[DISAPPEARED_FIELD] fair_value_debt: was $36,133M, now missing
+[NUMERIC] interest_rate_sensitivity: $7M → $2M (-71.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] net_investment_hedge_amount: was $5,500M, now missing
+[NUMERIC] fx_sensitivity_intercompany: $13M → $31M (+148.4%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_eur_debt: $400M → $900M (+125.0%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 3/7 previously-populated fields are now null (fixed_rate_notes_billion, fair_value_debt, net_investment_hedge_amount)
+[LLM_FLAG] variable_rate_debt_schedule: Current total of $1,410.0M vs. prior $1,385.2M represents a 1.8% increase, within normal range
+[LLM_FLAG] fx_sensitivity_intercompany: Current $31.3M vs. prior $12.6M represents a 148.4% increase - significant increase in intercompany debt exposure or unfavorable exchange rate conditions
+[LLM_FLAG] fx_sensitivity_eur_debt: Current $900.0M vs. prior $400.0M represents a 125% increase - either increased EUR debt exposure or unfavorable EUR/USD exchange rates
+[LLM_FLAG] foreign_currency_exposure_percentage operating_expenses: Changed from 40% to 37%, a 7.5% decrease
+[LLM_FLAG] interest_rate_sensitivity: Changed from 6.7M to 1.9M, representing a 71.6% decrease - appears to reflect different variable rate debt balances and/or interest rate environment
+

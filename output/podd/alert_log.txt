@@ -1,0 +1,67 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($31M)
+[DISAPPEARED_FIELD] ir_swap_notional: was $2,025M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $31M, now missing
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($12M)
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
+[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (ir_swap_notional, total_derivative_asset, ir_sensitivity_100bp)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] fx_designated_notional: was $30M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $12M, now missing
+[VALIDATION] Likely extraction failure: 2/6 previously-populated fields are now null (fx_designated_notional, cash_flow_hedge_aoci)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($30M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($2,025M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($314M)
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($19M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
+[DISAPPEARED_FIELD] notional_amount: was $460M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, marketable_equity_value, notional_amount)
+[LLM_FLAG] total_cash_equivalents_fv shows significant decline from prior period ($577.4M at December 31, 2025 to $314.5M at March 31, 2026), a 45.6% decrease. This is within the 50% threshold but warrants monitoring.
+[LLM_FLAG] The filing section provided focuses on liabilities measured at fair value (debt instruments) rather than asset-side marketable securities with corporate debt components. total_marketable_securities_fv cannot be reliably extracted from this section.
+[LLM_FLAG] This section contains only a cross-reference to the 10-K filing rather than substantive risk disclosures. All quantitative market risk data is deferred to the annual report.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-02 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
+[NEW_FIELD] notional_amount: appeared for first time ($460M)
+[LLM_FLAG] Incomplete filing text provided - only Note 10 header visible without substantive financial data tables or amounts
+[LLM_FLAG] ir_sensitivity_100bp: Described as 'insignificant' rather than quantified in millions; treated as null but warrants verification in full financial statements
+[LLM_FLAG] Prior period showed 'No mention' of derivatives; current period shows active derivatives with $460M notional interest rate swaps - significant change in disclosure completeness
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-02 ===
+[LLM_FLAG] Provided text is incomplete - only Note 10 header and opening sentence are present. Complete financial instruments and fair value tables/disclosures needed to extract requested values.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-02 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $716M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $2M, now missing
+[DISAPPEARED_FIELD] notional_amount: was $460M, now missing
+[DISAPPEARED_FIELD] foreign_currency_exposure_percentage: was $28M, now missing
+[DISAPPEARED_FIELD] foreign_currency_gain_loss: was $2M, now missing
+[VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (total_cash_equivalents_fv, gross_unrealized_gains_debt, fx_forwards_outstanding, fx_transaction_gain_loss, notional_amount...)
+[LLM_FLAG] Insufficient data: The provided filing text is incomplete and only contains the beginning of Note 10 header. No numerical financial data or fair value tables are present to extract the requested fields.
+[LLM_FLAG] Cannot assess whether prior period values are accurate without complete disclosure tables.
+[LLM_FLAG] Filing section is a referral to prior 10-K disclosure; this 10-Q provides no quantitative or qualitative risk metrics. All field values are null due to lack of detailed disclosure in this excerpt.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-01 ===
+[LLM_FLAG] Debt securities previously held ($4.7 million at 12/31/2024) were fully written off in 2025 with a provision for credit loss
+[LLM_FLAG] Money market mutual funds decreased from $819.9 million (12/31/2024) to $577.4 million (12/31/2025), a 29.6% decline
+[LLM_FLAG] No marketable securities line item appears in the December 31, 2025 fair value measurements table, unlike some prior period disclosures
+

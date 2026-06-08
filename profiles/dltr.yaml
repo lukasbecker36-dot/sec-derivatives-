@@ -1,0 +1,28 @@
+issuer: Dollar Tree
+ticker: DLTR
+cik: "935703"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  derivative_purpose:
+    description: "Purpose and policy for derivative use (cash flow hedging only, no trading)"
+    section: market_risk
+  interest_rate_exposure:
+    description: "Sources of interest rate risk (credit facilities, commercial paper program)"
+    section: market_risk
+  outstanding_borrowings:
+    description: "Current borrowing amounts under facilities"
+    section: market_risk
+  inflation_risk_factors:
+    description: "Primary cost categories subject to inflation (merchandise, transportation, construction, labor)"
+    section: market_risk
+
+# Unusual features identified:
+#   - No quantitative tables despite 'Quantitative' in heading
+#   - Mentions specific commodity hedging (diesel fuel swaps)
+#   - No current outstanding borrowings under facilities
+#   - Limited derivative activity disclosure compared to typical market risk sections
+

@@ -1,0 +1,25 @@
+issuer: Consolidated Edison
+ticker: ED
+cik: "1047862"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cross_reference_item_7:
+    description: "Reference to Financial and Commodity Market Risks section in Item 7"
+    section: market_risk
+  cross_reference_item_1a:
+    description: "Reference to capital markets funding requirements risk factor"
+    section: market_risk
+  entity_segmentation:
+    description: "Separate disclosure structure for Con Edison parent and CECONY subsidiary"
+    section: market_risk
+
+# Unusual features identified:
+#   - Pure cross-reference section with no substantive content
+#   - Duplicate disclosure structure for parent company and subsidiary
+#   - References both Item 7 MD&A and Item 1A risk factors
+#   - No actual quantitative or qualitative market risk data provided in this section
+

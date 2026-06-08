@@ -1,0 +1,26 @@
+issuer: Cintas
+ticker: CTAS
+cik: "723254"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  interest_rate_sensitivity:
+    description: "Impact of 50 basis point change on pre-tax income"
+    section: market_risk
+  foreign_currency_exposure:
+    description: "Percentage of foreign denominated revenue and operating income"
+    section: market_risk
+  sensitivity_analysis_assumptions:
+    description: "Limitations of the sensitivity analysis"
+    section: market_risk
+
+# Unusual features identified:
+#   - Market risk disclosure without any derivative instruments mentioned
+#   - Very brief disclosure with minimal quantitative detail
+#   - Interest rate sensitivity analysis excludes economic activity and capital structure changes
+#   - Foreign currency exposure described qualitatively only with no hedging strategy mentioned
+#   - No commodity price risk or credit risk discussion despite business nature
+

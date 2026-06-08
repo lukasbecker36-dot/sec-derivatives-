@@ -1,0 +1,28 @@
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-06-28 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $892M, now missing
+[DISAPPEARED_FIELD] fx_forward_cf_hedge_notional: was $735M, now missing
+[DISAPPEARED_FIELD] fx_forward_non_hedge_notional: was $157M, now missing
+[DISAPPEARED_FIELD] fx_forward_asset_fair_value: was $7M, now missing
+[DISAPPEARED_FIELD] fx_forward_liability_fair_value: was $8M, now missing
+[DISAPPEARED_FIELD] net_investment_hedge_notional: was $1,690M, now missing
+[DISAPPEARED_FIELD] net_investment_hedge_asset: was $16M, now missing
+[DISAPPEARED_FIELD] net_investment_hedge_liability: was $263M, now missing
+[VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (fx_forwards_outstanding, fx_forward_cf_hedge_notional, fx_forward_non_hedge_notional, fx_forward_asset_fair_value, fx_forward_liability_fair_value...)
+
+=== 10-K | Period ending 2025-06-28 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($892M)
+[NEW_FIELD] fx_forward_cf_hedge_notional: appeared for first time ($735M)
+[NEW_FIELD] fx_forward_non_hedge_notional: appeared for first time ($157M)
+[NEW_FIELD] fx_forward_asset_fair_value: appeared for first time ($7M)
+[NEW_FIELD] fx_forward_liability_fair_value: appeared for first time ($8M)
+[NEW_FIELD] net_investment_hedge_notional: appeared for first time ($1,690M)
+[NEW_FIELD] net_investment_hedge_asset: appeared for first time ($16M)
+[NEW_FIELD] net_investment_hedge_liability: appeared for first time ($263M)
+

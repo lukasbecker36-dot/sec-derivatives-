@@ -1,0 +1,37 @@
+issuer: Universal Health Services
+ticker: UHS
+cik: "352915"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cash_flow_hedges_outstanding:
+    description: "Whether any cash flow hedges (interest rate swaps) are outstanding"
+    section: market_risk
+  fx_forward_net_cash_flows:
+    description: "Net cash inflows/outflows from forward exchange contracts"
+    section: market_risk
+  fx_forward_gain_loss_aoci:
+    description: "Gain/loss recognized in AOCI from net investment hedges (FX forwards)"
+    section: market_risk
+  fx_forward_fair_value:
+    description: "Fair value of foreign currency forward exchange contracts"
+    section: market_risk
+  fixed_rate_debt_maturity_schedule:
+    description: "Principal cash flows by maturity for fixed rate debt"
+    section: market_risk
+  variable_rate_debt_maturity_schedule:
+    description: "Principal cash flows by maturity for variable rate debt"
+    section: market_risk
+  variable_rate_interest_sensitivity:
+    description: "Impact of 1% change in interest rates on variable rate debt"
+    section: market_risk
+
+# Unusual features identified:
+#   - FX forward contracts used as net investment hedges for UK operations
+#   - No interest rate swaps currently outstanding despite policy framework
+#   - Fair value table includes non-marketable securities at Level 3
+#   - Debt maturity schedule presented in market risk section
+

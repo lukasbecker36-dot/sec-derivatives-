@@ -1,0 +1,22 @@
+issuer: McCormick & Company
+ticker: MKC
+cik: "63754"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  market_risk_reference:
+    description: "reference to Market Risk Sensitivity section in MD&A"
+    section: market_risk
+  note_reference:
+    description: "reference to Note 7 for detailed disclosures"
+    section: market_risk
+
+# Unusual features identified:
+#   - Extremely brief disclosure - only references other sections
+#   - No actual derivative or market risk data in this section
+#   - Cross-references MD&A and Note 7 for substantive content
+#   - Page number (40) appears at end of section
+

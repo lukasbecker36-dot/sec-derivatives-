@@ -1,0 +1,38 @@
+issuer: Lamb Weston
+ticker: LW
+cik: "1679273"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  commodity_sensitivity_current:
+    description: "hypothetical 10% decline impact on cost of sales - current year"
+    section: market_risk
+  commodity_sensitivity_prior:
+    description: "hypothetical 10% decline impact on cost of sales - prior year"
+    section: market_risk
+  fx_sensitivity_current:
+    description: "hypothetical 10% adverse change in exchange rates impact - current year"
+    section: market_risk
+  fx_sensitivity_prior:
+    description: "hypothetical 10% adverse change in exchange rates impact - prior year"
+    section: market_risk
+  fixed_rate_debt_current:
+    description: "outstanding fixed-rate debt - current year"
+    section: market_risk
+  variable_rate_debt_current:
+    description: "outstanding variable-rate debt - current year"
+    section: market_risk
+  interest_rate_sensitivity_current:
+    description: "1% increase impact on annual interest expense - current year"
+    section: market_risk
+
+# Unusual features identified:
+#   - sensitivity analysis only format - no tabular data
+#   - normal purchase/normal sales scope exception noted
+#   - Euro specifically mentioned as primary FX exposure
+#   - references SOFR for variable rate exposure
+#   - includes both pre-tax and after-tax sensitivity amounts
+

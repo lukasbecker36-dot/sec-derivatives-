@@ -1,0 +1,35 @@
+issuer: Generac
+ticker: GNRC
+cik: "1474735"
+archetype: active_ir_fx_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  interest_rate_swaps_fair_value:
+    description: "fair value of interest rate swaps"
+    section: market_risk
+  stock_warrants_fair_value:
+    description: "fair value of stock warrants"
+    section: market_risk
+  stock_warrants_losses:
+    description: "annual losses on stock warrants"
+    section: market_risk
+  hedge_effectiveness_gains_losses:
+    description: "unrealized gains/losses on cash flow hedges"
+    section: market_risk
+  foreign_currency_translation:
+    description: "foreign currency translation adjustments"
+    section: market_risk
+  interest_rate_swap_credit_adjusted_value:
+    description: "fair value excluding credit risk impact"
+    section: market_risk
+
+# Unusual features identified:
+#   - Stock warrants treated as derivatives and marked to market quarterly
+#   - Anti-dilution protection rights creating additional warrant issuances
+#   - Credit risk adjustment disclosed separately for interest rate swaps
+#   - Fair value assets reported in different balance sheet line items by year
+#   - Stock warrant gains/losses recorded in other expense rather than OCI
+

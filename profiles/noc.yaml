@@ -1,0 +1,32 @@
+issuer: Northrop Grumman
+ticker: NOC
+cik: "1133421"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_forward_notional:
+    description: "Notional amount of foreign currency forward contracts ($308M at Dec 31, 2025)"
+    section: market_risk
+  fx_sensitivity_10pct:
+    description: "Sensitivity of 10% unfavorable FX rate movement (stated as not material)"
+    section: market_risk
+  marketable_securities_fair_value:
+    description: "Fair value of marketable securities portfolio ($483M at Dec 31, 2025)"
+    section: market_risk
+  long_term_debt_carrying_value:
+    description: "Long-term fixed-rate debt carrying value ($15.7B at Dec 31, 2025)"
+    section: market_risk
+  long_term_debt_fair_value:
+    description: "Fair value of long-term fixed-rate debt ($15.1B at Dec 31, 2025)"
+    section: market_risk
+
+# Unusual features identified:
+#   - FX forwards are described as managing exchange rate risk but no mention of hedge designation under ASC 815
+#   - No derivatives note captured; disclosure is entirely in market risk section
+#   - Includes equity risk section for marketable securities portfolio, which is unusual
+#   - Includes inflation risk section discussing EPA clauses on fixed-price contracts
+#   - Minimal derivative activity for a company of this size
+

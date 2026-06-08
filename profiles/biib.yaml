@@ -1,0 +1,32 @@
+issuer: Biogen
+ticker: BIIB
+cik: "875045"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  hypothetical_fx_impact_current:
+    description: "hypothetical decrease in fair value of forward contracts for 10% adverse FX movement as of current year-end"
+    section: market_risk
+  hypothetical_fx_impact_prior:
+    description: "hypothetical decrease in fair value of forward contracts for 10% adverse FX movement as of prior year-end"
+    section: market_risk
+  hedge_horizon:
+    description: "time period for forecasted transactions being hedged"
+    section: market_risk
+  primary_currencies:
+    description: "main foreign currencies creating exchange rate risk"
+    section: market_risk
+  counterparty_concentration:
+    description: "statement about concentration of exposure with counterparties"
+    section: market_risk
+
+# Unusual features identified:
+#   - hypothetical sensitivity analysis provided without formal tabular presentation
+#   - specific mention of geopolitical conflicts (Russia-Ukraine, Middle East) as risk factors
+#   - Argentina hyperinflation disclosure embedded within FX risk section
+#   - hedge accounting election explicitly mentioned as not used for balance sheet hedging
+#   - 21-month specific hedge horizon mentioned
+

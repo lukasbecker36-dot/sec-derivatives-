@@ -1,0 +1,36 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-4M, now missing
+[DISAPPEARED_FIELD] foreign_exchange_loss: was $-4M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_transaction_gain_loss, foreign_exchange_loss)
+[LLM_FLAG] hedged_currencies: Colombian peso added to hedges (prior period: Polish zloty, Indian rupee, Hungarian forint, Mexican peso). Colombian peso was not previously mentioned.
+[LLM_FLAG] cash_ukraine_belarus: Ukraine cash increased 42.1% from $44.7M to $63.5M (likely operational needs or conversion from Belarus); Belarus cash increased 103.3% from $24.6M to $50.0M (significant increase, possibly related to dividend distribution restrictions instituted in April 2024)
+[LLM_FLAG] revenue_currency_exposure: Slight increase from 39.9% to 40.0% (immaterial change, within normal variation)
+[LLM_FLAG] expense_currency_exposure: Not quantified in current period (prior period was 61.4%); filing only states 'majority' without specific percentage
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
+[NUMERIC] fx_transaction_gain_loss: $-6M → $-4M (+41.9%) — exceeds 20% threshold
+[NUMERIC] foreign_exchange_loss: $-6M → $-4M (+41.9%) — exceeds 20% threshold
+[LLM_FLAG] FX loss increased significantly: $3.6M (Q3 2025) vs $0.7M (Q3 2024) - a 414% increase, exceeding 50% threshold
+[LLM_FLAG] Cash in Belarus declined materially: $24.6M (Sept 2025) vs $37.2M (prior period) - a 34% decrease, though not exceeding 50%
+[LLM_FLAG] Expense currency exposure increased: 61.4% (Sept 2025) vs 63.0% (prior period) - moderate decrease of 1.6 percentage points, within normal range
+[LLM_FLAG] Revenue currency exposure remained stable: 39.9% (Sept 2025) vs 39.7% (prior period) - essentially flat
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
+[NUMERIC] fx_transaction_gain_loss: $-11M → $-6M (+42.1%) — exceeds 20% threshold
+[NUMERIC] foreign_exchange_loss: $-11M → $-6M (+42.1%) — exceeds 20% threshold
+[LLM_FLAG] fx_transaction_gain_loss: Current period loss of $6.2M is 42% worse than prior period loss of $10.7M in absolute terms (improvement), but this represents a quarterly figure vs. what may have been a different period comparison in prior data. Note: This is Q2 2025 vs Q2 2024 comparison, consistent with disclosure period.
+[LLM_FLAG] revenue_currency_exposure: Increased from 38.4% to 39.7% (modest 1.3 percentage point increase, within normal variance)
+[LLM_FLAG] expense_currency_exposure: Decreased from 67.5% to 63.0% (4.5 percentage point decrease, 6.7% relative decrease - within plausible operational change)
+[LLM_FLAG] cash_ukraine_belarus: Ukraine cash relatively stable ($47.8M to $39.1M, 18% decrease); Belarus cash increased ($24.6M to $37.2M, 51% increase). The Belarus increase is notable given dividend distribution restrictions mentioned in April 2024, suggesting cash accumulation in Belarus due to inability to distribute.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
+[NUMERIC] fx_transaction_gain_loss: $-26M → $-11M (+58.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] net_unrealized_loss_hedges: was $-3M, now missing
+[NUMERIC] foreign_exchange_loss: $-26M → $-11M (+58.7%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (net_unrealized_loss_hedges)
+[LLM_FLAG] fx_transaction_gain_loss: Q1 2025 loss of $10.7M is substantially lower than prior full year of $25.9M; however, this is a quarterly comparison so decline is plausible (Q1 Q4 prior was $1.9M)
+[LLM_FLAG] cash_ukraine_belarus: Ukraine cash decreased from $49.2M to $47.8M (2.8% decline); Belarus cash decreased significantly from $37.8M to $24.6M (34.9% decline). The Belarus decline warrants attention given new dividend distribution restrictions mentioned in the filing effective until end of 2025
+[LLM_FLAG] revenue_currency_exposure: Declined from 39.5% to 38.4% (2.8% decline) - minor change
+[LLM_FLAG] expense_currency_exposure: Increased from 63.2% to 67.5% (6.8% increase) - notable increase in non-USD expense exposure
+[LLM_FLAG] constant_currency_adjustment: Revenue growth differential changed from +1.3pp (14.1% vs 15.4% reported) in prior period to +1.7pp (13.4% vs 11.7%) in current period. Operating income differential reversed and widened significantly from -4.3pp (negative 8.8% vs reported 4.5%) to -8.1pp (negative 18.2% vs reported negative 10.1%), indicating greater FX headwind on earnings
+

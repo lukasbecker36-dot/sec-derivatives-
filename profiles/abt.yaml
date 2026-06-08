@@ -1,0 +1,38 @@
+issuer: Abbott Laboratories
+ticker: ABT
+cik: "1800"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_currency_forward_notional:
+    description: "notional values of foreign currency forward contracts by year"
+    section: market_risk
+  interest_rate_hedge_notional:
+    description: "notional values of interest rate hedge contracts"
+    section: market_risk
+  fx_contracts_table:
+    description: "detailed breakdown of foreign currency contracts by currency with notional amounts, exchange rates, and fair values"
+    section: market_risk
+  fair_value_hierarchy:
+    description: "fair value measurement approaches for different instrument types"
+    section: market_risk
+  hedge_designation:
+    description: "cash flow hedges vs fair value hedges vs net investment hedges"
+    section: market_risk
+  contract_maturities:
+    description: "maturity periods for different contract types"
+    section: market_risk
+  contingent_consideration:
+    description: "fair value of contingent consideration from acquisitions"
+    section: market_risk
+
+# Unusual features identified:
+#   - combines derivatives and market risk disclosures in single note
+#   - includes non-derivative financial instruments (equity securities, mutual funds) in market risk section
+#   - provides detailed currency-by-currency breakdown with weighted average exchange rates
+#   - includes rabbi trust investments for deferred compensation plan
+#   - net investment hedge using yen-denominated term loan rather than derivatives
+

@@ -1,0 +1,41 @@
+issuer: TE Connectivity
+ticker: TEL
+cik: "1385157"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  xccy_swap_unrealized_sensitivity:
+    description: "Change in unrealized value of cross-currency swap/FX forward contracts for 10% currency move"
+    section: market_risk
+  commodity_hedge_fair_value:
+    description: "Net fair value (gain/loss position) of commodity hedges"
+    section: market_risk
+  commodity_hedge_notional:
+    description: "Notional value of commodity swap contracts"
+    section: market_risk
+  commodity_types_hedged:
+    description: "Commodities hedged (gold, silver, copper, palladium)"
+    section: market_risk
+  commodity_sensitivity:
+    description: "Change in unrealized value for 10% commodity price move"
+    section: market_risk
+  fx_designated_cf_hedges:
+    description: "FX forward contracts designated as cash flow hedges"
+    section: market_risk
+  net_investment_hedge_xccy_swaps:
+    description: "Cross-currency swaps designated as net investment hedges"
+    section: market_risk
+  investment_swap_contracts:
+    description: "Investment swap contracts for nonqualified deferred compensation liabilities"
+    section: market_risk
+
+# Unusual features identified:
+#   - Uses commodity swaps for gold, silver, copper, and palladium - unusual for a tech/connectivity company
+#   - 18-month hedging horizon for commodity contracts
+#   - Cross-currency swaps used for both cash flow hedges and net investment hedges
+#   - Investment swap contracts to manage deferred compensation liabilities
+#   - XBRL confirms CurrencySwapMember with NetInvestmentHedgingMember
+

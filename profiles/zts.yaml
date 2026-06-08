@@ -1,0 +1,43 @@
+issuer: Zoetis
+ticker: ZTS
+cik: "1555280"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_net_investment_hedge_sensitivity_10pct:
+    description: "Change in CTA for 10% strengthening/weakening of USD on net investment hedges (~$112M)"
+    section: market_risk
+  fx_forward_sensitivity_10pct:
+    description: "Change in fair value of FX forward-exchange contracts for 10% change in USD (~$53M)"
+    section: market_risk
+  ir_swap_notional_notes_2028:
+    description: "Interest rate swap notional on 3.900% Senior Notes due 2028 (fixed-to-floating)"
+    section: market_risk
+  ir_swap_notional_notes_2030:
+    description: "Interest rate swap notional on 2.00% Senior Notes due 2030 (fixed-to-floating)"
+    section: market_risk
+  ir_sensitivity_100bp:
+    description: "Change in annual interest expense for 100bp increase in SOFR (~$3M from swaps)"
+    section: market_risk
+  primary_fx_translation_exposures:
+    description: "Primary translation currency exposures (AUD, BRL, GBP, CAD, CNY, EUR)"
+    section: market_risk
+  commercial_paper_outstanding:
+    description: "Commercial paper borrowings outstanding"
+    section: market_risk
+  revolving_credit_balance:
+    description: "Outstanding principal balance under revolving credit facility"
+    section: market_risk
+
+# Unusual features identified:
+#   - Derivatives note text was essentially empty - only a cross-reference to Commitments and Contingencies
+#   - Substantive disclosure is in the market_risk section (Item 7A) rather than in the notes
+#   - Fixed-to-floating interest rate swaps are unusual - company INCREASES variable rate exposure on senior notes
+#   - FX forward-exchange contracts are NOT designated as hedges - used to offset intercompany balance sheet exposure
+#   - FX net investment hedges ARE designated - separate treatment for different FX derivative programs
+#   - Animal health/veterinary company with global operations - broad currency exposure
+#   - No commercial paper or revolving credit outstanding as of year-end despite having facilities
+

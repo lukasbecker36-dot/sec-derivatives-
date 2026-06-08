@@ -1,0 +1,26 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
+[LLM_FLAG] This 10-Q section is a disclosure stub referring readers to the 2025 Form 10-K Item 7A for full market risk disclosures. Substantially all quantitative and qualitative details are omitted from the current filing, with only a statement that material changes have not occurred in the three-month period.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-02 ===
+[LLM_FLAG] The filing section provided is a boilerplate reference paragraph that directs readers to Item 7A of the 2024 10-K for detailed market risk disclosures. The text explicitly states 'Our exposure to such risks has not changed materially in the six months ended June 30, 2025,' indicating no updated quantitative disclosures are included in this 10-Q section. This is a common practice in 10-Q filings when risk exposure remains materially unchanged from the prior year-end 10-K.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-02 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $6M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $16M, now missing
+[DISAPPEARED_FIELD] commodity_derivative_fair_value_sensitivity: was $51M, now missing
+[DISAPPEARED_FIELD] economic_hedge_notional: was $295M, now missing
+[DISAPPEARED_FIELD] fx_earnings_sensitivity: was $27M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $1,885M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_sensitivity: was $16M, now missing
+[DISAPPEARED_FIELD] credit_facility_capacity: was $4,650M, now missing
+[VALIDATION] Likely extraction failure: 9/9 previously-populated fields are now null (fx_forwards_outstanding, fx_transaction_gain_loss, ir_sensitivity_100bp, commodity_derivative_fair_value_sensitivity, economic_hedge_notional...)
+[LLM_FLAG] This 10-Q section contains only a brief reference to Item 7A of the 2024 10-K, stating that market risk exposure has not changed materially. No quantitative risk disclosures are provided in this excerpt. All specific derivative and sensitivity values cannot be extracted from the provided text.
+

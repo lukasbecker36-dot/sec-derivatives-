@@ -1,0 +1,41 @@
+issuer: Ball Corporation
+ticker: BALL
+cik: "9389"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  aluminum_sensitivity_impact:
+    description: "after-tax earnings impact from 10% adverse aluminum price change"
+    section: market_risk
+  interest_rate_sensitivity_impact:
+    description: "after-tax earnings impact from 100 basis point interest rate increase"
+    section: market_risk
+  currency_sensitivity_earnings_impact:
+    description: "after-tax earnings impact from 10% USD strengthening"
+    section: market_risk
+  currency_sensitivity_debt_impact:
+    description: "increase in forecasted debt balance from 10% adverse USD exchange rate change"
+    section: market_risk
+  net_investment_hedge_notional:
+    description: "notional amounts of cross currency swaps"
+    section: market_risk
+  net_investment_sensitivity_impact:
+    description: "after-tax currency translation adjustment from 10% adverse FX change"
+    section: market_risk
+  derivative_counterparty_risk_policy:
+    description: "description of counterparty credit risk monitoring"
+    section: market_risk
+  aluminum_hedge_methods:
+    description: "two methods for managing aluminum price risk"
+    section: market_risk
+
+# Unusual features identified:
+#   - sensitivity analysis presented without tabular format
+#   - combines qualitative risk management discussion with quantitative sensitivity metrics
+#   - includes debt balance impact from FX changes in addition to earnings impact
+#   - mentions master derivative agreements with netting provisions
+#   - aluminum hedging described through both contractual pass-through and derivatives
+

@@ -1,0 +1,79 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $30M, now missing
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
+[NUMERIC] gross_derivative_assets: $140M → $19M (-86.4%) — exceeds 20% threshold
+[NUMERIC] gross_derivative_liabilities: $86M → $35M (-59.3%) — exceeds 20% threshold
+[NUMERIC] net_derivative_assets: $137M → $18M (-86.9%) — exceeds 20% threshold
+[NUMERIC] cash_collateral_posted: $114M → $53M (-53.5%) — exceeds 20% threshold
+[NUMERIC] realized_gains_losses: $-81M → $-38M (+53.1%) — exceeds 20% threshold
+[NUMERIC] unrealized_gains_losses: $-111M → $-8M (+92.8%) — exceeds 20% threshold
+[NUMERIC] natural_gas_notional_bcf: $8M → $2M (-75.0%) — exceeds 20% threshold
+[NUMERIC] congestion_rights_notional_gwh: $4,973M → $1,232M (-75.2%) — exceeds 20% threshold
+[LLM_FLAG] electricity_notional_gwh increased 6% from 5679 to 6019 - within expected variance
+[LLM_FLAG] natural_gas_notional_bcf decreased 75% from 8 to 2 - significant decrease but within commodity trading volatility
+[LLM_FLAG] congestion_rights_notional_gwh decreased 75% from 4973 to 1232 - significant decrease reflecting market position changes
+[LLM_FLAG] gross_derivative_assets decreased 86% from 140 to 19 - significant change reflecting fair value adjustments and settlements
+[LLM_FLAG] gross_derivative_liabilities decreased 59% from 86 to 35 - moderate decrease in liability positions
+[LLM_FLAG] net_derivative_assets decreased 87% from 137 to 18 - consistent with overall position reduction
+[LLM_FLAG] cash_collateral_posted decreased 53% from 114 to 53 - consistent with reduced derivative positions
+[LLM_FLAG] realized_gains_losses similar at -38 vs -40 - minimal variance
+[LLM_FLAG] unrealized_gains_losses improved from -111 to -8 - significant improvement reflecting market conditions
+[LLM_FLAG] fixed_rate_notes_billion calculated from debt schedules shows slight decrease from 36.378B to 36.307B - debt refinancing activity ongoing
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
+[NUMERIC] gross_derivative_assets: $196M → $140M (-28.6%) — exceeds 20% threshold
+[NUMERIC] gross_derivative_liabilities: $20M → $86M (+330.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_assets: $179M → $137M (-23.5%) — exceeds 20% threshold
+[NUMERIC] cash_collateral_posted: $75M → $114M (+52.0%) — exceeds 20% threshold
+[NUMERIC] realized_gains_losses: $-43M → $-81M (-88.4%) — exceeds 20% threshold
+[NUMERIC] unrealized_gains_losses: $11M → $-111M (-1109.1%) — exceeds 20% threshold
+[NUMERIC] congestion_rights_notional_gwh: $4,119M → $4,973M (+20.7%) — exceeds 20% threshold
+[LLM_FLAG] electricity_notional_gwh: Decreased from 6,914 GWh (prior period) to 5,679 GWh (current period) - a 17.8% decline, within normal bounds but notable
+[LLM_FLAG] congestion_rights_notional_gwh: Decreased significantly from 4,119 GWh (prior period) to 4,973 GWh (current period) - actually an increase of 20.7%, opposite expected direction from prior period decline concern
+[LLM_FLAG] net_derivative_assets: Decreased from 179 million (prior period) to 137 million (current period) - a 23.5% decline, slightly above 20% but within reasonable variance
+[LLM_FLAG] cash_collateral_posted: Increased from 75 million (prior period) to 114 million (current period) - a 52% increase, exceeding the 50% threshold. This significant increase may be due to increased derivative positions or counterparty credit requirements related to Eaton Fire liabilities and litigation activities.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
+[NUMERIC] cash_collateral_posted: $43M → $75M (+74.4%) — exceeds 20% threshold
+[NUMERIC] unrealized_gains_losses: $-23M → $11M (+147.8%) — exceeds 20% threshold
+[NUMERIC] electricity_notional_gwh: $4,571M → $6,914M (+51.3%) — exceeds 20% threshold
+[NUMERIC] natural_gas_notional_bcf: $8M → $10M (+25.0%) — exceeds 20% threshold
+[NUMERIC] congestion_rights_notional_gwh: $5,751M → $4,119M (-28.4%) — exceeds 20% threshold
+[NEW_FIELD] fin_toll_notional_gwh: appeared for first time ($240M)
+[LLM_FLAG] electricity_notional_gwh increased 51% from 4,571 to 6,914 GWh - significant increase in electricity derivative hedging volumes
+[LLM_FLAG] congestion_rights_notional_gwh decreased 28% from 5,751 to 4,119 GWh - material reduction in CRR positions
+[LLM_FLAG] fin_toll_notional_gwh changed from 0 to 240 GWh - new derivative instrument type not present in prior period
+[LLM_FLAG] net_derivative_assets decreased 15% from 155 to 179 million despite higher electricity volumes - likely due to market price movements
+[LLM_FLAG] cash_collateral_posted increased 74% from 43 to 75 million - significant increase related to higher derivative positions and collateral requirements
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($38M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($1,575M)
+[NEW_FIELD] gross_derivative_assets: appeared for first time ($164M)
+[NEW_FIELD] gross_derivative_liabilities: appeared for first time ($22M)
+[NEW_FIELD] net_derivative_assets: appeared for first time ($155M)
+[NEW_FIELD] net_derivative_liabilities: appeared for first time ($0M)
+[NEW_FIELD] cash_collateral_posted: appeared for first time ($43M)
+[NEW_FIELD] realized_gains_losses: appeared for first time ($-40M)
+[NEW_FIELD] unrealized_gains_losses: appeared for first time ($-23M)
+[NEW_FIELD] electricity_notional_gwh: appeared for first time ($4,571M)
+[NEW_FIELD] natural_gas_notional_bcf: appeared for first time ($8M)
+[NEW_FIELD] congestion_rights_notional_gwh: appeared for first time ($5,751M)
+[LLM_FLAG] electricity_notional_gwh: Increased from 3,295 GWh at December 31, 2024 to 4,571 GWh at March 31, 2025, representing a 39% increase within the quarter, which is significant but not exceeding the 50% threshold
+[LLM_FLAG] congestion_rights_notional_gwh: Decreased from 8,141 GWh at December 31, 2024 to 5,751 GWh at March 31, 2025, representing a 29% decrease within the quarter
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
+[LLM_FLAG] Provided text is only the audit opinion header section and does not contain market risk disclosure. The actual market risk disclosures are referenced as being in the MD&A under the heading 'Market Risk Exposures,' which is not included in this excerpt.
+

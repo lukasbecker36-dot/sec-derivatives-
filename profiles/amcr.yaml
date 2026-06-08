@@ -1,0 +1,42 @@
+issuer: Amcor
+ticker: AMCR
+cik: "1748790"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  notional_amounts_by_instrument:
+    description: "notional amounts for each derivative type"
+    section: market_risk
+  hedge_accounting_designation:
+    description: "fair value hedge, cash flow hedge, net investment hedge classifications"
+    section: market_risk
+  derivative_balance_sheet_location:
+    description: "balance sheet location and fair values of derivative assets/liabilities"
+    section: market_risk
+  commodity_contract_volumes:
+    description: "physical volumes for aluminum and PET resin contracts"
+    section: market_risk
+  cross_currency_swap_details:
+    description: "currency pairs, rates, and designation for cross currency swaps"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "1% rate change impact on income"
+    section: market_risk
+  fx_sensitivity:
+    description: "1% EUR rate change impact on net sales"
+    section: market_risk
+  argentina_peso_exposure:
+    description: "peso devaluation impacts and exposures"
+    section: market_risk
+
+# Unusual features identified:
+#   - commodity_swaps_on_behalf_of_customers
+#   - complex_merger_assumption_of_legacy_derivatives
+#   - multiple_currency_cross_currency_swaps_eur_gbp
+#   - argentina_peso_specific_risk_disclosure
+#   - economic_hedges_without_hedge_accounting
+#   - swap_downsizing_during_fiscal_year
+

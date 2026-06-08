@@ -1,0 +1,51 @@
+=== 10-K | Period ending 2025-10-26 | Processed 2026-06-04 ===
+[NUMERIC] foreign_currency_net_position: $1,100M → $800M (-27.3%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-04-27 | Processed 2026-06-04 ===
+[NUMERIC] long_term_debt_fair_value: $26,000M → $2,500M (-90.4%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2026-04-26 | Processed 2026-06-02 ===
+[NUMERIC] commodity_hedge_fair_value: $15M → $20M (+33.6%) — exceeds 20% threshold
+[LLM_FLAG] commodity_hedge_fair_value increased 33.6% from $14.9M to $19.9M - within normal range
+[LLM_FLAG] commodity_sensitivity_analysis changed from -$32.4M to -$29.7M (8.3% improvement) - minor variance
+[LLM_FLAG] interest_rate_sensitivity decreased from $60.9M to $59.4M (2.5% decline) - minor variance
+[LLM_FLAG] investment_securities_balance increased 0.9% from $222.4M to $224.4M - immaterial change
+[LLM_FLAG] equity_sensitivity_10pct slightly increased from $10.8M to $11.0M (1.9% change) - immaterial
+
+=== 10-Q | Period ending 2026-01-25 | Processed 2026-06-02 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $66M, now missing
+[NUMERIC] commodity_hedge_fair_value: $7M → $15M (+101.4%) — exceeds 20% threshold
+[NUMERIC] commodity_sensitivity_analysis: $-26M → $-32M (-22.7%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_net_position: $1,100M → $800M (-27.3%) — exceeds 20% threshold
+[LLM_FLAG] commodity_hedge_fair_value increased 101% from $7.4M to $14.9M - significant increase in hedging position
+[LLM_FLAG] commodity_sensitivity_analysis increased 23% in magnitude from -$26.4M to -$32.4M - consistent with larger hedge position
+[LLM_FLAG] foreign_currency_net_position decreased 27% from $1.1B to $0.8B - material reduction in foreign currency exposure
+[LLM_FLAG] major_currency_exposures changed - Philippine peso replaces Brazilian real; Chinese yuan and Indonesian rupiah maintained
+[LLM_FLAG] investment_securities_balance increased 3.4% from $215.0M to $222.4M - modest increase in COLI policies
+[LLM_FLAG] interest_rate_sensitivity methodology changed - prior period reported 100bp sensitivity ($65.9M), current period reports 10% rate change ($60.9M/-$56.5M), making direct comparison problematic
+
+=== 10-Q | Period ending 2025-07-27 | Processed 2026-06-02 ===
+[LLM_FLAG] commodity_sensitivity_analysis: Prior value -29.2 vs current -26.4. Change of 9.6% is within tolerance.
+[LLM_FLAG] foreign_currency_net_position: Prior value $1.2 billion vs current $1.1 billion. Change of 8.3% is within tolerance.
+[LLM_FLAG] interest_rate_sensitivity: Prior period showed separate 100bp sensitivity of 68.0 vs current 10% change sensitivity of 65.9. These are different methodologies; current uses 10% rate change.
+
+=== 10-Q | Period ending 2025-04-27 | Processed 2026-06-02 ===
+[NUMERIC] commodity_hedge_fair_value: $16M → $8M (-49.7%) — exceeds 20% threshold
+[LLM_FLAG] commodity_hedge_fair_value increased 234% from $(5.9)M to $7.8M - significant swing from loss position to gain position
+[LLM_FLAG] ir_sensitivity_100bp decreased 7% from $73.0M to $68.0M - minor change but directionally consistent with interest rate environment
+[LLM_FLAG] fixed_rate_notes_billion increased 4% from $2.4B to $2.5B - moderate increase in debt levels
+[LLM_FLAG] commodity_sensitivity_analysis improved 6% from $(31.0)M to $(29.2)M - smaller negative impact than prior period
+
+=== 10-Q | Period ending 2025-01-26 | Processed 2026-06-02 ===
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($10M)
+[NUMERIC] commodity_hedge_fair_value: $6M → $16M (+181.8%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_net_position: $800M → $1,200M (+50.0%) — exceeds 20% threshold
+[LLM_FLAG] foreign_currency_net_position: Increased 50% from $800M to $1,200M - significant change in net asset position in foreign currencies
+[LLM_FLAG] commodity_hedge_fair_value: Changed from $(5.9)M loss position to $15.5M gain position - substantial swing of $21.4M
+[LLM_FLAG] commodity_sensitivity_analysis: Changed from -$29.3M to -$31.0M impact - relatively stable but slight deterioration
+[LLM_FLAG] major_currency_exposures: Changed from Chinese yuan, Indonesian rupiah, Philippine peso to Chinese yuan, Indonesian rupiah, Brazilian real - Philippine peso replaced with Brazilian real
+[LLM_FLAG] ir_sensitivity_100bp: Increased from $62.2M to $73.0M - 17.4% increase in interest rate sensitivity
+
+=== 10-Q | Period ending 2026-04-26 | Processed 2026-06-01 ===
+[LLM_FLAG] FX net asset position decreased 33% from $1.2 billion (Oct 27, 2024) to $0.8 billion (Oct 26, 2025) - substantial decline warrants investigation
+

@@ -1,0 +1,54 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NUMERIC] ir_sensitivity_100bp: $31M → $1M (-96.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forward_fair_value: was $2,400M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_2024: was $18M, now missing
+[VALIDATION] Likely extraction failure: 2/4 previously-populated fields are now null (fx_forward_fair_value, variable_rate_debt_2024)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NUMERIC] ir_sensitivity_100bp: $1M → $31M (+3000.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_forward_fair_value: appeared for first time ($2,400M)
+[NEW_FIELD] variable_rate_debt_2024: appeared for first time ($18M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
+[NUMERIC] fx_forwards_outstanding: $3,900M → $1,600M (-59.0%) — exceeds 20% threshold
+[NUMERIC] fx_forward_notional: $3,900M → $1,600M (-59.0%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_up: $5M → $56M (+998.0%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_down: $-5M → $-56M (-978.8%) — exceeds 20% threshold
+[LLM_FLAG] fx_forwards_outstanding decreased 59% from $3,900M to $1,600M - significant reduction in FX hedge portfolio
+[LLM_FLAG] fx_forward_fair_value worsened (more negative) from -$6.6M to -$7.9M
+[LLM_FLAG] fx_sensitivity_up decreased 91% from $105.4M to $56.0M - correlates with reduced notional hedge value
+[LLM_FLAG] fx_sensitivity_down decreased 92% from $105.7M to $56.1M - correlates with reduced notional hedge value
+[LLM_FLAG] variable_rate_debt slightly decreased from $18.7M to $17.5M
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
+[NUMERIC] fx_forward_fair_value: $-4M → $-7M (-46.7%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_up: $35M → $5M (-85.3%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_down: $-35M → $-5M (+85.1%) — exceeds 20% threshold
+[LLM_FLAG] FX forward notional decreased 7.1% from $4,200M to $3,900M (within acceptable range)
+[LLM_FLAG] FX forward fair value deteriorated from -$4.5M to -$6.6M liability, representing 46.7% increase in loss (significant but within 50% threshold)
+[LLM_FLAG] FX sensitivity values dramatically decreased from ~$34.8M to ~$5.1-5.2M, representing 85.3% reduction - significant change warrants investigation
+[LLM_FLAG] Variable rate debt 2025 of $18.7M is essentially flat vs prior period $19.3M (3.1% decrease, no issue)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
+[NUMERIC] fx_forwards_outstanding: $6,500M → $4,200M (-35.4%) — exceeds 20% threshold
+[NUMERIC] fx_forward_notional: $6,500M → $4,200M (-35.4%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_up: $73M → $35M (-52.2%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_down: $-73M → $-35M (+52.4%) — exceeds 20% threshold
+[LLM_FLAG] fx_forwards_outstanding: Decreased 35% from $6.5 billion (2024-12-31) to $4.2 billion (2025-06-30) - significant reduction in notional value, likely reflects active hedging management or reduction in foreign currency exposure
+[LLM_FLAG] fx_forward_fair_value: Deteriorated from -$5.2 million liability to -$4.5 million liability, improvement of $0.7 million (13% better), consistent with market movement
+[LLM_FLAG] fx_sensitivity_up: Decreased 52% from $72.8 million to $34.8 million - attributable to lower notional hedge volume
+[LLM_FLAG] fx_sensitivity_down: Decreased 52% from -$73.1 million to -$34.8 million - proportional to the reduction in forward contracts outstanding
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($6,500M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] fx_forward_notional: appeared for first time ($6,500M)
+[NEW_FIELD] fx_forward_fair_value: appeared for first time ($-5M)
+[NEW_FIELD] fx_sensitivity_up: appeared for first time ($73M)
+[NEW_FIELD] fx_sensitivity_down: appeared for first time ($-73M)
+[NEW_FIELD] variable_rate_debt_2025: appeared for first time ($19M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($0M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
+[LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKj1UbSPbicySBtn162'}
+

@@ -1,0 +1,41 @@
+issuer: Newmont
+ticker: NEM
+cik: "1164727"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  provisionally_priced_sales_volume:
+    description: "Volume of provisionally priced gold, copper, silver, lead, zinc subject to final pricing"
+    section: market_risk
+  provisional_average_price:
+    description: "Average provisional price per ounce/pound for each metal"
+    section: market_risk
+  sensitivity_10pct_change:
+    description: "Effect of 10% change in average price on net income for each metal"
+    section: market_risk
+  fx_sensitivity_10pct:
+    description: "Impact of 10% adverse FX movement on costs applicable to sales"
+    section: market_risk
+  metal_price_assumptions_short_term:
+    description: "Short-term metal price assumptions for NRV (gold, copper, silver, lead, zinc)"
+    section: market_risk
+  metal_price_assumptions_long_term:
+    description: "Long-term metal price assumptions for NRV"
+    section: market_risk
+  fx_rate_assumptions:
+    description: "AUD, CAD, MXN to USD exchange rate assumptions"
+    section: market_risk
+  hedging_instruments_description:
+    description: "Description of Cadia PPA and FX cash flow hedges"
+    section: market_risk
+
+# Unusual features identified:
+#   - No notional amount tables for hedges; hedging detail is narrative only in market risk section
+#   - Provisional concentrate sales with embedded derivatives are the primary derivative exposure
+#   - Explicitly states no instruments designated to hedge metal price changes
+#   - Cadia Power Purchase Agreement treated as a hedging instrument
+#   - Metal price sensitivity presented as a table with provisionally priced volumes rather than notional amounts
+

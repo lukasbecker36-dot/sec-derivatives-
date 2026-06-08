@@ -1,0 +1,26 @@
+issuer: Tyler Technologies
+ticker: TYL
+cik: "860731"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  revolving_credit_available:
+    description: "Available borrowing capacity under 2024 Credit Agreement"
+    section: market_risk
+  variable_rate_terms:
+    description: "Interest rate terms on revolving credit facility (prime + margin or SOFR + margin)"
+    section: market_risk
+  outstanding_borrowings:
+    description: "Outstanding borrowings under credit agreement (zero as of reporting date)"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivatives of any kind
+#   - Extremely minimal market risk disclosure - only describes credit facility terms
+#   - No outstanding borrowings as of reporting date
+#   - No foreign currency risk discussion despite being a technology company
+#   - No interest rate sensitivity analysis provided
+

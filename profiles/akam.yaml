@@ -1,0 +1,32 @@
+issuer: Akamai Technologies
+ticker: AKAM
+cik: "1086222"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  interest_rate_sensitivity:
+    description: "Impact of 100bp rate increase on available-for-sale portfolio ($14.2 million decline)"
+    section: market_risk
+  convertible_notes_principal:
+    description: "Aggregate principal amount of convertible senior notes ($4,140.0 million)"
+    section: market_risk
+  fx_forward_contracts_materiality:
+    description: "Statement that foreign currency transaction gains/losses from forward contracts were immaterial"
+    section: market_risk
+  fx_sensitivity:
+    description: "Hypothetical 10% USD strengthening/weakening would not result in material impact"
+    section: market_risk
+  credit_concentration:
+    description: "One customer with >10% of accounts receivable as of Dec 31, 2025"
+    section: market_risk
+
+# Unusual features identified:
+#   - Uses bracketed section identifier [market_risk] rather than standard heading
+#   - Contains convertible notes discussion in interest rate section without derivative analysis
+#   - Foreign currency derivatives described as immaterial without quantitative details
+#   - No notional amounts or maturity information for FX forwards
+#   - Mixed market risk types in single continuous section without clear subsection breaks
+

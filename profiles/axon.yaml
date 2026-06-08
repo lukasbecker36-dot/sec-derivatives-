@@ -1,0 +1,38 @@
+issuer: Axon Enterprise
+ticker: AXON
+cik: "1069183"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  interest_rate_sensitivity:
+    description: "hypothetical impact of 100 basis point rate change on portfolio value"
+    section: market_risk
+  credit_facility_amount:
+    description: "total line of credit amount available"
+    section: market_risk
+  credit_facility_rate:
+    description: "interest rate structure (SOFR plus spread)"
+    section: market_risk
+  outstanding_letters_of_credit:
+    description: "amount of letters of credit reducing available borrowings"
+    section: market_risk
+  available_borrowing_capacity:
+    description: "net available borrowing under credit facility"
+    section: market_risk
+  foreign_currency_exposure:
+    description: "description of foreign exchange risks from international operations"
+    section: market_risk
+  hedging_policy:
+    description: "current hedging activities and future hedging intentions"
+    section: market_risk
+
+# Unusual features identified:
+#   - No actual derivative instruments disclosed despite market risk section
+#   - Company explicitly states no hedging activities to date but may consider in future
+#   - Interest rate sensitivity analysis provided for investment portfolio only
+#   - Unused credit facility creates potential future interest rate exposure
+#   - Foreign currency exposure acknowledged but not quantified or hedged
+

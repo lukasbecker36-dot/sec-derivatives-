@@ -1,0 +1,37 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
+[NUMERIC] total_cash_equivalents_fv: $1,726M → $1,113M (-35.5%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv decreased 68% from prior period ($1,726M to $1,113M) - this is significant but could be explained by timing of cash management activities
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
+[NUMERIC] total_cash_equivalents_fv: $1,122M → $1,726M (+53.8%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $76M → $1M (-98.7%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv increased 53.8% from $1,122.0M (prior period) to $1,726.0M (current period). This exceeds the 50% threshold. The increase is explained by higher time deposits and money market funds held as of September 30, 2025.
+[LLM_FLAG] total_marketable_securities_fv decreased 98.7% from $76.0M (prior period) to $1.0M (current period). This exceeds the 50% threshold. The significant decrease appears to be a reclassification of prior year held-to-maturity balances between time deposits and foreign government bonds as noted in the filing: 'Reclassifications of prior year held-to-maturity balances have been made in the current year to disaggregate between those that are time deposits and foreign government bonds.'
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
+[NUMERIC] total_marketable_securities_fv: $1M → $76M (+7500.0%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv decreased from $1,314 million (prior period) to $1,122 million (current period) - 14.6% decrease, within acceptable range
+[LLM_FLAG] total_marketable_securities_fv increased from $1 million (prior period) to $76 million (current period) - 7500% increase, but prior period value was extremely low ($1 million), making percentage change less meaningful. Change reflects addition of $75 million in available-for-sale securities at June 30, 2025
+[LLM_FLAG] Provided text is a brief disclosure reference section that directs readers to the 2024 Annual Report rather than containing substantive market risk analysis. Full quantitative and qualitative disclosures are not included in this excerpt.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
+[NUMERIC] total_cash_equivalents_fv: $3,431M → $1,314M (-61.7%) — exceeds 20% threshold
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[DISAPPEARED_FIELD] foreign_currency_contracts_fair_value: was $-13M, now missing
+[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $-471M, now missing
+[VALIDATION] Likely extraction failure: 2/4 previously-populated fields are now null (foreign_currency_contracts_fair_value, foreign_currency_sensitivity)
+[LLM_FLAG] total_cash_equivalents_fv: Decreased 39.7% from $2,179M (Dec 31, 2024) to $1,314M (Mar 31, 2025), within acceptable range but notable decline
+[LLM_FLAG] total_marketable_securities_fv: Decreased 98.4% from $63M (Dec 31, 2024) to $1M (Mar 31, 2025), substantial decline
+[LLM_FLAG] Filing text appears to be a reference/cross-reference only, not actual disclosure content. Text directs reader to 2024 Annual Report for market risk disclosures rather than providing actual quantitative/qualitative data.
+[LLM_FLAG] Unable to extract any specific numerical values or detailed policy information from the provided text.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-25 ===
+[LLM_FLAG] total_cash_equivalents_fv increased from $2,179 million (2024) to $3,431 million (2025), a 57.6% increase, primarily due to holding additional time deposits and money market funds classified as held-to-maturity securities
+

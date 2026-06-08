@@ -1,0 +1,62 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[NUMERIC] fx_transaction_gain_loss: $-3M → $-0M (+84.3%) — exceeds 20% threshold
+[NUMERIC] hedge_gain_losses_current: $1M → $0M (-75.0%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_transaction_losses: $-3M → $-0M (+84.3%) — exceeds 20% threshold
+[NUMERIC] revenue_fx_impact: $13M → $31M (+135.5%) — exceeds 20% threshold
+[NUMERIC] operating_profit_fx_impact: $3M → $14M (+326.7%) — exceeds 20% threshold
+[NUMERIC] eps_fx_impact: $0M → $0M (+1300.0%) — exceeds 20% threshold
+[LLM_FLAG] revenue_fx_impact: Q1 2026 revenue FX impact of $31.2M is significantly higher than prior year impact of -$12.3M (diff > 50%), indicating favorable currency environment in current period
+[LLM_FLAG] operating_profit_fx_impact: Operating profit FX impact of $14.2M is significantly higher than prior year of -$4.1M, suggesting strengthening of certain foreign currencies relative to prior year comparison
+[LLM_FLAG] hedge_gain_losses_current: Decreased from prior period $3.745M to current period $0.150M (96% decline), indicating reduced hedge gains
+[LLM_FLAG] fx_transaction_gain_loss: Losses increased from -$0.671M in prior period to -$0.444M in current period (34% improvement, not a concern)
+[LLM_FLAG] sensitivity_analysis: Updated to $12M revenue and $4M operating income impact from 1% USD strengthening (prior was $4M and $1M), suggesting increased foreign currency exposure or higher international sales mix
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-02 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] fx_transaction_gain_loss: $-1M → $-3M (-128.1%) — exceeds 20% threshold
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[NUMERIC] hedge_gain_losses_current: $3M → $1M (-76.6%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_transaction_losses: $-1M → $-3M (-128.1%) — exceeds 20% threshold
+[NUMERIC] revenue_fx_impact: $0M → $13M (+6484.6%) — exceeds 20% threshold
+[NUMERIC] operating_profit_fx_impact: $-0M → $3M (+809.6%) — exceeds 20% threshold
+[NUMERIC] eps_fx_impact: $-0M → $0M (+200.0%) — exceeds 20% threshold
+[LLM_FLAG] sensitivity_analysis shows 50% reduction in revenue impact from prior period ($8M to $4M) - likely due to different assumptions or hedging strategy changes
+[LLM_FLAG] operating_profit_fx_impact improved significantly from negative territory in prior year periods to positive $5.554M and $3.328M in current periods
+[LLM_FLAG] hedge_gain_losses_current decreased from positive $3.043M in prior 9-month period to $0.6M in current period
+[LLM_FLAG] fixed_rate_notes value of $0.25B is correctly stated as portion of total borrowings ($455M outstanding); only $250M is effectively fixed
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-02 ===
+[NUMERIC] fx_transaction_gain_loss: $-1M → $-1M (-84.6%) — exceeds 20% threshold
+[NUMERIC] hedge_gain_losses_current: $4M → $3M (-31.5%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_transaction_losses: $-1M → $-1M (-84.6%) — exceeds 20% threshold
+[NUMERIC] revenue_fx_impact: $-12M → $0M (+101.6%) — exceeds 20% threshold
+[NUMERIC] operating_profit_fx_impact: $-4M → $-0M (+88.9%) — exceeds 20% threshold
+[NUMERIC] eps_fx_impact: $-0M → $-0M (+75.0%) — exceeds 20% threshold
+[LLM_FLAG] revenue_fx_impact: Current period value of $0.201M is significantly lower than prior period of -$12.253M (98% decline), suggesting substantially improved currency headwinds
+[LLM_FLAG] operating_profit_fx_impact: Current period value of -$0.469M is substantially improved compared to prior period of -$4.211M (89% improvement), indicating better FX management
+[LLM_FLAG] hedge_gain_losses_current: Current period value of $2.565M is lower than prior period of $3.745M (31% decline), within expected variance
+[LLM_FLAG] forward_fx_assumptions: Exchange rates have shifted materially - EUR moved from 1.08 to 1.15 (6.5% weaker USD), GBP from 1.25 to 1.34 (7.2% weaker USD), CAD from 0.69 to 0.72 (4.3% weaker USD), indicating significant currency appreciation relative to USD
+[LLM_FLAG] sensitivity_analysis: 2025 projection of $8M revenue impact and $3M operating income impact from 1% USD strengthening is lower than prior period estimate of $11M and $4M respectively, consistent with the changed currency environment
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-02 ===
+[NUMERIC] fx_transaction_gain_loss: $-4,160M → $-1M (+100.0%) — exceeds 20% threshold
+[NUMERIC] hedge_gain_losses_current: $-801M → $4M (+100.5%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_transaction_losses: $-4,160M → $-1M (+100.0%) — exceeds 20% threshold
+[NUMERIC] revenue_fx_impact: $33,139M → $-12M (-100.0%) — exceeds 20% threshold
+[NUMERIC] operating_profit_fx_impact: $11,618M → $-4M (-100.0%) — exceeds 20% threshold
+[NUMERIC] eps_fx_impact: $0M → $-0M (-140.0%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: fx_transaction_gain_loss changed from -4,160 to -1 (0x)
+[VALIDATION] Likely units mismatch: hedge_gain_losses_current changed from -801 to 4 (0x)
+[VALIDATION] Likely units mismatch: foreign_currency_transaction_losses changed from -4,160 to -1 (0x)
+[VALIDATION] Likely units mismatch: revenue_fx_impact changed from 33,139 to -12 (0x)
+[VALIDATION] Likely units mismatch: operating_profit_fx_impact changed from 11,618 to -4 (0x)
+[LLM_FLAG] fx_transaction_gain_loss: Current period loss of $0.671 million is significantly different from prior period loss of $4.160 billion (99.98% decrease). This is a major change but represents 3-month results vs full-year prior period comparison - requires context.
+[LLM_FLAG] hedge_gain_losses_current: Current period gain of $3.745 million vs prior period $810 million represents a 362% increase, exceeding 50% threshold but within reasonable quarterly variation.
+[LLM_FLAG] revenue_fx_impact: Current period impact of $12.253 million loss vs prior period impact of $33.139 billion gain represents a significant directional shift, likely due to USD strengthening in current quarter.
+[LLM_FLAG] operating_profit_fx_impact: Current period impact of $4.211 million loss vs prior period impact of $11.618 billion gain is a substantial shift in direction and magnitude.
+[LLM_FLAG] forward_fx_assumptions: Exchange rates have changed materially from prior period (e.g., EUR moved from 1.16 to 1.08, JPY from 157 to 148), reflecting USD strengthening.
+

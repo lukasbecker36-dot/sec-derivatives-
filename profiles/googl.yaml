@@ -1,0 +1,39 @@
+issuer: Alphabet Inc. (Class A)
+ticker: GOOGL
+cik: "1652044"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fair_value_hierarchy_tables:
+    description: "Level 1, Level 2, Level 3 fair value measurements for cash equivalents and marketable securities"
+    section: market_risk
+  unrealized_gains_losses:
+    description: "Gross unrealized gains and losses on debt securities by maturity and loss duration"
+    section: market_risk
+  foreign_currency_sensitivity:
+    description: "10% adverse change impact on foreign denominated assets, cash flow hedges, and net investment hedges"
+    section: market_risk
+  hedge_accounting_designations:
+    description: "Cash flow hedges of foreign currency revenue and net investment hedges"
+    section: market_risk
+  value_at_risk:
+    description: "VaR analysis for interest rate risk on investment portfolio with 95% confidence interval"
+    section: market_risk
+  debt_securities_gains_losses:
+    description: "Annual realized and unrealized gains/losses on debt securities in OI&E"
+    section: market_risk
+  fair_value_option_elections:
+    description: "Debt securities elected for fair value option to align with derivative contract treatment"
+    section: market_risk
+
+# Unusual features identified:
+#   - No traditional notional amount table for derivatives
+#   - Derivatives disclosed primarily in market risk section rather than separate derivatives note
+#   - VaR methodology uses variance/covariance model with 95% confidence interval
+#   - Fair value option elected specifically to align with derivative contract accounting
+#   - Large non-marketable equity securities portfolio ($64.1B) with measurement alternative accounting
+#   - Sensitivity analysis uses 10% adverse change assumption based on historical trends
+

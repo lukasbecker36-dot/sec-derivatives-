@@ -1,0 +1,25 @@
+issuer: Devon Energy
+ticker: DVN
+cik: "1090012"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  derivative_instruments_details:
+    description: "details of derivative financial instruments used"
+    section: market_risk
+  market_risk_disclosures:
+    description: "quantitative and qualitative market risk information"
+    section: market_risk
+  fair_value_measurements:
+    description: "fair value hierarchy and measurements"
+    section: market_risk
+
+# Unusual features identified:
+#   - Only table of contents references provided, no actual content
+#   - Market risk disclosure appears to be in Item 7A rather than notes
+#   - Fair value information likely in separate Note 19
+#   - Cannot determine specific instrument types or hedge accounting from headers alone
+

@@ -24,10 +24,36 @@ fields:
     section: market_risk
 
 qualitative:
-  sections_to_search: [market_risk]
+  sections_to_search: [market_risk, derivatives_note, financial_instruments]
   categories:
     Interest rate risk: [interest rate, basis point, 'floating.rate']
     FX exposure: ['foreign currency.*risk', exchange rate]
     Sensitivity: ['10% increase', '10% decrease', sensitivity]
+    New instruments:
+      - 'entered into.*derivative'
+      - 'entered into.*swap'
+      - 'entered into.*forward'
+      - total return swap
+      - credit default swap
+      - embedded derivative
+      - bifurcat
+    Policy changes:
+      - 'commenced.*hedg'
+      - 'initiated.*hedg'
+      - 'new.*hedging.*program'
+      - 'began.*using.*derivative'
+    CVA/XVA:
+      - credit valuation adjust
+      - CVA
+      - DVA
+    Regulatory:
+      - Dodd-Frank
+      - EMIR
+    Event-driven:
+      - deal contingent
+      - contingent forward
+      - 'acquisition.*hedg'
+      - 'merger.*hedg'
+      - 'transaction.*hedg'
 
 dashboard_mapping: {}

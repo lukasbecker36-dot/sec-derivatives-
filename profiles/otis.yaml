@@ -1,0 +1,23 @@
+issuer: Otis Worldwide
+ticker: OTIS
+cik: "1781335"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_sensitivity:
+    description: "Sensitivity analysis based on hypothetical changes in foreign currency exchange rates"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "Sensitivity analysis based on hypothetical changes in interest rates"
+    section: market_risk
+
+# Unusual features identified:
+#   - Market risk section is extremely brief and truncated - references Note 2, Note 8 and Note 16 for details
+#   - Forward contracts mentioned but no notional amounts, fair values or specific currencies disclosed in extracted text
+#   - Also mentions commodity price exposure in addition to FX and interest rate risk
+#   - Detailed derivative information likely in Note 16: Financial Instruments which is not in extracted text
+#   - Hedge designation status cannot be determined from extracted text alone
+

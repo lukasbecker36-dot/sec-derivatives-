@@ -1,0 +1,44 @@
+issuer: Air Products
+ticker: APD
+cik: "2969"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  net_financial_instrument_position:
+    description: "total net liability position of all financial instruments"
+    section: market_risk
+  debt_composition_fixed_rate_percent:
+    description: "percentage of debt portfolio that is fixed-rate"
+    section: market_risk
+  debt_composition_variable_rate_percent:
+    description: "percentage of debt portfolio that is variable-rate"
+    section: market_risk
+  interest_rate_sensitivity_100bp_up_fixed:
+    description: "impact on net liability position from 100bp increase in rates"
+    section: market_risk
+  interest_rate_sensitivity_100bp_down_fixed:
+    description: "impact on net liability position from 100bp decrease in rates"
+    section: market_risk
+  interest_rate_sensitivity_100bp_variable:
+    description: "annual interest impact from 100bp change on variable debt"
+    section: market_risk
+  fx_sensitivity_10_percent:
+    description: "impact on net liability position from 10% currency movement"
+    section: market_risk
+  operating_income_fx_sensitivity_cny:
+    description: "annual operating income impact from 10% CNY weakening"
+    section: market_risk
+  operating_income_fx_sensitivity_eur:
+    description: "annual operating income impact from 10% EUR weakening"
+    section: market_risk
+
+# Unusual features identified:
+#   - combines quantitative sensitivity analysis with qualitative risk management discussion
+#   - references fair value disclosure in separate note rather than tabular presentation
+#   - includes operating income sensitivity separate from financial instrument sensitivity
+#   - mentions cost pass-through contracts as risk mitigation
+#   - discusses specific debt issuances and maturities within market risk section
+

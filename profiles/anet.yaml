@@ -1,0 +1,31 @@
+issuer: Arista Networks
+ticker: ANET
+cik: "1596532"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cash_equivalents_marketable_securities:
+    description: "total cash, cash equivalents and available-for-sale marketable securities"
+    section: market_risk
+  investment_types:
+    description: "types of investments held (money market funds, corporate bonds, etc.)"
+    section: market_risk
+  interest_rate_sensitivity_analysis:
+    description: "hypothetical impact of 100 basis point increase on market value"
+    section: market_risk
+  foreign_currency_hedging_status:
+    description: "current hedging practices for foreign currency transactions"
+    section: market_risk
+  derivative_usage_statement:
+    description: "explicit statement about not using derivative financial instruments"
+    section: market_risk
+
+# Unusual features identified:
+#   - No actual derivatives usage - company explicitly states they do not use derivative financial instruments
+#   - Only sensitivity analysis provided is hypothetical interest rate impact on investment portfolio
+#   - Market risk disclosure focuses on indirect foreign currency exposure rather than direct hedging
+#   - Investment portfolio composition detailed but no derivative overlays mentioned
+

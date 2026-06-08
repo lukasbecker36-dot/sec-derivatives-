@@ -1,0 +1,33 @@
+issuer: Caterpillar Inc.
+ticker: CAT
+cik: "18230"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  derivative_instruments:
+    description: "derivative financial instruments and risk management details"
+    section: market_risk
+  financing_activities:
+    description: "Cat Financial financing activities and related risks"
+    section: market_risk
+  debt_equity_investments:
+    description: "investments in debt and equity securities"
+    section: market_risk
+  fair_value_disclosures:
+    description: "fair value measurements and disclosures"
+    section: market_risk
+  accounting_policies:
+    description: "operations and significant accounting policies"
+    section: market_risk
+  revenue_recognition:
+    description: "sales and revenue recognition policies"
+    section: market_risk
+
+# Unusual features identified:
+#   - Market risk disclosure is distributed across multiple notes rather than consolidated
+#   - References cross-reference format with em dashes and quoted note titles
+#   - No direct quantitative data in this section - serves as roadmap to other notes
+

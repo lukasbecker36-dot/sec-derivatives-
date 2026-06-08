@@ -1,0 +1,37 @@
+issuer: Kimberly-Clark
+ticker: KMB
+cik: "55785"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_currency_sensitivity:
+    description: "10% unfavorable change impact on balance sheet exposures"
+    section: market_risk
+  translation_exposure_impact:
+    description: "10% unfavorable change impact on stockholders' equity ($600)"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "1 percentage point increase impact on variable-rate debt"
+    section: market_risk
+  argentina_peso_position:
+    description: "Net peso monetary position status"
+    section: market_risk
+  turkey_lira_position:
+    description: "Net lira monetary position status"
+    section: market_risk
+  debt_composition:
+    description: "Portfolio mix of variable vs fixed-rate debt"
+    section: market_risk
+  commodity_exposures:
+    description: "Pulp and petroleum-based materials price risk"
+    section: market_risk
+
+# Unusual features identified:
+#   - Highly inflationary accounting for Argentina and Turkey operations
+#   - Translation adjustments deemed non-material due to no cash flow impact
+#   - Qualitative commodity risk discussion without quantitative sensitivity analysis
+#   - Missing detailed notional amounts and fair value tables typically found in derivatives disclosures
+

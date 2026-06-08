@@ -1,0 +1,38 @@
+issuer: Match Group
+ticker: MTCH
+cik: "891103"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fair_value_measurements_table:
+    description: "Fair value hierarchy table with Level 1 and Level 2 assets"
+    section: market_risk
+  debt_fair_value_disclosure:
+    description: "Carrying value vs fair value of exchangeable notes"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "100 basis point impact on debt fair value ($134.7M)"
+    section: market_risk
+  foreign_exchange_exposure:
+    description: "Currency exposures (EUR, GBP, TRY, ARS) and revenue impacts"
+    section: market_risk
+  international_revenue_percentage:
+    description: "Percentage of revenue from international operations"
+    section: market_risk
+  fx_gains_losses:
+    description: "Annual foreign currency exchange gains/losses"
+    section: market_risk
+  equity_investments_carrying_value:
+    description: "Investments in equity securities without readily determinable fair values"
+    section: market_risk
+
+# Unusual features identified:
+#   - No actual derivatives found despite derivatives section
+#   - Digital assets included in fair value measurements
+#   - Exchangeable notes treated as debt rather than derivatives
+#   - No hedging activities despite significant FX exposure
+#   - Equity securities without readily determinable fair values with impairment tracking
+

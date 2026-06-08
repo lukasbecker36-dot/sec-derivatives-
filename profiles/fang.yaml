@@ -1,0 +1,39 @@
+issuer: Diamondback Energy
+ticker: FANG
+cik: "1539838"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  net_derivative_position:
+    description: "net asset/liability position value"
+    section: market_risk
+  sensitivity_analysis:
+    description: "impact of 10% price changes on derivative positions"
+    section: market_risk
+  weighted_average_interest_rates:
+    description: "historical interest rates on debt facilities"
+    section: market_risk
+  debt_maturities:
+    description: "schedule of debt maturities by year"
+    section: market_risk
+  credit_facility_terms:
+    description: "interest rate structure and margins for credit facilities"
+    section: market_risk
+  outstanding_borrowings:
+    description: "current outstanding amounts under facilities"
+    section: market_risk
+  available_capacity:
+    description: "remaining available borrowing capacity"
+    section: market_risk
+
+# Unusual features identified:
+#   - Derivatives disclosure split across multiple sections rather than consolidated
+#   - Market risk discussion contains quantitative sensitivity analysis with specific dollar impacts
+#   - Interest rate swap information referenced but detailed terms not provided in this excerpt
+#   - Multiple credit facilities with different pricing structures and guarantor arrangements
+#   - Viper subsidiary has separate credit facility with co-guarantor structure
+#   - Term loans tied to specific acquisition transactions
+

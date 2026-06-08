@@ -1,0 +1,42 @@
+issuer: Nike, Inc.
+ticker: NKE
+cik: "320187"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_forward_var:
+    description: "Value-at-Risk for foreign currency forward and option derivatives (one-day, 95% confidence)"
+    section: market_risk
+  interest_rate_swap_notional:
+    description: "Notional amount of interest rate swaps by maturity ($2,400M total)"
+    section: market_risk
+  interest_rate_swap_fair_value:
+    description: "Fair value of interest rate swaps ($21M)"
+    section: market_risk
+  fixed_rate_swap_avg_rates:
+    description: "Average fixed (3.6%) and variable (3.8%) interest rates on swaps"
+    section: market_risk
+  long_term_debt_principal:
+    description: "Long-term fixed rate debt principal by expected maturity year ($8,000M total)"
+    section: market_risk
+  long_term_debt_fair_value:
+    description: "Fair value of long-term fixed rate debt ($6,673M)"
+    section: market_risk
+  fx_hedge_currency_pairs:
+    description: "Primary hedged currency pairs: EUR/USD, CNY/USD, GBP/EUR, JPY/USD"
+    section: market_risk
+  average_monthly_fx_derivative_change:
+    description: "Average monthly change in fair value of FX derivatives ($200M fiscal 2025)"
+    section: market_risk
+
+# Unusual features identified:
+#   - Uses Value-at-Risk (VaR) model with variance/covariance technique rather than simple sensitivity analysis
+#   - Detailed expected maturity date table for debt and interest rate swaps
+#   - Interest rate swaps swap fixed to variable (fair value hedges), not the typical variable to fixed
+#   - FX hedging program hedges 12-24 months ahead with incremental hedges up to 100% of exposure
+#   - Separate Note 12 - Risk Management and Derivatives referenced but not included in this section
+#   - Fiscal year ending May 31
+

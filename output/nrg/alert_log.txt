@@ -1,0 +1,35 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NUMERIC] ir_sensitivity_100bp: $31,000M → $31M (-99.9%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 31,000 to 31 (0x)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NUMERIC] ir_sensitivity_100bp: $30M → $31,000M (+103233.3%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 30 to 31,000 (1033x)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($30M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NUMERIC] fx_transaction_gain_loss: $-6M → $-3M (+50.0%) — exceeds 20% threshold
+[NUMERIC] ir_sensitivity_100bp: $466M → $843M (+80.9%) — exceeds 20% threshold
+[NUMERIC] derivative_mark_to_market_var: $84M → $145M (+72.6%) — exceeds 20% threshold
+[NUMERIC] collateral_held: $278M → $408M (+46.8%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NUMERIC] fx_forwards_outstanding: $350M → $425M (+21.4%) — exceeds 20% threshold
+[NUMERIC] fx_transaction_gain_loss: $-3M → $-6M (-100.0%) — exceeds 20% threshold
+[NUMERIC] derivative_mark_to_market_var: $119M → $84M (-29.4%) — exceeds 20% threshold
+[NUMERIC] collateral_held: $585M → $278M (-52.5%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NUMERIC] fx_transaction_gain_loss: $-2M → $-3M (-50.0%) — exceeds 20% threshold
+[NUMERIC] collateral_held: $1,000M → $585M (-41.5%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($349M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-2M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($452M)
+[NEW_FIELD] commodity_var: appeared for first time ($59M)
+[NEW_FIELD] derivative_mark_to_market_var: appeared for first time ($137M)
+[NEW_FIELD] collateral_held: appeared for first time ($1,000M)
+

@@ -1,0 +1,65 @@
+issuer: Mondelez International
+ticker: MDLZ
+cik: "1103982"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  fx_derivative_designated_fair_value:
+    description: "Fair value of FX contracts designated as net investment hedges (asset and liability)"
+    section: derivatives_note
+  fx_derivative_undesignated_fair_value:
+    description: "Fair value of FX contracts not designated as hedges (asset and liability)"
+    section: derivatives_note
+  commodity_derivative_fair_value:
+    description: "Fair value of commodity contracts not designated as hedges (asset and liability)"
+    section: derivatives_note
+  interest_rate_derivative_designated_fair_value:
+    description: "Fair value of interest rate contracts designated as cash flow hedges"
+    section: derivatives_note
+  interest_rate_derivative_undesignated_fair_value:
+    description: "Fair value of interest rate contracts not designated as hedges"
+    section: derivatives_note
+  cross_currency_swap_fair_value:
+    description: "Fair value of cross-currency swap contracts designated as CF/NIH hedges"
+    section: derivatives_note
+  total_derivative_assets:
+    description: "Total fair value of derivative assets"
+    section: derivatives_note
+  total_derivative_liabilities:
+    description: "Total fair value of derivative liabilities"
+    section: derivatives_note
+  variation_margin_balance:
+    description: "Net asset variation margin balances for futures contracts"
+    section: derivatives_note
+  notional_amounts:
+    description: "Notional amounts of derivatives and other hedging instruments by type"
+    section: derivatives_note
+  non_usd_debt_net_investment_hedge:
+    description: "Non-US dollar denominated debt designated as net investment hedges"
+    section: derivatives_note
+  bs_location_other_current_assets:
+    description: "Derivative fair value in other current assets"
+    section: derivatives_note
+  bs_location_other_assets:
+    description: "Derivative fair value in other assets (non-current)"
+    section: derivatives_note
+  bs_location_other_current_liabilities:
+    description: "Derivative fair value in other current liabilities"
+    section: derivatives_note
+  bs_location_other_liabilities:
+    description: "Derivative fair value in other liabilities (non-current)"
+    section: derivatives_note
+
+# Unusual features identified:
+#   - Extremely comprehensive derivatives program covering FX, commodities, interest rates, and cross-currency swaps
+#   - Both designated (cash flow and net investment hedges) and non-designated derivatives used
+#   - Cross-currency swaps serve dual CF/NIH hedge designation
+#   - Non-USD denominated debt also designated as net investment hedges separate from derivative instruments
+#   - Commodity forward contracts qualify for normal purchases scope exception under ASC 815
+#   - Exchange-traded commodity futures have variation margin balances excluded from derivative fair value tables
+#   - Level 1 and Level 2 fair value hierarchy used for derivative measurements
+#   - ISDA master agreements govern OTC derivative transactions with no collateral posting
+

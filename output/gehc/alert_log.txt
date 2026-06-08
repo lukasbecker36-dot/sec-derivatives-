@@ -1,0 +1,30 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
+[LLM_FLAG] Filing text provided only contains Note 12 header with no substantive financial data or tables to extract from
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
+[LLM_FLAG] Filing text provided contains only the Note 12 header without the actual detailed financial data. No specific fair value measurements or security holdings data are present in the provided excerpt.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
+[LLM_FLAG] Insufficient text provided - only Note 12 header and page reference visible, no actual financial data disclosed in the excerpt
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $32M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $10M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $248M, now missing
+[DISAPPEARED_FIELD] currency_sensitivity: was $111M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (ir_sensitivity_100bp, fixed_rate_notes_billion, marketable_equity_value, currency_sensitivity)
+[LLM_FLAG] No actual financial data provided in the filing text excerpt. Only a note heading 'Note 12. Financial Instruments and Fair Value Measurements' with page reference is present.
+[LLM_FLAG] Cannot extract requested values without the full content of Note 12.
+[LLM_FLAG] Provided filing excerpt is a header reference directing to Annual Report Form 10-K rather than actual market risk disclosure. No substantive derivative or hedging data available for extraction.
+[LLM_FLAG] All fields cannot be populated due to incomplete source material. User should provide the full 'Quantitative and Qualitative Disclosures About Market Risk' section from the 10-Q filing.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
+[LLM_FLAG] The filing text provided only contains a note header reference ('Note 13. Financial Instruments and Fair Value Measurements 90') with no actual disclosure content. Unable to extract any numerical values.
+

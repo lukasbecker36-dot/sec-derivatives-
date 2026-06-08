@@ -1,0 +1,41 @@
+issuer: Apple Inc.
+ticker: AAPL
+cik: "320193"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  foreign_exchange_contracts_designated:
+    description: "notional amounts of FX contracts designated as accounting hedges"
+    section: market_risk
+  interest_rate_contracts_designated:
+    description: "notional amounts of interest rate contracts designated as accounting hedges"
+    section: market_risk
+  foreign_exchange_contracts_not_designated:
+    description: "notional amounts of FX contracts not designated as accounting hedges"
+    section: market_risk
+  investment_portfolio_interest_rate_risk:
+    description: "potential decline in fair value from 100bp rate increase"
+    section: market_risk
+  term_debt_interest_rate_risk:
+    description: "potential increase in annual interest expense from 100bp rate increase"
+    section: market_risk
+  foreign_currency_var:
+    description: "maximum one-day loss in fair value of FX derivatives at 95% confidence"
+    section: market_risk
+  hedge_duration_max:
+    description: "maximum hedging period for term debt FX transactions"
+    section: market_risk
+  forecasted_fx_hedge_period:
+    description: "typical hedging period for forecasted FX exposure"
+    section: market_risk
+
+# Unusual features identified:
+#   - VAR model using Monte Carlo simulation for FX derivatives
+#   - Split between designated and non-designated hedge accounting
+#   - Detailed maturity breakdown for marketable securities
+#   - Specific mention of 17-year maximum hedge duration
+#   - Fair value hierarchy classification (Level 1, Level 2) for investments
+

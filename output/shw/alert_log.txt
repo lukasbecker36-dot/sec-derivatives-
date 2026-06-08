@@ -1,0 +1,27 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $129M → $26M (-79.6%) — exceeds 20% threshold
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($26M)
+[NUMERIC] cash_flow_hedge_aoci: $2,023M → $11M (-99.5%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $300M → $15M (-95.0%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: cash_flow_hedge_aoci changed from 2,023 to 11 (0x)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $12M → $129M (+985.7%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $30M → $2,023M (+6643.3%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $109M → $12M (-89.1%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $4M → $300M (+7217.1%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $36M → $109M (+200.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $36M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $15M → $4M (-72.7%) — exceeds 20% threshold
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+

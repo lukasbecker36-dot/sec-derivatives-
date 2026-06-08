@@ -1,0 +1,39 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
+[LLM_FLAG] api_error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': "This request would exceed your organization's rate limit of 50,000 input tokens per minute (org: cd1bd080-80bf-4746-a4d4-1bf6fc78dd70, model: claude-haiku-4-5-20251001). For details, refer to: https://docs.claude.com/en/api/rate-limits. You can see the response headers for current usage. Reduce the prompt length or the maximum tokens requested, or try again later. View your current limits at https://console.anthropic.com/settings/limits. To raise this limit, purchase credits to advance to the next usage tier at https://console.anthropic.com/settings/billing."}, 'request_id': 'req_011CbKAohg8JghybaqTtE61u'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
+[LLM_FLAG] api_error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': "This request would exceed your organization's rate limit of 50,000 input tokens per minute (org: cd1bd080-80bf-4746-a4d4-1bf6fc78dd70, model: claude-haiku-4-5-20251001). For details, refer to: https://docs.claude.com/en/api/rate-limits. You can see the response headers for current usage. Reduce the prompt length or the maximum tokens requested, or try again later. View your current limits at https://console.anthropic.com/settings/limits. To raise this limit, purchase credits to advance to the next usage tier at https://console.anthropic.com/settings/billing."}, 'request_id': 'req_011CbKAoM4t9L3WmHtbJ4Mmy'}
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $43M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $33M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $43M, now missing
+[DISAPPEARED_FIELD] credit_exposure_percentage: was $15M, now missing
+[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, marketable_equity_value, interest_rate_sensitivity, credit_exposure_percentage)
+[LLM_FLAG] api_error: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': "This request would exceed your organization's rate limit of 50,000 input tokens per minute (org: cd1bd080-80bf-4746-a4d4-1bf6fc78dd70, model: claude-haiku-4-5-20251001). For details, refer to: https://docs.claude.com/en/api/rate-limits. You can see the response headers for current usage. Reduce the prompt length or the maximum tokens requested, or try again later. View your current limits at https://console.anthropic.com/settings/limits. To raise this limit, purchase credits to advance to the next usage tier at https://console.anthropic.com/settings/billing."}, 'request_id': 'req_011CbKAnuWjeuSCLxKGFvKqk'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[NEW_FIELD] marketable_equity_value: appeared for first time ($33M)
+[NUMERIC] credit_exposure_percentage: $11M → $15M (+40.6%) — exceeds 20% threshold
+[LLM_FLAG] ir_sensitivity_100bp increased from $36M (prior period Dec 31, 2024) to $43M (March 31, 2025), a 19% increase - plausible given higher interest rate environment and increased variable rate debt
+[LLM_FLAG] credit_exposure_percentage increased from 10.6% (prior period) to 14.9% (current period), a 40.6% increase - flag for significant deterioration in counterparty credit quality
+[LLM_FLAG] mtm_derivative_assets_liabilities: Total net assets decreased from $307M (Dec 31, 2024) to $225.0M (March 31, 2025), an approximately 27% decrease - within reasonable range for quarterly market movements
+[LLM_FLAG] var_trading_portfolio substantially decreased from End: $0.2M (Dec 31, 2024) to $0.1M (March 31, 2025), a 50% decrease - likely due to market conditions or reduced trading activity
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
+[LLM_FLAG] VaR trading portfolio decreased significantly from 2024 (End: $0M vs $0M, High: $1M vs $2M) - minimal change but worth monitoring for portfolio composition shifts
+[LLM_FLAG] VaR non-trading portfolio decreased substantially from 2024 (End: $4M vs $38M, High: $29M vs $99M, Average: $8M vs $19M) - exceeds 50% threshold, indicating reduced exposure or hedging activity
+

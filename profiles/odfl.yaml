@@ -1,0 +1,28 @@
+issuer: Old Dominion
+ticker: ODFL
+cik: "878927"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  variable_rate_debt_sensitivity:
+    description: "Impact of 100bp increase in interest rate on variable rate borrowings (Credit Agreement)"
+    section: market_risk
+  life_insurance_cash_surrender_value:
+    description: "Cash surrender value in company-owned life insurance contracts"
+    section: market_risk
+  life_insurance_market_exposure:
+    description: "Portion of life insurance investments with market fluctuation exposure"
+    section: market_risk
+  life_insurance_sensitivity:
+    description: "Impact of 10% change in market value on pre-tax income"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative financial instruments used
+#   - Manages diesel fuel commodity risk through fuel surcharges rather than derivatives
+#   - Market risk exposure from company-owned life insurance contracts is unusual
+#   - No outstanding borrowings under credit facility so interest rate sensitivity is zero
+

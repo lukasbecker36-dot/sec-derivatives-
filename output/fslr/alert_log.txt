@@ -1,0 +1,15 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $31M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $31M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($31M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($31M)
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
+[DISAPPEARED_FIELD] fx_sensitivity_amount: was $4M, now missing
+[DISAPPEARED_FIELD] restricted_securities_sensitivity: was $16M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_sensitivity_amount, restricted_securities_sensitivity)
+[LLM_FLAG] This 10-Q filing contains only a boilerplate statement referring readers to the 10-K. All quantitative market risk metrics are not disclosed in this section and must be found in the 2024 Form 10-K for the year ended December 31, 2024.
+

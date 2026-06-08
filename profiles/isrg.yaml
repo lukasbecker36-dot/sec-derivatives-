@@ -1,0 +1,47 @@
+issuer: Intuitive Surgical
+ticker: ISRG
+cik: "1035267"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  notional_amounts:
+    description: "total gross notional amounts in USD for outstanding derivatives"
+    section: market_risk
+  aggregate_fair_value:
+    description: "aggregate gross fair value of derivatives at period end"
+    section: market_risk
+  cash_flow_hedge_currencies:
+    description: "currencies hedged in cash flow hedges (EUR, GBP, JPY, KRW, TWD, CAD, INR, CHF)"
+    section: market_risk
+  non_hedge_derivatives_pnl:
+    description: "recognized gains/losses on non-hedge derivatives in interest and other income"
+    section: market_risk
+  fx_remeasurement_pnl:
+    description: "foreign exchange losses from balance sheet re-measurement"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "impact of 25bp interest rate change on fair value"
+    section: market_risk
+  fx_revenue_sensitivity:
+    description: "revenue impact from 10% USD strengthening"
+    section: market_risk
+  fx_balance_sheet_sensitivity:
+    description: "net asset impact from 10% USD strengthening after hedges"
+    section: market_risk
+  foreign_currency_revenue_percentage:
+    description: "percentage of total revenue in foreign currencies"
+    section: market_risk
+  portfolio_duration:
+    description: "weighted average duration of investment portfolio"
+    section: market_risk
+
+# Unusual features identified:
+#   - Derivatives section is embedded within broader financial instruments note rather than standalone
+#   - Notional amounts table appears to be cut off in the provided text
+#   - Market risk section appears incomplete (ends mid-sentence)
+#   - Heavy focus on investment securities alongside derivatives
+#   - Both designated and non-designated hedges clearly segregated with separate P&L reporting
+

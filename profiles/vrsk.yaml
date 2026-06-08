@@ -1,0 +1,28 @@
+issuer: Verisk Analytics
+ticker: VRSK
+cik: "1442145"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  revolving_facility_capacity:
+    description: "Borrowing capacity under syndicated revolving credit facility"
+    section: market_risk
+  revolving_facility_outstanding:
+    description: "Outstanding borrowings under revolving credit facility"
+    section: market_risk
+  revolving_facility_rate:
+    description: "Interest rate on revolving facility (SOFR plus spread)"
+    section: market_risk
+  fx_revenue_impact:
+    description: "Materiality assessment of hypothetical 10% FX rate change on earnings"
+    section: market_risk
+
+# Unusual features identified:
+#   - No derivative instruments used
+#   - Minimal market risk disclosure - only interest rate and FX translation risk
+#   - No quantitative sensitivity data beyond materiality statements
+#   - British pound is primary foreign currency exposure
+

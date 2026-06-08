@@ -1,0 +1,13 @@
+=== 10-Q | Period ending 2025-11-01 | Processed 2026-05-23 ===
+[NUMERIC] ir_sensitivity_100bp: $12M → $6M (-50.0%) — exceeds 20% threshold
+[LLM_FLAG] ir_sensitivity_100bp: Prior period showed 12.0 million (implied from 100bp sensitivity), current filing shows 6.0 million (derived from 50bp sensitivity of $3 million). This is a 50% decrease, but the prior period value appears to have been extrapolated from 50bp data. The filing now explicitly states 50bp sensitivity rather than 100bp, so direct comparison requires doubling the disclosed figure to 6.0 million for 100bp equivalent.
+[LLM_FLAG] net_asset_balance_exposed: Decreased from $1.2 billion (prior period, August 2, 2025) to $0.7 billion (current period, November 1, 2025), a 42% decrease. This represents a significant reduction in interest rate exposure.
+
+=== 10-Q | Period ending 2025-08-02 | Processed 2026-05-23 ===
+[LLM_FLAG] ir_sensitivity_100bp differs from prior period: prior was 10.0 million (100bp sensitivity implied), current filing shows 6 million for 50bp move (implying 12 million for 100bp). This 20% increase may reflect changes in cash/debt balances or different calculation methodology.
+
+=== 10-Q | Period ending 2025-05-03 | Processed 2026-05-23 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($10M)
+[LLM_FLAG] ir_sensitivity_100bp: Value of 10 million (extrapolated from 50bp = $5 million) differs from prior period but is calculated from disclosed 50bp sensitivity; filing does not provide direct 100bp figure
+[LLM_FLAG] fixed_rate_notes_billion: Only $0.5 billion swapped portion disclosed; total fixed-rate debt outstanding not provided in this excerpt
+

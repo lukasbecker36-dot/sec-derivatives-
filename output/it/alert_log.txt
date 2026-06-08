@@ -1,0 +1,53 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[DISAPPEARED_FIELD] ir_swap_notional: was $30M, now missing
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (ir_swap_notional)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] ir_swap_notional: $2M → $30M (+1400.0%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $3M, now missing
+[NUMERIC] fixed_rate_notes_billion: $2M → $3M (+34.8%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] floating_rate_debt: $274M → $0M
+[NUMERIC] cash_equivalents_amount: $1,400M → $1,700M (+21.4%) — exceeds 20% threshold
+[LLM_FLAG] Total debt principal increased from $2.5 billion to $3.0 billion (20% increase) - material change within expected range
+[LLM_FLAG] Floating rate debt decreased from $274.4 million to $0 million (100% decrease) - significant change suggesting refinancing or debt restructuring
+[LLM_FLAG] Cash equivalents increased from $1.4 billion to $1.7 billion (21% increase) - plausible
+[LLM_FLAG] Foreign currency sensitivity increased from $112.8 million to $117.5 million (4% increase) - consistent with higher cash balances
+[LLM_FLAG] Interest rate swap status not explicitly described in current period section - prior period indicated active swaps converting floating to fixed rates, but no current activity disclosed
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
+[NUMERIC] cash_equivalents_amount: $2,200M → $1,400M (-36.4%) — exceeds 20% threshold
+[LLM_FLAG] cash_equivalents_amount: Declined from $2,200M to $1,400M (36% decrease) - plausible given business operations but significant change
+[LLM_FLAG] foreign_currency_sensitivity: Increased from $97.9M to $112.8M (15% increase) - within normal range despite cash decline, likely due to currency composition shift
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] foreign_currency_sensitivity: $80M → $98M (+22.5%) — exceeds 20% threshold
+[LLM_FLAG] foreign_currency_sensitivity: Increased from $79.9 million (prior period) to $97.9 million (22.4% increase) - within normal variance but notable given volatile FX environment
+[LLM_FLAG] cash_equivalents_amount: Increased from $2,100.0 million to $2,200.0 million (4.8% increase) - modest improvement
+[LLM_FLAG] fx_forward_fair_value: Described as 'immaterial' rather than quantified - consistent with prior period pattern but limits precision
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
+[NUMERIC] fixed_rate_notes_billion: $3M → $2M (-25.8%) — exceeds 20% threshold
+[NEW_FIELD] floating_rate_debt: appeared for first time ($274M)
+[NUMERIC] cash_equivalents_amount: $1,700M → $2,100M (+23.5%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_sensitivity: $116M → $80M (-31.3%) — exceeds 20% threshold
+[LLM_FLAG] total_debt_principal decreased from $3.0B to $2.5B (16.7% decrease) - material change but within normal operating variance
+[LLM_FLAG] cash_equivalents_amount increased from $1.7B to $2.1B (23.5% increase) - significant but plausible
+[LLM_FLAG] foreign_currency_sensitivity decreased from $116.3M to $79.9M (31.3% decrease) - consistent with lower cash balances and/or lower foreign currency holdings
+[LLM_FLAG] floating_rate_debt changed from 'None' to $274.4M - significant change in debt structure, may reflect refinancing or new borrowings
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
+[LLM_FLAG] fx_forward_fair_value: Disclosed as 'immaterial' but no quantitative value provided; cannot verify precision
+[LLM_FLAG] fx_forwards_outstanding: Notional amount not provided in the disclosure; only fair value mentioned
+

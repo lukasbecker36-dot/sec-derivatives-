@@ -1,0 +1,25 @@
+issuer: Best Buy
+ticker: BBY
+cik: "764478"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  interest_rate_exposure:
+    description: "exposure to short-term market interest rate changes"
+    section: market_risk
+  swap_description:
+    description: "portion of fixed-rate debt swapped to floating rate"
+    section: market_risk
+  affected_instruments:
+    description: "cash, cash equivalents, restricted cash, and swapped debt"
+    section: market_risk
+
+# Unusual features identified:
+#   - text appears truncated mid-sentence
+#   - references to detailed derivative disclosures in separate notes (Note 5 and Note 7)
+#   - no quantitative data provided in market risk section itself
+#   - minimal qualitative description of derivative strategy
+

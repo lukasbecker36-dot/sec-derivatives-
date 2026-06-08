@@ -1,0 +1,32 @@
+issuer: DTE Energy
+ticker: DTE
+cik: "936340"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  credit_exposure_table:
+    description: "counterparty credit quality breakdown with exposure amounts"
+    section: market_risk
+  sensitivity_analysis_table:
+    description: "10% price/rate sensitivity for commodity contracts and debt"
+    section: market_risk
+  floating_rate_debt_amount:
+    description: "total floating rate debt exposure"
+    section: market_risk
+  floating_rate_debt_ratio:
+    description: "floating rate debt as percentage of total debt"
+    section: market_risk
+  foreign_currency_contract_maturity:
+    description: "maturity date of foreign exchange forwards"
+    section: market_risk
+
+# Unusual features identified:
+#   - market risk section is standalone rather than part of numbered note
+#   - includes detailed credit exposure breakdown by rating category
+#   - sensitivity analysis covers both derivative instruments and debt securities
+#   - regulatory rate recovery mechanisms (PSCR/GCR) mentioned as risk mitigation
+#   - future date (December 31, 2025) referenced in filing
+

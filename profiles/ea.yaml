@@ -1,0 +1,35 @@
+issuer: Electronic Arts
+ticker: EA
+cik: "712515"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  cash_flow_hedge_sensitivity:
+    description: "hypothetical adverse FX movement impact on forward contracts"
+    section: market_risk
+  interest_rate_sensitivity:
+    description: "150 basis point impact on short-term investments fair value"
+    section: market_risk
+  hedge_designation:
+    description: "cash flow hedges and balance sheet hedges designation"
+    section: market_risk
+  hedge_maturity:
+    description: "forward contract maturities (18 months or less for cash flow, 3 months for balance sheet)"
+    section: market_risk
+  comprehensive_income_derivatives:
+    description: "net gains/losses on derivative instruments"
+    section: market_risk
+  short_term_investments_value:
+    description: "fair value of available-for-sale securities"
+    section: market_risk
+
+# Unusual features identified:
+#   - derivatives disclosure split between two sections (Note 5 and Market Risk)
+#   - comprehensive income statement shows derivative gains/losses but balance sheet shows no derivative assets/liabilities
+#   - no tabular presentation of notional amounts or fair values
+#   - sensitivity analysis uses 150 basis points for interest rate risk instead of typical 100 basis points
+#   - balance sheet hedging activities described but not quantified with sensitivity analysis
+

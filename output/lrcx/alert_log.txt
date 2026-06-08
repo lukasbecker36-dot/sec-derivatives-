@@ -1,0 +1,31 @@
+=== 10-Q | Period ending 2025-09-28 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] long_term_debt_principal: was $29,000M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (long_term_debt_principal)
+
+=== 10-K | Period ending 2025-06-29 | Processed 2026-06-04 ===
+[NEW_FIELD] long_term_debt_principal: appeared for first time ($29,000M)
+
+=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-02 ===
+[NUMERIC] total_cash_equivalents_fv: $6,180M → $4,751M (-23.1%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv decreased 23.1% from prior period ($6,180.44M to $4,750.94M), which is within the 50% threshold but represents a significant decline driven by lower money market funds ($3,151.08M to $2,160.93M) and time deposits ($1,577.34M to $913.63M)
+[LLM_FLAG] The provided filing text is incomplete - it contains only a header reference to Item 7A market risk disclosures from the 2025 Form 10-K, without the actual quantitative and qualitative market risk disclosure content. The actual Item 7A section with derivatives, hedging, and sensitivity analysis data is not included in the excerpt provided.
+
+=== 10-Q | Period ending 2025-12-28 | Processed 2026-06-02 ===
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($0M)
+[LLM_FLAG] total_cash_equivalents_fv decreased 7.5% from prior period (6693.046 to 6180.44), which is within normal variance and not flagged as exceeding 50% threshold
+
+=== 10-Q | Period ending 2025-09-28 | Processed 2026-06-02 ===
+[NUMERIC] total_cash_equivalents_fv: $5,451M → $6,693M (+22.8%) — exceeds 20% threshold
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($0M)
+[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($0M)
+[LLM_FLAG] total_cash_equivalents_fv increased 22.7% from prior period ($5,450.7M to $6,693.0M), but within acceptable range for operating cash changes and not exceeding 50% threshold
+
+=== 10-Q | Period ending 2025-03-30 | Processed 2026-06-02 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($5,451M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4M, now missing
+[DISAPPEARED_FIELD] long_term_debt_principal: was $4,500M, now missing
+[DISAPPEARED_FIELD] long_term_debt_fair_value: was $3,900M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fixed_rate_notes_billion, long_term_debt_principal, long_term_debt_fair_value)
+[LLM_FLAG] This appears to be a condensed disclosure referencing the 2024 Form 10-K rather than providing detailed derivative and market risk details in the 10-Q filing section. No substantive market risk quantitative data is present in the provided text.
+

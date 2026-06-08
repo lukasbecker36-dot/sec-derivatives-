@@ -1,0 +1,61 @@
+=== 10-Q | Period ending 2026-04-30 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_swap_notional: was $2,026,000M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $31,000M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $700M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_pct: was $2,026,000M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (ir_swap_notional, ir_sensitivity_100bp, fx_sensitivity_10pct, variable_rate_debt_pct)
+
+=== 10-K | Period ending 2026-01-31 | Processed 2026-06-04 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($2,026,000M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($31,000M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($700M)
+[NEW_FIELD] variable_rate_debt_pct: appeared for first time ($2,026,000M)
+
+=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] ir_swap_notional: was $2,025M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $31,000M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $600M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_pct: was $2,025M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (ir_swap_notional, ir_sensitivity_100bp, fx_sensitivity_10pct, variable_rate_debt_pct)
+
+=== 10-K | Period ending 2026-01-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($37M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($4,500M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($400M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($4,771M)
+[NEW_FIELD] variable_rate_debt_pct: appeared for first time ($27M)
+[NEW_FIELD] interest_sensitivity_100bp: appeared for first time ($100M)
+[NEW_FIELD] currency_swap_fair_value: appeared for first time ($900M)
+[NEW_FIELD] currency_swap_sensitivity_10pct: appeared for first time ($700M)
+[NEW_FIELD] equity_investment_fair_value: appeared for first time ($4,500M)
+[NEW_FIELD] equity_investment_sensitivity_10pct: appeared for first time ($400M)
+[LLM_FLAG] variable_rate_debt_pct increased from 20% (FY2025) to 27% (FY2026) — significant increase in variable rate exposure
+[LLM_FLAG] currency_swap_fair_value liability decreased from $1,400M to $900M — improvement due to strengthening of certain currencies vs USD
+[LLM_FLAG] equity_investment_fair_value increased from $3,000M to $4,500M (50% increase) — crosses >50% change threshold vs prior 10-K
+[LLM_FLAG] Variable rate short-term borrowings more than doubled from $3,068M to $6,596M
+
+=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $36M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $3,000M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $300M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional: was $4,771M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_pct: was $20M, now missing
+[DISAPPEARED_FIELD] interest_sensitivity_100bp: was $100M, now missing
+[DISAPPEARED_FIELD] currency_swap_fair_value: was $1,400M, now missing
+[DISAPPEARED_FIELD] currency_swap_sensitivity_10pct: was $600M, now missing
+[DISAPPEARED_FIELD] equity_investment_fair_value: was $3,000M, now missing
+[DISAPPEARED_FIELD] equity_investment_sensitivity_10pct: was $300M, now missing
+[VALIDATION] Likely extraction failure: 10/10 previously-populated fields are now null (fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct, ir_swap_notional, variable_rate_debt_pct...)
+
+=== 10-K | Period ending 2025-01-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($36M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($3,000M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($300M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($4,771M)
+[NEW_FIELD] variable_rate_debt_pct: appeared for first time ($20M)
+[NEW_FIELD] interest_sensitivity_100bp: appeared for first time ($100M)
+[NEW_FIELD] currency_swap_fair_value: appeared for first time ($1,400M)
+[NEW_FIELD] currency_swap_sensitivity_10pct: appeared for first time ($600M)
+[NEW_FIELD] equity_investment_fair_value: appeared for first time ($3,000M)
+[NEW_FIELD] equity_investment_sensitivity_10pct: appeared for first time ($300M)
+

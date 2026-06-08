@@ -1,0 +1,42 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
+[NUMERIC] total_cash_equivalents_fv: $265M → $128M (-51.7%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv decreased 51.7% from prior period (265.0 to 128), exceeding 50% threshold. This represents a significant decline in cash and restricted cash equivalents from December 31, 2025 to March 31, 2026, likely due to operational or investing activities during Q1 2026.
+[LLM_FLAG] Filing excerpt is incomplete: only contains a cross-reference to the 2025 Form 10-K for market risk disclosures, not the actual quantitative and qualitative market risk data. No substantive derivative or hedging information is presented in the provided text.
+[LLM_FLAG] Unable to perform meaningful prior period comparison as current filing contains no actual market risk data.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
+[NUMERIC] total_cash_equivalents_fv: $356M → $265M (-25.6%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv decreased from $356M (Dec 31, 2024) to $265M (Sep 30, 2025), a 25.6% decrease, but within acceptable range. However, total cash and restricted cash equivalents increased from $356M to $2,132M due to significant addition of restricted cash equivalents ($1,867M).
+[LLM_FLAG] The provided text is a cross-reference to disclosures contained in the 2024 Annual Report on Form 10-K, not actual derivative disclosures. The 2025 Q3 10-Q filing section provided contains no substantive derivative or market risk data.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
+[NUMERIC] total_cash_equivalents_fv: $257M → $356M (+38.5%) — exceeds 20% threshold
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[LLM_FLAG] total_cash_equivalents_fv increased from $257.0M (prior period ending 2024-12-31) to $356M (current period ending 2025-06-30), a 38.5% increase. Note that the prior period value of $257.0M appears inconsistent with the December 31, 2024 fair value of $314M shown in this table, suggesting the prior period reference may have been from an earlier date or different classification.
+[LLM_FLAG] The provided text is only a cross-reference statement directing readers to the 2024 Annual Report Form 10-K for market risk information. It contains no actual quantitative or qualitative disclosures about derivatives, hedging activities, or market risk sensitivity.
+[LLM_FLAG] This appears to be a section header or introductory text rather than the full 'Quantitative and Qualitative Disclosures About Market Risk' section content.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
+[NUMERIC] total_cash_equivalents_fv: $100M → $257M (+157.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $35M, now missing
+[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $-163M, now missing
+[DISAPPEARED_FIELD] net_investment_hedge_sensitivity: was $-100M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $-35M, now missing
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (ir_sensitivity_100bp, foreign_currency_sensitivity, net_investment_hedge_sensitivity, interest_rate_sensitivity)
+[LLM_FLAG] total_cash_equivalents_fv decreased from 314 to 257 million (18.5% decline), within acceptable variance but worth monitoring
+[LLM_FLAG] This filing section focuses on derivative instruments and long-term debt fair value rather than investment securities. The requested fields (marketable securities) do not appear to be disclosed in this Note 19 excerpt.
+[LLM_FLAG] This excerpt is a reference statement directing readers to the 2024 Form 10-K for detailed market risk disclosures. No actual quantitative data, tables, or detailed derivative information is provided in the filing text supplied.
+[LLM_FLAG] All derivative-related fields cannot be extracted as the section contains only a cross-reference, not the actual disclosure content.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
+[LLM_FLAG] Interest rate sensitivity improved dramatically: $165 million fair value impact in 2024 vs. $35 million in 2025 (79% decrease). This is explained by redesignation of 2022 Interest Rate Swaps to align with remaining 2038 Notes in Q4 2025.
+[LLM_FLAG] Foreign currency contracts sensitivity slightly improved: $(181) million in 2024 vs. $(163) million in 2025 (10% improvement), which is within normal variance.
+[LLM_FLAG] Net investment hedge sensitivity increased: $88 million in 2024 vs. $100 million in 2025 (14% increase), likely due to changes in EUR/USD exchange rates or notional hedge amounts.
+

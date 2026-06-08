@@ -1,0 +1,40 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
+[LLM_FLAG] ir_sensitivity_100bp: 1044 vs prior 1116 represents 6.4% decrease (within 50% threshold but declining)
+[LLM_FLAG] interest_rate_sensitivity_100bp_up_fixed: 1044 vs prior 1116 represents 6.4% decrease, consistent with overall declining interest rate sensitivity
+[LLM_FLAG] interest_rate_sensitivity_100bp_down_fixed: 1174 vs prior 1276 represents 8.0% decrease, consistent with declining sensitivity
+[LLM_FLAG] fx_sensitivity_10_percent: 734 vs prior 750 represents 2.1% decrease, but filing notes increase in sensitivity is primarily due to new cross currency swaps; the lower absolute value suggests offsetting fair value changes
+[LLM_FLAG] net_financial_instrument_position: 16800 vs prior 17200 represents 2.3% decrease, attributed to $550M note repayment partially offset by $415M new borrowings - change is explained
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-05-23 ===
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing
+[NUMERIC] fx_sensitivity_10_percent: $571M → $750M (+31.3%) — exceeds 20% threshold
+[LLM_FLAG] ir_sensitivity_100bp: decreased from 1151.0 to 1116.0 (-3.0% change, within normal bounds)
+[LLM_FLAG] fx_sensitivity_10_percent: increased from 571.0 to 750.0 (+31.3% change) - primarily attributed to new cross currency interest rate swaps with CNY, KRW, and TWD per filing
+[LLM_FLAG] interest_rate_sensitivity_100bp_up_fixed: changed from -1151.0 to -1116.0 (-3.0% change, within normal bounds)
+[LLM_FLAG] interest_rate_sensitivity_100bp_down_fixed: changed from 1316.0 to 1276.0 (-2.9% change, within normal bounds)
+[LLM_FLAG] net_financial_instrument_position: decreased from 17200.0 to 17000.0 (-1.2% change, attributed to $550M repayment of 1.50% senior note and $365M additional NEOM project financing)
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+[LLM_FLAG] net_financial_instrument_position: Increased 19.5% from $13,855.3M to $16,564.3M - within expected range given issuance of €1.5B and $1.1B in fixed-rate notes
+[LLM_FLAG] interest_rate_sensitivity_100bp_up_fixed: Increased 8.4% from -$1,062M to -$1,151M - consistent with higher debt levels from new issuances
+[LLM_FLAG] interest_rate_sensitivity_100bp_down_fixed: Increased 7.5% from $1,224M to $1,316M - consistent with higher debt levels
+[LLM_FLAG] debt_composition_fixed_rate_percent: Increased from 91% to 92% - consistent with issuance of fixed-rate notes and derecognition of BHIG variable-rate debt
+[LLM_FLAG] debt_composition_variable_rate_percent: Decreased from 9% to 8% - opposite direction of fixed-rate increase
+[LLM_FLAG] fx_sensitivity_10_percent: Increased 14.2% from $500M to $571M - primarily due to issuance of €1.5B Euro-denominated notes
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,062M)
+[NEW_FIELD] net_financial_instrument_position: appeared for first time ($14,474M)
+[NEW_FIELD] debt_composition_fixed_rate_percent: appeared for first time ($91M)
+[NEW_FIELD] debt_composition_variable_rate_percent: appeared for first time ($9M)
+[NEW_FIELD] interest_rate_sensitivity_100bp_up_fixed: appeared for first time ($-1,062M)
+[NEW_FIELD] interest_rate_sensitivity_100bp_down_fixed: appeared for first time ($1,224M)
+[NEW_FIELD] fx_sensitivity_10_percent: appeared for first time ($500M)
+[LLM_FLAG] Fixed-rate debt composition increased from 87% to 91% (4 percentage point increase), explained by Eurobonds issuance and BHIG derecognition
+[LLM_FLAG] Net financial instrument liability position increased 4.4% from $13,855.3M to $14,473.5M, driven by Euro-denominated senior fixed-rate notes issuance
+[LLM_FLAG] FX sensitivity increased from $408M to $500M (22.5% increase) due to Eurobonds issuance
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
+[LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKeZivnSNg4nnvmaShi'}
+

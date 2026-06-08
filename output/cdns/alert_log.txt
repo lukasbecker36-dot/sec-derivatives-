@@ -1,0 +1,59 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
+[NUMERIC] fx_forwards_outstanding: $3,204M → $1,133M (-64.6%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_usd_decrease: $-213M → $6M (+102.7%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_usd_increase: $218M → $0M (-99.9%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: fx_sensitivity_usd_increase changed from 218 to 0 (0x)
+[LLM_FLAG] fx_forwards_outstanding decreased 65% from $3,203.9M to $1,133.0M - significant reduction in foreign currency hedging positions
+[LLM_FLAG] fx_sensitivity_usd_decrease decreased 97% from -$213.1M to $5.8M - substantially different sensitivity profile
+[LLM_FLAG] fx_sensitivity_usd_increase decreased 99% from $218.1M to $0.2M - substantially different sensitivity profile
+[LLM_FLAG] fx_forward_fair_value improved only slightly from -$26.0M (12/31/2025) to -$17.4M (3/31/2026)
+[LLM_FLAG] ir_sensitivity_100bp changed from prior estimate of 31.0M - new calculation based on disclosed rates yields approximately 33.0M, minor variance acceptable
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
+[NUMERIC] fx_forwards_outstanding: $836M → $3,204M (+283.5%) — exceeds 20% threshold
+[NUMERIC] ir_sensitivity_100bp: $25M → $31M (+24.0%) — exceeds 20% threshold
+[NUMERIC] fx_forward_fair_value: $15M → $-17M (-209.1%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_usd_decrease: $-16M → $-213M (-1271.6%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_usd_increase: $19M → $218M (+1024.2%) — exceeds 20% threshold
+[NUMERIC] debt_securities_fair_value: $60M → $73M (+20.3%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity: $2M → $3M (+24.0%) — exceeds 20% threshold
+[LLM_FLAG] FX forwards outstanding increased dramatically from $835.5M to $3,203.9M (284% increase) - driven by pending Hexagon acquisition hedging per disclosure
+[LLM_FLAG] FX forward fair value shifted from $15.4M unrealized gain to $(16.8)M unrealized loss - significant change in position valuation
+[LLM_FLAG] FX sensitivity metrics increased substantially - USD decrease impact went from -$15.5M to -$212.6M, and USD increase impact went from $19.4M to $218.1M - consistent with much larger notional exposure from acquisition hedging
+[LLM_FLAG] Debt securities fair value increased from $60.5M to $72.8M (20% increase)
+[LLM_FLAG] Interest rate sensitivity on debt improved from $2.5M to $3.1M (24% increase) due to larger portfolio
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($25M)
+[NUMERIC] fx_forward_fair_value: $12M → $15M (+25.2%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_usd_decrease: $-9M → $-16M (-66.7%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_usd_increase: $14M → $19M (+43.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_forwards_outstanding increased 11.3% from $750.3M (prior period) to $835.5M (current period) - within normal range
+[LLM_FLAG] fx_forward_fair_value increased from $12.3M to $15.4M - approximately 25% increase, plausible given market conditions
+[LLM_FLAG] fx_sensitivity_usd_decrease changed from -$9.3M to -$15.5M - approximately 67% increase in absolute sensitivity magnitude, exceeds 50% threshold but reflects increased notional amounts outstanding
+[LLM_FLAG] fx_sensitivity_usd_increase changed from $13.5M to $19.4M - approximately 44% increase, within expected range given higher notional amounts
+[LLM_FLAG] debt_securities_fair_value increased from $50.3M to $60.5M - approximately 20% increase, within normal range
+[LLM_FLAG] interest_rate_sensitivity increased from $2.2M to $2.5M - approximately 14% increase, modest and consistent with fair value increase
+[LLM_FLAG] Polish zloty added as new currency in forward contracts portfolio
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
+[NUMERIC] fx_forwards_outstanding: $3,258M → $750M (-77.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $44M, now missing
+[NUMERIC] fx_forward_fair_value: $-26M → $12M (+147.3%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_usd_decrease: $-213M → $-9M (+95.6%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_usd_increase: $219M → $14M (-93.8%) — exceeds 20% threshold
+[NUMERIC] debt_securities_fair_value: $71M → $51M (-28.2%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity: $3M → $2M (-21.4%) — exceeds 20% threshold
+[LLM_FLAG] FX forwards outstanding decreased from $3,257.6M to $750.3M - 77% decrease. This is a significant reduction but plausible as the company noted all forward contracts mature within 90 days and the period end date may represent a natural point in the hedging cycle.
+[LLM_FLAG] FX forward fair value changed from -$26.0M to +$12.3M - significant swing in valuation reflecting changes in foreign exchange rates between periods.
+[LLM_FLAG] FX sensitivity to USD decrease changed from -$213.1M to -$9.3M - approximately 96% decrease correlates directly with the 77% reduction in notional amounts outstanding, which is consistent.
+[LLM_FLAG] FX sensitivity to USD increase changed from $219.4M to $13.5M - approximately 94% decrease also consistent with reduced notional exposure.
+[LLM_FLAG] Debt securities fair value decreased from $71.0M to $51.0M - 28% decrease. Interest rate sensitivity at 1% improved from $2.8M to $2.2M due to lower portfolio balance, which is consistent.
+[LLM_FLAG] Interest rate sensitivity is expressed as 1% change, not 100bp as requested in prior period comparison field.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-25 ===
+[LLM_FLAG] fx_forwards_outstanding increased significantly from $927.6M in 2024 to $3,257.6M in 2025 (251% increase). This is explained by the pending acquisition of Hexagon's D&E business where forward contracts were entered to hedge currency exposure on the purchase consideration.
+[LLM_FLAG] fx_forward_fair_value deteriorated from -$7.5M (2024) to -$26.0M (2025), representing a 247% increase in liability, consistent with the much larger hedge position.
+[LLM_FLAG] debt_securities_fair_value increased from $50.3M (2024) to $71.0M (2025), a 41% increase. This appears reasonable and does not trigger the 50% threshold.
+[LLM_FLAG] fx_sensitivity values are much larger in 2025 than 2024 (USD decrease: $213.1M vs $18.3M; USD increase: $219.4M vs $12.7M), which is proportional to the much larger notional amounts of forward contracts outstanding due to the Hexagon acquisition hedging activity.
+

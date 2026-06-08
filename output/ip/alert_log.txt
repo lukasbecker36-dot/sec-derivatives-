@@ -1,0 +1,26 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($3M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($3M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($5M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($31M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($31M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
+[DISAPPEARED_FIELD] fx_designated_notional: was $49M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $49M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $12M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, expected_12mo_reclass_from_aoci)
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $23M → $49M (+113.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $23M → $49M (+113.0%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
+[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[NUMERIC] fx_designated_notional: $3,198M → $23M (-99.3%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $3,198M → $23M (-99.3%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: fx_designated_notional changed from 3,198 to 23 (0x)
+[VALIDATION] Likely units mismatch: fx_not_designated_notional changed from 3,198 to 23 (0x)
+
