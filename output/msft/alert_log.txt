@@ -2,6 +2,26 @@
 [NUMERIC] equity_sensitivity_10pct: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
 [NUMERIC] fx_investment_sensitivity: $-7M → $-5M (+28.6%) — exceeds 20% threshold
 [NUMERIC] equity_price_sensitivity: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_sensitivity_10pct decreased from -12434 to -12938 (significant). Interest rate sensitivity improved from -1462 to -1230 (more than 50% change).
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1,462M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-12,434M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-1,847M)
+[NEW_FIELD] fx_revenue_sensitivity: appeared for first time ($-12,434M)
+[NEW_FIELD] fx_investment_sensitivity: appeared for first time ($-7M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-1,462M)
+[NEW_FIELD] credit_spread_sensitivity: appeared for first time ($-495M)
+[NEW_FIELD] equity_price_sensitivity: appeared for first time ($-1,847M)
+[LLM_FLAG] Significant foreign currency sensitivity noted with a projected earnings impact of $12,434 million from a 10% decrease in exchange rates, which is a considerable exposure.
+[LLM_FLAG] Interest rate sensitivity indicates a fair value impact of $1,462 million from a 100 basis point increase in U.S. treasury rates, representing a high sensitivity to interest rate changes.
+[LLM_FLAG] Credit spread sensitivity shows a fair value impact of $495 million from a 100 basis point increase, highlighting potential credit risk exposure.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] equity_sensitivity_10pct: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[NUMERIC] fx_investment_sensitivity: $-7M → $-5M (+28.6%) — exceeds 20% threshold
+[NUMERIC] equity_price_sensitivity: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
 [LLM_FLAG] fx_revenue_sensitivity decreased by more than 50% from prior period (-12434 to -12938).
 
 === 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
