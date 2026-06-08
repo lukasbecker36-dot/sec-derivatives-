@@ -1,3 +1,50 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($562M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($25M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($220M)
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4M, now missing
+[DISAPPEARED_FIELD] foreign_currency_forward_sensitivity: was $199M, now missing
+[NUMERIC] cross_currency_swap_fair_value: $237M → $186M (-21.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] eur_debt_fair_value: was $935M, now missing
+[DISAPPEARED_FIELD] eur_debt_sensitivity: was $94M, now missing
+[DISAPPEARED_FIELD] usd_debt_fair_value: was $4,053M, now missing
+[DISAPPEARED_FIELD] usd_debt_sensitivity: was $405M, now missing
+[VALIDATION] Likely extraction failure: 6/10 previously-populated fields are now null (fixed_rate_notes_billion, foreign_currency_forward_sensitivity, eur_debt_fair_value, eur_debt_sensitivity, usd_debt_fair_value...)
+[LLM_FLAG] fx_sensitivity_10pct differs from prior period by more than 50%.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($199M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
+[NEW_FIELD] foreign_currency_forward_sensitivity: appeared for first time ($199M)
+[NEW_FIELD] cross_currency_swap_fair_value: appeared for first time ($237M)
+[NEW_FIELD] cross_currency_swap_sensitivity: appeared for first time ($211M)
+[NEW_FIELD] eur_debt_fair_value: appeared for first time ($935M)
+[NEW_FIELD] eur_debt_sensitivity: appeared for first time ($94M)
+[NEW_FIELD] usd_debt_fair_value: appeared for first time ($4,053M)
+[NEW_FIELD] usd_debt_sensitivity: appeared for first time ($405M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZSVHww9Z44C9M2XWbe'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZSZo4SVLWo9QARq1Ef'}
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZSG2UWzym62MZnAwaR'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZSJc1GLZuGt16cyo3D'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZRsgKKqE6MTv7Gk42c'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZRvduiYdfaTtjzhotk'}
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZRgRPrgSf6rKqwu81D'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZRjJHFAgowCjZpL8Wk'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZRVyqmywjZbRiAdUVL'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZRYuTP3RoUfhQ4vcLB'}
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
 [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
 [NUMERIC] cross_currency_swap_fair_value: $240M → $186M (-22.5%) — exceeds 20% threshold

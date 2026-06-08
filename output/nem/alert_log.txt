@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($127M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] provisionally_priced_sales_volume: appeared for first time ($131M)
+[NEW_FIELD] provisional_average_price: appeared for first time ($4,657M)
+[NUMERIC] sensitivity_10pct_change: $498M → $41M (-91.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] hedging_instruments_description: was $141M, now missing
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (equity_sensitivity_10pct, hedging_instruments_description)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] fx_sensitivity_10pct: $10M → $498M (+4880.0%) — exceeds 20% threshold
+[NEW_FIELD] provisionally_priced_sales_volume: appeared for first time ($141M)
+[NEW_FIELD] provisional_average_price: appeared for first time ($4,332M)
+[NEW_FIELD] sensitivity_10pct_change: appeared for first time ($42M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DROPPED_TO_ZERO] fx_sensitivity_10pct: $10M → $0M
 

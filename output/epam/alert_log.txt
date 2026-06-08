@@ -1,3 +1,25 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] cash_collateral_requirement: appeared for first time ($0M)
+[NEW_FIELD] foreign_exchange_loss: appeared for first time ($26M)
+[NEW_FIELD] revenue_currency_exposure: appeared for first time ($40M)
+[NEW_FIELD] expense_currency_exposure: appeared for first time ($63M)
+[NEW_FIELD] cash_ukraine_belarus: appeared for first time ($114M)
+[NUMERIC] constant_currency_adjustment: $3M → $4M (+42.3%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (equity_sensitivity_10pct)
+[LLM_FLAG] cash_ukraine_belarus is significant; cash held in unstable regions may indicate higher credit risk.
+[LLM_FLAG] foreign_exchange_loss reported at $25.9 million may have an impact on financial stability.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] net_unrealized_loss_hedges: appeared for first time ($3M)
+[NEW_FIELD] cash_collateral_requirement: appeared for first time ($0M)
+[NEW_FIELD] foreign_exchange_loss: appeared for first time ($26M)
+[NEW_FIELD] revenue_currency_exposure: appeared for first time ($40M)
+[NEW_FIELD] expense_currency_exposure: appeared for first time ($63M)
+[LLM_FLAG] The foreign exchange loss of $25.9 million reflects a significant increase compared to the prior year's loss of $7.0 million, indicating escalating risks or impacts from foreign currency fluctuations.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
 [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-4M, now missing
 [DISAPPEARED_FIELD] foreign_exchange_loss: was $-4M, now missing

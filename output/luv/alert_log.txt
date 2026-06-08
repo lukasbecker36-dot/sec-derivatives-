@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] interest_rate_swaps_fair_value: was $-32M, now missing
+[DISAPPEARED_FIELD] interest_rate_contracts_fair_value: was $1M, now missing
+[DISAPPEARED_FIELD] hedge_ineffectiveness: was $750M, now missing
+[DISAPPEARED_FIELD] non_designated_gain_loss: was $750M, now missing
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (interest_rate_swaps_fair_value, interest_rate_contracts_fair_value, hedge_ineffectiveness, non_designated_gain_loss)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-32M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
+[NEW_FIELD] interest_rate_swaps_notional: appeared for first time ($750M)
+[NEW_FIELD] interest_rate_contracts_notional: appeared for first time ($750M)
+[NEW_FIELD] aoci_derivative_gain_loss: appeared for first time ($23M)
+[LLM_FLAG] Southwest Airlines discontinued its fuel hedging program in 2025, which is a significant change in its risk management strategy, fully exposing the company to fluctuations in fuel prices.
+[LLM_FLAG] The Company terminated its remaining portfolio of fuel hedging contracts during Q2 2025, indicating a complete withdrawal from its previous hedging strategy.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)

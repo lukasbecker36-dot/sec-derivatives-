@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] sensitivity_analysis_table: was $904M, now missing
+[NEW_FIELD] floating_rate_debt_amount: appeared for first time ($0M)
+[NEW_FIELD] floating_rate_debt_ratio: appeared for first time ($0M)
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, sensitivity_analysis_table)
+[LLM_FLAG] The equity sensitivity from prior period of 0.0 to null cannot be conclusively checked; however, if null is found, it likely signifies that changes were material but unreported.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($904M)
+[NEW_FIELD] floating_rate_debt_amount: appeared for first time ($900M)
+[NEW_FIELD] floating_rate_debt_ratio: appeared for first time ($4M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
 [DROPPED_TO_ZERO] floating_rate_debt_amount: $216M → $0M
 [DROPPED_TO_ZERO] floating_rate_debt_ratio: $1M → $0M

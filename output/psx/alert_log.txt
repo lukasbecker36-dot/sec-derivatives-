@@ -1,3 +1,8 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $1M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (commodity_derivatives_notional)
+[LLM_FLAG] api_error: Connection error.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [NUMERIC] commodity_derivatives_notional: $141M → $1M (-99.3%) — exceeds 20% threshold

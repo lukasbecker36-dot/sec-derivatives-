@@ -1,3 +1,28 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
+[DISAPPEARED_FIELD] marketable_securities_types: was $0M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $0M, now missing
+[DISAPPEARED_FIELD] hedging_status: was $300M, now missing
+[DISAPPEARED_FIELD] revenue_currency: was $4,100M, now missing
+[VALIDATION] Likely extraction failure: 4/8 previously-populated fields are now null (marketable_securities_types, interest_rate_sensitivity, hedging_status, revenue_currency)
+[LLM_FLAG] Marketable securities amount has changed significantly (from 0.0 to 4300.0 million) indicating a substantial investment strategy or cash reserve increase.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
+[NEW_FIELD] cash_equivalents_amount: appeared for first time ($300M)
+[NEW_FIELD] marketable_securities_amount: appeared for first time ($4,100M)
+[NEW_FIELD] convertible_notes_amount: appeared for first time ($1,000M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
 [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
 [NUMERIC] cash_equivalents_amount: $1M → $0M (-23.2%) — exceeds 20% threshold

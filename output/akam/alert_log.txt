@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-13M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
+[NUMERIC] convertible_notes_principal: $14M → $4,140M (+29054.9%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] fx_sensitivity: $4M → $0M
+[VALIDATION] Likely units mismatch: convertible_notes_principal changed from 14 to 4,140 (292x)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NUMERIC] ir_sensitivity_100bp: $100M → $14M (-85.8%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
+[NEW_FIELD] convertible_notes_principal: appeared for first time ($4,140M)
+[LLM_FLAG] ir_sensitivity_100bp has decreased from 100.0 to 14.2, which is a more than 50% change.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
 [LLM_FLAG] ir_sensitivity_100bp decreased from $12.9M to $12.8M (-0.8%) - minor variation, within normal range
 [LLM_FLAG] credit_concentration changed from 'Yes' (one customer at 10% as of Dec 31, 2025) to 'No' (no customer >10% as of Mar 31, 2026) - this reflects the required disclosure timing for different reporting dates, not a material change in methodology

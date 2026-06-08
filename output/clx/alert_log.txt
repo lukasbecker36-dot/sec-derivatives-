@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($41M)
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($41M)
+[DISAPPEARED_FIELD] has_derivatives: was $53M, now missing
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $53M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $0M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] referenced_exhibit: appeared for first time ($99M)
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (has_derivatives, fx_derivatives_notional, fx_not_designated_notional, equity_sensitivity_10pct)
+[LLM_FLAG] The notional amount of foreign currency forward contracts decreased from $67 million in the prior period to $41 million.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($53M)
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($53M)
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
 === 10-Q | Period ending 2025-12-31 | Processed 2026-05-26 ===
 [LLM_FLAG] Filing section provided covers only derivative instruments and financial risk management (NOTE 6), not the balance sheet fair value measurements section where cash equivalents and marketable securities would typically be disclosed
 [LLM_FLAG] Filing section is a disclosure deferral to prior 10-K (Form 10-K for fiscal year ended June 30, 2025). No detailed quantitative market risk data is provided in this 10-Q excerpt.

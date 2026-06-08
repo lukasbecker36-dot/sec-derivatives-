@@ -1,3 +1,25 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[NUMERIC] hedge_gain_losses_current: $-4M → $0M (+103.6%) — exceeds 20% threshold
+[NEW_FIELD] foreign_currency_transaction_losses: appeared for first time ($-0M)
+[NEW_FIELD] revenue_fx_impact: appeared for first time ($31M)
+[NEW_FIELD] operating_profit_fx_impact: appeared for first time ($18M)
+[NEW_FIELD] eps_fx_impact: appeared for first time ($0M)
+[NUMERIC] hedge_duration: $-1M → $3M (+516.1%) — exceeds 20% threshold
+[NUMERIC] sensitivity_analysis: $-4M → $-12M (-188.5%) — exceeds 20% threshold
+[LLM_FLAG] The hedge gain/loss in the current period shows a significant change compared to the prior period of -4.16 to 0.150, which is over 100% difference.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-4M)
+[NEW_FIELD] hedge_gain_losses_current: appeared for first time ($-1M)
+[NEW_FIELD] foreign_currency_transaction_losses: appeared for first time ($-4M)
+[NEW_FIELD] revenue_fx_impact: appeared for first time ($33M)
+[NEW_FIELD] operating_profit_fx_impact: appeared for first time ($17M)
+[NEW_FIELD] eps_fx_impact: appeared for first time ($0M)
+[NEW_FIELD] sensitivity_analysis: appeared for first time ($-16M)
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 

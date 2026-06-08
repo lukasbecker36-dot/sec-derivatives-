@@ -1,3 +1,45 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] fi_fx_derivatives_notional: $13,100M → $7,600M (-42.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $1,200M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $13M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $20M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $4M, now missing
+[DISAPPEARED_FIELD] interest_rate_hedge_notional: was $1,200M, now missing
+[VALIDATION] Likely extraction failure: 7/10 previously-populated fields are now null (fi_ir_swap_notional, fx_forwards_outstanding, ir_sensitivity_100bp, fixed_rate_notes_billion, marketable_equity_value...)
+[LLM_FLAG] fi_fx_derivatives_notional increased significantly from 13100 to 7600, a decrease greater than 50%.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($13,100M)
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($7,400M)
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($1,200M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($13M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($20M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($4M)
+[NEW_FIELD] interest_rate_hedge_notional: appeared for first time ($1,200M)
+[LLM_FLAG] The notional amount of FX derivatives designated as cash flow hedges ($ 7400 million) indicates continued reliance on hedging to manage currency exposures, reflecting potential volatility in foreign markets.
+[LLM_FLAG] Interest rate hedge notional reduced by more than 50% compared to prior period, likely indicating a change in strategy or reduction of debt exposure.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXrYEV4yTGySvHfQpUJ'}
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXrDydfrPeVppZXWgwE'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXrKqriiiqKWiHg5oFC'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXqxC7Wjd1StXS7CMpf'}
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXqobvnN32EtSAFJ5rm'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXqbjJUhuUVhVMkzaKi'}
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
 [LLM_FLAG] Provided text is limited to Note 11 on Financial Instruments and Derivatives, focusing on foreign currency forward exchange contracts. It does not contain balance sheet fair value disclosures for cash equivalents, marketable securities, or debt securities that would be needed to extract the requested fields.
 

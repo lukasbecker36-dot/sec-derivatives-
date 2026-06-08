@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($12M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] ir_sensitivity_100bp: $100M → $13M (-87.0%) — exceeds 20% threshold
+[LLM_FLAG] ir_sensitivity_100bp decreased by more than 50% compared to the prior period value of 100.0; a reduction in potential earnings impact may indicate effective hedging or reduced exposure.
+
 === 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
 [NUMERIC] ir_sensitivity_100bp: $12M → $15M (+25.0%) — exceeds 20% threshold
 

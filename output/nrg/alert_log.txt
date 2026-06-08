@@ -1,3 +1,29 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($397M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($66M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $437M, now missing
+[NEW_FIELD] commodity_var: appeared for first time ($85M)
+[DISAPPEARED_FIELD] commodity_var_period_stats: was $30M, now missing
+[NUMERIC] derivative_mark_to_market_var: $-3M → $151M (+5133.3%) — exceeds 20% threshold
+[NEW_FIELD] counterparty_credit_exposure: appeared for first time ($1,300M)
+[NEW_FIELD] collateral_held: appeared for first time ($117M)
+[DISAPPEARED_FIELD] credit_exposure_by_quality: was $61M, now missing
+[NEW_FIELD] exposure_rolloff_timeline: appeared for first time ($61M)
+[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (equity_sensitivity_10pct, commodity_var_period_stats, credit_exposure_by_quality)
+[LLM_FLAG] interest rate sensitivity increased from prior period value of 66.0
+[LLM_FLAG] the commodity VaR has significantly increased from $59M to $85M, an increase driven by the addition of new generation assets.
+[LLM_FLAG] the derivative mark-to-market VaR is notably high at $151M compared to the previous period's -$3M, indicating a significant shift in risk exposure.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($437M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-3M)
+[NEW_FIELD] commodity_var: appeared for first time ($61M)
+[NEW_FIELD] derivative_mark_to_market_var: appeared for first time ($145M)
+[NEW_FIELD] counterparty_credit_exposure: appeared for first time ($1,700M)
+[NEW_FIELD] collateral_held: appeared for first time ($408M)
+[NEW_FIELD] exposure_rolloff_timeline: appeared for first time ($66M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NUMERIC] ir_sensitivity_100bp: $31,000M → $31M (-99.9%) — exceeds 20% threshold
 [VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 31,000 to 31 (0x)

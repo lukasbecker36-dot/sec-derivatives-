@@ -1,3 +1,27 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($1,147M)
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($1,147M)
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($250M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($19M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($34M)
+[DISAPPEARED_FIELD] has_derivatives: was $1,468M, now missing
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $1,174M, now missing
+[DISAPPEARED_FIELD] fx_designated_notional: was $1,468M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $250M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional: was $3M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $14M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (has_derivatives, fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional, ir_swap_notional...)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($1,468M)
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($1,174M)
+[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($1,468M)
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($250M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($3M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($14M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
 [LLM_FLAG] Provided text is Note 5 (Financial Instruments/Derivatives) and does not contain cash equivalents, marketable securities, or fair value measurement disclosures that would typically appear in Note 9 or in the liquidity/investments section of a 10-Q filing
 [LLM_FLAG] This filing section contains only a boilerplate statement referring to the 10-K annual report for December 31, 2025, with no actual quantitative market risk disclosures. All detailed derivative and risk sensitivity data must be obtained from the referenced 10-K filing or prior 10-Q filings.

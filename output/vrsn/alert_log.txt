@@ -1,3 +1,27 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] total_cash_equivalents_fv: $308M → $477M (+54.9%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $273M → $80M (-70.8%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $68M, now missing
+[DISAPPEARED_FIELD] fx_forward_notional: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_income_securities: was $0M, now missing
+[DISAPPEARED_FIELD] senior_notes_fair_value: was $0M, now missing
+[DISAPPEARED_FIELD] cash_and_equivalents: was $2M, now missing
+[VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (equity_sensitivity_10pct, fx_forward_notional, fixed_income_securities, senior_notes_fair_value, cash_and_equivalents)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($308M)
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($273M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($68M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
+[NEW_FIELD] fx_forward_notional: appeared for first time ($68M)
+[NEW_FIELD] fixed_income_securities: appeared for first time ($318M)
+[NEW_FIELD] senior_notes_fair_value: appeared for first time ($1,750M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)

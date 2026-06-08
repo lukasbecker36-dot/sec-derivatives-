@@ -1,3 +1,41 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] equity_sensitivity_10pct: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[NUMERIC] fx_investment_sensitivity: $-7M → $-5M (+28.6%) — exceeds 20% threshold
+[NUMERIC] equity_price_sensitivity: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[LLM_FLAG] ir_sensitivity_100bp changed significantly from -1462 to -1230, a 16% improvement, which indicates better interest rate risk management.
+[LLM_FLAG] fx_revenue_sensitivity shows a significant reduction from -12434 to -12938, an indication of increased positive effects from foreign exchange rate management.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1,462M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-1,847M)
+[NEW_FIELD] fx_revenue_sensitivity: appeared for first time ($-12,434M)
+[NEW_FIELD] fx_investment_sensitivity: appeared for first time ($-7M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-1,462M)
+[NEW_FIELD] credit_spread_sensitivity: appeared for first time ($-495M)
+[NEW_FIELD] equity_price_sensitivity: appeared for first time ($-1,847M)
+[LLM_FLAG] Interest rate sensitivity is significant, indicating potential vulnerability to rate hikes.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZxAoJ1HbKCdXHNenzZ'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZxGgWGh2zaPebVC4dT'}
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZwTe35T3pGu4tQyWP1'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZwYw2V28dbYZytN6J8'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZvnRrb83uew1Koyt2t'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZvsmKwGL6gg8B1qHAm'}
+
+=== 10-K | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZvA93jdyM6pnaFXtFg'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZvGsN1z64SCU7KkgZG'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZtshJwDTQKBDzT719P'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZtyqeUws1xTknCysdY'}
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [NUMERIC] ir_sensitivity_100bp: $7M → $5M (-28.6%) — exceeds 20% threshold

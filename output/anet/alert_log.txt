@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] cash_equivalents_marketable_securities: was $0M, now missing
+[DISAPPEARED_FIELD] investment_types: was $-100M, now missing
+[DISAPPEARED_FIELD] foreign_currency_hedging_status: was $0M, now missing
+[DISAPPEARED_FIELD] derivative_usage_statement: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (equity_sensitivity_10pct, cash_equivalents_marketable_securities, investment_types, foreign_currency_hedging_status, derivative_usage_statement)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-100M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
+[NEW_FIELD] cash_equivalents_marketable_securities: appeared for first time ($10,700M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)

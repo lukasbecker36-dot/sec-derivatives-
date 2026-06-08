@@ -1,3 +1,50 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $22M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $2,000M, now missing
+[DISAPPEARED_FIELD] fx_forward_notional_current: was $3,900M, now missing
+[DISAPPEARED_FIELD] fx_forward_notional_prior: was $2,900M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_current: was $439M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_prior: was $364M, now missing
+[DISAPPEARED_FIELD] foreign_sales_percentage: was $26M, now missing
+[DISAPPEARED_FIELD] equity_securities_fair_value_current: was $2,000M, now missing
+[DISAPPEARED_FIELD] equity_securities_fair_value_prior: was $1,600M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_current: was $392M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_prior: was $312M, now missing
+[VALIDATION] Likely extraction failure: 11/12 previously-populated fields are now null (fixed_rate_notes_billion, marketable_equity_value, fx_forward_notional_current, fx_forward_notional_prior, fx_sensitivity_current...)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($22M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($2,000M)
+[NEW_FIELD] fx_forward_notional_current: appeared for first time ($3,900M)
+[NEW_FIELD] fx_forward_notional_prior: appeared for first time ($2,900M)
+[NEW_FIELD] fx_sensitivity_current: appeared for first time ($439M)
+[NEW_FIELD] fx_sensitivity_prior: appeared for first time ($364M)
+[NEW_FIELD] foreign_sales_percentage: appeared for first time ($26M)
+[NEW_FIELD] equity_securities_fair_value_current: appeared for first time ($2,000M)
+[NEW_FIELD] equity_securities_fair_value_prior: appeared for first time ($1,600M)
+[NEW_FIELD] equity_sensitivity_current: appeared for first time ($392M)
+[NEW_FIELD] equity_sensitivity_prior: appeared for first time ($312M)
+[LLM_FLAG] fx_forward_notional_current increased by more than 50% compared to prior period
+[LLM_FLAG] fx_sensitivity_current increased by more than 50% compared to prior period
+[LLM_FLAG] equity_securities_fair_value_current increased by more than 50% compared to prior period
+[LLM_FLAG] equity_sensitivity_current increased by more than 50% compared to prior period
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZEkmmsXYwFQovdBxEq'}
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZEUxmJr24EssDrUtPF'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZE4TcsNks7ehVa6e8n'}
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZDnRDwoF3v2mzJLqax'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZDVawbkNNGosCJnvUq'}
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2,900M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)

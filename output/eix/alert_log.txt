@@ -1,3 +1,37 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($6,032M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($18M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($35M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-17M)
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $3,249M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $48M, now missing
+[NEW_FIELD] gross_derivative_assets: appeared for first time ($19M)
+[NEW_FIELD] gross_derivative_liabilities: appeared for first time ($35M)
+[NEW_FIELD] net_derivative_assets: appeared for first time ($18M)
+[NEW_FIELD] net_derivative_liabilities: appeared for first time ($0M)
+[NEW_FIELD] cash_collateral_posted: appeared for first time ($34M)
+[NEW_FIELD] realized_gains_losses: appeared for first time ($-38M)
+[NEW_FIELD] unrealized_gains_losses: appeared for first time ($-8M)
+[NEW_FIELD] electricity_notional_gwh: appeared for first time ($6,019M)
+[NEW_FIELD] natural_gas_notional_bcf: appeared for first time ($2M)
+[NEW_FIELD] congestion_rights_notional_gwh: appeared for first time ($1,232M)
+[NEW_FIELD] fin_toll_notional_gwh: appeared for first time ($236M)
+[VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss)
+[LLM_FLAG] Net derivative assets value reflects a significant decrease from the prior period, suggesting either a change in the company's hedging position or market volatility affecting their derivatives.
+[LLM_FLAG] Realized gains/losses show a new significant loss in the current period compared to prior periods, indicating potential changes in market conditions or the effectiveness of hedging strategies.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $30,000M, now missing
+[NUMERIC] commodity_derivatives_notional: $30M → $3,249M (+10730.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $30M → $48M (+60.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $30M → $57M (+90.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $30M → $-9M (-130.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[VALIDATION] Likely units mismatch: commodity_derivatives_notional changed from 30 to 3,249 (108x)
+[LLM_FLAG] total_derivative_asset differs by more than 50% from prior period (30.0). Previously $30m, now $48m.
+[LLM_FLAG] total_derivative_liability differs by more than 50% from prior period (30.0). Previously $30m, now $57m.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 

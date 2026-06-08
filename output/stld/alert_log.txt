@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] futures_contracts_fair_value: was $4M, now missing
+[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (futures_contracts_fair_value)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
+[NEW_FIELD] commodity_price_sensitivity: appeared for first time ($-56M)
+[LLM_FLAG] Cumulative unrealized loss of $56.0 million related to financial contracts, indicating potential volatility in commodity prices; this figure is significant and noteworthy.
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
 [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
 [NEW_FIELD] commodity_contracts_fair_value: appeared for first time ($-56M)

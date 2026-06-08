@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fair_value_assets: was $32M, now missing
+[DISAPPEARED_FIELD] fair_value_liabilities: was $111M, now missing
+[DISAPPEARED_FIELD] hedge_designations: was $10M, now missing
+[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (fair_value_assets, fair_value_liabilities, hedge_designations)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($32M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($111M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)
+[LLM_FLAG] None
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)

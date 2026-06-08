@@ -1,3 +1,42 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[DROPPED_TO_ZERO] fx_forwards_outstanding: $12,726M → $0M
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($784M)
+[NUMERIC] currency_derivative_notional_prior: $7,636M → $12,726M (+66.7%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_appreciation_prior: $322M → $804M (+149.7%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_depreciation_prior: $394M → $982M (+149.2%) — exceeds 20% threshold
+[LLM_FLAG] The increase in currency derivative notional from 12726 million to 13633 million represents a 7.1% increase, while the total notional for the current period indicates a shift in risk management exposure which should be noted.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($12,726M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($11M)
+[NEW_FIELD] currency_derivative_notional_current: appeared for first time ($12,726M)
+[NEW_FIELD] currency_derivative_notional_prior: appeared for first time ($7,636M)
+[NEW_FIELD] fx_sensitivity_appreciation_current: appeared for first time ($804M)
+[NEW_FIELD] fx_sensitivity_appreciation_prior: appeared for first time ($322M)
+[NEW_FIELD] fx_sensitivity_depreciation_current: appeared for first time ($982M)
+[NEW_FIELD] fx_sensitivity_depreciation_prior: appeared for first time ($394M)
+[NEW_FIELD] interest_rate_derivative_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_debt_amount: appeared for first time ($11,343M)
+[NEW_FIELD] fixed_rate_debt_percentage: appeared for first time ($100M)
+[LLM_FLAG] currency_derivative_notional_current increased by more than 50% compared to prior period
+[LLM_FLAG] fx_sensitivity_appreciation_current increased by more than 50% compared to prior period
+[LLM_FLAG] fx_sensitivity_depreciation_current increased by more than 50% compared to prior period
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYFMvWV2RgrqCogCuB5'}
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYF9QgruYKPbov72CcE'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYEpVejg5XjHVAuvNPX'}
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYETYpW3xgTAvGmqTcA'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYE761jksqW5eszKwYh'}
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
 [NUMERIC] currency_derivative_notional_prior: $7,636M → $12,726M (+66.7%) — exceeds 20% threshold
 [NUMERIC] fx_sensitivity_appreciation_prior: $322M → $804M (+149.7%) — exceeds 20% threshold

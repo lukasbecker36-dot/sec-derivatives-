@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] sensitivity_analysis_jpy: was $1,000M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, sensitivity_analysis_jpy)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1,000M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10,000M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)

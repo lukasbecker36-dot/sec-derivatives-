@@ -1,3 +1,33 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $3,292M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $0M, now missing
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $73,330M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $109,284M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[DISAPPEARED_FIELD] has_derivatives: was $0M, now missing
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $0M, now missing
+[DISAPPEARED_FIELD] fx_designated_notional: was $0M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $0M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $0M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 12/12 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt...)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($3,292M)
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($0M)
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($73,330M)
+[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($109,284M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($0M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($0M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
 === 10-Q | Period ending 2025-09-30 | Processed 2026-04-25 ===
 [LLM_FLAG] The provided text is a boilerplate reference directing to the Form 10-K rather than actual market risk disclosures. No substantive quantitative or qualitative data on market risk is present in this excerpt.
 

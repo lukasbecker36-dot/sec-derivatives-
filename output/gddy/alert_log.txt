@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] total_derivative_liability: $136M → $103M (-24.5%) — exceeds 20% threshold
+[NUMERIC] aoci_realized_losses: $4M → $9M (+116.3%) — exceeds 20% threshold
+[NUMERIC] aoci_unrealized_losses: $22M → $6M (-73.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] constant_currency_impact: was $0M, now missing
+[LLM_FLAG] total_derivative_asset increased from 49.2 to 57.3, an increase of 16.5%, slightly above prior period due to market fluctuations.
+[LLM_FLAG] total_derivative_liability decreased from 136.0 to 102.7, a decrease of 24.4%, indicating possible reduction in hedging activity or effective positions.
+[LLM_FLAG] AOCI realized losses increased from 4.3 to 9.3 million, a 116% increase, which is concerning and may suggest increased currency or hedge effectiveness issues.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NUMERIC] aoci_realized_losses: $2M → $4M (+104.8%) — exceeds 20% threshold
+[NUMERIC] aoci_unrealized_losses: $-21M → $22M (+205.8%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset decreased by more than 50% compared to the prior period (from 59.3 to 49.2), indicating a significant reduction in derivative assets.
+[LLM_FLAG] total_derivative_liability increased from 138.2 to 136.0 but did not exceed the 50% threshold.
+[LLM_FLAG] aoci_realized_losses increased from 2.1 to 4.3, which is more than 50%.
+[LLM_FLAG] aoci_unrealized_losses increased from -20.7 to -21.9, which is more than 50%.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
 [NUMERIC] total_derivative_liability: $138M → $103M (-25.7%) — exceeds 20% threshold
 [NUMERIC] aoci_realized_losses: $2M → $9M (+342.9%) — exceeds 20% threshold

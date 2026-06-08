@@ -1,3 +1,32 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $7,456M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $7,037M, now missing
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($7,456M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($7,037M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ2DPK7da1RZqN5Crob'}
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ1vKPzhikWpuKDheDq'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ1znHQmtzcKThpChFp'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ1SuP6ZRQRiXG28rKa'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ1XQVixtYzbKthM2hP'}
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYzwDwR96XyoD56zjsH'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ14JasvRAfT612cQDu'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYzXD4UTnvWxgrXjQAQ'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYzdvdQGZ9Zc5GhkNsC'}
+
 === 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
 [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (gross_unrealized_gains_debt)

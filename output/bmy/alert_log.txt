@@ -1,3 +1,44 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($7,187M)
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($422M)
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($237M)
+[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($422M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($316M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($150M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $428M, now missing
+[DISAPPEARED_FIELD] foreign_exchange_sensitivity_10pct: was $428M, now missing
+[DISAPPEARED_FIELD] cross_currency_swap_sensitivity_10pct: was $8M, now missing
+[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (fx_sensitivity_10pct, foreign_exchange_sensitivity_10pct, cross_currency_swap_sensitivity_10pct)
+[LLM_FLAG] no derivatives or hedging activities reported in the filing
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($428M)
+[NEW_FIELD] foreign_exchange_sensitivity_10pct: appeared for first time ($428M)
+[NEW_FIELD] cross_currency_swap_sensitivity_10pct: appeared for first time ($8M)
+[LLM_FLAG] cross_currency_swap_sensitivity_10pct differs significantly from prior period value of $49 million, as per 2024 disclosure; noteworthy decrease may indicate changes in company's hedging strategy or exposure
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYHMLbdz6yLw5kkgF1s'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYHSQwX2x5S2m8UYTaW'}
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYGw27ioAxATMifPeYf'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYH3sctSV4qXLGkqeVp'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYGWbS5CpbDPjTLUhpT'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYGb4pBMFZpd3RhDv76'}
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYG9nnSsHPQqC1QZJSL'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYGE6zoWzDe9FKb6TsZ'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYFpec1DDnpwpjpNXDX'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYFu1Hn8pDbhEs2BQde'}
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
 [NUMERIC] total_cash_equivalents_fv: $10,916M → $7,187M (-34.2%) — exceeds 20% threshold
 [NUMERIC] marketable_equity_securities_fv: $529M → $322M (-39.1%) — exceeds 20% threshold

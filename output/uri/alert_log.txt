@@ -1,3 +1,27 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-28M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($4M)
+[NUMERIC] fixed_rate_fair_value_sensitivity: $10M → $3M (-70.6%) — exceeds 20% threshold
+[NEW_FIELD] foreign_revenue: appeared for first time ($361M)
+[NEW_FIELD] foreign_revenue_pct: appeared for first time ($9M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] ir_sensitivity_100bp: $38,000M → $31M (-99.9%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] fx_sensitivity_10pct: $10M → $0M
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)
+[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($4M)
+[NEW_FIELD] variable_rate_sensitivity: appeared for first time ($31M)
+[NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($10M)
+[NEW_FIELD] fixed_rate_fair_value_sensitivity: appeared for first time ($3M)
+[NEW_FIELD] foreign_revenue: appeared for first time ($1,428M)
+[NEW_FIELD] foreign_revenue_pct: appeared for first time ($9M)
+[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 38,000 to 31 (0x)
+[LLM_FLAG] ir_sensitivity_100bp decreased by more than 50% from prior period; discrepancy worth noting.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NUMERIC] ir_sensitivity_100bp: $31M → $28,000M (+90222.6%) — exceeds 20% threshold
 [VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 31 to 28,000 (903x)

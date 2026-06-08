@@ -1,0 +1,14 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $675M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-11M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $5M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($675M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-11M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($5M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-07 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7eRWHuSdGcwT7Mu2sC'}
+

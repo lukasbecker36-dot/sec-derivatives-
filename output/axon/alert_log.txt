@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NUMERIC] credit_facility_amount: $-0M → $300M (+150100.0%) — exceeds 20% threshold
+[NEW_FIELD] outstanding_letters_of_credit: appeared for first time ($9M)
+[NEW_FIELD] available_borrowing_capacity: appeared for first time ($291M)
+[DISAPPEARED_FIELD] hedging_policy: was $-0M, now missing
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (hedging_policy)
+[VALIDATION] Likely units mismatch: credit_facility_amount changed from -0 to 300 (1500x)
+[LLM_FLAG] The credit facility amount of $300 million represents a significant potential borrowing capability, while previous reports indicated it might be lower. Management's lack of usage since inception raises questions about their borrowing strategy.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NUMERIC] ir_sensitivity_100bp: $30M → $-0M (-100.7%) — exceeds 20% threshold
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-0M)
+[NEW_FIELD] credit_facility_amount: appeared for first time ($300M)
+[NEW_FIELD] outstanding_letters_of_credit: appeared for first time ($9M)
+[NEW_FIELD] available_borrowing_capacity: appeared for first time ($291M)
+[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 30 to -0 (0x)
+[LLM_FLAG] ir_sensitivity_100bp decreased by more than 50% compared to prior period, changing from 30.0 to -0.2.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $31M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)

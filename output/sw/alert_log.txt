@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] ir_sensitivity_1pct: was $17M, now missing
+[DISAPPEARED_FIELD] pct_sales_outside_us: was $114M, now missing
+[DISAPPEARED_FIELD] commodity_derivative_fair_value_impact: was $88M, now missing
+[DISAPPEARED_FIELD] energy_cost_change_yoy: was $17M, now missing
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (ir_sensitivity_1pct, pct_sales_outside_us, commodity_derivative_fair_value_impact, energy_cost_change_yoy)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($17M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($114M)
+[NEW_FIELD] pct_interest_cost_fixed: appeared for first time ($88M)
+[NEW_FIELD] ir_sensitivity_1pct: appeared for first time ($17M)
+[NEW_FIELD] interest_income_sensitivity_1pct: appeared for first time ($9M)
+[NEW_FIELD] fx_equity_sensitivity_1pct: appeared for first time ($114M)
+[NEW_FIELD] pct_sales_outside_us: appeared for first time ($54M)
+[NEW_FIELD] energy_cost_change_yoy: appeared for first time ($45M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)

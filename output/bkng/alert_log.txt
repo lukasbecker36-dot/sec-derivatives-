@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,000M)
+[NEW_FIELD] fx_impact_on_revenues: appeared for first time ($6M)
+[NEW_FIELD] equity_price_sensitivity: appeared for first time ($45M)
+[LLM_FLAG] equity_sensitivity_10pct has a significant change (from 0.0 to 45.0) indicating increased risk due to equity investments.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($60M)
+[NEW_FIELD] fx_impact_on_bookings: appeared for first time ($2M)
+[NEW_FIELD] fx_impact_on_revenues: appeared for first time ($3M)
+[LLM_FLAG] ir_sensitivity_100bp has changed from 100000.0 to 110000.0, a difference of 10%.
+[LLM_FLAG] The company's foreign currency transaction gains/losses were not reported, which may indicate stability or limited exposure.
+
 === 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
 [NUMERIC] ir_sensitivity_100bp: $100M → $100,000M (+99900.0%) — exceeds 20% threshold
 [VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 100 to 100,000 (1000x)

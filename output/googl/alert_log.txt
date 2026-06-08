@@ -1,3 +1,58 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] total_cash_equivalents_fv: $30,708M → $38,063M (+24.0%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $859M → $505M (-41.2%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_asset: $732M → $1,610M (+119.9%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $379M → $890M (+134.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-46M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $1,610M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $48M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $-631M, now missing
+[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $1,610M, now missing
+[DISAPPEARED_FIELD] value_at_risk: was $162M, now missing
+[VALIDATION] Likely extraction failure: 6/18 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, equity_sensitivity_10pct, foreign_currency_sensitivity...)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($30,708M)
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($96,135M)
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($6,313M)
+[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($21,565M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($859M)
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($56,885M)
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($23,852M)
+[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($44,000M)
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($732M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($379M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-46M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1,610M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($48M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-631M)
+[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($1,610M)
+[NEW_FIELD] value_at_risk: appeared for first time ($162M)
+[LLM_FLAG] fx_sensitivity_10pct shows a significant upward change compared to prior period indicating increased foreign currency risk management activity.
+[LLM_FLAG] fixed_rate_notes_billion: increase of $36.6 billion compared to prior value, which suggests considerable borrowing or new issuances during the year.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXwdMhMYcX2455Usw4Z'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXwhxmhPN2eCrEy6jYq'}
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXwFSLAaM954qQ1y31K'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXwMWD2NcVW2tfvrmNQ'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXvkzZ5BX32UtaxjF9b'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXvs4BdYx9hqTEbLkYi'}
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXvSgycZZKN2XqiyygR'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXvVpF7fgLjjEA3Q7Ai'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXvFyYgwbBMZ8GWxb9Y'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXvK3M7g7o8Amu4818f'}
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)

@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] fx_forward_sensitivity_10pct: was $3M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional_notes_2028: was $53M, now missing
+[DISAPPEARED_FIELD] revolving_credit_balance: was $112M, now missing
+[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (gross_unrealized_gains_debt, equity_sensitivity_10pct, fx_forward_sensitivity_10pct, ir_swap_notional_notes_2028, revolving_credit_balance)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($53M)
+[NEW_FIELD] fx_net_investment_hedge_sensitivity_10pct: appeared for first time ($112M)
+[NEW_FIELD] fx_forward_sensitivity_10pct: appeared for first time ($53M)
+[NEW_FIELD] commercial_paper_outstanding: appeared for first time ($0M)
+[NEW_FIELD] revolving_credit_balance: appeared for first time ($0M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
 [DISAPPEARED_FIELD] commercial_paper_outstanding: was $31M, now missing

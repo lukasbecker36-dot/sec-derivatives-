@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] underlying_debt_maturity: was $1M, now missing
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (underlying_debt_maturity)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
+[LLM_FLAG] The fair value of the interest rate swaps has changed significantly, with values reported as $9 million, $14 million, and a $87 million liability across different years.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)

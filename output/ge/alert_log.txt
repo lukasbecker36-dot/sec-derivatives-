@@ -1,3 +1,27 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($5,866M)
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($461M)
+[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($5M)
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($500M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($177M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($145M)
+[DISAPPEARED_FIELD] has_derivatives: was $10,659M, now missing
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $7,125M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $3,079M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional: was $187M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $71M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (has_derivatives, fx_derivatives_notional, fx_not_designated_notional, ir_swap_notional, commodity_derivatives_notional)
+[LLM_FLAG] fi_fx_derivatives_notional increased significantly from previous reporting period, requires further analysis for underlying reasons.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($10,659M)
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($7,125M)
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($3,079M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($187M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($71M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
 [LLM_FLAG] This filing section (NOTE 20) focuses on derivative financial instruments and hedging activities rather than investment securities. The text explicitly states that cash and cash equivalents and investment securities are detailed in Note 3, which is not provided in this extract.
 

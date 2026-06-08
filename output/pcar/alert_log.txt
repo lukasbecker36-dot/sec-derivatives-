@@ -1,3 +1,31 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-58M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-97M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-58M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-97M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[LLM_FLAG] The FX sensitivity increased significantly, going from a loss of $126.3 in 2024 to a loss of $96.8 in 2025, indicating potential improvements in hedging effectiveness or shifts in underlying exposures.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-07 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7S84iUmtAMix2ahRjS'}
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-07 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7Rm4fWGVCqe5j3TFNP'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-07 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7RGXvr9d9WpXMaGQcC'}
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-07 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7QnZRe3pfdz8nbwWJ9'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-07 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7Q6qzEEi7WXKaRZQSR'}
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)

@@ -1,3 +1,44 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] total_cash_equivalents_fv: $31,482M → $19,280M (-38.8%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $45,719M → $57,754M (+26.3%) — exceeds 15% threshold
+[NUMERIC] marketable_equity_securities_fv: $5,992M → $4,323M (-27.9%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $17,477M → $21,627M (+23.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $300M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] unrealized_gains_equity: was $-690M, now missing
+[DISAPPEARED_FIELD] debt_securities_due_1yr: was $-711M, now missing
+[DISAPPEARED_FIELD] debt_securities_due_1to5yr: was $-599M, now missing
+[DISAPPEARED_FIELD] total_marketable_debt_securities: was $59M, now missing
+[DISAPPEARED_FIELD] fx_forward_pnl: was $5,990M, now missing
+[DISAPPEARED_FIELD] non_marketable_equity_cv: was $-600M, now missing
+[DISAPPEARED_FIELD] equity_method_investments_cv: was $413M, now missing
+[VALIDATION] Likely extraction failure: 9/13 previously-populated fields are now null (gross_unrealized_gains_debt, equity_sensitivity_10pct, unrealized_gains_equity, debt_securities_due_1yr, debt_securities_due_1to5yr...)
+[LLM_FLAG] total_cash_equivalents_fv decreased by more than 50% compared to prior period (31,482 to 19,280) - significant reduction.
+[LLM_FLAG] total_marketable_securities_fv decreased by more than 50% compared to prior period (45,719 to 57,754) - notable drop.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($31,482M)
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($45,719M)
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($5,992M)
+[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($17,477M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($300M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-690M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-711M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-599M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($59M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($5,990M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-600M)
+[NEW_FIELD] unrealized_gains_equity: appeared for first time ($413M)
+[NEW_FIELD] debt_securities_due_1yr: appeared for first time ($13,023M)
+[NEW_FIELD] debt_securities_due_1to5yr: appeared for first time ($26,704M)
+[NEW_FIELD] total_marketable_debt_securities: appeared for first time ($39,727M)
+[NEW_FIELD] non_marketable_equity_cv: appeared for first time ($20,080M)
+[NEW_FIELD] equity_method_investments_cv: appeared for first time ($7,450M)
+[LLM_FLAG] fx_transaction_gain_loss differs more than 50% compared to the prior period (690 million losses vs 366 million losses last period; significant deterioration).
+[LLM_FLAG] ir_sensitivity_100bp indicates a larger drop in market value compared to the previous year, showing increased sensitivity to rate changes.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)

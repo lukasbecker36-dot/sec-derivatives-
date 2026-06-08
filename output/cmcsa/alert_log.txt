@@ -1,3 +1,30 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $102M, now missing
+[DISAPPEARED_FIELD] derivative_impact_on_interest_expense: was $45M, now missing
+[DISAPPEARED_FIELD] fair_values: was $87M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fixed_rate_notes_billion, derivative_impact_on_interest_expense, fair_values)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($102M)
+[NEW_FIELD] derivative_impact_on_interest_expense: appeared for first time ($45M)
+[NEW_FIELD] fair_values: appeared for first time ($87M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYZhMooGqiP6CDtfCwa'}
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYZWSjCU29Ksnujxxcn'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYZFbkukwKULYUx8crp'}
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYZ2m6MabUpo7TsipSj'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYYpG1TPfy589DJ3ssi'}
+
 === 10-Q | Period ending 2025-03-31 | Processed 2026-04-25 ===
 [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $102M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fixed_rate_notes_billion)

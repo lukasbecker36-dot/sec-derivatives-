@@ -1,3 +1,49 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] fx_derivatives_notional: $10,191M → $13,128M (+28.8%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $509M → $385M (-24.4%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $9,682M → $12,843M (+32.6%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $4,068M → $3,180M (-21.8%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $-6M → $-14M (-133.3%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $6M → $1M (-83.3%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional increased by more than 50% compared to prior value of 10191.0 million.
+[LLM_FLAG] net_derivative_position improved significantly considering the prior period of -887.0 million, moved to -795.0 million.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($10,191M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($509M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($9,682M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($4,068M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($18M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($905M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-887M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-6M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($6M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[LLM_FLAG] fx_derivatives_notional increased by over 50% from prior year's $9155 million
+[LLM_FLAG] total_derivative_asset increased from prior year while total_derivative_liability increased significantly, indicating a shift in derivative activity.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZLoXPYV8VMKwFzkMKd'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZLtCRf4gaRmb3jzUPi'}
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZLVNzHxs2ozoy2ncpL'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZLaHR3JvZXif4yr6gi'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZL3KaU69dzMN8Pr8e1'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZL7V77dsNXmA3xubff'}
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZKhr3xvAMEquTCKRRb'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZKn4ZDHkySpvNxh3GM'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZKPAuCPAxcubFM1STE'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZKTphXNxAmrj5y7PR8'}
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [NUMERIC] fx_designated_notional: $31M → $6,139M (+19703.2%) — exceeds 20% threshold

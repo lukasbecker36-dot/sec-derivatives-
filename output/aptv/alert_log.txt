@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] currency_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] commodity_net_fair_value: was $77M, now missing
+[DISAPPEARED_FIELD] commodity_sensitivity_10pct: was $2M, now missing
+[DISAPPEARED_FIELD] foreign_currency_translation_adjustment: was $476M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (currency_sensitivity_10pct, commodity_net_fair_value, commodity_sensitivity_10pct, foreign_currency_translation_adjustment)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($77M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
+[NEW_FIELD] net_fair_value_liability_currency: appeared for first time ($476M)
+[NEW_FIELD] currency_sensitivity_10pct: appeared for first time ($27M)
+[NEW_FIELD] commodity_net_fair_value: appeared for first time ($79M)
+[NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($44M)
+[NEW_FIELD] foreign_currency_translation_adjustment: appeared for first time ($310M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $31M, now missing

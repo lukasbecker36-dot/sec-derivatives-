@@ -1,3 +1,26 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($26M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
+[NEW_FIELD] corporate_cash_and_equivalents: appeared for first time ($154M)
+[NUMERIC] funds_held_for_clients: $22M → $2,200M (+9854.8%) — exceeds 20% threshold
+[NEW_FIELD] available_for_sale_securities: appeared for first time ($375M)
+[NEW_FIELD] interest_rate_sensitivity_client_funds: appeared for first time ($26M)
+[NEW_FIELD] interest_rate_sensitivity_afs: appeared for first time ($2M)
+[LLM_FLAG] interest_rate_sensitivity_client_funds has increased significantly compared to the prior period value of 22.1.
+[LLM_FLAG] Equity sensitivity remains at 0, consistent with prior period, but flagged as lacking hedging activity.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] ir_sensitivity_100bp: $100M → $22M (-77.9%) — exceeds 20% threshold
+[NEW_FIELD] corporate_cash_and_equivalents: appeared for first time ($370M)
+[NEW_FIELD] funds_held_for_clients: appeared for first time ($4,800M)
+[NEW_FIELD] available_for_sale_securities: appeared for first time ($374M)
+[NEW_FIELD] interest_rate_sensitivity_client_funds: appeared for first time ($22M)
+[NEW_FIELD] interest_rate_sensitivity_afs: appeared for first time ($2M)
+[LLM_FLAG] ir_sensitivity_100bp differs significantly from the prior period value of 100.0 (decrease of 77.9%).
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
 [NUMERIC] funds_held_for_clients: $1,300M → $4,800M (+269.2%) — exceeds 20% threshold
 [NUMERIC] available_for_sale_securities: $497M → $374M (-24.6%) — exceeds 20% threshold

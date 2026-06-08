@@ -1,3 +1,36 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,235M)
+[NUMERIC] total_derivative_asset: $1,150M → $44M (-96.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $853M → $19M (-97.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $297M → $25M (-91.6%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($14M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $52M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $8M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $44M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $84M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $32M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/10 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value...)
+[LLM_FLAG] total_derivative_asset decreased by 61.5% from prior period (1150.0).
+[LLM_FLAG] total_derivative_liability decreased by 77.3% from prior period (853.0).
+[LLM_FLAG] net derivative position increased by 8.5% from prior period (297.0).
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,150M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($853M)
+[NUMERIC] fx_not_designated_notional: $30M → $297M (+890.0%) — exceeds 20% threshold
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $12M → $52M (+337.5%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($44M)
+[NUMERIC] cash_flow_hedge_aoci: $30M → $84M (+178.5%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $20M → $32M (+62.5%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[LLM_FLAG] fx_derivatives_notional increased significantly compared to prior period values; prior value was 30.0 million, current is 1150.0 million
+[LLM_FLAG] notional amounts related to FX derivatives were accurately captured from the text, ensuring consistency and alignment with prior patterns
+[LLM_FLAG] new net investment hedge transactions have been utilized to mitigate the variability of investments
+[LLM_FLAG] there is a notable gain in AOCI indicating effective cash flow hedging follow-through
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 

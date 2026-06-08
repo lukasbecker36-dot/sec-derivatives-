@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($8M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($24M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_debt: was $15M, now missing
+[NUMERIC] fair_value_sensitivity: $22M → $874M (+3927.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] equity_sensitivity: was $1,500M, now missing
+[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (equity_sensitivity_10pct, fixed_rate_debt, equity_sensitivity)
+[LLM_FLAG] fixed_rate_debt increased by more than 50% compared to the prior period (from 15.0 to 24.1 billion); significant update for stakeholders.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] ir_sensitivity_100bp: $100M → $15M (-85.0%) — exceeds 20% threshold
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($22M)
+[NEW_FIELD] floating_rate_obligations: appeared for first time ($1,500M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($15M)
+[NEW_FIELD] fair_value_sensitivity: appeared for first time ($800M)
+[NEW_FIELD] zens_derivative_component: appeared for first time ($564M)
+[LLM_FLAG] ir_sensitivity_100bp increased from prior period value of 100.0 by 85%.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-04-25 ===
 [NUMERIC] ir_sensitivity_100bp: $11M → $8M (-27.3%) — exceeds 20% threshold
 [NUMERIC] interest_rate_sensitivity: $11M → $8M (-27.3%) — exceeds 20% threshold
