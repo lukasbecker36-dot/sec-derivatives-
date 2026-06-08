@@ -2,6 +2,27 @@
 [NUMERIC] equity_sensitivity_10pct: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
 [NUMERIC] fx_investment_sensitivity: $-7M → $-5M (+28.6%) — exceeds 20% threshold
 [NUMERIC] equity_price_sensitivity: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_revenue_sensitivity decreased by more than 50% compared to prior period (-12434 to -12938).
+[LLM_FLAG] equity_sensitivity_10pct decreased by more than 50% compared to prior period (-1847 to -2248).
+[LLM_FLAG] There is a significant decline in interest rate sensitivity from -1462 to -1230, though it is less than 50%.
+[LLM_FLAG] Credit spread sensitivity shows a decline but remains within expectations. Prior period was -495.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1,462M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-1,847M)
+[NEW_FIELD] fx_revenue_sensitivity: appeared for first time ($-12,434M)
+[NEW_FIELD] fx_investment_sensitivity: appeared for first time ($-7M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-1,462M)
+[NEW_FIELD] credit_spread_sensitivity: appeared for first time ($-495M)
+[NEW_FIELD] equity_price_sensitivity: appeared for first time ($-1,847M)
+[LLM_FLAG] The reported foreign currency revenue sensitivity of -12434 million indicates significant exposure to foreign exchange rates, which could raise concerns about market volatility impacts.
+[LLM_FLAG] Interest rate sensitivity demonstrates a potential negative impact of -1462 million from a hypothetical 100bp increase in U.S. treasury rates.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] equity_sensitivity_10pct: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[NUMERIC] fx_investment_sensitivity: $-7M → $-5M (+28.6%) — exceeds 20% threshold
+[NUMERIC] equity_price_sensitivity: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
 [LLM_FLAG] fx_sensitivity_10pct decreased from -12434 to -12938 (significant). Interest rate sensitivity improved from -1462 to -1230 (more than 50% change).
 
 === 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
