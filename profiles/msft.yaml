@@ -16,7 +16,7 @@ sections:
     max_length: 30000
   derivatives_note:
     heading: 'Note\s+\d+\s*[.–—―\-:]?\s*Derivatives'
-    match_strategy: last
+    match_strategy: first
     validation_keywords: [notional, derivative, swap, forward, hedge]
     end_boundary: 'Note\s+\d+\s*[.–—―\-:]?\s*(?!Derivatives)'
     max_length: 15000
