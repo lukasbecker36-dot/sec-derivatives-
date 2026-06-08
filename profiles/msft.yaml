@@ -10,16 +10,16 @@ extraction_mode: llm
 # archetype default (10000) to reach the derivatives notional tables.
 sections:
   financial_instruments:
-    heading: 'Note\s+\d+\s*[.–—―\-]\s*Financial Instruments'
+    heading: 'NOTE\s+\d+\s*[.–—―\-:]?\s*FINANCIAL INSTRUMENTS'
     match_strategy: first
     validation_keywords: [fair value, securities, cash]
-    end_boundary: 'Note\s+\d+\s*[.–—―\-]\s*(?!Financial Instruments)'
+    end_boundary: 'NOTE\s+\d+\s*[.–—―\-:]?\s*(?!FINANCIAL INSTRUMENTS)'
     max_length: 30000
   derivatives_note:
-    heading: 'Note\s+\d+\s*[.–—―\-]\s*Financial Instruments'
+    heading: 'NOTE\s+\d+\s*[.–—―\-:]?\s*FINANCIAL INSTRUMENTS'
     match_strategy: first
     validation_keywords: [notional, derivative, forward]
-    end_boundary: 'Note\s+\d+\s*[.–—―\-]\s*(?!Financial Instruments)'
+    end_boundary: 'NOTE\s+\d+\s*[.–—―\-:]?\s*(?!FINANCIAL INSTRUMENTS)'
     max_length: 30000
 
 fields:

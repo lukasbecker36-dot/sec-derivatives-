@@ -7,16 +7,16 @@
 
 sections:
   financial_instruments:
-    heading: 'Note\s+\d+\s*[.–—―�‒—–\-]\s*Financial Instruments'
+    heading: 'Note\s+\d+\s*[.–—―�‒—–\-]?\s*Financial Instruments'
     match_strategy: first
     validation_keywords: [fair value, securities, cash]
-    end_boundary: 'Note\s+\d+\s*[.–—―�‒—–\-]\s*(?!Financial Instruments)'
+    end_boundary: 'Note\s+\d+\s*[.–—―�‒—–\-]?\s*(?!Financial Instruments)'
     max_length: 10000
   derivatives_note:
-    heading: 'Note\s+\d+\s*[.–—―�‒—–\-]\s*(?:Derivative|Hedging)'
+    heading: 'Note\s+\d+\s*[.–—―�‒—–\-]?\s*(?:Derivative|Hedging)'
     match_strategy: last
     validation_keywords: [notional, derivative, swap, forward, hedge]
-    end_boundary: 'Note\s+\d+\s*[.–—―�‒—–\-]\s*(?!Derivative|Hedging)'
+    end_boundary: 'Note\s+\d+\s*[.–—―�‒—–\-]?\s*(?!Derivative|Hedging)'
     max_length: 10000
   market_risk:
     heading: 'Quantitative and Qualitative Disclosures About Market Risk'
