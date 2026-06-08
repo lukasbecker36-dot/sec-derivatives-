@@ -4,8 +4,7 @@ import logging
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
-
-import anthropic
+from typing import Any
 
 from .bootstrap import bootstrap_issuer_for_activation, PROFILES_DIR
 from .config import load_config
@@ -181,7 +180,7 @@ def activate_issuer(
     issuer_name: str,
     sector: str,
     filing_meta: dict,
-    client: anthropic.Anthropic | None = None,
+    client: Any | None = None,
     output_dir: Path = OUTPUT_DIR,
 ) -> ActivationResult:
     """Full activation pipeline for one issuer.
@@ -195,7 +194,13 @@ def activate_issuer(
     7. Write outputs or clean up
     """
     if client is None:
-        client = anthropic.Anthropic()
+        from .llm_extract import _provider, _client as _llm_client
+        if _provider == 'openai':
+            import openai as _openai
+            client = _llm_client or _openai.OpenAI()
+        else:
+            import anthropic as _anthropic
+            client = _llm_client or _anthropic.Anthropic()
 
     result = ActivationResult(
         ticker=ticker,

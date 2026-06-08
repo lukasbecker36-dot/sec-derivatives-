@@ -8,8 +8,6 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-import anthropic
-
 from .activation import check_new_filing, activate_issuer, ActivationResult
 from .config import load_config
 from .engine import OUTPUT_DIR
@@ -182,7 +180,13 @@ def _pass_registered(universe: list[dict], cutoff_date: str,
                                     reason='New filing detected')
 
             if client is None:
-                client = anthropic.Anthropic()
+                from .llm_extract import _provider, _client as _llm_client
+                if _provider == 'openai':
+                    import openai as _openai
+                    client = _llm_client or _openai.OpenAI()
+                else:
+                    import anthropic as _anthropic
+                    client = _llm_client or _anthropic.Anthropic()
 
             result = activate_issuer(
                 ticker=ticker,
@@ -376,6 +380,10 @@ def main():
                         help='Write JSON summary to file')
     parser.add_argument('--verbose', '-v', action='store_true',
                         help='Verbose logging')
+    parser.add_argument('--provider', default='anthropic', choices=['anthropic', 'openai'],
+                        help='LLM provider (default: anthropic)')
+    parser.add_argument('--model', default='',
+                        help='Override model name for the chosen provider')
     args = parser.parse_args()
 
     level = logging.DEBUG if args.verbose else logging.INFO
@@ -384,6 +392,9 @@ def main():
         format='%(asctime)s %(levelname)s %(name)s: %(message)s',
         datefmt='%Y-%m-%d %H:%M:%S',
     )
+
+    from .llm_extract import set_provider
+    set_provider(args.provider, model=args.model or None)
 
     summary = run_scheduled(
         output_dir=args.output,

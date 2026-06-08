@@ -4,8 +4,8 @@ import json
 import re
 import logging
 from pathlib import Path
+from typing import Any
 
-import anthropic
 import yaml
 
 from .filing_fetcher import discover_filings, fetch_filing_text
@@ -17,7 +17,8 @@ PROFILES_DIR = Path(__file__).resolve().parent.parent / 'profiles'
 ARCHETYPES_DIR = PROFILES_DIR / '_archetypes'
 LLM_LOG = Path(__file__).resolve().parent.parent / 'output' / 'llm_usage.log'
 
-SONNET_MODEL = 'claude-sonnet-4-20250514'
+ANTHROPIC_SONNET = 'claude-sonnet-4-20250514'
+OPENAI_SONNET_EQUIV = 'gpt-4o'  # used for bootstrap analysis when provider=openai
 
 # Pluggable override — when set, bootstrap functions call this instead of the
 # Anthropic API.  Used by cc_bridge.py.
@@ -163,7 +164,7 @@ def bootstrap_issuer(
     cik: str,
     ticker: str = '',
     issuer_name: str = '',
-    client: anthropic.Anthropic | None = None,
+    client: Any | None = None,
 ) -> Path:
     """Bootstrap a new issuer config from a CIK.
 
@@ -171,7 +172,13 @@ def bootstrap_issuer(
     Returns path to the generated config file.
     """
     if client is None:
-        client = anthropic.Anthropic()
+        from .llm_extract import _provider, _client as _llm_client
+        if _provider == 'openai':
+            import openai as _openai
+            client = _llm_client or _openai.OpenAI()
+        else:
+            import anthropic as _anthropic
+            client = _llm_client or _anthropic.Anthropic()
 
     # Fetch most recent 10-Q
     filings = discover_filings(cik)
@@ -212,17 +219,31 @@ def bootstrap_issuer(
         if _analysis_override is not None:
             raw = _analysis_override(prompt)
         else:
-            response = client.messages.create(
-                model=SONNET_MODEL,
-                max_tokens=2048,
-                messages=[{'role': 'user', 'content': prompt}],
-            )
-            raw = response.content[0].text
-            log_llm_usage(
-                LLM_LOG, issuer_name or cik, 'bootstrap', SONNET_MODEL,
-                response.usage.input_tokens, response.usage.output_tokens,
-                (response.usage.input_tokens * 3.0 + response.usage.output_tokens * 15.0) / 1_000_000,
-            )
+            from .llm_extract import _provider, _client as _llm_client
+            if _provider == 'openai':
+                import openai as _openai
+                active_client = client or _llm_client or _openai.OpenAI()
+                response = active_client.chat.completions.create(
+                    model=OPENAI_SONNET_EQUIV,
+                    max_tokens=2048,
+                    messages=[{'role': 'user', 'content': prompt}],
+                )
+                raw = response.choices[0].message.content
+                inp, out = response.usage.prompt_tokens, response.usage.completion_tokens
+                cost = (inp * 2.50 + out * 10.0) / 1_000_000
+                log_llm_usage(LLM_LOG, issuer_name or cik, 'bootstrap', OPENAI_SONNET_EQUIV, inp, out, cost)
+            else:
+                import anthropic as _anthropic
+                active_client = client or _llm_client or _anthropic.Anthropic()
+                response = active_client.messages.create(
+                    model=ANTHROPIC_SONNET,
+                    max_tokens=2048,
+                    messages=[{'role': 'user', 'content': prompt}],
+                )
+                raw = response.content[0].text
+                inp, out = response.usage.input_tokens, response.usage.output_tokens
+                cost = (inp * 3.0 + out * 15.0) / 1_000_000
+                log_llm_usage(LLM_LOG, issuer_name or cik, 'bootstrap', ANTHROPIC_SONNET, inp, out, cost)
 
         # Parse analysis
         raw = re.sub(r'^```(?:json)?\s*', '', raw.strip())
@@ -299,7 +320,7 @@ def bootstrap_issuer_for_activation(
     ticker: str,
     issuer_name: str,
     filing_text: str,
-    client: anthropic.Anthropic | None = None,
+    client: Any | None = None,
 ) -> dict:
     """Activation-mode bootstrap: generate config from pre-fetched filing text.
 
@@ -309,9 +330,6 @@ def bootstrap_issuer_for_activation(
     Returns dict with: config_path, archetype, archetype_confidence,
     note_headings_found, sections_found, llm_analysis, llm_analysis_failed, warnings
     """
-    if client is None:
-        client = anthropic.Anthropic()
-
     warnings = []
 
     # Find note headings
@@ -346,17 +364,31 @@ def bootstrap_issuer_for_activation(
         if _analysis_override is not None:
             raw = _analysis_override(prompt)
         else:
-            response = client.messages.create(
-                model=SONNET_MODEL,
-                max_tokens=2048,
-                messages=[{'role': 'user', 'content': prompt}],
-            )
-            raw = response.content[0].text
-            log_llm_usage(
-                LLM_LOG, issuer_name or cik, 'bootstrap', SONNET_MODEL,
-                response.usage.input_tokens, response.usage.output_tokens,
-                (response.usage.input_tokens * 3.0 + response.usage.output_tokens * 15.0) / 1_000_000,
-            )
+            from .llm_extract import _provider, _client as _llm_client
+            if _provider == 'openai':
+                import openai as _openai
+                active_client = client or _llm_client or _openai.OpenAI()
+                response = active_client.chat.completions.create(
+                    model=OPENAI_SONNET_EQUIV,
+                    max_tokens=2048,
+                    messages=[{'role': 'user', 'content': prompt}],
+                )
+                raw = response.choices[0].message.content
+                inp, out = response.usage.prompt_tokens, response.usage.completion_tokens
+                log_llm_usage(LLM_LOG, issuer_name or cik, 'bootstrap', OPENAI_SONNET_EQUIV,
+                              inp, out, (inp * 2.50 + out * 10.0) / 1_000_000)
+            else:
+                import anthropic as _anthropic
+                active_client = client or _llm_client or _anthropic.Anthropic()
+                response = active_client.messages.create(
+                    model=ANTHROPIC_SONNET,
+                    max_tokens=2048,
+                    messages=[{'role': 'user', 'content': prompt}],
+                )
+                raw = response.content[0].text
+                inp, out = response.usage.input_tokens, response.usage.output_tokens
+                log_llm_usage(LLM_LOG, issuer_name or cik, 'bootstrap', ANTHROPIC_SONNET,
+                              inp, out, (inp * 3.0 + out * 15.0) / 1_000_000)
 
         raw = re.sub(r'^```(?:json)?\s*', '', raw.strip())
         raw = re.sub(r'\s*```$', '', raw)
@@ -397,7 +429,7 @@ def bootstrap_issuer_for_activation(
     }
 
 
-def bootstrap_batch(cik_list_path: Path, client: anthropic.Anthropic | None = None):
+def bootstrap_batch(cik_list_path: Path, client: Any | None = None):
     """Bootstrap configs for a list of CIKs from a text file."""
     with open(cik_list_path, 'r') as f:
         lines = [line.strip() for line in f if line.strip() and not line.startswith('#')]
