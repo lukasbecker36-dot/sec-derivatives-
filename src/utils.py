@@ -47,9 +47,26 @@ def extract_first_dollar(text):
 # Text cleaning
 # ---------------------------------------------------------------------------
 
+def _render_table(table_tag) -> str:
+    """Render an HTML table as tab-separated rows.
+
+    Preserving row/column structure prevents date column headers (e.g. "March 29, 2026")
+    from appearing adjacent to "Notional Amount" in the flat text, which causes the
+    LLM to read the year as a notional value.
+    """
+    rows = []
+    for tr in table_tag.find_all('tr'):
+        cells = [td.get_text(' ', strip=True) for td in tr.find_all(['td', 'th'])]
+        if any(c.strip() for c in cells):
+            rows.append('\t'.join(cells))
+    return '\n'.join(rows)
+
+
 def clean_filing_text(html: str) -> str:
     """Clean raw filing HTML into plain text for extraction."""
     soup = BeautifulSoup(html, 'html.parser')
+    for table in soup.find_all('table'):
+        table.replace_with(_render_table(table) + '\n')
     text = soup.get_text(' ', strip=True)
     text = text.replace('\xa0', ' ')
     text = re.sub(r'\d+\s+Table of Contents', '', text)

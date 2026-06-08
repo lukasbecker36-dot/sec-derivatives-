@@ -2,10 +2,26 @@ issuer: Microsoft
 ticker: MSFT
 cik: "789019"
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: Information Technology
 extraction_mode: llm
 
-# Additional fields identified by LLM analysis (review and adjust)
+# Microsoft reports all derivatives inside Note 5 "Financial Instruments".
+# The note is very long (~30k chars) so we need a larger max_length than the
+# archetype default (10000) to reach the derivatives notional tables.
+sections:
+  financial_instruments:
+    heading: 'Note\s+\d+\s*[.–—―\-]\s*Financial Instruments'
+    match_strategy: first
+    validation_keywords: [fair value, securities, cash]
+    end_boundary: 'Note\s+\d+\s*[.–—―\-]\s*(?!Financial Instruments)'
+    max_length: 30000
+  derivatives_note:
+    heading: 'Note\s+\d+\s*[.–—―\-]\s*Financial Instruments'
+    match_strategy: first
+    validation_keywords: [notional, derivative, forward]
+    end_boundary: 'Note\s+\d+\s*[.–—―\-]\s*(?!Financial Instruments)'
+    max_length: 30000
+
 fields:
   fx_revenue_sensitivity:
     description: "Earnings impact from 10% decrease in foreign exchange rates on revenue"
@@ -22,19 +38,10 @@ fields:
   equity_price_sensitivity:
     description: "Earnings impact from 10% decrease in equity market prices"
     section: market_risk
-  interest_rate_swaps_on_debt:
-    description: "Interest rate swaps related to fixed-rate debt referenced in Note 5"
-    section: derivatives_note
   long_term_debt_fair_value:
     description: "Estimated fair value of long-term debt including current portion"
     section: financial_instruments
   principal_currency_exposures:
     description: "Major currency exposures (Euro, JPY, GBP, CAD, AUD)"
     section: market_risk
-
-# Unusual features identified:
-#   - Derivatives note text not fully extracted; only a debt-focused cross-reference to Note 5 Derivatives was captured
-#   - Sensitivity analysis table provided in market_risk section covers FX, interest rate, credit, and equity risks
-#   - Full derivatives notional and fair value tables likely exist in Note 5 but were not included in extracted text
-#   - Euro-denominated debt pays interest annually unlike other semi-annual debt
 
