@@ -6,7 +6,7 @@ from .config import SectionConfig, IssuerConfig
 # Expanded cross-reference pattern
 XREF_PATTERN = re.compile(
     r',\s*Note\s+\d+'
-    r'|(?:in |to )(?:the |our )?(?:notes|condensed|consolidated|accompanying)'
+    r'|(?:in |to )(?:the |our )?(?:accompanying )?notes(?:\s+to)?'
     r'|for (?:disclosures|further details|a discussion)'
     r'|(?:see|refer\s+to)\s+Note\s+\d+'
     r'|(?:included|discussed|described)\s+in\s+(?:the\s+)?(?:notes|Note)'
