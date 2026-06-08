@@ -126,6 +126,7 @@ _NOTIONAL_ANCHOR = re.compile(
     r'notional\s+amounts?\s+of'                          # "notional amounts of our derivatives"
     r'|(?:aggregate|total|outstanding|combined)\s+notional'  # qualified notional
     r'|notional\s+amounts?\b'                            # bare "notional amount(s)"
+    r'|hedging\s+activities\W{0,30}we\s+had'            # GD: "Hedging Activities. We had"
     r')',
     re.IGNORECASE,
 )
