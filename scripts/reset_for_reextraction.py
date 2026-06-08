@@ -53,8 +53,8 @@ def main():
 
         with open(csv_path, encoding='utf-8') as f:
             reader = csv.DictReader(f)
-            fieldnames = reader.fieldnames
-            rows = list(reader)
+            fieldnames = [f for f in (reader.fieldnames or []) if f is not None]
+            rows = [{k: v for k, v in row.items() if k is not None} for row in reader]
 
         if not rows:
             continue
