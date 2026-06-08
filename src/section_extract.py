@@ -170,14 +170,16 @@ def extract_all_sections(text: str, config: IssuerConfig) -> dict[str, str]:
     for name, section_cfg in config.sections.items():
         sections[name] = extract_section(text, section_cfg)
 
-    # Content fallback: if a derivatives note section is configured but the
-    # heading pattern matched nothing, try to locate the notional table by
-    # content so diversely-titled notes still get extracted.
-    if 'derivatives_note' in sections and not sections['derivatives_note']:
-        cfg = config.sections['derivatives_note']
-        fallback = extract_derivatives_by_content(text, max_length=cfg.max_length)
-        if fallback:
-            sections['derivatives_note'] = fallback
+    # Content fallback: if the derivatives_note section is missing or was found
+    # by heading but contains no notional data (heading matched a stub/cross-ref),
+    # try to locate the notional table by content instead.
+    if 'derivatives_note' in sections:
+        dn = sections['derivatives_note']
+        if not dn or 'notional' not in dn.lower():
+            cfg = config.sections['derivatives_note']
+            fallback = extract_derivatives_by_content(text, max_length=cfg.max_length)
+            if fallback and 'notional' in fallback.lower():
+                sections['derivatives_note'] = fallback
 
     return sections
 
