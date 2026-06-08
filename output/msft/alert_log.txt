@@ -1,4 +1,41 @@
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] fx_not_designated_notional: $8,994M → $14,050M (+56.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $320M → $1,080M (+237.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $907M → $671M (-26.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-587M → $409M (+169.7%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $-7M → $-34M (-385.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $16M, now missing
+[NUMERIC] equity_sensitivity_10pct: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[NUMERIC] fx_investment_sensitivity: $-7M → $-5M (+28.6%) — exceeds 20% threshold
+[NUMERIC] equity_price_sensitivity: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional increased by 3% from prior period (52784 to 54543), but is within plausibility.
+[LLM_FLAG] ir_swap_notional increased by 2.6% (1166 to 1180), within reasonable range.
+[LLM_FLAG] engaged in substantial use of equity derivatives with a net amount (purchased and sold) declining (7198 vs. 7364 in prior).
+[LLM_FLAG] interest_rate_sensitivity changed from -1462 to -1230, a reduction of more than 50%, indicating a potential change in interest rate risk management strategy.
+[LLM_FLAG] equity_sensitivity_10pct changed from -1847 to -2248, indicating an increase in sensitivity to equity market price changes.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($52,784M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,492M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($8,994M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,166M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($7,354M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($320M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($907M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-587M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-7M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($16M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1,462M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-1,847M)
+[NEW_FIELD] fx_revenue_sensitivity: appeared for first time ($-12,434M)
+[NEW_FIELD] fx_investment_sensitivity: appeared for first time ($-7M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-1,462M)
+[NEW_FIELD] credit_spread_sensitivity: appeared for first time ($-495M)
+[NEW_FIELD] equity_price_sensitivity: appeared for first time ($-1,847M)
+[LLM_FLAG] Notional amount of unhedged foreign exchange derivatives decreased significantly, may indicate a winding down of certain hedges.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NUMERIC] equity_sensitivity_10pct: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
 [NUMERIC] fx_investment_sensitivity: $-7M → $-5M (+28.6%) — exceeds 20% threshold
 [NUMERIC] equity_price_sensitivity: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
