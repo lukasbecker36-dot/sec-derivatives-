@@ -123,10 +123,9 @@ def extract_section(text: str, section_cfg: SectionConfig,
 # mentions (e.g. a passing reference in a debt footnote).
 _NOTIONAL_ANCHOR = re.compile(
     r'(?:'
-    r'notional\s+amounts?\s+of'           # "notional amounts of our derivatives"
-    r'|aggregate\s+notional'              # "aggregate notional"
-    r'|(?:total|outstanding)\s+notional'  # "total notional", "outstanding notional"
-    r'|with\s+(?:an?\s+)?(?:aggregate|total)\s+notional'
+    r'notional\s+amounts?\s+of'                          # "notional amounts of our derivatives"
+    r'|(?:aggregate|total|outstanding|combined)\s+notional'  # qualified notional
+    r'|notional\s+amounts?\b'                            # bare "notional amount(s)"
     r')',
     re.IGNORECASE,
 )

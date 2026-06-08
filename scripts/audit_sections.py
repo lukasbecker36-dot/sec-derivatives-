@@ -28,7 +28,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.config import load_config
 from src.filing_fetcher import discover_filings, fetch_filing_text
-from src.section_extract import extract_section
+from src.section_extract import extract_all_sections
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_CSV = ROOT / 'output' / 'section_audit.csv'
@@ -61,12 +61,11 @@ def audit_one(ticker: str, cik: str) -> dict | None:
         return {'ticker': ticker, 'bucket': 'no_notional',
                 'period': meta['period_end'], 'note': ''}
 
-    # Which section captures a notional?
-    capturing = []
-    for name, sec_cfg in config.sections.items():
-        captured = extract_section(text, sec_cfg)
-        if captured and 'notional' in captured.lower():
-            capturing.append(name)
+    # Which section captures a notional? Use the real pipeline path
+    # (extract_all_sections) so the content fallback is exercised too.
+    sections = extract_all_sections(text, config)
+    capturing = [name for name, txt in sections.items()
+                 if txt and 'notional' in txt.lower()]
 
     if capturing:
         return {'ticker': ticker, 'bucket': 'captured',
