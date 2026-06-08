@@ -126,19 +126,21 @@ _NOTIONAL_ANCHOR = re.compile(
     r'notional\s+amounts?\s+of'                          # "notional amounts of our derivatives"
     r'|(?:aggregate|total|outstanding|combined)\s+notional'  # qualified notional
     r'|notional\s+amounts?\b'                            # bare "notional amount(s)"
-    r'|hedging\s+activities\W{0,30}we\s+had'            # GD: "Hedging Activities. We had"
+    r'|hedging\s+activities\W{0,30}we\s+had'            # GD-style "Hedging Activities. We had"
+    r'|\bnotional\b'                                    # bare "notional" (guarded by _DERIV_CONTEXT)
     r')',
     re.IGNORECASE,
 )
 _DERIV_CONTEXT = re.compile(
     r'derivative|forward\s+contract|interest\s+rate\s+swap|cross-currency|'
-    r'currency\s+(?:forward|contract|swap)|hedg|commodity\s+contract',
+    r'currency\s+(?:forward|contract|swap)|hedg|commodity\s+contract|'
+    r'swap\s+agreement|rate\s+swap|forward\s+exchange',
     re.IGNORECASE,
 )
 
 
 def extract_derivatives_by_content(text: str, max_length: int = 10000,
-                                   lookback: int = 400) -> str:
+                                   lookback: int = 600) -> str:
     """Locate the derivatives notional disclosure by content, not heading.
 
     Fallback for filers whose derivatives note heading doesn't match the
