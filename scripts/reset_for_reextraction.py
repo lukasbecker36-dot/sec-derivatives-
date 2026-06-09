@@ -1,10 +1,11 @@
-"""Remove target filing periods from tracking CSVs so the scheduler re-extracts them.
+"""Remove recent filing periods from tracking CSVs so the scheduler re-extracts them.
 
 Usage:
     python scripts/reset_for_reextraction.py [--dry-run] [--tickers AAPL MSFT ...]
+    python scripts/reset_for_reextraction.py --last 2       # remove last 2 rows per filer
 
 By default targets all filers with missing/bad FX notional data.
-Removes their most recent filing period from tracking.csv so the
+Removes their most recent filing periods from tracking.csv so the
 scheduler treats them as unprocessed on the next run.
 """
 
@@ -33,11 +34,12 @@ def main():
     parser = argparse.ArgumentParser(description='Reset filing periods for re-extraction')
     parser.add_argument('--dry-run', action='store_true', help='Show what would be removed, do not modify files')
     parser.add_argument('--tickers', nargs='+', help='Only reset these tickers (default: all bad FX filers)')
+    parser.add_argument('--last', type=int, default=0,
+                        help='Remove the last N rows per filer (ignores --periods)')
     parser.add_argument('--periods', nargs='+', default=['2026-03-31', '2025-12-31'],
                         help='Period end dates to remove (default: 2026-03-31 2025-12-31)')
     args = parser.parse_args()
 
-    target_periods = set(args.periods)
     target_tickers = {t.lower() for t in args.tickers} if args.tickers else None
 
     reset_count = 0
@@ -59,14 +61,18 @@ def main():
         if not rows:
             continue
 
-        # Check if latest row has bad FX data
         latest = rows[-1]
         if not has_bad_fx(latest):
             continue
 
-        # Find rows matching target periods
-        rows_to_keep = [r for r in rows if r.get('period_end_date', '') not in target_periods]
-        rows_removed = [r for r in rows if r.get('period_end_date', '') in target_periods]
+        if args.last > 0:
+            n = min(args.last, len(rows))
+            rows_to_keep = rows[:-n]
+            rows_removed = rows[-n:]
+        else:
+            target_periods = set(args.periods)
+            rows_to_keep = [r for r in rows if r.get('period_end_date', '') not in target_periods]
+            rows_removed = [r for r in rows if r.get('period_end_date', '') in target_periods]
 
         if not rows_removed:
             continue
