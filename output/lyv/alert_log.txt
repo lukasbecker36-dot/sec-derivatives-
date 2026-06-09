@@ -1,3 +1,26 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($944M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $500M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] swap_rate: appeared for first time ($3M)
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (cash_flow_hedge_aoci, equity_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $500M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (cash_flow_hedge_aoci, equity_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] fx_derivatives_notional: was $2,020M, now missing
 [DISAPPEARED_FIELD] fx_designated_notional: was $2,026M, now missing

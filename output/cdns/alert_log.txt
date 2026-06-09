@@ -1,3 +1,68 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,133M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $3,258M, now missing
+[NEW_FIELD] total_derivative_liability: appeared for first time ($-17M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($1,133M)
+[NUMERIC] ir_sensitivity_100bp: $-26M → $-3M (+87.3%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $26M → $213M (+719.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $3,258M, now missing
+[DISAPPEARED_FIELD] fx_forward_exchange_rates: was $3M, now missing
+[NUMERIC] fx_forward_fair_value: $213M → $-17M (-108.2%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_usd_decrease: appeared for first time ($6M)
+[NEW_FIELD] fx_sensitivity_usd_increase: appeared for first time ($0M)
+[NEW_FIELD] debt_securities_fair_value: appeared for first time ($80M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($3M)
+[NEW_FIELD] credit_facility_rate_sensitivity: appeared for first time ($4M)
+[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (total_derivative_asset, equity_sensitivity_10pct, fx_forward_exchange_rates)
+[LLM_FLAG] Total derivative asset and liability values not provided, which deviates from expectations given prior disclosures.
+[LLM_FLAG] ir_sensitivity_100bp has changed from -26.0 to -3.3, a significant improvement.
+[LLM_FLAG] fx_sensitivity_10pct has changed from 26.0 to 213.1, a substantial increase indicating higher exposure to foreign currency risks.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,258M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($-26M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($26M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($3,258M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
+[NUMERIC] fx_sensitivity_10pct: $10M → $213M (+2031.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_forward_fair_value: appeared for first time ($-26M)
+[NEW_FIELD] fx_sensitivity_usd_decrease: appeared for first time ($213M)
+[NEW_FIELD] fx_sensitivity_usd_increase: appeared for first time ($219M)
+[NEW_FIELD] debt_securities_fair_value: appeared for first time ($71M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($3M)
+[NEW_FIELD] credit_facility_rate_sensitivity: appeared for first time ($4M)
+[LLM_FLAG] The total notional amount of FX derivatives shows significant engagement in hedging activities, reflecting a more aggressive stance in managing currency exposure.
+[LLM_FLAG] fx_sensitivity_10pct increased significantly from the prior period value of 10.0 million
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($1,133M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($80M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $3,258M, now missing
+[DISAPPEARED_FIELD] fx_forward_exchange_rates: was $3M, now missing
+[NUMERIC] fx_forward_fair_value: $213M → $-17M (-108.2%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_usd_decrease: appeared for first time ($6M)
+[NUMERIC] fx_sensitivity_usd_increase: $71M → $0M (-99.7%) — exceeds 20% threshold
+[NEW_FIELD] debt_securities_fair_value: appeared for first time ($80M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($3M)
+[NEW_FIELD] credit_facility_rate_sensitivity: appeared for first time ($4M)
+[VALIDATION] Likely extraction failure: 2/4 previously-populated fields are now null (equity_sensitivity_10pct, fx_forward_exchange_rates)
+[VALIDATION] Likely units mismatch: fx_sensitivity_usd_increase changed from 71 to 0 (0x)
+[LLM_FLAG] fx_forward_fair_value (-17.4) shows a significant unrealized loss compared to the prior period's value of -26.0 million, which may indicate adverse conditions affecting the company’s hedging effectiveness.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($3,258M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
+[NUMERIC] fx_sensitivity_10pct: $10M → $213M (+2031.0%) — exceeds 20% threshold
+[NEW_FIELD] marketable_equity_value: appeared for first time ($71M)
+[NEW_FIELD] fx_forward_fair_value: appeared for first time ($-26M)
+[NEW_FIELD] fx_sensitivity_usd_decrease: appeared for first time ($213M)
+[NEW_FIELD] fx_sensitivity_usd_increase: appeared for first time ($219M)
+[NEW_FIELD] debt_securities_fair_value: appeared for first time ($71M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($3M)
+[NEW_FIELD] credit_facility_rate_sensitivity: appeared for first time ($4M)
+[LLM_FLAG] fx_sensitivity_10pct increased from 10.0 to 213.1, indicating a significant change in foreign currency risk exposure.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
 [NUMERIC] fx_forwards_outstanding: $3,204M → $1,133M (-64.6%) — exceeds 20% threshold
 [NUMERIC] fx_sensitivity_usd_decrease: $-213M → $6M (+102.7%) — exceeds 20% threshold

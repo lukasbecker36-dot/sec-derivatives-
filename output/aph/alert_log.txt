@@ -1,3 +1,40 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($2,500M)
+[NUMERIC] cash_flow_hedge_aoci: $2,500M → $88M (-96.5%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
+[NUMERIC] treasury_lock_settlement_loss: $1M → $88M (+7900.0%) — exceeds 20% threshold
+[NEW_FIELD] floating_rate_exposure: appeared for first time ($3M)
+[LLM_FLAG] ir_swap_notional differs from prior period values by more than 50%.
+[LLM_FLAG] The treasury_lock_notional value of 2500.0 differs from prior period value of 0.0 by more than 50%
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($2,500M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($88M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-88M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
+[NEW_FIELD] treasury_lock_notional: appeared for first time ($2M)
+[NEW_FIELD] treasury_lock_settlement_loss: appeared for first time ($88M)
+[NEW_FIELD] floating_rate_exposure: appeared for first time ($3M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($0M)
+[LLM_FLAG] The notional values for interest rate hedges are substantial, totaling $2,500 million, and indicate significant proactive management of interest rate risk.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] treasury_lock_notional: appeared for first time ($2,500M)
+[NEW_FIELD] treasury_lock_settlement_loss: appeared for first time ($88M)
+[NEW_FIELD] floating_rate_exposure: appeared for first time ($3M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] treasury_lock_notional: appeared for first time ($2,500M)
+[NEW_FIELD] treasury_lock_settlement_loss: appeared for first time ($88M)
+[NEW_FIELD] floating_rate_exposure: appeared for first time ($3M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)

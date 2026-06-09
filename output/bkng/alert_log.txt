@@ -1,3 +1,51 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($14,300M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($14,300M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[DROPPED_TO_ZERO] total_derivative_asset: $8,900M → $0M
+[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[DROPPED_TO_ZERO] net_derivative_position: $8,900M → $0M
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,000M)
+[NEW_FIELD] fx_impact_on_revenues: appeared for first time ($6M)
+[NEW_FIELD] equity_price_sensitivity: appeared for first time ($-4M)
+[DISAPPEARED_FIELD] derivative_policies: was $60M, now missing
+[LLM_FLAG] All derivative values indicate that the company is not designating derivatives for hedge accounting, which is a significant change from the usual practice.
+[LLM_FLAG] equity_sensitivity_10pct differs from prior period by more than 50%; significant loss indicated.
+[LLM_FLAG] fx_impact_on_revenues indicates a benefit from foreign currency influence.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($8,900M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($8,900M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($60M)
+[NEW_FIELD] fx_impact_on_bookings: appeared for first time ($2M)
+[NEW_FIELD] fx_impact_on_revenues: appeared for first time ($3M)
+[NEW_FIELD] equity_price_sensitivity: appeared for first time ($6M)
+[LLM_FLAG] ir_sensitivity_100bp
+[LLM_FLAG] fx_impact_on_bookings
+[LLM_FLAG] fx_impact_on_revenues
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,000M)
+[NEW_FIELD] fx_impact_on_revenues: appeared for first time ($6M)
+[NEW_FIELD] equity_price_sensitivity: appeared for first time ($45M)
+[LLM_FLAG] equity_sensitivity_10pct has a significant change (from 0.0 to 45.0) indicating increased risk due to equity investments.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($60M)
+[NEW_FIELD] fx_impact_on_bookings: appeared for first time ($2M)
+[NEW_FIELD] fx_impact_on_revenues: appeared for first time ($3M)
+[LLM_FLAG] ir_sensitivity_100bp has changed from 100000.0 to 110000.0, a difference of 10%.
+[LLM_FLAG] The company's foreign currency transaction gains/losses were not reported, which may indicate stability or limited exposure.
+
 === 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
 [NUMERIC] ir_sensitivity_100bp: $100M → $100,000M (+99900.0%) — exceeds 20% threshold
 [VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 100 to 100,000 (1000x)

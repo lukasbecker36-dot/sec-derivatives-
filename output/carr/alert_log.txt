@@ -1,3 +1,39 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,200M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($3,200M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,500M)
+[NUMERIC] total_derivative_asset: $3,100M → $133M (-95.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $3,100M → $153M (-95.1%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($-20M)
+[NUMERIC] cash_flow_hedge_aoci: $1,500M → $58M (-96.1%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($4M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $129M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $166M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-37M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $58M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $4M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/9 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value...)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,100M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($3,100M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,500M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($129M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($166M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-37M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($58M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($4M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[LLM_FLAG] Total derivative asset and liability values have changed in significant proportions compared to prior period.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
 === 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
 [LLM_FLAG] 10-Q filing section provides minimal market risk disclosure - explicitly refers readers to 2024 Form 10-K for detailed discussion. All quantitative and qualitative metrics cannot be extracted from this section.
 [LLM_FLAG] No numerical data on derivatives, hedging instruments, or market risk sensitivities provided in this excerpt.

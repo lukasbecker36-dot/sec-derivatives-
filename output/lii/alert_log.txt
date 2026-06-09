@@ -1,3 +1,29 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $88M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $24M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $24M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, fx_sensitivity_10pct, equity_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($88M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($24M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($24M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[LLM_FLAG] The notional amount of commodity derivatives (87.6 million) suggests significant exposure to commodity price fluctuations, impacting fairness and operational performance.
+[LLM_FLAG] Interest rate swaps have not been utilized for two consecutive years, which may indicate a shift in hedging strategy.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
 [LLM_FLAG] Filing references Form 10-K for fiscal year ended December 31, 2025, but the 10-Q period is Q1 2026 (ending March 31, 2026) - ensure correct annual report year is being referenced
 [LLM_FLAG] Provided excerpt is minimal and consists primarily of a cross-reference directing readers to the 10-K; most quantitative market risk disclosures are not included in this 10-Q excerpt

@@ -1,3 +1,50 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($131M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($131M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $477M → $141M (-70.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $477M → $145M (-69.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $78M → $-5M (-105.9%) — exceeds 20% threshold
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-13M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($13M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $84M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $169M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-85M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-30M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $20M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/9 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value...)
+[LLM_FLAG] Net derivative position of -4.6 million is significantly different from the prior period value of 77.7 million.
+[LLM_FLAG] The company de-designated the €750.0 million 3.125% Euro Senior Notes due 2028 as net investment hedges in February 2026.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($477M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($477M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($78M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($84M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($169M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-85M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-30M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($20M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($14M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($815M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($163M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($14M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($815M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($163M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $255M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)

@@ -1,3 +1,60 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1,044M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-734M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] net_financial_instrument_position: appeared for first time ($-16,800M)
+[NEW_FIELD] debt_composition_fixed_rate_percent: appeared for first time ($92M)
+[NUMERIC] debt_composition_variable_rate_percent: $750M → $8M (-98.9%) — exceeds 20% threshold
+[NEW_FIELD] interest_rate_sensitivity_100bp_up_fixed: appeared for first time ($-1,044M)
+[NEW_FIELD] interest_rate_sensitivity_100bp_down_fixed: appeared for first time ($1,174M)
+[NUMERIC] fx_sensitivity_10_percent: $-17,000M → $-734M (+95.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] operating_income_fx_sensitivity_cny: was $92M, now missing
+[DISAPPEARED_FIELD] operating_income_fx_sensitivity_eur: was $8M, now missing
+[VALIDATION] Likely extraction failure: 3/5 previously-populated fields are now null (equity_sensitivity_10pct, operating_income_fx_sensitivity_cny, operating_income_fx_sensitivity_eur)
+[LLM_FLAG] Significant change in net financial instrument position, which decreased by $400 million, potentially driven by repayment of senior note and new borrowings under project financing. This is noteworthy given the prior period's liability position.
+[LLM_FLAG] The 10% adverse foreign currency movement impact decreased by $5,000 million compared to prior period, which is more than 50% difference, warranting further examination of foreign currency risk management.
+[LLM_FLAG] Introduction of cross currency interest rate swaps indicates possible shifts in hedging strategy towards additional currency risk management.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] fx_sensitivity_10pct: $10M → $750M (+7400.0%) — exceeds 20% threshold
+[NEW_FIELD] net_financial_instrument_position: appeared for first time ($-17,000M)
+[NEW_FIELD] debt_composition_fixed_rate_percent: appeared for first time ($92M)
+[NEW_FIELD] debt_composition_variable_rate_percent: appeared for first time ($8M)
+[NEW_FIELD] interest_rate_sensitivity_100bp_up_fixed: appeared for first time ($-1,116M)
+[NEW_FIELD] interest_rate_sensitivity_100bp_down_fixed: appeared for first time ($1,276M)
+[LLM_FLAG] fx_sensitivity_10pct increased from prior value of 10.0 to 750.0, likely due to origination of cross currency interest rate swaps.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1,044M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-734M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] net_financial_instrument_position: appeared for first time ($-16,800M)
+[NUMERIC] debt_composition_fixed_rate_percent: $-1M → $92M (+8343.7%) — exceeds 20% threshold
+[NUMERIC] debt_composition_variable_rate_percent: $-1M → $8M (+1166.7%) — exceeds 20% threshold
+[NEW_FIELD] interest_rate_sensitivity_100bp_up_fixed: appeared for first time ($-1,044M)
+[NEW_FIELD] interest_rate_sensitivity_100bp_down_fixed: appeared for first time ($1,174M)
+[NUMERIC] fx_sensitivity_10_percent: $-17M → $-734M (-4217.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] operating_income_fx_sensitivity_cny: was $92M, now missing
+[DISAPPEARED_FIELD] operating_income_fx_sensitivity_eur: was $8M, now missing
+[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (equity_sensitivity_10pct, operating_income_fx_sensitivity_cny, operating_income_fx_sensitivity_eur)
+[LLM_FLAG] net_financial_instrument_position decreased by $400 million, which may indicate improved financial health or changes in borrowing.
+[LLM_FLAG] fx_sensitivity_10pct has worsened compared to prior period value of -17.0 million, indicating increased exposure to currency fluctuations due to new cross currency hedges.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1M)
+[NUMERIC] fx_sensitivity_10pct: $10M → $-1M (-107.5%) — exceeds 20% threshold
+[NEW_FIELD] net_financial_instrument_position: appeared for first time ($-17M)
+[NEW_FIELD] debt_composition_fixed_rate_percent: appeared for first time ($92M)
+[NEW_FIELD] debt_composition_variable_rate_percent: appeared for first time ($8M)
+[NEW_FIELD] interest_rate_sensitivity_100bp_up_fixed: appeared for first time ($-1M)
+[NEW_FIELD] interest_rate_sensitivity_100bp_down_fixed: appeared for first time ($1M)
+[NEW_FIELD] fx_sensitivity_10_percent: appeared for first time ($-1M)
+[LLM_FLAG] fx_sensitivity_10pct has changed by more than 50% from the prior period value of 10.0
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
 [LLM_FLAG] ir_sensitivity_100bp: 1044 vs prior 1116 represents 6.4% decrease (within 50% threshold but declining)
 [LLM_FLAG] interest_rate_sensitivity_100bp_up_fixed: 1044 vs prior 1116 represents 6.4% decrease, consistent with overall declining interest rate sensitivity

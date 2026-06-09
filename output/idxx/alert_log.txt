@@ -1,3 +1,61 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($115M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($115M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($250M)
+[NUMERIC] total_derivative_asset: $398M → $8M (-98.0%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($14M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-6M)
+[NUMERIC] cash_flow_hedge_aoci: $250M → $1M (-99.5%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($1M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-0M)
+[NUMERIC] fixed_rate_notes_billion: $2M → $0M (-90.0%) — exceeds 20% threshold
+[NUMERIC] hedge_gain_losses_current: $-4M → $0M (+103.6%) — exceeds 20% threshold
+[NEW_FIELD] foreign_currency_transaction_losses: appeared for first time ($-0M)
+[NEW_FIELD] revenue_fx_impact: appeared for first time ($31M)
+[NEW_FIELD] operating_profit_fx_impact: appeared for first time ($18M)
+[NEW_FIELD] eps_fx_impact: appeared for first time ($0M)
+[NUMERIC] hedge_duration: $-1M → $3M (+524.5%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: cash_flow_hedge_aoci changed from 250 to 1 (0x)
+[LLM_FLAG] net_derivative_position is negative indicating total derivative liabilities exceed assets.
+[LLM_FLAG] total_derivative_asset decreased by more than 50% compared to prior period (398.0 to 7.8). Needs further investigation.
+[LLM_FLAG] foreign currency transaction losses significantly decreased from prior period's value of 0.671, indicating an improvement in this aspect of the financial situation.
+[LLM_FLAG] hedge gains increased sharply compared to previous period's losses, reflecting a substantial positive shift in hedging effectiveness.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($398M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($250M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($2M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-4M)
+[NEW_FIELD] hedge_gain_losses_current: appeared for first time ($-1M)
+[NEW_FIELD] foreign_currency_transaction_losses: appeared for first time ($-4M)
+[NEW_FIELD] revenue_fx_impact: appeared for first time ($33M)
+[NEW_FIELD] operating_profit_fx_impact: appeared for first time ($17M)
+[NEW_FIELD] eps_fx_impact: appeared for first time ($0M)
+[NEW_FIELD] sensitivity_analysis: appeared for first time ($-16M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[NUMERIC] hedge_gain_losses_current: $-4M → $0M (+103.6%) — exceeds 20% threshold
+[NEW_FIELD] foreign_currency_transaction_losses: appeared for first time ($-0M)
+[NEW_FIELD] revenue_fx_impact: appeared for first time ($31M)
+[NEW_FIELD] operating_profit_fx_impact: appeared for first time ($18M)
+[NEW_FIELD] eps_fx_impact: appeared for first time ($0M)
+[NUMERIC] hedge_duration: $-1M → $3M (+516.1%) — exceeds 20% threshold
+[NUMERIC] sensitivity_analysis: $-4M → $-12M (-188.5%) — exceeds 20% threshold
+[LLM_FLAG] The hedge gain/loss in the current period shows a significant change compared to the prior period of -4.16 to 0.150, which is over 100% difference.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-4M)
+[NEW_FIELD] hedge_gain_losses_current: appeared for first time ($-1M)
+[NEW_FIELD] foreign_currency_transaction_losses: appeared for first time ($-4M)
+[NEW_FIELD] revenue_fx_impact: appeared for first time ($33M)
+[NEW_FIELD] operating_profit_fx_impact: appeared for first time ($17M)
+[NEW_FIELD] eps_fx_impact: appeared for first time ($0M)
+[NEW_FIELD] sensitivity_analysis: appeared for first time ($-16M)
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 

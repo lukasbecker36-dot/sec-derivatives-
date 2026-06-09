@@ -1,3 +1,49 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($435M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($11,010M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($115M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($433M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($227M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($206M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $9,100M, now missing
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($7M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($20M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($5M)
+[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (cash_flow_hedge_aoci)
+[LLM_FLAG] ir_sensitivity_100bp increased by more than 50% compared to prior period sensitives
+[LLM_FLAG] fx_sensitivity_10pct was less than 5 million, indicating exposure to exchange-rate movements in foreign subsidiaries for the first time.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($9,100M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] ir_sensitivity_100bp: $2,025M → $10M (-99.5%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 2,025 to 10 (0x)
+[LLM_FLAG] The interest rate sensitivity has dropped significantly from the previous value of 2025.0 to 10; this may indicate a shift in strategy or exposure.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($20M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($5M)
+[DISAPPEARED_FIELD] nonperformance_risk_adjustments: was $10M, now missing
+[DISAPPEARED_FIELD] fair_value_assumptions: was $0M, now missing
+[LLM_FLAG] ir_sensitivity_100bp increased from prior period (from 0.0 to 20.0 million); indicates a significant exposure to interest rate changes.
+[LLM_FLAG] fx_sensitivity_10pct identified a new potential loss exposure due to foreign currency fluctuations indicating increased risk exposure.
+[LLM_FLAG] commodity_price_sensitivity changed from prior period indicating a notable change in market risk assessment.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NUMERIC] ir_sensitivity_100bp: $2,025M → $10M (-99.5%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] commodity_price_sensitivity: appeared for first time ($-10M)
+[NEW_FIELD] nonperformance_risk_adjustments: appeared for first time ($0M)
+[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 2,025 to 10 (0x)
+[LLM_FLAG] ir_sensitivity_100bp decreased from 2025.0 to 10, which exceeds the 50% threshold; this indicates a significant change in interest rate exposure.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($31M)

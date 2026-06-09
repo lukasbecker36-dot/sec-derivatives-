@@ -1,3 +1,59 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($149M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($61M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-22M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $300M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $27M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $69M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $51M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $18M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $1M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 8/10 previously-populated fields are now null (cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct...)
+[LLM_FLAG] net_derivative_position decreased by 7.0 from prior period, indicating increased liability position.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($300M)
+[NUMERIC] commodity_derivatives_notional: $11M → $27M (+145.5%) — exceeds 20% threshold
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $2,024M → $69M (-96.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $27M → $51M (+88.9%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($18M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($1M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($1M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[LLM_FLAG] The total derivative asset of 69 million is a decrease from the prior period value of 75 million, which is more than 50%. This needs clarification.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($149M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($61M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-22M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $600M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $106M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $70M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $51M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $19M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 8/10 previously-populated fields are now null (cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct...)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($600M)
+[NUMERIC] commodity_derivatives_notional: $11M → $106M (+863.6%) — exceeds 20% threshold
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $2,024M → $70M (-96.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $27M → $51M (+88.9%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($19M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($1M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[LLM_FLAG] The commodity derivatives notional of 106.0 million differs by more than 50% from the prior period value of 11.0 million.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [DISAPPEARED_FIELD] fx_designated_notional: was $31M, now missing

@@ -1,3 +1,33 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($366M)
+[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($4,243M)
+[NUMERIC] long_term_debt_face_value: $387M → $4,440M (+1048.2%) — exceeds 20% threshold
+[NEW_FIELD] interest_rate_sensitivity_1pct: appeared for first time ($366M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($4,334M)
+[NEW_FIELD] long_term_debt_face_value: appeared for first time ($4,441M)
+[NEW_FIELD] interest_rate_sensitivity_1pct: appeared for first time ($387M)
+[LLM_FLAG] ir_sensitivity_100bp differs from prior period by more than 50%
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($4,243M)
+[NUMERIC] long_term_debt_face_value: $387M → $4,440M (+1048.2%) — exceeds 20% threshold
+[NEW_FIELD] interest_rate_sensitivity_1pct: appeared for first time ($366M)
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (equity_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
+[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($4,334M)
+[NEW_FIELD] long_term_debt_face_value: appeared for first time ($4,441M)
+[NEW_FIELD] interest_rate_sensitivity_1pct: appeared for first time ($387M)
+[LLM_FLAG] ir_sensitivity_100bp decreased by 13.1% from prior period value of 399.8 million.
+
 === 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($396M)

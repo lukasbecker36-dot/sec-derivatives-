@@ -1,3 +1,46 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] total_derivative_asset: $44M → $7M (-84.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $137M → $66M (-51.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-93M → $-59M (+36.6%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $-715M → $23M (+103.2%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $39M → $23M (-41.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $449M, now missing
+[LLM_FLAG] fx_derivatives_notional decreased by more than 50% compared to prior period (8776.0 to 7569.0).
+[LLM_FLAG] net_derivative_position improved to -59.0 from -93.0, indicating reduced liability.
+[LLM_FLAG] cash_flow_hedge_aoci has increased from -715.0 to 23.0, indicating a significant positive turnaround in their cash flow hedge position.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($8,776M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($2,647M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($4,391M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($44M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($137M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-93M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-715M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($39M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($449M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbqacgodx9au4QoLw75Ay'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbqacna9xQfGbxqZun1WZ'}
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqacJB74XirF3wRbTn5H'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqacPfksv4dXbB5Z76qA'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqabeoK5c9raJ6pG7Wjc'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqabkX6bM58bhABbLk27'}
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbqab6myVC8d9npTvorPC'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqabCz35FdS2Zm6pd2Cq'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaaWwkgG4GXgdqSQTds'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaaeaPNXRGc4GwX859o'}
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [NUMERIC] fx_designated_notional: $39M → $23M (-41.0%) — exceeds 20% threshold

@@ -1,3 +1,36 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-6M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-2M)
+[NEW_FIELD] foreign_sales_percentage: appeared for first time ($34M)
+[NEW_FIELD] floating_rate_debt_amount: appeared for first time ($229M)
+[NEW_FIELD] total_debt_outstanding: appeared for first time ($1,830M)
+[NEW_FIELD] current_interest_rate: appeared for first time ($3M)
+[NEW_FIELD] revolving_facility_outstanding: appeared for first time ($229M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] foreign_sales_percentage: was $-6M, now missing
+[DISAPPEARED_FIELD] foreign_exchange_gains_losses: was $-2M, now missing
+[DISAPPEARED_FIELD] revolving_facility_outstanding: was $34M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (equity_sensitivity_10pct, foreign_sales_percentage, foreign_exchange_gains_losses, revolving_facility_outstanding)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-6M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-2M)
+[NEW_FIELD] foreign_sales_percentage: appeared for first time ($34M)
+[NEW_FIELD] floating_rate_debt_amount: appeared for first time ($229M)
+[NEW_FIELD] total_debt_outstanding: appeared for first time ($1,830M)
+[NEW_FIELD] current_interest_rate: appeared for first time ($3M)
+[NEW_FIELD] revolving_facility_outstanding: appeared for first time ($229M)
+[LLM_FLAG] Foreign currency transaction loss increased significantly due to unfavorable currency movements, potential concern for future profitability.
+[LLM_FLAG] A hypothetical 1% interest rate change affecting floating rate debt showed sensitivity in annual interest expense, indicating exposure to interest rate fluctuations.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $3M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)

@@ -1,3 +1,29 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,300M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($92M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-92M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] underlying_debt_maturity: was $1M, now missing
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($87M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-87M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-1M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
+[LLM_FLAG] The potential decrease in fair value from interest rate changes was noted to be $757 million, which reflects a significant sensitivity to Treasury rate fluctuations.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] underlying_debt_maturity: was $1M, now missing
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (underlying_debt_maturity)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
+[LLM_FLAG] The fair value of the interest rate swaps has changed significantly, with values reported as $9 million, $14 million, and a $87 million liability across different years.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)

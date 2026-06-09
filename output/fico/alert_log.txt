@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] revolving_credit_facility: was $3M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, revolving_credit_facility)
+[LLM_FLAG] extraction_failed: Invalid control character at: line 26 column 29 (char 737)
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+[DISAPPEARED_FIELD] revolving_credit_facility: was $3M, now missing
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (revolving_credit_facility)
+[LLM_FLAG] fixed_rate_notes_billion has increased compared to the prior period, indicating potential changes in interest rate risk exposure or financing strategy.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
 [NUMERIC] fixed_rate_notes_billion: $3M → $3M (+21.4%) — exceeds 20% threshold
 [LLM_FLAG] fx_forwards_outstanding increased 1.8% from prior period ($28.406M to $28.912M) - minor variance

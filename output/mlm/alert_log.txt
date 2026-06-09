@@ -1,3 +1,52 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($30M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] variable_rate_facilities: appeared for first time ($0M)
+[NEW_FIELD] energy_cost_sensitivity: appeared for first time ($29M)
+[NEW_FIELD] revolving_facility_amount: appeared for first time ($800M)
+[NEW_FIELD] trade_receivable_facility: appeared for first time ($400M)
+[LLM_FLAG] Energy cost sensitivity at $29 million indicates a significant potential impact on financial results from energy price fluctuations.
+[LLM_FLAG] Interest rate sensitivity unchanged at $30 million may indicate consistent risk management strategies or stable market conditions.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] ir_sensitivity_100bp: $100M → $30M (-70.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2,025M, now missing
+[NEW_FIELD] variable_rate_facilities: appeared for first time ($30M)
+[NEW_FIELD] energy_cost_sensitivity: appeared for first time ($29M)
+[NEW_FIELD] revolving_facility_amount: appeared for first time ($800M)
+[NEW_FIELD] trade_receivable_facility: appeared for first time ($400M)
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fx_sensitivity_10pct)
+[LLM_FLAG] ir_sensitivity_100bp decreased by more than 50% compared to prior period (100.0 to 30.0) due to assumption change in rate increase impact on interest expense.
+[LLM_FLAG] energy_cost_sensitivity indicates significant potential impact on future operations given the reliance on energy costs, worth noting especially as it may affect pricing strategies.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] variable_rate_facilities: appeared for first time ($0M)
+[NEW_FIELD] energy_cost_sensitivity: appeared for first time ($29M)
+[NEW_FIELD] revolving_facility_amount: appeared for first time ($800M)
+[NEW_FIELD] trade_receivable_facility: appeared for first time ($400M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] ir_sensitivity_100bp: $100M → $0M (-100.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2,025M, now missing
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[NEW_FIELD] variable_rate_facilities: appeared for first time ($30M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($0M)
+[NEW_FIELD] energy_cost_sensitivity: appeared for first time ($3M)
+[NEW_FIELD] revolving_facility_amount: appeared for first time ($800M)
+[NEW_FIELD] trade_receivable_facility: appeared for first time ($400M)
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fx_sensitivity_10pct)
+[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 100 to 0 (0x)
+[LLM_FLAG] ir_sensitivity_100bp: The value has decreased by more than 50% compared to the prior period (from 100.0 to 0.03). Significant change in outstanding balance or hedging strategy consistent with changing economic conditions.
+[LLM_FLAG] energy_cost_sensitivity: This value of 2.9 is derived from the hypothetical impact of a 10% change in energy prices which could be of concern given rising energy costs.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
 [NUMERIC] fx_sensitivity_10pct: $10M → $2,026M (+20160.0%) — exceeds 20% threshold

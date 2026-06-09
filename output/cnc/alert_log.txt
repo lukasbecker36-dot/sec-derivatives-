@@ -1,3 +1,46 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[DISAPPEARED_FIELD] total_derivative_asset: was $931M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $931M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-636M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] short_term_investments: appeared for first time ($2,500M)
+[NUMERIC] long_term_investments: $-650M → $18,000M (+2869.2%) — exceeds 20% threshold
+[NEW_FIELD] restricted_deposits: appeared for first time ($1,400M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-636M)
+[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, equity_sensitivity_10pct)
+[LLM_FLAG] ir_sensitivity_100bp differs from prior analysis, substantial decrease in fixed income investments fair value anticipated due to interest rate risk.
+[LLM_FLAG] long_term_investments significantly high, notable increase from prior period.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($931M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($931M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-650M)
+[NEW_FIELD] short_term_investments: appeared for first time ($2,400M)
+[NEW_FIELD] long_term_investments: appeared for first time ($18,400M)
+[NEW_FIELD] restricted_deposits: appeared for first time ($1,400M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-650M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-636M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] short_term_investments: appeared for first time ($2,500M)
+[NUMERIC] long_term_investments: $-650M → $18,000M (+2869.2%) — exceeds 20% threshold
+[NEW_FIELD] restricted_deposits: appeared for first time ($1,400M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-636M)
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (equity_sensitivity_10pct)
+[LLM_FLAG] long_term_investments changed from -650.0 to 18000.0, significant change indicates different reporting methodology or substantial investments made; further review needed.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-650M)
+[NEW_FIELD] short_term_investments: appeared for first time ($2,400M)
+[NEW_FIELD] long_term_investments: appeared for first time ($18,400M)
+[NEW_FIELD] restricted_deposits: appeared for first time ($1,400M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-650M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
 [LLM_FLAG] short_term_investments increased from $2,200M to $2,500M (13.6% increase) - within normal variation
 [LLM_FLAG] long_term_investments decreased from $19,600M to $18,000M (8.2% decrease) - within normal variation

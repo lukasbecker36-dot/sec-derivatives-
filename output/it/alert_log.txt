@@ -1,3 +1,56 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($110M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($110M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($0M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $350M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($118M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] total_debt_principal: appeared for first time ($3,000M)
+[NEW_FIELD] floating_rate_debt: appeared for first time ($0M)
+[NUMERIC] cash_equivalents_amount: $116M → $1,700M (+1361.7%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_sensitivity: $3M → $12M (+291.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] interest_rate_swap_status: was $3,000M, now missing
+[VALIDATION] Likely extraction failure: 3/5 previously-populated fields are now null (cash_flow_hedge_aoci, equity_sensitivity_10pct, interest_rate_swap_status)
+[LLM_FLAG] cash_equivalents_amount has increased by more than 50% compared to the prior period.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NUMERIC] ir_swap_notional: $30M → $350M (+1066.7%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($116M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+[NUMERIC] total_debt_principal: $30,000M → $3,000M (-90.0%) — exceeds 20% threshold
+[NEW_FIELD] floating_rate_debt: appeared for first time ($0M)
+[NEW_FIELD] cash_equivalents_amount: appeared for first time ($1,700M)
+[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($116M)
+[LLM_FLAG] IR swap notional of $350 million is significantly higher than the reported $30 million in the prior period, raising questions about the company's interest rate exposure.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($118M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+[NEW_FIELD] total_debt_principal: appeared for first time ($3,000M)
+[NEW_FIELD] floating_rate_debt: appeared for first time ($0M)
+[NUMERIC] cash_equivalents_amount: $116M → $1,700M (+1361.7%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_sensitivity: $3M → $118M (+3816.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] interest_rate_swap_status: was $3,000M, now missing
+[LLM_FLAG] fixed_rate_notes_billion value differs from prior period; importance noted for company debt structure.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[DISAPPEARED_FIELD] ir_swap_notional: was $30M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($116M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+[NUMERIC] total_debt_principal: $30,000M → $3,000M (-90.0%) — exceeds 20% threshold
+[NEW_FIELD] floating_rate_debt: appeared for first time ($0M)
+[NEW_FIELD] cash_equivalents_amount: appeared for first time ($1,700M)
+[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($116M)
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (ir_swap_notional)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [DISAPPEARED_FIELD] ir_swap_notional: was $30M, now missing

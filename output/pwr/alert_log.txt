@@ -1,3 +1,35 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $5M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, interest_rate_sensitivity)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($453M)
+[NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($4,530M)
+[NEW_FIELD] fixed_rate_debt_carrying_value: appeared for first time ($4,710M)
+[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($991M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($6M)
+[NEW_FIELD] debt_portfolio_mix: appeared for first time ($84M)
+[LLM_FLAG] Fixed-rate notes fair value is substantial, indicating strong reliance on this debt structure.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $5M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, interest_rate_sensitivity)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($453M)
+[NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($4,530M)
+[NEW_FIELD] fixed_rate_debt_carrying_value: appeared for first time ($4,710M)
+[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($991M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($3M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $40M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)

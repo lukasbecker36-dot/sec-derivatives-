@@ -1,3 +1,54 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($28M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($7M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($3M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($136M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($1M)
+[NUMERIC] total_derivative_asset: $1,050M → $167M (-84.1%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($123M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($44M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($35M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-2M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity_impact: was $7M, now missing
+[DISAPPEARED_FIELD] currency_sensitivity_earnings_impact: was $15M, now missing
+[DISAPPEARED_FIELD] derivative_counterparty_risk_policy: was $3M, now missing
+[DISAPPEARED_FIELD] aluminum_hedge_methods: was $7M, now missing
+[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (equity_sensitivity_10pct, interest_rate_sensitivity_impact, currency_sensitivity_earnings_impact, derivative_counterparty_risk_policy, aluminum_hedge_methods)
+[LLM_FLAG] net_derivative_position increased from a prior value of 12 (total assets at 1050 million in the last reporting period, which was an asset netted against lesser liabilities)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,050M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($7M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($15M)
+[NEW_FIELD] aluminum_sensitivity_impact: appeared for first time ($3M)
+[NEW_FIELD] interest_rate_sensitivity_impact: appeared for first time ($7M)
+[NEW_FIELD] currency_sensitivity_earnings_impact: appeared for first time ($15M)
+[NEW_FIELD] currency_sensitivity_debt_impact: appeared for first time ($164M)
+[NEW_FIELD] net_investment_hedge_notional: appeared for first time ($1,050M)
+[NEW_FIELD] net_investment_sensitivity_impact: appeared for first time ($67M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] interest_rate_sensitivity_impact: was $7M, now missing
+[DISAPPEARED_FIELD] currency_sensitivity_debt_impact: was $1M, now missing
+[DISAPPEARED_FIELD] derivative_counterparty_risk_policy: was $3M, now missing
+[DISAPPEARED_FIELD] aluminum_hedge_methods: was $7M, now missing
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (interest_rate_sensitivity_impact, currency_sensitivity_debt_impact, derivative_counterparty_risk_policy, aluminum_hedge_methods)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($7M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
+[NEW_FIELD] aluminum_sensitivity_impact: appeared for first time ($3M)
+[NEW_FIELD] interest_rate_sensitivity_impact: appeared for first time ($7M)
+[NEW_FIELD] currency_sensitivity_earnings_impact: appeared for first time ($15M)
+[NEW_FIELD] currency_sensitivity_debt_impact: appeared for first time ($164M)
+[NEW_FIELD] net_investment_hedge_notional: appeared for first time ($1,050M)
+[NEW_FIELD] net_investment_sensitivity_impact: appeared for first time ($67M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)

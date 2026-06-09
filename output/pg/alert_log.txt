@@ -1,3 +1,41 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NUMERIC] total_derivative_asset: $33M → $88M (+166.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $712M → $568M (-20.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-679M → $-480M (+29.3%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional decreased by more than 50% compared to the prior period; Possible revaluation or change in hedging needs.
+[LLM_FLAG] net_derivative_position reflects significant changes in derivative liabilities.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($4,381M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($11,992M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($4,381M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($5,336M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($33M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($712M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-679M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($9M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($124M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[LLM_FLAG] Increase in notional amount of interest rate contracts designated as hedging instruments by over 50% compared to the prior period, driven by debt portfolio rebalancing.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaQqxDfMJtGh39fSeyS'}
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaQYXUMEv6LZjmZe4tF'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaQG5Wg1ePhBJr4he3j'}
+
+=== 10-K | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaQ2FKP6boLwWqSt3XJ'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaPhsXGEpKiHbgcGiZ2'}
+
 === 10-Q | Period ending 2025-12-31 | Processed 2026-04-28 ===
 [LLM_FLAG] This 10-Q filing (period ending 2025-12-31) contains minimal market risk disclosure and directs readers to the Form 10-K filed for fiscal year ended June 30, 2025 instead of providing current period details. The section states 'no material changes' in market risk exposure, suggesting this is a condensed disclosure typical of interim filings.
 [LLM_FLAG] Period mismatch: The filing references Form 10-K for fiscal year ended June 30, 2025, which is approximately 6 months prior to the stated 10-Q period (December 31, 2025). This is consistent with P&G's fiscal year (June 30 year-end) but indicates market risk details are not fully updated in this 10-Q.

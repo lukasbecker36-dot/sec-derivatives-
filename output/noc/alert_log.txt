@@ -1,3 +1,42 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($318M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($149M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($169M)
+[NUMERIC] total_derivative_asset: $308M → $2M (-99.4%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 308 to 2 (0x)
+[LLM_FLAG] The total derivative asset value of $2 million is significantly lower than the prior period value of $308 million, which raises concerns about potential derecognition or ineffectiveness of derivative positions.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($308M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($16M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($483M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] fx_forward_notional: appeared for first time ($308M)
+[NEW_FIELD] marketable_securities_fair_value: appeared for first time ($483M)
+[NEW_FIELD] long_term_debt_carrying_value: appeared for first time ($16M)
+[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($15M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $308M, now missing
+[DISAPPEARED_FIELD] long_term_debt_fair_value: was $16M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, long_term_debt_fair_value)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($308M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($16M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($483M)
+[NEW_FIELD] fx_forward_notional: appeared for first time ($308M)
+[NEW_FIELD] marketable_securities_fair_value: appeared for first time ($483M)
+[NEW_FIELD] long_term_debt_carrying_value: appeared for first time ($16M)
+[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($15M)
+[LLM_FLAG] Noteworthy decrease in foreign currency forward contracts outstanding from $399 million in 2024 to $308 million in 2025 (over 22% decline).
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($308M)
 [NEW_FIELD] fx_forward_notional: appeared for first time ($308M)

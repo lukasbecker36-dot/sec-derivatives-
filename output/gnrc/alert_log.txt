@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[DISAPPEARED_FIELD] ir_swap_notional: was $500M, now missing
+[DISAPPEARED_FIELD] fx_forward_notional: was $14M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $12M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (ir_swap_notional, fx_forward_notional, total_derivative_asset)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
+[NEW_FIELD] fx_forward_notional: appeared for first time ($14M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($12M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
 [LLM_FLAG] Filing text does not contain substantive market risk disclosures - only references that detailed disclosures are in the 10-K for the year ended December 31, 2025. No specific quantitative or fair value data provided in this excerpt.
 

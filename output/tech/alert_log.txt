@@ -1,3 +1,38 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($130M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($150M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($200M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $130M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $130M, now missing
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-820M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $1,746M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-6,001M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-4,255M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4,419M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $-2,759M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 8/9 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct...)
+[LLM_FLAG] The cash flow hedge AOCI remains unchanged from the prior period, which is notable amidst the changes in their foreign currency hedging strategy.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($130M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($130M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($200M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($1,746M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($-6,001M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-4,255M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($4,419M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-2,759M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[LLM_FLAG] The total derivative asset decreased significantly compared to the prior period due to material losses in hedging instruments.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
 [LLM_FLAG] Minimal disclosure in provided text: The filing section is a single boilerplate paragraph referring readers to the prior year 10-K for detailed market risk disclosures. Most quantitative and qualitative data points are not included in this excerpt.
 

@@ -1,3 +1,27 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[DISAPPEARED_FIELD] market_risk_exposure: was $0M, now missing
+[DROPPED_TO_ZERO] variable_rate_debt: $0M → $0M
+[NEW_FIELD] revolving_credit_rate: appeared for first time ($5M)
+[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (market_risk_exposure)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[NEW_FIELD] revolving_credit_rate: appeared for first time ($5M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DROPPED_TO_ZERO] variable_rate_debt: $0M → $0M
+[NEW_FIELD] revolving_credit_rate: appeared for first time ($5M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[NEW_FIELD] revolving_credit_rate: appeared for first time ($5M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-04-25 ===
 [LLM_FLAG] Revolving credit rate decreased from 5.4% (September 30, 2025) to 5.0% (December 31, 2025) - 7.4% change, within normal range for interest rate movements
 [LLM_FLAG] No outstanding borrowings on revolving credit facility maintained from prior period

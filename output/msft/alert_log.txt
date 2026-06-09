@@ -1,3 +1,143 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] fx_not_designated_notional: $8,994M → $14,050M (+56.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $320M → $1,080M (+237.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $907M → $671M (-26.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-587M → $409M (+169.7%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $-7M → $-34M (-385.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $16M, now missing
+[NUMERIC] equity_sensitivity_10pct: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[NUMERIC] fx_investment_sensitivity: $-7M → $-5M (+28.6%) — exceeds 20% threshold
+[NUMERIC] equity_price_sensitivity: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional increased by 3% from prior period (52784 to 54543), but is within plausibility.
+[LLM_FLAG] ir_swap_notional increased by 2.6% (1166 to 1180), within reasonable range.
+[LLM_FLAG] engaged in substantial use of equity derivatives with a net amount (purchased and sold) declining (7198 vs. 7364 in prior).
+[LLM_FLAG] interest_rate_sensitivity changed from -1462 to -1230, a reduction of more than 50%, indicating a potential change in interest rate risk management strategy.
+[LLM_FLAG] equity_sensitivity_10pct changed from -1847 to -2248, indicating an increase in sensitivity to equity market price changes.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($52,784M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,492M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($8,994M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,166M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($7,354M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($320M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($907M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-587M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-7M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($16M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1,462M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-1,847M)
+[NEW_FIELD] fx_revenue_sensitivity: appeared for first time ($-12,434M)
+[NEW_FIELD] fx_investment_sensitivity: appeared for first time ($-7M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-1,462M)
+[NEW_FIELD] credit_spread_sensitivity: appeared for first time ($-495M)
+[NEW_FIELD] equity_price_sensitivity: appeared for first time ($-1,847M)
+[LLM_FLAG] Notional amount of unhedged foreign exchange derivatives decreased significantly, may indicate a winding down of certain hedges.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] equity_sensitivity_10pct: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[NUMERIC] fx_investment_sensitivity: $-7M → $-5M (+28.6%) — exceeds 20% threshold
+[NUMERIC] equity_price_sensitivity: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_revenue_sensitivity decreased by more than 50% compared to prior period (-12434 to -12938).
+[LLM_FLAG] equity_sensitivity_10pct decreased by more than 50% compared to prior period (-1847 to -2248).
+[LLM_FLAG] There is a significant decline in interest rate sensitivity from -1462 to -1230, though it is less than 50%.
+[LLM_FLAG] Credit spread sensitivity shows a decline but remains within expectations. Prior period was -495.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1,462M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-1,847M)
+[NEW_FIELD] fx_revenue_sensitivity: appeared for first time ($-12,434M)
+[NEW_FIELD] fx_investment_sensitivity: appeared for first time ($-7M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-1,462M)
+[NEW_FIELD] credit_spread_sensitivity: appeared for first time ($-495M)
+[NEW_FIELD] equity_price_sensitivity: appeared for first time ($-1,847M)
+[LLM_FLAG] The reported foreign currency revenue sensitivity of -12434 million indicates significant exposure to foreign exchange rates, which could raise concerns about market volatility impacts.
+[LLM_FLAG] Interest rate sensitivity demonstrates a potential negative impact of -1462 million from a hypothetical 100bp increase in U.S. treasury rates.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] equity_sensitivity_10pct: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[NUMERIC] fx_investment_sensitivity: $-7M → $-5M (+28.6%) — exceeds 20% threshold
+[NUMERIC] equity_price_sensitivity: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_sensitivity_10pct decreased from -12434 to -12938 (significant). Interest rate sensitivity improved from -1462 to -1230 (more than 50% change).
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1,462M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-12,434M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-1,847M)
+[NEW_FIELD] fx_revenue_sensitivity: appeared for first time ($-12,434M)
+[NEW_FIELD] fx_investment_sensitivity: appeared for first time ($-7M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-1,462M)
+[NEW_FIELD] credit_spread_sensitivity: appeared for first time ($-495M)
+[NEW_FIELD] equity_price_sensitivity: appeared for first time ($-1,847M)
+[LLM_FLAG] Significant foreign currency sensitivity noted with a projected earnings impact of $12,434 million from a 10% decrease in exchange rates, which is a considerable exposure.
+[LLM_FLAG] Interest rate sensitivity indicates a fair value impact of $1,462 million from a 100 basis point increase in U.S. treasury rates, representing a high sensitivity to interest rate changes.
+[LLM_FLAG] Credit spread sensitivity shows a fair value impact of $495 million from a 100 basis point increase, highlighting potential credit risk exposure.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] equity_sensitivity_10pct: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[NUMERIC] fx_investment_sensitivity: $-7M → $-5M (+28.6%) — exceeds 20% threshold
+[NUMERIC] equity_price_sensitivity: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_revenue_sensitivity decreased by more than 50% from prior period (-12434 to -12938).
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1,462M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-1,847M)
+[NEW_FIELD] fx_revenue_sensitivity: appeared for first time ($-12,434M)
+[NEW_FIELD] fx_investment_sensitivity: appeared for first time ($-7M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-1,462M)
+[NEW_FIELD] credit_spread_sensitivity: appeared for first time ($-495M)
+[NEW_FIELD] equity_price_sensitivity: appeared for first time ($-1,847M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbr9W73oLUqi26vju8JXM'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbr9W9yAjcQM1cqLbGrWb'}
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbr9VrVCJjjULuKPKudeB'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbr9VuTYDM7kFxxk6Kii1'}
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] equity_sensitivity_10pct: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[NUMERIC] fx_investment_sensitivity: $-7M → $-5M (+28.6%) — exceeds 20% threshold
+[NUMERIC] equity_price_sensitivity: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[LLM_FLAG] ir_sensitivity_100bp changed significantly from -1462 to -1230, a 16% improvement, which indicates better interest rate risk management.
+[LLM_FLAG] fx_revenue_sensitivity shows a significant reduction from -12434 to -12938, an indication of increased positive effects from foreign exchange rate management.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1,462M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-1,847M)
+[NEW_FIELD] fx_revenue_sensitivity: appeared for first time ($-12,434M)
+[NEW_FIELD] fx_investment_sensitivity: appeared for first time ($-7M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-1,462M)
+[NEW_FIELD] credit_spread_sensitivity: appeared for first time ($-495M)
+[NEW_FIELD] equity_price_sensitivity: appeared for first time ($-1,847M)
+[LLM_FLAG] Interest rate sensitivity is significant, indicating potential vulnerability to rate hikes.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZxAoJ1HbKCdXHNenzZ'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZxGgWGh2zaPebVC4dT'}
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZwTe35T3pGu4tQyWP1'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZwYw2V28dbYZytN6J8'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZvnRrb83uew1Koyt2t'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZvsmKwGL6gg8B1qHAm'}
+
+=== 10-K | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZvA93jdyM6pnaFXtFg'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZvGsN1z64SCU7KkgZG'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZtshJwDTQKBDzT719P'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZtyqeUws1xTknCysdY'}
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [NUMERIC] ir_sensitivity_100bp: $7M → $5M (-28.6%) — exceeds 20% threshold

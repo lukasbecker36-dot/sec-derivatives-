@@ -1,3 +1,46 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,392M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($2,092M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($300M)
+[NUMERIC] total_derivative_asset: $2,400M → $30M (-98.7%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($8M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($22M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($11M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($11M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($242M)
+[DISAPPEARED_FIELD] sensitivity_analysis: was $13M, now missing
+[DISAPPEARED_FIELD] counterparty_ratings: was $160M, now missing
+[DISAPPEARED_FIELD] credit_policy: was $1M, now missing
+[DISAPPEARED_FIELD] diversification_strategy: was $227M, now missing
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (sensitivity_analysis, counterparty_ratings, credit_policy, diversification_strategy)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,400M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($13M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($160M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($227M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($23M)
+[NEW_FIELD] notional_amount: appeared for first time ($2,400M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] sensitivity_analysis: was $-13M, now missing
+[DISAPPEARED_FIELD] counterparty_ratings: was $160M, now missing
+[DISAPPEARED_FIELD] credit_policy: was $1M, now missing
+[DISAPPEARED_FIELD] diversification_strategy: was $227M, now missing
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (sensitivity_analysis, counterparty_ratings, credit_policy, diversification_strategy)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-13M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($160M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($227M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($23M)
+[NEW_FIELD] notional_amount: appeared for first time ($2,400M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
 [LLM_FLAG] Marketable equity value increased from $207.9M (prior period) to $241.5M (16.2% increase) - within acceptable variance but upward trend noted
 [LLM_FLAG] Provided text appears to be a brief transition section referencing the 10-K; most detailed risk disclosures likely located elsewhere in filing

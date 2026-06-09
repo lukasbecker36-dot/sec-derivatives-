@@ -1,3 +1,99 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $12,940M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $4,040M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $9,733M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $117M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $74M, now missing
+[NEW_FIELD] fx_designated_notional: appeared for first time ($345M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($10,000M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($144M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($139M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($5M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-91M)
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $1,135M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-52M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $22M, now missing
+[DISAPPEARED_FIELD] total_debt: was $26,989M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $51M, now missing
+[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $-1,805M, now missing
+[DISAPPEARED_FIELD] foreign_currency_notional: was $13,653M, now missing
+[VALIDATION] Likely extraction failure: 13/15 previously-populated fields are now null (gross_unrealized_gains_debt, fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_total_derivative_asset...)
+[LLM_FLAG] fx_derivatives_notional increased from 13653.0 to 13827.0, which is within the threshold, but noteworthy for monitoring trends.
+[LLM_FLAG] The fair value of derivative assets has decreased significantly from the prior period, which could indicate changes in the market's estimation of credit risk related to these derivatives.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($12,940M)
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($4,040M)
+[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($9,733M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($117M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($74M)
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($13,653M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,135M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-52M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($22M)
+[NEW_FIELD] total_debt: appeared for first time ($26,989M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($51M)
+[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($-1,805M)
+[NEW_FIELD] foreign_currency_notional: appeared for first time ($13,653M)
+[LLM_FLAG] fi_fx_derivatives_notional increased by more than 50% compared to the prior period value.
+[LLM_FLAG] fixed_rate_debt increased significantly from prior period, also floating rate debt has increased in absolute value.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $9,667M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $560M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $9,107M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $117M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $306M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $1,135M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-52M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $22M, now missing
+[DISAPPEARED_FIELD] total_debt: was $26,989M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $-51M, now missing
+[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $-1,805M, now missing
+[DISAPPEARED_FIELD] foreign_currency_notional: was $13,653M, now missing
+[VALIDATION] Likely extraction failure: 13/15 previously-populated fields are now null (gross_unrealized_gains_debt, fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_total_derivative_asset...)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($9,667M)
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($560M)
+[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($9,107M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($117M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($306M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,135M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-52M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($22M)
+[NEW_FIELD] total_debt: appeared for first time ($26,989M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-51M)
+[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($-1,805M)
+[NEW_FIELD] foreign_currency_notional: appeared for first time ($13,653M)
+[LLM_FLAG] Notional amount of FX derivatives designated as hedging instruments is notable for being lower compared to overall notional FX derivatives, indicating a focused hedging strategy.
+[LLM_FLAG] The gross unrealized gains on marketable debt securities reflect a significant decrease in materiality, signaling potential shifts in market positions.
+[LLM_FLAG] Fixed rate debt has increased by over 50% compared to the previous year (from $17,584 million to $21,879 million), indicating a significant shift in Linde's capital structure.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZhy6gvobn8GYviUnno'}
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZhYhVn2F66rLxFq4Jy'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZhenNKv1NPdx6N17Fn'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZh3pRiy56ALd6GA7nC'}
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZgmxgzcaKtmv9zfGnT'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZgUN2VUonivQi9Vmod'}
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
 [LLM_FLAG] Filing section is incomplete - contains only a cross-reference to 2025 Form 10-K Item 7A without actual quantitative or qualitative risk disclosures
 [LLM_FLAG] No substantive market risk data is present in the provided text

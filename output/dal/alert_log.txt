@@ -1,3 +1,55 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity_fair_value: was $-470M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity_expense: was $290M, now missing
+[DISAPPEARED_FIELD] foreign_currency_investment_exposure: was $13M, now missing
+[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $2,900M, now missing
+[DISAPPEARED_FIELD] equity_investment_fair_value: was $360M, now missing
+[DISAPPEARED_FIELD] equity_investment_sensitivity: was $40M, now missing
+[DISAPPEARED_FIELD] debt_amounts: was $-470M, now missing
+[VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (equity_sensitivity_10pct, interest_rate_sensitivity_fair_value, interest_rate_sensitivity_expense, foreign_currency_investment_exposure, foreign_currency_sensitivity...)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-470M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($290M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($13M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($2,900M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($360M)
+[NEW_FIELD] fuel_price_sensitivity: appeared for first time ($40M)
+[NEW_FIELD] interest_rate_sensitivity_fair_value: appeared for first time ($-470M)
+[NEW_FIELD] interest_rate_sensitivity_expense: appeared for first time ($11M)
+[NEW_FIELD] foreign_currency_investment_exposure: appeared for first time ($2,900M)
+[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($290M)
+[NEW_FIELD] equity_investment_fair_value: appeared for first time ($3,600M)
+[NEW_FIELD] equity_investment_sensitivity: appeared for first time ($360M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] interest_rate_sensitivity_fair_value: was $-470M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity_expense: was $-290M, now missing
+[DISAPPEARED_FIELD] foreign_currency_investment_exposure: was $13M, now missing
+[DISAPPEARED_FIELD] equity_investment_fair_value: was $-360M, now missing
+[DISAPPEARED_FIELD] equity_investment_sensitivity: was $40M, now missing
+[DISAPPEARED_FIELD] debt_amounts: was $-470M, now missing
+[VALIDATION] Likely extraction failure: 6/8 previously-populated fields are now null (interest_rate_sensitivity_fair_value, interest_rate_sensitivity_expense, foreign_currency_investment_exposure, equity_investment_fair_value, equity_investment_sensitivity...)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-470M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-290M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($13M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-360M)
+[NEW_FIELD] fuel_price_sensitivity: appeared for first time ($40M)
+[NEW_FIELD] interest_rate_sensitivity_fair_value: appeared for first time ($-470M)
+[NEW_FIELD] interest_rate_sensitivity_expense: appeared for first time ($11M)
+[NEW_FIELD] foreign_currency_investment_exposure: appeared for first time ($2,900M)
+[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($-290M)
+[NEW_FIELD] equity_investment_fair_value: appeared for first time ($3,600M)
+[NEW_FIELD] equity_investment_sensitivity: appeared for first time ($-360M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2,900M, now missing

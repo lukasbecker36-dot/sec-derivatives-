@@ -1,3 +1,44 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($7,300M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($7,300M)
+[NUMERIC] total_derivative_asset: $4,800M → $720M (-85.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $4,800M → $720M (-85.0%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($0M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($279M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $771M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-771M, now missing
+[NUMERIC] fixed_rate_notes_billion: $-410M → $7M (+101.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] marketable_equity_value: was $274M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] currency_swaps_fair_value: was $5M, now missing
+[VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, marketable_equity_value, equity_sensitivity_10pct, currency_swaps_fair_value)
+[LLM_FLAG] Total derivative assets and liabilities have notably decreased from prior period values of $4800 million, raising questions about the effectiveness of their hedging strategies.
+[LLM_FLAG] Possible lack of interest rate derivatives noted for the current period although the previous indicator suggests active management in this area.
+[LLM_FLAG] fixed_rate_notes_billion increased from -410.0 billion to 7.3 billion; significant discrepancy.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($4,800M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($4,800M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($771M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-771M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-410M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($274M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
+[LLM_FLAG] total_derivative_liability increased from a previous amount of $960 million to $771 million, which is a significant change. Detailed clarification on the ongoing risk management strategies surrounding this should be noted.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($7M)
+[DISAPPEARED_FIELD] currency_swaps_fair_value: was $5M, now missing
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (currency_swaps_fair_value)
+[LLM_FLAG] fixed_rate_notes_billion exceeded prior period by more than 50%
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
+
 === 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] currency_swaps_notional: appeared for first time ($4,800M)

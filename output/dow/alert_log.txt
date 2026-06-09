@@ -1,3 +1,79 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NUMERIC] fx_derivatives_notional: $15,300M → $18,474M (+20.7%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $10,560M → $12,986M (+23.0%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $697M → $2,027M (+190.8%) — exceeds 20% threshold
+[NUMERIC] commodity_derivatives_notional: $11M → $6M (-47.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $67M → $217M (+223.9%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $434M → $124M (-71.4%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-367M → $93M (+125.3%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($18M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] composite_var: was $182M, now missing
+[LLM_FLAG] fx_not_designated_notional increased significantly from prior period value of 10560.0 to 12986.0, a 23% increase.
+[LLM_FLAG] Total derivative assets increased significantly compared to prior value of 67.0 to 217.0, a 224% increase.
+[LLM_FLAG] Total derivative liabilities increased significantly from prior period value of 434.0 to 124.0, a 71% decrease.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($15,300M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($5,114M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($10,560M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($697M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($11M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($67M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($434M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-367M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
+[NEW_FIELD] composite_var: appeared for first time ($182M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] fi_fx_derivatives_notional: $15,674M → $18,862M (+20.3%) — exceeds 20% threshold
+[NUMERIC] fi_fx_not_designated_notional: $10,560M → $12,974M (+22.9%) — exceeds 20% threshold
+[NUMERIC] fi_ir_swap_notional: $697M → $2,027M (+190.8%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_asset: $364M → $217M (-40.4%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $434M → $164M (-62.2%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] composite_var: was $182M, now missing
+[LLM_FLAG] total_marketable_securities_fv increased by 0.8% from the prior period. This is within the plausible range.
+[LLM_FLAG] marketable_equity_securities_fv decreased by 0.3% from the prior period. This small fluctuation is not significant.
+[LLM_FLAG] fi_fx_derivatives_notional increased by 78.5% from the prior period. This indicates a sizable increase in exposure to foreign currency derivatives.
+[LLM_FLAG] fi_fx_designated_notional increased by 14.9% from the prior period, suggesting an expansion of hedging activities related to foreign currency.
+[LLM_FLAG] fi_ir_swap_notional increased from 697.0 to 2027.0, which is a 191% increase, indicating a potential shift or expansion in interest rate hedging strategies.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($2,203M)
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($234M)
+[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($996M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($15,674M)
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($5,114M)
+[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($10,560M)
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($697M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($364M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($434M)
+[NEW_FIELD] composite_var: appeared for first time ($182M)
+[LLM_FLAG] The notional amounts of interest rate swaps increased significantly from the previous period.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYpRHLffCHHzh78HKPb'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYpVZp5K8iUg8xJGtZE'}
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYp1mEE4fksSQ4JkTWD'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYp92nnEcVwrTQt4VBw'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYoVGRdrEXyvx5MRkbC'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYoaN1pBrqCJXhyJGw5'}
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYo6yjYpqXsgCR3AS2H'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYoBLRQPx6jFFRt8rsi'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYnmEqKz38uGAJn5D7S'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYnr6nHwB7sAYeUQdhc'}
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-04-28 ===
 [NUMERIC] marketable_equity_securities_fv: $180M → $232M (+28.9%) — exceeds 20% threshold
 [LLM_FLAG] total_marketable_securities_fv: Value decreased from 2,063 to 2,228 million (8.0% increase, within 50% threshold but note this is debt securities only)

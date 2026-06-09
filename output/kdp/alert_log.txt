@@ -1,3 +1,78 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_designated_notional: appeared for first time ($500M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($6,048M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,800M)
+[NUMERIC] total_derivative_asset: $13,033M → $8M (-99.9%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $11,810M → $468M (-96.0%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $3,800M → $70M (-98.2%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $595M → $16M (-97.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $18M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $53M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-35M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct_usd_weak: was $-68M, now missing
+[DISAPPEARED_FIELD] interest_rate_derivatives_notional: was $13M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity_1pct: was $-13M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_fair_value: was $-40M, now missing
+[DISAPPEARED_FIELD] commodity_sensitivity_10pct: was $1,248M, now missing
+[VALIDATION] Likely extraction failure: 9/15 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct, fx_sensitivity_10pct_usd_weak...)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 13,033 to 8 (0x)
+[LLM_FLAG] Total derivative asset decreased significantly from prior period (13033 to 8) indicating material changes which may warrant further investigation.
+[LLM_FLAG] Total derivative liability increased substantially from prior period (11810 to 468), a change over 50% which could be due to using new hedging instruments or changes in market conditions.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NUMERIC] fx_derivatives_notional: $2,025M → $13,033M (+543.6%) — exceeds 20% threshold
+[NEW_FIELD] fx_designated_notional: appeared for first time ($11,810M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($3,800M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($595M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($18M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($53M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-35M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-68M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($13M)
+[NEW_FIELD] fx_derivatives_fair_value_hedge_accounting: appeared for first time ($-13M)
+[NEW_FIELD] fx_derivatives_fair_value_non_hedge: appeared for first time ($-40M)
+[NEW_FIELD] fx_sensitivity_10pct_usd_weak: appeared for first time ($1,248M)
+[NEW_FIELD] interest_rate_derivatives_notional: appeared for first time ($3,800M)
+[NEW_FIELD] fixed_rate_debt_face_value: appeared for first time ($13,214M)
+[NEW_FIELD] variable_rate_debt: appeared for first time ($3,060M)
+[NEW_FIELD] interest_rate_sensitivity_1pct: appeared for first time ($69M)
+[NEW_FIELD] commodity_derivatives_fair_value: appeared for first time ($18M)
+[NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($60M)
+[LLM_FLAG] fx_derivatives_notional has increased from prior period, significant due to association with the JDE Peet's Acquisition.
+[LLM_FLAG] interest_rate_derivatives_notional is high owing to planned future issuances of long-term debt.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[DISAPPEARED_FIELD] total_derivative_asset: was $13,033M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $595M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $11,810M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct_usd_weak: was $-68M, now missing
+[DISAPPEARED_FIELD] interest_rate_derivatives_notional: was $13M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity_1pct: was $-13M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_fair_value: was $-40M, now missing
+[DISAPPEARED_FIELD] commodity_sensitivity_10pct: was $1,248M, now missing
+[VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (total_derivative_asset, expected_12mo_reclass_from_aoci, equity_sensitivity_10pct, fx_sensitivity_10pct_usd_weak, interest_rate_derivatives_notional...)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NUMERIC] fx_derivatives_notional: $2,025M → $13,033M (+543.6%) — exceeds 20% threshold
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($595M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($11,810M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-68M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($13M)
+[NEW_FIELD] fx_derivatives_fair_value_hedge_accounting: appeared for first time ($-13M)
+[NEW_FIELD] fx_derivatives_fair_value_non_hedge: appeared for first time ($-40M)
+[NEW_FIELD] fx_sensitivity_10pct_usd_weak: appeared for first time ($1,248M)
+[NEW_FIELD] interest_rate_derivatives_notional: appeared for first time ($3,800M)
+[NEW_FIELD] fixed_rate_debt_face_value: appeared for first time ($13,214M)
+[NEW_FIELD] variable_rate_debt: appeared for first time ($3,060M)
+[NEW_FIELD] interest_rate_sensitivity_1pct: appeared for first time ($69M)
+[NEW_FIELD] commodity_derivatives_fair_value: appeared for first time ($18M)
+[NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($60M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] fx_derivatives_notional: was $2,027M, now missing
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $18M, now missing

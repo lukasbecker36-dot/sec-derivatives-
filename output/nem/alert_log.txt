@@ -1,3 +1,57 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_designated_notional: appeared for first time ($80M)
+[NUMERIC] total_derivative_asset: $67M → $103M (+53.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $60M → $3M (-95.0%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($100M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $262M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $1M, now missing
+[NUMERIC] fx_sensitivity_10pct: $261M → $127M (-51.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $7M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $45M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] provisionally_priced_sales_volume: appeared for first time ($131M)
+[NUMERIC] sensitivity_10pct_change: $498M → $41M (-91.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] hedging_instruments_description: was $141M, now missing
+[VALIDATION] Likely extraction failure: 7/14 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fixed_rate_notes_billion, marketable_equity_value...)
+[LLM_FLAG] Total derivative asset increased by more than 50% from prior period (from $67.0M to $103.0M).
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($67M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($60M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($262M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($1M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($261M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($7M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($45M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NUMERIC] fx_sensitivity_10pct: $10M → $498M (+4880.0%) — exceeds 20% threshold
+[NEW_FIELD] provisionally_priced_sales_volume: appeared for first time ($141M)
+[NEW_FIELD] provisional_average_price: appeared for first time ($4,332M)
+[NEW_FIELD] sensitivity_10pct_change: appeared for first time ($42M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($127M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] provisionally_priced_sales_volume: appeared for first time ($131M)
+[NEW_FIELD] provisional_average_price: appeared for first time ($4,657M)
+[NUMERIC] sensitivity_10pct_change: $498M → $41M (-91.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] hedging_instruments_description: was $141M, now missing
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (equity_sensitivity_10pct, hedging_instruments_description)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] fx_sensitivity_10pct: $10M → $498M (+4880.0%) — exceeds 20% threshold
+[NEW_FIELD] provisionally_priced_sales_volume: appeared for first time ($141M)
+[NEW_FIELD] provisional_average_price: appeared for first time ($4,332M)
+[NEW_FIELD] sensitivity_10pct_change: appeared for first time ($42M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DROPPED_TO_ZERO] fx_sensitivity_10pct: $10M → $0M
 

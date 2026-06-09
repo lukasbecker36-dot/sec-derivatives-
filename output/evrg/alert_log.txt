@@ -1,3 +1,55 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($100M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($213M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($85M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($78M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($7M)
+[NUMERIC] cash_flow_hedge_aoci: $100M → $1M (-99.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $264M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $82M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $75M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $8M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] var_high_value: was $13M, now missing
+[DISAPPEARED_FIELD] variable_debt_percentage: was $1M, now missing
+[VALIDATION] Likely extraction failure: 8/9 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion...)
+[VALIDATION] Likely units mismatch: cash_flow_hedge_aoci changed from 100 to 1 (0x)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($100M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($264M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($82M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($75M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($8M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($1M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($13M)
+[NEW_FIELD] var_end_value: appeared for first time ($1M)
+[NEW_FIELD] var_high_value: appeared for first time ($3M)
+[NEW_FIELD] var_average_value: appeared for first time ($1M)
+[NEW_FIELD] var_low_value: appeared for first time ($0M)
+[NEW_FIELD] variable_rate_debt_amount: appeared for first time ($1,525M)
+[NEW_FIELD] variable_debt_percentage: appeared for first time ($10M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] var_high_value: was $13M, now missing
+[DISAPPEARED_FIELD] variable_debt_percentage: was $1M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (equity_sensitivity_10pct, var_high_value, variable_debt_percentage)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($13M)
+[NEW_FIELD] var_end_value: appeared for first time ($1M)
+[NEW_FIELD] var_high_value: appeared for first time ($3M)
+[NEW_FIELD] var_average_value: appeared for first time ($1M)
+[NEW_FIELD] var_low_value: appeared for first time ($0M)
+[NEW_FIELD] variable_rate_debt_amount: appeared for first time ($1,525M)
+[NEW_FIELD] variable_debt_percentage: appeared for first time ($10M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)

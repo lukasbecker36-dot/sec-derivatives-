@@ -1,3 +1,45 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($12M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DROPPED_TO_ZERO] ir_sensitivity_100bp: $-1,174M → $0M
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $1,174M, now missing
+[NEW_FIELD] cross_currency_swaps_notional: appeared for first time ($36,069M)
+[NEW_FIELD] cross_currency_swaps_fair_value: appeared for first time ($-2,168M)
+[NEW_FIELD] interest_rate_swaps_outstanding: appeared for first time ($0M)
+[NEW_FIELD] foreign_exchange_forwards_outstanding: appeared for first time ($0M)
+[VALIDATION] Likely extraction failure: 2/4 previously-populated fields are now null (total_derivative_asset, fx_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($-1,174M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($1,174M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] cross_currency_swaps_notional: appeared for first time ($35,741M)
+[NEW_FIELD] cross_currency_swaps_fair_value: appeared for first time ($-1,174M)
+[NEW_FIELD] interest_rate_swaps_outstanding: appeared for first time ($0M)
+[NEW_FIELD] interest_rate_locks_outstanding: appeared for first time ($0M)
+[NEW_FIELD] foreign_exchange_forwards_outstanding: appeared for first time ($0M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] cross_currency_swaps_notional: appeared for first time ($36,069M)
+[NEW_FIELD] cross_currency_swaps_fair_value: appeared for first time ($-2,168M)
+[NEW_FIELD] interest_rate_swaps_outstanding: appeared for first time ($0M)
+[NEW_FIELD] interest_rate_locks_outstanding: appeared for first time ($0M)
+[NEW_FIELD] foreign_exchange_forwards_outstanding: appeared for first time ($0M)
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+[LLM_FLAG] cross_currency_swaps_notional represents a significant hedge strategy, given the company's use of cross-currency swaps to mitigate foreign currency and interest rate risks.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] cross_currency_swaps_notional: appeared for first time ($35,741M)
+[NEW_FIELD] cross_currency_swaps_fair_value: appeared for first time ($-1,174M)
+[NEW_FIELD] interest_rate_swaps_outstanding: appeared for first time ($0M)
+[NEW_FIELD] interest_rate_locks_outstanding: appeared for first time ($0M)
+[NEW_FIELD] foreign_exchange_forwards_outstanding: appeared for first time ($0M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
 [NUMERIC] cross_currency_swaps_fair_value: $-1,472M → $-2,168M (-47.3%) — exceeds 20% threshold
 [LLM_FLAG] cross_currency_swaps_notional: Decreased from $39,142M to $36,069M (7.8% decrease). This change is within normal variance and may reflect debt maturity or refinancing activities.

@@ -1,3 +1,47 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($415M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($415M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($8M)
+[NUMERIC] total_derivative_asset: $446M → $16M (-96.5%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($3M)
+[NUMERIC] net_derivative_position: $446M → $13M (-97.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $8M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $4M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $2M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity_basis_points: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/8 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct...)
+[LLM_FLAG] The notional amount of foreign exchange derivatives not designated as hedging instruments decreased compared to the prior period by more than 50% (from $ 446 million to $ 415 million).
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($446M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($446M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($8M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($4M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($2M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($2M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_amount: appeared for first time ($4M)
+[NEW_FIELD] marketable_securities_return: appeared for first time ($5M)
+[NEW_FIELD] restricted_securities_sensitivity: appeared for first time ($16M)
+[NEW_FIELD] restricted_securities_maturity: appeared for first time ($9M)
+[LLM_FLAG] fx_derivatives_notional decreased by more than 50% from prior year.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_amount: appeared for first time ($4M)
+[NEW_FIELD] interest_rate_sensitivity_basis_points: appeared for first time ($16M)
+[NEW_FIELD] marketable_securities_return: appeared for first time ($5M)
+[NEW_FIELD] restricted_securities_sensitivity: appeared for first time ($16M)
+[NEW_FIELD] restricted_securities_maturity: appeared for first time ($9M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $31M, now missing
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $31M, now missing

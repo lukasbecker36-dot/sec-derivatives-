@@ -1,3 +1,29 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] natural_gas_notional_amounts: appeared for first time ($9M)
+[LLM_FLAG] contract_maturity_periods decreased by more than 50% from prior period
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+[NEW_FIELD] natural_gas_notional_amounts: appeared for first time ($14M)
+[NEW_FIELD] natural_gas_sensitivity: appeared for first time ($13M)
+[NEW_FIELD] production_cost_sensitivity: appeared for first time ($32M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] natural_gas_notional_amounts: appeared for first time ($9M)
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (equity_sensitivity_10pct)
+[LLM_FLAG] natural_gas_notional_amounts shows significant derivatives usage, indicating heightened risk management activity.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+[NEW_FIELD] natural_gas_notional_amounts: appeared for first time ($14M)
+[NEW_FIELD] natural_gas_sensitivity: appeared for first time ($13M)
+[NEW_FIELD] production_cost_sensitivity: appeared for first time ($32M)
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 

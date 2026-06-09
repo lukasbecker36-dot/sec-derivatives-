@@ -1,3 +1,43 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($400M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($391M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($9M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($55M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($13M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $438M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $438M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $2M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $25M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $44M, now missing
+[DROPPED_TO_ZERO] fx_forwards_outstanding: $12M → $0M
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $438M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $438M, now missing
+[VALIDATION] Likely extraction failure: 7/8 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci...)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($438M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($438M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($2M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($25M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($44M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($12M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($438M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($438M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-11M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
+[LLM_FLAG] The notional amount of equity derivatives not designated as hedging instruments decreased by more than 50% from the prior period, potentially indicating changes in the company's hedging strategy.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $442M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($442M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-11M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-12M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
 [LLM_FLAG] The provided filing text is incomplete - it only contains a cross-reference to Item 7A of the Form 10-K rather than actual quantitative and qualitative disclosures about market risk. Full market risk analysis would typically be found in a complete Item 7A section.
 

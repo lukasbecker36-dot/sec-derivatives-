@@ -1,3 +1,52 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
+[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($500M)
+[NEW_FIELD] foreign_currency_forward_notional: appeared for first time ($4,000M)
+[LLM_FLAG] Foreign currency forward contracts outstanding indicates significant hedging activity to mitigate FX exposure.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] fi_total_derivative_asset: $22M → $10M (-54.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $500M, now missing
+[DISAPPEARED_FIELD] foreign_currency_forward_notional: was $7M, now missing
+[LLM_FLAG] total_marketable_securities_fv decreased by more than 50% from prior period (1241.0 to 1170.0).
+[LLM_FLAG] fi_total_derivative_asset decreased by more than 50% from prior period (22.0 to 10.0).
+[LLM_FLAG] fi_total_derivative_liability has shifted to a higher negative value (-33.0 to -38.0).
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1,241M)
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($1,217M)
+[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($24M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($22M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($-33M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
+[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($500M)
+[NEW_FIELD] foreign_currency_forward_notional: appeared for first time ($7M)
+[LLM_FLAG] foreign_currency_forward_notional increased by more than 50% from the prior period
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY9ZtBPNcNEbdcYLKxd'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY9gJtJvFB6oVcYW5bD'}
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY9Eh25MEy6MSch9nMT'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY9KR31NyAUPekr1CHG'}
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY8zcSa9PWS8mHtUZKm'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY94f2ByJW8TpsC7oUd'}
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY8paC39eGoYQhfEzgQ'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY8shiDmRHjecorNF1v'}
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY8etXdR5V5uSYhRnW9'}
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY8hmR9MGHNFpwJbQ8V'}
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-04-28 ===
 [LLM_FLAG] total_marketable_securities_fv decreased from $1,298.0M (Dec 31, 2025) to $1,198.0M (Mar 31, 2026), a 7.7% decline within normal range but driven by equity securities decline from $1,217M to $1,170M
 [LLM_FLAG] marketable_equity_securities_fv decreased by 3.9% from $1,274.0M to $1,170.0M; the Dec 31, 2025 value of $1,217M shown in filing differs from prior period input of $1,274.0M - this suggests the prior period input may have been from a different quarter or year

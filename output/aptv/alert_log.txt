@@ -1,3 +1,64 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,090M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($2M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($500M)
+[NUMERIC] total_derivative_asset: $3,395M → $154M (-95.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $3,395M → $11M (-99.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $2M → $143M (+7050.0%) — exceeds 20% threshold
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($151M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $415M → $121M (-70.8%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $174M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $10M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $164M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $164M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $125M, now missing
+[DISAPPEARED_FIELD] currency_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] commodity_net_fair_value: was $77M, now missing
+[DISAPPEARED_FIELD] foreign_currency_translation_adjustment: was $476M, now missing
+[VALIDATION] Likely extraction failure: 8/12 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value...)
+[VALIDATION] Likely units mismatch: total_derivative_liability changed from 3,395 to 11 (0x)
+[LLM_FLAG] net_derivative_position increased by more than 50% compared to prior period (previously 2.0)
+[LLM_FLAG] total_derivative_asset decreased by more than 50% compared to prior period (previously 3395.0) indicating a significant reduction in situational hedging
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,395M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($3,395M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($2M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($415M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($174M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($10M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($164M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($164M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($125M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($77M)
+[NEW_FIELD] net_fair_value_liability_currency: appeared for first time ($476M)
+[NEW_FIELD] currency_sensitivity_10pct: appeared for first time ($-27M)
+[NEW_FIELD] commodity_net_fair_value: appeared for first time ($79M)
+[NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($44M)
+[NEW_FIELD] foreign_currency_translation_adjustment: appeared for first time ($310M)
+[LLM_FLAG] fx_derivatives_notional differs from prior period by more than 50% due to increased exposure.
+[LLM_FLAG] aggregate cash flow hedge AOCI increased by $ 130 million, indicating significant hedging activity impacting financial results.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] currency_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] commodity_net_fair_value: was $77M, now missing
+[DISAPPEARED_FIELD] commodity_sensitivity_10pct: was $2M, now missing
+[DISAPPEARED_FIELD] foreign_currency_translation_adjustment: was $476M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (currency_sensitivity_10pct, commodity_net_fair_value, commodity_sensitivity_10pct, foreign_currency_translation_adjustment)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($77M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
+[NEW_FIELD] net_fair_value_liability_currency: appeared for first time ($476M)
+[NEW_FIELD] currency_sensitivity_10pct: appeared for first time ($27M)
+[NEW_FIELD] commodity_net_fair_value: appeared for first time ($79M)
+[NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($44M)
+[NEW_FIELD] foreign_currency_translation_adjustment: appeared for first time ($310M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $31M, now missing

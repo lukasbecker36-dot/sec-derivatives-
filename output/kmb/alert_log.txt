@@ -1,3 +1,39 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[DISAPPEARED_FIELD] fx_designated_notional: was $2,300M, now missing
+[NUMERIC] ir_swap_notional: $425M → $325M (-23.5%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $21M → $5M (-76.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] translation_exposure_impact: was $600M, now missing
+[VALIDATION] Likely extraction failure: 3/8 previously-populated fields are now null (fx_designated_notional, fx_forwards_outstanding, translation_exposure_impact)
+[LLM_FLAG] fx_derivatives_notional decreased by more than 50% compared to the prior period (2500.0 to 2100.0), warranting review of hedging strategy changes.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,300M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($2,300M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($4,600M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($425M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($2,300M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($21M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] translation_exposure_impact: appeared for first time ($600M)
+[LLM_FLAG] Discontinued cash flow hedge accounting for certain instruments with a notional value of $ 690 due to forecasted transactions no longer probable. This indicates a significant change in the hedging strategy.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[DISAPPEARED_FIELD] translation_exposure_impact: was $600M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $0M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, translation_exposure_impact, interest_rate_sensitivity)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] translation_exposure_impact: appeared for first time ($600M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($0M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZZp7UMMEoMdAkT9ehV'}
+
 === 10-Q | Period ending 2025-03-31 | Processed 2026-06-02 ===
 [DISAPPEARED_FIELD] translation_exposure_impact: was $600M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (translation_exposure_impact)

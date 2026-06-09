@@ -1,3 +1,38 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($880M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($880M)
+[NUMERIC] total_derivative_asset: $880M → $8M (-99.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_liability: was $880M, now missing
+[NEW_FIELD] net_derivative_position: appeared for first time ($8M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-4M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($1M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $11M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-11M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-4M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $1M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (total_derivative_liability, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value...)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 880 to 8 (0x)
+[LLM_FLAG] fx_derivatives_notional is new information regarding designated notional as previous filings lacked specifics on this.
+[LLM_FLAG] Total derivative asset shows a significant asset position of $ 8.1 million from cross-currency swaps indicating effective hedging.
+[LLM_FLAG] Noteworthy is the expected $ 1.1 million reclassification from AOCI to earnings, which hints at ongoing hedge efficiency monitoring.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($880M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($880M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($11M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-11M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-4M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($1M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
 [LLM_FLAG] Provided text is a brief transitional statement referencing prior year disclosure rather than containing actual market risk data. No quantitative or qualitative market risk disclosures are included in the excerpt.
 

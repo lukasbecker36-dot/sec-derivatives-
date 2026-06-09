@@ -1,0 +1,31 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,040M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($2,465M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($326M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($1,714M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $72M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $267M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-195M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $17M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/7 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, marketable_equity_value, equity_sensitivity_10pct)
+[LLM_FLAG] fx_derivatives_notional has a significant increase compared to the prior period.
+[LLM_FLAG] total_derivative_liability shows a large increase compared to the prior period.
+[LLM_FLAG] net_derivative_position indicates a shift in derivative assets vs liabilities which could require further investigation.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,040M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($2,465M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($72M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($267M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-195M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($17M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
