@@ -134,7 +134,8 @@ _NOTIONAL_ANCHOR = re.compile(
 _DERIV_CONTEXT = re.compile(
     r'derivative|forward\s+contract|interest\s+rate\s+swap|cross-currency|'
     r'currency\s+(?:forward|contract|swap)|hedg|commodity\s+contract|'
-    r'swap\s+agreement|rate\s+swap|forward\s+exchange',
+    r'swap\s+agreement|rate\s+swap|forward\s+exchange|'
+    r'credit\s+default\s+swap|CDS|strike\s+price|collar',
     re.IGNORECASE,
 )
 
