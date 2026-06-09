@@ -1,3 +1,25 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($2,723M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($556M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($556M)
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $2,484M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $307M, now missing
+[DROPPED_TO_ZERO] ir_sensitivity_100bp: $3M → $0M
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $304M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, fx_sensitivity_10pct, equity_sensitivity_10pct)
+[LLM_FLAG] total_derivative_liability of 0.0 may indicate the company is fully covered or not using derivatives effectively, raising concerns about hedging effectiveness.
+[LLM_FLAG] ir_sensitivity_100bp changed from 3.0 to 0.0 which is more than a 50% decline, despite the company stating they have outstanding interest rate exposure.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($2,484M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($307M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($3M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($304M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 

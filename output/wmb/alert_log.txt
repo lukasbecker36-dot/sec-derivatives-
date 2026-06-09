@@ -1,3 +1,43 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($688M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($261M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($371M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-110M)
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $722M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $336M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $340M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-4M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NUMERIC] var_one_day_95pct: $30M → $12M (-60.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] commercial_paper_outstanding: was $-193M, now missing
+[NEW_FIELD] cash_collateral_level1: appeared for first time ($-327M)
+[DISAPPEARED_FIELD] nwp_debt_detail: was $11M, now missing
+[VALIDATION] Likely extraction failure: 7/11 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct...)
+[LLM_FLAG] Net derivative position shows a significant liability of 110 million, indicating increased exposure or possible changes in market conditions.
+[LLM_FLAG] Total derivative assets decreased by more than 50% from the prior period, where expected values were at 722 million; current total asset at 261 million.
+[LLM_FLAG] The total net fair value of commodity derivative contracts at -437 million indicates significant exposure, which is a notable change from the prior period.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($722M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($336M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($340M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-4M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($30M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] commodity_derivative_fair_value_total: appeared for first time ($-193M)
+[NEW_FIELD] var_one_day_95pct: appeared for first time ($11M)
+[NEW_FIELD] long_term_debt_fixed_rate_total: appeared for first time ($30M)
+[NEW_FIELD] long_term_debt_variable_rate_total: appeared for first time ($0M)
+[NEW_FIELD] commercial_paper_outstanding: appeared for first time ($1M)
+[NEW_FIELD] cash_collateral_level1: appeared for first time ($189M)
+[LLM_FLAG] The total derivative liability is higher than total derivative asset, leading to a net derivative liability position, which may indicate increased exposure to market fluctuations.
+[LLM_FLAG] Long-term fixed-rate debt increased from previous year (prior was $26,722 million); significant increase in exposure.
+[LLM_FLAG] VaR increased from $4 million to $11 million, indicating heightened risk exposure.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)

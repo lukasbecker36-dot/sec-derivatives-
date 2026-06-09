@@ -1,3 +1,52 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($750M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($20M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-20M)
+[NUMERIC] cash_flow_hedge_aoci: $750M → $-108M (-114.4%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($29M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $23M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] interest_rate_swaps_notional: was $0M, now missing
+[DISAPPEARED_FIELD] interest_rate_swaps_fair_value: was $-32M, now missing
+[DISAPPEARED_FIELD] interest_rate_contracts_notional: was $0M, now missing
+[DISAPPEARED_FIELD] interest_rate_contracts_fair_value: was $2M, now missing
+[DISAPPEARED_FIELD] commodity_contracts_notional: was $0M, now missing
+[DISAPPEARED_FIELD] commodity_contracts_fair_value: was $0M, now missing
+[DISAPPEARED_FIELD] hedge_ineffectiveness: was $750M, now missing
+[DISAPPEARED_FIELD] aoci_derivative_gain_loss: was $0M, now missing
+[DISAPPEARED_FIELD] non_designated_gain_loss: was $0M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $0M, now missing
+[DISAPPEARED_FIELD] commodity_price_sensitivity: was $0M, now missing
+[VALIDATION] Likely extraction failure: 13/14 previously-populated fields are now null (fixed_rate_notes_billion, equity_sensitivity_10pct, interest_rate_swaps_notional, interest_rate_swaps_fair_value, interest_rate_contracts_notional...)
+[LLM_FLAG] Net derivative position is negative indicating liabilities exceed assets.
+[LLM_FLAG] Cash flow hedge AOCI balance is negative, indicating cumulative losses.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($750M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($23M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-32M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] interest_rate_swaps_notional: appeared for first time ($750M)
+[NEW_FIELD] interest_rate_swaps_fair_value: appeared for first time ($0M)
+[NEW_FIELD] interest_rate_contracts_notional: appeared for first time ($0M)
+[NEW_FIELD] interest_rate_contracts_fair_value: appeared for first time ($0M)
+[NEW_FIELD] commodity_contracts_notional: appeared for first time ($0M)
+[NEW_FIELD] commodity_contracts_fair_value: appeared for first time ($0M)
+[NEW_FIELD] hedge_ineffectiveness: appeared for first time ($0M)
+[NEW_FIELD] aoci_derivative_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] non_designated_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($0M)
+[NEW_FIELD] commodity_price_sensitivity: appeared for first time ($22M)
+[LLM_FLAG] Significant details about the interest rate swap agreements were provided, specifically the termination of $150 million of forward-starting interest rate swaps classified as cash flow hedges.
+[LLM_FLAG] Significant change noted: Company discontinued its fuel hedging program in 2025, representing a major shift in hedging strategy.
+[LLM_FLAG] The $750 million interest rate swaps for the 5.25% Notes indicates new hedging activity and a change from previous practices.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [DISAPPEARED_FIELD] interest_rate_swaps_fair_value: was $-32M, now missing

@@ -1,3 +1,31 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[DISAPPEARED_FIELD] total_derivative_asset: was $1,459M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $154M, now missing
+[DISAPPEARED_FIELD] debt_maturity_schedule: was $-20M, now missing
+[DISAPPEARED_FIELD] intercompany_debt_sensitivity_10pct: was $5M, now missing
+[DISAPPEARED_FIELD] forward_contracts_notional_jpy: was $35M, now missing
+[DISAPPEARED_FIELD] forward_contracts_sensitivity: was $13M, now missing
+[DISAPPEARED_FIELD] credit_facility_sensitivity: was $-20M, now missing
+[DISAPPEARED_FIELD] equity_price_sensitivity_10pct: was $-220M, now missing
+[VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (total_derivative_asset, equity_sensitivity_10pct, debt_maturity_schedule, intercompany_debt_sensitivity_10pct, forward_contracts_notional_jpy...)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,459M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($154M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-20M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($35M)
+[NEW_FIELD] variable_rate_percentage: appeared for first time ($13M)
+[NEW_FIELD] foreign_currency_sensitivity_1pct: appeared for first time ($-20M)
+[NEW_FIELD] intercompany_debt_sensitivity_10pct: appeared for first time ($-220M)
+[NEW_FIELD] mgm_osaka_commitment_jpy: appeared for first time ($357M)
+[NEW_FIELD] forward_contracts_notional_jpy: appeared for first time ($154M)
+[NEW_FIELD] yen_credit_facility_amount: appeared for first time ($54M)
+[NEW_FIELD] forward_contracts_sensitivity: appeared for first time ($-109M)
+[NEW_FIELD] credit_facility_sensitivity: appeared for first time ($-35M)
+[NEW_FIELD] equity_price_sensitivity_10pct: appeared for first time ($35M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $154M, now missing

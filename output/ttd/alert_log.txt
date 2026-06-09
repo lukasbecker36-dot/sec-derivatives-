@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[DISAPPEARED_FIELD] total_derivative_asset: was $382M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $382M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($5M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($45M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[DISAPPEARED_FIELD] primary_fx_exposures: was $6M, now missing
+[DISAPPEARED_FIELD] fx_forward_fair_value: was $47M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (total_derivative_asset, net_derivative_position, primary_fx_exposures, fx_forward_fair_value)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($382M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($382M)
+[NUMERIC] ir_sensitivity_100bp: $30M → $6M (-80.0%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $30M → $47M (+56.7%) — exceeds 20% threshold
+[LLM_FLAG] ir_sensitivity_100bp decreased by more than 50% compared to the prior period value of 30.0.
+[LLM_FLAG] fx_sensitivity_10pct increased by more than 50% compared to the prior period value of 30.0.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)

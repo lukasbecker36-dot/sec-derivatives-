@@ -1,3 +1,43 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,600M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($3,600M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($303M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($27M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($151M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($29M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($122M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($125M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($5M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-14M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1,500M)
+[NEW_FIELD] variable_rate_debt_pct: appeared for first time ($9M)
+[NEW_FIELD] euro_denominated_debt_unhedged: appeared for first time ($2,500M)
+[NEW_FIELD] euro_debt_sensitivity_10pct: appeared for first time ($258M)
+[NUMERIC] fuel_expense_pct_of_operating: $10M → $12M (+23.0%) — exceeds 20% threshold
+[NUMERIC] fuel_sensitivity_10pct: $15M → $81M (+441.3%) — exceeds 20% threshold
+[NUMERIC] fx_remeasurement_gains_losses: $19,300M → $22M (-99.9%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: fx_remeasurement_gains_losses changed from 19,300 to 22 (0x)
+[LLM_FLAG] fx_derivatives_notional and fx_designated_notional show a significant increase from the prior period which may indicate a new hedging strategy.
+[LLM_FLAG] fx_unhedged_payments_eur decreased by 20% compared to prior period, indicating a lessening of unhedged exposure.
+[LLM_FLAG] fuel_expense_pct_of_operating increased by 10% compared to prior period, suggesting rising costs associated with fuel.
+[LLM_FLAG] interest_rate_sensitivity decreased slightly compared to prior period, reflecting potential changes in debt structure or interest rate exposures.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] fx_sensitivity_10pct: $10,000M → $1,900M (-81.0%) — exceeds 20% threshold
+[NUMERIC] variable_rate_debt_pct: $30M → $10M (-66.7%) — exceeds 20% threshold
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($15M)
+[NEW_FIELD] fx_unhedged_payments_eur: appeared for first time ($19,300M)
+[NEW_FIELD] euro_denominated_debt_unhedged: appeared for first time ($2,000M)
+[NEW_FIELD] euro_debt_sensitivity_10pct: appeared for first time ($200M)
+[NEW_FIELD] fuel_expense_pct_of_operating: appeared for first time ($12M)
+[NEW_FIELD] fuel_sensitivity_10pct: appeared for first time ($66M)
+[NEW_FIELD] fx_remeasurement_gains_losses: appeared for first time ($-135M)
+[LLM_FLAG] ir_sensitivity_100bp increased by more than 50% from previously reported 0.0 to 15.0 due to higher variable rate debt addition.
+[LLM_FLAG] fx_sensitivity_10pct is significantly lower than the previous period value of 10000.0, which may indicate a change in exposure or hedging strategy.
+[LLM_FLAG] variable_rate_debt_pct increased from 30.0% in the prior period to 10.0% in this period; notable decrease in fixed rate proportion.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($14M)

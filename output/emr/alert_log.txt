@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NUMERIC] expected_12mo_reclass_from_aoci: $4M → $6M (+50.0%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional increased from 4200.0 to 4300.0, which is a change of less than 50%.
+[LLM_FLAG] Cash flow hedge AOCI decreased from 21.0 to 20.0, which is a change of less than 50%.
+[LLM_FLAG] Expected reclass from AOCI increased from 4.0 to 6.0, which is greater than a 50% increase.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($4,200M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($21M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($4M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
 === 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 

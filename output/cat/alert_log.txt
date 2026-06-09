@@ -1,3 +1,31 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NUMERIC] fx_derivatives_notional: $62M → $293M (+372.6%) — exceeds 20% threshold
+[NEW_FIELD] fx_designated_notional: appeared for first time ($136M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($62M)
+[NUMERIC] commodity_derivatives_notional: $10M → $37M (+270.0%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] equity_derivatives_notional: $1M → $0M
+[NUMERIC] total_derivative_asset: $423M → $518M (+22.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $246M → $420M (+70.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $177M → $98M (-44.6%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $163M → $-67M (-141.1%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] expected_12mo_reclass_from_aoci: $55M → $0M
+[LLM_FLAG] fx_derivatives_notional differs by more than 50% from prior period (62.0 -> 293.0)
+[LLM_FLAG] total_derivative_asset differs by more than 50% from prior period (423.0 -> 518.0)
+[LLM_FLAG] total_derivative_liability differs by more than 50% from prior period (246.0 -> 420.0)
+[LLM_FLAG] net_derivative_position differs by more than 50% from prior period (177.0 -> 98.0)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($62M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($59M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($10M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($1M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($423M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($246M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($177M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($163M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($55M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 

@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[DISAPPEARED_FIELD] fx_designated_notional: was $1,600M, now missing
+[NUMERIC] total_derivative_asset: $80M → $129M (+61.9%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $80M → $129M (+61.9%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $-7M → $57M (+947.8%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $30M → $43M (+44.1%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2M, now missing
+[LLM_FLAG] The notional amount of foreign currency derivatives is significantly higher than the prior period value of 1599.6, indicating increased hedging activity.
+[LLM_FLAG] The total derivative asset value has increased compared to the prior period, warranting attention for changes in hedging effectiveness.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,600M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,600M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($290M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($80M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($80M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-7M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($30M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($2M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $109M, now missing

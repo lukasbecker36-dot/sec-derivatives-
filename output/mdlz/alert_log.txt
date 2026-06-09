@@ -1,3 +1,69 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NUMERIC] fi_fx_derivatives_notional: $161M → $209M (+29.8%) — exceeds 20% threshold
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($7M)
+[NUMERIC] fi_fx_not_designated_notional: $161M → $209M (+29.8%) — exceeds 20% threshold
+[NUMERIC] fi_ir_swap_notional: $1M → $2M (+100.0%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_asset: $826M → $1,189M (+43.9%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $1,780M → $2,232M (+25.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_designated_notional: was $9,500M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $10,353M, now missing
+[NUMERIC] ir_swap_notional: $1,932M → $3,149M (+63.0%) — exceeds 20% threshold
+[NUMERIC] commodity_derivatives_notional: $14,463M → $9,820M (-32.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $664M → $868M (+30.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $1,328M → $1,916M (+44.3%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-664M → $-1,048M (-57.8%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $38M → $4M (-89.5%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $38M → $4M (-89.5%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $22M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $42M, now missing
+[NUMERIC] fx_derivative_designated_fair_value: $-318M → $-156M (+50.9%) — exceeds 20% threshold
+[NUMERIC] commodity_derivative_fair_value: $-502M → $-785M (-56.4%) — exceeds 20% threshold
+[NUMERIC] interest_rate_derivative_undesignated_fair_value: $-2M → $-12M (-500.0%) — exceeds 20% threshold
+[NUMERIC] cross_currency_swap_fair_value: $-132M → $-90M (+31.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_assets: $664M → $868M (+30.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liabilities: $1,328M → $1,916M (+44.3%) — exceeds 20% threshold
+[NUMERIC] non_usd_debt_net_investment_hedge: $474M → $3,680M (+676.4%) — exceeds 20% threshold
+[NUMERIC] bs_location_other_current_assets: $664M → $868M (+30.7%) — exceeds 20% threshold
+[NUMERIC] bs_location_other_assets: $162M → $321M (+98.1%) — exceeds 20% threshold
+[NUMERIC] bs_location_other_current_liabilities: $1,328M → $1,916M (+44.3%) — exceeds 20% threshold
+[NUMERIC] bs_location_other_liabilities: $452M → $316M (-30.1%) — exceeds 20% threshold
+[LLM_FLAG] The total derivative liabilities increased by more than 50%, which may indicate a significant change in the company's risk profile or hedging strategy.
+[LLM_FLAG] The increase in total derivative liabilities (from 1328 to 1916) is more than 50%, indicating increased exposure or risk management activities.
+[LLM_FLAG] The net derivative position has worsened significantly (from -664 to -1048), which may highlight increasing risks in their hedging strategy.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($161M)
+[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($161M)
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($1M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($826M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($1,780M)
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($19,853M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($9,500M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($10,353M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,932M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($14,463M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($664M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($1,328M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-664M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($38M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($38M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($22M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($42M)
+[NEW_FIELD] fx_derivative_designated_fair_value: appeared for first time ($-318M)
+[NEW_FIELD] commodity_derivative_fair_value: appeared for first time ($-502M)
+[NEW_FIELD] interest_rate_derivative_undesignated_fair_value: appeared for first time ($-2M)
+[NEW_FIELD] cross_currency_swap_fair_value: appeared for first time ($-132M)
+[NEW_FIELD] total_derivative_assets: appeared for first time ($664M)
+[NEW_FIELD] total_derivative_liabilities: appeared for first time ($1,328M)
+[NEW_FIELD] variation_margin_balance: appeared for first time ($364M)
+[NEW_FIELD] non_usd_debt_net_investment_hedge: appeared for first time ($474M)
+[NEW_FIELD] bs_location_other_current_assets: appeared for first time ($664M)
+[NEW_FIELD] bs_location_other_assets: appeared for first time ($162M)
+[NEW_FIELD] bs_location_other_current_liabilities: appeared for first time ($1,328M)
+[NEW_FIELD] bs_location_other_liabilities: appeared for first time ($452M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NUMERIC] fi_ir_swap_notional: $1,932M → $3,149M (+63.0%) — exceeds 20% threshold
 [NUMERIC] fi_total_derivative_asset: $826M → $1,189M (+43.9%) — exceeds 20% threshold

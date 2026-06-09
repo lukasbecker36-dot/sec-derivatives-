@@ -1,3 +1,35 @@
+=== 10-K | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($356M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($337M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($18M)
+[NUMERIC] total_derivative_asset: $326M → $8M (-97.6%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] total_derivative_liability: $311M → $0M
+[NUMERIC] net_derivative_position: $15M → $8M (-47.5%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DROPPED_TO_ZERO] fx_transaction_gain_loss: $0M → $0M
+[NUMERIC] ir_sensitivity_100bp: $-6M → $-16M (-181.4%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $-5M → $-34M (-548.0%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] fixed_rate_notes_billion: $-4M → $0M
+[DROPPED_TO_ZERO] marketable_equity_value: $13M → $0M
+[NEW_FIELD] fx_sensitivity: appeared for first time ($34M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($16M)
+[LLM_FLAG] total_derivative_asset has increased significantly from prior period (previously 325.86), but the total liability has decreased drastically to 0 from 311.23, creating a large net asset position that may require further scrutiny.
+[LLM_FLAG] ir_sensitivity_100bp changed significantly from -5.793 to -16.3, indicating increasing exposure to interest rate changes which may reflect a broader economic trend or potential strategic shift.
+[LLM_FLAG] fx_sensitivity_10pct changed significantly, reflecting a much higher hypothetical impact from foreign currency fluctuations than the prior period value of -5.324.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NUMERIC] fx_derivatives_notional: $7M → $326M (+4555.1%) — exceeds 20% threshold
+[NEW_FIELD] fx_designated_notional: appeared for first time ($311M)
+[NUMERIC] fx_not_designated_notional: $1M → $15M (+1363.0%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($-6M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-5M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-4M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $5,548M → $13M (-99.8%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[VALIDATION] Likely units mismatch: expected_12mo_reclass_from_aoci changed from 5,548 to 13 (0x)
+[LLM_FLAG] fx_derivatives_notional increased by more than 50% from prior period (from 7.0 to 325.86); this indicates significant additional foreign currency derivative contracts were utilized.
+
 === 10-K | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($356M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($337M)

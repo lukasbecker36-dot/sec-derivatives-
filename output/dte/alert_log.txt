@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-981M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] floating_rate_debt_amount: appeared for first time ($0M)
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (equity_sensitivity_10pct)
+[LLM_FLAG] fx_forwards_outstanding not found but noted the presence of foreign currency contracts with maturity information.
+[LLM_FLAG] ir_sensitivity_100bp shows significant increase compared to the prior period (-789 to -981).
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-904M)
+[NEW_FIELD] floating_rate_debt_amount: appeared for first time ($1M)
+[NEW_FIELD] floating_rate_debt_ratio: appeared for first time ($4M)
+[LLM_FLAG] The interest rate sensitivity shows a significant increase of more than 50% from the prior period's value of -789 million, indicating heightened risk exposure.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing

@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NUMERIC] total_derivative_asset: $33M → $88M (+166.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $712M → $568M (-20.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-679M → $-480M (+29.3%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional decreased by more than 50% compared to the prior period; Possible revaluation or change in hedging needs.
+[LLM_FLAG] net_derivative_position reflects significant changes in derivative liabilities.
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($4,381M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($11,992M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($4,381M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($5,336M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($33M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($712M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-679M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($9M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($124M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[LLM_FLAG] Increase in notional amount of interest rate contracts designated as hedging instruments by over 50% compared to the prior period, driven by debt portfolio rebalancing.
+
 === 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 

@@ -1,3 +1,34 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NUMERIC] total_cash_equivalents_fv: $387M → $177M (-54.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] has_derivatives: was $0M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $0M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $0M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] fair_value_measurements_table: was $0M, now missing
+[DISAPPEARED_FIELD] debt_fair_value_disclosure: was $135M, now missing
+[DISAPPEARED_FIELD] foreign_exchange_exposure: was $4M, now missing
+[VALIDATION] Likely extraction failure: 8/13 previously-populated fields are now null (has_derivatives, fx_not_designated_notional, ir_swap_notional, commodity_derivatives_notional, equity_sensitivity_10pct...)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($387M)
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($0M)
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($0M)
+[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($0M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($0M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($0M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($135M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($135M)
+[NEW_FIELD] international_revenue_percentage: appeared for first time ($56M)
+[NEW_FIELD] fx_gains_losses: appeared for first time ($8M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NUMERIC] total_cash_equivalents_fv: $387M → $172M (-55.4%) — exceeds 20% threshold
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)

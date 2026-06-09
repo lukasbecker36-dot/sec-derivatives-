@@ -1,3 +1,27 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($543M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($543M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($3,750M)
+[NUMERIC] total_derivative_asset: $543M → $109M (-79.9%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($416M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-307M)
+[NUMERIC] cash_flow_hedge_aoci: $3,500M → $70M (-98.0%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $128M → $70M (-45.3%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[LLM_FLAG] Total derivative assets decreased by more than 80% from the prior period; this may indicate significant changes in derivatives strategy or counterparty exposure.
+[LLM_FLAG] Total derivative liabilities increased by approximately 52% which may raise concerns regarding the company's hedging positions or increasing risk exposure.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($543M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($3,500M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($128M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($32M)
+[NEW_FIELD] debt_fair_value_sensitivity: appeared for first time ($1M)
+[NEW_FIELD] variable_debt_earnings_sensitivity: appeared for first time ($20M)
+[LLM_FLAG] The carrying value of fixed-rate debt shows a significant increase, rising from $31,519 million in 2024 to $31,990 million in 2025. This change exceeds 50% increase, potentially indicating a new issuance or refinancing activity.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 

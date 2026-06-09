@@ -1,3 +1,31 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($194M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($194M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-3M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-3M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] marketable_securities_types: was $0M, now missing
+[DISAPPEARED_FIELD] convertible_notes_amount: was $1M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $0M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity: was $0M, now missing
+[DISAPPEARED_FIELD] hedging_status: was $300M, now missing
+[DISAPPEARED_FIELD] revenue_currency: was $4,100M, now missing
+[VALIDATION] Likely extraction failure: 7/9 previously-populated fields are now null (equity_sensitivity_10pct, marketable_securities_types, convertible_notes_amount, interest_rate_sensitivity, fx_sensitivity...)
+[LLM_FLAG] marketable_securities_amount increased significantly from prior period ($0 to $4300.0).
+[LLM_FLAG] Cash equivalents much higher than prior period ($0 to $389.3)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($0M)
+[NEW_FIELD] cash_equivalents_amount: appeared for first time ($300M)
+[NEW_FIELD] marketable_securities_amount: appeared for first time ($4,100M)
+[NEW_FIELD] convertible_notes_amount: appeared for first time ($1,000M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)

@@ -1,3 +1,38 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($1,113M)
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($1,027M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($7M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($153M)
+[NUMERIC] total_derivative_asset: $1,280M → $7M (-99.5%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($153M)
+[NUMERIC] net_derivative_position: $1,280M → $-146M (-111.4%) — exceeds 20% threshold
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($33M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-27M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $11M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $29M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-18M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $9M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $5M, now missing
+[DISAPPEARED_FIELD] primary_currencies: was $-471M, now missing
+[VALIDATION] Likely extraction failure: 6/8 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value...)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 1,280 to 7 (0x)
+[LLM_FLAG] net_derivative_position differs from prior period by more than 50% (previously 1280.0 million)
+[LLM_FLAG] total_derivative_asset decreased significantly from 1280.0 million in the prior period.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,280M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,280M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($11M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($29M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-18M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($9M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($5M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-471M)
+[NEW_FIELD] foreign_currency_contracts_fair_value: appeared for first time ($-13M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NUMERIC] total_cash_equivalents_fv: $3,431M → $1,113M (-67.6%) — exceeds 20% threshold
 [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($1,027M)

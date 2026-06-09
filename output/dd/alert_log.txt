@@ -1,3 +1,32 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($347M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,000M)
+[NUMERIC] ir_swap_notional: $1,000M → $774M (-22.6%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_asset: appeared for first time ($221M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($53M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($168M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($64M)
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-35M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-163M, now missing
+[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $-100M, now missing
+[DISAPPEARED_FIELD] net_investment_hedge_sensitivity: was $-100M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $-35M, now missing
+[VALIDATION] Likely extraction failure: 5/11 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, foreign_currency_sensitivity, net_investment_hedge_sensitivity, interest_rate_sensitivity)
+[LLM_FLAG] total_cash_equivalents_fv decreased by 14% from prior period, which may warrant further review regarding cash liquidity.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($100M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($46M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($52M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,000M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-35M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-163M)
+[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($-100M)
+[NEW_FIELD] net_investment_hedge_sensitivity: appeared for first time ($-100M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-35M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NUMERIC] gross_unrealized_gains_debt: $52M → $95M (+82.7%) — exceeds 20% threshold
 [NUMERIC] fi_fx_derivatives_notional: $1,014M → $347M (-65.8%) — exceeds 20% threshold

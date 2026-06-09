@@ -1,3 +1,29 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($343M)
+[DISAPPEARED_FIELD] has_derivatives: was $320M, now missing
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($343M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $320M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] currency_derivatives_fair_value: was $2M, now missing
+[DISAPPEARED_FIELD] maximum_term: was $4M, now missing
+[DISAPPEARED_FIELD] sensitivity_analysis_loss: was $2M, now missing
+[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (has_derivatives, total_derivative_asset, equity_sensitivity_10pct, currency_derivatives_fair_value, maximum_term...)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($320M)
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($320M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($4M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
+[NEW_FIELD] total_debt: appeared for first time ($2,000M)
+[NEW_FIELD] fixed_rate_percentage: appeared for first time ($90M)
+[NEW_FIELD] revolving_facility_outstanding: appeared for first time ($191M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($2M)
+[LLM_FLAG] The notional amount of currency derivatives increased significantly from $167.2 million in 2024 to $320.1 million in 2025, marking a change of over 50%. This could indicate a shift in hedging strategy.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($343M)
 [DISAPPEARED_FIELD] has_derivatives: was $320M, now missing

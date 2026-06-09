@@ -1,3 +1,34 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,997M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($7,327M)
+[NUMERIC] total_derivative_liability: $156M → $283M (+81.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $5,577M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $382M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $244M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $138M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 8/12 previously-populated fields are now null (cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct...)
+[LLM_FLAG] net_derivative_position has increased significantly from the prior period (0.0 to 44), which could indicate a change in risk management strategy.
+[LLM_FLAG] total_derivative_asset has increased by more than 50% from prior period (0.0 to 327).
+[LLM_FLAG] total_derivative_liability has decreased in value compared to the prior period but still shows notable positions.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($156M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($5,577M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($382M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($244M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($138M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing

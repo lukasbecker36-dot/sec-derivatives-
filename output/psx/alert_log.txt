@@ -1,3 +1,37 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($260,102M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($1,497M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($27,524M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-26,027M)
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $2,804M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $2,804M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $2,711M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $93M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NUMERIC] var_amount: $-191M → $647M (+438.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] floating_rate_debt_maturity_schedule: was $19M, now missing
+[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct...)
+[LLM_FLAG] commodity_derivatives_notional is significantly higher than in the prior period, indicating increased activity or exposure.
+[LLM_FLAG] net_derivative_position indicates a substantial liability position, which may be concerning.
+[LLM_FLAG] VaR value of 647 million indicates a shift in risk profile, likely due to heightened commodity price volatility.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NUMERIC] commodity_derivatives_notional: $1M → $2,804M (+280300.0%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_asset: appeared for first time ($2,804M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($2,711M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($93M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-191M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($19M)
+[NEW_FIELD] var_amount: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($18,324M)
+[VALIDATION] Likely units mismatch: commodity_derivatives_notional changed from 1 to 2,804 (2804x)
+[LLM_FLAG] The fair value of fixed-rate debt of $18,324 million significantly increased from $16,913 million in the prior period, indicating a material change in market conditions or debt structure.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
 [DISAPPEARED_FIELD] commodity_derivatives_notional: was $1M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (commodity_derivatives_notional)

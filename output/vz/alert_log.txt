@@ -1,3 +1,42 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($590M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($590M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $23,700M, now missing
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($84M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $1,400M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $5,100M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-3,700M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $570M, now missing
+[DISAPPEARED_FIELD] ir_swap_fair_value_liability: was $340M, now missing
+[DISAPPEARED_FIELD] cross_currency_swap_fair_value_asset: was $159M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity_100bp: was $79M, now missing
+[DISAPPEARED_FIELD] long_term_debt_fair_value: was $5,100M, now missing
+[DISAPPEARED_FIELD] collateral_posted: was $36,100M, now missing
+[VALIDATION] Likely extraction failure: 10/12 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct...)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($570M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($570M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($23,700M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($1,400M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($5,100M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-3,700M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($570M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($340M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($159M)
+[NEW_FIELD] fixed_rate_debt_pct: appeared for first time ($79M)
+[NEW_FIELD] ir_swap_fair_value_liability: appeared for first time ($5,100M)
+[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($36,100M)
+[NEW_FIELD] cross_currency_swap_fair_value_asset: appeared for first time ($1,400M)
+[NEW_FIELD] cross_currency_swap_fair_value_liability: appeared for first time ($1,200M)
+[NEW_FIELD] fx_forward_notional: appeared for first time ($570M)
+[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($158,955M)
+[NEW_FIELD] collateral_posted: appeared for first time ($1,100M)
+[LLM_FLAG] Net derivative position is significantly negative at -3700 million, indicating potential concerns about hedging strategy or downside exposure.
+[LLM_FLAG] The fair value liability of interest rate swaps decreased from $5.3 billion to $5.1 billion, a reduction of about 3.8%, which could indicate a decrease in the market's expectation of future interest rates.
+[LLM_FLAG] The notional amount of cross currency swaps increased significantly from $32.1 billion to $36.1 billion, a rise of about 12.4%, suggesting increased hedging activity or exposure.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $23,700M, now missing
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)

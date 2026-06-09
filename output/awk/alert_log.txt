@@ -1,3 +1,29 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($175M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($0M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] treasury_lock_notional: was $12M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $6M, now missing
+[DISAPPEARED_FIELD] treasury_lock_sensitivity: was $200M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (equity_sensitivity_10pct, treasury_lock_notional, interest_rate_sensitivity, treasury_lock_sensitivity)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($12M)
+[NEW_FIELD] treasury_lock_count: appeared for first time ($6M)
+[NEW_FIELD] treasury_lock_notional: appeared for first time ($200M)
+[NEW_FIELD] treasury_lock_average_rate: appeared for first time ($4M)
+[NEW_FIELD] treasury_lock_fair_value: appeared for first time ($2M)
+[NEW_FIELD] treasury_lock_sensitivity: appeared for first time ($-21M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [DISAPPEARED_FIELD] treasury_lock_notional: was $12M, now missing

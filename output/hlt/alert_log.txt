@@ -1,3 +1,27 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,600M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($1M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-6M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($0M)
+[DISAPPEARED_FIELD] interest_rate_swap_fair_value: was $-9M, now missing
+[DISAPPEARED_FIELD] fixed_interest_rate_payable: was $9M, now missing
+[DROPPED_TO_ZERO] fx_forward_contracts: $1,600M → $0M
+[VALIDATION] Likely extraction failure: 3/5 previously-populated fields are now null (equity_sensitivity_10pct, interest_rate_swap_fair_value, fixed_interest_rate_payable)
+[LLM_FLAG] The company has no interest rate swaps outstanding and no foreign currency forward contracts as of this period, which differs from prior reports.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-9M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($9M)
+[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($1,600M)
+[NEW_FIELD] interest_rate_swap_fair_value: appeared for first time ($7M)
+[NEW_FIELD] variable_interest_rate_receivable: appeared for first time ($4M)
+[NEW_FIELD] fixed_interest_rate_payable: appeared for first time ($2M)
+[NEW_FIELD] variable_rate_debt_amount: appeared for first time ($3M)
+[NEW_FIELD] fixed_rate_debt_amount: appeared for first time ($9M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [DISAPPEARED_FIELD] interest_rate_swap_fair_value: was $-7M, now missing

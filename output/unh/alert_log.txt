@@ -1,3 +1,33 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($383M)
+[DISAPPEARED_FIELD] variable_rate_financial_liabilities: was $345M, now missing
+[DISAPPEARED_FIELD] fixed_rate_non_swapped_debt: was $51M, now missing
+[NEW_FIELD] investment_income_sensitivity_1pct: appeared for first time ($383M)
+[NUMERIC] interest_expense_sensitivity_1pct: $550M → $288M (-47.6%) — exceeds 20% threshold
+[NUMERIC] fair_value_assets_sensitivity_1pct: $34M → $2M (-94.1%) — exceeds 20% threshold
+[NUMERIC] fair_value_liabilities_sensitivity_1pct: $27M → $5M (-81.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] equity_securities_investments: was $48M, now missing
+[VALIDATION] Likely extraction failure: 3/8 previously-populated fields are now null (variable_rate_financial_liabilities, fixed_rate_non_swapped_debt, equity_securities_investments)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($345M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($51M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($550M)
+[NEW_FIELD] variable_rate_financial_assets: appeared for first time ($34M)
+[NEW_FIELD] variable_rate_financial_liabilities: appeared for first time ($27M)
+[NEW_FIELD] fixed_rate_investments: appeared for first time ($48M)
+[NEW_FIELD] fixed_rate_non_swapped_debt: appeared for first time ($51M)
+[NEW_FIELD] investment_income_sensitivity_1pct: appeared for first time ($345M)
+[NEW_FIELD] interest_expense_sensitivity_1pct: appeared for first time ($273M)
+[NEW_FIELD] fair_value_assets_sensitivity_1pct: appeared for first time ($-2,150M)
+[NEW_FIELD] fair_value_liabilities_sensitivity_1pct: appeared for first time ($-5,078M)
+[NEW_FIELD] equity_securities_investments: appeared for first time ($5,500M)
+[LLM_FLAG] fx_forwards_outstanding is 0, indicating no reliance on FX forwards, which could be noteworthy depending on currency exposure.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-383M)

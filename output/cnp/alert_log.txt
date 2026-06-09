@@ -1,3 +1,31 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($24M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NUMERIC] fixed_rate_debt: $20M → $24M (+20.5%) — exceeds 20% threshold
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($8M)
+[NUMERIC] fair_value_sensitivity: $22M → $874M (+3927.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] zens_derivative_component: was $0M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity: was $2M, now missing
+[DISAPPEARED_FIELD] commodity_risk_exposure: was $21M, now missing
+[VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (equity_sensitivity_10pct, zens_derivative_component, equity_sensitivity, commodity_risk_exposure)
+[LLM_FLAG] floating_rate_obligations
+[LLM_FLAG] fixed_rate_debt
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NUMERIC] ir_sensitivity_100bp: $100M → $20M (-80.0%) — exceeds 20% threshold
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($22M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
+[NEW_FIELD] floating_rate_obligations: appeared for first time ($2M)
+[NEW_FIELD] fixed_rate_debt: appeared for first time ($21M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($20M)
+[NEW_FIELD] fair_value_sensitivity: appeared for first time ($800M)
+[NEW_FIELD] zens_derivative_component: appeared for first time ($564M)
+[LLM_FLAG] ir_sensitivity_100bp increased compared to prior value of 100.0, indicating a notable change in interest expense sensitivity due to rising rates.
+[LLM_FLAG] fixed_rate_notes increased from 19.7 billion in the prior period, indicating increased borrowing in fixed-rate instruments.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($8M)

@@ -1,3 +1,42 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[DISAPPEARED_FIELD] total_derivative_asset: was $437M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $700M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $3M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($397M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $3,135M, now missing
+[NUMERIC] ir_sensitivity_100bp: $3,222M → $66M (-98.0%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $-87M → $-1M (+98.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $437M, now missing
+[NEW_FIELD] commodity_var: appeared for first time ($85M)
+[DISAPPEARED_FIELD] commodity_var_period_stats: was $16M, now missing
+[NUMERIC] derivative_mark_to_market_var: $-3M → $151M (+5133.3%) — exceeds 20% threshold
+[NEW_FIELD] counterparty_credit_exposure: appeared for first time ($1,300M)
+[NEW_FIELD] collateral_held: appeared for first time ($117M)
+[DISAPPEARED_FIELD] credit_exposure_by_quality: was $61M, now missing
+[NEW_FIELD] exposure_rolloff_timeline: appeared for first time ($61M)
+[VALIDATION] Likely extraction failure: 7/10 previously-populated fields are now null (total_derivative_asset, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, equity_sensitivity_10pct...)
+[LLM_FLAG] extraction_failed: Expecting property name enclosed in double quotes: line 29 column 18 (char 941)
+[LLM_FLAG] ir_sensitivity_100bp showed a significant change compared to the prior period (3222.0 to 66.0) due to a shift in the company's debt structure and interest rates.
+[LLM_FLAG] fx_sensitivity_10pct shows a more than 50% drop compared to prior period of -87.0 to -1.0, reflecting changes in currency exposure impacts.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($437M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($700M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($3M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($3,135M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($3,222M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-87M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($437M)
+[NUMERIC] ir_sensitivity_100bp: $30M → $16M (-46.7%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-3M)
+[NEW_FIELD] commodity_var: appeared for first time ($61M)
+[NEW_FIELD] derivative_mark_to_market_var: appeared for first time ($145M)
+[NEW_FIELD] counterparty_credit_exposure: appeared for first time ($1,700M)
+[NEW_FIELD] collateral_held: appeared for first time ($408M)
+[NEW_FIELD] exposure_rolloff_timeline: appeared for first time ($66M)
+[LLM_FLAG] Notional FX derivatives and interest rate swap amounts are significant additions indicating active hedging strategy.
+[LLM_FLAG] ir_sensitivity_100bp dropped from prior period value of 30.0, likely due to a change in interest rate derivatives and market conditions.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($397M)
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($66M)

@@ -1,3 +1,31 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NUMERIC] fx_derivatives_notional: $15,300M → $18,474M (+20.7%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $10,560M → $12,986M (+23.0%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $697M → $2,027M (+190.8%) — exceeds 20% threshold
+[NUMERIC] commodity_derivatives_notional: $11M → $6M (-47.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $67M → $217M (+223.9%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $434M → $124M (-71.4%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-367M → $93M (+125.3%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($18M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] composite_var: was $182M, now missing
+[LLM_FLAG] fx_not_designated_notional increased significantly from prior period value of 10560.0 to 12986.0, a 23% increase.
+[LLM_FLAG] Total derivative assets increased significantly compared to prior value of 67.0 to 217.0, a 224% increase.
+[LLM_FLAG] Total derivative liabilities increased significantly from prior period value of 434.0 to 124.0, a 71% decrease.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($15,300M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($5,114M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($10,560M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($697M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($11M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($67M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($434M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-367M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
+[NEW_FIELD] composite_var: appeared for first time ($182M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NUMERIC] fi_fx_derivatives_notional: $15,674M → $18,862M (+20.3%) — exceeds 20% threshold
 [NUMERIC] fi_fx_not_designated_notional: $10,560M → $12,974M (+22.9%) — exceeds 20% threshold

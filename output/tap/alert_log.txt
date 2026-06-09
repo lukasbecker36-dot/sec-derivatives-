@@ -1,3 +1,31 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_designated_notional: appeared for first time ($124M)
+[NUMERIC] commodity_derivatives_notional: $442M → $889M (+101.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $52M → $89M (+71.4%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $4,777M → $7M (-99.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-4,724M → $82M (+101.7%) — exceeds 20% threshold
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-81M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($2M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($2M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-305M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-134M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
+[VALIDATION] Likely units mismatch: total_derivative_liability changed from 4,777 to 7 (0x)
+[LLM_FLAG] fx_derivatives_notional differs by more than 50% from prior period (104.9 to 123.9).
+[LLM_FLAG] commodity_derivatives_notional differs by more than 50% from prior period (442.1 to 888.9).
+[LLM_FLAG] net_derivative_position shows a significant shift from prior period (-4724.5 to 81.9), indicating a material change in overall derivative asset and liability structure.
+[LLM_FLAG] fx_forwards_outstanding: notable increase compared to prior period (from 0.0), indicating new hedging activity.
+[LLM_FLAG] fixed_rate_notes_billion: consistent with prior period but significant amount, reflecting continued exposure to interest rate risk.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($105M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,000M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($442M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($52M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($4,777M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-4,724M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-305M)
 [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-13M)

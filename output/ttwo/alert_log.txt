@@ -1,3 +1,37 @@
+=== 10-K | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($490M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($490M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $441M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $441M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NUMERIC] fx_forward_sell_notional: $0M → $349M (+87200.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_forward_buy_notional: appeared for first time ($140M)
+[NEW_FIELD] fx_forward_gain_loss: appeared for first time ($-6M)
+[NEW_FIELD] short_term_investments: appeared for first time ($444M)
+[NEW_FIELD] cash_and_equivalents: appeared for first time ($1,546M)
+[NEW_FIELD] fx_translation_adjustment: appeared for first time ($30M)
+[NUMERIC] fx_transaction_loss: $324M → $17M (-94.6%) — exceeds 20% threshold
+[NUMERIC] variable_rate_debt_rate: $117M → $4M (-96.9%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (total_derivative_asset, net_derivative_position, equity_sensitivity_10pct)
+[VALIDATION] Likely units mismatch: fx_forward_sell_notional changed from 0 to 349 (873x)
+[LLM_FLAG] fx_forward_gain_loss changed significantly from prior period
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($441M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($441M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[NEW_FIELD] fx_forward_sell_notional: appeared for first time ($324M)
+[NEW_FIELD] fx_forward_buy_notional: appeared for first time ($117M)
+[NEW_FIELD] fx_forward_gain_loss: appeared for first time ($-12M)
+[NEW_FIELD] short_term_investments: appeared for first time ($199M)
+[NEW_FIELD] cash_and_equivalents: appeared for first time ($2,160M)
+[NEW_FIELD] fx_translation_adjustment: appeared for first time ($16M)
+[NEW_FIELD] fx_transaction_loss: appeared for first time ($-6M)
+[NEW_FIELD] variable_rate_debt_rate: appeared for first time ($4M)
+[LLM_FLAG] fx_forward_gain_loss differs significantly from the prior year, indicating a notable variance in the outcomes of their foreign currency hedging activities.
+
 === 10-K | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-17M)

@@ -1,3 +1,26 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,050M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($17M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($9M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($128M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-119M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $13M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $86M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-73M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] unrealized_gains_losses: appeared for first time ($-353M)
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($970M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($13M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($86M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-73M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[LLM_FLAG] net_derivative_position changed from (9) to (73), a 711% increase.
+[LLM_FLAG] total_derivative_liability increased by 861% from previous period (from 9 to 86).
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 

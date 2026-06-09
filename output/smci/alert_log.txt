@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NUMERIC] total_cash_equivalents_fv: $42M → $19M (-54.8%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $100,498M → $60,157M (-40.1%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $15,192M → $15M (-99.9%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely units mismatch: marketable_equity_securities_fv changed from 15,192 to 15 (0x)
+[LLM_FLAG] total_marketable_securities_fv decreased more than 50% from prior period
+[LLM_FLAG] gross_unrealized_gains_debt increased more than 50% from prior period
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($42M)
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($100,498M)
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($15,192M)
+[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($0M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NUMERIC] total_cash_equivalents_fv: $42M → $19M (-54.8%) — exceeds 20% threshold
 [NUMERIC] total_marketable_securities_fv: $100,498M → $626M (-99.4%) — exceeds 20% threshold

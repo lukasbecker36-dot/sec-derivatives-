@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($865M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($865M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,700M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $378M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $1,600M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (total_derivative_asset, net_derivative_position)
+[LLM_FLAG] fx_derivatives_notional increased by more than 50% from the prior period value, signaling a significant increase in currency hedging activity.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($378M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,600M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] credit_facility_drawn: appeared for first time ($0M)
+[LLM_FLAG] The total notional amount of FX derivatives not designated as hedging instruments represents a significant increase from the prior period, highlighting potential changes in Uber's exposure to foreign currency risks.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($865M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($865M)

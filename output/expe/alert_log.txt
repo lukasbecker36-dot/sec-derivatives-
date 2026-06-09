@@ -1,3 +1,49 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($8,800M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,500M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($7,300M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($220M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $220M, now missing
+[NUMERIC] total_derivative_liability: $220M → $35M (-84.1%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($-35M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($40M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($40M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $25M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $11M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-11M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] debt_fair_value: was $-46M, now missing
+[DISAPPEARED_FIELD] debt_sensitivity: was $-85M, now missing
+[DISAPPEARED_FIELD] forward_contract_liability: was $-35M, now missing
+[DISAPPEARED_FIELD] cross_currency_swap_notional: was $6M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_scenario: was $83M, now missing
+[DISAPPEARED_FIELD] historical_fx_losses: was $5M, now missing
+[DISAPPEARED_FIELD] revolving_credit_outstanding: was $85M, now missing
+[VALIDATION] Likely extraction failure: 12/13 previously-populated fields are now null (total_derivative_asset, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct...)
+[LLM_FLAG] fx_not_designated_notional differs from prior period values; significant FX business exposure indicated by high notional amounts.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($220M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($220M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($25M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($11M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-11M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-46M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-85M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-35M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($6M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($83M)
+[NEW_FIELD] debt_fair_value: appeared for first time ($5M)
+[NEW_FIELD] debt_sensitivity: appeared for first time ($85M)
+[NEW_FIELD] forward_contract_liability: appeared for first time ($13M)
+[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($220M)
+[NEW_FIELD] cross_currency_swap_fair_value: appeared for first time ($-11M)
+[NEW_FIELD] fx_sensitivity_scenario: appeared for first time ($-35M)
+[NEW_FIELD] historical_fx_losses: appeared for first time ($-46M)
+[NEW_FIELD] revolving_credit_outstanding: appeared for first time ($0M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing

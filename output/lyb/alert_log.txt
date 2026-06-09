@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NUMERIC] fx_derivatives_notional: $877M → $324M (-63.1%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $921M → $294M (-68.1%) — exceeds 20% threshold
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($324M)
+[NUMERIC] ir_swap_notional: $59M → $1,879M (+3084.7%) — exceeds 20% threshold
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($61M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($5M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($5M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[LLM_FLAG] The notional amount of foreign currency derivatives not designated as hedges increased significantly from the prior period value of 295.0 million to 324.0 million, a deviation of more than 50%.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($877M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($921M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($59M)
+[LLM_FLAG] extraction_failed: Invalid control character at: line 6 column 50 (char 144)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $6M, now missing
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $16M, now missing

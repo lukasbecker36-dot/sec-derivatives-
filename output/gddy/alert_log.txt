@@ -1,3 +1,26 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NUMERIC] fx_forward_notional: $1,333M → $1,046M (-21.5%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_asset: appeared for first time ($57M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($103M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($50M)
+[NUMERIC] aoci_realized_losses: $4M → $9M (+116.3%) — exceeds 20% threshold
+[NUMERIC] aoci_unrealized_losses: $22M → $6M (-73.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] constant_currency_impact: was $0M, now missing
+[LLM_FLAG] ir_swap_notional decreased by more than 50% compared to prior period; noteworthy due to significant changes in interest rate strategy or market conditions.
+[LLM_FLAG] aoci_realized_losses increased from 4.3 to 9.3, a 116% increase, likely due to increased hedging activity.
+[LLM_FLAG] aoci_unrealized_losses decreased from 21.9 to 5.9, a 73% decrease, indicating improved hedging effectiveness.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,918M)
+[NEW_FIELD] fx_forward_notional: appeared for first time ($1,333M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $59M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $138M, now missing
+[NUMERIC] aoci_realized_losses: $2M → $4M (+104.8%) — exceeds 20% threshold
+[NUMERIC] aoci_unrealized_losses: $-21M → $22M (+205.8%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (total_derivative_asset, total_derivative_liability)
+[LLM_FLAG] ir_swap_notional differ by more than 50% from prior period, indicating significant changes in derivative strategy or exposure.
+[LLM_FLAG] aoci_realized_losses increased significantly from prior period value of 2.1 million, indicating more volatility or changes in hedging strategy.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NUMERIC] total_derivative_liability: $136M → $103M (-24.5%) — exceeds 20% threshold
 [NUMERIC] aoci_realized_losses: $4M → $9M (+116.3%) — exceeds 20% threshold

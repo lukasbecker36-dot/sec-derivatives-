@@ -1,3 +1,41 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($130M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($130M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,466M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($293M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-293M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($3M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_forward_fair_value_sensitivity: was $11M, now missing
+[DISAPPEARED_FIELD] cross_currency_swap_notional: was $13M, now missing
+[DISAPPEARED_FIELD] foreign_debt_amount: was $203M, now missing
+[DISAPPEARED_FIELD] foreign_debt_hedge_percentage: was $20M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt: was $127M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $2,720M, now missing
+[DISAPPEARED_FIELD] marketable_securities_value: was $339M, now missing
+[DISAPPEARED_FIELD] marketable_securities_sensitivity: was $3,673M, now missing
+[VALIDATION] Likely extraction failure: 8/10 previously-populated fields are now null (fx_forward_fair_value_sensitivity, cross_currency_swap_notional, foreign_debt_amount, foreign_debt_hedge_percentage, variable_rate_debt...)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,470M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($11M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($13M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($203M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($20M)
+[NEW_FIELD] fx_forward_notional: appeared for first time ($127M)
+[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($2,720M)
+[NEW_FIELD] cross_currency_swap_sensitivity: appeared for first time ($339M)
+[NEW_FIELD] foreign_debt_amount: appeared for first time ($3,673M)
+[NEW_FIELD] foreign_debt_hedge_percentage: appeared for first time ($94M)
+[NEW_FIELD] variable_rate_debt: appeared for first time ($5,768M)
+[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($1,470M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($11M)
+[NEW_FIELD] marketable_securities_value: appeared for first time ($203M)
+[NEW_FIELD] marketable_securities_sensitivity: appeared for first time ($20M)
+[LLM_FLAG] New cross-currency swap agreements were entered into on February 3, 2025, following the termination of existing agreements, which is a noteworthy change.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $127M, now missing

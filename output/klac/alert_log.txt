@@ -1,3 +1,37 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $467M → $44M (-90.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $386M → $19M (-95.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $112M → $25M (-77.8%) — exceeds 20% threshold
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($69M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($14M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $53M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $8M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $44M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $84M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $32M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/9 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value...)
+
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($467M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($386M)
+[NUMERIC] fx_not_designated_notional: $30M → $112M (+272.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $12M → $53M (+337.5%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($44M)
+[NUMERIC] cash_flow_hedge_aoci: $30M → $84M (+178.5%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $20M → $32M (+62.5%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[LLM_FLAG] total_derivative_asset decreased compared to prior period, which should be investigated as it dropped from 12.0 to 52.505
+[LLM_FLAG] total_derivative_liability increased sharply compared to prior period, going from 0.0 to 8.219, raising potential concerns on counterparty credit risk.
+[LLM_FLAG] net_derivative_position shows a significant difference, changing from a net asset to a smaller net asset, suggesting increased liability exposure.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,235M)
 [NUMERIC] total_derivative_asset: $1,150M → $44M (-96.2%) — exceeds 20% threshold

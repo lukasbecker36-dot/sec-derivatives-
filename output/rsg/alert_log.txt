@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($28M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NUMERIC] variable_rate_debt_outstanding: $26M → $2,800M (+10669.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fixed_rate_debt_maturity_profile: was $11M, now missing
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (equity_sensitivity_10pct, fixed_rate_debt_maturity_profile)
+[VALIDATION] Likely units mismatch: variable_rate_debt_outstanding changed from 26 to 2,800 (108x)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] ir_sensitivity_100bp: $100M → $26M (-74.0%) — exceeds 20% threshold
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($11M)
+[NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($11,157M)
+[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($2,553M)
+[NEW_FIELD] total_debt_fair_value: appeared for first time ($10,945M)
+[LLM_FLAG] ir_sensitivity_100bp changed from 100.0 to 26.0, which is a decrease of more than 50%. Updated methodology may reflect changing interest rates impacting debt servicing costs.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($28M)

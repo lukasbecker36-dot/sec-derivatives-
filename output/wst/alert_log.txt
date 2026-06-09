@@ -1,3 +1,34 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($378M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($263M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($115M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($17M)
+[NUMERIC] total_derivative_asset: $465M → $217M (-53.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $445M → $17M (-96.3%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $20M → $200M (+912.6%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $130M → $2M (-98.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $1M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $1M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/11 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value)
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($465M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($445M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($20M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($130M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($1M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($1M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[LLM_FLAG] extraction_failed: Expecting property name enclosed in double quotes: line 54 column 21 (char 2120)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 

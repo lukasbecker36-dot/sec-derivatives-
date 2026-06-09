@@ -1,3 +1,47 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($25,314M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($24M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1M)
+[NUMERIC] total_derivative_asset: $25,507M → $286M (-98.9%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $23,852M → $244M (-99.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $1,556M → $42M (-97.3%) — exceeds 20% threshold
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($23M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($133M)
+[NUMERIC] fx_transaction_gain_loss: $196M → $-32M (-116.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $653M, now missing
+[NUMERIC] fx_sensitivity_10pct: $-457M → $-2,263M (-395.2%) — exceeds 20% threshold
+[NUMERIC] fixed_rate_notes_billion: $-275M → $14M (+105.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] debt_amount: appeared for first time ($14,400M)
+[NEW_FIELD] foreign_currency_revenue_percentage: appeared for first time ($58M)
+[NEW_FIELD] foreign_currency_expense_percentage: appeared for first time ($30M)
+[NUMERIC] constant_currency_impact: $14M → $-408M (-2913.8%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_revenue_hedges: appeared for first time ($-2,263M)
+[NEW_FIELD] fx_sensitivity_content_hedges: appeared for first time ($-274M)
+[NUMERIC] fx_sensitivity_monetary_items: $14,500M → $-32M (-100.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] primary_currencies: was $56M, now missing
+[VALIDATION] Likely units mismatch: fx_sensitivity_monetary_items changed from 14,500 to -32 (0x)
+[LLM_FLAG] fx_transaction_gain_loss shows a material loss compared to prior period gain of 196.0
+[LLM_FLAG] fx_sensitivity_10pct significantly differs from prior period value of -457.0
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($25,507M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($23,852M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,556M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($196M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($653M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-457M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-275M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($14M)
+[NEW_FIELD] debt_amount: appeared for first time ($14,500M)
+[NEW_FIELD] foreign_currency_revenue_percentage: appeared for first time ($56M)
+[NEW_FIELD] foreign_currency_expense_percentage: appeared for first time ($31M)
+[NEW_FIELD] constant_currency_impact: appeared for first time ($271M)
+[NEW_FIELD] fx_sensitivity_revenue_hedges: appeared for first time ($2,296M)
+[NEW_FIELD] fx_sensitivity_content_hedges: appeared for first time ($237M)
+[NEW_FIELD] fx_sensitivity_monetary_items: appeared for first time ($1M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
 [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($14M)

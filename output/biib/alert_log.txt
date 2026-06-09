@@ -1,3 +1,35 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,632M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,241M)
+[NUMERIC] total_derivative_asset: $1,531M → $24M (-98.4%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($38M)
+[NUMERIC] net_derivative_position: $1,194M → $-14M (-101.2%) — exceeds 20% threshold
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-6M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($16M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $10M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $57M, now missing
+[NUMERIC] fx_sensitivity_10pct: $-46M → $-254M (-448.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-73M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $68M, now missing
+[NEW_FIELD] hypothetical_fx_impact_current: appeared for first time ($-254M)
+[NEW_FIELD] hypothetical_fx_impact_prior: appeared for first time ($-278M)
+[VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fixed_rate_notes_billion, marketable_equity_value)
+[LLM_FLAG] Net derivative position is negative (-14.2), which represents a significant change in the company's derivative exposure compared to prior period net asset of 1193.7 million.
+[LLM_FLAG] fx_sensitivity_10pct flagged due to a decrease greater than 50% from prior period values.
+[LLM_FLAG] hypothetical_fx_impact_current flagged due to significant decrease of more than 50% from prior period.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,531M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,194M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($10M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($57M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-46M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-73M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($68M)
+[NEW_FIELD] hypothetical_fx_impact_current: appeared for first time ($278M)
+[NEW_FIELD] hypothetical_fx_impact_prior: appeared for first time ($192M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] hypothetical_fx_impact_current: appeared for first time ($254M)
