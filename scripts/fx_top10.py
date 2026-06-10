@@ -191,11 +191,37 @@ def main():
                    default="notional")
     p.add_argument("--top", type=int, default=10)
     p.add_argument("--csv", help="write full ranking to this path")
+    p.add_argument("--max-growth-pct", type=float, default=1000.0,
+                   help="Drop rows whose growth % exceeds this (units bug guard).")
+    p.add_argument("--max-notional", type=float, default=500_000.0,
+                   help="Drop rows whose current notional ($m) exceeds this. "
+                        "Default 500B catches issuers reporting in thousands.")
     args = p.parse_args()
 
     rows = load_rows()
     totals = aggregate_fx_by_filing(rows)
     ranking = pick_current_and_baseline(totals)
+
+    suspect = []
+    clean = []
+    for r in ranking:
+        if r["current_fx_notional_m"] and r["current_fx_notional_m"] > args.max_notional:
+            r["_flag"] = f"current_notional > {args.max_notional:,.0f}m (likely units bug)"
+            suspect.append(r)
+            continue
+        if r["growth_pct"] is not None and abs(r["growth_pct"]) > args.max_growth_pct:
+            r["_flag"] = f"growth_pct > {args.max_growth_pct:.0f}% (likely units bug in baseline)"
+            suspect.append(r)
+            continue
+        clean.append(r)
+    ranking = clean
+
+    if suspect:
+        print(f"\n⚠  Dropped {len(suspect)} suspect row(s) (re-extract these issuers):")
+        for r in suspect:
+            print(f"   {r['ticker']:>6}  current={r['current_fx_notional_m']:>12,.0f}  "
+                  f"baseline={r.get('baseline_fx_notional_m') or 0:>10,.0f}  "
+                  f"Δ%={r.get('growth_pct') or 0:>10.1f}  — {r['_flag']}")
 
     key_fn = {
         "notional": lambda r: r["current_fx_notional_m"] or 0,

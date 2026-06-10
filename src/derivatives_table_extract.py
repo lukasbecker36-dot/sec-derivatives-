@@ -196,12 +196,18 @@ Rules:
 - "Foreign currency exchange contracts" → asset_class="fx", instrument_type="forward" unless otherwise stated.
 - "Interest rate swaps" / "Interest rate contracts" → asset_class="ir", instrument_type="swap".
 - A "Total" row should have designation="total".
-- CRITICAL — unit handling: Look for a units note in the table header (e.g. "in millions", "in billions",
-  "amounts in millions"). Use that scale literally.
-  - If the header says "(in millions)" and a cell shows "23,448" → return 23448 (already in millions, no conversion).
+- CRITICAL — unit handling: Look for a units note in the table header or filing context
+  (e.g. "in millions", "in thousands", "in billions", "amounts in thousands of dollars",
+  "(in $000s)", "$ in millions"). Output every value in USD millions.
+  - If the header says "(in thousands)" and a cell shows "102,388" → return 102.388 (divide by 1000).
+  - If the header says "(in millions)" and a cell shows "23,448" → return 23448 (no conversion).
   - If the header says "(in billions)" and a cell shows "23.4" → return 23400 (multiply by 1000).
-  - If no unit header found, assume millions.
+  - If no unit header is visible, assume millions ONLY if the values look plausibly millions-scale
+    (typically 1 to 100,000); if values are >100,000 they are almost certainly thousands.
   - Never treat a comma as a decimal separator — "23,448" means twenty-three thousand four hundred forty-eight.
+- Sanity floor: a real corporate derivative notional is essentially never below $1m. If a cell shows
+  e.g. "23" and looks like it could be thousands or a P&L gain/loss rather than a notional, return null
+  rather than guessing.
 - Pick the MOST RECENT period column if the table shows multiple periods (i.e. {period_end}).
 - If a row has no notional and no fair value, skip it.
 - Empty rows list is acceptable if the table has no extractable derivative rows.
