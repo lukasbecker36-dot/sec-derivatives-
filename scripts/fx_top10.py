@@ -192,7 +192,7 @@ def main():
     p.add_argument("--top", type=int, default=10)
     p.add_argument("--csv", help="write full ranking to this path")
     p.add_argument("--max-growth-pct", type=float, default=1000.0,
-                   help="Drop rows whose growth % exceeds this (units bug guard).")
+                   help="Drop rows whose growth %% exceeds this (units bug guard).")
     p.add_argument("--max-notional", type=float, default=500_000.0,
                    help="Drop rows whose current notional ($m) exceeds this. "
                         "Default 500B catches issuers reporting in thousands.")
