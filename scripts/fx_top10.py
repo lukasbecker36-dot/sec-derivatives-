@@ -42,27 +42,85 @@ def load_rows():
         return list(csv.DictReader(f))
 
 
-def aggregate_fx_by_filing(rows):
-    """Return {(ticker, period_end, form_type): total_fx_notional_millions}."""
-    totals: dict[tuple[str, str, str], float] = defaultdict(float)
-    seen: dict[tuple[str, str, str], bool] = {}
+def deduplicate_rows(rows):
+    """Remove exact duplicate rows (same run or re-extraction).
+
+    Keeps the first occurrence of each
+    (ticker, period_end, accession, asset_class, designation, source_table_idx,
+     notional_usd_millions) tuple.
+    """
+    seen = set()
+    out = []
     for r in rows:
-        if r.get("asset_class") != "fx":
+        key = (
+            r.get("ticker"), r.get("period_end"), r.get("accession"),
+            r.get("asset_class"), r.get("designation"),
+            r.get("source_table_idx"), r.get("notional_usd_millions"),
+        )
+        if key not in seen:
+            seen.add(key)
+            out.append(r)
+    return out
+
+
+def pick_notional_table(rows_for_filing):
+    """From all rows for one (ticker, period_end, accession), select only rows
+    from the single source table that has the most FX notional values.
+
+    This prevents summing across the notional table + fair-value table +
+    P&L gain/loss table, which the sweep may all return as candidates.
+    """
+    by_table: dict[str, list] = defaultdict(list)
+    for r in rows_for_filing:
+        by_table[r.get("source_table_idx", "")].append(r)
+
+    # Score each table: count of rows with a real notional value
+    def notional_count(tbl_rows):
+        return sum(1 for r in tbl_rows
+                   if _to_float(r.get("notional_usd_millions")) is not None
+                   and _to_float(r.get("notional_usd_millions", 0)) > 0)
+
+    best = max(by_table.keys(), key=lambda t: notional_count(by_table[t]))
+    return by_table[best]
+
+
+def aggregate_fx_by_filing(rows):
+    """Return {(ticker, period_end, form_type): total_fx_notional_millions}.
+
+    Steps:
+    1. Deduplicate identical rows from repeated runs.
+    2. For each filing, pick the single source table with the most notional rows.
+    3. Sum non-total FX rows from that table.
+    """
+    rows = deduplicate_rows(rows)
+
+    # Group by (ticker, period_end, accession, form_type)
+    by_filing: dict[tuple, list] = defaultdict(list)
+    for r in rows:
+        key = (r["ticker"], r["period_end"], r.get("accession", ""), r["form_type"])
+        by_filing[key].append(r)
+
+    totals: dict[tuple[str, str, str], float] = {}
+    for (ticker, period_end, accession, form_type), filing_rows in by_filing.items():
+        fx_rows = [r for r in filing_rows if r.get("asset_class") == "fx"]
+        if not fx_rows:
             continue
-        # Skip "total" rows to avoid double-counting when we also have the
-        # designated + not_designated breakdown.
-        designation = (r.get("designation") or "").lower()
-        notional = _to_float(r.get("notional_usd_millions"))
-        if notional is None:
-            continue
-        key = (r["ticker"], r["period_end"], r["form_type"])
-        # If we see designated + not_designated rows, sum them and skip totals.
-        # Track which keys have non-total rows.
-        if designation != "total":
-            totals[key] += notional
-            seen[key] = True
-        elif key not in seen:
-            totals[key] = notional
+        best_rows = pick_notional_table(fx_rows)
+        # Sum non-total designations; fall back to total if that's all we have
+        non_total = [r for r in best_rows
+                     if (r.get("designation") or "").lower() != "total"]
+        rows_to_sum = non_total if non_total else best_rows
+        total = sum(
+            _to_float(r["notional_usd_millions"])
+            for r in rows_to_sum
+            if _to_float(r.get("notional_usd_millions")) is not None
+            and _to_float(r["notional_usd_millions"]) > 0
+        )
+        if total > 0:
+            filing_key = (ticker, period_end, form_type)
+            # Keep max if same filing appears twice (e.g. 10-Q/A replacing 10-Q)
+            if filing_key not in totals or total > totals[filing_key]:
+                totals[filing_key] = total
     return totals
 
 

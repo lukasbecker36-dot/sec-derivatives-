@@ -162,7 +162,8 @@ def sweep_filing(html: str, top_k: int = 3) -> list[TableCandidate]:
 LLM_SYSTEM = (
     "You normalise SEC derivatives notional tables into structured JSON rows. "
     "Read the table text and output one row per distinct combination of "
-    "(asset_class, designation, instrument_type, currency). Use millions of USD. "
+    "(asset_class, designation, instrument_type, currency). "
+    "All output amounts must be in USD millions. "
     "Do not invent values. If a cell is blank or unclear, return null. "
     "Do not include rows that aren't derivatives (e.g. debt schedules, AOCI rollforward)."
 )
@@ -195,7 +196,12 @@ Rules:
 - "Foreign currency exchange contracts" → asset_class="fx", instrument_type="forward" unless otherwise stated.
 - "Interest rate swaps" / "Interest rate contracts" → asset_class="ir", instrument_type="swap".
 - A "Total" row should have designation="total".
-- Convert all amounts to USD millions (if "billion" used, multiply by 1000).
+- CRITICAL — unit handling: Look for a units note in the table header (e.g. "in millions", "in billions",
+  "amounts in millions"). Use that scale literally.
+  - If the header says "(in millions)" and a cell shows "23,448" → return 23448 (already in millions, no conversion).
+  - If the header says "(in billions)" and a cell shows "23.4" → return 23400 (multiply by 1000).
+  - If no unit header found, assume millions.
+  - Never treat a comma as a decimal separator — "23,448" means twenty-three thousand four hundred forty-eight.
 - Pick the MOST RECENT period column if the table shows multiple periods (i.e. {period_end}).
 - If a row has no notional and no fair value, skip it.
 - Empty rows list is acceptable if the table has no extractable derivative rows.
