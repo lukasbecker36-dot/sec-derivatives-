@@ -43,44 +43,52 @@ def load_rows():
 
 
 def deduplicate_rows(rows):
-    """Remove exact duplicate rows (same run or re-extraction).
+    """Collapse identical-shape rows from repeated runs, keeping the row with
+    the LATEST extracted_at timestamp.
 
-    Keeps the first occurrence of each
-    (ticker, period_end, accession, asset_class, designation, source_table_idx,
-     notional_usd_millions) tuple.
+    Dedup key intentionally EXCLUDES notional value — so if a prior run stored
+    a broken value (e.g. 16.384 from comma-as-decimal bug) and a later run
+    stored the corrected 16384, only the later one survives.
     """
-    seen = set()
-    out = []
+    latest = {}
     for r in rows:
         key = (
             r.get("ticker"), r.get("period_end"), r.get("accession"),
             r.get("asset_class"), r.get("designation"),
-            r.get("source_table_idx"), r.get("notional_usd_millions"),
+            r.get("instrument_type"), r.get("source_table_idx"),
         )
-        if key not in seen:
-            seen.add(key)
-            out.append(r)
-    return out
+        ts = r.get("extracted_at", "")
+        if key not in latest or ts > latest[key].get("extracted_at", ""):
+            latest[key] = r
+    return list(latest.values())
 
 
 def pick_notional_table(rows_for_filing):
-    """From all rows for one (ticker, period_end, accession), select only rows
-    from the single source table that has the most FX notional values.
+    """From all rows for one (ticker, period_end, accession), select rows from
+    the single source table with the highest SUM of notional values.
 
-    This prevents summing across the notional table + fair-value table +
-    P&L gain/loss table, which the sweep may all return as candidates.
+    Sum (not row count) is the right signal: a real derivatives notional
+    table has totals in the tens of billions; a P&L reclassification table
+    has values in the hundreds. Using row count alone causes the picker to
+    prefer P&L tables that itemise many small line items.
     """
     by_table: dict[str, list] = defaultdict(list)
     for r in rows_for_filing:
         by_table[r.get("source_table_idx", "")].append(r)
 
-    # Score each table: count of rows with a real notional value
-    def notional_count(tbl_rows):
-        return sum(1 for r in tbl_rows
-                   if _to_float(r.get("notional_usd_millions")) is not None
-                   and _to_float(r.get("notional_usd_millions", 0)) > 0)
+    def notional_sum(tbl_rows):
+        # Sum only non-total rows to avoid counting "total" twice; if no
+        # non-total rows, fall back to all rows.
+        non_total = [r for r in tbl_rows
+                     if (r.get("designation") or "").lower() != "total"]
+        target = non_total if non_total else tbl_rows
+        return sum(
+            _to_float(r.get("notional_usd_millions")) or 0
+            for r in target
+            if _to_float(r.get("notional_usd_millions")) is not None
+        )
 
-    best = max(by_table.keys(), key=lambda t: notional_count(by_table[t]))
+    best = max(by_table.keys(), key=lambda t: notional_sum(by_table[t]))
     return by_table[best]
 
 
