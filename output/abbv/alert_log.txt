@@ -1,98 +1,41 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NUMERIC] ir_swap_notional: $1,800M → $4,080M (+126.7%) — exceeds 20% threshold
-[NUMERIC] total_derivative_asset: $91M → $155M (+70.3%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $540M → $338M (-37.4%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $-449M → $-183M (+59.2%) — exceeds 20% threshold
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($10M)
-[NUMERIC] expected_12mo_reclass_from_aoci: $19M → $24M (+26.3%) — exceeds 20% threshold
-[DROPPED_TO_ZERO] fx_forwards_outstanding: $19,568M → $0M
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-458M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-81M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-2,000M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_amount: was $2,000M, now missing
-[DISAPPEARED_FIELD] interest_rate_swap_sensitivity: was $-81M, now missing
-[DISAPPEARED_FIELD] debt_fair_value_sensitivity: was $-4,500M, now missing
-[VALIDATION] Likely extraction failure: 7/16 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, fx_sensitivity_amount...)
-[LLM_FLAG] ir_swap_notional increased by more than 50% compared to the prior period (from 1800 to 4080).
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-10 ===
+[HISTORICAL] [NUMERIC] ir_swap_notional: $1,800M → $4,050M (+125.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $91M → $155M (+70.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $540M → $338M (-37.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-449M → $-183M (+59.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $2M → $24M (+1100.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $19,568M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $81M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2,000M, now missing
+[HISTORICAL] [LLM_FLAG] Net investment hedge notionals stated in EUR/SEK/CAD/CHF; converted to USD at approximate spot rates (EUR~1.08, SEK~0.095, CAD~0.72, CHF~1.13). Senior Euro notes (€3.1B non-derivative net-investment hedge) excluded — they are debt, not derivatives.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($9,200M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($2,500M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($6,700M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($1,800M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($91M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($540M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-449M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($19M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($19,568M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-458M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-81M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-2,000M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
-[NEW_FIELD] fx_sensitivity_amount: appeared for first time ($2,000M)
-[NEW_FIELD] interest_rate_swap_sensitivity: appeared for first time ($-81M)
-[NEW_FIELD] debt_fair_value_sensitivity: appeared for first time ($-4,500M)
-[LLM_FLAG] fx_derivatives_notional increased from $5.9 billion in 2024 to $9.2 billion in 2025, a growth of over 50%. This is notable as it indicates a significant increase in hedging activity.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-10 ===
+[HISTORICAL] [NUMERIC] ir_swap_notional: $3,500M → $1,800M (-48.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $125M → $91M (-27.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $690M → $540M (-21.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-565M → $-449M (+20.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-15M → $2M (+113.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($19,568M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($81M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($2,000M)
+[HISTORICAL] [LLM_FLAG] Net investment hedge notionals stated in EUR/SEK/CAD/CHF; converted to USD at approximate spot rates (EUR~1.08, SEK~0.095, CAD~0.72, CHF~1.13). Senior Euro notes (€3.1B non-derivative net-investment hedge) excluded — they are debt, not derivatives.
+[HISTORICAL] [LLM_FLAG] Long-term debt sensitivity also disclosed: 100bp increase would decrease fair value of long-term debt by $4.5 billion
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[DROPPED_TO_ZERO] fx_forwards_outstanding: $19,568M → $0M
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-458M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-81M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-2,000M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_amount: was $-2,000M, now missing
-[DISAPPEARED_FIELD] interest_rate_swap_sensitivity: was $-81M, now missing
-[DISAPPEARED_FIELD] debt_fair_value_sensitivity: was $-4,500M, now missing
-[VALIDATION] Likely extraction failure: 7/8 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, fx_sensitivity_amount...)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-10 ===
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $6,300M → $10,100M (+60.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $101M → $125M (+23.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $880M → $690M (-21.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-779M → $-565M (+27.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $13M → $-15M (-215.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Net investment hedge notionals stated in EUR/SEK/CAD/CHF; converted to USD at approximate spot rates (EUR~1.08, SEK~0.095, CAD~0.72, CHF~1.13). Senior Euro notes (€3.1B non-derivative net-investment hedge) excluded — they are debt, not derivatives.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($19,568M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-458M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-81M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-2,000M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
-[NEW_FIELD] fx_sensitivity_amount: appeared for first time ($-2,000M)
-[NEW_FIELD] interest_rate_swap_sensitivity: appeared for first time ($-81M)
-[NEW_FIELD] debt_fair_value_sensitivity: appeared for first time ($-4,500M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-10 ===
+[HISTORICAL] [NUMERIC] fx_designated_notional: $9,351M → $11,451M (+22.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $130M → $101M (-22.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $252M → $880M (+249.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-122M → $-779M (-538.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $126M → $13M (-89.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Net investment hedge notionals stated in EUR/SEK/CAD/CHF; converted to USD at approximate spot rates (EUR~1.08, SEK~0.095, CAD~0.72, CHF~1.13). Senior Euro notes (€3.1B non-derivative net-investment hedge) excluded — they are debt, not derivatives.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXsh4araQkxRa3vN8KL'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXsYHz7uG4oKtiTir4W'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXsLte5n576iNDuQ6sQ'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXs8qr76yCDv1DsWeTw'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXrwG5jLk91wm2RTGyF'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
-[LLM_FLAG] Excerpt contains only a header reference to market risk disclosures in the 10-K; detailed quantitative data not provided in this excerpt
-[LLM_FLAG] Unable to compare 2025 Q3 values against prior periods due to insufficient data in the provided text
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
-[LLM_FLAG] Provided text is only a reference header to the full 'Quantitative and Qualitative Disclosures About Market Risk' section and does not contain actual disclosure data. All specific numerical fields cannot be extracted.
-[LLM_FLAG] The excerpt references the 2024 10-K annual report rather than the requested 2025 Q2 10-Q filing period.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $19,568M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-81M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_amount: was $-2,000M, now missing
-[DISAPPEARED_FIELD] interest_rate_swap_sensitivity: was $-81M, now missing
-[DISAPPEARED_FIELD] debt_fair_value_sensitivity: was $-4,500M, now missing
-[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, fixed_rate_notes_billion, fx_sensitivity_amount, interest_rate_swap_sensitivity...)
-[LLM_FLAG] The provided text is merely a section header/reference to the Form 10-K annual report. It does not contain the actual quantitative and qualitative disclosures about market risk. All specific numerical data fields cannot be extracted from this excerpt.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-10 ===
+[HISTORICAL] [LLM_FLAG] Net investment hedge notionals stated in EUR/SEK/CAD/CHF; converted to USD at approximate spot rates (EUR~1.08, SEK~0.095, CAD~0.72, CHF~1.13). Senior Euro notes (€3.1B non-derivative net-investment hedge) excluded — they are debt, not derivatives.
