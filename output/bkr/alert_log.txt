@@ -1,3 +1,26 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-10 ===
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1,198M)
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($1,170M)
+[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($28M)
+[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($10M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($38M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($10M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($38M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-28M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-91M)
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $500M, now missing
+[DISAPPEARED_FIELD] foreign_currency_forward_notional: was $4,000M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, interest_rate_swap_notional, foreign_currency_forward_notional)
+[LLM_FLAG] Total outstanding notional dropped from $7.1B to $3.5B QoQ due to termination of $2.5B interest rate swaps and other activity
+[LLM_FLAG] All cash flow hedges terminated as of March 31, 2026; $91M loss in AOCI from terminated IR swaps
+[LLM_FLAG] Company designated EUR 3.0B (~$3.4B) of newly issued notes as non-derivative net investment hedge
+[LLM_FLAG] Credit default swaps of $159M notional remaining (down from $287M at Dec 2025) related to Mexico customer receivables
+[LLM_FLAG] Market risk section is a brief cross-reference stating no material change since Dec 31, 2025, but the derivatives note shows substantial changes (total notional halved from $7.1B to $3.5B)
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
