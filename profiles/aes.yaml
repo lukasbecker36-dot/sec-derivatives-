@@ -1,36 +1,28 @@
 issuer: AES Corporation
 ticker: AES
-cik: "874761"
+cik: '874761'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   commodity_price_sensitivity:
-    description: "hypothetical 10% increase impact on pre-tax earnings by commodity type"
+    description: hypothetical 10% increase impact on pre-tax earnings by commodity type
     section: market_risk
   nonperformance_risk_adjustments:
-    description: "fair value adjustments for credit and nonperformance risk"
+    description: fair value adjustments for credit and nonperformance risk
     section: market_risk
   hedging_strategies:
-    description: "risk management strategies including derivatives usage"
+    description: risk management strategies including derivatives usage
     section: market_risk
   fair_value_assumptions:
-    description: "market participant assumptions including credit risk factors"
+    description: market participant assumptions including credit risk factors
     section: market_risk
   commodity_exposures:
-    description: "exposure to electricity, natural gas, coal, and environmental credits by business segment"
+    description: exposure to electricity, natural gas, coal, and environmental credits by business segment
     section: market_risk
   contract_indexation_mechanisms:
-    description: "PPA price adjustment mechanisms based on commodity price fluctuations"
+    description: PPA price adjustment mechanisms based on commodity price fluctuations
     section: market_risk
-
-# Unusual features identified:
-#   - Cross-references to Item 8 instead of standalone derivative note
-#   - Extensive commodity-specific sensitivity analysis with quantified impacts
-#   - Geographic segmentation of derivative exposures by country/region
-#   - Integration of physical and financial derivative positions in sensitivity calculations
-#   - Detailed discussion of contract indexation mechanisms as hedge substitutes
-#   - Explicit exclusion of correlation effects from sensitivity models
-
+sections:
+  financial_instruments:
+    heading: 3\.\s+FAIR\s+VALUE

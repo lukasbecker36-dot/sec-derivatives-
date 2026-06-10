@@ -1,45 +1,49 @@
 issuer: Microsoft
 ticker: MSFT
-cik: "789019"
+cik: '789019'
 archetype: minimal_hedger
 sector: Information Technology
 extraction_mode: llm
-
-# Microsoft's derivatives are in "Note 5 – Derivatives" (separate from
-# Financial Instruments). The financial_instruments note is also large.
 sections:
   financial_instruments:
-    heading: 'Note\s+\d+\s*[.–—―\-:]?\s*Financial Instruments'
+    heading: Financial\s+Instruments
     match_strategy: first
-    validation_keywords: [fair value, securities, cash]
-    end_boundary: 'Note\s+\d+\s*[.–—―\-:]?\s*(?!Financial Instruments)'
+    validation_keywords:
+    - fair value
+    - securities
+    - cash
+    end_boundary: Note\s+\d+\s*[.–—―\-:]?\s*(?!Financial Instruments)
     max_length: 30000
   derivatives_note:
-    heading: 'Note\s+\d+\s*[.–—―\-:]?\s*Derivatives'
+    heading: Note\s+\d+\s*[.–—―\-:]?\s*Derivatives
     match_strategy: first
-    validation_keywords: [notional, derivative, swap, forward, hedge]
-    end_boundary: 'Note\s+\d+\s*[.–—―\-:]?\s*(?!Derivatives)'
+    validation_keywords:
+    - notional
+    - derivative
+    - swap
+    - forward
+    - hedge
+    end_boundary: Note\s+\d+\s*[.–—―\-:]?\s*(?!Derivatives)
     max_length: 15000
-
 fields:
   fx_revenue_sensitivity:
-    description: "Earnings impact from 10% decrease in foreign exchange rates on revenue"
+    description: Earnings impact from 10% decrease in foreign exchange rates on revenue
     section: market_risk
   fx_investment_sensitivity:
-    description: "Fair value impact from 10% decrease in FX rates on investments"
+    description: Fair value impact from 10% decrease in FX rates on investments
     section: market_risk
   interest_rate_sensitivity:
-    description: "Fair value impact from 100bp increase in US treasury rates"
+    description: Fair value impact from 100bp increase in US treasury rates
     section: market_risk
   credit_spread_sensitivity:
-    description: "Fair value impact from 100bp increase in credit spreads"
+    description: Fair value impact from 100bp increase in credit spreads
     section: market_risk
   equity_price_sensitivity:
-    description: "Earnings impact from 10% decrease in equity market prices"
+    description: Earnings impact from 10% decrease in equity market prices
     section: market_risk
   long_term_debt_fair_value:
-    description: "Estimated fair value of long-term debt including current portion"
+    description: Estimated fair value of long-term debt including current portion
     section: financial_instruments
   principal_currency_exposures:
-    description: "Major currency exposures (Euro, JPY, GBP, CAD, AUD)"
+    description: Major currency exposures (Euro, JPY, GBP, CAD, AUD)
     section: market_risk
