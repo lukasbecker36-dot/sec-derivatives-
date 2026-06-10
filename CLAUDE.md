@@ -80,6 +80,16 @@ python -m src.scheduler --max-activations 50 --since 2025-01-01 --dry-run --verb
 
 # Single issuer via monitor
 python -m src.monitor --issuer META --since 2025-01-01
+
+# Backfill re-extraction (locate-then-extract; see BACKFILL_DESIGN.md)
+python -m src.backfill prepare --since 2025-01-01 --tickers AAPL,NUE   # or --next 25
+# (Claude Code processes backfill/requests/ → backfill/results/; locate requests
+#  return {found, heading_text, start_anchor, end_anchor} or {found: false, reason: not_disclosed})
+python -m src.backfill resolve            # apply locate results, emit extraction requests
+# (Claude Code processes the new extraction requests)
+python -m src.backfill finalize           # stage rows, rebuild chronology, report gate
+python -m src.backfill finalize --commit  # cut over gated issuers to output/ + promote in universe
+python -m src.backfill status
 ```
 
 ### Scheduler CLI Arguments

@@ -61,6 +61,10 @@ def _recent_alerts(days: int) -> dict[str, list[str]]:
         current_date = None
 
         for line in text.splitlines():
+            # Backfill-regenerated alerts for already-covered periods are tagged
+            # historical and must not appear in the weekly digest.
+            if '[HISTORICAL]' in line:
+                continue
             header = re.match(r'^=== .+ \| Processed (\d{4}-\d{2}-\d{2}) ===$', line)
             if header:
                 if current_block and current_date and current_date >= cutoff_str:
