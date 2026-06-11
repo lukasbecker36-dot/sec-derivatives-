@@ -614,6 +614,23 @@ def _commit_issuer(ticker: str, staged_rows: list[dict], config: IssuerConfig,
             writer.writerow(staged['row'])
     tmp_csv.replace(issuer_dir / 'tracking.csv')
 
+    # Write all rows to consolidated DB
+    try:
+        from .db import get_connection, upsert_many
+        db_rows = []
+        for staged in staged_rows:
+            db_row = dict(staged['row'])
+            db_row['ticker'] = ticker.upper()
+            db_row['issuer_name'] = config.issuer
+            db_row['cik'] = config.cik
+            db_row['sector'] = config.sector
+            db_rows.append(db_row)
+        conn = get_connection()
+        upsert_many(conn, db_rows)
+        conn.close()
+    except Exception as e:
+        logger.debug(f'DB write skipped for {ticker}: {e}')
+
     staging_dir = STAGING_DIR / ticker.lower()
     for src_name, dst_name in (('alerts.txt', 'alert_log.txt'), ('notes.txt', 'notes.txt')):
         src = staging_dir / src_name

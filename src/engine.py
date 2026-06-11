@@ -141,11 +141,31 @@ def process_filing(
     }
 
 
+METADATA_COLUMNS = ['accession_number', 'filing_date', 'processed_at', 'extraction_version']
+
+
 def _get_csv_columns(config: IssuerConfig) -> list[str]:
-    """Build ordered list of CSV columns."""
+    """Build ordered list of CSV columns (includes metadata tail)."""
     cols = ['period_end_date', 'form_type']
     cols.extend(config.fields.keys())
+    cols.extend(METADATA_COLUMNS)
     return cols
+
+
+def _write_to_db(row: dict, config: IssuerConfig):
+    """Best-effort write to the consolidated DuckDB store."""
+    try:
+        from .db import get_connection, upsert_extraction
+        db_row = dict(row)
+        db_row['ticker'] = config.ticker
+        db_row['issuer_name'] = config.issuer
+        db_row['cik'] = config.cik
+        db_row['sector'] = config.sector
+        conn = get_connection()
+        upsert_extraction(conn, db_row)
+        conn.close()
+    except Exception as e:
+        logger.debug(f'DB write skipped: {e}')
 
 
 def append_csv_row(csv_path: Path, row: dict, config: IssuerConfig):
@@ -239,7 +259,13 @@ def run_issuer(config: IssuerConfig, output_dir: Path = OUTPUT_DIR, client=None,
             result = process_filing(config, filing_meta, filing_text, prior_row,
                                     client=client, profile=profile)
 
+            result['row']['accession_number'] = filing_meta.get('accession_number', '')
+            result['row']['filing_date'] = filing_meta.get('filing_date', '')
+            result['row']['processed_at'] = datetime.now(timezone.utc).isoformat()
+            result['row']['extraction_version'] = 1
+
             append_csv_row(csv_path, result['row'], config)
+            _write_to_db(result['row'], config)
             append_notes(notes_path, filing_meta['period_end'], filing_meta['form_type'], result['notes'])
             append_alerts(alert_path, filing_meta['period_end'], filing_meta['form_type'], result['alerts'])
 

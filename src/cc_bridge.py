@@ -417,8 +417,16 @@ def finalize(since: str, max_activations: int, json_summary: str = '', verbose: 
                     if flag:
                         alerts.append(f'[LLM_FLAG] {flag}')
 
+            # Add metadata columns
+            row['accession_number'] = req_data.get('accession_number', '')
+            row['filing_date'] = req_data.get('filing_date', '')
+            row['processed_at'] = datetime.now(timezone.utc).isoformat()
+            row['extraction_version'] = 1
+
             # Write outputs
             append_csv_row(csv_path, row, config)
+            from .engine import _write_to_db
+            _write_to_db(row, config)
             notes_path = OUTPUT_DIR / config.ticker.lower() / 'notes.txt'
             alert_path = OUTPUT_DIR / config.ticker.lower() / 'alert_log.txt'
             append_notes(notes_path, period_end, req_data['form_type'], notes)
