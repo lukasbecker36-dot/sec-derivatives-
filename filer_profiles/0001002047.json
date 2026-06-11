@@ -15,7 +15,11 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "cash flow hedge",
+      "notional amount",
+      "designated as hedging"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -31,6 +35,66 @@
       ],
       "fields_extracted": 0,
       "fields_null": 0
+    },
+    {
+      "filing_date": "2025-01-24",
+      "form_type": "10-Q",
+      "period_end": "2025-01-24",
+      "processed_at": "2026-06-11T12:33:04Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 4,
+      "fields_null": 22
+    },
+    {
+      "filing_date": "2025-04-25",
+      "form_type": "10-K",
+      "period_end": "2025-04-25",
+      "processed_at": "2026-06-11T12:33:04Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 8,
+      "fields_null": 18
+    },
+    {
+      "filing_date": "2025-07-25",
+      "form_type": "10-Q",
+      "period_end": "2025-07-25",
+      "processed_at": "2026-06-11T12:33:04Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 4,
+      "fields_null": 22
+    },
+    {
+      "filing_date": "2025-10-24",
+      "form_type": "10-Q",
+      "period_end": "2025-10-24",
+      "processed_at": "2026-06-11T12:33:04Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 4,
+      "fields_null": 22
+    },
+    {
+      "filing_date": "2026-01-23",
+      "form_type": "10-Q",
+      "period_end": "2026-01-23",
+      "processed_at": "2026-06-11T12:33:04Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 4,
+      "fields_null": 22
     }
   ]
 }

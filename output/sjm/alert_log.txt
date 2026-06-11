@@ -1,0 +1,60 @@
+=== 10-Q | Period ending 2026-01-31 | Processed 2026-06-11 ===
+[NUMERIC] commodity_derivatives_notional: $1,281M → $403M (-68.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $15M → $10M (-28.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $62M → $6M (-90.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-48M → $5M (+109.7%) — exceeds 20% threshold
+[NUMERIC] commodity_derivative_notional: $1,281M → $403M (-68.5%) — exceeds 20% threshold
+[LLM_FLAG] commodity_derivatives_notional dropped 69% from $1,281.4M to $403.1M — significant reduction in commodity hedging activity
+[LLM_FLAG] commodity_derivatives_notional dropped 76% from year-ago $1,698.1M level
+
+=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-11 ===
+[NUMERIC] fx_derivatives_notional: $126M → $88M (-29.8%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $126M → $88M (-29.8%) — exceeds 20% threshold
+[NUMERIC] commodity_derivatives_notional: $1,866M → $1,281M (-31.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $26M → $15M (-43.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $143M → $62M (-56.6%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-117M → $-48M (+59.4%) — exceeds 20% threshold
+[NUMERIC] commodity_sensitivity_low: $20M → $-30M (-247.1%) — exceeds 20% threshold
+[NUMERIC] commodity_sensitivity_avg: $52M → $40M (-23.6%) — exceeds 20% threshold
+[NUMERIC] revenue_pct_international: $3M → $4M (+33.3%) — exceeds 20% threshold
+[NUMERIC] commodity_derivative_notional: $1,866M → $1,281M (-31.3%) — exceeds 20% threshold
+[LLM_FLAG] commodity_sensitivity_low swung from +$20.4M potential loss to -$30.0M potential gain — indicates some quarters had net short positions
+
+=== 10-Q | Period ending 2025-07-31 | Processed 2026-06-11 ===
+[NUMERIC] total_derivative_asset: $82M → $26M (-68.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $20M → $143M (+607.9%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $62M → $-117M (-288.6%) — exceeds 20% threshold
+[NUMERIC] revenue_pct_international: $4M → $3M (-25.0%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position swung from +$62.1M to -$117.1M — driven by $227.7M commodity derivative losses in Q1 FY2026
+[LLM_FLAG] commodity derivative loss of $227.7M in Q1 is extreme vs $30.0M loss in prior year Q1
+
+=== 10-K | Period ending 2025-04-30 | Processed 2026-06-11 ===
+[NUMERIC] fx_derivatives_notional: $98M → $122M (+24.9%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $98M → $122M (+24.9%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $62M → $82M (+33.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $37M → $20M (-44.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $25M → $62M (+148.4%) — exceeds 20% threshold
+[NUMERIC] commodity_sensitivity_high: $38M → $113M (+197.4%) — exceeds 20% threshold
+[NUMERIC] commodity_sensitivity_low: $14M → $20M (+39.9%) — exceeds 20% threshold
+[NUMERIC] commodity_sensitivity_avg: $27M → $50M (+84.4%) — exceeds 20% threshold
+[LLM_FLAG] commodity_sensitivity_high jumped from $37.9M to $112.7M — reflects significantly larger commodity derivative position
+
+=== 10-Q | Period ending 2025-01-31 | Processed 2026-06-11 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($98M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($98M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($1,534M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($62M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($37M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($25M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-120M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-12M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($590M)
+[NEW_FIELD] commodity_sensitivity_high: appeared for first time ($38M)
+[NEW_FIELD] commodity_sensitivity_low: appeared for first time ($14M)
+[NEW_FIELD] commodity_sensitivity_avg: appeared for first time ($27M)
+[NEW_FIELD] ir_cash_flow_hedge_aoci: appeared for first time ($-120M)
+[NEW_FIELD] revenue_pct_international: appeared for first time ($4M)
+[NEW_FIELD] commodity_derivative_notional: appeared for first time ($1,534M)
+
