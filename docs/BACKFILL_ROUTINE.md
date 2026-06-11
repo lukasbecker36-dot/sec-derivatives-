@@ -1,14 +1,14 @@
 # Wave 1 Backfill Routine
 
-Scheduled Claude Code routine that processes 8 issuers per ~5-hour window
+Scheduled Claude Code routine that processes 4 issuers per fire
 through the locate-then-extract backfill pipeline. Designed to stay inside
-a single window's included subscription quota.
+a single session's context and quota window.
 
 ## Schedule
 
 Every 5 hours, weekdays only (or 24/7 if you want it done faster). At
-8 issuers per fire, ~5 fires/day, the ~300 remaining issuers complete in
-roughly 8 days.
+4 issuers per fire, ~5 fires/day, the ~300 remaining issuers complete in
+roughly 15 days.
 
 ## Pre-flight (one time)
 
@@ -27,35 +27,46 @@ Run one Wave 1 backfill chunk for the sec-derivatives- repo.
 Branch: claude/determined-franklin-1yztdn
 Working dir: repo root
 
-Step 1 — Seed the next batch of issuers:
-    python -m src.backfill prepare --since 2025-01-01 --next 8
+BUDGET RULE: This routine MUST complete in a single session. Do NOT
+continue into a second quota window. If you hit a spend-cap or context
+warning, skip to Step 6 immediately and commit whatever is done.
 
-This writes ~120 request files to backfill/requests/ for the next 8
-universe issuers not yet seeded. If prepare reports fewer than 8 issuers
-seeded, that means most of the universe is already done — proceed
-anyway with whatever was seeded.
+Step 1 — Seed the next batch (4 issuers):
+    python -m src.backfill prepare --since 2025-01-01 --next 4
 
-Step 2 — Process the request files. CRITICAL: launch subagents
-SERIALLY (one at a time, wait for each to complete before launching
-the next). Do NOT launch parallel subagents — that trips the spend cap.
+This writes request files to backfill/requests/ for the next 4
+universe issuers not yet seeded. If prepare reports fewer than 4
+issuers seeded, proceed with whatever was seeded.
 
-For each ticker with pending requests in backfill/requests/, launch
-one subagent with this task:
+Step 2 — Process request files using SUBAGENTS.
+
+CRITICAL RULES:
+  - You MUST use the Agent tool for each ticker — do NOT read request
+    files or write result files in the main conversation. Every request
+    file read in the main context wastes budget.
+  - Launch subagents SERIALLY — one at a time, wait for completion
+    before launching the next. Parallel subagents trip the spend cap.
+  - Each subagent gets ONE ticker and a fresh context.
+
+For each ticker that has pending requests in backfill/requests/,
+launch one subagent with this prompt (fill in {TICKER}):
 
     Process all backfill/requests/{TICKER}_*.json files that do NOT
-    yet have a matching result in backfill/results/. Two request types:
+    yet have a matching result in backfill/results/. For each file:
 
-    - *_locate.json: read the 'prompt' field, decide whether the
-      target section is in the supplied filing windows, write a
-      result JSON to backfill/results/ with the SAME filename:
+    If the filename contains "_locate":
+      Read the 'prompt' field. Decide whether the target section
+      exists in the supplied filing text windows. Write a result
+      JSON to backfill/results/ with the SAME filename:
         {"found": true, "heading_text": "...", "start_anchor": "...",
          "end_anchor": "..." or null}
       OR
         {"found": false, "reason": "not_disclosed" | "insufficient_context",
          "note": "..."}
 
-    - *_extract.json: read 'section_text' + 'schema', extract numeric
-      values for each schema field, write result JSON to backfill/results/:
+    If the filename contains "_extract":
+      Read 'section_text' + 'schema'. Extract numeric values for each
+      schema field. Write result JSON to backfill/results/:
         {"fields": {"field_name": {"value": N, "evidence": "..."}, ...},
          "flags": ["any concerns"]}
       Use null for fields not in the text. Numbers in millions unless
@@ -64,20 +75,12 @@ one subagent with this task:
 Step 3 — Apply locate results:
     python -m src.backfill resolve
 
-This slices filing text using locate anchors, emits new extraction
-requests for any sections that were newly located, and writes learned
-heading regexes to issuer YAMLs.
-
 Step 4 — If resolve produced new pending extraction requests (check
-backfill/requests/manifest.json), launch one more subagent per
-affected ticker to process them, same SERIAL pattern as Step 2.
+backfill/requests/manifest.json for pending items), launch one more
+subagent per affected ticker to process them, same SERIAL pattern.
 
 Step 5 — Stage, gate, and cut over:
     python -m src.backfill finalize --commit
-
-This rebuilds chronological alerts/notes per issuer, runs the
-median-fill-rate gate, and replaces output/{ticker}/ for issuers
-that pass. Issuers that fail the gate stay staged for review.
 
 Step 6 — Commit and push:
     git add -A
@@ -88,7 +91,8 @@ Step 6 — Commit and push:
     "
     git push -u origin claude/determined-franklin-1yztdn
 
-Stop after Step 6. Do not process more than 8 issuers per routine fire.
+STOP HERE. Do not loop back. Do not process more issuers. Do not
+start a second chunk. This routine is done after Step 6.
 ```
 
 ## Setting it up
@@ -112,3 +116,12 @@ Stop after Step 6. Do not process more than 8 issuers per routine fire.
 - The weekly digest ignores `[HISTORICAL]`-tagged alerts (regenerated by
   the backfill against periods already in live output), so no editorial
   noise from the backfill itself
+
+## Lessons from Wave 0 trial
+
+- **8 issuers = ~120-170 requests** — too many for one session. Reduced to 4.
+- **Processing requests in the main context** caused quadratic context growth
+  and burned 3 quota windows on a single issuer (ABBV). The prompt now
+  explicitly mandates subagents and forbids reading request files in the
+  main conversation.
+- Added hard STOP instructions and a budget rule to bail out early if needed.
