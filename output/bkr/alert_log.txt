@@ -1,103 +1,71 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-10 ===
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1,198M)
-[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($1,170M)
-[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($28M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($10M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($38M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($10M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($38M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-28M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-91M)
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
-[DISAPPEARED_FIELD] interest_rate_swap_notional: was $500M, now missing
-[DISAPPEARED_FIELD] foreign_currency_forward_notional: was $4,000M, now missing
-[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, interest_rate_swap_notional, foreign_currency_forward_notional)
-[LLM_FLAG] Total outstanding notional dropped from $7.1B to $3.5B QoQ due to termination of $2.5B interest rate swaps and other activity
-[LLM_FLAG] All cash flow hedges terminated as of March 31, 2026; $91M loss in AOCI from terminated IR swaps
-[LLM_FLAG] Company designated EUR 3.0B (~$3.4B) of newly issued notes as non-derivative net investment hedge
-[LLM_FLAG] Credit default swaps of $159M notional remaining (down from $287M at Dec 2025) related to Mexico customer receivables
-[LLM_FLAG] Market risk section is a brief cross-reference stating no material change since Dec 31, 2025, but the derivatives note shows substantial changes (total notional halved from $7.1B to $3.5B)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-11 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1,198M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($1,170M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($10M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($38M)
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($38M)
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-91M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $4,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_swap_notional: was $500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_forward_notional: was $4,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity: was $15M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, interest_rate_swap_notional, foreign_currency_forward_notional, fx_sensitivity)
+[HISTORICAL] [LLM_FLAG] Cash equivalents are not presented in this section of the filing
+[HISTORICAL] [LLM_FLAG] No corporate debt securities disclosed; only non-U.S. debt securities ($28M, available-for-sale, maturity within one year)
+[HISTORICAL] [LLM_FLAG] Derivative notional amounts (FX, IR) are not disclosed in Note 12; they appear in Note 11 (derivatives note)
+[HISTORICAL] [LLM_FLAG] Investment securities total ($1,198M) includes equity securities ($1,170M) and non-U.S. debt securities ($28M); no cash equivalents in this table
+[HISTORICAL] [LLM_FLAG] Gross unrealized gains on equity securities were $629M but the schema field asks specifically for debt securities — debt securities show $0 unrealized gains
+[HISTORICAL] [LLM_FLAG] Total derivatives notional of $3.5B at March 31 2026 is a blended figure covering multiple instrument types (FX, commodity, IR, embedded, intercompany); no standalone FX-only notional disclosed
+[HISTORICAL] [LLM_FLAG] Cash flow hedge IR swaps ($2.5B notional) were terminated in March 2026; as of period end there are no active cash flow hedges
+[HISTORICAL] [LLM_FLAG] AOCI loss of $91M from terminated cash flow hedges recorded; this is a cumulative balance not a current-period change
+[HISTORICAL] [LLM_FLAG] Net investment hedge of ~$3.4B (€3.0B) is a non-derivative hedge (foreign-currency-denominated notes), not included in fx_derivatives_notional
+[HISTORICAL] [LLM_FLAG] CDS notional of $159M at March 31 2026 relates to customer credit risk, not a market risk hedging instrument
+[HISTORICAL] [LLM_FLAG] total_derivative_asset set to null because it is not disclosed in this section; the financial instruments note (Note 12) value of $10M is available in the financial_instruments extract
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($500M)
-[NEW_FIELD] foreign_currency_forward_notional: appeared for first time ($4,000M)
-[LLM_FLAG] Foreign currency forward contracts outstanding indicates significant hedging activity to mitigate FX exposure.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-11 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $1,298M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $1,274M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $16M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $-114M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $3,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-77M, now missing
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($4,000M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] interest_rate_swap_notional: appeared for first time ($500M)
+[HISTORICAL] [NEW_FIELD] foreign_currency_forward_notional: appeared for first time ($4,000M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity: appeared for first time ($15M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (total_marketable_securities_fv, marketable_equity_securities_fv, gross_unrealized_gains_debt, fi_total_derivative_asset, fi_total_derivative_liability...)
+[HISTORICAL] [LLM_FLAG] Section text provided is Management's Report on Internal Control Over Financial Reporting and the KPMG independent auditor's report — not Note 15 (Financial Instruments). The text references 'Note 15. Financial Instruments' but does not include that note's content. No fair value tables, derivative schedules, or investment securities data are present. All fields are null due to wrong section text.
+[HISTORICAL] [LLM_FLAG] Section text provided is the Risk Factors / legal-regulatory-tax section of the 10-K, not Note 15 (Financial Instruments / Derivatives note). No derivative notional amounts, fair value tables, or AOCI balances are present in this excerpt. All numeric fields are null due to insufficient section text.
+[HISTORICAL] [LLM_FLAG] hedge_designation is a text descriptor rather than a numeric value — set to null; narrative captured in evidence
+[HISTORICAL] [LLM_FLAG] long_term_debt_schedule is tabular data not a single numeric — set to null; schedule detail captured in evidence
+[HISTORICAL] [LLM_FLAG] fx_sensitivity is reported as an upper bound (<$15M); recorded as 15 (ceiling) with note in evidence
+[HISTORICAL] [LLM_FLAG] foreign_currency_forward_notional is in billions in the filing ($4.0B); converted to millions (4000)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NUMERIC] fi_total_derivative_asset: $22M → $10M (-54.5%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
-[DISAPPEARED_FIELD] interest_rate_swap_notional: was $500M, now missing
-[DISAPPEARED_FIELD] foreign_currency_forward_notional: was $7M, now missing
-[LLM_FLAG] total_marketable_securities_fv decreased by more than 50% from prior period (1241.0 to 1170.0).
-[LLM_FLAG] fi_total_derivative_asset decreased by more than 50% from prior period (22.0 to 10.0).
-[LLM_FLAG] fi_total_derivative_liability has shifted to a higher negative value (-33.0 to -38.0).
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-11 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $-44M → $-114M (-159.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $500M → $3,000M (+500.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-77M)
+[HISTORICAL] [LLM_FLAG] Derivative liabilities jumped significantly to $(114)M at Q3 2025 from $(44)M at Q2 2025, consistent with the $(77)M fair value of new $2,500M Chart-related IR swap cash flow hedges.
+[HISTORICAL] [LLM_FLAG] Investment securities at September 30, 2025 comprise mainly ADNOC Drilling equity ($1,274M) plus $24M non-U.S. debt securities.
+[HISTORICAL] [LLM_FLAG] Net gains (losses) on securities: $(8)M for Q3 2025 and $(29)M for 9M 2025.
+[HISTORICAL] [LLM_FLAG] Total notional jumped to $7.0B at Q3 2025 (from $4.0B at Q2 2025) primarily due to $2,500M new IR swap cash flow hedges for Chart acquisition financing.
+[HISTORICAL] [LLM_FLAG] CDS notional remaining $377M at September 30, 2025 (Mexico customer facility) — not a hedging derivative.
+[HISTORICAL] [LLM_FLAG] Fair value of new $2,500M cash flow hedge IR swaps is $(77)M at September 30, 2025.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1,241M)
-[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($1,217M)
-[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($24M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($22M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($-33M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($500M)
-[NEW_FIELD] foreign_currency_forward_notional: appeared for first time ($7M)
-[LLM_FLAG] foreign_currency_forward_notional increased by more than 50% from the prior period
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-11 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $13M → $17M (+30.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Investment securities at June 30, 2025 comprise mainly Baker Hughes stake in ADNOC Drilling (equity securities $1,277M) plus $15M non-U.S. debt securities.
+[HISTORICAL] [LLM_FLAG] Net gains (losses) on securities: $119M for Q2 2025 and $(22)M for H1 2025, recorded in Other (income) expense, net.
+[HISTORICAL] [LLM_FLAG] Total notional of $4.0B at Q2 2025 is a combined figure covering FX, commodity, IR, embedded derivatives, and intercompany FX; FX sub-total not disclosed separately.
+[HISTORICAL] [LLM_FLAG] CDS notional remaining $466M at June 30, 2025 (Mexico customer facility) — not a hedging derivative.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY9ZtBPNcNEbdcYLKxd'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY9gJtJvFB6oVcYW5bD'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY9Eh25MEy6MSch9nMT'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY9KR31NyAUPekr1CHG'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY8zcSa9PWS8mHtUZKm'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY94f2ByJW8TpsC7oUd'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY8paC39eGoYQhfEzgQ'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY8shiDmRHjecorNF1v'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY8etXdR5V5uSYhRnW9'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqY8hmR9MGHNFpwJbQ8V'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-28 ===
-[LLM_FLAG] total_marketable_securities_fv decreased from $1,298.0M (Dec 31, 2025) to $1,198.0M (Mar 31, 2026), a 7.7% decline within normal range but driven by equity securities decline from $1,217M to $1,170M
-[LLM_FLAG] marketable_equity_securities_fv decreased by 3.9% from $1,274.0M to $1,170.0M; the Dec 31, 2025 value of $1,217M shown in filing differs from prior period input of $1,274.0M - this suggests the prior period input may have been from a different quarter or year
-[LLM_FLAG] This filing excerpt is incomplete - it references prior year disclosure ('see Item 7A Quantitative and Qualitative Disclosures about Market Risk in our 2025 Annual Report') rather than providing specific derivative and market risk details for the 2026 Q1 period
-[LLM_FLAG] The excerpt only states market risk exposure has not changed materially since December 31, 2025, without providing quantitative metrics for verification
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-28 ===
-[NUMERIC] corporate_debt_securities_fv: $15M → $24M (+60.0%) — exceeds 20% threshold
-[LLM_FLAG] marketable_equity_securities_fv increased from 1,277 to 1,274 (minimal change, -0.2%, within acceptable range)
-[LLM_FLAG] corporate_debt_securities_fv increased from 15 to 24 (60% increase exceeds 50% threshold - change from Non-U.S. debt securities amortized cost adjustment)
-[LLM_FLAG] Filing excerpt contains only a brief reference to market risk disclosure; full quantitative details are stated to be in the 2024 Annual Report. This excerpt is insufficient for extracting specific derivative, debt, or sensitivity values.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-28 ===
-[LLM_FLAG] total_marketable_securities_fv increased 10.5% from $1,284M (Dec 31, 2024) to $1,292M (Jun 30, 2025), within normal range
-[LLM_FLAG] marketable_equity_securities_fv decreased slightly from $1,281M to $1,277M (-0.3%), within normal range
-[LLM_FLAG] corporate_debt_securities_fv increased 400% from $3M (Dec 31, 2024) to $15M (Jun 30, 2025), exceeding 50% threshold - likely due to company investment activity and timing of non-U.S. debt security holdings
-[LLM_FLAG] Limited disclosure in this excerpt - text references 'Quantitative and Qualitative Disclosures about Market Risk' in 2024 Annual Report and states exposure has not changed materially, but provides no specific quantitative metrics for comparison
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-28 ===
-[NUMERIC] corporate_debt_securities_fv: $24M → $15M (-37.5%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $4,000M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $6M, now missing
-[DISAPPEARED_FIELD] interest_rate_swap_notional: was $500M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity: was $15M, now missing
-[VALIDATION] Likely extraction failure: 4/8 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, interest_rate_swap_notional, fx_sensitivity)
-[LLM_FLAG] total_marketable_securities_fv decreased from 1,241.0 to 1,169.0 (5.8% decrease) - within acceptable variance
-[LLM_FLAG] marketable_equity_securities_fv decreased from 1,217.0 to 1,154.0 (5.2% decrease) - within acceptable variance, primarily due to net losses of $140 million recorded to earnings during Q1 2025
-[LLM_FLAG] corporate_debt_securities_fv increased from 24.0 to 15.0 (37.5% decrease) - significant decrease but remains plausible as Non-U.S. debt securities matured within one year
-[LLM_FLAG] Provided text is extremely limited - only a transition sentence referencing detailed market risk disclosures in the 2024 Annual Report. Most derivative and market risk data fields cannot be extracted from this excerpt alone.
-[LLM_FLAG] The filing states 'Our exposure to market risk has not changed materially since December 31, 2024' which suggests prior period values should remain valid, but specific numbers are not provided in this section.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-11 ===
+[HISTORICAL] [LLM_FLAG] Investment securities at March 31, 2025 comprise mainly Baker Hughes stake in ADNOC Drilling (equity securities $1,154M) plus $15M non-U.S. debt securities.
+[HISTORICAL] [LLM_FLAG] Net gains (losses) on securities: $(140)M for Q1 2025 vs $27M Q1 2024, recorded in Other (income) expense, net.
+[HISTORICAL] [LLM_FLAG] Total notional of $3.6B at Q1 2025 is a combined figure covering FX, commodity, IR, embedded derivatives, and intercompany FX; FX sub-total not disclosed separately in this section.
+[HISTORICAL] [LLM_FLAG] CDS notional remaining $556M at March 31, 2025 (Mexico customer facility) — not a hedging derivative.

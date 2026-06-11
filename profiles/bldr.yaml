@@ -1,32 +1,25 @@
 issuer: Builders FirstSource
 ticker: BLDR
-cik: "1316835"
+cik: '1316835'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   revolving_facility_interest_rate:
-    description: "base rate or SOFR plus applicable margin"
+    description: base rate or SOFR plus applicable margin
     section: market_risk
   revolving_facility_outstanding_amount:
-    description: "outstanding borrowings on revolving facility"
+    description: outstanding borrowings on revolving facility
     section: market_risk
   fixed_rate_notes:
-    description: "details of fixed rate senior notes including rates and maturity dates"
+    description: details of fixed rate senior notes including rates and maturity dates
     section: market_risk
   commodity_exposure:
-    description: "exposure to lumber and material price fluctuations"
+    description: exposure to lumber and material price fluctuations
     section: market_risk
   freight_cost_exposure:
-    description: "exposure to inbound freight cost fluctuations"
+    description: exposure to inbound freight cost fluctuations
     section: market_risk
-
-# Unusual features identified:
-#   - No derivative instruments disclosed despite market risk exposures
-#   - Material commodity price risk acknowledged but no hedging instruments mentioned
-#   - Interest rate exposure exists but no interest rate derivatives discussed
-#   - RSU market condition reference in heading but not addressed in section text
-#   - Future date referenced (December 31, 2025) suggesting this may be projected/pro forma data
-
+sections:
+  financial_instruments:
+    heading: Fair\s+Value

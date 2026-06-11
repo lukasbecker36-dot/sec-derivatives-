@@ -1,50 +1,35 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
-[NEW_FIELD] revolving_facility_outstanding_amount: appeared for first time ($200M)
-[LLM_FLAG] ir_sensitivity_100bp value changed significantly from prior period; prior was 0.0
-[LLM_FLAG] commodity_exposure did not change despite prior period's declaration; current is 1.0, same as prior
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-11 ===
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2M)
+[HISTORICAL] [LLM_FLAG] Company reports no financial instruments at fair value on a recurring basis as of March 31, 2026.
+[HISTORICAL] [LLM_FLAG] Only senior notes fair values disclosed (Level 2, amortized cost basis): 4.25% 2032 Notes ~$1.2B, 6.375% 2034 Notes ~$1.0B, 6.75% 2035 Notes $749.1M, 6.375% 2032 Notes $702.6M, 5.00% 2030 Notes $536.3M — these are debt instruments, not derivatives.
+[HISTORICAL] [LLM_FLAG] No derivatives activity detected for this period.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp reflects additional interest expense (income statement impact), not a fair value change — the filing does not provide a fair value sensitivity figure for the variable-rate facility.
+[HISTORICAL] [LLM_FLAG] fixed_rate_notes_billion is null because no aggregate principal balance is stated in the market risk section; only the five note series names and rates are listed.
+[HISTORICAL] [LLM_FLAG] No FX, equity, or commodity derivative hedging program disclosed; company is exposed to commodity and freight cost fluctuations but does not hedge them with financial instruments.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[NEW_FIELD] revolving_facility_outstanding_amount: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-11 ===
+[HISTORICAL] [LLM_FLAG] Company reports no material financial instruments at fair value on a recurring basis as of December 31, 2025 (10-K annual filing).
+[HISTORICAL] [LLM_FLAG] Only senior notes fair values disclosed (Level 2, amortized cost basis): 4.25% 2032 Notes $1,236.6M, 6.375% 2034 Notes $1,038.8M, 6.75% 2035 Notes $785.6M, 6.375% 2032 Notes $726.3M, 5.00% 2030 Notes $548.6M — these are debt instruments, not derivatives.
+[HISTORICAL] [LLM_FLAG] No derivatives activity detected for this period.
+[HISTORICAL] [LLM_FLAG] Revolving Facility had zero outstanding borrowings at period end, so no variable-rate interest rate sensitivity figure is calculable.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] revolving_facility_outstanding_amount: appeared for first time ($200M)
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-11 ===
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $2M, now missing
+[HISTORICAL] [DROPPED_TO_ZERO] revolving_facility_outstanding_amount: $233M → $0M
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (ir_sensitivity_100bp)
+[HISTORICAL] [LLM_FLAG] Company reports no financial instruments at fair value on a recurring basis as of September 30, 2025.
+[HISTORICAL] [LLM_FLAG] Only senior notes fair values disclosed (Level 2, amortized cost basis): 4.25% 2032 Notes ~$1.2B, 6.375% 2034 Notes ~$1.0B, 6.75% 2035 Notes $785.6M, 6.375% 2032 Notes $724.5M, 5.00% 2030 Notes $543.8M — these are debt instruments, not derivatives.
+[HISTORICAL] [LLM_FLAG] No derivatives activity detected for this period.
+[HISTORICAL] [LLM_FLAG] Revolving Facility had zero outstanding borrowings at period end, so no variable-rate interest rate sensitivity figure is calculable.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[NEW_FIELD] revolving_facility_outstanding_amount: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-11 ===
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $8M → $2M (-70.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] revolving_facility_outstanding_amount: $775M → $233M (-69.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Company reports no financial instruments at fair value on a recurring basis as of June 30, 2025.
+[HISTORICAL] [LLM_FLAG] Only senior notes fair values disclosed (Level 2, amortized cost basis): 4.25% 2032 Notes ~$1.2B, 6.375% 2034 Notes ~$1.0B, 6.75% 2035 Notes $772.5M, 6.375% 2032 Notes $719.3M, 5.00% 2030 Notes $540.4M — these are debt instruments, not derivatives.
+[HISTORICAL] [LLM_FLAG] No derivatives activity detected for this period.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $2M, now missing
-[DROPPED_TO_ZERO] revolving_facility_outstanding_amount: $233M → $0M
-[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (ir_sensitivity_100bp)
-[LLM_FLAG] revolving_facility_outstanding_amount changed from $233.0M to $0M (100% decrease) - company repaid all borrowings by Q3 2025
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $8M → $2M (-70.5%) — exceeds 20% threshold
-[NUMERIC] revolving_facility_outstanding_amount: $775M → $233M (-69.9%) — exceeds 20% threshold
-[LLM_FLAG] IR_SENSITIVITY_100BP differs significantly from prior period (2.3 vs 7.8, 71% decrease). This is due to lower outstanding revolving facility borrowings ($233.0M vs prior $775.0M implied higher balance), resulting in reduced interest rate sensitivity.
-[LLM_FLAG] FIXED_RATE_NOTES includes new 6.75% 2035 Notes not present in prior period disclosure. This suggests new debt issuance or improved disclosure completeness in current period.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($8M)
-[LLM_FLAG] Revolving facility outstanding amount increased significantly from $0 million (prior period) to $775.0 million (current period) — increase of >7500%, indicating substantial new borrowing activity
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-11 ===
+[HISTORICAL] [LLM_FLAG] Company reports no financial instruments at fair value on a recurring basis as of March 31, 2025.
+[HISTORICAL] [LLM_FLAG] Only senior notes fair values disclosed (Level 2, amortized cost basis): 4.25% 2032 Notes ~$1.2B, 6.375% 2034 Notes ~$1.0B, 6.375% 2032 Notes $705.3M, 5.00% 2030 Notes $528.0M — these are debt instruments, not derivatives.
+[HISTORICAL] [LLM_FLAG] No derivatives activity detected for this period.
