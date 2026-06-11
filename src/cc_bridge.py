@@ -425,12 +425,13 @@ def finalize(since: str, max_activations: int, json_summary: str = '', verbose: 
 
             # Write outputs
             append_csv_row(csv_path, row, config)
-            from .engine import _write_to_db
+            from .engine import _write_to_db, _sync_text_files_to_db
             _write_to_db(row, config)
             notes_path = OUTPUT_DIR / config.ticker.lower() / 'notes.txt'
             alert_path = OUTPUT_DIR / config.ticker.lower() / 'alert_log.txt'
             append_notes(notes_path, period_end, req_data['form_type'], notes)
             append_alerts(alert_path, period_end, req_data['form_type'], alerts)
+            _sync_text_files_to_db(config.ticker, OUTPUT_DIR / config.ticker.lower())
 
             # Update filer profile
             profile = get_or_create_profile(config.cik, config.ticker, config.issuer)

@@ -64,6 +64,24 @@ Per-issuer configs in `profiles/{ticker}.yaml`. Per-CIK structural profiles in `
 - `cc_work/` — Temporary extraction request files (gitignored)
 - `cc_results/` — Temporary extraction result files (gitignored)
 
+### Consolidated Query Store (`src/db.py`, `src/query.py`)
+
+All extraction data is mirrored into a single DuckDB file (`data/derivatives.duckdb`,
+gitignored — rebuild anytime with `python scripts/rebuild_db.py`). Three tables:
+`extractions` (numeric fields, PK ticker+accession_number), `qualitative_findings`
+(parsed notes.txt: ticker/period/category/finding), `alerts` (parsed alert_log.txt:
+change-detection + LLM flags). All three pipelines (engine, cc_bridge, backfill)
+write to it on the fly.
+
+```bash
+python -m src.query summary                  # DB-wide stats
+python -m src.query top-fx / top-ir          # largest users by notional
+python -m src.query issuer ABBV              # one issuer's time series
+python -m src.query findings "cross-currency swap" --since 2026-01-01
+python -m src.query alerts --type LLM_FLAG --since 2026-01-01
+python -m src.query sql "SELECT ..."         # raw SQL
+```
+
 ## Running Manually
 
 ```bash

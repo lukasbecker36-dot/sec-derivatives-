@@ -168,6 +168,17 @@ def _write_to_db(row: dict, config: IssuerConfig):
         logger.debug(f'DB write skipped: {e}')
 
 
+def _sync_text_files_to_db(ticker: str, issuer_dir: Path):
+    """Best-effort refresh of qualitative findings/alerts from text files."""
+    try:
+        from .db import get_connection, load_issuer_text_files
+        conn = get_connection()
+        load_issuer_text_files(conn, issuer_dir, ticker)
+        conn.close()
+    except Exception as e:
+        logger.debug(f'Qualitative DB sync skipped for {ticker}: {e}')
+
+
 def append_csv_row(csv_path: Path, row: dict, config: IssuerConfig):
     """Append a row to the tracking CSV, creating the file if needed."""
     columns = _get_csv_columns(config)
@@ -268,6 +279,7 @@ def run_issuer(config: IssuerConfig, output_dir: Path = OUTPUT_DIR, client=None,
             _write_to_db(result['row'], config)
             append_notes(notes_path, filing_meta['period_end'], filing_meta['form_type'], result['notes'])
             append_alerts(alert_path, filing_meta['period_end'], filing_meta['form_type'], result['alerts'])
+            _sync_text_files_to_db(config.ticker, issuer_dir)
 
             # Update filer profile
             profile = update_profile_after_extraction(

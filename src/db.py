@@ -114,6 +114,24 @@ CREATE TABLE IF NOT EXISTS extractions (
     -- Dedup constraint
     PRIMARY KEY (ticker, accession_number)
 );
+
+CREATE TABLE IF NOT EXISTS qualitative_findings (
+    ticker      VARCHAR NOT NULL,
+    period_end  DATE,
+    form_type   VARCHAR,
+    category    VARCHAR NOT NULL,
+    finding     VARCHAR NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS alerts (
+    ticker       VARCHAR NOT NULL,
+    period_end   DATE,
+    form_type    VARCHAR,
+    processed_on DATE,
+    historical   BOOLEAN DEFAULT FALSE,
+    alert_type   VARCHAR,
+    message      VARCHAR NOT NULL
+);
 """
 
 _VIEW_DDL = """
@@ -223,6 +241,162 @@ def query(conn: duckdb.DuckDBPyConnection, sql: str, params: dict | None = None)
     result = conn.execute(sql, params or {})
     columns = [desc[0] for desc in result.description]
     return [dict(zip(columns, row)) for row in result.fetchall()]
+
+
+_NOTES_HEADER_RE = None  # compiled lazily
+_ALERT_HEADER_RE = None
+_ALERT_TAG_RE = None
+
+
+def parse_notes_text(text: str) -> list[dict]:
+    """Parse a notes.txt file into finding records.
+
+    Format:
+        --- 10-Q | Period ending 2026-03-31 ---
+          [Category name]
+            - finding text
+    """
+    import re
+    global _NOTES_HEADER_RE
+    if _NOTES_HEADER_RE is None:
+        _NOTES_HEADER_RE = re.compile(
+            r'^--- (?P<form>10-[QK](?:/A)?) \| Period ending (?P<period>\d{4}-\d{2}-\d{2}) ---')
+
+    records = []
+    form = period = None
+    category = None
+    current = None  # last finding record, for continuation lines
+    for line in text.splitlines():
+        m = _NOTES_HEADER_RE.match(line)
+        if m:
+            form, period = m.group('form'), m.group('period')
+            category = None
+            current = None
+            continue
+        stripped = line.strip()
+        if stripped.startswith('[') and stripped.endswith(']'):
+            category = stripped[1:-1]
+            current = None
+            continue
+        if stripped.startswith('- ') and form and category:
+            current = {
+                'form_type': form,
+                'period_end': period,
+                'category': category,
+                'finding': stripped[2:].strip(),
+            }
+            records.append(current)
+        elif stripped and current is not None:
+            # Continuation of a multi-line finding (e.g. table excerpt)
+            current['finding'] += ' ' + stripped
+    return records
+
+
+def parse_alerts_text(text: str) -> list[dict]:
+    """Parse an alert_log.txt file into alert records.
+
+    Format:
+        === 10-Q | Period ending 2026-03-31 | Processed 2026-06-10 ===
+        [HISTORICAL] [NUMERIC] message...
+        [LLM_FLAG] message...
+    """
+    import re
+    global _ALERT_HEADER_RE, _ALERT_TAG_RE
+    if _ALERT_HEADER_RE is None:
+        _ALERT_HEADER_RE = re.compile(
+            r'^=== (?P<form>10-[QK](?:/A)?) \| Period ending (?P<period>\d{4}-\d{2}-\d{2})'
+            r'(?: \| Processed (?P<processed>\d{4}-\d{2}-\d{2}))? ===')
+        _ALERT_TAG_RE = re.compile(r'^\[(?P<tag>[A-Z_]+)\]\s*')
+
+    records = []
+    form = period = processed = None
+    for line in text.splitlines():
+        m = _ALERT_HEADER_RE.match(line)
+        if m:
+            form, period = m.group('form'), m.group('period')
+            processed = m.group('processed')
+            continue
+        stripped = line.strip()
+        if not stripped or form is None:
+            continue
+        historical = False
+        alert_type = None
+        rest = stripped
+        while True:
+            tm = _ALERT_TAG_RE.match(rest)
+            if not tm:
+                break
+            tag = tm.group('tag')
+            if tag == 'HISTORICAL':
+                historical = True
+            elif alert_type is None:
+                alert_type = tag
+            rest = rest[tm.end():]
+        if not rest:
+            continue
+        records.append({
+            'form_type': form,
+            'period_end': period,
+            'processed_on': processed,
+            'historical': historical,
+            'alert_type': alert_type or 'OTHER',
+            'message': rest,
+        })
+    return records
+
+
+def replace_issuer_findings(conn: duckdb.DuckDBPyConnection, ticker: str,
+                            notes_text: str = '', alerts_text: str = '') -> tuple[int, int]:
+    """Replace all qualitative findings + alerts for one issuer from file text.
+
+    Parses and de-duplicates (notes files accumulate duplicate blocks when a
+    period is reprocessed). Returns (findings_inserted, alerts_inserted).
+    """
+    ticker = ticker.upper()
+    conn.execute('DELETE FROM qualitative_findings WHERE ticker = ?', [ticker])
+    conn.execute('DELETE FROM alerts WHERE ticker = ?', [ticker])
+
+    seen = set()
+    n_findings = 0
+    for rec in parse_notes_text(notes_text):
+        key = (rec['period_end'], rec['category'], rec['finding'])
+        if key in seen:
+            continue
+        seen.add(key)
+        conn.execute(
+            'INSERT INTO qualitative_findings VALUES (?, ?, ?, ?, ?)',
+            [ticker, _coerce_date(rec['period_end']), rec['form_type'],
+             rec['category'], rec['finding']],
+        )
+        n_findings += 1
+
+    seen = set()
+    n_alerts = 0
+    for rec in parse_alerts_text(alerts_text):
+        key = (rec['period_end'], rec['alert_type'], rec['message'])
+        if key in seen:
+            continue
+        seen.add(key)
+        conn.execute(
+            'INSERT INTO alerts VALUES (?, ?, ?, ?, ?, ?, ?)',
+            [ticker, _coerce_date(rec['period_end']), rec['form_type'],
+             _coerce_date(rec['processed_on']), rec['historical'],
+             rec['alert_type'], rec['message']],
+        )
+        n_alerts += 1
+    return n_findings, n_alerts
+
+
+def load_issuer_text_files(conn: duckdb.DuckDBPyConnection, issuer_dir: Path,
+                           ticker: str) -> tuple[int, int]:
+    """Load notes.txt + alert_log.txt for one issuer directory into the DB."""
+    notes_path = issuer_dir / 'notes.txt'
+    alerts_path = issuer_dir / 'alert_log.txt'
+    notes_text = notes_path.read_text(encoding='utf-8') if notes_path.exists() else ''
+    alerts_text = alerts_path.read_text(encoding='utf-8') if alerts_path.exists() else ''
+    if not notes_text and not alerts_text:
+        return 0, 0
+    return replace_issuer_findings(conn, ticker, notes_text, alerts_text)
 
 
 def load_csv_into_db(

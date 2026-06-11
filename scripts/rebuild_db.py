@@ -16,7 +16,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from src.db import get_connection, load_csv_into_db, query
+from src.db import get_connection, load_csv_into_db, load_issuer_text_files, query
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
 logger = logging.getLogger('rebuild_db')
@@ -54,20 +54,25 @@ def main():
 
     total_rows = 0
     issuers_loaded = 0
+    total_findings = 0
+    total_alerts = 0
 
     for issuer_dir in sorted(OUTPUT_DIR.iterdir()):
         if not issuer_dir.is_dir():
             continue
-        csv_path = issuer_dir / 'tracking.csv'
-        if not csv_path.exists():
-            continue
         ticker = issuer_dir.name.upper()
-        count = load_csv_into_db(conn, csv_path, ticker, universe)
-        if count > 0:
-            issuers_loaded += 1
-            total_rows += count
+        csv_path = issuer_dir / 'tracking.csv'
+        if csv_path.exists():
+            count = load_csv_into_db(conn, csv_path, ticker, universe)
+            if count > 0:
+                issuers_loaded += 1
+                total_rows += count
+        nf, na = load_issuer_text_files(conn, issuer_dir, ticker)
+        total_findings += nf
+        total_alerts += na
 
     logger.info(f'Loaded {total_rows} rows from {issuers_loaded} issuers')
+    logger.info(f'Loaded {total_findings} qualitative findings, {total_alerts} alerts')
 
     stats = query(conn, """
         SELECT

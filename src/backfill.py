@@ -638,6 +638,14 @@ def _commit_issuer(ticker: str, staged_rows: list[dict], config: IssuerConfig,
             (issuer_dir / dst_name).write_text(src.read_text(encoding='utf-8'),
                                                encoding='utf-8')
 
+    try:
+        from .db import get_connection, load_issuer_text_files
+        conn = get_connection()
+        load_issuer_text_files(conn, issuer_dir, ticker)
+        conn.close()
+    except Exception as e:
+        logger.debug(f'Qualitative DB sync skipped for {ticker}: {e}')
+
     for row in universe:
         if row.get('ticker', '').upper() == ticker.upper():
             if row.get('status') == 'active_needs_review':

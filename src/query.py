@@ -185,6 +185,67 @@ def cmd_who_uses(conn, args):
         print(f'No issuers found matching "{args.term}"')
 
 
+def cmd_findings(conn, args):
+    """Search qualitative findings by text and/or category."""
+    clauses = []
+    params: dict = {}
+    if args.search:
+        clauses.append('LOWER(finding) LIKE $term')
+        params['term'] = f'%{args.search.lower()}%'
+    if args.category:
+        clauses.append('LOWER(category) LIKE $cat')
+        params['cat'] = f'%{args.category.lower()}%'
+    if args.ticker:
+        clauses.append('ticker = $ticker')
+        params['ticker'] = args.ticker.upper()
+    if args.since:
+        clauses.append('period_end >= $since')
+        params['since'] = args.since
+    where = ('WHERE ' + ' AND '.join(clauses)) if clauses else ''
+    params['limit'] = args.limit
+    results = query(conn, f"""
+        SELECT ticker, period_end, form_type, category,
+               LEFT(finding, 200) AS finding
+        FROM qualitative_findings
+        {where}
+        ORDER BY period_end DESC, ticker
+        LIMIT $limit
+    """, params)
+    _print_table(results, max_col_width=120)
+    print(f'\n({len(results)} shown; use --limit to see more)')
+
+
+def cmd_alerts(conn, args):
+    clauses = []
+    params: dict = {}
+    if args.search:
+        clauses.append('LOWER(message) LIKE $term')
+        params['term'] = f'%{args.search.lower()}%'
+    if args.type:
+        clauses.append('alert_type = $atype')
+        params['atype'] = args.type.upper()
+    if args.ticker:
+        clauses.append('ticker = $ticker')
+        params['ticker'] = args.ticker.upper()
+    if args.since:
+        clauses.append('period_end >= $since')
+        params['since'] = args.since
+    if not args.include_historical:
+        clauses.append('NOT historical')
+    where = ('WHERE ' + ' AND '.join(clauses)) if clauses else ''
+    params['limit'] = args.limit
+    results = query(conn, f"""
+        SELECT ticker, period_end, alert_type,
+               LEFT(message, 160) AS message
+        FROM alerts
+        {where}
+        ORDER BY period_end DESC, ticker
+        LIMIT $limit
+    """, params)
+    _print_table(results, max_col_width=120)
+    print(f'\n({len(results)} shown; use --limit to see more)')
+
+
 def main():
     p = argparse.ArgumentParser(prog='python -m src.query')
     p.add_argument('--db', default=None, help='DB path override')
@@ -208,6 +269,22 @@ def main():
     who_p = sub.add_parser('who-uses', help='Find issuers using a specific instrument/term')
     who_p.add_argument('term', help='Search term (e.g. "interest rate option", "commodity")')
 
+    f_p = sub.add_parser('findings', help='Search qualitative findings (notes.txt content)')
+    f_p.add_argument('search', nargs='?', default='', help='Text to search for in findings')
+    f_p.add_argument('--category', default='', help='Filter by category (e.g. "New instruments")')
+    f_p.add_argument('--ticker', default='', help='Filter by ticker')
+    f_p.add_argument('--since', default='', help='Period cutoff (YYYY-MM-DD)')
+    f_p.add_argument('--limit', type=int, default=25)
+
+    a_p = sub.add_parser('alerts', help='Search change-detection alerts')
+    a_p.add_argument('search', nargs='?', default='', help='Text to search for in messages')
+    a_p.add_argument('--type', default='', help='Alert type (NUMERIC, NEW_FIELD, LLM_FLAG...)')
+    a_p.add_argument('--ticker', default='', help='Filter by ticker')
+    a_p.add_argument('--since', default='', help='Period cutoff (YYYY-MM-DD)')
+    a_p.add_argument('--include-historical', action='store_true',
+                     help='Include [HISTORICAL] backfill-regenerated alerts')
+    a_p.add_argument('--limit', type=int, default=25)
+
     args = p.parse_args()
     if not args.command:
         p.print_help()
@@ -223,6 +300,8 @@ def main():
         'issuer': cmd_issuer,
         'summary': cmd_summary,
         'who-uses': cmd_who_uses,
+        'findings': cmd_findings,
+        'alerts': cmd_alerts,
     }
     handlers[args.command](conn, args)
     conn.close()
