@@ -1,32 +1,25 @@
 issuer: Conagra Brands
 ticker: CAG
-cik: "23217"
+cik: '23217'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   commodity_price_sensitivity:
-    description: "Fair value impact of 10% commodity price fluctuation by type"
+    description: Fair value impact of 10% commodity price fluctuation by type
     section: market_risk
   foreign_exchange_sensitivity:
-    description: "Fair value impact of 10% foreign currency fluctuation"
+    description: Fair value impact of 10% foreign currency fluctuation
     section: market_risk
   interest_rate_sensitivity:
-    description: "Fair value impact of 1% interest rate change on fixed rate debt"
+    description: Fair value impact of 1% interest rate change on fixed rate debt
     section: market_risk
   debt_fair_value:
-    description: "Fair value of long-term debt including current installments"
+    description: Fair value of long-term debt including current installments
     section: market_risk
   hypothetical_fluctuation_table:
-    description: "Tabular data showing potential gain/loss from 10% price movements"
+    description: Tabular data showing potential gain/loss from 10% price movements
     section: market_risk
-
-# Unusual features identified:
-#   - Uses 10% hypothetical fluctuation instead of standard 5%
-#   - Combines qualitative and quantitative disclosures in single section
-#   - Includes specific offset language about inverse correlation with underlying hedged items
-#   - Shows average fair value impact during fiscal year rather than point-in-time
-#   - Interest rate sensitivity calculated on debt fair value rather than derivative fair value
-
+sections:
+  financial_instruments:
+    heading: 16\.\s+FAIR\s+VALUE\s+MEASUREMENTS

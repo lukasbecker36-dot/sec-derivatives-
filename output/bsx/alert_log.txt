@@ -1,107 +1,56 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($14,630M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($1,596M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($4,316M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($219M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($1,230M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-1,011M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($6M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($22M)
-[NUMERIC] currency_derivative_notional_prior: $7,636M → $12,726M (+66.7%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_appreciation_prior: $322M → $804M (+149.7%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_depreciation_prior: $394M → $982M (+149.2%) — exceeds 20% threshold
-[LLM_FLAG] Net derivative position is negative and indicates a potential increase in liabilities compared to prior period values.
-[LLM_FLAG] Increase in FX derivatives notional by approximately 6.6% from $ 13,723 million to $ 14,630 million may indicate increased hedging activity.
-[LLM_FLAG] fx_forwards_outstanding increased by more than 50% compared to prior period.
-[LLM_FLAG] fixed_rate_notes_billion indicates an increase in overall debt holdings.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-12 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($684M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($16M)
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($13,633M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($9,316M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($4,316M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($219M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($196M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($10,313M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($4,316M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $181M → $219M (+21.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] currency_derivative_notional_prior: $7,636M → $12,726M (+66.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_appreciation_prior: $322M → $804M (+149.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_depreciation_prior: $-394M → $-982M (-149.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset of $219M and fi_total_derivative_liability of $196M exclude FC-denominated debt ($1,034M) which is a nonderivative hedging instrument included in the filing's total of $1,230M. Values reported are for derivative instruments (forward currency contracts) only.
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional of $13,632M excludes $997M FC-denominated debt nonderivative instrument; total notional including nonderivative is $14,630M.
+[HISTORICAL] [LLM_FLAG] 10-K (000010) for year-end 2025-12-31 section text was wrong content — those notional figures are not available from this backfill set.
+[HISTORICAL] [LLM_FLAG] Total derivative liability includes $1,034M FX-denominated debt (non-derivative hedging instrument); pure derivative liability = $196M ($74+$79+$43)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($12,726M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($11M)
-[NEW_FIELD] currency_derivative_notional_current: appeared for first time ($12,726M)
-[NEW_FIELD] currency_derivative_notional_prior: appeared for first time ($7,636M)
-[NEW_FIELD] fx_sensitivity_appreciation_current: appeared for first time ($804M)
-[NEW_FIELD] fx_sensitivity_appreciation_prior: appeared for first time ($322M)
-[NEW_FIELD] fx_sensitivity_depreciation_current: appeared for first time ($982M)
-[NEW_FIELD] fx_sensitivity_depreciation_prior: appeared for first time ($394M)
-[NEW_FIELD] interest_rate_derivative_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_debt_amount: appeared for first time ($11,343M)
-[NEW_FIELD] fixed_rate_debt_percentage: appeared for first time ($100M)
-[LLM_FLAG] Though derivatives are mentioned, specific notional amounts and values for derivatives are not provided, raising concerns about completeness of disclosures.
-[LLM_FLAG] The currency derivative notional increased significantly from 7636 (prior year) to 12726 (current year), a change of over 66%, which may indicate a strategic move to hedge against currency fluctuations more aggressively.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-12 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $12,088M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $8,025M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $4,063M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $9,022M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $4,063M, now missing
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($181M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($1,308M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-1,127M)
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-20M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-12M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 7/19 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fx_designated_notional, fx_not_designated_notional...)
+[HISTORICAL] [LLM_FLAG] Wrong section extracted: section_text contains Note B (Acquisitions and Strategic Investments) rather than the derivatives/fair value note for the 10-K period ending 2025-12-31. No derivative notional or fair value data could be extracted. The 10-K hedging note with notional tables was not captured.
+[HISTORICAL] [LLM_FLAG] Some values derived from comparative columns in Q1 2026 10-Q filing (0000885725-26-000033); section text truncated at 10000 chars for 10-K
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[DROPPED_TO_ZERO] fx_forwards_outstanding: $12,726M → $0M
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($784M)
-[NUMERIC] currency_derivative_notional_prior: $7,636M → $12,726M (+66.7%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_appreciation_prior: $322M → $804M (+149.7%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_depreciation_prior: $394M → $982M (+149.2%) — exceeds 20% threshold
-[LLM_FLAG] The increase in currency derivative notional from 12726 million to 13633 million represents a 7.1% increase, while the total notional for the current period indicates a shift in risk management exposure which should be noted.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-12 ===
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $3,329M → $4,063M (+22.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $3,329M → $4,063M (+22.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_transaction_gain_loss: $-1M → $-12M (-1100.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text truncated; fair value asset/liability table and cash equivalents table were not captured in section_text. FX derivative notional excludes $997M FC-denominated debt (nonderivative hedging instrument).
+[HISTORICAL] [LLM_FLAG] Section text truncated at 10000 chars; derivative balance sheet table not reached
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($12,726M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($11M)
-[NEW_FIELD] currency_derivative_notional_current: appeared for first time ($12,726M)
-[NEW_FIELD] currency_derivative_notional_prior: appeared for first time ($7,636M)
-[NEW_FIELD] fx_sensitivity_appreciation_current: appeared for first time ($804M)
-[NEW_FIELD] fx_sensitivity_appreciation_prior: appeared for first time ($322M)
-[NEW_FIELD] fx_sensitivity_depreciation_current: appeared for first time ($982M)
-[NEW_FIELD] fx_sensitivity_depreciation_prior: appeared for first time ($394M)
-[NEW_FIELD] interest_rate_derivative_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_debt_amount: appeared for first time ($11,343M)
-[NEW_FIELD] fixed_rate_debt_percentage: appeared for first time ($100M)
-[LLM_FLAG] currency_derivative_notional_current increased by more than 50% compared to prior period
-[LLM_FLAG] fx_sensitivity_appreciation_current increased by more than 50% compared to prior period
-[LLM_FLAG] fx_sensitivity_depreciation_current increased by more than 50% compared to prior period
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-12 ===
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $5,699M → $7,499M (+31.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $6,696M → $8,496M (+26.9%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $232M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $1,047M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-815M, now missing
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $99M → $-24M (-124.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_appreciation_current: $554M → $736M (+32.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_depreciation_current: $-676M → $-899M (-33.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text truncated; fair value asset/liability table and cash equivalents table were not captured in section_text. FX derivative notional excludes $997M FC-denominated debt (nonderivative hedging instrument).
+[HISTORICAL] [LLM_FLAG] Section text truncated at 10000 chars; derivative balance sheet table not reached
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYFMvWV2RgrqCogCuB5'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYF9QgruYKPbov72CcE'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYEpVejg5XjHVAuvNPX'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYETYpW3xgTAvGmqTcA'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYE761jksqW5eszKwYh'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[NUMERIC] currency_derivative_notional_prior: $7,636M → $12,726M (+66.7%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_appreciation_prior: $322M → $804M (+149.7%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_depreciation_prior: $-394M → $-982M (-149.2%) — exceeds 20% threshold
-[LLM_FLAG] fixed_rate_notes_billion decreased from 11.326 billion to 10.935 billion (-3.4%), within acceptable range
-[LLM_FLAG] currency_derivative_notional_current increased from 12.087 billion to 13.633 billion (+12.8%), within acceptable range
-[LLM_FLAG] fx_sensitivity_appreciation_current decreased from 794 million to 784 million (-1.3%), minimal change
-[LLM_FLAG] fx_sensitivity_depreciation_current decreased from -970 million to -958 million (1.2% improvement), minimal change
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
-[LLM_FLAG] currency_derivative_notional_current: Increased 58.1% from $7.636B to $12.087B - significant increase in hedging notional amounts
-[LLM_FLAG] fx_sensitivity_appreciation_current: Increased 146.3% from $322M to $794M - proportional to the larger derivative notional
-[LLM_FLAG] fx_sensitivity_depreciation_current: Increased 146.2% from $394M to $970M - proportional to the larger derivative notional
-[LLM_FLAG] fixed_rate_notes_billion: Increased from $11.319B to $11.326B - minor increase of 0.06%, consistent with refinancing/debt management
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
-[NUMERIC] fx_sensitivity_appreciation_current: $554M → $736M (+32.9%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_depreciation_current: $-676M → $-899M (-33.0%) — exceeds 20% threshold
-[LLM_FLAG] currency_derivative_notional_current: Increased from $7.636B to $10.828B (41.8% increase) - within plausibility but significant expansion of hedging program
-[LLM_FLAG] fx_sensitivity_appreciation_current: Increased from $322M to $736M (128.6% increase) - proportional to derivative notional increase, plausible
-[LLM_FLAG] fx_sensitivity_depreciation_current: Increased from $394M to $899M (128.2% increase) - proportional to derivative notional increase, plausible
-[LLM_FLAG] fixed_rate_notes_billion: Increased from $11.243B to $11.319B (0.68% increase) - minimal change, plausible
-[LLM_FLAG] fixed_rate_debt_percentage: Increased from 100.0% to 98.0% - indicates some floating rate debt has been added or fixed rate debt reduced proportionally; implies variable rate debt now represents ~2% of total
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[NUMERIC] currency_derivative_notional_current: $12,726M → $9,546M (-25.0%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_appreciation_current: $804M → $554M (-31.1%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_depreciation_current: $-982M → $-676M (+31.2%) — exceeds 20% threshold
-[LLM_FLAG] currency_derivative_notional_current differs significantly from prior period: $9.546B (current) vs $7.636B (prior), a 25% increase. This is a substantial change but within the 50% threshold; likely reflects active hedging program expansion.
-[LLM_FLAG] fx_sensitivity_appreciation_current increased from $322M to $554M, a 72% increase exceeding the 50% threshold. This correlates with the larger notional amount of currency derivatives ($9.546B vs $7.636B), suggesting more derivative contracts at current period.
-[LLM_FLAG] fx_sensitivity_depreciation_current increased from -$394M to -$676M, a 72% increase exceeding the 50% threshold. Consistent with the larger derivative notional amount.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
-[LLM_FLAG] Currency derivative notional amount increased 66.6% from prior period ($7.636B to $12.726B), suggesting significant expansion of hedging activities
-[LLM_FLAG] FX sensitivity metrics increased substantially: USD appreciation impact up 149.4% ($322M to $804M) and depreciation impact up 149.2% ($394M to $982M), consistent with larger derivative notional amounts
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-12 ===
+[HISTORICAL] [LLM_FLAG] Section text truncated; fair value asset/liability table and cash equivalents table were not captured in section_text. FX derivative notional excludes $997M FC-denominated debt (nonderivative hedging instrument).
+[HISTORICAL] [LLM_FLAG] Total derivative liability includes $969M FX-denominated debt (non-derivative hedging instrument); pure derivative liability (fwd contracts only) = $78M ($12+$19+$47)

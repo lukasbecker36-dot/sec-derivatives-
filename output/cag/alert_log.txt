@@ -1,30 +1,48 @@
-=== 10-Q | Period ending 2026-02-22 | Processed 2026-05-26 ===
-[LLM_FLAG] ir_sensitivity_100bp: Decreased from $349.3M to $337.2M (-3.5%), within normal range
-[LLM_FLAG] commodity_price_sensitivity - energy: Decreased from $2.3M to $1.2M (-47.8%), significant decline but within 50% threshold
-[LLM_FLAG] commodity_price_sensitivity - agriculture: Decreased from $7.4M to $7.1M (-4.1%), minimal change
-[LLM_FLAG] foreign_exchange_sensitivity: Decreased from $10.4M to $9.6M (-7.7%), minimal change
-[LLM_FLAG] fixed_rate_notes_billion: Decreased from $7.24B to $7.23B (-0.1%), minimal change
-[LLM_FLAG] debt_fair_value: Decreased from ~$7.16B to $7.16B (no change)
+=== 10-Q | Period ending 2026-02-22 | Processed 2026-06-12 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $7M → $5M (-26.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $2M → $4M (+158.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $114M → $83M (-27.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $7M → $5M (-26.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $2M → $4M (+158.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $5M → $1M (-85.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_transaction_gain_loss: $-0M → $-7M (-2233.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section does not disclose notional amounts for FX or IR derivatives; fair value only.
+[HISTORICAL] [LLM_FLAG] Nonrecurring impairments from Q2 fiscal 2026 referenced again (goodwill $771.3M, brands $195.3M+$1.7M), consistent with prior quarter filing.
+[HISTORICAL] [LLM_FLAG] Derivative fair values sourced from Note 16 Fair Value Measurements table (Window 4 of locate request); all derivatives non-designated
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct is FX contracts only; energy commodities $1.2M, agriculture commodities $7.1M also disclosed for 10% fluctuation scenario
 
-=== 10-Q | Period ending 2025-11-23 | Processed 2026-05-26 ===
-[LLM_FLAG] Energy commodity sensitivity decreased 43.9% from $4.1M to $2.3M - significant decline warrants investigation
-[LLM_FLAG] Agriculture commodity sensitivity decreased 1.3% from $7.5M to $7.4M - within normal variance
-[LLM_FLAG] Foreign exchange sensitivity increased 3.0% from $10.1M to $10.4M - minor increase within normal range
-[LLM_FLAG] Interest rate sensitivity decreased 2.1% from $356.8M to $349.3M - minor decrease within normal range
-[LLM_FLAG] Fixed-rate debt carrying amount decreased 12.1% from $8.24B to $7.24B - significant debt reduction
+=== 10-Q | Period ending 2025-11-23 | Processed 2026-06-12 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $3M → $2M (-45.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $3M → $2M (-45.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $3M → $5M (+86.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_transaction_gain_loss: $-1M → $-0M (+75.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section does not disclose notional amounts for FX or IR derivatives; fair value only.
+[HISTORICAL] [LLM_FLAG] Large goodwill impairment ($771.3M) and brand impairment ($195.3M + $1.7M) charges disclosed in nonrecurring fair value section for Q2 fiscal 2026.
+[HISTORICAL] [LLM_FLAG] Derivative fair values sourced from Note 16 Fair Value Measurements table (Window 4 of locate request); all derivatives non-designated
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct is FX contracts only; energy commodities $2.3M, agriculture commodities $7.4M also disclosed for 10% fluctuation scenario
 
-=== 10-Q | Period ending 2025-08-24 | Processed 2026-05-26 ===
-[NUMERIC] foreign_exchange_sensitivity: $8M → $10M (+26.2%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp increased 9% from $327.5M to $356.8M - within normal variance but trending up slightly
-[LLM_FLAG] fixed_rate_notes_billion increased 13% from $7.27B to $8.24B - significant increase but acceptable for a growing company
-[LLM_FLAG] debt_fair_value increased 14% from $7,120M to $8,110M - consistent with the increase in long-term debt carrying amount
-[LLM_FLAG] commodity_price_sensitivity (energy) increased 356% from $0.9M to $4.1M - substantial increase warrants attention; may reflect higher energy exposure or changed hedging strategy
-[LLM_FLAG] commodity_price_sensitivity (agriculture) increased 19% from $6.3M to $7.5M - within normal variance
-[LLM_FLAG] interest_rate_sensitivity improved (increased spread) - 1% decrease impact increased 8% from $367.9M to $398.3M
+=== 10-Q | Period ending 2025-08-24 | Processed 2026-06-12 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($3M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($3M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($3M)
+[HISTORICAL] [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-1M)
+[HISTORICAL] [LLM_FLAG] Section does not disclose notional amounts for FX or IR derivatives; fair value only.
+[HISTORICAL] [LLM_FLAG] Derivative assets split between Level 1 ($3.8M, likely commodity) and Level 2 ($2.2M, likely FX/commodity options/forwards).
+[HISTORICAL] [LLM_FLAG] Derivative fair values sourced from Note 16 Fair Value Measurements table in the same filing (Window 3); all derivatives non-designated
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct is FX contracts only; energy commodities $4.1M, agriculture commodities $7.5M also disclosed for 10% fluctuation scenario
 
-=== 10-Q | Period ending 2025-02-23 | Processed 2026-05-26 ===
-[LLM_FLAG] Energy commodities sensitivity decreased significantly from $5.7M (prior period calculation implied) to $0.9M actual — 84% decrease. This substantial decline warrants investigation into changes in hedging strategy or commodity exposure.
-[LLM_FLAG] Interest rate sensitivity (1% increase) changed from -$302.8M to -$327.5M, an increase in absolute value of 8.1% which is within normal variance but reflects rising debt levels and market conditions.
-[LLM_FLAG] Debt fair value decreased from $7,030M (prior) to $7,120M carrying amount with $7,120M fair value, indicating tightening of fair value to book value.
-[LLM_FLAG] Foreign exchange sensitivity decreased from $9.6M to $8.0M, a 16.7% decline.
+=== 10-K | Period ending 2025-05-25 | Processed 2026-06-12 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $0M, now missing
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $65M → $140M (+114.4%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $10M, now missing
+[HISTORICAL] [LLM_FLAG] Annual 10-K filing; section text shows comparative table for FY2023; current period data visible
 
+=== 10-Q | Period ending 2025-02-23 | Processed 2026-06-12 ===
+[HISTORICAL] [LLM_FLAG] Section does not disclose notional amounts for FX or IR derivatives; fair value only.
+[HISTORICAL] [LLM_FLAG] Derivative liabilities are zero as of February 23, 2025 (all dashes in table), compared to $3.6M at prior year-end May 26, 2024.
+[HISTORICAL] [LLM_FLAG] Segment P&L data included at end of section text (appended beyond fair value note); values there are in millions and relate to business segment results, not derivatives.
+[HISTORICAL] [LLM_FLAG] All derivatives are non-designated; fair values are not material per filing disclosure
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct is the energy commodity sensitivity; agriculture commodity $6.3M; FX $8.0M
