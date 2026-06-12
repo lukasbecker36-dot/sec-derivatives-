@@ -1,66 +1,55 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NUMERIC] fx_derivatives_notional: $62M → $293M (+372.6%) — exceeds 20% threshold
-[NEW_FIELD] fx_designated_notional: appeared for first time ($136M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($62M)
-[NUMERIC] commodity_derivatives_notional: $10M → $37M (+270.0%) — exceeds 20% threshold
-[DROPPED_TO_ZERO] equity_derivatives_notional: $1M → $0M
-[NUMERIC] total_derivative_asset: $423M → $518M (+22.5%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $246M → $420M (+70.7%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $177M → $98M (-44.6%) — exceeds 20% threshold
-[NUMERIC] cash_flow_hedge_aoci: $163M → $-67M (-141.1%) — exceeds 20% threshold
-[DROPPED_TO_ZERO] expected_12mo_reclass_from_aoci: $55M → $0M
-[LLM_FLAG] fx_derivatives_notional differs by more than 50% from prior period (62.0 -> 293.0)
-[LLM_FLAG] total_derivative_asset differs by more than 50% from prior period (423.0 -> 518.0)
-[LLM_FLAG] total_derivative_liability differs by more than 50% from prior period (246.0 -> 420.0)
-[LLM_FLAG] net_derivative_position differs by more than 50% from prior period (177.0 -> 98.0)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-12 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($518M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($-420M)
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-325M → $-420M (-29.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $171M → $98M (-42.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Designated subtotals are directly visible in the section text: assets $345M, liabilities $(326)M as of March 31, 2026. Grand totals incorporate undesignated figures from the derivatives note ($173M assets, $(94)M liabilities) which are truncated in this section text.
+[HISTORICAL] [LLM_FLAG] Cash equivalents, marketable securities, and related fields are not part of this section (Note 5 — Derivative financial instruments and risk management); they appear in a separate note.
+[HISTORICAL] [LLM_FLAG] Notional amounts are only disclosed as an aggregate total across all instrument types in the derivatives note table, not broken down by FX, IR, or commodity within this section.
+[HISTORICAL] [LLM_FLAG] Total notional for all derivatives is $30.3 billion but not broken down by instrument type (FX, IR, commodity); individual type notionals unavailable.
+[HISTORICAL] [LLM_FLAG] Gross derivative assets of $518M net down to $303M after master netting offsets.
+[HISTORICAL] [LLM_FLAG] Gross derivative liabilities of $(420)M net down to $(205)M after master netting offsets.
+[HISTORICAL] [LLM_FLAG] Cash flow hedge AOCI movement notable: FX contracts recognized $(174)M loss in AOCI for Q1 2026 vs. $78M gain in Q1 2025.
+[HISTORICAL] [LLM_FLAG] Item 3 market risk section contains no quantitative disclosures; all information incorporated by reference to Note 5 (derivative financial instruments and risk management) and MD&A in this 10-Q filing for period ending 2026-03-31.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($62M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($59M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($10M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($1M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($423M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($246M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($177M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($163M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($55M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-12 ===
+[HISTORICAL] [NUMERIC] net_derivative_position: $237M → $171M (-27.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] The section text window for this 10-K filing covers accounting policy notes (Note G income taxes, Note H goodwill, Note I estimates, Note J new standards, Note 2 revenue recognition) rather than the derivative fair value disclosure table — the financial_instruments section was likely extracted from a different offset in the 10-K.
+[HISTORICAL] [LLM_FLAG] All schema fields are null due to absence of relevant data in the provided text; derivative totals are available from the derivatives_note_extract for this same accession.
+[HISTORICAL] [LLM_FLAG] Cash equivalents, marketable securities, and related fields would appear in a separate investments/fair value hierarchy note, not in the derivatives policy note.
+[HISTORICAL] [LLM_FLAG] Total notional for all derivatives is $29.3 billion but not broken down by instrument type (FX, IR, commodity); individual type notionals unavailable.
+[HISTORICAL] [LLM_FLAG] Gross derivative assets of $496M net down to $336M after master netting offsets.
+[HISTORICAL] [LLM_FLAG] Gross derivative liabilities of $(325)M net down to $(165)M after master netting offsets.
+[HISTORICAL] [LLM_FLAG] Annual 10-K filing; full-year P&L gains/losses included in section text but not balance sheet notional by type.
+[HISTORICAL] [LLM_FLAG] Item 7A market risk section contains no quantitative disclosures; all information incorporated by reference to multiple notes (Note 1 accounting policies, Note 2 revenue recognition, Note 4 derivative instruments, Note 7 Cat Financial financing activities, Note 11 debt/equity investments, Note 18 fair value disclosures) in this annual 10-K filing for period ending 2025-12-31.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-12 ===
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-439M → $-312M (+28.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $179M → $237M (+32.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text is truncated mid-table; derivative asset and liability totals (designated + undesignated grand total) are not visible in the provided text window.
+[HISTORICAL] [LLM_FLAG] Cash equivalents, marketable securities, and related fields are not part of this section (Note 5 — Derivative financial instruments and risk management); they appear in a separate note.
+[HISTORICAL] [LLM_FLAG] Notional amounts are only disclosed as an aggregate total across all instrument types in the derivatives note table, not broken down by FX, IR, or commodity within this section.
+[HISTORICAL] [LLM_FLAG] Total notional for all derivatives is $28.8 billion but not broken down by instrument type (FX, IR, commodity); individual type notionals unavailable.
+[HISTORICAL] [LLM_FLAG] Gross derivative assets of $549M net down to $373M after master netting offsets.
+[HISTORICAL] [LLM_FLAG] Gross derivative liabilities of $(312)M net down to $(136)M after master netting offsets.
+[HISTORICAL] [LLM_FLAG] Item 3 market risk section contains no quantitative disclosures; all information incorporated by reference to Note 5 (derivative financial instruments and risk management) and MD&A in this 10-Q filing for period ending 2025-09-30.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYP863AgzrkJ8XBDuig'}
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-12 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $357M → $618M (+73.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-15M → $179M (+1293.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text is truncated mid-table; derivative asset and liability totals (designated + undesignated grand total) are not visible in the provided text window.
+[HISTORICAL] [LLM_FLAG] Cash equivalents, marketable securities, and related fields are not part of this section (Note 5 — Derivative financial instruments and risk management); they appear in a separate note.
+[HISTORICAL] [LLM_FLAG] Notional amounts are only disclosed as an aggregate total across all instrument types in the derivatives note table, not broken down by FX, IR, or commodity within this section.
+[HISTORICAL] [LLM_FLAG] Total notional for all derivatives is $28.0 billion but not broken down by instrument type (FX, IR, commodity); individual type notionals unavailable.
+[HISTORICAL] [LLM_FLAG] Gross derivative assets of $618M net down to $380M after master netting offsets.
+[HISTORICAL] [LLM_FLAG] Gross derivative liabilities of $(439)M net down to $(201)M after master netting offsets.
+[HISTORICAL] [LLM_FLAG] Item 3 market risk section contains no quantitative disclosures; all information incorporated by reference to Note 5 (derivative financial instruments and risk management) and MD&A in this 10-Q filing for period ending 2025-06-30.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYNoRdBDBruJFpLJ6Ck'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYNNL1yX46LxYzwNv7P'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYN1tCLA8jtq5vY7Pkt'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYMgQB7vLWpZRgzpBzW'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] debt_equity_investments: was $11M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (debt_equity_investments)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] debt_equity_investments: appeared for first time ($11M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
-[LLM_FLAG] This filing section is an incorporation by reference - all quantitative and qualitative disclosures are located in Note 5 and MD&A, not in this Item itself. Specific numerical values cannot be extracted from this excerpt alone.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
-[LLM_FLAG] This filing section is a cross-reference only. Actual quantitative data (sensitivity analysis, notional amounts, gains/losses) is incorporated by reference to Note 5 and MD&A sections which are not provided in this excerpt. Unable to extract specific numerical values or detailed disclosures.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
-[LLM_FLAG] Note reference changed from Note 4 (prior period) to Note 5 (current period) for derivative financial instruments - verify if this is a renumbering or structural change
-[LLM_FLAG] Excerpt provided is only the Item 7A header with reference to full disclosures; specific quantitative metrics not included in this section
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-25 ===
-[LLM_FLAG] This excerpt is a table of contents reference section only, not substantive disclosure. All quantitative values are not found in this text.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-12 ===
+[HISTORICAL] [LLM_FLAG] Section text is truncated mid-table; derivative asset and liability totals (designated + undesignated grand total) are not visible in the provided text window.
+[HISTORICAL] [LLM_FLAG] Cash equivalents, marketable securities, and related fields are not part of this section (Note 5 — Derivative financial instruments and risk management); they appear in a separate note.
+[HISTORICAL] [LLM_FLAG] Notional amounts are only disclosed as an aggregate total across all instrument types in the derivatives note table, not broken down by FX, IR, or commodity within this section.
+[HISTORICAL] [LLM_FLAG] Total notional for all derivatives is $26.0 billion but not broken down by instrument type (FX, IR, commodity); individual type notionals unavailable.
+[HISTORICAL] [LLM_FLAG] Total derivative liability represents gross amount before netting; net settlement reduces to $(180)M net liability.
+[HISTORICAL] [LLM_FLAG] Total derivative asset represents gross amount before netting; net settlement reduces to $165M net asset.
+[HISTORICAL] [LLM_FLAG] Item 3 market risk section contains no quantitative disclosures; all information incorporated by reference to Note 5 (derivative financial instruments and risk management) and MD&A in this 10-Q filing for period ending 2025-03-31.

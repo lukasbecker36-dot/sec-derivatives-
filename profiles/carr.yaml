@@ -1,40 +1,34 @@
 issuer: Carrier Global
 ticker: CARR
-cik: "1783180"
+cik: '1783180'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   foreign_currency_exposure:
-    description: "operations throughout the world with various functional currencies"
+    description: operations throughout the world with various functional currencies
     section: market_risk
   cross_currency_swaps:
-    description: "swaps to manage foreign currency translation risk on assets"
+    description: swaps to manage foreign currency translation risk on assets
     section: market_risk
   hedge_designation:
-    description: "designated as partial hedge of investment in subsidiaries"
+    description: designated as partial hedge of investment in subsidiaries
     section: market_risk
   fair_value_measurement:
-    description: "measured at fair value using observable market inputs"
+    description: measured at fair value using observable market inputs
     section: market_risk
   hedge_accounting:
-    description: "changes in fair value recorded in Equity"
+    description: changes in fair value recorded in Equity
     section: market_risk
   commodity_exposure:
-    description: "exposed to volatility in commodity prices, uses fixed price contracts"
+    description: exposed to volatility in commodity prices, uses fixed price contracts
     section: market_risk
   no_commodity_hedges:
-    description: "no commodity hedge contracts in place at December 31, 2025"
+    description: no commodity hedge contracts in place at December 31, 2025
     section: market_risk
   interest_rate_exposure:
-    description: "substantially all long-term debt has fixed interest rates"
+    description: substantially all long-term debt has fixed interest rates
     section: market_risk
-
-# Unusual features identified:
-#   - Future date of December 31, 2025 referenced in filing
-#   - No quantitative tables provided despite section title suggesting both qualitative and quantitative disclosures
-#   - Limited derivative instrument usage - only cross currency swaps mentioned
-#   - Commodity hedging done through fixed price contracts rather than derivatives
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*FAIR\s+VALUE\s+MEASUREMENTS
