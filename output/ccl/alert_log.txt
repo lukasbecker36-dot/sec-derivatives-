@@ -1,36 +1,69 @@
-=== 10-Q | Period ending 2026-02-28 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $5M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+=== 10-Q | Period ending 2026-02-28 | Processed 2026-06-13 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,400M → $900M (-35.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $42M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] newbuild_euro_commitment: was $8,400M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] newbuild_fx_sensitivity: was $84M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $42M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 8/9 previously-populated fields are now null (ir_swap_notional, total_derivative_asset, total_derivative_liability, net_derivative_position, ir_sensitivity_100bp...)
+[HISTORICAL] [LLM_FLAG] Section text covers fair value measurement framework, non-recurring fair values for debt (fixed rate debt $21,930M carrying / $21,949M fair value at Feb 28 2026; floating rate debt $4,074M carrying / $4,077M fair value), goodwill and trademarks, and qualitative risk management discussion. No derivative notional amounts or derivative fair values are disclosed.
+[HISTORICAL] [LLM_FLAG] Cash equivalents figure ($0.9 billion) is stated in billions; converted to 900 million.
+[HISTORICAL] [LLM_FLAG] Section confirms derivative use (FX derivatives including cross-currency swaps, and interest rate swaps) but provides no quantitative notional amounts, fair values, or hedge accounting balances. Derivative quantitative disclosures likely appear in a separate derivatives/hedging note not captured in this section window.
+[HISTORICAL] [LLM_FLAG] Fuel price risk managed via operational means only — no fuel derivatives disclosed.
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section is a stub — states 'There have been no material changes to our exposure to market risks since the date of our 2025 Form 10-K.' Most quantitative fields are not restated.
+[HISTORICAL] [LLM_FLAG] Only the debt composition table (Feb 28, 2026) is present in the section text; all other sensitivities and FX/IR metrics are omitted by cross-reference to the 10-K.
+[HISTORICAL] [LLM_FLAG] Debt composition shifted slightly from prior quarter: Fixed rate 52% (was 54%), EUR fixed rate 33% (was 31%), Floating rate 5% (unchanged), EUR floating rate 11% (was 10%).
 
-=== 10-K | Period ending 2025-11-30 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($5M)
+=== 10-K | Period ending 2025-11-30 | Processed 2026-06-13 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $0M, now missing
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($42M)
+[HISTORICAL] [NEW_FIELD] newbuild_euro_commitment: appeared for first time ($8,400M)
+[HISTORICAL] [NEW_FIELD] newbuild_fx_sensitivity: appeared for first time ($84M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($42M)
+[HISTORICAL] [LLM_FLAG] Section text is very brief; only cash equivalents at fair value are disclosed. No derivative notional amounts, marketable securities, or derivative fair values appear in the supplied section window. The full filing may contain additional derivative disclosures elsewhere.
+[HISTORICAL] [LLM_FLAG] This is the 10-K (annual report) for November 30, 2025 fiscal year end
+[HISTORICAL] [LLM_FLAG] Company confirms zero active derivatives: 'As of November 30, 2025, we had no remaining interest rate swaps'
+[HISTORICAL] [LLM_FLAG] No derivative instruments table for current period — only narrative disclosure
+[HISTORICAL] [LLM_FLAG] Fair value information for prior derivatives described as 'not material'
+[HISTORICAL] [LLM_FLAG] Note heading changed from 'Derivative Instruments and Hedging Activities' subsection to just narrative — signals no active program
+[HISTORICAL] [LLM_FLAG] All SOFR-based interest rate swaps terminated in July 2025; no derivative instruments outstanding at November 30, 2025.
+[HISTORICAL] [LLM_FLAG] Newbuild commitment figure ($8.4B) and FX sensitivity ($84M/1%) are from the 10-K annual filing and represent the most complete disclosures in this series.
 
-=== 10-Q | Period ending 2026-02-28 | Processed 2026-03-29 ===
-[LLM_FLAG] Fixed rate USD decreased from 57% to 52% (5 percentage point change)
-[LLM_FLAG] EUR fixed rate increased from 29% to 33% (4 percentage point change)
-[LLM_FLAG] Floating rate USD increased from 3% to 5% (2 percentage point change)
-[LLM_FLAG] EUR floating rate decreased slightly from 11% to 11% (no material change)
+=== 10-Q | Period ending 2025-08-31 | Processed 2026-06-13 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,648M → $1,307M (-20.7%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] fi_total_derivative_liability: $5M → $0M
+[HISTORICAL] [DROPPED_TO_ZERO] ir_swap_notional: $1,000M → $0M
+[HISTORICAL] [DROPPED_TO_ZERO] total_derivative_liability: $5M → $0M
+[HISTORICAL] [DROPPED_TO_ZERO] net_derivative_position: $-5M → $0M
+[HISTORICAL] [LLM_FLAG] All derivative assets and liabilities are zero at August 31, 2025 — consistent with swap termination in July 2025
+[HISTORICAL] [LLM_FLAG] SOFR-based IR swaps ($1.0B notional) were terminated in July 2025 — company now has zero active derivatives
+[HISTORICAL] [LLM_FLAG] $21M was reclassified from AOCI to interest expense in Q3 2025 upon swap termination
+[HISTORICAL] [LLM_FLAG] ir_swap_notional recorded as 0 (rather than null) to reflect confirmed termination vs. absence of disclosure
+[HISTORICAL] [LLM_FLAG] The AOCI reclassification table still shows FX zero cost collars for prior periods but $0 for current quarter
+[HISTORICAL] [LLM_FLAG] Item 3 cross-references 2024 Form 10-K for full market risk disclosures; most quantitative fields are not available in this filing's section text.
+[HISTORICAL] [LLM_FLAG] SOFR-based interest rate swaps were terminated in July 2025; debt composition table no longer shows 'after effect of interest rate swaps'.
 
-=== 10-Q | Period ending 2025-08-31 | Processed 2026-03-29 ===
-[LLM_FLAG] Debt composition shows EUR fixed rate increased from 24% to 29% (4 percentage point increase or 20.8% relative change - within acceptable range)
-[LLM_FLAG] Fixed rate USD decreased from 58% to 57% (1 percentage point decrease)
-[LLM_FLAG] Floating rate USD decreased from 7% to 3% (4 percentage point decrease or 57.1% relative change - exceeds 50% threshold)
-[LLM_FLAG] Most detailed market risk metrics are referenced as being in Note 10 and Form 10-K but not provided in this excerpt
+=== 10-Q | Period ending 2025-05-31 | Processed 2026-06-13 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $375M → $1,648M (+339.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $4M → $5M (+25.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $4M → $5M (+25.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-4M → $-5M (-25.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Cash equivalents increased significantly from $404M (Nov 30, 2024) to $1,648M (May 31, 2025)
+[HISTORICAL] [LLM_FLAG] Derivative asset was $2M at prior period (November 30, 2024) but $0 at May 31, 2025
+[HISTORICAL] [LLM_FLAG] Foreign currency zero cost collars appear in AOCI reclassification table but no notional amount is disclosed
+[HISTORICAL] [LLM_FLAG] EURIBOR-based IR swap ($11M notional) matured March 2025; no longer outstanding
+[HISTORICAL] [LLM_FLAG] IR swap notional is $1,000M SOFR-based only as of May 31, 2025
+[HISTORICAL] [LLM_FLAG] Expected 12-month AOCI reclassification described as 'not material'
+[HISTORICAL] [LLM_FLAG] Item 3 cross-references 2024 Form 10-K for full market risk disclosures; most quantitative fields are not available in this filing's section text.
 
-=== 10-Q | Period ending 2025-05-31 | Processed 2026-03-29 ===
-[LLM_FLAG] Fixed rate USD debt decreased from 61% to 58% (3 percentage point change)
-[LLM_FLAG] EUR fixed rate debt increased from 23% to 24% (1 percentage point change)
-[LLM_FLAG] Floating rate USD debt unchanged at 7%
-[LLM_FLAG] EUR floating rate debt increased from 10% to 11% (1 percentage point change)
-[LLM_FLAG] Text states 'no material changes to our exposure to market risks since 2024 Form 10-K' but minimal disclosure provided in this excerpt
-
-=== 10-Q | Period ending 2025-02-28 | Processed 2026-03-29 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $42M, now missing
-[DISAPPEARED_FIELD] newbuild_euro_commitment: was $8,400M, now missing
-[DISAPPEARED_FIELD] newbuild_fx_sensitivity: was $84M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $42M, now missing
-[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (ir_sensitivity_100bp, newbuild_euro_commitment, newbuild_fx_sensitivity, interest_rate_sensitivity)
-[LLM_FLAG] Debt composition has changed: Fixed rate USD decreased from 54% to 61%; EUR fixed rate decreased from 31% to 23%; Floating rate USD increased from 5% to 7%; EUR floating rate unchanged at 10%
-[LLM_FLAG] This appears to be an excerpt from a 10-Q filing with limited market risk disclosures; full details likely in Note 10 and 10-K referenced in text
-[LLM_FLAG] Multiple critical fields not found in provided text: ir_sensitivity_100bp, fx_forwards_outstanding, fuel_price_exposure, fx_rates_table, newbuild_euro_commitment, newbuild_fx_sensitivity, and others
-
+=== 10-Q | Period ending 2025-02-28 | Processed 2026-06-13 ===
+[HISTORICAL] [LLM_FLAG] Derivative asset was $2M at prior period (November 30, 2024) but $0 at February 28, 2025
+[HISTORICAL] [LLM_FLAG] Derivative notional amounts not repeated in this financial instruments section; see derivatives_note extract for IR swap notional
+[HISTORICAL] [LLM_FLAG] IR swap notional is the sum of two disclosed contracts ($10M EURIBOR + $1,000M SOFR); EURIBOR swap was expected to settle March 2025 (shortly after period end)
+[HISTORICAL] [LLM_FLAG] No explicit AOCI balance disclosed; only period activity flows shown
+[HISTORICAL] [LLM_FLAG] Expected 12-month AOCI reclassification described as 'not material' — recorded as null rather than 0
+[HISTORICAL] [LLM_FLAG] Item 3 cross-references 2024 Form 10-K for full market risk disclosures; most quantitative fields are not available in this filing's section text.
