@@ -1,38 +1,33 @@
 issuer: C.H. Robinson
 ticker: CHRW
-cik: "1043277"
+cik: '1043277'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   cash_and_equivalents:
-    description: "cash and cash equivalents balance"
+    description: cash and cash equivalents balance
     section: market_risk
   revolving_credit_facility:
-    description: "revolving credit facility amount and outstanding balance"
+    description: revolving credit facility amount and outstanding balance
     section: market_risk
   senior_notes_details:
-    description: "senior notes amounts, rates, maturity dates and fair values"
+    description: senior notes amounts, rates, maturity dates and fair values
     section: market_risk
   receivables_securitization:
-    description: "receivables securitization facility amount and outstanding balance"
+    description: receivables securitization facility amount and outstanding balance
     section: market_risk
   interest_rate_sensitivity:
-    description: "hypothetical basis point change impact"
+    description: hypothetical basis point change impact
     section: market_risk
   foreign_currencies:
-    description: "primary currencies transacted in"
+    description: primary currencies transacted in
     section: market_risk
   fx_sensitivity_analysis:
-    description: "hypothetical 10% USD weakening/strengthening impact on net income"
+    description: hypothetical 10% USD weakening/strengthening impact on net income
     section: market_risk
-
-# Unusual features identified:
-#   - minimal derivative usage with immaterial impact
-#   - future date December 31, 2025 in filing
-#   - explicit statement of no derivative use for interest rate risk management
-#   - detailed debt portfolio description in market risk section
-#   - foreign exchange sensitivity expressed as net income impact rather than typical pre-tax earnings
-
+sections:
+  derivatives_note:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*FAIR\s+VALUE\s+MEASUREMENT
+  market_risk:
+    heading: ITEM\s+3\.\s+QUANTITATIVE\s+AND\s+QUALITATIVE\s+DISCLOSURES\s+ABOUT\s+MARKET\s+RISK
