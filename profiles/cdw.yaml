@@ -1,12 +1,11 @@
 issuer: CDW Corporation
 ticker: CDW
-cik: "1402057"
+cik: '1402057'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Unusual features identified:
-#   - Market risk section text appears to be a table of contents entry only ('Quantitative and Qualitative Disclosures About Market Risk 39 Item 8. Financial Statements and Supplementary Data 40'), not the actual disclosure content
-#   - No note headings found in filing extraction
-#   - No substantive derivative or market risk disclosure captured
-
+sections:
+  financial_instruments:
+    heading: 7\.\s+Fair\s+Value\s+Measurements\s+and\s+Financial\s+Instruments
+  market_risk:
+    heading: Item\s+7A\.\s+Quantitative\s+and\s+Qualitative\s+Disclosures\s+of\s+Market\s+Risks
