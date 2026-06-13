@@ -1,56 +1,54 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] natural_gas_notional_amounts: appeared for first time ($9M)
-[LLM_FLAG] contract_maturity_periods decreased by more than 50% from prior period
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-13 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($1,597M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($1M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($2M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing
+[HISTORICAL] [NUMERIC] natural_gas_notional_amounts: $14M → $9M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] natural_gas_sensitivity: was $13M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, natural_gas_sensitivity)
+[HISTORICAL] [LLM_FLAG] Cash equivalents total from fair value table ($1,597M) differs from cash+equivalents investment schedule total ($2,042M); difference is cash ($445M) not included in fair value hierarchy table
+[HISTORICAL] [LLM_FLAG] December 31, 2025 comparatives also available: derivative assets $1M, derivative liabilities $5M, cash equivalents FV $1,353M
+[HISTORICAL] [LLM_FLAG] Commodity (natural gas) derivatives confirmed but notional amounts not disclosed in this note
+[HISTORICAL] [LLM_FLAG] No hedge accounting applied — changes in fair value recognized in earnings, no AOCI
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section is a one-paragraph cross-reference to the 2025 10-K Item 7A; only natural gas MMBtu position is updated in this filing.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
-[NEW_FIELD] natural_gas_notional_amounts: appeared for first time ($14M)
-[NEW_FIELD] natural_gas_sensitivity: appeared for first time ($13M)
-[NEW_FIELD] production_cost_sensitivity: appeared for first time ($32M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-13 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,399M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $4M, now missing
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+[HISTORICAL] [NUMERIC] natural_gas_notional_amounts: $19M → $14M (-30.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] natural_gas_sensitivity: appeared for first time ($13M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (total_cash_equivalents_fv, gross_unrealized_gains_debt, fi_total_derivative_asset, fi_total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] 10-K financial_instruments section is truncated — contains only the derivative instruments qualitative description and a cross-reference to Note 16; fair value tables were not captured in this section's text
+[HISTORICAL] [LLM_FLAG] 10-K explicitly confirms no hedge accounting applied to natural gas derivatives — economic hedges only, fair value changes in earnings
+[HISTORICAL] [LLM_FLAG] FX derivatives mentioned as occasional use but no active positions or notionals disclosed for this period
+[HISTORICAL] [LLM_FLAG] 10-K Item 7A contains full market risk disclosures; natural gas notional 13.5M MMBtus, sensitivity ~$13M per $1.00/MMBtu move, fixed rate senior notes $3.25B; no quantified FX or IR sensitivity figures provided.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] natural_gas_notional_amounts: appeared for first time ($9M)
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (equity_sensitivity_10pct)
-[LLM_FLAG] natural_gas_notional_amounts shows significant derivatives usage, indicating heightened risk management activity.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-13 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $2M → $4M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $3M → $4M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] natural_gas_notional_amounts: $14M → $19M (+42.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Cash equivalents total from fair value table ($1,399M) differs from cash+equivalents investment schedule total ($1,838M); difference is cash ($439M) not included in fair value hierarchy table
+[HISTORICAL] [LLM_FLAG] Commodity (natural gas) derivatives confirmed but notional amounts not disclosed in this note
+[HISTORICAL] [LLM_FLAG] No hedge accounting applied — changes in fair value recognized in earnings, no AOCI
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section is a one-paragraph cross-reference to the 2024 10-K Item 7A; only natural gas MMBtu position is updated in this filing.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
-[NEW_FIELD] natural_gas_notional_amounts: appeared for first time ($14M)
-[NEW_FIELD] natural_gas_sensitivity: appeared for first time ($13M)
-[NEW_FIELD] production_cost_sensitivity: appeared for first time ($32M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-13 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $1M → $2M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $2M → $3M (+50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] natural_gas_notional_amounts: $6M → $14M (+134.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Cash equivalents total from fair value table ($1,242M) differs from cash+equivalents investment schedule total ($1,686M); difference is cash ($444M) not included in fair value hierarchy table
+[HISTORICAL] [LLM_FLAG] Commodity (natural gas) derivatives confirmed but notional amounts not disclosed in this note
+[HISTORICAL] [LLM_FLAG] No hedge accounting applied — changes in fair value recognized in earnings, no AOCI
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section is a one-paragraph cross-reference to the 2024 10-K Item 7A; only natural gas MMBtu position is updated in this filing.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
-[LLM_FLAG] natural_gas_notional_amounts: Decreased from 19.4 million MMBtus (prior period) to 9.0 million MMBtus (current period) - a 53.6% decrease. This significant reduction warrants investigation into whether derivatives were settled, allowed to expire, or the company reduced hedging activity.
-[LLM_FLAG] contract_maturity_periods: Extended from March 2026 to March 2027, indicating derivative contracts now extend one additional quarter beyond prior period.
-[LLM_FLAG] Most quantitative metrics (interest rate sensitivity, equity sensitivity, FX exposures, senior notes details, and cost sensitivity) are deferred to Item 7A of the 10-K rather than provided in this 10-Q section, which limits the completeness of this quarterly disclosure.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
-[LLM_FLAG] Natural gas notional amounts increased 42.6% from 13.6 million MMBtus (prior period) to 19.4 million MMBtus (current period) - within 50% threshold but notable increase
-[LLM_FLAG] Contract maturity periods shifted from 'Through March 2026' (prior period) to 'Through March 2026' (current period) - same maturity window
-[LLM_FLAG] This section is very brief and references Item 7A of the 10-K for detailed market risk analysis; most detailed disclosures not included in this excerpt
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fixed_rate_notes_billion)
-[LLM_FLAG] natural_gas_notional_amounts increased 134% from 5.8 million MMBtus (prior period) to 13.6 million MMBtus (current period) - significant increase in derivative contract coverage
-[LLM_FLAG] contract_maturity_periods changed from 'Through March 2027' (prior period) to 'Through March 2026' (current period) - appears to be earlier maturity, inconsistent with typical annual contract extension patterns
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] natural_gas_sensitivity: was $13M, now missing
-[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (fx_forwards_outstanding, natural_gas_sensitivity)
-[LLM_FLAG] natural_gas_notional_amounts decreased from 13.5 million MMBtus to 5.8 million MMBtus (57% decrease) - significant reduction in open derivative positions
-[LLM_FLAG] contract_maturity_periods shortened from 'Through March 2027' to 'Through March 2026' - contracts matured or were closed
-[LLM_FLAG] This section is limited and references Item 7A of 10-K for detailed market risk analysis; full disclosure likely in 10-K filing
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-25 ===
-[LLM_FLAG] Natural gas derivative notional decreased from 16.0 million MMBtus (2024) to 13.5 million MMBtus (2025), representing a 15.6% decrease - within normal operating range but notable reduction
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-13 ===
+[HISTORICAL] [LLM_FLAG] Cash equivalents total from fair value table ($1,200M) differs from cash+equivalents investment schedule total ($1,406M); difference is cash ($206M) not included in fair value hierarchy table
+[HISTORICAL] [LLM_FLAG] Commodity (natural gas) derivatives confirmed but notional amounts not disclosed in this note
+[HISTORICAL] [LLM_FLAG] No hedge accounting applied per filing — changes in fair value recognized in earnings, no AOCI
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section is a one-paragraph cross-reference to the 2024 10-K Item 7A; only natural gas MMBtu position is updated in this filing.

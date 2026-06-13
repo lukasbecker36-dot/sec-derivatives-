@@ -1,92 +1,73 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($4,600M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($504M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($13,227M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-848M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($1M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fair_value_by_level: was $2M, now missing
-[NEW_FIELD] commodity_derivative_roll_forward: appeared for first time ($1,990M)
-[NEW_FIELD] market_risk_sensitivity: appeared for first time ($0M)
-[NUMERIC] fair_value_maturity_profile: $1,099M → $2,493M (+126.8%) — exceeds 20% threshold
-[LLM_FLAG] ir_swap_notional increased from 1400 to 4600 million, flagging a major change in hedging strategy indicating increased interest rate risk exposure.
-[LLM_FLAG] total_derivative_liability significantly high at 13227 million raises concerns regarding counterparty risks and liquidity management.
-[LLM_FLAG] The collateral_amounts increased from $0 million to $1683 million due to extensive derivative activity, as the previous period had no collateral reported.
-[LLM_FLAG] The commodity_derivative_roll_forward shows a significant change indicating active management and strategic positions increasing from $504 million to $2493 million.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-13 ===
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($4,600M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($13,227M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-848M)
+[HISTORICAL] [NUMERIC] collateral_amounts: $1,352M → $1,683M (+24.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Post-Calpine acquisition (January 2026), the filing no longer separately discloses FX derivative notionals; only interest rate swap notionals are given ($4.6 billion).
+[HISTORICAL] [LLM_FLAG] IR swap notional of $4.6 billion represents a large increase from prior periods, primarily driven by Calpine derivatives acquired at acquisition.
+[HISTORICAL] [LLM_FLAG] Total derivative liability of $(13,227) million is gross pre-netting; netting reduces this to $(878) million net on balance sheet.
+[HISTORICAL] [LLM_FLAG] Net derivative position of $(848) million includes both legacy CEG and acquired Calpine derivatives.
+[HISTORICAL] [LLM_FLAG] The section text begins mid-table so gross total derivative assets cannot be directly read.
+[HISTORICAL] [LLM_FLAG] equity_sensitivity_10pct of $1,072M reflects combined NDT fund impact of 25bp IR increase AND 10% equity decline — not equity-only sensitivity.
+[HISTORICAL] [LLM_FLAG] Calpine acquisition completed January 2026 caused a massive step-change in commodity derivative net assets: $504M at Dec 31, 2025 to $2,493M at Mar 31, 2026. Acquired contracts of $1,403M added during roll-forward period.
+[HISTORICAL] [LLM_FLAG] market_risk_sensitivity metric changed from $5/MWh to $10/MWh energy + $5/MWh spark spread, reflecting new gas generation portfolio from Calpine. No dollar figure disclosed (not material).
+[HISTORICAL] [LLM_FLAG] FX risk sub-section removed in Q1 2026 compared to prior quarters — only 'Interest Rate Risk' heading present.
+[HISTORICAL] [LLM_FLAG] fair_value_by_level and fair_value_maturity_profile contain structured table data stored as evidence strings rather than scalars; null used for value field as schema expects a single numeric.
+[HISTORICAL] [LLM_FLAG] commodity_derivative_roll_forward stored as evidence string; null for value as no single scalar.
+[HISTORICAL] [LLM_FLAG] hedge_settlement_timeline: 2026–2028 (text value, not numeric).
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($2M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($1,099M)
-[NEW_FIELD] collateral_amounts: appeared for first time ($1,352M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-13 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $1,506M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $1,506M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $9,459M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-269M, now missing
+[HISTORICAL] [NUMERIC] collateral_amounts: $776M → $1,352M (+74.2%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] market_risk_sensitivity: was $219M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/7 previously-populated fields are now null (fx_derivatives_notional, ir_swap_notional, total_derivative_liability, net_derivative_position, market_risk_sensitivity)
+[HISTORICAL] [LLM_FLAG] The section text provided for this 10-K filing is from the Critical Accounting Policies section (accounting methodology narrative), not the quantitative Note 15 — Derivative Financial Instruments tables; no specific notional amounts or fair values are present in the extracted text.
+[HISTORICAL] [LLM_FLAG] Company does not use designated cash flow hedges; all instruments are economic hedges.
+[HISTORICAL] [LLM_FLAG] equity_sensitivity_10pct of $1,099M reflects combined NDT fund impact of 25bp IR increase AND 10% equity decline — not equity-only sensitivity.
+[HISTORICAL] [LLM_FLAG] This is the 10-K filing (annual) for FY2025; roll-forward table includes both 2025 and 2024 comparative columns.
+[HISTORICAL] [LLM_FLAG] market_risk_sensitivity: impact described as not material for 2026 and 2027; no dollar figure disclosed (contrast with Q3 2025 which had $219M for 2026).
+[HISTORICAL] [LLM_FLAG] fair_value_by_level and fair_value_maturity_profile contain structured table data stored as evidence strings rather than scalars; null used for value field as schema expects a single numeric.
+[HISTORICAL] [LLM_FLAG] commodity_derivative_roll_forward stored as evidence string; null for value as no single scalar.
+[HISTORICAL] [LLM_FLAG] hedge_settlement_timeline: 2026–2028 (text value, not numeric).
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($1M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[NUMERIC] fair_value_maturity_profile: $1,099M → $2,493M (+126.8%) — exceeds 20% threshold
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-13 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $1,065M → $1,506M (+41.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $1,065M → $1,506M (+41.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($9,459M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-269M)
+[HISTORICAL] [NEW_FIELD] market_risk_sensitivity: appeared for first time ($219M)
+[HISTORICAL] [LLM_FLAG] IR swaps and FX derivatives notional are reported as a combined figure of $1,506 million at September 30, 2025; individual FX and IR components not split out.
+[HISTORICAL] [LLM_FLAG] Total derivative liability of $(9,459) million is the gross pre-netting figure; the netting column shows $8,281 million, yielding net liabilities of $(864) million (noncurrent + current combined from the balance sheet).
+[HISTORICAL] [LLM_FLAG] Net derivative position of $(269) million is the overall mark-to-market net after netting and collateral as shown in the table fragment.
+[HISTORICAL] [LLM_FLAG] The section text begins mid-table so total derivative assets (gross) are not directly readable.
+[HISTORICAL] [LLM_FLAG] equity_sensitivity_10pct of $1,061M reflects combined NDT fund impact of 25bp IR increase AND 10% equity decline — not equity-only sensitivity.
+[HISTORICAL] [LLM_FLAG] market_risk_sensitivity: $219M is the 2026 earnings impact from $5/MWh reduction; 2025 impact described as not material.
+[HISTORICAL] [LLM_FLAG] fair_value_by_level and fair_value_maturity_profile contain structured table data stored as evidence strings rather than scalars; null used for value field as schema expects a single numeric.
+[HISTORICAL] [LLM_FLAG] commodity_derivative_roll_forward stored as evidence string; null for value as no single scalar.
+[HISTORICAL] [LLM_FLAG] hedge_settlement_timeline: 2025–2027 (text value, not numeric).
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] total_derivative_liability: appeared for first time ($-1,307M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-753M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($1,099M)
-[NEW_FIELD] collateral_amounts: appeared for first time ($1,352M)
-[NEW_FIELD] commodity_derivative_roll_forward: appeared for first time ($504M)
-[NEW_FIELD] market_risk_sensitivity: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-13 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $712M → $1,065M (+49.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $712M → $1,065M (+49.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] collateral_amounts: $1,063M → $847M (-20.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] IR swaps and FX derivatives notional are reported as a combined figure of $1,065 million at June 30, 2025; individual components not split out.
+[HISTORICAL] [LLM_FLAG] Commodity derivative gross/net fair value tables not included in the extracted section text; only credit exposure and contingent features tables are present.
+[HISTORICAL] [LLM_FLAG] Company does not use designated cash flow hedges.
+[HISTORICAL] [LLM_FLAG] equity_sensitivity_10pct of $981M reflects combined NDT fund impact of 25bp IR increase AND 10% equity decline — not equity-only sensitivity.
+[HISTORICAL] [LLM_FLAG] fair_value_by_level and fair_value_maturity_profile contain structured table data stored as evidence strings rather than scalars; null used for value field as schema expects a single numeric.
+[HISTORICAL] [LLM_FLAG] commodity_derivative_roll_forward stored as evidence string; null for value as no single scalar.
+[HISTORICAL] [LLM_FLAG] IR sensitivity explicitly described as not material; no dollar figure extractable.
+[HISTORICAL] [LLM_FLAG] hedge_settlement_timeline: 2025–2027 (text value, not numeric).
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] net_derivative_position: was $554M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (net_derivative_position)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($554M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] collateral_amounts: $776M → $1,683M (+116.9%) — exceeds 20% threshold
-[LLM_FLAG] equity_sensitivity_10pct: 1072 vs prior 1061 - minimal 1% increase, within reasonable variation for NDT trust asset value changes
-[LLM_FLAG] fair_value_by_level total increased dramatically: 2493 vs prior 182 (1271% increase) - primarily driven by Calpine acquisition in January 2026 which added 1,403M in contracts acquired at acquisition date
-[LLM_FLAG] collateral_amounts: 1683 vs prior 776 - 117% increase, consistent with significant increase in derivative positions from Calpine acquisition
-[LLM_FLAG] commodity_derivative_roll_forward: Prior period reflected full year 2025 while current period reflects only Q1 2026 (3 months); the large jump to 2,493 is primarily attributable to 1,403M in Calpine contract acquisitions
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
-[LLM_FLAG] PLAUSIBILITY: equity_sensitivity_10pct increased 8.2% from prior period ($981M to $1,061M) - within acceptable variance
-[LLM_FLAG] PLAUSIBILITY: commodity_derivative_roll_forward ending balance decreased 57% from prior period ($424M to $182M) - significant change but explained by total change in fair value of -$317M (marked-to-market adjustment) and reclassification to realized at settlement
-[LLM_FLAG] PLAUSIBILITY: fair_value_by_level total decreased 57% - consistent with commodity derivative decline; Level 3 changed from +$137M to -$55M, suggesting adverse mark-to-market on model-based valuations
-[LLM_FLAG] PLAUSIBILITY: collateral_amounts decreased 8.4% from prior period ($847M to $776M) - within acceptable variance, correlates with lower derivative net asset position
-[LLM_FLAG] NOTE: market_risk_sensitivity disclosed at 2026 level ($219M) compared to prior period statement of 'not material for 2025 and 2026' - represents material change in 2026 exposure year
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
-[NUMERIC] collateral_amounts: $1,063M → $847M (-20.3%) — exceeds 20% threshold
-[LLM_FLAG] equity_sensitivity_10pct: Value changed from 948 to 981 (3.5% increase). This appears reasonable and within normal variance; not a material change.
-[LLM_FLAG] collateral_amounts: Value changed from 1063 to 847 (20.3% decrease). This is within 50% threshold.
-[LLM_FLAG] fair_value_by_level: Total fair value changed from 435 to 424 (2.5% decrease). Level 3 changed from -18 to 137 (major shift). This represents a significant change in Level 3 positioning; likely due to mark-to-market movements and portfolio changes during the six-month period.
-[LLM_FLAG] commodity_derivative_roll_forward: Structure is comparable to prior period but individual components differ; changes appear reasonable given six-month period operations and market movements.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
-[NUMERIC] collateral_amounts: $1,352M → $1,063M (-21.4%) — exceeds 20% threshold
-[LLM_FLAG] equity_sensitivity_10pct: 948 is 13.7% LOWER than prior period value of 1,099 - likely due to different equity price assumptions or changes in NDT trust fund composition and market values at March 31, 2025 vs prior period
-[LLM_FLAG] collateral_amounts: 1,063 is 21.3% LOWER than prior period value of 1,352 - represents net collateral positions at Q1 2025 vs prior reporting date
-[LLM_FLAG] commodity_derivative_roll_forward: ending balance of 435 is 13.7% LOWER than prior period ending balance of 504 - decline driven by lower fair value changes and reclassifications
-[LLM_FLAG] fair_value_by_level: Level 3 position is NEGATIVE 18 (prior: 140) - significant decrease of 112.9% indicates material shift in unobservable input valuations, level 1 increased from 142 to 280 (97% increase)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-13 ===
+[HISTORICAL] [LLM_FLAG] IR swaps and FX derivatives notional are reported as a combined figure of $712 million; individual components not split out.
+[HISTORICAL] [LLM_FLAG] Commodity derivative gross/net fair value tables (derivative assets and liabilities) are not included in the extracted section text window; only credit exposure and contingent features tables are present.
+[HISTORICAL] [LLM_FLAG] Company does not use designated cash flow hedges; all commodity and FX/IR instruments are economic hedges.
+[HISTORICAL] [LLM_FLAG] equity_sensitivity_10pct of $948M reflects combined NDT fund impact of 25bp IR increase AND 10% equity decline — not equity-only sensitivity.
+[HISTORICAL] [LLM_FLAG] fair_value_by_level and fair_value_maturity_profile contain structured table data stored as evidence strings rather than scalars; null used for value field as schema expects a single numeric.
+[HISTORICAL] [LLM_FLAG] commodity_derivative_roll_forward stored as evidence string; null for value as no single scalar.
+[HISTORICAL] [LLM_FLAG] IR sensitivity explicitly described as not material; no dollar figure extractable.
+[HISTORICAL] [LLM_FLAG] hedge_settlement_timeline: 2025–2027 (text value, not numeric).
