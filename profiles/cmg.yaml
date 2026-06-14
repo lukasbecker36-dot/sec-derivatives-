@@ -1,9 +1,10 @@
-issuer: "Chipotle Mexican Grill"
+issuer: Chipotle Mexican Grill
 ticker: CMG
-cik: "1058090"
+cik: '1058090'
 archetype: minimal_hedger
 extraction_mode: llm
-
-# Derivatives section matched by: Note\s+\d+\s*[.–—―�‒—–:—–\-]\s*Fair Value
-# Market risk section matched by: Quantitative\s+and\s+Qualitat\s*ive\s+Disclosures?\s+About\s+Market\s+Risk
-
+sections:
+  financial_instruments:
+    heading: 4\.\s+Fair\s+Value\s+Measurements
+  market_risk:
+    heading: ITEM\s+3\.\s+QUANTITATIVE\s+AND\s+QUALITATIVE\s+DISCLOSURE\s+ABOUT\s+MARKET\s+RISK

@@ -1,46 +1,37 @@
 issuer: Cummins
 ticker: CMI
-cik: "26172"
+cik: '26172'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   foreign_currency_forwards_notional:
-    description: "notional amounts of foreign currency forward contracts"
+    description: notional amounts of foreign currency forward contracts
     section: market_risk
   net_investment_hedge_notional:
-    description: "notional amounts of net investment hedges"
+    description: notional amounts of net investment hedges
     section: market_risk
   cross_currency_swaps_notional:
-    description: "notional amounts of cross-currency interest rate swaps"
+    description: notional amounts of cross-currency interest rate swaps
     section: market_risk
   interest_rate_swaps_notional:
-    description: "notional amounts outstanding for interest rate swaps by debt maturity"
+    description: notional amounts outstanding for interest rate swaps by debt maturity
     section: market_risk
   net_investment_hedge_activity:
-    description: "gains/losses recognized in AOCL and reclassified to earnings"
+    description: gains/losses recognized in AOCL and reclassified to earnings
     section: market_risk
   fair_value_hedge_activity:
-    description: "gains/losses on interest rate swaps and related borrowings"
+    description: gains/losses on interest rate swaps and related borrowings
     section: market_risk
   non_hedge_derivative_income:
-    description: "gains/losses on derivatives not designated as hedging instruments"
+    description: gains/losses on derivatives not designated as hedging instruments
     section: market_risk
   derivative_fair_values:
-    description: "fair values and balance sheet locations of derivative assets and liabilities"
+    description: fair values and balance sheet locations of derivative assets and liabilities
     section: market_risk
   major_currencies:
-    description: "primary currencies in foreign exchange contracts and their percentage"
+    description: primary currencies in foreign exchange contracts and their percentage
     section: market_risk
-
-# Unusual features identified:
-#   - Includes both financial derivatives and physical forward contracts (non-derivatives)
-#   - Cross-currency interest rate swaps introduced mid-year 2025
-#   - Interest rate lock agreements settled upon debt issuance
-#   - LIBOR to SOFR transition mentioned in swap agreements
-#   - Net investment hedge activity table shows both foreign exchange forwards and cross-currency swaps
-#   - Fair value table separates designated vs non-designated hedging instruments
-#   - Incomplete fair value table (appears cut off at derivative liabilities section)
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*DERIVATIVES
