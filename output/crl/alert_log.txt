@@ -1,14 +1,30 @@
-=== 10-Q | Period ending 2026-03-28 | Processed 2026-05-26 ===
-[LLM_FLAG] This is a brief disclosure referring readers to the 10-K for detailed market risk information. Minimal quantitative data is provided in this 10-Q excerpt.
-[LLM_FLAG] Market risk reference changed from fiscal year 2024 to fiscal year 2025 in the 10-K citation, which is expected due to the annual update.
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-06-14 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fixed_rate_notes_billion)
+[HISTORICAL] [LLM_FLAG] CRL does not appear to use FX or IR derivatives in this filing period; fair value note covers only life insurance policies (COLI) and contingent consideration from acquisitions.
+[HISTORICAL] [LLM_FLAG] Market risk section is a boilerplate cross-reference with no numeric data.
 
-=== 10-Q | Period ending 2025-06-28 | Processed 2026-05-26 ===
-[LLM_FLAG] This section is a boilerplate disclosure that refers readers to prior period documentation rather than providing detailed quantitative market risk metrics. No material change assertion suggests data should be consistent with prior year, but specific values are not disclosed.
+=== 10-K | Period ending 2025-12-27 | Processed 2026-06-14 ===
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
+[HISTORICAL] [LLM_FLAG] Section text contains only the fair value accounting policy and methodology narrative from the 10-K; actual fair value tables with numeric data were not captured in the extraction window. FX forward contracts and IR swaps are mentioned as valuation categories, suggesting CRL may use these instruments, but no numeric data is available to extract.
+[HISTORICAL] [LLM_FLAG] IR swap of $500M notional matured in fiscal 2024; no active IR swaps as of 10-K date.
+[HISTORICAL] [LLM_FLAG] FX derivatives are used but notional amounts are not disclosed in the section text provided.
+[HISTORICAL] [LLM_FLAG] FX revenue sensitivity: revenue would decrease $135.6M and operating income would increase $9.6M on a 10% USD strengthening.
+[HISTORICAL] [LLM_FLAG] Market risk section incorporates by reference; limited standalone numeric content.
+[HISTORICAL] [LLM_FLAG] 10% USD strengthening: revenue impact -$135.6M, operating income impact +$9.6M (translational, not derivative sensitivity).
+[HISTORICAL] [LLM_FLAG] IR swap of $500M matured fiscal 2024; no active IR swaps at 10-K date.
 
-=== 10-Q | Period ending 2025-03-29 | Processed 2026-05-26 ===
-[LLM_FLAG] This section provides only a cross-reference to prior period disclosures rather than specific quantitative data. No substantive market risk metrics are disclosed in the current 10-Q section provided.
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-06-14 ===
+[HISTORICAL] [LLM_FLAG] CRL does not appear to use FX or IR derivatives in this filing period; fair value note covers only life insurance policies (COLI) and contingent consideration from acquisitions.
+[HISTORICAL] [LLM_FLAG] Market risk section is a boilerplate cross-reference with no numeric data.
 
-=== 10-Q | Period ending 2026-03-28 | Processed 2026-05-25 ===
-[LLM_FLAG] Filing text is incomplete - appears to end mid-sentence after the cross-references, preventing extraction of actual quantitative market risk disclosures
-[LLM_FLAG] All quantitative metrics cannot be verified as the detailed disclosure sections are not included in the provided text
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-06-14 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $0M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (total_cash_equivalents_fv)
+[HISTORICAL] [LLM_FLAG] CRL does not appear to use FX or IR derivatives in this filing period; fair value note covers only life insurance policies (COLI) and contingent consideration from acquisitions.
+[HISTORICAL] [LLM_FLAG] Market risk section is a boilerplate cross-reference with no numeric data.
 
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-06-14 ===
+[HISTORICAL] [LLM_FLAG] CRL does not appear to use FX or IR derivatives in this filing period; fair value note covers only life insurance policies (COLI) and contingent consideration from acquisitions.
+[HISTORICAL] [LLM_FLAG] Cash equivalents balance is de minimis ($31 thousand).
+[HISTORICAL] [LLM_FLAG] Market risk section is a boilerplate cross-reference with no numeric data.
