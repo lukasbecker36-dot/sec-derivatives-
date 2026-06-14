@@ -1,22 +1,22 @@
 issuer: Salesforce
 ticker: CRM
-cik: "1108524"
+cik: '1108524'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fx_contracts_notional:
-    description: "Notional amount of FX contracts"
+    description: Notional amount of FX contracts
     section: market_risk
   fx_contracts_fair_value:
-    description: "Fair value of FX contracts"
+    description: Fair value of FX contracts
     section: market_risk
   non_designated_gain_loss:
-    description: "Gain/loss on non-designated derivatives"
+    description: Gain/loss on non-designated derivatives
     section: market_risk
   foreign_currency_sensitivity:
-    description: "Impact of foreign currency rate changes on results"
+    description: Impact of foreign currency rate changes on results
     section: market_risk
-
+sections:
+  financial_instruments:
+    heading: 3\.\s+Investments
