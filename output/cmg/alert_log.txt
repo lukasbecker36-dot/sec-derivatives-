@@ -1,6 +1,29 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-14 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($247M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($644M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($2M)
+[HISTORICAL] [LLM_FLAG] Values are in thousands in the filing; converted to millions here. CMG holds no financial derivatives. Notable shift from prior periods: no Level 1 corporate debt securities at March 31, 2026; Level 3 Notes receivable increased significantly ($12,833 vs $4,292 at Sep 2025), likely reflecting new convertible note investments in private companies. Cash and investment balances have declined substantially, consistent with ongoing share repurchase activity.
+[HISTORICAL] [LLM_FLAG] Entirely qualitative market risk disclosure. No quantitative sensitivity figures provided for any risk category. CMG uses supplier forward pricing protocols (physical supply contracts, not financial derivatives) for commodity risk management.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-14 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $699M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $992M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $18M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $4M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt)
+[HISTORICAL] [LLM_FLAG] Entirely qualitative market risk disclosure (10-K Item 7A). No quantitative sensitivity figures provided for any risk category. CMG uses supplier forward pricing protocols (physical supply contracts, not financial derivatives) for commodity risk management.
 
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-14 ===
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $38M → $18M (-51.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Values are in thousands in the filing; converted to millions here. CMG holds no financial derivatives. The fair value table covers cash, money market funds, time deposits, U.S. Treasuries, Level 1 corporate debt, and Level 3 illiquid instruments.
+[HISTORICAL] [LLM_FLAG] Entirely qualitative market risk disclosure. No quantitative sensitivity figures provided for any risk category. CMG uses supplier forward pricing protocols (physical supply contracts, not financial derivatives) for commodity risk management.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-14 ===
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $48M → $38M (-20.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $6M → $4M (-22.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Values are in thousands in the filing; converted to millions here. CMG holds no financial derivatives. The fair value table covers cash, money market funds, time deposits, U.S. Treasuries, Level 1 corporate debt, and Level 3 illiquid instruments.
+[HISTORICAL] [LLM_FLAG] Entirely qualitative market risk disclosure. No quantitative sensitivity figures provided for any risk category. CMG uses supplier forward pricing protocols (physical supply contracts, not financial derivatives) for commodity risk management.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-14 ===
+[HISTORICAL] [LLM_FLAG] Values are in thousands in the filing; converted to millions here. CMG holds no financial derivatives — the fair value table covers only cash, money market funds, time deposits, U.S. Treasuries, corporate debt, and Level 3 instruments (illiquid corporate debt security and convertible notes receivable).
+[HISTORICAL] [LLM_FLAG] Entirely qualitative market risk disclosure. No quantitative sensitivity figures provided for any risk category. CMG uses supplier forward pricing protocols (physical supply contracts, not financial derivatives) for commodity risk management.
