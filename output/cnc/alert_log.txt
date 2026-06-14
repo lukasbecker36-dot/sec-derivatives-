@@ -1,64 +1,33 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[DISAPPEARED_FIELD] total_derivative_asset: was $931M, now missing
-[DISAPPEARED_FIELD] total_derivative_liability: was $931M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-636M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] short_term_investments: appeared for first time ($2,500M)
-[NUMERIC] long_term_investments: $-650M → $18,000M (+2869.2%) — exceeds 20% threshold
-[NEW_FIELD] restricted_deposits: appeared for first time ($1,400M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-636M)
-[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, equity_sensitivity_10pct)
-[LLM_FLAG] ir_sensitivity_100bp differs from prior analysis, substantial decrease in fixed income investments fair value anticipated due to interest rate risk.
-[LLM_FLAG] long_term_investments significantly high, notable increase from prior period.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-14 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($21,264M)
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $256M, now missing
+[HISTORICAL] [LLM_FLAG] Section covers investment portfolio fair value measurements only; no derivative instruments disclosed.
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt cannot be extracted: this period's section contains only a fair value hierarchy table without amortized cost or unrealized gain/loss columns.
+[HISTORICAL] [LLM_FLAG] Equity securities dropped to $1M at March 31, 2026, down from $13M at September 30, 2025 — notable decline.
+[HISTORICAL] [LLM_FLAG] investment_composition and investment_maturity_profile are descriptive fields not suitable for numeric extraction; values set to null
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($931M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($931M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-650M)
-[NEW_FIELD] short_term_investments: appeared for first time ($2,400M)
-[NEW_FIELD] long_term_investments: appeared for first time ($18,400M)
-[NEW_FIELD] restricted_deposits: appeared for first time ($1,400M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-650M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-14 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $17,058M, now missing
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $13M → $1M (-92.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($256M)
+[HISTORICAL] [LLM_FLAG] Section is Note 4 (Short-term and Long-term Investments), presenting amortized cost/unrealized gains/losses/fair value by security type — different structure from quarterly fair value hierarchy tables.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv of $20,879M includes private equity investments ($915M) and life insurance contracts ($217M) which are not marketable securities in the traditional sense; the tradeable debt/equity portfolio fair value is approximately $19,747M (total minus private equity and life insurance).
+[HISTORICAL] [LLM_FLAG] No derivative instruments disclosed; Centene does not use derivatives.
+[HISTORICAL] [LLM_FLAG] Centene had no active derivative instruments at December 31, 2025; the section text describes a historical one-time FX cash flow hedge (Circle Health divestiture swap, notional $931M) that was fully settled in January 2024 and a corresponding gain of $20 million recorded in investment and other income.
+[HISTORICAL] [LLM_FLAG] investment_composition and investment_maturity_profile are descriptive fields not suitable for numeric extraction; values set to null
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-636M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] short_term_investments: appeared for first time ($2,500M)
-[NUMERIC] long_term_investments: $-650M → $18,000M (+2869.2%) — exceeds 20% threshold
-[NEW_FIELD] restricted_deposits: appeared for first time ($1,400M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-636M)
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (equity_sensitivity_10pct)
-[LLM_FLAG] long_term_investments changed from -650.0 to 18000.0, significant change indicates different reporting methodology or substantial investments made; further review needed.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-14 ===
+[HISTORICAL] [NUMERIC] short_term_investments: $2,800M → $2,200M (-21.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section covers investment portfolio fair value measurements only; no derivative instruments disclosed.
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt cannot be extracted: this period's section contains only a fair value hierarchy table without amortized cost or unrealized gain/loss columns.
+[HISTORICAL] [LLM_FLAG] investment_composition and investment_maturity_profile are descriptive fields not suitable for numeric extraction; values set to null
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-650M)
-[NEW_FIELD] short_term_investments: appeared for first time ($2,400M)
-[NEW_FIELD] long_term_investments: appeared for first time ($18,400M)
-[NEW_FIELD] restricted_deposits: appeared for first time ($1,400M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-650M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-14 ===
+[HISTORICAL] [LLM_FLAG] Section covers investment portfolio fair value measurements only; no derivative instruments disclosed.
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt cannot be extracted: this period's section contains only a fair value hierarchy table without amortized cost or unrealized gain/loss columns.
+[HISTORICAL] [LLM_FLAG] investment_composition and investment_maturity_profile are descriptive fields not suitable for numeric extraction; values set to null
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
-[LLM_FLAG] short_term_investments increased from $2,200M to $2,500M (13.6% increase) - within normal variation
-[LLM_FLAG] long_term_investments decreased from $19,600M to $18,000M (8.2% decrease) - within normal variation
-[LLM_FLAG] interest_rate_sensitivity decreased from $685M to $636M (7.1% decrease) - likely due to portfolio changes and market conditions
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
-[NUMERIC] short_term_investments: $2,800M → $2,200M (-21.4%) — exceeds 20% threshold
-[LLM_FLAG] Short-term investments decreased from $2.8 billion (prior period) to $2.2 billion (current period), a 21% decrease - within acceptable range
-[LLM_FLAG] Interest rate sensitivity decreased from $728 million (prior period) to $685 million (current period), a 6% decrease - within acceptable range
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
-[LLM_FLAG] interest_rate_sensitivity increased from $706M to $728M (+3.1%), within normal variance
-[LLM_FLAG] short_term_investments increased from $2,500M to $2,800M (+12%), within acceptable range
-[LLM_FLAG] long_term_investments increased from $19,700M to $20,200M (+2.5%), within normal variance
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] interest_rate_sensitivity increased from $650M to $706M (8.6% increase) - within normal variance
-[LLM_FLAG] short_term_investments increased from $2,400M to $2,500M (4.2% increase) - within normal variance
-[LLM_FLAG] long_term_investments increased from $18,400M to $19,700M (7.1% increase) - within normal variance
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-14 ===
+[HISTORICAL] [LLM_FLAG] Section covers investment portfolio fair value measurements only; no derivative instruments disclosed. Centene is a health insurer with no derivatives activity in this note.
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt cannot be extracted: this period's section contains only a fair value hierarchy table without amortized cost or unrealized gain/loss columns.
+[HISTORICAL] [LLM_FLAG] investment_composition and investment_maturity_profile are descriptive fields not suitable for numeric extraction; values set to null
