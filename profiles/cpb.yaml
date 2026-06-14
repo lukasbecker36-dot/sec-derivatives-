@@ -1,24 +1,21 @@
 issuer: Campbell's Company (The)
 ticker: CPB
-cik: "16732"
+cik: '16732'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   financial_instruments_detail:
-    description: "derivative instruments and risk management policies"
+    description: derivative instruments and risk management policies
     section: market_risk
   fair_value_hierarchy:
-    description: "fair value measurements by level"
+    description: fair value measurements by level
     section: market_risk
   derivative_fair_values:
-    description: "fair values of derivative instruments"
+    description: fair values of derivative instruments
     section: market_risk
-
-# Unusual features identified:
-#   - Section text appears incomplete - only shows note references without actual content
-#   - Financial instruments and fair value measurements are split across separate notes (14 and 15)
-#   - Cannot determine actual derivative types or data structure from provided excerpt
-
+sections:
+  financial_instruments:
+    heading: 13\.\s+Financial\s+Instruments
+  market_risk:
+    heading: MARKET\s+RISK\s+SENSITIVITY

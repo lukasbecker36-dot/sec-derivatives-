@@ -1,29 +1,24 @@
 issuer: Costco
 ticker: COST
-cik: "909832"
+cik: '909832'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   interest_rate_exposure:
-    description: "exposure to market risk from interest rate changes"
+    description: exposure to market risk from interest rate changes
     section: market_risk
   foreign_currency_exposure:
-    description: "exposure to financial market risk from foreign exchange rates"
+    description: exposure to financial market risk from foreign exchange rates
     section: market_risk
   investment_holdings:
-    description: "diversified instruments considered cash equivalents"
+    description: diversified instruments considered cash equivalents
     section: market_risk
   speculative_activities:
-    description: "statement about non-engagement in speculative transactions"
+    description: statement about non-engagement in speculative transactions
     section: market_risk
-
-# Unusual features identified:
-#   - Very basic market risk disclosure with minimal quantitative detail
-#   - No derivative instruments mentioned despite market risk section
-#   - Focus primarily on cash equivalents rather than complex financial instruments
-#   - Explicitly states no speculative or trading activities
-#   - Incomplete section text - appears to cut off mid-sentence
-
+sections:
+  financial_instruments:
+    heading: Fair\s+Value\s+Measurement\s+Assets\s+and\s+Liabilities\s+Measured\s+at\s+Fair\s+Value\s+on\s+a\s+Recurring\s+Basis
+  derivatives_note:
+    heading: Summary\s+of\s+Significant\s+Accounting\s+Policies
