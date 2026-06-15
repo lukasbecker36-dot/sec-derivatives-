@@ -1,47 +1,40 @@
 issuer: Cognizant
 ticker: CTSH
-cik: "1058290"
+cik: '1058290'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fair_value_assets_designated:
-    description: "fair value of assets for designated hedging instruments"
+    description: fair value of assets for designated hedging instruments
     section: market_risk
   fair_value_liabilities_designated:
-    description: "fair value of liabilities for designated hedging instruments"
+    description: fair value of liabilities for designated hedging instruments
     section: market_risk
   fair_value_assets_non_designated:
-    description: "fair value of assets for non-designated instruments"
+    description: fair value of assets for non-designated instruments
     section: market_risk
   fair_value_liabilities_non_designated:
-    description: "fair value of liabilities for non-designated instruments"
+    description: fair value of liabilities for non-designated instruments
     section: market_risk
   notional_amounts_by_maturity:
-    description: "notional values broken down by maturity year"
+    description: notional values broken down by maturity year
     section: market_risk
   weighted_average_contract_rates:
-    description: "weighted average exchange rates by maturity year"
+    description: weighted average exchange rates by maturity year
     section: market_risk
   sensitivity_analysis_designated:
-    description: "10% sensitivity impact on designated hedges ($310M)"
+    description: 10% sensitivity impact on designated hedges ($310M)
     section: market_risk
   sensitivity_analysis_non_designated:
-    description: "10% sensitivity impact on non-designated instruments ($4M)"
+    description: 10% sensitivity impact on non-designated instruments ($4M)
     section: market_risk
   unrealized_loss_amount:
-    description: "net unrealized loss on outstanding contracts ($84M)"
+    description: net unrealized loss on outstanding contracts ($84M)
     section: market_risk
   oci_reclassification_estimate:
-    description: "estimated reclassification from OCI within 12 months ($47M)"
+    description: estimated reclassification from OCI within 12 months ($47M)
     section: market_risk
-
-# Unusual features identified:
-#   - Provides both gross fair value presentation and mentions master netting arrangements exist but are not applied
-#   - Includes weighted average contract rates in addition to notional amounts
-#   - Separates sensitivity analysis between designated and non-designated instruments with different materiality thresholds
-#   - Cross-references specific income statement line items for hedge effectiveness (Cost of revenues and SG&A)
-#   - Combines FX forwards and options in single designation category rather than separate treatment
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Derivative\s+Financial\s+Instruments
