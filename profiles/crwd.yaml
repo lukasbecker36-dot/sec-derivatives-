@@ -1,41 +1,36 @@
 issuer: CrowdStrike
 ticker: CRWD
-cik: "1535527"
+cik: '1535527'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   cash_equivalents_current:
-    description: "Current period cash and cash equivalents balance"
+    description: Current period cash and cash equivalents balance
     section: market_risk
   cash_equivalents_prior:
-    description: "Prior period cash and cash equivalents balance"
+    description: Prior period cash and cash equivalents balance
     section: market_risk
   interest_rate_sensitivity:
-    description: "Basis point change scenario and impact assessment"
+    description: Basis point change scenario and impact assessment
     section: market_risk
   foreign_currency_exposure:
-    description: "Primary currencies exposed to (British Pound, Australian Dollar, Euro)"
+    description: Primary currencies exposed to (British Pound, Australian Dollar, Euro)
     section: market_risk
   fx_sensitivity_current:
-    description: "Hypothetical 10% adverse FX impact on operating loss for current year"
+    description: Hypothetical 10% adverse FX impact on operating loss for current year
     section: market_risk
   fx_sensitivity_prior_1:
-    description: "Hypothetical 10% adverse FX impact on operating loss for prior year 1"
+    description: Hypothetical 10% adverse FX impact on operating loss for prior year 1
     section: market_risk
   fx_sensitivity_prior_2:
-    description: "Hypothetical 10% adverse FX impact on operating loss for prior year 2"
+    description: Hypothetical 10% adverse FX impact on operating loss for prior year 2
     section: market_risk
   derivative_usage_statement:
-    description: "Statement about current and future derivative usage"
+    description: Statement about current and future derivative usage
     section: market_risk
-
-# Unusual features identified:
-#   - No derivative instruments currently used despite foreign currency exposure
-#   - Combines market risk disclosures with sensitivity analysis in narrative format rather than tabular
-#   - Includes multi-year comparative sensitivity analysis for FX risk
-#   - Explicitly states no trading or speculative investment purposes
-#   - Future-dated financials (January 31, 2026) suggesting this may be pro forma or projected data
-
+sections:
+  financial_instruments:
+    heading: 2\.\s+Investments\s+and\s+Fair\s+Value\s+Measurements
+  market_risk:
+    heading: ITEM\s+3\.\s+QUANTITATIVE\s+AND\s+QUALITATIVE\s+DISCLOSURES\s+ABOUT\s+MARKET\s+RISK

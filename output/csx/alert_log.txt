@@ -1,57 +1,42 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($1,300M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($92M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-92M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] underlying_debt_maturity: was $1M, now missing
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-15 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($303M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($5M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($69M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $1,300M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] debt_fair_value_sensitivity: was $757M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/9 previously-populated fields are now null (fi_ir_swap_notional, fx_forwards_outstanding, debt_fair_value_sensitivity)
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in this section — see derivatives_note for notional amounts. The 'total_marketable_securities_fv' mapped to CSX's 'Total Investments at Fair Value'; CSX does not use the label 'marketable securities'. Notable increase in Time Deposits to $140M (from nil) and overall portfolio up significantly to $303M vs $157M in Q1 2025.
+[HISTORICAL] [LLM_FLAG] All active IR swaps are fair value hedges — no unsettled cash flow hedge notional remains. Net derivative position computed as asset adjustment minus liability adjustment on the hedged notes table ($19M - $92M = -$73M); the swaps themselves do not have separate standalone fair value line items quoted in this section. Section text is truncated at the end ('Interest Rate Der'); additional fair value detail may appear in Note 9 continuation.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($87M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-87M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-1M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[LLM_FLAG] The potential decrease in fair value from interest rate changes was noted to be $757 million, which reflects a significant sensitivity to Treasury rate fluctuations.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-15 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $177M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $5M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $78M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($1,300M)
+[HISTORICAL] [NEW_FIELD] debt_fair_value_sensitivity: appeared for first time ($757M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/11 previously-populated fields are now null (total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt)
+[HISTORICAL] [LLM_FLAG] The financial_instruments section text supplied for this 10-K is the market risk/sensitivity section and auditor report rather than the fair value investments table (Note 13). Investment portfolio fair value data (ETFs, bonds) not extractable from the supplied text. IR swap notional of $1,300M inferred by summing stated hedged note amounts ($250M + $250M + $800M).
+[HISTORICAL] [LLM_FLAG] Cash flow hedges fully settled in Q2 2024; AOCI gain from settled cash flow hedges will remain until 2027 notes are refinanced. Swaps expiry range extended to 2032-2055 vs prior 2032-2035 as new 2055 swaps were added in 2025.
+[HISTORICAL] [LLM_FLAG] No floating rate notes outstanding as of December 31, 2025; forward starting swaps fully settled in 2024 so no longer in scope. Debt fair value sensitivity uses a 10% / ~43bp Treasury rate shock, not a standard 100bp parallel shift.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] underlying_debt_maturity: was $1M, now missing
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (underlying_debt_maturity)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-15 ===
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in this section — see derivatives_note for notional amounts. The 'total_marketable_securities_fv' mapped to CSX's 'Total Investments at Fair Value'; CSX does not use the label 'marketable securities'. Non-recurring fair value measurement: goodwill impairment recorded in Q3 2025 (see Note 12).
+[HISTORICAL] [LLM_FLAG] Cash flow hedges fully settled in Q2 2024; AOCI gain remains until associated debt (2027 notes) is refinanced. Non-recurring goodwill impairment of $164M recorded in Q3 2025 for Quality Carriers.
+[HISTORICAL] [LLM_FLAG] Market risk section cross-references the most recent 10-K; only incremental Q1 2025 swap update highlighted.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[LLM_FLAG] The fair value of the interest rate swaps has changed significantly, with values reported as $9 million, $14 million, and a $87 million liability across different years.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-15 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $3M → $5M (+66.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $20M → $25M (+25.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $20M → $25M (+25.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-90M → $-67M (+25.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in this section — see derivatives_note for notional amounts. The 'total_marketable_securities_fv' mapped to CSX's 'Total Investments at Fair Value'; CSX does not use the label 'marketable securities'.
+[HISTORICAL] [LLM_FLAG] Cash flow hedges fully settled in Q2 2024; AOCI gain remains until associated debt (2027 notes) is refinanced.
+[HISTORICAL] [LLM_FLAG] Market risk section cross-references the most recent 10-K for full quantitative disclosures; only incremental update (Q1 2025 new swaps still highlighted) provided here.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-25 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
-[DISAPPEARED_FIELD] underlying_debt_maturity: was $2,055M, now missing
-[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, underlying_debt_maturity)
-[LLM_FLAG] Insufficient data: The provided filing text is only a header reference to the Quantitative and Qualitative Disclosures about Market Risk section without the actual content. No substantive market risk disclosures are present to extract.
-[LLM_FLAG] Unable to verify changes from prior period due to incomplete filing text.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-25 ===
-[LLM_FLAG] swap_fair_values: Increased from $10 million to $11 million (10% increase), within normal range
-[LLM_FLAG] No significant deviations from prior period patterns detected
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-25 ===
-[LLM_FLAG] swap_fair_values: Increased from $8 million asset (Q1 2025) to $10 million asset (Q2 2025) - 25% increase, within acceptable range
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-25 ===
-[NUMERIC] fixed_rate_notes_billion: $1M → $0M (-80.8%) — exceeds 20% threshold
-[NEW_FIELD] underlying_debt_maturity: appeared for first time ($2,055M)
-[DISAPPEARED_FIELD] debt_fair_value_sensitivity: was $757M, now missing
-[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (debt_fair_value_sensitivity)
-[LLM_FLAG] swap_fair_values: Changed from prior period ($9M + $14M + $87L = $(64)M net) to current Q1 2025 ($8M asset). Prior disclosure mentioned three swap groups; current text only mentions new Q1 2025 swaps. This appears to be an update for new contracts entered in Q1 2025, not a decrease in total swap values.
-[LLM_FLAG] notional_amounts: Prior period showed $250M, $250M, $800M ($1.3B total). Current text only mentions $250M for 2055 notes. Incomplete disclosure or these may be new swaps separate from prior swaps.
-[LLM_FLAG] fixed_rate_notes_billion: Prior was $1.3B; current shows only $0.25B mentioned in the provided excerpt, likely incomplete disclosure in excerpt provided.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-15 ===
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in this section — see derivatives_note for notional amounts. The 'total_marketable_securities_fv' mapped to CSX's 'Total Investments at Fair Value' which includes ETFs, bonds, and other securities; CSX does not use the label 'marketable securities' in this note.
+[HISTORICAL] [LLM_FLAG] Cash flow hedges fully settled in Q2 2024; AOCI gain remains but will only be recognized when associated debt (2027 notes) is refinanced. IR swap notional reflects fair value hedges only.
+[HISTORICAL] [LLM_FLAG] Market risk section cross-references the most recent 10-K for full quantitative disclosures; only incremental Q1 2025 update (new $250M swaps) provided here.

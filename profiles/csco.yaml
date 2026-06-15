@@ -1,47 +1,40 @@
 issuer: Cisco
 ticker: CSCO
-cik: "858877"
+cik: '858877'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fx_forward_notional_purchased:
-    description: "notional amount of purchased forward contracts"
+    description: notional amount of purchased forward contracts
     section: market_risk
   fx_forward_notional_sold:
-    description: "notional amount of sold forward contracts"
+    description: notional amount of sold forward contracts
     section: market_risk
   fx_forward_fair_value_purchased:
-    description: "fair value of purchased forward contracts"
+    description: fair value of purchased forward contracts
     section: market_risk
   fx_forward_fair_value_sold:
-    description: "fair value of sold forward contracts"
+    description: fair value of sold forward contracts
     section: market_risk
   available_for_sale_debt_fair_value:
-    description: "fair value of available-for-sale debt investments"
+    description: fair value of available-for-sale debt investments
     section: market_risk
   interest_rate_sensitivity_scenarios:
-    description: "hypothetical fair values under different interest rate scenarios"
+    description: hypothetical fair values under different interest rate scenarios
     section: market_risk
   financing_receivables_carrying_value:
-    description: "carrying value of financing receivables"
+    description: carrying value of financing receivables
     section: market_risk
   debt_principal_amount:
-    description: "principal amount of senior fixed-rate notes"
+    description: principal amount of senior fixed-rate notes
     section: market_risk
   marketable_equity_fair_value:
-    description: "fair value of marketable equity investments"
+    description: fair value of marketable equity investments
     section: market_risk
   privately_held_investments_carrying_amount:
-    description: "carrying amount of privately held investments"
+    description: carrying amount of privately held investments
     section: market_risk
-
-# Unusual features identified:
-#   - combines derivatives disclosure with broader market risk analysis including non-derivative investments
-#   - includes detailed interest rate sensitivity analysis with multiple basis point scenarios
-#   - provides both current and prior year comparative data for FX derivatives
-#   - explicitly states hedging is not for speculative purposes
-#   - includes qualitative discussion of indirect FX effects on revenue
-
+sections:
+  financial_instruments:
+    heading: 10\.\s+Investments
