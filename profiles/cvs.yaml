@@ -1,35 +1,30 @@
 issuer: CVS Health
 ticker: CVS
-cik: "64803"
+cik: '64803'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   investment_portfolio_total:
-    description: "total investments supporting products"
+    description: total investments supporting products
     section: market_risk
   experience_rated_products:
-    description: "investments supporting experience-rated products"
+    description: investments supporting experience-rated products
     section: market_risk
   average_credit_rating:
-    description: "average credit quality rating of debt securities"
+    description: average credit quality rating of debt securities
     section: market_risk
   below_investment_grade_fair_value:
-    description: "fair value of debt securities rated below BBB-/Baa3"
+    description: fair value of debt securities rated below BBB-/Baa3
     section: market_risk
   aaa_rated_fair_value:
-    description: "fair value of debt securities rated AAA"
+    description: fair value of debt securities rated AAA
     section: market_risk
   municipal_debt_securities:
-    description: "municipal debt securities guaranteed by third parties"
+    description: municipal debt securities guaranteed by third parties
     section: market_risk
-
-# Unusual features identified:
-#   - combines general market risk disclosure with detailed investment portfolio data
-#   - focuses heavily on investment credit quality rather than derivative details
-#   - mentions derivative types but provides no quantitative data
-#   - includes experience-rated products where investment risk is transferred to contract holders
-#   - no separate derivatives table or notional amounts disclosed
-
+sections:
+  financial_instruments:
+    heading: 3\.\s+Fair\s+Value
+  market_risk:
+    heading: Item\s+3\.\s+Quantitative\s+and\s+Qualitative\s+Disclosures\s+About\s+Market\s+Risk
