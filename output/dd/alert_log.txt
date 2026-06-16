@@ -1,120 +1,74 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($347M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($1,000M)
-[NUMERIC] ir_swap_notional: $1,000M → $774M (-22.6%) — exceeds 20% threshold
-[NEW_FIELD] total_derivative_asset: appeared for first time ($221M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($53M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($168M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($64M)
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-35M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-163M, now missing
-[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $-100M, now missing
-[DISAPPEARED_FIELD] net_investment_hedge_sensitivity: was $-100M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $-35M, now missing
-[VALIDATION] Likely extraction failure: 5/11 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, foreign_currency_sensitivity, net_investment_hedge_sensitivity, interest_rate_sensitivity)
-[LLM_FLAG] total_cash_equivalents_fv decreased by 14% from prior period, which may warrant further review regarding cash liquidity.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $2,014M → $1,347M (-33.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $1,014M → $347M (-65.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $46M → $90M (+95.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $1,000M → $1,347M (+34.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $1,014M → $347M (-65.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $46M → $93M (+102.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-6M → $40M (+766.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $1,014M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-163M, now missing
+[HISTORICAL] [LLM_FLAG] Total derivatives net fair value is +$40M (net asset): $90M gain minus $50M loss — first net asset position observed
+[HISTORICAL] [LLM_FLAG] Long-term debt fair value improved to ($3,117M) from ($3,181M) at December 31, 2025, with $95M gain on long-term debt reflecting IR swap fair value hedge effectiveness
+[HISTORICAL] [LLM_FLAG] First period where IR swaps are fully designated as fair value hedges (2022 Swaps $774M redesignated in November 2025); no non-designated IR swaps outstanding
+[HISTORICAL] [LLM_FLAG] Net derivative position is a $40M asset — first net asset position across the observed filing history
+[HISTORICAL] [LLM_FLAG] FX not-designated notional increased from $1,014M at December 31, 2025 to $347M at March 31, 2026 (net basis); the Dec 31, 2025 figure was also net so direction of movement depends on gross flows
+[HISTORICAL] [LLM_FLAG] Item 3 section_text is a cross-reference stub only — no numeric data present. All quantitative disclosures deferred to Note 17 and Part II Item 7A of the 2025 Annual Report on Form 10-K.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($100M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($46M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($52M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($1,000M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-35M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-163M)
-[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($-100M)
-[NEW_FIELD] net_investment_hedge_sensitivity: appeared for first time ($-100M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-35M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $2,132M → $142M (-93.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $1,060M → $2,014M (+90.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $60M → $1,014M (+1590.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_ir_swap_notional: $3,505M → $774M (-77.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $134M → $52M (-61.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $60M → $1,014M (+1590.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $3,505M → $770M (-78.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $60M → $46M (-23.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $143M → $52M (-63.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-83M → $-6M (+92.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($1,014M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-163M)
+[HISTORICAL] [LLM_FLAG] FX not-designated and IR swap notionals sourced from 26-000031 filing's December 31, 2025 comparison column, as the Note 21 table in this filing only shows fair values, not notional amounts
+[HISTORICAL] [LLM_FLAG] Net derivative position is ($6M): $46M asset minus $52M liability — materially better than prior periods due to 2024 Swaps settlement and IR swap redesignation
+[HISTORICAL] [LLM_FLAG] Section text is truncated and does not include a notional amounts table; key notional data inferred from narrative and cross-reference with 26-000031 comparison figures
+[HISTORICAL] [LLM_FLAG] 2024 Swaps fully settled in November 2025 ($92M total settlement); 2022 Swaps redesignated as fair value hedge at 77% notional ($770M) in November 2025
+[HISTORICAL] [LLM_FLAG] IR swap notional of $770M represents significant reduction from $3,505M at Q3 2025 following Electronics Separation capital structure actions
+[HISTORICAL] [LLM_FLAG] FX not-designated notional of $1,014M sourced from 26-000031 comparative column for December 31, 2025
+[HISTORICAL] [LLM_FLAG] Sensitivity disclosures use a 10% rate/price change methodology, not 100bp; ir_sensitivity_100bp cannot be derived from available text
+[HISTORICAL] [LLM_FLAG] FX forward notional ($1,014M) sourced from 26-000031 comparison column — not directly stated in this 10-K market risk section
+[HISTORICAL] [LLM_FLAG] IR swap sensitivity reduced dramatically year-over-year ($165M to $35M) reflecting settlement of 2024 Swaps and reduction in total swap notional from ~$4B to $774M
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NUMERIC] gross_unrealized_gains_debt: $52M → $95M (+82.7%) — exceeds 20% threshold
-[NUMERIC] fi_fx_derivatives_notional: $1,014M → $347M (-65.8%) — exceeds 20% threshold
-[NUMERIC] fi_fx_not_designated_notional: $1,014M → $347M (-65.8%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-163M, now missing
-[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $-163M, now missing
-[DISAPPEARED_FIELD] net_investment_hedge_sensitivity: was $-100M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $-35M, now missing
-[VALIDATION] Likely extraction failure: 4/13 previously-populated fields are now null (fx_sensitivity_10pct, foreign_currency_sensitivity, net_investment_hedge_sensitivity, interest_rate_sensitivity)
-[LLM_FLAG] gross_unrealized_gains_debt increased by more than 50% compared to prior period
-[LLM_FLAG] fi_fx_derivatives_notional decreased by more than 50% compared to prior period
-[LLM_FLAG] fi_fx_not_designated_notional decreased by more than 50% compared to prior period
-[LLM_FLAG] fi_total_derivative_asset decreased from 46.0 to 40.0, which is noteworthy
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $398M → $2,132M (+435.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $1,619M → $1,060M (-34.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $619M → $60M (-90.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $1,619M → $1,060M (-34.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $619M → $60M (-90.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-108M → $-83M (+23.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Restricted cash of $1,867M is unusually high, reflecting proceeds from the Qnity Electronics Separation completed November 1, 2025
+[HISTORICAL] [LLM_FLAG] Total derivatives net fair value is ($83M): $51M gain minus $134M loss
+[HISTORICAL] [LLM_FLAG] Foreign currency derivative asset and liability both $8M, netting to zero
+[HISTORICAL] [LLM_FLAG] FX not-designated notional dropped sharply from ($619M) to +$60M quarter-over-quarter, likely related to the Electronics Separation completed November 1, 2025
+[HISTORICAL] [LLM_FLAG] In September 2025, the Company settled 30% of the 2024 Swap related to 2048 Notes for approximately $20M; the remaining 2024 Swaps carry $75M MTM liability at September 30, 2025
+[HISTORICAL] [LLM_FLAG] IR swap notional reduced from $4,150M to $3,505M reflecting partial 2024 Swap settlement
+[HISTORICAL] [LLM_FLAG] Item 3 section_text is a cross-reference stub only — no numeric data present. All quantitative disclosures deferred to Note 19 and Part II Item 7A of the 2024 Annual Report on Form 10-K.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($100M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($52M)
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($1,014M)
-[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($1,000M)
-[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($1,014M)
-[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($774M)
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($46M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($52M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-163M)
-[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($-163M)
-[NEW_FIELD] net_investment_hedge_sensitivity: appeared for first time ($-100M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-35M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $298M → $398M (+33.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $115M → $45M (-60.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $117M → $51M (-56.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-25M → $-108M (-332.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Total derivatives net fair value is ($108M) per the table: $45M gain minus $153M loss
+[HISTORICAL] [LLM_FLAG] Significant increase in net derivative liability vs Q1 2025 ($25M net liability), driven by 2024 Swaps MTM at $92M
+[HISTORICAL] [LLM_FLAG] 2024 Swaps carry a $92M mark-to-market liability at June 30, 2025, recorded in Accrued and other current liabilities
+[HISTORICAL] [LLM_FLAG] IR swap notional includes both 2022 Swaps ($1B post-dedesignation, economic hedge) and 2024 Swaps ($3.15B, not designated)
+[HISTORICAL] [LLM_FLAG] FX notional ($619M) is presented net of contracts bought and sold
+[HISTORICAL] [LLM_FLAG] Item 3 section_text is a cross-reference stub only — no numeric data present. All quantitative disclosures deferred to Note 19 and Part II Item 7A of the 2024 Annual Report on Form 10-K.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYrypjQvHLgyezbcfnT'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYs4DuLGRt1aU8qHRVB'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYrg7d1YxsSgne3H51D'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYrkwLc3SdKTkDcpwqw'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYrBST3VJnrwKgW5w6T'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYrJ92mnrKB6dzAbvnj'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYqovtVqy89xj4rxPtc'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYquLaf3iNayLVA2ia5'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYqTQNHoeMYQhLY5wFQ'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYqXbskXJV3uh7W8YhU'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
-[NUMERIC] total_cash_equivalents_fv: $265M → $128M (-51.7%) — exceeds 20% threshold
-[LLM_FLAG] total_cash_equivalents_fv decreased 51.7% from prior period (265.0 to 128), exceeding 50% threshold. This represents a significant decline in cash and restricted cash equivalents from December 31, 2025 to March 31, 2026, likely due to operational or investing activities during Q1 2026.
-[LLM_FLAG] Filing excerpt is incomplete: only contains a cross-reference to the 2025 Form 10-K for market risk disclosures, not the actual quantitative and qualitative market risk data. No substantive derivative or hedging information is presented in the provided text.
-[LLM_FLAG] Unable to perform meaningful prior period comparison as current filing contains no actual market risk data.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
-[NUMERIC] total_cash_equivalents_fv: $356M → $265M (-25.6%) — exceeds 20% threshold
-[LLM_FLAG] total_cash_equivalents_fv decreased from $356M (Dec 31, 2024) to $265M (Sep 30, 2025), a 25.6% decrease, but within acceptable range. However, total cash and restricted cash equivalents increased from $356M to $2,132M due to significant addition of restricted cash equivalents ($1,867M).
-[LLM_FLAG] The provided text is a cross-reference to disclosures contained in the 2024 Annual Report on Form 10-K, not actual derivative disclosures. The 2025 Q3 10-Q filing section provided contains no substantive derivative or market risk data.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
-[NUMERIC] total_cash_equivalents_fv: $257M → $356M (+38.5%) — exceeds 20% threshold
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[LLM_FLAG] total_cash_equivalents_fv increased from $257.0M (prior period ending 2024-12-31) to $356M (current period ending 2025-06-30), a 38.5% increase. Note that the prior period value of $257.0M appears inconsistent with the December 31, 2024 fair value of $314M shown in this table, suggesting the prior period reference may have been from an earlier date or different classification.
-[LLM_FLAG] The provided text is only a cross-reference statement directing readers to the 2024 Annual Report Form 10-K for market risk information. It contains no actual quantitative or qualitative disclosures about derivatives, hedging activities, or market risk sensitivity.
-[LLM_FLAG] This appears to be a section header or introductory text rather than the full 'Quantitative and Qualitative Disclosures About Market Risk' section content.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
-[NUMERIC] total_cash_equivalents_fv: $100M → $257M (+157.0%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $35M, now missing
-[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $-163M, now missing
-[DISAPPEARED_FIELD] net_investment_hedge_sensitivity: was $-100M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $-35M, now missing
-[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (ir_sensitivity_100bp, foreign_currency_sensitivity, net_investment_hedge_sensitivity, interest_rate_sensitivity)
-[LLM_FLAG] total_cash_equivalents_fv decreased from 314 to 257 million (18.5% decline), within acceptable variance but worth monitoring
-[LLM_FLAG] This filing section focuses on derivative instruments and long-term debt fair value rather than investment securities. The requested fields (marketable securities) do not appear to be disclosed in this Note 19 excerpt.
-[LLM_FLAG] This excerpt is a reference statement directing readers to the 2024 Form 10-K for detailed market risk disclosures. No actual quantitative data, tables, or detailed derivative information is provided in the filing text supplied.
-[LLM_FLAG] All derivative-related fields cannot be extracted as the section contains only a cross-reference, not the actual disclosure content.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
-[LLM_FLAG] Interest rate sensitivity improved dramatically: $165 million fair value impact in 2024 vs. $35 million in 2025 (79% decrease). This is explained by redesignation of 2022 Interest Rate Swaps to align with remaining 2038 Notes in Q4 2025.
-[LLM_FLAG] Foreign currency contracts sensitivity slightly improved: $(181) million in 2024 vs. $(163) million in 2025 (10% improvement), which is within normal variance.
-[LLM_FLAG] Net investment hedge sensitivity increased: $88 million in 2024 vs. $100 million in 2025 (14% increase), likely due to changes in EUR/USD exchange rates or notional hedge amounts.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-16 ===
+[HISTORICAL] [LLM_FLAG] Note 19 table does not show notional amounts; those were cross-referenced from the derivatives note (Note 18/20)
+[HISTORICAL] [LLM_FLAG] Total derivatives net fair value is ($25M) per the table: $115M gain minus $140M loss
+[HISTORICAL] [LLM_FLAG] IR swap notional of $4,150M includes both 2022 Swaps ($1B, economic hedge post-dedesignation) and 2024 Swaps ($3.15B, not designated); the 2024 Swaps carry a $58M mark-to-market liability at March 31, 2025
+[HISTORICAL] [LLM_FLAG] FX notional ($611M) is presented net of contracts bought and sold per footnote 1
+[HISTORICAL] [LLM_FLAG] Total derivative assets of $117M exclude the cross-currency swap gain of $113M already included separately as net investment hedge
+[HISTORICAL] [LLM_FLAG] Item 3 section_text is a cross-reference stub only — no numeric data present. All quantitative disclosures deferred to Note 19 and Part II Item 7A of the 2024 Annual Report on Form 10-K.
