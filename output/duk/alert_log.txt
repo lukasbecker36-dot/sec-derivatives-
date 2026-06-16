@@ -1,54 +1,39 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,997M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($7,327M)
-[NUMERIC] total_derivative_liability: $156M → $283M (+81.4%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $5,577M, now missing
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $382M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $244M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $138M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 8/12 previously-populated fields are now null (cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct...)
-[LLM_FLAG] net_derivative_position has increased significantly from the prior period (0.0 to 44), which could indicate a change in risk management strategy.
-[LLM_FLAG] total_derivative_asset has increased by more than 50% from prior period (0.0 to 327).
-[LLM_FLAG] total_derivative_liability has decreased in value compared to the prior period but still shows notable positions.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] ir_swap_notional: $5,577M → $7,327M (+31.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $138M → $44M (-68.1%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $64M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] market_risk_sensitivity: was $64M, now missing
+[HISTORICAL] [LLM_FLAG] Commodity derivatives are reported in physical volume units only (GWh, MMDth), not dollar notionals; commodity_derivatives_notional is null.
+[HISTORICAL] [LLM_FLAG] FX derivatives are all cross-currency swaps designated as fair value hedges; pay notional is USD, receive notional is euros. FX fair value loss of $36M in Q1 2026 vs. gain of $86M in Q1 2025, reflecting USD strengthening vs. euro.
+[HISTORICAL] [LLM_FLAG] AOCI balance and expected 12-month reclassification not visible in the provided section extract.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($156M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($5,577M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($382M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($244M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($138M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] net_derivative_position: $112M → $138M (+23.2%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($64M)
+[HISTORICAL] [NEW_FIELD] market_risk_sensitivity: appeared for first time ($64M)
+[HISTORICAL] [LLM_FLAG] Commodity derivatives are reported in physical volume units only (GWh, MMDth), not dollar notionals; commodity_derivatives_notional is null.
+[HISTORICAL] [LLM_FLAG] FX derivatives are all cross-currency swaps designated as fair value hedges; pay notional is USD, receive notional is euros.
+[HISTORICAL] [LLM_FLAG] The 10-K includes three-year fair value gain/loss history: FX fair value gains in 2025 were $258M, losses of $113M in 2024, gains of $32M in 2023.
+[HISTORICAL] [LLM_FLAG] AOCI balance and expected 12-month reclassification not visible in the provided section extract.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp is stated as impact on pretax income, not change in fair value — schema says 'change in fair value from 100bp move' but the text only provides the income impact metric
+[HISTORICAL] [LLM_FLAG] Most detailed quantitative data (notional amounts, fair values, hedge effectiveness) is deferred to Note 15 and Note 17, which are not included in the provided section_text
+[HISTORICAL] [LLM_FLAG] The $6.4 billion figure relates to unhedged floating rate exposure, not fixed-rate notes; fixed_rate_notes_billion cannot be extracted from this section
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $539M → $360M (-33.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $283M → $112M (-60.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Commodity derivatives are reported in physical volume units only (GWh, MMDth), not dollar notionals; commodity_derivatives_notional is null.
+[HISTORICAL] [LLM_FLAG] FX derivatives are all cross-currency swaps designated as fair value hedges; pay notional is USD, receive notional is euros.
+[HISTORICAL] [LLM_FLAG] AOCI balance and expected 12-month reclassification not visible in the provided section extract.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] net_derivative_position: $200M → $283M (+41.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Commodity derivatives are reported in physical volume units only (GWh, MMDth), not dollar notionals; commodity_derivatives_notional is null.
+[HISTORICAL] [LLM_FLAG] FX derivatives are all cross-currency swaps designated as fair value hedges; pay notional is USD, receive notional is euros.
+[HISTORICAL] [LLM_FLAG] The large increase in FX derivative assets ($11M Q1 to $195M Q2) reflects significant euro appreciation vs. USD during Q2 2025.
+[HISTORICAL] [LLM_FLAG] AOCI balance and expected 12-month reclassification not visible in the provided section extract.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
-[LLM_FLAG] Filing text excerpt is incomplete - only contains section header 'Quantitative and Qualitative Disclosures About Market Risk' and page reference without actual disclosure content
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-16 ===
+[HISTORICAL] [LLM_FLAG] Commodity derivatives are reported in physical volume units only (GWh, MMDth), not dollar notionals; commodity_derivatives_notional is null.
+[HISTORICAL] [LLM_FLAG] FX derivatives are all cross-currency swaps designated as fair value hedges; pay notional is USD, receive notional is euros.
+[HISTORICAL] [LLM_FLAG] AOCI balance and expected 12-month reclassification not visible in the provided section extract.
