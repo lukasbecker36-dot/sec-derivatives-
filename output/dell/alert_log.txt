@@ -1,68 +1,59 @@
-=== 10-Q | Period ending 2026-05-01 | Processed 2026-06-10 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($15,280M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($8,579M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($6,701M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($6,809M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($279M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($298M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-19M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($75M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-8M)
-[LLM_FLAG] FX notional increased from $13,378M to $15,280M QoQ (+14%)
-[LLM_FLAG] Net derivative position swung from +$34M to -$19M QoQ
-[LLM_FLAG] Cross-currency amortizing swaps used for European securitization program (not separately quantified)
+=== 10-Q | Period ending 2026-05-01 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $492M → $279M (-43.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $458M → $298M (-34.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $160M → $97M (-39.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $34M → $-19M (-155.9%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $30M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] var_foreign_currency: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] variable_rate_debt_exposure: was $3,000M, now missing
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability are gross amounts before netting; net fair value position is -$19M. No cash equivalents or marketable securities data in derivatives note.
+[HISTORICAL] [LLM_FLAG] Net derivative position is a liability of $(19) million at May 1, 2026. Q1 FY2027 non-designated FX gain/(loss): $(101) million; IR gain: $10 million; total non-designated: $(91) million.
+[HISTORICAL] [LLM_FLAG] 10-Q Item 3 contains only a cross-reference to the FY2026 Annual Report (10-K for fiscal year ended January 30, 2026) with a statement that market risk exposure has not changed materially from such Annual Report. No quantitative data extractable from this section.
 
-=== 10-K | Period ending 2026-01-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYkm3NTpCEanNBEHeE7'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYkqRJBvCXftrW3NW3H'}
+=== 10-K | Period ending 2026-01-30 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $394M → $492M (+24.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $282M → $458M (+62.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $84M → $126M (+50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $112M → $34M (-69.6%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($30M)
+[HISTORICAL] [NEW_FIELD] var_foreign_currency: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] variable_rate_debt_exposure: appeared for first time ($3,000M)
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability are gross amounts before netting; net fair value position is $34M. No cash equivalents or marketable securities data in derivatives note.
+[HISTORICAL] [LLM_FLAG] FY2026 total FX designated hedge gain/loss reclassified from OCI to income: $(198) million (net revenue $(187) + cost of net revenue $(11)). Non-designated FX gain: $438 million; IR loss: $(39) million; total non-designated: $399 million.
+[HISTORICAL] [LLM_FLAG] Most detailed derivative data (notionals, fair values, OCI) is in the derivatives note (Note 8), not in this market risk section. This section primarily provides VaR and interest rate sensitivity summaries.
 
-=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYkNoABfqxt1Ybf62j8'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYkTLWNekesHzcM6tGY'}
+=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $365M → $282M (-22.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $150M → $196M (+30.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $158M → $84M (-46.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-8M → $112M (+1500.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability are gross amounts before netting; net fair value position is $112M. No cash equivalents or marketable securities data in derivatives note.
+[HISTORICAL] [LLM_FLAG] 10-Q Item 3 contains only a cross-reference to the FY2025 Annual Report (10-K for fiscal year ended January 31, 2025) with a statement that market risk exposure has not changed materially from such Annual Report. No quantitative data extractable from this section.
 
-=== 10-Q | Period ending 2025-08-01 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYjzUUsCdQuLYhVuZr4'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYk6DFyJetrZa1kyUep'}
+=== 10-Q | Period ending 2025-08-01 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $675M → $357M (-47.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $553M → $365M (-34.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $357M → $150M (-58.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $235M → $158M (-32.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $122M → $-8M (-106.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability are gross amounts before netting; net fair value position is -$8M. No cash equivalents or marketable securities data in derivatives note.
+[HISTORICAL] [LLM_FLAG] Net derivative position is a slight liability of $(8) million at August 1, 2025, compared to net asset of $122 million at May 2, 2025.
+[HISTORICAL] [LLM_FLAG] 10-Q Item 3 contains only a cross-reference to the FY2025 Annual Report (10-K for fiscal year ended January 31, 2025) with a statement that market risk exposure has not changed materially from such Annual Report. No quantitative data extractable from this section.
 
-=== 10-Q | Period ending 2025-05-02 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYjad2XrYqfRXbCLFsZ'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYjfYhEba9kTJpBJva8'}
+=== 10-Q | Period ending 2025-05-02 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $5,965M → $7,724M (+29.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $441M → $553M (+25.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $5,965M → $7,724M (+29.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $75M → $235M (+213.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $227M → $122M (-46.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $26M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] var_foreign_currency: was $9M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] variable_rate_debt_exposure: was $2,600M, now missing
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability are gross amounts before netting; net fair value position is $122M. No cash equivalents or marketable securities data in derivatives note.
+[HISTORICAL] [LLM_FLAG] Gross FX designated asset $52, liability $(137), net $(85); gross non-designated FX asset $564, liability $(365), net $199; IR asset $59, liability $(51), net $8. Total gross derivative at fair value: $299 assets, $(184) + $(51) = $(235) liabilities; net $122 million.
+[HISTORICAL] [LLM_FLAG] 10-Q Item 3 contains only a cross-reference to the FY2025 Annual Report (10-K for fiscal year ended January 31, 2025) with a statement that market risk exposure has not changed materially. No quantitative data extractable from this section.
 
-=== 10-K | Period ending 2025-01-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYjCZjEPfH16d8DY1af'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYjHg4P87hTy3FGUPft'}
-
-=== 10-K | Period ending 2026-01-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($30M)
-
-=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] expected_12mo_reclass_from_aoci: $1M → $31M (+3000.0%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-08-01 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] expected_12mo_reclass_from_aoci: $2M → $1M (-50.0%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-05-02 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_designated_notional: $5,965M → $7,724M (+29.5%) — exceeds 20% threshold
-[NUMERIC] fx_not_designated_notional: $5,965M → $7,724M (+29.5%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $31M → $2M (-93.5%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $31M, now missing
-
-=== 10-Q | Period ending 2025-05-02 | Processed 2026-05-26 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $26M, now missing
-[DISAPPEARED_FIELD] var_foreign_currency: was $9M, now missing
-[DISAPPEARED_FIELD] variable_rate_debt_exposure: was $2,600M, now missing
-[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (ir_sensitivity_100bp, var_foreign_currency, variable_rate_debt_exposure)
-[LLM_FLAG] Filing excerpt is incomplete - contains only a cross-reference statement directing to the Form 10-K. Detailed market risk disclosures are not included in this excerpt.
-[LLM_FLAG] Unable to verify if values have changed materially from prior period as specific quantitative data is not provided in the excerpt.
-[LLM_FLAG] Prior period shows 'has_derivatives': 'Yes' but current excerpt provides no derivative-specific information to confirm ongoing use.
-
-=== 10-K | Period ending 2025-01-31 | Processed 2026-05-26 ===
-[NUMERIC] var_foreign_currency: $6M → $9M (+50.0%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp decreased from $30 million to $26 million (13% decrease within tolerance)
-[LLM_FLAG] var_foreign_currency decreased from $15 million to $9 million (40% decrease within tolerance)
-[LLM_FLAG] variable_rate_debt_exposure decreased from $3,000 million to $2,600 million (13% decrease within tolerance)
-
+=== 10-K | Period ending 2025-01-31 | Processed 2026-06-16 ===
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability are gross amounts before netting under master netting agreements; net fair value position is $227M. No cash equivalents or marketable securities data in derivatives note.
+[HISTORICAL] [LLM_FLAG] Gross derivative asset per balance sheet position table: $145 (designated FX) + $483 (non-designated FX) + $40 (IR) = $668 million gross assets; $10 + $387 + $44 = $441 million gross liabilities. Net presentation is $302 asset and $75 liability after netting offsets.
+[HISTORICAL] [LLM_FLAG] Most detailed derivative data (notionals, fair values, OCI) is in the derivatives note (Note 8), not in this market risk section. This section primarily provides VaR and interest rate sensitivity summaries.

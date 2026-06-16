@@ -1,116 +1,83 @@
-=== 10-K | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($356M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($337M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($18M)
-[NUMERIC] total_derivative_asset: $326M → $8M (-97.6%) — exceeds 20% threshold
-[DROPPED_TO_ZERO] total_derivative_liability: $311M → $0M
-[NUMERIC] net_derivative_position: $15M → $8M (-47.5%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DROPPED_TO_ZERO] fx_transaction_gain_loss: $0M → $0M
-[NUMERIC] ir_sensitivity_100bp: $-6M → $-16M (-181.4%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_10pct: $-5M → $-34M (-548.0%) — exceeds 20% threshold
-[DROPPED_TO_ZERO] fixed_rate_notes_billion: $-4M → $0M
-[DROPPED_TO_ZERO] marketable_equity_value: $13M → $0M
-[NEW_FIELD] fx_sensitivity: appeared for first time ($34M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($16M)
-[LLM_FLAG] total_derivative_asset has increased significantly from prior period (previously 325.86), but the total liability has decreased drastically to 0 from 311.23, creating a large net asset position that may require further scrutiny.
-[LLM_FLAG] ir_sensitivity_100bp changed significantly from -5.793 to -16.3, indicating increasing exposure to interest rate changes which may reflect a broader economic trend or potential strategic shift.
-[LLM_FLAG] fx_sensitivity_10pct changed significantly, reflecting a much higher hypothetical impact from foreign currency fluctuations than the prior period value of -5.324.
+=== 10-K | Period ending 2026-03-31 | Processed 2026-06-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,700M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $6M, now missing
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $15M → $18M (+25.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1M → $8M (+1225.2%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] total_derivative_liability: $-6M → $0M
+[HISTORICAL] [NUMERIC] net_derivative_position: $-5M → $8M (+247.4%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-4M, now missing
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($0M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/10 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, cash_flow_hedge_aoci)
+[HISTORICAL] [LLM_FLAG] Amounts stated in thousands in filing; converted to millions here
+[HISTORICAL] [LLM_FLAG] As of March 31, 2026 the portfolio returned to net asset position ($7.686M) from net liability position as of September/December 2025
+[HISTORICAL] [LLM_FLAG] AOCL balance and reclassification amount not provided in the truncated section text — full note would contain this
+[HISTORICAL] [LLM_FLAG] Dollar amounts in filing are in thousands; converted to millions above — sensitivity figures are accordingly very small as millions
+[HISTORICAL] [LLM_FLAG] Commodity risk managed via fixed purchasing contracts, not financial derivatives
+[HISTORICAL] [LLM_FLAG] Cash and cash equivalents balance as of March 31, 2026: $1,907,249 (thousands) = $1,907.249M
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NUMERIC] fx_derivatives_notional: $7M → $326M (+4555.1%) — exceeds 20% threshold
-[NEW_FIELD] fx_designated_notional: appeared for first time ($311M)
-[NUMERIC] fx_not_designated_notional: $1M → $15M (+1363.0%) — exceeds 20% threshold
-[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($-6M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-5M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-4M)
-[NUMERIC] expected_12mo_reclass_from_aoci: $5,548M → $13M (-99.8%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[VALIDATION] Likely units mismatch: expected_12mo_reclass_from_aoci changed from 5,548 to 13 (0x)
-[LLM_FLAG] fx_derivatives_notional increased by more than 50% from prior period (from 7.0 to 325.86); this indicates significant additional foreign currency derivative contracts were utilized.
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,018M → $1,700M (+67.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $0M → $1M (+48.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $11M → $6M (-49.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $4M → $15M (+317.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $0M → $1M (+48.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-11M → $-6M (+49.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-11M → $-5M (+53.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-8M → $-4M (+53.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Amounts in filing are in thousands; converted to millions by dividing by 1000
+[HISTORICAL] [LLM_FLAG] No Non-Designated Derivative Contracts liability line present as of December 31, 2025
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX derivatives not provided in the fair value note — see derivatives note for notionals
+[HISTORICAL] [LLM_FLAG] Amounts stated in thousands in filing; converted to millions here
+[HISTORICAL] [LLM_FLAG] Subsequent to December 31, 2025, through January 13, 2026, the Company entered into Designated Derivative Contracts with notional values totaling $31,071 (thousands)
+[HISTORICAL] [LLM_FLAG] Nine-months AOCL roll: beginning $1,584 → ending $(3,980) with $(19,996) OCI losses and $12,648 reclassifications to net sales, $1,784 tax benefit
+[HISTORICAL] [LLM_FLAG] Item 3 is a boilerplate cross-reference only: 'There have been no material changes in the quantitative and qualitative disclosures about market risk disclosed in Part II, Item 7A ... within our 2025 Annual Report.' No numeric data present.
 
-=== 10-K | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($356M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($337M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($18M)
-[NUMERIC] total_derivative_asset: $326M → $8M (-97.6%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] total_derivative_liability: was $311M, now missing
-[DISAPPEARED_FIELD] net_derivative_position: was $15M, now missing
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($6M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($18M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DROPPED_TO_ZERO] fx_transaction_gain_loss: $0M → $0M
-[NUMERIC] ir_sensitivity_100bp: $6M → $16M (+181.4%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_10pct: $-5M → $-34M (-548.0%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-4M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $4M, now missing
-[NEW_FIELD] fx_sensitivity: appeared for first time ($-34M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($16M)
-[VALIDATION] Likely extraction failure: 4/9 previously-populated fields are now null (total_derivative_liability, net_derivative_position, fixed_rate_notes_billion, marketable_equity_value)
-[LLM_FLAG] Total derivative assets (7.69 million) decreased significantly from prior period (325.86 million) indicating a potential reduction in hedging activities or the unwinding of positions. Further investigation is advisable.
-[LLM_FLAG] fx_sensitivity_10pct decreased significantly from prior period indicating a reduced volatility in foreign currency fair value.
-[LLM_FLAG] ir_sensitivity_100bp increased significantly from prior period indicating heightened interest rate exposure.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,377M → $1,018M (-26.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $25M → $11M (-54.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $42M → $4M (-91.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-25M → $-11M (+54.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-25M → $-11M (+55.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-19M → $-8M (+54.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Amounts in filing are in thousands; converted to millions by dividing by 1000
+[HISTORICAL] [LLM_FLAG] No Non-Designated Derivative Contracts liability line present as of September 30, 2025
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX derivatives not provided in the fair value note — see derivatives note for notionals
+[HISTORICAL] [LLM_FLAG] Amounts stated in thousands in filing; converted to millions here
+[HISTORICAL] [LLM_FLAG] Subsequent to September 30, 2025, through October 9, 2025, the Company entered into Designated Derivative Contracts ($28,794 thousands) and Non-Designated Derivative Contracts ($39,521 thousands)
+[HISTORICAL] [LLM_FLAG] Non-Designated Derivative Contracts asset of $114 is included in total_derivative_asset
+[HISTORICAL] [LLM_FLAG] Item 3 is a boilerplate cross-reference only: 'There have been no material changes in the quantitative and qualitative disclosures about market risk disclosed in Part II, Item 7A ... within our 2025 Annual Report.' No numeric data present.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NUMERIC] fx_derivatives_notional: $7M → $326M (+4555.1%) — exceeds 20% threshold
-[NEW_FIELD] fx_designated_notional: appeared for first time ($311M)
-[NUMERIC] fx_not_designated_notional: $1M → $15M (+1363.0%) — exceeds 20% threshold
-[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($6M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-5M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-4M)
-[NUMERIC] expected_12mo_reclass_from_aoci: $5,548M → $4M (-99.9%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[VALIDATION] Likely units mismatch: expected_12mo_reclass_from_aoci changed from 5,548 to 4 (0x)
-[LLM_FLAG] The total derivative asset and liability position shows a significant net liability compared to the prior period figures indicating an increase in derivative losses.
-[LLM_FLAG] The expected reclassification from AOCI to net sales is significantly lower compared to the prior period's value (5548 million), which should be noted.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-16 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($1,377M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($25M)
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $14M → $42M (+201.1%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] total_derivative_asset: $2M → $0M
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-0M → $-25M (-39009.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $2M → $-25M (-1251.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $2M → $-19M (-1275.8%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $0M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/11 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, fx_sensitivity, interest_rate_sensitivity)
+[HISTORICAL] [VALIDATION] Likely units mismatch: total_derivative_liability changed from -0 to -25 (391x)
+[HISTORICAL] [LLM_FLAG] Amounts in filing are in thousands; converted to millions by dividing by 1000
+[HISTORICAL] [LLM_FLAG] No derivative asset lines present as of June 30, 2025 reporting date (compare: March 31, 2025 comparative has $2,238K total derivative assets)
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX derivatives not provided in the fair value note — see derivatives note for notionals
+[HISTORICAL] [LLM_FLAG] Amounts stated in thousands in filing; converted to millions here
+[HISTORICAL] [LLM_FLAG] As of June 30, 2025, all derivative fair values are in liability position (no asset)
+[HISTORICAL] [LLM_FLAG] AOCL for cash flow hedges swung from +$1.584M (March 31, 2025) to -$18.625M (June 30, 2025)
+[HISTORICAL] [LLM_FLAG] Item 3 is a boilerplate cross-reference only: 'There have been no material changes in the quantitative and qualitative disclosures about market risk disclosed in Part II, Item 7A ... within our 2025 Annual Report.' No numeric data present.
 
-=== 10-K | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] fx_derivatives_notional: was $7M, now missing
-[NUMERIC] fx_not_designated_notional: $1M → $31M (+3000.0%) — exceeds 20% threshold
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($11M)
-[NUMERIC] expected_12mo_reclass_from_aoci: $1,765M → $11M (-99.4%) — exceeds 20% threshold
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($31M)
-[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (fx_derivatives_notional)
-[VALIDATION] Likely units mismatch: expected_12mo_reclass_from_aoci changed from 1,765 to 11 (0x)
-
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] expected_12mo_reclass_from_aoci: $5,548M → $1,765M (-68.2%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $30M, now missing
-[NUMERIC] expected_12mo_reclass_from_aoci: $25,210M → $5,548M (-78.0%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($6M)
-[NUMERIC] fx_not_designated_notional: $367,695M → $1M (-100.0%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $2,023M → $25,210M (+1146.2%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $31M, now missing
-[VALIDATION] Likely units mismatch: fx_not_designated_notional changed from 367,695 to 1 (0x)
-
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-05-26 ===
-[LLM_FLAG] Incomplete filing section provided: Only contains a cross-reference to 'Quantitative and Qualitative Disclosures About Market Risk' in 2025 Annual Report, not the actual detailed disclosures
-[LLM_FLAG] Unable to verify derivative usage changes from prior period (was 'Yes') due to lack of substantive disclosure in provided text
-[LLM_FLAG] All market risk and derivative-related fields cannot be extracted from this fragmentary section
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
-[LLM_FLAG] Provided text is only a header reference to detailed disclosures in the 2025 Annual Report, not the actual quantitative and qualitative disclosures. All detailed derivative and market risk data would appear in the referenced annual report section, not this 10-Q excerpt.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $15M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity: was $34M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $15M, now missing
-[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity, interest_rate_sensitivity)
-[LLM_FLAG] Filing text appears to be incomplete or truncated - only contains a reference to 'Quantitative and Qualitative Disclosures About Market Risk' in the 2025 Annual Report rather than the actual detailed disclosures expected in a 10-Q filing
-[LLM_FLAG] Unable to compare values to prior period as substantive financial data is not provided in the submitted text
-
-=== 10-K | Period ending 2025-03-31 | Processed 2026-05-26 ===
-[LLM_FLAG] ir_sensitivity_100bp decreased from 16.3M (prior period) to 14.7M (current period) - 9.8% decrease, within acceptable range
-[LLM_FLAG] fx_sensitivity remained stable at 34.0M (34.5M prior) - 1.4% decrease, within acceptable range
-[LLM_FLAG] interest_rate_sensitivity mirrors ir_sensitivity_100bp at 14.7M, consistent with methodology
-
+=== 10-K | Period ending 2025-03-31 | Processed 2026-06-16 ===
+[HISTORICAL] [LLM_FLAG] Amounts stated in thousands in filing; converted to millions here
+[HISTORICAL] [LLM_FLAG] As of March 31, 2024 the Company had no outstanding derivative contracts — FY2025 is the first year with derivatives
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci not quantified in provided section text
+[HISTORICAL] [LLM_FLAG] Dollar amounts in filing are in thousands; converted to millions above
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp and fx_sensitivity_10pct are very small because they are expressed in thousands (the filing unit) converted to millions
+[HISTORICAL] [LLM_FLAG] Commodity price risk managed via fixed purchasing contracts, not financial derivatives
