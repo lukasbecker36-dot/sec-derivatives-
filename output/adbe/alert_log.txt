@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-05-29 | Processed 2026-06-16 ===
+[NUMERIC] fx_derivatives_notional: $27M → $6,160M (+22714.8%) — exceeds 20% threshold
+[NEW_FIELD] fx_designated_notional: appeared for first time ($6,160M)
+[NUMERIC] ir_swap_notional: $12M → $2,700M (+22400.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] net_derivative_position: was $27M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $12M → $-26M (-316.7%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: fx_derivatives_notional changed from 27 to 6,160 (228x)
+[VALIDATION] Likely units mismatch: ir_swap_notional changed from 12 to 2,700 (225x)
+[LLM_FLAG] fx_derivatives_notional changed from 27.0 to 6160 (>50% change) — prior value appears incorrect; current $6.16B clearly stated in filing
+[LLM_FLAG] ir_swap_notional changed from 12.0 to 2700 (>50% change) — prior value appears incorrect; current $2.70B clearly stated in filing
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed from 12.0 to -26 (sign change + >50%) — current filing states $26M net losses expected
+[LLM_FLAG] Fair value table data (derivative assets/liabilities) not present in extracted section text — may be in a table that was not captured
+
 === 10-Q | Period ending 2026-02-27 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [NUMERIC] ir_swap_notional: $2,025M → $12M (-99.4%) — exceeds 20% threshold
