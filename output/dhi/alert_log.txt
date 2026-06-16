@@ -1,105 +1,72 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] total_derivative_asset: appeared for first time ($2M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($2M)
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $2,100M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $2M, now missing
-[NUMERIC] ir_sensitivity_100bp: $0M → $1M (+1000.0%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2M, now missing
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NUMERIC] mbs_balance: $4M → $1,100M (+27468.9%) — exceeds 20% threshold
-[NUMERIC] variable_rate_debt_amounts: $3,500M → $2,593M (-25.9%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] debt_fair_values: was $2,100M, now missing
-[VALIDATION] Likely extraction failure: 5/12 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, fx_sensitivity_10pct, equity_sensitivity_10pct, debt_fair_values)
-[VALIDATION] Likely units mismatch: mbs_balance changed from 4 to 1,100 (276x)
-[LLM_FLAG] The increase in interest rate sensitivity from the prior period, which was 0.1 to 1.1, indicates a significant increase in exposure to interest rate movements and may need monitoring.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] notional_amount_hedging_instruments: $3,500M → $6,200M (+77.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] uncommitted_irlcs_notional: $2,100M → $3,400M (+61.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] uncommitted_mortgage_loans_notional: $1,500M → $2,000M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] mbs_balance: $794M → $1,100M (+38.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] IRLCs notional at March 31, 2026 totaled $3.4 billion (Level 3) but no fair value asset/liability for IRLCs is separately disclosed in this section — only the MBS position FV is given.
+[HISTORICAL] [LLM_FLAG] Schema fields for cash equivalents, marketable securities, and FX/IR derivatives are not applicable to this issuer's financial instruments section, which covers mortgage pipeline hedging only.
+[HISTORICAL] [LLM_FLAG] Prior period (Sep 30, 2025) MBS position was an asset of $1.9 million but that is not the reporting period for this filing.
+[HISTORICAL] [LLM_FLAG] IRLCs of $3.4B notional at March 31, 2026, up from $2.1B at September 30, 2025
+[HISTORICAL] [LLM_FLAG] MBS forward sales of ~$6.2B total notional (per market risk section) — significant increase
+[HISTORICAL] [LLM_FLAG] No FX, IR swap, commodity, or equity derivatives
+[HISTORICAL] [LLM_FLAG] No FX derivatives; all hedging instruments relate to mortgage pipeline (IRLC/MBS)
+[HISTORICAL] [LLM_FLAG] MBS liability of $0.1M for uncommitted MBS position at March 31, 2026
+[HISTORICAL] [LLM_FLAG] Total hedging instruments notional surged to $6.2B from $3.5B at December 31, 2025 — significant Q2 increase; IRLCs jumped to $3.4B
+[HISTORICAL] [LLM_FLAG] Variable rate debt maturity profile significantly restructured vs prior quarter
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($2,100M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($2M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($2M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] notional_amount_hedging_instruments: appeared for first time ($3,500M)
-[NEW_FIELD] uncommitted_irlcs_notional: appeared for first time ($2,100M)
-[NEW_FIELD] uncommitted_mortgage_loans_notional: appeared for first time ($1,500M)
-[NEW_FIELD] mbs_balance: appeared for first time ($794M)
-[NEW_FIELD] debt_fair_values: appeared for first time ($4,017M)
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-16 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($0M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $2M, now missing
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[HISTORICAL] [NUMERIC] net_derivative_position: $2M → $-0M (-105.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] uncommitted_mortgage_loans_notional: $2,300M → $1,500M (-34.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] IRLCs notional at December 31, 2025 totaled $2.1 billion (Level 3) but no fair value asset/liability for IRLCs is separately disclosed in this section — only the MBS position FV is given.
+[HISTORICAL] [LLM_FLAG] Schema fields for cash equivalents, marketable securities, and FX/IR derivatives are not applicable to this issuer's financial instruments section, which covers mortgage pipeline hedging only.
+[HISTORICAL] [LLM_FLAG] Prior period (Sep 30, 2025) MBS position was an asset of $1.9 million but that is not the reporting period for this filing.
+[HISTORICAL] [LLM_FLAG] IRLCs of $2.1B notional at both December 31, 2025 and September 30, 2025
+[HISTORICAL] [LLM_FLAG] MBS forward sales of ~$3.5B total notional (per market risk section)
+[HISTORICAL] [LLM_FLAG] No FX, IR swap, commodity, or equity derivatives
+[HISTORICAL] [LLM_FLAG] No FX derivatives; all hedging instruments relate to mortgage pipeline (IRLC/MBS)
+[HISTORICAL] [LLM_FLAG] MBS liability of $0.1M for uncommitted MBS position
+[HISTORICAL] [LLM_FLAG] Total hedging instruments notional declined to $3.5B from $4.2B at September 30, 2025 — seasonal Q1 reduction
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
-[NEW_FIELD] uncommitted_irlcs_notional: appeared for first time ($3,400M)
-[NEW_FIELD] uncommitted_mortgage_loans_notional: appeared for first time ($2,000M)
-[NUMERIC] mbs_balance: $4M → $1,100M (+27468.9%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] debt_maturity_schedule: was $0M, now missing
-[DISAPPEARED_FIELD] variable_rate_debt_amounts: was $3,500M, now missing
-[NUMERIC] debt_fair_values: $2,100M → $3,969M (+89.0%) — exceeds 20% threshold
-[VALIDATION] Likely extraction failure: 2/6 previously-populated fields are now null (debt_maturity_schedule, variable_rate_debt_amounts)
-[VALIDATION] Likely units mismatch: mbs_balance changed from 4 to 1,100 (276x)
-[LLM_FLAG] notional_amount_hedging_instruments increased significantly from 0.0 to 6200.0 million due to increased hedging activity for IRLCs and uncommitted mortgage loans.
+=== 10-K | Period ending 2025-09-30 | Processed 2026-06-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $7M, now missing
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($2M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $7M, now missing
+[HISTORICAL] [NUMERIC] net_derivative_position: $-7M → $2M (+127.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] uncommitted_irlcs_notional: $2,700M → $2,000M (-25.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] uncommitted_mortgage_loans_notional: $1,900M → $2,300M (+21.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] mbs_balance: $880M → $678M (-23.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text is from Item 7A (market risk) of 10-K, not a separate derivatives note
+[HISTORICAL] [LLM_FLAG] Uncommitted IRLCs ~$2.0B and mortgage loans held for sale ~$2.3B totaling $4.2B in hedging instruments
+[HISTORICAL] [LLM_FLAG] No FX, IR swap, commodity, or equity derivatives
+[HISTORICAL] [LLM_FLAG] Annual 10-K filing; no FX derivatives; all hedging instruments relate to mortgage pipeline (IRLC/MBS)
+[HISTORICAL] [LLM_FLAG] MBS asset of $1.9M for uncommitted MBS position
+[HISTORICAL] [LLM_FLAG] Fixed rate debt decreased from $4.56B (June 2025) to $3.99B (September 2025)
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
-[NEW_FIELD] notional_amount_hedging_instruments: appeared for first time ($3,500M)
-[NEW_FIELD] uncommitted_irlcs_notional: appeared for first time ($2,100M)
-[NEW_FIELD] uncommitted_mortgage_loans_notional: appeared for first time ($1,500M)
-[NEW_FIELD] mbs_balance: appeared for first time ($794M)
-[NEW_FIELD] debt_fair_values: appeared for first time ($4,017M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $2M, now missing
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $3M → $7M (+161.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $3M → $7M (+161.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-3M → $-7M (-161.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] IRLCs notional at June 30, 2025 totaled $2.7 billion (Level 3) but no fair value asset/liability for IRLCs is separately disclosed in this section — only the MBS position FV is given.
+[HISTORICAL] [LLM_FLAG] Schema fields for cash equivalents, marketable securities, and FX/IR derivatives are not applicable to this issuer's financial instruments section, which covers mortgage pipeline hedging only.
+[HISTORICAL] [LLM_FLAG] Prior period (Sep 30, 2024) MBS position was an asset of $2.4 million but that is not the reporting period for this filing.
+[HISTORICAL] [LLM_FLAG] IRLCs of $2.7B notional are the primary derivative instrument; classified as economic hedge not designated hedge accounting
+[HISTORICAL] [LLM_FLAG] MBS forward sales of ~$4.4B total notional (per market risk section) serve as hedging instruments
+[HISTORICAL] [LLM_FLAG] No FX, IR swap, commodity, or equity derivatives
+[HISTORICAL] [LLM_FLAG] No FX derivatives; all hedging instruments relate to mortgage pipeline (IRLC/MBS)
+[HISTORICAL] [LLM_FLAG] MBS liability of $6.8M for uncommitted MBS position (from Note F)
+[HISTORICAL] [LLM_FLAG] Notional of total hedging instruments $4.4B vs $4.3B prior quarter
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-25 ===
-[NUMERIC] notional_amount_hedging_instruments: $3,500M → $6,200M (+77.1%) — exceeds 20% threshold
-[NUMERIC] uncommitted_irlcs_notional: $2,100M → $3,400M (+61.9%) — exceeds 20% threshold
-[NUMERIC] uncommitted_mortgage_loans_notional: $1,500M → $2,000M (+33.3%) — exceeds 20% threshold
-[NUMERIC] mbs_balance: $794M → $1,100M (+38.6%) — exceeds 20% threshold
-[LLM_FLAG] notional_amount_hedging_instruments increased 77% from $3,500M to $6,200M - significant increase driven by higher uncommitted IRLCs ($3.4B vs $2.1B) and uncommitted mortgage loans ($2.0B vs $1.5B)
-[LLM_FLAG] uncommitted_irlcs_notional increased 62% from $2,100M to $3,400M - substantial growth in interest rate lock commitments
-[LLM_FLAG] uncommitted_mortgage_loans_notional increased 33% from $1,500M to $2,000M - notable increase in funded uncommitted loans
-[LLM_FLAG] mbs_balance increased 39% from $793.5M to $1,100M - significant growth in mortgage-backed securities holdings
-[LLM_FLAG] variable_rate_debt increased 63% from $1,589M to $2,593.2M - substantial increase in variable rate obligations, primarily short-term mortgage repurchase facilities maturing in Q3 2026
-[LLM_FLAG] fixed_rate_debt increased 0.3% from $3,990.2M to $4,001.1M - minimal change, within normal range
-[LLM_FLAG] debt_fair_values changed significantly - total increased from $5,606.2M to $6,562.5M due to increase in variable rate debt
-
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-04-25 ===
-[NUMERIC] notional_amount_hedging_instruments: $4,400M → $3,500M (-20.5%) — exceeds 20% threshold
-[NUMERIC] uncommitted_irlcs_notional: $2,700M → $2,100M (-22.2%) — exceeds 20% threshold
-[NUMERIC] uncommitted_mortgage_loans_notional: $1,900M → $1,500M (-21.1%) — exceeds 20% threshold
-[LLM_FLAG] notional_amount_hedging_instruments: Decreased from $4,400.0M to $3,500.0M (-20.5%) - within 50% threshold but notable decline
-[LLM_FLAG] uncommitted_irlcs_notional: Decreased from $2,700.0M to $2,100.0M (-22.2%) - within 50% threshold but material decline
-[LLM_FLAG] uncommitted_mortgage_loans_notional: Decreased from $1,900.0M to $1,500.0M (-21.1%) - within 50% threshold but material decline
-[LLM_FLAG] mbs_balance: Increased from $880.5M to $793.5M but text shows September 2025 was $677.5M, so comparing to incorrect prior period baseline
-[LLM_FLAG] fixed_rate_notes_billion: Decreased from $4.5597B to $3.9902B (-12.4%) - significant decrease in debt principal outstanding
-[LLM_FLAG] debt_maturity_schedule: Substantially different structure - this table uses 9-month period ending September 2026 instead of calendar year 2025 for current period
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-25 ===
-[LLM_FLAG] fixed_rate_notes_billion changed from 4.0531 to 4.5597 (12.4% increase) - consistent with debt maturity schedule showing new issuances
-[LLM_FLAG] notional_amount_hedging_instruments changed from 4300 to 4400 (2.3% increase) - minor, within normal variation
-[LLM_FLAG] uncommitted_mortgage_loans_notional changed from 1800 to 1900 (5.6% increase) - consistent with business activity
-[LLM_FLAG] mbs_balance changed from 1100 to 880.5 (19.9% decrease) - significant change but below 50% threshold
-[LLM_FLAG] variable_rate_debt_amounts changed significantly in total from 2497.4 to 2724.2 (9.1% increase) and maturity distribution shifted notably
-[LLM_FLAG] Debt maturity schedule structure changed - fiscal year ending September 30 2025 Q4 data now provided separately ($1,704.2M variable rate due in Q4 2025)
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-25 ===
-[NUMERIC] uncommitted_irlcs_notional: $2,000M → $2,700M (+35.0%) — exceeds 20% threshold
-[NUMERIC] uncommitted_mortgage_loans_notional: $2,300M → $1,800M (-21.7%) — exceeds 20% threshold
-[NUMERIC] mbs_balance: $678M → $1,100M (+62.4%) — exceeds 20% threshold
-[LLM_FLAG] notional_amount_hedging_instruments increased from 4,200 to 4,300 million (2.4% change, within normal range)
-[LLM_FLAG] uncommitted_irlcs_notional increased significantly from 2,000 to 2,700 million (35% increase)
-[LLM_FLAG] uncommitted_mortgage_loans_notional decreased from 2,300 to 1,800 million (21.7% decrease)
-[LLM_FLAG] mbs_balance increased significantly from 677.5 to 1,100 million (62.4% increase)
-[LLM_FLAG] fixed_rate_notes_billion decreased from 3.9905 to 4.0531 billion (1.6% increase, minimal change)
-[LLM_FLAG] variable_rate_debt_amounts increased from 2,008.3 to 2,497.4 million (24.3% increase)
-[LLM_FLAG] Total debt increased from 5,998.8 to 6,550.5 million (9.2% increase)
-[LLM_FLAG] Maturity structure has changed with different timing of repayments, particularly in near-term periods
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-16 ===
+[HISTORICAL] [LLM_FLAG] IRLCs notional at March 31, 2025 totaled $2.7 billion (Level 3) but no fair value asset/liability for IRLCs is separately disclosed in this section — only the MBS position FV is given.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset value of 2.4 reflects the prior period (Sep 30, 2024) MBS asset; no current-period derivative asset is stated (position is a liability at Mar 31, 2025).
+[HISTORICAL] [LLM_FLAG] Schema fields for cash equivalents, marketable securities, and FX/IR derivatives are not applicable to this issuer's financial instruments section, which covers mortgage pipeline hedging only.
+[HISTORICAL] [LLM_FLAG] IRLCs of $2.7B notional are the primary derivative instrument; classified as economic hedge not designated hedge accounting
+[HISTORICAL] [LLM_FLAG] MBS forward sales of ~$4.3B total notional (per market risk section) serve as hedging instruments but details appear in Item 3, not a dedicated derivatives note
+[HISTORICAL] [LLM_FLAG] No FX, IR swap, commodity, or equity derivatives
+[HISTORICAL] [LLM_FLAG] No FX derivatives; all hedging instruments relate to mortgage pipeline (IRLC/MBS)
+[HISTORICAL] [LLM_FLAG] MBS liability of $2.6M for uncommitted MBS position (from Note F)
+[HISTORICAL] [LLM_FLAG] Fixed rate debt fair value $3,953.8M vs carrying $4,053.1M implies modest premium/discount

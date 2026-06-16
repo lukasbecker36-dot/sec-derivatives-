@@ -1,44 +1,39 @@
 issuer: Quest Diagnostics
 ticker: DGX
-cik: "1022079"
+cik: '1022079'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   ir_swap_notional:
-    description: "Notional amount of fixed-to-variable interest rate swaps outstanding"
+    description: Notional amount of fixed-to-variable interest rate swaps outstanding
     section: market_risk
   ir_swap_fair_value:
-    description: "Aggregate fair value of fixed-to-variable interest rate swaps (asset/liability position)"
+    description: Aggregate fair value of fixed-to-variable interest rate swaps (asset/liability position)
     section: market_risk
   debt_fair_value:
-    description: "Estimated fair value of total debt"
+    description: Estimated fair value of total debt
     section: market_risk
   debt_fv_vs_carrying:
-    description: "Difference between fair value and carrying value of debt"
+    description: Difference between fair value and carrying value of debt
     section: market_risk
   ir_sensitivity_10pct:
-    description: "Decrease in estimated fair value of debt from hypothetical 10% increase in interest rates"
+    description: Decrease in estimated fair value of debt from hypothetical 10% increase in interest rates
     section: market_risk
   ir_swap_sensitivity_10pct:
-    description: "Change in fair value of IR swaps from hypothetical 10% change in SOFR curve"
+    description: Change in fair value of IR swaps from hypothetical 10% change in SOFR curve
     section: market_risk
   equity_investments_carrying:
-    description: "Carrying value of equity investments without readily determinable fair values"
+    description: Carrying value of equity investments without readily determinable fair values
     section: market_risk
   secured_receivables_facility:
-    description: "Size of secured receivables credit facility"
+    description: Size of secured receivables credit facility
     section: market_risk
   revolving_credit_facility:
-    description: "Size of senior unsecured revolving credit facility"
+    description: Size of senior unsecured revolving credit facility
     section: market_risk
-
-# Unusual features identified:
-#   - Uses fixed-to-variable interest rate swaps (opposite of typical variable-to-fixed hedging)
-#   - IR swap notional grew from $700M to $1.8B year-over-year
-#   - Sensitivity analysis uses 10% change rather than standard 100bp
-#   - Equity investments in life sciences/healthcare companies measured at cost minus impairment
-#   - No FX derivatives despite being a global company - states FX exposure is not material
-
+sections:
+  financial_instruments:
+    heading: 7\.\s+FINANCIAL\s+INSTRUMENTS
+  market_risk:
+    heading: Quantitative\s+and\s+Qualitative\s+Disclosures\s+About\s+Market\s+Risk

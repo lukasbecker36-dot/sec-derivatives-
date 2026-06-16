@@ -1,38 +1,31 @@
 issuer: Dollar General
 ticker: DG
-cik: "29534"
+cik: '29534'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   derivative_policy:
-    description: "Policy statement on derivative usage and authorization requirements"
+    description: Policy statement on derivative usage and authorization requirements
     section: market_risk
   interest_rate_swap_notional:
-    description: "Total notional amount of interest rate swaps ($350.0 million)"
+    description: Total notional amount of interest rate swaps ($350.0 million)
     section: market_risk
   swap_entry_date:
-    description: "Date swaps were entered into (June 2021)"
+    description: Date swaps were entered into (June 2021)
     section: market_risk
   swap_maturity_date:
-    description: "Maturity date of swaps (April 2030)"
+    description: Maturity date of swaps (April 2030)
     section: market_risk
   swap_structure:
-    description: "Fixed to SOFR floating rate swap on 2030 Senior Notes"
+    description: Fixed to SOFR floating rate swap on 2030 Senior Notes
     section: market_risk
   sensitivity_analysis_current:
-    description: "One percentage point decrease impact on earnings ($5.6 million for 2025)"
+    description: One percentage point decrease impact on earnings ($5.6 million for 2025)
     section: market_risk
   sensitivity_analysis_prior:
-    description: "One percentage point decrease impact on earnings ($3.5 million for 2024)"
+    description: One percentage point decrease impact on earnings ($3.5 million for 2024)
     section: market_risk
-
-# Unusual features identified:
-#   - Sensitivity analysis focuses only on downward rate movement (one percentage point decrease)
-#   - No tabular presentation of derivative positions despite having active swaps
-#   - No fair value disclosure for the $350M notional swap position
-#   - Interest rate exposure primarily from cash investments rather than debt
-#   - Comparative sensitivity analysis between two years with different exposure amounts
-
+sections:
+  financial_instruments:
+    heading: Assets\s+and\s+liabilities\s+measured\s+at\s+fair\s+value
