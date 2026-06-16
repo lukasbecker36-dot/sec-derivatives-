@@ -1,22 +1,16 @@
 issuer: Deere & Company
 ticker: DE
-cik: "315189"
+cik: '315189'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   market_risk_types:
-    description: "types of market risks (interest rates, currency exchange rates)"
+    description: types of market risks (interest rates, currency exchange rates)
     section: market_risk
   cross_references:
-    description: "references to other sections with detailed information"
+    description: references to other sections with detailed information
     section: market_risk
-
-# Unusual features identified:
-#   - Very brief disclosure with no quantitative data
-#   - Cross-references to MD&A and Note 26 instead of providing direct information
-#   - No specific derivative instruments mentioned
-#   - Fair value note heading fragment suggests data is in separate section
-
+sections:
+  financial_instruments:
+    heading: \(18\)\s+FAIR\s+VALUE\s+MEASUREMENTS

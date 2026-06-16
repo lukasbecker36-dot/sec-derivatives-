@@ -1,44 +1,39 @@
 issuer: Deckers Brands
 ticker: DECK
-cik: "910521"
+cik: '910521'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   notional_values:
-    description: "notional amounts for designated and non-designated derivative contracts by year"
+    description: notional amounts for designated and non-designated derivative contracts by year
     section: market_risk
   fair_values:
-    description: "fair values recorded in assets and liabilities for derivative positions"
+    description: fair values recorded in assets and liabilities for derivative positions
     section: market_risk
   settlement_amounts:
-    description: "notional values of derivative contracts settled during each fiscal year"
+    description: notional values of derivative contracts settled during each fiscal year
     section: market_risk
   aocl_changes:
-    description: "changes in accumulated other comprehensive income/loss from cash flow hedges"
+    description: changes in accumulated other comprehensive income/loss from cash flow hedges
     section: market_risk
   subsequent_events:
-    description: "derivative contracts entered into after reporting date"
+    description: derivative contracts entered into after reporting date
     section: market_risk
   fx_sensitivity:
-    description: "hypothetical 10% foreign currency exchange rate impact on fair value"
+    description: hypothetical 10% foreign currency exchange rate impact on fair value
     section: market_risk
   interest_rate_sensitivity:
-    description: "hypothetical 100 basis point change impact on interest income"
+    description: hypothetical 100 basis point change impact on interest income
     section: market_risk
   commodity_exposures:
-    description: "sheepskin and sugarcane-derived EVA price risks and fixed contracts"
+    description: sheepskin and sugarcane-derived EVA price risks and fixed contracts
     section: market_risk
   credit_risk_exposure:
-    description: "maximum loss from derivative counterparty non-performance"
+    description: maximum loss from derivative counterparty non-performance
     section: market_risk
-
-# Unusual features identified:
-#   - combines designated and non-designated derivatives in single table
-#   - includes subsequent events disclosure for post-period derivative activity
-#   - detailed AOCL rollforward with reclassification amounts
-#   - commodity risk managed through fixed purchase contracts rather than derivatives
-#   - explicit statement of no interest rate hedging activity
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*FAIR\s+VALUE\s+MEASUREMENTS
+  market_risk:
+    heading: ITEM\s+3\.\s+QUANTITATIVE\s+AND\s+QUALITATIVE\s+DISCLOSURES\s+ABOUT\s+MARKET\s+RISK
