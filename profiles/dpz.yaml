@@ -1,25 +1,19 @@
 issuer: Domino's
 ticker: DPZ
-cik: "1286681"
+cik: '1286681'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   foreign_currency_risk:
-    description: "changes in foreign currency exchange rates"
+    description: changes in foreign currency exchange rates
     section: market_risk
   commodity_price_risk:
-    description: "increases in prices of food (particularly cheese), fuel and other commodity costs"
+    description: increases in prices of food (particularly cheese), fuel and other commodity costs
     section: market_risk
   interest_rate_risk:
-    description: "changes in interest rates affecting consumer spending and credit environment"
+    description: changes in interest rates affecting consumer spending and credit environment
     section: market_risk
-
-# Unusual features identified:
-#   - Section appears to be only safe harbor language without actual market risk quantitative or qualitative disclosures
-#   - No derivatives instruments mentioned despite market risk section heading
-#   - Only forward-looking statement boilerplate with risk factors
-#   - Missing typical market risk analysis content such as sensitivity analysis or VaR
-
+sections:
+  financial_instruments:
+    heading: 5\.\s+Fair\s+Value\s+Measurements
