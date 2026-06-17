@@ -1,64 +1,49 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_designated_notional: $2,025,000M → $2,025M (-99.9%) — exceeds 20% threshold
-[NEW_FIELD] total_derivative_asset: appeared for first time ($9M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($4M)
-[NUMERIC] cash_flow_hedge_aoci: $2,025,000M → $31M (-100.0%) — exceeds 20% threshold
-[VALIDATION] Likely units mismatch: fx_designated_notional changed from 2,025,000 to 2,025 (0x)
-[VALIDATION] Likely units mismatch: cash_flow_hedge_aoci changed from 2,025,000 to 31 (0x)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] fx_designated_notional: $1,677M → $1,294M (-22.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $12M → $18M (+50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_fair_values: $15M → $24M (+60.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] non_hedge_fair_values: $4M → $6M (+50.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Short-term derivative assets of $35 million separately broken out in other current assets table, consistent with $45M total derivative asset figure in fair value table
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($2,025,000M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($2,025M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($2,025,000M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-17 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $49M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $14M, now missing
+[HISTORICAL] [NUMERIC] ir_swap_notional: $200M → $400M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $49M → $39M (-20.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $35M → $27M (-22.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] non_hedge_fair_values: $7M → $4M (-42.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text is Item 7A (market risk MD&A) of the 10-K, not Note 6 (derivatives note). The financial instruments locate step selected this section but it does not contain the full derivative fair value table or notional amounts. The actual derivatives note (Note 6) with complete tables would be in the financial statements section of the 10-K.
+[HISTORICAL] [LLM_FLAG] FX cash flow hedge fair value (asset) at Dec 31, 2025: $15M; FX not-designated fair value (asset): $4M — these are the only point estimates available from this section.
+[HISTORICAL] [LLM_FLAG] FX sensitivity: 20% adverse move would reduce FX cash flow hedge value by $89M and FX not-designated by $34M.
+[HISTORICAL] [LLM_FLAG] IR contracts switched from cash flow hedges ($150M) to fair value hedges ($400M) at year-end 2025
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $69M → $49M (-29.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $48M → $14M (-70.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $69M → $49M (-29.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $48M → $14M (-70.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $21M → $35M (+66.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_fair_values: $-11M → $15M (+236.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] non_hedge_fair_values: $20M → $7M (-65.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts table present in filing but section_text is truncated before table values; FX and IR notionals could not be extracted.
+[HISTORICAL] [LLM_FLAG] Row label 'Other' in derivative assets changed to 'Warrants and other' ($17M vs $15M prior quarter), suggesting new warrant positions.
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $16M → $48M (+200.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $1,463M → $1,847M (+26.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $150M → $200M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $16M → $48M (+200.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $50M → $21M (-58.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_fair_values: $23M → $-11M (-147.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] non_hedge_fair_values: $9M → $20M (+122.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts table present in filing but section_text is truncated before table values; FX and IR notionals could not be extracted.
+[HISTORICAL] [LLM_FLAG] Significant increase in derivative liabilities vs Q1 2025 ($18M to $48M), driven by FX designated cash flow hedge liabilities of $27M appearing where none existed at March 31, 2025.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
-[NUMERIC] ir_sensitivity_100bp: $37M → $28M (-24.3%) — exceeds 20% threshold
-[NUMERIC] fixed_rate_notes_billion: $3M → $2M (-24.1%) — exceeds 20% threshold
-[NUMERIC] cash_flow_hedge_fair_values: $15M → $24M (+60.0%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp: Decreased from $37 million (prior period) to $28 million (current period), a 24% decrease. This is within normal variance and likely reflects changes in interest-bearing investment portfolio composition.
-[LLM_FLAG] fixed_rate_notes_billion: Decreased from $2.9 billion to $2.2 billion, a 24% decrease. This represents a material reduction in fixed-rate securities holdings.
-[LLM_FLAG] marketable_equity_value: Decreased from $903 million to $766 million, a 15% decrease, which is within acceptable variance.
-[LLM_FLAG] equity_investment_values: Decreased from 12% to 11% of total cash and investments, reflecting the decline in absolute equity investment value.
-[LLM_FLAG] fixed_rate_securities_balance: Decreased from 40% to 31% of total cash and investments, indicating a strategic shift toward more liquid or lower-duration investments.
+=== 10-Q/A | Period ending 2025-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [LLM_FLAG] This is a 10-Q/A (amendment) for the same period (2025-03-31) as accession 0001065088-25-000061; section text and figures are identical to the original filing.
+[HISTORICAL] [LLM_FLAG] Notional amounts table present in filing but section_text is truncated before table values; FX and IR notionals could not be extracted.
+[HISTORICAL] [LLM_FLAG] 10-Q/A amendment; values are identical to the original 10-Q filing (0001065088-25-000061) for the same period end March 31, 2025
+[HISTORICAL] [LLM_FLAG] 10-Q/A amendment; values are identical to the original 10-Q filing (0001065088-25-000061) for the same period end March 31, 2025
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
-[NUMERIC] cash_flow_hedge_fair_values: $-11M → $15M (+236.4%) — exceeds 20% threshold
-[NUMERIC] non_hedge_fair_values: $20M → $7M (-65.0%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp: Decreased from $38M to $37M (2.6% decrease, within normal variance)
-[LLM_FLAG] fixed_rate_notes_billion: Decreased from $3.3B to $2.9B (12% decrease, material but plausible)
-[LLM_FLAG] marketable_equity_value: Decreased from $912M to $903M (1% decrease, minimal change)
-[LLM_FLAG] cash_flow_hedge_fair_values: Changed from liability of -$11M to asset of $15M (significant swing, likely due to mark-to-market changes in FX rates)
-[LLM_FLAG] non_hedge_fair_values: Decreased from $20M to $7M (65% decrease, exceeds 50% threshold - significant decline in non-designated hedge fair value)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
-[NUMERIC] cash_flow_hedge_fair_values: $23M → $-11M (-147.8%) — exceeds 20% threshold
-[NUMERIC] non_hedge_fair_values: $9M → $20M (+122.2%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp: Increased from $35M (prior period) to $38M - 8.6% increase, within normal range
-[LLM_FLAG] marketable_equity_value: Decreased from $1,100M to $912M - 17% decrease, material but plausible market change
-[LLM_FLAG] equity_investment_values: Decreased from 13% to 12% - consistent with the $188M decline in equity investments
-[LLM_FLAG] cash_flow_hedge_fair_values: Changed from asset position of $23M to liability position of $(11)M - significant swing, plausible due to currency movements
-[LLM_FLAG] non_hedge_fair_values: Decreased from $9M to $20M - approximately doubled, within reasonable range for FX contract valuation changes
-[LLM_FLAG] fixed_rate_securities_balance: Increased from $3.2B to $3.3B - 3.1% increase, consistent with portfolio management
-
-=== 10-Q/A | Period ending 2025-03-31 | Processed 2026-05-30 ===
-[NUMERIC] cash_flow_hedge_fair_values: $15M → $23M (+53.3%) — exceeds 20% threshold
-[NUMERIC] non_hedge_fair_values: $4M → $9M (+125.0%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp decreased from $49 million (Dec 31, 2024) to $35 million (Mar 31, 2025) - a 29% decrease, within normal quarterly volatility
-[LLM_FLAG] marketable_equity_value increased from $929 million to $1,100 million - an 18% increase, likely due to market appreciation of private equity holdings
-[LLM_FLAG] cash_flow_hedge_fair_values increased from $15 million to $23 million - a 53% increase, exceeds 50% threshold but within range of typical FX volatility
-[LLM_FLAG] non_hedge_fair_values increased from $4 million to $9 million - a 125% increase, exceeds 50% threshold significantly but amounts are small in absolute terms
-[LLM_FLAG] equity_investment_values decreased slightly from 14% to 13% of total cash and investments - a 1 percentage point decrease
-[LLM_FLAG] fixed_rate_securities_balance increased from $2.9 billion (42%) to $3.2 billion (38%) - absolute amount increased but percentage decreased due to larger total investment base
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
-[LLM_FLAG] Interest rate sensitivity shows significant decrease from $49 million (2024) to $30 million (2025), representing a 39% improvement, suggesting either lower interest rate exposure or different portfolio composition.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [LLM_FLAG] Notional amounts table present in filing but section_text is truncated before table values; FX and IR notionals could not be extracted.

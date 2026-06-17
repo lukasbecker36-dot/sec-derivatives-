@@ -1,22 +1,18 @@
 issuer: Ecolab
 ticker: ECL
-cik: "31462"
+cik: '31462'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   reference_location:
-    description: "Location of actual market risk disclosure"
+    description: Location of actual market risk disclosure
     section: market_risk
   incorporated_sections:
-    description: "Referenced sections containing market risk data"
+    description: Referenced sections containing market risk data
     section: market_risk
-
-# Unusual features identified:
-#   - No actual market risk data present - only cross-reference
-#   - Market risk disclosure incorporated by reference from Part II, Item 7
-#   - References both 'Market Risk' and 'Global Economic and Political Environment' sections
-#   - Minimal standalone content in this section
-
+sections:
+  financial_instruments:
+    heading: 7\.\s+FAIR\s+VALUE\s+MEASUREMENTS
+  market_risk:
+    heading: Market\s+Risk

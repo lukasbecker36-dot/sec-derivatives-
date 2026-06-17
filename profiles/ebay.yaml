@@ -1,35 +1,28 @@
 issuer: eBay Inc.
 ticker: EBAY
-cik: "1065088"
+cik: '1065088'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fair_value_sensitivity_analysis:
-    description: "hypothetical adverse change in foreign exchange rates with 20% sensitivity"
+    description: hypothetical adverse change in foreign exchange rates with 20% sensitivity
     section: market_risk
   interest_rate_sensitivity:
-    description: "hypothetical 1% increase impact on investment fair values"
+    description: hypothetical 1% increase impact on investment fair values
     section: market_risk
   cash_flow_hedge_fair_values:
-    description: "fair value of foreign exchange contracts designated as cash flow hedges"
+    description: fair value of foreign exchange contracts designated as cash flow hedges
     section: market_risk
   non_hedge_fair_values:
-    description: "fair value of foreign exchange contracts not designated for hedge accounting"
+    description: fair value of foreign exchange contracts not designated for hedge accounting
     section: market_risk
   equity_investment_values:
-    description: "total equity investments as percentage of cash and investments"
+    description: total equity investments as percentage of cash and investments
     section: market_risk
   fixed_rate_securities_balance:
-    description: "balance and percentage of corporate bonds, commercial paper and government securities"
+    description: balance and percentage of corporate bonds, commercial paper and government securities
     section: market_risk
-
-# Unusual features identified:
-#   - Market risk disclosure includes detailed equity investment fair value measurements with Level 3 reconciliation table
-#   - Foreign exchange sensitivity uses 20% adverse change rather than typical 10%
-#   - Interest rate sensitivity provided for two different year-end dates
-#   - Derivative disclosure appears truncated at end of foreign currency section
-#   - References equity investments in disposed entities (Adevinta, Gmarket) within derivatives section
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Derivative\s+Instruments

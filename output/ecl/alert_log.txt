@@ -1,52 +1,71 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NUMERIC] fx_designated_notional: $4,276M → $2,160M (-49.5%) — exceeds 20% threshold
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($8M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($8M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($47M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($269M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($6,511M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($47M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($269M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-222M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $388M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fx_sensitivity_10pct)
+[HISTORICAL] [LLM_FLAG] Notional amounts not available in this fair value measurements section; they appear in Note 8 (Derivatives and Hedging Transactions) which is not included in the extracted text.
+[HISTORICAL] [LLM_FLAG] A new instrument appears this period: forward-starting interest rate lock contracts ($0.3M liability), not present in prior periods.
+[HISTORICAL] [LLM_FLAG] No FX option contracts listed as assets this period, whereas the September 2025 filing showed $1.2M in FX option assets.
+[HISTORICAL] [LLM_FLAG] Fair values presented gross per the filing; netting adjustments may reduce balance sheet carrying amounts.
+[HISTORICAL] [LLM_FLAG] Forward-starting interest rate lock contracts $150M entered Q1 2026 to hedge anticipated debt issuances; designated as cash flow hedges
+[HISTORICAL] [LLM_FLAG] Cross-currency swap net investment hedges: CHF 200M ($250M), EUR 2,275M ($2,628M), CNH 3,984M ($578M), CAD 280M ($201M) as of March 31, 2026
+[HISTORICAL] [LLM_FLAG] Subsequent event: In April 2026, additional $450M IR lock contracts and CHF 500M cross-currency swaps entered
+[HISTORICAL] [LLM_FLAG] Market risk section is a brief cross-reference paragraph only; all quantitative data is in Note 8
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($4,276M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($1,500M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-17 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $21M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $288M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $7,957M, now missing
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($1,500M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $21M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $288M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-267M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-7M, now missing
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($388M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability, fx_derivatives_notional, total_derivative_asset, total_derivative_liability...)
+[HISTORICAL] [LLM_FLAG] Section text provided is the MD&A Market Risk narrative, not the financial statement Note 8 derivatives disclosure; key notional and fair value tables are missing
+[HISTORICAL] [LLM_FLAG] IR swap notional $1,500M explicitly stated
+[HISTORICAL] [LLM_FLAG] Cross-currency swap net investment hedge notionals stated in local currency terms: EUR 2,275M (~$2,672M), CNY 3,986M (~$570M), CAD 280M (~$204M)
+[HISTORICAL] [LLM_FLAG] FX sensitivity: 10% change in market rates would increase/decrease financial position and liquidity by approximately $388 million
+[HISTORICAL] [LLM_FLAG] The $388M sensitivity figure covers both FX and interest rate derivatives combined, not FX alone; schema field fx_sensitivity_10pct populated with this combined figure with flag for clarity.
+[HISTORICAL] [LLM_FLAG] IR swaps outstanding: $1,500M as of December 31, 2025.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap net investment hedges outstanding: EUR $2,672M + CNY $570M + CAD $204M = approximately $3,446M USD equivalent.
+[HISTORICAL] [LLM_FLAG] No standalone FX forward notional disclosed in this section.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($21M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($288M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $1,500M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $28M → $21M (-27.7%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-7M)
+[HISTORICAL] [LLM_FLAG] Notional amounts not available in this fair value measurements section; they appear in Note 8 (Derivatives and Hedging Transactions) which is not included in the extracted text.
+[HISTORICAL] [LLM_FLAG] Fair values presented gross per the filing; netting adjustments may reduce balance sheet carrying amounts.
+[HISTORICAL] [LLM_FLAG] IR swap notional of $1,500M (stated in fair value hedge paragraph) not shown in notional values table excerpt; table shows FX instruments only
+[HISTORICAL] [LLM_FLAG] FX options notional $1,580M relates to CAD options entered in September 2025 to hedge planned Ovivo Electronics acquisition; these are not designated hedges
+[HISTORICAL] [LLM_FLAG] Net derivative position calculated from gross values; net balance sheet amounts after netting are assets $4.4M and liabilities $271.5M
+[HISTORICAL] [LLM_FLAG] Market risk section is a brief cross-reference paragraph only; all quantitative data is in Note 8
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYufch2toyo9dypowfb'}
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-17 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $103M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $196M, now missing
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $5,516M → $7,029M (+27.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $103M → $28M (-72.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $196M → $335M (+71.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-93M → $-307M (-231.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Cross-currency swap net investment hedges as of June 30, 2025: EUR 2,275M ($2,581M), CNH 4,699M ($657M), CAD 280M ($206M)
+[HISTORICAL] [LLM_FLAG] Euronotes EUR 39M remaining as of June 30, 2025; fully repaid in July 2025
+[HISTORICAL] [LLM_FLAG] Large net derivative liability position driven by cross-currency swap liabilities of $210.2M (IR swaps $93.5M + CC swaps $210.2M vs. minimal assets)
+[HISTORICAL] [LLM_FLAG] Market risk section is a brief cross-reference paragraph only; all quantitative data is in Note 8
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYuMNaaWQrgRaWJQw3D'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYttxqqvoCTVrPjRPGA'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYtSLhTyihsToHZ2Y7B'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYt2Ukmt3RvSM2Wqppv'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
-[LLM_FLAG] Excerpt provided contains only introductory disclosure and reference to Note 8; quantitative metrics (FX forwards notional, interest rate sensitivity, equity sensitivity, etc.) are not included in the provided text and would be found in the full Note 8 disclosure
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
-[LLM_FLAG] This section is introductory/overview text only. Quantitative metrics (FX forwards outstanding, sensitivities, gain/loss amounts, debt amounts) are not disclosed in this excerpt. The detailed data would be in Note 8 which is referenced but not provided in this filing text.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
-[LLM_FLAG] Note number changed from Note 9 (prior period) to Note 8 (current period) - verify this is intentional reorganization and not a data error
-[LLM_FLAG] Extracted text is limited to introductory disclosure paragraph; quantitative market risk sensitivity data not included in provided text
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
-[LLM_FLAG] Change in reference_location from prior period (prior: Part II, Item 7 of Form 10-K; current: Part I, Item 1 of Form 10-Q). This is expected as filing is 10-Q not 10-K.
-[LLM_FLAG] Change from 'No mention' to 'Yes' for has_derivatives. Filing now explicitly discloses derivative use, likely because this section was not included in prior period extraction or prior period was different fiscal document.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
-[LLM_FLAG] Provided text is only the section header that incorporates by reference the actual market risk disclosure from Part II, Item 7. Specific quantitative metrics cannot be extracted from this excerpt alone.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [LLM_FLAG] Notional amounts not available in this fair value measurements section; they appear in Note 8 (Derivatives and Hedging Transactions) which is not included in the extracted text.
+[HISTORICAL] [LLM_FLAG] No FX option contracts listed as assets this period.
+[HISTORICAL] [LLM_FLAG] Fair values presented gross per the filing; netting adjustments may reduce balance sheet carrying amounts.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap net investment hedges as of March 31, 2025: EUR 1,875M ($2,028M), CNH 3,619M ($498M), CAD 280M ($195M)
+[HISTORICAL] [LLM_FLAG] Euronotes EUR 575M ($598M) also designated as net investment hedge
+[HISTORICAL] [LLM_FLAG] Subsequent events: April 2025 additional EUR 200M cross-currency swaps entered; EUR 300M Euronotes de-designated
+[HISTORICAL] [LLM_FLAG] Market risk section is a brief cross-reference paragraph only; all quantitative data is in Note 9
