@@ -1,47 +1,40 @@
 issuer: Emcor
 ticker: EME
-cik: "1053507"
+cik: '1053507'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fixed_rate_debt_schedule:
-    description: "principal cash flows by maturity date for fixed rate debt"
+    description: principal cash flows by maturity date for fixed rate debt
     section: market_risk
   variable_rate_debt_schedule:
-    description: "principal cash flows by maturity date for variable rate debt"
+    description: principal cash flows by maturity date for variable rate debt
     section: market_risk
   weighted_average_interest_rates:
-    description: "weighted average interest rates for fixed and variable debt by maturity"
+    description: weighted average interest rates for fixed and variable debt by maturity
     section: market_risk
   fair_value_debt:
-    description: "fair value of total debt outstanding"
+    description: fair value of total debt outstanding
     section: market_risk
   interest_rate_sensitivity:
-    description: "impact of 10% increase in interest rates on variable rate debt"
+    description: impact of 10% increase in interest rates on variable rate debt
     section: market_risk
   foreign_currency_exposure_percentage:
-    description: "percentage of revenues and expenses in foreign currencies"
+    description: percentage of revenues and expenses in foreign currencies
     section: market_risk
   eur_denominated_debt:
-    description: "total EUR denominated debt outstanding"
+    description: total EUR denominated debt outstanding
     section: market_risk
   net_investment_hedge_amount:
-    description: "EUR debt designated as non-derivative net investment hedge"
+    description: EUR debt designated as non-derivative net investment hedge
     section: market_risk
   fx_sensitivity_intercompany:
-    description: "impact of 10% adverse exchange rate change on intercompany debt"
+    description: impact of 10% adverse exchange rate change on intercompany debt
     section: market_risk
   fx_sensitivity_eur_debt:
-    description: "impact of 10% adverse exchange rate change on unhedged EUR debt"
+    description: impact of 10% adverse exchange rate change on unhedged EUR debt
     section: market_risk
-
-# Unusual features identified:
-#   - Large EUR denominated debt exposure with partial net investment hedge designation
-#   - Very detailed maturity schedule breakdown by year through 2030 and thereafter
-#   - Specific quantitative sensitivity analysis for both interest rate and foreign currency risks
-#   - Mixed derivative and non-derivative hedging approach
-#   - Future date reference (December 31, 2025) suggesting this is forward-looking or template text
-
+sections:
+  financial_instruments:
+    heading: 7\.\s+FAIR\s+VALUE\s+MEASUREMENTS
