@@ -1,46 +1,39 @@
 issuer: EPAM Systems
 ticker: EPAM
-cik: "1352010"
+cik: '1352010'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   foreign_exchange_forward_contracts_duration:
-    description: "duration of FX forward contracts"
+    description: duration of FX forward contracts
     section: market_risk
   hedged_currencies:
-    description: "currencies being hedged (Polish zloty, Indian rupee, Hungarian forint, Mexican peso)"
+    description: currencies being hedged (Polish zloty, Indian rupee, Hungarian forint, Mexican peso)
     section: market_risk
   net_unrealized_loss_hedges:
-    description: "net unrealized loss from hedges ($2.6 million)"
+    description: net unrealized loss from hedges ($2.6 million)
     section: market_risk
   cash_collateral_requirement:
-    description: "collateral requirements for FX forwards"
+    description: collateral requirements for FX forwards
     section: market_risk
   foreign_exchange_loss:
-    description: "annual foreign exchange loss ($25.9 million)"
+    description: annual foreign exchange loss ($25.9 million)
     section: market_risk
   revenue_currency_exposure:
-    description: "percentage of revenues in non-USD currencies (39.5%)"
+    description: percentage of revenues in non-USD currencies (39.5%)
     section: market_risk
   expense_currency_exposure:
-    description: "percentage of operating expenses in non-USD currencies (63.2%)"
+    description: percentage of operating expenses in non-USD currencies (63.2%)
     section: market_risk
   cash_ukraine_belarus:
-    description: "cash held in Ukraine ($49.2M) and Belarus ($37.8M)"
+    description: cash held in Ukraine ($49.2M) and Belarus ($37.8M)
     section: market_risk
   constant_currency_adjustment:
-    description: "revenue growth excluding FX effects"
+    description: revenue growth excluding FX effects
     section: market_risk
-
-# Unusual features identified:
-#   - Embedded within market_risk brackets rather than standard note format
-#   - Significant geopolitical risk disclosure for Ukraine/Belarus operations
-#   - Historical Russian operations divestiture impact included
-#   - Belarus dividend distribution restrictions disclosed
-#   - No tabular presentation of derivative positions or fair values
-#   - Constant currency non-GAAP measure explanation included
-#   - All derivatives designated as hedges with no trading positions
-
+sections:
+  financial_instruments:
+    heading: 5\.\s+FAIR\s+VALUE\s+MEASUREMENTS
+  derivatives_note:
+    heading: 5\.\s+DERIVATIVE\s+FINANCIAL\s+INSTRUMENTS

@@ -1,35 +1,44 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($153M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($61M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($3M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($58M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $12M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $1M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $11M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct)
-[LLM_FLAG] significant change in total derivative asset to $61m from prior periods, which was not noted previously.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $49M → $217M (+342.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $2M → $3M (+50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $47M → $214M (+355.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section covers only senior notes fair value: $7,890M principal / $7,742M fair value at 2026-03-31. All schema fields are out of scope for this section.
+[HISTORICAL] [LLM_FLAG] Derivative contracts are explicitly excluded from this note ('other than financial commodity and other derivative contracts').
+[HISTORICAL] [LLM_FLAG] Significant increase in net derivative asset position ($47M at Dec 31, 2025 to $214M at Mar 31, 2026) driven by natural gas price movements; Brent Linked Gas Sales Contract fair value increased from $31M to $152M
+[HISTORICAL] [LLM_FLAG] Item 3 is a pure cross-reference paragraph with no standalone quantitative disclosures
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] total_derivative_asset: appeared for first time ($12M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($1M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($11M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $87M → $49M (-43.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $41M → $2M (-95.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] 10-K section titled 'Fair Value of Debt' only; covers senior notes: $7,890M principal / $7,849M fair value at 2025-12-31. All schema fields are out of scope for this section.
+[HISTORICAL] [LLM_FLAG] Section is narrower than the 10-Q equivalent — does not mention cash/AR/AP approximation language, focuses only on debt fair value.
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional amounts not disclosed in dollar terms; volumes expressed in physical units
+[HISTORICAL] [LLM_FLAG] Net cash paid for settlements of financial commodity derivative contracts in 2025 was $56 million (per MD&A Cash Flow section)
+[HISTORICAL] [LLM_FLAG] Item 7A is a single-sentence incorporation by reference; all derivative quantitative data is in Item 7 and Notes 12-13
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $57M → $87M (+52.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $86M → $41M (-52.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-29M → $46M (+258.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fixed_rate_notes_billion: $4M → $8M (+84.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section covers only senior notes fair value: $7,640M principal / $7,634M fair value at 2025-09-30. Note the significant increase in principal vs prior periods (from $4,640M) — EOG added ~$3,000M in senior notes during Q3 2025. All schema fields are out of scope for this section.
+[HISTORICAL] [LLM_FLAG] Derivative contracts are explicitly excluded from this note ('other than financial commodity and other derivative contracts').
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional amounts not disclosed in dollar terms; volumes expressed in MMBtud
+[HISTORICAL] [LLM_FLAG] Q3 2025 includes commodity derivatives assumed via novation from Encino acquisition (Aug 1, 2025)
+[HISTORICAL] [LLM_FLAG] Item 3 is a pure cross-reference paragraph with no standalone quantitative disclosures
+[HISTORICAL] [LLM_FLAG] Q3 2025 filing reflects enlarged derivative portfolio following Encino acquisition
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $117M → $57M (-51.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $277M → $86M (-69.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-160M → $-29M (+81.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section covers only senior notes fair value: $4,140M principal / $3,996M fair value at 2025-06-30. All schema fields are out of scope for this section.
+[HISTORICAL] [LLM_FLAG] Derivative contracts are explicitly excluded from this note ('other than financial commodity and other derivative contracts').
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional amounts expressed as volumes (MMBtud) not dollar notional; dollar notional not determinable from filing text provided
+[HISTORICAL] [LLM_FLAG] Item 3 is a pure cross-reference paragraph with no standalone quantitative disclosures
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
-[LLM_FLAG] This filing section is an index/reference page only - it does not contain quantitative derivatives data (notional amounts, gains/losses, or sensitivities). Actual numerical data would be found in the referenced Note 10 and MD&A sections, which are not provided in the extraction text.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
-[LLM_FLAG] This is an incorporation by reference section. Actual derivative quantitative and qualitative disclosures are located in Item 7 MD&A sections, not in this excerpt. Specific metrics (FX forwards, sensitivities, fair values) cannot be extracted without access to those referenced sections.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [LLM_FLAG] Section covers only senior notes fair value: $4,640M principal / $4,508M fair value at 2025-03-31. All schema fields are out of scope for this section.
+[HISTORICAL] [LLM_FLAG] Derivative contracts are explicitly excluded from this note ('other than financial commodity and other derivative contracts').
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional amounts expressed as volumes (MMBtud) not dollar notional; dollar notional not determinable from filing text provided
+[HISTORICAL] [LLM_FLAG] Item 3 is a pure cross-reference paragraph with no standalone quantitative disclosures; all numeric values sourced from other notes in the same filing
