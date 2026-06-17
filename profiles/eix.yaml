@@ -1,50 +1,43 @@
 issuer: Edison International
 ticker: EIX
-cik: "827052"
+cik: '827052'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   gross_derivative_assets:
-    description: "gross amounts of derivative assets recognized"
+    description: gross amounts of derivative assets recognized
     section: market_risk
   gross_derivative_liabilities:
-    description: "gross amounts of derivative liabilities recognized"
+    description: gross amounts of derivative liabilities recognized
     section: market_risk
   net_derivative_assets:
-    description: "net amounts of derivative assets presented on balance sheet"
+    description: net amounts of derivative assets presented on balance sheet
     section: market_risk
   net_derivative_liabilities:
-    description: "net amounts of derivative liabilities presented on balance sheet"
+    description: net amounts of derivative liabilities presented on balance sheet
     section: market_risk
   cash_collateral_posted:
-    description: "cash collateral posted against derivative positions"
+    description: cash collateral posted against derivative positions
     section: market_risk
   realized_gains_losses:
-    description: "realized gains/losses on derivative instruments"
+    description: realized gains/losses on derivative instruments
     section: market_risk
   unrealized_gains_losses:
-    description: "unrealized gains/losses on derivative instruments"
+    description: unrealized gains/losses on derivative instruments
     section: market_risk
   electricity_notional_gwh:
-    description: "notional volumes for electricity derivatives in gigawatt hours"
+    description: notional volumes for electricity derivatives in gigawatt hours
     section: market_risk
   natural_gas_notional_bcf:
-    description: "notional volumes for natural gas derivatives in billion cubic feet"
+    description: notional volumes for natural gas derivatives in billion cubic feet
     section: market_risk
   congestion_rights_notional_gwh:
-    description: "notional volumes for congestion revenue rights in gigawatt hours"
+    description: notional volumes for congestion revenue rights in gigawatt hours
     section: market_risk
   fin_toll_notional_gwh:
-    description: "notional volumes for Fin Toll arrangements in gigawatt hours"
+    description: notional volumes for Fin Toll arrangements in gigawatt hours
     section: market_risk
-
-# Unusual features identified:
-#   - Utility-specific derivatives including congestion revenue rights and Fin Toll arrangements
-#   - Regulatory accounting treatment where gains/losses are recorded as regulatory assets/liabilities rather than affecting earnings
-#   - Credit-risk contingent features requiring investment grade rating maintenance
-#   - Cash collateral offsetting against derivative liabilities on balance sheet presentation
-#   - Economic hedging designation rather than formal hedge accounting
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+Value\s+Measurements
