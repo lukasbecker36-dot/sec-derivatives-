@@ -1,28 +1,26 @@
 issuer: DaVita
 ticker: DVA
-cik: "927066"
+cik: '927066'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   interest_rate_sensitivity_impact:
-    description: "hypothetical net income impact from 100bp rate increase"
+    description: hypothetical net income impact from 100bp rate increase
     section: market_risk
   duration_analysis_methodology:
-    description: "parallel shift yield curve model description"
+    description: parallel shift yield curve model description
     section: market_risk
   derivative_usage_policy:
-    description: "statement about not holding derivatives for trading"
+    description: statement about not holding derivatives for trading
     section: market_risk
   risk_management_program:
-    description: "controlled program including derivative instruments"
+    description: controlled program including derivative instruments
     section: market_risk
-
-# Unusual features identified:
-#   - Interest rate sensitivity analysis shows future year projections (2025) alongside historical years
-#   - Impact amounts are presented net of tax and interest rate caps effect
-#   - No tabular presentation of derivative positions or fair values
-#   - References external note for detailed derivative information rather than including in market risk section
-
+sections:
+  financial_instruments:
+    heading: 11\.\s+Fair\s+values\s+of\s+financial\s+instruments
+  derivatives_note:
+    heading: Interest\s+rate\s+cap\s+agreements
+  market_risk:
+    heading: Item\s+3\.\s+Quantitative\s+and\s+Qualitative\s+Disclosures\s+about\s+Market\s+Risk

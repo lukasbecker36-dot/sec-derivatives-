@@ -1,42 +1,63 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] duration_analysis_methodology: was $-5M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, duration_analysis_methodology)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($38M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($21M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($21M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($21M)
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-21M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-5M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity_impact: was $-5M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (cash_flow_hedge_aoci, ir_sensitivity_100bp, interest_rate_sensitivity_impact)
+[HISTORICAL] [LLM_FLAG] DaVita reports in thousands; converted to millions.
+[HISTORICAL] [LLM_FLAG] No contingent earn-out obligations listed in the Q1 2026 fair value table (previously present in earlier periods).
+[HISTORICAL] [LLM_FLAG] DaVita reports in thousands; converted to millions.
+[HISTORICAL] [LLM_FLAG] ir_swap_notional represents interest rate cap agreements (not swaps).
+[HISTORICAL] [LLM_FLAG] total_derivative_asset sourced from Note 11 (financial_instruments section) as fair value not stated in derivatives note text itself.
+[HISTORICAL] [LLM_FLAG] Section includes legal proceedings disclosures unrelated to derivatives.
+[HISTORICAL] [LLM_FLAG] Revolving line of credit: $375M drawn, $1,125M available as of March 31, 2026.
+[HISTORICAL] [LLM_FLAG] Section contains only a cross-reference: 'no material change in the nature of the Company's interest rate risks or foreign currency exchange risks from those described in the 2025 10-K.' No quantitative figures available.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-5M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-17 ===
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $40M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $8M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $8M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $8M, now missing
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-21M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-5M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity_impact: appeared for first time ($-5M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (marketable_equity_securities_fv, fi_total_derivative_asset, total_derivative_asset, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] DaVita reports in thousands; converted to millions.
+[HISTORICAL] [LLM_FLAG] ir_swap_notional represents interest rate cap agreements (not swaps).
+[HISTORICAL] [LLM_FLAG] total_derivative_asset is null because the 10-K derivatives note section text does not include the balance sheet fair value of cap agreements at December 31, 2025 — that figure would be in the financial instruments note.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci represents the after-tax change in OCI for FY2025 ($21.321M loss), not the cumulative AOCI balance.
+[HISTORICAL] [LLM_FLAG] Reclassification from AOCI to income in 2025 was $7,480 thousand net of tax ($9,966 gross) per the OCI effects table.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] duration_analysis_methodology: was $5M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, duration_analysis_methodology)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $17M → $8M (-53.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $17M → $8M (-53.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $17M → $8M (-53.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] DaVita reports in thousands; converted to millions.
+[HISTORICAL] [LLM_FLAG] Contingent earn-out obligations ($9.548M) are acquisition-related liabilities, not derivatives.
+[HISTORICAL] [LLM_FLAG] DaVita reports in thousands; converted to millions.
+[HISTORICAL] [LLM_FLAG] ir_swap_notional represents interest rate cap agreements (not swaps); reported under schema field for IR derivative notional.
+[HISTORICAL] [LLM_FLAG] Section also contains legal proceedings disclosures which are unrelated to derivatives.
+[HISTORICAL] [LLM_FLAG] Section contains only a cross-reference: 'no material change in the nature of the Company's interest rate risks or foreign currency exchange risks from those described in the 2024 10-K.' No quantitative figures available.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($5M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $22M → $17M (-21.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $22M → $17M (-21.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $22M → $17M (-21.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] DaVita reports in thousands; converted to millions.
+[HISTORICAL] [LLM_FLAG] Contingent earn-out obligations ($9.393M) are acquisition-related liabilities, not derivatives.
+[HISTORICAL] [LLM_FLAG] Contingent consideration payable to Medtronic (~$12.5M) is acquisition-related, not a derivative.
+[HISTORICAL] [LLM_FLAG] DaVita reports in thousands; converted to millions.
+[HISTORICAL] [LLM_FLAG] ir_swap_notional represents interest rate cap agreements (not swaps); reported under schema field for IR derivative notional.
+[HISTORICAL] [LLM_FLAG] Section also references commitment/contingency disclosures (legal proceedings) which are unrelated to derivatives.
+[HISTORICAL] [LLM_FLAG] Section contains only a cross-reference: 'no material change in the nature of the Company's interest rate risks or foreign currency exchange risks from those described in the 2024 10-K.' No quantitative figures available.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
-[LLM_FLAG] Provided text is only a section header/reference to the 10-K filing. The actual detailed market risk disclosures are located in the referenced Annual Report on Form 10-K for the year ended December 31, 2024, which was not provided for extraction.
-[LLM_FLAG] Cannot assess changes from prior period as the substantive disclosure content is not included in the excerpt provided.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_forwards_outstanding)
-[LLM_FLAG] Filing excerpt appears to be a section header reference only ('Quantitative and Qualitative Disclosures about Market Risk') rather than the actual detailed disclosure content. Most quantitative fields cannot be extracted.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $5M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity_impact: was $5M, now missing
-[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (ir_sensitivity_100bp, interest_rate_sensitivity_impact)
-[LLM_FLAG] The provided 10-Q excerpt is minimal and primarily references the 10-K for detailed market risk disclosures. Most quantitative metrics (IR sensitivity, equity sensitivity, fixed-rate notes outstanding) are not disclosed in this section and cannot be extracted.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [LLM_FLAG] DaVita reports in thousands; converted to millions.
+[HISTORICAL] [LLM_FLAG] Contingent earn-out obligations ($10.384M) are acquisition-related liabilities, not derivatives.
+[HISTORICAL] [LLM_FLAG] DaVita reports in thousands; all dollar figures converted to millions by dividing by 1000.
+[HISTORICAL] [LLM_FLAG] ir_swap_notional represents interest rate cap agreements (not swaps); labeled as IR derivative notional per schema intent.
+[HISTORICAL] [LLM_FLAG] Total notional of $3,500M reflects the 2025 coverage column from the cap table (the largest single-year figure shown).
+[HISTORICAL] [LLM_FLAG] Section contains only a cross-reference: 'no material change in the nature of the Company's interest rate risks or foreign currency exchange risks from those described in the 2024 10-K.' No quantitative figures available.

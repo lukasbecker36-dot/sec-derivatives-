@@ -1,31 +1,27 @@
 issuer: Dexcom
 ticker: DXCM
-cik: "1093557"
+cik: '1093557'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   investment_policy:
-    description: "Types of securities allowed in investment portfolio"
+    description: Types of securities allowed in investment portfolio
     section: market_risk
   interest_rate_exposure:
-    description: "Assessment of material exposure to interest rate risk"
+    description: Assessment of material exposure to interest rate risk
     section: market_risk
   derivative_usage_policy:
-    description: "Statement on derivative financial instruments usage"
+    description: Statement on derivative financial instruments usage
     section: market_risk
   capped_calls_purpose:
-    description: "Description of 2028 Capped Calls function and limitations"
+    description: Description of 2028 Capped Calls function and limitations
     section: market_risk
   related_debt_reference:
-    description: "Cross-reference to debt note for additional details"
+    description: Cross-reference to debt note for additional details
     section: market_risk
-
-# Unusual features identified:
-#   - Market risk section embedded within revenue recognition note heading
-#   - Limited derivative disclosure - only capped calls mentioned
-#   - No quantitative risk metrics or sensitivity analysis provided
-#   - Incomplete sentence ending with reference to debt note
-
+sections:
+  financial_instruments:
+    heading: Foreign\s+Currency\s+and\s+Derivative\s+Financial\s+Instruments
+  market_risk:
+    heading: ITEM\s+3\s+\-\s+QUANTITATIVE\s+AND\s+QUALITATIVE\s+DISCLOSURES\s+ABOUT\s+MARKET\s+RISK
