@@ -1,38 +1,33 @@
 issuer: Eaton Corporation
 ticker: ETN
-cik: "1551182"
+cik: '1551182'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   derivative_types:
-    description: "Types of derivative instruments used"
+    description: Types of derivative instruments used
     section: market_risk
   hedge_designations:
-    description: "Fair value hedges, cash flow hedges, net investment hedges"
+    description: Fair value hedges, cash flow hedges, net investment hedges
     section: market_risk
   counterparty_credit_management:
-    description: "Credit rating monitoring and position limits"
+    description: Credit rating monitoring and position limits
     section: market_risk
   hedge_effectiveness_method:
-    description: "Spot rate method for net investment hedges"
+    description: Spot rate method for net investment hedges
     section: market_risk
   non_hedge_derivatives:
-    description: "Currency contracts for intercompany exposures"
+    description: Currency contracts for intercompany exposures
     section: market_risk
   coverage_target:
-    description: "95% to 100% of intercompany balance sheet exposure"
+    description: 95% to 100% of intercompany balance sheet exposure
     section: market_risk
   cash_flow_classification:
-    description: "Operating vs investing activities classification"
+    description: Operating vs investing activities classification
     section: market_risk
-
-# Unusual features identified:
-#   - No quantitative tables with notional amounts or fair values in derivatives section
-#   - Market risk disclosure is referenced but located in separate section
-#   - Detailed explanation of spot rate method for hedge effectiveness
-#   - Specific coverage target percentage disclosed for intercompany exposures
-#   - Forward points treatment explicitly described for net investment hedges
-
+sections:
+  financial_instruments:
+    heading: FAIR\s+VALUE\s+MEASUREMENTS
+  market_risk:
+    heading: MARKET\s+RISK\s+DISCLOSURE
