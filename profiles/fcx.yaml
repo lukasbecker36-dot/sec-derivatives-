@@ -1,44 +1,37 @@
 issuer: Freeport-McMoRan
 ticker: FCX
-cik: "831259"
+cik: '831259'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   copper_futures_swap_notional:
-    description: "104 million pounds at $5.05 average price"
+    description: 104 million pounds at $5.05 average price
     section: market_risk
   copper_futures_swap_maturity:
-    description: "maturities through December 2027"
+    description: maturities through December 2027
     section: market_risk
   embedded_derivative_copper_sales:
-    description: "365 million pounds, $5.05 contract vs $5.64 market"
+    description: 365 million pounds, $5.05 contract vs $5.64 market
     section: market_risk
   embedded_derivative_gold_sales:
-    description: "3 thousand ounces, $3,826 contract vs $4,331 market"
+    description: 3 thousand ounces, $3,826 contract vs $4,331 market
     section: market_risk
   embedded_derivative_copper_purchases:
-    description: "143 million pounds, $5.06 contract vs $5.65 market"
+    description: 143 million pounds, $5.06 contract vs $5.65 market
     section: market_risk
   copper_forward_contracts:
-    description: "79 million pounds net sales at $5.36 average"
+    description: 79 million pounds net sales at $5.36 average
     section: market_risk
   hedge_effectiveness_gains_losses:
-    description: "realized and unrealized P&L by year"
+    description: realized and unrealized P&L by year
     section: market_risk
   non_designated_gains_losses:
-    description: "embedded derivatives and forward contract P&L"
+    description: embedded derivatives and forward contract P&L
     section: market_risk
   maximum_credit_exposure:
-    description: "$289 million as of Dec 31, 2025"
+    description: $289 million as of Dec 31, 2025
     section: market_risk
-
-# Unusual features identified:
-#   - embedded derivatives in provisional pricing contracts with bifurcation from host contracts
-#   - detailed breakdown of copper vs gold embedded derivatives
-#   - Atlantic Copper subsidiary separate forward contract disclosure
-#   - normal purchases and sales scope exception applied to host contracts
-#   - comprehensive credit risk quantification with maximum exposure amount
-
+sections:
+  derivatives_note:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*FINANCIAL\s+INSTRUMENTS
