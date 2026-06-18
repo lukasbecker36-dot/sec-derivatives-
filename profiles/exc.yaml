@@ -1,35 +1,30 @@
 issuer: Exelon
 ticker: EXC
-cik: "1109357"
+cik: '1109357'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   commodity_contract_liabilities:
-    description: "fair value of commodity derivative contract net liabilities by maturity"
+    description: fair value of commodity derivative contract net liabilities by maturity
     section: market_risk
   fair_value_hierarchy_level:
-    description: "Level 3 fair value measurements for commodity derivatives"
+    description: Level 3 fair value measurements for commodity derivatives
     section: market_risk
   hedge_designation:
-    description: "cash flow hedge designation for interest rate derivatives"
+    description: cash flow hedge designation for interest rate derivatives
     section: market_risk
   npns_qualification:
-    description: "normal purchase normal sale accounting treatment"
+    description: normal purchase normal sale accounting treatment
     section: market_risk
   counterparty_credit_risk:
-    description: "non-performance risk on derivative instruments"
+    description: non-performance risk on derivative instruments
     section: market_risk
   commodity_price_risk:
-    description: "exposure to energy and natural gas price movements"
+    description: exposure to energy and natural gas price movements
     section: market_risk
-
-# Unusual features identified:
-#   - Utility-specific regulatory recovery mechanisms for hedging programs
-#   - PJM wholesale market credit risk sharing arrangements
-#   - 20-year floating-to-fixed renewable energy swaps with regulatory asset/liability treatment
-#   - Competitive procurement process for electric supply contracts
-#   - Only Level 3 fair value measurements disclosed in commodity derivatives table
-
+sections:
+  financial_instruments:
+    heading: 10\.\s+Fair\s+Value\s+of\s+Financial\s+Assets\s+and\s+Liabilities\s+\(All\s+Registrants\)
+  market_risk:
+    heading: ITEM\s+3\.\s+QUANTITATIVE\s+AND\s+QUALITATIVE\s+DISCLOSURE\s+ABOUT\s+MARKET\s+RISK

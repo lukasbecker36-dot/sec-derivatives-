@@ -1,14 +1,9 @@
 issuer: Expeditors International
 ticker: EXPD
-cik: "746515"
+cik: '746515'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Unusual features identified:
-#   - Section marked as [market_risk] but contains no actual market risk disclosures
-#   - Text appears to be forward-looking statement disclaimers and MD&A business overview rather than quantitative/qualitative market risk disclosures
-#   - No derivative instruments, hedging activities, or market risk exposures discussed
-#   - Section may be mislabeled or extracted incorrectly
-#   - References Item 7A market risk disclosures but doesn't contain the actual Item 7A content
-
+sections:
+  financial_instruments:
+    heading: Fair\s+Value\s+of\s+Financial\s+Instruments
