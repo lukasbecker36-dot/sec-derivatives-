@@ -1,40 +1,44 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($2,723M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($556M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($556M)
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $2,484M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $307M, now missing
-[DROPPED_TO_ZERO] ir_sensitivity_100bp: $3M → $0M
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $304M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, fx_sensitivity_10pct, equity_sensitivity_10pct)
-[LLM_FLAG] total_derivative_liability of 0.0 may indicate the company is fully covered or not using derivatives effectively, raising concerns about hedging effectiveness.
-[LLM_FLAG] ir_sensitivity_100bp changed from 3.0 to 0.0 which is more than a 50% decline, despite the company stating they have outstanding interest rate exposure.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $406M → $803M (+97.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-99M → $-247M (-149.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $307M → $556M (+81.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional volumes are in physical units (Bcf/MMBbls) not dollar millions — commodity_derivatives_notional cannot be expressed in $M from this text
+[HISTORICAL] [LLM_FLAG] No hedge accounting; all derivatives are undesignated commodity contracts
+[HISTORICAL] [LLM_FLAG] Notional volumes noted as net of short and long positions per filing footnote
+[HISTORICAL] [LLM_FLAG] Market risk section covers commodity price risk and interest rate risk only; no FX or equity price risk
+[HISTORICAL] [LLM_FLAG] No outstanding Credit Facility borrowings as of March 31, 2026 so IR sensitivity is zero/not quantified
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($2,484M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($307M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($3M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($304M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $289M → $406M (+40.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-161M → $-99M (+38.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $128M → $307M (+139.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional volumes are in physical units (Bcf/MMBbls) not dollar millions — commodity_derivatives_notional cannot be expressed in $M from this text
+[HISTORICAL] [LLM_FLAG] No hedge accounting; all derivatives are undesignated commodity contracts
+[HISTORICAL] [LLM_FLAG] 10-K filing (annual); instrument type labels changed from prior quarters (e.g. 'two-way collars' replaces 'collars'; 'basis protection swaps' consistent)
+[HISTORICAL] [LLM_FLAG] Market risk section covers commodity price risk and interest rate risk only; no FX or equity price risk
+[HISTORICAL] [LLM_FLAG] No outstanding 2025 Credit Facility borrowings as of December 31, 2025 so IR sensitivity is zero/not quantified
+[HISTORICAL] [LLM_FLAG] Section text in the extract request is truncated (2210 chars); full sensitivity figures visible in locate window 5 but not in section_text provided
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $177M → $289M (+63.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-358M → $-161M (+55.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-181M → $128M (+170.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional volumes are in physical units (Bcf/MMBbls) not dollar millions — commodity_derivatives_notional cannot be expressed in $M from this text
+[HISTORICAL] [LLM_FLAG] No hedge accounting; all derivatives are undesignated commodity contracts
+[HISTORICAL] [LLM_FLAG] Market risk section covers commodity price risk and interest rate risk only; no FX or equity price risk
+[HISTORICAL] [LLM_FLAG] No outstanding 2025 Credit Facility borrowings as of September 30, 2025 so IR sensitivity is zero/not quantified
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $57M → $177M (+210.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-1,080M → $-358M (+66.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-1,023M → $-181M (+82.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional volumes are in physical units (Bcf/MMBbls) not dollar millions — commodity_derivatives_notional cannot be expressed in $M from this text
+[HISTORICAL] [LLM_FLAG] No hedge accounting; all derivatives are undesignated commodity contracts
+[HISTORICAL] [LLM_FLAG] Market risk section covers commodity price risk and interest rate risk only; no FX or equity price risk
+[HISTORICAL] [LLM_FLAG] No outstanding Credit Facility borrowings as of June 30, 2025 so IR sensitivity is zero/not quantified
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [LLM_FLAG] Notional volumes are in physical units (Bcf/MMBbls) not dollar millions — commodity_derivatives_notional cannot be expressed in $M from this text
+[HISTORICAL] [LLM_FLAG] No hedge accounting; all derivatives are undesignated commodity contracts
+[HISTORICAL] [LLM_FLAG] Market risk section covers commodity price risk and interest rate risk only; no FX or equity price risk
+[HISTORICAL] [LLM_FLAG] No outstanding Credit Facility borrowings as of March 31, 2025 so IR sensitivity is zero/not quantified
