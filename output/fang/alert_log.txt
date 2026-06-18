@@ -1,64 +1,67 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($300M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($217M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($362M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $198M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (fx_sensitivity_10pct, equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [DROPPED_TO_ZERO] ir_swap_notional: $300M → $0M
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($492M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($337M)
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $198M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] outstanding_borrowings: was $550M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] available_capacity: was $2,500M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (net_derivative_position, fx_forwards_outstanding, outstanding_borrowings, available_capacity)
+[HISTORICAL] [LLM_FLAG] IR swap notional is now ZERO as of March 31, 2026 — all $300M remaining notional was terminated in Q1 2026 for approximately $27M cash payment.
+[HISTORICAL] [LLM_FLAG] Total derivative asset of $492M is gross before netting; net amounts: $165M current + $52M non-current = $217M net commodity asset.
+[HISTORICAL] [LLM_FLAG] Total derivative liability of $337M is gross; net: $62M current commodity + $0M non-current commodity (fully offset) = $62M net.
+[HISTORICAL] [LLM_FLAG] Commodity derivatives notional not available as a dollar figure — disclosed only in volumetric terms.
+[HISTORICAL] [LLM_FLAG] The December 31, 2025 comparison table in the filing shows the prior period had interest rate swaps ($7M current + $20M non-current) which are now terminated.
+[HISTORICAL] [LLM_FLAG] Section is a cross-reference stub only: 'information regarding market risks for the three months ended March 31, 2026 does not differ materially from that disclosed in... our Annual Report on Form 10-K for the year ended December 31, 2025.' No numeric data is present in the supplied text. Quantitative disclosures are in the 10-K, not this 10-Q filing.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($600M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($198M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] Noteworthy that $600 million in notional amount of interest rate swaps were early terminated, which may reflect a strategy adjustment.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-18 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $393M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $334M, now missing
+[HISTORICAL] [NUMERIC] net_derivative_position: $90M → $198M (+120.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] outstanding_borrowings: appeared for first time ($550M)
+[HISTORICAL] [NEW_FIELD] available_capacity: appeared for first time ($2,500M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (total_derivative_asset, total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] The section_text supplied appears to be from the 10-K MD&A (Liquidity, Results of Operations), not the actual Note 12 Derivatives body — the fair value tables are not present in the supplied text.
+[HISTORICAL] [LLM_FLAG] IR swap notional of $300M at December 31, 2025 is inferred from the market risk section text (also provided in the market_risk_extract request) which explicitly states '$300 million notional amount' at December 31, 2025.
+[HISTORICAL] [LLM_FLAG] The early termination of $600M notional interest rate swaps during 2025 (in aggregate) is confirmed in the section text.
+[HISTORICAL] [LLM_FLAG] Total derivative asset/liability values cannot be extracted from the supplied text — the fair value table in Note 13 was not included.
+[HISTORICAL] [LLM_FLAG] IR swap notional $300M at December 31, 2025; $600M total terminated during 2025.
+[HISTORICAL] [LLM_FLAG] Commodity net derivative position of $198M as of December 31, 2025.
+[HISTORICAL] [LLM_FLAG] Asymmetric sensitivity: 10% down creates $60M gain vs 10% up creates only $3M loss — predominantly put option / protective put portfolio.
+[HISTORICAL] [LLM_FLAG] No FX or equity market risk disclosures — Diamondback is a domestic US E&P company.
+[HISTORICAL] [LLM_FLAG] The supplied section_text appears truncated mid-paragraph — full IR risk discussion may contain more detail not captured here.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $198M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_sensitivity_10pct, equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] ir_swap_notional: $450M → $300M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $49M → $90M (+83.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] IR swap notional reduced to $300M ($150M x 2) as of September 30, 2025 following termination of $150M in Q3 2025 and $450M in Q2 2025.
+[HISTORICAL] [LLM_FLAG] Total derivative asset of $393M is gross before netting offsets; net balance sheet: $174M current + $1M non-current = $175M net commodity asset.
+[HISTORICAL] [LLM_FLAG] Total derivative liability of $334M is gross; net: $1M current commodity + $9M current IR swaps + $84M non-current commodity + $22M non-current IR swaps.
+[HISTORICAL] [LLM_FLAG] Commodity derivatives notional not available as a dollar figure — disclosed only in volumetric terms.
+[HISTORICAL] [LLM_FLAG] IR swap notional $300M at September 30, 2025 following additional $150M termination in Q3 2025.
+[HISTORICAL] [LLM_FLAG] Commodity net derivative position of $90M; asymmetric sensitivity — 10% down creates $71M gain vs 10% up creates only $27M loss, consistent with put-dominated hedge portfolio.
+[HISTORICAL] [LLM_FLAG] No FX or equity market risk disclosures — Diamondback is a domestic US E&P company.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] net_derivative_position: appeared for first time ($198M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] ir_swap_notional: $900M → $450M (-50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $538M → $337M (-37.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $273M → $49M (-82.1%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] outstanding_borrowings: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] available_capacity: was $2,500M, now missing
+[HISTORICAL] [LLM_FLAG] IR swap notional reduced to $450M ($150M + $300M) as of June 30, 2025 following partial early termination of $450M in Q2 2025.
+[HISTORICAL] [LLM_FLAG] Total derivative asset of $337M is gross before netting offsets; net balance sheet amounts are $117M current + $0M non-current = $117M net commodity asset.
+[HISTORICAL] [LLM_FLAG] Total derivative liability of $334M is gross before netting; net amounts: $8M current commodity + $13M current IR swaps + $60M non-current commodity + $33M non-current IR swaps = $114M net.
+[HISTORICAL] [LLM_FLAG] Commodity derivatives notional not available as a dollar figure — disclosed only in volumetric terms.
+[HISTORICAL] [LLM_FLAG] IR swap notional $450M at June 30, 2025 following partial termination of $450M in Q2 2025.
+[HISTORICAL] [LLM_FLAG] Commodity net derivative position of $49M is notably lower than Q1 2025 ($273M), reflecting commodity price movements.
+[HISTORICAL] [LLM_FLAG] No FX or equity market risk disclosures — Diamondback is a domestic US E&P company.
+[HISTORICAL] [LLM_FLAG] Sensitivity analysis direction reversed vs Q1 2025: at Q2 2025, a 10% price increase is favorable (net asset grows) due to the current position structure.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] ir_swap_notional: was $12M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_swap_notional)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($12M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] net_derivative_position: was $90M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_forwards_outstanding, net_derivative_position)
-[LLM_FLAG] The provided text is only a header/reference statement directing readers to the Form 10-K for the year ended December 31, 2025. The actual quantitative and qualitative disclosures about market risk are not included in this excerpt. All fields cannot be extracted.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
-[NUMERIC] net_derivative_position: $49M → $90M (+83.7%) — exceeds 20% threshold
-[LLM_FLAG] net_derivative_position increased 84% from $49 million (prior period) to $90 million - significant increase likely due to commodity price environment changes
-[LLM_FLAG] sensitivity_analysis shows opposite directional impact compared to prior period - 10% increase now decreases position (vs increased in prior period), indicating shift in derivative positioning or commodity price expectations
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
-[NUMERIC] net_derivative_position: $273M → $49M (-82.1%) — exceeds 20% threshold
-[LLM_FLAG] net_derivative_position decreased 82% from $273 million (prior period) to $49 million (current period) - significant decline in commodity derivative asset position
-[LLM_FLAG] sensitivity_analysis shows much smaller impacts in current period ($10M/$9M swings) compared to prior period ($2M/$15M swings), consistent with lower net derivative position
-[LLM_FLAG] weighted_average_variable rate on swaps changed from 6.10% to 5.81% - reflects lower interest rate environment
-[LLM_FLAG] credit_facility margins appear slightly different from prior period - Alternate base rate margin ranges narrowed from 0.125%-1.000% to 0.000%-0.750% for revolving facility
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
-[NUMERIC] net_derivative_position: $198M → $273M (+37.9%) — exceeds 20% threshold
-[LLM_FLAG] net_derivative_position increased 38% from $198 million to $273 million - primarily driven by commodity derivatives ($273M vs implied $198M prior); change of $75 million is material and should be verified
-[LLM_FLAG] sensitivity_analysis changed significantly: impact of 10% moves reduced from $3M/-$60M range to $2M/-$15M range, suggesting different derivative positions or market valuations
-[LLM_FLAG] interest rate swaps notional amount ($900 million) and net liability position ($113 million) not disclosed in prior period for comparison
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [LLM_FLAG] IR swap notional confirmed at $900M ($300M + $600M) as of March 31, 2025.
+[HISTORICAL] [LLM_FLAG] Total derivative asset of $538M is gross before netting offsets; net balance sheet amounts are $267M current + $61M non-current = $328M net asset.
+[HISTORICAL] [LLM_FLAG] Total derivative liability of $378M is gross before netting offsets; net balance sheet amounts are $46M current commodity + $29M current IR swaps + $9M non-current commodity + $84M non-current IR swaps = $168M net.
+[HISTORICAL] [LLM_FLAG] Commodity derivatives notional not available as a dollar figure — disclosed only in volumetric terms (Bbls/day, MMBtu/day).
+[HISTORICAL] [LLM_FLAG] IR swap notional $900M at March 31, 2025 confirmed in derivatives note (not repeated in market risk section).
+[HISTORICAL] [LLM_FLAG] Commodity net derivative position of $273M is net of all commodity contracts (puts, swaps, basis swaps).
+[HISTORICAL] [LLM_FLAG] No FX or equity market risk disclosures — Diamondback is a domestic US E&P company.
