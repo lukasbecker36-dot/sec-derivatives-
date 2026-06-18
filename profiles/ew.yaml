@@ -1,32 +1,25 @@
 issuer: Edwards Lifesciences
 ticker: EW
-cik: "1099800"
+cik: '1099800'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   notional_amount:
-    description: "total notional amount of derivative financial instruments for foreign currency management"
+    description: total notional amount of derivative financial instruments for foreign currency management
     section: market_risk
   sensitivity_analysis:
-    description: "hypothetical 10% USD change impact on derivative fair value"
+    description: hypothetical 10% USD change impact on derivative fair value
     section: market_risk
   counterparty_ratings:
-    description: "investment grade ratings of bank counterparties"
+    description: investment grade ratings of bank counterparties
     section: market_risk
   credit_policy:
-    description: "policy to execute with major creditworthy financial institutions"
+    description: policy to execute with major creditworthy financial institutions
     section: market_risk
   diversification_strategy:
-    description: "diversification among counterparties to minimize exposure"
+    description: diversification among counterparties to minimize exposure
     section: market_risk
-
-# Unusual features identified:
-#   - derivatives discussed in market risk section rather than dedicated derivatives note
-#   - no tabular presentation of notional amounts or fair values
-#   - limited hedge accounting disclosure
-#   - combines general market risk with derivatives discussion
-#   - no maturity analysis of derivative instruments
-
+sections:
+  financial_instruments:
+    heading: 8\.\s+FAIR\s+VALUE\s+MEASUREMENTS
