@@ -1,16 +1,44 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $309M → $598M (+93.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All figures in the filing are stated in thousands; values converted to millions here
+[HISTORICAL] [LLM_FLAG] Equity investments are measured at NAV or cost (not fair value hierarchy)
+[HISTORICAL] [LLM_FLAG] No derivatives of any kind are disclosed in this fair value note
+[HISTORICAL] [LLM_FLAG] Market risk disclosure is entirely qualitative with no numeric sensitivity figures
+[HISTORICAL] [LLM_FLAG] Management references no material changes versus 10-K for year ended September 30, 2025
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($309M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($18M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[HISTORICAL] [LLM_FLAG] All figures in the filing are stated in thousands; values converted to millions here
+[HISTORICAL] [LLM_FLAG] Equity investments are measured at NAV or cost (not fair value hierarchy)
+[HISTORICAL] [LLM_FLAG] No derivatives of any kind are disclosed in this fair value note
+[HISTORICAL] [LLM_FLAG] Note: the filing table heading changed from 'Total debt investments' in earlier filings to 'Total cash equivalents' — consistent with same instruments (money market funds)
+[HISTORICAL] [LLM_FLAG] Market risk disclosure is entirely qualitative with no numeric sensitivity figures
+[HISTORICAL] [LLM_FLAG] Management references no material changes versus 10-K for year ended September 30, 2025
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-K | Period ending 2025-09-30 | Processed 2026-06-18 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $760M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $15M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (total_cash_equivalents_fv, marketable_equity_securities_fv, gross_unrealized_gains_debt)
+[HISTORICAL] [LLM_FLAG] Section text for this 10-K filing is truncated — contains only fair value hierarchy narrative (Level 1/2/3 definitions) with no quantitative tables; data tables were not captured in the section extraction
+[HISTORICAL] [LLM_FLAG] Cannot extract numeric values from the available text; all fields are null due to insufficient section content
+[HISTORICAL] [LLM_FLAG] Market risk disclosure (Item 7A) is entirely qualitative with no numeric sensitivity figures
+[HISTORICAL] [LLM_FLAG] The section text includes the beginning of Item 8 (auditor report) indicating the market risk section ended without any quantitative disclosure
+[HISTORICAL] [LLM_FLAG] 10-K filing for year ended September 30, 2025
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $624M → $760M (+21.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All figures in the filing are stated in thousands; values converted to millions here
+[HISTORICAL] [LLM_FLAG] Equity investments are measured at NAV or cost (not fair value hierarchy) and are not traditional marketable equity securities
+[HISTORICAL] [LLM_FLAG] No derivatives of any kind are disclosed in this fair value note
+[HISTORICAL] [LLM_FLAG] Market risk disclosure is entirely qualitative with no numeric sensitivity figures
+[HISTORICAL] [LLM_FLAG] Management references no material changes versus 10-K for year ended September 30, 2024
 
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [LLM_FLAG] All figures in the filing are stated in thousands; values converted to millions here
+[HISTORICAL] [LLM_FLAG] Equity investments are measured at NAV or cost (not fair value hierarchy) and are not traditional marketable equity securities
+[HISTORICAL] [LLM_FLAG] No derivatives of any kind are disclosed in this fair value note
+[HISTORICAL] [LLM_FLAG] Market risk disclosure is entirely qualitative with no numeric sensitivity figures
+[HISTORICAL] [LLM_FLAG] Management references no material changes versus 10-K for year ended September 30, 2024

@@ -1,62 +1,47 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] revolving_credit_facility: was $3M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, revolving_credit_facility)
-[LLM_FLAG] extraction_failed: Invalid control character at: line 26 column 29 (char 737)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] fixed_rate_notes_billion: $3M → $3M (+21.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Derivative fair values are disclosed in a separate Note 3, not in this fair value measurements section; fi_fx fields are null by design.
+[HISTORICAL] [LLM_FLAG] No cash equivalents at March 31, 2026 in the fair value table (total_cash_equivalents_fv set to null as the line is absent from the current-period table).
+[HISTORICAL] [LLM_FLAG] FX forward notional figures are in thousands (USD); converted to millions for fx_forwards_outstanding
+[HISTORICAL] [LLM_FLAG] No quantitative sensitivity analysis disclosed
+[HISTORICAL] [LLM_FLAG] 2018 Senior Notes ($400M) were fully repaid in Q2 FY2026; 2026 Senior Notes ($1.0B at 6.25%, maturing September 2034) were issued in Q2 FY2026
+[HISTORICAL] [LLM_FLAG] Total fixed-rate Senior Notes increased from $2.8B to $3.4B during the period
+[HISTORICAL] [LLM_FLAG] Marketable securities plan renamed from supplemental retirement and savings plan to non-qualified deferred compensation plan
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($56M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $1M, now missing
+[HISTORICAL] [LLM_FLAG] Derivative fair values are disclosed in a separate Note 3, not in this fair value measurements section; fi_fx fields are null by design.
+[HISTORICAL] [LLM_FLAG] No cash equivalents at December 31, 2025 in the fair value table (total_cash_equivalents_fv set to null rather than 0 as it is simply absent from the table).
+[HISTORICAL] [LLM_FLAG] FX forward notional figures are in thousands (USD); converted to millions for fx_forwards_outstanding
+[HISTORICAL] [LLM_FLAG] No quantitative sensitivity analysis disclosed
+[HISTORICAL] [LLM_FLAG] No cash equivalents at Level 1 fair value at December 31, 2025 (only trivial $6K at prior period); marketable securities $55,866K
+[HISTORICAL] [LLM_FLAG] 2018 Senior Notes ($400M) mature June 15, 2026 and are classified as current liabilities
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
-[DISAPPEARED_FIELD] revolving_credit_facility: was $3M, now missing
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (revolving_credit_facility)
-[LLM_FLAG] fixed_rate_notes_billion has increased compared to the prior period, indicating potential changes in interest rate risk exposure or financing strategy.
+=== 10-K | Period ending 2025-09-30 | Processed 2026-06-18 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $32M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $51M, now missing
+[HISTORICAL] [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($1M)
+[HISTORICAL] [LLM_FLAG] Section text for this 10-K filing appears to be the accounting policy/summary of significant accounting policies note, not the fair value measurements table note. Fair values are referenced as being in Note 4 (cash/marketable securities) and Note 5 (derivatives). All numeric fields are null because the quantitative table is not in this section text.
+[HISTORICAL] [LLM_FLAG] FX forward notional figures are in thousands (USD); converted to millions for fx_forwards_outstanding
+[HISTORICAL] [LLM_FLAG] No quantitative sensitivity analysis disclosed
+[HISTORICAL] [LLM_FLAG] Annual 10-K filing; FX transaction gain $1.1M for fiscal 2025 vs loss $(0.6)M in 2024 and loss $(2.6)M in 2023
+[HISTORICAL] [LLM_FLAG] Term loans were fully repaid in FY2025 using 2025 Senior Notes proceeds; revolving credit had $275M outstanding at year-end
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $5M → $32M (+567.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $35M → $25M (-28.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $35M → $25M (-28.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_forwards_outstanding: $35M → $25M (-28.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fixed_rate_notes_billion: $1M → $3M (+115.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Derivative fair values are disclosed in a separate Note 3, not in this fair value measurements section; fi_fx fields are null by design.
+[HISTORICAL] [LLM_FLAG] FX forward notional figures are in thousands (USD); converted to millions for fx_forwards_outstanding
+[HISTORICAL] [LLM_FLAG] No quantitative sensitivity analysis disclosed
+[HISTORICAL] [LLM_FLAG] 2025 Senior Notes ($1.5B at 6.00%) were issued in May 2025, bringing total fixed-rate notes to $2.8B
+[HISTORICAL] [LLM_FLAG] Term loans fully repaid using 2025 Senior Notes proceeds; revolving credit had zero balance at period end
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
-[NUMERIC] fixed_rate_notes_billion: $3M → $3M (+21.4%) — exceeds 20% threshold
-[LLM_FLAG] fx_forwards_outstanding increased 1.8% from prior period ($28.406M to $28.912M) - minor variance
-[LLM_FLAG] fixed_rate_notes_billion increased 21.4% from prior period ($2.8B to $3.4B) - new 2026 Senior Notes of $1.0B were issued
-[LLM_FLAG] cash_and_cash_equivalents increased 35.2% from prior period ($162.034M to $219.419M) - significant increase likely due to new debt issuance
-[LLM_FLAG] revolving_credit_facility outstanding borrowings decreased 36.1% from prior period ($415.0M to $265.0M)
-[LLM_FLAG] revolving_credit_facility weighted average interest rate decreased from 5.0% to 4.931% - minor variance
-[LLM_FLAG] senior_notes fair values changed significantly: 2019/2021 notes fair value decreased 1.9%, 2025 notes fair value decreased 5.3% (interest rate environment changes)
-
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-05-30 ===
-[LLM_FLAG] fx_forwards_outstanding increased from $25.355M to $28.406M (12% increase) - within normal range
-[LLM_FLAG] cash_and_cash_equivalents increased from $189.049M to $162.034M (14% decrease) - plausible business fluctuation
-[LLM_FLAG] average_yield on cash decreased from 2.8% to 2.45% - reflects current interest rate environment
-[LLM_FLAG] senior_notes fair value increased from $2,785.125M to $2,822.375M (1.3% increase) - plausible given market conditions
-[LLM_FLAG] revolving_credit_facility: NEW outstanding borrowings of $415.0M detected (prior period showed $0) - significant change
-[LLM_FLAG] foreign_currency_forward_contracts: EUR notional decreased from $6,500 to $6,900 (6% change); GBP notional increased from $9,613 to $10,296 (7% change); SGD notional increased from $5,708 to $8,208 (44% increase) - SGD showing material increase
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
-[NUMERIC] fx_forwards_outstanding: $35M → $25M (-28.0%) — exceeds 20% threshold
-[NUMERIC] fixed_rate_notes_billion: $1M → $3M (+115.4%) — exceeds 20% threshold
-[LLM_FLAG] fx_forwards_outstanding decreased 28.3% from $35.234M (March 31, 2025) to $25.355M (June 30, 2025), which is within plausible range but represents significant reduction in outstanding forwards
-[LLM_FLAG] fixed_rate_notes_billion increased 115.4% from $1.3B to $2.8B due to addition of $1.5B in 2025 Senior Notes issuance
-[LLM_FLAG] cash_and_cash_equivalents increased 28.8% from $146.641M to $189.049M
-[LLM_FLAG] No senior notes outstanding in prior period comparison (September 30, 2024 showed $1.3B), but June 30, 2025 includes new $1.5B 2025 Senior Notes
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
-[NUMERIC] fx_forwards_outstanding: $29M → $35M (+22.2%) — exceeds 20% threshold
-[NUMERIC] fixed_rate_notes_billion: $3M → $1M (-53.6%) — exceeds 20% threshold
-[LLM_FLAG] FX forwards outstanding increased 22% from $28.834M to $35.234M; driven by changes in GBP buy contracts ($13.5M to $20.8M) and EUR sell contracts ($9.034M to $9.234M)
-[LLM_FLAG] Fixed-rate notes decreased 54% from $2.8B to $1.3B face value; this significant change suggests a change in reporting scope - prior period included additional notes not present in current filing
-[LLM_FLAG] Total debt increased substantially from prior period estimate: revolving credit facility alone is $535.0M (vs prior $275.0M) plus two term loans totaling $701.3M; this represents new financing activity
-[LLM_FLAG] Cash and equivalents increased 9% from $134.136M to $146.641M cost basis
-[LLM_FLAG] Average yield on cash improved from 1.77% to 2.80%, reflecting higher interest rate environment
-[LLM_FLAG] Senior notes fair value decreased from $2,793.5M to $1,254.625M, consistent with the 54% reduction in face value
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
-[LLM_FLAG] Fixed-rate notes increased from $1.3 billion to $2.8 billion (115% increase) due to issuance of 2025 Senior Notes of $1.5 billion
-[LLM_FLAG] Cash and cash equivalents decreased from $150.667 million to $134.136 million (11% decrease)
-[LLM_FLAG] Average yield on cash decreased from 2.88% to 1.77% (39% decrease), consistent with lower market interest rates in 2025
-[LLM_FLAG] FX forward contracts outstanding notional decreased from $36.731 million to $28.834 million (21% decrease)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [LLM_FLAG] Derivative fair values are disclosed in a separate Note 3, not in this fair value measurements section; fi_fx fields are null by design.
+[HISTORICAL] [LLM_FLAG] FX forward notional figures are in thousands (USD) in the filing; converted to millions for fx_forwards_outstanding field
+[HISTORICAL] [LLM_FLAG] No quantitative sensitivity analysis (dollar impact of interest rate or FX moves) is disclosed; FICO does not provide 100bp or 10% sensitivity tables
+[HISTORICAL] [LLM_FLAG] Marketable securities ($45.4M at March 31, 2025) are trading securities held in supplemental retirement plan, disclosed in fair value measurements note not market risk section
