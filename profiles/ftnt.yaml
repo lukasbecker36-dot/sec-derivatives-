@@ -1,36 +1,28 @@
 issuer: Fortinet
 ticker: FTNT
-cik: "1262039"
+cik: '1262039'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   interest_rate_sensitivity:
-    description: "10% decrease impact on interest income by year"
+    description: 10% decrease impact on interest income by year
     section: market_risk
   foreign_currency_exposure:
-    description: "Primary currencies exposed to (EUR, CAD, GBP, JPY)"
+    description: Primary currencies exposed to (EUR, CAD, GBP, JPY)
     section: market_risk
   derivative_maturity:
-    description: "Forward contract maturity periods"
+    description: Forward contract maturity periods
     section: market_risk
   foreign_currency_transaction_losses:
-    description: "Recognized expense from FX transactions"
+    description: Recognized expense from FX transactions
     section: market_risk
   hypothetical_fx_sensitivity:
-    description: "10% FX rate change impact on foreign currency cash balances"
+    description: 10% FX rate change impact on foreign currency cash balances
     section: market_risk
   derivative_purpose:
-    description: "Risk management vs speculative use"
+    description: Risk management vs speculative use
     section: market_risk
-
-# Unusual features identified:
-#   - Market risk disclosure embedded within broader risk section rather than standalone note
-#   - No tabular presentation of notional amounts or fair values
-#   - Forward contracts limited to CAD hedging only
-#   - Interest rate sensitivity presented as decrease scenario only
-#   - Combines investment portfolio and debt interest rate risks
-#   - FX sensitivity analysis covers cash balances rather than derivative positions
-
+sections:
+  financial_instruments:
+    heading: 3\.\s+FINANCIAL\s+INSTRUMENTS\s+AND\s+FAIR\s+VALUE

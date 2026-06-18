@@ -1,33 +1,25 @@
 issuer: Fox Corporation (Class A)
 ticker: FOXA
-cik: "1754301"
+cik: '1754301'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fixed_rate_debt_outstanding:
-    description: "Outstanding fixed-rate debt amount"
+    description: Outstanding fixed-rate debt amount
     section: market_risk
   borrowings_fair_value:
-    description: "Fair value of borrowings liability"
+    description: Fair value of borrowings liability
     section: market_risk
   interest_rate_sensitivity:
-    description: "Potential change in fair values from 10% adverse change in interest rates"
+    description: Potential change in fair values from 10% adverse change in interest rates
     section: market_risk
   stock_investments_fair_value:
-    description: "Total fair value of common stock investments"
+    description: Total fair value of common stock investments
     section: market_risk
   stock_price_sensitivity:
-    description: "Potential change in fair values from 10% adverse change in stock prices"
+    description: Potential change in fair values from 10% adverse change in stock prices
     section: market_risk
-
-# Unusual features identified:
-#   - No derivative instruments disclosed - only market risk from debt and equity investments
-#   - Explicitly states company does not hold or issue financial instruments for trading purposes
-#   - Only covers interest rate risk and stock price risk, no foreign exchange risk
-#   - All financial instruments denominated in US dollars only
-#   - No variable-rate debt outstanding as of reporting date
-#   - Uses 10% adverse change scenarios for sensitivity analysis rather than typical 100bp for rates
-
+sections:
+  financial_instruments:
+    heading: Financial\s+Instruments
