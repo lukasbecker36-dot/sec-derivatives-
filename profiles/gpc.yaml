@@ -1,35 +1,28 @@
 issuer: Genuine Parts Company
 ticker: GPC
-cik: "40987"
+cik: '40987'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   primary_foreign_currencies:
-    description: "Euro, Canadian dollar, Australian dollar exposure"
+    description: Euro, Canadian dollar, Australian dollar exposure
     section: market_risk
   fx_sensitivity_10pct:
-    description: "10% FX rate shift impact on net sales ($867M 2025, $829M 2024)"
+    description: 10% FX rate shift impact on net sales ($867M 2025, $829M 2024)
     section: market_risk
   fx_sensitivity_15pct:
-    description: "15% FX rate shift impact on net sales ($1.3B 2025, $1.2B 2024)"
+    description: 15% FX rate shift impact on net sales ($1.3B 2025, $1.2B 2024)
     section: market_risk
   fx_sensitivity_20pct:
-    description: "20% FX rate shift impact on net sales ($1.7B 2025, $1.7B 2024)"
+    description: 20% FX rate shift impact on net sales ($1.7B 2025, $1.7B 2024)
     section: market_risk
   interest_rate_sensitivity:
-    description: "100 bps increase impact - immaterial on debt, $10M increase on A/R Sales Agreement fees"
+    description: 100 bps increase impact - immaterial on debt, $10M increase on A/R Sales Agreement fees
     section: market_risk
   debt_composition:
-    description: "Primarily fixed-rate debt as of December 31, 2025"
+    description: Primarily fixed-rate debt as of December 31, 2025
     section: market_risk
-
-# Unusual features identified:
-#   - No tabular presentation of derivative instruments or notional amounts
-#   - Provides multiple FX sensitivity scenarios (10%, 15%, 20%) instead of standard single scenario
-#   - Includes inflation discussion within market risk section
-#   - Mentions A/R Sales Agreement with interest rate-linked fees
-#   - No hedge accounting designation disclosures despite mentioning derivatives use
-
+sections:
+  financial_instruments:
+    heading: Fair\s+Value\s+of\s+Financial\s+Instruments
