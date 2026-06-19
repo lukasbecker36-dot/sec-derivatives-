@@ -1,35 +1,28 @@
 issuer: Huntington Ingalls Industries
 ticker: HII
-cik: "1501585"
+cik: '1501585'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   revolving_credit_facility_amount:
-    description: "Amount of revolving credit facility"
+    description: Amount of revolving credit facility
     section: market_risk
   commercial_paper_program_amount:
-    description: "Amount of commercial paper program"
+    description: Amount of commercial paper program
     section: market_risk
   outstanding_debt_revolving:
-    description: "Outstanding indebtedness under revolving credit facility"
+    description: Outstanding indebtedness under revolving credit facility
     section: market_risk
   outstanding_debt_commercial_paper:
-    description: "Outstanding indebtedness under commercial paper program"
+    description: Outstanding indebtedness under commercial paper program
     section: market_risk
   inflation_mitigation_strategies:
-    description: "Methods used to mitigate inflation risk"
+    description: Methods used to mitigate inflation risk
     section: market_risk
   cost_inflation_impact:
-    description: "Impact of inflation on financial position and operations"
+    description: Impact of inflation on financial position and operations
     section: market_risk
-
-# Unusual features identified:
-#   - No actual derivatives disclosed despite derivatives section
-#   - Focus on non-derivative market risks (interest rate exposure through debt facilities and inflation)
-#   - No quantitative sensitivity analysis or tables
-#   - Minimal market risk disclosure due to no outstanding debt
-#   - Inflation risk discussion unusually detailed for market risk section
-
+sections:
+  financial_instruments:
+    heading: Fair\s+Value\s+of\s+Financial\s+Instruments
