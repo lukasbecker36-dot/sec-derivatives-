@@ -1,55 +1,46 @@
 issuer: General Motors
 ticker: GM
-cik: "1467858"
+cik: '1467858'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   notional_amount:
-    description: "notional amounts by instrument type"
+    description: notional amounts by instrument type
     section: market_risk
   fair_value_assets:
-    description: "fair value of derivative assets"
+    description: fair value of derivative assets
     section: market_risk
   fair_value_liabilities:
-    description: "fair value of derivative liabilities"
+    description: fair value of derivative liabilities
     section: market_risk
   hedge_designation:
-    description: "whether derivatives are designated as hedges or not"
+    description: whether derivatives are designated as hedges or not
     section: market_risk
   hedge_type:
-    description: "fair value hedge or cash flow hedge classification"
+    description: fair value hedge or cash flow hedge classification
     section: market_risk
   fair_value_level:
-    description: "fair value hierarchy level (Level 2)"
+    description: fair value hierarchy level (Level 2)
     section: market_risk
   hedged_item_carrying_amount:
-    description: "carrying amount of hedged debt items"
+    description: carrying amount of hedged debt items
     section: market_risk
   cumulative_hedge_adjustments:
-    description: "cumulative fair value hedging adjustments"
+    description: cumulative fair value hedging adjustments
     section: market_risk
   sensitivity_analysis:
-    description: "potential loss from adverse market movements"
+    description: potential loss from adverse market movements
     section: market_risk
   foreign_currency_exposures:
-    description: "specific currency pairs and exposure amounts"
+    description: specific currency pairs and exposure amounts
     section: market_risk
   commodity_exposures:
-    description: "specific commodities hedged"
+    description: specific commodities hedged
     section: market_risk
   collateral_amounts:
-    description: "collateral held and posted"
+    description: collateral held and posted
     section: market_risk
-
-# Unusual features identified:
-#   - separate_automotive_gm_financial_tables
-#   - detailed_collateral_disclosure_for_gm_financial_only
-#   - unamortized_losses_on_discontinued_hedges
-#   - comprehensive_income_effects_detailed_by_hedge_type
-#   - sensitivity_analysis_with_specific_percentage_scenarios
-#   - foreign_currency_translation_remeasurement_breakdown
-#   - commodity_hedging_covers_lithium_and_other_ev_materials
-
+sections:
+  financial_instruments:
+    heading: Marketable\s+and\s+Other\s+Securities
