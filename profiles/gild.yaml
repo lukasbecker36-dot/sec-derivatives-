@@ -1,45 +1,37 @@
 issuer: Gilead Sciences
 ticker: GILD
-cik: "882095"
+cik: '882095'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fx_forward_notional_current:
-    description: "notional amount of foreign currency forward contracts as of current year-end"
+    description: notional amount of foreign currency forward contracts as of current year-end
     section: market_risk
   fx_forward_notional_prior:
-    description: "notional amount of foreign currency forward contracts as of prior year-end"
+    description: notional amount of foreign currency forward contracts as of prior year-end
     section: market_risk
   fx_sensitivity_current:
-    description: "hypothetical 10% adverse movement impact on fair value for current year"
+    description: hypothetical 10% adverse movement impact on fair value for current year
     section: market_risk
   fx_sensitivity_prior:
-    description: "hypothetical 10% adverse movement impact on fair value for prior year"
+    description: hypothetical 10% adverse movement impact on fair value for prior year
     section: market_risk
   foreign_sales_percentage:
-    description: "percentage of product sales denominated in foreign currencies"
+    description: percentage of product sales denominated in foreign currencies
     section: market_risk
   equity_securities_fair_value_current:
-    description: "fair value of equity securities held as of current year-end"
+    description: fair value of equity securities held as of current year-end
     section: market_risk
   equity_securities_fair_value_prior:
-    description: "fair value of equity securities held as of prior year-end"
+    description: fair value of equity securities held as of prior year-end
     section: market_risk
   equity_sensitivity_current:
-    description: "hypothetical 20% price change impact on equity securities fair value for current year"
+    description: hypothetical 20% price change impact on equity securities fair value for current year
     section: market_risk
   equity_sensitivity_prior:
-    description: "hypothetical 20% price change impact on equity securities fair value for prior year"
+    description: hypothetical 20% price change impact on equity securities fair value for prior year
     section: market_risk
-
-# Unusual features identified:
-#   - No formal hedge designation disclosure despite using derivatives for risk management
-#   - No tabular presentation of derivative positions - all disclosed narratively
-#   - Includes equity price risk for strategic biotechnology investments
-#   - Sensitivity analysis uses different percentage thresholds for different risks (10% for FX, 20% for equity)
-#   - No credit risk discussion for derivative counterparties
-#   - Forward contracts disclosed with notional amounts but no maturity or fair value details
-
+sections:
+  financial_instruments:
+    heading: 5\.\s+DERIVATIVE\s+FINANCIAL\s+INSTRUMENTS
