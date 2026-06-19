@@ -1,45 +1,37 @@
 issuer: GE HealthCare
 ticker: GEHC
-cik: "1932393"
+cik: '1932393'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   gross_notional_amounts:
-    description: "notional amounts by instrument type"
+    description: notional amounts by instrument type
     section: market_risk
   fair_value_assets:
-    description: "positive fair values by instrument type"
+    description: positive fair values by instrument type
     section: market_risk
   fair_value_liabilities:
-    description: "negative fair values by instrument type"
+    description: negative fair values by instrument type
     section: market_risk
   hedge_designations:
-    description: "cash flow, fair value, net investment hedge classifications"
+    description: cash flow, fair value, net investment hedge classifications
     section: market_risk
   maximum_hedge_maturity:
-    description: "maximum remaining maturity periods"
+    description: maximum remaining maturity periods
     section: market_risk
   expected_reclassification:
-    description: "amounts expected to be reclassified from AOCI"
+    description: amounts expected to be reclassified from AOCI
     section: market_risk
   currency_sensitivity:
-    description: "10% USD weakening impact on derivative fair values"
+    description: 10% USD weakening impact on derivative fair values
     section: market_risk
   basis_adjustments:
-    description: "cumulative fair value hedge basis adjustments on borrowings"
+    description: cumulative fair value hedge basis adjustments on borrowings
     section: market_risk
   cash_flow_settlements:
-    description: "cash settlement amounts for net investment hedges"
+    description: cash settlement amounts for net investment hedges
     section: market_risk
-
-# Unusual features identified:
-#   - Accrued interest treatment changed between periods (included in 2025, excluded in 2024)
-#   - Cross-currency swaps used in combination with FX forwards and options for net investment hedging
-#   - Embedded derivatives identified in purchase/sales contracts
-#   - Spot method used for net investment hedge effectiveness testing
-#   - Systematic recognition of excluded components from net investment hedges
-#   - Market risk section provides currency sensitivity analysis excluding net investment hedges
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Financial\s+Instruments\s+and\s+Fair\s+Value\s+Measurements

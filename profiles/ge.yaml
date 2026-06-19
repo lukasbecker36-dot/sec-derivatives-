@@ -1,44 +1,37 @@
 issuer: GE Aerospace
 ticker: GE
-cik: "40545"
+cik: '40545'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   gross_notional:
-    description: "notional amounts by derivative type"
+    description: notional amounts by derivative type
     section: market_risk
   fair_value_assets:
-    description: "positive fair values by derivative type"
+    description: positive fair values by derivative type
     section: market_risk
   fair_value_liabilities:
-    description: "negative fair values by derivative type"
+    description: negative fair values by derivative type
     section: market_risk
   oci_gains_losses:
-    description: "amounts recognized in other comprehensive income"
+    description: amounts recognized in other comprehensive income
     section: market_risk
   reclassified_amounts:
-    description: "amounts reclassified from AOCI to net income"
+    description: amounts reclassified from AOCI to net income
     section: market_risk
   expected_reclassification:
-    description: "expected reclassification in next 12 months"
+    description: expected reclassification in next 12 months
     section: market_risk
   foreign_currency_debt_netting:
-    description: "carrying value of foreign currency debt in net investment hedges"
+    description: carrying value of foreign currency debt in net investment hedges
     section: market_risk
   counterparty_exposure:
-    description: "credit risk exposure to counterparties"
+    description: credit risk exposure to counterparties
     section: market_risk
   fair_value_hedge_adjustments:
-    description: "cumulative gains on discontinued fair value hedges"
+    description: cumulative gains on discontinued fair value hedges
     section: market_risk
-
-# Unusual features identified:
-#   - includes fair value disclosure for non-derivative financial instruments
-#   - has detailed netting and credit adjustments
-#   - includes discontinued fair value hedges with ongoing amortization
-#   - separates current and non-current derivatives in fair value table
-#   - includes run-off insurance operations components
-
+sections:
+  market_risk:
+    heading: FOREIGN\s+EXCHANGE\s+AND\s+INTEREST\s+RATE\s+RISKS
