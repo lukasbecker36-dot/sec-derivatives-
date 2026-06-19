@@ -1,133 +1,92 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NUMERIC] total_cash_equivalents_fv: $30,708M → $38,063M (+24.0%) — exceeds 20% threshold
-[NUMERIC] gross_unrealized_gains_debt: $859M → $505M (-41.2%) — exceeds 20% threshold
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($52M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($23M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($52M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($30M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($2M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($1M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($1M)
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $671M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $48M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $6,300M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $631M, now missing
-[DISAPPEARED_FIELD] value_at_risk: was $162M, now missing
-[VALIDATION] Likely extraction failure: 5/11 previously-populated fields are now null (fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct, value_at_risk)
-[LLM_FLAG] total_cash_equivalents_fv increased by more than 50% from prior period (from 30708 to 38063), warranting further investigation.
-[LLM_FLAG] gross_unrealized_gains_debt decreased by more than 50% from prior period (from 859 to 505), indicating a significant change in the valuation of debt securities.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-19 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $30,708M → $38,063M (+24.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $859M → $505M (-41.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $732M → $1,610M (+119.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $379M → $890M (+134.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] equity_derivatives_notional: appeared for first time ($30,000M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $732M → $1,610M (+119.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $379M → $890M (+134.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $353M → $720M (+104.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $671M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $48M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_value: was $6,313M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $631M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] value_at_risk: was $162M, now missing
+[HISTORICAL] [LLM_FLAG] Cash equivalents total of $38,063M includes $15,408M in cash; excluding cash, cash equivalents only = $22,655M.
+[HISTORICAL] [LLM_FLAG] Total assets (cash + marketable securities) fell from $126,843M at Dec 31, 2025 to $126,840M at Mar 31, 2026, with mix shift from marketable securities ($96,135M to $88,777M) to cash equivalents ($30,708M to $38,063M).
+[HISTORICAL] [LLM_FLAG] Gross unrealized losses increased to $(297)M for debt in continuous loss position vs $(178)M at Dec 31, 2025, driven by rise in government bond yields.
+[HISTORICAL] [LLM_FLAG] Debt securities realized gains on sale declined; Q1 2026 gross realized gain $83M vs $266M in Q1 2025. Unrealized FVO loss of $(142)M vs gain of $97M in Q1 2025.
+[HISTORICAL] [LLM_FLAG] Total available-for-sale debt securities by maturity: $82,733M at Mar 31, 2026 vs $89,822M at Dec 31, 2025.
+[HISTORICAL] [LLM_FLAG] Section text appears truncated at 10,000 chars; AOCI balance and 12-month reclassification disclosure may appear later in the full note.
+[HISTORICAL] [LLM_FLAG] New equity derivatives category introduced in Q1 2026: $30,000M notional — these are agreements for future capital funding (notes/equity in tranches contingent on milestones through 2030), not traditional equity derivatives. Fair value not material.
+[HISTORICAL] [LLM_FLAG] Credit derivatives expanded to $28,436M at Mar 31, 2026 from $16,940M at Dec 31, 2025, plus approximately $15.3B additional agreements signed in April 2026.
+[HISTORICAL] [LLM_FLAG] Net investment hedges now include foreign currency-denominated debt; OCI gain of $440M on FX debt for Q1 2026.
+[HISTORICAL] [LLM_FLAG] Cash flow hedge OCI for Q1 2026: amount included in effectiveness $259M gain (vs -$339M loss in Q1 2025), showing a reversal.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($30,708M)
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($96,135M)
-[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($6,313M)
-[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($21,565M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($859M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($671M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($48M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($6,300M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($631M)
-[NEW_FIELD] value_at_risk: appeared for first time ($162M)
-[LLM_FLAG] extraction_failed: Invalid control character at: line 16 column 40 (char 536)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-19 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $23,090M → $30,708M (+33.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $75,406M → $96,135M (+27.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $595M → $732M (+23.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $595M → $732M (+23.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $159M → $353M (+122.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($671M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($48M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_value: appeared for first time ($6,313M)
+[HISTORICAL] [NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($631M)
+[HISTORICAL] [NEW_FIELD] value_at_risk: appeared for first time ($162M)
+[HISTORICAL] [LLM_FLAG] Cash equivalents total of $30,708M includes $15,305M in cash; excluding cash, cash equivalents only = $15,403M.
+[HISTORICAL] [LLM_FLAG] 10-K uses a simplified fair value hierarchy table (Level 1/Level 2 only) rather than the AOCI/FVO split used in 10-Qs.
+[HISTORICAL] [LLM_FLAG] Corporate debt $21,565M shown under Level 2; does not separately identify fair-value-option elected portion in this table format.
+[HISTORICAL] [LLM_FLAG] Debt securities now total $89,822M by maturity schedule at Dec 31, 2025 (up significantly from $67,266M at Mar 31, 2025), reflecting government bond purchases.
+[HISTORICAL] [LLM_FLAG] Section text appears truncated at 10,000 chars; AOCI balance and 12-month reclassification disclosure may appear later in the full note.
+[HISTORICAL] [LLM_FLAG] Credit derivatives $16,940M relate to backstop obligations for third-party data center leases; these are not FX derivatives and are excluded from fx_derivatives_notional.
+[HISTORICAL] [LLM_FLAG] Net investment hedges expanded to $14,203M at Dec 31, 2025 from $6,986M at Dec 31, 2024, now including foreign currency-denominated debt as hedging instrument.
+[HISTORICAL] [LLM_FLAG] Annual OCI for cash flow hedges 2025: amount included in effectiveness assessment -$978M; net investment hedges -$1,157M total (FX -$765M, FX debt -$393M).
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct of $671M covers only foreign denominated monetary assets and liabilities (OI&E channel). AOCI impacts from cash flow hedges ($2,096M) and net investment hedges ($2,942M) are additional components of Alphabet's 10% FX sensitivity disclosure.
+[HISTORICAL] [LLM_FLAG] Alphabet does not disclose a 100bp interest rate sensitivity; uses VaR (one-day, 95% CI) instead — VaR of $162M at Dec 31, 2025.
+[HISTORICAL] [LLM_FLAG] fixed_rate_notes_billion of $48.5B represents a major increase from $11.9B at Dec 31, 2024, reflecting significant debt issuance during 2025.
+[HISTORICAL] [LLM_FLAG] Non-marketable equity securities carrying value was $64.1B at Dec 31, 2025 (measurement alternative) — not included in equity_sensitivity_10pct as they are not at market.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NUMERIC] total_cash_equivalents_fv: $30,708M → $38,063M (+24.0%) — exceeds 20% threshold
-[NUMERIC] gross_unrealized_gains_debt: $859M → $505M (-41.2%) — exceeds 20% threshold
-[NUMERIC] fi_total_derivative_asset: $732M → $1,610M (+119.9%) — exceeds 20% threshold
-[NUMERIC] fi_total_derivative_liability: $379M → $890M (+134.8%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-46M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $1,610M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $48M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $-631M, now missing
-[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $1,610M, now missing
-[DISAPPEARED_FIELD] value_at_risk: was $162M, now missing
-[VALIDATION] Likely extraction failure: 6/18 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, equity_sensitivity_10pct, foreign_currency_sensitivity...)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-19 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $68,575M → $88,245M (+28.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $30,552M → $41,037M (+34.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $38,023M → $47,208M (+24.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $1,103M → $595M (-46.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $1,758M → $436M (-75.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $68,575M → $88,245M (+28.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $30,552M → $41,037M (+34.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $38,023M → $47,208M (+24.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1,103M → $595M (-46.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $1,758M → $436M (-75.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-655M → $159M (+124.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Cash equivalents total of $23,090M includes $12,050M in cash; excluding cash, cash equivalents only = $11,040M.
+[HISTORICAL] [LLM_FLAG] Corporate debt FV includes AOCI-tracked ($18,573M) and fair-value-option elected ($3,117M).
+[HISTORICAL] [LLM_FLAG] Gross unrealized losses on debt securities fell further to $(235)M at Sep 30, 2025 vs $(821)M at Dec 31, 2024, reflecting falling interest rates.
+[HISTORICAL] [LLM_FLAG] Section text appears truncated at 10,000 chars; AOCI balance and 12-month reclassification disclosure may appear later in the full note.
+[HISTORICAL] [LLM_FLAG] New credit derivative category introduced in Q3 2025: $6,529M notional related to backstop obligations for third-party data center leases. These are not FX derivatives and are excluded from fx_derivatives_notional.
+[HISTORICAL] [LLM_FLAG] Net investment hedges expanded significantly: $12,413M at Sep 30, 2025 vs $6,986M at Dec 31, 2024, now also includes foreign currency-denominated debt.
+[HISTORICAL] [LLM_FLAG] Other contracts notional of $13,439M (not designated) cannot be split further.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($30,708M)
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($96,135M)
-[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($6,313M)
-[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($21,565M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($859M)
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($56,885M)
-[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($23,852M)
-[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($44,000M)
-[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($732M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($379M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-46M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1,610M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($48M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-631M)
-[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($1,610M)
-[NEW_FIELD] value_at_risk: appeared for first time ($162M)
-[LLM_FLAG] fx_sensitivity_10pct shows a significant upward change compared to prior period indicating increased foreign currency risk management activity.
-[LLM_FLAG] fixed_rate_notes_billion: increase of $36.6 billion compared to prior value, which suggests considerable borrowing or new issuances during the year.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-19 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $4,744M → $5,910M (+24.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $570M → $702M (+23.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $698M → $1,103M (+58.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $489M → $1,758M (+259.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $698M → $1,103M (+58.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $489M → $1,758M (+259.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $209M → $-655M (-413.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Cash equivalents total of $21,036M includes $11,623M in cash; if schema requires only cash equivalents excluding raw cash, then $9,413M.
+[HISTORICAL] [LLM_FLAG] Corporate debt FV includes both AOCI-tracked ($18,502M) and fair-value-option elected ($2,978M).
+[HISTORICAL] [LLM_FLAG] Gross unrealized losses on debt securities improved significantly to $(347)M total at June 30, 2025 vs $(821)M at Dec 31, 2024.
+[HISTORICAL] [LLM_FLAG] Section text appears truncated at 10,000 chars; AOCI balance and 12-month reclassification disclosure may appear later in the full note.
+[HISTORICAL] [LLM_FLAG] OCI recognized in Q2 2025 for cash flow hedges was -$1,050M (3-month) and -$1,389M (6-month), indicating significant FX losses on hedges.
+[HISTORICAL] [LLM_FLAG] Net investment hedging now also includes foreign currency-denominated debt ($219M loss in OCI for 6 months ended June 30, 2025).
+[HISTORICAL] [LLM_FLAG] Other contracts notional of $17,406M (not designated) includes commodities and other — cannot be split further.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXwdMhMYcX2455Usw4Z'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXwhxmhPN2eCrEy6jYq'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXwFSLAaM954qQ1y31K'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXwMWD2NcVW2tfvrmNQ'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXvkzZ5BX32UtaxjF9b'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXvs4BdYx9hqTEbLkYi'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXvSgycZZKN2XqiyygR'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXvVpF7fgLjjEA3Q7Ai'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXvFyYgwbBMZ8GWxb9Y'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXvK3M7g7o8Amu4818f'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[NUMERIC] total_cash_equivalents_fv: $16,395M → $38,063M (+132.2%) — exceeds 20% threshold
-[NUMERIC] total_marketable_securities_fv: $69,401M → $88,777M (+27.9%) — exceeds 20% threshold
-[NUMERIC] gross_unrealized_gains_debt: $1,229M → $505M (-58.9%) — exceeds 20% threshold
-[LLM_FLAG] total_cash_equivalents_fv increased 132% from prior period (16,395 to 38,063) - significant increase in money market funds (11,349 to 16,686) and addition of government bonds (0 to 2,946)
-[LLM_FLAG] gross_unrealized_gains_debt decreased 59% from prior period (1,229 to 505) - reflects changes in interest rate environment and portfolio composition
-[LLM_FLAG] The provided filing text is incomplete - it only contains a header reference to 'Quantitative and Qualitative Disclosures About Market Risk' and directs readers to the 10-K, without providing any actual market risk disclosures.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
-[NUMERIC] gross_unrealized_gains_debt: $702M → $1,229M (+75.1%) — exceeds 20% threshold
-[LLM_FLAG] total_cash_equivalents_fv increased 8.6% from $15,096M to $16,395M - within normal range
-[LLM_FLAG] total_marketable_securities_fv increased 1.8% from $68,147M to $69,401M - within normal range
-[LLM_FLAG] marketable_equity_securities_fv increased 0.6% from $5,910M to $5,946M - within normal range
-[LLM_FLAG] corporate_debt_securities_fv increased 0.8% from $21,558M to $21,733M - within normal range
-[LLM_FLAG] gross_unrealized_gains_debt increased 75.0% from $702M to $1,229M - significant increase likely due to interest rate environment changes benefiting debt securities valuations between Dec 2024 and Sept 2025
-[LLM_FLAG] The provided filing text is incomplete - it only contains a reference to the Annual Report on Form 10-K for the year ended December 31, 2024, without the actual quantitative and qualitative disclosures about market risk. No derivative or financial instrument data could be extracted from this excerpt.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
-[NUMERIC] total_cash_equivalents_fv: $9,945M → $15,096M (+51.8%) — exceeds 20% threshold
-[NUMERIC] marketable_equity_securities_fv: $4,744M → $5,910M (+24.6%) — exceeds 20% threshold
-[LLM_FLAG] total_cash_equivalents_fv increased 51.6% from 9,945 to 15,096 - primarily due to increase in money market funds from 8,154 to 5,473 (decreased) and cash from 12,407 to 11,623 (decreased), but time deposits increased from 2,217 to 3,735 and current marketable equity securities increased from 4,708 to 5,910, resulting in net reallocation within investment categories
-[LLM_FLAG] marketable_equity_securities_fv increased 24.6% from 4,744 to 5,910 - notable but within reasonable range for market appreciation
-[LLM_FLAG] corporate_debt_securities_fv increased 2.0% from 21,133 to 21,558 - remained relatively stable
-[LLM_FLAG] Insufficient text provided: Only a reference sentence to the 10-K filing was included. The actual quantitative and qualitative disclosures about market risk appear to be contained in the referenced 10-K for year ended December 31, 2024, not in this 10-Q excerpt.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($9,945M)
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($75,438M)
-[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($4,744M)
-[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($21,133M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($608M)
-[LLM_FLAG] gross_unrealized_gains_debt: Value of 1206 million represents sum of all marketable debt securities' gross unrealized gains (government bonds, corporate debt, and mortgage-backed securities combined across AOCI and net income categories). If only corporate debt securities were intended, the value would be 198 million. Clarification on scope needed.
-[LLM_FLAG] Provided text is only a header/reference statement directing to Form 10-K annual report. No substantive quantitative or qualitative market risk disclosures are included in the excerpt. Full Q1 2025 10-Q filing section needed for extraction.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
-[LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKqbn1dMPgshDr8RTF9'}
-[LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKrAnNpsRQk59nDsmSw'}
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-19 ===
+[HISTORICAL] [LLM_FLAG] Cash equivalents total of $23,264M includes $9,945M in cash (not technically at FV on a recurring basis); if schema requires only cash equivalents excluding cash, then $13,319M.
+[HISTORICAL] [LLM_FLAG] Corporate debt securities FV includes both AOCI-tracked ($18,140M) and fair-value-option elected ($2,933M) amounts combined.
+[HISTORICAL] [LLM_FLAG] Marketable equity securities of $4,744M excludes long-term lock-up restricted portion ($376M) in other non-current assets.
+[HISTORICAL] [LLM_FLAG] Section text appears truncated at 10,000 chars; AOCI balance and 12-month reclassification disclosure may appear later in the full note.
+[HISTORICAL] [LLM_FLAG] Other contracts notional of $12,549M (not designated) includes commodities, equity, and other — cannot be split without more detail.
+[HISTORICAL] [LLM_FLAG] Fair value hedges for FX were $1,562M at Dec 31, 2024 and $0 at Mar 31, 2025, indicating unwinding during Q1 2025.
