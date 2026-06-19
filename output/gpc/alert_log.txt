@@ -1,54 +1,78 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,879M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($179M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-1,622M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $209M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $23M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_20pct: was $867M, now missing
-[VALIDATION] Likely extraction failure: 4/6 previously-populated fields are now null (fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct, fx_sensitivity_20pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-19 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($1,879M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($1,879M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($15M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($26M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $7M → $15M (+115.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $67M → $26M (-61.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-59M → $-10M (+82.6%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $867M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_15pct: was $1,300M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_20pct: was $1,700M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $10M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/9 previously-populated fields are now null (fx_sensitivity_10pct, fx_sensitivity_15pct, fx_sensitivity_20pct, interest_rate_sensitivity)
+[HISTORICAL] [LLM_FLAG] Foreign currency debt (€475,000K notional, $544,445K balance) is a non-derivative instrument used as a net investment hedge; excluded from derivative totals.
+[HISTORICAL] [LLM_FLAG] AFS debt security (bond fund, $244M fair value) disclosed in this section following December 2025 pension plan settlement; does not map cleanly to schema fields which are oriented toward traditional marketable securities categories. Flagged for analyst review.
+[HISTORICAL] [LLM_FLAG] No IR swap activity disclosed despite filer context noting recurring interest rate swap terms.
+[HISTORICAL] [LLM_FLAG] All derivative instruments are net investment hedges (not cash flow or fair value hedges).
+[HISTORICAL] [LLM_FLAG] Foreign currency debt (EUR 475M = $544.445M) is a non-derivative hedging instrument and is excluded from derivative notional totals.
+[HISTORICAL] [LLM_FLAG] Amounts reported in thousands in filing; converted to millions here.
+[HISTORICAL] [LLM_FLAG] Total notional unchanged from Q2/Q3 2025 and FY2025 at $1,879.356M but composition shifted: more moved to asset position in Q1 2026.
+[HISTORICAL] [LLM_FLAG] Section also mentions an AFS debt security (bond fund, $244M fair value) that is not a derivative instrument.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($246M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($1,868M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($209M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($23M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($867M)
-[NEW_FIELD] fx_sensitivity_15pct: appeared for first time ($1,300M)
-[NEW_FIELD] fx_sensitivity_20pct: appeared for first time ($1,700M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-19 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $1,879M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $1,879M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $71M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $6M → $7M (+24.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($867M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_15pct: appeared for first time ($1,300M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_20pct: appeared for first time ($1,700M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($10M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/9 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_total_derivative_asset, fi_total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] Section text for this 10-K (period_end 2025-12-31) does not contain the forward contract notional/balance table; it consists primarily of accounting policy boilerplate (fair value hierarchy definitions, hedging policy, EPS table). The derivative instrument table may reside in a different note section not captured here.
+[HISTORICAL] [LLM_FLAG] Text mentions a short-term bond fund of $243M (Level 1) held at December 31, 2025 — this is a post-pension-settlement asset, not a traditional marketable securities line; excluded as it does not match schema categories.
+[HISTORICAL] [LLM_FLAG] Senior unsecured notes fair value ~$3.8B mentioned (Level 2) but this is long-term debt, not a derivative or marketable security.
+[HISTORICAL] [LLM_FLAG] All derivative instruments are net investment hedges (not cash flow or fair value hedges).
+[HISTORICAL] [LLM_FLAG] Foreign currency debt (EUR 475M = $558.030M) is classified under 'Current portion of debt and long-term debt' at Dec 31, 2025, reflecting potential current maturity.
+[HISTORICAL] [LLM_FLAG] Amounts reported in thousands in filing; converted to millions here.
+[HISTORICAL] [LLM_FLAG] The 10-K section_text also contains extensive lease and pension benefit plan disclosures which are not relevant to derivatives fields.
+[HISTORICAL] [LLM_FLAG] A short-term bond fund of $243M (AFS debt security) appeared in the section as a new item following the December 2025 pension plan settlement — this is not a derivative.
+[HISTORICAL] [LLM_FLAG] FX sensitivity figures are for translated net sales impact (translation risk), not transaction gains/losses.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp is described as 'immaterial' for debt fair value; the $10M figure relates to A/R Sales Agreement fees only.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity values stored as the 2025 figure in millions; 2024 comparatives: 10%=$829M, 15%=$1,200M, 20%=$1,700M.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_20pct: was $867M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, fx_sensitivity_20pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-19 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $4M → $6M (+31.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $4M → $6M (+31.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Foreign currency debt (€475,000K notional, $557,033K balance) is a non-derivative instrument used as a net investment hedge; excluded from derivative totals.
+[HISTORICAL] [LLM_FLAG] No IR swap activity disclosed despite filer context noting recurring interest rate swap terms.
+[HISTORICAL] [LLM_FLAG] All derivative instruments are net investment hedges (not cash flow or fair value hedges).
+[HISTORICAL] [LLM_FLAG] Foreign currency debt (EUR 475M = $557.033M) is a non-derivative hedging instrument and is excluded from derivative notional totals.
+[HISTORICAL] [LLM_FLAG] Amounts reported in thousands in filing; converted to millions here.
+[HISTORICAL] [LLM_FLAG] Notional amounts unchanged from Q2 2025 ($245,960K asset + $1,633,396K liability), but fair value balances changed.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($867M)
-[NEW_FIELD] fx_sensitivity_15pct: appeared for first time ($1,300M)
-[NEW_FIELD] fx_sensitivity_20pct: appeared for first time ($1,700M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-19 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $1,412M → $1,879M (+33.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $1,412M → $1,879M (+33.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $27M → $4M (-83.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $2M → $83M (+5260.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $1,412M → $1,879M (+33.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $1,412M → $1,879M (+33.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $27M → $4M (-83.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $2M → $83M (+5260.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $25M → $-79M (-414.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Foreign currency debt (€475,000K notional, $556,700K balance) is a non-derivative instrument used as a net investment hedge; excluded from derivative totals.
+[HISTORICAL] [LLM_FLAG] No IR swap activity disclosed despite filer context noting recurring interest rate swap terms.
+[HISTORICAL] [LLM_FLAG] All derivative instruments are net investment hedges (not cash flow or fair value hedges).
+[HISTORICAL] [LLM_FLAG] Foreign currency debt (EUR 475M = $556.700M) is a non-derivative hedging instrument and is excluded from derivative notional totals.
+[HISTORICAL] [LLM_FLAG] Amounts reported in thousands in filing; converted to millions here.
+[HISTORICAL] [LLM_FLAG] Net position swung to net liability compared to Q1 2025 as more forward contracts moved to liability position.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $31M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($31M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
-[LLM_FLAG] The provided filing section is a cross-reference only. The text states 'See Quantitative and Qualitative Disclosures About Market Risk in Item 7A of Part II of our 2025 Annual Report on Form 10-K.' This is not actual disclosure content, only a reference to another document. All market risk details are not included in this excerpt.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
-[LLM_FLAG] Excerpt provided is minimal and references prior year 10-K disclosure. Full quantitative risk disclosures should be in Item 7A of the 2024 10-K and detailed 2025 Q3 10-Q filing sections not provided in this excerpt.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
-[LLM_FLAG] Insufficient text provided - only a brief reference statement found. The filing text appears to be a transition sentence directing readers to Item 7A of the 2024 10-K rather than substantive market risk disclosures. Full Item 7A content from the actual 10-Q is needed to extract requested metrics.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
-[LLM_FLAG] Minimal disclosure: The provided text is a boilerplate reference to the 2024 10-K rather than actual market risk quantitative disclosure. Most fields cannot be extracted from this excerpt.
-[LLM_FLAG] Company explicitly references prior year Form 10-K for detailed disclosures, suggesting this 10-Q section may be abbreviated.
-[LLM_FLAG] Prior period data shows detailed derivatives and FX sensitivity information was disclosed; this excerpt does not contain comparable detail.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-19 ===
+[HISTORICAL] [LLM_FLAG] Foreign currency debt (€475,000K notional, $514,473K balance) is a non-derivative instrument used as a net investment hedge; its notional/balance is excluded from derivative totals per schema definitions.
+[HISTORICAL] [LLM_FLAG] No IR swap activity disclosed despite filer context noting recurring interest rate swap terms.
+[HISTORICAL] [LLM_FLAG] All derivative instruments are net investment hedges (not cash flow or fair value hedges).
+[HISTORICAL] [LLM_FLAG] Foreign currency debt (EUR 475M = $514.473M) is a non-derivative hedging instrument and is excluded from derivative notional totals.
+[HISTORICAL] [LLM_FLAG] Amounts reported in thousands in filing; converted to millions here.
