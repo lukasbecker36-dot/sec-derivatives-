@@ -1,41 +1,34 @@
 issuer: Hilton Worldwide
 ticker: HLT
-cik: "1585689"
+cik: '1585689'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   interest_rate_swap_notional:
-    description: "notional amount of interest rate swap"
+    description: notional amount of interest rate swap
     section: market_risk
   interest_rate_swap_fair_value:
-    description: "fair value of interest rate swap"
+    description: fair value of interest rate swap
     section: market_risk
   variable_interest_rate_receivable:
-    description: "variable rate received on swap"
+    description: variable rate received on swap
     section: market_risk
   fixed_interest_rate_payable:
-    description: "fixed rate paid on swap"
+    description: fixed rate paid on swap
     section: market_risk
   variable_rate_debt_amount:
-    description: "amount of variable-rate debt"
+    description: amount of variable-rate debt
     section: market_risk
   fixed_rate_debt_amount:
-    description: "amount of fixed-rate debt"
+    description: amount of fixed-rate debt
     section: market_risk
   fx_forward_contracts:
-    description: "foreign currency forward contracts for hedging"
+    description: foreign currency forward contracts for hedging
     section: market_risk
   primary_rate_exposure:
-    description: "primary interest rate benchmark exposure"
+    description: primary interest rate benchmark exposure
     section: market_risk
-
-# Unusual features identified:
-#   - Combined debt maturity and derivatives table format
-#   - Interest rate swap details embedded within debt maturity table
-#   - Foreign currency derivatives mentioned but marked as not material
-#   - SOFR benchmark rate explicitly identified as primary exposure
-#   - Swap fair value position noted but value integrated in table
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+Value\s+Measurements

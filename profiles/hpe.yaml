@@ -1,35 +1,28 @@
 issuer: Hewlett Packard Enterprise
 ticker: HPE
-cik: "1645590"
+cik: '1645590'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   foreign_currency_exposure:
-    description: "geographic currency exposures and major currencies"
+    description: geographic currency exposures and major currencies
     section: market_risk
   fx_sensitivity_analysis:
-    description: "10% adverse movement impact on FX fair value"
+    description: 10% adverse movement impact on FX fair value
     section: market_risk
   interest_rate_sensitivity_analysis:
-    description: "10% adverse movement impact on interest rate fair value"
+    description: 10% adverse movement impact on interest rate fair value
     section: market_risk
   hedge_designation_types:
-    description: "cash flow hedges vs non-designated instruments"
+    description: cash flow hedges vs non-designated instruments
     section: market_risk
   underlying_exposures:
-    description: "revenue, costs, balance sheet items being hedged"
+    description: revenue, costs, balance sheet items being hedged
     section: market_risk
   debt_hedging_strategy:
-    description: "use of swaps for foreign currency debt"
+    description: use of swaps for foreign currency debt
     section: market_risk
-
-# Unusual features identified:
-#   - sensitivity_analysis_only_no_notional_amounts
-#   - combined_narrative_format_without_tabular_data
-#   - specific_dollar_amounts_for_sensitivity_without_underlying_notionals
-#   - references_to_natural_hedging_strategy
-#   - mentions_choice_not_to_hedge_certain_exposures
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Financial\s+Instruments

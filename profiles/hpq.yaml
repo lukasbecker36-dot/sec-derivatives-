@@ -1,32 +1,25 @@
 issuer: HP Inc.
 ticker: HPQ
-cik: "47217"
+cik: '47217'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   foreign_currency_sensitivity_loss:
-    description: "hypothetical 10% adverse FX movement loss amounts"
+    description: hypothetical 10% adverse FX movement loss amounts
     section: market_risk
   interest_rate_sensitivity_loss:
-    description: "hypothetical 10% adverse interest rate movement loss amounts"
+    description: hypothetical 10% adverse interest rate movement loss amounts
     section: market_risk
   primary_foreign_currencies:
-    description: "most significant foreign currencies to operations"
+    description: most significant foreign currencies to operations
     section: market_risk
   hedge_designation_types:
-    description: "cash flow hedges vs non-designated derivatives"
+    description: cash flow hedges vs non-designated derivatives
     section: market_risk
   sensitivity_analysis_dates:
-    description: "as of dates for sensitivity analyses"
+    description: as of dates for sensitivity analyses
     section: market_risk
-
-# Unusual features identified:
-#   - Uses bracketed section identifier [market_risk] instead of standard note heading
-#   - Sensitivity analysis uses 10% adverse movement rather than typical 100 basis points for rates
-#   - No tabular presentation of notional amounts or fair values
-#   - Combines both FX and interest rate risks in single narrative section
-#   - Mentions natural hedging strategy without quantification
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Financial\s+Instruments
