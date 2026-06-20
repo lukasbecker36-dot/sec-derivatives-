@@ -1,130 +1,64 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NUMERIC] commodity_derivatives_notional: $11M → $5M (-54.5%) — exceeds 20% threshold
-[NUMERIC] total_derivative_asset: $18M → $25M (+38.9%) — exceeds 20% threshold
-[DROPPED_TO_ZERO] cash_flow_hedge_aoci: $-2M → $0M
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4M, now missing
-[DISAPPEARED_FIELD] foreign_currency_forward_sensitivity: was $199M, now missing
-[NUMERIC] cross_currency_swap_fair_value: $237M → $186M (-21.5%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] eur_debt_fair_value: was $935M, now missing
-[DISAPPEARED_FIELD] eur_debt_sensitivity: was $94M, now missing
-[DISAPPEARED_FIELD] usd_debt_fair_value: was $4,053M, now missing
-[DISAPPEARED_FIELD] usd_debt_sensitivity: was $405M, now missing
-[VALIDATION] Negative notional: fx_derivatives_notional = -1984.0
-[LLM_FLAG] fx_derivatives_notional decreased by more than 50% from the prior period, which may indicate significant changes in foreign currency exposure or hedging strategies.
-[LLM_FLAG] cross_currency_swap_fair_value differs significantly from prior period, indicating a potential change in trading strategy or market conditions affecting derivatives.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $11M → $5M (-54.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $18M → $25M (+38.9%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] cash_flow_hedge_aoci: $-4M → $0M
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $405M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_forward_sensitivity: was $199M, now missing
+[HISTORICAL] [NUMERIC] cross_currency_swap_fair_value: $237M → $186M (-21.5%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] eur_debt_fair_value: was $935M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] eur_debt_sensitivity: was $94M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] usd_debt_fair_value: was $4,053M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] usd_debt_sensitivity: was $405M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/16 previously-populated fields are now null (ir_sensitivity_100bp, foreign_currency_forward_sensitivity, eur_debt_fair_value, eur_debt_sensitivity, usd_debt_fair_value...)
+[HISTORICAL] [LLM_FLAG] Financial instruments note (Note 15) contains only fair value hierarchy methodology text, with reference to Level 3 earnout receivable. No quantitative derivative or securities data in this excerpt.
+[HISTORICAL] [LLM_FLAG] CCS expanded from 17 swaps ($1.9B) to 22 swaps ($2.4B) following February 2026 $500M expansion. New swaps mature Feb 2033 and Feb 2036.
+[HISTORICAL] [LLM_FLAG] CCS now in a partial asset position: $18M asset, $204M liability = $186M net liability (consistent with market risk section disclosure).
+[HISTORICAL] [LLM_FLAG] Commodity contracts now showing as derivative assets ($3M designated) rather than prior-period presentation as only liabilities.
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section states 'no material changes from 2025 Form 10-K except as described below with respect to the cross currency swap agreements'.
+[HISTORICAL] [LLM_FLAG] CCS sensitivity increased to $206M vs $211M in prior 10-K despite higher notional ($2.4B vs $1.9B), reflecting different fair value profile of the expanded swap portfolio.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($-1,840M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($17M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($11M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($18M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($242M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-224M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-2M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($199M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
-[NEW_FIELD] foreign_currency_forward_sensitivity: appeared for first time ($199M)
-[NEW_FIELD] cross_currency_swap_fair_value: appeared for first time ($237M)
-[NEW_FIELD] cross_currency_swap_sensitivity: appeared for first time ($211M)
-[NEW_FIELD] eur_debt_fair_value: appeared for first time ($935M)
-[NEW_FIELD] eur_debt_sensitivity: appeared for first time ($94M)
-[NEW_FIELD] usd_debt_fair_value: appeared for first time ($4,053M)
-[NEW_FIELD] usd_debt_sensitivity: appeared for first time ($405M)
-[VALIDATION] Negative notional: fx_derivatives_notional = -1840.0
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $3M → $11M (+266.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $3M → $18M (+500.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-3M → $-4M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($405M)
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $163M → $199M (+22.1%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] foreign_currency_forward_sensitivity: appeared for first time ($199M)
+[HISTORICAL] [NUMERIC] cross_currency_swap_sensitivity: $163M → $211M (+29.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] eur_debt_fair_value: appeared for first time ($935M)
+[HISTORICAL] [NEW_FIELD] eur_debt_sensitivity: appeared for first time ($94M)
+[HISTORICAL] [NEW_FIELD] usd_debt_fair_value: appeared for first time ($4,053M)
+[HISTORICAL] [NEW_FIELD] usd_debt_sensitivity: appeared for first time ($405M)
+[HISTORICAL] [LLM_FLAG] Financial instruments note (Note 16 in 10-K) contains only fair value hierarchy methodology text, with reference to Level 3 earnout receivable. No quantitative derivative or securities data in this excerpt.
+[HISTORICAL] [LLM_FLAG] CCS notional expanded from $1.4B to $1.9B during Q4 2025 (subsequent to Q3 2025 filing date; effective October 1, 2025). Now 17 swaps vs 12 previously.
+[HISTORICAL] [LLM_FLAG] Subsequent event: On February 18, 2026, Company entered agreements to further expand CCS capacity by $500M to total $2.4B notional, maturing Feb 2033 and Feb 2036.
+[HISTORICAL] [LLM_FLAG] CCS narrative fair value is $237M net liability but the detail table shows CCS liabilities $238M offset by CCS asset $1M = net $237M; total derivative liabilities is $242M including FX and commodity.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp field value populated with the USD debt sensitivity to 10% interest rate change ($405M) — the text does not specify a 100bp scenario specifically; this is a 10% rate change sensitivity.
+[HISTORICAL] [LLM_FLAG] usd_debt_fair_value converted from $4.053 billion to $4,053 million for consistency with millions convention.
+[HISTORICAL] [LLM_FLAG] Cross currency swap fair value ($237M) in market risk section is net of the $1M asset; derivatives note shows gross liability of $238M and gross asset of $1M.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($562M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($25M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($220M)
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4M, now missing
-[DISAPPEARED_FIELD] foreign_currency_forward_sensitivity: was $199M, now missing
-[NUMERIC] cross_currency_swap_fair_value: $237M → $186M (-21.5%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] eur_debt_fair_value: was $935M, now missing
-[DISAPPEARED_FIELD] eur_debt_sensitivity: was $94M, now missing
-[DISAPPEARED_FIELD] usd_debt_fair_value: was $4,053M, now missing
-[DISAPPEARED_FIELD] usd_debt_sensitivity: was $405M, now missing
-[VALIDATION] Likely extraction failure: 6/10 previously-populated fields are now null (fixed_rate_notes_billion, foreign_currency_forward_sensitivity, eur_debt_fair_value, eur_debt_sensitivity, usd_debt_fair_value...)
-[LLM_FLAG] fx_sensitivity_10pct differs from prior period by more than 50%.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $24M → $3M (-87.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $36M → $3M (-91.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Financial instruments section (Note 15) contains only fair value hierarchy methodology text. No quantitative derivative or securities data in this excerpt.
+[HISTORICAL] [LLM_FLAG] Subsequent event disclosed: On October 1, 2025, Company entered agreements to expand cross currency swap capacity by $500M, bringing total notional to $1.9 billion (effective Q4 2025 onward).
+[HISTORICAL] [LLM_FLAG] FX forward contracts presented net of bought/sold; absolute gross notional could be higher than net -1,829M shown.
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section states 'no material changes from 2024 Form 10-K' except cross currency swaps.
+[HISTORICAL] [LLM_FLAG] The sensitivity figure of $163M is the same as Q2 2025 despite the CCS fair value changing from $254M to $240M — the sensitivity relates to notional-based calculation which was unchanged at $1.4B.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($199M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
-[NEW_FIELD] foreign_currency_forward_sensitivity: appeared for first time ($199M)
-[NEW_FIELD] cross_currency_swap_fair_value: appeared for first time ($237M)
-[NEW_FIELD] cross_currency_swap_sensitivity: appeared for first time ($211M)
-[NEW_FIELD] eur_debt_fair_value: appeared for first time ($935M)
-[NEW_FIELD] eur_debt_sensitivity: appeared for first time ($94M)
-[NEW_FIELD] usd_debt_fair_value: appeared for first time ($4,053M)
-[NEW_FIELD] usd_debt_sensitivity: appeared for first time ($405M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $8M → $36M (+350.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $131M → $255M (+94.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-123M → $-219M (-78.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cross_currency_swap_fair_value: $122M → $254M (+108.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Financial instruments section (Note 15) contains only fair value hierarchy methodology text with reference to Level 3 earnout receivable. No quantitative derivative or securities data present in this excerpt.
+[HISTORICAL] [LLM_FLAG] FX forward contracts presented net of bought/sold; absolute gross notional could be higher than the net -1,630M shown.
+[HISTORICAL] [LLM_FLAG] Interest rate swaps noted as pre-issuance hedges; reclassification of $1M from AOCI to Interest expense reported for six months ended June 30, 2025, but no outstanding notional given.
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section states 'no material changes from 2024 Form 10-K' except cross currency swaps; most sensitivity disclosures only in annual 10-K.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZSVHww9Z44C9M2XWbe'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZSZo4SVLWo9QARq1Ef'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZSG2UWzym62MZnAwaR'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZSJc1GLZuGt16cyo3D'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZRsgKKqE6MTv7Gk42c'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZRvduiYdfaTtjzhotk'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZRgRPrgSf6rKqwu81D'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZRjJHFAgowCjZpL8Wk'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZRVyqmywjZbRiAdUVL'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZRYuTP3RoUfhQ4vcLB'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
-[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
-[NUMERIC] cross_currency_swap_fair_value: $240M → $186M (-22.5%) — exceeds 20% threshold
-[NUMERIC] cross_currency_swap_sensitivity: $163M → $206M (+26.4%) — exceeds 20% threshold
-[LLM_FLAG] The filing excerpt does not contain a marketable securities section or unrealized gains disclosure. The fair value table shows long-term debt notes with fair values differing from carrying values, but this represents the Company's own debt liabilities, not marketable securities held as assets.
-[LLM_FLAG] cross_currency_swap_fair_value: decreased from $240M (prior) to $186M (current), a 22.5% decline - within acceptable range but notable
-[LLM_FLAG] cross_currency_swap_sensitivity: increased from $163M (prior) to $206M (current), a 26.4% increase - material change suggesting increased FX volatility or position adjustments
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-02 ===
-[NUMERIC] total_cash_equivalents_fv: $816M → $621M (-23.9%) — exceeds 20% threshold
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] total_cash_equivalents_fv decreased from $816.0M (Dec 31, 2024 implied from prior period) to $621M (Sep 30, 2025), a 24% decline - within acceptable variance but notable decrease
-[LLM_FLAG] No marketable securities portfolio disclosed in this filing section; the fair value table shows company-issued debt instruments and derivatives rather than investments in marketable securities
-[LLM_FLAG] The filing focuses on fair value of liabilities (debt issued) and derivatives rather than assets in the form of marketable securities
-[LLM_FLAG] cross_currency_swap_fair_value decreased from $254 million (prior period) to $240 million (current period), a 5.5% decrease—within acceptable variance
-[LLM_FLAG] cross_currency_swap_sensitivity remained at $163 million, exactly matching prior period
-[LLM_FLAG] Limited disclosure in this section; text notes 'no material changes in market risk from the information provided in our 2024 Form 10-K, except for the cross currency swap agreements'
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-02 ===
-[NUMERIC] total_cash_equivalents_fv: $613M → $816M (+33.1%) — exceeds 20% threshold
-[NUMERIC] cross_currency_swap_fair_value: $122M → $254M (+108.2%) — exceeds 20% threshold
-[LLM_FLAG] total_cash_equivalents_fv increased 33% from prior period ($613M to $816M), which exceeds the 50% threshold but is within reasonable variance for a 6-month reporting period
-[LLM_FLAG] Filing text is limited to Note 15 (Financial Instruments) and does not contain typical cash and marketable securities balance sheet disclosures that would detail these items comprehensively
-[LLM_FLAG] This appears to be a derivatives and debt fair value footnote rather than a liquidity/marketable securities note
-[LLM_FLAG] cross_currency_swap_fair_value: Increased from $122M (prior period) to $254M (current period) - 108% increase. This represents a significant change in liability position, potentially due to EUR/USD exchange rate movements or swap repricing.
-[LLM_FLAG] cross_currency_swap_sensitivity: Increased from $138M (prior period) to $163M (current period) - 18% increase. The sensitivity change is moderate but consistent with the larger swap position.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-02 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($613M)
-[DISAPPEARED_FIELD] foreign_currency_forward_sensitivity: was $199M, now missing
-[NUMERIC] cross_currency_swap_fair_value: $237M → $122M (-48.5%) — exceeds 20% threshold
-[NUMERIC] cross_currency_swap_sensitivity: $211M → $138M (-34.6%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] eur_debt_fair_value: was $935M, now missing
-[DISAPPEARED_FIELD] eur_debt_sensitivity: was $94M, now missing
-[DISAPPEARED_FIELD] usd_debt_fair_value: was $4,053M, now missing
-[DISAPPEARED_FIELD] usd_debt_sensitivity: was $405M, now missing
-[VALIDATION] Likely extraction failure: 5/7 previously-populated fields are now null (foreign_currency_forward_sensitivity, eur_debt_fair_value, eur_debt_sensitivity, usd_debt_fair_value, usd_debt_sensitivity)
-[LLM_FLAG] Filing text appears to be limited to Note 15 (Financial Instruments) and does not include balance sheet sections where cash equivalents and marketable securities are typically reported. The text shows only cash and cash equivalents ($613M) but lacks the complete financial position disclosures needed to extract all requested fields.
-[LLM_FLAG] cross_currency_swap_fair_value: Decreased 48.5% from $237M to $122M - material change disclosed as 'no material changes in market risk from 2024 Form 10-K, except for the cross currency swap agreements'
-[LLM_FLAG] cross_currency_swap_sensitivity: Decreased 34.6% from $211M to $138M - proportional to fair value reduction
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-01 ===
-[LLM_FLAG] The provided filing text is only a partial excerpt from Note 16 describing fair value accounting methodology and the three-level valuation hierarchy. The actual fair value amounts for cash equivalents, marketable securities, and related unrealized gains/losses are not included in this excerpt. Full table disclosure with numerical data appears to be missing or occurs later in the Note.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-20 ===
+[HISTORICAL] [LLM_FLAG] Financial instruments section (Note 15) for this filing contains only fair value hierarchy methodology text. Quantitative derivative fair values and notional amounts are disclosed in the derivatives note (Note 15 covers fair value hierarchy only in this filing).
+[HISTORICAL] [LLM_FLAG] FX derivatives notional: FX forward contracts presented net at -1,684M and cross currency swaps at 1,400M separately in the table. These cannot be simply combined as they are different instrument types. fx_derivatives_notional field value set to sum of absolute notional values (1,684 + 1,400 = 3,084) would be double-counting; instead left as note. Value recorded as the sum of cross-currency swaps notional (1,400) as the primary FX hedge notional — FX forwards notional is -1,684 net (presented net of bought/sold). Consider tracking separately.
+[HISTORICAL] [LLM_FLAG] Cross currency swaps fair value shown as $122M liability in narrative but total derivative liabilities table shows cross currency swaps $122M + FX contracts $9M = $131M total.
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section states 'no material changes from 2024 Form 10-K except for cross currency swap agreements' — most sensitivity disclosures are only in the annual 10-K.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct and cross_currency_swap_sensitivity both reflect the same $138M figure (10% USD/EUR move on cross currency swaps only).
