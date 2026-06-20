@@ -1,53 +1,19 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-6M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[DISAPPEARED_FIELD] variable_rate_debt_level: was $-0M, now missing
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity: $-0M → $-6M (-1766.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section discusses only senior credit facility and senior notes fair value; no cash equivalents, marketable securities, or derivative instruments are mentioned.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] average_variable_rate: appeared for first time ($5M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity: $-2M → $-0M (+81.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section discusses senior debt fair value, commitments, leases, goodwill, and intangibles — no cash equivalents at fair value, marketable securities, or derivative instruments are mentioned.
+[HISTORICAL] [LLM_FLAG] Company explicitly states it had no derivative instruments at December 31, 2025 and 2024.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-6M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[DISAPPEARED_FIELD] variable_rate_debt_level: was $-0M, now missing
-[LLM_FLAG] The interest rate sensitivity value of -5.6 million indicates a potential impact on earnings that is notable.
-[LLM_FLAG] No foreign currency forward contracts are in place, which may expose the company to currency risk.
-[LLM_FLAG] The absence of fuel price hedging instruments suggests a high exposure to fluctuating fuel prices.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity: $-3M → $-2M (+42.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section discusses only senior credit facility and senior notes fair value; no cash equivalents, marketable securities, or derivative instruments are mentioned.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-0M)
-[NEW_FIELD] average_variable_rate: appeared for first time ($5M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity: $-1M → $-3M (-100.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section discusses only senior credit facility and senior notes fair value; no cash equivalents, marketable securities, or derivative instruments are mentioned.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-28 ===
-[NUMERIC] ir_sensitivity_100bp: $2M → $6M (+250.0%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp: Value increased from $1.6 million to $5.6 million (250% increase), indicating significantly higher variable-rate debt exposure or higher borrowing levels compared to prior period.
-[LLM_FLAG] average_variable_rate: Rate increased from 5.16% to 4.66%, which is a 9.7% decrease. This is inconsistent with general rate environment and warrants investigation.
-[LLM_FLAG] fixed_rate_range: Prior period showed range of 3.875% to 4.90%, but current filing only mentions single rate of 4.90%. Unable to confirm if range has narrowed or if this is incomplete disclosure.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-28 ===
-[NUMERIC] ir_sensitivity_100bp: $3M → $2M (-42.9%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp decreased from $2.8 million to $1.6 million (43% decrease) - likely due to reduced variable-rate debt outstanding or lower applicable interest rate
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-28 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
-[LLM_FLAG] interest_rate_sensitivity changed from $1.4 million to $2.8 million (100% increase). This is a significant change requiring investigation. The prior period showed a 1% rate increase impact of $1.4M, while current period shows $2.8M. This could indicate either increased variable rate debt levels or a change in calculation methodology.
-[LLM_FLAG] average_variable_rate increased slightly from 5.33% to 5.32% (minimal change, within expected range)
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-28 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (ir_sensitivity_100bp)
-[LLM_FLAG] interest_rate_sensitivity increased from $0.3 million to $1.4 million (367% increase) - this is a significant change indicating either higher variable-rate debt levels or higher rates on existing variable debt
-[LLM_FLAG] average_variable_rate increased from 4.62% to 5.33% (71bp increase), which aligns with the federal funds rate environment between prior period and Q1 2025
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-20 ===
+[HISTORICAL] [LLM_FLAG] Section discusses only senior credit facility and senior notes fair value; no cash equivalents, marketable securities, or derivative instruments are mentioned.

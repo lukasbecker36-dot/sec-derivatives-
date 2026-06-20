@@ -1,22 +1,63 @@
-=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZY9sZFmS1mM37tX6zg'}
+=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-20 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($81,800M)
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($8,000M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($1,206M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($5,853M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-4,647M)
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-300M → $-600M (-100.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional combines FX forward contracts ($43.9B) and cross-currency interest rate swaps ($37.9B) as both carry FX exposure; interest rate swaps ($8.0B) reported separately as fi_ir_swap_notional
+[HISTORICAL] [LLM_FLAG] FX forwards notional declined to $43.9B (from $45.2B at Dec 28, 2025 prior period disclosed in same filing); CCIRS also declined to $37.9B (from $38.9B)
+[HISTORICAL] [LLM_FLAG] Fair value table for derivative assets/liabilities not present in section text excerpt; fi_total_derivative_asset and fi_total_derivative_liability cannot be extracted
+[HISTORICAL] [LLM_FLAG] CSA cash collateral paid was $4.7B net at March 29, 2026
+[HISTORICAL] [LLM_FLAG] Equity investments with readily determinable value: $703M carrying value; without readily determinable value: $888M carrying value (not the same as marketable equity securities fair value)
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional combines forward FX contracts ($43.9B) and cross-currency interest rate swaps ($37.9B); IR swaps ($8.0B) reported separately
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci is approximate from '$ 0.6 billion after-tax' disclosure; sign is negative (net loss)
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci: only qualitative disclosure ('substantially all'), no dollar amount given
+[HISTORICAL] [LLM_FLAG] Section text is a boilerplate cross-reference: 'There has been no material change in the Company's assessment of its sensitivity to market risk since its presentation set forth in Item 7A...in its Annual Report on Form 10-K for the fiscal year ended December 28, 2025.' No quantitative data present.
 
-=== 10-K | Period ending 2025-12-28 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZXhcFQVyBDNQiSPWgK'}
+=== 10-K | Period ending 2025-12-28 | Processed 2026-06-20 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $84,800M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $8,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $1,445M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $6,093M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-4,648M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (fi_fx_derivatives_notional, fi_ir_swap_notional, total_derivative_asset, total_derivative_liability, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] Section text is from 10-K Note 1 (Summary of significant accounting policies — Financial instruments), which is a policy description only with no quantitative disclosures. Detailed financial instruments data is in Note 6 per the text: 'See Note 6 for additional information on Financial Instruments.'
+[HISTORICAL] [LLM_FLAG] All fields null because section does not contain quantitative data; the derivatives_note section (if extracted from Note 6) would contain the actual notional and fair value figures for this period.
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional combines forward FX contracts ($40.6B) and cross-currency interest rate swaps ($38.9B); IR swaps ($8.0B) reported separately
+[HISTORICAL] [LLM_FLAG] total_derivative_asset and total_derivative_liability not available in provided section text (text truncated before fair value table)
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci is approximate from '$ 0.3 billion after-tax' disclosure; sign is negative (net loss)
+[HISTORICAL] [LLM_FLAG] 10-K Item 3 (market risk) is entirely a cross-reference to Item 7 MD&A — Liquidity and capital resources — Financing and market risk; no quantitative data is present in the provided section_text
+[HISTORICAL] [LLM_FLAG] All market risk quantitative fields require the Item 7 section text to extract values
 
-=== 10-Q | Period ending 2025-09-28 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZX8AbNfgnKy7ufF9TJ'}
+=== 10-Q | Period ending 2025-09-28 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-700M → $-300M (+57.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional combines FX forward contracts ($45.2B) and cross-currency interest rate swaps ($39.6B) as both carry FX exposure; interest rate swaps ($8.0B) reported separately as fi_ir_swap_notional
+[HISTORICAL] [LLM_FLAG] IR swap notional decreased from $9.0B (Q1/Q2 2025) to $8.0B at September 28, 2025
+[HISTORICAL] [LLM_FLAG] Fair value table for derivative assets/liabilities not present in section text excerpt; fi_total_derivative_asset and fi_total_derivative_liability cannot be extracted
+[HISTORICAL] [LLM_FLAG] CSA cash collateral paid was $4.8B net at September 28, 2025 (down from $5.2B at June 29, 2025)
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional combines forward FX contracts ($45.2B) and cross-currency interest rate swaps ($39.6B); IR swaps ($8.0B) reported separately
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci is approximate from '$ 0.3 billion after-tax' disclosure; sign is negative (net loss)
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci: only qualitative disclosure ('substantially all'), no dollar amount given
+[HISTORICAL] [LLM_FLAG] Section text is a boilerplate cross-reference: 'There has been no material change in the Company's assessment of its sensitivity to market risk since its presentation set forth in Item 7A...in its Annual Report on Form 10-K for the fiscal year ended December 29, 2024.' No quantitative data present.
 
-=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZWd3PSVFRR94FwbAtj'}
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] total_derivative_liability: $3,785M → $7,080M (+87.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-2,074M → $-5,586M (-169.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-1,200M → $-700M (+41.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional combines FX forward contracts ($47.7B) and cross-currency interest rate swaps ($40.9B) as both carry FX exposure; interest rate swaps ($9.0B) reported separately as fi_ir_swap_notional
+[HISTORICAL] [LLM_FLAG] Fair value table for derivative assets/liabilities not present in section text excerpt; fi_total_derivative_asset and fi_total_derivative_liability cannot be extracted
+[HISTORICAL] [LLM_FLAG] CSA cash collateral paid increased to $5.2B net (from $1.9B at Q1 2025), reflecting increased collateral requirements
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional combines forward FX contracts ($47.7B) and cross-currency interest rate swaps ($40.9B); IR swaps ($9.0B) reported separately
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci is approximate from '$ 0.7 billion after-tax' disclosure; sign is negative (net loss)
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci: only qualitative disclosure ('substantially all'), no dollar amount given
+[HISTORICAL] [LLM_FLAG] Section text is a boilerplate cross-reference: 'There has been no material change in the Company's assessment of its sensitivity to market risk since its presentation set forth in Item 7A...in its Annual Report on Form 10-K for the fiscal year ended December 29, 2024.' No quantitative data present.
 
-=== 10-Q | Period ending 2025-03-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZW4s8UzdKK1aZJUvSD'}
-
-=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-02 ===
-[LLM_FLAG] The provided text is only a reference statement directing readers to the Annual Report on Form 10-K for fiscal year ended December 29, 2024. It does not contain actual quantitative or qualitative disclosures about market risk. All fields are not found because the detailed disclosure section was not provided.
-
-=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-01 ===
-[LLM_FLAG] Provided text is incomplete - it references incorporation by reference to Item 7 and Note 1 but does not include the actual content of those sections where market risk disclosures would be detailed
-[LLM_FLAG] Unable to extract substantive financial data from a referential disclosure section
-
+=== 10-Q | Period ending 2025-03-30 | Processed 2026-06-20 ===
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional combines FX forward contracts ($45.2B) and cross-currency interest rate swaps ($40.0B) as both carry FX exposure; interest rate swaps ($9.0B) reported separately as fi_ir_swap_notional
+[HISTORICAL] [LLM_FLAG] Fair value table for derivative assets/liabilities not present in section text excerpt; fi_total_derivative_asset and fi_total_derivative_liability cannot be extracted
+[HISTORICAL] [LLM_FLAG] Equity investment carrying values ($471M readily determinable, $787M without) are not the same as marketable equity securities fair value; left as null
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional combines forward FX contracts ($45.2B) and cross-currency interest rate swaps ($40.0B) as both carry FX exposure; IR swaps ($9.0B) reported separately
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci is approximate from '$ 1.2 billion after-tax' disclosure; sign is negative (net loss)
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci: only qualitative disclosure ('substantially all'), no dollar amount given
+[HISTORICAL] [LLM_FLAG] Section text is a boilerplate cross-reference: 'There has been no material change in the Company's assessment of its sensitivity to market risk since its presentation set forth in Item 7A...in its Annual Report on Form 10-K for the fiscal year ended December 29, 2024.' No quantitative data present.
