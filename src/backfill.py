@@ -240,6 +240,8 @@ def _write_extraction_request(config: IssuerConfig, config_path: Path,
 
 def prepare(since: str, tickers: list[str], next_n: int):
     """Seed ledger units and write locate/extraction requests."""
+    REQUESTS_DIR.mkdir(parents=True, exist_ok=True)
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     universe = load_universe()
     if not universe:
         logger.error('Universe is empty')
