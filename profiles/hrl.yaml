@@ -1,41 +1,34 @@
 issuer: Hormel Foods
 ticker: HRL
-cik: "48465"
+cik: '48465'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   commodity_hedge_fair_value:
-    description: "Fair value of cash flow commodity contracts"
+    description: Fair value of cash flow commodity contracts
     section: market_risk
   commodity_sensitivity_analysis:
-    description: "10% price change impact on commodity contracts"
+    description: 10% price change impact on commodity contracts
     section: market_risk
   long_term_debt_fair_value:
-    description: "Fair value of long-term fixed rate debt"
+    description: Fair value of long-term fixed rate debt
     section: market_risk
   interest_rate_sensitivity:
-    description: "10% rate change impact on debt fair value"
+    description: 10% rate change impact on debt fair value
     section: market_risk
   foreign_currency_net_position:
-    description: "Net asset position in foreign currencies"
+    description: Net asset position in foreign currencies
     section: market_risk
   major_currency_exposures:
-    description: "Primary foreign currency exposures"
+    description: Primary foreign currency exposures
     section: market_risk
   investment_securities_balance:
-    description: "Corporate-owned life insurance policy values"
+    description: Corporate-owned life insurance policy values
     section: market_risk
   investment_sensitivity:
-    description: "10% change impact on non-fixed income investments"
+    description: 10% change impact on non-fixed income investments
     section: market_risk
-
-# Unusual features identified:
-#   - No notional amounts disclosed for derivative instruments
-#   - Fair values presented as single point-in-time figures rather than tables
-#   - Company explicitly states no hedging for foreign currency risk
-#   - Investment risk section covers corporate-owned life insurance rather than traditional securities
-#   - Sensitivity analysis uses 10% change assumption across all risk types
-
+sections:
+  financial_instruments:
+    heading: NOTE\s+L\s+\-\s+FAIR\s+VALUE\s+MEASUREMENTS

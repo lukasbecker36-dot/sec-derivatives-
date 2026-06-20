@@ -1,35 +1,30 @@
 issuer: Hubbell Incorporated
 ticker: HUBB
-cik: "48898"
+cik: '48898'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   foreign_currency_sensitivity:
-    description: "10% USD movement impact on operating profit ($6.7 million)"
+    description: 10% USD movement impact on operating profit ($6.7 million)
     section: market_risk
   interest_rate_sensitivity:
-    description: "100 basis point impact assessment"
+    description: 100 basis point impact assessment
     section: market_risk
   financial_instruments_maturity_table:
-    description: "Cost and weighted average interest rates by maturity for available-for-sale investments and long-term debt"
+    description: Cost and weighted average interest rates by maturity for available-for-sale investments and long-term debt
     section: market_risk
   derivative_usage_policy:
-    description: "Derivatives only matched with specific asset, liability, or future transaction"
+    description: Derivatives only matched with specific asset, liability, or future transaction
     section: market_risk
   foreign_operations_percentage:
-    description: "Percentage of net sales from foreign operations by year"
+    description: Percentage of net sales from foreign operations by year
     section: market_risk
   debt_composition:
-    description: "Fixed-rate senior notes ($1,450M), variable-rate term loan ($600M), short-term debt ($289.1M)"
+    description: Fixed-rate senior notes ($1,450M), variable-rate term loan ($600M), short-term debt ($289.1M)
     section: market_risk
-
-# Unusual features identified:
-#   - No notional amounts disclosed for derivative instruments
-#   - No hedge accounting designations mentioned despite hedge instruments being used
-#   - Fair value table combines both assets and liabilities with different maturity structures
-#   - Interest rate sensitivity described qualitatively rather than quantified
-#   - Foreign currency sensitivity only provided for translation risk, not transaction risk
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+Value\s+Measurement
+  market_risk:
+    heading: Quantitative\s+and\s+Qualitative\s+Disclosures\s+About\s+Market\s+Risk
