@@ -1,41 +1,34 @@
 issuer: Idexx Laboratories
 ticker: IDXX
-cik: "874716"
+cik: '874716'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   hedge_gain_losses_current:
-    description: "current period hedge gains/losses"
+    description: current period hedge gains/losses
     section: market_risk
   foreign_currency_transaction_losses:
-    description: "foreign currency transaction gains/losses"
+    description: foreign currency transaction gains/losses
     section: market_risk
   revenue_fx_impact:
-    description: "foreign exchange impact on revenue"
+    description: foreign exchange impact on revenue
     section: market_risk
   operating_profit_fx_impact:
-    description: "foreign exchange impact on operating profit"
+    description: foreign exchange impact on operating profit
     section: market_risk
   eps_fx_impact:
-    description: "foreign exchange impact on diluted EPS"
+    description: foreign exchange impact on diluted EPS
     section: market_risk
   forward_fx_assumptions:
-    description: "assumed exchange rates for forward projections"
+    description: assumed exchange rates for forward projections
     section: market_risk
   hedge_duration:
-    description: "typical duration of hedging instruments"
+    description: typical duration of hedging instruments
     section: market_risk
   sensitivity_analysis:
-    description: "1% USD strengthening impact on revenue and operating income"
+    description: 1% USD strengthening impact on revenue and operating income
     section: market_risk
-
-# Unusual features identified:
-#   - detailed multi-year comparative FX impact table
-#   - specific forward-looking FX rate assumptions provided
-#   - combined hedge and transaction loss reporting
-#   - natural hedges mentioned but not quantified
-#   - hedge accounting qualification criteria detailed
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*FAIR\s+VALUE\s+MEASUREMENTS

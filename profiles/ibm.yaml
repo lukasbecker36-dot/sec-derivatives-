@@ -1,25 +1,19 @@
 issuer: IBM
 ticker: IBM
-cik: "51143"
+cik: '51143'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   reference_document:
-    description: "Referenced annual report document"
+    description: Referenced annual report document
     section: market_risk
   reference_page:
-    description: "Page number in referenced document"
+    description: Page number in referenced document
     section: market_risk
   reference_section_title:
-    description: "Title of referenced section"
+    description: Title of referenced section
     section: market_risk
-
-# Unusual features identified:
-#   - Entire market risk disclosure is incorporated by reference to external document
-#   - No actual derivatives or market risk data present in SEC filing
-#   - Reference points to page 37 of 2025 Annual Report to Stockholders
-#   - Cross-reference structure instead of direct disclosure
-
+sections:
+  market_risk:
+    heading: Interest\s+Rate\s+Risk

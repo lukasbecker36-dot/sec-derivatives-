@@ -1,20 +1,13 @@
 issuer: Howmet Aerospace
 ticker: HWM
-cik: "4281"
+cik: '4281'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   market_risk_materiality:
-    description: "statement indicating market risk is not material"
+    description: statement indicating market risk is not material
     section: market_risk
-
-# Unusual features identified:
-#   - Extremely brief market risk disclosure - only states 'Not material'
-#   - No quantitative disclosures provided despite section title
-#   - No derivative instruments discussed
-#   - Minimal content for a public company market risk section
-#   - Section appears to be truncated or incomplete
-
+sections:
+  financial_instruments:
+    heading: P\.\s+Fair\s+Value\s+of\s+Financial\s+Instruments

@@ -1,36 +1,28 @@
 issuer: Humana
 ticker: HUM
-cik: "49071"
+cik: '49071'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   interest_rate_swaps:
-    description: "swap agreements converting fixed rate senior notes to variable SOFR-based rates"
+    description: swap agreements converting fixed rate senior notes to variable SOFR-based rates
     section: market_risk
   investment_portfolio_duration:
-    description: "average duration of investment portfolio including cash equivalents"
+    description: average duration of investment portfolio including cash equivalents
     section: market_risk
   fair_value_sensitivity:
-    description: "impact on fair value from 1% interest rate change based on duration"
+    description: impact on fair value from 1% interest rate change based on duration
     section: market_risk
   pretax_earnings_sensitivity:
-    description: "hypothetical impact on pretax earnings from 100/200/300 basis point rate changes"
+    description: hypothetical impact on pretax earnings from 100/200/300 basis point rate changes
     section: market_risk
   unrealized_loss_position:
-    description: "net unrealized gains/losses on investment portfolio"
+    description: net unrealized gains/losses on investment portfolio
     section: market_risk
   credit_rating:
-    description: "weighted average S&P credit rating of investment portfolio"
+    description: weighted average S&P credit rating of investment portfolio
     section: market_risk
-
-# Unusual features identified:
-#   - Heavy focus on investment portfolio interest rate risk rather than traditional derivatives disclosure
-#   - Detailed sensitivity analysis table with multiple basis point scenarios
-#   - Duration-based fair value sensitivity calculation provided
-#   - No notional amounts or fair values disclosed for swap agreements
-#   - No hedge accounting designation details despite having swaps
-#   - Historical interest rate volatility context provided
-
+sections:
+  financial_instruments:
+    heading: 5\.\s+FAIR\s+VALUE
