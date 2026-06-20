@@ -1,106 +1,61 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($110M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($110M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($0M)
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $350M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($118M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] total_debt_principal: appeared for first time ($3,000M)
-[NEW_FIELD] floating_rate_debt: appeared for first time ($0M)
-[NUMERIC] cash_equivalents_amount: $116M → $1,700M (+1361.7%) — exceeds 20% threshold
-[NUMERIC] foreign_currency_sensitivity: $3M → $12M (+291.7%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] interest_rate_swap_status: was $3,000M, now missing
-[VALIDATION] Likely extraction failure: 3/5 previously-populated fields are now null (cash_flow_hedge_aoci, equity_sensitivity_10pct, interest_rate_swap_status)
-[LLM_FLAG] cash_equivalents_amount has increased by more than 50% compared to the prior period.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $427M → $110M (-74.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $427M → $110M (-74.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1M → $0M (-81.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $1M → $0M (-77.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $0M → $0M (-99.6%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely units mismatch: net_derivative_position changed from 0 to 0 (0x)
+[HISTORICAL] [LLM_FLAG] No interest rate swap outstanding as of March 31, 2026 — matured September 2025.
+[HISTORICAL] [LLM_FLAG] FX forwards nearly flat in fair value: $1K net asset (assets $213K, liabilities $212K).
+[HISTORICAL] [LLM_FLAG] All debt is fixed-rate as of March 31, 2026; no interest rate swap outstanding.
+[HISTORICAL] [LLM_FLAG] interest_rate_swap_status and derivative_valuation_level are descriptive fields.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NUMERIC] ir_swap_notional: $30M → $350M (+1066.7%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($116M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
-[NUMERIC] total_debt_principal: $30,000M → $3,000M (-90.0%) — exceeds 20% threshold
-[NEW_FIELD] floating_rate_debt: appeared for first time ($0M)
-[NEW_FIELD] cash_equivalents_amount: appeared for first time ($1,700M)
-[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($116M)
-[LLM_FLAG] IR swap notional of $350 million is significantly higher than the reported $30 million in the prior period, raising questions about the company's interest rate exposure.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $84M → $427M (+411.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $84M → $427M (+411.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $0M → $1M (+2618.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $0M → $1M (+217.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-0M → $0M (+190.9%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $3M, now missing
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+[HISTORICAL] [DROPPED_TO_ZERO] floating_rate_debt: $274M → $0M
+[HISTORICAL] [NUMERIC] cash_equivalents_amount: $1,400M → $1,700M (+21.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text provided contained Leases (Note 7) content rather than the Derivatives and Hedging note; key derivative values sourced from comparative period data in the Q1 2026 filing.
+[HISTORICAL] [LLM_FLAG] Interest rate swap matured September 2025 — no IR swap outstanding at year-end December 31, 2025.
+[HISTORICAL] [LLM_FLAG] All debt is now fixed-rate as of December 31, 2025 — interest rate swap matured September 2025 and the credit facility floating-rate balance appears to have been repaid or this reflects new fixed-rate debt issuances.
+[HISTORICAL] [LLM_FLAG] Total debt increased to $3.0B (from $2.5B), likely reflecting new notes issuances (2031 Notes, 2035 Notes visible in Q1 2026 comparative).
+[HISTORICAL] [LLM_FLAG] interest_rate_swap_status and derivative_valuation_level are descriptive fields.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($118M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
-[NEW_FIELD] total_debt_principal: appeared for first time ($3,000M)
-[NEW_FIELD] floating_rate_debt: appeared for first time ($0M)
-[NUMERIC] cash_equivalents_amount: $116M → $1,700M (+1361.7%) — exceeds 20% threshold
-[NUMERIC] foreign_currency_sensitivity: $3M → $118M (+3816.7%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] interest_rate_swap_status: was $3,000M, now missing
-[LLM_FLAG] fixed_rate_notes_billion value differs from prior period; importance noted for company debt structure.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-20 ===
+[HISTORICAL] [DROPPED_TO_ZERO] ir_swap_notional: $350M → $0M
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1M → $0M (-96.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $0M → $0M (+33.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $1M → $-0M (-125.6%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] cash_flow_hedge_aoci: $-3M → $0M
+[HISTORICAL] [DROPPED_TO_ZERO] expected_12mo_reclass_from_aoci: $4M → $0M
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
+[HISTORICAL] [NUMERIC] cash_equivalents_amount: $2,200M → $1,400M (-36.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Interest rate swap matured in September 2025 — no IR swap outstanding at period end.
+[HISTORICAL] [LLM_FLAG] AOCL for interest rate swaps went to $0 at September 30, 2025 — fully amortized.
+[HISTORICAL] [LLM_FLAG] Interest rate swap matured September 2025; floating-rate debt of $274.4M now unhedged.
+[HISTORICAL] [LLM_FLAG] interest_rate_swap_status and derivative_valuation_level are descriptive fields.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] ir_swap_notional: was $30M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($116M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
-[NUMERIC] total_debt_principal: $30,000M → $3,000M (-90.0%) — exceeds 20% threshold
-[NEW_FIELD] floating_rate_debt: appeared for first time ($0M)
-[NEW_FIELD] cash_equivalents_amount: appeared for first time ($1,700M)
-[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($116M)
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (ir_swap_notional)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $143M → $78M (-45.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $143M → $78M (-45.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $2M → $1M (-46.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $2M → $1M (-52.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-6M → $-3M (+52.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $9M → $4M (-50.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $80M → $98M (+22.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] foreign_currency_sensitivity: $80M → $98M (+22.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Interest rate swap de-designated from hedge accounting since June 30, 2020; matures September 2025.
+[HISTORICAL] [LLM_FLAG] total_derivative_asset derived from combining derivatives note with fair value disclosures gross breakdown.
+[HISTORICAL] [LLM_FLAG] interest_rate_swap_status and derivative_valuation_level are descriptive fields, not numeric.
+[HISTORICAL] [LLM_FLAG] total_debt_principal and cash_equivalents_amount rounded per company disclosure style.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] ir_swap_notional: was $30M, now missing
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (ir_swap_notional)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] ir_swap_notional: $2M → $30M (+1400.0%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $3M, now missing
-[NUMERIC] fixed_rate_notes_billion: $2M → $3M (+34.8%) — exceeds 20% threshold
-[DROPPED_TO_ZERO] floating_rate_debt: $274M → $0M
-[NUMERIC] cash_equivalents_amount: $1,400M → $1,700M (+21.4%) — exceeds 20% threshold
-[LLM_FLAG] Total debt principal increased from $2.5 billion to $3.0 billion (20% increase) - material change within expected range
-[LLM_FLAG] Floating rate debt decreased from $274.4 million to $0 million (100% decrease) - significant change suggesting refinancing or debt restructuring
-[LLM_FLAG] Cash equivalents increased from $1.4 billion to $1.7 billion (21% increase) - plausible
-[LLM_FLAG] Foreign currency sensitivity increased from $112.8 million to $117.5 million (4% increase) - consistent with higher cash balances
-[LLM_FLAG] Interest rate swap status not explicitly described in current period section - prior period indicated active swaps converting floating to fixed rates, but no current activity disclosed
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
-[NUMERIC] cash_equivalents_amount: $2,200M → $1,400M (-36.4%) — exceeds 20% threshold
-[LLM_FLAG] cash_equivalents_amount: Declined from $2,200M to $1,400M (36% decrease) - plausible given business operations but significant change
-[LLM_FLAG] foreign_currency_sensitivity: Increased from $97.9M to $112.8M (15% increase) - within normal range despite cash decline, likely due to currency composition shift
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] foreign_currency_sensitivity: $80M → $98M (+22.5%) — exceeds 20% threshold
-[LLM_FLAG] foreign_currency_sensitivity: Increased from $79.9 million (prior period) to $97.9 million (22.4% increase) - within normal variance but notable given volatile FX environment
-[LLM_FLAG] cash_equivalents_amount: Increased from $2,100.0 million to $2,200.0 million (4.8% increase) - modest improvement
-[LLM_FLAG] fx_forward_fair_value: Described as 'immaterial' rather than quantified - consistent with prior period pattern but limits precision
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
-[NUMERIC] fixed_rate_notes_billion: $3M → $2M (-25.8%) — exceeds 20% threshold
-[NEW_FIELD] floating_rate_debt: appeared for first time ($274M)
-[NUMERIC] cash_equivalents_amount: $1,700M → $2,100M (+23.5%) — exceeds 20% threshold
-[NUMERIC] foreign_currency_sensitivity: $116M → $80M (-31.3%) — exceeds 20% threshold
-[LLM_FLAG] total_debt_principal decreased from $3.0B to $2.5B (16.7% decrease) - material change but within normal operating variance
-[LLM_FLAG] cash_equivalents_amount increased from $1.7B to $2.1B (23.5% increase) - significant but plausible
-[LLM_FLAG] foreign_currency_sensitivity decreased from $116.3M to $79.9M (31.3% decrease) - consistent with lower cash balances and/or lower foreign currency holdings
-[LLM_FLAG] floating_rate_debt changed from 'None' to $274.4M - significant change in debt structure, may reflect refinancing or new borrowings
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
-[LLM_FLAG] fx_forward_fair_value: Disclosed as 'immaterial' but no quantitative value provided; cannot verify precision
-[LLM_FLAG] fx_forwards_outstanding: Notional amount not provided in the disclosure; only fair value mentioned
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-20 ===
+[HISTORICAL] [LLM_FLAG] Interest rate swap was de-designated from hedge accounting effective June 30, 2020; subsequent FV changes recorded in Other income, net. AOCL balance of $8.7M (pre-tax) / $6.41M (net of tax) being amortized into Interest expense.
+[HISTORICAL] [LLM_FLAG] total_derivative_asset derived from combining derivatives note net FV table with fair value disclosures gross asset/liability breakdown.
+[HISTORICAL] [LLM_FLAG] interest_rate_swap_status and derivative_valuation_level are descriptive fields, not numeric — values set to null per schema (numeric extraction only).
+[HISTORICAL] [LLM_FLAG] total_debt_principal and cash_equivalents_amount rounded to nearest $100M per company's own disclosure style.

@@ -1,35 +1,28 @@
 issuer: Jacobs Solutions
 ticker: J
-cik: "52988"
+cik: '52988'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   swap_notional_value:
-    description: "outstanding swap agreement notional amount"
+    description: outstanding swap agreement notional amount
     section: market_risk
   variable_rate_exposure:
-    description: "principal amount subject to variable interest rate risk"
+    description: principal amount subject to variable interest rate risk
     section: market_risk
   treasury_lock_notional:
-    description: "treasury lock arrangements aggregate notional value"
+    description: treasury lock arrangements aggregate notional value
     section: market_risk
   fx_contracts_notional:
-    description: "notional value of exchange rate sensitive instruments"
+    description: notional value of exchange rate sensitive instruments
     section: market_risk
   interest_rate_sensitivity:
-    description: "impact of 1% rate increase on interest expense"
+    description: impact of 1% rate increase on interest expense
     section: market_risk
   weighted_average_floating_borrowings:
-    description: "floating rate borrowings subject to rate exposure"
+    description: floating rate borrowings subject to rate exposure
     section: market_risk
-
-# Unusual features identified:
-#   - derivatives data scattered across narrative without consolidated tables
-#   - references ASC 815 compliance
-#   - ESG-linked interest rate adjustments mentioned
-#   - settled treasury locks from prior year still disclosed
-#   - leverage ratio-based margin adjustments detailed
-
+sections:
+  financial_instruments:
+    heading: 17\.\s+Commitments\s+and\s+Contingencies\s+and\s+Derivative\s+Financial\s+Instruments
