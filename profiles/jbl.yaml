@@ -1,40 +1,34 @@
 issuer: Jabil
 ticker: JBL
-cik: "898293"
+cik: '898293'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fx_forward_currencies:
-    description: "Primary currencies for FX forwards"
+    description: Primary currencies for FX forwards
     section: market_risk
   fx_forward_maturity:
-    description: "Typical maturity period for FX forwards"
+    description: Typical maturity period for FX forwards
     section: market_risk
   fx_sensitivity_test:
-    description: "10% hypothetical change impact assessment"
+    description: 10% hypothetical change impact assessment
     section: market_risk
   hedge_accounting_types:
-    description: "Cash flow hedges, net investment hedges, economic hedges"
+    description: Cash flow hedges, net investment hedges, economic hedges
     section: market_risk
   interest_rate_swap_notional:
-    description: "Notional amount of interest rate swaps"
+    description: Notional amount of interest rate swaps
     section: market_risk
   interest_rate_swap_maturity:
-    description: "Expiration date of interest rate swaps"
+    description: Expiration date of interest rate swaps
     section: market_risk
   interest_rate_sensitivity_test:
-    description: "100 basis point change impact assessment"
+    description: 100 basis point change impact assessment
     section: market_risk
   variable_rate_debt_outstanding:
-    description: "Outstanding amounts under variable rate facilities"
+    description: Outstanding amounts under variable rate facilities
     section: market_risk
-
-# Unusual features identified:
-#   - Combined quantitative/qualitative disclosure format
-#   - No tabular presentation of notional amounts or fair values
-#   - Specific mention of forward contracts expiring in less than three months
-#   - Year-over-year comparison showing zero interest rate swaps in prior period
-
+sections:
+  financial_instruments:
+    heading: Fair\s+Value\s+Measurements

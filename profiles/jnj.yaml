@@ -1,22 +1,18 @@
 issuer: Johnson & Johnson
 ticker: JNJ
-cik: "200406"
+cik: '200406'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   forward_contracts_amount:
-    description: "amounts related to forward foreign exchange contracts"
+    description: amounts related to forward foreign exchange contracts
     section: market_risk
   currency_transaction_gains_losses:
-    description: "net currency transaction gains and losses"
+    description: net currency transaction gains and losses
     section: market_risk
-
-# Unusual features identified:
-#   - Section is primarily a cross-reference to other parts of the filing
-#   - Actual derivatives data appears to be in Note 1 and Item 7 rather than this section
-#   - Incomplete note headings suggest data extraction may be truncated
-#   - No substantive quantitative data present in this excerpt
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+value\s+measurements
+  market_risk:
+    heading: Item\s+3\s+—\s+Quantitative\s+and\s+qualitative\s+disclosures\s+about\s+market\s+risk

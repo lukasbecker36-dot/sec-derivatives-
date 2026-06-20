@@ -1,18 +1,13 @@
 issuer: Johnson Controls
 ticker: JCI
-cik: "833444"
+cik: '833444'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   reference_location:
-    description: "Cross-reference to Risk Management section in MD&A"
+    description: Cross-reference to Risk Management section in MD&A
     section: market_risk
-
-# Unusual features identified:
-#   - Minimal standalone content - only contains cross-reference to MD&A Risk Management section
-#   - No actual quantitative or qualitative market risk data in this section
-#   - Requires following reference to Item 7 MD&A for actual risk disclosures
-
+sections:
+  financial_instruments:
+    heading: 10\.\s+FAIR\s+VALUE\s+MEASUREMENTS
