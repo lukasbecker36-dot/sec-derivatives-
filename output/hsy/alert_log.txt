@@ -1,82 +1,108 @@
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($973M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $31M → $236M (+661.3%) — exceeds 20% threshold
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($39M)
-[NEW_FIELD] foreign_currency_forwards_fair_value: appeared for first time ($-1M)
-[NEW_FIELD] interest_rate_sensitivity_variable_debt: appeared for first time ($9M)
-[NEW_FIELD] interest_rate_sensitivity_fixed_debt: appeared for first time ($236M)
-[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($39M)
-[LLM_FLAG] ir_sensitivity_100bp has increased from the prior period's value of 31.0 by more than 50%, indicating a significant increase in fair value impact from fixed-rate debt changes.
+=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-20 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($11M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($130M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($221M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($158M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($64M)
+[HISTORICAL] [NEW_FIELD] equity_derivatives_notional: appeared for first time ($37M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($11M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($130M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-119M)
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-3M)
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_forwards_fair_value: was $-1M, now missing
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity_variable_debt: $9M → $2M (-80.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Deferred compensation derivatives ($3,270K) included in total derivative liabilities as presented in the fair value table
+[HISTORICAL] [LLM_FLAG] Notional amounts are not disclosed in this note; they appear in the derivatives note
+[HISTORICAL] [LLM_FLAG] Large spike in commodities futures/options liabilities ($122,402K) vs Q3 2025 ($4,528K) — material increase in net commodity hedge liability position in Q1 2026
+[HISTORICAL] [LLM_FLAG] ir_swap_notional not disclosed at period-end; swaps are settled upon debt issuance so outstanding notional may be zero
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass is a net loss (-2.686M), primarily associated with interest rate swap agreements
+[HISTORICAL] [LLM_FLAG] net derivative position is a large net liability (-118.933M) driven by commodity futures/options liabilities of $122.402M
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $31M → $236M (+661.3%) — exceeds 20% threshold
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($39M)
-[NEW_FIELD] foreign_currency_forwards_fair_value: appeared for first time ($-1M)
-[NEW_FIELD] interest_rate_sensitivity_variable_debt: appeared for first time ($9M)
-[NEW_FIELD] interest_rate_sensitivity_fixed_debt: appeared for first time ($236M)
-[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($39M)
-[LLM_FLAG] ir_sensitivity_100bp value decreased from prior period (31.0 to 236.0), indicating a larger impact from interest rate fluctuations on fixed-rate long-term debt.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-20 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $8M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $11M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $261M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $240M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $21M, now missing
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $592M → $973M (+64.4%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] equity_derivatives_notional: was $33M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $10M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $8M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-11M, now missing
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-16M → $-39M (-134.5%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] foreign_currency_forwards_fair_value: appeared for first time ($-1M)
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity_variable_debt: $8M → $9M (+22.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] foreign_currency_sensitivity: $-16M → $-39M (-134.5%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 10/16 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability, fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional...)
+[HISTORICAL] [LLM_FLAG] Section text provided contains commodity market risk discussion and sensitivity analysis, not the Note 5 Derivative Instruments detail table; FX notional, derivative assets/liabilities, and AOCI data are not extractable from the excerpt provided
+[HISTORICAL] [LLM_FLAG] foreign_currency_forwards_fair_value is a net liability (-0.7M) at December 31, 2025
+[HISTORICAL] [LLM_FLAG] peanuts and almonds cannot be hedged with active futures contracts per the disclosure
 
-=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fx_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-28 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $18M → $8M (-54.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $9M → $11M (+23.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $212M → $592M (+179.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $21M → $10M (-49.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $6M → $8M (+46.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $15M → $2M (-86.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-33M → $-16M (+49.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity_variable_debt: $5M → $8M (+45.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] foreign_currency_sensitivity: $-33M → $-16M (+49.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Deferred compensation derivatives ($2,249K) included in total derivative liabilities as presented in the fair value table
+[HISTORICAL] [LLM_FLAG] Notional amounts are not disclosed in this note; they appear in the derivatives note
+[HISTORICAL] [LLM_FLAG] Net derivative position is now a net liability ($8.212M assets vs $10.665M liabilities) — shift from Q1/Q2 2025 net asset positions
+[HISTORICAL] [LLM_FLAG] ir_swap_notional not disclosed at period-end; swaps are settled upon debt issuance so outstanding notional may be zero
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass is a net loss (-10.730M), primarily associated with interest rate swap agreements
+[HISTORICAL] [LLM_FLAG] interest_rate_sensitivity_variable_debt: company has net cash position at Q3 2025, so 100bp increase would increase interest income by $7.7M (not an expense impact)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-20 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($18M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($9M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($250M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($229M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($20M)
+[HISTORICAL] [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($212M)
+[HISTORICAL] [NEW_FIELD] equity_derivatives_notional: appeared for first time ($30M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($21M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($15M)
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-11M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-264M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-33M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity_variable_debt: appeared for first time ($5M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity_fixed_debt: appeared for first time ($-264M)
+[HISTORICAL] [NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($-33M)
+[HISTORICAL] [LLM_FLAG] Deferred compensation derivatives ($2,877K) included in total derivative liabilities as presented in the fair value table
+[HISTORICAL] [LLM_FLAG] Notional amounts are not disclosed in this note; they appear in the derivatives note
+[HISTORICAL] [LLM_FLAG] Significant decline in commodities derivative assets vs Q1 2025 ($13,322K vs $242,791K) — large drawdown in commodity hedge fair values
+[HISTORICAL] [LLM_FLAG] ir_swap_notional not disclosed at period-end; swaps are settled upon debt issuance so outstanding notional may be zero
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass is a net loss (-11.370M), primarily associated with interest rate swap agreements
+[HISTORICAL] [LLM_FLAG] interest_rate_sensitivity_variable_debt: company has net cash position at Q2 2025, so 100bp increase would increase interest income by $5.3M (not an expense impact)
 
-=== 10-Q | Period ending 2025-09-28 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-Q/A | Period ending 2025-03-30 | Processed 2026-06-20 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $248M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $12M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $199M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $103M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $96M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_derivatives_notional: was $275M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_derivatives_notional: was $31M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $248M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $12M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $236M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-5M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-307M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-29M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity_variable_debt: was $3M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity_fixed_debt: was $-307M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_sensitivity: was $-29M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 16/16 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability, fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional...)
 
-=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2026-03-29 | Processed 2026-05-30 ===
-[NUMERIC] ir_sensitivity_100bp: $8M → $3M (-55.8%) — exceeds 20% threshold
-[NUMERIC] foreign_currency_forwards_fair_value: $16M → $32M (+91.5%) — exceeds 20% threshold
-[NUMERIC] interest_rate_sensitivity_variable_debt: $8M → $2M (-76.6%) — exceeds 20% threshold
-[NUMERIC] foreign_currency_sensitivity: $16M → $32M (+91.5%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp: Current quarter value of $1.8 million is 77% lower than prior period value of $7.7 million. This reflects the specific quarter being measured (Q1 2026 vs full year 2025 comparison), with the filing showing $3.4 million for full 2025 as a comparison point. The Q1 2026 specific impact is lower due to the shorter period.
-[LLM_FLAG] foreign_currency_sensitivity: Value of $31.6 million decreased 92% from prior period of $16.5 million. Note: The prior period value appears to represent net fair value, while current disclosure provides the sensitivity measure (potential decline in fair value from 10% adverse change), which are different metrics.
-
-=== 10-Q | Period ending 2025-09-28 | Processed 2026-05-30 ===
-[NUMERIC] ir_sensitivity_100bp: $5M → $8M (+45.3%) — exceeds 20% threshold
-[NUMERIC] foreign_currency_forwards_fair_value: $33M → $16M (-49.7%) — exceeds 20% threshold
-[NUMERIC] interest_rate_sensitivity_variable_debt: $5M → $8M (+45.3%) — exceeds 20% threshold
-[NUMERIC] foreign_currency_sensitivity: $33M → $16M (-49.7%) — exceeds 20% threshold
-[LLM_FLAG] fx_forwards_fair_value decreased significantly from $32.8M (prior period) to $16.5M (current period) - 49.7% decrease. This is a plausible reduction in exposure but near the 50% threshold.
-[LLM_FLAG] interest_rate_sensitivity_fixed_debt increased from $264M (prior) to $273M (current) - 3.4% increase, within normal range.
-[LLM_FLAG] interest_rate_sensitivity_variable_debt increased from $5.3M (prior) to $7.7M (current) - 45.3% increase, plausible due to higher short-term debt position mentioned ($576M net debt vs. prior year implied position).
-
-=== 10-Q | Period ending 2025-06-29 | Processed 2026-05-30 ===
-[NUMERIC] ir_sensitivity_100bp: $3M → $5M (+55.9%) — exceeds 20% threshold
-[NUMERIC] interest_rate_sensitivity_variable_debt: $3M → $5M (+55.9%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp increased from 3.4 million (prior period) to 5.3 million (current period), but this is not a concern as the prior period was for full year 2024 and current period is only 6 months of 2025; the metric also changed from expense impact to income impact due to net cash position
-[LLM_FLAG] interest_rate_sensitivity_fixed_debt increased from 307.0 million to 264.0 million (14% decrease) - this is within acceptable range and reflects changed debt portfolio
-[LLM_FLAG] foreign_currency_forwards_fair_value increased from 29.0 million to 32.8 million (13% increase) - within acceptable range
-
-=== 10-Q | Period ending 2025-03-30 | Processed 2026-05-30 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
-[NEW_FIELD] foreign_currency_forwards_fair_value: appeared for first time ($29M)
-[NEW_FIELD] interest_rate_sensitivity_variable_debt: appeared for first time ($3M)
-[NEW_FIELD] interest_rate_sensitivity_fixed_debt: appeared for first time ($307M)
-[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($29M)
-[LLM_FLAG] Commodity derivative notional value decreased significantly from $667.4 million (Dec 31, 2024) to $274.7 million (Mar 30, 2025) - a 59% decline. This is substantial and warrants investigation; likely due to quarterly hedging adjustments and realized positions rolling off.
-
-=== 10-Q/A | Period ending 2025-03-30 | Processed 2026-05-30 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $354M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $9M, now missing
-[DISAPPEARED_FIELD] foreign_currency_forwards_fair_value: was $-1M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity_variable_debt: was $9M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity_fixed_debt: was $236M, now missing
-[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $-39M, now missing
-[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, foreign_currency_forwards_fair_value, interest_rate_sensitivity_variable_debt, interest_rate_sensitivity_fixed_debt...)
-
-=== 10-Q | Period ending 2026-03-29 | Processed 2026-05-29 ===
-[LLM_FLAG] FX forwards outstanding increased 47.6% from $240.4M (95.0 + 259.0 - 184.2 - 140.2 = prior period calculation) to $354.0M in 2025, potentially due to increased hedging activity or business expansion
-[LLM_FLAG] Commodity derivative notional value increased 45.8% from $667.4M in 2024 to $973.1M in 2025, indicating significantly increased hedging of commodity price risk
-[LLM_FLAG] Interest rate sensitivity on variable debt increased 34.3% from $7.0M (2024) to $9.4M (2025), consistent with higher debt levels or interest rate environment
-
+=== 10-Q | Period ending 2025-03-30 | Processed 2026-06-20 ===
+[HISTORICAL] [LLM_FLAG] Deferred compensation derivatives ($1,886K) included in total derivative liabilities as presented in the fair value table; these are economically offsetting liabilities on deferred compensation plans
+[HISTORICAL] [LLM_FLAG] Notional amounts are not disclosed in this note; they appear in the derivatives note
+[HISTORICAL] [LLM_FLAG] ir_swap_notional not disclosed in period-end table; swaps are settled upon debt issuance so outstanding notional may be zero
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass is a net loss (-5.361M), primarily associated with interest rate swap agreements
+[HISTORICAL] [LLM_FLAG] interest_rate_sensitivity_variable_debt is a change in interest expense (not fair value) — net cash position at Q1 2025 so 100bp increase would increase expense by $3.4M
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp and interest_rate_sensitivity_fixed_debt both reference fair value of fixed-rate debt

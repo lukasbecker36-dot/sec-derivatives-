@@ -1,51 +1,118 @@
-=== 10-K | Period ending 2025-10-26 | Processed 2026-06-04 ===
-[NUMERIC] foreign_currency_net_position: $1,100M → $800M (-27.3%) — exceeds 20% threshold
+=== 10-Q | Period ending 2026-04-26 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $0M → $0M (-21.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $4M → $3M (-22.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $15M → $19M (+26.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $15M → $20M (+32.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_hedge_fair_value: $15M → $20M (+33.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All values reported in thousands in source; converted to millions above.
+[HISTORICAL] [LLM_FLAG] No FX or IR derivatives — Hormel uses commodity derivatives only (futures, swaps, options on grain, lean hog, natural gas, diesel fuel, pork).
+[HISTORICAL] [LLM_FLAG] Short-term Marketable Securities ($33,107k) includes Level 1 ($7,411k) and Level 2 ($25,696k); portfolio composition described qualitatively as equities, government securities, money market (Level 1) and corporate bonds, asset-backed securities (Level 2).
+[HISTORICAL] [LLM_FLAG] Note renumbered to Note L in this 10-Q filing (was Note I/J in prior quarters).
+[HISTORICAL] [LLM_FLAG] Section also covers a $40.0 million secured promissory note receivable from sale of whole-bird turkey business (nonrecurring FV measurement at inception).
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional amounts disclosed in physical units only (bushels, pounds, MMBtu, gallons), not dollar amounts — commodity_derivatives_notional set to null.
+[HISTORICAL] [LLM_FLAG] No FX or equity derivatives. No active interest rate swap.
+[HISTORICAL] [LLM_FLAG] Derivative asset value confirmed by both Gross FV table ($22,516K) and Fair Value Measurements table ($22,516K).
+[HISTORICAL] [LLM_FLAG] AOCL Derivatives & Hedging balance $22.527M includes commodity cash flow hedge gains ($19.8M) and settled interest rate positions ($10.0M); net of tax effects.
+[HISTORICAL] [LLM_FLAG] FV Measurements table truncated in provided text; derivative liability confirmed from Gross FV table.
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity uses 10% rate change (not 100bp); ir_sensitivity_100bp set to null.
+[HISTORICAL] [LLM_FLAG] Long-term debt fair value $2.5B converted to $2,500M — unchanged despite $500M notes maturing in Q2 FY2026 (remaining debt at lower fair value rate).
+[HISTORICAL] [LLM_FLAG] Foreign currency net position $0.8B converted to $800M — unchanged from Q1 FY2026.
+[HISTORICAL] [LLM_FLAG] major_currency_exposures field requires numeric — set to null; text: Chinese yuan, Indonesian rupiah, Philippine peso.
+[HISTORICAL] [LLM_FLAG] Market risk section notes 'no material changes' from 10-K for fiscal year ended October 26, 2025 except as noted — disclosures are abbreviated.
 
-=== 10-Q | Period ending 2025-04-27 | Processed 2026-06-04 ===
-[NUMERIC] long_term_debt_fair_value: $26,000M → $2,500M (-90.4%) — exceeds 20% threshold
+=== 10-Q | Period ending 2026-01-25 | Processed 2026-06-20 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($0M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $10M → $19M (+97.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $6M → $15M (+169.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $12M → $19M (+57.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $5M → $15M (+175.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_hedge_fair_value: $6M → $15M (+170.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All values reported in thousands in source; converted to millions above.
+[HISTORICAL] [LLM_FLAG] No FX or IR derivatives — Hormel uses commodity derivatives only (futures, swaps, options on grain, lean hog, natural gas, diesel fuel, pork).
+[HISTORICAL] [LLM_FLAG] Short-term Marketable Securities ($33,302k) includes Level 1 ($7,229k) and Level 2 ($26,073k); portfolio composition described qualitatively as equities, government securities, money market (Level 1) and corporate bonds, asset-backed securities (Level 2).
+[HISTORICAL] [LLM_FLAG] Note renumbered from Note I (prior quarters) to Note J in this 10-Q filing.
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional amounts disclosed in physical units only (bushels, pounds, MMBtu, gallons), not dollar amounts — commodity_derivatives_notional set to null.
+[HISTORICAL] [LLM_FLAG] No FX or equity derivatives. Fair Value IR Hedge section no longer present in Q1 FY2026 filing — only the settled Cash Flow IR Hedges (IR locks) are mentioned historically.
+[HISTORICAL] [LLM_FLAG] Derivative asset/liability values from Fair Value Measurements table (in thousands), converted to millions.
+[HISTORICAL] [LLM_FLAG] AOCL Derivatives & Hedging balance $18.985M includes both commodity cash flow hedge gains ($14.9M) and settled interest rate positions ($10.3M) — total exceeds balance due to tax effects.
+[HISTORICAL] [LLM_FLAG] Gross FV of Commodity Contracts Assets: $19,482K; FV Measurements table: $19,483K — one-thousand dollar rounding difference; using FV table figure.
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity uses 10% rate change (not 100bp); ir_sensitivity_100bp set to null.
+[HISTORICAL] [LLM_FLAG] Long-term debt fair value $2.5B converted to $2,500M.
+[HISTORICAL] [LLM_FLAG] Foreign currency net position $0.8B converted to $800M — unchanged from year-end October 26, 2025.
+[HISTORICAL] [LLM_FLAG] major_currency_exposures field requires numeric — set to null; text: Chinese yuan, Indonesian rupiah, Philippine peso.
+[HISTORICAL] [LLM_FLAG] Market risk section notes 'no material changes' from 10-K except as noted below; disclosures are abbreviated vs. prior 10-Q filings.
 
-=== 10-Q | Period ending 2026-04-26 | Processed 2026-06-02 ===
-[NUMERIC] commodity_hedge_fair_value: $15M → $20M (+33.6%) — exceeds 20% threshold
-[LLM_FLAG] commodity_hedge_fair_value increased 33.6% from $14.9M to $19.9M - within normal range
-[LLM_FLAG] commodity_sensitivity_analysis changed from -$32.4M to -$29.7M (8.3% improvement) - minor variance
-[LLM_FLAG] interest_rate_sensitivity decreased from $60.9M to $59.4M (2.5% decline) - minor variance
-[LLM_FLAG] investment_securities_balance increased 0.9% from $222.4M to $224.4M - immaterial change
-[LLM_FLAG] equity_sensitivity_10pct slightly increased from $10.8M to $11.0M (1.9% change) - immaterial
+=== 10-K | Period ending 2025-10-26 | Processed 2026-06-20 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $0M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $14M → $10M (-29.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $6M → $4M (-30.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $8M → $6M (-29.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_hedge_fair_value: $7M → $6M (-25.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] foreign_currency_net_position: $1,100M → $800M (-27.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional amounts disclosed in physical units only (bushels, pounds, MMBtu, gallons), not dollar amounts — commodity_derivatives_notional set to null.
+[HISTORICAL] [LLM_FLAG] No FX or equity derivatives. IR swap was terminated in fiscal 2022 and amortization completed in fiscal 2024.
+[HISTORICAL] [LLM_FLAG] Gross FV values from derivatives note table (in thousands), converted to millions.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci corroborated from Q1 FY2026 filing opening balance ($12,038K = $12.038M) — the 10-K section_text was truncated before the AOCL table.
+[HISTORICAL] [LLM_FLAG] AOCL contains both commodity cash flow hedge gains ($5.4M expected reclass) and settled interest rate positions ($10.5M) per AOCL Impact disclosure.
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity uses 10% rate change (not 100bp); ir_sensitivity_100bp set to null.
+[HISTORICAL] [LLM_FLAG] Long-term debt fair value $2.6B converted to $2,600M — increased from $2.5B at July 27, 2025.
+[HISTORICAL] [LLM_FLAG] Foreign currency net position $0.8B converted to $800M — significant decline from $1.1B-$1.2B in quarterly filings due to $163.7M Garudafood impairment.
+[HISTORICAL] [LLM_FLAG] Currency exposure changed from prior quarters — now Philippine peso replaces Brazilian real in top-3.
+[HISTORICAL] [LLM_FLAG] major_currency_exposures field requires numeric — set to null; text: Chinese yuan, Indonesian rupiah, Philippine peso.
 
-=== 10-Q | Period ending 2026-01-25 | Processed 2026-06-02 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $66M, now missing
-[NUMERIC] commodity_hedge_fair_value: $7M → $15M (+101.4%) — exceeds 20% threshold
-[NUMERIC] commodity_sensitivity_analysis: $-26M → $-32M (-22.7%) — exceeds 20% threshold
-[NUMERIC] foreign_currency_net_position: $1,100M → $800M (-27.3%) — exceeds 20% threshold
-[LLM_FLAG] commodity_hedge_fair_value increased 101% from $7.4M to $14.9M - significant increase in hedging position
-[LLM_FLAG] commodity_sensitivity_analysis increased 23% in magnitude from -$26.4M to -$32.4M - consistent with larger hedge position
-[LLM_FLAG] foreign_currency_net_position decreased 27% from $1.1B to $0.8B - material reduction in foreign currency exposure
-[LLM_FLAG] major_currency_exposures changed - Philippine peso replaces Brazilian real; Chinese yuan and Indonesian rupiah maintained
-[LLM_FLAG] investment_securities_balance increased 3.4% from $215.0M to $222.4M - modest increase in COLI policies
-[LLM_FLAG] interest_rate_sensitivity methodology changed - prior period reported 100bp sensitivity ($65.9M), current period reports 10% rate change ($60.9M/-$56.5M), making direct comparison problematic
+=== 10-Q | Period ending 2025-07-27 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $0M → $0M (+25.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $0M → $0M (+98.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $11M → $14M (+25.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $3M → $6M (+98.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All values reported in thousands in source; converted to millions above.
+[HISTORICAL] [LLM_FLAG] No FX or IR derivatives — Hormel uses commodity derivatives only (futures, swaps, options on grain, lean hog, natural gas, diesel fuel).
+[HISTORICAL] [LLM_FLAG] Short-term Marketable Securities ($31,480k) includes Level 1 ($6,640k) and Level 2 ($24,840k) components; no breakdown into equity vs. corporate debt.
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional amounts disclosed in physical units only (bushels, pounds, MMBtu, gallons), not dollar amounts — commodity_derivatives_notional set to null.
+[HISTORICAL] [LLM_FLAG] No FX or equity derivatives. IR swap was terminated in fiscal 2022 and amortization completed in fiscal 2024.
+[HISTORICAL] [LLM_FLAG] Derivative asset/liability values from Fair Value Measurements table (in thousands), converted to millions.
+[HISTORICAL] [LLM_FLAG] AOCL Derivatives & Hedging balance includes both commodity cash flow hedge gains ($6.2M) and settled interest rate positions ($10.8M).
+[HISTORICAL] [LLM_FLAG] Gross Fair Value of Commodity Contracts Assets: $13,884K; Commodity Derivatives in FV table: $14,016K — slight difference due to netting; using FV measurement table figure.
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity uses 10% rate change (not 100bp); ir_sensitivity_100bp set to null.
+[HISTORICAL] [LLM_FLAG] Long-term debt fair value reported in billions ($2.5B), converted to millions.
+[HISTORICAL] [LLM_FLAG] Foreign currency net position $1.1B converted to $1,100M — note this declined from $1.2B in prior quarter.
+[HISTORICAL] [LLM_FLAG] major_currency_exposures field requires numeric — set to null; text: Indonesian rupiah, Chinese yuan, Brazilian real.
+[HISTORICAL] [LLM_FLAG] Rabbi trust investment sensitivity ($10.7M) captured in investment_sensitivity field.
 
-=== 10-Q | Period ending 2025-07-27 | Processed 2026-06-02 ===
-[LLM_FLAG] commodity_sensitivity_analysis: Prior value -29.2 vs current -26.4. Change of 9.6% is within tolerance.
-[LLM_FLAG] foreign_currency_net_position: Prior value $1.2 billion vs current $1.1 billion. Change of 8.3% is within tolerance.
-[LLM_FLAG] interest_rate_sensitivity: Prior period showed separate 100bp sensitivity of 68.0 vs current 10% change sensitivity of 65.9. These are different methodologies; current uses 10% rate change.
+=== 10-Q | Period ending 2025-04-27 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $0M → $0M (-33.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $17M → $11M (-33.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $13M → $8M (-38.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $18M → $14M (-21.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $12M → $8M (-39.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_hedge_fair_value: $16M → $8M (-49.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All values reported in thousands in source; converted to millions above.
+[HISTORICAL] [LLM_FLAG] No FX or IR derivatives — Hormel uses commodity derivatives only (futures, swaps, options on grain, lean hog, natural gas, diesel fuel).
+[HISTORICAL] [LLM_FLAG] Short-term Marketable Securities ($29,293k) includes Level 1 ($6,055k) and Level 2 ($23,238k) components; no breakdown into equity vs. corporate debt.
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional amounts disclosed in physical units only (bushels, pounds, MMBtu, gallons), not dollar amounts — commodity_derivatives_notional set to null.
+[HISTORICAL] [LLM_FLAG] No FX or equity derivatives. IR swap was terminated in fiscal 2022 and amortization completed in fiscal 2024.
+[HISTORICAL] [LLM_FLAG] Derivative asset/liability values from Fair Value Measurements table (in thousands), converted to millions.
+[HISTORICAL] [LLM_FLAG] AOCL Derivatives & Hedging balance includes both commodity cash flow hedge gains ($7.5M) and settled interest rate positions ($11.0M).
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity uses 10% rate change (not 100bp); ir_sensitivity_100bp set to null.
+[HISTORICAL] [LLM_FLAG] Long-term debt fair value reported in billions ($2.5B), converted to millions.
+[HISTORICAL] [LLM_FLAG] Foreign currency net position $1.2B converted to $1,200M.
+[HISTORICAL] [LLM_FLAG] major_currency_exposures field requires numeric — set to null; text: Chinese yuan, Indonesian rupiah, Brazilian real.
+[HISTORICAL] [LLM_FLAG] Rabbi trust investment sensitivity ($10.1M) captured in investment_sensitivity field.
 
-=== 10-Q | Period ending 2025-04-27 | Processed 2026-06-02 ===
-[NUMERIC] commodity_hedge_fair_value: $16M → $8M (-49.7%) — exceeds 20% threshold
-[LLM_FLAG] commodity_hedge_fair_value increased 234% from $(5.9)M to $7.8M - significant swing from loss position to gain position
-[LLM_FLAG] ir_sensitivity_100bp decreased 7% from $73.0M to $68.0M - minor change but directionally consistent with interest rate environment
-[LLM_FLAG] fixed_rate_notes_billion increased 4% from $2.4B to $2.5B - moderate increase in debt levels
-[LLM_FLAG] commodity_sensitivity_analysis improved 6% from $(31.0)M to $(29.2)M - smaller negative impact than prior period
-
-=== 10-Q | Period ending 2025-01-26 | Processed 2026-06-02 ===
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($10M)
-[NUMERIC] commodity_hedge_fair_value: $6M → $16M (+181.8%) — exceeds 20% threshold
-[NUMERIC] foreign_currency_net_position: $800M → $1,200M (+50.0%) — exceeds 20% threshold
-[LLM_FLAG] foreign_currency_net_position: Increased 50% from $800M to $1,200M - significant change in net asset position in foreign currencies
-[LLM_FLAG] commodity_hedge_fair_value: Changed from $(5.9)M loss position to $15.5M gain position - substantial swing of $21.4M
-[LLM_FLAG] commodity_sensitivity_analysis: Changed from -$29.3M to -$31.0M impact - relatively stable but slight deterioration
-[LLM_FLAG] major_currency_exposures: Changed from Chinese yuan, Indonesian rupiah, Philippine peso to Chinese yuan, Indonesian rupiah, Brazilian real - Philippine peso replaced with Brazilian real
-[LLM_FLAG] ir_sensitivity_100bp: Increased from $62.2M to $73.0M - 17.4% increase in interest rate sensitivity
-
-=== 10-Q | Period ending 2026-04-26 | Processed 2026-06-01 ===
-[LLM_FLAG] FX net asset position decreased 33% from $1.2 billion (Oct 27, 2024) to $0.8 billion (Oct 26, 2025) - substantial decline warrants investigation
-
+=== 10-Q | Period ending 2025-01-26 | Processed 2026-06-20 ===
+[HISTORICAL] [LLM_FLAG] All values reported in thousands in source; converted to millions above.
+[HISTORICAL] [LLM_FLAG] No FX or IR derivatives — Hormel uses commodity derivatives only (futures, swaps, options on grain, lean hog, natural gas, diesel fuel).
+[HISTORICAL] [LLM_FLAG] Short-term Marketable Securities ($26,016k) includes a mix of Level 1 and Level 2 instruments; no breakdown into equity vs. corporate debt securities.
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional amounts disclosed in physical units only (bushels, pounds, MMBtu, gallons), not dollar amounts — commodity_derivatives_notional set to null.
+[HISTORICAL] [LLM_FLAG] No FX or equity derivatives. IR swap was terminated in fiscal 2022 and amortization completed in fiscal 2024.
+[HISTORICAL] [LLM_FLAG] Derivative asset/liability values from Fair Value Measurements table (in thousands), converted to millions.
+[HISTORICAL] [LLM_FLAG] AOCL Derivatives & Hedging balance includes both commodity cash flow hedge gains ($12.4M) and settled interest rate positions ($11.3M).
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity uses 10% rate change (not 100bp); ir_sensitivity_100bp set to null.
+[HISTORICAL] [LLM_FLAG] Long-term debt fair value reported in billions ($2.4B), converted to millions for long_term_debt_fair_value.
+[HISTORICAL] [LLM_FLAG] Foreign currency net position $1.2B converted to $1,200M.
+[HISTORICAL] [LLM_FLAG] major_currency_exposures field requires string value — set to null as schema expects numeric; text: Chinese yuan, Indonesian rupiah, Brazilian real.
+[HISTORICAL] [LLM_FLAG] No equity price risk sensitivity — rabbi trust investment sensitivity ($10.2M) captured in investment_sensitivity field.
