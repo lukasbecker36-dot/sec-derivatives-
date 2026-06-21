@@ -1,48 +1,40 @@
 issuer: Kraft Heinz
 ticker: KHC
-cik: "1637459"
+cik: '1637459'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   notional_amounts:
-    description: "notional values by instrument type for current and prior year"
+    description: notional values by instrument type for current and prior year
     section: market_risk
   fair_value_hierarchy:
-    description: "Level 1, Level 2, Level 3 breakdown of derivative fair values"
+    description: Level 1, Level 2, Level 3 breakdown of derivative fair values
     section: market_risk
   derivative_assets_liabilities:
-    description: "fair value of derivatives recorded as assets and liabilities"
+    description: fair value of derivatives recorded as assets and liabilities
     section: market_risk
   hedge_designations:
-    description: "derivatives designated vs not designated as hedging instruments"
+    description: derivatives designated vs not designated as hedging instruments
     section: market_risk
   net_investment_hedges:
-    description: "foreign currency debt and derivatives used for net investment hedging"
+    description: foreign currency debt and derivatives used for net investment hedging
     section: market_risk
   cash_flow_hedges:
-    description: "foreign exchange contracts designated as cash flow hedges"
+    description: foreign exchange contracts designated as cash flow hedges
     section: market_risk
   fair_value_hedges:
-    description: "derivatives hedging foreign currency exposure of loans"
+    description: derivatives hedging foreign currency exposure of loans
     section: market_risk
   collateral_posted:
-    description: "collateral amounts posted for commodity derivative margins"
+    description: collateral amounts posted for commodity derivative margins
     section: market_risk
   netting_arrangements:
-    description: "master netting arrangement impact on gross vs net presentation"
+    description: master netting arrangement impact on gross vs net presentation
     section: market_risk
   market_risk_exposures:
-    description: "commodity prices, foreign exchange rates, interest rates"
+    description: commodity prices, foreign exchange rates, interest rates
     section: market_risk
-
-# Unusual features identified:
-#   - Extensive use of footnotes (a)(b)(c) to specify balance sheet location of derivatives
-#   - Detailed breakdown of current vs non-current asset/liability classification for each instrument type
-#   - Specific disclosure of collateral posted for commodity derivative margins
-#   - Net investment hedge includes mix of debt, cross-currency contracts, and FX contracts
-#   - Fair value hedge disclosure includes both intercompany and external loan hedges
-#   - Multi-currency notional amounts disclosed in both foreign currency and USD equivalents
-
+sections:
+  market_risk:
+    heading: Item\s+3\.\s+Quantitative\s+and\s+Qualitative\s+Disclosures\s+About\s+Market\s+Risk\.
