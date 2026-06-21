@@ -1,35 +1,30 @@
 issuer: Live Nation Entertainment
 ticker: LYV
-cik: "1335258"
+cik: '1335258'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   notional_amount:
-    description: "notional amount of interest rate swap"
+    description: notional amount of interest rate swap
     section: market_risk
   swap_rate:
-    description: "fixed rate cap of 3.445%"
+    description: fixed rate cap of 3.445%
     section: market_risk
   maturity_date:
-    description: "expiration date of October 2026"
+    description: expiration date of October 2026
     section: market_risk
   hedge_designation:
-    description: "cash flow hedge designation status"
+    description: cash flow hedge designation status
     section: market_risk
   ineffectiveness:
-    description: "hedge ineffectiveness amount"
+    description: hedge ineffectiveness amount
     section: market_risk
   fair_value_impact:
-    description: "changes in fair value and OCI treatment"
+    description: changes in fair value and OCI treatment
     section: market_risk
-
-# Unusual features identified:
-#   - Foreign currency derivatives stated as not material with no quantitative disclosure
-#   - Market risk section redirects to Item 7 instead of providing direct disclosure
-#   - No tabular presentation of notional amounts or fair values
-#   - Interest rate swap converts floating to fixed rather than traditional fixed to floating
-#   - Specific rate cap disclosure (3.445%) rather than spread over benchmark
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*FAIR\s+VALUE\s+MEASUREMENTS
+  market_risk:
+    heading: Market\s+Risk

@@ -1,47 +1,42 @@
 issuer: LyondellBasell
 ticker: LYB
-cik: "1489393"
+cik: '1489393'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   commodity_derivative_fair_value_sensitivity:
-    description: "10% sensitivity analysis for commodity derivatives"
+    description: 10% sensitivity analysis for commodity derivatives
     section: market_risk
   fx_hedge_notional_amounts:
-    description: "notional amounts for FX hedges by type and year"
+    description: notional amounts for FX hedges by type and year
     section: market_risk
   fx_hedge_sensitivity:
-    description: "10% variance impact on OCI for FX hedges"
+    description: 10% variance impact on OCI for FX hedges
     section: market_risk
   economic_hedge_notional:
-    description: "aggregate notional amount of economic FX hedges"
+    description: aggregate notional amount of economic FX hedges
     section: market_risk
   economic_hedge_maturity:
-    description: "maturity range of economic FX hedges"
+    description: maturity range of economic FX hedges
     section: market_risk
   fx_earnings_sensitivity:
-    description: "10% fluctuation impact on earnings"
+    description: 10% fluctuation impact on earnings
     section: market_risk
   interest_rate_swap_notional:
-    description: "notional amounts of fixed-to-variable interest rate swaps"
+    description: notional amounts of fixed-to-variable interest rate swaps
     section: market_risk
   debt_portfolio_composition:
-    description: "percentage split of fixed vs variable rate debt"
+    description: percentage split of fixed vs variable rate debt
     section: market_risk
   interest_rate_swap_sensitivity:
-    description: "10% sensitivity for fair value of interest rate swaps"
+    description: 10% sensitivity for fair value of interest rate swaps
     section: market_risk
   credit_facility_capacity:
-    description: "available borrowing capacity under facilities"
+    description: available borrowing capacity under facilities
     section: market_risk
-
-# Unusual features identified:
-#   - embedded tabular data within narrative text rather than formal tables
-#   - combines both designated hedge accounting and economic hedging strategies
-#   - includes pre-issuance hedging strategy discussion
-#   - reports foreign currency gains in narrative format
-#   - uses bracketed section identifier instead of standard note numbering
-
+sections:
+  financial_instruments:
+    heading: 9\.\s+Financial\s+Instruments\s+and\s+Fair\s+Value\s+Measurements
+  market_risk:
+    heading: Item\s+3\s+\.\s+QUANTITATIVE\s+AND\s+QUALITATIVE\s+DISCLOSURES\s+ABOUT\s+MARKET\s+RISK
