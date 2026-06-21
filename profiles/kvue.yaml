@@ -1,32 +1,25 @@
 issuer: Kenvue
 ticker: KVUE
-cik: "1944048"
+cik: '1944048'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fx_sensitivity_earnings:
-    description: "10% unfavorable FX impact on net income ($122 million)"
+    description: 10% unfavorable FX impact on net income ($122 million)
     section: market_risk
   fx_sensitivity_derivatives:
-    description: "10% unfavorable FX impact on derivative fair values ($182 million)"
+    description: 10% unfavorable FX impact on derivative fair values ($182 million)
     section: market_risk
   hedge_designation:
-    description: "Forward starting interest rate swaps designated as cash flow hedges"
+    description: Forward starting interest rate swaps designated as cash flow hedges
     section: market_risk
   debt_composition:
-    description: "Outstanding long-term debt primarily fixed-rate"
+    description: Outstanding long-term debt primarily fixed-rate
     section: market_risk
   commodity_exposures:
-    description: "Resins, silicon, pulp, corn derivatives, paper, agrochemicals, vegetable oils, energy, labor, transportation"
+    description: Resins, silicon, pulp, corn derivatives, paper, agrochemicals, vegetable oils, energy, labor, transportation
     section: market_risk
-
-# Unusual features identified:
-#   - Combined qualitative and quantitative market risk disclosure in single section
-#   - No tabular presentation of derivative notionals or fair values
-#   - Hypothetical sensitivity analysis embedded in narrative text
-#   - References external note for fair value details
-#   - Covers multiple risk types in continuous narrative format
-
+sections:
+  financial_instruments:
+    heading: 12\.\s+Fair\s+Value\s+Measurements
