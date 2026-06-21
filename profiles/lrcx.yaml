@@ -1,40 +1,34 @@
 issuer: Lam Research
 ticker: LRCX
-cik: "707549"
+cik: '707549'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   long_term_debt_principal:
-    description: "principal amount of fixed-rate long-term debt"
+    description: principal amount of fixed-rate long-term debt
     section: market_risk
   long_term_debt_fair_value:
-    description: "fair value of fixed-rate long-term debt"
+    description: fair value of fixed-rate long-term debt
     section: market_risk
   fx_forward_contract_maturity:
-    description: "maturity periods for foreign currency forward contracts"
+    description: maturity periods for foreign currency forward contracts
     section: market_risk
   fx_option_contract_maturity:
-    description: "maturity periods for foreign currency option contracts"
+    description: maturity periods for foreign currency option contracts
     section: market_risk
   cash_flow_hedge_unrealized_gain:
-    description: "unrealized gain on cash flow hedges"
+    description: unrealized gain on cash flow hedges
     section: market_risk
   balance_sheet_hedge_unrealized_loss:
-    description: "unrealized loss on balance sheet hedges"
+    description: unrealized loss on balance sheet hedges
     section: market_risk
   fx_sensitivity_10_percent:
-    description: "impact of hypothetical 10% FX rate movement"
+    description: impact of hypothetical 10% FX rate movement
     section: market_risk
   fx_sensitivity_15_percent:
-    description: "impact of hypothetical 15% FX rate movement"
+    description: impact of hypothetical 15% FX rate movement
     section: market_risk
-
-# Unusual features identified:
-#   - sensitivity analysis results described as 'not significant' without specific values
-#   - includes collar option strategy details
-#   - combines interest rate and FX risk in single market risk section
-#   - hedges both anticipated cash flows and existing monetary items
-
+sections:
+  market_risk:
+    heading: ITEM\s+3\.\s+Quantitative\s+and\s+Qualitative\s+Disclosures\s+About\s+Market\s+Risk

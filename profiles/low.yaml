@@ -1,32 +1,25 @@
 issuer: Lowe's
 ticker: LOW
-cik: "60667"
+cik: '60667'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   derivative_types:
-    description: "types of derivative instruments used"
+    description: types of derivative instruments used
     section: market_risk
   hedge_designation:
-    description: "hedge accounting designation (fair value hedges)"
+    description: hedge accounting designation (fair value hedges)
     section: market_risk
   fair_value_materiality:
-    description: "materiality assessment of derivative fair values"
+    description: materiality assessment of derivative fair values
     section: market_risk
   commodity_exposure:
-    description: "exposure to commodity price volatility"
+    description: exposure to commodity price volatility
     section: market_risk
   risk_mitigation:
-    description: "methods used to mitigate market risks"
+    description: methods used to mitigate market risks
     section: market_risk
-
-# Unusual features identified:
-#   - No quantitative tables provided despite regulatory requirement
-#   - Explicit statement that quantitative information is not meaningful
-#   - Commodity risk discussed but no derivatives used for hedging
-#   - Fair value disclosure limited to materiality statement only
-#   - Very brief disclosure compared to typical market risk sections
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+Value\s+Measurements

@@ -1,49 +1,40 @@
 issuer: Lululemon Athletica
 ticker: LULU
-cik: "1397187"
+cik: '1397187'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   notional_amounts:
-    description: "gross notional amounts by hedge designation"
+    description: gross notional amounts by hedge designation
     section: market_risk
   fair_value_assets:
-    description: "derivative assets by hedge designation"
+    description: derivative assets by hedge designation
     section: market_risk
   fair_value_liabilities:
-    description: "derivative liabilities by hedge designation"
+    description: derivative liabilities by hedge designation
     section: market_risk
   net_investment_hedge_gains_losses:
-    description: "pre-tax gains/losses in OCI for net investment hedges"
+    description: pre-tax gains/losses in OCI for net investment hedges
     section: market_risk
   derivative_gains_losses_income_statement:
-    description: "gains/losses for non-designated derivatives in SG&A"
+    description: gains/losses for non-designated derivatives in SG&A
     section: market_risk
   foreign_exchange_gains_losses:
-    description: "foreign exchange gains/losses in SG&A"
+    description: foreign exchange gains/losses in SG&A
     section: market_risk
   maturity_dates:
-    description: "maturity ranges for outstanding contracts"
+    description: maturity ranges for outstanding contracts
     section: market_risk
   sensitivity_analysis:
-    description: "10% depreciation impact on derivative fair values"
+    description: 10% depreciation impact on derivative fair values
     section: market_risk
   netting_arrangements:
-    description: "amounts subject to enforceable netting"
+    description: amounts subject to enforceable netting
     section: market_risk
   hedge_effectiveness:
-    description: "assessment of hedge effectiveness and ineffectiveness"
+    description: assessment of hedge effectiveness and ineffectiveness
     section: market_risk
-
-# Unusual features identified:
-#   - Combined notional and fair value table with comparative periods
-#   - Separate disclosure of netting arrangements within main table narrative
-#   - Net investment hedges for Canadian subsidiary translation exposure
-#   - Economic hedges without hedge accounting for monetary item revaluations
-#   - Sensitivity analysis only for 10% USD depreciation scenario
-#   - No reclassification from OCI due to no subsidiary disposals
-#   - Revenue impact quantification from FX translation
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+Value\s+Measurement

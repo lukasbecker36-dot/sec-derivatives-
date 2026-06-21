@@ -1,43 +1,45 @@
 issuer: Southwest Airlines
 ticker: LUV
-cik: "92380"
+cik: '92380'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   interest_rate_swaps_notional:
-    description: "Notional amount of interest rate swaps"
+    description: Notional amount of interest rate swaps
     section: market_risk
   interest_rate_swaps_fair_value:
-    description: "Fair value of interest rate swaps"
+    description: Fair value of interest rate swaps
     section: market_risk
   interest_rate_contracts_notional:
-    description: "Notional amount of interest rate contracts"
+    description: Notional amount of interest rate contracts
     section: market_risk
   interest_rate_contracts_fair_value:
-    description: "Fair value of interest rate contracts"
+    description: Fair value of interest rate contracts
     section: market_risk
   commodity_contracts_notional:
-    description: "Notional amount/volume of commodity contracts"
+    description: Notional amount/volume of commodity contracts
     section: market_risk
   commodity_contracts_fair_value:
-    description: "Fair value of commodity contracts"
+    description: Fair value of commodity contracts
     section: market_risk
   hedge_ineffectiveness:
-    description: "Hedge ineffectiveness recognized in income"
+    description: Hedge ineffectiveness recognized in income
     section: market_risk
   aoci_derivative_gain_loss:
-    description: "Derivative gains/losses in AOCI"
+    description: Derivative gains/losses in AOCI
     section: market_risk
   non_designated_gain_loss:
-    description: "Gain/loss on non-designated derivatives"
+    description: Gain/loss on non-designated derivatives
     section: market_risk
   interest_rate_sensitivity:
-    description: "Impact of interest rate changes on interest expense or fair value"
+    description: Impact of interest rate changes on interest expense or fair value
     section: market_risk
   commodity_price_sensitivity:
-    description: "Impact of commodity price changes on results"
+    description: Impact of commodity price changes on results
     section: market_risk
-
+sections:
+  financial_instruments:
+    heading: 7\.\s+FAIR\s+VALUE\s+MEASUREMENTS
+  derivatives_note:
+    heading: 3\.\s+FINANCIAL\s+DERIVATIVE\s+INSTRUMENTS
