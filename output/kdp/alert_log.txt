@@ -1,111 +1,84 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_designated_notional: appeared for first time ($500M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($6,048M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($1,800M)
-[NUMERIC] total_derivative_asset: $13,033M → $8M (-99.9%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $11,810M → $468M (-96.0%) — exceeds 20% threshold
-[NUMERIC] cash_flow_hedge_aoci: $3,800M → $70M (-98.2%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $595M → $16M (-97.3%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $18M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $53M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-35M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct_usd_weak: was $-68M, now missing
-[DISAPPEARED_FIELD] interest_rate_derivatives_notional: was $13M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity_1pct: was $-13M, now missing
-[DISAPPEARED_FIELD] commodity_derivatives_fair_value: was $-40M, now missing
-[DISAPPEARED_FIELD] commodity_sensitivity_10pct: was $1,248M, now missing
-[VALIDATION] Likely extraction failure: 9/15 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct, fx_sensitivity_10pct_usd_weak...)
-[VALIDATION] Likely units mismatch: total_derivative_asset changed from 13,033 to 8 (0x)
-[LLM_FLAG] Total derivative asset decreased significantly from prior period (13033 to 8) indicating material changes which may warrant further investigation.
-[LLM_FLAG] Total derivative liability increased substantially from prior period (11810 to 468), a change over 50% which could be due to using new hedging instruments or changes in market conditions.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $13,033M → $6,548M (-49.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($500M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($6,048M)
+[HISTORICAL] [NUMERIC] fi_ir_swap_notional: $3,800M → $2,300M (-39.5%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $13,033M, now missing
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($500M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($6,048M)
+[HISTORICAL] [NUMERIC] ir_swap_notional: $3,800M → $2,300M (-39.5%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_derivatives_notional: was $595M, now missing
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($149M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($497M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-348M)
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-21M, now missing
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($16M)
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $13M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_fair_value_hedge_accounting: was $-13M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_fair_value_non_hedge: was $-40M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct_usd_weak: was $-68M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_derivatives_notional: was $3,800M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_debt_face_value: was $13,214M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] variable_rate_debt: was $3,060M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity_1pct: was $69M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_derivatives_fair_value: was $18M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_sensitivity_10pct: was $60M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 13/16 previously-populated fields are now null (fx_derivatives_notional, commodity_derivatives_notional, cash_flow_hedge_aoci, fixed_rate_notes_billion, fx_derivatives_fair_value_hedge_accounting...)
+[HISTORICAL] [LLM_FLAG] Section text is truncated; fair value tables for derivative assets (designated) and all derivative liabilities are cut off. fi_total_derivative_asset and fi_total_derivative_liability cannot be reliably extracted.
+[HISTORICAL] [LLM_FLAG] FX notional still elevated at $6,548M due to ~€5B of JDE Peet's acquisition hedges remaining as of March 31, 2026 (down from ~€10B at September 30, 2025).
+[HISTORICAL] [LLM_FLAG] fx_not_designated_notional of $6,048M includes €5 billion (~$5,548M equivalent) of FX forwards in connection with the JDE Peet's Acquisition which closed April 1, 2026 — substantially elevated vs. normal operational hedging; ir_swap_notional includes pay-variable, pay-fixed and forward starting swaps totaling $2,300M; designated cash flow hedge IR swaps (~$3.5B) were terminated in March 2026 and are no longer outstanding
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NUMERIC] fx_derivatives_notional: $2,025M → $13,033M (+543.6%) — exceeds 20% threshold
-[NEW_FIELD] fx_designated_notional: appeared for first time ($11,810M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($3,800M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($595M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($18M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($53M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-35M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-68M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($13M)
-[NEW_FIELD] fx_derivatives_fair_value_hedge_accounting: appeared for first time ($-13M)
-[NEW_FIELD] fx_derivatives_fair_value_non_hedge: appeared for first time ($-40M)
-[NEW_FIELD] fx_sensitivity_10pct_usd_weak: appeared for first time ($1,248M)
-[NEW_FIELD] interest_rate_derivatives_notional: appeared for first time ($3,800M)
-[NEW_FIELD] fixed_rate_debt_face_value: appeared for first time ($13,214M)
-[NEW_FIELD] variable_rate_debt: appeared for first time ($3,060M)
-[NEW_FIELD] interest_rate_sensitivity_1pct: appeared for first time ($69M)
-[NEW_FIELD] commodity_derivatives_fair_value: appeared for first time ($18M)
-[NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($60M)
-[LLM_FLAG] fx_derivatives_notional has increased from prior period, significant due to association with the JDE Peet's Acquisition.
-[LLM_FLAG] interest_rate_derivatives_notional is high owing to planned future issuances of long-term debt.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-21 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $677M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $12,418M, now missing
+[HISTORICAL] [NUMERIC] fi_ir_swap_notional: $2,300M → $3,800M (+65.2%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $113M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $399M, now missing
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($13,033M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $677M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $12,418M, now missing
+[HISTORICAL] [NUMERIC] ir_swap_notional: $2,300M → $3,800M (+65.2%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($595M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $103M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $399M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-286M, now missing
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-21M)
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $10M, now missing
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($13M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_fair_value_hedge_accounting: appeared for first time ($-13M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_fair_value_non_hedge: appeared for first time ($-40M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct_usd_weak: appeared for first time ($-68M)
+[HISTORICAL] [NEW_FIELD] interest_rate_derivatives_notional: appeared for first time ($3,800M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_debt_face_value: appeared for first time ($13,214M)
+[HISTORICAL] [NEW_FIELD] variable_rate_debt: appeared for first time ($3,060M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity_1pct: appeared for first time ($69M)
+[HISTORICAL] [NEW_FIELD] commodity_derivatives_fair_value: appeared for first time ($18M)
+[HISTORICAL] [NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($60M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 10/13 previously-populated fields are now null (fi_fx_designated_notional, fi_fx_not_designated_notional, fi_total_derivative_asset, fi_total_derivative_liability, fx_designated_notional...)
+[HISTORICAL] [LLM_FLAG] This is a 10-K market risk/MD&A section rather than the detailed derivatives note; fair value tables and designated/not-designated splits are not available here.
+[HISTORICAL] [LLM_FLAG] FX notional of $13,033M includes ~$11,810M of JDE Peet's acquisition hedges, representing a large one-time M&A-related position.
+[HISTORICAL] [LLM_FLAG] Section text provided is the market risk narrative (Item 7A) plus financial statements, NOT the full Note 7 derivatives table — fx_designated/not_designated notional split and derivative fair value tables are not available in this extract; total FX notional $13,033M includes ~$11,810M one-time JDE Peet's acquisition-related forwards; cash_flow_hedge_aoci value reflects the annual change (flow), not the AOCI stock balance
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional of $13,033M is substantially elevated by ~$11,810M of JDE Peet's acquisition-related FX forwards (one-time strategic hedges, not recurring operational hedges); fx_sensitivity_10pct_usd_weak of -$68M applies only to hedge-accounting FX derivatives; non-hedge FX derivatives have opposite exposure (+$1,248M from USD weakening) due to the JDE acquisition forwards; fixed_rate_notes_billion populated in both billions and millions fields for flexibility
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] total_derivative_asset: was $13,033M, now missing
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $595M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $11,810M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct_usd_weak: was $-68M, now missing
-[DISAPPEARED_FIELD] interest_rate_derivatives_notional: was $13M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity_1pct: was $-13M, now missing
-[DISAPPEARED_FIELD] commodity_derivatives_fair_value: was $-40M, now missing
-[DISAPPEARED_FIELD] commodity_sensitivity_10pct: was $1,248M, now missing
-[VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (total_derivative_asset, expected_12mo_reclass_from_aoci, equity_sensitivity_10pct, fx_sensitivity_10pct_usd_weak, interest_rate_derivatives_notional...)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $1,172M → $13,095M (+1017.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $593M → $12,418M (+1994.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $52M → $113M (+117.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $593M → $12,418M (+1994.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $52M → $103M (+98.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-358M → $-286M (+20.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $15M → $10M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional includes ~€10 billion (~$11B+) of FX forwards entered in Q3 2025 for the planned JDE Peet's Acquisition, causing a large spike in FX notional vs prior periods.
+[HISTORICAL] [LLM_FLAG] fx_not_designated_notional of $12,418M is highly elevated due to ~€10 billion (~$11,810M USD equivalent) of FX forwards entered in Q3 2025 in connection with the planned JDE Peet's Acquisition — not representative of normal hedging activity
+[HISTORICAL] [LLM_FLAG] This 10-Q states 'There have been no material changes to the disclosures on market risk made in our Annual Report, except as discussed below' — the exception only references entry into new JDE Peet's FX forwards and forward starting swaps, but provides no quantitative sensitivity figures; all sensitivity/notional data must be sourced from the 2024 Annual Report or the derivatives note
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NUMERIC] fx_derivatives_notional: $2,025M → $13,033M (+543.6%) — exceeds 20% threshold
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($595M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($11,810M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-68M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($13M)
-[NEW_FIELD] fx_derivatives_fair_value_hedge_accounting: appeared for first time ($-13M)
-[NEW_FIELD] fx_derivatives_fair_value_non_hedge: appeared for first time ($-40M)
-[NEW_FIELD] fx_sensitivity_10pct_usd_weak: appeared for first time ($1,248M)
-[NEW_FIELD] interest_rate_derivatives_notional: appeared for first time ($3,800M)
-[NEW_FIELD] fixed_rate_debt_face_value: appeared for first time ($13,214M)
-[NEW_FIELD] variable_rate_debt: appeared for first time ($3,060M)
-[NEW_FIELD] interest_rate_sensitivity_1pct: appeared for first time ($69M)
-[NEW_FIELD] commodity_derivatives_fair_value: appeared for first time ($18M)
-[NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($60M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $919M → $1,172M (+27.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $408M → $579M (+41.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_ir_swap_notional: $3,050M → $2,300M (-24.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $408M → $579M (+41.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $3,050M → $2,300M (-24.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $36M → $15M (-58.3%) — exceeds 20% threshold
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_derivatives_notional: was $2,027M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $18M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_derivatives_notional, fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($18M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,025M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
-[LLM_FLAG] Filing section contains minimal disclosure - company states 'no material changes' from Annual Report, referring readers to 10-K rather than providing detailed quantitative/qualitative risk metrics in the 10-Q. This is a common practice for interim filings but prevents extraction of specific market risk data.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-02 ===
-[LLM_FLAG] has_derivatives changed from 'No mention' to 'Yes' - material change in derivatives disclosure indicating new hedging activities in Q3 2025
-[LLM_FLAG] Provided text is limited summary; detailed quantitative data referenced in Notes 2, 5, and 18 but not included in extraction
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-02 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $13,033M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $690M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $13M, now missing
-[DISAPPEARED_FIELD] fx_derivatives_notional: was $13,033M, now missing
-[DISAPPEARED_FIELD] fx_derivatives_fair_value_hedge_accounting: was $-13M, now missing
-[DISAPPEARED_FIELD] fx_derivatives_fair_value_non_hedge: was $-40M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct_usd_weak: was $1,180M, now missing
-[DISAPPEARED_FIELD] interest_rate_derivatives_notional: was $3,800M, now missing
-[DISAPPEARED_FIELD] fixed_rate_debt_face_value: was $13,214M, now missing
-[DISAPPEARED_FIELD] variable_rate_debt: was $3,060M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity_1pct: was $69M, now missing
-[DISAPPEARED_FIELD] commodity_derivatives_notional: was $595M, now missing
-[DISAPPEARED_FIELD] commodity_derivatives_fair_value: was $18M, now missing
-[DISAPPEARED_FIELD] commodity_sensitivity_10pct: was $60M, now missing
-[VALIDATION] Likely extraction failure: 14/14 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, fixed_rate_notes_billion, fx_derivatives_notional, fx_derivatives_fair_value_hedge_accounting...)
-[LLM_FLAG] Filing contains minimal disclosure language referring to Annual Report for market risk details. All specific quantitative data not provided in this 10-Q excerpt. Company indicates no material changes from prior period, suggesting values should be similar to prior period baseline, but specific numbers cannot be confirmed from this filing text alone.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-21 ===
+[HISTORICAL] [LLM_FLAG] Swaptions ($1,100M) included in ir_swap_notional total; derivative assets may omit interest rate contract assets if none existed at period end (IR contracts appear only in liabilities)
