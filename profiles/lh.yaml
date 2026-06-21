@@ -1,12 +1,11 @@
 issuer: Labcorp
 ticker: LH
-cik: "920148"
+cik: '920148'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Unusual features identified:
-#   - Market risk section text appears to be a table of contents entry only ('Quantitative and Qualitative Disclosures About Market Risk 47 Item 8. Financial Statements and Supplementary Data 48'), not the actual disclosure content
-#   - No note headings were found in the filing extraction
-#   - No substantive derivative or market risk disclosure captured
-
+sections:
+  financial_instruments:
+    heading: 9\.\s+FAIR\s+VALUE\s+MEASUREMENTS\s+AND\s+DERIVATIVE\s+INSTRUMENTS\s+AND\s+HEDGING\s+ACTIVITIES
+  market_risk:
+    heading: ITEM\s+3\.\s+QUANTITATIVE\s+AND\s+QUALITATIVE\s+DISCLOSURE\s+ABOUT\s+MARKET\s+RISK

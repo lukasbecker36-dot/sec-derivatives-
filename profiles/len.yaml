@@ -1,32 +1,27 @@
 issuer: Lennar
 ticker: LEN
-cik: "920760"
+cik: '920760'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   interest_rate_sensitive_instruments:
-    description: "table of instruments sensitive to interest rate changes with maturity dates and rates"
+    description: table of instruments sensitive to interest rate changes with maturity dates and rates
     section: market_risk
   weighted_average_interest_rates:
-    description: "weighted average effective interest rates by maturity"
+    description: weighted average effective interest rates by maturity
     section: market_risk
   estimated_fair_values:
-    description: "fair values of debt instruments at reporting date"
+    description: fair values of debt instruments at reporting date
     section: market_risk
   principal_cash_flows:
-    description: "principal amounts by expected maturity dates"
+    description: principal amounts by expected maturity dates
     section: market_risk
   hedge_accounting_designation:
-    description: "whether derivatives qualify for hedge accounting"
+    description: whether derivatives qualify for hedge accounting
     section: market_risk
-
-# Unusual features identified:
-#   - Combined real estate and financial services derivatives exposure
-#   - CMBX and CDX credit protection instruments mentioned
-#   - Multiple business segment derivative usage (homebuilding and financial services)
-#   - Specific mention of LMF Commercial warehouse facilities
-#   - Text appears to cut off mid-sentence referencing other sections
-
+sections:
+  financial_instruments:
+    heading: \(8\)\s+Financial\s+Instruments\s+and\s+Fair\s+Value\s+Disclosures
+  market_risk:
+    heading: Item\s+3\.\s+Quantitative\s+and\s+Qualitative\s+Disclosures\s+About\s+Market\s+Risk

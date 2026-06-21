@@ -1,41 +1,34 @@
 issuer: L3Harris
 ticker: LHX
-cik: "202058"
+cik: '202058'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   foreign_currency_forward_notional:
-    description: "aggregate notional amount of open foreign currency forward contracts"
+    description: aggregate notional amount of open foreign currency forward contracts
     section: market_risk
   hedged_currencies:
-    description: "currencies being hedged (USD, CAD, AUD)"
+    description: currencies being hedged (USD, CAD, AUD)
     section: market_risk
   cumulative_translation_impact:
-    description: "cumulative impact of translating foreign operations to USD"
+    description: cumulative impact of translating foreign operations to USD
     section: market_risk
   foreign_business_percentage:
-    description: "percentage of business transacted in local currency environments"
+    description: percentage of business transacted in local currency environments
     section: market_risk
   long_term_debt_carrying_value:
-    description: "carrying value of fixed-rate debt"
+    description: carrying value of fixed-rate debt
     section: market_risk
   long_term_debt_fair_value:
-    description: "estimated fair value of fixed-rate debt"
+    description: estimated fair value of fixed-rate debt
     section: market_risk
   sensitivity_analysis_foreign_currency:
-    description: "10% hypothetical change impact on foreign currency derivatives"
+    description: 10% hypothetical change impact on foreign currency derivatives
     section: market_risk
   sensitivity_analysis_interest_rate:
-    description: "10% hypothetical change impact on interest rates"
+    description: 10% hypothetical change impact on interest rates
     section: market_risk
-
-# Unusual features identified:
-#   - combines market risk disclosures in single section rather than separate note
-#   - includes specific date references (January 2, 2026) suggesting this is forward-looking
-#   - notional amounts presented in narrative format rather than tabular
-#   - fair values embedded in text rather than separate table
-#   - explicitly states hypothetical sensitivity analysis results as 'not material'
-
+sections:
+  market_risk:
+    heading: ITEM\s+3\.\s+QUANTITATIVE\s+AND\s+QUALITATIVE\s+DISCLOSURES\s+ABOUT\s+MARKET\s+RISK\.
