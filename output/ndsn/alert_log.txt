@@ -1,10 +1,77 @@
-=== 10-K | Period ending 2025-10-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-Q | Period ending 2026-04-30 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $28M → $18M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $28M → $18M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cumulative_hedge_adjustment_debt: $9M → $6M (-29.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] IR swap notional unchanged at $300M from prior quarter.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional slightly decreased from $928.1M (Jan 2026) to $920.6M.
+[HISTORICAL] [LLM_FLAG] FX forward notional broadly stable at $1,049.7M vs $1,036.1M in prior quarter.
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional includes FX forwards and cross-currency swaps but excludes interest rate swaps.
+[HISTORICAL] [LLM_FLAG] Net derivative position of -$64,923 confirmed by fair value measurement disclosures in the same filing
 
-=== 10-Q | Period ending 2026-01-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $7,000M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (interest_rate_sensitivity)
+=== 10-Q | Period ending 2026-01-31 | Processed 2026-06-22 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($1,964M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($928M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($1,036M)
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($300M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($28M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($87M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $22M → $28M (+23.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cumulative_hedge_adjustment_debt: $11M → $9M (-20.5%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $7M, now missing
+[HISTORICAL] [LLM_FLAG] Reporting format changed from prior 10-Qs: this filing provides a full derivatives balance sheet table with notional amounts and balance sheet line items.
+[HISTORICAL] [LLM_FLAG] IR swap notional is $300M (fair value hedge), cross-currency swap notional is $928.1M (net investment hedge).
+[HISTORICAL] [LLM_FLAG] FX forward notional of $1,036.1M is materially larger than prior quarters; reflects gross notional of buy+sell sides.
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional includes both FX forwards and cross-currency swaps (FX instruments) but excludes interest rate swaps.
+[HISTORICAL] [LLM_FLAG] Net derivative position of -$59,465 confirmed by fair value measurement disclosures in the same filing
 
-=== 10-K | Period ending 2025-10-31 | Processed 2026-06-04 ===
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($7,000M)
+=== 10-K | Period ending 2025-10-31 | Processed 2026-06-22 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $1,716M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $856M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $860M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $17M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $66M, now missing
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $1,501M → $2,002M (+33.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $645M → $1,138M (+76.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $17M → $22M (+31.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_forward_notional: $645M → $1,138M (+76.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cumulative_hedge_adjustment_debt: $9M → $11M (+32.7%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($7M)
+[HISTORICAL] [LLM_FLAG] 10-K fair value table uses net derivative contracts format rather than gross asset/liability split used in 10-Q filings.
+[HISTORICAL] [LLM_FLAG] Net derivative contracts = $(55,367) thousand (2025) vs $(16,388) thousand (2024) — significant increase in net liability position.
+[HISTORICAL] [LLM_FLAG] Detailed notionals and gross fair values are in Note 12 (derivatives note) which is not included in this section text.
+[HISTORICAL] [LLM_FLAG] Insufficient data in this section to populate most schema fields; consider using derivatives_note_extract results instead.
+[HISTORICAL] [LLM_FLAG] Other assets for cross-currency swap shows $73 in the comparison Oct 2024 column vs Oct 2025 column; Oct 2025 appears to have $0 in other assets for cross-currency swaps based on total reconciliation
+[HISTORICAL] [LLM_FLAG] Net derivative position of -$55,367 confirmed by fair value measurement disclosures in subsequent 10-Q filing
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity expressed as impact on annual interest expense ($7,000K), not as fair value change
+[HISTORICAL] [LLM_FLAG] No quantitative fx sensitivity (10% scenario) or ir_sensitivity_100bp (fair value change) provided in this section
 
+=== 10-Q | Period ending 2025-07-31 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $42M → $17M (-59.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $42M → $17M (-59.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-22M → $-48M (-117.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cumulative_hedge_adjustment_debt: $13M → $9M (-31.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in this section; only fair value shown.
+[HISTORICAL] [LLM_FLAG] Deferred compensation plans ($11,615 thousand liability) excluded from fi_total_derivative_liability as they are not derivative instruments.
+[HISTORICAL] [LLM_FLAG] FX notional totals combine sell and buy sides of forward contracts.
+[HISTORICAL] [LLM_FLAG] IR swap table shows both asset ($8,662) and liability ($6) in fair value table; net IR swap asset = $8,656K which equals cumulative hedge adjustment
+[HISTORICAL] [LLM_FLAG] Deferred compensation plans ($11,615) excluded from derivative liability total
+
+=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $25M → $42M (+70.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $9M → $64M (+579.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $25M → $42M (+70.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $20M → $64M (+217.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $4M → $-22M (-612.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cumulative_hedge_adjustment_debt: $3M → $13M (+321.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in this section; only fair value shown.
+[HISTORICAL] [LLM_FLAG] Deferred compensation plans ($10,765 thousand liability) excluded from fi_total_derivative_liability as they are not derivative instruments.
+[HISTORICAL] [LLM_FLAG] FX notional totals combine sell and buy sides of forward contracts.
+[HISTORICAL] [LLM_FLAG] Derivative liability total in the fair value table includes deferred compensation plans ($10,765) which are non-derivative; pure derivative liabilities = $64,177K
+[HISTORICAL] [LLM_FLAG] FX forward notional uses buy-side total amounts
+
+=== 10-Q | Period ending 2025-01-31 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in this section; only fair value shown.
+[HISTORICAL] [LLM_FLAG] Deferred compensation plans ($10,791 thousand liability) excluded from fi_total_derivative_liability as they are not derivative instruments.
+[HISTORICAL] [LLM_FLAG] FX notional totals combine sell and buy sides of forward contracts; economic exposure is net but gross notional reported.
+[HISTORICAL] [LLM_FLAG] Derivative liability total in fair value table includes deferred compensation plans ($10,791) which are not derivatives; pure derivative liabilities = $9,441K
+[HISTORICAL] [LLM_FLAG] FX forward notional uses buy-side amounts; sell-side totals $206,711K separately
