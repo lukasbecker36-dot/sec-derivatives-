@@ -1,96 +1,36 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NUMERIC] total_cash_equivalents_fv: $387M → $177M (-54.3%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] has_derivatives: was $0M, now missing
-[DISAPPEARED_FIELD] fx_not_designated_notional: was $0M, now missing
-[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
-[DISAPPEARED_FIELD] commodity_derivatives_notional: was $0M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] fair_value_measurements_table: was $0M, now missing
-[DISAPPEARED_FIELD] debt_fair_value_disclosure: was $135M, now missing
-[DISAPPEARED_FIELD] foreign_exchange_exposure: was $4M, now missing
-[VALIDATION] Likely extraction failure: 8/13 previously-populated fields are now null (has_derivatives, fx_not_designated_notional, ir_swap_notional, commodity_derivatives_notional, equity_sensitivity_10pct...)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-8M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-135M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $-135M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] international_revenue_percentage: was $56M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_gains_losses: was $-8M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 7/9 previously-populated fields are now null (fx_forwards_outstanding, fx_transaction_gain_loss, ir_sensitivity_100bp, fixed_rate_notes_billion, interest_rate_sensitivity...)
+[HISTORICAL] [LLM_FLAG] Match Group does not use derivative instruments. Digital assets of $4.174M (cost basis $10,167K) are classified as intangible assets. Short-term investment time deposits of $3.298M not included in cash equivalents total. Azar trade name impairment of $25.2M recognized in Q1 2026.
+[HISTORICAL] [LLM_FLAG] Market risk section for Q1 2026 10-Q states only 'no material changes since the disclosure in our Annual Report on Form 10-K for the year ended December 31, 2025' — all quantitative details are deferred to the annual filing. equity_investments_carrying_value sourced from Note 3 Financial Instruments section text.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($387M)
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($0M)
-[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($0M)
-[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($0M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($0M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($135M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($135M)
-[NEW_FIELD] international_revenue_percentage: appeared for first time ($56M)
-[NEW_FIELD] fx_gains_losses: appeared for first time ($8M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-22 ===
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-8M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-135M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-135M)
+[HISTORICAL] [NEW_FIELD] international_revenue_percentage: appeared for first time ($56M)
+[HISTORICAL] [NEW_FIELD] fx_gains_losses: appeared for first time ($-8M)
+[HISTORICAL] [NUMERIC] equity_investments_carrying_value: $21M → $33M (+61.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Match Group does not use derivative instruments. Digital assets of $7.216M (cost basis $10,167K) are classified as intangible assets. Short-term investment time deposits of $3.461M not included in cash equivalents total. Equity securities without readily determinable fair values totaled $33.3M at cost (not in fair value table).
+[HISTORICAL] [LLM_FLAG] Match Group has no derivative instruments and explicitly states it does not hedge foreign currency. ir_sensitivity_100bp and interest_rate_sensitivity both refer to the same $134.7M figure (fair value impact on $4.0B fixed-rate debt). fx_transaction_gain_loss is a loss, reported as negative. fx_revenue_impact of +$23.8M (positive 2025) is qualitative context, not extracted as a separate field.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NUMERIC] total_cash_equivalents_fv: $387M → $172M (-55.4%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] fair_value_measurements_table: was $-8M, now missing
-[DISAPPEARED_FIELD] debt_fair_value_disclosure: was $-135M, now missing
-[DISAPPEARED_FIELD] foreign_exchange_exposure: was $4M, now missing
-[VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (equity_sensitivity_10pct, fair_value_measurements_table, debt_fair_value_disclosure, foreign_exchange_exposure)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $175M → $461M (+163.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Match Group does not use derivative instruments. Digital assets of $1.339M (cost basis $1,167K) are classified as intangible assets. Short-term investment time deposits of $3.561M not included in cash equivalents total.
+[HISTORICAL] [LLM_FLAG] Market risk section for Q3 2025 10-Q states only 'no material changes since the disclosure in our Annual Report on Form 10-K for the year ended December 31, 2024' — all quantitative details are deferred to the annual filing. equity_investments_carrying_value sourced from Note 3 Financial Instruments section text.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($387M)
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($155M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-8M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-135M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-135M)
-[NEW_FIELD] international_revenue_percentage: appeared for first time ($56M)
-[NEW_FIELD] fx_gains_losses: appeared for first time ($-8M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] Match Group does not use derivative instruments. Digital assets of $0.927M (cost basis $1,167K) are classified as intangible assets, not marketable securities. Short-term investment time deposits of $5.172M not included in cash equivalents total.
+[HISTORICAL] [LLM_FLAG] Market risk section for Q2 2025 10-Q states only 'no material changes since the disclosure in our Annual Report on Form 10-K for the year ended December 31, 2024' — all quantitative details are deferred to the annual filing. equity_investments_carrying_value sourced from Note 3 Financial Instruments section text.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
-[NUMERIC] total_cash_equivalents_fv: $461M → $320M (-30.5%) — exceeds 20% threshold
-[LLM_FLAG] total_cash_equivalents_fv decreased 30.5% from prior period (460.82 to 320.42 million) - plausible given market conditions and cash usage
-[LLM_FLAG] total_marketable_securities_fv decreased 7.4% from prior period (3.561 to 3.298 million) - minor change within normal range
-[LLM_FLAG] This Q1 2026 filing contains minimal market risk disclosure, referring readers to the 2025 10-K for detailed information. The filing states there were 'no material changes' to risk positions during the quarter.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-02 ===
-[NUMERIC] total_cash_equivalents_fv: $181M → $461M (+154.5%) — exceeds 20% threshold
-[NUMERIC] total_marketable_securities_fv: $5M → $4M (-31.1%) — exceeds 20% threshold
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[LLM_FLAG] total_cash_equivalents_fv: Value increased from $181.086M to $460.82M (154% increase). This exceeds the 50% threshold. The increase is driven by higher money market funds ($317.9M vs $264.0M prior) and time deposits ($142.9M vs $121.0M prior), reflecting changes in cash management strategy or cash position improvements.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-02 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (fx_forwards_outstanding)
-[LLM_FLAG] total_cash_equivalents_fv decreased from 180.426 to 181.086 (0.4% increase) - within acceptable variance
-[LLM_FLAG] total_marketable_securities_fv increased from 4.748 to 5.172 (8.9% increase) - within acceptable variance
-[LLM_FLAG] Note: June 30, 2025 total assets in fair value table is 181.086 (including 0.927 in digital assets), while cash equivalents and short-term investments sum to 180.159
-[LLM_FLAG] Minimal disclosure provided: The filing section consists solely of a boilerplate statement referring to prior year 10-K without providing substantive market risk quantitative or qualitative details. All numerical market risk metrics are absent from the provided text.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-02 ===
-[NUMERIC] total_cash_equivalents_fv: $377M → $180M (-52.1%) — exceeds 20% threshold
-[NUMERIC] total_marketable_securities_fv: $4M → $5M (+35.7%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-8M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $135M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $135M, now missing
-[DISAPPEARED_FIELD] international_revenue_percentage: was $56M, now missing
-[DISAPPEARED_FIELD] fx_gains_losses: was $-8M, now missing
-[VALIDATION] Likely extraction failure: 6/9 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fixed_rate_notes_billion, interest_rate_sensitivity, international_revenue_percentage...)
-[LLM_FLAG] total_cash_equivalents_fv decreased from 376.7 to 180.426 (52% decline). Change driven by significant reduction in money market funds (264.008 to 105.162) and time deposits (121.0 to 75.264)
-[LLM_FLAG] total_marketable_securities_fv increased from 3.5 to 4.748 (35% increase). Minor change in time deposit holdings within short-term investments
-[LLM_FLAG] This 10-Q filing section contains only a boilerplate disclosure stating 'no material changes' since the 2024 10-K. Detailed quantitative disclosures about market risk are referenced as being in the Form 10-K but are not reproduced in this 10-Q section. Most fields cannot be extracted from the provided text.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-01 ===
-[LLM_FLAG] total_cash_equivalents_fv: The extracted value of $376.7M includes both money market funds ($224.8M) and time deposits ($151.9M). Note that the table shows total fair value of $387.4M, which also includes digital assets ($7.2M) and short-term investments ($3.5M). The cash equivalents alone total $376.7M.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] Match Group does not use derivative instruments; the Financial Instruments note contains no derivative disclosures. Short-term investment time deposits of $4.748M are not included in cash equivalents total above.
+[HISTORICAL] [LLM_FLAG] Market risk section for Q1 2025 10-Q states only 'no material changes since the disclosure in our Annual Report on Form 10-K for the year ended December 31, 2024' — all quantitative details are deferred to the annual filing. equity_investments_carrying_value sourced from Note 3 Financial Instruments section text.
