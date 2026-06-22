@@ -1,9 +1,8 @@
-issuer: "Motorola Solutions"
+issuer: Motorola Solutions
 ticker: MSI
-cik: "68505"
+cik: '68505'
 archetype: minimal_hedger
 extraction_mode: llm
-
-# Derivatives section matched by: Note\s+\d+\s*[.–—―�‒—–:—–\-]\s*Fair Value
-# Market risk section matched by: Quantitative\s+and\s+Qualitat\s*ive\s+Disclosures?\s+About\s+Market\s+Risk
-
+sections:
+  market_risk:
+    heading: Quantitative\s+and\s+Qualitative\s+Disclosures\s+About\s+Market\s+Risk
