@@ -1,35 +1,28 @@
 issuer: Martin Marietta Materials
 ticker: MLM
-cik: "916076"
+cik: '916076'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   variable_rate_facilities:
-    description: "outstanding balance on variable-rate borrowings and facilities"
+    description: outstanding balance on variable-rate borrowings and facilities
     section: market_risk
   interest_rate_sensitivity:
-    description: "hypothetical impact of 100 basis point rate increase"
+    description: hypothetical impact of 100 basis point rate increase
     section: market_risk
   energy_cost_sensitivity:
-    description: "hypothetical impact of 10% energy price change"
+    description: hypothetical impact of 10% energy price change
     section: market_risk
   pension_discount_rate_risk:
-    description: "interest rate risk from pension assumptions"
+    description: interest rate risk from pension assumptions
     section: market_risk
   revolving_facility_amount:
-    description: "$800 million Revolving Facility capacity"
+    description: $800 million Revolving Facility capacity
     section: market_risk
   trade_receivable_facility:
-    description: "$400 million Trade Receivable Facility capacity"
+    description: $400 million Trade Receivable Facility capacity
     section: market_risk
-
-# Unusual features identified:
-#   - No actual derivatives disclosed despite being market risk section
-#   - Focus on operational/business risk rather than financial instruments
-#   - Energy cost sensitivity analysis included in market risk disclosure
-#   - Pension interest rate risk discussed but no hedging instruments mentioned
-#   - Fixed-price energy agreements mentioned but no details on terms or fair values
-
+sections:
+  financial_instruments:
+    heading: Financial\s+Instruments

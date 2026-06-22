@@ -1,29 +1,22 @@
 issuer: Monster Beverage
 ticker: MNST
-cik: "865752"
+cik: '865752'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fx_forward_contracts:
-    description: "Forward currency exchange contracts used for balance sheet hedging of non-functional currency assets/liabilities"
+    description: Forward currency exchange contracts used for balance sheet hedging of non-functional currency assets/liabilities
     section: market_risk
   fx_forward_maturity:
-    description: "All FX forwards have terms of three months or less"
+    description: All FX forwards have terms of three months or less
     section: market_risk
   international_sales_pct:
-    description: "Percentage of consolidated net sales from customers outside US"
+    description: Percentage of consolidated net sales from customers outside US
     section: market_risk
   commodity_exposure:
-    description: "Commodity price risks on aluminum cans, sugar, sweeteners, juice concentrates, etc."
+    description: Commodity price risks on aluminum cans, sugar, sweeteners, juice concentrates, etc.
     section: market_risk
-
-# Unusual features identified:
-#   - FX forwards are NOT designated as hedges under ASC 815; gains/losses in interest and other income
-#   - Generally does not hedge against commodity price fluctuations except for aluminum
-#   - Does not use derivative financial instruments to protect against interest rate fluctuations
-#   - Aluminum is the only commodity specifically mentioned as hedged
-#   - No interest rate derivatives despite commodity and FX exposures
-
+sections:
+  financial_instruments:
+    heading: FAIR\s+VALUE\s+OF\s+CERTAIN\s+FINANCIAL\s+ASSETS\s+AND\s+LIABILITIES
