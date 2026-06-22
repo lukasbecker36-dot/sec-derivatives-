@@ -1,28 +1,23 @@
 issuer: Marathon Petroleum
 ticker: MPC
-cik: "1510295"
+cik: '1510295'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   market_risk_exposures:
-    description: "types of market risks - crude oil, refined petroleum products, ethanol, renewable feedstock, renewable products, NGLs, natural gas, interest rates, foreign currency"
+    description: types of market risks - crude oil, refined petroleum products, ethanol, renewable feedstock, renewable products,
+      NGLs, natural gas, interest rates, foreign currency
     section: market_risk
   hedging_strategies:
-    description: "use of commodity derivative instruments to hedge price fluctuations"
+    description: use of commodity derivative instruments to hedge price fluctuations
     section: market_risk
   current_derivative_positions:
-    description: "no financial derivatives for interest rate or FX hedging as of Dec 31, 2025"
+    description: no financial derivatives for interest rate or FX hedging as of Dec 31, 2025
     section: market_risk
   risk_assessment:
-    description: "management's view on material adverse consequences and effects on operations"
+    description: management's view on material adverse consequences and effects on operations
     section: market_risk
-
-# Unusual features identified:
-#   - filing date appears to be future dated (December 31, 2025)
-#   - very high-level qualitative discussion with no quantitative metrics
-#   - no specific derivative instrument details provided
-#   - references other notes but section is incomplete/truncated
-
+sections:
+  derivatives_note:
+    heading: 15\s+\.\s+Derivatives

@@ -1,22 +1,16 @@
 issuer: Monolithic Power Systems
 ticker: MPWR
-cik: "1280452"
+cik: '1280452'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   investment_portfolio_risk:
-    description: "Interest rate and credit risk on cash equivalents and short-term investments"
+    description: Interest rate and credit risk on cash equivalents and short-term investments
     section: market_risk
   fx_exposure_currencies:
-    description: "Primary FX exposures: Renminbi, New Taiwan Dollar, Euro"
+    description: 'Primary FX exposures: Renminbi, New Taiwan Dollar, Euro'
     section: market_risk
-
-# Unusual features identified:
-#   - Explicitly states the company does not use derivative financial instruments in its investment portfolio
-#   - No FX hedging despite having foreign currency exposures in RMB, TWD, and EUR
-#   - Worldwide sales primarily denominated in USD, reducing FX risk on revenue side
-#   - FX gains/losses only arise from intercompany transactions and are reported in other income
-
+sections:
+  financial_instruments:
+    heading: 9\.\s+FAIR\s+VALUE\s+MEASUREMENTS

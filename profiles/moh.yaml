@@ -1,22 +1,16 @@
 issuer: Molina Healthcare
 ticker: MOH
-cik: "1179929"
+cik: '1179929'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   interest_rate_sensitivity:
-    description: "Approximate decrease in fair value of fixed income investments from hypothetical 1% interest rate increase"
+    description: Approximate decrease in fair value of fixed income investments from hypothetical 1% interest rate increase
     section: market_risk
   variable_rate_debt_reference:
-    description: "Reference to borrowings under New Credit Agreement bearing variable interest"
+    description: Reference to borrowings under New Credit Agreement bearing variable interest
     section: market_risk
-
-# Unusual features identified:
-#   - No derivative instruments disclosed; company does not use hedging
-#   - Disclosure is very brief, limited to interest rate risk on fixed income investments and variable-rate debt
-#   - No foreign currency risk discussion, consistent with a domestic-focused managed care company
-#   - Cross-references to Note 5 Fair Value Measurements, Note 6 Investments, and Note 11 Debt for details
-
+sections:
+  financial_instruments:
+    heading: 4\.\s+Fair\s+Value\s+Measurements
