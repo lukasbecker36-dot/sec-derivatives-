@@ -1,69 +1,77 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($6,410M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($2,603M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($232M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($297M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-65M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] fx_derivatives_notional increased significantly compared to the prior period suggesting increased hedging activity.
-[LLM_FLAG] total_derivative_liability decreased significantly compared to the prior period indicating a potential decrease in risk exposure.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($431M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($1,670M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($234M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($232M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($297M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($17,193M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($14,590M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($2,603M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($232M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($297M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-65M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $192M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+[HISTORICAL] [LLM_FLAG] Interest rate contracts no longer shown as a separate liability line in Q1 2026 table (vs prior quarters). Notional amounts not in this note.
+[HISTORICAL] [LLM_FLAG] Significant increase in FX designated notional vs prior quarters due to $4.1B in new net investment hedge foreign currency forward contracts entered in Q1 2026.
+[HISTORICAL] [LLM_FLAG] IR swap notional absent from Q1 2026 notional table — IR swaps may have been fully terminated following the Q3 2025 partial termination ($800M reduced to $400M).
+[HISTORICAL] [LLM_FLAG] Cash flow hedge AOCI balance and 12-month reclassification not quantified; described as immaterial.
+[HISTORICAL] [LLM_FLAG] Note numbering changed from prior filings: Derivatives is now Note 13, Fair Value Measurements and Marketable Securities is Note 14.
+[HISTORICAL] [LLM_FLAG] Item 3 contains no new quantitative data; states no material changes from year-end through March 31, 2026.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-22 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $533M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $1,867M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $210M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $145M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $338M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $10,481M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $8,064M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $2,417M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $400M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $145M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $338M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-193M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-106M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-22M, now missing
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($192M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 14/14 previously-populated fields are now null (total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, fi_total_derivative_asset, fi_total_derivative_liability...)
+[HISTORICAL] [LLM_FLAG] The supplied section_text contains Item 7A (Quantitative and Qualitative Disclosures About Market Risk) text rather than Note 15 (Derivatives) note text; the derivative notional/fair value table was not included.
+[HISTORICAL] [LLM_FLAG] Key quantitative data available from this section: FX sensitivity of $192M for 10% spot rate change; IR sensitivity described as insignificant for 100bp change.
+[HISTORICAL] [LLM_FLAG] Refer to Note 15 (Derivatives) in the 10-K for the full notional amounts and fair value table.
+[HISTORICAL] [LLM_FLAG] IR sensitivity of 100bp described as 'insignificant' — no numeric value provided; set to null.
+[HISTORICAL] [LLM_FLAG] The $192M FX sensitivity at Dec 31, 2025 is the change in fair value of FX forward/option contracts and cross-currency swaps only; an additional $206M impact on non-functional currency denominated debt hedging instruments is also stated.
+[HISTORICAL] [LLM_FLAG] 3M does not enter into derivative financial instruments associated with commodities.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $2,607M → $1,867M (-28.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $800M → $400M (-50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-256M → $-193M (+24.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-29M → $-22M (+24.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in this fair value note. Precision grinding and finishing business classified as held for sale in Q3 2025.
+[HISTORICAL] [LLM_FLAG] Cash flow hedge AOCI and expected reclassification amounts are after-tax figures as disclosed.
+[HISTORICAL] [LLM_FLAG] IR swap notional reduced from $800M to $400M in Q3 2025 due to termination of half the fixed-to-floating interest rate swaps.
+[HISTORICAL] [LLM_FLAG] Section_text supplied was pension note; derivative data extracted from locate-file WINDOW 2 which contains the full derivatives table.
+[HISTORICAL] [LLM_FLAG] Item 3 contains no new quantitative data; states no material changes from year-end through September 30, 2025.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXq2XXeCqDWxGxCRCj2'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXq5rTLgDaxvyWWn6sc'}
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $714M → $518M (-27.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $388M → $237M (-38.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $113M → $139M (+23.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $189M → $395M (+109.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $113M → $139M (+23.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $189M → $395M (+109.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-76M → $-256M (-236.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-44M → $-127M (-188.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $25M → $-29M (-216.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in this fair value note. FX derivative liabilities increased sharply from Q1 ($122M to $339M).
+[HISTORICAL] [LLM_FLAG] Cash flow hedge AOCI and expected reclassification amounts are after-tax figures as disclosed.
+[HISTORICAL] [LLM_FLAG] IR swap notional remains $800M; cross-currency swaps of $1.1B were entered in Q1 2025 and are included in FX designated notional.
+[HISTORICAL] [LLM_FLAG] Item 3 contains no new quantitative data; states no material changes from year-end through June 30, 2025.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXpoceYdofn6pe1Qs7y'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXpsuNK9hk5q31n7f5r'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXpW1jPooSTQ7d7YkNu'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXpZ2Z1qkV39BC4Qem6'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXpJ1AtFPVM6SguS3i6'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXpLzG5nPrTDHHtJLvn'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXoz7tfck9B8K7Dhmb6'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXp5qSAbw23SbzUcbVL'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] ir_swap_notional: was $15M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_swap_notional)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($15M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-25 ===
-[LLM_FLAG] This 10-Q filing section does not contain quantitative data; it explicitly states to refer to the 2025 10-K for Item 3 disclosures and notes there have been no material changes since the end of the preceding year (March 31, 2025).
-[LLM_FLAG] No specific numerical values can be extracted from the provided text - all quantitative metrics are unavailable in this 10-Q excerpt.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-25 ===
-[LLM_FLAG] This 10-Q filing incorporates by reference the 2024 10-K Item 3 disclosure, indicating no material changes in market risk disclosures. Most quantitative metrics cannot be extracted from this excerpt and would require reference to the 2024 10-K filing.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-25 ===
-[LLM_FLAG] This is an incorporation by reference to the 2024 10-K. No quantitative data is provided in this excerpt. All specific numerical values cannot be extracted from this filing section alone.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-25 ===
-[LLM_FLAG] This is a brief disclosure indicating 'no material changes' from prior year (2024 10-K). No specific quantitative data is provided in this excerpt. All numeric fields are null because the filing explicitly references the 2024 10-K for detailed market risk disclosures rather than repeating them in the Q1 2025 10-Q filing.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in this fair value note; separate derivatives note likely contains notional detail.
+[HISTORICAL] [LLM_FLAG] Cash flow hedge AOCI and expected reclassification amounts are after-tax figures as disclosed.
+[HISTORICAL] [LLM_FLAG] IR swap notional includes $800M total; these are fixed-to-floating swaps on long-term debt.
+[HISTORICAL] [LLM_FLAG] Item 3 contains no new quantitative data; states no material changes from year-end through March 31, 2025.
