@@ -1,48 +1,40 @@
 issuer: Norwegian Cruise Line Holdings
 ticker: NCLH
-cik: "1513761"
+cik: '1513761'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   variable_rate_debt_pct:
-    description: "Percentage of debt that is variable rate (10% at Dec 31, 2025)"
+    description: Percentage of debt that is variable rate (10% at Dec 31, 2025)
     section: market_risk
   interest_rate_sensitivity:
-    description: "Impact of 1% increase in SOFR on annual interest expense ($15.0M)"
+    description: Impact of 1% increase in SOFR on annual interest expense ($15.0M)
     section: market_risk
   fx_unhedged_payments_eur:
-    description: "Unhedged euro-denominated ship construction payments (EUR 16.4B / $19.3B)"
+    description: Unhedged euro-denominated ship construction payments (EUR 16.4B / $19.3B)
     section: market_risk
   fx_sensitivity_10pct:
-    description: "Impact of 10% change in EUR on unhedged ship construction payments ($1.9B)"
+    description: Impact of 10% change in EUR on unhedged ship construction payments ($1.9B)
     section: market_risk
   euro_denominated_debt_unhedged:
-    description: "Euro-denominated debt not hedged (~EUR 1.7B / $2.0B)"
+    description: Euro-denominated debt not hedged (~EUR 1.7B / $2.0B)
     section: market_risk
   euro_debt_sensitivity_10pct:
-    description: "Impact of 10% EUR change on unhedged debt ($199.9M)"
+    description: Impact of 10% EUR change on unhedged debt ($199.9M)
     section: market_risk
   fuel_hedge_pct_by_year:
-    description: "Percentage of fuel purchases hedged (51% for 2026, 22% for 2027)"
+    description: Percentage of fuel purchases hedged (51% for 2026, 22% for 2027)
     section: market_risk
   fuel_expense_pct_of_operating:
-    description: "Fuel expense as percentage of total cruise operating expense (12.0%)"
+    description: Fuel expense as percentage of total cruise operating expense (12.0%)
     section: market_risk
   fuel_sensitivity_10pct:
-    description: "Impact of 10% increase in fuel price on 2026 expense ($66.2M) and offset from fuel swaps ($27.6M)"
+    description: Impact of 10% increase in fuel price on 2026 expense ($66.2M) and offset from fuel swaps ($27.6M)
     section: market_risk
   fx_remeasurement_gains_losses:
-    description: "Net gains/losses from exchange rate remeasurement on euro debt"
+    description: Net gains/losses from exchange rate remeasurement on euro debt
     section: market_risk
-
-# Unusual features identified:
-#   - Very large unhedged EUR exposure for newbuild ship construction (EUR 16.4B)
-#   - Fuel swaps described but no notional amounts table; only percentage hedged provided
-#   - FX derivatives hedge ship construction payments specifically, not general operating FX exposure
-#   - No derivatives note section captured; all information from market risk section only
-#   - Cruise industry-specific risk profile with fuel as a significant commodity exposure
-#   - Fair value of derivatives described as using income valuation approach
-
+sections:
+  financial_instruments:
+    heading: Fair\s+Value\s+Measurements\s+and\s+Derivatives
