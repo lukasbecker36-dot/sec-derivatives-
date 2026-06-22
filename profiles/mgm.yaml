@@ -1,48 +1,42 @@
 issuer: MGM Resorts
 ticker: MGM
-cik: "789570"
+cik: '789570'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   debt_maturity_schedule:
-    description: "fixed and variable rate debt by maturity year with fair values"
+    description: fixed and variable rate debt by maturity year with fair values
     section: market_risk
   variable_rate_percentage:
-    description: "percentage of total borrowings that are variable rate"
+    description: percentage of total borrowings that are variable rate
     section: market_risk
   foreign_currency_sensitivity_1pct:
-    description: "impact of 1% adverse exchange rate change"
+    description: impact of 1% adverse exchange rate change
     section: market_risk
   intercompany_debt_sensitivity_10pct:
-    description: "impact of 10% adverse exchange rate change on intercompany debt"
+    description: impact of 10% adverse exchange rate change on intercompany debt
     section: market_risk
   mgm_osaka_commitment_jpy:
-    description: "JPY denominated funding commitments for MGM Osaka"
+    description: JPY denominated funding commitments for MGM Osaka
     section: market_risk
   forward_contracts_notional_jpy:
-    description: "notional amount of forward currency exchange contracts in JPY"
+    description: notional amount of forward currency exchange contracts in JPY
     section: market_risk
   yen_credit_facility_amount:
-    description: "JPY term loan facility amount"
+    description: JPY term loan facility amount
     section: market_risk
   forward_contracts_sensitivity:
-    description: "impact of 10% adverse exchange rate change on forward contracts"
+    description: impact of 10% adverse exchange rate change on forward contracts
     section: market_risk
   credit_facility_sensitivity:
-    description: "impact of 10% adverse exchange rate change on yen credit facility"
+    description: impact of 10% adverse exchange rate change on yen credit facility
     section: market_risk
   equity_price_sensitivity_10pct:
-    description: "impact of 10% adverse change in equity prices"
+    description: impact of 10% adverse change in equity prices
     section: market_risk
-
-# Unusual features identified:
-#   - combines debt maturity schedule within market risk section rather than separate note
-#   - extensive foreign currency exposure due to international gaming operations
-#   - specific JPY hedging strategy for MGM Osaka project funding
-#   - uses different sensitivity percentages (1% vs 10%) for different FX exposures
-#   - includes equity price risk for publicly traded securities investments
-#   - derivative usage is limited and focused on FX hedging rather than comprehensive risk management
-
+sections:
+  financial_instruments:
+    heading: Fair\s+value\s+measurements
+  market_risk:
+    heading: Market\s+Risk

@@ -1,34 +1,28 @@
 issuer: McKesson Corporation
 ticker: MCK
-cik: "927653"
+cik: '927653'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   interest_rate_swap_notional:
-    description: "notional amount of fixed-to-floating interest rate swaps"
+    description: notional amount of fixed-to-floating interest rate swaps
     section: market_risk
   cash_equivalents_balance:
-    description: "cash and cash equivalents balances earning variable rates"
+    description: cash and cash equivalents balances earning variable rates
     section: market_risk
   interest_rate_sensitivity:
-    description: "hypothetical 50 basis point impact on earnings"
+    description: hypothetical 50 basis point impact on earnings
     section: market_risk
   hedge_designations:
-    description: "net investment hedges, fair value hedges, or cash flow hedges for cross-currency swaps"
+    description: net investment hedges, fair value hedges, or cash flow hedges for cross-currency swaps
     section: market_risk
   foreign_exchange_sensitivity:
-    description: "hypothetical adverse 10% change impact on foreign currency balances"
+    description: hypothetical adverse 10% change impact on foreign currency balances
     section: market_risk
   primary_currency_exposures:
-    description: "Canadian dollar, Euro, and British pound sterling exposures"
+    description: Canadian dollar, Euro, and British pound sterling exposures
     section: market_risk
-
-# Unusual features identified:
-#   - derivatives data spread across market risk disclosures rather than dedicated derivatives note
-#   - references to completed divestitures affecting currency exposure
-#   - specific mention of reduced FX risk due to Norway and Canadian retail disposals
-#   - quantitative sensitivity analysis includes net position calculation
-
+sections:
+  financial_instruments:
+    heading: 9\.\s+Hedging\s+Activities
