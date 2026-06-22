@@ -1,29 +1,22 @@
 issuer: Masco
 ticker: MAS
-cik: "62996"
+cik: '62996'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   derivative_involvement_level:
-    description: "Company's level of involvement with derivative instruments"
+    description: Company's level of involvement with derivative instruments
     section: market_risk
   derivative_purpose:
-    description: "Purpose for using derivative instruments"
+    description: Purpose for using derivative instruments
     section: market_risk
   sensitivity_analysis_parameters:
-    description: "Hypothetical changes tested in sensitivity analysis"
+    description: Hypothetical changes tested in sensitivity analysis
     section: market_risk
   sensitivity_analysis_conclusion:
-    description: "Results and materiality assessment of sensitivity analysis"
+    description: Results and materiality assessment of sensitivity analysis
     section: market_risk
-
-# Unusual features identified:
-#   - Minimal derivative usage - company explicitly states 'insignificant involvement'
-#   - No specific derivative instruments named beyond general foreign currency category
-#   - No quantitative tables or detailed breakdowns provided
-#   - Sensitivity analysis covers broader financial instruments beyond just derivatives
-#   - Very brief disclosure compared to typical derivative-heavy companies
-
+sections:
+  derivatives_note:
+    heading: A\.\s+ACCOUNTING\s+POLICIES

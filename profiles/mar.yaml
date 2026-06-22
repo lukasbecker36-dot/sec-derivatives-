@@ -1,34 +1,32 @@
 issuer: Marriott International
 ticker: MAR
-cik: "1048286"
+cik: '1048286'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   derivative_strategy:
-    description: "overall hedging strategy and risk management approach"
+    description: overall hedging strategy and risk management approach
     section: market_risk
   forward_contracts_purpose:
-    description: "currency exchange rate risk management for cash and intercompany loans"
+    description: currency exchange rate risk management for cash and intercompany loans
     section: market_risk
   interest_rate_exposure:
-    description: "floating-rate and fixed-rate debt/receivables exposure"
+    description: floating-rate and fixed-rate debt/receivables exposure
     section: market_risk
   maturity_schedule:
-    description: "scheduled maturities by year for financial instruments"
+    description: scheduled maturities by year for financial instruments
     section: market_risk
   fair_values:
-    description: "total fair value vs carrying amount for rate-sensitive instruments"
+    description: total fair value vs carrying amount for rate-sensitive instruments
     section: market_risk
   average_interest_rates:
-    description: "weighted average rates for fixed and floating instruments"
+    description: weighted average rates for fixed and floating instruments
     section: market_risk
-
-# Unusual features identified:
-#   - combines market risk disclosures with detailed maturity analysis
-#   - explicitly states derivative fair value impact is not material
-#   - focuses heavily on interest rate risk rather than FX risk despite mentioning currency hedging
-#   - uses both assets and liabilities in single combined table with opposite signs
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*FAIR\s+VALUE\s+OF\s+FINANCIAL\s+INSTRUMENTS
+  market_risk:
+    heading: Item\s+3\.\s+Quantitative\s+and\s+Qualitative\s+Disclosures\s+About\s+Market\s+Risk
+  derivatives_note:
+    heading: Derivative\s+Instruments
