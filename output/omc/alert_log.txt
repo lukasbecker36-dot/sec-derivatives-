@@ -1,49 +1,74 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[DISAPPEARED_FIELD] total_derivative_asset: was $27M, now missing
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $0M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $7M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $7M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] var_estimate: was $27M, now missing
-[DISAPPEARED_FIELD] international_revenue_pct: was $181M, now missing
-[VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (total_derivative_asset, cash_flow_hedge_aoci, fx_transaction_gain_loss, fx_sensitivity_10pct, equity_sensitivity_10pct...)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($4,288M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($1M)
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $208M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $208M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $0M, now missing
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($0M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $208M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $208M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $27M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forward_notional: was $27M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cross_currency_swap_notional_jpy_usd: was $181M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cross_currency_swap_notional_gbp_eur: was $325M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] swap_fair_value_asset: was $7M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_expense_reduction: was $10M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] international_revenue_pct: was $47M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 14/17 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_ir_swap_notional, fx_derivatives_notional, fx_designated_notional...)
+[HISTORICAL] [LLM_FLAG] Notional amounts not present in this note section. Only cross currency swap (net investment hedge) appears at March 31, 2026 — no FX forwards or other derivatives.
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in this note. Only cross currency swap (net investment hedge) at March 31, 2026 — no FX forwards or other derivatives shown. No cash flow hedges.
+[HISTORICAL] [LLM_FLAG] Section is a brief qualitative disclosure deferring entirely to 2025 10-K and Note 15; no quantitative values extractable
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($27M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($7M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($7M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_forward_notional: appeared for first time ($27M)
-[NEW_FIELD] cross_currency_swap_notional_jpy_usd: appeared for first time ($181M)
-[NEW_FIELD] cross_currency_swap_notional_gbp_eur: appeared for first time ($325M)
-[NEW_FIELD] swap_fair_value_asset: appeared for first time ($7M)
-[NEW_FIELD] interest_expense_reduction: appeared for first time ($10M)
-[NEW_FIELD] international_revenue_pct: appeared for first time ($47M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-23 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $3,406M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $1M, now missing
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($208M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($208M)
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($0M)
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $9M, now missing
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($208M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($208M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $9M, now missing
+[HISTORICAL] [NUMERIC] net_derivative_position: $-9M → $7M (+180.7%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($27M)
+[HISTORICAL] [NEW_FIELD] fx_forward_notional: appeared for first time ($27M)
+[HISTORICAL] [NEW_FIELD] cross_currency_swap_notional_jpy_usd: appeared for first time ($181M)
+[HISTORICAL] [NEW_FIELD] cross_currency_swap_notional_gbp_eur: appeared for first time ($325M)
+[HISTORICAL] [NEW_FIELD] swap_fair_value_asset: appeared for first time ($7M)
+[HISTORICAL] [NEW_FIELD] interest_expense_reduction: appeared for first time ($10M)
+[HISTORICAL] [NEW_FIELD] international_revenue_pct: appeared for first time ($47M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, fi_total_derivative_liability, total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] Section is MD&A (Item 7A market risk), not the financial statement fair value note. Notional amounts are disclosed here but fair values are only partially disclosed. Cross currency swaps include a £325.0M Sterling/Euro tranche — notional in GBP not USD; excluded from USD total. fi_fx_derivatives_notional of $208.4M covers USD-denominated notional only. fi_ir_swap_notional set to 0.0 per explicit disclosure that no IR swaps exist.
+[HISTORICAL] [LLM_FLAG] £325M Sterling/Euro cross-currency swap notional excluded from USD fx_derivatives_notional total as no USD equivalent is provided
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional of $208.4M represents FX forwards ($27.4M) plus Yen/USD cross-currency swaps ($181M) only
+[HISTORICAL] [LLM_FLAG] The $7.1M swap fair value asset represents only the cross-currency swaps; FX forwards fair value not separately stated
+[HISTORICAL] [LLM_FLAG] VaR described as 'not material' — no numeric figure provided
+[HISTORICAL] [LLM_FLAG] cross_currency_swap_notional_gbp_eur is in GBP millions (£325.0M), not USD
+[HISTORICAL] [LLM_FLAG] FX forwards are fair value hedges; cross-currency swaps are net investment hedges
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $27M, now missing
-[DISAPPEARED_FIELD] var_estimate: was $27M, now missing
-[DISAPPEARED_FIELD] international_revenue_pct: was $181M, now missing
-[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (equity_sensitivity_10pct, var_estimate, international_revenue_pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-23 ===
+[HISTORICAL] [DROPPED_TO_ZERO] fi_total_derivative_asset: $0M → $0M
+[HISTORICAL] [DROPPED_TO_ZERO] total_derivative_asset: $0M → $0M
+[HISTORICAL] [LLM_FLAG] Notional amounts not present in this note section. No FX derivative assets or liabilities at this date — only cross currency swap liability.
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in this note. At September 30, 2025 no FX derivative assets or liabilities appear — only cross currency swap liability. Cross currency swaps are net investment hedges, not cash flow hedges.
+[HISTORICAL] [LLM_FLAG] Section is a brief qualitative disclosure deferring entirely to 2024 10-K and Note 13; no quantitative values extractable
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($27M)
-[NEW_FIELD] fx_forward_notional: appeared for first time ($27M)
-[NEW_FIELD] cross_currency_swap_notional_jpy_usd: appeared for first time ($181M)
-[NEW_FIELD] cross_currency_swap_notional_gbp_eur: appeared for first time ($325M)
-[NEW_FIELD] swap_fair_value_asset: appeared for first time ($7M)
-[NEW_FIELD] interest_expense_reduction: appeared for first time ($10M)
-[NEW_FIELD] international_revenue_pct: appeared for first time ($47M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $6M → $0M (-98.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $6M → $0M (-98.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $6M → $-9M (-245.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts not present in this note section. Cross currency swaps shifted from asset to liability vs Q1 2025.
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in this note. Cross currency swaps flipped from asset to liability compared to Q1 2025. No cash flow hedges — swaps are net investment hedges.
+[HISTORICAL] [LLM_FLAG] Section is a brief qualitative disclosure deferring entirely to 2024 10-K and Note 13; no quantitative values extractable
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($27M)
-[NEW_FIELD] fx_forward_notional: appeared for first time ($27M)
-[NEW_FIELD] cross_currency_swap_notional_jpy_usd: appeared for first time ($181M)
-[NEW_FIELD] cross_currency_swap_notional_gbp_eur: appeared for first time ($325M)
-[NEW_FIELD] swap_fair_value_asset: appeared for first time ($7M)
-[NEW_FIELD] interest_expense_reduction: appeared for first time ($10M)
-[NEW_FIELD] international_revenue_pct: appeared for first time ($47M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [LLM_FLAG] Notional amounts not present in this note section; only fair values are reported. No corporate/government debt securities in the portfolio — only marketable equity securities.
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in this note; only fair values shown. Cross currency swaps are net investment hedges, not cash flow hedges — AOCI balance not separately broken out here.
+[HISTORICAL] [LLM_FLAG] Section is a brief qualitative disclosure deferring entirely to 2024 10-K and Note 12; no quantitative values extractable
