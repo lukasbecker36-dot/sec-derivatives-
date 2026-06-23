@@ -1,100 +1,82 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[DISAPPEARED_FIELD] total_derivative_asset: was $437M, now missing
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $700M, now missing
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $3M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($397M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $3,135M, now missing
-[NUMERIC] ir_sensitivity_100bp: $3,222M → $66M (-98.0%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_10pct: $-87M → $-1M (+98.9%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $437M, now missing
-[NEW_FIELD] commodity_var: appeared for first time ($85M)
-[DISAPPEARED_FIELD] commodity_var_period_stats: was $16M, now missing
-[NUMERIC] derivative_mark_to_market_var: $-3M → $151M (+5133.3%) — exceeds 20% threshold
-[NEW_FIELD] counterparty_credit_exposure: appeared for first time ($1,300M)
-[NEW_FIELD] collateral_held: appeared for first time ($117M)
-[DISAPPEARED_FIELD] credit_exposure_by_quality: was $61M, now missing
-[NEW_FIELD] exposure_rolloff_timeline: appeared for first time ($61M)
-[VALIDATION] Likely extraction failure: 7/10 previously-populated fields are now null (total_derivative_asset, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, equity_sensitivity_10pct...)
-[LLM_FLAG] extraction_failed: Expecting property name enclosed in double quotes: line 29 column 18 (char 941)
-[LLM_FLAG] ir_sensitivity_100bp showed a significant change compared to the prior period (3222.0 to 66.0) due to a shift in the company's debt structure and interest rates.
-[LLM_FLAG] fx_sensitivity_10pct shows a more than 50% drop compared to prior period of -87.0 to -1.0, reflecting changes in currency exposure impacts.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $3,175M → $4,260M (+34.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $3,222M → $4,559M (+41.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $3,135M → $4,220M (+34.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $3,222M → $4,559M (+41.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-87M → $-339M (-289.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-3M → $-1M (+66.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_var: $61M → $85M (+39.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] collateral_held: $408M → $117M (-71.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset of $4,260M includes $34M of investments in securities and $6M of NAV equity securities in addition to derivatives (IR $3 + FX $7 + commodity $4,210 = $4,220M pure derivatives).
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not disclosed in Note 5; they would appear in Note 6 (Accounting for Derivative Instruments and Hedging Activities), which is not included in this section_text.
+[HISTORICAL] [LLM_FLAG] Commodity contracts exclude $565M derivative assets and $132M derivative liabilities elected as NPNS on October 1, 2024, no longer carried at fair value.
+[HISTORICAL] [LLM_FLAG] Long-term debt carrying amount jumped significantly from $16,565M (Dec 31, 2025) to $23,269M (Mar 31, 2026), likely reflecting new debt from LSP Portfolio acquisition mentioned in the Level 3 rollforward.
+[HISTORICAL] [LLM_FLAG] LSP Portfolio acquisition on January 30, 2026 significantly increased derivative balances; LSP Portfolio derivative assets of $715M (current) + $335M (non-current) and liabilities of $784M (current) + $362M (non-current) were assumed.
+[HISTORICAL] [LLM_FLAG] NPNS deferred: $565M assets and $132M liabilities excluded from recurring fair value table as of March 31, 2026.
+[HISTORICAL] [LLM_FLAG] Total derivative assets including NPNS deferred gains = $4,785M; total derivative liabilities including NPNS deferred losses = $4,691M.
+[HISTORICAL] [LLM_FLAG] Treasury locks of $800M notional entered in February 2026 were fully terminated in March 2026 and are not included in the period-end notional.
+[HISTORICAL] [LLM_FLAG] Commodity VaR increased significantly in Q1 2026 (from $59M to $85M at period end) primarily due to the LSP Portfolio acquisition on January 30, 2026 adding new generation assets.
+[HISTORICAL] [LLM_FLAG] Debt fair value jumped to $22.9B (from $16.4B at Dec 31, 2025) reflecting the LSP acquisition which added $3.2B of assumed debt plus new financing.
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity is expressed as change in fair value of long-term debt from 100bp decrease, not change in derivatives fair value.
+[HISTORICAL] [LLM_FLAG] Section also discloses: a 1% change in variable interest rates would result in a $66 million change in interest expense on a rolling twelve-month basis as of March 31, 2026.
+[HISTORICAL] [LLM_FLAG] FX sensitivity reflects impact on net income from 10% appreciation of major currencies vs USD.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($437M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($700M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($3M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($3,135M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($3,222M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-87M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($437M)
-[NUMERIC] ir_sensitivity_100bp: $30M → $16M (-46.7%) — exceeds 20% threshold
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-3M)
-[NEW_FIELD] commodity_var: appeared for first time ($61M)
-[NEW_FIELD] derivative_mark_to_market_var: appeared for first time ($145M)
-[NEW_FIELD] counterparty_credit_exposure: appeared for first time ($1,700M)
-[NEW_FIELD] collateral_held: appeared for first time ($408M)
-[NEW_FIELD] exposure_rolloff_timeline: appeared for first time ($66M)
-[LLM_FLAG] Notional FX derivatives and interest rate swap amounts are significant additions indicating active hedging strategy.
-[LLM_FLAG] ir_sensitivity_100bp dropped from prior period value of 30.0, likely due to a change in interest rate derivatives and market conditions.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] net_derivative_position: $-41M → $-87M (-112.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $466M → $843M (+80.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-6M → $-3M (+50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_mark_to_market_var: $84M → $145M (+72.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] collateral_held: $278M → $408M (+46.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset of $3,175M includes $33M of investments in securities and $7M of NAV equity securities in addition to derivatives (IR $0 + FX $3 + commodity $3,132 = $3,135M pure derivatives).
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not disclosed in Note 5; they would appear in Note 6 (Accounting for Derivative Instruments and Hedging Activities), which is not included in this section_text.
+[HISTORICAL] [LLM_FLAG] Commodity contracts exclude $622M derivative assets and $138M derivative liabilities elected as NPNS on October 1, 2024, no longer carried at fair value.
+[HISTORICAL] [LLM_FLAG] 10-K filing (annual). Section text appears truncated mid-sentence near the credit reserve methodology discussion.
+[HISTORICAL] [LLM_FLAG] NRG elected NPNS for certain existing derivative contracts on October 1, 2024; $622M of derivative assets and $138M of derivative liabilities are excluded from the recurring fair value table as of December 31, 2025.
+[HISTORICAL] [LLM_FLAG] Total derivative assets including NPNS deferred gains = $3,757M; total derivative liabilities including NPNS deferred losses = $3,360M. Net including NPNS = $397M.
+[HISTORICAL] [LLM_FLAG] Treasury locks of $1.4B notional entered in July 2025 were fully terminated in September 2025.
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity is expressed as change in fair value of long-term debt from 100bp decrease, not change in derivatives fair value.
+[HISTORICAL] [LLM_FLAG] Section also discloses: a 1% change in variable interest rates would result in a $16 million change in interest expense on a rolling twelve-month basis as of December 31, 2025.
+[HISTORICAL] [LLM_FLAG] FX sensitivity reflects impact on net income from 10% appreciation of major currencies vs USD.
+[HISTORICAL] [LLM_FLAG] Liquidity risk sensitivity: $0.50/MMBtu gas price decrease would increase margin collateral posted by ~$1.4B; 1.00 MMBtu/MWh heat rate decrease would increase margin posted by ~$503M.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($397M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($66M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $437M, now missing
-[NEW_FIELD] commodity_var: appeared for first time ($85M)
-[DISAPPEARED_FIELD] commodity_var_period_stats: was $30M, now missing
-[NUMERIC] derivative_mark_to_market_var: $-3M → $151M (+5133.3%) — exceeds 20% threshold
-[NEW_FIELD] counterparty_credit_exposure: appeared for first time ($1,300M)
-[NEW_FIELD] collateral_held: appeared for first time ($117M)
-[DISAPPEARED_FIELD] credit_exposure_by_quality: was $61M, now missing
-[NEW_FIELD] exposure_rolloff_timeline: appeared for first time ($61M)
-[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (equity_sensitivity_10pct, commodity_var_period_stats, credit_exposure_by_quality)
-[LLM_FLAG] interest rate sensitivity increased from prior period value of 66.0
-[LLM_FLAG] the commodity VaR has significantly increased from $59M to $85M, an increase driven by the addition of new generation assets.
-[LLM_FLAG] the derivative mark-to-market VaR is notably high at $151M compared to the previous period's -$3M, indicating a significant shift in risk exposure.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $350M → $425M (+21.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $134M → $-41M (-130.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-3M → $-6M (-100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_mark_to_market_var: $119M → $84M (-29.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] collateral_held: $585M → $278M (-52.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset of $2,807M includes $30M of investments in securities and $7M of NAV equity securities in addition to derivatives ($8M FX + $2,762M commodity = $2,770M pure derivatives).
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not disclosed in Note 5; they would appear in Note 6 (Accounting for Derivative Instruments and Hedging Activities), which is not included in this section_text.
+[HISTORICAL] [LLM_FLAG] Commodity contracts exclude $644M derivative assets and $194M derivative liabilities elected as NPNS on October 1, 2024, no longer carried at fair value.
+[HISTORICAL] [LLM_FLAG] Section text appears truncated mid-sentence in the Level 3 quantitative table (ending with 'Consumer' for Power Options row).
+[HISTORICAL] [LLM_FLAG] NRG elected NPNS for certain existing derivative contracts on October 1, 2024; $644M of derivative assets and $194M of derivative liabilities are excluded from the recurring fair value table as of September 30, 2025.
+[HISTORICAL] [LLM_FLAG] Total derivative assets including NPNS deferred gains = $3,414M; total derivative liabilities including NPNS deferred losses = $3,005M.
+[HISTORICAL] [LLM_FLAG] Treasury locks of $1.4B notional entered in July 2025 were fully terminated in September 2025 and are not included in the period-end notional.
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity is expressed as change in fair value of long-term debt from 100bp decrease, not change in derivatives fair value.
+[HISTORICAL] [LLM_FLAG] Section also discloses: a 1% change in variable interest rates would result in a $16 million change in interest expense on a rolling twelve-month basis as of September 30, 2025.
+[HISTORICAL] [LLM_FLAG] FX sensitivity reflects impact on net income from 10% appreciation of major currencies vs USD.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($437M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-3M)
-[NEW_FIELD] commodity_var: appeared for first time ($61M)
-[NEW_FIELD] derivative_mark_to_market_var: appeared for first time ($145M)
-[NEW_FIELD] counterparty_credit_exposure: appeared for first time ($1,700M)
-[NEW_FIELD] collateral_held: appeared for first time ($408M)
-[NEW_FIELD] exposure_rolloff_timeline: appeared for first time ($66M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $4,310M → $3,251M (-24.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $4,276M → $3,216M (-24.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $601M → $134M (-77.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-2M → $-3M (-50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] collateral_held: $1,000M → $585M (-41.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset of $3,251M includes $28M of investments in securities and $7M of NAV equity securities in addition to derivatives ($3M FX + $3,213M commodity = $3,216M pure derivatives).
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not disclosed in Note 5; they would appear in Note 6 (Accounting for Derivative Instruments and Hedging Activities), which is not included in this section_text.
+[HISTORICAL] [LLM_FLAG] Commodity contracts exclude $861M derivative assets and $145M derivative liabilities elected as NPNS on October 1, 2024, no longer carried at fair value.
+[HISTORICAL] [LLM_FLAG] Convertible Senior Notes were settled as of July 8, 2025 (after this reporting period end).
+[HISTORICAL] [LLM_FLAG] NRG elected NPNS for certain existing derivative contracts on October 1, 2024; $861M of derivative assets and $145M of derivative liabilities are excluded from the recurring fair value table as of June 30, 2025.
+[HISTORICAL] [LLM_FLAG] Total derivative assets including NPNS deferred gains = $4,077M; total derivative liabilities including NPNS deferred losses = $3,227M.
+[HISTORICAL] [LLM_FLAG] In July 2025 (subsequent to period end), the Company entered into treasury locks with a total notional amount of $1.4 billion.
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity is expressed as change in fair value of long-term debt from 100bp decrease, not change in derivatives fair value.
+[HISTORICAL] [LLM_FLAG] FX sensitivity reflects impact on net income from 10% appreciation of major currencies vs USD; primary exposure is Canadian business natural gas purchases.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NUMERIC] ir_sensitivity_100bp: $31,000M → $31M (-99.9%) — exceeds 20% threshold
-[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 31,000 to 31 (0x)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NUMERIC] ir_sensitivity_100bp: $30M → $31,000M (+103233.3%) — exceeds 20% threshold
-[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 30 to 31,000 (1033x)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($30M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NUMERIC] fx_transaction_gain_loss: $-6M → $-3M (+50.0%) — exceeds 20% threshold
-[NUMERIC] ir_sensitivity_100bp: $466M → $843M (+80.9%) — exceeds 20% threshold
-[NUMERIC] derivative_mark_to_market_var: $84M → $145M (+72.6%) — exceeds 20% threshold
-[NUMERIC] collateral_held: $278M → $408M (+46.8%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NUMERIC] fx_forwards_outstanding: $350M → $425M (+21.4%) — exceeds 20% threshold
-[NUMERIC] fx_transaction_gain_loss: $-3M → $-6M (-100.0%) — exceeds 20% threshold
-[NUMERIC] derivative_mark_to_market_var: $119M → $84M (-29.4%) — exceeds 20% threshold
-[NUMERIC] collateral_held: $585M → $278M (-52.5%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NUMERIC] fx_transaction_gain_loss: $-2M → $-3M (-50.0%) — exceeds 20% threshold
-[NUMERIC] collateral_held: $1,000M → $585M (-41.5%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($349M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-2M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($452M)
-[NEW_FIELD] commodity_var: appeared for first time ($59M)
-[NEW_FIELD] derivative_mark_to_market_var: appeared for first time ($137M)
-[NEW_FIELD] collateral_held: appeared for first time ($1,000M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset of $4,310M includes $28M of investments in securities and $6M of NAV equity securities in addition to derivatives ($18M FX + $4,258M commodity = $4,276M pure derivatives). The table Total assets line blends these; pure derivative assets = $4,276M.
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not disclosed in Note 5; they would appear in Note 6 (Accounting for Derivative Instruments and Hedging Activities), which is not included in this section_text.
+[HISTORICAL] [LLM_FLAG] Commodity contracts exclude $895M derivative assets and $208M derivative liabilities elected as NPNS on October 1, 2024, no longer carried at fair value.
+[HISTORICAL] [LLM_FLAG] NRG elected NPNS for certain existing derivative contracts on October 1, 2024; $895M of derivative assets and $208M of derivative liabilities are excluded from the recurring fair value table as of March 31, 2025.
+[HISTORICAL] [LLM_FLAG] Total derivative assets including NPNS deferred gains = $5,171M; total derivative liabilities including NPNS deferred losses = $3,883M.
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity is expressed as change in fair value of long-term debt from 100bp decrease, not change in derivatives fair value.
+[HISTORICAL] [LLM_FLAG] FX sensitivity reflects impact on net income from 10% appreciation of major currencies vs USD; primary exposure is Canadian business natural gas purchases.

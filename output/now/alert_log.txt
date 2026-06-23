@@ -1,24 +1,67 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,100M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($2,200M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($900M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($45M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($32M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($13M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($5M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($1,852M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($5,204M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($4,019M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($16M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,300M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($2,200M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($3,100M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($45M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($32M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($13M)
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($5M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-62M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-199M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_sensitivity: was $-177M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, foreign_currency_sensitivity)
+[HISTORICAL] [LLM_FLAG] Derivative contract details (notional amounts, fair values) are in Note 8 which is not included in this section_text. FX and IR derivative fields cannot be populated.
+[HISTORICAL] [LLM_FLAG] Note: December 31, 2025 comparative fair value table shows higher cash equivalents total of $9,261M total vs $7,056M at March 31, 2026, reflecting significant cash deployment. Cash equivalents at Dec 31, 2025 include $515M in U.S. government securities (not present at March 31, 2026).
+[HISTORICAL] [LLM_FLAG] During Q1 2026, net upward adjustments of $87M were recorded on non-marketable equity investments, vs immaterial adjustments in Q1 2025.
+[HISTORICAL] [LLM_FLAG] Q1 2026 is the first period where expense hedging was added (forecasted operating expenses hedged from Q4 2025 onwards), increasing designated notional from $1.8B to $2.2B.
+[HISTORICAL] [LLM_FLAG] Non-designated portfolio grew to $3.1B from $2.5B at Dec 31, 2025, reflecting increased balance sheet exposure hedging.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-23 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $2,005M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $6,952M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $5,107M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $41M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $4,800M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $1,800M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $3,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $82M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-76M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-65M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-56M, now missing
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-62M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-199M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($-177M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 12/12 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt, fx_derivatives_notional...)
+[HISTORICAL] [LLM_FLAG] Section_text provided is the Item 7A market risk section, not Note 8 Derivative Contracts. Notional amounts and fair value tables are in Note 8 which was not included in the provided section_text. From Q1 2026 comparative disclosures: designated notional $2.2B and non-designated notional $2.5B as of December 31, 2025.
+[HISTORICAL] [LLM_FLAG] Two distinct FX sensitivity figures reported: (1) $177M decrease in operating income from 10% USD strengthening (pre-hedge, operating income basis); (2) $199M decrease in fair value of cash flow hedge portfolio for revenue hedges from 10% USD depreciation. These measure different things — fx_sensitivity_10pct uses the $199M hedge portfolio figure; foreign_currency_sensitivity uses the $177M operating income figure.
+[HISTORICAL] [LLM_FLAG] An additional $18M sensitivity for expense hedge portfolio (10% USD appreciation) is not captured in a single field.
+[HISTORICAL] [LLM_FLAG] FX contract notional amounts and derivative fair values are in Note 8 which is not included in this section_text.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1M → $6M (+500.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $117M → $82M (-29.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-116M → $-76M (+34.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-101M → $-65M (+35.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-76M → $-56M (+26.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Derivative contract details (notional amounts, fair values) are in Note 8 which is not included in this section_text. FX and IR derivative fields cannot be populated.
+[HISTORICAL] [LLM_FLAG] In September 2025, the Company purchased $750M of preferred shares of Genesys (privately-held), contributing to the large increase in strategic investments from $472M to $1,508M.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $29M → $35M (+20.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $17M → $1M (-94.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $19M → $117M (+515.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-2M → $-116M (-5700.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-2M → $-101M (-4950.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $4M → $-76M (-2000.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Derivative contract details (notional amounts, fair values) are in Note 8 which is not included in this section_text. FX and IR derivative fields cannot be populated.
+[HISTORICAL] [LLM_FLAG] Large swing in hedge fair values vs Q1 2025: designated hedges moved from net asset position to large net liability ($116M) reflecting USD strengthening against forecasted currencies.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [LLM_FLAG] Derivative contract details (notional amounts, fair values) are in Note 8 which is not included in this section_text. FX and IR derivative fields cannot be populated.
