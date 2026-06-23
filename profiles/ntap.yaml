@@ -1,40 +1,34 @@
 issuer: NetApp
 ticker: NTAP
-cik: "1002047"
+cik: '1002047'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fx_forwards_cf_hedge_notional:
-    description: "Notional of FX forwards designated as cash flow hedges (long position)"
+    description: Notional of FX forwards designated as cash flow hedges (long position)
     section: market_risk
   fx_forwards_non_designated_long:
-    description: "Notional of non-designated FX forwards (long/balance sheet hedges)"
+    description: Notional of non-designated FX forwards (long/balance sheet hedges)
     section: market_risk
   fx_forwards_non_designated_short:
-    description: "Notional of non-designated FX forwards (short/balance sheet hedges)"
+    description: Notional of non-designated FX forwards (short/balance sheet hedges)
     section: market_risk
   fx_hedge_gain_loss_oci:
-    description: "Unrealized gains/losses on cash flow hedges in OCI"
+    description: Unrealized gains/losses on cash flow hedges in OCI
     section: market_risk
   fixed_income_investments:
-    description: "Total fixed income debt investments ($2.1B)"
+    description: Total fixed income debt investments ($2.1B)
     section: market_risk
   ir_sensitivity_100bp:
-    description: "Change in fair value of fixed-income securities from 100bp increase ($4M)"
+    description: Change in fair value of fixed-income securities from 100bp increase ($4M)
     section: market_risk
   senior_notes_principal:
-    description: "Aggregate principal of Senior Notes outstanding ($2.5B)"
+    description: Aggregate principal of Senior Notes outstanding ($2.5B)
     section: market_risk
   fx_forward_gain_loss:
-    description: "Gains/losses on FX forward contracts"
+    description: Gains/losses on FX forward contracts
     section: market_risk
-
-# Unusual features identified:
-#   - Uses both designated cash flow hedges (long FX forwards) and non-designated balance sheet hedges (long and short FX forwards)
-#   - Fixed-rate Senior Notes with no financial statement risk from IR changes but fair value fluctuation disclosed
-#   - Does not use derivative financial instruments in investment portfolio
-#   - Fiscal year ends late April (non-standard)
-
+sections:
+  financial_instruments:
+    heading: Financial\s+Instruments\s+and\s+Fair\s+Value\s+Measurements

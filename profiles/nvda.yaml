@@ -1,39 +1,36 @@
 issuer: Nvidia
 ticker: NVDA
-cik: "1045810"
+cik: '1045810'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   notional_designated:
-    description: "Notional value of FX forwards designated as accounting hedges"
+    description: Notional value of FX forwards designated as accounting hedges
     section: derivatives_note
   notional_non_designated:
-    description: "Notional value of FX forwards not designated as accounting hedges"
+    description: Notional value of FX forwards not designated as accounting hedges
     section: derivatives_note
   maturity_horizon:
-    description: "Maximum maturity of foreign currency contracts"
+    description: Maximum maturity of foreign currency contracts
     section: derivatives_note
   facility_lease_guarantee_exposure:
-    description: "Maximum gross exposure under facility lease guarantee agreements classified as credit derivatives"
+    description: Maximum gross exposure under facility lease guarantee agreements classified as credit derivatives
     section: derivatives_note
   escrow_mitigation:
-    description: "Amount placed in escrow to mitigate guarantee exposure"
+    description: Amount placed in escrow to mitigate guarantee exposure
     section: derivatives_note
   interest_rate_sensitivity:
-    description: "Change in fair value of investment portfolio for 0.5% yield curve decrease"
+    description: Change in fair value of investment portfolio for 0.5% yield curve decrease
     section: market_risk
   fx_sensitivity_aoci:
-    description: "Adverse impact on AOCI from 10% USD strengthening for FX contracts"
+    description: Adverse impact on AOCI from 10% USD strengthening for FX contracts
     section: market_risk
   fx_sensitivity_balance_sheet:
-    description: "Adverse impact on income before taxes from 10% FX rate change on balance sheet hedging contracts"
+    description: Adverse impact on income before taxes from 10% FX rate change on balance sheet hedging contracts
     section: market_risk
-
-# Unusual features identified:
-#   - Facility lease guarantees classified as credit derivatives with changes in fair value in Other income and expense
-#   - Fair values of FX contracts described as 'not significant' rather than providing a table
-#   - Two categories of FX forwards: designated hedges for operating expenses and non-designated for monetary assets/liabilities
-
+sections:
+  financial_instruments:
+    heading: Cash\s+Equivalents\s+and\s+Marketable\s+Securities
+  market_risk:
+    heading: Quantitative\s+and\s+Qualitative\s+Disclosures\s+About\s+Market\s+Risk

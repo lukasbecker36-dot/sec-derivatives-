@@ -1,44 +1,32 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($456M)
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $463M, now missing
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($8M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-6M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $6M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (cash_flow_hedge_aoci, fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $6M → $8M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text captured the borrowings note (2026 Credit Agreement details) rather than the Financial Instruments and Fair Value Measurements note content. Level 3 equity/other securities end balance of $806M visible in a separate window for this period.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($463M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-6M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($6M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $10M → $7M (-30.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $10M → $7M (-30.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text is a truncated borrowings-note stub; the full Financial Instruments and Fair Value Measurements note content was not captured. Level 3 equity/other securities end balance of $817M visible in a separate window.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-23 ===
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($7M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] sensitivity_adverse_10pct_interest_rate: was $-1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_debt_outstanding: was $1,500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] variable_rate_debt_outstanding: was $475M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, sensitivity_adverse_10pct_interest_rate, fixed_rate_debt_outstanding, variable_rate_debt_outstanding)
+[HISTORICAL] [LLM_FLAG] Section text is a truncated borrowings-note stub and does not contain the financial instruments fair value measurement tables. Level 3 equity/other securities balance of $814M visible in Window 2 of the locate request (beginning of period $814M, end of period $814M for Q1 FY2026).
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-06-30 | Processed 2026-06-23 ===
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $9M, now missing
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] sensitivity_adverse_10pct_interest_rate: appeared for first time ($-1M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($1,500M)
+[HISTORICAL] [NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($475M)
+[HISTORICAL] [LLM_FLAG] Section text is a minimal stub containing only a cross-reference to Note 11 and an Other, net commentary; the full Note 11 Financial Instruments and Fair Value Measurements content was not captured in this extract window.
+[HISTORICAL] [LLM_FLAG] Section text appears to be from Item 7A (MD&A market risk discussion) rather than the financial statement derivatives note; some fields like AOCI balance and 12-month reclassification may be in the financial statement note separately.
+[HISTORICAL] [LLM_FLAG] fx_revenue_sensitivity is multi-dimensional (two currency pairs, two metrics each); individual components: AUD/USD revenue $35M, GBP/USD revenue $11M, AUD/USD EBITDA $10M, GBP/USD EBITDA $1M per one-cent move.
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
-[DISAPPEARED_FIELD] sensitivity_adverse_10pct_interest_rate: was $-1M, now missing
-[DISAPPEARED_FIELD] fixed_rate_debt_outstanding: was $1,500M, now missing
-[DISAPPEARED_FIELD] variable_rate_debt_outstanding: was $475M, now missing
-[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, sensitivity_adverse_10pct_interest_rate, fixed_rate_debt_outstanding, variable_rate_debt_outstanding)
-
-=== 10-K | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
-[NEW_FIELD] sensitivity_adverse_10pct_interest_rate: appeared for first time ($-1M)
-[NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($1,500M)
-[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($475M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [LLM_FLAG] Section text appears to be a truncated/stub extract containing only REA Group borrowing footnotes and a cross-reference; the full Financial Instruments and Fair Value Measurements note content was likely not captured in this window.
