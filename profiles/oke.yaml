@@ -1,9 +1,8 @@
-issuer: "Oneok"
+issuer: Oneok
 ticker: OKE
-cik: "1039684"
+cik: '1039684'
 archetype: minimal_hedger
 extraction_mode: llm
-
-# Derivatives section matched by: ITEM\s*7A
-# Market risk section matched by: Quantitative\s+and\s+Qualitat\s*ive\s+Disclosures?\s+About\s+Market\s+Risk
-
+sections:
+  market_risk:
+    heading: ITEM\s+3\.\s+QUANTITATIVE\s+AND\s+QUALITATIVE\s+DISCLOSURES\s+ABOUT\s+MARKET\s+RISK

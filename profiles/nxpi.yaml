@@ -1,25 +1,23 @@
 issuer: NXP Semiconductors
 ticker: NXPI
-cik: "1413447"
+cik: '1413447'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   rcf_borrowing_capacity:
-    description: "Revolving credit facility borrowing capacity with floating rate"
+    description: Revolving credit facility borrowing capacity with floating rate
     section: market_risk
   interest_rate_sensitivity:
-    description: "Hypothetical impact of interest rate increase on floating rate debt"
+    description: Hypothetical impact of interest rate increase on floating rate debt
     section: market_risk
   derivative_fair_value_methodology:
-    description: "Valuation model inputs for derivative instruments (market observable inputs, yield curves, spot/forward rates)"
+    description: Valuation model inputs for derivative instruments (market observable inputs, yield curves, spot/forward rates)
     section: market_risk
-
-# Unusual features identified:
-#   - Market risk section mentions use of derivative financial instruments but no specific types or notional amounts are disclosed in the extracted text
-#   - No outstanding borrowings under RCF so interest rate sensitivity is zero
-#   - Derivatives note content may exist in Note 2 (Significant Accounting Policies) rather than a standalone derivatives note
-#   - Section text appears truncated - references Note 2 and Note 14 for additional information
-
+sections:
+  financial_instruments:
+    heading: 11\s+Fair\s+Value\s+Measurements
+  derivatives_note:
+    heading: 11\s+Fair\s+Value\s+Measurements
+  market_risk:
+    heading: Item\s+3\.\s+Quantitative\s+and\s+Qualitative\s+Disclosures\s+About\s+Market\s+Risk
