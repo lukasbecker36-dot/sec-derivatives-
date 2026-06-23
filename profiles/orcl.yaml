@@ -1,35 +1,28 @@
 issuer: Oracle Corporation
 ticker: ORCL
-cik: "1341439"
+cik: '1341439'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   non_marketable_equity_investments:
-    description: "total value of non-marketable equity and convertible debt investments"
+    description: total value of non-marketable equity and convertible debt investments
     section: market_risk
   principal_currency_exposures:
-    description: "list of primary foreign currencies with exposure"
+    description: list of primary foreign currencies with exposure
     section: market_risk
   foreign_currency_forward_contracts:
-    description: "description of hedging program and contract characteristics"
+    description: description of hedging program and contract characteristics
     section: market_risk
   sensitivity_analysis_table:
-    description: "hypothetical potential losses from market rate changes"
+    description: hypothetical potential losses from market rate changes
     section: market_risk
   foreign_exchange_earnings_impact:
-    description: "potential earnings impact from 10% FX rate decrease"
+    description: potential earnings impact from 10% FX rate decrease
     section: market_risk
   foreign_exchange_fair_value_impact:
-    description: "potential fair value impact on cash and receivables from 10% FX rate decrease"
+    description: potential fair value impact on cash and receivables from 10% FX rate decrease
     section: market_risk
-
-# Unusual features identified:
-#   - no_notional_amounts_disclosed
-#   - no_maturity_analysis_provided
-#   - limited_hedge_accounting_disclosure
-#   - sensitivity_analysis_uses_earnings_impact_rather_than_derivative_fair_values
-#   - non_marketable_investments_included_in_market_risk_section
-
+sections:
+  financial_instruments:
+    heading: Fair\s+Values\s+of\s+Financial\s+Instruments

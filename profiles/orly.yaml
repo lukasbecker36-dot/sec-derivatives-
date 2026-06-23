@@ -1,42 +1,37 @@
 issuer: O’Reilly Automotive
 ticker: ORLY
-cik: "898173"
+cik: '898173'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   commercial_paper_outstanding:
-    description: "Outstanding borrowings under commercial paper program"
+    description: Outstanding borrowings under commercial paper program
     section: market_risk
   commercial_paper_rate:
-    description: "Weighted-average variable interest rate on commercial paper"
+    description: Weighted-average variable interest rate on commercial paper
     section: market_risk
   interest_rate_sensitivity:
-    description: "Impact of 10% interest rate increase on pre-tax earnings"
+    description: Impact of 10% interest rate increase on pre-tax earnings
     section: market_risk
   fixed_rate_debt_outstanding:
-    description: "Outstanding fixed rate debt amount"
+    description: Outstanding fixed rate debt amount
     section: market_risk
   fixed_rate_debt_fair_value:
-    description: "Estimated fair value of fixed rate debt"
+    description: Estimated fair value of fixed rate debt
     section: market_risk
   mexico_net_asset_exposure:
-    description: "Net asset exposure in Mexican subsidiaries in USD"
+    description: Net asset exposure in Mexican subsidiaries in USD
     section: market_risk
   canada_net_asset_exposure:
-    description: "Net asset exposure in Canadian subsidiaries in USD"
+    description: Net asset exposure in Canadian subsidiaries in USD
     section: market_risk
   fx_sensitivity_mexico:
-    description: "Potential loss from 10% FX change for Mexican operations"
+    description: Potential loss from 10% FX change for Mexican operations
     section: market_risk
   fx_sensitivity_canada:
-    description: "Potential loss from 10% FX change for Canadian operations"
+    description: Potential loss from 10% FX change for Canadian operations
     section: market_risk
-
-# Unusual features identified:
-#   - No derivative instruments used despite significant foreign currency exposure in Mexico and Canada
-#   - Company manages FX risk through functional currency denomination rather than hedging instruments
-#   - Interest rate risk primarily from commercial paper program, not derivatives
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*FAIR\s+VALUE\s+MEASUREMENTS
