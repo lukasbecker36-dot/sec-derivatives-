@@ -1,9 +1,10 @@
-issuer: "ResMed"
+issuer: ResMed
 ticker: RMD
-cik: "943819"
+cik: '943819'
 archetype: minimal_hedger
 extraction_mode: llm
-
-# Derivatives section matched by: \(\d+\)\s+Derivative
-# Market risk section matched by: Item\s*7A[.\s]*Quantitative
-
+sections:
+  financial_instruments:
+    heading: \(10\)\s+Derivative\s+Instruments\s+and\s+Hedging\s+Activities
+  market_risk:
+    heading: ITEM\s+7A\s+QUANTITATIVE\s+AND\s+QUALITATIVE\s+DISCLOSURES\s+ABOUT\s+MARKET\s+AND\s+BUSINESS\s+RISKS
