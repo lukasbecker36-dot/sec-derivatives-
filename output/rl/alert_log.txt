@@ -1,0 +1,91 @@
+=== 10-K | Period ending 2026-03-28 | Processed 2026-06-24 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $219M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $1,396M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $1,108M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $288M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $40M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $1,396M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $1,108M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $288M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $40M, now missing
+[HISTORICAL] [NUMERIC] net_derivative_position: $-38M → $14M (+137.2%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-7M, now missing
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($141M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_notional_designated: was $308M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_notional_undesignated: was $288M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_investment_hedge_notional: was $800M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_fair_value_asset: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_fair_value_liability: was $40M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] hedge_gain_loss_oci: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] hedge_gain_loss_reclassified: was $-9M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 20/21 previously-populated fields are now null (total_marketable_securities_fv, gross_unrealized_gains_debt, fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional...)
+[HISTORICAL] [LLM_FLAG] Section text is the MD&A market risk narrative, not Note 12; notional amounts and gross fair values require Note 12 which was not in provided section_text
+[HISTORICAL] [LLM_FLAG] FX sensitivity (10% USD move): ~$141M; IR sensitivity (25bp): ~$14M; Senior Notes fair value: $1.206B
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp not available — filing only discloses 25bp sensitivity (~$14M); 100bp extrapolation would be ~$56M but not stated explicitly
+
+=== 10-Q | Period ending 2025-12-27 | Processed 2026-06-24 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $2M → $2M (+21.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $2M → $2M (+21.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-17M → $-7M (+60.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_forwards_fair_value_asset: $2M → $2M (+21.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] hedge_gain_loss_oci: $4M → $1M (-77.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] hedge_gain_loss_reclassified: $-5M → $-9M (-84.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] hedge_gain_loss_oci captures Q3 three-month cash flow hedge OCI only; nine-month YTD cash flow hedge OCI was $(19.5)M
+[HISTORICAL] [LLM_FLAG] Nine-month OCI on CF hedges: $(19.5)M; Q3 standalone: $0.9M
+[HISTORICAL] [LLM_FLAG] Cash flow hedge reclassifications to COGS: $(9.2)M Q3, $(9.5)M nine-month YTD
+[HISTORICAL] [LLM_FLAG] This 10-Q market risk section cross-references the Fiscal 2025 10-K and Note 11 for quantitative disclosures; no sensitivity figures restated here
+
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-06-24 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $0M → $2M (+533.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $66M → $42M (-36.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $0M → $2M (+533.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $66M → $42M (-36.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-66M → $-40M (+39.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-26M → $-17M (+34.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_forwards_fair_value_asset: $0M → $2M (+533.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_forwards_fair_value_liability: $66M → $42M (-36.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] hedge_gain_loss_oci: $-24M → $4M (+116.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] hedge_gain_loss_reclassified: $5M → $-5M (-206.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] hedge_gain_loss_oci captures cash flow hedge OCI only (Q2 three-month period); net investment hedge OCI for same period was $1.3M effective portion + $6.7M excluded = $8.0M total
+[HISTORICAL] [LLM_FLAG] Six-month OCI on CF hedges: $(20.4)M; three-month: $4.0M
+[HISTORICAL] [LLM_FLAG] Cash flow hedge reclassifications to COGS: $(5.0)M Q2, $(0.3)M six-month YTD
+[HISTORICAL] [LLM_FLAG] This 10-Q market risk section cross-references the Fiscal 2025 10-K and Note 11 for quantitative disclosures; no sensitivity figures restated here
+
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-06-24 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($187M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($1,443M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($1,161M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($282M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($66M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,443M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($1,161M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($282M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($66M)
+[HISTORICAL] [NUMERIC] net_derivative_position: $26M → $-66M (-354.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-26M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $121M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
+[HISTORICAL] [NEW_FIELD] fx_forwards_notional_designated: appeared for first time ($361M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_notional_undesignated: appeared for first time ($282M)
+[HISTORICAL] [NEW_FIELD] net_investment_hedge_notional: appeared for first time ($800M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_fair_value_asset: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_fair_value_liability: appeared for first time ($66M)
+[HISTORICAL] [NEW_FIELD] hedge_gain_loss_oci: appeared for first time ($-24M)
+[HISTORICAL] [NEW_FIELD] hedge_gain_loss_reclassified: appeared for first time ($5M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (fx_sensitivity_10pct, fixed_rate_notes_billion)
+[HISTORICAL] [LLM_FLAG] net_investment_hedge OCI included in total designated OCI of $(84.3)M; only cash flow hedge OCI of $(24.4)M captured for hedge_gain_loss_oci per field definition
+[HISTORICAL] [LLM_FLAG] cross-currency swaps are classified under net investment hedges, not as a separate IR swap line
+[HISTORICAL] [LLM_FLAG] Net investment hedge notional of $800M is cross-currency swaps (FX), included in fx_derivatives_notional total
+[HISTORICAL] [LLM_FLAG] OCI gain/loss on CF hedges for Q1 FY2026: $(24.4)M; net investment hedges effective portion: $(57.8)M
+[HISTORICAL] [LLM_FLAG] This 10-Q market risk section largely cross-references the Fiscal 2025 10-K and Note 11 for quantitative disclosures; sensitivity figures are not restated here
+
+=== 10-K | Period ending 2025-03-29 | Processed 2026-06-24 ===
+[HISTORICAL] [LLM_FLAG] Section text is the MD&A market risk narrative, not the Note 13 derivatives table; notional amounts and gross fair values require Note 13 which was not in the provided section_text
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp not available — filing only discloses 25bp sensitivity (~$9M); 100bp extrapolation would be ~$36M but not stated explicitly
