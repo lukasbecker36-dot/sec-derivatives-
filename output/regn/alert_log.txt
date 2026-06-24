@@ -1,31 +1,39 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-24 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($1,865M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($15,528M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($49M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($10,620M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($41M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $198M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_value: was $516M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_sensitivity_100bp, marketable_equity_value)
+[HISTORICAL] [LLM_FLAG] REGN continues to hold no derivative instruments. Equity securities at fair value collapsed to $48.7M (Mar 31, 2026) from $700.8M (Sep 30, 2025) and $1,485.4M (Jun 30, 2025), suggesting large-scale liquidation of equity holdings. The Mar 31, 2026 fair value table omits a Level 3 column and shows no contingent consideration liability, possibly settled.
+[HISTORICAL] [LLM_FLAG] 10-Q Item 3 provides no quantitative disclosures — it only cross-references Part II, Item 7A of the 2025 10-K (filed February 4, 2026) and states no material changes to market risks as of March 31, 2026. All fields are null.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($198M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($516M)
-[LLM_FLAG] ir_sensitivity_100bp value increase of 21.0% compared to prior period indicative value of $163.0 million.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-24 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,162M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $15,522M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $701M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $9,698M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $93M, now missing
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($198M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_value: appeared for first time ($516M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt)
+[HISTORICAL] [LLM_FLAG] All market risk disclosures in this 10-K section are qualitative only except for the 100bp IR sensitivity figure and the equity securities carrying value; no FX or equity sensitivity dollar amounts are disclosed.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-24 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $850M → $1,162M (+36.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $1,485M → $701M (-52.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] REGN holds a large investment portfolio ($15.5B in AFS debt securities + $700.8M equity securities) but discloses no derivative instruments. Contingent consideration liability of $10.3 million is not a derivative. Equity securities declined sharply from $1,095.3M (Dec 31, 2024) to $700.8M (Sep 30, 2025).
+[HISTORICAL] [LLM_FLAG] 10-Q Item 3 provides no quantitative disclosures — it only cross-references Part II, Item 7A of the 2024 10-K and states no material changes to market risks as of September 30, 2025. All fields are null.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($198M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($516M)
-[LLM_FLAG] The decrease in fair value of the investment portfolio due to a 100bp unfavorable change in interest rates shows a significant increase compared to the prior year ($198.3M vs $163.0M), which is over 50%. This may indicate growing concerns over interest rate exposure.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-24 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,865M → $850M (-54.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $1,235M → $1,485M (+20.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $57M → $78M (+36.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] REGN holds a large investment portfolio ($14B+ in AFS debt securities) but discloses no derivative instruments. Contingent consideration liability of $10.3 million (Level 3) is not a derivative.
+[HISTORICAL] [LLM_FLAG] 10-Q Item 3 provides no quantitative disclosures — it only cross-references Part II, Item 7A of the 2024 10-K and states no material changes to market risks as of June 30, 2025. All fields are null.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($198M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($516M)
-[LLM_FLAG] Equity securities carrying value decreased significantly from $1.307B (2024) to $515.8M (2025), a decline of over 60%
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-24 ===
+[HISTORICAL] [LLM_FLAG] REGN holds no derivative instruments. Contingent consideration liability of $10.3 million (Level 3) is not a derivative. Long-term debt fair value estimated at $1.511 billion (Level 2) as of March 31, 2025.
+[HISTORICAL] [LLM_FLAG] 10-Q Item 3 provides no quantitative disclosures — it only cross-references Part II, Item 7A of the 2024 10-K (filed February 5, 2025) and states no material changes to market risks as of March 31, 2025. All fields are null.

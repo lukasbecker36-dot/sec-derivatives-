@@ -1,30 +1,97 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($4,700M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,200M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($893M)
-[DISAPPEARED_FIELD] net_derivative_position: was $1,200M, now missing
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $897M, now missing
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $1,000M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $114M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $123M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-9M, now missing
-[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (net_derivative_position, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp...)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-24 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($512M)
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $1,200M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $897M, now missing
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($326M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($92M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($4,700M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $1,200M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_derivatives_notional: was $1,000M, now missing
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($326M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($92M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($234M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $703M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $727M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_notional: was $1,200M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_fair_value: was $114M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_swaps_notional: was $897M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_swaps_fair_value: was $32M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_contracts_notional: was $1,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_contracts_fair_value: was $-123M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] non_designated_gain_loss: was $49M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $12M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_sensitivity: was $727M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_price_sensitivity: was $55M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 16/17 previously-populated fields are now null (fi_fx_not_designated_notional, fi_ir_swap_notional, fx_not_designated_notional, commodity_derivatives_notional, ir_sensitivity_100bp...)
+[HISTORICAL] [LLM_FLAG] Section text is truncated before derivative notional schedules; FX and IR swap notionals cannot be extracted from the provided text.
+[HISTORICAL] [LLM_FLAG] Cash equivalents fair value of $512M is from the non-recurring fair value table (carrying amount equals fair value, Level 1); no separate marketable securities breakdown is provided.
+[HISTORICAL] [LLM_FLAG] Significant increase in outstanding FX notional from $2.0B (Dec 2025) to $4.7B (Mar 2026), likely reflecting new ship construction hedges.
+[HISTORICAL] [LLM_FLAG] Fuel swap aggregate notional not visible in provided section text excerpt.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,200M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($897M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($1,000M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($114M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($123M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-9M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-24 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $432M, now missing
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($1,200M)
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($897M)
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $212M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $64M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $1,900M, now missing
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,200M)
+[HISTORICAL] [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($1,000M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $212M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $64M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $148M, now missing
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($703M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($727M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_notional: appeared for first time ($1,200M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_fair_value: appeared for first time ($114M)
+[HISTORICAL] [NEW_FIELD] interest_rate_swaps_notional: appeared for first time ($897M)
+[HISTORICAL] [NEW_FIELD] interest_rate_swaps_fair_value: appeared for first time ($32M)
+[HISTORICAL] [NEW_FIELD] commodity_contracts_notional: appeared for first time ($1,000M)
+[HISTORICAL] [NEW_FIELD] commodity_contracts_fair_value: appeared for first time ($-123M)
+[HISTORICAL] [NEW_FIELD] non_designated_gain_loss: appeared for first time ($49M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($12M)
+[HISTORICAL] [NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($727M)
+[HISTORICAL] [NEW_FIELD] commodity_price_sensitivity: appeared for first time ($55M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 7/8 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, fx_derivatives_notional, total_derivative_asset...)
+[HISTORICAL] [LLM_FLAG] Section text is the MD&A quantitative market risk disclosures (Item 7A), not the financial instruments footnote (Note 16). Total derivative asset/liability balance sheet amounts are not present; they are in the referenced Note 16.
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional of $1,200M is a 2025 annual average, not a period-end balance.
+[HISTORICAL] [LLM_FLAG] Fuel swap notional approximately $1.0 billion (maturing through 2028) not captured in schema fields — no fuel swap field in schema.
+[HISTORICAL] [LLM_FLAG] Net investment hedge: approximately €631M (~$740M) of debt designated as hedge of net investments in TUI Cruises.
+[HISTORICAL] [LLM_FLAG] The section_text for this 10-K extract appears to be from Item 7A (MD&A market risk), not from the actual Note 16 financial statement tables; key balance sheet fair value totals are not present.
+[HISTORICAL] [LLM_FLAG] Fuel swap fair value is a liability of $123M per the text; IR swap fair value is an asset of $32M.
+[HISTORICAL] [LLM_FLAG] FX construction forward fair value is an asset of $114M per the text.
+[HISTORICAL] [LLM_FLAG] Commodity contracts fair value reported as negative (liability of $123M).
+[HISTORICAL] [LLM_FLAG] IR sensitivity covers two separate metrics: $703M fair value impact (fixed-rate debt) and $12M interest expense impact (floating-rate debt).
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $727M relates to ship construction Euro exposure only, not total FX sensitivity.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-24 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $735M → $432M (-41.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $290M → $212M (-26.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $88M → $64M (-27.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,900M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $290M → $212M (-26.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $88M → $64M (-27.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $202M → $148M (-26.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text is truncated before derivative notional schedules; FX and IR swap notionals cannot be extracted from the provided text.
+[HISTORICAL] [LLM_FLAG] Cash equivalents fair value of $432M is from the non-recurring fair value table (carrying amount equals fair value, Level 1); no separate marketable securities breakdown is provided.
+[HISTORICAL] [LLM_FLAG] Fuel swap aggregate notional not visible in provided section text excerpt.
+[HISTORICAL] [LLM_FLAG] FX designated vs. not-designated split not separately stated for the $1.9B outstanding notional.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-24 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $386M → $735M (+90.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $113M → $290M (+156.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $59M → $88M (+49.2%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $3,200M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $113M → $290M (+156.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $59M → $88M (+49.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $54M → $202M (+274.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text is truncated before derivative notional schedules; FX and IR swap notionals cannot be extracted from the provided text.
+[HISTORICAL] [LLM_FLAG] Cash equivalents fair value of $735M is from the non-recurring fair value table (carrying amount equals fair value, Level 1); no separate marketable securities breakdown is provided.
+[HISTORICAL] [LLM_FLAG] Outstanding FX contract notional not visible in the provided section text excerpt (text truncated).
+[HISTORICAL] [LLM_FLAG] Fuel swap aggregate notional not visible in provided section text excerpt.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[LLM_FLAG] Section text appears truncated — refers to Note 16 for detailed derivative disclosures but quantitative data not included in extracted section
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-24 ===
+[HISTORICAL] [LLM_FLAG] Section text is truncated before derivative notional schedules; FX and IR swap notionals cannot be extracted from the provided text.
+[HISTORICAL] [LLM_FLAG] Cash equivalents fair value of $386M is from the non-recurring fair value table (carrying amount equals fair value, Level 1); no separate marketable securities breakdown is provided.
+[HISTORICAL] [LLM_FLAG] Fuel swap aggregate notional not visible in provided section text excerpt; full filing likely contains it.
+[HISTORICAL] [LLM_FLAG] FX designated vs. not-designated split not separately stated for the $3.2B outstanding notional.

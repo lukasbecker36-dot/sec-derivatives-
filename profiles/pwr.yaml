@@ -1,32 +1,25 @@
 issuer: Quanta Services
 ticker: PWR
-cik: "1050915"
+cik: '1050915'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fixed_rate_debt_fair_value:
-    description: "Fair value of senior notes fixed-rate debt"
+    description: Fair value of senior notes fixed-rate debt
     section: market_risk
   fixed_rate_debt_carrying_value:
-    description: "Carrying value of senior notes net of unamortized costs"
+    description: Carrying value of senior notes net of unamortized costs
     section: market_risk
   variable_rate_debt_outstanding:
-    description: "Amount outstanding under senior credit facility and commercial paper program"
+    description: Amount outstanding under senior credit facility and commercial paper program
     section: market_risk
   interest_rate_sensitivity:
-    description: "Impact of 50 basis point change on annual interest expense for variable-rate debt"
+    description: Impact of 50 basis point change on annual interest expense for variable-rate debt
     section: market_risk
   debt_portfolio_mix:
-    description: "Percentage split between fixed-rate and variable-rate debt"
+    description: Percentage split between fixed-rate and variable-rate debt
     section: market_risk
-
-# Unusual features identified:
-#   - No derivative instruments used despite exposure to interest rate and currency exchange rate risks
-#   - Only market_risk section captured; no derivatives note exists or was extracted
-#   - Interest rate risk managed passively through debt portfolio mix (84% fixed, 16% variable)
-#   - Currency exchange rate risk mentioned as exposure but no hedging instruments disclosed
-#   - Sensitivity analysis uses 50 bps for variable-rate debt and 10% market price change for fixed-rate debt fair value
-
+sections:
+  market_risk:
+    heading: Item\s+3\.\s+Quantitative\s+and\s+Qualitative\s+Disclosures\s+about\s+Market\s+Risk\.

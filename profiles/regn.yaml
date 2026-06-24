@@ -1,33 +1,27 @@
 issuer: Regeneron Pharmaceuticals
 ticker: REGN
-cik: "872589"
+cik: '872589'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   ir_sensitivity_100bp:
-    description: "Decrease in fair value of investment portfolio from 100bp unfavorable change in interest rates"
+    description: Decrease in fair value of investment portfolio from 100bp unfavorable change in interest rates
     section: market_risk
   investment_portfolio_ir_exposure:
-    description: "Interest rate risk from marketable securities (corporate bonds and US treasury securities)"
+    description: Interest rate risk from marketable securities (corporate bonds and US treasury securities)
     section: market_risk
   korean_withholding_tax_receivable:
-    description: "Korean withholding tax receivable balance subject to FX risk - described in Note 3: Income Taxes"
+    description: 'Korean withholding tax receivable balance subject to FX risk - described in Note 3: Income Taxes'
     section: market_risk
   equity_price_risk:
-    description: "Exposure to equity price risk on investment portfolio"
+    description: Exposure to equity price risk on investment portfolio
     section: market_risk
   fx_risk_collaborator_revenue:
-    description: "Foreign exchange risk from collaborator revenue sharing and development expenses outside US"
+    description: Foreign exchange risk from collaborator revenue sharing and development expenses outside US
     section: market_risk
-
-# Unusual features identified:
-#   - No derivatives currently used - states 'We do not currently use interest rate derivative instruments'
-#   - Investment portfolio is primary IR risk source (corporate bonds and US treasuries)
-#   - 100bp sensitivity: $198.3M decrease in FV (Dec 2025) vs $163.0M (Dec 2024)
-#   - Notes future potential for FX hedging as international operations expand
-#   - Has variable rate lease (Tarrytown, NY) creating additional IR exposure
-#   - Pharma company with collaborator revenue sharing creating FX exposure
-
+sections:
+  financial_instruments:
+    heading: 5\.\s+Marketable\s+Securities
+  market_risk:
+    heading: Item\s+3\.\s+Quantitative\s+and\s+Qualitative\s+Disclosures\s+About\s+Market\s+Risk
