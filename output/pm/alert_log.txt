@@ -1,75 +1,62 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-25 ===
-[NEW_FIELD] fx_designated_notional: appeared for first time ($29,543M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($19,328M)
-[NEW_FIELD] commodity_designated_notional: appeared for first time ($5M)
-[NEW_FIELD] commodity_not_designated_notional: appeared for first time ($0M)
-[NEW_FIELD] total_notional: appeared for first time ($54,176M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($1,056M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($1,182M)
-[NEW_FIELD] net_asset: appeared for first time ($150M)
-[NEW_FIELD] net_liability: appeared for first time ($-1M)
-[NEW_FIELD] commodity_oci_gain_loss: appeared for first time ($1M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($159M)
-[NEW_FIELD] hedge_ineffectiveness: appeared for first time ($0M)
-[NEW_FIELD] credit_contingent_liability_fv: appeared for first time ($0M)
-[NEW_FIELD] collateral_posted: appeared for first time ($311M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-24 ===
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($29,543M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($19,328M)
+[HISTORICAL] [NEW_FIELD] commodity_designated_notional: appeared for first time ($5M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($1,056M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($1,182M)
+[HISTORICAL] [NEW_FIELD] net_asset: appeared for first time ($150M)
+[HISTORICAL] [NEW_FIELD] net_liability: appeared for first time ($-1M)
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $109M → $159M (+45.9%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] credit_contingent_liability_fv: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] collateral_posted: appeared for first time ($311M)
+[HISTORICAL] [LLM_FLAG] fx_oci_gain_loss and commodity_oci_gain_loss are stated pre-tax; net-of-tax split by instrument type not explicitly provided
+[HISTORICAL] [LLM_FLAG] net_liability is only $1M after netting; presented as -1 per schema convention
+[HISTORICAL] [LLM_FLAG] PMI's 10-Q market risk section is a brief qualitative cross-reference to Note 6; quantitative sensitivity disclosures are only provided in the annual 10-K using Value at Risk methodology
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-03-28 ===
-[DISAPPEARED_FIELD] fx_designated_notional: was $29,349M, now missing
-[DISAPPEARED_FIELD] fx_not_designated_notional: was $16,030M, now missing
-[DISAPPEARED_FIELD] commodity_designated_notional: was $6M, now missing
-[DISAPPEARED_FIELD] commodity_not_designated_notional: was $0M, now missing
-[DISAPPEARED_FIELD] total_notional: was $52,835M, now missing
-[DISAPPEARED_FIELD] total_derivative_asset: was $643M, now missing
-[DISAPPEARED_FIELD] total_derivative_liability: was $2,167M, now missing
-[DISAPPEARED_FIELD] net_asset: was $91M, now missing
-[DISAPPEARED_FIELD] net_liability: was $-115M, now missing
-[DISAPPEARED_FIELD] fx_oci_gain_loss: was $-168M, now missing
-[DISAPPEARED_FIELD] commodity_oci_gain_loss: was $0M, now missing
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $49M, now missing
-[DISAPPEARED_FIELD] hedge_ineffectiveness: was $0M, now missing
-[DISAPPEARED_FIELD] credit_contingent_liability_fv: was $0M, now missing
-[DISAPPEARED_FIELD] collateral_posted: was $91M, now missing
-[VALIDATION] Likely extraction failure: 15/15 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, commodity_designated_notional, commodity_not_designated_notional, total_notional...)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-24 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $29,349M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $16,030M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_designated_notional: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $643M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $2,167M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_asset: was $91M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_liability: was $-115M, now missing
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $49M → $109M (+122.4%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] credit_contingent_liability_fv: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] collateral_posted: was $91M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 9/12 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, commodity_designated_notional, total_derivative_asset, total_derivative_liability...)
+[HISTORICAL] [LLM_FLAG] WARNING: supplied section_text is the Item 7 MD&A liquidity/market risk narrative (pages 62-64), NOT Note 14 Financial Instruments — most derivatives-note fields cannot be populated from this text
+[HISTORICAL] [LLM_FLAG] total_notional of 50000 is approximate; the filing says 'approximately $50 billion'
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci of $109M sourced from Window 6 of the co-located market_risk_locate request file, which contains the AOCI rollforward from Note 14
+[HISTORICAL] [LLM_FLAG] Re-extraction from the actual Note 14 section of pm-20251231.htm would be needed to populate the remaining null fields
+[HISTORICAL] [LLM_FLAG] PM discloses market risk using a VaR (Value at Risk) methodology — one-day fair value impact at 95% confidence using a parametric delta-gamma approach — rather than the 10%/100bp sensitivity analysis format the schema expects. FX VaR at period-end: $97M; IR VaR at period-end: $135M. These VaR figures cannot be directly mapped to schema fields without fabrication.
+[HISTORICAL] [LLM_FLAG] No commodity sensitivity or commodity derivative data appears in this market risk section.
+[HISTORICAL] [LLM_FLAG] Prior-period (Dec 31, 2024) VaR also available in text: FX $130M at period-end (avg $92M, high $130M, low $69M); IR $221M at period-end (avg $233M, high $272M, low $200M).
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-03-28 ===
-[NUMERIC] net_asset: $61M → $91M (+49.2%) — exceeds 20% threshold
-[NUMERIC] net_liability: $-422M → $-115M (+72.7%) — exceeds 20% threshold
-[NUMERIC] fx_oci_gain_loss: $-279M → $-168M (+39.8%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $22M → $49M (+122.7%) — exceeds 20% threshold
-[LLM_FLAG] total_notional increased 20.4% from $44,100M to $52,835M; change driven by increase in FX designated contracts ($25,149M to $29,349M, +16.8%) and new interest rate contracts ($3,000M to $7,450M, +148.3%)
-[LLM_FLAG] total_derivative_asset decreased 54.6% from $1,418M to $643M; this is within the 50% threshold but notable change
-[LLM_FLAG] total_derivative_liability increased 776.5% from $247M to $2,167M; significant change likely due to interest rate environment shifts affecting fair values
-[LLM_FLAG] net_asset decreased 49.2% from $337M to $91M, consistent with lower derivative assets
-[LLM_FLAG] net_liability position changed substantially: from $11M liability to $115M liability (945% increase)
-[LLM_FLAG] collateral_posted decreased 88.4% from $76M to $91M (actually increased slightly from cash collateral perspective); note the filing shows cash collateral received/pledged increased to $91M vs $18M prior period
-[LLM_FLAG] fx_oci_gain_loss changed from -$279M (pre-tax) to -$168M (9-month period data); prior period was for full year comparison
-[LLM_FLAG] Filing text provided appears to be introductory/reference section only - does not contain the quantitative sensitivity disclosures typically found in 'Quantitative and Qualitative Disclosures About Market Risk' section. The text references Note 6 for derivative details but the actual sensitivity metrics are not included in the provided excerpt.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-24 ===
+[HISTORICAL] [NUMERIC] net_asset: $61M → $91M (+49.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_liability: $-422M → $-115M (+72.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $22M → $49M (+122.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fx_oci_gain_loss and commodity_oci_gain_loss are stated pre-tax; net-of-tax split by instrument type not explicitly provided
+[HISTORICAL] [LLM_FLAG] net_liability is $115M after netting; presented as -115 per schema convention
+[HISTORICAL] [LLM_FLAG] PMI's 10-Q market risk section is a brief qualitative cross-reference to Note 6; quantitative sensitivity disclosures are only provided in the annual 10-K
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-03-28 ===
-[NUMERIC] fx_designated_notional: $24,025M → $31,573M (+31.4%) — exceeds 15% threshold
-[NUMERIC] commodity_designated_notional: $10M → $6M (-40.0%) — exceeds 20% threshold
-[NUMERIC] total_derivative_asset: $855M → $632M (-26.1%) — exceeds 25% threshold
-[NUMERIC] total_derivative_liability: $558M → $2,677M (+379.7%) — exceeds 20% threshold
-[NUMERIC] net_asset: $115M → $61M (-47.0%) — exceeds 20% threshold
-[NUMERIC] net_liability: $-14M → $-422M (-2914.3%) — exceeds 20% threshold
-[NUMERIC] fx_oci_gain_loss: $-583M → $-279M (+52.1%) — exceeds 20% threshold
-[DROPPED_TO_ZERO] commodity_oci_gain_loss: $1M → $0M
-[NUMERIC] expected_12mo_reclass_from_aoci: $134M → $22M (-83.6%) — exceeds 20% threshold
-[NUMERIC] collateral_posted: $288M → $76M (-73.6%) — exceeds 20% threshold
-[LLM_FLAG] fx_designated_notional increased 31.5% from $24,025M to $31,573M (7.3% variance threshold exceeded)
-[LLM_FLAG] fx_not_designated_notional decreased 11.9% from $18,698M to $16,472M (within expected range)
-[LLM_FLAG] total_notional increased 7.3% from $44,100M to $52,251M (within expected range)
-[LLM_FLAG] total_derivative_asset decreased 55.4% from $855M to $632M (exceeds 50% threshold - significant decrease in fair value of derivative assets)
-[LLM_FLAG] total_derivative_liability increased 380.5% from $558M to $2,677M (significant increase - exceeds 50% threshold)
-[LLM_FLAG] net_liability changed from -$14M to -$422M (change of 3,014% - major shift to net liability position)
-[LLM_FLAG] collateral_posted decreased 73.6% from $288M to $76M (exceeds 50% threshold)
-[LLM_FLAG] The provided filing excerpt references Note 6 (Financial Instruments) but does not include the actual note content with quantitative market risk sensitivities. The complete note section would be needed to extract the requested sensitivity metrics.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-24 ===
+[HISTORICAL] [NUMERIC] fx_designated_notional: $24,025M → $31,573M (+31.4%) — exceeds 15% threshold
+[HISTORICAL] [NUMERIC] commodity_designated_notional: $10M → $6M (-40.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $855M → $632M (-26.1%) — exceeds 25% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $558M → $2,677M (+379.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_asset: $115M → $61M (-47.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_liability: $-14M → $-422M (-2914.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $134M → $22M (-83.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] collateral_posted: $288M → $76M (-73.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fx_oci_gain_loss and commodity_oci_gain_loss are stated pre-tax in filing; net-of-tax split by instrument type not explicitly provided
+[HISTORICAL] [LLM_FLAG] net_liability is $422M after netting; presented as -422 per schema convention
+[HISTORICAL] [LLM_FLAG] Large swing in net_liability vs prior quarter ($14M to $422M) reflects material EUR/USD appreciation impact on net investment hedges
+[HISTORICAL] [LLM_FLAG] PMI's 10-Q market risk section is a brief qualitative cross-reference to Note 6; quantitative sensitivity disclosures are only provided in the annual 10-K
 
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-03-28 ===
-[LLM_FLAG] Total notional increased 10.4% from $44,100M (Dec 31, 2024) to $48,683M (Mar 31, 2025), primarily driven by FX not designated increasing 17.3% from $15,942M to $18,698M
-[LLM_FLAG] Total derivative assets decreased 39.7% from $1,418M to $855M, and total liabilities increased 126.1% from $247M to $558M, indicating significant fair value deterioration in derivative positions
-[LLM_FLAG] Net asset position decreased 65.9% from $337M to $115M (Q1 2025 vs year-end 2024)
-[LLM_FLAG] FX OCI loss of $583M (pre-tax) in Q1 2025 versus gain of $619M in Q1 2024 represents a significant swing of approximately $1,202M
-[LLM_FLAG] This excerpt appears to be introductory/overview text pointing to Note 6 (Financial Instruments) and Note 9 (Contingencies). The actual quantitative sensitivity disclosures are not included in the provided text. Full extraction requires the complete Note 6 section which typically contains the detailed market risk sensitivity tables.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-24 ===
+[HISTORICAL] [LLM_FLAG] fx_oci_gain_loss and commodity_oci_gain_loss are stated pre-tax in the filing; net-of-tax OCI split by instrument type is not explicitly provided
+[HISTORICAL] [LLM_FLAG] net_liability is reported gross as $14M after netting; presented as -14 per schema convention
+[HISTORICAL] [LLM_FLAG] collateral_posted derived from cash collateral received/pledged line on asset side of netting table ($288M)
+[HISTORICAL] [LLM_FLAG] PMI's 10-Q market risk section is a brief qualitative cross-reference to Note 6; quantitative sensitivity disclosures (10% FX, 100bp IR) are only provided in the annual 10-K using Value at Risk methodology, not the 10-Q format
