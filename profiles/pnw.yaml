@@ -1,32 +1,25 @@
 issuer: Pinnacle West Capital
 ticker: PNW
-cik: "764622"
+cik: '764622'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   derivative_instrument_types:
-    description: "Types of derivative instruments used by APS for commodity risk management"
+    description: Types of derivative instruments used by APS for commodity risk management
     section: derivatives_note
   derivative_fair_values:
-    description: "Fair values of derivative assets and liabilities on balance sheet"
+    description: Fair values of derivative assets and liabilities on balance sheet
     section: derivatives_note
   regulatory_treatment:
-    description: "Whether derivative gains/losses are deferred as regulatory assets/liabilities under rate regulation"
+    description: Whether derivative gains/losses are deferred as regulatory assets/liabilities under rate regulation
     section: derivatives_note
   forward_sale_agreements:
-    description: "Forward sale agreements activity and settlement details"
+    description: Forward sale agreements activity and settlement details
     section: financial_instruments
   accumulated_oci_derivatives:
-    description: "Derivative-related amounts in accumulated other comprehensive loss"
+    description: Derivative-related amounts in accumulated other comprehensive loss
     section: derivatives_note
-
-# Unusual features identified:
-#   - Market risk section text contained table of contents and auditor report rather than derivative detail
-#   - Derivative accounting is in Note 13 of combined notes for both Pinnacle West and APS
-#   - As a regulated utility, derivative gains/losses may be deferred as regulatory assets or liabilities rather than flowing through earnings or OCI
-#   - Forward sale agreements noted in headings suggest equity-linked forward contracts for capital raising
-#   - Dual registrant filing (Pinnacle West Capital and Arizona Public Service Company)
-
+sections:
+  market_risk:
+    heading: MARKET\s+AND\s+CREDIT\s+RISKS

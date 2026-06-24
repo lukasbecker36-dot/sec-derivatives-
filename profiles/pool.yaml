@@ -1,35 +1,30 @@
 issuer: Pool Corporation
 ticker: POOL
-cik: "945841"
+cik: '945841'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   interest_rate_swap_notional:
-    description: "Notional amounts of interest rate swap contracts"
+    description: Notional amounts of interest rate swap contracts
     section: derivatives_note
   interest_rate_swap_fixed_rate:
-    description: "Fixed interest rate per swap contracts"
+    description: Fixed interest rate per swap contracts
     section: derivatives_note
   interest_rate_swap_fair_value:
-    description: "Estimated fair value of interest rate swap contracts on balance sheet"
+    description: Estimated fair value of interest rate swap contracts on balance sheet
     section: derivatives_note
   hedge_effectiveness:
-    description: "Assessment of hedge effectiveness for cash flow hedges"
+    description: Assessment of hedge effectiveness for cash flow hedges
     section: derivatives_note
   aoci_derivative_gains_losses:
-    description: "Changes in estimated fair value recorded in Accumulated other comprehensive loss"
+    description: Changes in estimated fair value recorded in Accumulated other comprehensive loss
     section: derivatives_note
   interest_expense_reclassification:
-    description: "Amounts reclassified from AOCI to interest expense"
+    description: Amounts reclassified from AOCI to interest expense
     section: derivatives_note
-
-# Unusual features identified:
-#   - Only interest rate swaps are used; no commodity or FX derivatives
-#   - All swaps designated as cash flow hedges of variable-rate borrowings under ASC 815
-#   - Master netting arrangements exist but company policy is not to offset fair values on balance sheet
-#   - Market risk section contained only risk factor boilerplate and cybersecurity discussion, not quantitative market risk data
-#   - Reclassification amounts from AOCI to interest expense described as not material in any period
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+Value\s+Measurements\s+and\s+Interest\s+Rate\s+Swaps
+  market_risk:
+    heading: Item\s+3\.\s+Quantitative\s+and\s+Qualitative\s+Disclosures\s+About\s+Market\s+Risk

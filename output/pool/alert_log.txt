@@ -1,28 +1,49 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($300M)
-[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($300M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-24 ===
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($300M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $14M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/9 previously-populated fields are now null (fx_forwards_outstanding, fx_transaction_gain_loss, ir_sensitivity_100bp)
+[HISTORICAL] [LLM_FLAG] Fair value table is in thousands; converted to millions for output
+[HISTORICAL] [LLM_FLAG] Swap asset reclassified from long-term other assets to current prepaid expenses between Mar 2025 and Mar 2026, consistent with the Feb 2027 termination date approaching within 12 months
+[HISTORICAL] [LLM_FLAG] fair value now classified as current (Prepaid expenses) vs prior periods showing in Other assets (non-current), indicating swaps expire within 12 months of March 31, 2026 (termination Feb 26, 2027)
+[HISTORICAL] [LLM_FLAG] total_derivative_asset in thousands ($8,011K = $8.011M)
+[HISTORICAL] [LLM_FLAG] Market risk section contains no quantitative disclosures; defers entirely to 2025 Annual Report on Form 10-K for both interest rate and currency risk details
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($0M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] aoci_derivative_gains_losses: appeared for first time ($0M)
-[NEW_FIELD] interest_expense_reclassification: appeared for first time ($0M)
-[LLM_FLAG] The company has no exposure to FX derivatives or other types of derivatives despite recognizing interest rate swap contracts.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-24 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $300M, now missing
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $11M → $9M (-20.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $11M → $9M (-20.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $11M → $9M (-20.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($14M)
+[HISTORICAL] [NUMERIC] interest_rate_swap_fair_value: $11M → $9M (-20.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Fair value table is in thousands; converted to millions for output
+[HISTORICAL] [LLM_FLAG] 10-K section text does not include the swap notional table; IR swap notional set to null — may be $300M based on prior quarters but cannot confirm from this text alone
+[HISTORICAL] [LLM_FLAG] Prior year (2024) comparatives show $0 prepaid + $19,876 thousand other assets = $20.610M derivative asset for Dec 31, 2024
+[HISTORICAL] [LLM_FLAG] section_text is from MD&A liquidity section and cross-references Note 5 for swap details; notional amounts inferred from consistent quarterly disclosures
+[HISTORICAL] [LLM_FLAG] total_derivative_asset from fair value table in accounting policies section ($9,115K = $9.115M)
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp is expressed as pretax income impact (decrease of $13.7M), not fair value change
+[HISTORICAL] [LLM_FLAG] sensitivity analysis assumes maximum borrowings under all facilities ($1.3B revolving + $375M receivables + $500M term)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-24 ===
+[HISTORICAL] [LLM_FLAG] Fair value table is in thousands; converted to millions for output
+[HISTORICAL] [LLM_FLAG] Former swap 1 ($150M, 1.3260%) terminated Feb 28, 2025 and is excluded from active notional
+[HISTORICAL] [LLM_FLAG] ir_swap_notional represents only the two active swaps at period end; terminated swap (inception Feb 5 2020) excluded
+[HISTORICAL] [LLM_FLAG] total_derivative_asset in thousands ($11,453K = $11.453M)
+[HISTORICAL] [LLM_FLAG] Market risk section contains no quantitative disclosures; defers entirely to 2024 Annual Report on Form 10-K for both interest rate and currency risk details
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-24 ===
+[HISTORICAL] [LLM_FLAG] Fair value table is in thousands; converted to millions for output
+[HISTORICAL] [LLM_FLAG] Swap 1 ($150M, 1.3260%) terminated Feb 28, 2025 and is excluded from active notional
+[HISTORICAL] [LLM_FLAG] ir_swap_notional represents only the two active swaps at period end; terminated swap 1 ($150M) excluded
+[HISTORICAL] [LLM_FLAG] total_derivative_asset is in thousands in the filing ($13,791K = $13.791M)
+[HISTORICAL] [LLM_FLAG] Market risk section contains no quantitative disclosures; defers entirely to 2024 Annual Report on Form 10-K for both interest rate and currency risk details
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-24 ===
+[HISTORICAL] [LLM_FLAG] Fair value table is in thousands; converted to millions for output
+[HISTORICAL] [LLM_FLAG] Swap 1 ($150M, 1.3260%) terminated Feb 28, 2025 and is excluded from active notional
+[HISTORICAL] [LLM_FLAG] ir_swap_notional represents only the two active swaps at period end; terminated swap 1 ($150M) is excluded as it ended Feb 28 2025
+[HISTORICAL] [LLM_FLAG] total_derivative_asset is in thousands in the filing ($16,728K = $16.728M)
+[HISTORICAL] [LLM_FLAG] Market risk section contains no quantitative disclosures; defers entirely to 2024 Annual Report on Form 10-K for both interest rate and currency risk details

@@ -1,37 +1,31 @@
 issuer: Insulet Corporation
 ticker: PODD
-cik: "1145197"
+cik: '1145197'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   notional_amount:
-    description: "notional value of interest rate swaps"
+    description: notional value of interest rate swaps
     section: market_risk
   weighted_average_rate:
-    description: "fixed interest rate paid on swaps"
+    description: fixed interest rate paid on swaps
     section: market_risk
   hedge_designation:
-    description: "type of hedge accounting applied"
+    description: type of hedge accounting applied
     section: market_risk
   embedded_derivative_gain:
-    description: "gain recognized on embedded derivative"
+    description: gain recognized on embedded derivative
     section: market_risk
   foreign_currency_exposure_percentage:
-    description: "percentage of revenue in foreign currencies"
+    description: percentage of revenue in foreign currencies
     section: market_risk
   foreign_currency_gain_loss:
-    description: "net realized and unrealized FX gains/losses"
+    description: net realized and unrealized FX gains/losses
     section: market_risk
   interest_rate_sensitivity:
-    description: "impact of 100bp rate change on earnings"
+    description: impact of 100bp rate change on earnings
     section: market_risk
-
-# Unusual features identified:
-#   - embedded derivative from convertible notes cash redemption election
-#   - no tabular presentation of derivative fair values or notional amounts
-#   - interest rate sensitivity analysis shows insignificant impact
-#   - foreign currency exposure detailed but no hedging instruments mentioned
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Financial\s+Instruments\s+and\s+Fair\s+Value
