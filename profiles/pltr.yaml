@@ -1,31 +1,25 @@
 issuer: Palantir Technologies
 ticker: PLTR
-cik: "1321655"
+cik: '1321655'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   publicly_traded_equity_securities:
-    description: "Fair value of publicly-traded equity securities held"
+    description: Fair value of publicly-traded equity securities held
     section: market_risk
   privately_held_equity_securities:
-    description: "Fair value of privately-held equity securities held"
+    description: Fair value of privately-held equity securities held
     section: market_risk
   interest_rate_risk_exposure:
-    description: "Description of cash/investment exposure to interest rates (short-term, minimal risk)"
+    description: Description of cash/investment exposure to interest rates (short-term, minimal risk)
     section: market_risk
   fx_exposure_currencies:
-    description: "Key FX exposures: JPY, EUR, GBP"
+    description: 'Key FX exposures: JPY, EUR, GBP'
     section: market_risk
   no_hedging_statement:
-    description: "Explicit statement that company has not engaged in FX hedging transactions"
+    description: Explicit statement that company has not engaged in FX hedging transactions
     section: market_risk
-
-# Unusual features identified:
-#   - Explicitly states no foreign currency hedging transactions to date
-#   - No derivative instruments used at all
-#   - Significant equity securities portfolio (public and private) creating market risk but not via derivatives
-#   - Risk discussion covers market risk, interest rate risk, FX risk, and inflation risk but with no hedging activity
-
+sections:
+  financial_instruments:
+    heading: 4\.\s+Investments\s+and\s+Fair\s+Value\s+Measurements
