@@ -1,41 +1,45 @@
-=== 10-K | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
-[NEW_FIELD] fx_forwards_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_contracts_notional: appeared for first time ($1M)
+=== 10-K | Period ending 2026-03-31 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] total_derivative_liability: $1M → $1M (-30.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-1M → $-0M (+50.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
+[HISTORICAL] [LLM_FLAG] All FX forwards and commodity swaps are not designated as hedging instruments; no hedge accounting applied.
+[HISTORICAL] [LLM_FLAG] FX notional amounts are given in individual foreign currency units only (no USD equivalent total).
+[HISTORICAL] [LLM_FLAG] Commodity notional is in physical units (pounds of nickel), not dollar-equivalent.
+[HISTORICAL] [LLM_FLAG] 10-K provides quantitative IR sensitivity ($0.4M for 100bp on $37.8M floating); FX and commodity sections are qualitative only with positions in non-USD units. Fixed rate notes total $1,907.8M.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_contracts_notional: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-25 ===
+[HISTORICAL] [DROPPED_TO_ZERO] total_derivative_asset: $0M → $0M
+[HISTORICAL] [NUMERIC] total_derivative_liability: $2M → $1M (-56.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-2M → $-1M (+52.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All FX forwards and commodity swaps are not designated as hedging instruments; no hedge accounting applied.
+[HISTORICAL] [LLM_FLAG] FX notional amounts are given in individual foreign currency units only (no USD equivalent total).
+[HISTORICAL] [LLM_FLAG] Commodity notional is in physical units (pounds of nickel), not dollar-equivalent.
+[HISTORICAL] [LLM_FLAG] All market risk disclosures in this 10-Q are qualitative only; cross-reference to 10-K for quantitative sensitivities. Positions stated in foreign currency/physical units, not USD millions.
 
-=== 10-K | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
-[NEW_FIELD] fx_forwards_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_contracts_notional: appeared for first time ($0M)
-[LLM_FLAG] Fixed-rate notes have increased to $1,907.8 million from prior period's value, indicating a significant change in capital structure or funding strategy.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1M → $0M (-77.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $3M → $2M (-23.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All FX forwards and commodity swaps are not designated as hedging instruments; no hedge accounting applied.
+[HISTORICAL] [LLM_FLAG] FX notional amounts are given in individual foreign currency units only (no USD equivalent total).
+[HISTORICAL] [LLM_FLAG] Commodity notional is in physical units (pounds of nickel), not dollar-equivalent.
+[HISTORICAL] [LLM_FLAG] All market risk disclosures in this 10-Q are qualitative only; cross-reference to 10-K for quantitative sensitivities. FX and commodity positions stated in foreign currency/physical units, not USD millions.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_contracts_notional: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $0M → $1M (+900.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $1M → $3M (+430.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-0M → $-2M (-341.2%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (ir_sensitivity_100bp, fixed_rate_notes_billion)
+[HISTORICAL] [LLM_FLAG] All FX forwards and commodity swaps are not designated as hedging instruments; no hedge accounting applied.
+[HISTORICAL] [LLM_FLAG] FX notional amounts are given in individual foreign currency units only (no USD equivalent total).
+[HISTORICAL] [LLM_FLAG] Commodity notional is in physical units (pounds of nickel), not dollar-equivalent.
+[HISTORICAL] [LLM_FLAG] All market risk disclosures in this 10-Q are qualitative only; cross-reference to 10-K for quantitative sensitivities. Positions stated in foreign currency/physical units, not USD millions.
 
-=== 10-K | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($31M)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $31M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_sensitivity_100bp, fixed_rate_notes_billion)
-
-=== 10-K | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
-
+=== 10-K | Period ending 2025-03-31 | Processed 2026-06-25 ===
+[HISTORICAL] [LLM_FLAG] Filing reports in dollars in thousands (not millions); fair values converted to millions for schema consistency.
+[HISTORICAL] [LLM_FLAG] All FX forwards and commodity swaps are not designated as hedging instruments; no hedge accounting applied.
+[HISTORICAL] [LLM_FLAG] FX notional amounts are given in individual foreign currency units only (no USD equivalent total).
+[HISTORICAL] [LLM_FLAG] Commodity notional is in physical units (pounds of nickel), not dollar-equivalent.
+[HISTORICAL] [LLM_FLAG] 10-K provides quantitative IR sensitivity ($0.3M for 100bp on $34.8M floating); FX and commodity sections are qualitative only with positions in non-USD units. Fixed rate notes total $2,024.2M. Note 18 tables use thousands, not millions.

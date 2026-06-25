@@ -1,28 +1,28 @@
 issuer: Steris
 ticker: STE
-cik: "1757898"
+cik: '1757898'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fx_forwards_notional:
-    description: "Notional amount of FX forwards"
+    description: Notional amount of FX forwards
     section: market_risk
   fx_forwards_fair_value:
-    description: "Fair value of FX forwards"
+    description: Fair value of FX forwards
     section: market_risk
   commodity_contracts_notional:
-    description: "Notional amount/volume of commodity contracts"
+    description: Notional amount/volume of commodity contracts
     section: market_risk
   commodity_contracts_fair_value:
-    description: "Fair value of commodity contracts"
+    description: Fair value of commodity contracts
     section: market_risk
   foreign_currency_sensitivity:
-    description: "Impact of foreign currency rate changes on results"
+    description: Impact of foreign currency rate changes on results
     section: market_risk
   commodity_price_sensitivity:
-    description: "Impact of commodity price changes on results"
+    description: Impact of commodity price changes on results
     section: market_risk
-
+sections:
+  derivatives_note:
+    heading: 18\.\s+DERIVATIVES\s+AND\s+HEDGING
