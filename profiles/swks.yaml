@@ -1,19 +1,16 @@
 issuer: Skyworks Solutions
 ticker: SWKS
-cik: "4127"
+cik: '4127'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   interest_rate_sensitivity:
-    description: "Impact of interest rate changes on interest expense or fair value"
+    description: Impact of interest rate changes on interest expense or fair value
     section: market_risk
   foreign_currency_sensitivity:
-    description: "Impact of foreign currency rate changes on results"
+    description: Impact of foreign currency rate changes on results
     section: market_risk
-
-# Unusual features identified:
-#   - Market risk section present but no derivative instruments disclosed
-
+sections:
+  financial_instruments:
+    heading: FAIR\s+VALUE
