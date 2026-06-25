@@ -1,30 +1,58 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_designated_notional: appeared for first time ($293M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($10M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($303M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($311M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-8M)
-[LLM_FLAG] Net derivative position has shifted to -8.0 million, which is a change and may indicate a shift in hedging effectiveness or management's strategy.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-25 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($694M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($303M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($311M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($303M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($311M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-8M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $3,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $900M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct)
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not disclosed in this note; they appear only in the separate derivatives/hedging note.
+[HISTORICAL] [LLM_FLAG] Marketable securities held in trusts ($694M) likely represent benefit plan trust assets, not a general investment portfolio; equity/debt breakout not provided here.
+[HISTORICAL] [LLM_FLAG] Note number changed from Note 13 (prior filings) to Note 12 in this Q1 2026 filing.
+[HISTORICAL] [LLM_FLAG] FX notional of $26 billion (present value) is unchanged from December 31, 2025, suggesting hedge book is stable quarter-over-quarter.
+[HISTORICAL] [LLM_FLAG] Net derivative position has flipped to a small net liability ($-8M) vs. December 31, 2025 prior period (Derivative assets $436M, liabilities $265M = net asset $171M).
+[HISTORICAL] [LLM_FLAG] Note numbering shifted: in Q1 2026 filing the Fair Value Measurements note is Note 12 (vs. Note 13 in earlier 2025 quarterly filings).
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($26,000M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-25 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $713M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $362M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $342M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $362M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $342M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $20M, now missing
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3,000M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($900M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (total_marketable_securities_fv, fi_total_derivative_asset, fi_total_derivative_liability, total_derivative_asset, total_derivative_liability...)
+[HISTORICAL] [LLM_FLAG] Section text provided is the Item 7A market risk and management report text, not the financial instruments note — the derivatives fair value table (Note 13: Financial Instruments) is not included in this section_text.
+[HISTORICAL] [LLM_FLAG] FX notional of $26 billion is the present value of aggregate notional per RTX's consistent disclosure convention.
+[HISTORICAL] [LLM_FLAG] RTX explicitly confirms zero interest rate swap derivatives outstanding at December 31, 2025.
+[HISTORICAL] [LLM_FLAG] 10% adverse FX move sensitivity: $0.9 billion increase in unrealized losses per the 10-K market risk section.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp of $3 billion relates to fixed-rate debt fair value impact, not earnings impact — RTX notes this is not considered material as investors cannot demand early repayment.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct of $900 million represents unrealized losses on derivatives only; RTX notes these are offset by corresponding gains/losses on hedged underlying transactions.
+[HISTORICAL] [LLM_FLAG] Variable-rate debt ($0.9 billion term loans) 100bp sensitivity is described as not material but no dollar figure given.
+[HISTORICAL] [LLM_FLAG] RTX states it currently holds no interest rate swap derivatives (may consider in future).
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $490M → $362M (-26.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $490M → $362M (-26.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $183M → $20M (-89.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not disclosed in this note; they appear only in the separate derivatives/hedging note.
+[HISTORICAL] [LLM_FLAG] Marketable securities held in trusts ($713M) likely represent benefit plan trust assets, not a general investment portfolio; equity/debt breakout not provided here.
+[HISTORICAL] [LLM_FLAG] FX notional of $24 billion is the present value of aggregate notional per RTX's disclosure convention — continuing growth trend from $18B (Q1) to $21B (Q2) to $24B (Q3).
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7UpqDCGTsQbTyUQZaK'}
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $310M → $490M (+58.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $310M → $490M (+58.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $45M → $183M (+306.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not disclosed in this note; they appear only in the separate derivatives/hedging note.
+[HISTORICAL] [LLM_FLAG] Marketable securities held in trusts ($679M) likely represent benefit plan trust assets, not a general investment portfolio; equity/debt breakout not provided here.
+[HISTORICAL] [LLM_FLAG] FX notional of $21 billion is the present value of aggregate notional per RTX's disclosure convention.
+[HISTORICAL] [LLM_FLAG] During Q2 2025, RTX entered new net investment hedge forward exchange contracts in EUR and CAD — this is a new structure not present in prior quarter.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7UY88PTX5jcZjRFT6a'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7UCCKY8yVBsa1UpnMT'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7Twx4tTEhdbLT7iM9b'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7TfhmFBhe9jL1kXNDD'}
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-25 ===
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not disclosed in this note; they appear only in the separate derivatives/hedging note.
+[HISTORICAL] [LLM_FLAG] Marketable securities held in trusts ($682M) likely represent benefit plan trust assets, not a general investment portfolio; equity/debt breakout not provided here.
+[HISTORICAL] [LLM_FLAG] FX notional of $18 billion is the present value of aggregate notional (not face notional); this is consistent with RTX's disclosure convention across filings.
+[HISTORICAL] [LLM_FLAG] No IR swap notional disclosed — RTX states it uses swaps but none are outstanding or broken out quantitatively in Q1 2025.
