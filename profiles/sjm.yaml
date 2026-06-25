@@ -1,42 +1,34 @@
 issuer: J.M. Smucker Company (The)
 ticker: SJM
-cik: "91419"
+cik: '91419'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   ir_sensitivity_100bp:
-    description: "Change in fair value of long-term debt from 100bp decrease ($499.7M)"
+    description: Change in fair value of long-term debt from 100bp decrease ($499.7M)
     section: market_risk
   commodity_sensitivity_high:
-    description: "High potential loss from 10% commodity price change"
+    description: High potential loss from 10% commodity price change
     section: market_risk
   commodity_sensitivity_low:
-    description: "Low potential gain from 10% commodity price change"
+    description: Low potential gain from 10% commodity price change
     section: market_risk
   commodity_sensitivity_avg:
-    description: "Average potential loss from 10% commodity price change"
+    description: Average potential loss from 10% commodity price change
     section: market_risk
   fx_sensitivity_10pct:
-    description: "Impact of 10% FX change (not material)"
+    description: Impact of 10% FX change (not material)
     section: market_risk
   ir_cash_flow_hedge_aoci:
-    description: "AOCI balance from terminated IR cash flow hedges ($239.8M pre-tax loss being amortized)"
+    description: AOCI balance from terminated IR cash flow hedges ($239.8M pre-tax loss being amortized)
     section: market_risk
   revenue_pct_international:
-    description: "Percentage of revenue from outside US subject to FX (4%)"
+    description: Percentage of revenue from outside US subject to FX (4%)
     section: market_risk
   commodity_derivative_notional:
-    description: "Notional amount of commodity derivatives outstanding"
+    description: Notional amount of commodity derivatives outstanding
     section: derivatives_note
-
-# Unusual features identified:
-#   - Commodity derivatives not qualified for hedge accounting - gains/losses immediately in cost of products sold
-#   - FX derivatives also not qualified for hedge accounting
-#   - Significant legacy AOCI loss ($239.8M) from 2020 terminated IR cash flow hedges still being amortized
-#   - Commodity sensitivity table shows quarterly high/low/average rather than point-in-time
-#   - Reverse treasury locks used for tender offer hedging (settled Dec 2024, $4.5M loss)
-#   - Dollar amounts in filing appear to be in millions without explicit unit statement
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Other\s+Financial\s+Instruments\s+and\s+Fair\s+Value\s+Measurements
