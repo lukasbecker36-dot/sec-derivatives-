@@ -1,15 +1,45 @@
-=== 10-Q | Period ending 2026-04-04 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7ZJGLH3ufejQR81zSY'}
+=== 10-Q | Period ending 2026-04-04 | Processed 2026-06-25 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $153M, now missing
+[HISTORICAL] [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-0M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_forwards_outstanding)
+[HISTORICAL] [LLM_FLAG] Section text contains the fair value table for finance receivables and long-term debt (non-derivative financial instruments) but no derivative notional or fair value data
+[HISTORICAL] [LLM_FLAG] Snap-on does not disclose FX forward notional amounts in this note
+[HISTORICAL] [LLM_FLAG] Note renumbered from Note 8 to Note 9 in this filing (26-000109) compared to prior quarterly filings
+[HISTORICAL] [LLM_FLAG] FX forward notional amounts not disclosed — Snap-on describes their FX hedging program qualitatively but does not provide notional dollar figures in this note
+[HISTORICAL] [LLM_FLAG] Equity forward position disclosed only in share count (73,500 shares at April 4, 2026) not dollar notional
+[HISTORICAL] [LLM_FLAG] No derivative fair value table in section text; balance sheet line items for derivatives not separately broken out here
+[HISTORICAL] [LLM_FLAG] Note renumbered from Note 8 to Note 9 in this filing (26-000109) compared to prior quarterly filings
+[HISTORICAL] [LLM_FLAG] Snap-on uses VAR model disclosures rather than standard sensitivity analysis; one-day 95% VAR as of April 4, 2026 was $7.0M total ($6.4M IR + $0.6M FX).
+[HISTORICAL] [LLM_FLAG] FX transaction gain/loss sourced from Note 16 Other income table embedded in filing windows, not from the market risk section itself.
 
-=== 10-K | Period ending 2026-01-03 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7Z38W64enA3zUBRQ6H'}
+=== 10-K | Period ending 2026-01-03 | Processed 2026-06-25 ===
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($153M)
+[HISTORICAL] [LLM_FLAG] Snap-on uses VAR model disclosures rather than standard sensitivity analysis; one-day 95% VAR at 2025 year end was $4.7M (entirely IR-sensitive); 2024 year end was $9.8M ($10.0M IR loss partially offset by $0.2M FX gain).
+[HISTORICAL] [LLM_FLAG] FX forward notional sourced from the derivatives section of Note 10 which appears in the locate windows, not from the market risk section itself.
 
-=== 10-Q | Period ending 2025-09-27 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7YgJ7wfnJE5DAEzgrM'}
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-06-25 ===
+[HISTORICAL] [LLM_FLAG] Section text contains the fair value table for finance receivables and long-term debt (non-derivative financial instruments) but no derivative notional or fair value data
+[HISTORICAL] [LLM_FLAG] Snap-on does not disclose FX forward notional amounts in this note
+[HISTORICAL] [LLM_FLAG] FX forward notional amounts not disclosed — Snap-on describes their FX hedging program qualitatively but does not provide notional dollar figures in this note
+[HISTORICAL] [LLM_FLAG] Equity forward position disclosed only in share count (72,500 shares at September 27, 2025) not dollar notional
+[HISTORICAL] [LLM_FLAG] No derivative fair value table in section text; balance sheet line items for derivatives not separately broken out here
+[HISTORICAL] [LLM_FLAG] Snap-on uses VAR model disclosures rather than standard sensitivity analysis; one-day 95% VAR as of September 27, 2025 was $6.9M net ($7.4M IR loss + $0.5M FX gain).
 
-=== 10-Q | Period ending 2025-06-28 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7YN6z4NrRkqVYxJG6n'}
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-06-25 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-1M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_transaction_gain_loss)
+[HISTORICAL] [LLM_FLAG] Section text contains the fair value table for finance receivables and long-term debt (non-derivative financial instruments) but no derivative notional or fair value data
+[HISTORICAL] [LLM_FLAG] Snap-on does not disclose FX forward notional amounts in this note
+[HISTORICAL] [LLM_FLAG] FX forward notional amounts not disclosed — Snap-on describes their FX hedging program qualitatively but does not provide notional dollar figures in this note
+[HISTORICAL] [LLM_FLAG] Equity forward position disclosed only in share count (72,500 shares at June 28, 2025) not dollar notional
+[HISTORICAL] [LLM_FLAG] No derivative fair value table in section text; balance sheet line items for derivatives not separately broken out here
+[HISTORICAL] [LLM_FLAG] Snap-on uses VAR model disclosures rather than standard sensitivity analysis; one-day 95% VAR as of June 28, 2025 was $9.2M total ($9.1M IR + $0.1M FX).
 
-=== 10-Q | Period ending 2025-03-29 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7Y1dgQFLFnrt72rYJQ'}
-
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-06-25 ===
+[HISTORICAL] [LLM_FLAG] Section text contains the fair value table for finance receivables and long-term debt (non-derivative financial instruments) but no derivative notional or fair value data
+[HISTORICAL] [LLM_FLAG] Snap-on does not disclose FX forward notional amounts in this note
+[HISTORICAL] [LLM_FLAG] FX forward notional amounts not disclosed — Snap-on describes their FX hedging program qualitatively but does not provide notional dollar figures in this note
+[HISTORICAL] [LLM_FLAG] Equity forward position disclosed only in share count (71,300 shares) not dollar notional
+[HISTORICAL] [LLM_FLAG] No derivative fair value table in section text; balance sheet line items for derivatives not separately broken out here
+[HISTORICAL] [LLM_FLAG] Snap-on uses VAR model disclosures rather than standard sensitivity analysis; one-day 95% VAR as of March 29, 2025 was $11.7M total ($10.9M IR + $0.8M FX).
+[HISTORICAL] [LLM_FLAG] FX transaction gain/loss sourced from Note 15 Other income table embedded in filing windows, not from the market risk section itself.
