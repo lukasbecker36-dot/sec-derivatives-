@@ -1,3 +1,80 @@
-=== 10-K | Period ending 2025-12-28 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($598M)
+=== 10-Q | Period ending 2026-04-05 | Processed 2026-06-25 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($23M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($1M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($0M)
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $598M → $460M (-23.2%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($1M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($0M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $598M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fx_forwards_outstanding)
+[HISTORICAL] [LLM_FLAG] All fair value table figures are in thousands; converted to millions for schema.
+[HISTORICAL] [LLM_FLAG] Notional amounts of FX derivatives not disclosed in this section — only fair values reported.
+[HISTORICAL] [LLM_FLAG] Marketable securities described as equity and mutual fund investments (Level 1); no separate equity vs. debt breakdown.
+[HISTORICAL] [LLM_FLAG] Prior period comparator is December 28, 2025 (fiscal year-end), not the same-quarter prior year — note the fiscal year rollover.
+[HISTORICAL] [LLM_FLAG] Contingent consideration liabilities increased from $17.869M to $25.011M due to an $8.0M addition in Q1 2026.
+[HISTORICAL] [LLM_FLAG] All FX derivatives are economic hedges not designated as ASC 815 cash flow hedges; AOCI amounts relate to net investment hedge of 2026 Notes (EUR 498.6M notional)
+[HISTORICAL] [LLM_FLAG] 2026 Notes (EUR 500M face) reclassified to current portion of long-term debt as of April 5, 2026 — maturity is imminent
+[HISTORICAL] [LLM_FLAG] Values in thousands in source; converted to millions
+[HISTORICAL] [LLM_FLAG] Section_text is extremely brief — only IR risk commentary, cross-references 2025 10-K for FX VaR
+[HISTORICAL] [LLM_FLAG] FX notional and derivative fair values are better sourced from the derivatives_note section_text for this filing
 
+=== 10-K | Period ending 2025-12-28 | Processed 2026-06-25 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $29M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-1M, now missing
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($598M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (total_marketable_securities_fv, fi_total_derivative_asset, fi_total_derivative_liability, total_derivative_asset, total_derivative_liability...)
+[HISTORICAL] [LLM_FLAG] Section_text is the Item 7A market risk section plus partial Note 19 reference; the fair value table with derivative asset/liability values is in Note 19 which is not included in this section_text excerpt
+[HISTORICAL] [LLM_FLAG] EUR 498.6M of 2026 Notes designated as net investment hedge of foreign subsidiaries; AOCI impact $67.6M loss in fiscal 2025
+[HISTORICAL] [LLM_FLAG] Company uses VaR model for FX risk, not a standard 10% sensitivity — fx_sensitivity_10pct cannot be populated
+[HISTORICAL] [LLM_FLAG] Foreign exchange losses line in P&L ($14.9M) includes items beyond pure FX transaction gain/loss
+[HISTORICAL] [LLM_FLAG] No specific fixed-rate debt total stated in market risk section; debt table would need to be reviewed separately
+
+=== 10-Q | Period ending 2025-09-28 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $3M → $0M (-84.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $1M → $1M (+53.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $3M → $0M (-84.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $1M → $1M (+53.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $2M → $-1M (-139.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All fair value table figures are in thousands; converted to millions for schema.
+[HISTORICAL] [LLM_FLAG] Notional amounts of FX derivatives not disclosed in this section — only fair values reported.
+[HISTORICAL] [LLM_FLAG] Marketable securities described as equity and mutual fund investments (Level 1); no separate equity vs. debt breakdown.
+[HISTORICAL] [LLM_FLAG] Net derivative position flipped to liability-heavy compared to prior quarters (asset $0.445M vs. liability $1.261M).
+[HISTORICAL] [LLM_FLAG] All FX derivatives are economic hedges not designated as ASC 815 cash flow hedges; AOCI amounts relate to net investment hedge of 2026 Notes (EUR 498.6M notional)
+[HISTORICAL] [LLM_FLAG] Net derivative position is a small net liability this quarter
+[HISTORICAL] [LLM_FLAG] Values in thousands in source; converted to millions
+[HISTORICAL] [LLM_FLAG] This Item 3 section cross-references 2024 Form 10-K for quantitative detail; no standalone sensitivity figures provided.
+[HISTORICAL] [LLM_FLAG] Cash & equivalents at variable rates = $931.4M at September 28, 2025.
+[HISTORICAL] [LLM_FLAG] No interest rate derivative instruments outstanding at September 28, 2025.
+[HISTORICAL] [LLM_FLAG] FX derivative notionals not quantified here — see financial_instruments note.
+
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $1M → $3M (+146.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $1M → $1M (+36.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1M → $3M (+146.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $1M → $1M (+36.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $1M → $2M (+262.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All fair value table figures are in thousands; converted to millions for schema.
+[HISTORICAL] [LLM_FLAG] Notional amounts of FX derivatives not disclosed in this section — only fair values reported.
+[HISTORICAL] [LLM_FLAG] Marketable securities described as equity and mutual fund investments (Level 1); no separate equity vs. debt breakdown.
+[HISTORICAL] [LLM_FLAG] All FX derivatives are economic hedges not designated as ASC 815 cash flow hedges; AOCI amounts relate to net investment hedge of 2026 Notes (EUR 498.6M notional)
+[HISTORICAL] [LLM_FLAG] Values in thousands in source; converted to millions
+[HISTORICAL] [LLM_FLAG] This Item 3 section cross-references 2024 Form 10-K for quantitative detail; no standalone sensitivity figures provided.
+[HISTORICAL] [LLM_FLAG] Cash & equivalents at variable rates = $991.8M at June 29, 2025.
+[HISTORICAL] [LLM_FLAG] No interest rate derivative instruments outstanding at June 29, 2025.
+[HISTORICAL] [LLM_FLAG] FX derivative notionals not quantified here — see financial_instruments note.
+
+=== 10-Q | Period ending 2025-03-30 | Processed 2026-06-25 ===
+[HISTORICAL] [LLM_FLAG] All fair value table figures are in thousands; converted to millions for schema.
+[HISTORICAL] [LLM_FLAG] Notional amounts of FX derivatives not disclosed in this section — only fair values reported.
+[HISTORICAL] [LLM_FLAG] Marketable securities described as equity and mutual fund investments (Level 1); no separate equity vs. debt breakdown.
+[HISTORICAL] [LLM_FLAG] All FX derivatives are economic hedges not designated as ASC 815 cash flow hedges; AOCI amounts relate to net investment hedge of 2026 Notes (EUR 498.6M notional), not FX forwards
+[HISTORICAL] [LLM_FLAG] Values in thousands in source; converted to millions
+[HISTORICAL] [LLM_FLAG] This Item 3 section cross-references 2024 Form 10-K for quantitative detail; no standalone sensitivity figures provided.
+[HISTORICAL] [LLM_FLAG] Variable rate debt is only $0.4M; cash & equivalents at variable rates = $1,137.6M.
+[HISTORICAL] [LLM_FLAG] No interest rate derivative instruments outstanding at March 30, 2025.
+[HISTORICAL] [LLM_FLAG] FX derivative notionals not quantified here — see financial_instruments note.

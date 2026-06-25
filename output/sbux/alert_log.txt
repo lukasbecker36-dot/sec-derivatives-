@@ -1,15 +1,70 @@
-=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7bMYqBMMEEZ6xxxuuH'}
+=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $3,413M → $1,532M (-55.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $100M → $77M (-22.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $80M → $18M (-77.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $5,071M → $2,673M (-47.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $80M → $18M (-77.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $296M → $400M (+34.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivative contracts are not disclosed in this fair value note section; they may appear in a separate derivatives note
+[HISTORICAL] [LLM_FLAG] Section contains two reporting dates (Mar 29, 2026 current period and Sep 28, 2025 prior year end); all extracted values are from the current period
+[HISTORICAL] [LLM_FLAG] Cash equivalents dropped sharply from $3,219.8M (Sep 2025) to $1,532.0M (Mar 2026) — notable decline worth flagging for editorial context
+[HISTORICAL] [LLM_FLAG] No structured deposits appear in either the Mar 29, 2026 or Sep 28, 2025 balance tables; structured deposits were present in prior fiscal year
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional fell sharply from $4,197M to $1,697M due to maturity/early termination of net investment hedges related to China retail divestiture; AOCI to be released in Q3 FY2026
 
-=== 10-Q | Period ending 2025-12-28 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7b47bKjcNUN5CBSwEh'}
+=== 10-Q | Period ending 2025-12-28 | Processed 2026-06-25 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($3,413M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($185M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($100M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($193M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($376M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($80M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,071M)
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($350M)
+[HISTORICAL] [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($205M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($376M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($80M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($296M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-873M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-22M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $16M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion)
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivative contracts are not disclosed in this fair value note section; they may appear in a separate derivatives note
+[HISTORICAL] [LLM_FLAG] Section contains two reporting dates (December 28, 2025 current period and September 28, 2025 prior year end); all extracted values are from the current period
+[HISTORICAL] [LLM_FLAG] No structured deposits appear in the December 28, 2025 balance (present in prior year); this is a change from earlier periods
 
-=== 10-K | Period ending 2025-09-28 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7aqHRC2HRzAuvrHU8o'}
+=== 10-K | Period ending 2025-09-28 | Processed 2026-06-25 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $4,173M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $333M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $89M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $189M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $197M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $38M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $5,215M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $350M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_derivatives_notional: was $522M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $197M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $38M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $159M, now missing
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-873M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-22M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($16M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 13/13 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt...)
+[HISTORICAL] [LLM_FLAG] Section text contains only accounting policy narrative for Note 1; the actual Note 3 Derivative Financial Instruments tables with notional amounts and fair values were not included in the section_text field. All numeric fields are null due to missing table data.
+[HISTORICAL] [LLM_FLAG] Section text is a cross-reference only ('incorporated by reference to MD&A'); numeric values sourced from context windows in the locate request. ir_sensitivity_100bp and fx_sensitivity_10pct extracted from Item 7 Financial Risk Management windows.
 
-=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7aU5DG2bD4DzWckEkK'}
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $2,671M → $4,173M (+56.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $323M → $197M (-39.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $23M → $38M (+60.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $221M → $522M (+136.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $323M → $197M (-39.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $23M → $38M (+60.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $300M → $159M (-46.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivative contracts are not disclosed in this fair value note section; they may appear in a separate derivatives note
+[HISTORICAL] [LLM_FLAG] Section contains two reporting dates (June 29, 2025 current period and September 29, 2024 prior year); all extracted values are from the current period
 
-=== 10-Q | Period ending 2025-03-30 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7a7NmLQzoagMEHSjoK'}
-
+=== 10-Q | Period ending 2025-03-30 | Processed 2026-06-25 ===
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivative contracts are not disclosed in this fair value note section; they may appear in a separate derivatives note
+[HISTORICAL] [LLM_FLAG] Section contains two reporting dates (March 30, 2025 current period and September 29, 2024 prior year); all extracted values are from the current period

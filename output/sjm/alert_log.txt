@@ -1,60 +1,107 @@
-=== 10-Q | Period ending 2026-01-31 | Processed 2026-06-11 ===
-[NUMERIC] commodity_derivatives_notional: $1,281M → $403M (-68.5%) — exceeds 20% threshold
-[NUMERIC] total_derivative_asset: $15M → $10M (-28.1%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $62M → $6M (-90.5%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $-48M → $5M (+109.7%) — exceeds 20% threshold
-[NUMERIC] commodity_derivative_notional: $1,281M → $403M (-68.5%) — exceeds 20% threshold
-[LLM_FLAG] commodity_derivatives_notional dropped 69% from $1,281.4M to $403.1M — significant reduction in commodity hedging activity
-[LLM_FLAG] commodity_derivatives_notional dropped 76% from year-ago $1,698.1M level
+=== 10-K | Period ending 2026-04-30 | Processed 2026-06-25 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $19M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $4M, now missing
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $101M → $74M (-26.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $101M → $74M (-26.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $403M → $606M (+50.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $10M → $32M (+206.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $6M → $11M (+93.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $5M → $21M (+352.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_sensitivity_high: $112M → $44M (-61.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_sensitivity_low: $-29M → $-35M (-20.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_sensitivity_avg: $34M → $7M (-79.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_derivative_notional: $403M → $606M (+50.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] EXTRACTION INCOMPLETE: The section_text for this filing (10-K, April 30, 2026) does not contain the financial instruments fair value hierarchy table. The text covers Note 1 (Accounting Policies including supplier financing, foreign currency translation, recently adopted/issued accounting standards, risks and uncertainties) and Note 2 (Acquisition of Hostess Brands), but the actual Note 11 fair value measurement table with marketable securities and derivative instrument fair values is absent. The section may have been incorrectly extracted or truncated. Re-extraction from sjm-20260430.htm is recommended.
+[HISTORICAL] [LLM_FLAG] Supplier financing program details are present: $325.1 outstanding payment obligations sold to financial institution as of April 30, 2026 (vs $340.4 at April 30, 2025) — this is context only, not a schema field.
+[HISTORICAL] [LLM_FLAG] Foreign currency translation losses in AOCI: $38.5 at April 30, 2026 and $41.7 at April 30, 2025.
+[HISTORICAL] [LLM_FLAG] AOCI balance is a deferred loss (negative); reported as -104.9.
+[HISTORICAL] [LLM_FLAG] No designated hedges — SJM does not qualify commodity or FX derivatives for hedge accounting.
+[HISTORICAL] [LLM_FLAG] Net derivative position of $20.8 confirmed from Note 11 fair value table.
+[HISTORICAL] [LLM_FLAG] Cash margin at April 30, 2026 represents collateral received of $7.4 (vs. collateral pledged in prior periods), indicating SJM is in-the-money on exchange-traded positions.
+[HISTORICAL] [LLM_FLAG] commodity_sensitivity_low is ($35.4) — a gain scenario, consistent with mixed commodity positions.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp represents a fair value increase in long-term debt (economic loss for the company).
+[HISTORICAL] [LLM_FLAG] Commodity sensitivity High/Average substantially lower than prior year ($112.7/$49.6 at April 30, 2025), reflecting reduced commodity notional.
 
-=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-11 ===
-[NUMERIC] fx_derivatives_notional: $126M → $88M (-29.8%) — exceeds 20% threshold
-[NUMERIC] fx_not_designated_notional: $126M → $88M (-29.8%) — exceeds 20% threshold
-[NUMERIC] commodity_derivatives_notional: $1,866M → $1,281M (-31.3%) — exceeds 20% threshold
-[NUMERIC] total_derivative_asset: $26M → $15M (-43.6%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $143M → $62M (-56.6%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $-117M → $-48M (+59.4%) — exceeds 20% threshold
-[NUMERIC] commodity_sensitivity_low: $20M → $-30M (-247.1%) — exceeds 20% threshold
-[NUMERIC] commodity_sensitivity_avg: $52M → $40M (-23.6%) — exceeds 20% threshold
-[NUMERIC] revenue_pct_international: $3M → $4M (+33.3%) — exceeds 20% threshold
-[NUMERIC] commodity_derivative_notional: $1,866M → $1,281M (-31.3%) — exceeds 20% threshold
-[LLM_FLAG] commodity_sensitivity_low swung from +$20.4M potential loss to -$30.0M potential gain — indicates some quarters had net short positions
+=== 10-Q | Period ending 2026-01-31 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $1,281M → $403M (-68.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $15M → $10M (-28.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $62M → $6M (-90.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-48M → $5M (+109.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_derivative_notional: $1,281M → $403M (-68.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Derivative fair values reported net (not gross): commodity contracts net $5.6, FX contracts net ($1.0), total net $4.6. Derivative position returned to modest net asset from ($47.5) net liability in prior quarter.
+[HISTORICAL] [LLM_FLAG] Marketable securities and other investments ($19.3) are retirement plan assets (nonqualified plans), not traditional investment portfolio securities.
+[HISTORICAL] [LLM_FLAG] No cash equivalents fair value disclosure in this section.
+[HISTORICAL] [LLM_FLAG] FX and IR notional amounts not available here; see Note 10 (Derivative Financial Instruments) for notionals.
+[HISTORICAL] [LLM_FLAG] Nonrecurring fair value adjustments of $961.7 recognized in Q3 2026 for Sweet Baked Snacks goodwill ($507.5) and Hostess trademark ($454.2) — flagged as context but not schema fields.
+[HISTORICAL] [LLM_FLAG] Commodity notional significantly reduced to $403.1 from $1,698.1 at April 30, 2025 — substantial reduction in commodity hedging activity.
+[HISTORICAL] [LLM_FLAG] AOCI balance is a deferred loss (negative); reported as -108.0.
+[HISTORICAL] [LLM_FLAG] No designated hedges — SJM does not qualify commodity or FX derivatives for hedge accounting.
+[HISTORICAL] [LLM_FLAG] commodity_sensitivity_low is ($29.3) — a gain scenario.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp represents a fair value increase in long-term debt (economic loss for the company).
 
-=== 10-Q | Period ending 2025-07-31 | Processed 2026-06-11 ===
-[NUMERIC] total_derivative_asset: $82M → $26M (-68.5%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $20M → $143M (+607.9%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $62M → $-117M (-288.6%) — exceeds 20% threshold
-[NUMERIC] revenue_pct_international: $4M → $3M (-25.0%) — exceeds 20% threshold
-[LLM_FLAG] net_derivative_position swung from +$62.1M to -$117.1M — driven by $227.7M commodity derivative losses in Q1 FY2026
-[LLM_FLAG] commodity derivative loss of $227.7M in Q1 is extreme vs $30.0M loss in prior year Q1
+=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $126M → $88M (-29.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $126M → $88M (-29.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $1,866M → $1,281M (-31.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $26M → $15M (-43.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $143M → $62M (-56.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-117M → $-48M (+59.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_sensitivity_low: $20M → $-30M (-247.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_sensitivity_avg: $52M → $40M (-23.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] revenue_pct_international: $3M → $4M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_derivative_notional: $1,866M → $1,281M (-31.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Derivative fair values reported net (not gross): commodity contracts net ($48.6), FX contracts net $1.1, total net ($47.5). Net derivative liability position partially recovered from prior quarter ($117.1 net liability to $47.5 net liability).
+[HISTORICAL] [LLM_FLAG] Marketable securities and other investments ($19.9) are retirement plan assets (nonqualified plans), not traditional investment portfolio securities.
+[HISTORICAL] [LLM_FLAG] No cash equivalents fair value disclosure in this section.
+[HISTORICAL] [LLM_FLAG] FX and IR notional amounts not available here; see Note 9 (Derivative Financial Instruments) for notionals.
+[HISTORICAL] [LLM_FLAG] Net derivative position is a net liability of -47.5 at October 31, 2025.
+[HISTORICAL] [LLM_FLAG] AOCI balance is a deferred loss (negative); reported as -111.1.
+[HISTORICAL] [LLM_FLAG] No designated hedges — SJM does not qualify commodity or FX derivatives for hedge accounting.
+[HISTORICAL] [LLM_FLAG] commodity_sensitivity_low is ($30.0) — a gain scenario — reflecting the net short commodity position at this date.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp represents a fair value increase in long-term debt (economic loss for the company).
 
-=== 10-K | Period ending 2025-04-30 | Processed 2026-06-11 ===
-[NUMERIC] fx_derivatives_notional: $98M → $122M (+24.9%) — exceeds 20% threshold
-[NUMERIC] fx_not_designated_notional: $98M → $122M (+24.9%) — exceeds 20% threshold
-[NUMERIC] total_derivative_asset: $62M → $82M (+33.6%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $37M → $20M (-44.8%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $25M → $62M (+148.4%) — exceeds 20% threshold
-[NUMERIC] commodity_sensitivity_high: $38M → $113M (+197.4%) — exceeds 20% threshold
-[NUMERIC] commodity_sensitivity_low: $14M → $20M (+39.9%) — exceeds 20% threshold
-[NUMERIC] commodity_sensitivity_avg: $27M → $50M (+84.4%) — exceeds 20% threshold
-[LLM_FLAG] commodity_sensitivity_high jumped from $37.9M to $112.7M — reflects significantly larger commodity derivative position
+=== 10-Q | Period ending 2025-07-31 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $82M → $26M (-68.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $20M → $143M (+607.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $62M → $-117M (-288.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] revenue_pct_international: $4M → $3M (-25.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Derivative fair values reported net (not gross): commodity contracts net ($117.6), FX contracts net $0.5, total net ($117.1). Significant swing from prior quarter net asset of $62.1 to net liability of ($117.1) — commodity derivative position reversed sharply.
+[HISTORICAL] [LLM_FLAG] Marketable securities and other investments ($20.1) are retirement plan assets (nonqualified plans), not traditional investment portfolio securities.
+[HISTORICAL] [LLM_FLAG] No cash equivalents fair value disclosure in this section.
+[HISTORICAL] [LLM_FLAG] FX and IR notional amounts not available here; see Note 9 (Derivative Financial Instruments) for notionals.
+[HISTORICAL] [LLM_FLAG] Net derivative position is a net liability of -117.1 at July 31, 2025 — a significant shift from net asset of $62.1 at April 30, 2025, driven by large commodity derivative losses.
+[HISTORICAL] [LLM_FLAG] AOCI balance is a deferred loss (negative); reported as -114.3.
+[HISTORICAL] [LLM_FLAG] No designated hedges — SJM does not qualify commodity or FX derivatives for hedge accounting.
+[HISTORICAL] [LLM_FLAG] Revenue_pct_international is 3% for this quarter vs. 4% in prior periods.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp represents a fair value increase in long-term debt (economic loss for the company).
 
-=== 10-Q | Period ending 2025-01-31 | Processed 2026-06-11 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($98M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($98M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($1,534M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($62M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($37M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($25M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-120M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-12M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($590M)
-[NEW_FIELD] commodity_sensitivity_high: appeared for first time ($38M)
-[NEW_FIELD] commodity_sensitivity_low: appeared for first time ($14M)
-[NEW_FIELD] commodity_sensitivity_avg: appeared for first time ($27M)
-[NEW_FIELD] ir_cash_flow_hedge_aoci: appeared for first time ($-120M)
-[NEW_FIELD] revenue_pct_international: appeared for first time ($4M)
-[NEW_FIELD] commodity_derivative_notional: appeared for first time ($1,534M)
+=== 10-K | Period ending 2025-04-30 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $98M → $122M (+24.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $98M → $122M (+24.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $62M → $82M (+33.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $37M → $20M (-44.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $25M → $62M (+148.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_sensitivity_high: $38M → $113M (+197.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_sensitivity_low: $14M → $20M (+39.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_sensitivity_avg: $27M → $50M (+84.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Derivative fair values reported net (not gross): commodity contracts net $62.8, FX contracts net ($0.7), total net $62.1. Cannot split into gross asset vs gross liability from this section alone.
+[HISTORICAL] [LLM_FLAG] Marketable securities and other investments ($20.0) are retirement plan assets (nonqualified plans), not traditional investment portfolio securities.
+[HISTORICAL] [LLM_FLAG] No cash equivalents fair value disclosure in this section.
+[HISTORICAL] [LLM_FLAG] FX and IR notional amounts not available here; see Note 10 (Derivative Financial Instruments) for notionals.
+[HISTORICAL] [LLM_FLAG] 10-K filing (full year ended April 30, 2025). Long-term debt now split Level 1 (public Senior Notes $6,532.5) and Level 2 (Term Loan $709.5), indicating new Term Loan classification vs. prior year.
+[HISTORICAL] [LLM_FLAG] AOCI balance is a deferred loss (negative); reported as -117.4.
+[HISTORICAL] [LLM_FLAG] No designated hedges — SJM does not qualify commodity or FX derivatives for hedge accounting.
+[HISTORICAL] [LLM_FLAG] Net derivative position of $62.1 confirmed from Note 11 fair value table.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp represents a fair value increase in long-term debt (i.e., an economic loss for the company).
+[HISTORICAL] [LLM_FLAG] commodity_sensitivity_low of $20.0 is a potential loss (positive), not a gain, in the Low scenario.
 
+=== 10-Q | Period ending 2025-01-31 | Processed 2026-06-25 ===
+[HISTORICAL] [LLM_FLAG] Derivative fair values reported net (not gross): commodity contracts net $20.4, FX contracts net $4.6, total net $25.0. Cannot split into gross asset vs gross liability from this section alone.
+[HISTORICAL] [LLM_FLAG] Marketable securities and other investments ($21.2) are retirement plan assets (nonqualified plans), not traditional investment portfolio securities.
+[HISTORICAL] [LLM_FLAG] No cash equivalents fair value disclosure in this section.
+[HISTORICAL] [LLM_FLAG] FX and IR notional amounts not available here; see Note 11 (Derivative Financial Instruments) for notionals.
+[HISTORICAL] [LLM_FLAG] AOCI balance is a deferred loss (negative); reported as -120.4.
+[HISTORICAL] [LLM_FLAG] No designated hedges — SJM does not qualify commodity or FX derivatives for hedge accounting.
+[HISTORICAL] [LLM_FLAG] Net derivative position of $25.0 confirmed from Note 12 fair value table.
+[HISTORICAL] [LLM_FLAG] commodity_sensitivity_low of $14.3 is a potential loss (positive), not a gain — the 'Low' row represents a smaller loss scenario.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp represents a fair value increase in long-term debt (i.e., an economic loss for the company).
