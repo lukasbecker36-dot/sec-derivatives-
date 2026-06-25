@@ -1,42 +1,36 @@
 issuer: Smurfit Westrock
 ticker: SW
-cik: "2005951"
+cik: '2005951'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   pct_interest_cost_fixed:
-    description: "Percentage of interest cost fixed over following 12 months"
+    description: Percentage of interest cost fixed over following 12 months
     section: market_risk
   ir_sensitivity_1pct:
-    description: "Increase in interest expense from 1% rise in variable rate borrowings"
+    description: Increase in interest expense from 1% rise in variable rate borrowings
     section: market_risk
   interest_income_sensitivity_1pct:
-    description: "Increase in interest income from 1% rise in rates on cash balances"
+    description: Increase in interest income from 1% rise in rates on cash balances
     section: market_risk
   fx_equity_sensitivity_1pct:
-    description: "Reduction in shareholders equity from 1% strengthening of USD against all currencies"
+    description: Reduction in shareholders equity from 1% strengthening of USD against all currencies
     section: market_risk
   largest_net_asset_currency_exposures:
-    description: "List of currencies with largest net asset exposures (EUR, MXN, CAD, BRL, GBP, COP)"
+    description: List of currencies with largest net asset exposures (EUR, MXN, CAD, BRL, GBP, COP)
     section: market_risk
   pct_sales_outside_us:
-    description: "Percentage of net sales from outside the U.S."
+    description: Percentage of net sales from outside the U.S.
     section: market_risk
   commodity_derivative_fair_value_impact:
-    description: "Fair value and impact of 10% adverse move on commodity derivatives"
+    description: Fair value and impact of 10% adverse move on commodity derivatives
     section: market_risk
   energy_cost_change_yoy:
-    description: "Year-over-year change in energy costs"
+    description: Year-over-year change in energy costs
     section: market_risk
-
-# Unusual features identified:
-#   - Smurfit Westrock is a post-Combination entity (Smurfit Kappa + WestRock); disclosures reference the Combination impact on year-over-year comparisons
-#   - Uses NPNS (normal purchase normal sale) scope exception under ASC 815 for physical commodity contracts
-#   - Certain commodity financial derivatives are designated as cash flow hedges with changes in fair value in AOCI; others are economic hedges not qualifying for hedge accounting
-#   - FX hedging covers highly probable forecast sales and purchases with hedge accounting applied
-#   - Fair value of financial derivative contracts stated as immaterial as of December 31, 2025
-#   - Commodity exposure management covers energy (gas and electricity) and fiber (recovered paper, virgin fiber)
-
+sections:
+  financial_instruments:
+    heading: Fair\s+Value\s+Measurement
+  derivatives_note:
+    heading: Fair\s+Value\s+Measurement

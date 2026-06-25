@@ -1,56 +1,49 @@
 issuer: Constellation Brands
 ticker: STZ
-cik: "16918"
+cik: '16918'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   foreign_currency_notional:
-    description: "aggregate notional value of foreign currency contracts"
+    description: aggregate notional value of foreign currency contracts
     section: market_risk
   foreign_currency_fair_value:
-    description: "net fair value of foreign currency contracts"
+    description: net fair value of foreign currency contracts
     section: market_risk
   foreign_currency_sensitivity:
-    description: "impact of 10% adverse change on foreign currency contracts"
+    description: impact of 10% adverse change on foreign currency contracts
     section: market_risk
   commodity_notional:
-    description: "aggregate notional value of commodity derivative contracts"
+    description: aggregate notional value of commodity derivative contracts
     section: market_risk
   commodity_fair_value:
-    description: "net fair value of commodity derivative contracts"
+    description: net fair value of commodity derivative contracts
     section: market_risk
   commodity_sensitivity:
-    description: "impact of 10% adverse change on commodity contracts"
+    description: impact of 10% adverse change on commodity contracts
     section: market_risk
   net_investment_hedge_notional:
-    description: "aggregate notional value of net investment hedge contracts"
+    description: aggregate notional value of net investment hedge contracts
     section: market_risk
   fixed_debt_notional:
-    description: "aggregate notional value of fixed interest rate debt"
+    description: aggregate notional value of fixed interest rate debt
     section: market_risk
   fixed_debt_fair_value:
-    description: "fair value of fixed interest rate debt"
+    description: fair value of fixed interest rate debt
     section: market_risk
   fixed_debt_sensitivity:
-    description: "impact of 1% rate increase on fixed debt"
+    description: impact of 1% rate increase on fixed debt
     section: market_risk
   preissuance_hedge_notional:
-    description: "notional value of pre-issuance hedge contracts"
+    description: notional value of pre-issuance hedge contracts
     section: market_risk
   variable_debt_sensitivity:
-    description: "annual interest expense impact from 1% rate increase on variable debt"
+    description: annual interest expense impact from 1% rate increase on variable debt
     section: market_risk
   hedge_ratios:
-    description: "percentage of forecasted exposures hedged"
+    description: percentage of forecasted exposures hedged
     section: market_risk
-
-# Unusual features identified:
-#   - separate sensitivity analysis parameters (10% for FX/commodities vs 1% for interest rates)
-#   - specific hedge ratio targets mentioned (100% for balance sheet, 73% and 79% for transactional exposures)
-#   - net investment hedge contracts reported separately from other FX derivatives
-#   - pre-issuance hedge contracts tracked as separate instrument type
-#   - variable rate debt sensitivity reported as annual dollar impact rather than fair value change
-
+sections:
+  financial_instruments:
+    heading: 8\.\s+Fair\s+Value\s+of\s+Financial\s+Instruments
