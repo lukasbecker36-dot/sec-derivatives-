@@ -13,35 +13,27 @@
 </head><body>
 
 <h1>SEC Derivatives Weekly</h1>
-<div class="subtitle">12 &ndash; 19 June 2026</div>
+<div class="subtitle">19 &ndash; 26 June 2026</div>
 
 <div class="summary">
-Light week for new filings &mdash; only three issuers processed &mdash; but a batch of first-time extractions from the prior wave surfaced several strong leads. AbbVie doubled its IR swaps, Abbott slashed FX hedging by 42%, and Adobe&rsquo;s true hedging footprint finally came into view at $6.2B in FX derivatives.
+Quiet week &mdash; just two filings processed, both on June 26. The standout is Micron&rsquo;s ballooning FX hedge book, now $22B in total notional. McCormick enters the monitored universe with its first clean extraction showing a textbook FX-and-commodity hedging programme.
 </div>
 
 <h2>Story Leads</h2>
 
-<p><strong>Adobe&rsquo;s $6.2B FX hedge book revealed.</strong> The Q3 FY2026 10-Q (period ending May 29, processed June 16) shows $6.16B in designated FX derivatives and $2.7B in interest rate swaps. Prior extractions badly undercounted these at ~$27M due to section-capture issues &mdash; the LLM flagged that "$6.16B is clearly stated in the filing." This is the first clean read of Adobe&rsquo;s real hedging programme, and it&rsquo;s substantial. Worth checking whether the ramp reflects the Figma integration or broader international revenue growth.</p>
+<p><strong>Micron&rsquo;s FX hedging hits $22B as non-designated book nearly doubles.</strong> MU&rsquo;s Q3 FY2026 10-Q (period ending May 28) shows $12.4B in non-designated FX derivatives, up 79% from $6.9B the prior quarter. Designated FX hedges of $9.7B were captured for the first time, putting total FX notional at $22.1B. For a semiconductor company with major fab operations in Japan, Singapore, and Taiwan, this kind of ramp in balance-sheet hedging suggests treasury is responding to elevated currency volatility or operational scaling. Worth asking whether the expansion tracks new capex commitments in Asia.</p>
 
-<p><strong>AbbVie more than doubles IR swap positions.</strong> IR swap notional jumped from $1.8B to $4.08B (+127%) in Q1 2026, while total derivative assets rose 70% to $155M. FX derivatives held steady at ~$9.3B. With roughly $60B in long-term debt post-Allergan/ImmunoMedics, AbbVie appears to be aggressively re-layering its rate hedges &mdash; possibly locking in ahead of expected Fed moves.</p>
+<p><strong>McCormick&rsquo;s first full read: $2B in FX, $500M in IR swaps, $302M in commodities.</strong> MKC&rsquo;s Q2 FY2026 10-Q (period ending May 31) produced a clean first extraction. The spice giant is running $1.95B in FX derivatives ($1.88B designated), $500M in interest rate swaps, and $302M in commodity hedges. Net derivative position is a healthy +$17M. With 40% of revenue from international operations and heavy commodity exposure (pepper, vanilla, packaging), this is a well-rounded hedging programme &mdash; and now we can track it quarter to quarter.</p>
 
-<p><strong>Abbott cuts FX derivatives programme by 42%.</strong> FX derivatives notional dropped from $13B to $7.6B quarter-over-quarter. The $1.2B IR swap position also disappeared from the latest filing. Abbott generates ~60% of revenue internationally, so a pullback of this size in FX hedging is notable. Could signal a strategic shift or portfolio restructuring post-diagnostics spinoff discussions.</p>
-
-<p><strong>Targa Resources massively expands commodity hedging.</strong> Commodity derivative liabilities surged from $67M to $481M, with $650M in new notional. Variable-rate borrowings grew from $161M to $1.06B. The midstream operator looks to be layering on significant commodity risk management as it takes on leverage &mdash; a story angle on energy hedging discipline.</p>
-
-<p><strong>Molson Coors doubles commodity hedge book.</strong> Commodity derivatives notional went from $442M to $889M (+101%) in Q1 2026. The brewer is likely expanding hedges on aluminium, barley, and natural gas. Total derivative liabilities collapsed from $4.8B to $7M, though the prior figure looks like an extraction artefact.</p>
-
-<p><strong>Airbnb quietly enters the IR swap market.</strong> A $1.7B interest rate swap position appeared for the first time in Q1 2026, alongside its modest ~$26M FX programme. Airbnb&rsquo;s balance sheet is mostly cash-rich, so a swap of this size likely relates to its $2B term loan &mdash; worth a call to their treasury team.</p>
-
-<p><strong>Brown-Forman boosts FX forwards 27%.</strong> The annual 10-K (April 2026) shows $586M in FX forwards, up from $463M. The Jack Daniel&rsquo;s parent hedges euro, sterling, and AUD, and also discloses commodity exposures across agave, rye, corn, malted barley, and aluminium. A tidy package for a commodities-and-FX hedging story.</p>
+<p><strong>Micron&rsquo;s commodity notional drop is a data correction, not a real move.</strong> The alerts flagged a 90% decline in commodity derivatives from $4.1B to $406M, but the LLM correctly identified the prior $4.1B as a data error &mdash; August 2025 showed $393M, consistent with the current figure. Ignore the percentage-change alert on this field for MU.</p>
 
 <h2>Universe Update</h2>
 
-<p>391 issuers tracked: 194 active, 180 needs-review, 5 failed activation, 4 still registered. One activation attempted this week &mdash; Medtronic (MDT, 10-K) &mdash; which failed with a score of 0.34. Eight rows in the universe file have malformed status fields (sector names leaking into the status column), flagged for cleanup.</p>
+<p>391 issuers tracked: 194 active, 180 needs-review, 5 failed activation, 4 still registered. No new activations this week. The pipeline processed two filings (MKC, MU) in a single run on June 26. The scheduled runs on June 19&ndash;25 found no new filings to process for active issuers.</p>
 
 <h2>Data Notes</h2>
 
-<p>Adobe&rsquo;s prior-period FX/IR figures ($27M, $12M) were confirmed incorrect by the LLM &mdash; the current $6.16B/$2.7B figures are the first accurate extraction. Treat the percentage-change alerts as data corrections, not real moves. Molson Coors&rsquo; prior $4.8B derivative liability figure is almost certainly an extraction error. Several issuers (AAPL, ACN, ADSK) logged API authentication failures on June 8 &mdash; these were fallback API-mode attempts that failed; the CC-bridge extractions succeeded separately.</p>
+<p>MU&rsquo;s FX designated notional ($9.7B) appears for the first time in the tracking data &mdash; prior extractions captured only the non-designated portion, so the 79% increase in non-designated is a real quarter-over-quarter move, but the $22B total reflects improved extraction coverage, not a sudden quintupling of hedging. MKC&rsquo;s prior periods (FY2025) returned empty extractions, likely because those 10-Qs cross-referenced the 10-K without disclosing derivatives detail. Eight rows in universe.csv still have malformed status fields (sector names in the status column).</p>
 
-<footer>Automated digest from SEC Derivatives pipeline &middot; 19 June 2026</footer>
+<footer>Automated digest from SEC Derivatives pipeline &middot; 26 June 2026</footer>
 </body></html>
