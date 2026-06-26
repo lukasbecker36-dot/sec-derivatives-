@@ -1,49 +1,40 @@
 issuer: United Airlines Holdings
 ticker: UAL
-cik: "100517"
+cik: '100517'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   has_derivatives:
-    description: "Whether the company uses derivatives"
+    description: Whether the company uses derivatives
     section: market_risk
   variable_rate_debt:
-    description: "Carrying value of variable rate debt, in millions"
+    description: Carrying value of variable rate debt, in millions
     section: market_risk
   ir_sensitivity_100bp_variable:
-    description: "Impact of 100bp increase on projected variable rate interest expense, in millions"
+    description: Impact of 100bp increase on projected variable rate interest expense, in millions
     section: market_risk
   fixed_rate_debt:
-    description: "Carrying value of fixed rate debt, in millions"
+    description: Carrying value of fixed rate debt, in millions
     section: market_risk
   fixed_rate_debt_fair_value:
-    description: "Fair value of fixed rate debt, in millions"
+    description: Fair value of fixed rate debt, in millions
     section: market_risk
   ir_sensitivity_100bp_fixed_fv:
-    description: "Impact of 100bp increase on fair value of fixed rate debt, in millions"
+    description: Impact of 100bp increase on fair value of fixed rate debt, in millions
     section: market_risk
   ir_sensitivity_100bp_interest_income:
-    description: "Impact of 100bp increase on interest income from cash/investments, in millions"
+    description: Impact of 100bp increase on interest income from cash/investments, in millions
     section: market_risk
   fuel_price_sensitivity_1dollar:
-    description: "Change in projected fuel expense from $1/barrel change, in millions"
+    description: Change in projected fuel expense from $1/barrel change, in millions
     section: market_risk
   fx_sensitivity_1pct_pretax:
-    description: "Impact of 1% USD strengthening on pre-tax income, in millions"
+    description: Impact of 1% USD strengthening on pre-tax income, in millions
     section: market_risk
   primary_fx_exposures:
-    description: "Primary foreign currency exposures (CAD, EUR, JPY, CNY, BRL, MXN)"
+    description: Primary foreign currency exposures (CAD, EUR, JPY, CNY, BRL, MXN)
     section: market_risk
-
-# Unusual features identified:
-#   - Policy allows derivatives (IR swaps, FX contracts, cross-currency swaps) but current strategy is NOT to hedge fuel or FX
-#   - Fuel price risk is largest exposure — $116M per $1/barrel change — but deliberately unhedged
-#   - FX exposure deliberately unhedged despite significant multi-currency exposure (CAD, EUR, JPY, CNY, BRL, MXN)
-#   - Interest rate table with variable/fixed rate debt breakdown and dual sensitivity (expense impact and fair value impact)
-#   - Interest income sensitivity also disclosed ($140M per 100bp on cash/investments)
-#   - Variable rate debt includes $5.4B from non-US entities affected by tax law changes
-#   - Archetype should be 'no_derivatives' or 'minimal_hedger' — company has derivative policy but current strategy is not to hedge commodity or FX
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*FAIR\s+VALUE\s+MEASUREMENTS,\s+INVESTMENTS\s+AND\s+NOTES\s+RECEIVABLE
