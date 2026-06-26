@@ -1,55 +1,44 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><style>
-body { font-family: -apple-system, Arial, sans-serif; max-width: 700px; margin: 0 auto; padding: 20px; color: #333; }
-h1 { color: #1a1a2e; border-bottom: 2px solid #e94560; padding-bottom: 8px; font-size: 22px; }
-h2 { color: #1a1a2e; font-size: 17px; margin-top: 28px; }
-h3 { color: #444; font-size: 14px; margin: 16px 0 4px 0; }
-.stat { display: inline-block; background: #f0f0f0; padding: 6px 14px; border-radius: 4px; margin: 3px 4px 3px 0; font-size: 13px; }
-.stat b { color: #1a1a2e; }
-.alert { font-size: 13px; line-height: 1.5; color: #555; margin: 2px 0; font-family: Consolas, monospace; }
-.alert-numeric { color: #c44; }
-.alert-disappeared { color: #888; }
-.alert-new { color: #2a7; }
-.alert-flag { color: #b80; }
-.section-header { background: #f8f8f8; padding: 6px 10px; border-left: 3px solid #e94560; margin: 8px 0 4px 0; font-size: 13px; font-weight: bold; }
-.footer { margin-top: 30px; padding-top: 12px; border-top: 1px solid #ddd; font-size: 11px; color: #999; }
-</style></head><body>
-<h1>SEC Derivatives — Weekly Digest</h1>
-<p style="color:#666; font-size:13px;">Week ending 26 June 2026 &middot; Last 7 days</p>
+<html><head><meta charset="utf-8">
+<title>SEC Derivatives Weekly — 19–26 June 2026</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; max-width: 640px; margin: 2em auto; padding: 0 1em; color: #1a1a1a; line-height: 1.6; }
+  h1 { font-size: 1.5em; border-bottom: 2px solid #1a1a1a; padding-bottom: 0.3em; margin-bottom: 0.2em; }
+  .dateline { color: #666; font-size: 0.9em; margin-bottom: 1.5em; }
+  h2 { font-size: 1.15em; color: #333; margin-top: 1.8em; margin-bottom: 0.5em; }
+  p { margin: 0.8em 0; }
+  strong { color: #111; }
+  footer { margin-top: 2.5em; padding-top: 1em; border-top: 1px solid #ccc; color: #888; font-size: 0.8em; }
+</style>
+</head><body>
 
-<h2>Universe</h2>
-<div>
-<span class="stat"><b>381</b> active</span>
-<span class="stat"><b>4</b> registered</span>
-<span class="stat"><b>6</b> failed</span>
-<span class="stat"><b>391</b> total</span>
-</div>
-<h2>Alerts (20 across 2 issuers)</h2>
-<h3>MKC</h3>
-<div class="section-header">=== 10-Q | Period ending 2026-05-31 | Processed 2026-06-26 ===</div>
-<div class="alert alert-new">[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,953M)</div>
-<div class="alert alert-new">[NEW_FIELD] fx_designated_notional: appeared for first time ($1,884M)</div>
-<div class="alert alert-new">[NEW_FIELD] fx_not_designated_notional: appeared for first time ($69M)</div>
-<div class="alert alert-new">[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)</div>
-<div class="alert alert-new">[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($302M)</div>
-<div class="alert alert-new">[NEW_FIELD] total_derivative_asset: appeared for first time ($82M)</div>
-<div class="alert alert-new">[NEW_FIELD] total_derivative_liability: appeared for first time ($65M)</div>
-<div class="alert alert-new">[NEW_FIELD] net_derivative_position: appeared for first time ($17M)</div>
-<div class="alert alert-new">[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($49M)</div>
-<h3>MU</h3>
-<div class="section-header">=== 10-Q | Period ending 2026-05-28 | Processed 2026-06-26 ===</div>
-<div class="alert alert-new">[NEW_FIELD] fx_derivatives_notional: appeared for first time ($22,095M)</div>
-<div class="alert alert-new">[NEW_FIELD] fx_designated_notional: appeared for first time ($9,664M)</div>
-<div class="alert alert-numeric">[NUMERIC] fx_not_designated_notional: $6,942M → $12,431M (+79.1%) — exceeds 20% threshold</div>
-<div class="alert alert-numeric">[NUMERIC] commodity_derivatives_notional: $4,106M → $406M (-90.1%) — exceeds 20% threshold</div>
-<div class="alert alert-new">[NEW_FIELD] total_derivative_asset: appeared for first time ($146M)</div>
-<div class="alert alert-new">[NEW_FIELD] total_derivative_liability: appeared for first time ($161M)</div>
-<div class="alert alert-new">[NEW_FIELD] net_derivative_position: appeared for first time ($-15M)</div>
-<div class="alert alert-flag">[LLM_FLAG] fx_not_designated_notional: $12,431M vs prior $6,942M — 79% increase. Driven by significant growth in non-designated currency hedges (prior period Aug 2025 showed $3,477M, indicating rolling hedge program has expanded substantially).</div>
-<div class="alert alert-flag">[LLM_FLAG] commodity_derivatives_notional: $406M vs prior $4,106M — 90% decrease. However, the prior value of $4,106M appears to be a data error (the Aug 2025 figure from this filing shows $393M, consistent with current $406M). The prior value may have been confused with cash flow currency hedges.</div>
+<h1>SEC Derivatives Weekly</h1>
+<p class="dateline">19 &ndash; 26 June 2026</p>
 
-<div class="footer">
-SEC Derivatives &amp; Market Risk Extractor &middot; Automated weekly digest<br>
-Data sourced from SEC EDGAR. Extraction via Claude Code scheduled routine.
-</div>
+<p>Light processing week &mdash; only two new filings extracted (Micron, McCormick) &mdash; but the broader June cycle surfaced several stories worth chasing, headlined by M&amp;A-driven derivatives activity at Abbott Labs and a wave of interest rate swap expansions across industrials and pharma.</p>
+
+<h2>Story Leads</h2>
+
+<p><strong>Abbott triples IR swaps to $4.2B as Exact Sciences deal takes shape.</strong> Abbott Laboratories&rsquo; Q1 2026 filing shows interest rate swap notional jumping from $1.2B to $4.2B (+250%), with the pipeline flagging additional hedges &ldquo;associated with the Exact Sciences acquisition.&rdquo; Simultaneously, FX derivatives contracted 42% to $7.6B and $13.4B in non-designated FX hedges dropped to zero. Classic M&amp;A hedging pattern &mdash; locking in financing costs while unwinding legacy currency positions.</p>
+
+<p><strong>Dow Chemical&rsquo;s derivatives book flips to net positive.</strong> Dow&rsquo;s net derivative position swung from &minus;$367M to +$93M in Q1, driven by IR swaps nearly tripling ($697M &rarr; $2.03B) and derivative liabilities plunging 71%. FX notional also grew to $18.5B. The chemical giant appears to have repositioned aggressively for the rate environment &mdash; worth asking if they&rsquo;re locking in ahead of expected cuts.</p>
+
+<p><strong>Caterpillar ramps hedging as positions move against it.</strong> CAT quintupled its FX derivatives ($62M &rarr; $293M) and tripled commodity hedges ($10M &rarr; $37M) in Q1. But cash flow hedge AOCI flipped from a +$163M gain to a &minus;$67M loss, suggesting existing hedges are underwater. Industrial bellwether expanding protection while its current book shows stress.</p>
+
+<p><strong>Micron&rsquo;s FX hedge programme hits $22B.</strong> This week&rsquo;s fresh Q3 extraction shows Micron&rsquo;s total FX notional at $22.1B, with non-designated hedges up 79% to $12.4B. The memory chipmaker is running one of the largest corporate FX programmes in the S&amp;P 500. Commodity notional appeared to drop 90%, but the pipeline flagged the prior-period figure as a likely data error.</p>
+
+<p><strong>AbbVie doubles IR swaps while $19.6B FX forward book vanishes.</strong> IR notional jumped from $1.8B to $4.08B (+127%) in Q1. The $19.6B FX forwards outstanding dropped to zero, though 7 of 16 tracked fields also disappeared &mdash; likely a partial extraction. The IR expansion looks real; the FX unwind needs manual verification against the filing.</p>
+
+<p><strong>Salesforce quietly builds a $3.5B private equity portfolio.</strong> CRM&rsquo;s equity sensitivity to private holdings grew from $79M to $292M over nine months as top-5 private investments expanded from $1.3B to $3.5B. Meanwhile, public equity holdings were almost entirely exited ($68M &rarr; $5M). Unusual concentration of private-market risk for a SaaS company.</p>
+
+<h2>Universe Update</h2>
+
+<p>The pipeline tracks 194 active issuers and 180 in needs-review, with 4 still registered and 5 failed. One activation attempt this week: Medtronic (MDT) failed on its 10-K (score 0.34). McCormick (MKC) had its first full extraction on June 26, revealing a $2.0B FX, $500M IR swap, and $302M commodity hedging programme &mdash; a useful new consumer staples data point.</p>
+
+<h2>Data Notes</h2>
+
+<p>Adobe&rsquo;s prior-period FX notional was underreported by ~200x ($27M vs. actual $6.2B) &mdash; corrected in the June 16 run. Several issuers (ABBV, ABT, Corteva) showed 40&ndash;60% field disappearance in Q1 extractions, suggesting section extraction may be clipping tables. Albemarle&rsquo;s $2.4B derivative-asset drop-to-zero is likely a field-mapping issue, not a real unwind.</p>
+
+<footer>Automated digest from SEC Derivatives pipeline &middot; 26 June 2026</footer>
+
 </body></html>
