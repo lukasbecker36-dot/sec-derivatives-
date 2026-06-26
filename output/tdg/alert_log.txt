@@ -1,24 +1,66 @@
-=== 10-Q | Period ending 2025-12-27 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $57M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $89M → $61M (-31.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $89M → $61M (-31.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $18M → $36M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] total_derivative_liability: $2M → $0M
+[HISTORICAL] [NUMERIC] net_derivative_position: $16M → $36M (+125.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $7M → $3M (-57.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_forward_notional: $89M → $61M (-31.5%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_swap_fair_value: appeared for first time ($23M)
+[HISTORICAL] [NUMERIC] fx_forward_gain_loss: $-1M → $-2M (-100.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Subsequent event: In April 2026, new collar agreements aggregating $800M notional were entered (not yet in balance sheet as of March 28, 2026)
+[HISTORICAL] [LLM_FLAG] section_text_deferred_to_10k: Item 3 cross-references Item 7A of the 10-K (FY2025, filed Nov 12 2025) and states market risks have not materially changed for Q2 FY2026; no quantitative data present
 
-=== 10-K | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($57M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+=== 10-Q | Period ending 2025-12-27 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $118M → $89M (-24.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $118M → $89M (-24.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $700M → $2,750M (+292.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $3M → $2M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $12M → $16M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $118M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] variable_rate_debt_term_loans: was $11,124M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] securitization_facility_balance: was $725M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_pct: was $75M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_1pct: was $57M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] weighted_avg_interest_rate: was $6M, now missing
+[HISTORICAL] [NUMERIC] fx_forward_notional: $118M → $89M (-24.6%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_forward_gain_loss: appeared for first time ($-1M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 7/16 previously-populated fields are now null (cash_flow_hedge_aoci, fx_forwards_outstanding, variable_rate_debt_term_loans, securitization_facility_balance, fixed_rate_pct...)
+[HISTORICAL] [LLM_FLAG] section_text_deferred_to_10k: Item 3 cross-references Item 7A of the 10-K (FY2025, filed Nov 12 2025) and states market risks have not materially changed for Q1 FY2026; no quantitative data present
 
-=== 10-Q | Period ending 2025-12-27 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] variable_rate_debt_term_loans: was $11,124M, now missing
-[DISAPPEARED_FIELD] securitization_facility_balance: was $725M, now missing
-[DISAPPEARED_FIELD] fixed_rate_pct: was $75M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_1pct: was $57M, now missing
-[DISAPPEARED_FIELD] weighted_avg_interest_rate: was $6M, now missing
-[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (variable_rate_debt_term_loans, securitization_facility_balance, fixed_rate_pct, ir_sensitivity_1pct, weighted_avg_interest_rate)
+=== 10-K | Period ending 2025-09-30 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $29M → $118M (+306.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $29M → $118M (+306.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $28M → $15M (-46.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $5M → $3M (-40.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $24M → $12M (-50.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-4M)
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-1M → $7M (+800.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($118M)
+[HISTORICAL] [NEW_FIELD] variable_rate_debt_term_loans: appeared for first time ($11,124M)
+[HISTORICAL] [NEW_FIELD] securitization_facility_balance: appeared for first time ($725M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_pct: appeared for first time ($75M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_1pct: appeared for first time ($57M)
+[HISTORICAL] [NEW_FIELD] weighted_avg_interest_rate: appeared for first time ($6M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_cap_notional: was $700M, now missing
+[HISTORICAL] [NUMERIC] ir_collar_notional: $4,488M → $7,238M (+61.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_forward_notional: $29M → $118M (+306.9%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_fair_value: was $11M, now missing
+[HISTORICAL] [LLM_FLAG] New forward-starting swaps entered in Q4 FY2025: $700M active plus additional forward-starting tranches ($125M, $1,025M, $900M) starting 9/30/2027
 
-=== 10-K | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] variable_rate_debt_term_loans: appeared for first time ($11,124M)
-[NEW_FIELD] securitization_facility_balance: appeared for first time ($725M)
-[NEW_FIELD] fixed_rate_pct: appeared for first time ($75M)
-[NEW_FIELD] ir_sensitivity_1pct: appeared for first time ($57M)
-[NEW_FIELD] weighted_avg_interest_rate: appeared for first time ($6M)
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $59M → $29M (-50.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $59M → $29M (-50.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $2,700M → $700M (-74.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $46M → $28M (-39.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $3M → $5M (+66.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $43M → $24M (-44.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-12M → $-1M (+91.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_forward_notional: $59M → $29M (-50.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_fair_value: $22M → $11M (-50.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] section_text_deferred_to_10k: Item 3 cross-references Item 7A of the 10-K and states market risks have not materially changed for Q3 FY2025; no quantitative data present
 
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-06-26 ===
+[HISTORICAL] [LLM_FLAG] IR swaps of $500M and $1,500M matured on or around 3/29/2025 period end; $700M swap was active; collar agreements include forward-starting tranches
+[HISTORICAL] [LLM_FLAG] section_text_deferred_to_10k: Item 3 cross-references Item 7A of the 10-K and states market risks have not materially changed for Q2 FY2025; no quantitative data present

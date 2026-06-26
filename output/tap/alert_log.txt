@@ -1,76 +1,38 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_designated_notional: appeared for first time ($124M)
-[NUMERIC] commodity_derivatives_notional: $442M → $889M (+101.1%) — exceeds 20% threshold
-[NUMERIC] total_derivative_asset: $52M → $89M (+71.4%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $4,777M → $7M (-99.8%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $-4,724M → $82M (+101.7%) — exceeds 20% threshold
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-81M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($2M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($2M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-305M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-134M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
-[VALIDATION] Likely units mismatch: total_derivative_liability changed from 4,777 to 7 (0x)
-[LLM_FLAG] fx_derivatives_notional differs by more than 50% from prior period (104.9 to 123.9).
-[LLM_FLAG] commodity_derivatives_notional differs by more than 50% from prior period (442.1 to 888.9).
-[LLM_FLAG] net_derivative_position shows a significant shift from prior period (-4724.5 to 81.9), indicating a material change in overall derivative asset and liability structure.
-[LLM_FLAG] fx_forwards_outstanding: notable increase compared to prior period (from 0.0), indicating new hedging activity.
-[LLM_FLAG] fixed_rate_notes_billion: consistent with prior period but significant amount, reflecting continued exposure to interest rate risk.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $442M → $889M (+101.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $136M → $248M (+82.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($7M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($241M)
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($68M)
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($2M)
+[HISTORICAL] [LLM_FLAG] AOCI balance of $68.2M is from prior year-end (Dec 31, 2025), not current period end
+[HISTORICAL] [LLM_FLAG] Commodity swaps fair value $131.5M, sensitivity -$76.0M; commodity options fair value $20.1M, sensitivity -$11.0M; Q1 2026 10-Q
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($105M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($1,000M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($442M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($52M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($4,777M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-4,724M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $355M → $442M (+24.4%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $114M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $2M, now missing
+[HISTORICAL] [LLM_FLAG] section_text for this 10-K extract contains market risk sensitivity tables rather than the full derivatives note; some fields may be incomplete
+[HISTORICAL] [LLM_FLAG] TAP 10-K annual report; commodity swaps fair value $52.1M, sensitivity -$46.9M; IR swap fair value $83.7M, sensitivity -$81.4M
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-305M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-13M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
-[LLM_FLAG] fx_forwards_outstanding increased by more than 50% from prior period (104.9 to 123.9).
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $124M → $94M (-24.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $124M → $94M (-24.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $12M → $6M (-49.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-1M → $2M (+300.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_forwards_outstanding: $124M → $94M (-24.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-14M → $-10M (+25.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] TAP reports derivative sensitivities using 10% price change metric; commodity swaps fair value $40.6M, sensitivity -$38.9M
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $161M → $124M (-22.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $161M → $124M (-22.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $361M → $437M (+21.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $5M → $-1M (-120.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_forwards_outstanding: $161M → $124M (-22.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass is stated as 'less than $1 million' loss; recorded as -1.0 as upper bound
+[HISTORICAL] [LLM_FLAG] TAP reports derivative sensitivities using 10% price change metric; IR swap fair value $72.0M, sensitivity -$80.8M from 10% rate change
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7KTXYu5zp1GM6MN8jc'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7Jy1ZgZZxMiogW6nTu'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7JZu1YpGUJu22oVzdm'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7JJ8EKL96q8Yjbz1NL'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7HzNtXvtZDmgYrEfrD'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($124M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-440M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($6M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $94M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-482M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $6M, now missing
-[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, fixed_rate_notes_billion)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NUMERIC] fx_forwards_outstanding: $124M → $94M (-24.6%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NUMERIC] fx_forwards_outstanding: $161M → $124M (-22.5%) — exceeds 20% threshold
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-26 ===
+[HISTORICAL] [LLM_FLAG] TAP reports commodity and IR derivative sensitivities using 10% price change metric rather than 1pp or 100bp
