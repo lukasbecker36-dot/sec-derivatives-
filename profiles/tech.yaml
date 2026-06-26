@@ -1,31 +1,25 @@
 issuer: Bio-Techne
 ticker: TECH
-cik: "842023"
+cik: '842023'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   foreign_currency_sales_percentage:
-    description: "percentage of sales in foreign currencies"
+    description: percentage of sales in foreign currencies
     section: market_risk
   currency_breakdown:
-    description: "breakdown by currency (euro, GBP, CNY, CAD, CHF)"
+    description: breakdown by currency (euro, GBP, CNY, CAD, CHF)
     section: market_risk
   exchange_rate_table:
-    description: "high/low/average exchange rates by currency for 3 years"
+    description: high/low/average exchange rates by currency for 3 years
     section: market_risk
   sensitivity_analysis:
-    description: "10% USD appreciation impact on earnings, net assets, and transaction gains"
+    description: 10% USD appreciation impact on earnings, net assets, and transaction gains
     section: market_risk
   hedging_policy:
-    description: "statement that company does not use FX forwards"
+    description: statement that company does not use FX forwards
     section: market_risk
-
-# Unusual features identified:
-#   - No derivative instruments used despite significant FX exposure (32% foreign sales)
-#   - Explicitly states no FX hedging strategy
-#   - Exchange rates presented as unweighted month-end rates rather than volume-weighted
-#   - Sensitivity analysis uses hypothetical 10% simultaneous appreciation scenario
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+Value\s+Measurements

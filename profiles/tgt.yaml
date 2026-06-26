@@ -1,38 +1,31 @@
 issuer: Target Corporation
 ticker: TGT
-cik: "27419"
+cik: '27419'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   floating_rate_excess:
-    description: "Excess of floating rate short-term investments over floating rate debt"
+    description: Excess of floating rate short-term investments over floating rate debt
     section: market_risk
   interest_rate_sensitivity:
-    description: "Annualized effect of 1pp interest rate increase on earnings before taxes (floating rate)"
+    description: Annualized effect of 1pp interest rate increase on earnings before taxes (floating rate)
     section: market_risk
   insurance_liability_rate_sensitivity:
-    description: "Annualized effect of 1pp interest rate change on general liability/workers comp earnings"
+    description: Annualized effect of 1pp interest rate change on general liability/workers comp earnings
     section: market_risk
   pension_discount_rate_sensitivity:
-    description: "Impact of 1pp decrease in discount rate on annual pension expense"
+    description: Impact of 1pp decrease in discount rate on annual pension expense
     section: market_risk
   pension_interest_rate_hedge_pct:
-    description: "Percentage of pension plan interest rate exposure hedged"
+    description: Percentage of pension plan interest rate exposure hedged
     section: market_risk
   ir_swap_notional:
-    description: "Notional of interest rate swaps designated as hedging instruments"
+    description: Notional of interest rate swaps designated as hedging instruments
     section: market_risk
   prepaid_forward_own_stock:
-    description: "Prepaid forward contracts on own common stock for deferred compensation"
+    description: Prepaid forward contracts on own common stock for deferred compensation
     section: market_risk
-
-# Unusual features identified:
-#   - Interest rate swaps designated as hedges to convert fixed rate debt to floating
-#   - Pension plan holds derivative instruments and long-duration bonds to hedge interest rate exposure
-#   - Uses prepaid forward contracts on its own common stock to offset deferred compensation plan exposure
-#   - 75% of pension plan interest rate exposure is hedged
-#   - XBRL shows both InterestRateSwapMember and ForwardContractsMember
-
+sections:
+  financial_instruments:
+    heading: 4\.\s+Fair\s+Value\s+Measurements

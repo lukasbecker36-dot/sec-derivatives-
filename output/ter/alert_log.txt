@@ -1,15 +1,52 @@
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($139M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($139M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($1M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($1M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($0M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($1M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-26 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($49M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($152M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($59M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($57M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($173M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($173M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($1M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($3M)
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $139M → $173M (+24.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $139M → $173M (+24.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $1M → $3M (+222.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $0M → $-2M (-848.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Q1 2026 shows the highest FX notional in the series ($172.7M) and a notably elevated net liability position (-$1.849M), driven by new DKK/USD and DKK/CNY contracts.
+[HISTORICAL] [LLM_FLAG] Q1 2026 shows largest FX notional ($172.7M) and a net liability position (-$1.849M), driven by significant SGD/USD and new DKR/USD, DKR/CNY contracts.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-26 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $92M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $155M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $55M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $37M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $125M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $125M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $1M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $0M → $1M (+279.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-1M → $0M (+130.2%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 10/16 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt...)
+[HISTORICAL] [LLM_FLAG] All sensitivities described as immaterial/not material — no numeric values disclosed in the 10-K Item 7A section.
 
+=== 10-Q | Period ending 2025-09-28 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $193M → $92M (-52.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $0M → $0M (+53.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $1M → $0M (-76.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1M → $0M (-76.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-0M → $-1M (-2000.0%) — exceeds 20% threshold
+
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $262M → $193M (-26.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $0M → $0M (+29.7%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] fi_fx_designated_notional: $6M → $0M
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $1M → $1M (+30.5%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] fx_designated_notional: $6M → $0M
+[HISTORICAL] [NUMERIC] total_derivative_liability: $1M → $1M (+30.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $0M → $-0M (-123.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Derivatives note uses 'Gross Notional Value' label (vs 'Net Notional Value' in prior quarter), consistent with no offsetting contracts in the period.
+[HISTORICAL] [LLM_FLAG] Note uses 'Gross Notional Value' label rather than 'Net Notional Value' used in prior quarters — consistent with no offsetting contracts in this period.
+[HISTORICAL] [LLM_FLAG] Market risk section cross-references 10-K (filed February 20, 2025); states no material changes — all quantitative values must be sourced from that 10-K.
