@@ -1,47 +1,55 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8">
-<style>
-  body { font-family: Georgia, 'Times New Roman', serif; max-width: 680px; margin: 0 auto; padding: 24px; color: #1a1a1a; line-height: 1.6; }
-  h1 { font-size: 22px; border-bottom: 2px solid #1a1a1a; padding-bottom: 8px; margin-bottom: 6px; }
-  .subtitle { font-size: 14px; color: #555; margin-bottom: 24px; }
-  h2 { font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: #333; margin-top: 28px; margin-bottom: 12px; }
-  p { margin: 0 0 14px 0; font-size: 15px; }
-  strong { color: #111; }
-  footer { margin-top: 32px; padding-top: 12px; border-top: 1px solid #ccc; font-size: 12px; color: #888; }
-  .summary { font-size: 15px; color: #333; border-left: 3px solid #555; padding-left: 14px; margin-bottom: 24px; }
-</style>
-</head><body>
+<html><head><meta charset="utf-8"><style>
+body { font-family: -apple-system, Arial, sans-serif; max-width: 700px; margin: 0 auto; padding: 20px; color: #333; }
+h1 { color: #1a1a2e; border-bottom: 2px solid #e94560; padding-bottom: 8px; font-size: 22px; }
+h2 { color: #1a1a2e; font-size: 17px; margin-top: 28px; }
+h3 { color: #444; font-size: 14px; margin: 16px 0 4px 0; }
+.stat { display: inline-block; background: #f0f0f0; padding: 6px 14px; border-radius: 4px; margin: 3px 4px 3px 0; font-size: 13px; }
+.stat b { color: #1a1a2e; }
+.alert { font-size: 13px; line-height: 1.5; color: #555; margin: 2px 0; font-family: Consolas, monospace; }
+.alert-numeric { color: #c44; }
+.alert-disappeared { color: #888; }
+.alert-new { color: #2a7; }
+.alert-flag { color: #b80; }
+.section-header { background: #f8f8f8; padding: 6px 10px; border-left: 3px solid #e94560; margin: 8px 0 4px 0; font-size: 13px; font-weight: bold; }
+.footer { margin-top: 30px; padding-top: 12px; border-top: 1px solid #ddd; font-size: 11px; color: #999; }
+</style></head><body>
+<h1>SEC Derivatives — Weekly Digest</h1>
+<p style="color:#666; font-size:13px;">Week ending 26 June 2026 &middot; Last 7 days</p>
 
-<h1>SEC Derivatives Weekly</h1>
-<div class="subtitle">12 &ndash; 19 June 2026</div>
-
-<div class="summary">
-Light week for new filings &mdash; only three issuers processed &mdash; but a batch of first-time extractions from the prior wave surfaced several strong leads. AbbVie doubled its IR swaps, Abbott slashed FX hedging by 42%, and Adobe&rsquo;s true hedging footprint finally came into view at $6.2B in FX derivatives.
+<h2>Universe</h2>
+<div>
+<span class="stat"><b>381</b> active</span>
+<span class="stat"><b>4</b> registered</span>
+<span class="stat"><b>6</b> failed</span>
+<span class="stat"><b>391</b> total</span>
 </div>
+<h2>Alerts (20 across 2 issuers)</h2>
+<h3>MKC</h3>
+<div class="section-header">=== 10-Q | Period ending 2026-05-31 | Processed 2026-06-26 ===</div>
+<div class="alert alert-new">[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,953M)</div>
+<div class="alert alert-new">[NEW_FIELD] fx_designated_notional: appeared for first time ($1,884M)</div>
+<div class="alert alert-new">[NEW_FIELD] fx_not_designated_notional: appeared for first time ($69M)</div>
+<div class="alert alert-new">[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)</div>
+<div class="alert alert-new">[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($302M)</div>
+<div class="alert alert-new">[NEW_FIELD] total_derivative_asset: appeared for first time ($82M)</div>
+<div class="alert alert-new">[NEW_FIELD] total_derivative_liability: appeared for first time ($65M)</div>
+<div class="alert alert-new">[NEW_FIELD] net_derivative_position: appeared for first time ($17M)</div>
+<div class="alert alert-new">[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($49M)</div>
+<h3>MU</h3>
+<div class="section-header">=== 10-Q | Period ending 2026-05-28 | Processed 2026-06-26 ===</div>
+<div class="alert alert-new">[NEW_FIELD] fx_derivatives_notional: appeared for first time ($22,095M)</div>
+<div class="alert alert-new">[NEW_FIELD] fx_designated_notional: appeared for first time ($9,664M)</div>
+<div class="alert alert-numeric">[NUMERIC] fx_not_designated_notional: $6,942M → $12,431M (+79.1%) — exceeds 20% threshold</div>
+<div class="alert alert-numeric">[NUMERIC] commodity_derivatives_notional: $4,106M → $406M (-90.1%) — exceeds 20% threshold</div>
+<div class="alert alert-new">[NEW_FIELD] total_derivative_asset: appeared for first time ($146M)</div>
+<div class="alert alert-new">[NEW_FIELD] total_derivative_liability: appeared for first time ($161M)</div>
+<div class="alert alert-new">[NEW_FIELD] net_derivative_position: appeared for first time ($-15M)</div>
+<div class="alert alert-flag">[LLM_FLAG] fx_not_designated_notional: $12,431M vs prior $6,942M — 79% increase. Driven by significant growth in non-designated currency hedges (prior period Aug 2025 showed $3,477M, indicating rolling hedge program has expanded substantially).</div>
+<div class="alert alert-flag">[LLM_FLAG] commodity_derivatives_notional: $406M vs prior $4,106M — 90% decrease. However, the prior value of $4,106M appears to be a data error (the Aug 2025 figure from this filing shows $393M, consistent with current $406M). The prior value may have been confused with cash flow currency hedges.</div>
 
-<h2>Story Leads</h2>
-
-<p><strong>Adobe&rsquo;s $6.2B FX hedge book revealed.</strong> The Q3 FY2026 10-Q (period ending May 29, processed June 16) shows $6.16B in designated FX derivatives and $2.7B in interest rate swaps. Prior extractions badly undercounted these at ~$27M due to section-capture issues &mdash; the LLM flagged that "$6.16B is clearly stated in the filing." This is the first clean read of Adobe&rsquo;s real hedging programme, and it&rsquo;s substantial. Worth checking whether the ramp reflects the Figma integration or broader international revenue growth.</p>
-
-<p><strong>AbbVie more than doubles IR swap positions.</strong> IR swap notional jumped from $1.8B to $4.08B (+127%) in Q1 2026, while total derivative assets rose 70% to $155M. FX derivatives held steady at ~$9.3B. With roughly $60B in long-term debt post-Allergan/ImmunoMedics, AbbVie appears to be aggressively re-layering its rate hedges &mdash; possibly locking in ahead of expected Fed moves.</p>
-
-<p><strong>Abbott cuts FX derivatives programme by 42%.</strong> FX derivatives notional dropped from $13B to $7.6B quarter-over-quarter. The $1.2B IR swap position also disappeared from the latest filing. Abbott generates ~60% of revenue internationally, so a pullback of this size in FX hedging is notable. Could signal a strategic shift or portfolio restructuring post-diagnostics spinoff discussions.</p>
-
-<p><strong>Targa Resources massively expands commodity hedging.</strong> Commodity derivative liabilities surged from $67M to $481M, with $650M in new notional. Variable-rate borrowings grew from $161M to $1.06B. The midstream operator looks to be layering on significant commodity risk management as it takes on leverage &mdash; a story angle on energy hedging discipline.</p>
-
-<p><strong>Molson Coors doubles commodity hedge book.</strong> Commodity derivatives notional went from $442M to $889M (+101%) in Q1 2026. The brewer is likely expanding hedges on aluminium, barley, and natural gas. Total derivative liabilities collapsed from $4.8B to $7M, though the prior figure looks like an extraction artefact.</p>
-
-<p><strong>Airbnb quietly enters the IR swap market.</strong> A $1.7B interest rate swap position appeared for the first time in Q1 2026, alongside its modest ~$26M FX programme. Airbnb&rsquo;s balance sheet is mostly cash-rich, so a swap of this size likely relates to its $2B term loan &mdash; worth a call to their treasury team.</p>
-
-<p><strong>Brown-Forman boosts FX forwards 27%.</strong> The annual 10-K (April 2026) shows $586M in FX forwards, up from $463M. The Jack Daniel&rsquo;s parent hedges euro, sterling, and AUD, and also discloses commodity exposures across agave, rye, corn, malted barley, and aluminium. A tidy package for a commodities-and-FX hedging story.</p>
-
-<h2>Universe Update</h2>
-
-<p>391 issuers tracked: 194 active, 180 needs-review, 5 failed activation, 4 still registered. One activation attempted this week &mdash; Medtronic (MDT, 10-K) &mdash; which failed with a score of 0.34. Eight rows in the universe file have malformed status fields (sector names leaking into the status column), flagged for cleanup.</p>
-
-<h2>Data Notes</h2>
-
-<p>Adobe&rsquo;s prior-period FX/IR figures ($27M, $12M) were confirmed incorrect by the LLM &mdash; the current $6.16B/$2.7B figures are the first accurate extraction. Treat the percentage-change alerts as data corrections, not real moves. Molson Coors&rsquo; prior $4.8B derivative liability figure is almost certainly an extraction error. Several issuers (AAPL, ACN, ADSK) logged API authentication failures on June 8 &mdash; these were fallback API-mode attempts that failed; the CC-bridge extractions succeeded separately.</p>
-
-<footer>Automated digest from SEC Derivatives pipeline &middot; 19 June 2026</footer>
+<div class="footer">
+SEC Derivatives &amp; Market Risk Extractor &middot; Automated weekly digest<br>
+Data sourced from SEC EDGAR. Extraction via Claude Code scheduled routine.
+</div>
 </body></html>
