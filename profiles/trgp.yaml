@@ -1,39 +1,31 @@
 issuer: Targa Resources
 ticker: TRGP
-cik: "1389170"
+cik: '1389170'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   commodity_derivative_fair_value_asset:
-    description: "Fair value of commodity derivative assets"
+    description: Fair value of commodity derivative assets
     section: market_risk
   commodity_derivative_fair_value_liability:
-    description: "Fair value of commodity derivative liabilities"
+    description: Fair value of commodity derivative liabilities
     section: market_risk
   commodity_hedge_gain_loss:
-    description: "Gain/loss on designated commodity hedges reclassified to sales"
+    description: Gain/loss on designated commodity hedges reclassified to sales
     section: market_risk
   nondesignated_commodity_gain_loss:
-    description: "Gain/loss on non-designated commodity contracts in sales"
+    description: Gain/loss on non-designated commodity contracts in sales
     section: market_risk
   commodity_volumes_hedged:
-    description: "Volumes of natural gas and NGL hedged by year"
+    description: Volumes of natural gas and NGL hedged by year
     section: market_risk
   interest_rate_variable_exposure:
-    description: "Variable rate debt exposure discussion"
+    description: Variable rate debt exposure discussion
     section: market_risk
   derivative_settlement_cash_flow:
-    description: "Cash flow impact from derivative settlements"
+    description: Cash flow impact from derivative settlements
     section: market_risk
-
-# Unusual features identified:
-#   - Energy company with commodity price risk as primary derivatives driver
-#   - Uses both designated and non-designated commodity contracts
-#   - Basis swap contracts for locational price differences in natural gas and NGLs
-#   - Derivative fair values split between current and long-term on balance sheet
-#   - Has a contingent consideration liability related to Dovetail Acquisition also at fair value
-#   - Market risk section focuses on cash flow impacts from commodity derivative settlements
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+V\s+alue\s+Measurements

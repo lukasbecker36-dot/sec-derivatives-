@@ -1,39 +1,31 @@
 issuer: Trimble Inc.
 ticker: TRMB
-cik: "864749"
+cik: '864749'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fx_forward_purchased_notional:
-    description: "Nominal amount of purchased forward contracts"
+    description: Nominal amount of purchased forward contracts
     section: market_risk
   fx_forward_sold_notional:
-    description: "Nominal amount of sold forward contracts"
+    description: Nominal amount of sold forward contracts
     section: market_risk
   fx_forward_purchased_fv:
-    description: "Fair value of purchased forward contracts"
+    description: Fair value of purchased forward contracts
     section: market_risk
   fx_forward_sold_fv:
-    description: "Fair value of sold forward contracts"
+    description: Fair value of sold forward contracts
     section: market_risk
   fx_revenue_impact:
-    description: "Revenue impact from foreign currency exchange rate fluctuations"
+    description: Revenue impact from foreign currency exchange rate fluctuations
     section: market_risk
   fx_operating_income_impact:
-    description: "Operating income impact from foreign currency exchange rate fluctuations"
+    description: Operating income impact from foreign currency exchange rate fluctuations
     section: market_risk
   primary_fx_exposures:
-    description: "Primary currencies hedged (EUR, NZD, CAD, BRL, AUD)"
+    description: Primary currencies hedged (EUR, NZD, CAD, BRL, AUD)
     section: market_risk
-
-# Unusual features identified:
-#   - Provides a summary table of forward contracts with both nominal amounts and fair values
-#   - FX forwards are marked-to-market through earnings (not designated as hedges)
-#   - Very short maturity - contracts range 1 to 2 months
-#   - Occasionally enters FX contracts to hedge business acquisition purchase prices
-#   - Large purchased forwards ($269.7M) vs smaller sold forwards ($60.8M) - net long foreign currency
-#   - EUR is most significant non-USD currency exposure
-
+sections:
+  derivatives_note:
+    heading: Derivative\s+Financial\s+Instruments

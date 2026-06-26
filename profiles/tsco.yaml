@@ -1,26 +1,21 @@
 issuer: Tractor Supply
 ticker: TSCO
-cik: "916365"
+cik: '916365'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   commodity_price_exposure:
-    description: "Commodities affecting purchase prices (grain, corn, steel, petroleum, cotton)"
+    description: Commodities affecting purchase prices (grain, corn, steel, petroleum, cotton)
     section: market_risk
   interest_rate_swap_status:
-    description: "Status of interest rate swap (matured in first quarter of fiscal 2025)"
+    description: Status of interest rate swap (matured in first quarter of fiscal 2025)
     section: market_risk
   variable_rate_debt_facility:
-    description: "2022 Senior Credit Facility variable rate exposure"
+    description: 2022 Senior Credit Facility variable rate exposure
     section: market_risk
-
-# Unusual features identified:
-#   - Previously had an interest rate swap but it matured in Q1 FY2025 and was not replaced
-#   - No active derivative instruments as of the filing date
-#   - Purchase price volatility section discusses commodity exposure (grain, corn, steel, petroleum, cotton) but company does NOT use commodity derivatives
-#   - Manages commodity risk through vendor incentives, economies of scale, and retail price adjustments
-#   - SOFR references are only for credit facility rate terms, not swaps
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+Value\s+of\s+Financial\s+Instruments
+  derivatives_note:
+    heading: Derivative\s+Financial\s+Instruments
