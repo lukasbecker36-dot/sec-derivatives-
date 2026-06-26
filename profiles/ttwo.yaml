@@ -1,40 +1,34 @@
 issuer: Take-Two Interactive
 ticker: TTWO
-cik: "946581"
+cik: '946581'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fx_forward_sell_notional:
-    description: "Notional value of forward contracts to sell foreign currencies for USD"
+    description: Notional value of forward contracts to sell foreign currencies for USD
     section: market_risk
   fx_forward_buy_notional:
-    description: "Notional value of forward contracts to buy foreign currencies for USD"
+    description: Notional value of forward contracts to buy foreign currencies for USD
     section: market_risk
   fx_forward_gain_loss:
-    description: "Gain/loss on foreign currency forward contracts"
+    description: Gain/loss on foreign currency forward contracts
     section: market_risk
   short_term_investments:
-    description: "Total short-term investments balance"
+    description: Total short-term investments balance
     section: market_risk
   cash_and_equivalents:
-    description: "Cash and cash equivalents balance"
+    description: Cash and cash equivalents balance
     section: market_risk
   fx_translation_adjustment:
-    description: "Foreign currency translation adjustment gain/loss"
+    description: Foreign currency translation adjustment gain/loss
     section: market_risk
   fx_transaction_loss:
-    description: "Foreign currency exchange transaction gains/losses"
+    description: Foreign currency exchange transaction gains/losses
     section: market_risk
   variable_rate_debt_rate:
-    description: "SOFR-based variable rate on credit agreement"
+    description: SOFR-based variable rate on credit agreement
     section: market_risk
-
-# Unusual features identified:
-#   - Explicitly states it does NOT use derivative financial instruments in its investment portfolio
-#   - FX forwards are NOT designated as hedges - used only for balance sheet hedging
-#   - All forward contracts have maturities under one year
-#   - XBRL data shows ForeignExchangeForwardMember at fair value levels
-
+sections:
+  financial_instruments:
+    heading: 4\.\s+FAIR\s+VALUE\s+MEASUREMENTS

@@ -1,25 +1,47 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-1,690M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-26 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($2,133M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($28,140M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($3M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1,690M)
+[HISTORICAL] [LLM_FLAG] New as of Q1 2026: Tesla discloses a SpaceX equity investment of $2,002M measured at fair value (Level II) — not present in prior periods. Not a marketable security per the investment schedule.
+[HISTORICAL] [LLM_FLAG] Tesla holds $786M in digital assets (Bitcoin) measured at fair value (Level I) as of March 31, 2026 — down from $1,008M at December 31, 2025.
+[HISTORICAL] [LLM_FLAG] Short-term investments restricted for insurance business: $282M as of March 31, 2026.
+[HISTORICAL] [LLM_FLAG] No derivatives of any kind are disclosed in this note; Tesla does not use FX or IR hedging instruments.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct of $1.69 billion stored as 1690 millions
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1,700M)
+=== 10-K/A | Period ending 2025-12-31 | Processed 2026-06-26 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $1,700M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_forwards_outstanding, fx_sensitivity_10pct)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-1,690M)
-[LLM_FLAG] fx_sensitivity_10pct decreased more than 50% from the prior period.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-26 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,174M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $23,358M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $16M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $7M, now missing
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $1,350M → $1,700M (+25.9%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/6 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt)
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct of $1.70 billion stored as 1700 millions
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-2M)
-[LLM_FLAG] fx_sensitivity_10pct value is a significant negative gain/loss, indicating considerable exposure to foreign currency fluctuations.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $963M → $1,174M (+21.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $47M → $16M (-66.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $4M → $7M (+75.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Tesla holds $1,315M in digital assets (Bitcoin) measured at fair value (Level I) as of September 30, 2025 — not captured in schema fields but notable.
+[HISTORICAL] [LLM_FLAG] Insurance business investments of $254M held restricted as of September 30, 2025 are not separately broken out in the main fair value table.
+[HISTORICAL] [LLM_FLAG] No derivatives of any kind are disclosed in this note; Tesla does not use FX or IR hedging instruments.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct of $1.35 billion stored as 1350 millions
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NUMERIC] fx_sensitivity_10pct: $1,350M → $1,700M (+25.9%) — exceeds 20% threshold
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-26 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($963M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($21,195M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($47M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($4M)
+[HISTORICAL] [LLM_FLAG] Tesla holds $1,235M in digital assets (Bitcoin) measured at fair value (Level I) as of June 30, 2025 — not captured in schema fields but notable.
+[HISTORICAL] [LLM_FLAG] No derivatives of any kind are disclosed in this note; Tesla does not use FX or IR hedging instruments.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct of $1.31 billion stored as 1310 millions
 
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1,140M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-26 ===
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct reported as $1.14 billion (converted to millions: 1140); schema description says 'in millions' but value is commonly reported in billions by Tesla — stored as 1140 (millions)
