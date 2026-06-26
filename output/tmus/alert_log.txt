@@ -1,45 +1,56 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($7,300M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($7,300M)
-[NUMERIC] total_derivative_asset: $4,800M → $720M (-85.0%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $4,800M → $720M (-85.0%) — exceeds 20% threshold
-[NEW_FIELD] net_derivative_position: appeared for first time ($0M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($279M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $771M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-771M, now missing
-[NUMERIC] fixed_rate_notes_billion: $-410M → $7M (+101.8%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] marketable_equity_value: was $274M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] currency_swaps_fair_value: was $5M, now missing
-[VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, marketable_equity_value, equity_sensitivity_10pct, currency_swaps_fair_value)
-[LLM_FLAG] Total derivative assets and liabilities have notably decreased from prior period values of $4800 million, raising questions about the effectiveness of their hedging strategies.
-[LLM_FLAG] Possible lack of interest rate derivatives noted for the current period although the previous indicator suggests active management in this area.
-[LLM_FLAG] fixed_rate_notes_billion increased from -410.0 billion to 7.3 billion; significant discrepancy.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $5,551M → $8,284M (+49.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $5,551M → $8,284M (+49.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Significant step-up in EUR notional: €4.8B in all prior periods to €7.3B at March 31, 2026, indicating new EUR-denominated debt issuances and corresponding new cross-currency swap agreements entered during late 2025 or early 2026.
+[HISTORICAL] [LLM_FLAG] FX notional ($8,284M) is inferred from the EUR-denominated debt carrying amount at March 31, 2026 (the swap notional equals EUR debt notional per company disclosure); no explicit USD notional table provided.
+[HISTORICAL] [LLM_FLAG] No derivative fair value balance sheet table included in extracted section text; asset/liability fair values cannot be confirmed.
+[HISTORICAL] [LLM_FLAG] Interest rate lock derivatives terminated April 2020 — residual AOCI balance of $721M at March 31, 2026 with ongoing amortization of $67M/quarter; no active notional.
+[HISTORICAL] [LLM_FLAG] EUR notional increased from €4.8B to €7.3B compared to prior periods, reflecting additional EUR-denominated debt issuances in Q1 2026 (three new EUR tranches issued February 19, 2026).
+[HISTORICAL] [LLM_FLAG] USD-equivalent notional not explicitly stated; USD carrying amount of EUR-denominated debt was $8,284M at March 31, 2026.
+[HISTORICAL] [LLM_FLAG] AOCI balance of $721M relates to terminated IR lock derivatives, not a live cash flow hedge.
+[HISTORICAL] [LLM_FLAG] Derivative asset/liability fair values not separately disclosed in section text.
+[HISTORICAL] [LLM_FLAG] Market risk section is qualitative only with no numerical sensitivity data.
+[HISTORICAL] [LLM_FLAG] EUR-denominated Senior Notes increased to €7.3 billion outstanding as of March 31, 2026 (from €4.8B in prior quarters), fully hedged with cross-currency swaps designated as fair value hedges.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($4,800M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($4,800M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($771M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-771M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-410M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($274M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
-[LLM_FLAG] total_derivative_liability increased from a previous amount of $960 million to $771 million, which is a significant change. Detailed clarification on the ongoing risk management strategies surrounding this should be noted.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-26 ===
+[HISTORICAL] [LLM_FLAG] Section text is truncated (10-K filing) — the note continues with revenue recognition and other policies unrelated to derivatives; the fair value measurements note for derivatives may be in a separate section not captured here.
+[HISTORICAL] [LLM_FLAG] FX notional ($5,551M) is inferred from the EUR-denominated debt carrying amount at December 31, 2025, sourced from the comparative column of the Q1 2026 filing (26-000063) since the 10-K section text itself was cut off before the debt fair value table.
+[HISTORICAL] [LLM_FLAG] Interest rate lock derivatives terminated April 2020; AOCI balance of $771M at December 31, 2025 per Q1 2026 filing comparative disclosure.
+[HISTORICAL] [LLM_FLAG] Low confidence in completeness of this extraction due to section text truncation.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap USD notional not explicitly stated; EUR notional is €4.8B; USD carrying amount of EUR-denominated debt was $5,551M at December 31, 2025.
+[HISTORICAL] [LLM_FLAG] AOCI balance of $771M relates to terminated IR lock derivatives, not a live cash flow hedge.
+[HISTORICAL] [LLM_FLAG] Derivative asset/liability fair values not separately disclosed in section text.
+[HISTORICAL] [LLM_FLAG] Section also discusses recourse guarantee liabilities ($130M) measured at fair value using Level 3 inputs; these are not derivative instruments.
+[HISTORICAL] [LLM_FLAG] Market risk section is qualitative only with no numerical sensitivity data.
+[HISTORICAL] [LLM_FLAG] EUR-denominated Senior Notes of €4.8 billion outstanding as of December 31, 2025, fully hedged with cross-currency swaps.
+[HISTORICAL] [LLM_FLAG] $2.0 billion drawn under ECA Facilities at variable rates as of December 31, 2025, creating some interest rate exposure.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($7M)
-[DISAPPEARED_FIELD] currency_swaps_fair_value: was $5M, now missing
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (currency_swaps_fair_value)
-[LLM_FLAG] fixed_rate_notes_billion exceeded prior period by more than 50%
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-26 ===
+[HISTORICAL] [LLM_FLAG] FX notional ($5,543M) is inferred from the EUR-denominated debt carrying amount at September 30, 2025 (swap notional equals EUR debt notional per company disclosure); no explicit USD notional table provided.
+[HISTORICAL] [LLM_FLAG] No derivative fair value balance sheet table included in extracted section text; asset/liability fair values cannot be confirmed.
+[HISTORICAL] [LLM_FLAG] Interest rate lock derivatives terminated April 2020 — residual AOCI balance of $820M at September 30, 2025 with ongoing amortization; no active notional.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap USD notional not explicitly stated; EUR notional is €4.8B; USD carrying amount of EUR-denominated debt was $5,543M at September 30, 2025.
+[HISTORICAL] [LLM_FLAG] AOCI balance of $820M relates to terminated IR lock derivatives, not a live cash flow hedge.
+[HISTORICAL] [LLM_FLAG] Derivative asset/liability fair values not separately disclosed in section text.
+[HISTORICAL] [LLM_FLAG] Market risk section is qualitative only with no numerical sensitivity data.
+[HISTORICAL] [LLM_FLAG] EUR-denominated Senior Notes of €4.8 billion outstanding as of September 30, 2025, fully hedged with cross-currency swaps designated as fair value hedges.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-26 ===
+[HISTORICAL] [LLM_FLAG] FX notional ($5,567M) is inferred from the EUR-denominated debt carrying amount at June 30, 2025 (swap notional equals EUR debt notional per company disclosure); no explicit USD notional table provided.
+[HISTORICAL] [LLM_FLAG] No derivative fair value balance sheet table included in extracted section text; asset/liability fair values cannot be confirmed.
+[HISTORICAL] [LLM_FLAG] Interest rate lock derivatives terminated April 2020 — residual AOCI balance of $867M at June 30, 2025 with ongoing amortization; no active notional.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap USD notional not explicitly stated; EUR notional is €4.8B; USD carrying amount of EUR-denominated debt was $5,567M at June 30, 2025.
+[HISTORICAL] [LLM_FLAG] AOCI balance of $867M relates to terminated IR lock derivatives, not a live cash flow hedge.
+[HISTORICAL] [LLM_FLAG] Derivative asset/liability fair values not separately disclosed in section text.
+[HISTORICAL] [LLM_FLAG] Market risk section is qualitative only with no numerical sensitivity data.
+[HISTORICAL] [LLM_FLAG] EUR-denominated Senior Notes of €4.8 billion outstanding as of June 30, 2025, fully hedged with cross-currency swaps designated as fair value hedges.
 
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] currency_swaps_notional: appeared for first time ($4,800M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-26 ===
+[HISTORICAL] [LLM_FLAG] FX notional ($5,105M) is inferred from the EUR-denominated debt carrying amount (the swap notional equals the EUR debt notional per company disclosure); no explicit USD notional table is provided.
+[HISTORICAL] [LLM_FLAG] No derivative fair value balance sheet table included in the extracted section text; asset/liability fair values cannot be confirmed.
+[HISTORICAL] [LLM_FLAG] Interest rate lock derivatives terminated April 2020 — only residual AOCI amortization ($914M balance at March 31, 2025) remains, no active notional.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap USD notional not explicitly stated; only EUR amount (€4.8B) provided; USD carrying amount of EUR-denominated debt was $5,105M at March 31, 2025 but this is not the same as swap notional.
+[HISTORICAL] [LLM_FLAG] Derivative asset/liability fair values not separately disclosed in section text; cross-currency swaps accounted for as fair value hedges with changes running through AOCI.
+[HISTORICAL] [LLM_FLAG] AOCI balance of $914M relates to terminated IR lock derivatives, not a live cash flow hedge position.
+[HISTORICAL] [LLM_FLAG] Market risk section is qualitative only with no numerical sensitivity data or quantitative tables.
+[HISTORICAL] [LLM_FLAG] EUR-denominated Senior Notes of €4.8 billion outstanding as of March 31, 2025, hedged with cross-currency swaps designated as fair value hedges.

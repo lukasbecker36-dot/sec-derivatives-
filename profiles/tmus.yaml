@@ -1,22 +1,22 @@
 issuer: T-Mobile US
 ticker: TMUS
-cik: "1283699"
+cik: '1283699'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   interest_rate_contracts_notional:
-    description: "Notional amount of interest rate contracts"
+    description: Notional amount of interest rate contracts
     section: market_risk
   interest_rate_contracts_fair_value:
-    description: "Fair value of interest rate contracts"
+    description: Fair value of interest rate contracts
     section: market_risk
   currency_swaps_notional:
-    description: "Notional amount of currency swaps"
+    description: Notional amount of currency swaps
     section: market_risk
   currency_swaps_fair_value:
-    description: "Fair value of currency swaps"
+    description: Fair value of currency swaps
     section: market_risk
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+Value\s+Measurements

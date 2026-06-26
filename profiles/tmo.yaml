@@ -1,59 +1,54 @@
 issuer: Thermo Fisher Scientific
 ticker: TMO
-cik: "97745"
+cik: '97745'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   xccy_ir_swap_notional_eur:
-    description: "Notional of cross-currency IR swaps designated as net investment hedge (EUR)"
+    description: Notional of cross-currency IR swaps designated as net investment hedge (EUR)
     section: market_risk
   xccy_ir_swap_notional_jpy:
-    description: "Notional of cross-currency IR swaps designated as net investment hedge (JPY)"
+    description: Notional of cross-currency IR swaps designated as net investment hedge (JPY)
     section: market_risk
   xccy_ir_swap_notional_chf:
-    description: "Notional of cross-currency IR swaps designated as net investment hedge (CHF)"
+    description: Notional of cross-currency IR swaps designated as net investment hedge (CHF)
     section: market_risk
   fx_contract_notional:
-    description: "Notional of currency exchange contracts (non-designated)"
+    description: Notional of currency exchange contracts (non-designated)
     section: market_risk
   designated_hedge_asset_fv:
-    description: "Fair value of designated hedging instrument assets"
+    description: Fair value of designated hedging instrument assets
     section: market_risk
   designated_hedge_liability_fv:
-    description: "Fair value of designated hedging instrument liabilities"
+    description: Fair value of designated hedging instrument liabilities
     section: market_risk
   nondesignated_asset_fv:
-    description: "Fair value of non-designated derivative assets"
+    description: Fair value of non-designated derivative assets
     section: market_risk
   nondesignated_liability_fv:
-    description: "Fair value of non-designated derivative liabilities"
+    description: Fair value of non-designated derivative liabilities
     section: market_risk
   net_investment_hedge_oci:
-    description: "Net investment hedge gain/loss in cumulative translation adjustment"
+    description: Net investment hedge gain/loss in cumulative translation adjustment
     section: market_risk
   xccy_swap_interest_income:
-    description: "Cross-currency swap amounts included in interest expense"
+    description: Cross-currency swap amounts included in interest expense
     section: market_risk
   cf_hedge_reclassification:
-    description: "Cash flow hedge amounts reclassified from AOCI to interest expense"
+    description: Cash flow hedge amounts reclassified from AOCI to interest expense
     section: market_risk
   fx_contract_cost_of_revenue:
-    description: "Non-designated FX contract gains/losses in cost of product revenues"
+    description: Non-designated FX contract gains/losses in cost of product revenues
     section: market_risk
   debt_fair_value:
-    description: "Total estimated fair value of debt"
+    description: Total estimated fair value of debt
     section: market_risk
   fx_sensitivity_10pct:
-    description: "Impact of 10% adverse change in FX rates"
+    description: Impact of 10% adverse change in FX rates
     section: market_risk
-
-# Unusual features identified:
-#   - Very large cross-currency interest rate swap program ($10.65 billion aggregate notional across EUR, JPY, CHF)
-#   - Uses master netting arrangements - shows both gross and net derivative positions
-#   - Foreign currency-denominated debt also designated as net investment hedge
-#   - Cash flow hedges are legacy interest rate swaps being amortized from AOCI
-#   - Swiss franc hedges added recently (increased from $2.5B to $5.0B)
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+Value\s+Measurements
+  market_risk:
+    heading: Item\s+3\.\s+Quantitative\s+and\s+Qualitative\s+Disclosures\s+About\s+Market\s+Risk

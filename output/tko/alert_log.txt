@@ -1,67 +1,68 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $40M, now missing
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
-[NUMERIC] ir_sensitivity_100bp: $1M → $46M (+6471.4%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_10pct: $-1M → $-36M (-5000.0%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-1M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] variable_rate_debt_ir_sensitivity: appeared for first time ($46M)
-[NEW_FIELD] fx_operating_income_impact: appeared for first time ($6M)
-[VALIDATION] Likely extraction failure: 6/11 previously-populated fields are now null (total_derivative_asset, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fixed_rate_notes_billion, marketable_equity_value...)
-[LLM_FLAG] Variable rate debt interest rate sensitivity shows substantial increase compared to prior period, indicating greater exposure or higher debt levels.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-26 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $40M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $40M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-2M, now missing
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $37M → $46M (+24.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] variable_rate_debt_ir_sensitivity: $37M → $46M (+24.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_revenue_impact: $69M → $36M (-48.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_operating_income_impact: $3M → $6M (+117.2%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 10/14 previously-populated fields are now null (fi_ir_swap_notional, fi_total_derivative_asset, fx_derivatives_notional, fx_not_designated_notional, ir_swap_notional...)
+[HISTORICAL] [LLM_FLAG] IR sensitivity increased to $46M vs $37M at Q3 2025/10-K, consistent with additional $900M term loan drawn in Q1 2026 (balance increased from $3.7B to $4.6B)
+[HISTORICAL] [LLM_FLAG] fx_operating_income_impact of $6.3M is notably higher than prior quarters, suggesting increased FX-denominated operating exposure
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($40M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($1M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-1M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-1M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($37M)
-[NEW_FIELD] variable_rate_debt_ir_sensitivity: appeared for first time ($37M)
-[NEW_FIELD] fx_revenue_impact: appeared for first time ($69M)
-[NEW_FIELD] fx_operating_income_impact: appeared for first time ($3M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-26 ===
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($40M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($40M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-2M)
+[HISTORICAL] [NUMERIC] fx_revenue_impact: $51M → $69M (+35.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset is stated as 'less than $0.1 million'; recorded as 0.1 as an upper bound — actual value is between 0 and 0.1.
+[HISTORICAL] [LLM_FLAG] FX forwards that existed at December 31, 2024 (GBP 4.6M / $3.6M) are explicitly noted as no longer outstanding at December 31, 2025; fi_fx_derivatives_notional is correctly null for the report period.
+[HISTORICAL] [LLM_FLAG] IR swap notional ($40.0M) is stated but this is the original 2018 notional; no current amortized balance is disclosed.
+[HISTORICAL] [LLM_FLAG] Section 9 covers derivatives only; no fair value hierarchy table for cash equivalents or marketable securities present.
+[HISTORICAL] [LLM_FLAG] Section text appears truncated (ends mid-sentence in the stockholders equity section); derivative disclosures appear complete.
+[HISTORICAL] [LLM_FLAG] IR swap fair value is disclosed as 'less than $0.1 million' — recorded as approximately $0.1M or less in total_derivative_asset
+[HISTORICAL] [LLM_FLAG] FX forward contracts outstanding as of Dec 31, 2024 (GBP 4.6M / $3.6M) are explicitly stated to be no longer outstanding as of Dec 31, 2025
+[HISTORICAL] [LLM_FLAG] Net FX forward gains/(losses): -$1.5M for 2025, -$0.3M for 2024, +$3.1M for 2023
+[HISTORICAL] [LLM_FLAG] fx_transaction_gain_loss sourced from Note 9, not the market risk section text itself
+[HISTORICAL] [LLM_FLAG] Primary FX exposure narrowed to British Pound only in 10-K; Brazilian Real was listed in Q1-Q3 2025 quarterly filings
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($46M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] fx_operating_income_impact: appeared for first time ($6M)
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (equity_sensitivity_10pct)
-[LLM_FLAG] The FX revenue impact of 35.7 million represents a significant decrease from the prior period, which could indicate increased currency risk exposure.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $27M → $37M (+37.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] variable_rate_debt_ir_sensitivity: $27M → $37M (+37.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_revenue_impact: $33M → $51M (+53.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_operating_income_impact: $2M → $3M (+66.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fx_revenue_impact and fx_operating_income_impact are nine-month (YTD) sensitivities, not single-quarter figures
+[HISTORICAL] [LLM_FLAG] IR sensitivity increased materially vs Q2 ($37M vs $27M) consistent with new $1B term loan drawn in Q3 2025
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($37M)
-[NEW_FIELD] variable_rate_debt_ir_sensitivity: appeared for first time ($37M)
-[NEW_FIELD] fx_revenue_impact: appeared for first time ($69M)
-[NEW_FIELD] fx_operating_income_impact: appeared for first time ($3M)
-[LLM_FLAG] fx_revenue_impact and fx_operating_income_impact indicate significant sensitivity to foreign currency fluctuations, important for assessing risk management strategy.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-26 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $0M, now missing
+[HISTORICAL] [NUMERIC] fx_revenue_impact: $18M → $33M (+82.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_operating_income_impact: $3M → $2M (-37.9%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/7 previously-populated fields are now null (fi_total_derivative_asset, total_derivative_asset, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] fx_revenue_impact and fx_operating_income_impact are six-month (YTD) sensitivities, not single-quarter figures
 
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaiwijwtWq6HnsDH84h'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NUMERIC] fx_revenue_impact: $51M → $69M (+35.7%) — exceeds 20% threshold
-[LLM_FLAG] primary_fx_exposure changed from 'British Pound, Brazilian Real' to 'British Pound' only in the 10-K — Brazilian Real no longer mentioned as principal exposure
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NUMERIC] variable_rate_debt_ir_sensitivity: $27M → $37M (+37.0%) — exceeds 20% threshold
-[NUMERIC] fx_revenue_impact: $33M → $51M (+53.2%) — exceeds 20% threshold
-[NUMERIC] fx_operating_income_impact: $2M → $3M (+66.7%) — exceeds 20% threshold
-[LLM_FLAG] variable_rate_debt_ir_sensitivity increased from $27M to $37M (37% increase), suggesting increased variable-rate debt levels
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NUMERIC] fx_revenue_impact: $18M → $33M (+82.9%) — exceeds 20% threshold
-[NUMERIC] fx_operating_income_impact: $3M → $2M (-37.9%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] variable_rate_debt_ir_sensitivity: appeared for first time ($27M)
-[NEW_FIELD] fx_revenue_impact: appeared for first time ($18M)
-[NEW_FIELD] fx_operating_income_impact: appeared for first time ($3M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-26 ===
+[HISTORICAL] [LLM_FLAG] Section 9 (Financial Instruments) covers derivatives only; no fair value hierarchy table for cash equivalents or marketable securities present.
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed; only fair value ($0.3M asset) stated.
+[HISTORICAL] [LLM_FLAG] FX forward notional amounts not disclosed; only P&L impacts reported ($0.1M gain Q1 2025).
+[HISTORICAL] [LLM_FLAG] No derivative liabilities identified.
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in this section; only fair value ($0.3M) is stated.
+[HISTORICAL] [LLM_FLAG] FX forward notional amounts not disclosed; only P&L impacts reported.
+[HISTORICAL] [LLM_FLAG] AOCI balance for cash flow hedges not stated; only quarterly change ($0.4M increase) is given.
+[HISTORICAL] [LLM_FLAG] No 12-month forward reclassification estimate provided; only current-quarter reclassification (<$0.1M) disclosed.
