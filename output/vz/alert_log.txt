@@ -1,89 +1,82 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($590M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($590M)
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $23,700M, now missing
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($84M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $1,400M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $5,100M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-3,700M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $570M, now missing
-[DISAPPEARED_FIELD] ir_swap_fair_value_liability: was $340M, now missing
-[DISAPPEARED_FIELD] cross_currency_swap_fair_value_asset: was $159M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity_100bp: was $79M, now missing
-[DISAPPEARED_FIELD] long_term_debt_fair_value: was $5,100M, now missing
-[DISAPPEARED_FIELD] collateral_posted: was $36,100M, now missing
-[VALIDATION] Likely extraction failure: 10/12 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct...)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $1,422M → $1,022M (-28.1%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($1,918M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($6,679M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-4,761M)
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($84M)
+[HISTORICAL] [NUMERIC] cross_currency_swap_fair_value_asset: $1,400M → $1,000M (-28.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cross_currency_swap_fair_value_liability: $1,200M → $1,600M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset excludes non-derivative items (fixed income $380M and marketable equity $516M) from reported table Total of $1,918M.
+[HISTORICAL] [LLM_FLAG] Cross currency swaps notional increased substantially to $40,482M at March 31, 2026, from $36,074M at December 31, 2025, with $3,836M notional entered during Q1 2026.
+[HISTORICAL] [LLM_FLAG] No FX forward assets appear in this period's fair value table; FX forwards appear only as a $4M liability.
+[HISTORICAL] [LLM_FLAG] Frontier Communications acquisition completed January 20, 2026 significantly increased debt and likely derivative portfolio.
+[HISTORICAL] [LLM_FLAG] The $1,918M total asset figure includes marketable equity securities ($516M) and fixed income securities ($380M) which are not derivatives; derivative-only assets are approximately $1,022M (CCS $1,022M)
+[HISTORICAL] [LLM_FLAG] Frontier acquisition (completed January 2026) added CCS notional: cross currency swaps grew significantly from $36,074M at Dec 31, 2025 to $40,482M at March 31, 2026 including assumed Frontier derivatives
+[HISTORICAL] [LLM_FLAG] ir_swap_notional rounded to $23.7B from narrative; exact figure from financial instruments note is $23,674M.
+[HISTORICAL] [LLM_FLAG] cross_currency_swap_notional rounded to $40.5B from narrative; exact figure $40,482M.
+[HISTORICAL] [LLM_FLAG] cross_currency_swap_fair_value_asset of $1.0B is rounded; fair value table shows current $12M + non-current $1,010M = $1,022M total.
+[HISTORICAL] [LLM_FLAG] cross_currency_swap_fair_value_liability of $1.6B is rounded; fair value table shows current $264M + non-current $1,362M = $1,626M total.
+[HISTORICAL] [LLM_FLAG] ir_swap_fair_value_liability of $5.0B is rounded; fair value table shows current $2,150M + non-current $2,899M = $5,049M total.
+[HISTORICAL] [LLM_FLAG] interest_rate_sensitivity_100bp increased to $380M vs $340M in prior period, reflecting significantly larger debt portfolio post-Frontier acquisition ($169.2B vs $155.6B carrying amount).
+[HISTORICAL] [LLM_FLAG] Frontier Communications acquisition completed January 20, 2026 for ~$9.8B cash; significantly increased total debt and long-term debt fair value.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($570M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($570M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($23,700M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($1,400M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($5,100M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-3,700M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($570M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($340M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($159M)
-[NEW_FIELD] fixed_rate_debt_pct: appeared for first time ($79M)
-[NEW_FIELD] ir_swap_fair_value_liability: appeared for first time ($5,100M)
-[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($36,100M)
-[NEW_FIELD] cross_currency_swap_fair_value_asset: appeared for first time ($1,400M)
-[NEW_FIELD] cross_currency_swap_fair_value_liability: appeared for first time ($1,200M)
-[NEW_FIELD] fx_forward_notional: appeared for first time ($570M)
-[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($158,955M)
-[NEW_FIELD] collateral_posted: appeared for first time ($1,100M)
-[LLM_FLAG] Net derivative position is significantly negative at -3700 million, indicating potential concerns about hedging strategy or downside exposure.
-[LLM_FLAG] The fair value liability of interest rate swaps decreased from $5.3 billion to $5.1 billion, a reduction of about 3.8%, which could indicate a decrease in the market's expectation of future interest rates.
-[LLM_FLAG] The notional amount of cross currency swaps increased significantly from $32.1 billion to $36.1 billion, a rise of about 12.4%, suggesting increased hedging activity or exposure.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $309M → $453M (+46.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $309M → $453M (+46.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $750M → $570M (-24.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $750M → $570M (-24.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $2,013M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $6,047M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-4,034M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $87M, now missing
+[HISTORICAL] [NUMERIC] fx_forwards_outstanding: $750M → $570M (-24.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_forward_notional: $750M → $570M (-24.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset excludes non-derivative items (fixed income $384M and marketable equity $453M) from reported table Total of $2,259M.
+[HISTORICAL] [LLM_FLAG] Treasury rate locks fully settled in 2025 (notional $6,000M entered and settled); none outstanding at year-end.
+[HISTORICAL] [LLM_FLAG] Cross currency swaps notional increased significantly to $36,074M at December 31, 2025 from $32,177M at September 30, 2025 due to $6,191M entered and $2,170M settled in 2025.
+[HISTORICAL] [LLM_FLAG] This is the 10-K (annual) filing for fiscal year 2025.
+[HISTORICAL] [LLM_FLAG] Section text provided is the market risk narrative (Item 7A equivalent), not the full Note 9 fair value table; notional values are rounded figures from narrative text (exact: IR swaps $23,674M, CCS $36,074M per Note 9 in financial statements)
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional computed as CCS $36,100M + FX forwards $570M using narrative approximations
+[HISTORICAL] [LLM_FLAG] ir_swap_notional rounded from $23.7B stated in text; exact figure $23,674M available in Note 9 derivatives table
+[HISTORICAL] [LLM_FLAG] cross_currency_swap_notional rounded from $36.1B; exact figure $36,074M in Note 9
+[HISTORICAL] [LLM_FLAG] ir_swap_fair_value_liability rounded from $5.1B; cross_currency_swap values are approximate billions from narrative text
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $23,700M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $570M, now missing
-[DISAPPEARED_FIELD] ir_swap_fair_value_liability: was $340M, now missing
-[DISAPPEARED_FIELD] cross_currency_swap_fair_value_asset: was $159M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity_100bp: was $79M, now missing
-[DISAPPEARED_FIELD] long_term_debt_fair_value: was $5,100M, now missing
-[DISAPPEARED_FIELD] collateral_posted: was $36,100M, now missing
-[VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (cash_flow_hedge_aoci, equity_sensitivity_10pct, ir_swap_fair_value_liability, cross_currency_swap_fair_value_asset, interest_rate_sensitivity_100bp...)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-27 ===
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset excludes non-derivative items (fixed income $336M and marketable equity $309M) from the reported table Total of $2,013M.
+[HISTORICAL] [LLM_FLAG] Treasury rate locks notional increased to $6,000M at September 30, 2025 (from $4,900M at June 30, 2025); fair value liability $97M.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset computed as $1,368M (CCS current $1M + FX fwds $1M + CCS non-current $1,366M).
+[HISTORICAL] [LLM_FLAG] The $2,013M total asset figure includes marketable equity securities ($309M) and fixed income securities ($336M) which are not derivatives; derivative-only assets are approximately $1,368M
+[HISTORICAL] [LLM_FLAG] Treasury rate locks outstanding at September 30, 2025: $6,000M notional with $97M fair value liability
+[HISTORICAL] [LLM_FLAG] ir_swap_notional rounded to $23.0B from narrative; exact figure from financial instruments note is $23,040M.
+[HISTORICAL] [LLM_FLAG] cross_currency_swap_fair_value_asset of $1.4B is rounded from narrative; fair value table shows current $1M + non-current $1,366M = $1,367M total.
+[HISTORICAL] [LLM_FLAG] cross_currency_swap_fair_value_liability of $1.2B is rounded from narrative; fair value table shows current $166M + non-current $1,074M = $1,240M total.
+[HISTORICAL] [LLM_FLAG] ir_swap_fair_value_liability of $4.7B is rounded; fair value table shows current $1,877M + non-current $2,830M = $4,707M total.
+[HISTORICAL] [LLM_FLAG] Fixed-rate debt percentage increased to 78% from 77% in Q2 2025.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($23,700M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($570M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($340M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($159M)
-[NEW_FIELD] fixed_rate_debt_pct: appeared for first time ($79M)
-[NEW_FIELD] ir_swap_fair_value_liability: appeared for first time ($5,100M)
-[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($36,100M)
-[NEW_FIELD] cross_currency_swap_fair_value_asset: appeared for first time ($1,400M)
-[NEW_FIELD] cross_currency_swap_fair_value_liability: appeared for first time ($1,200M)
-[NEW_FIELD] fx_forward_notional: appeared for first time ($570M)
-[NEW_FIELD] interest_rate_sensitivity_100bp: appeared for first time ($340M)
-[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($158,955M)
-[NEW_FIELD] collateral_posted: appeared for first time ($1,100M)
-[LLM_FLAG] Significant increase in fair value liability of interest rate swaps from $5.3 billion to $5.1 billion within 12 months warrants monitoring as it represents a change despite being a decrease.
-[LLM_FLAG] Notable increase in the total notional amount of cross currency swaps from $32.1 billion to $36.1 billion, indicating an expansion in hedging activity.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($295M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($295M)
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $532M → $1,579M (+196.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $865M → $2,231M (+157.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-6,368M → $-3,661M (+42.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cross_currency_swap_fair_value_asset: $528M → $1,600M (+203.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cross_currency_swap_fair_value_liability: $2,400M → $1,000M (-58.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] collateral_posted: $1,600M → $1,100M (-31.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset excludes non-derivative items (fixed income securities $357M and marketable equity securities $295M) included in reported table Total of $2,231M.
+[HISTORICAL] [LLM_FLAG] Treasury rate locks ($4,900M notional, $55M liability fair value) appear for the first time this quarter.
+[HISTORICAL] [LLM_FLAG] Marketable equity securities ($295M) appear for the first time in Q2 2025 fair value table.
+[HISTORICAL] [LLM_FLAG] The $2,231M total asset figure includes marketable equity securities ($295M) and fixed income securities ($357M) which are not derivatives; derivative-only assets are approximately $1,579M
+[HISTORICAL] [LLM_FLAG] Treasury rate locks ($4,900M notional) are newly added in Q2 2025 as both designated cash flow hedges and undesignated; fair value liability $55M included in liabilities total
+[HISTORICAL] [LLM_FLAG] ir_swap_notional rounded to $23.0B from narrative; exact figure from financial instruments note is $23,040M.
+[HISTORICAL] [LLM_FLAG] cross_currency_swap_fair_value_asset of $1.6B is rounded from narrative; fair value table shows current $3M + non-current $1,553M = $1,556M total.
+[HISTORICAL] [LLM_FLAG] cross_currency_swap_fair_value_liability of $1.0B is rounded from narrative; fair value table shows current $229M + non-current $813M = $1,042M total.
+[HISTORICAL] [LLM_FLAG] ir_swap_fair_value_liability of $4.8B is rounded; fair value table shows current $1,878M + non-current $2,912M = $4,790M total.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[DISAPPEARED_FIELD] fixed_rate_debt_pct: was $100M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_sensitivity_100bp, fixed_rate_debt_pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
-[NEW_FIELD] fixed_rate_debt_pct: appeared for first time ($100M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($570M)
-[NEW_FIELD] fixed_rate_debt_pct: appeared for first time ($79M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($23,700M)
-[NEW_FIELD] ir_swap_fair_value_liability: appeared for first time ($5,100M)
-[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($36,100M)
-[NEW_FIELD] cross_currency_swap_fair_value_asset: appeared for first time ($1,400M)
-[NEW_FIELD] cross_currency_swap_fair_value_liability: appeared for first time ($1,200M)
-[NEW_FIELD] fx_forward_notional: appeared for first time ($570M)
-[NEW_FIELD] interest_rate_sensitivity_100bp: appeared for first time ($340M)
-[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($158,955M)
-[NEW_FIELD] collateral_posted: appeared for first time ($1,100M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset excludes fixed income securities ($333M) included in the reported table Total of $865M — only derivative instruments counted.
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional combines cross currency swaps and FX forwards; cross currency swaps are designated fair value hedges, FX forwards are economic hedges (not designated).
+[HISTORICAL] [LLM_FLAG] The $865M total asset figure includes fixed income securities ($333M) which are not derivatives; derivative-only assets are approximately $532M (FX forwards $3M + IR caps $1M + CCS $528M)
+[HISTORICAL] [LLM_FLAG] Cross currency swaps were re-designated from cash flow hedges to fair value hedges in March 2022; the $94M 12-month figure relates to amortization of the excluded component, not a traditional AOCI reclassification
+[HISTORICAL] [LLM_FLAG] ir_swap_notional and cross_currency_swap_notional values are rounded ($24.0B and $31.7B) as stated in the market risk section; exact figures from the financial instruments note are $24,025M and $31,694M respectively.
+[HISTORICAL] [LLM_FLAG] cross_currency_swap_fair_value_liability of $2.4B is rounded from the narrative; fair value table shows $332M current + $2,081M non-current = $2,413M total.
+[HISTORICAL] [LLM_FLAG] ir_swap_fair_value_liability of $4.8B is rounded from narrative; fair value table shows $1,932M current + $2,886M non-current = $4,818M total.
