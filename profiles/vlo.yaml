@@ -1,37 +1,31 @@
 issuer: Valero Energy
 ticker: VLO
-cik: "1035002"
+cik: '1035002'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   commodity_derivative_sensitivity:
-    description: "Materiality of 10% price change on commodity derivatives"
+    description: Materiality of 10% price change on commodity derivatives
     section: market_risk
   compliance_program_derivative_sensitivity:
-    description: "Materiality of 10% price change on RFS compliance derivatives"
+    description: Materiality of 10% price change on RFS compliance derivatives
     section: market_risk
   fixed_rate_debt_by_maturity:
-    description: "Fixed rate debt principal by expected maturity date"
+    description: Fixed rate debt principal by expected maturity date
     section: market_risk
   fixed_rate_debt_fair_value:
-    description: "Fair value of fixed rate debt"
+    description: Fair value of fixed rate debt
     section: market_risk
   floating_rate_debt_outstanding:
-    description: "Floating rate debt principal outstanding"
+    description: Floating rate debt principal outstanding
     section: market_risk
   floating_rate_interest_sensitivity:
-    description: "Materiality of 10% change in floating interest rates"
+    description: Materiality of 10% change in floating interest rates
     section: market_risk
   fx_contracts_fair_value:
-    description: "Fair value of foreign currency contracts"
+    description: Fair value of foreign currency contracts
     section: market_risk
-
-# Unusual features identified:
-#   - Commodity derivatives for inventory LIFO management
-#   - Separate compliance program price risk section for renewable/low-carbon fuel credits
-#   - Detailed debt maturity schedule with weighted-average interest rates
-#   - Derivative details deferred to Note 20 rather than disclosed in market risk section
-
+sections:
+  financial_instruments:
+    heading: Financial\s+Instruments

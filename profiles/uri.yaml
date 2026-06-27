@@ -1,33 +1,28 @@
 issuer: United Rentals
 ticker: URI
-cik: "1067701"
+cik: '1067701'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   variable_rate_debt_outstanding:
-    description: "Aggregate variable rate indebtedness amount"
+    description: Aggregate variable rate indebtedness amount
     section: market_risk
   variable_rate_sensitivity:
-    description: "Annual after-tax earnings change per 1% interest rate increase on variable rate debt"
+    description: Annual after-tax earnings change per 1% interest rate increase on variable rate debt
     section: market_risk
   fixed_rate_debt_outstanding:
-    description: "Aggregate fixed rate indebtedness amount"
+    description: Aggregate fixed rate indebtedness amount
     section: market_risk
   fixed_rate_fair_value_sensitivity:
-    description: "Percentage change in fair value of fixed rate debt from 1% decrease in market interest rates"
+    description: Percentage change in fair value of fixed rate debt from 1% decrease in market interest rates
     section: market_risk
   foreign_revenue:
-    description: "Revenue from foreign subsidiaries"
+    description: Revenue from foreign subsidiaries
     section: market_risk
   foreign_revenue_pct:
-    description: "Foreign revenue as percent of total revenue"
+    description: Foreign revenue as percent of total revenue
     section: market_risk
-
-# Unusual features identified:
-#   - No derivative instruments used
-#   - Market risk disclosure only covers interest rate and FX exposure qualitatively
-#   - Sensitivity expressed as after-tax earnings impact per percentage point
-
+sections:
+  financial_instruments:
+    heading: Fair\s+Value\s+of\s+Financial\s+Instruments

@@ -1,55 +1,47 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($530M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($530M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($468M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($5,018M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($5,088M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-70M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($9M)
-[DISAPPEARED_FIELD] fixed_rate_debt_by_maturity: was $0M, now missing
-[NEW_FIELD] floating_rate_debt_outstanding: appeared for first time ($110M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($530M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($530M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($5,018M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($5,088M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-70M)
+[HISTORICAL] [NUMERIC] floating_rate_debt_outstanding: $23M → $110M (+378.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text contains only the debt fair value table (carrying $9,191M vs. fair value $9,051M at March 31, 2026) and a cross-reference to 'Recurring Fair Value Measurements' for derivative and AFS security fair values; none of the schema target fields are quantified in this section text.
+[HISTORICAL] [LLM_FLAG] This filing (Q1 2026) adds 'investments of certain benefit plans' to the instrument list compared to prior quarters, suggesting a new benefit plan investment category.
+[HISTORICAL] [LLM_FLAG] Very large commodity derivative positions in Q1 2026 vs prior quarters — commodity assets/liabilities ~$5B vs ~$300-900M in prior periods, likely reflecting crude oil price volatility.
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional volumes in physical units only, no dollar notional.
+[HISTORICAL] [LLM_FLAG] Fixed rate debt increased to $9.158B in Q1 2026 vs $8.308B at year-end 2025, reflecting new debt issuance.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($8,167M)
-[NEW_FIELD] floating_rate_debt_outstanding: appeared for first time ($23M)
-[NEW_FIELD] fx_contracts_fair_value: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-27 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $537M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $537M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $329M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $340M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-11M, now missing
+[HISTORICAL] [NUMERIC] floating_rate_debt_outstanding: $131M → $23M (-82.4%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (fx_derivatives_notional, fx_not_designated_notional, total_derivative_asset, total_derivative_liability, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] Section text supplied is from the MD&A market risk discussion, not from the derivatives footnote (Note 20). The actual derivative disclosures (notional volumes, fair values) are in Note 20 which is not in the section_text provided. All derivative fields are null as a result.
+[HISTORICAL] [LLM_FLAG] 10-K market risk section explicitly states FX contract fair value is not material; no notional amount disclosed in this section.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($9M)
-[DISAPPEARED_FIELD] fixed_rate_debt_by_maturity: was $0M, now missing
-[LLM_FLAG] fixed_rate_debt_fair_value increased by more than 50% from prior period
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $849M → $329M (-61.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $857M → $340M (-60.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-8M → $-11M (-37.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text contains only the debt fair value table (carrying $8,366M vs. fair value $8,327M at September 30, 2025) and a cross-reference to 'Recurring Fair Value Measurements' for derivative and AFS security fair values; none of the schema target fields are quantified in this section text.
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional volumes in physical units only, no dollar notional.
+[HISTORICAL] [LLM_FLAG] FX section appears after the Renewable Programs section in this filing, unlike the Q1 ordering.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($8,167M)
-[NEW_FIELD] floating_rate_debt_outstanding: appeared for first time ($23M)
-[NEW_FIELD] floating_rate_interest_sensitivity: appeared for first time ($0M)
-[NEW_FIELD] fx_contracts_fair_value: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $174M → $628M (+260.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $174M → $628M (+260.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $493M → $849M (+72.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $475M → $857M (+80.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $18M → $-8M (-144.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] floating_rate_debt_outstanding: $46M → $137M (+197.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text contains only the debt fair value table (carrying $8,370M vs. fair value $8,191M at June 30, 2025) and a cross-reference to 'Recurring Fair Value Measurements' for derivative and AFS security fair values; none of the schema target fields are quantified in this section text.
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional volumes in physical units only, no dollar notional.
+[HISTORICAL] [LLM_FLAG] FX contracts to purchase $628M USD split: $453M matured by July 21, 2025 and $175M by July 30, 2025 — all very short-dated.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NUMERIC] floating_rate_debt_outstanding: $131M → $23M (-82.4%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NUMERIC] floating_rate_debt_outstanding: $46M → $137M (+197.8%) — exceeds 20% threshold
-[LLM_FLAG] floating_rate_debt_outstanding increased from $46M (Q1 2025) to $137M (Q2 2025), a ~198% increase
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($9M)
-[NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($8,279M)
-[NEW_FIELD] floating_rate_debt_outstanding: appeared for first time ($46M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [LLM_FLAG] Section text contains only the debt fair value table (carrying $8,528M vs. fair value $8,325M at March 31, 2025) and a cross-reference to 'Recurring Fair Value Measurements' for derivative and AFS security fair values; none of the schema target fields are quantified in this section text.
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional volumes are in physical units (barrels/bushels), not dollar amounts; no dollar notional available for commodities.
+[HISTORICAL] [LLM_FLAG] Total derivative asset/liability lines from the gross table: $493M asset, $475M liability — cross-check: $14+$492+$1+$0=$507 asset gross vs $9+$463+$12+$0=$484 liability gross; the table totals of $493/$475 appear to net physical purchase contracts differently; using stated table totals.

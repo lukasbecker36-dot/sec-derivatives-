@@ -1,79 +1,20 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($4M)
-[NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($10M)
-[NUMERIC] fixed_rate_fair_value_sensitivity: $10M → $3M (-70.6%) — exceeds 20% threshold
-[NEW_FIELD] foreign_revenue: appeared for first time ($361M)
-[NEW_FIELD] foreign_revenue_pct: appeared for first time ($9M)
-[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (equity_sensitivity_10pct)
-[LLM_FLAG] The variable_rate_sensitivity has changed significantly compared to the prior period value of 31.0, which may indicate a shift in underlying variable rate debt exposure or interest rate conditions.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] foreign_revenue: $1,428M → $361M (-74.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section covers only senior notes fair value disclosure (carrying $9,820M vs fair value $9,684M at March 31, 2026). No derivatives, cash equivalents, or marketable securities disclosed. United Rentals does not appear to use derivatives in this filing period.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $38,000M → $31M (-99.9%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)
-[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($4M)
-[NEW_FIELD] variable_rate_sensitivity: appeared for first time ($31M)
-[NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($10M)
-[NEW_FIELD] fixed_rate_fair_value_sensitivity: appeared for first time ($3M)
-[NEW_FIELD] foreign_revenue: appeared for first time ($1,428M)
-[NEW_FIELD] foreign_revenue_pct: appeared for first time ($9M)
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fx_sensitivity_10pct)
-[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 38,000 to 31 (0x)
-[LLM_FLAG] ir_sensitivity_100bp decreased by more than 50% from the prior period (from 38 million to 31 million).
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] fixed_rate_fair_value_sensitivity: $2M → $3M (+50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] foreign_revenue: $1,043M → $1,428M (+36.9%) — exceeds 20% threshold
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-28M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($4M)
-[NUMERIC] fixed_rate_fair_value_sensitivity: $10M → $3M (-70.6%) — exceeds 20% threshold
-[NEW_FIELD] foreign_revenue: appeared for first time ($361M)
-[NEW_FIELD] foreign_revenue_pct: appeared for first time ($9M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] fixed_rate_fair_value_sensitivity: $3M → $2M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] foreign_revenue: $675M → $1,043M (+54.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section covers only senior notes fair value disclosure (carrying $8,827M vs fair value $8,791M at September 30, 2025). No derivatives, cash equivalents, or marketable securities disclosed. United Rentals does not appear to use derivatives in this filing period.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $38,000M → $31M (-99.9%) — exceeds 20% threshold
-[DROPPED_TO_ZERO] fx_sensitivity_10pct: $10M → $0M
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)
-[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($4M)
-[NEW_FIELD] variable_rate_sensitivity: appeared for first time ($31M)
-[NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($10M)
-[NEW_FIELD] fixed_rate_fair_value_sensitivity: appeared for first time ($3M)
-[NEW_FIELD] foreign_revenue: appeared for first time ($1,428M)
-[NEW_FIELD] foreign_revenue_pct: appeared for first time ($9M)
-[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 38,000 to 31 (0x)
-[LLM_FLAG] ir_sensitivity_100bp decreased by more than 50% from prior period; discrepancy worth noting.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] fixed_rate_fair_value_sensitivity: $4M → $3M (-25.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] foreign_revenue: $324M → $675M (+108.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section covers only senior notes fair value disclosure (carrying $8,826M vs fair value $8,762M at June 30, 2025). No derivatives, cash equivalents, or marketable securities disclosed. United Rentals does not appear to use derivatives in this filing period.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NUMERIC] ir_sensitivity_100bp: $31M → $28,000M (+90222.6%) — exceeds 20% threshold
-[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 31 to 28,000 (903x)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NUMERIC] ir_sensitivity_100bp: $38,000M → $31M (-99.9%) — exceeds 20% threshold
-[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 38,000 to 31 (0x)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NUMERIC] foreign_revenue: $1,043M → $1,428M (+36.9%) — exceeds 20% threshold
-[LLM_FLAG] Fixed rate debt increased from $9.1B (Q1-Q3) to $10.2B at year-end, a $1.1B increase (12% jump)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NUMERIC] foreign_revenue: $675M → $1,043M (+54.5%) — exceeds 20% threshold
-[LLM_FLAG] Variable rate debt increased significantly from $3.8B (Q1) to $5.0B (Q3), a 32% increase over two quarters
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NUMERIC] foreign_revenue: $324M → $675M (+108.3%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($9M)
-[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($3,800M)
-[NEW_FIELD] variable_rate_sensitivity: appeared for first time ($-29M)
-[NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($9,100M)
-[NEW_FIELD] foreign_revenue: appeared for first time ($324M)
-[NEW_FIELD] foreign_revenue_pct: appeared for first time ($9M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [LLM_FLAG] Section covers only senior notes fair value disclosure (carrying $8,822M vs fair value $8,586M at March 31, 2025). No derivatives, cash equivalents, or marketable securities disclosed. United Rentals does not appear to use derivatives in this filing period.
