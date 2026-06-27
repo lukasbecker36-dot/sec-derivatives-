@@ -1,14 +1,37 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] total_derivative_asset: was $18M, now missing
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $26M → $10M (-62.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-6M → $-26M (-324.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX or IR swap notional amounts disclosed; WEC is a regulated utility whose derivatives are entirely commodity-based.
+[HISTORICAL] [LLM_FLAG] Commodity notional volumes are given in physical units (Dth, MWh) rather than dollar amounts.
+[HISTORICAL] [LLM_FLAG] Net derivative position has deteriorated significantly to -$26.3M at Q1 2026 vs -$6.2M at year-end 2025, reflecting natural gas price movements.
+[HISTORICAL] [LLM_FLAG] Note: filing uses 'FTRs' only (TCRs dropped from prior quarters), likely reflecting a change in operations or classification.
+[HISTORICAL] [LLM_FLAG] Market risk section is a cross-reference only: 'There have been no material changes related to market risk from the disclosures presented in our 2025 Annual Report on Form 10-K.' No quantitative data in this section for Q1 2026.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($18M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $38M → $26M (-31.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $11M → $-6M (-156.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX or IR swap notional amounts disclosed; WEC is a regulated utility whose derivatives are entirely commodity-based.
+[HISTORICAL] [LLM_FLAG] Commodity notional volumes are given in physical units (Dth, MWh) rather than dollar amounts.
+[HISTORICAL] [LLM_FLAG] At year-end 2025, WEC is in a net derivative liability position ($32.5M liabilities vs $26.3M assets) for the first time across these filings.
+[HISTORICAL] [LLM_FLAG] 10-K market risk section (Item 7A) is a pure cross-reference: 'See Item 7. Management's Discussion and Analysis... as well as Note 1(r), Fair Value Measurements, Note 1(s), Derivative Instruments, and Note 19, Guarantees.' No quantitative sensitivity data in Item 7A itself.
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $56M → $38M (-32.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $16M → $27M (+72.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $41M → $11M (-73.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX or IR swap notional amounts disclosed; WEC is a regulated utility whose derivatives are entirely commodity-based.
+[HISTORICAL] [LLM_FLAG] Commodity notional volumes are given in physical units (Dth, MWh) rather than dollar amounts.
+[HISTORICAL] [LLM_FLAG] Market risk section is a cross-reference only: 'There have been no material changes related to market risk from the disclosures presented in our 2024 Annual Report on Form 10-K.' No quantitative data in this section for Q3 2025.
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $89M → $56M (-36.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $5M → $16M (+222.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $84M → $41M (-51.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX or IR swap notional amounts disclosed; WEC is a regulated utility whose derivatives are entirely commodity-based.
+[HISTORICAL] [LLM_FLAG] Commodity notional volumes are given in physical units (Dth, MWh) rather than dollar amounts.
+[HISTORICAL] [LLM_FLAG] Market risk section is a cross-reference only: 'There have been no material changes related to market risk from the disclosures presented in our 2024 Annual Report on Form 10-K.' No quantitative data in this section for Q2 2025.
 
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [LLM_FLAG] No FX or IR swap notional amounts disclosed; WEC is a regulated utility whose derivatives are entirely commodity-based (natural gas price management and transmission congestion rights).
+[HISTORICAL] [LLM_FLAG] Commodity notional volumes are given in physical units (Dth, MWh) rather than dollar amounts, so commodity_derivatives_notional cannot be populated in millions.
+[HISTORICAL] [LLM_FLAG] Market risk section is a cross-reference only: 'There have been no material changes related to market risk from the disclosures presented in our 2024 Annual Report on Form 10-K.' No quantitative data in this section for Q1 2025.

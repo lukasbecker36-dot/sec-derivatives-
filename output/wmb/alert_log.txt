@@ -1,81 +1,58 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($688M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($261M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($371M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-110M)
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $722M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $336M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $340M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-4M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NUMERIC] var_one_day_95pct: $30M → $12M (-60.1%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] commercial_paper_outstanding: was $-193M, now missing
-[NEW_FIELD] cash_collateral_level1: appeared for first time ($-327M)
-[DISAPPEARED_FIELD] nwp_debt_detail: was $11M, now missing
-[VALIDATION] Likely extraction failure: 7/11 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct...)
-[LLM_FLAG] Net derivative position shows a significant liability of 110 million, indicating increased exposure or possible changes in market conditions.
-[LLM_FLAG] Total derivative assets decreased by more than 50% from the prior period, where expected values were at 722 million; current total asset at 261 million.
-[LLM_FLAG] The total net fair value of commodity derivative contracts at -437 million indicates significant exposure, which is a notable change from the prior period.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-915M → $-1,125M (-23.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-193M → $-437M (-126.4%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $29M, now missing
+[HISTORICAL] [NUMERIC] commodity_derivative_fair_value_total: $-193M → $-437M (-126.4%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] long_term_debt_fixed_rate_total: was $28,706M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] long_term_debt_variable_rate_total: was $250M, now missing
+[HISTORICAL] [DROPPED_TO_ZERO] commercial_paper_outstanding: $700M → $0M
+[HISTORICAL] [NUMERIC] cash_collateral_level1: $189M → $327M (+73.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All commodity derivatives are not designated as hedging instruments for accounting purposes
+[HISTORICAL] [LLM_FLAG] Net balance sheet amounts after counterparty and collateral netting: asset $261M, liability $(371)M at March 31, 2026
+[HISTORICAL] [LLM_FLAG] No FX or equity market risk disclosures
+[HISTORICAL] [LLM_FLAG] VaR uses 95% confidence interval, 1-day holding period — parametric model
+[HISTORICAL] [LLM_FLAG] Commodity derivatives exclude cash collateral of $327M from Level 1 fair value measurement
+[HISTORICAL] [LLM_FLAG] Notably elevated Level 3 fair value of $(69)M compared to prior periods
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($722M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($336M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($340M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-4M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($30M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivative_fair_value_total: appeared for first time ($-193M)
-[NEW_FIELD] var_one_day_95pct: appeared for first time ($11M)
-[NEW_FIELD] long_term_debt_fixed_rate_total: appeared for first time ($30M)
-[NEW_FIELD] long_term_debt_variable_rate_total: appeared for first time ($0M)
-[NEW_FIELD] commercial_paper_outstanding: appeared for first time ($1M)
-[NEW_FIELD] cash_collateral_level1: appeared for first time ($189M)
-[LLM_FLAG] The total derivative liability is higher than total derivative asset, leading to a net derivative liability position, which may indicate increased exposure to market fluctuations.
-[LLM_FLAG] Long-term fixed-rate debt increased from previous year (prior was $26,722 million); significant increase in exposure.
-[LLM_FLAG] VaR increased from $4 million to $11 million, indicating heightened risk exposure.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $565M → $722M (+27.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-288M → $-193M (+33.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($29M)
+[HISTORICAL] [NUMERIC] commodity_derivative_fair_value_total: $-288M → $-193M (+33.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] var_one_day_95pct: $6M → $11M (+83.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] long_term_debt_fixed_rate_total: appeared for first time ($28,706M)
+[HISTORICAL] [NEW_FIELD] long_term_debt_variable_rate_total: appeared for first time ($250M)
+[HISTORICAL] [NUMERIC] commercial_paper_outstanding: $170M → $700M (+311.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All commodity derivatives are not designated as hedging instruments for accounting purposes
+[HISTORICAL] [LLM_FLAG] Net balance sheet amounts after counterparty and collateral netting: asset $336M, liability $(340)M at December 31, 2025
+[HISTORICAL] [LLM_FLAG] 10-K annual filing — full year ended December 31, 2025
+[HISTORICAL] [LLM_FLAG] No FX or equity market risk disclosures
+[HISTORICAL] [LLM_FLAG] 10-K filing includes detailed debt maturity tables for Williams, Transco, and NWP
+[HISTORICAL] [LLM_FLAG] VaR uses 95% confidence interval, 1-day holding period — parametric model
+[HISTORICAL] [LLM_FLAG] Commodity derivatives exclude cash collateral of $189M from Level 1 fair value measurement
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivative_fair_value_total: appeared for first time ($-437M)
-[NUMERIC] var_one_day_95pct: $29M → $18M (-37.3%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] commercial_paper_outstanding: was $-193M, now missing
-[NEW_FIELD] cash_collateral_level1: appeared for first time ($-327M)
-[DISAPPEARED_FIELD] nwp_debt_detail: was $11M, now missing
-[VALIDATION] Likely extraction failure: 2/4 previously-populated fields are now null (commercial_paper_outstanding, nwp_debt_detail)
-[LLM_FLAG] commodity_derivative_fair_value_total decreased significantly from prior period indicating potential increased volatility or market conditions.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] var_one_day_95pct: $8M → $6M (-25.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_collateral_level1: $269M → $211M (-21.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All commodity derivatives are not designated as hedging instruments for accounting purposes
+[HISTORICAL] [LLM_FLAG] Net balance sheet amounts after counterparty and collateral netting: asset $231M, liability $(308)M at September 30, 2025
+[HISTORICAL] [LLM_FLAG] No FX or equity market risk disclosures
+[HISTORICAL] [LLM_FLAG] VaR uses 95% confidence interval, 1-day holding period — parametric model
+[HISTORICAL] [LLM_FLAG] Commodity derivatives exclude cash collateral of $211M from Level 1 fair value measurement
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($29M)
-[NEW_FIELD] commodity_derivative_fair_value_total: appeared for first time ($-193M)
-[NEW_FIELD] var_one_day_95pct: appeared for first time ($11M)
-[NEW_FIELD] long_term_debt_fixed_rate_total: appeared for first time ($28M)
-[NEW_FIELD] long_term_debt_variable_rate_total: appeared for first time ($250M)
-[NEW_FIELD] commercial_paper_outstanding: appeared for first time ($700M)
-[NEW_FIELD] cash_collateral_level1: appeared for first time ($189M)
-[LLM_FLAG] The total fixed-rate long-term debt increased from $25,830 million in 2024 to $28,379 million in 2025, which is a significant increase.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $794M → $609M (-23.3%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] commercial_paper_outstanding: $322M → $0M
+[HISTORICAL] [LLM_FLAG] All commodity derivatives are not designated as hedging instruments for accounting purposes
+[HISTORICAL] [LLM_FLAG] Net balance sheet amounts after counterparty and collateral netting: asset $265M, liability $(336)M at June 30, 2025
+[HISTORICAL] [LLM_FLAG] No FX or equity market risk disclosures
+[HISTORICAL] [LLM_FLAG] VaR uses 95% confidence interval, 1-day holding period — parametric model
+[HISTORICAL] [LLM_FLAG] Commodity derivatives exclude cash collateral of $269M from Level 1 fair value measurement
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($29M)
-[NUMERIC] commodity_derivative_fair_value_total: $-288M → $-193M (+33.0%) — exceeds 20% threshold
-[NEW_FIELD] long_term_debt_variable_rate_total: appeared for first time ($250M)
-[NEW_FIELD] commercial_paper_outstanding: appeared for first time ($700M)
-[LLM_FLAG] Commodity derivative net liability decreased substantially from -$344M (Dec 2024) to -$193M (Dec 2025), a 44% reduction year-over-year
-[LLM_FLAG] Level 3 derivatives flipped from asset of $48M (Dec 2024) to liability of -$15M (Dec 2025)
-[LLM_FLAG] Fixed rate debt increased from $26,722M to $28,706M (+$1,984M or +7.4%) year-over-year
-[LLM_FLAG] Commercial paper outstanding increased from $455M to $700M (+53.8%)
-[LLM_FLAG] Trading VaR increased from $4M (Dec 2024) to $11M (Dec 2025)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NUMERIC] cash_collateral_level1: $269M → $211M (-21.6%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivative_fair_value_total: appeared for first time ($-383M)
-[NEW_FIELD] cash_collateral_level1: appeared for first time ($284M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [LLM_FLAG] All commodity derivatives are not designated as hedging instruments for accounting purposes — no hedge accounting used
+[HISTORICAL] [LLM_FLAG] Notional volumes are in physical units (MMBtu/Barrels) not dollar millions
+[HISTORICAL] [LLM_FLAG] Net balance sheet amounts after counterparty and collateral netting: asset $254M, liability $(353)M at March 31, 2025
+[HISTORICAL] [LLM_FLAG] No FX or equity market risk disclosures — Williams is a US-only midstream operator
+[HISTORICAL] [LLM_FLAG] VaR uses 95% confidence interval, 1-day holding period — parametric model
+[HISTORICAL] [LLM_FLAG] Commodity derivatives exclude cash collateral of $284M from Level 1 fair value measurement
