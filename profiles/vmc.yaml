@@ -1,25 +1,19 @@
 issuer: Vulcan Materials Company
 ticker: VMC
-cik: "1396009"
+cik: '1396009'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   long_term_debt_fair_value:
-    description: "Estimated fair value of long-term debt including current maturities"
+    description: Estimated fair value of long-term debt including current maturities
     section: market_risk
   long_term_debt_face_value:
-    description: "Face value of long-term debt"
+    description: Face value of long-term debt
     section: market_risk
   interest_rate_sensitivity_1pct:
-    description: "Change in fair value of debt from 1% decline in interest rates"
+    description: Change in fair value of debt from 1% decline in interest rates
     section: market_risk
-
-# Unusual features identified:
-#   - Interest rate swaps mentioned as used at times but no current details provided
-#   - Very brief market risk disclosure
-#   - Pension economic risk discussed separately
-#   - Fair value estimated by averaging asking price quotes for publicly traded notes
-
+sections:
+  derivatives_note:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*DERIVATIVE\s+INSTRUMENTS
