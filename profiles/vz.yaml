@@ -1,48 +1,42 @@
 issuer: Verizon
 ticker: VZ
-cik: "732712"
+cik: '732712'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fixed_rate_debt_pct:
-    description: "Percentage of total debt that is fixed-rate including effect of interest rate swaps"
+    description: Percentage of total debt that is fixed-rate including effect of interest rate swaps
     section: market_risk
   ir_swap_notional:
-    description: "Total notional amount of interest rate swaps"
+    description: Total notional amount of interest rate swaps
     section: market_risk
   ir_swap_fair_value_liability:
-    description: "Fair value liability of interest rate swap contracts"
+    description: Fair value liability of interest rate swap contracts
     section: market_risk
   cross_currency_swap_notional:
-    description: "Total notional amount of cross currency swaps"
+    description: Total notional amount of cross currency swaps
     section: market_risk
   cross_currency_swap_fair_value_asset:
-    description: "Fair value asset of cross currency swap contracts"
+    description: Fair value asset of cross currency swap contracts
     section: market_risk
   cross_currency_swap_fair_value_liability:
-    description: "Fair value liability of cross currency swap contracts"
+    description: Fair value liability of cross currency swap contracts
     section: market_risk
   fx_forward_notional:
-    description: "Total notional amount of foreign exchange forwards"
+    description: Total notional amount of foreign exchange forwards
     section: market_risk
   interest_rate_sensitivity_100bp:
-    description: "Change in annual interest expense from 100bp change on floating rate debt"
+    description: Change in annual interest expense from 100bp change on floating rate debt
     section: market_risk
   long_term_debt_fair_value:
-    description: "Fair value of long-term debt and related derivatives"
+    description: Fair value of long-term debt and related derivatives
     section: market_risk
   collateral_posted:
-    description: "Collateral posted related to derivative contracts"
+    description: Collateral posted related to derivative contracts
     section: market_risk
-
-# Unusual features identified:
-#   - Very large derivatives program - $23.7B IR swaps and $36.1B cross currency swaps
-#   - Interest rate swaps designated as fair value hedges
-#   - Cross currency swaps hedge multiple currencies (GBP, EUR, CHF, CAD, AUD)
-#   - FX forwards not designated for hedge accounting
-#   - Detailed sensitivity table with +/- 100bp shifts for debt and derivatives
-#   - Significant collateral posting ($1.1B) under CSA agreements
-
+sections:
+  financial_instruments:
+    heading: Fair\s+Value\s+Measurements\s+and\s+Financial\s+Instruments
+  market_risk:
+    heading: Market\s+Risk
