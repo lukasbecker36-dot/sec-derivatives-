@@ -1,43 +1,37 @@
 issuer: UnitedHealth Group
 ticker: UNH
-cik: "731766"
+cik: '731766'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   variable_rate_financial_assets:
-    description: "Financial assets with variable interest rates"
+    description: Financial assets with variable interest rates
     section: market_risk
   variable_rate_financial_liabilities:
-    description: "Financial liabilities at variable rates including via interest rate swaps"
+    description: Financial liabilities at variable rates including via interest rate swaps
     section: market_risk
   fixed_rate_investments:
-    description: "Fixed-rate debt securities investments"
+    description: Fixed-rate debt securities investments
     section: market_risk
   fixed_rate_non_swapped_debt:
-    description: "Non-swapped fixed-rate term debt"
+    description: Non-swapped fixed-rate term debt
     section: market_risk
   investment_income_sensitivity_1pct:
-    description: "Change in investment income per annum from 1% rate change"
+    description: Change in investment income per annum from 1% rate change
     section: market_risk
   interest_expense_sensitivity_1pct:
-    description: "Change in interest expense per annum from 1% rate change"
+    description: Change in interest expense per annum from 1% rate change
     section: market_risk
   fair_value_assets_sensitivity_1pct:
-    description: "Change in fair value of financial assets from 1% rate change"
+    description: Change in fair value of financial assets from 1% rate change
     section: market_risk
   fair_value_liabilities_sensitivity_1pct:
-    description: "Change in fair value of financial liabilities from 1% rate change"
+    description: Change in fair value of financial liabilities from 1% rate change
     section: market_risk
   equity_securities_investments:
-    description: "Investments in equity securities"
+    description: Investments in equity securities
     section: market_risk
-
-# Unusual features identified:
-#   - Interest rate swap contracts referenced but detail in notes not in market risk section
-#   - Detailed sensitivity table with 1% and 2% scenarios for both assets and liabilities
-#   - Note about rates not falling below zero affecting hypothetical analysis
-#   - Large-scale financial services company with deposit liabilities
-
+sections:
+  financial_instruments:
+    heading: 2\.\s+Investments

@@ -1,32 +1,25 @@
 issuer: Uber
 ticker: UBER
-cik: "1543151"
+cik: '1543151'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   has_derivatives:
-    description: "Whether the company uses derivatives"
+    description: Whether the company uses derivatives
     section: market_risk
   fx_cash_flow_hedge_notional:
-    description: "Notional amount of FX contracts designated as cash flow hedges, in millions"
+    description: Notional amount of FX contracts designated as cash flow hedges, in millions
     section: market_risk
   fx_non_designated_notional:
-    description: "Notional amount of FX contracts not designated as hedges, in millions"
+    description: Notional amount of FX contracts not designated as hedges, in millions
     section: market_risk
   fx_hedge_horizon:
-    description: "Typical hedge horizon for designated FX hedges"
+    description: Typical hedge horizon for designated FX hedges
     section: market_risk
   credit_facility_drawn:
-    description: "Outstanding balance drawn on credit agreement"
+    description: Outstanding balance drawn on credit agreement
     section: market_risk
-
-# Unusual features identified:
-#   - Designates some FX contracts as cash flow hedges protecting forecasted revenue (up to 12 months)
-#   - Also uses non-designated FX contracts for general currency risk management with much larger notionals ($1.6B vs $378M designated)
-#   - Fair values described as immaterial — no detailed fair value table provided
-#   - Has master netting arrangements but elected gross presentation on balance sheet
-#   - No drawn amounts on credit facility as of reporting date, so minimal interest rate risk
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Investments\s+and\s+Fair\s+Value\s+Measurement
