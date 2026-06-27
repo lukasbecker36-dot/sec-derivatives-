@@ -1,75 +1,65 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NUMERIC] fx_derivatives_notional: $2,261M → $3,084M (+36.4%) — exceeds 20% threshold
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-32M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-819M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $18M, now missing
-[LLM_FLAG] fx_derivatives_notional increased by more than 50% compared to the prior period (from 2261.0 to 3084.0)
-[LLM_FLAG] net_derivative_position became more negative compared to the prior period, indicating increased liability (from -68.0 to -79.0)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $3,038M → $3,894M (+28.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $2,687M → $3,528M (+31.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $141M → $107M (-24.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-58M → $-126M (-117.2%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-819M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $18M, now missing
+[HISTORICAL] [LLM_FLAG] This note (Note 10) covers only deferred compensation plan assets/liabilities and cash equivalents at fair value. All derivative instrument details are cross-referenced to Note 9.
+[HISTORICAL] [LLM_FLAG] Cash equivalents total $192M (Time deposits $134 + Money market fund $58) as of March 31, 2026.
+[HISTORICAL] [LLM_FLAG] Senior notes fair value disclosed as $14,609 million (March 31, 2026) and $15,205 million (December 31, 2025) — stated in full millions consistent with 10-K disclosure style.
+[HISTORICAL] [LLM_FLAG] Note that compared to prior quarters the comparative period shown is December 31, 2025 (not December 31, 2024), consistent with post-10-K quarterly reporting.
+[HISTORICAL] [LLM_FLAG] Credit contracts (2,000 notional at Dec 31, 2025) were unwound during Q1 2026 for an immaterial loss and do not appear in March 31, 2026 notionals.
+[HISTORICAL] [LLM_FLAG] Cash flow hedge FX notional rose significantly from 2,235 (Dec 31, 2025) to 3,084 (Mar 31, 2026), reflecting new hedge activity in Q1 2026.
+[HISTORICAL] [LLM_FLAG] IR swaps mentioned in text context ($1,500M entered Q1 2025) but show zero notional in March 31, 2026 balance sheet table — may have matured or been unwound.
+[HISTORICAL] [LLM_FLAG] 12-month AOCI reclassification described as 'not material'; recorded as 0.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,261M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($2,235M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($126M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($81M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($149M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-68M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-819M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($18M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $368M → $168M (-54.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $561M → $351M (-37.4%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $2,500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-819M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($18M)
+[HISTORICAL] [LLM_FLAG] This note (Note 14, 10-K) covers only deferred compensation plan assets/liabilities and cash equivalents at fair value. All derivative instrument details are cross-referenced to Note 13.
+[HISTORICAL] [LLM_FLAG] Cash equivalents total $168M (Time deposits $107 + Money market funds $61) as of December 31, 2025.
+[HISTORICAL] [LLM_FLAG] Senior notes fair value disclosed as $15,205 million (December 31, 2025) and $34,876 million (December 31, 2024) — stated in full millions in the 10-K vs. billions shorthand in 10-Qs.
+[HISTORICAL] [LLM_FLAG] Additional narrative in 10-K explains equity securities include money market funds, mutual funds in separate trusts (supplemental retirement plans), and company-owned life insurance contracts.
+[HISTORICAL] [LLM_FLAG] New instrument class 'Credit contracts' (notional 2,000) appears at December 31, 2025 — the Company entered $2,000M of credit contract swaptions to hedge interest rate risk related to previously proposed Separation Transaction; excluded from fx_derivatives_notional.
+[HISTORICAL] [LLM_FLAG] Interest rate swaps (2,500 notional, non-designated) from 2025 no longer appear in December 31, 2025 balance sheet table; may have been unwound or matured.
+[HISTORICAL] [LLM_FLAG] AOCI balance and 12-month reclassification not in provided section text.
+[HISTORICAL] [LLM_FLAG] WBD's 10-K market risk section discusses interest rate risk quantitatively (100bp sensitivity = -$819M) but does not provide explicit FX or equity sensitivity percentages.
+[HISTORICAL] [LLM_FLAG] The company also holds a $15,000 million bridge loan (floating rate at SOFR + spread) as of December 31, 2025; this is not included in fixed_rate_notes_billion.
+[HISTORICAL] [LLM_FLAG] Fixed-rate notes at par = $17,845M = 17.845 billion.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7jLLsoMnehH1q1EtEd'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7jQqkBKQ5xqaAnCXab'}
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $174M → $135M (-22.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-45M → $-66M (-46.7%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[HISTORICAL] [LLM_FLAG] This note (Note 10) covers only deferred compensation plan assets/liabilities and cash equivalents at fair value. All derivative instrument details are cross-referenced to Note 9.
+[HISTORICAL] [LLM_FLAG] Cash equivalents total $368M (Time deposits $312 + Money market fund $56) as of September 30, 2025.
+[HISTORICAL] [LLM_FLAG] Senior notes fair value disclosed as $15.8 billion (September 30, 2025) and $34.9 billion (December 31, 2024) — significant decrease from prior year reflects ongoing debt reduction.
+[HISTORICAL] [LLM_FLAG] 12-month AOCI reclassification described as 'not material'; recorded as 0.
+[HISTORICAL] [LLM_FLAG] EUR 450M FX forward contracts unwound in June 2025 in connection with Tender Offers are not in period-end notionals.
+[HISTORICAL] [LLM_FLAG] AOCI period-end balance not provided in section text.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7j2GwN3CwwdGjrt8wz'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7j6YR6PRiR99tFM3te'}
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $1,160M → $588M (-49.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $1,500M → $2,500M (+66.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $92M → $174M (+89.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-106M → $-45M (+57.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] This note (Note 10) covers only deferred compensation plan assets/liabilities and cash equivalents at fair value. All derivative instrument details are cross-referenced to Note 9.
+[HISTORICAL] [LLM_FLAG] Cash equivalents total $367M (Time deposits $317 + Money market fund $50) as of June 30, 2025.
+[HISTORICAL] [LLM_FLAG] Senior notes fair value disclosed as $14.7 billion (June 30, 2025) and $34.9 billion (December 31, 2024) — significant decrease reflects debt repayment/restructuring.
+[HISTORICAL] [LLM_FLAG] IR swap notional increased from 1,500 (Q1 2025) to 2,500 reflecting additional swaps entered in Q2 2025.
+[HISTORICAL] [LLM_FLAG] Company unwound EUR 450M FX forward contracts related to Tender Offers in Q2 2025; these are not in period-end notionals.
+[HISTORICAL] [LLM_FLAG] AOCI balance and 12-month reclassification amounts not included in the provided section text.
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7ib86jCt2k2n6G2FiJ'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7ifX1nqsHqxic49kma'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7iEx9zggYmF4DAbawi'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7iKvoDT6KoT2b8URYN'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7hs3mzcCiW7SXzsK9t'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7hx7sjsAerXskq2V2N'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_designated_notional: $2,235M → $3,084M (+38.0%) — exceeds 20% threshold
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($19M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($31M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($32M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] fx_not_designated_notional: was $229M, now missing
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $2,025M, now missing
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $22M, now missing
-[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (fx_not_designated_notional, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($229M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($2,025M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($22M)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-819M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $18M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_sensitivity_100bp, fixed_rate_notes_billion)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-819M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($18M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [LLM_FLAG] This note (Note 10) covers only deferred compensation plan assets/liabilities and cash equivalents at fair value. All derivative instrument details are cross-referenced to Note 9.
+[HISTORICAL] [LLM_FLAG] Cash equivalents total $395M (Time deposits $349 + Money market fund $46) as of March 31, 2025.
+[HISTORICAL] [LLM_FLAG] Senior notes fair value disclosed as $30.8 billion (March 31, 2025) and $34.9 billion (December 31, 2024) — Level 2 inputs, over-the-counter market quotes.
+[HISTORICAL] [LLM_FLAG] Total return swaps (notional 443) classified under equity_derivatives_notional as they hedge deferred compensation equity-linked liabilities, not FX or IR exposure.
+[HISTORICAL] [LLM_FLAG] IR swaps (1,500 notional) are non-designated and entered Q1 2025; prior period shows zero.
+[HISTORICAL] [LLM_FLAG] AOCI balance and 12-month reclassification amounts not included in the provided section text.

@@ -1,22 +1,16 @@
 issuer: Wabtec
 ticker: WAB
-cik: "943452"
+cik: '943452'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   variable_rate_debt_exposure:
-    description: "Variable rate debt facilities with interest rate risk"
+    description: Variable rate debt facilities with interest rate risk
     section: market_risk
   fx_forward_usage:
-    description: "Whether foreign currency forward contracts are currently in use"
+    description: Whether foreign currency forward contracts are currently in use
     section: market_risk
-
-# Unusual features identified:
-#   - Very brief market risk disclosure
-#   - Details deferred to notes (Note 2, Note 17, Note 19) rather than in this section
-#   - FX forwards used periodically - no current quantitative detail provided
-#   - Variable rate debt limited to credit agreement borrowings
-
+sections:
+  financial_instruments:
+    heading: FAIR\s+VALUE\s+MEASUREMENT\s+AND\s+DERIVATIVE\s+INSTRUMENTS

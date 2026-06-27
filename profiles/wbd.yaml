@@ -1,9 +1,8 @@
-issuer: "Warner Bros. Discovery"
+issuer: Warner Bros. Discovery
 ticker: WBD
-cik: "1437107"
+cik: '1437107'
 archetype: minimal_hedger
 extraction_mode: llm
-
-# Derivatives section matched by: Note\s+\d+\s*[.–—―�‒—–:—–\-]\s*Derivative
-# Market risk section matched by: Quantitative\s+and\s+Qualitat\s*ive\s+Disclosures?\s+About\s+Market\s+Risk
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*FAIR\s+VALUE\s+MEASUREMENTS

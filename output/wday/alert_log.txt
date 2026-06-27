@@ -1,49 +1,63 @@
-=== 10-Q | Period ending 2026-04-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2M)
-[NUMERIC] total_derivative_asset: $4M → $5M (+25.0%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $38M, now missing
-[NUMERIC] expected_12mo_reclass_from_aoci: $12M → $30M (+150.0%) — exceeds 20% threshold
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+=== 10-Q | Period ending 2026-04-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,092M → $204M (-81.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $36M → $15M (-58.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $21M → $27M (+28.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $21M → $27M (+28.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-127M → $-101M (+20.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-38M → $-48M (-26.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX derivative notional amounts are not in this section; they appear in the derivatives note which is extracted separately
+[HISTORICAL] [LLM_FLAG] No debt securities held in cash equivalents as of April 30, 2026 (unlike prior periods)
+[HISTORICAL] [LLM_FLAG] Expected AOCI reclassification is a loss ($48M net losses), entered as -48; total FX notional has grown significantly from $3,553M (Jan 2025) to $5,097M (Apr 2026), driven by large sell-USD designated and non-designated positions
+[HISTORICAL] [LLM_FLAG] Market risk section references Note 9 (Derivative Instruments) for derivative detail; all derivative figures extracted from that note separately
 
-=== 10-K | Period ending 2026-01-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] fx_derivatives_notional: was $2M, now missing
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($38M)
-[NUMERIC] expected_12mo_reclass_from_aoci: $31M → $12M (-61.3%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[VALIDATION] Likely extraction failure: 2/6 previously-populated fields are now null (fx_derivatives_notional, ir_sensitivity_100bp)
+=== 10-K | Period ending 2026-01-31 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $2,322M → $1,092M (-53.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $33M → $21M (-36.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $111M → $148M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $764M → $1,007M (+31.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $33M → $21M (-36.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $111M → $148M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-78M → $-127M (-62.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-26M → $-38M (-46.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX derivative notional amounts are not in this section; they appear in the derivatives note (Note 11) which is extracted separately
+[HISTORICAL] [LLM_FLAG] Total debt securities portfolio contracted substantially year-over-year ($6,651M to $4,340M), consistent with $2.9B in debt security sales during fiscal 2026
+[HISTORICAL] [LLM_FLAG] Expected AOCI reclassification is a loss ($38M net losses), entered as -38; significant increase in non-designated hedge notional vs prior year ($333M to $1,007M) and sell-USD designated notional grew from $420M to $874M
+[HISTORICAL] [LLM_FLAG] Market risk section references Note 10 (Derivative Instruments) for derivative detail; all derivative figures extracted from that note separately
 
-=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,004M → $2,322M (+131.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $6,922M → $4,234M (-38.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $3,967M → $2,120M (-46.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $33M → $40M (+21.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-6M → $-26M (-333.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $114M → $68M (-40.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX derivative notional amounts are not in this section; they appear in the derivatives note which is extracted separately
+[HISTORICAL] [LLM_FLAG] Large shift in cash equivalents mix: money market funds jumped to $2,301M (from $802M at July 31), likely from $2.7B debt security sale proceeds
+[HISTORICAL] [LLM_FLAG] Expected AOCI reclassification is a loss ($26M net losses), entered as -26
+[HISTORICAL] [LLM_FLAG] Market risk section references Note 10 (Derivative Instruments) for derivative detail; all derivative figures extracted from that note separately
 
-=== 10-Q | Period ending 2025-07-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] total_derivative_asset: $7M → $5M (-28.6%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $3M → $14M (+366.7%) — exceeds 20% threshold
+=== 10-Q | Period ending 2025-07-31 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $754M → $1,004M (+33.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $53M → $33M (-37.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $368M → $750M (+103.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $20M → $-6M (-130.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX derivative notional amounts are not in this section; they appear in the derivatives note which is extracted separately
+[HISTORICAL] [LLM_FLAG] Expected AOCI reclassification is a loss ($6M net losses), entered as -6
+[HISTORICAL] [LLM_FLAG] Market risk section references Note 9 (Derivative Instruments) for derivative detail; all derivative figures extracted from that note separately
 
-=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2M)
-[NUMERIC] total_derivative_asset: $1M → $7M (+600.0%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $1M → $3M (+200.0%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $23M, now missing
-[NUMERIC] expected_12mo_reclass_from_aoci: $12M → $30M (+150.0%) — exceeds 20% threshold
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,165M → $754M (-35.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $17M → $53M (+211.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $112M → $36M (-67.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $26M → $112M (+330.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $112M → $36M (-67.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $26M → $112M (+330.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $86M → $-76M (-188.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $89M → $111M (+24.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX derivative notional amounts are not in this section; they appear in the derivatives note which is extracted separately
+[HISTORICAL] [LLM_FLAG] Notable increase in derivative liability vs prior period ($26M to $112M), possibly reflecting USD strengthening
+[HISTORICAL] [LLM_FLAG] Market risk section references Note 9 (Derivative Instruments) for derivative detail; all derivative figures extracted from that note separately
 
-=== 10-K | Period ending 2026-01-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $68M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-04 ===
-[NUMERIC] ir_sensitivity_100bp: $114M → $68M (-40.4%) — exceeds 20% threshold
-[LLM_FLAG] IR sensitivity dropped sharply from $114M (Jul 2025) to $68M (Oct 2025), a 40% decline, driven by cash/securities declining from $8.2B to $6.8B — likely reflecting share repurchases or other capital deployment
-[LLM_FLAG] Cash/equivalents/marketable securities decreased from $8.0B (Jan 2025) to $6.8B (Oct 2025), a $1.2B reduction
-[LLM_FLAG] Investment portfolio now includes supranational securities not mentioned in prior quarters
-
-=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($111M)
-
-=== 10-K | Period ending 2025-01-31 | Processed 2026-06-04 ===
-[LLM_FLAG] Section text appears truncated — the market risk disclosure for the 10-K ends mid-sentence with a cross-reference to Note 10, Derivative Instruments, but the quantitative detail from that note is not included in the extracted section
-
+=== 10-K | Period ending 2025-01-31 | Processed 2026-06-27 ===
+[HISTORICAL] [LLM_FLAG] FX derivative notional amounts are not in this section; they appear in the derivatives note (Note 10) which is extracted separately
+[HISTORICAL] [LLM_FLAG] Market risk section text is truncated; notional and hedge detail figures are in derivatives note (Note 10) which has been extracted separately
