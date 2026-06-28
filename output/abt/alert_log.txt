@@ -1,93 +1,83 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NUMERIC] fi_fx_derivatives_notional: $13,000M → $7,600M (-41.5%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fi_ir_swap_notional: was $1,200M, now missing
-[DROPPED_TO_ZERO] fx_not_designated_notional: $13,400M → $0M
-[NUMERIC] ir_swap_notional: $1,200M → $4,200M (+250.0%) — exceeds 20% threshold
-[NEW_FIELD] total_derivative_asset: appeared for first time ($240M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($876M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-636M)
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-69M, now missing
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-279M, now missing
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $20M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $4M, now missing
-[DISAPPEARED_FIELD] interest_rate_hedge_notional: was $1,200M, now missing
-[VALIDATION] Likely extraction failure: 9/16 previously-populated fields are now null (fi_ir_swap_notional, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_forwards_outstanding, ir_sensitivity_100bp...)
-[LLM_FLAG] fi_fx_derivatives_notional decreased from 13000 to 7600, which is a significant decrease over 50%.
-[LLM_FLAG] ir_swap_notional increased by more than 50% due to additional interest rate hedge contracts associated with the Exact Sciences acquisition.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-28 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $13,100M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $1,200M, now missing
+[HISTORICAL] [NUMERIC] ir_swap_notional: $1,200M → $4,200M (+250.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($240M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($299M)
+[HISTORICAL] [NUMERIC] net_derivative_position: $-189M → $-59M (+68.8%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-69M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $20,495M, now missing
+[HISTORICAL] [NUMERIC] fx_transaction_gain_loss: $-50M → $45M (+190.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $13M, now missing
+[HISTORICAL] [NUMERIC] marketable_equity_value: $20M → $335M (+1575.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] contingent_consideration: appeared for first time ($304M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/14 previously-populated fields are now null (fi_fx_not_designated_notional, fi_ir_swap_notional, cash_flow_hedge_aoci, fx_forwards_outstanding, fixed_rate_notes_billion)
+[HISTORICAL] [LLM_FLAG] Section text for financial_instruments is a very short excerpt — only the opening paragraph of Note 11 covering cash flow hedge FX forwards; all other data (non-designated FX, IR swaps, fair value tables) are in the derivatives_note section for this filing
+[HISTORICAL] [LLM_FLAG] IR swap notional jumped from $1.2B (Dec 31, 2025) to $4.2B (Mar 31, 2026) due to additional interest rate hedge contracts associated with Exact Sciences acquisition financing
+[HISTORICAL] [LLM_FLAG] Total long-term debt jumped from $12,929M to $34,047M reflecting Exact Sciences acquisition debt
+[HISTORICAL] [LLM_FLAG] Contingent consideration of $304M (Level 3) assumed with Exact Sciences acquisition per fair value hierarchy table
+[HISTORICAL] [LLM_FLAG] IR hedge notional jumped from $1.2B to $4.2B due to new fair value hedges on fixed-rate debt issued for the Exact Sciences acquisition — significant structural change
+[HISTORICAL] [LLM_FLAG] Total Long-term Debt carrying value increased from ~$12.9B to $34.0B reflecting Exact Sciences acquisition financing
+[HISTORICAL] [LLM_FLAG] Contingent consideration surged from $0 at Dec 31, 2025 to $304M at March 31, 2026 — Exact Sciences acquisition-related
+[HISTORICAL] [LLM_FLAG] Fair value of hedged LT debt increased from $1.133B to $4.068B at March 31, 2026 reflecting expanded IR hedge portfolio
+[HISTORICAL] [LLM_FLAG] IR swap fair value hedge now has a $89M payable position (vs. $19M at Dec 31, 2025) consistent with rising long-term rates reducing the value of the received-fixed leg
+[HISTORICAL] [LLM_FLAG] Note numbering changed: derivatives note is now Note 11 (was Note 10 in prior 10-Q filings) following acquisition-related restacking of footnotes
+[HISTORICAL] [LLM_FLAG] marketable_equity_value of $335M is Level 1 equity securities; total equity securities carrying value is $727M
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($13,000M)
-[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($7,400M)
-[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($1,200M)
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($13,400M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($589M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($13,400M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($1,200M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-69M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-279M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($20M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($4M)
-[NEW_FIELD] interest_rate_hedge_notional: appeared for first time ($1,200M)
-[LLM_FLAG] Notional amount of FX derivatives has decreased by approximately 19.6% from $16.2 billion in the prior period to $13.1 billion. This is significant and could indicate a shift in the company's foreign exchange hedging strategy.
-[LLM_FLAG] Decreased notional of interest rate hedge contracts from $2.2 billion to $1.2 billion (~45% decrease).
-[LLM_FLAG] Significant decrease in notional values of foreign currency forward contracts, down from $23.191 billion to $20.495 billion (~12% decrease).
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-28 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $55M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $338M, now missing
+[HISTORICAL] [NUMERIC] net_derivative_position: $-283M → $-189M (+33.2%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-69M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($20,495M)
+[HISTORICAL] [NUMERIC] fx_transaction_gain_loss: $44M → $-50M (-213.6%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($13M)
+[HISTORICAL] [NUMERIC] marketable_equity_value: $352M → $20M (-94.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] contingent_consideration: was $1M, now missing
+[HISTORICAL] [LLM_FLAG] Section text for financial_instruments is the opening paragraph of Note 12 only — fair value tables and detailed breakdown not included in this text window
+[HISTORICAL] [LLM_FLAG] net_derivative_position of -$189M reflects only FX forward contracts net fair value from the contracts table; does not include IR swap fair value liability
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge AOCI turned negative (-$69M) at year-end 2025 vs. positive $210M at year-end 2024, driven by $279M adverse OCI movement on cash flow hedges during 2025
+[HISTORICAL] [LLM_FLAG] FX non-designated notional declined from $16.2B to $13.1B during 2025
+[HISTORICAL] [LLM_FLAG] fixed_rate_notes_billion of $12.8B is the fair value of total long-term debt, not explicitly labeled as fixed-rate notes outstanding — may overstate if variable-rate debt is included
+[HISTORICAL] [LLM_FLAG] equity_sensitivity_10pct is null because Abbott discloses only a 20% adverse move scenario ($4M impact) for the $20M publicly-traded equity portfolio
+[HISTORICAL] [LLM_FLAG] fx_transaction_gain_loss of -$50M represents a gain (negative loss) on the Net foreign exchange line of the income statement
+[HISTORICAL] [LLM_FLAG] Rabbi trust mutual funds ($323M) excluded from marketable_equity_value as they are offset by corresponding benefit obligation changes
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NUMERIC] fi_fx_derivatives_notional: $13,100M → $7,600M (-42.0%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fi_ir_swap_notional: was $1,200M, now missing
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $13M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $20M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $4M, now missing
-[DISAPPEARED_FIELD] interest_rate_hedge_notional: was $1,200M, now missing
-[VALIDATION] Likely extraction failure: 7/10 previously-populated fields are now null (fi_ir_swap_notional, fx_forwards_outstanding, ir_sensitivity_100bp, fixed_rate_notes_billion, marketable_equity_value...)
-[LLM_FLAG] fi_fx_derivatives_notional increased significantly from 13100 to 7600, a decrease greater than 50%.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-28 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $111M → $55M (-50.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $429M → $338M (-21.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_transaction_gain_loss: $35M → $44M (+25.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text for financial_instruments is a truncated version of Note 10 — fair value tables were captured in the derivatives_note section instead
+[HISTORICAL] [LLM_FLAG] Net derivative position remains deeply negative (-$283M) as FX forward contracts continue to be a net liability
+[HISTORICAL] [LLM_FLAG] FX cash flow hedge designated notional held flat at $7.2B for second consecutive quarter
+[HISTORICAL] [LLM_FLAG] fx_transaction_gain_loss of $44M is the 9M 2025 (nine months ended September 30, 2025) cumulative gain on non-designated FX forwards; Q3 2025 alone was $9M gain vs. losses of $89M in Q3 2024
+[HISTORICAL] [LLM_FLAG] marketable_equity_value of $352M is Level 1 (publicly quoted) equity securities; total equity securities carrying value is $633M
+[HISTORICAL] [LLM_FLAG] FX forward payable position remains elevated at $304M (down from $396M at Q2 2025) reflecting USD weakness vs. European currencies
+[HISTORICAL] [LLM_FLAG] Total Liabilities line of fair value hierarchy table is truncated in the section text — full total not available
+[HISTORICAL] [LLM_FLAG] No currency-level breakdown table (EUR, JPY, CNY etc.) with notional and exchange rates present in this section text
+[HISTORICAL] [LLM_FLAG] Net investment hedge yen loan decreased to $619M from $635M at Q2 2025 due to JPY depreciation in Q3
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($13,100M)
-[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($7,400M)
-[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($1,200M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($13M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($20M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($4M)
-[NEW_FIELD] interest_rate_hedge_notional: appeared for first time ($1,200M)
-[LLM_FLAG] The notional amount of FX derivatives designated as cash flow hedges ($ 7400 million) indicates continued reliance on hedging to manage currency exposures, reflecting potential volatility in foreign markets.
-[LLM_FLAG] Interest rate hedge notional reduced by more than 50% compared to prior period, likely indicating a change in strategy or reduction of debt exposure.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-28 ===
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $16,200M → $12,800M (-21.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $16,200M → $12,800M (-21.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $188M → $111M (-41.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $260M → $429M (+65.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-72M → $-318M (-341.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] contingent_consideration: $59M → $1M (-98.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text for financial_instruments is a truncated version of Note 10 — fair value tables were captured in the derivatives_note section instead
+[HISTORICAL] [LLM_FLAG] FX non-designated notional dropped significantly from $16.2B (Q1 2025) to $12.8B (Q2 2025)
+[HISTORICAL] [LLM_FLAG] Net derivative position worsened sharply from -$72M (Q1 2025) to -$318M (Q2 2025) driven by large increase in FX forward liabilities
+[HISTORICAL] [LLM_FLAG] fx_transaction_gain_loss of $35M is the H1 2025 (six months ended June 30, 2025) cumulative gain on non-designated FX forwards; Q2 2025 alone was only $1M gain vs. $43M in Q2 2024
+[HISTORICAL] [LLM_FLAG] FX fair value liabilities increased sharply to $396M payable vs. $212M at Q1 2025, reflecting USD weakening vs. European currencies in Q2 2025
+[HISTORICAL] [LLM_FLAG] marketable_equity_value of $344M is Level 1 (publicly quoted) equity securities; total equity securities carrying value is $619M
+[HISTORICAL] [LLM_FLAG] No currency-level breakdown table (EUR, JPY, CNY etc.) with notional and exchange rates present in this section text
+[HISTORICAL] [LLM_FLAG] Net investment hedge yen loan increased to $635M from $612M at Q1 2025 due to JPY appreciation
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXrYEV4yTGySvHfQpUJ'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXrDydfrPeVppZXWgwE'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXrKqriiiqKWiHg5oFC'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXqxC7Wjd1StXS7CMpf'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXqobvnN32EtSAFJ5rm'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXqbjJUhuUVhVMkzaKi'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[LLM_FLAG] Provided text is limited to Note 11 on Financial Instruments and Derivatives, focusing on foreign currency forward exchange contracts. It does not contain balance sheet fair value disclosures for cash equivalents, marketable securities, or debt securities that would be needed to extract the requested fields.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
-[LLM_FLAG] This Note 10 section focuses exclusively on derivative financial instruments (foreign currency forwards, interest rate hedges) and does not contain information about cash equivalents, marketable securities, or debt securities holdings. The requested fields are typically found in different sections of the 10-Q (e.g., balance sheet or liquidity/investments notes).
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
-[LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKWFnTDydgbrtJ3BV8A'}
-[LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKWwVe9wUaE68WT48Wa'}
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-28 ===
+[HISTORICAL] [LLM_FLAG] Section text for financial_instruments is a truncated version of Note 10 — fair value tables were captured in the derivatives_note section instead
+[HISTORICAL] [LLM_FLAG] fx_not_designated_notional of $16.2B includes FX forwards for intercompany loans/trade payables/receivables — large balance relative to designated hedges
+[HISTORICAL] [LLM_FLAG] IR swap notional dropped from $2.2B (Dec 2024) to $1.2B (Mar 2025) due to $1.0B maturity concurrent with debt repayment
+[HISTORICAL] [LLM_FLAG] fx_transaction_gain_loss of $34M is a gain (not a loss) on non-designated FX forwards for Q1 2025; prior year Q1 2024 gain was $92M
+[HISTORICAL] [LLM_FLAG] marketable_equity_value of $311M is Level 1 (publicly quoted) equity securities; total equity securities carrying value is $572M including non-quoted holdings
+[HISTORICAL] [LLM_FLAG] No currency-level breakdown table (by EUR, JPY, CNY etc.) with notional and exchange rates is present in this section text; only aggregate fair values by hedge type
+[HISTORICAL] [LLM_FLAG] IR swap notional decreased from $2.2B to $1.2B due to $1.0B maturity in March 2025 coinciding with long-term debt maturity
