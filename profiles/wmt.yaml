@@ -1,48 +1,40 @@
 issuer: Walmart
 ticker: WMT
-cik: "104169"
+cik: '104169'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   ir_swap_notional:
-    description: "Total notional amount of interest rate swaps (fixed to variable)"
+    description: Total notional amount of interest rate swaps (fixed to variable)
     section: market_risk
   ir_swap_pay_rate:
-    description: "Weighted-average pay rate on interest rate swaps"
+    description: Weighted-average pay rate on interest rate swaps
     section: market_risk
   ir_swap_receive_rate:
-    description: "Weighted-average receive rate on interest rate swaps"
+    description: Weighted-average receive rate on interest rate swaps
     section: market_risk
   variable_rate_debt_pct:
-    description: "Variable rate borrowings as percentage of total debt including commercial paper and swaps"
+    description: Variable rate borrowings as percentage of total debt including commercial paper and swaps
     section: market_risk
   interest_sensitivity_100bp:
-    description: "Change in annual interest costs from 100bp change in market rates"
+    description: Change in annual interest costs from 100bp change in market rates
     section: market_risk
   currency_swap_fair_value:
-    description: "Aggregate fair value of currency swaps (liability position)"
+    description: Aggregate fair value of currency swaps (liability position)
     section: market_risk
   currency_swap_sensitivity_10pct:
-    description: "Change in swap value from hypothetical 10% USD weakening"
+    description: Change in swap value from hypothetical 10% USD weakening
     section: market_risk
   fixed_rate_debt_by_maturity:
-    description: "Fixed rate long-term debt by expected maturity with weighted-average rates"
+    description: Fixed rate long-term debt by expected maturity with weighted-average rates
     section: market_risk
   equity_investment_fair_value:
-    description: "Fair value of equity investments measured on recurring basis"
+    description: Fair value of equity investments measured on recurring basis
     section: market_risk
   equity_investment_sensitivity_10pct:
-    description: "Change in equity investment fair value from 10% stock price change"
+    description: Change in equity investment fair value from 10% stock price change
     section: market_risk
-
-# Unusual features identified:
-#   - Fiscal year ending January 31 - period dates differ from calendar year
-#   - Interest rate swaps convert fixed to variable (opposite of typical pattern)
-#   - Detailed maturity schedule table for debt and IR swap derivatives
-#   - Currency swaps for foreign-denominated debt
-#   - Investment risk section for equity/equity method investments at fair value
-#   - Immaterial FX forward contracts for purchase commitments in non-functional currencies
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+Value\s+Measurements

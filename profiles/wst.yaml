@@ -1,53 +1,47 @@
 issuer: West Pharmaceutical Services
 ticker: WST
-cik: "105770"
+cik: '105770'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fx_forward_notional_fair_value_hedges:
-    description: "Notional amounts of FX forwards designated as fair value hedges by currency pair (SGD, USD, EUR)"
+    description: Notional amounts of FX forwards designated as fair value hedges by currency pair (SGD, USD, EUR)
     section: market_risk
   fx_forward_notional_cash_flow_hedges:
-    description: "Notional amounts of FX forwards designated as cash flow hedges by sell/purchase currency pair (EUR, JPY, SGD)"
+    description: Notional amounts of FX forwards designated as cash flow hedges by sell/purchase currency pair (EUR, JPY,
+      SGD)
     section: market_risk
   cross_currency_swap_notional:
-    description: "Notional amount of cross-currency swap designated as net investment hedge (JPY/USD)"
+    description: Notional amount of cross-currency swap designated as net investment hedge (JPY/USD)
     section: market_risk
   cross_currency_swap_maturity:
-    description: "Maturity date of cross-currency swap"
+    description: Maturity date of cross-currency swap
     section: market_risk
   crude_oil_call_options_barrels:
-    description: "Number of barrels of crude oil under outstanding call option contracts"
+    description: Number of barrels of crude oil under outstanding call option contracts
     section: market_risk
   crude_oil_call_options_strike_price:
-    description: "Weighted-average strike price of crude oil call options"
+    description: Weighted-average strike price of crude oil call options
     section: market_risk
   crude_oil_call_options_maturity_range:
-    description: "Maturity date range for crude oil call options"
+    description: Maturity date range for crude oil call options
     section: market_risk
   fx_sensitivity_10pct:
-    description: "Sensitivity of FX contract fair values to 10% change in exchange rates"
+    description: Sensitivity of FX contract fair values to 10% change in exchange rates
     section: market_risk
   ir_sensitivity_1pct:
-    description: "Change in annual interest expense for 1% change in variable rates"
+    description: Change in annual interest expense for 1% change in variable rates
     section: market_risk
   commodity_sensitivity_10pct:
-    description: "Sensitivity of commodity option fair values to 10% change in brent crude prices"
+    description: Sensitivity of commodity option fair values to 10% change in brent crude prices
     section: market_risk
   long_term_debt_fixed_rate:
-    description: "Fixed rate long-term debt carrying value and fair value"
+    description: Fixed rate long-term debt carrying value and fair value
     section: market_risk
   long_term_debt_variable_rate:
-    description: "Variable rate long-term debt carrying value"
+    description: Variable rate long-term debt carrying value
     section: market_risk
-
-# Unusual features identified:
-#   - Combines FX forwards, cross-currency swaps, and commodity call options - diversified hedging program
-#   - Cross-currency swap designated as net investment hedge for Japanese subsidiary (Daikyo)
-#   - Crude oil call options used to hedge elastomer purchase surcharges - unusual commodity hedge for a healthcare company
-#   - Notional amounts for FX forwards presented in a matrix format by sell/purchase currency pairs
-#   - Disclosure is in market_risk section (Item 7A) rather than a dedicated derivatives note
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+Value\s+Measurements
