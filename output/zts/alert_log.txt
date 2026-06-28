@@ -1,76 +1,51 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,393M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($1,458M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($2,393M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($250M)
-[NUMERIC] total_derivative_asset: $2,175M → $7M (-99.7%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $1,325M → $50M (-96.2%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $2,175M → $-43M (-102.0%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $250M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $5M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $69M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-69M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-121M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] fx_forward_sensitivity_10pct: was $3M, now missing
-[DISAPPEARED_FIELD] ir_swap_notional_notes_2028: was $53M, now missing
-[DISAPPEARED_FIELD] revolving_credit_balance: was $112M, now missing
-[VALIDATION] Likely extraction failure: 9/12 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion...)
-[VALIDATION] Likely units mismatch: total_derivative_asset changed from 2,175 to 7 (0x)
-[LLM_FLAG] Net derivative position shows a significant increase in liabilities compared to prior period.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-28 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($2,393M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($2,393M)
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($250M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($25M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($75M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $17M → $25M (+47.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-69M → $-50M (+27.5%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $3M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $53M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_net_investment_hedge_sensitivity_10pct: was $112M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forward_sensitivity_10pct: was $53M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commercial_paper_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] revolving_credit_balance: was $0M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/12 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, fx_net_investment_hedge_sensitivity_10pct, fx_forward_sensitivity_10pct, commercial_paper_outstanding...)
+[HISTORICAL] [LLM_FLAG] Designated FX notional amounts are disclosed in foreign currency units (Euro, Danish krone, Swiss franc), not USD; fi_fx_derivatives_notional only captures the $2,393M USD not-designated forwards and cannot include designated FX notionals without FX rate conversion.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset of $25M is derived by summing individual line items from the fair value table; the filing does not state a single 'total derivative assets' line — only a 'total derivatives' net figure of $(50)M.
+[HISTORICAL] [LLM_FLAG] Collateral posted at March 31, 2026: $50M posted by ZTS (no collateral received).
+[HISTORICAL] [LLM_FLAG] FX designated instrument notionals are in foreign currency units — USD aggregate not available from section text
+[HISTORICAL] [LLM_FLAG] No forward-starting IR swaps outstanding as of March 31, 2026
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,175M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($1,325M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($2,175M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($250M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($5M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($69M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-69M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-121M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($53M)
-[NEW_FIELD] fx_net_investment_hedge_sensitivity_10pct: appeared for first time ($112M)
-[NEW_FIELD] fx_forward_sensitivity_10pct: appeared for first time ($53M)
-[NEW_FIELD] commercial_paper_outstanding: appeared for first time ($0M)
-[NEW_FIELD] revolving_credit_balance: appeared for first time ($0M)
-[LLM_FLAG] fx_designated_notional differs significantly from prior period as it reflects a new approach to managing foreign currency risk.
-[LLM_FLAG] net_derivative_position has had a considerable deterioration compared to prior period values, signaling potential concerns regarding overall hedging effectiveness.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-28 ===
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($53M)
+[HISTORICAL] [NEW_FIELD] fx_net_investment_hedge_sensitivity_10pct: appeared for first time ($112M)
+[HISTORICAL] [NEW_FIELD] fx_forward_sensitivity_10pct: appeared for first time ($53M)
+[HISTORICAL] [NEW_FIELD] commercial_paper_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] revolving_credit_balance: appeared for first time ($0M)
+[HISTORICAL] [LLM_FLAG] Section text is MD&A balance sheet narrative only — it references Note 9 Financial Instruments but contains no quantitative derivative or fair value data
+[HISTORICAL] [LLM_FLAG] Forward-starting IR swaps fully terminated in August 2025; $700M aggregate notional terminated upon issuance of 5.000% 2025 senior notes due 2035
+[HISTORICAL] [LLM_FLAG] ir_swap_notional split between 2028 and 2030 notes not disclosed in market risk section; $250M total is available from derivatives note
+[HISTORICAL] [LLM_FLAG] fixed_rate_notes_billion not explicitly stated in section; would require derivation from debt note
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] fx_forward_sensitivity_10pct: was $3M, now missing
-[DISAPPEARED_FIELD] ir_swap_notional_notes_2028: was $53M, now missing
-[DISAPPEARED_FIELD] revolving_credit_balance: was $112M, now missing
-[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (gross_unrealized_gains_debt, equity_sensitivity_10pct, fx_forward_sensitivity_10pct, ir_swap_notional_notes_2028, revolving_credit_balance)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-28 ===
+[HISTORICAL] [NUMERIC] ir_swap_notional: $850M → $250M (-70.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $32M → $18M (-43.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $128M → $90M (-29.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-96M → $-72M (+25.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text is MD&A balance sheet narrative only — references Note 9 Financial Instruments but contains no quantitative derivative or fair value data
+[HISTORICAL] [LLM_FLAG] Forward-starting IR swaps terminated in August 2025 upon issuance of 5.000% 2025 senior notes due 2035; $700M aggregate notional was terminated, $11M cash settlement received
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($53M)
-[NEW_FIELD] fx_net_investment_hedge_sensitivity_10pct: appeared for first time ($112M)
-[NEW_FIELD] fx_forward_sensitivity_10pct: appeared for first time ($53M)
-[NEW_FIELD] commercial_paper_outstanding: appeared for first time ($0M)
-[NEW_FIELD] revolving_credit_balance: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-28 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $53M → $32M (-39.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $52M → $128M (+146.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $1M → $-96M (-9700.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text is MD&A balance sheet narrative only — references Note 9 but contains no quantitative derivative or fair value data
+[HISTORICAL] [LLM_FLAG] FX designated instrument notionals are in foreign currency units — USD aggregate not available from section text
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[DISAPPEARED_FIELD] commercial_paper_outstanding: was $31M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_sensitivity_100bp, commercial_paper_outstanding)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
-[NEW_FIELD] commercial_paper_outstanding: appeared for first time ($31M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
-[NEW_FIELD] fx_net_investment_hedge_sensitivity_10pct: appeared for first time ($112M)
-[NEW_FIELD] fx_forward_sensitivity_10pct: appeared for first time ($53M)
-[NEW_FIELD] commercial_paper_outstanding: appeared for first time ($0M)
-[NEW_FIELD] revolving_credit_balance: appeared for first time ($0M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-28 ===
+[HISTORICAL] [LLM_FLAG] Section text is the MD&A balance sheet narrative paragraph only — it references Note 9 Financial Instruments but contains no quantitative fair value or notional data; all derivative data is in the derivatives_note section
+[HISTORICAL] [LLM_FLAG] FX designated instrument notionals are in foreign currency units, not USD — aggregate USD notional for designated FX derivatives is not available from this section
