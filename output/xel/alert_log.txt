@@ -1,33 +1,64 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($130M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($68M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($16M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($4M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($12M)
-[NUMERIC] cash_flow_hedge_aoci: $240M → $3M (-98.8%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $66M → $1M (-98.5%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $7M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-7M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $2M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 5/7 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-28 ===
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($130M)
+[HISTORICAL] [NUMERIC] ir_swap_notional: $240M → $130M (-45.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($138M)
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-2M → $-3M (-50.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text appears truncated — derivative fair value balance sheet table not included in supplied text
+[HISTORICAL] [LLM_FLAG] Nuclear decommissioning fund assets are legally restricted and excluded from schema fields targeting corporate portfolios
+[HISTORICAL] [LLM_FLAG] total_derivative_asset is current portion only; noncurrent assets and liabilities tables truncated in section text
+[HISTORICAL] [LLM_FLAG] no FX derivatives — Xcel Energy is a US domestic utility
+[HISTORICAL] [LLM_FLAG] commodity notionals reported in physical units (MWh/MMBtu) not dollars
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp reflects impact on interest expense (not fair value); pertains to variable rate debt only
+[HISTORICAL] [LLM_FLAG] Xcel Energy has no FX exposure and no corporate marketable equity portfolio
+[HISTORICAL] [LLM_FLAG] Nuclear decommissioning fund equity price risk does not impact earnings due to regulatory deferral
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($240M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($66M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($7M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-7M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($2M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($2M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-28 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $120M, now missing
+[HISTORICAL] [NUMERIC] ir_swap_notional: $120M → $240M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $216M, now missing
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-3M → $-2M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $13M → $17M (+30.8%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (fi_ir_swap_notional, total_derivative_asset)
+[HISTORICAL] [LLM_FLAG] Section text contains MD&A market risk narrative (commodity trading fair value tables, VaR, credit risk) rather than the balance sheet fair value hierarchy note — fair value hierarchy data not present
+[HISTORICAL] [LLM_FLAG] No interest rate derivative notional disclosed in this section for 10-K (Dec. 31, 2025)
+[HISTORICAL] [LLM_FLAG] Xcel Energy has no FX derivatives or corporate marketable securities portfolio
+[HISTORICAL] [LLM_FLAG] derivative fair value tables truncated in section text — totals for assets and liabilities unavailable
+[HISTORICAL] [LLM_FLAG] no FX derivatives — Xcel Energy is a US domestic utility
+[HISTORICAL] [LLM_FLAG] commodity notionals reported in physical units (MWh/MMBtu) not dollars
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp reflects impact on interest expense (not fair value); pertains to variable rate debt only
+[HISTORICAL] [LLM_FLAG] Xcel Energy has no FX exposure and no corporate marketable equity portfolio
+[HISTORICAL] [LLM_FLAG] Nuclear decommissioning fund equity price risk does not impact earnings due to regulatory deferral
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-28 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $315M → $216M (-31.4%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $27M, now missing
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($13M)
+[HISTORICAL] [LLM_FLAG] Section text appears truncated — derivative fair value balance sheet table not included in supplied text
+[HISTORICAL] [LLM_FLAG] IR swap fair value described as immaterial
+[HISTORICAL] [LLM_FLAG] Nuclear decommissioning fund assets are legally restricted and excluded from schema fields targeting corporate portfolios
+[HISTORICAL] [LLM_FLAG] total_derivative_asset is current portion only; noncurrent assets and full liabilities table truncated in section text
+[HISTORICAL] [LLM_FLAG] no FX derivatives — Xcel Energy is a US domestic utility
+[HISTORICAL] [LLM_FLAG] commodity notionals reported in physical units (MWh/MMBtu) not dollars
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp reflects impact on interest expense (not fair value); pertains to variable rate debt only
+[HISTORICAL] [LLM_FLAG] Xcel Energy has no FX exposure and no corporate marketable equity portfolio
+[HISTORICAL] [LLM_FLAG] Nuclear decommissioning fund equity price risk does not impact earnings due to regulatory deferral
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-28 ===
+[HISTORICAL] [DROPPED_TO_ZERO] fi_ir_swap_notional: $390M → $0M
+[HISTORICAL] [DROPPED_TO_ZERO] ir_swap_notional: $390M → $0M
+[HISTORICAL] [NUMERIC] total_derivative_asset: $113M → $315M (+178.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($27M)
+[HISTORICAL] [LLM_FLAG] Section text appears truncated — derivative fair value balance sheet table not included in supplied text
+[HISTORICAL] [LLM_FLAG] IR swap notional explicitly stated as zero: 'Xcel Energy had no unsettled interest swaps outstanding' as of June 30, 2025
+[HISTORICAL] [LLM_FLAG] Nuclear decommissioning fund assets are legally restricted and excluded from schema fields targeting corporate portfolios
+[HISTORICAL] [LLM_FLAG] total_derivative_liability is current only; noncurrent derivative liabilities table was truncated in section text
+[HISTORICAL] [LLM_FLAG] no FX derivatives — Xcel Energy is a US domestic utility
+[HISTORICAL] [LLM_FLAG] commodity notionals reported in physical units (MWh/MMBtu) not dollars
 
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-28 ===
+[HISTORICAL] [LLM_FLAG] Section text appears truncated — derivative fair value balance sheet table not included in supplied text
+[HISTORICAL] [LLM_FLAG] Nuclear decommissioning fund assets are legally restricted and excluded from schema fields targeting corporate portfolios
+[HISTORICAL] [LLM_FLAG] total_derivative_asset is current portion only; noncurrent derivative assets table was truncated in section text
+[HISTORICAL] [LLM_FLAG] total_derivative_liability unavailable — section text truncated before liability table
+[HISTORICAL] [LLM_FLAG] commodity notionals reported in physical units (MWh/MMBtu) not dollars
+[HISTORICAL] [LLM_FLAG] Q1 2025 10-Q market risk section defers entirely to 2024 10-K: 'There have been no material changes to the market risk disclosure included in our Annual Report on Form 10-K for the year ended Dec. 31, 2024'; no extractable quantitative values

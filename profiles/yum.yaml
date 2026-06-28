@@ -1,64 +1,55 @@
 issuer: Yum! Brands
 ticker: YUM
-cik: "1041061"
+cik: '1041061'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fx_forward_notional_net_investment_hedge:
-    description: "USD notional amount of FX forward designated as net investment hedge for Indian rupee operations"
+    description: USD notional amount of FX forward designated as net investment hedge for Indian rupee operations
     section: market_risk
   fx_forward_maturity:
-    description: "Maturity date of FX forward net investment hedge"
+    description: Maturity date of FX forward net investment hedge
     section: market_risk
   ir_swap_notional:
-    description: "Notional amount of interest rate swap ($1.5B)"
+    description: Notional amount of interest rate swap ($1.5B)
     section: market_risk
   ir_swap_fixed_rate:
-    description: "Fixed rate on swapped portion of Term Loan B (5.09%)"
+    description: Fixed rate on swapped portion of Term Loan B (5.09%)
     section: market_risk
   ir_swap_maturity:
-    description: "Maturity of interest rate swap (March 2028)"
+    description: Maturity of interest rate swap (March 2028)
     section: market_risk
   ir_swap_gain_loss_oci:
-    description: "Gains/losses on interest rate swaps recognized in OCI"
+    description: Gains/losses on interest rate swaps recognized in OCI
     section: market_risk
   ir_swap_reclassified_from_aoci:
-    description: "Gains/losses reclassified from AOCI into interest expense"
+    description: Gains/losses reclassified from AOCI into interest expense
     section: market_risk
   aoci_reclassification_next_12m:
-    description: "Estimated net gain in AOCI from IR swaps to be reclassified to earnings in next 12 months"
+    description: Estimated net gain in AOCI from IR swaps to be reclassified to earnings in next 12 months
     section: market_risk
   total_return_swap_fair_value:
-    description: "Fair value of total return swaps for EID plan"
+    description: Fair value of total return swaps for EID plan
     section: market_risk
   pct_fixed_rate_debt:
-    description: "Percentage of total debt at fixed rate (83% before swaps, 96% after)"
+    description: Percentage of total debt at fixed rate (83% before swaps, 96% after)
     section: market_risk
   ir_sensitivity_100bp:
-    description: "Change in interest expense for 100bp change after swaps ($4M)"
+    description: Change in interest expense for 100bp change after swaps ($4M)
     section: market_risk
   ir_swap_fair_value_sensitivity_100bp:
-    description: "Change in net IR swap fair value for 100bp decrease ($31M)"
+    description: Change in net IR swap fair value for 100bp decrease ($31M)
     section: market_risk
   fixed_rate_debt_fair_value_sensitivity_100bp:
-    description: "Change in fair value of fixed-rate debt for 100bp increase ($375M decrease)"
+    description: Change in fair value of fixed-rate debt for 100bp increase ($375M decrease)
     section: market_risk
   fx_net_asset_exposure:
-    description: "Total foreign currency net asset exposure ($1.0B)"
+    description: Total foreign currency net asset exposure ($1.0B)
     section: market_risk
   fx_operating_profit_sensitivity_10pct:
-    description: "Change in operating profit for 10% uniform weakening of foreign currencies ($150M decrease)"
+    description: Change in operating profit for 10% uniform weakening of foreign currencies ($150M decrease)
     section: market_risk
-
-# Unusual features identified:
-#   - Three distinct derivative types: FX forward (net investment hedge), IR swap (cash flow hedge), and total return swaps (non-designated)
-#   - Total return swaps used to hedge deferred compensation (EID plan) liabilities - non-designated
-#   - Very large IR swap program ($1.5B) on Term Loan B replacing expired swaps
-#   - FX forward for Indian rupee net investment is relatively small ($80M) and short-term (6 months)
-#   - 96% of $11.5B debt effectively at fixed rate after IR swap
-#   - Company does not historically hedge FX translation risk on foreign earnings/cash flows
-#   - Detailed IR sensitivity analysis including post-swap and debt fair value impacts
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+Value\s+Disclosures
