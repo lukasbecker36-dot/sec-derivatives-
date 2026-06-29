@@ -1,0 +1,50 @@
+issuer: Kroger
+ticker: KR
+cik: "56873"
+archetype: minimal_hedger
+sector: TODO  # e.g., technology, industrials, financials
+extraction_mode: llm
+
+# Additional fields identified by LLM analysis (review and adjust)
+fields:
+  ir_swap_notional_outstanding:
+    description: "Aggregate notional amount of outstanding interest rate swap agreements, in millions"
+    section: market_risk
+  forward_starting_swap_notional:
+    description: "Aggregate notional of forward-starting interest rate swaps, in millions"
+    section: market_risk
+  treasury_lock_notional:
+    description: "Aggregate notional of treasury lock agreements, in millions"
+    section: market_risk
+  fixed_rate_debt_total:
+    description: "Total fixed rate principal payments outstanding, in millions"
+    section: market_risk
+  variable_rate_debt_total:
+    description: "Total variable rate principal payments outstanding, in millions"
+    section: market_risk
+  fixed_rate_debt_fair_value:
+    description: "Fair value of fixed rate debt, in millions"
+    section: market_risk
+  variable_rate_debt_fair_value:
+    description: "Fair value of variable rate debt, in millions"
+    section: market_risk
+  cash_flow_hedge_notional:
+    description: "Notional amount of derivatives designated as cash flow hedges, in millions"
+    section: market_risk
+  deferred_hedge_gain_loss_aoci:
+    description: "Unamortized gain or loss deferred in AOCI from terminated hedges, in millions"
+    section: market_risk
+  weighted_avg_fixed_rate:
+    description: "Weighted average interest rate on fixed rate debt"
+    section: market_risk
+  weighted_avg_variable_rate:
+    description: "Weighted average interest rate on variable rate debt"
+    section: market_risk
+
+# Unusual features identified:
+#   - All derivative positions (forward-starting IR swaps and treasury locks) were terminated in 2024; no derivatives outstanding as of January 31, 2026 or February 1, 2025
+#   - Disclosure primarily describes historical derivative activity and current debt portfolio rather than active hedging positions
+#   - Debt maturity schedule table with fair values is the primary quantitative disclosure
+#   - Policy limits floating rate and rate-reset exposure to 25% of debt portfolio carrying value
+#   - Uses forward yield curve for variable rate debt projections
+
