@@ -1,49 +1,43 @@
 issuer: Autodesk
 ticker: ADSK
-cik: "769397"
+cik: '769397'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   forward_contracts_purchased_notional:
-    description: "notional amount of purchased forward contracts"
+    description: notional amount of purchased forward contracts
     section: market_risk
   forward_contracts_purchased_fair_value:
-    description: "fair value of purchased forward contracts"
+    description: fair value of purchased forward contracts
     section: market_risk
   forward_contracts_sold_notional:
-    description: "notional amount of sold forward contracts"
+    description: notional amount of sold forward contracts
     section: market_risk
   forward_contracts_sold_fair_value:
-    description: "fair value of sold forward contracts"
+    description: fair value of sold forward contracts
     section: market_risk
   option_contracts_purchased_notional:
-    description: "notional amount of purchased option contracts"
+    description: notional amount of purchased option contracts
     section: market_risk
   option_contracts_purchased_fair_value:
-    description: "fair value of purchased option contracts"
+    description: fair value of purchased option contracts
     section: market_risk
   option_contracts_sold_notional:
-    description: "notional amount of sold option contracts"
+    description: notional amount of sold option contracts
     section: market_risk
   option_contracts_sold_fair_value:
-    description: "fair value of sold option contracts"
+    description: fair value of sold option contracts
     section: market_risk
   usd_appreciation_sensitivity:
-    description: "impact on fair value from 10% USD appreciation"
+    description: impact on fair value from 10% USD appreciation
     section: market_risk
   usd_depreciation_sensitivity:
-    description: "impact on fair value from 10% USD depreciation"
+    description: impact on fair value from 10% USD depreciation
     section: market_risk
   cash_equivalents_marketable_securities:
-    description: "total amount of cash equivalents and marketable securities"
+    description: total amount of cash equivalents and marketable securities
     section: market_risk
-
-# Unusual features identified:
-#   - combined notional and fair value in single table format
-#   - sensitivity analysis includes both appreciation and depreciation scenarios with different impacts
-#   - includes private company investment risks under market risk disclosure
-#   - forward contracts show both purchased and sold positions
-
+sections:
+  financial_instruments:
+    heading: 5\s+\.\s+Financial\s+Instruments

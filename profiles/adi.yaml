@@ -1,40 +1,34 @@
 issuer: Analog Devices
 ticker: ADI
-cik: "6281"
+cik: '6281'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   floating_rate_debt_sensitivity:
-    description: "annual interest expense change per 100bp rate increase"
+    description: annual interest expense change per 100bp rate increase
     section: market_risk
   cash_marketable_securities_sensitivity:
-    description: "annual interest income change per 100bp rate increase"
+    description: annual interest income change per 100bp rate increase
     section: market_risk
   swap_notional_amount:
-    description: "notional amount of fixed-for-floating interest rate swaps"
+    description: notional amount of fixed-for-floating interest rate swaps
     section: market_risk
   swap_fair_value:
-    description: "fair value of swap payable"
+    description: fair value of swap payable
     section: market_risk
   swap_sensitivity:
-    description: "change in swap payable value for 100bp rate increase"
+    description: change in swap payable value for 100bp rate increase
     section: market_risk
   notes_principal_amount:
-    description: "principal amount outstanding by maturity"
+    description: principal amount outstanding by maturity
     section: market_risk
   notes_fair_value:
-    description: "current fair value by note series"
+    description: current fair value by note series
     section: market_risk
   notes_stressed_fair_value:
-    description: "fair value assuming 100bp rate increase"
+    description: fair value assuming 100bp rate increase
     section: market_risk
-
-# Unusual features identified:
-#   - detailed tabular breakdown of debt securities by maturity date with stressed fair values
-#   - combines both derivative (swaps) and non-derivative (debt securities) instruments in same section
-#   - references external note for foreign currency derivatives
-#   - includes commercial paper as part of debt sensitivity analysis
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+Value
