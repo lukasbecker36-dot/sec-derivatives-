@@ -15,7 +15,17 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "cash flow hedge",
+      "fair value hedge",
+      "interest rate swap",
+      "commodity derivative",
+      "notional amount",
+      "mark-to-market",
+      "unrealized gain",
+      "accumulated other comprehensive",
+      "unrealized loss"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -31,6 +41,66 @@
       ],
       "fields_extracted": 0,
       "fields_null": 0
+    },
+    {
+      "filing_date": "2025-02-01",
+      "form_type": "10-K",
+      "period_end": "2025-02-01",
+      "processed_at": "2026-06-30T09:19:10Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 17,
+      "fields_null": 13
+    },
+    {
+      "filing_date": "2025-05-24",
+      "form_type": "10-Q",
+      "period_end": "2025-05-24",
+      "processed_at": "2026-06-30T09:19:10Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 7,
+      "fields_null": 23
+    },
+    {
+      "filing_date": "2025-08-16",
+      "form_type": "10-Q",
+      "period_end": "2025-08-16",
+      "processed_at": "2026-06-30T09:19:10Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 8,
+      "fields_null": 22
+    },
+    {
+      "filing_date": "2025-11-08",
+      "form_type": "10-Q",
+      "period_end": "2025-11-08",
+      "processed_at": "2026-06-30T09:19:10Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 8,
+      "fields_null": 22
+    },
+    {
+      "filing_date": "2026-01-31",
+      "form_type": "10-K",
+      "period_end": "2026-01-31",
+      "processed_at": "2026-06-30T09:19:10Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 17,
+      "fields_null": 13
     }
   ]
 }
