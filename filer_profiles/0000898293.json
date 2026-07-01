@@ -21,9 +21,14 @@
       "interest rate swap",
       "notional amount",
       "aoci",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "net investment hedge",
+      "cash flow hedge",
+      "designated as hedging"
     ],
-    "non_gaap_metrics": [],
+    "non_gaap_metrics": [
+      "core earnings"
+    ],
     "unusual_disclosure_patterns": [],
     "known_issues": []
   },
@@ -82,6 +87,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 14
+    },
+    {
+      "filing_date": "2026-05-31",
+      "form_type": "10-Q",
+      "period_end": "2026-05-31",
+      "processed_at": "2026-07-01T09:14:43Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 5,
+      "fields_null": 22
     }
   ]
 }
