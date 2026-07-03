@@ -12,7 +12,7 @@ from .section_extract import extract_all_sections
 from .llm_extract import extract_fields_llm
 from .qualitative import extract_qualitative
 from .change_detect import detect_changes
-from .validate import validate_row
+from .validate import validate_row, validate_source_quotes
 
 logger = logging.getLogger(__name__)
 
@@ -115,6 +115,12 @@ def process_filing(
             row[field_name] = field_data.get('value')
 
         all_flags.extend(llm_result.get('flags', []))
+        all_flags.extend(validate_source_quotes(llm_result, schema))
+
+    # A transient API/parse failure in any section means this row is incomplete;
+    # surface it so run_issuer can leave the filing unprocessed and retry rather
+    # than persisting a null row that permanently blocks reprocessing.
+    retryable_failure = any(r.get('retryable') for r in all_llm_results.values())
 
     # Qualitative extraction
     notes = extract_qualitative(sections, config, prior_row)
@@ -138,6 +144,7 @@ def process_filing(
         'validation': validation,
         'llm_results': all_llm_results,
         'sections': sections,
+        'retryable_failure': retryable_failure,
     }
 
 
@@ -269,6 +276,17 @@ def run_issuer(config: IssuerConfig, output_dir: Path = OUTPUT_DIR, client=None,
             prior_row = _get_prior_row(csv_path)
             result = process_filing(config, filing_meta, filing_text, prior_row,
                                     client=client, profile=profile)
+
+            # Transient extraction failure: don't persist a null row (which would
+            # mark the period processed and block retry). Leave it for next run.
+            if result.get('retryable_failure'):
+                logger.warning(
+                    f"  Transient extraction failure for {filing_meta['period_end']}; "
+                    f"leaving unprocessed for retry"
+                )
+                errors.append({'period_end': filing_meta['period_end'],
+                               'error': 'transient extraction failure (will retry)'})
+                continue
 
             result['row']['accession_number'] = filing_meta.get('accession_number', '')
             result['row']['filing_date'] = filing_meta.get('filing_date', '')

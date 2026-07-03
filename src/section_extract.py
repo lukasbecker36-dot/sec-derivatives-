@@ -76,9 +76,13 @@ def extract_section(text: str, section_cfg: SectionConfig,
         if not XREF_PATTERN.search(after):
             matches.append(m)
 
-    # Fall back to all matches if filtering removed everything
+    # If every heading occurrence was a table-of-contents entry or a
+    # cross-reference stub, the section isn't genuinely present at a usable
+    # location here. Return empty so the content fallback (derivatives_note) or
+    # the locate/backfill path can recover it, rather than slicing a known-bad
+    # stub and feeding it to the LLM (which just reports "reference header only").
     if not matches:
-        matches = raw_matches
+        return ''
 
     # Pick match based on strategy
     if section_cfg.match_strategy == 'first':

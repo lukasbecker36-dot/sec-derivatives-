@@ -1,7 +1,7 @@
 """Tests for src.validate — sanity checks on extracted data."""
 
 import pytest
-from src.validate import validate_row, _parse_numeric
+from src.validate import validate_row, validate_source_quotes, _parse_numeric
 from src.config import IssuerConfig, FieldConfig
 
 
@@ -55,3 +55,50 @@ class TestValidateRow:
         results = validate_row(current, prior, config)
         errors = [r for r in results if r['level'] == 'error']
         assert len(errors) == 0
+
+
+class TestValidateSourceQuotes:
+    _schema = {
+        'ir_swap_notional': 'Interest rate swap notional amount in millions',
+        'cash_flow_hedge_aoci': 'Cash flow hedge fair value in AOCI, millions',
+        'fx_notional': 'FX derivatives notional in millions',
+        'usd_revenue_pct': 'USD revenue as a percentage of total',
+    }
+
+    def test_flags_year_as_notional(self):
+        result = {'fields': {'ir_swap_notional':
+                  {'value': 2025.0, 'source_quote': 'as of March 31, 2025'}}}
+        flags = validate_source_quotes(result, self._schema)
+        assert any('calendar year' in f for f in flags)
+
+    def test_flags_day_of_month_with_date_context(self):
+        result = {'fields': {'cash_flow_hedge_aoci':
+                  {'value': 31.0, 'source_quote': 'balance at March 31, 2026'}}}
+        flags = validate_source_quotes(result, self._schema)
+        assert any('day-of-month' in f for f in flags)
+
+    def test_flags_value_unsupported_by_quote(self):
+        result = {'fields': {'fx_notional':
+                  {'value': 500.0, 'source_quote': 'the company uses forward contracts'}}}
+        flags = validate_source_quotes(result, self._schema)
+        assert any('not supported' in f for f in flags)
+
+    def test_legit_values_not_flagged(self):
+        result = {'fields': {
+            'ir_swap_notional': {'value': 4080.0, 'source_quote': 'notional totaling $4.08 billion'},
+            'fx_notional': {'value': 30.0, 'source_quote': 'forward contracts of $30 million'},
+        }}
+        assert validate_source_quotes(result, self._schema) == []
+
+    def test_percent_field_year_not_flagged(self):
+        # A percentage field is exempt from the year/date checks.
+        result = {'fields': {'usd_revenue_pct':
+                  {'value': 2025.0, 'source_quote': 'fiscal year 2025'}}}
+        assert validate_source_quotes(result, self._schema) == []
+
+    def test_null_and_string_values_skipped(self):
+        result = {'fields': {
+            'ir_swap_notional': {'value': None, 'source_quote': ''},
+            'fx_notional': {'value': 'Yes', 'source_quote': 'uses derivatives'},
+        }}
+        assert validate_source_quotes(result, self._schema) == []
