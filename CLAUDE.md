@@ -104,10 +104,33 @@ Manage at: https://claude.ai/code/routines
 
 A `run_scheduler.ps1` script also exists for local API-mode runs (requires `ANTHROPIC_API_KEY` as a user environment variable).
 
+## CME Interest-Rate Bulletin Tracker (`src/cme_bulletin.py`)
+
+A standalone daily tracker for CME Daily Bulletin **Section 02A — Summary Volume and Open Interest, Interest Rate Futures and Options**. It is independent of the SEC pipeline and uses **no LLM / API** — parsing is deterministic (`pdfplumber`).
+
+```bash
+# Parse a bulletin PDF you downloaded yourself, append to the store (recommended)
+python -m src.cme_bulletin pull --file ~/Downloads/Section02A.pdf --verbose
+
+# Re-parse a previously archived PDF (no download)
+python -m src.cme_bulletin pull --date 2026-07-02 --force
+
+# Search the history with SQL (DuckDB over the CSV; table is named `data`)
+python -m src.cme_bulletin query "SELECT trade_date, total_volume, open_interest FROM data WHERE product_code='SR3' AND report_section='FUTURES' ORDER BY trade_date"
+```
+
+> **Acquisition — important.** CME blocks automated downloads of the daily bulletin (HTTP 403, "IP blocked due to suspected web scraping"), and CME Group's website Data Terms of Use prohibit scraping. So the plain `pull` (auto-download) path is unreliable and non-compliant. Obtain the PDF through a channel you're entitled to — your browser, or a licensed CME data service (CME DataMine / the Daily Bulletin subscription; contact `gcc@cmegroup.com`) — then feed it to the parser with `--file`. The download path remains in the code for completeness but should not be relied on.
+
+- **Storage:** `data/cme/ir_volume_oi.csv` — append-only, one row per product line per section per trading day (git-friendly). Raw PDFs are archived under `data/cme/raw/{trade_date}.pdf`. Both are committed so history accumulates.
+- **Idempotency:** re-running `pull` for the same day replaces that day's rows rather than duplicating.
+- **Columns:** `trade_date, report_status, report_section` (FUTURES/OPTIONS), `product_code, product_name, option_type` (C/P/blank), `is_total`, `globex_volume, open_outcry_volume, pnt_volume, total_volume, open_interest, oi_change, prior_year_volume, prior_year_open_interest, source_pdf, fetched_at`.
+- **Querying note:** the OPTIONS section includes per-family `TOTAL` roll-up rows (`is_total = true`); filter `WHERE NOT is_total` (or `option_type IN ('C','P')`) to avoid double-counting when aggregating.
+- **Parsing:** numeric columns are right-aligned and empty cells vanish from the text, so columns are located by clustering token right-edges into anchors and bucketing each cell to its anchor. Every row is validated by `globex+open_outcry+pnt == total_volume`; a layout change raises `BulletinParseError` so the run fails loudly instead of storing garbage.
+
 ## Environment
 
 - **Python 3.11+** required
-- Dependencies: `pip install -r requirements.txt` (anthropic, beautifulsoup4, pyyaml, requests, duckdb)
+- Dependencies: `pip install -r requirements.txt` (anthropic, beautifulsoup4, pyyaml, requests, duckdb, pdfplumber)
 - **ANTHROPIC_API_KEY** only needed for API mode (not for Claude Code mode)
 
 ## Tests
