@@ -1,6 +1,27 @@
 """Post-extraction sanity checks on extracted data."""
 
+import re
+
 from .config import IssuerConfig
+
+# Field descriptions with any of these words carry dollar amounts, so a value
+# that looks like a calendar year or a day-of-month is almost certainly a date
+# fragment that leaked out of a table header rather than a real figure.
+_DOLLAR_HINTS = (
+    'notional', 'fair value', 'million', 'billion', 'debt', 'asset',
+    'liability', 'collateral', 'sensitivity', 'var', 'proceeds', 'exposure',
+    'gain', 'loss', 'reclass', 'aoci', 'notes',
+)
+_PERCENT_HINTS = ('percent', '%', 'basis point')
+
+# A source_quote backing a dollar figure should contain a currency/number
+# marker; if it has none, the value was likely fabricated or mis-sourced.
+_DOLLAR_MARKER = re.compile(r'[\$\d]|million|billion|thousand', re.IGNORECASE)
+_DATE_CONTEXT = re.compile(
+    r'January|February|March|April|May|June|July|August|September|October'
+    r'|November|December|\d{1,2}/\d{1,2}/\d{2,4}|20\d{2}',
+    re.IGNORECASE,
+)
 
 
 def _parse_numeric(val) -> float | None:
@@ -10,6 +31,57 @@ def _parse_numeric(val) -> float | None:
         return float(val)
     except (ValueError, TypeError):
         return None
+
+
+def validate_source_quotes(llm_result: dict, schema: dict[str, str]) -> list[str]:
+    """Cross-check each extracted numeric value against its source_quote.
+
+    Catches the common failure where a date fragment ("March 31, 2026") leaks
+    from a table header into a numeric field — e.g. an IR-swap notional of
+    2026.0 or a cash-flow-hedge AOCI of 31.0. Returns a list of flag strings
+    (empty if everything looks sane). Deliberately conservative: only fields
+    whose description clearly denotes a dollar amount are checked, so a genuine
+    $30M notional isn't spuriously flagged.
+    """
+    flags = []
+    fields = llm_result.get('fields', {}) or {}
+    for name, desc in schema.items():
+        fd = fields.get(name) or {}
+        value = _parse_numeric(fd.get('value'))
+        if value is None:
+            continue
+        desc_l = desc.lower()
+        is_dollar = any(h in desc_l for h in _DOLLAR_HINTS)
+        is_percent = any(h in desc_l for h in _PERCENT_HINTS)
+        if not is_dollar or is_percent:
+            continue
+
+        quote = str(fd.get('source_quote') or '')
+
+        # Value looks like a calendar year.
+        if value == int(value) and 1990 <= value <= 2035:
+            flags.append(
+                f'[QUOTE_CHECK] {name}={value:g} looks like a calendar year — '
+                f'possible date contamination (source_quote: "{quote[:80]}")'
+            )
+            continue
+
+        # Value looks like a day-of-month and its quote mentions a date.
+        if value in (28, 29, 30, 31) and _DATE_CONTEXT.search(quote):
+            flags.append(
+                f'[QUOTE_CHECK] {name}={value:g} may be a day-of-month from a '
+                f'date, not a figure (source_quote: "{quote[:80]}")'
+            )
+            continue
+
+        # A dollar figure whose quote carries no number/currency marker.
+        if value != 0 and quote and not _DOLLAR_MARKER.search(quote):
+            flags.append(
+                f'[QUOTE_CHECK] {name}={value:g} not supported by its '
+                f'source_quote (no $/number: "{quote[:80]}")'
+            )
+
+    return flags
 
 
 def validate_row(

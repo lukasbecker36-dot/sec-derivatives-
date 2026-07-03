@@ -39,7 +39,7 @@ from .section_locate import (
     assess_sections, build_locate_request, apply_locate_result,
     heading_to_regex, persist_learned_heading,
 )
-from .validate import validate_row
+from .validate import validate_row, validate_source_quotes
 
 logger = logging.getLogger(__name__)
 
@@ -472,6 +472,7 @@ def _assemble_row(key: str, detail: dict, config: IssuerConfig) -> dict | None:
                 row[field_name] = value
                 provenance[field_name] = 'extracted' if value is not None else 'not_disclosed'
             flags.extend(f for f in llm_result.get('flags', []) if f)
+            flags.extend(validate_source_quotes(llm_result, schema))
             req_path = REQUESTS_DIR / sec['request_file']
             if req_path.exists():
                 with open(req_path, 'r', encoding='utf-8') as f:

@@ -136,6 +136,25 @@ def build_extraction_prompt(section_text: str, schema: dict, context: dict,
     )
 
 
+def _is_retryable_error(exc: Exception) -> bool:
+    """True for transient API failures worth retrying on a later run.
+
+    Overload (529), rate-limit (429), and 5xx/timeout/connection errors clear
+    on their own, so the caller should leave the filing unprocessed and retry
+    rather than persisting a null row that blocks it forever. A 400/401/404 is
+    a real problem with the request and should not loop.
+    """
+    status = getattr(exc, 'status_code', None) or getattr(exc, 'status', None)
+    if status in (408, 409, 429, 500, 502, 503, 504, 529):
+        return True
+    msg = str(exc).lower()
+    return any(k in msg for k in (
+        'overload', 'rate limit', 'ratelimit', 'timeout', 'timed out',
+        'temporarily', 'connection', 'unavailable',
+        '429', '500', '502', '503', '504', '529',
+    ))
+
+
 def parse_llm_response(raw: str) -> dict:
     """Parse LLM response, stripping markdown fences if present."""
     text = raw.strip()
@@ -248,6 +267,7 @@ def extract_fields_llm(
                     'fields': failed_fields,
                     'flags': [f'extraction_failed: {e}'],
                     'notes': f'LLM extraction failed after retry: {e}',
+                    'retryable': True,
                 }
 
         except Exception as e:
@@ -260,4 +280,5 @@ def extract_fields_llm(
                 'fields': failed_fields,
                 'flags': [f'api_error: {e}'],
                 'notes': f'LLM API error: {e}',
+                'retryable': _is_retryable_error(e),
             }
