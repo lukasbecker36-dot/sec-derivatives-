@@ -119,7 +119,16 @@ python -m src.cme_bulletin pull --date 2026-07-02 --force
 python -m src.cme_bulletin query "SELECT trade_date, total_volume, open_interest FROM data WHERE product_code='SR3' AND report_section='FUTURES' ORDER BY trade_date"
 ```
 
-> **Acquisition — important.** CME blocks automated downloads of the daily bulletin (HTTP 403, "IP blocked due to suspected web scraping"), and CME Group's website Data Terms of Use prohibit scraping. So the plain `pull` (auto-download) path is unreliable and non-compliant. Obtain the PDF through a channel you're entitled to — your browser, or a licensed CME data service (CME DataMine / the Daily Bulletin subscription; contact `gcc@cmegroup.com`) — then feed it to the parser with `--file`. The download path remains in the code for completeness but should not be relied on.
+> **Acquisition — important.** CME blocks automated downloads of the daily bulletin (HTTP 403, "IP blocked due to suspected web scraping"), and CME Group's website Data Terms of Use prohibit scraping. So the plain `pull` (auto-download) path is unreliable and non-compliant from shared/cloud IPs. Obtain the PDF through a channel you're entitled to — your browser, or a licensed CME data service (CME DataMine / the Daily Bulletin subscription; contact `gcc@cmegroup.com`) — then feed it to the parser with `--file`. The download path remains in the code for completeness but should not be relied on.
+
+### Local scheduled job (`run_cme_bulletin.ps1`)
+
+For hands-off daily updates, `run_cme_bulletin.ps1` runs as a Windows Scheduled Task on your own machine (registration snippet is in the script header). Each run:
+1. **Drains an inbox** — parses any PDF you dropped into `inbox\cme\` via `pull --file`, then moves it to `inbox\cme\processed\`. This is the reliable, compliant path: download the bulletin yourself, drop it in the folder.
+2. **Attempts a direct download** as best-effort (works only if your network isn't blocked by CME; a 403 is logged and skipped, not fatal).
+3. **Commits & pushes** any new `data/cme/` rows.
+
+`inbox/` is gitignored. Logs go to `logs/` (30-day retention).
 
 - **Storage:** `data/cme/ir_volume_oi.csv` — append-only, one row per product line per section per trading day (git-friendly). Raw PDFs are archived under `data/cme/raw/{trade_date}.pdf`. Both are committed so history accumulates.
 - **Idempotency:** re-running `pull` for the same day replaces that day's rows rather than duplicating.
