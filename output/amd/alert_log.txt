@@ -1,37 +1,98 @@
-=== 10-Q | Period ending 2026-03-28 | Processed 2026-05-23 ===
-[NUMERIC] total_cash_equivalents_fv: $1,788M → $2,679M (+49.8%) — exceeds 20% threshold
-[NUMERIC] total_marketable_securities_fv: $4,368M → $8,271M (+89.4%) — exceeds 20% threshold
-[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($6M)
-[NUMERIC] corporate_debt_securities_fv: $3,258M → $5,955M (+82.8%) — exceeds 20% threshold
-[NUMERIC] gross_unrealized_gains_debt: $2M → $1M (-50.0%) — exceeds 20% threshold
-[LLM_FLAG] total_marketable_securities_fv increased 89% from $4,368M to $8,271M - significant increase driven by substantial growth in corporate debt securities ($3,107M to $4,446M in short-term investments) and addition of long-term investments ($295M) and marketable equity securities ($6M)
-[LLM_FLAG] corporate_debt_securities_fv increased 83% from $3,258M to $5,955M - substantial growth reflects expansion of both cash equivalents and short-term debt security holdings
-[LLM_FLAG] gross_unrealized_gains_debt decreased 50% from $2M to $1M - decline reflects market rate changes and portfolio composition shifts between prior and current periods
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-07-03 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($4,188M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($6,762M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($4,446M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($4,100M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($2,900M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($1,200M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($4,100M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($2,900M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,200M)
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv includes a new 'Marketable equity securities' line item ($6M) disclosed for the first time this quarter under Short-term investments (not present in prior AMD filings processed).
+[HISTORICAL] [LLM_FLAG] Fair value of FX forwards (designated and non-designated) is described only as 'not material' for both March 28, 2026 and December 27, 2025, with no dollar figures given — fi_total_derivative_asset and fi_total_derivative_liability are therefore null.
+[HISTORICAL] [LLM_FLAG] A $4.1B lease-guarantee credit-derivative exposure (fair value also 'not material') is disclosed separately and is not reflected in the FX-only totals above.
+[HISTORICAL] [LLM_FLAG] Fair value of both designated and non-designated FX forwards is described only as 'not material' as of March 28, 2026 and December 27, 2025, with no dollar figures given — total_derivative_asset, total_derivative_liability, and net_derivative_position are therefore null.
+[HISTORICAL] [LLM_FLAG] The note also discloses a $4.1 billion maximum gross exposure from data-center lease guarantees, recorded as a credit derivative within Other long-term liabilities (fair value also 'not material'); this is outside the FX/IR/commodity/equity categories in the schema and is not reflected in the fields above.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci are not disclosed in this excerpt.
 
-=== 10-Q | Period ending 2025-09-27 | Processed 2026-05-23 ===
-[NUMERIC] total_cash_equivalents_fv: $3,623M → $1,788M (-50.6%) — exceeds 20% threshold
-[NUMERIC] total_marketable_securities_fv: $1,426M → $4,368M (+206.3%) — exceeds 20% threshold
-[NUMERIC] corporate_debt_securities_fv: $2,063M → $3,258M (+57.9%) — exceeds 20% threshold
-[NUMERIC] gross_unrealized_gains_debt: $1M → $2M (+100.0%) — exceeds 20% threshold
-[LLM_FLAG] total_cash_equivalents_fv decreased 51% from 3,623 to 1,788 - significant decline in money market funds (1,496 to 732) and net changes in other cash equivalents
-[LLM_FLAG] total_marketable_securities_fv increased 206% from 1,426 to 4,368 - substantial increase primarily due to corporate debt securities growth from 814 to 1,525 in short-term investments
-[LLM_FLAG] corporate_debt_securities_fv increased 58% from 2,063 to 3,258 - reflects increase in both cash equivalents (1,733 vs 806) and short-term investments (1,525 vs 814)
-[LLM_FLAG] gross_unrealized_gains_debt changed from 1 to 2 million - modest improvement in debt securities valuation position
+=== 10-K/A | Period ending 2025-12-27 | Processed 2026-07-03 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $4,355M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $5,014M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $198M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $3,107M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $3,400M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $2,300M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $1,100M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $3,400M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $12M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-3M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $3,400M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_value: was $198M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 13/13 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt...)
 
-=== 10-Q | Period ending 2025-06-28 | Processed 2026-05-23 ===
-[NUMERIC] total_cash_equivalents_fv: $4,715M → $3,623M (-23.2%) — exceeds 20% threshold
-[NUMERIC] total_marketable_securities_fv: $1,968M → $1,426M (-27.5%) — exceeds 20% threshold
-[LLM_FLAG] total_cash_equivalents_fv increased 23% from prior period ($4,715M to $3,623M) - decrease reflects different composition of cash equivalents between periods
-[LLM_FLAG] total_marketable_securities_fv decreased 28% from prior period ($1,968M to $1,425M) - decline consistent with overall reduction in short-term investments
-[LLM_FLAG] corporate_debt_securities_fv increased 7% from prior period ($1,928M to $2,063M) - modest increase within normal range
+=== 10-K | Period ending 2025-12-27 | Processed 2026-07-03 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $3,521M → $4,355M (+23.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $2,435M → $5,014M (+105.9%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($198M)
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $1,525M → $3,107M (+103.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $3M → $4M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $797M → $1,100M (+38.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $2,300M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $797M, now missing
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($12M)
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-3M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($3,400M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_value: appeared for first time ($198M)
+[HISTORICAL] [LLM_FLAG] marketable_equity_securities_fv ($198M) is inferred from the 'Long-term investments' Level 1 fair-value column under Other non-current assets, cross-referenced against the Item 7A disclosure of the same $198M figure for publicly traded equity holdings; the Level 3 portion of that line ($202M) represents non-marketable (private) equity and is excluded.
+[HISTORICAL] [LLM_FLAG] Fair value of FX forwards (both designated and non-designated) is described only as 'not material' for December 27, 2025 and December 28, 2024, with no dollar figures given — fi_total_derivative_asset and fi_total_derivative_liability are therefore null.
+[HISTORICAL] [LLM_FLAG] This section_text is drawn from Item 7A (MD&A market-risk discussion) rather than the Note 8 hedging footnote; it reports an aggregate FX-forward notional ($3.4B) and a net fair-value position ($12M gain) without a designated/non-designated split. See the financial_instruments extraction for the Note 8 split ($2.3B designated / $1.1B not designated cash flow hedges, fair value described there as 'not material').
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci ($-3M) is inferred from the ending Accumulated Other Comprehensive Loss balance because cash flow hedges appear to be the sole component of OCI reported by AMD for the period — it is not an explicitly labeled 'cash flow hedge AOCI' line, so treat with moderate confidence.
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci is not disclosed in this excerpt.
+[HISTORICAL] [LLM_FLAG] This section_text is Item 7A (MD&A market-risk discussion), not the Note 8 hedging footnote; it gives only an aggregate FX-forward notional ($3.4B current / $2.8B prior) and net fair-value position ($12M gain current / $66M loss prior) without a designated vs. non-designated split, so all designated_hedge_* and non_designated_hedge_* fields are left null here. The companion financial_instruments extraction for this same accession number captures the actual Note 8 split: $2.3B designated / $1.1B not-designated notional as of December 27, 2025 (fair value described only as 'not material').
+[HISTORICAL] [LLM_FLAG] Text states 'All forward contracts mature within 24 months' but does not break this out by designation bucket, so designated_hedge_maturity and non_designated_hedge_maturity are left null rather than assumed.
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity is disclosed only for a hypothetical 50 basis-point move (~$25 million fair-value impact on the cash equivalent and investment portfolio), not the 100bp move requested by the schema; not extrapolated/scaled to avoid fabricating a value, so ir_sensitivity_100bp is null.
+[HISTORICAL] [LLM_FLAG] No total fixed-rate long-term debt balance is disclosed in this excerpt (only that 'all of our outstanding long-term debt had fixed interest rates' and a balance-sheet 'current portion of long-term debt, net' of $874M, which is not the total outstanding balance), so fixed_rate_notes_billion is null.
+[HISTORICAL] [LLM_FLAG] fx_transaction_gain_loss, fx_sensitivity_10pct, and equity_sensitivity_10pct are not disclosed anywhere in this section.
 
-=== 10-Q | Period ending 2025-03-29 | Processed 2026-05-23 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($4,715M)
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1,968M)
-[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($1,928M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($1M)
-[LLM_FLAG] Filing section is a brief disclosure stating no material changes since prior year; does not contain detailed market risk quantitative data. Refers to full disclosure in 2024 10-K for specific details.
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-07-03 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $1,425M → $2,435M (+70.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $902M → $1,525M (+69.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $2M → $3M (+50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $2,350M → $3,097M (+31.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $1,600M → $2,300M (+43.8%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $31M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $7M, now missing
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $2,350M → $3,097M (+31.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $1,600M → $2,300M (+43.8%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $31M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $7M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $24M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/15 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability, total_derivative_asset, total_derivative_liability, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] Fair value of both designated and non-designated FX forwards is described only as 'not material' as of September 27, 2025 and December 28, 2024, with no dollar figures given — fi_total_derivative_asset and fi_total_derivative_liability are therefore null.
+[HISTORICAL] [LLM_FLAG] A separate $413M Level 3 contingent consideration liability (acquisition-related earn-out) appears in the fair-value table but is not an FX/IR/commodity/equity derivative and is excluded from the derivative totals.
+[HISTORICAL] [LLM_FLAG] Fair value of both designated and non-designated FX forwards is described only as 'not material' as of September 27, 2025 and December 28, 2024, with no dollar figures given — total_derivative_asset, total_derivative_liability, and net_derivative_position are therefore null rather than fabricated.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci are not disclosed in this excerpt.
 
-=== 10-Q | Period ending 2026-03-28 | Processed 2026-05-22 ===
-[LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKZtnWSWzM5ao114QLW'}
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-07-03 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $5,165M → $3,623M (-29.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $2,968M → $2,350M (-20.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $2,100M → $1,600M (-23.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $7M → $31M (+342.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $41M → $7M (-82.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $2,968M → $2,350M (-20.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $2,100M → $1,600M (-23.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $7M → $31M (+342.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $41M → $7M (-82.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-34M → $24M (+170.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset/liability inferred by allocating the designated-hedge fair value across the named balance-sheet lines; fair value of non-designated contracts was 'not material' with no dollar figure.
+[HISTORICAL] [LLM_FLAG] A separate $396M Level 3 contingent consideration liability (acquisition-related earn-out) appears in the fair-value table but is not an FX/IR/commodity/equity derivative and is excluded from the derivative totals.
+[HISTORICAL] [LLM_FLAG] total_derivative_asset/total_derivative_liability/net_derivative_position are inferred by allocating the designated-hedge fair value across the named balance-sheet lines; fair value of non-designated contracts was 'not material' with no dollar figure and is excluded.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci are not disclosed in this excerpt.
 
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-07-03 ===
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset/liability inferred by allocating the designated-hedge fair value across the three named balance-sheet lines; fair value of non-designated contracts was 'not material' with no dollar figure.
+[HISTORICAL] [LLM_FLAG] total_derivative_asset/total_derivative_liability/net_derivative_position are inferred by allocating the designated-hedge fair value across the three named balance-sheet lines (asset line = asset value, liability lines = liability value); fair value of non-designated contracts was described as 'not material' with no dollar figure and is excluded from these totals.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci are not disclosed in this excerpt.
