@@ -1,20 +1,36 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-03 ===
+[HISTORICAL] [LLM_FLAG] section_text is truncated mid-sentence ('Net earnings $1,359.8 Weighted ') inside Note 5 EPS, well before Note 7 Corporate Investments and Funds Held for Clients (the note that would contain these figures). All fields left null; recommend re-slicing with a larger window to capture the target note.
+[HISTORICAL] [LLM_FLAG] section_text is truncated mid-sentence ('...impact our consolidated results of operations, financial...') before it discusses derivative instruments/FX/equity risk figures.
+[HISTORICAL] [LLM_FLAG] Only 25bp interest-rate sensitivity figures ($20.0M total portfolio / $8.0M short-term-only) are disclosed; schema requests 100bp so left null rather than scaled/fabricated.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-07-03 ===
+[HISTORICAL] [LLM_FLAG] section_text is truncated mid-sentence ('...Weig') inside the Note 5 EPS table, well before Note 7 Corporate Investments and Funds Held for Clients (the note that would contain these figures). All fields left null; recommend re-slicing with a larger window to capture the target note.
+[HISTORICAL] [LLM_FLAG] section_text is truncated mid-sentence ('...exposed to market risk from changes in foreign currency exchange rates that could impact our consolidated results of oper...') before it discusses derivative instruments/FX/equity risk figures.
+[HISTORICAL] [LLM_FLAG] Only 25bp interest-rate sensitivity figures ($23M total portfolio / $8M short-term-only) are disclosed; schema requests 100bp so left null rather than scaled/fabricated.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-03 ===
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_swap_notional)
+[HISTORICAL] [LLM_FLAG] section_text is truncated right at the start of Note 7 'Corporate Investments and Funds Held for Clients' — the heading that should contain all schema data is present but its body text is missing from the supplied window. All fields left null; re-slicing with a larger window is recommended to actually capture this note's content.
+[HISTORICAL] [LLM_FLAG] section_text is truncated mid-sentence ('We manage our exposure to these market risks through our regular operating and financing activit...') just before it would discuss derivative instruments used for FX exposure — no FX forward/notional/equity figures are present in the supplied window.
+[HISTORICAL] [LLM_FLAG] Only 25bp interest-rate sensitivity figures ($22M total portfolio / $7M short-term-only) are disclosed; schema requests 100bp so left null rather than scaled/fabricated.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-06-30 | Processed 2026-07-03 ===
+[HISTORICAL] [DROPPED_TO_ZERO] ir_swap_notional: $400M → $0M
+[HISTORICAL] [LLM_FLAG] Extracted section text is the 'Debt' note (Note 10) of the FY2025 10-K, not a dedicated derivatives/hedging note - ADP has no separate derivatives note.
+[HISTORICAL] [LLM_FLAG] Two separate treasury rate lock programs are described, both already terminated by fiscal year end: $1.0 billion notional (Sept 2024, hedging the 4.450% notes due 2034, $12.5 million unamortized loss deferred to AOCI) and $1.0 billion notional (FY2025, hedging the 4.750% notes due 2032, $3.0 million unamortized loss deferred to AOCI).
+[HISTORICAL] [LLM_FLAG] ir_swap_notional set to 0 because both programs were terminated (no outstanding IR derivative position at June 30, 2025), not because no derivatives were used during the year.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci left null: the text gives two separate transaction-level deferred-loss amounts ($12.5M and $3.0M) recorded at the time each hedge was terminated, not a single point-in-time total AOCI cash-flow-hedge balance as of the balance sheet date (some amortization would have since occurred); combining them would risk fabricating a figure not stated in the text.
+[HISTORICAL] [LLM_FLAG] No derivative asset/liability fair value figures or 12-month AOCI reclassification amount are stated in this excerpt.
+[HISTORICAL] [LLM_FLAG] section_text (10-K, FY2025) is truncated mid-sentence ('We may use derivative financial instrume...') just as it begins discussing derivative use for FX exposure — the actual FX forward/notional/equity figures are not in the supplied window.
+[HISTORICAL] [LLM_FLAG] Only 25bp interest-rate sensitivity figures ($24M total portfolio / $8M short-term-only) are disclosed; schema requests 100bp so left null rather than scaled/fabricated.
 
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[LLM_FLAG] Market risk reference changed from 'Item 7' in prior period to 'Item 2' in current period - this appears to be a structural change in filing organization
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
-[LLM_FLAG] Provided text is only a section header/cross-reference. No substantive market risk quantitative disclosures are present in the extracted text. All quantitative fields cannot be populated from this excerpt.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-03 ===
+[HISTORICAL] [LLM_FLAG] section_text is truncated (ends mid-sentence during Note 4 Acquisition disclosure, '...None o') before reaching the Corporate Investments/Financial Instruments note that would contain cash equivalents, marketable securities, and derivative figures. All fields left null rather than guessed.
+[HISTORICAL] [LLM_FLAG] Extracted section text is actually the 'Debt' note (not a dedicated derivatives/hedging note) - ADP has no separate derivatives note in this filing.
+[HISTORICAL] [LLM_FLAG] ir_swap_notional of $400.0 million reflects treasury rate lock contracts used to hedge an upcoming debt refinancing, not a traditional interest rate swap program.
+[HISTORICAL] [LLM_FLAG] A separate, already-terminated $1.0 billion notional treasury rate lock program (from Sept 2024) with a $12.5 million unamortized AOCI loss is also mentioned but is not an outstanding position at period end (March 31, 2025), so it was not used for ir_swap_notional.
+[HISTORICAL] [LLM_FLAG] No fair value figures for derivative assets/liabilities or a clean total cash_flow_hedge_aoci balance are stated in this excerpt (text refers reader to Note 16 for AOCI detail); left null rather than fabricated.
+[HISTORICAL] [LLM_FLAG] total_derivative_asset/total_derivative_liability/net_derivative_position/expected_12mo_reclass_from_aoci not disclosed in this excerpt.
+[HISTORICAL] [LLM_FLAG] section_text is truncated mid-sentence ('...exposed to market risk from changes in foreign currency exchange rates that could impact our consolidated results of operations, financial position,') before covering FX derivatives, notional amounts, fixed-rate debt, or equity price risk.
+[HISTORICAL] [LLM_FLAG] Only 25bp interest-rate sensitivity figures ($24M total portfolio / $9M short-term-only) are disclosed; schema requests 100bp so left null rather than scaled/fabricated.

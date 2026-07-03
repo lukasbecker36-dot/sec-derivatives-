@@ -1,32 +1,25 @@
 issuer: Ameren
 ticker: AEE
-cik: "1002910"
+cik: '1002910'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   hedged_commodities:
-    description: "natural gas, power, interest rates, fuel oil"
+    description: natural gas, power, interest rates, fuel oil
     section: market_risk
   hedge_accounting_exception:
-    description: "NPNS (Normal Purchases Normal Sales) exception"
+    description: NPNS (Normal Purchases Normal Sales) exception
     section: market_risk
   settlement_methods:
-    description: "financial settlement, physical delivery, net settlement"
+    description: financial settlement, physical delivery, net settlement
     section: market_risk
   risk_exposures:
-    description: "short-term variable-rate debt, fixed-rate debt, US Treasury bonds, discount rates"
+    description: short-term variable-rate debt, fixed-rate debt, US Treasury bonds, discount rates
     section: market_risk
   governance_structure:
-    description: "risk management steering committee with board oversight"
+    description: risk management steering committee with board oversight
     section: market_risk
-
-# Unusual features identified:
-#   - combines utility commodity hedging with interest rate risk management
-#   - mentions rail transportation surcharge hedging through fuel oil
-#   - references NPNS exception without full explanation
-#   - text appears truncated at 'See' reference
-#   - includes both quantitative and qualitative market risk sections
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*FAIR\s+VALUE\s+MEASUREMENTS
