@@ -1,43 +1,37 @@
 issuer: Albemarle Corporation
 ticker: ALB
-cik: "915913"
+cik: '915913'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   primary_currencies:
-    description: "Chinese Renminbi, Euro and Australian Dollar"
+    description: Chinese Renminbi, Euro and Australian Dollar
     section: market_risk
   fx_forward_notional:
-    description: "$2.4 billion aggregate notional value"
+    description: $2.4 billion aggregate notional value
     section: market_risk
   fx_forward_fair_value:
-    description: "net liability position of $2.6 million"
+    description: net liability position of $2.6 million
     section: market_risk
   fx_sensitivity_up:
-    description: "$105.4 million increase for 10% USD appreciation"
+    description: $105.4 million increase for 10% USD appreciation
     section: market_risk
   fx_sensitivity_down:
-    description: "$105.7 million decrease for 10% USD depreciation"
+    description: $105.7 million decrease for 10% USD depreciation
     section: market_risk
   variable_rate_debt_2025:
-    description: "$17.9 million outstanding"
+    description: $17.9 million outstanding
     section: market_risk
   variable_rate_debt_2024:
-    description: "$27.5 million outstanding"
+    description: $27.5 million outstanding
     section: market_risk
   interest_rate_sensitivity:
-    description: "$0.2 million annualized impact per 100bp"
+    description: $0.2 million annualized impact per 100bp
     section: market_risk
   kemerton_hedge_loss:
-    description: "$26.1 million loss from dedesignation"
+    description: $26.1 million loss from dedesignation
     section: market_risk
-
-# Unusual features identified:
-#   - narrative format with embedded metrics rather than tabular presentation
-#   - specific project-related hedge (Kemerton plant) with dedesignation event
-#   - mentions potential use of interest rate derivatives but no current positions
-#   - raw materials price exposure mentioned but no derivatives used historically
-
+sections:
+  financial_instruments:
+    heading: 'Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+Value\s+of\s+Financial\s+Instruments:'
