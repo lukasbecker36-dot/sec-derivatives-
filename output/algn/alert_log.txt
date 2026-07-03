@@ -1,55 +1,55 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($502M)
-[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($502M)
-[DISAPPEARED_FIELD] has_derivatives: was $466M, now missing
-[DISAPPEARED_FIELD] fx_designated_notional: was $466M, now missing
-[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
-[DISAPPEARED_FIELD] commodity_derivatives_notional: was $0M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($274M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 5/11 previously-populated fields are now null (has_derivatives, fx_designated_notional, ir_swap_notional, commodity_derivatives_notional, equity_sensitivity_10pct)
-[LLM_FLAG] total_cash_equivalents_fv increased by more than 50% compared to the prior period.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-03 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $325M → $199M (-38.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Fair value of outstanding FX forward contracts described only as 'not material' with no dollar figure given, so fi_total_derivative_asset/fi_total_derivative_liability left null.
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv taken from the fair-value-hierarchy table ($198,951 thousand total), not the larger $1,059,834 thousand 'Cash and Cash Equivalents' balance-sheet column which also includes non-fair-value cash of $860,883 thousand.
+[HISTORICAL] [LLM_FLAG] Text also discloses $40.5 million of convertible-note investments classified as Level 3 loans receivable at amortized cost — not a marketable security or derivative, so not mapped to any schema field; noted for awareness only.
+[HISTORICAL] [LLM_FLAG] Fair value of outstanding FX forward contracts described only as 'not material' with no dollar figure given, so total_derivative_asset/total_derivative_liability/net_derivative_position left null.
+[HISTORICAL] [LLM_FLAG] This section_text fragment begins mid-word ('l 2 of the fair value hierarchy') and does not itself contain the 'Derivatives Not Designated as Hedging Instruments' heading seen in the adjacent financial_instruments section; left fx_designated_notional/fx_not_designated_notional null since designation status is not explicit within this text window.
+[HISTORICAL] [LLM_FLAG] No interest rate swap, commodity, or equity derivative activity is mentioned in this text.
+[HISTORICAL] [LLM_FLAG] No dollar figures for FX forward notional, settlement gains/losses, or outstanding fair value appear in this market_risk text window (those figures are disclosed in the separate derivatives_note/financial_instruments sections instead); left null here per instructions to use fx_forwards_outstanding only when derivatives_note fields are empty.
+[HISTORICAL] [LLM_FLAG] hedging_currencies, contract_maturity, interest_rate_sensitivity, and foreign_currency_sensitivity are inherently qualitative schema fields; reported as short descriptive strings rather than numbers since no numeric values are given for them in the text.
+[HISTORICAL] [LLM_FLAG] marketable_equity_value left null: the only equity-related dollar figures in this text ($274.4 million at March 31, 2026 and $216.2 million at December 31, 2025) are carrying values of non-marketable investments in privately held companies (measurement alternative), not marketable equity securities.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($1,095M)
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($0M)
-[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($0M)
-[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($0M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($466M)
-[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($466M)
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($0M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-[LLM_FLAG] Total cash equivalents increased from 1043.9 million to 1095 million which is over 50%, indicating a noteworthy cash increase.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-03 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $207M → $325M (+56.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Fair value of outstanding FX forward contracts described only as 'not material' with no dollar figure given, so fi_total_derivative_asset/fi_total_derivative_liability left null.
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv taken from the fair-value-hierarchy table ($324,857 thousand total), not the larger $1,094,908 thousand 'Cash and cash equivalents' balance-sheet column which also includes non-fair-value cash of $770,051 thousand.
+[HISTORICAL] [LLM_FLAG] Text states 'We had no financial assets that were categorized as level 2 or level 3 in the fair value hierarchy for the years ended December 31, 2025 or 2024,' immediately followed by a statement that FX forward contracts 'are classified within Level 2 of the fair value hierarchy' — an apparent internal inconsistency in the filing text; noted but not resolved since no fair value dollar amount is given for the derivatives either way.
+[HISTORICAL] [LLM_FLAG] Fair value of outstanding FX forward contracts described only as 'not material' with no dollar figure given, so total_derivative_asset/total_derivative_liability/net_derivative_position left null.
+[HISTORICAL] [LLM_FLAG] This section_text fragment begins mid-word ('f foreign currency forward contracts') and does not itself contain the 'Derivatives Not Designated as Hedging Instruments' heading seen in the adjacent financial_instruments section; left fx_designated_notional/fx_not_designated_notional null since designation status is not explicit within this text window.
+[HISTORICAL] [LLM_FLAG] No interest rate swap, commodity, or equity derivative activity is mentioned in this text.
+[HISTORICAL] [LLM_FLAG] No dollar figures for FX forward notional, settlement gains/losses, or outstanding fair value appear in this market_risk text window (those figures are disclosed in the separate derivatives_note/financial_instruments sections instead); left null here per instructions to use fx_forwards_outstanding only when derivatives_note fields are empty.
+[HISTORICAL] [LLM_FLAG] hedging_currencies, contract_maturity, interest_rate_sensitivity, and foreign_currency_sensitivity are inherently qualitative schema fields; reported as short descriptive strings rather than numbers since no numeric values are given for them in the text.
+[HISTORICAL] [LLM_FLAG] Unlike prior-quarter market_risk sections for this issuer, this 10-K excerpt does not include an 'Investment Risk' paragraph on privately held equity investments, so marketable_equity_value/equity_sensitivity_10pct are left null (not just unquantified but entirely absent from this text).
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[NUMERIC] marketable_equity_value: $198M → $274M (+38.4%) — exceeds 20% threshold
-[LLM_FLAG] total_cash_equivalents_fv decreased from 1094.908 to 1059.834 (-3.2%), which is within acceptable variance but represents a slight decline in cash position
-[LLM_FLAG] total_marketable_securities_fv remains at 0.0, consistent with prior period
-[LLM_FLAG] marketable_equity_value increased 38.6% from $198.2M (Dec 2025) to $274.4M (Mar 2026) - significant increase in private company investments, may warrant investigation into new investments or fair value adjustments
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-03 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $77M → $207M (+167.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Fair value of outstanding FX forward contracts described only as 'not material' with no dollar figure given, so fi_total_derivative_asset/fi_total_derivative_liability left null.
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv taken from the fair-value-hierarchy table ($207,177 thousand total), not the larger $1,004,589 thousand 'Cash and Cash Equivalents' balance-sheet column which also includes non-fair-value cash of $797,412 thousand.
+[HISTORICAL] [LLM_FLAG] Fair value of outstanding FX forward contracts described only as 'not material' with no dollar figure given, so total_derivative_asset/total_derivative_liability/net_derivative_position left null.
+[HISTORICAL] [LLM_FLAG] This section_text fragment begins mid-sentence and does not itself contain the 'Derivatives Not Designated as Hedging Instruments' heading seen in the adjacent financial_instruments section; left fx_designated_notional/fx_not_designated_notional null since designation status is not explicit within this text window.
+[HISTORICAL] [LLM_FLAG] No interest rate swap, commodity, or equity derivative activity is mentioned in this text.
+[HISTORICAL] [LLM_FLAG] No dollar figures for FX forward notional, settlement gains/losses, or outstanding fair value appear in this market_risk text window (those figures are disclosed in the separate derivatives_note/financial_instruments sections instead); left null here per instructions to use fx_forwards_outstanding only when derivatives_note fields are empty.
+[HISTORICAL] [LLM_FLAG] hedging_currencies, contract_maturity, interest_rate_sensitivity, and foreign_currency_sensitivity are inherently qualitative schema fields; reported as short descriptive strings rather than numbers since no numeric values are given for them in the text.
+[HISTORICAL] [LLM_FLAG] marketable_equity_value left null: the only equity-related dollar figure in this text ($198.2 million at September 30, 2025) is the carrying value of non-marketable investments in privately held companies (measurement alternative), not marketable equity securities.
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
-[LLM_FLAG] total_cash_equivalents_fv increased from 901.157 to 1004.589 (11.5% increase) - this is within normal range but represents significant cash position growth
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-03 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $116M → $77M (-33.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Fair value of outstanding FX forward contracts described only as 'not material' with no dollar figure given, so fi_total_derivative_asset/fi_total_derivative_liability left null.
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv taken from the fair-value-hierarchy table (money market funds + CDs = $77,372 thousand), not the larger $901,157 thousand 'Cash and Cash Equivalents' balance-sheet column which also includes non-fair-value cash of $823,785 thousand.
+[HISTORICAL] [LLM_FLAG] Fair value of outstanding FX forward contracts described only as 'not material' with no dollar figure given, so total_derivative_asset/total_derivative_liability/net_derivative_position left null.
+[HISTORICAL] [LLM_FLAG] This section_text fragment begins mid-sentence (dollar figure with no heading) and does not itself contain the 'Derivatives Not Designated as Hedging Instruments' heading seen in the adjacent financial_instruments section; left fx_designated_notional/fx_not_designated_notional null since designation status is not explicit within this text window.
+[HISTORICAL] [LLM_FLAG] No interest rate swap, commodity, or equity derivative activity is mentioned in this text.
+[HISTORICAL] [LLM_FLAG] No dollar figures for FX forward notional, settlement gains/losses, or outstanding fair value appear in this market_risk text window (those figures are disclosed in the separate derivatives_note/financial_instruments sections instead); left null here per instructions to use fx_forwards_outstanding only when derivatives_note fields are empty.
+[HISTORICAL] [LLM_FLAG] hedging_currencies, contract_maturity, interest_rate_sensitivity, and foreign_currency_sensitivity are inherently qualitative schema fields; reported as short descriptive strings rather than numbers since no numeric values are given for them in the text.
+[HISTORICAL] [LLM_FLAG] marketable_equity_value left null: the only equity-related dollar figure in this text ($198.2 million at June 30, 2025) is the carrying value of non-marketable investments in privately held companies (measurement alternative), not marketable equity securities.
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
-[LLM_FLAG] total_cash_equivalents_fv decreased from 873.0 to 901.157 million (3.2% increase within 50% threshold, no flag needed despite reversal from prior note that showed 1,043.887 in December 2024)
-[LLM_FLAG] Prior period comparison note: December 31, 2024 cash equivalents were 1,043.887 million; June 30, 2025 shows 901.157 million (13.7% decrease), indicating seasonal cash flow patterns
-[LLM_FLAG] marketable_equity_value increased from $188.2M (Dec 31, 2024) to $198.2M (June 30, 2025), representing a 5.3% increase - within normal variance
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($873M)
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($0M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($188M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
-[LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKknzZTLDXo11PCQmQo'}
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-03 ===
+[HISTORICAL] [LLM_FLAG] Fair value of outstanding FX forward contracts described only as 'not material' with no dollar figure given, so fi_total_derivative_asset/fi_total_derivative_liability left null.
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv taken from the fair-value-hierarchy table (money market funds + CDs = $115,685 thousand), not the larger $873,012 thousand 'Cash and Cash Equivalents' balance-sheet column which also includes non-fair-value cash of $757,327 thousand.
+[HISTORICAL] [LLM_FLAG] Fair value of outstanding FX forward contracts is described only as 'not material' with no dollar figure given, so total_derivative_asset/total_derivative_liability/net_derivative_position left null.
+[HISTORICAL] [LLM_FLAG] This section_text is a fragment beginning mid-sentence ('2 of the fair value hierarchy') and does not itself contain the 'Derivatives Not Designated as Hedging Instruments' heading that appears in the adjacent financial_instruments section of the same note; left fx_designated_notional/fx_not_designated_notional null since designation status is not explicit within this text window.
+[HISTORICAL] [LLM_FLAG] No interest rate swap, commodity, or equity derivative activity is mentioned in this text.
+[HISTORICAL] [LLM_FLAG] No dollar figures for FX forward notional, settlement gains/losses, or outstanding fair value appear in this market_risk text window (those figures are disclosed in the separate derivatives_note/financial_instruments sections instead); left null here per instructions to use fx_forwards_outstanding only when derivatives_note fields are empty.
+[HISTORICAL] [LLM_FLAG] hedging_currencies, contract_maturity, interest_rate_sensitivity, and foreign_currency_sensitivity are inherently qualitative schema fields; reported as short descriptive strings rather than numbers since no numeric values are given for them in the text.
+[HISTORICAL] [LLM_FLAG] marketable_equity_value left null: the only equity-related dollar figure in this text ($188.2 million) is the carrying value of non-marketable investments in privately held companies (measurement alternative), not marketable equity securities.
