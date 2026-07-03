@@ -1,55 +1,71 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($31M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($122M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($26M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($31M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($132M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-03 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($124M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($108M)
+[HISTORICAL] [NUMERIC] total_derivative_liability: $77M → $122M (+58.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-77M → $-122M (-58.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($6M)
+[HISTORICAL] [NUMERIC] natural_gas_derivatives_fair_value: $77M → $122M (+58.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset left null: the Fair Value Measurements table and the balance-sheet carrying-value table for this filing show only a 'Liabilities:' section (Commodity derivative instruments $122M + Foreign currency derivative instruments $2M = $124M total) for both March 31, 2026 and December 31, 2025 — no 'Assets:' section or 'Total derivative assets' line is present. This implies zero derivative assets but the text never states an explicit $0, so null is reported rather than assuming zero.
+[HISTORICAL] [LLM_FLAG] This filing discloses 'Foreign currency derivative instruments' with a fair value of $2 million (liability) at March 31, 2026, but no notional amount is given anywhere in this section, so fi_fx_derivatives_notional remains null despite FX derivatives being present.
+[HISTORICAL] [LLM_FLAG] No interest-rate-swap notional and no cash-equivalents/marketable-securities fair-value data appear in this section.
+[HISTORICAL] [LLM_FLAG] This section separately discusses a GBP-denominated revolving credit facility (£1.5 billion commitment) and GBP letters of credit outstanding (£567 million at 3/31/2026, £901 million at 12/31/2025) — these are financing/credit-facility amounts, not derivative notionals, and are in GBP not USD; not mapped to any schema field, but flagged here for awareness given known currency-mismatch risk in APA GBP-denominated figures.
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional (108) is denominated in British pounds (£), not US dollars; no GBP/USD conversion rate is given in this excerpt, so the raw GBP figure is reported as-is — downstream conversion to USD millions may be needed.
+[HISTORICAL] [LLM_FLAG] total_derivative_liability/net_derivative_position ($122M) reflect only the natural gas commodity derivatives described in this excerpt; the FX collar's own fair value is not separately quantified here (only its 10% sensitivity, a $6M gain / $14M loss, is given), so it is not included in this total.
+[HISTORICAL] [LLM_FLAG] The section_text supplied for this 'derivatives_note' request is the Item 3 Market Risk narrative, not Note 4 itself; it happens to include some notional/sensitivity figures directly, but does not include the full derivative fair-value table or AOCI cash-flow-hedge balances.
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding and fx_sensitivity_10pct values (108 and 6, respectively) are based on figures denominated/derived from British pounds and a GBP/USD rate move; fx_forwards_outstanding of 108 is in GBP millions, not USD millions — no conversion rate is provided in this excerpt.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-03 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $13M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $71M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_liability: $35M → $77M (+120.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-35M → $-77M (-120.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NUMERIC] natural_gas_derivatives_fair_value: $35M → $77M (+120.0%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/6 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] The section_text supplied for this 'derivatives_note' request (10-K) is the Item 7A Quantitative and Qualitative Disclosures About Market Risk narrative, not Note 4 — Derivative Instruments and Hedging Activities; it contains no notional volumes for commodity, IR, or FX derivatives and no AOCI cash-flow-hedge balances.
+[HISTORICAL] [LLM_FLAG] The text references a subsequent event: after December 31, 2025 (i.e., after the fiscal year-end covered by this filing), the Company entered into FX forward/collar contracts totaling £120 million notional to hedge British pound exposure. This was NOT outstanding as of the December 31, 2025 balance sheet date, so fx_derivatives_notional is left null rather than populated with this subsequent-event figure. Note the £120 million is denominated in British pounds, not US dollars, and no conversion is given.
+[HISTORICAL] [LLM_FLAG] total_derivative_liability/net_derivative_position ($77M) reflect only the natural gas derivatives not designated as cash flow hedges as described in this excerpt.
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding set to 0 because, as of the December 31, 2025 balance sheet date, no FX forward/collar contracts were outstanding — the £120 million notional was entered into as a subsequent event AFTER year end (also denominated in GBP, not USD; no conversion rate given).
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct and fx_transaction_gain_loss left null: the filing states the FX sensitivity 'would not be material' but gives no dollar figure.
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-03 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $110M → $13M (-88.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $21M → $71M (+238.1%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $110M, now missing
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($35M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-35M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2M, now missing
+[HISTORICAL] [NUMERIC] natural_gas_derivatives_fair_value: $110M → $35M (-68.2%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/6 previously-populated fields are now null (total_derivative_asset, fx_sensitivity_10pct)
+[HISTORICAL] [LLM_FLAG] This section contains no cash-equivalents / marketable-securities fair-value table, and no FX or interest-rate-swap notional amounts; only commodity derivative instruments and a contingent consideration (earn-out) arrangement are disclosed, so those schema fields are left null rather than genuinely absent from APA's overall disclosure.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset ($13M) and fi_total_derivative_liability ($71M) are as of September 30, 2025 (prior period, Dec 31, 2024, was $0 assets / $18M liabilities per the same table).
+[HISTORICAL] [LLM_FLAG] The section_text supplied for this 'derivatives_note' request is actually the Item 3 Quantitative and Qualitative Disclosures About Market Risk narrative, not Note 4 — Derivative Instruments and Hedging Activities; it contains no notional volumes, no full derivative fair-value table, and no AOCI cash-flow-hedge balances, so most schema fields are left null rather than being genuinely absent from the company's disclosure.
+[HISTORICAL] [LLM_FLAG] total_derivative_liability/net_derivative_position ($35M) reflect only the natural gas derivatives not designated as cash flow hedges as described in this excerpt; they may not represent the company's full derivative book (e.g., any FX or other commodity derivative positions are not mentioned here).
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct and fx_transaction_gain_loss left null: the filing states the FX impact 'would not be material' but gives no dollar figure (unlike the June 30, 2025 filing, which quantified it at $2 million).
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding, ir_sensitivity_100bp, marketable_equity_value, equity_sensitivity_10pct, and foreign_exchange_contracts left null: not disclosed in this excerpt.
+[HISTORICAL] [LLM_FLAG] natural_gas_derivatives_fair_value is a net LIABILITY of $35 million as of September 30, 2025.
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] fx_designated_notional: was $28M, now missing
-[DISAPPEARED_FIELD] fx_not_designated_notional: was $25M, now missing
-[DISAPPEARED_FIELD] commodity_derivatives_notional: was $31M, now missing
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $129M, now missing
-[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, commodity_derivatives_notional, expected_12mo_reclass_from_aoci)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-03 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($110M)
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $46M → $21M (-54.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($110M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $28M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-28M, now missing
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $3M → $2M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] natural_gas_derivatives_fair_value: $28M → $110M (+292.9%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/6 previously-populated fields are now null (total_derivative_liability, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] This section contains no cash-equivalents / marketable-securities fair-value table, and no FX or interest-rate-swap notional amounts; only commodity derivative instruments (natural gas) and a contingent consideration (earn-out) arrangement are disclosed, so those schema fields are left null rather than genuinely absent from APA's overall disclosure.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset ($110M) and fi_total_derivative_liability ($21M) are as of June 30, 2025 (prior period, Dec 31, 2024, was $0 assets / $18M liabilities per the same table).
+[HISTORICAL] [LLM_FLAG] The section_text supplied for this 'derivatives_note' request is actually the Item 3 Quantitative and Qualitative Disclosures About Market Risk narrative, not Note 4 — Derivative Instruments and Hedging Activities; it contains no notional volumes, no full derivative fair-value table, and no AOCI cash-flow-hedge balances, so most schema fields are left null rather than being genuinely absent from the company's disclosure.
+[HISTORICAL] [LLM_FLAG] total_derivative_asset ($110M) reflects only the natural gas (commodity) derivatives discussed in this excerpt; the company's Fair Value Measurements table also shows a separate ~$21M contingent-consideration (Callon earn-out) liability that is not mentioned in this excerpt and is not included here.
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding, fx_transaction_gain_loss, ir_sensitivity_100bp, marketable_equity_value, equity_sensitivity_10pct, and foreign_exchange_contracts left null: this excerpt discloses no outstanding FX forward/collar contracts, no explicit realized FX transaction gain/loss figure, no 100bp interest-rate sensitivity, and no marketable-equity holdings — only a hypothetical FX sensitivity and general commodity/interest-rate risk narrative are given.
+[HISTORICAL] [LLM_FLAG] natural_gas_derivatives_fair_value is a net ASSET of $110 million as of June 30, 2025, not a liability; flagging because the field description assumes a liability position.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4M, now missing
-[DISAPPEARED_FIELD] natural_gas_derivatives_fair_value: was $35M, now missing
-[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, natural_gas_derivatives_fair_value)
-[LLM_FLAG] extraction_failed: Expecting ',' delimiter: line 11 column 147 (char 529)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
-[NUMERIC] natural_gas_derivatives_fair_value: $110M → $35M (-68.2%) — exceeds 20% threshold
-[LLM_FLAG] natural_gas_derivatives_fair_value: Decreased significantly from $110 million (prior period) to $35 million (current period) - 68% decrease; this represents a material change in the liability position
-[LLM_FLAG] fixed_rate_notes_billion: Decreased from $4.6 billion to $4.5 billion - 2.2% decrease; within normal range but shows debt reduction
-[LLM_FLAG] commodity_price_realizations: Oil price decreased 14% from $78.06 to $67.43; natural gas increased 57% from $1.43 to $2.25; NGL decreased 3% from $21.29 to $20.65 - significant volatility in oil and gas prices year-over-year
-[LLM_FLAG] revenue_sensitivity_oil: Increased from $21 million to $22 million per $1/barrel - 4.8% increase, likely due to higher production volumes
-[LLM_FLAG] fixed_rate_debt_rate: Increased from 5.64% to 5.66% - 2 basis points increase in weighted average interest rate
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
-[NUMERIC] natural_gas_derivatives_fair_value: $28M → $110M (+292.9%) — exceeds 20% threshold
-[LLM_FLAG] natural_gas_derivatives_fair_value: Value increased dramatically from $28.0 million (Q2 2024) to $110 million (Q2 2025), a 293% increase. However, this is primarily an asset position change and may reflect favorable market conditions for natural gas prices during this period.
-[LLM_FLAG] commodity_price_realizations: Oil prices decreased 20% from $82.28 to $65.58/barrel; Natural gas prices increased 29% from $1.77 to $2.28/Mcf; NGL prices decreased 5% from $21.68 to $20.49/barrel. Significant volatility noted.
-[LLM_FLAG] fixed_rate_debt: Weighted average interest rate increased slightly from 5.63% to 5.64%, which is immaterial.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] natural_gas_derivatives_fair_value: $77M → $28M (-63.6%) — exceeds 20% threshold
-[LLM_FLAG] natural_gas_derivatives_fair_value decreased significantly from $77.0 million (prior period) to $28 million (63.6% decline) - represents substantial improvement in liability position
-[LLM_FLAG] commodity_price_realizations show volatility: Oil down 9% ($80.65 to $73.73), Natural gas up 14% ($2.47 to $2.81), NGL up 10% ($26.20 to $28.75)
-[LLM_FLAG] revenue_sensitivity values are materially lower than prior period comparisons: Oil $21M vs prior $87M per $1/barrel; Natural gas $8M vs prior $33M per $0.10/Mcf; NGL $7M vs prior $28M per $1/barrel - these represent Q1 2025 specific daily production volumes rather than annualized
-[LLM_FLAG] fx_forwards_outstanding shows 0 current active positions, contrasting with prior period disclosure of £120 million notional (noted as post-December 31, 2025 entry), suggesting temporal difference in measurement
-[LLM_FLAG] fixed_rate_debt decreased from $4.5 billion to $4.6 billion (net basis, modest 2.2% increase), with interest rate declining from 5.66% to 5.63%
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
-[LLM_FLAG] fx_forwards_outstanding: FX contracts were entered into subsequent to December 31, 2025 (post-period), so they are not reflected as outstanding as of the balance sheet date. The £120 million notional amount is converted to approximately $148 million USD equivalent (assuming ~1.23 GBP/USD exchange rate), but should be verified against actual rate used.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-03 ===
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset left null: the Fair Value Measurements table and the balance-sheet carrying-value table for this filing show only a 'Liabilities:' section (Commodity derivative instruments $28M + Contingent consideration $18M fair value / $46M carrying total for derivatives) for both March 31, 2025 and December 31, 2024 — no 'Assets:' section or 'Total derivative assets' line is present. This implies zero derivative assets but the text never states an explicit $0, so null is reported rather than assuming zero.
+[HISTORICAL] [LLM_FLAG] No FX or interest-rate-swap notional amounts, and no cash-equivalents/marketable-securities fair-value data, appear in this section.
+[HISTORICAL] [LLM_FLAG] This accession (0002040266-25-000012) is filed under a different CIK prefix than the 'cik' field (1841666) recorded in the request — likely the co-registrant Apache Corporation filing the same joint 10-Q; noting for awareness, does not affect the extracted figures which are identical to APA Corp's consolidated numbers.
+[HISTORICAL] [LLM_FLAG] The section_text supplied for this 'derivatives_note' request is actually the Item 3 Quantitative and Qualitative Disclosures About Market Risk narrative, not Note 4 — Derivative Instruments and Hedging Activities; it contains no notional volumes, no full derivative fair-value table, and no AOCI cash-flow-hedge balances.
+[HISTORICAL] [LLM_FLAG] total_derivative_liability/net_derivative_position ($28M) reflect only the natural gas derivatives not designated as cash flow hedges as described in this excerpt.
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding, ir_sensitivity_100bp, marketable_equity_value, equity_sensitivity_10pct, and foreign_exchange_contracts left null: not disclosed in this excerpt.
+[HISTORICAL] [LLM_FLAG] natural_gas_derivatives_fair_value is a net LIABILITY of $28 million as of March 31, 2025.
