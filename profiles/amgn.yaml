@@ -1,34 +1,28 @@
 issuer: Amgen
 ticker: AMGN
-cik: "318154"
+cik: '318154'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   interest_rate_swap_notional:
-    description: "aggregate notional amount of interest rate swap contracts"
+    description: aggregate notional amount of interest rate swap contracts
     section: market_risk
   cross_currency_swap_notional:
-    description: "aggregate notional amount of cross-currency swap contracts"
+    description: aggregate notional amount of cross-currency swap contracts
     section: market_risk
   fx_forward_fair_values:
-    description: "fair values of foreign currency forward contracts (assets and liabilities)"
+    description: fair values of foreign currency forward contracts (assets and liabilities)
     section: market_risk
   foreign_currency_debt_carrying_value:
-    description: "carrying value and fair value of euro/pound sterling denominated debt"
+    description: carrying value and fair value of euro/pound sterling denominated debt
     section: market_risk
   sensitivity_analysis_100bp:
-    description: "impact of 100 basis point interest rate changes on derivative fair values"
+    description: impact of 100 basis point interest rate changes on derivative fair values
     section: market_risk
   sensitivity_analysis_20pct_fx:
-    description: "impact of 20% foreign exchange rate changes on derivative fair values"
+    description: impact of 20% foreign exchange rate changes on derivative fair values
     section: market_risk
-
-# Unusual features identified:
-#   - Narrative format without tabular summary
-#   - Text appears to be cut off at the end
-#   - Separate sensitivity analyses for different risk types rather than consolidated tables
-#   - Fair value hedge and cash flow hedge designations explicitly identified
-
+sections:
+  financial_instruments:
+    heading: 11\.\s+Fair\s+value\s+measurement
