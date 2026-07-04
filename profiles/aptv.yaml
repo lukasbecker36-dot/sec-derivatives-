@@ -1,39 +1,31 @@
 issuer: Aptiv
 ticker: APTV
-cik: "1521332"
+cik: '1521332'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   net_fair_value_liability_currency:
-    description: "Net fair value liability of all financial instruments with currency exposure"
+    description: Net fair value liability of all financial instruments with currency exposure
     section: market_risk
   currency_sensitivity_10pct:
-    description: "Potential change in fair value from hypothetical 10% adverse/favorable currency rate changes"
+    description: Potential change in fair value from hypothetical 10% adverse/favorable currency rate changes
     section: market_risk
   commodity_net_fair_value:
-    description: "Net fair value of commodity swap contracts"
+    description: Net fair value of commodity swap contracts
     section: market_risk
   commodity_sensitivity_10pct:
-    description: "Change in fair value from 10% commodity price change"
+    description: Change in fair value from 10% commodity price change
     section: market_risk
   hedged_currencies:
-    description: "List of significant hedged currency exposures"
+    description: List of significant hedged currency exposures
     section: market_risk
   net_investment_hedge_instruments:
-    description: "Euro-denominated Senior Notes and forward contracts designated as net investment hedges"
+    description: Euro-denominated Senior Notes and forward contracts designated as net investment hedges
     section: market_risk
   foreign_currency_translation_adjustment:
-    description: "Translation adjustment gains/losses"
+    description: Translation adjustment gains/losses
     section: market_risk
-
-# Unusual features identified:
-#   - Fair value amounts provided in narrative rather than tabular format
-#   - Net investment hedges using both debt instruments and forward contracts
-#   - Sensitivity analysis includes both adverse and favorable scenarios
-#   - Commodity hedging focused specifically on non-ferrous metals
-#   - No floating rate debt outstanding as of reporting date
-#   - Future date reference (December 31, 2025) suggests this may be forward-looking or projected data
-
+sections:
+  financial_instruments:
+    heading: 15\.\s+FAIR\s+VALUE\s+OF\s+FINANCIAL\s+INSTRUMENTS

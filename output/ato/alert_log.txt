@@ -1,20 +1,42 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-04 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $11M → $1M (-92.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] The 'Financial instruments' asset/liability line in the fair value table is inferred to represent total derivatives based on footnote (1) ('Level 2 measurements consist of over-the-counter options and swaps'), but the table does not explicitly label it as 'derivatives' — moderate confidence.
+[HISTORICAL] [LLM_FLAG] 'Bonds' figure used for corporate_debt_securities_fv actually includes municipal bonds per footnote (1); no pure corporate-only breakout is disclosed.
+[HISTORICAL] [LLM_FLAG] No notional amounts for any derivative type (FX, IR swap, commodity) are disclosed in this Note 14 excerpt — this note covers fair value hierarchy classification only, not notional/hedge designation detail typically found in a derivatives note.
+[HISTORICAL] [LLM_FLAG] This section_text appears to be the tail of Note 14 'Fair Value Measurements' (prior-period comparative table only) plus Note 15 (Concentration of Credit Risk), the auditor's review report, and MD&A introduction/overview text — it does not contain Note 13 'Financial Instruments' (the actual derivatives/hedging note with notional amounts and current-period balance sheet tables). Section slicing for this filer's 'derivatives_note' appears misaligned.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-07-04 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($120M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($48M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($4M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($11M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_forwards_outstanding)
+[HISTORICAL] [LLM_FLAG] The 'Financial instruments' asset/liability line in the fair value table is inferred to represent total derivatives based on footnote (1) ('Level 2 measurements consist of over-the-counter options and swaps'), but the table does not explicitly label it as 'derivatives' — moderate confidence.
+[HISTORICAL] [LLM_FLAG] 'Bonds' figure used for corporate_debt_securities_fv actually includes municipal bonds per footnote (1); no pure corporate-only breakout is disclosed.
+[HISTORICAL] [LLM_FLAG] No notional amounts for any derivative type (FX, IR swap, commodity) are disclosed in this Note 14 excerpt — this note covers fair value hierarchy classification only, not notional/hedge designation detail typically found in a derivatives note.
+[HISTORICAL] [LLM_FLAG] Notable period-over-period swing: derivative asset dropped from $9,897K (Sept 30, 2025) to $3,632K while derivative liability rose from $6,485K to $10,892K — worth a sanity check against the filing if used editorially.
+[HISTORICAL] [LLM_FLAG] This section_text appears to be the tail of Note 14 'Fair Value Measurements' (prior-period comparative table only) plus Note 15 (Concentration of Credit Risk), the auditor's review report, and MD&A introduction/overview text — it does not contain Note 13 'Financial Instruments' (the actual derivatives/hedging note with notional amounts and current-period balance sheet tables). Section slicing for this filer's 'derivatives_note' appears misaligned.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-K | Period ending 2025-09-30 | Processed 2026-07-04 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $113M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $40M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $133M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $1M, now missing
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (total_marketable_securities_fv, corporate_debt_securities_fv, fi_total_derivative_asset, fi_total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] This section_text (10-K, FY2025) contains only the qualitative description of the fair value hierarchy levels (Level 1/2/3 definitions and general methodology) — it is cut off before the actual fair value measurement tables with dollar amounts, unlike the parallel 10-Q filings for this issuer. No numeric values could be extracted from this excerpt at all; the real financial instruments/derivatives fair value table for FY2025 is not included in the supplied text.
+[HISTORICAL] [LLM_FLAG] This section_text appears to be the tail of the Fair Value Measurements note (prior fiscal year-end comparative table only), Note 18 (Concentration of Credit Risk), Item 9/9A Controls and Procedures, and the ICFR audit opinion — it does not contain the substantive Financial Instruments/derivatives note (Note 16) with notional amounts and current-period balance sheet tables. Section slicing for this filer's 'derivatives_note' in the 10-K appears misaligned.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-04 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $1M → $1M (+20.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] The 'Financial instruments' asset/liability line in the fair value table is inferred to represent total derivatives based on footnote (1) ('Level 2 measurements consist of over-the-counter options and swaps'), but the table does not explicitly label it as 'derivatives' — moderate confidence.
+[HISTORICAL] [LLM_FLAG] 'Bonds' figure used for corporate_debt_securities_fv actually includes municipal bonds per footnote (1); no pure corporate-only breakout is disclosed.
+[HISTORICAL] [LLM_FLAG] No notional amounts for any derivative type (FX, IR swap, commodity) are disclosed in this Note 14 excerpt — this note covers fair value hierarchy classification only, not notional/hedge designation detail typically found in a derivatives note.
+[HISTORICAL] [LLM_FLAG] This section_text appears to be the tail of Note 14 'Fair Value Measurements' (prior-period comparative table only) plus Note 15 (Concentration of Credit Risk), the auditor's review report, and MD&A introduction/overview text — it does not contain Note 13 'Financial Instruments' (the actual derivatives/hedging note with notional amounts and current-period balance sheet tables). Section slicing for this filer's 'derivatives_note' appears misaligned.
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
-[LLM_FLAG] Insufficient filing text provided: Only a header reference to 'quantitative and qualitative disclosures about market risk' is present. The actual disclosure content is missing, preventing extraction of substantive data.
-[LLM_FLAG] Unable to compare with prior period values due to lack of current period content
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-04 ===
+[HISTORICAL] [LLM_FLAG] The 'Financial instruments' asset/liability line in the fair value table is inferred to represent total derivatives based on footnote (1) ('Level 2 measurements consist of over-the-counter options and swaps'), but the table does not explicitly label it as 'derivatives' — moderate confidence.
+[HISTORICAL] [LLM_FLAG] 'Bonds' figure used for corporate_debt_securities_fv actually includes municipal bonds per footnote (1); no pure corporate-only breakout is disclosed.
+[HISTORICAL] [LLM_FLAG] No notional amounts for any derivative type (FX, IR swap, commodity) are disclosed in this Note 14 excerpt — this note covers fair value hierarchy classification only, not notional/hedge designation detail typically found in a derivatives note.
+[HISTORICAL] [LLM_FLAG] This section_text appears to be the tail of Note 14 'Fair Value Measurements' (prior-period comparative table only) plus Note 15 (Concentration of Credit Risk), the auditor's review report, and MD&A introduction/overview text — it does not contain Note 13 'Financial Instruments' (the actual derivatives/hedging note with notional amounts and current-period balance sheet tables). Section slicing for this filer's 'derivatives_note' appears misaligned; the real derivative data is captured separately under the 'market_risk' and 'financial_instruments' locate windows for this accession.

@@ -1,38 +1,31 @@
 issuer: Atmos Energy
 ticker: ATO
-cik: "731802"
+cik: '731802'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   commodity_price_risk_description:
-    description: "Description of natural gas price volatility exposure and mitigation"
+    description: Description of natural gas price volatility exposure and mitigation
     section: market_risk
   interest_rate_risk_description:
-    description: "Description of short-term interest rate exposure from commercial paper and borrowings"
+    description: Description of short-term interest rate exposure from commercial paper and borrowings
     section: market_risk
   sensitivity_analysis_methodology:
-    description: "Method used to estimate interest rate risk impact"
+    description: Method used to estimate interest rate risk impact
     section: market_risk
   hypothetical_rate_increase:
-    description: "Assumed interest rate increase for sensitivity analysis (one percent)"
+    description: Assumed interest rate increase for sensitivity analysis (one percent)
     section: market_risk
   material_impact_assessment:
-    description: "Assessment of whether rate increase would materially affect interest expense"
+    description: Assessment of whether rate increase would materially affect interest expense
     section: market_risk
   risk_management_segments:
-    description: "Business segments where risk management activities are conducted"
+    description: Business segments where risk management activities are conducted
     section: market_risk
   purchased_gas_cost_recovery:
-    description: "Mechanism for recovering gas costs from customers"
+    description: Mechanism for recovering gas costs from customers
     section: market_risk
-
-# Unusual features identified:
-#   - Limited quantitative data - no tables with notional amounts or fair values
-#   - References external Note 16 for detailed risk management accounting
-#   - Uses forward-looking year 2025 in sensitivity analysis
-#   - Emphasizes limited commodity risk due to cost recovery mechanisms
-#   - Combines physical and financial risk management tools
-
+sections:
+  financial_instruments:
+    heading: 14\.\s+Fair\s+Value\s+Measurements

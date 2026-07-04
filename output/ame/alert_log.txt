@@ -1,17 +1,32 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-04 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($8M)
+[HISTORICAL] [LLM_FLAG] No FX forwards, interest rate swaps, commodity, or equity derivative contracts are disclosed in this section; the only hedging activity mentioned is British-pound/Euro-denominated long-term debt designated as a net investment hedge (a non-derivative instrument), so all derivative notional/fair-value fields are null.
+[HISTORICAL] [LLM_FLAG] The only quantitative fair-value table present is for mutual fund investments (~$8.2M, all Level 1); mapped to total_marketable_securities_fv as the closest schema match. No separate cash-equivalents fair value, corporate debt securities, or marketable-equity-securities breakout is disclosed.
+[HISTORICAL] [LLM_FLAG] The note discloses only non-derivative net investment hedges: $296.6M of British-pound-denominated loans and $662.2M of Euro-denominated loans at 3/31/2026, designated as hedges of net investment in foreign subsidiaries, with $18.4M of pre-tax currency remeasurement gains recognized in OCI for the three months ended March 31, 2026. These are debt notionals, not derivative notionals, so they were not mapped into fx_derivatives_notional.
+[HISTORICAL] [LLM_FLAG] No fair-value table for derivative assets/liabilities, no cash-flow-hedge AOCI balance, and no interest rate, commodity, or equity derivative activity appear in this note; all such fields are null.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-04 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $8M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (total_marketable_securities_fv)
+[HISTORICAL] [LLM_FLAG] The note discloses only non-derivative net investment hedges: $302.5M of British-pound-denominated loans and $674.7M of Euro-denominated loans at 12/31/2025 (vs. $281.7M and $595.2M at 12/31/2024), designated as hedges of net investment in foreign subsidiaries. These are debt notionals, not derivative notionals, so they were not mapped into fx_derivatives_notional.
+[HISTORICAL] [LLM_FLAG] No fair-value table for derivative assets/liabilities, no cash-flow-hedge AOCI balance, and no interest rate, commodity, or equity derivative activity appear in this note; all such fields are null.
+[HISTORICAL] [LLM_FLAG] A separate accounting-policy note elsewhere in this 10-K (Note 1, 'Financial Instruments and Foreign Currency Translation') states the Company 'makes infrequent use of derivative financial instruments' including occasional forward contracts, but no specific outstanding forward-contract notional or fair value is given anywhere in the filing text reviewed.
+[HISTORICAL] [LLM_FLAG] The supplied section text is truncated at 'described in the Notes to the Consolidated Financial Statements included in Part II,' before reaching the quantitative sensitivity conclusion. A related excerpt elsewhere in this filing indicates the Company's hypothetical 10% adverse move in interest rates/FX concludes potential losses in earnings, fair value, and cash flows are 'not material,' with no specific dollar figures disclosed — consistent with all numeric sensitivity fields (ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct, fx_forwards_outstanding, fx_transaction_gain_loss) being null.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-04 ===
+[HISTORICAL] [LLM_FLAG] No FX forwards, interest rate swaps, commodity, or equity derivative contracts are disclosed in this section; the only hedging activity mentioned is British-pound/Euro-denominated long-term debt designated as a net investment hedge (a non-derivative instrument), so all derivative notional/fair-value fields are null.
+[HISTORICAL] [LLM_FLAG] The only quantitative fair-value table present is for mutual fund investments (~$8.0M, all Level 1); mapped to total_marketable_securities_fv as the closest schema match. No separate cash-equivalents fair value, corporate debt securities, or marketable-equity-securities breakout is disclosed.
+[HISTORICAL] [LLM_FLAG] The note discloses only non-derivative net investment hedges: $302.4M of British-pound-denominated loans and $674.6M of Euro-denominated loans at 9/30/2025, designated as hedges of net investment in foreign subsidiaries, with $100.2M of pre-tax currency remeasurement losses recognized in OCI for the nine months ended September 30, 2025. These are debt notionals, not derivative notionals, so they were not mapped into fx_derivatives_notional.
+[HISTORICAL] [LLM_FLAG] No fair-value table for derivative assets/liabilities, no cash-flow-hedge AOCI balance, and no interest rate, commodity, or equity derivative activity appear in this note; all such fields are null.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-04 ===
+[HISTORICAL] [LLM_FLAG] No FX forwards, interest rate swaps, commodity, or equity derivative contracts are disclosed in this section; the only hedging activity mentioned is British-pound/Euro-denominated long-term debt designated as a net investment hedge (a non-derivative instrument), so all derivative notional/fair-value fields are null.
+[HISTORICAL] [LLM_FLAG] The only quantitative fair-value table present is for mutual fund investments (~$9.8M, all Level 1); mapped to total_marketable_securities_fv as the closest schema match. No separate cash-equivalents fair value, corporate debt securities, or marketable-equity-securities breakout is disclosed.
+[HISTORICAL] [LLM_FLAG] The note discloses only non-derivative net investment hedges: $308.7M of British-pound-denominated loans and $676.8M of Euro-denominated loans at 6/30/2025, designated as hedges of net investment in foreign subsidiaries, with $108.7M of pre-tax currency remeasurement losses recognized in OCI for the six months ended June 30, 2025. These are debt notionals, not derivative notionals, so they were not mapped into fx_derivatives_notional.
+[HISTORICAL] [LLM_FLAG] No fair-value table for derivative assets/liabilities, no cash-flow-hedge AOCI balance, and no interest rate, commodity, or equity derivative activity appear in this note; all such fields are null.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
-[LLM_FLAG] Filed text is incomplete - appears to be cut off mid-sentence ('included in Part II,') suggesting critical derivative and sensitivity disclosure sections are not included
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-04 ===
+[HISTORICAL] [LLM_FLAG] No FX forwards, interest rate swaps, commodity, or equity derivative contracts are disclosed in this section; the only hedging activity mentioned is British-pound/Euro-denominated long-term debt designated as a net investment hedge (a non-derivative instrument), so all derivative notional/fair-value fields are null.
+[HISTORICAL] [LLM_FLAG] The only quantitative fair-value table present is for mutual fund investments (~$9.3M, all Level 1); mapped to total_marketable_securities_fv as the closest schema match. No separate cash-equivalents fair value, corporate debt securities, or marketable-equity-securities breakout is disclosed.
+[HISTORICAL] [LLM_FLAG] The note discloses only non-derivative net investment hedges: $290.1M of British-pound-denominated loans and $620.7M of Euro-denominated loans at 3/31/2025, designated as hedges of net investment in foreign subsidiaries, with $33.9M of pre-tax currency remeasurement losses recognized in OCI for the three months ended March 31, 2025. These are debt notionals, not derivative notionals, so they were not mapped into fx_derivatives_notional.
+[HISTORICAL] [LLM_FLAG] No fair-value table for derivative assets/liabilities, no cash-flow-hedge AOCI balance, and no interest rate, commodity, or equity derivative activity appear in this note; all such fields are null.
