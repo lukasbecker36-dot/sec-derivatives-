@@ -46,7 +46,9 @@ def validate_source_quotes(llm_result: dict, schema: dict[str, str]) -> list[str
     flags = []
     fields = llm_result.get('fields', {}) or {}
     for name, desc in schema.items():
-        fd = fields.get(name) or {}
+        fd = fields.get(name)
+        if not isinstance(fd, dict):
+            fd = {'value': fd}
         value = _parse_numeric(fd.get('value'))
         if value is None:
             continue

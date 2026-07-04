@@ -467,8 +467,8 @@ def _assemble_row(key: str, detail: dict, config: IssuerConfig) -> dict | None:
             with open(result_path, 'r', encoding='utf-8') as f:
                 llm_result = json.load(f)
             for field_name in schema:
-                field_data = llm_result.get('fields', {}).get(field_name, {})
-                value = field_data.get('value')
+                field_data = llm_result.get('fields', {}).get(field_name)
+                value = field_data.get('value') if isinstance(field_data, dict) else field_data
                 row[field_name] = value
                 provenance[field_name] = 'extracted' if value is not None else 'not_disclosed'
             flags.extend(f for f in llm_result.get('flags', []) if f)

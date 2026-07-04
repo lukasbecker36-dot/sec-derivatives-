@@ -1,60 +1,85 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($2,500M)
-[NUMERIC] cash_flow_hedge_aoci: $2,500M → $88M (-96.5%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
-[NUMERIC] treasury_lock_settlement_loss: $1M → $88M (+7900.0%) — exceeds 20% threshold
-[NEW_FIELD] floating_rate_exposure: appeared for first time ($3M)
-[LLM_FLAG] ir_swap_notional differs from prior period values by more than 50%.
-[LLM_FLAG] The treasury_lock_notional value of 2500.0 differs from prior period value of 0.0 by more than 50%
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-04 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $2,500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($12M)
+[HISTORICAL] [DISAPPEARED_FIELD] floating_rate_exposure: was $3M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/8 previously-populated fields are now null (fi_fx_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset, floating_rate_exposure)
+[HISTORICAL] [LLM_FLAG] No 'marketable securities' or 'cash equivalents' fair value breakdown disclosed; table only shows short-term/long-term investments (certificates of deposit), not mapped to marketable securities fields since terminology differs.
+[HISTORICAL] [LLM_FLAG] As of March 31, 2026, forward contracts fair value ($(12.5)) reflects a mix of net investment hedges and not-designated contracts (per text); the split between designated and not-designated notional amounts is not disclosed, so both notional fields are null.
+[HISTORICAL] [LLM_FLAG] No notional amounts for FX derivatives are disclosed anywhere in this section (only aggregate fair value).
+[HISTORICAL] [LLM_FLAG] fi_ir_swap_notional is null because the $1,500.0/$1,000.0 notional treasury lock derivatives (entered August 2025) were already settled in Q4 2025 and had no outstanding notional as of March 31, 2026.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_liability of 12.5 taken from the negative 'Forward contracts' fair value line in the Level 2 fair value table as of March 31, 2026; the table does not separately break out derivative assets vs. liabilities (only a net figure), so fi_total_derivative_asset is null.
+[HISTORICAL] [LLM_FLAG] ir_swap_notional combines two settled treasury lock tranches ($1,500.0 + $1,000.0 = $2,500.0); both were already settled in Q4 2025, so nothing remains outstanding as of this Q1 2026 period end — figure reflects historical notional, not a current outstanding balance.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci ($67.4M loss) is the cumulative after-tax loss recorded at settlement; the text does not state how much has since been amortized out of AOCI as of March 31, 2026, so this may overstate the remaining period-end balance.
+[HISTORICAL] [LLM_FLAG] No FX derivative notional, total derivative asset/liability, or 12-month AOCI reclassification amount is disclosed in this excerpt.
+[HISTORICAL] [LLM_FLAG] treasury_lock figures are historical (hedges entered August 2025, settled Q4 2025) referenced retrospectively in this Q1 2026 10-Q; treasury_lock_settlement_loss of $88.0M is pre-tax, after-tax figure is $67.4M.
+[HISTORICAL] [LLM_FLAG] This section discloses a specific floating amount ($1,534.1M outstanding under each Delayed Draw Term Loan as of March 31, 2026) but does not state an aggregate percentage of borrowings subject to floating rates, so floating_rate_exposure is left null rather than computed/estimated.
+[HISTORICAL] [LLM_FLAG] No FX forward notional, fair value, or sensitivity figures appear in this excerpt.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($2,500M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($88M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-88M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[NEW_FIELD] treasury_lock_notional: appeared for first time ($2M)
-[NEW_FIELD] treasury_lock_settlement_loss: appeared for first time ($88M)
-[NEW_FIELD] floating_rate_exposure: appeared for first time ($3M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($0M)
-[LLM_FLAG] The notional values for interest rate hedges are substantial, totaling $2,500 million, and indicate significant proactive management of interest rate risk.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-04 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($0M)
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $34M, now missing
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-67M)
+[HISTORICAL] [NEW_FIELD] treasury_lock_notional: appeared for first time ($2,500M)
+[HISTORICAL] [NEW_FIELD] treasury_lock_settlement_loss: appeared for first time ($88M)
+[HISTORICAL] [NEW_FIELD] floating_rate_exposure: appeared for first time ($3M)
+[HISTORICAL] [LLM_FLAG] No 'marketable securities' or 'cash equivalents' fair value breakdown disclosed; table only shows short-term/long-term investments (certificates of deposit), not mapped to marketable securities fields since terminology differs.
+[HISTORICAL] [LLM_FLAG] fi_fx_designated_notional set to 0 based on statement 'As of December 31, 2025 and 2024, the Company had no outstanding foreign exchange forward contracts accounted for as either net investment hedges or cash flow hedges.'
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional not disclosed as a notional amount; only fair value of not-designated forward contracts given ($0.3 at 12/31/2025), not notional.
+[HISTORICAL] [LLM_FLAG] fi_ir_swap_notional derived from $1,500.0 10-year + $1,000.0 30-year notional treasury lock derivative instruments entered in August 2025 (interest rate hedges, not swaps); these treasury locks were settled in Q4 2025 for a cumulative loss of $88.0, so no notional was outstanding at year-end 12/31/2025.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset of 0.3 taken from the positive 'Forward contracts' fair value line in the Level 2 fair value table as of December 31, 2025; the table does not separately break out derivative assets vs. liabilities (only a net figure), so fi_total_derivative_liability is null.
+[HISTORICAL] [LLM_FLAG] ir_swap_notional combines two treasury lock tranches ($1,500.0 10-year + $1,000.0 30-year = $2,500.0); the locks were already settled in Q4 2025, so no notional remained outstanding at period end (Dec 31, 2025) — this figure reflects the notional entered into during the year, not an outstanding balance.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci ($67.4M loss) is the cumulative after-tax loss initially recorded to AOCI upon settlement of the treasury locks; the text does not state the remaining unamortized balance as of Dec 31, 2025, so this is an approximation of the AOCI-related amount, not necessarily the exact period-end balance.
+[HISTORICAL] [LLM_FLAG] This excerpt appears to be from the Item 7A/MD&A market-risk discussion carried into the derivatives_note request rather than a discrete 'Derivatives' footnote; Amphenol embeds derivative disclosures within its Fair Value Measurements note.
+[HISTORICAL] [LLM_FLAG] No FX derivative notional, total derivative asset/liability, or 12-month reclassification amount is disclosed in this excerpt.
+[HISTORICAL] [LLM_FLAG] treasury_lock_settlement_loss reported as $88.0M pre-tax per evidence quote; after-tax figure is $67.4M (see cash_flow_hedge_aoci in the derivatives_note extraction for this filing).
+[HISTORICAL] [LLM_FLAG] floating_rate_exposure value of 3 represents a percentage (3% of outstanding borrowings), not a millions figure.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct / fx_forward_fair_value / interest_rate_sensitivity / counterparty_concentration are all discussed only qualitatively in this text (e.g. 'not material', 'does not have any significant concentration with any one counterparty') with no accompanying dollar figure, so left null rather than fabricating a number.
+[HISTORICAL] [LLM_FLAG] No notional or fair value is given for FX forward contracts in this excerpt (only a qualitative 'not material' fair value statement), so fx_forwards_outstanding and fx_forward_fair_value are null despite FX forwards being disclosed as outstanding.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] treasury_lock_notional: appeared for first time ($2,500M)
-[NEW_FIELD] treasury_lock_settlement_loss: appeared for first time ($88M)
-[NEW_FIELD] floating_rate_exposure: appeared for first time ($3M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-04 ===
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($2,500M)
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $2M, now missing
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($34M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $0M, now missing
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($2,500M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (fi_total_derivative_asset, fx_designated_notional)
+[HISTORICAL] [LLM_FLAG] No 'marketable securities' or 'cash equivalents' fair value breakdown disclosed in this section; table only shows short-term/long-term investments (certificates of deposit), which were not mapped to marketable securities fields since terminology differs.
+[HISTORICAL] [LLM_FLAG] fi_fx_designated_notional set to 0 based on statement 'the Company had no outstanding foreign exchange forward contracts accounted for as either net investment hedges or cash flow hedges' as of September 30, 2025 (also true at Dec 31, 2024).
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional not disclosed as a notional amount; only fair value of not-designated forward contracts given ($(34.3) at 9/30/2025), not notional.
+[HISTORICAL] [LLM_FLAG] fi_ir_swap_notional derived from $1,500.0 10-year + $1,000.0 30-year notional treasury lock derivative instruments (interest rate hedges), not interest rate swaps specifically.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_liability of 34.3 taken from the negative 'Forward contracts' fair value line in the Level 2 fair value table as of September 30, 2025; the table does not separately break out derivative assets vs. liabilities (only a net figure), so fi_total_derivative_asset is null.
+[HISTORICAL] [LLM_FLAG] ir_swap_notional combines two treasury lock tranches ($1,500.0 10-year + $1,000.0 30-year = $2,500.0); these are treasury locks, not swaps, but are the only interest-rate derivative notional disclosed in this text.
+[HISTORICAL] [LLM_FLAG] FX forward contracts are mentioned as outstanding but no notional amount or fair value figure is given in this excerpt; fair value locations on the balance sheet are described only qualitatively.
+[HISTORICAL] [LLM_FLAG] No aggregate derivative asset/liability fair value or AOCI balance is disclosed in this excerpt of the note.
+[HISTORICAL] [LLM_FLAG] This market-risk excerpt contains only qualitative discussion of debt-related interest rate and FX risk (Revolving Credit Facility, Commercial Paper Programs, Euro-denominated borrowings); it does not quantify any sensitivity, notional, or fair value figures.
+[HISTORICAL] [LLM_FLAG] It briefly references that interest rate derivative instruments may be used to hedge future debt issuances (see Note 5), but no notional or dollar amount appears in this section_text.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] treasury_lock_notional: appeared for first time ($2,500M)
-[NEW_FIELD] treasury_lock_settlement_loss: appeared for first time ($88M)
-[NEW_FIELD] floating_rate_exposure: appeared for first time ($3M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-04 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $0M → $2M (+566.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No 'marketable securities' or 'cash equivalents' fair value breakdown disclosed; table only shows short-term/long-term investments (certificates of deposit), not mapped to marketable securities fields since terminology differs.
+[HISTORICAL] [LLM_FLAG] fi_fx_designated_notional set to 0 based on statement 'As of June 30, 2025 and December 31, 2024, the Company had no outstanding foreign exchange forward contracts accounted for as either net investment hedges or cash flow hedges.'
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional not disclosed as a notional amount; only fair value of not-designated forward contracts given ($2.0 at 6/30/2025), not notional.
+[HISTORICAL] [LLM_FLAG] No interest rate swap/derivative activity mentioned in this section, so fi_ir_swap_notional is null.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset of 2.0 taken from the positive 'Forward contracts' fair value line in the Level 2 fair value table as of June 30, 2025; the table does not separately break out derivative assets vs. liabilities (only a net figure), so fi_total_derivative_liability is null.
+[HISTORICAL] [LLM_FLAG] has_derivatives = Yes based on 'The Company utilizes foreign exchange forward contracts, hedging instruments accounted for as cash flow hedges...' and references to net investment hedges (2032 Euro Notes designated as net investment hedge).
+[HISTORICAL] [LLM_FLAG] fx_designated_notional set to 0 based on statement 'As of June 30, 2025 and December 31, 2024, the Company had no outstanding foreign exchange forward contracts accounted for as either net investment hedges or cash flow hedges.'
+[HISTORICAL] [LLM_FLAG] No notional amounts, fair value asset/liability breakdown, or AOCI dollar balances are disclosed in this excerpt; only a qualitative statement that AOCI amounts related to FX forwards 'were not material' for the three and six months ended June 30, 2025 and 2024, and that not-designated forward contracts made up the (referenced but not included) fair value table.
+[HISTORICAL] [LLM_FLAG] No commodity or equity derivative activity, and no interest rate swap/derivative activity, is mentioned in this section.
+[HISTORICAL] [LLM_FLAG] This filing's period end (June 30, 2025) precedes the August 2025 treasury lock transaction, and this excerpt contains no subsequent-events reference to it, so no treasury-lock figures are disclosed.
+[HISTORICAL] [LLM_FLAG] The excerpt is purely qualitative (borrowing facilities, floating-rate exposure discussion) with no dollar or percentage sensitivity figures matching the schema fields.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] treasury_lock_notional: appeared for first time ($2,500M)
-[NEW_FIELD] treasury_lock_settlement_loss: appeared for first time ($67M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
-[LLM_FLAG] This appears to be a qualitative disclosure section without detailed quantitative market risk metrics. Many standard quantitative fields are not provided in this excerpt.
-[LLM_FLAG] The text references Note 5 for derivative instrument details, suggesting quantitative information may be in that note rather than this section.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[DISAPPEARED_FIELD] floating_rate_exposure: was $3M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (floating_rate_exposure)
-[LLM_FLAG] This appears to be a general market risk disclosure section rather than a complete quantitative analysis. It lacks the detailed quantitative sensitivities and derivative fair value measurements typically found in full derivative and market risk disclosures.
-[LLM_FLAG] Prior period indicated 'has_derivatives': 'Yes' with specific treasury lock and forward contract positions, but current filing text contains no mention of any derivative instruments.
-[LLM_FLAG] Floating rate exposure percentage not quantified in provided text (prior period was 3%), though $638.9M USCP Notes are outstanding.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-04 ===
+[HISTORICAL] [LLM_FLAG] No 'marketable securities' or 'cash equivalents' fair value breakdown disclosed; table only shows short-term/long-term investments (certificates of deposit), not mapped to marketable securities fields since terminology differs.
+[HISTORICAL] [LLM_FLAG] fi_fx_designated_notional set to 0 based on statement 'As of March 31, 2025 and December 31, 2024, the Company had no outstanding foreign exchange forward contracts accounted for as either net investment hedges or cash flow hedges.'
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional not disclosed as a notional amount; only fair value of not-designated forward contracts given ($0.3 at 3/31/2025), not notional.
+[HISTORICAL] [LLM_FLAG] No interest rate swap/derivative activity mentioned in this section, so fi_ir_swap_notional is null.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset of 0.3 taken from the positive 'Forward contracts' fair value line in the Level 2 fair value table as of March 31, 2025; the table does not separately break out derivative assets vs. liabilities (only a net figure), so fi_total_derivative_liability is null.
+[HISTORICAL] [LLM_FLAG] has_derivatives = Yes based on 'The Company utilizes foreign exchange forward contracts, hedging instruments accounted for as cash flow hedges...' and references to net investment hedges.
+[HISTORICAL] [LLM_FLAG] fx_designated_notional set to 0 based on statement 'As of March 31, 2025 and December 31, 2024, the Company had no outstanding foreign exchange forward contracts accounted for as either net investment hedges or cash flow hedges.'
+[HISTORICAL] [LLM_FLAG] No notional amounts, fair value asset/liability breakdown, or AOCI dollar balances are disclosed in this excerpt; only a qualitative statement that AOCI amounts related to FX forwards 'were not material' for the three months ended March 31, 2025 and 2024, and that not-designated forward contracts made up the (referenced but not included) fair value table.
+[HISTORICAL] [LLM_FLAG] No commodity or equity derivative activity, and no interest rate swap/derivative activity, is mentioned in this section.
+[HISTORICAL] [LLM_FLAG] This filing predates the August 2025 treasury lock hedges, so no treasury-lock-related figures are disclosed.
+[HISTORICAL] [LLM_FLAG] The only quantified figure in this excerpt is USCP (commercial paper) borrowings outstanding of $638.9M at a 4.57% weighted average interest rate, which does not map to any field in this schema (it is a debt balance, not a derivative notional or sensitivity metric), so it was not forced into any field.
+[HISTORICAL] [LLM_FLAG] No FX, equity, or interest-rate sensitivity figures are disclosed in this section_text.
