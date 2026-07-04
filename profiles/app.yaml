@@ -1,34 +1,28 @@
 issuer: AppLovin
 ticker: APP
-cik: "1751008"
+cik: '1751008'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   cash_equivalents_amount:
-    description: "Amount of unrestricted cash and cash equivalents"
+    description: Amount of unrestricted cash and cash equivalents
     section: market_risk
   interest_rate_sensitivity:
-    description: "Hypothetical basis point impact analysis"
+    description: Hypothetical basis point impact analysis
     section: market_risk
   debt_interest_rate_type:
-    description: "Fixed vs variable rate exposure on debt instruments"
+    description: Fixed vs variable rate exposure on debt instruments
     section: market_risk
   foreign_exchange_exposure:
-    description: "Translation and transaction exposure description"
+    description: Translation and transaction exposure description
     section: market_risk
   foreign_currency_gains_losses:
-    description: "Materiality of FX transaction gains/losses"
+    description: Materiality of FX transaction gains/losses
     section: market_risk
   hedging_policy:
-    description: "Current and future derivative hedging intentions"
+    description: Current and future derivative hedging intentions
     section: market_risk
-
-# Unusual features identified:
-#   - No actual derivative instruments disclosed despite derivatives section header
-#   - Explicit statement that company does not currently use derivatives but may in future
-#   - Market risk disclosure focuses on natural exposures rather than derivative hedging
-#   - Financial instruments section appears incomplete with only heading shown
-
+sections:
+  financial_instruments:
+    heading: 4\.\s+Financial\s+Instruments\s+and\s+Fair\s+Value\s+Measurements
