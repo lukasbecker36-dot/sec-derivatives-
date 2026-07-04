@@ -1,42 +1,57 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($1,147M)
-[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($1,147M)
-[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($250M)
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($19M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($34M)
-[DISAPPEARED_FIELD] has_derivatives: was $1,468M, now missing
-[DISAPPEARED_FIELD] fx_derivatives_notional: was $1,174M, now missing
-[DISAPPEARED_FIELD] fx_designated_notional: was $1,468M, now missing
-[DISAPPEARED_FIELD] fx_not_designated_notional: was $250M, now missing
-[DISAPPEARED_FIELD] ir_swap_notional: was $3M, now missing
-[DISAPPEARED_FIELD] commodity_derivatives_notional: was $14M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (has_derivatives, fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional, ir_swap_notional...)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-04 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $4,065M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $2,598M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $1,468M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $7M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $18M, now missing
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,622M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($2,622M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($21M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($36M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-15M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_total_derivative_asset, fi_total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] Supplied section_text is only the introductory paragraph of Note 5, truncated before any fair value or notional tables appear; no numeric data available in this excerpt.
+[HISTORICAL] [LLM_FLAG] This filing introduces a new instrument category, 'Cross-currency swap contracts with collars' ($77.8 million notional, Net investment), in addition to the prior FX forward/collar and cross-currency swap lines.
+[HISTORICAL] [LLM_FLAG] Commodity and equity derivative notional not quantified in this excerpt.
+[HISTORICAL] [LLM_FLAG] Item 3 text is pure cross-reference boilerplate: no material changes to Part II, Item 7A of the FY2025 10-K. No quantitative market risk data in this filing's Item 3.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($1,468M)
-[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($1,174M)
-[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($1,468M)
-[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($250M)
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($3M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($14M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-04 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($4,065M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($2,598M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($1,468M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($7M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($18M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $2,585M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $2,585M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $30M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $32M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-3M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fx_derivatives_notional, fx_designated_notional, total_derivative_asset, total_derivative_liability, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] Commodity contracts ($1.7 million notional, designated as cash flow hedges) are disclosed in the table but have no corresponding schema field (only FX and IR swap notional fields exist), so they are excluded from fi_fx_derivatives_notional/fi_fx_designated_notional but included in the total asset/liability sums since those totals are balance-sheet-location totals, not FX-specific.
+[HISTORICAL] [LLM_FLAG] No cash equivalents / marketable securities fair value tables present in this excerpt.
+[HISTORICAL] [LLM_FLAG] This section_text is actually MD&A/Liquidity discussion (financing activities, debt issuances, and hedge settlements during 2025) rather than the Note 5 Financial Instruments outstanding-balance table; the euro amounts cited (€920 million) are settled/matured amounts, not outstanding notional at period end.
+[HISTORICAL] [LLM_FLAG] The actual current-period notional and fair value table for this accession is present in the financial_instruments section_text and was extracted there instead.
+[HISTORICAL] [LLM_FLAG] No numeric dollar sensitivities disclosed for FX or IR risk in FY2025 10-K Item 7A — company describes impacts qualitatively as 'not significant'.
+[HISTORICAL] [LLM_FLAG] Outstanding FX forward/derivative notional figures are disclosed in the financial_instruments section for this accession, not in this market_risk text.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[LLM_FLAG] Provided text is Note 5 (Financial Instruments/Derivatives) and does not contain cash equivalents, marketable securities, or fair value measurement disclosures that would typically appear in Note 9 or in the liquidity/investments section of a 10-Q filing
-[LLM_FLAG] This filing section contains only a boilerplate statement referring to the 10-K annual report for December 31, 2025, with no actual quantitative market risk disclosures. All detailed derivative and risk sensitivity data must be obtained from the referenced 10-K filing or prior 10-Q filings.
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-07-04 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $1,422M → $2,585M (+81.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $1,422M → $2,585M (+81.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $6M → $-3M (-148.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Supplied section_text is only the introductory paragraph of Note 5, truncated before any fair value or notional tables appear; no numeric data available in this excerpt.
+[HISTORICAL] [LLM_FLAG] Commodity and equity derivative notional not quantified in this excerpt.
+[HISTORICAL] [LLM_FLAG] Section text begins mid-sentence ('ontracts on forecasted...'), consistent with a truncated window rather than missing data.
 
-=== 10-Q | Period ending 2025-09-27 | Processed 2026-05-23 ===
-[LLM_FLAG] This is a cross-reference section indicating no material changes from the 10-K filing. Detailed derivative and market risk disclosures must be found in the referenced 10-K for fiscal year ended December 28, 2024. The current filing section provides no quantitative data.
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-07-04 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $17M → $36M (+114.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $9M → $30M (+247.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $8M → $6M (-30.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Supplied section_text is only the introductory paragraph of Note 5, truncated before any fair value or notional tables appear; no numeric data available in this excerpt.
+[HISTORICAL] [LLM_FLAG] Commodity and equity derivative notional not quantified in this excerpt.
+[HISTORICAL] [LLM_FLAG] Item 3 text is pure cross-reference boilerplate: no material changes to Part II, Item 7A of the FY2024 10-K. No quantitative market risk data in this filing's Item 3.
 
-=== 10-Q | Period ending 2025-06-28 | Processed 2026-05-23 ===
-[LLM_FLAG] This is a boilerplate disclosure stating no material changes from the 10-K. All detailed quantitative and qualitative market risk disclosures are incorporated by reference to the Form 10-K for fiscal year ended December 28, 2024, not presented in this 10-Q section.
-
-=== 10-Q | Period ending 2025-03-29 | Processed 2026-05-23 ===
-[LLM_FLAG] This 10-Q section contains only a reference to the 10-K filing with no substantive disclosure of derivatives, hedging activities, or market risk quantitative measures. The company states 'no material changes' to Item 7A of the 10-K, which means detailed disclosures are located in the prior 10-K rather than this 10-Q. Most specific data points cannot be extracted from this section alone.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
-[LLM_FLAG] VAR estimates described as 'not significant' but no specific dollar amount provided
-[LLM_FLAG] Interest rate sensitivity scenarios provided (29 bp for 2025) but no quantified fair value impact in millions disclosed
-[LLM_FLAG] Very limited quantitative disclosure of derivative positions and fair values - this section lacks detailed market risk quantification metrics typically found in 10-K filings
-
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-07-04 ===
+[HISTORICAL] [LLM_FLAG] Supplied section_text is only the introductory paragraph of Note 5 ('We use various derivative financial instruments... Refer to') and is truncated before any fair value or notional tables appear; no numeric data available in this excerpt.
+[HISTORICAL] [LLM_FLAG] Balance sheet location table for this filing has only 3 categories (Other Current Assets, Other Non-Current Assets, Other Current Liabilities) with no Other Non-Current Liabilities column; totals computed accordingly.
+[HISTORICAL] [LLM_FLAG] Commodity and equity derivative notional not quantified in this excerpt (described as 'not material' or not mentioned).
+[HISTORICAL] [LLM_FLAG] Item 3 text is pure cross-reference boilerplate: 'There have been no material changes to the information provided in Part II, Item 7A of our Annual Report on Form 10-K...'. No quantitative market risk data in this filing's Item 3.
