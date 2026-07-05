@@ -1,33 +1,25 @@
 issuer: Bunge Global
 ticker: BG
-cik: "1996862"
+cik: '1996862'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   unrealized_gains_derivatives:
-    description: "unrealized gains on derivative contracts at fair value"
+    description: unrealized gains on derivative contracts at fair value
     section: market_risk
   derivative_fair_value_gains_losses:
-    description: "net gain or loss from fair valuation in cost of goods sold"
+    description: net gain or loss from fair valuation in cost of goods sold
     section: market_risk
   margin_deposits:
-    description: "margin deposits for derivative positions"
+    description: margin deposits for derivative positions
     section: market_risk
   commodity_exposures:
-    description: "agricultural commodities subject to price risk"
+    description: agricultural commodities subject to price risk
     section: market_risk
   risk_management_framework:
-    description: "governance structure and risk limits"
+    description: governance structure and risk limits
     section: market_risk
-
-# Unusual features identified:
-#   - derivatives section is very brief with minimal detail on instruments
-#   - fair value amounts shown in other current assets rather than dedicated derivatives table
-#   - ocean freight derivatives specifically mentioned as OTC instruments with financial institutions
-#   - risk management discussion separated from technical derivative accounting disclosures
-#   - no notional amounts or maturity analysis provided
-#   - sustainability provisions mentioned in securitization program affecting pricing
-
+sections:
+  financial_instruments:
+    heading: 11\.\s+Fair\s+Value\s+Measurements

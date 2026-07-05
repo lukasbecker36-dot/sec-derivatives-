@@ -1,28 +1,22 @@
 issuer: Becton Dickinson
 ticker: BDX
-cik: "10795"
+cik: '10795'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   notional_amounts:
-    description: "notional values by hedge designation and instrument type"
+    description: notional values by hedge designation and instrument type
     section: market_risk
   hedge_designation:
-    description: "classification as undesignated, cash flow hedges, or net investment hedges"
+    description: classification as undesignated, cash flow hedges, or net investment hedges
     section: market_risk
   foreign_currency_exposures:
-    description: "geographic regions with FX exposure"
+    description: geographic regions with FX exposure
     section: market_risk
   hedge_accounting_treatment:
-    description: "income recognition timing for gains/losses by hedge type"
+    description: income recognition timing for gains/losses by hedge type
     section: market_risk
-
-# Unusual features identified:
-#   - includes foreign currency-denominated debt as derivative instrument in notional table
-#   - fair values explicitly stated as not material
-#   - focuses exclusively on foreign currency risk with no interest rate derivatives
-#   - incomplete sentence at end suggests table continues beyond excerpt
-
+sections:
+  market_risk:
+    heading: Financial\s+Instrument\s+Market\s+Risk

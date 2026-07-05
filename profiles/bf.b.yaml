@@ -1,40 +1,34 @@
 issuer: Brown–Forman
 ticker: BF.B
-cik: "14693"
+cik: '14693'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   currency_derivatives_notional_current:
-    description: "notional amounts of outstanding currency derivatives current year"
+    description: notional amounts of outstanding currency derivatives current year
     section: market_risk
   currency_derivatives_notional_prior:
-    description: "notional amounts of outstanding currency derivatives prior year"
+    description: notional amounts of outstanding currency derivatives prior year
     section: market_risk
   hypothetical_fx_sensitivity:
-    description: "estimated fair value change from 10% dollar weakening"
+    description: estimated fair value change from 10% dollar weakening
     section: market_risk
   cash_equivalents_balance:
-    description: "cash and cash equivalents exposed to interest rate changes"
+    description: cash and cash equivalents exposed to interest rate changes
     section: market_risk
   commercial_paper_balance:
-    description: "short-term commercial paper borrowings at par"
+    description: short-term commercial paper borrowings at par
     section: market_risk
   interest_rate_sensitivity:
-    description: "impact of 1% interest rate increase on net interest expense"
+    description: impact of 1% interest rate increase on net interest expense
     section: market_risk
   primary_fx_exposures:
-    description: "most significant foreign currency exposures"
+    description: most significant foreign currency exposures
     section: market_risk
   primary_commodity_exposures:
-    description: "most significant commodities exposures"
+    description: most significant commodities exposures
     section: market_risk
-
-# Unusual features identified:
-#   - narrative format without tabular presentation
-#   - notional amounts given inline rather than in table
-#   - commodity exposures mentioned but no quantitative metrics provided
-#   - cross-references to other sections for additional details
-
+sections:
+  financial_instruments:
+    heading: 14\.\s+Fair\s+Value\s+Measurements
