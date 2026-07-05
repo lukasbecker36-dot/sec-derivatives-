@@ -1,39 +1,62 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($31M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($31M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($31M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($23M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($31M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-05 ===
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($184M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($649M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-465M)
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $19M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_debt_fair_value: was $19,424M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] variable_rate_debt_notional: was $1,348M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $300M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_price_sensitivity_wti: was $240M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_price_sensitivity_brent: was $25M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_price_sensitivity_natgas: was $120M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] midland_gulf_coast_spread_sensitivity: was $55M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (fixed_rate_notes_billion, fixed_rate_debt_fair_value, variable_rate_debt_notional, interest_rate_sensitivity, commodity_price_sensitivity_wti...)
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional not disclosed as a dollar notional; filing discloses only physical volumes -- crude collars notional volume of 100 Mbbl per day, plus marketing derivative short volumes (Oil ( 54 ) MMbbl, Natural gas ( 294 ) Bcf as of March 31, 2026)
+[HISTORICAL] [LLM_FLAG] New this quarter: crude two-way collar derivatives entered into in February 2026 (floor WTI $55.00/bbl, weighted-average ceiling WTI $75.89/bbl), reported as a separate 'Crude Collars' line in the fair value table with a $(292) million liability at March 31, 2026 and a $(339) million loss for the three months ended March 31, 2026 (included in net sales)
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci: no cash-flow-hedge or AOCI figure disclosed in this filing's derivatives note
+[HISTORICAL] [LLM_FLAG] fair_value_level1/fair_value_level2 not populated: only per-line-item Level 1/2/3 breakdowns are disclosed (across Marketing Derivatives and Crude Collars categories), no aggregate total
+[HISTORICAL] [LLM_FLAG] total_derivative_asset/total_derivative_liability computed by summing the disclosed 'Total Fair Value' column across all asset line items and all liability line items (Marketing Derivatives + Crude Collars) respectively
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] fx_designated_notional: was $31M, now missing
-[DISAPPEARED_FIELD] fx_not_designated_notional: was $31M, now missing
-[DISAPPEARED_FIELD] commodity_derivatives_notional: was $30M, now missing
-[DISAPPEARED_FIELD] total_derivative_asset: was $9M, now missing
-[DISAPPEARED_FIELD] total_derivative_liability: was $30M, now missing
-[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, commodity_derivatives_notional, total_derivative_asset, total_derivative_liability)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-05 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $49M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $46M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $3M, now missing
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($19M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($19,424M)
+[HISTORICAL] [NEW_FIELD] variable_rate_debt_notional: appeared for first time ($1,348M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($300M)
+[HISTORICAL] [NEW_FIELD] commodity_price_sensitivity_wti: appeared for first time ($240M)
+[HISTORICAL] [NEW_FIELD] commodity_price_sensitivity_brent: appeared for first time ($25M)
+[HISTORICAL] [NEW_FIELD] commodity_price_sensitivity_natgas: appeared for first time ($120M)
+[HISTORICAL] [NEW_FIELD] midland_gulf_coast_spread_sensitivity: appeared for first time ($55M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] section_text is truncated (it ends mid-sentence with 'See '); only the introductory 'OBJECTIVE AND STRATEGY' boilerplate is included and the fair-value tables, notional amounts, and marketing-derivative fair value breakdown that normally follow in this note (or in the cross-referenced Note 8 - Fair Value Measurements) are not present in the supplied text, so all quantitative fields could not be extracted from this excerpt
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp: only a 25-basis-point Treasury rate sensitivity ($300 million) is disclosed; no 100bp figure was given and none was extrapolated to avoid fabricating a value
+[HISTORICAL] [LLM_FLAG] value_at_risk: the filing describes VaR methodology (95% confidence, maximum potential negative one-day change in fair value) but discloses no specific dollar VaR figure for the period
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding, fx_transaction_gain_loss, fx_sensitivity_10pct, marketable_equity_value, equity_sensitivity_10pct: not disclosed; the filing states international/FX exposure is limited (functional currency is USD for all consolidated international oil and gas subsidiaries) and no equity securities price-risk disclosure is present
+[HISTORICAL] [LLM_FLAG] debt_maturity_schedule is a multi-year table (see evidence), not a single numeric value; reported as null with the full table quoted as evidence for audit purposes
+[HISTORICAL] [LLM_FLAG] fixed_rate_notes_billion reported using the disclosed principal total ($19,079 million = $19.079 billion) for consistency with the field description ('outstanding'); note the filing's narrative sentence separately cites '$19.4 billion' fair value, which is captured instead in fixed_rate_debt_fair_value ($19,424 million)
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] total_derivative_asset: $30M → $9M (-70.0%) — exceeds 20% threshold
-[NEW_FIELD] total_derivative_liability: appeared for first time ($30M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-05 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $75M → $49M (-34.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $22M → $46M (+109.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $53M → $3M (-94.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional not disclosed as a dollar notional; filing only gives physical volumes (Oil ( 58 ) MMbbl, Natural gas ( 111 ) Bcf as of September 30, 2025)
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci: no cash-flow-hedge or AOCI figure disclosed in this filing's derivatives note
+[HISTORICAL] [LLM_FLAG] fair_value_level1/fair_value_level2 not populated: only per-line-item Level 1/2/3 breakdowns are disclosed, no aggregate total
+[HISTORICAL] [LLM_FLAG] total_derivative_asset/total_derivative_liability computed by summing the disclosed 'Total Fair Value' column across asset line items and liability line items respectively (all Marketing Derivatives; no other derivative categories disclosed)
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_designated_notional: $2,025M → $31M (-98.5%) — exceeds 20% threshold
-[NUMERIC] total_derivative_asset: $9M → $30M (+233.3%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] total_derivative_liability: was $31M, now missing
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-05 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $39M → $75M (+92.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $70M → $22M (-68.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-31M → $53M (+271.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional not disclosed as a dollar notional; filing only gives physical volumes (Oil ( 54 ) MMbbl, Natural gas ( 182 ) Bcf as of June 30, 2025)
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci: unlike the Q1 2025 filing, this Q2 2025 filing does not repeat the cash-flow-hedge-insignificance statement or any AOCI figure for cash flow hedges
+[HISTORICAL] [LLM_FLAG] fair_value_level1/fair_value_level2 not populated: only per-line-item Level 1/2/3 breakdowns are disclosed, no aggregate total
+[HISTORICAL] [LLM_FLAG] total_derivative_asset/total_derivative_liability computed by summing the disclosed 'Total Fair Value' column across asset line items and liability line items respectively (all Marketing Derivatives; no other derivative categories disclosed)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($19M)
-[NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($19,424M)
-[NEW_FIELD] variable_rate_debt_notional: appeared for first time ($1,348M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($300M)
-[NEW_FIELD] commodity_price_sensitivity_wti: appeared for first time ($240M)
-[NEW_FIELD] commodity_price_sensitivity_brent: appeared for first time ($25M)
-[NEW_FIELD] commodity_price_sensitivity_natgas: appeared for first time ($120M)
-[NEW_FIELD] midland_gulf_coast_spread_sensitivity: appeared for first time ($55M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-05 ===
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional not disclosed as a dollar notional; filing only gives physical volumes (Oil ( 62 ) MMbbl, Natural gas ( 237 ) Bcf as of March 31, 2025)
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci: filing states 'The value of cash flow hedges was insignificant for all periods presented' with no specific dollar figure disclosed
+[HISTORICAL] [LLM_FLAG] fair_value_level1/fair_value_level2 not populated: filing discloses Level 1/Level 2/Level 3 fair value only per balance-sheet line item (Other current assets, Other long-term assets, Accrued liabilities, Deferred credits and other liabilities), with no single aggregate Level 1 or Level 2 total disclosed
+[HISTORICAL] [LLM_FLAG] total_derivative_asset/total_derivative_liability computed by summing the disclosed 'Total Fair Value' column across asset line items and liability line items respectively, all of which relate to the same Marketing Derivatives category (no other derivative categories disclosed)

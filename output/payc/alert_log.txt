@@ -1,69 +1,45 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($26M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
-[NEW_FIELD] corporate_cash_and_equivalents: appeared for first time ($154M)
-[NUMERIC] funds_held_for_clients: $22M → $2,200M (+9854.8%) — exceeds 20% threshold
-[NEW_FIELD] available_for_sale_securities: appeared for first time ($375M)
-[NEW_FIELD] interest_rate_sensitivity_client_funds: appeared for first time ($26M)
-[NEW_FIELD] interest_rate_sensitivity_afs: appeared for first time ($2M)
-[LLM_FLAG] The increase in interest rate sensitivity for funds held for clients ($26.1M) compared to the prior period's $22.1M is a significant change (over 50%).
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-05 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($375M)
+[HISTORICAL] [NUMERIC] corporate_cash_and_equivalents: $370M → $154M (-58.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] funds_held_for_clients: $5M → $2M (-54.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] This Note 8 excerpt only contains a fair-value hierarchy table for U.S. treasury securities (and, in the 2026-03-31 filing, certificates of deposit) held within funds held for clients; it does not disclose cash-equivalent fair values, corporate debt securities, marketable equity securities, unrealized gains/losses, or any derivative instruments (FX or interest-rate) or their notionals/fair values -- those are addressed in Note 7 'Corporate Investments and Funds Held for Clients' (not included in this excerpt) or are simply not applicable/disclosed here.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv is inferred as the total of the recurring fair-value table line item(s) (U.S. treasury securities [+ certificates of deposit]), since the note states investments held >3 months are classified as available-for-sale securities 'recognized at fair value' (i.e., the securities subject to the fair-value hierarchy), distinct from cash equivalents whose carrying amount merely 'approximates fair value'; the note does not use the label 'marketable securities' or provide an explicit 'Total' caption for this line, so this is an inference, not an explicit disclosure.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv (374.8) is the sum of two separate line items (U.S. treasury securities $299.8M + certificates of deposit $75.0M) as of March 31, 2026; no single combined total line is given in the source table.
+[HISTORICAL] [LLM_FLAG] Schema field descriptions carry static example values (e.g. $370.0M, $4.8B) that actually correspond to the 2025-12-31 10-K, not this filing; all values here were extracted from this filing's own section_text instead.
+[HISTORICAL] [LLM_FLAG] This filing discloses $675.0 million outstanding under a FLOATING-rate Revolving Credit Facility (not fixed-rate notes), with a 100bp change in reference rates estimated to shift interest expense by $5.6 million over the next 12 months ('a hypothetical 100 basis point change in the applicable reference rates would result in a $5.6 million change in our interest expense'); fixed_rate_notes_billion is left null because no fixed-rate notes were disclosed, and this floating-rate debt sensitivity is not captured by any field in the given schema.
+[HISTORICAL] [LLM_FLAG] No FX, commodity, or equity derivative disclosures appear in this market risk section, consistent with the company having no derivatives note.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp populated with the AFS market-value fair-value sensitivity ($1.8M) since the schema description specifies 'change in fair value'; the separate $26.1M figure is an interest-income sensitivity, captured under interest_rate_sensitivity_client_funds.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $100M → $22M (-77.9%) — exceeds 20% threshold
-[NEW_FIELD] corporate_cash_and_equivalents: appeared for first time ($370M)
-[NEW_FIELD] funds_held_for_clients: appeared for first time ($4,800M)
-[NEW_FIELD] available_for_sale_securities: appeared for first time ($374M)
-[NEW_FIELD] interest_rate_sensitivity_client_funds: appeared for first time ($22M)
-[NEW_FIELD] interest_rate_sensitivity_afs: appeared for first time ($2M)
-[LLM_FLAG] ir_sensitivity_100bp increased from 100.0 to 22.1, which is a drastic decrease; please verify values.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-05 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $497M, now missing
+[HISTORICAL] [NUMERIC] funds_held_for_clients: $1M → $5M (+269.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] available_for_sale_securities: $497M → $374M (-24.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX, commodity, equity derivative, or fixed/floating-rate debt disclosures appear in this market risk section; only interest-rate risk on corporate cash and AFS treasury securities/CDs is discussed, consistent with the company having no derivatives note.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp populated with the AFS market-value fair-value sensitivity ($1.7M) since the schema description specifies 'change in fair value'; the separate $22.1M figure is an interest-income sensitivity, captured under interest_rate_sensitivity_client_funds.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($26M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
-[NEW_FIELD] corporate_cash_and_equivalents: appeared for first time ($154M)
-[NUMERIC] funds_held_for_clients: $22M → $2,200M (+9854.8%) — exceeds 20% threshold
-[NEW_FIELD] available_for_sale_securities: appeared for first time ($375M)
-[NEW_FIELD] interest_rate_sensitivity_client_funds: appeared for first time ($26M)
-[NEW_FIELD] interest_rate_sensitivity_afs: appeared for first time ($2M)
-[LLM_FLAG] interest_rate_sensitivity_client_funds has increased significantly compared to the prior period value of 22.1.
-[LLM_FLAG] Equity sensitivity remains at 0, consistent with prior period, but flagged as lacking hedging activity.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-05 ===
+[HISTORICAL] [NUMERIC] corporate_cash_and_equivalents: $532M → $375M (-29.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] This Note 8 excerpt only contains a fair-value hierarchy table for U.S. treasury securities (and, in the 2026-03-31 filing, certificates of deposit) held within funds held for clients; it does not disclose cash-equivalent fair values, corporate debt securities, marketable equity securities, unrealized gains/losses, or any derivative instruments (FX or interest-rate) or their notionals/fair values -- those are addressed in Note 7 'Corporate Investments and Funds Held for Clients' (not included in this excerpt) or are simply not applicable/disclosed here.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv is inferred as the total of the recurring fair-value table line item(s) (U.S. treasury securities [+ certificates of deposit]), since the note states investments held >3 months are classified as available-for-sale securities 'recognized at fair value' (i.e., the securities subject to the fair-value hierarchy), distinct from cash equivalents whose carrying amount merely 'approximates fair value'; the note does not use the label 'marketable securities' or provide an explicit 'Total' caption for this line, so this is an inference, not an explicit disclosure.
+[HISTORICAL] [LLM_FLAG] Schema field descriptions carry static example values (e.g. $370.0M, $4.8B) that actually correspond to the 2025-12-31 10-K, not this filing; all values here were extracted from this filing's own section_text instead.
+[HISTORICAL] [LLM_FLAG] No FX, commodity, equity derivative, or fixed/floating-rate debt disclosures appear in this market risk section; only interest-rate risk on corporate cash and AFS treasury securities is discussed, consistent with the company having no derivatives note.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp populated with the AFS market-value fair-value sensitivity ($2.0M) since the schema description specifies 'change in fair value'; the separate $21.5M figure is an interest-income sensitivity, captured under interest_rate_sensitivity_client_funds.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $100M → $22M (-77.9%) — exceeds 20% threshold
-[NEW_FIELD] corporate_cash_and_equivalents: appeared for first time ($370M)
-[NEW_FIELD] funds_held_for_clients: appeared for first time ($4,800M)
-[NEW_FIELD] available_for_sale_securities: appeared for first time ($374M)
-[NEW_FIELD] interest_rate_sensitivity_client_funds: appeared for first time ($22M)
-[NEW_FIELD] interest_rate_sensitivity_afs: appeared for first time ($2M)
-[LLM_FLAG] ir_sensitivity_100bp differs significantly from the prior period value of 100.0 (decrease of 77.9%).
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-05 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $369M → $496M (+34.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $3M → $2M (-24.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] funds_held_for_clients: $2M → $1M (-42.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] available_for_sale_securities: $369M → $496M (+34.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity_afs: $3M → $2M (-24.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] This Note 8 excerpt only contains a fair-value hierarchy table for U.S. treasury securities (and, in the 2026-03-31 filing, certificates of deposit) held within funds held for clients; it does not disclose cash-equivalent fair values, corporate debt securities, marketable equity securities, unrealized gains/losses, or any derivative instruments (FX or interest-rate) or their notionals/fair values -- those are addressed in Note 7 'Corporate Investments and Funds Held for Clients' (not included in this excerpt) or are simply not applicable/disclosed here.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv is inferred as the total of the recurring fair-value table line item(s) (U.S. treasury securities [+ certificates of deposit]), since the note states investments held >3 months are classified as available-for-sale securities 'recognized at fair value' (i.e., the securities subject to the fair-value hierarchy), distinct from cash equivalents whose carrying amount merely 'approximates fair value'; the note does not use the label 'marketable securities' or provide an explicit 'Total' caption for this line, so this is an inference, not an explicit disclosure.
+[HISTORICAL] [LLM_FLAG] Schema field descriptions carry static example values (e.g. $370.0M, $4.8B) that actually correspond to the 2025-12-31 10-K, not this filing; all values here were extracted from this filing's own section_text instead.
+[HISTORICAL] [LLM_FLAG] No FX, commodity, equity derivative, or fixed/floating-rate debt disclosures appear in this market risk section; only interest-rate risk on corporate cash and AFS treasury securities is discussed, consistent with the company having no derivatives note.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp populated with the AFS market-value fair-value sensitivity ($2.2M) since the schema description specifies 'change in fair value'; the separate $22.5M figure is an interest-income sensitivity, captured under interest_rate_sensitivity_client_funds.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NUMERIC] funds_held_for_clients: $1,300M → $4,800M (+269.2%) — exceeds 20% threshold
-[NUMERIC] available_for_sale_securities: $497M → $374M (-24.6%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NUMERIC] corporate_cash_and_equivalents: $532M → $375M (-29.5%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NUMERIC] ir_sensitivity_100bp: $3M → $2M (-24.1%) — exceeds 20% threshold
-[NUMERIC] funds_held_for_clients: $1,900M → $1,100M (-42.1%) — exceeds 20% threshold
-[NUMERIC] available_for_sale_securities: $369M → $496M (+34.5%) — exceeds 20% threshold
-[NUMERIC] interest_rate_sensitivity_afs: $3M → $2M (-24.1%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
-[NEW_FIELD] corporate_cash_and_equivalents: appeared for first time ($521M)
-[NEW_FIELD] funds_held_for_clients: appeared for first time ($1,900M)
-[NEW_FIELD] available_for_sale_securities: appeared for first time ($369M)
-[NEW_FIELD] interest_rate_sensitivity_client_funds: appeared for first time ($25M)
-[NEW_FIELD] interest_rate_sensitivity_afs: appeared for first time ($3M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-05 ===
+[HISTORICAL] [LLM_FLAG] This Note 8 excerpt only contains a fair-value hierarchy table for U.S. treasury securities (and, in the 2026-03-31 filing, certificates of deposit) held within funds held for clients; it does not disclose cash-equivalent fair values, corporate debt securities, marketable equity securities, unrealized gains/losses, or any derivative instruments (FX or interest-rate) or their notionals/fair values -- those are addressed in Note 7 'Corporate Investments and Funds Held for Clients' (not included in this excerpt) or are simply not applicable/disclosed here.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv is inferred as the total of the recurring fair-value table line item(s) (U.S. treasury securities [+ certificates of deposit]), since the note states investments held >3 months are classified as available-for-sale securities 'recognized at fair value' (i.e., the securities subject to the fair-value hierarchy), distinct from cash equivalents whose carrying amount merely 'approximates fair value'; the note does not use the label 'marketable securities' or provide an explicit 'Total' caption for this line, so this is an inference, not an explicit disclosure.
+[HISTORICAL] [LLM_FLAG] Schema field descriptions carry static example values (e.g. $370.0M, $4.8B) that actually correspond to the 2025-12-31 10-K, not this filing; all values here were extracted from this filing's own section_text instead.
+[HISTORICAL] [LLM_FLAG] No FX, commodity, equity derivative, or fixed/floating-rate debt disclosures appear in this market risk section; only interest-rate risk on corporate cash and AFS treasury securities is discussed, consistent with the company having no derivatives note.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp populated with the AFS market-value fair-value sensitivity ($2.9M) since the schema description specifies 'change in fair value'; the separate $24.9M figure is an interest-income sensitivity, captured under interest_rate_sensitivity_client_funds.
