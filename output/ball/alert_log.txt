@@ -1,75 +1,83 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($28M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($7M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($3M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($136M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($1M)
-[NUMERIC] total_derivative_asset: $1,050M → $167M (-84.1%) — exceeds 20% threshold
-[NEW_FIELD] total_derivative_liability: appeared for first time ($123M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($44M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($35M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-2M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity_impact: was $7M, now missing
-[DISAPPEARED_FIELD] currency_sensitivity_earnings_impact: was $15M, now missing
-[DISAPPEARED_FIELD] derivative_counterparty_risk_policy: was $3M, now missing
-[DISAPPEARED_FIELD] aluminum_hedge_methods: was $7M, now missing
-[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (equity_sensitivity_10pct, interest_rate_sensitivity_impact, currency_sensitivity_earnings_impact, derivative_counterparty_risk_policy, aluminum_hedge_methods)
-[LLM_FLAG] net_derivative_position increased from a prior value of 12 (total assets at 1050 million in the last reporting period, which was an asset netted against lesser liabilities)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-05 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($3,375M)
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($600M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($173M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($175M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($173M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($175M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-2M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-7M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-15M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] aluminum_sensitivity_impact: was $-3M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity_impact: was $-7M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] currency_sensitivity_earnings_impact: was $-15M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] currency_sensitivity_debt_impact: was $164M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_investment_hedge_notional: was $1,050M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_investment_sensitivity_impact: was $-67M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, aluminum_sensitivity_impact, interest_rate_sensitivity_impact, currency_sensitivity_earnings_impact...)
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional uses only the $3,375 million USD-denominated 'Currency' risk-area notional from the commercial risk table; the separate €1,050 million net-investment-hedge cross-currency swap notional is denominated in EUR and was not combined in to avoid an unsupported currency conversion
+[HISTORICAL] [LLM_FLAG] fi_fx_designated_notional / fi_fx_not_designated_notional not split out at the notional level (only fair-value amounts are split by designated/not-designated in the Fair Value Measurements table)
+[HISTORICAL] [LLM_FLAG] No cash equivalents, marketable securities, equity securities, or corporate debt securities fair value figures are present in the supplied text
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability computed by summing current + noncurrent 'Total' subtotals from the Fair Value Measurements table, not from a single stated total
+[HISTORICAL] [LLM_FLAG] Notional amount table (by commodity/currency/interest rate/net investment) is not included in the supplied section_text; fx/ir/commodity/equity notional fields could not be sourced
+[HISTORICAL] [LLM_FLAG] total_derivative_asset and total_derivative_liability are computed by summing the current and noncurrent 'Total' column subtotals in the Fair Value Measurements table, not from a single stated total
+[HISTORICAL] [LLM_FLAG] section_text is a boilerplate cross-reference to Item 7A of the 2025 10-K and Note 20 of this filing; it contains no quantitative sensitivity figures for this period
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,050M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($7M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($15M)
-[NEW_FIELD] aluminum_sensitivity_impact: appeared for first time ($3M)
-[NEW_FIELD] interest_rate_sensitivity_impact: appeared for first time ($7M)
-[NEW_FIELD] currency_sensitivity_earnings_impact: appeared for first time ($15M)
-[NEW_FIELD] currency_sensitivity_debt_impact: appeared for first time ($164M)
-[NEW_FIELD] net_investment_hedge_notional: appeared for first time ($1,050M)
-[NEW_FIELD] net_investment_sensitivity_impact: appeared for first time ($67M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-05 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $2,894M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $600M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $65M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $204M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $65M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $204M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-139M, now missing
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-7M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-15M)
+[HISTORICAL] [NEW_FIELD] aluminum_sensitivity_impact: appeared for first time ($-3M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity_impact: appeared for first time ($-7M)
+[HISTORICAL] [NEW_FIELD] currency_sensitivity_earnings_impact: appeared for first time ($-15M)
+[HISTORICAL] [NEW_FIELD] currency_sensitivity_debt_impact: appeared for first time ($164M)
+[HISTORICAL] [NEW_FIELD] net_investment_hedge_notional: appeared for first time ($1,050M)
+[HISTORICAL] [NEW_FIELD] net_investment_sensitivity_impact: appeared for first time ($-67M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (fi_fx_derivatives_notional, fi_ir_swap_notional, fi_total_derivative_asset, fi_total_derivative_liability, total_derivative_asset...)
+[HISTORICAL] [LLM_FLAG] Supplied text is the Item 7A Quantitative and Qualitative Disclosures About Market Risk narrative plus the start of the Report of Independent Registered Public Accounting Firm; the notes' financial instruments/derivatives tables (notional-by-risk-area table, Fair Value Measurements table) are not included in this window
+[HISTORICAL] [LLM_FLAG] Only notional figure present is 'three fixed-for-fixed cross currency swaps outstanding, with notional amounts totaling €1.05 billion' used as net investment hedges as of December 31, 2025 -- this is a EUR-denominated component of, not the total for, FX derivative notional, so it was not reported as fi_fx_derivatives_notional without the full currency-notional context seen in other filings
+[HISTORICAL] [LLM_FLAG] No cash equivalents, marketable securities, equity securities, corporate debt securities, interest rate swap notional, or derivative fair value figures are present anywhere in the supplied text
+[HISTORICAL] [LLM_FLAG] section_text for this request consists mostly of the Net Investments in Foreign Operations Risk narrative (duplicate of market_risk content), the audit report, and the start of the Statements of Earnings; it does not include the derivative fair value tables or notional table for Note 22 (Financial Instruments and Risk Management)
+[HISTORICAL] [LLM_FLAG] As of December 31, 2025, the company had three fixed-for-fixed cross currency swaps outstanding with notional amounts totaling €1.05 billion (euros, not USD) — this is only a partial component of total FX derivatives notional, so fx_derivatives_notional was left null rather than guessed
+[HISTORICAL] [LLM_FLAG] net_investment_hedge_notional of 1050 is denominated in euros (€1.05 billion), not USD
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] interest_rate_sensitivity_impact: was $7M, now missing
-[DISAPPEARED_FIELD] currency_sensitivity_debt_impact: was $1M, now missing
-[DISAPPEARED_FIELD] derivative_counterparty_risk_policy: was $3M, now missing
-[DISAPPEARED_FIELD] aluminum_hedge_methods: was $7M, now missing
-[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (interest_rate_sensitivity_impact, currency_sensitivity_debt_impact, derivative_counterparty_risk_policy, aluminum_hedge_methods)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-05 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $260M → $204M (-21.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $260M → $204M (-21.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-200M → $-139M (+30.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional uses only the $2,894 million USD-denominated 'Currency' risk-area notional from the commercial risk table; the separate €1,050 million net-investment-hedge cross-currency swap notional is denominated in EUR and was not combined in to avoid an unsupported currency conversion
+[HISTORICAL] [LLM_FLAG] fi_fx_designated_notional / fi_fx_not_designated_notional not split out at the notional level (only fair-value amounts are split by designated/not-designated in the Fair Value Measurements table)
+[HISTORICAL] [LLM_FLAG] No cash equivalents, marketable securities, equity securities, or corporate debt securities fair value figures are present in the supplied text
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability computed by summing current + noncurrent 'Total' subtotals from the Fair Value Measurements table, not from a single stated total
+[HISTORICAL] [LLM_FLAG] Notional amount table (by commodity/currency/interest rate/net investment) is not included in the supplied section_text, which begins mid-sentence after that table; fx/ir/commodity/equity notional fields could not be sourced
+[HISTORICAL] [LLM_FLAG] total_derivative_asset and total_derivative_liability are computed by summing the current and noncurrent 'Total' column subtotals in the Fair Value Measurements table, not from a single stated total
+[HISTORICAL] [LLM_FLAG] section_text is a boilerplate cross-reference to Item 7A of the prior 10-K and Note 20 of this filing; it contains no quantitative sensitivity figures for this period
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($7M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[NEW_FIELD] aluminum_sensitivity_impact: appeared for first time ($3M)
-[NEW_FIELD] interest_rate_sensitivity_impact: appeared for first time ($7M)
-[NEW_FIELD] currency_sensitivity_earnings_impact: appeared for first time ($15M)
-[NEW_FIELD] currency_sensitivity_debt_impact: appeared for first time ($164M)
-[NEW_FIELD] net_investment_hedge_notional: appeared for first time ($1,050M)
-[NEW_FIELD] net_investment_sensitivity_impact: appeared for first time ($67M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-05 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $60M → $260M (+333.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $60M → $260M (+333.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $8M → $-200M (-2600.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $14M, now missing
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional uses only the $3,064 million USD-denominated 'Currency' risk-area notional from the commercial risk table; the separate €1,050 million net-investment-hedge cross-currency swap notional is denominated in EUR and was not combined in to avoid an unsupported currency conversion
+[HISTORICAL] [LLM_FLAG] fi_fx_designated_notional / fi_fx_not_designated_notional not split out at the notional level (only fair-value amounts are split by designated/not-designated in the Fair Value Measurements table)
+[HISTORICAL] [LLM_FLAG] No cash equivalents, marketable securities, equity securities, or corporate debt securities fair value figures are present in the supplied text
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability computed by summing current + noncurrent 'Total' subtotals from the Fair Value Measurements table, not from a single stated total
+[HISTORICAL] [LLM_FLAG] Notional amount table (by commodity/currency/interest rate/net investment) is not included in the supplied section_text; fx/ir/commodity/equity notional fields could not be sourced
+[HISTORICAL] [LLM_FLAG] total_derivative_asset and total_derivative_liability are computed by summing the current and noncurrent 'Total' column subtotals in the Fair Value Measurements table, not from a single stated total
+[HISTORICAL] [LLM_FLAG] section_text is a boilerplate cross-reference to Item 7A of the 2024 10-K and Note 20 of this filing; it contains no quantitative sensitivity figures for this period
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[LLM_FLAG] This filing section is introductory/navigation text only. Detailed quantitative disclosures about market risk appear to be referenced in Note 20 and Item 7A of the 2025 Annual Report (Form 10-K), not provided in this excerpt. Most numerical fields cannot be extracted from this section.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
-[LLM_FLAG] This filing section is introductory/boilerplate text that refers to Item 7A of the 2024 Annual Report (10-K) and Note 20 of the consolidated financial statements for detailed quantitative disclosures. The specific numerical risk metrics are not present in this excerpt and would be found in those referenced sections.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[DISAPPEARED_FIELD] aluminum_sensitivity_impact: was $3M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity_impact: was $7M, now missing
-[DISAPPEARED_FIELD] currency_sensitivity_earnings_impact: was $15M, now missing
-[DISAPPEARED_FIELD] currency_sensitivity_debt_impact: was $164M, now missing
-[DISAPPEARED_FIELD] net_investment_hedge_notional: was $1,050M, now missing
-[DISAPPEARED_FIELD] net_investment_sensitivity_impact: was $67M, now missing
-[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (aluminum_sensitivity_impact, interest_rate_sensitivity_impact, currency_sensitivity_earnings_impact, currency_sensitivity_debt_impact, net_investment_hedge_notional...)
-[LLM_FLAG] Most quantitative market risk sensitivity metrics are not disclosed in this provided excerpt. The filing references Item 7A of the 2024 Form 10-K and Note 20 for detailed disclosures, suggesting this excerpt is incomplete.
-[LLM_FLAG] Aluminum hedge methods are not provided in this text excerpt despite being in prior period disclosures.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-05 ===
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional uses only the $2,857 million USD-denominated 'Currency' risk-area notional from the commercial risk table; the separate €1,050 million net-investment-hedge cross-currency swap notional is denominated in EUR and was not combined in to avoid an unsupported currency conversion
+[HISTORICAL] [LLM_FLAG] fi_fx_designated_notional / fi_fx_not_designated_notional not split out at the notional level (only fair-value amounts are split by designated/not-designated in the Fair Value Measurements table)
+[HISTORICAL] [LLM_FLAG] No cash equivalents, marketable securities, equity securities, or corporate debt securities fair value figures are present in the supplied text
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability computed by summing current + noncurrent 'Total' subtotals from the Fair Value Measurements table, not from a single stated total
+[HISTORICAL] [LLM_FLAG] Notional amount table (by commodity/currency/interest rate/net investment) is not fully included in the supplied section_text; only a trailing fragment of the 'expected to be recognized in net earnings within the next 12 months' row survives at the very start of the text, so fx/ir/commodity/equity notional totals and cash_flow_hedge_aoci could not be sourced
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci of 14 was computed by summing the four risk-category values in that leftover row (commodity 15, currency -4, interest rate 3, net investment 0), not from a single stated total
+[HISTORICAL] [LLM_FLAG] total_derivative_asset and total_derivative_liability are computed by summing the current and noncurrent 'Total' column subtotals in the Fair Value Measurements table
+[HISTORICAL] [LLM_FLAG] section_text is a boilerplate cross-reference to Item 7A of the 2024 10-K and Note 20 of this filing; it contains no quantitative sensitivity figures for this period

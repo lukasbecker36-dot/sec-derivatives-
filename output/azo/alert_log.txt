@@ -1,67 +1,66 @@
-=== 10-Q | Period ending 2026-05-09 | Processed 2026-06-15 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $8M → $284M (+3241.2%) — exceeds 20% threshold
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
-[NEW_FIELD] variable_rate_debt: appeared for first time ($1,400M)
-[NEW_FIELD] fixed_rate_debt: appeared for first time ($7,700M)
-[NEW_FIELD] debt_fair_value: appeared for first time ($9,000M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($284M)
-[LLM_FLAG] ir_sensitivity_100bp changed from prior 8.5 to 284.0 (>50% change). Prior value may have reflected variable-rate earnings impact ($13.6M this period) rather than fixed-rate fair value impact. Current extraction uses $284.0M fixed-rate debt fair value change as stated in the text, which matches the schema description 'change in fair value from 100bp move'.
+=== 10-Q | Period ending 2026-05-09 | Processed 2026-07-05 ===
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $2M → $1M (-70.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] variable_rate_debt: $851M → $1,400M (+64.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section covers only fair value hierarchy and marketable debt securities (Notes D & E); no cash equivalents fair value, marketable equity securities, or any derivative instrument data appear in the supplied text.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv and gross_unrealized_gains_debt taken from the aggregate totals row of the available-for-sale debt securities table.
+[HISTORICAL] [LLM_FLAG] Repayment of $400 million 3.125% Senior Notes due April 2026 and $609.4 million increase in commercial paper noted in text but no schema field captures these
+[HISTORICAL] [LLM_FLAG] Mexican peso/FX and equity disclosures are not repeated in this 10-Q's market risk section
 
-=== 10-Q | Period ending 2026-02-14 | Processed 2026-06-04 ===
-[NUMERIC] ir_sensitivity_100bp: $6M → $8M (+49.1%) — exceeds 20% threshold
+=== 10-Q | Period ending 2026-02-14 | Processed 2026-07-05 ===
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $-443M → $-305M (+31.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] variable_rate_debt: $570M → $851M (+49.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity: $-443M → $-305M (+31.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section covers only fair value hierarchy and marketable debt securities (Notes D & E); no cash equivalents fair value, marketable equity securities, or any derivative instrument data appear in the supplied text.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv and gross_unrealized_gains_debt taken from the aggregate totals row of the available-for-sale debt securities table.
+[HISTORICAL] [LLM_FLAG] This 10-Q's Item 3 only describes the material change since the FY2025 10-K ($102.4 million net increase in commercial paper) plus debt figures; Mexican peso/FX and equity disclosures are not repeated here
 
-=== 10-Q | Period ending 2025-11-22 | Processed 2026-06-04 ===
-[NUMERIC] ir_sensitivity_100bp: $56M → $6M (-89.7%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fx_sensitivity_10pct)
+=== 10-Q | Period ending 2025-11-22 | Processed 2026-07-05 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($131M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($26M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($2M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-81M, now missing
+[HISTORICAL] [NUMERIC] variable_rate_debt: $749M → $570M (-23.9%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] mexican_net_assets: was $893M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_rate_change: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity: was $-81M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/12 previously-populated fields are now null (fx_derivatives_notional, fx_forwards_outstanding, fx_sensitivity_10pct, mexican_net_assets, fx_rate_change...)
+[HISTORICAL] [LLM_FLAG] Section covers only fair value hierarchy and marketable debt securities (Notes D & E); no cash equivalents fair value, marketable equity securities, or any derivative instrument data appear in the supplied text.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv and gross_unrealized_gains_debt taken from the aggregate totals row of the available-for-sale debt securities table.
+[HISTORICAL] [LLM_FLAG] This 10-Q's Item 3 only describes the material change since the FY2025 10-K (net decrease in commercial paper) plus debt figures; Mexican peso/FX and equity disclosures are not repeated here
+[HISTORICAL] [LLM_FLAG] $179.1 million net decrease in commercial paper noted in text but no schema field captures it
 
-=== 10-K | Period ending 2025-08-30 | Processed 2026-06-04 ===
-[NUMERIC] ir_sensitivity_100bp: $8M → $56M (+586.4%) — exceeds 20% threshold
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+=== 10-K | Period ending 2025-08-30 | Processed 2026-07-05 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $121M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $26M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $1M, now missing
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $-340M → $-444M (-30.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-81M)
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity: $-340M → $-444M (-30.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] mexican_net_assets: appeared for first time ($893M)
+[HISTORICAL] [NEW_FIELD] fx_rate_change: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity: appeared for first time ($-81M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/9 previously-populated fields are now null (total_marketable_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt)
+[HISTORICAL] [LLM_FLAG] Supplied text window is truncated exactly at the start of the 'Financial Instruments' note ('The Company has financial instruments, including cash and cash equiva...') before any fair value figures, tables, or derivative data appear.
+[HISTORICAL] [LLM_FLAG] No cash equivalents, marketable securities, or derivative fair value/notional figures are present anywhere in the supplied text.
+[HISTORICAL] [LLM_FLAG] Supplied text is purely qualitative accounting-policy narrative about interest rate hedging; it contains no notional amounts, fair values, or AOCI balances for the interest rate swaps/treasury locks it describes.
+[HISTORICAL] [LLM_FLAG] Explicit statement that no FX derivatives are used supports fx_derivatives_notional = 0; FX designated/not-designated split is not applicable and left null.
+[HISTORICAL] [LLM_FLAG] fixed_rate_debt/fixed_rate_notes_billion reported as stated ($8.1 billion, net of $48.8M issuance costs); precise millions figure not disclosed
+[HISTORICAL] [LLM_FLAG] No derivatives (FX or IR swaps) were outstanding as of period end
 
-=== 10-Q | Period ending 2025-05-10 | Processed 2026-06-04 ===
-[NUMERIC] ir_sensitivity_100bp: $6M → $8M (+35.0%) — exceeds 20% threshold
+=== 10-Q | Period ending 2025-05-10 | Processed 2026-07-05 ===
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $0M → $1M (+40.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] variable_rate_debt: $602M → $806M (+33.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section covers only fair value hierarchy and marketable debt securities (Notes D & E); no cash equivalents fair value, marketable equity securities, or any derivative instrument data appear in the supplied text.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv and gross_unrealized_gains_debt taken from the aggregate totals row of the available-for-sale debt securities table.
+[HISTORICAL] [LLM_FLAG] Issuance of $500 million 5.125% Senior Notes due June 2030 and repayments of $400M/$500M Senior Notes, plus $225.5 million net increase in commercial paper, noted in text but no schema field captures these
+[HISTORICAL] [LLM_FLAG] Mexican peso/FX and equity disclosures are not repeated in this 10-Q's market risk section
 
-=== 10-Q | Period ending 2026-02-14 | Processed 2026-05-23 ===
-[NUMERIC] ir_sensitivity_100bp: $443M → $305M (-31.2%) — exceeds 20% threshold
-[NUMERIC] variable_rate_debt: $570M → $851M (+49.4%) — exceeds 20% threshold
-[NUMERIC] interest_rate_sensitivity: $443M → $305M (-31.2%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp decreased 31.3% from $443.3M to $304.8M - this reflects a 1% rate change calculation rather than 100bp, resulting in lower sensitivity
-[LLM_FLAG] variable_rate_debt increased 49.4% from $569.5M to $851.0M - significant increase in variable rate exposure
-[LLM_FLAG] debt_fair_value increased 4.6% from $8.7B to $9.1B - within normal range but worth noting
-
-=== 10-Q | Period ending 2025-11-22 | Processed 2026-05-23 ===
-[NUMERIC] ir_sensitivity_100bp: $340M → $443M (+30.3%) — exceeds 20% threshold
-[NUMERIC] variable_rate_debt: $806M → $570M (-29.3%) — exceeds 20% threshold
-[NUMERIC] interest_rate_sensitivity: $340M → $443M (+30.3%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp increased 30.3% from $340.3M to $443.3M - this is a significant change but explainable by different debt composition and market conditions
-[LLM_FLAG] variable_rate_debt decreased 29.3% from $805.5M to $569.5M - substantial decrease in commercial paper outstanding
-[LLM_FLAG] debt_fair_value decreased 1.1% from $8.8B to $8.7B - minor decrease consistent with filing disclosure of $179.1M reduction in commercial paper
-
-=== 10-Q | Period ending 2025-05-10 | Processed 2026-05-23 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] variable_rate_debt: $602M → $806M (+33.8%) — exceeds 20% threshold
-[LLM_FLAG] Variable rate debt increased 38.7% from $580.0M to $805.5M, driven by $225.5M net increase in commercial paper
-[LLM_FLAG] Fixed rate debt decreased 5.9% from $8.5B to $8.0B (net of unamortized costs), reflecting repayment of $900M notes and issuance of $500M new notes
-[LLM_FLAG] IR sensitivity declined 4.1% from $354.8M to $340.3M, consistent with lower fixed rate debt outstanding
-[LLM_FLAG] Debt fair value decreased 2.2% from $9.0B to $8.8B
-
-=== 10-Q | Period ending 2025-02-15 | Processed 2026-05-23 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[NUMERIC] ir_sensitivity_100bp: $444M → $355M (-20.0%) — exceeds 20% threshold
-[NUMERIC] interest_rate_sensitivity: $444M → $355M (-20.0%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] mexican_net_assets: was $893M, now missing
-[DISAPPEARED_FIELD] fx_rate_change: was $6M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity: was $81M, now missing
-[VALIDATION] Likely extraction failure: 4/10 previously-populated fields are now null (fx_forwards_outstanding, mexican_net_assets, fx_rate_change, fx_sensitivity)
-[LLM_FLAG] ir_sensitivity_100bp decreased from 443.7 to 354.8 million (-19.9%), within normal variation but notable decline
-[LLM_FLAG] fixed_rate_debt decreased from 8100.0 to 8500.0 gross (increase in net debt presentation due to different unamortized cost treatment)
-[LLM_FLAG] variable_rate_debt decreased from 748.6 to 602.0 million (-19.6%), significant reduction not explained in text
-[LLM_FLAG] interest_rate_sensitivity impact reduced from 443.7 to 354.8 million, consistent with decline in fixed rate debt fair value sensitivity
-[LLM_FLAG] Filing does not address derivatives, FX forwards, or Mexican subsidiary exposure that were disclosed in prior periods
-
-=== 10-Q | Period ending 2026-02-14 | Processed 2026-05-22 ===
-[LLM_FLAG] Mexican net assets increased from $478.4 million to $893.1 million (87% increase), which significantly exceeds the 50% threshold. This is explained by the 5.9% appreciation of the Mexican peso in fiscal 2025 and likely expansion of Mexican operations.
-[LLM_FLAG] Variable rate debt increased from $580.0 million to $748.6 million (29% increase), which is within normal range but notable.
-
+=== 10-Q | Period ending 2025-02-15 | Processed 2026-07-05 ===
+[HISTORICAL] [LLM_FLAG] Section covers only fair value hierarchy and marketable debt securities (Notes D & E); no cash equivalents fair value, marketable equity securities, or any derivative instrument data appear in the supplied text.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv and gross_unrealized_gains_debt taken from the aggregate totals row of the available-for-sale debt securities table.
+[HISTORICAL] [LLM_FLAG] $22.0 million net increase in commercial paper noted in text but no schema field captures it
+[HISTORICAL] [LLM_FLAG] Mexican peso/FX and equity disclosures are not repeated in this 10-Q's market risk section
