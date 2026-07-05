@@ -1,32 +1,25 @@
 issuer: Paycom
 ticker: PAYC
-cik: "1590955"
+cik: '1590955'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   corporate_cash_and_equivalents:
-    description: "Corporate cash and cash equivalents balance ($370.0M)"
+    description: Corporate cash and cash equivalents balance ($370.0M)
     section: market_risk
   funds_held_for_clients:
-    description: "Funds held for clients cash and cash equivalents ($4.8B)"
+    description: Funds held for clients cash and cash equivalents ($4.8B)
     section: market_risk
   available_for_sale_securities:
-    description: "AFS securities in funds held for clients ($374.5M US Treasuries and CD)"
+    description: AFS securities in funds held for clients ($374.5M US Treasuries and CD)
     section: market_risk
   interest_rate_sensitivity_client_funds:
-    description: "100bp change impact on interest earned on funds held for clients ($22.1M)"
+    description: 100bp change impact on interest earned on funds held for clients ($22.1M)
     section: market_risk
   interest_rate_sensitivity_afs:
-    description: "100bp change impact on AFS securities market value ($1.7M)"
+    description: 100bp change impact on AFS securities market value ($1.7M)
     section: market_risk
-
-# Unusual features identified:
-#   - No derivative instruments used; pure interest rate sensitivity disclosure
-#   - Payroll processing company with large funds-held-for-clients balances driving interest rate risk
-#   - Distinguishes between corporate cash and client funds interest rate sensitivity
-#   - Explicitly states company does not enter into investments for trading or speculative purposes
-#   - No foreign currency risk or commodity risk discussed
-
+sections:
+  financial_instruments:
+    heading: 8\.\s+FAIR\s+VALUE\s+OF\s+FINANCIAL\s+INSTRUMENTS

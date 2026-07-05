@@ -1,32 +1,25 @@
 issuer: Palo Alto Networks
 ticker: PANW
-cik: "1327567"
+cik: '1327567'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   fx_derivative_designated_hedges:
-    description: "FX derivative contracts designated as cash flow hedges for revenue and operating expenditures"
+    description: FX derivative contracts designated as cash flow hedges for revenue and operating expenditures
     section: market_risk
   fx_derivative_non_designated:
-    description: "FX derivative contracts not designated as hedges for monetary assets/liabilities"
+    description: FX derivative contracts not designated as hedges for monetary assets/liabilities
     section: market_risk
   fx_sensitivity:
-    description: "Hypothetical 10% FX rate change impact on monetary assets/liabilities after hedges"
+    description: Hypothetical 10% FX rate change impact on monetary assets/liabilities after hedges
     section: market_risk
   interest_rate_sensitivity:
-    description: "100bp interest rate change impact on investment portfolio fair value ($132.3M decline / $134.7M increase)"
+    description: 100bp interest rate change impact on investment portfolio fair value ($132.3M decline / $134.7M increase)
     section: market_risk
   derivative_note_details:
-    description: "Full derivative instruments disclosure in Note 6"
+    description: Full derivative instruments disclosure in Note 6
     section: derivatives_note
-
-# Unusual features identified:
-#   - Derivative Instruments note (Note 6) text in this extract is primarily a cross-reference rather than the full note
-#   - Cash flow hedge designation for FX contracts with maturities up to 24 months
-#   - Both designated and non-designated FX derivative programs described
-#   - The derivatives_or_instruments section contains mostly audit report text rather than derivative note details; full Note 6 data would need separate extraction
-#   - References to Fair Value Measurements note and Note 8 for contingent consideration valuation
-
+sections:
+  financial_instruments:
+    heading: 3\.\s+Fair\s+Value\s+Measurements
