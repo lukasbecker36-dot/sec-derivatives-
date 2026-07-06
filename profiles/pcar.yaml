@@ -1,9 +1,8 @@
-issuer: "Paccar"
+issuer: Paccar
 ticker: PCAR
-cik: "75362"
+cik: '75362'
 archetype: minimal_hedger
 extraction_mode: llm
-
-# Derivatives section matched by: ITEM\s*7A
-# Market risk section matched by: Quantitative\s+and\s+Qualitat\s*ive\s+Disclosures?\s+About\s+Market\s+Risk
-
+sections:
+  financial_instruments:
+    heading: NOTE\s+C\s+\-\s+Investments\s+in\s+Marketable\s+Securities

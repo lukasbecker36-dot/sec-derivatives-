@@ -1,33 +1,25 @@
 issuer: Public Service Enterprise Group
 ticker: PEG
-cik: "788784"
+cik: '788784'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   derivative_fair_values:
-    description: "Fair values of derivative assets and liabilities on balance sheet"
+    description: Fair values of derivative assets and liabilities on balance sheet
     section: financial_instruments
   commodity_derivative_volumes:
-    description: "Volumes/notional amounts of commodity derivative contracts by type"
+    description: Volumes/notional amounts of commodity derivative contracts by type
     section: derivatives_note
   unrealized_gains_losses:
-    description: "Unrealized gains or losses from mark-to-market of non-hedge derivatives"
+    description: Unrealized gains or losses from mark-to-market of non-hedge derivatives
     section: derivatives_note
   normal_purchase_sale_exclusions:
-    description: "Derivatives qualifying for and designated as normal purchases/sales"
+    description: Derivatives qualifying for and designated as normal purchases/sales
     section: derivatives_note
   exchange_clearing_prices:
-    description: "Source of fair value determination (ICE, Nodal Exchange, auction prices)"
+    description: Source of fair value determination (ICE, Nodal Exchange, auction prices)
     section: derivatives_note
-
-# Unusual features identified:
-#   - Wholesale energy derivatives are not designated as hedges despite hedging commodity price risk economically
-#   - Derivative fair values determined primarily from exchange clearing prices (ICE, Nodal Exchange)
-#   - PSEG Power wholesale energy derivatives marked to market through earnings, causing potential significant earnings volatility
-#   - Market risk section is summary-level; detailed Note for Derivative Financial Instruments was cross-referenced but not included
-#   - Three-entity structure (PSEG, PSEG Power, PSE&G) with different derivative exposures
-#   - Normal purchase/normal sale exception applied to qualifying contracts
-
+sections:
+  financial_instruments:
+    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*Fair\s+Value\s+Measurements
