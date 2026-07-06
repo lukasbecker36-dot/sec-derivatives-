@@ -134,59 +134,86 @@ def fetch_pdf(url: str = BULLETIN_URL, retries: int = 2) -> bytes:
     raise last_exc  # exhausted retries on network errors
 
 
-def fetch_pdf_browser(url: str = BULLETIN_URL) -> bytes:
-    """Download the bulletin using headless Chromium (Playwright).
+# Playwright uses a dedicated, persistent browser profile (kept out of git) so
+# Akamai clearance cookies survive between runs.
+PROFILE_DIR = Path(__file__).resolve().parent.parent / '.pw-profile'
+# Real installed browsers look far less like automation than bundled Chromium;
+# None falls back to Playwright's Chromium.
+BROWSER_CHANNELS = ['chrome', 'msedge', None]
 
-    A real browser satisfies Akamai's cookie/JS challenge, so this succeeds where
-    plain requests are blocked — provided the network egress itself isn't IP-banned.
-    Requires a one-time `python -m playwright install chromium`.
+
+def fetch_pdf_browser(url: str = BULLETIN_URL, headless: bool = False,
+                      channel: str | None = 'auto') -> bytes:
+    """Download the bulletin by driving a real, headed browser (Playwright).
+
+    CME allows a normal browser but blocks scripted/headless clients, so this
+    launches your installed Chrome/Edge (persistent profile, automation flag
+    disabled) to mimic a manual visit. Run headed (the default) unless you know
+    headless works from your network.
+
+    Requires `pip install playwright`; using your installed Chrome/Edge needs no
+    extra download, otherwise `python -m playwright install chromium`.
     """
     try:
         from playwright.sync_api import sync_playwright
     except ImportError as e:
         raise BulletinParseError(
-            'Playwright is not installed. Run `pip install playwright` and '
-            '`python -m playwright install chromium`.') from e
+            'Playwright is not installed. Run `pip install playwright`.') from e
 
-    logger.debug('Fetching %s via headless Chromium', url)
+    channels = BROWSER_CHANNELS if channel == 'auto' else [channel]
+    PROFILE_DIR.mkdir(parents=True, exist_ok=True)
+    # Removing the AutomationControlled feature drops the navigator.webdriver
+    # signal that bot filters key on.
+    launch_args = ['--disable-blink-features=AutomationControlled']
+
+    last_err = None
     with sync_playwright() as p:
-        try:
-            browser = p.chromium.launch(headless=True)
-        except Exception as e:
-            raise BulletinParseError(
-                'Could not launch Chromium. Run `python -m playwright install '
-                f'chromium`. ({e})') from e
-        try:
-            context = browser.new_context(user_agent=USER_AGENT)
-            page = context.new_page()
-            # Prime Akamai cookies by visiting the bulletin landing page first
-            # (best effort — the direct download can still work without it).
+        for ch in channels:
+            label = ch or 'bundled-chromium'
             try:
-                page.goto(DAILY_BULLETIN_PAGE, wait_until='domcontentloaded', timeout=60000)
+                logger.debug('Trying %s (headless=%s)', label, headless)
+                ctx = p.chromium.launch_persistent_context(
+                    str(PROFILE_DIR), channel=ch, headless=headless,
+                    user_agent=USER_AGENT, args=launch_args, accept_downloads=True)
             except Exception as e:
-                logger.debug('Landing-page prime failed (continuing): %s', e)
-            resp = context.request.get(url, timeout=60000)
-            if resp.status != 200:
-                raise DownloadBlockedError(
-                    f'CME returned HTTP {resp.status} to the browser download')
-            body = resp.body()
-        finally:
-            browser.close()
+                last_err = e
+                logger.debug('Could not launch %s: %s', label, e)
+                continue
+            try:
+                page = ctx.pages[0] if ctx.pages else ctx.new_page()
+                try:  # prime Akamai cookies via the landing page (best effort)
+                    page.goto(DAILY_BULLETIN_PAGE, wait_until='domcontentloaded',
+                              timeout=60000)
+                except Exception as e:
+                    logger.debug('Landing-page prime failed (continuing): %s', e)
+                resp = ctx.request.get(url, timeout=60000)
+                if resp.status == 200:
+                    body = resp.body()
+                    if body[:5] == b'%PDF-':
+                        logger.info('Downloaded via %s', label)
+                        return body
+                    last_err = DownloadBlockedError(
+                        f'{label}: response was not a PDF (got {body[:40]!r})')
+                else:
+                    last_err = DownloadBlockedError(
+                        f'{label}: CME returned HTTP {resp.status}')
+                logger.debug(str(last_err))
+            finally:
+                ctx.close()
 
-    if body[:5] != b'%PDF-':
-        raise DownloadBlockedError(f'browser download was not a PDF (got {body[:40]!r})')
-    return body
+    raise last_err or DownloadBlockedError('browser download failed')
 
 
-def download_pdf(url: str = BULLETIN_URL, browser: bool = False) -> bytes:
-    """Fetch the PDF: requests first, then fall back to a headless browser."""
+def download_pdf(url: str = BULLETIN_URL, browser: bool = False,
+                 headless: bool = False) -> bytes:
+    """Fetch the PDF: quick requests attempt, then a real headed browser."""
     if browser:
-        return fetch_pdf_browser(url)
+        return fetch_pdf_browser(url, headless=headless)
     try:
         return fetch_pdf(url)
     except DownloadBlockedError as e:
-        logger.info('Direct download blocked (%s); retrying via headless browser', e)
-        return fetch_pdf_browser(url)
+        logger.info('Direct request blocked (%s); retrying via real browser', e)
+        return fetch_pdf_browser(url, headless=headless)
 
 
 # ---------------------------------------------------------------------------
@@ -422,12 +449,13 @@ def upsert_rows(new_rows: list[dict]) -> int:
 
 def pull(url: str = BULLETIN_URL, date_override: str | None = None,
          force: bool = False, file: str | None = None,
-         browser: bool = False) -> dict:
+         browser: bool = False, headless: bool = False) -> dict:
     """Fetch (or read) the bulletin, parse it, and upsert to the CSV.
 
     Source precedence: ``file`` (a local PDF you downloaded yourself) →
     ``force`` (re-read an archived PDF for ``date_override``) → download
-    (requests, then a headless-browser fallback for Akamai-blocked requests).
+    (quick requests attempt, then a real headed browser for Akamai-blocked
+    requests).
 
     Note: CME's Data Terms of Use restrict automated access to the daily
     bulletin. The download path is intended for a machine/network you're
@@ -442,7 +470,7 @@ def pull(url: str = BULLETIN_URL, date_override: str | None = None,
         logger.info('Re-parsing cached %s', raw_path)
         pdf_bytes = raw_path.read_bytes()
     else:
-        pdf_bytes = download_pdf(url, browser=browser)
+        pdf_bytes = download_pdf(url, browser=browser, headless=headless)
 
     trade_date, report_status, rows = parse_bulletin(pdf_bytes)
     if date_override:
@@ -492,7 +520,10 @@ def main():
     p.add_argument('--file', default=None,
                    help='parse a local PDF you downloaded yourself (bypasses download)')
     p.add_argument('--browser', action='store_true',
-                   help='force the headless-browser download (skip the requests attempt)')
+                   help='force the real-browser download (skip the requests attempt)')
+    p.add_argument('--headless', action='store_true',
+                   help='run the browser headless (default: headed, which passes '
+                        "CME's bot check where headless does not)")
     p.add_argument('--date', default=None, help='override trade date (YYYY-MM-DD)')
     p.add_argument('--force', action='store_true',
                    help='re-parse the stored raw PDF for --date instead of downloading')
@@ -512,7 +543,7 @@ def main():
 
     if args.command == 'pull':
         pull(url=args.url, date_override=args.date, force=args.force,
-             file=args.file, browser=args.browser)
+             file=args.file, browser=args.browser, headless=args.headless)
     elif args.command == 'query':
         query(args.sql)
 

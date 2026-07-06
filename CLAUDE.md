@@ -127,10 +127,11 @@ python -m src.cme_bulletin query "SELECT trade_date, total_volume, open_interest
 
 ### Downloading (`pull`)
 
-`pull` fetches the bulletin in two stages: a plain `requests` call first, then an automatic **headless-Chromium (Playwright)** fallback that satisfies CME's Akamai bot check when the plain request is refused (HTTP 403). One-time setup on the machine that runs it:
+`pull` fetches the bulletin in two stages: a plain `requests` call first, then a **real, headed browser** (Playwright driving your installed Chrome/Edge) when the plain request is refused (HTTP 403). CME allows a normal browser but blocks scripted/**headless** clients, so the browser runs headed by default (a window opens briefly) with the automation flag disabled and a persistent profile (`.pw-profile/`, gitignored) to stay warm. Force it with `--browser`; opt into headless with `--headless` only if that works from your network. One-time setup:
 
 ```bash
 python -m pip install -r requirements.txt
+# Uses your installed Chrome/Edge — no extra download. Only if neither exists:
 python -m playwright install chromium
 ```
 
