@@ -104,10 +104,57 @@ Manage at: https://claude.ai/code/routines
 
 A `run_scheduler.ps1` script also exists for local API-mode runs (requires `ANTHROPIC_API_KEY` as a user environment variable).
 
+## CME Interest-Rate Bulletin Tracker (`src/cme_bulletin.py`)
+
+A standalone daily tracker for CME Daily Bulletin **Section 02A — Summary Volume and Open Interest, Interest Rate Futures and Options**. It is independent of the SEC pipeline and uses **no LLM / API** — parsing is deterministic (`pdfplumber`).
+
+```bash
+# Download today's bulletin, parse it, append to the store (hands-off)
+python -m src.cme_bulletin pull --verbose
+
+# Force the headless-browser download (skip the plain-request attempt)
+python -m src.cme_bulletin pull --browser --verbose
+
+# Parse a bulletin PDF you downloaded yourself (bypasses the download)
+python -m src.cme_bulletin pull --file ~/Downloads/Section02A.pdf --verbose
+
+# Re-parse a previously archived PDF (no download)
+python -m src.cme_bulletin pull --date 2026-07-02 --force
+
+# Search the history with SQL (DuckDB over the CSV; table is named `data`)
+python -m src.cme_bulletin query "SELECT trade_date, total_volume, open_interest FROM data WHERE product_code='SR3' AND report_section='FUTURES' ORDER BY trade_date"
+```
+
+### Downloading (`pull`)
+
+`pull` fetches the bulletin in two stages: a plain `requests` call first, then an automatic **headless-Chromium (Playwright)** fallback that satisfies CME's Akamai bot check when the plain request is refused (HTTP 403). One-time setup on the machine that runs it:
+
+```bash
+python -m pip install -r requirements.txt
+python -m playwright install chromium
+```
+
+> **Terms of Use.** CME's website Data Terms of Use restrict automated access to the daily bulletin, and CME blocks scripted requests from data-center/shared IPs (a 403 "suspected web scraping" message). Run `pull` only from a machine/network you're entitled to use for this content. The clearly-compliant alternatives — CME's **free Daily Bulletin email subscription** (Subscription Center) and the licensed **CME DataMine** feed (structured volume/OI via REST/SFTP/S3; `dataminesales@cmegroup.com`) — remain available; the parser/storage/query layer works unchanged behind any source (`--file`).
+
+### Local scheduled job (`run_cme_bulletin.ps1`)
+
+For hands-off daily updates, `run_cme_bulletin.ps1` runs as a Windows Scheduled Task on your own machine (setup + registration snippet in the script header). Each run:
+1. **Downloads directly** via `pull` (requests → headless-browser fallback). This is the primary, no-manual-upload path.
+2. **Drains an inbox** as a safety net — parses any PDF dropped into `inbox\cme\` via `pull --file`, then moves it to `inbox\cme\processed\`.
+3. **Commits & pushes** any new `data/cme/` rows.
+
+`inbox/` is gitignored. Logs go to `logs/` (30-day retention).
+
+- **Storage:** `data/cme/ir_volume_oi.csv` — append-only, one row per product line per section per trading day (git-friendly). Raw PDFs are archived under `data/cme/raw/{trade_date}.pdf`. Both are committed so history accumulates.
+- **Idempotency:** re-running `pull` for the same day replaces that day's rows rather than duplicating.
+- **Columns:** `trade_date, report_status, report_section` (FUTURES/OPTIONS), `product_code, product_name, option_type` (C/P/blank), `is_total`, `globex_volume, open_outcry_volume, pnt_volume, total_volume, open_interest, oi_change, prior_year_volume, prior_year_open_interest, source_pdf, fetched_at`.
+- **Querying note:** the OPTIONS section includes per-family `TOTAL` roll-up rows (`is_total = true`); filter `WHERE NOT is_total` (or `option_type IN ('C','P')`) to avoid double-counting when aggregating.
+- **Parsing:** numeric columns are right-aligned and empty cells vanish from the text, so columns are located by clustering token right-edges into anchors and bucketing each cell to its anchor. Every row is validated by `globex+open_outcry+pnt == total_volume`; a layout change raises `BulletinParseError` so the run fails loudly instead of storing garbage.
+
 ## Environment
 
 - **Python 3.11+** required
-- Dependencies: `pip install -r requirements.txt` (anthropic, beautifulsoup4, pyyaml, requests, duckdb)
+- Dependencies: `pip install -r requirements.txt` (anthropic, beautifulsoup4, pyyaml, requests, duckdb, pdfplumber)
 - **ANTHROPIC_API_KEY** only needed for API mode (not for Claude Code mode)
 
 ## Tests
