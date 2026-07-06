@@ -1,49 +1,40 @@
 issuer: Pfizer
 ticker: PFE
-cik: "78003"
+cik: '78003'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   derivative_assets_current_fx:
-    description: "Current foreign exchange contract derivative assets ($416M)"
+    description: Current foreign exchange contract derivative assets ($416M)
     section: financial_instruments
   derivative_assets_noncurrent_ir:
-    description: "Noncurrent interest rate contract derivative assets ($52M)"
+    description: Noncurrent interest rate contract derivative assets ($52M)
     section: financial_instruments
   derivative_assets_noncurrent_fx:
-    description: "Noncurrent foreign exchange contract derivative assets ($64M)"
+    description: Noncurrent foreign exchange contract derivative assets ($64M)
     section: financial_instruments
   derivative_liabilities_current_ir:
-    description: "Current interest rate contract derivative liabilities ($16M)"
+    description: Current interest rate contract derivative liabilities ($16M)
     section: financial_instruments
   derivative_liabilities_current_fx:
-    description: "Current foreign exchange contract derivative liabilities ($412M)"
+    description: Current foreign exchange contract derivative liabilities ($412M)
     section: financial_instruments
   derivative_liabilities_noncurrent_ir:
-    description: "Noncurrent interest rate contract derivative liabilities ($215M)"
+    description: Noncurrent interest rate contract derivative liabilities ($215M)
     section: financial_instruments
   derivative_liabilities_noncurrent_fx:
-    description: "Noncurrent foreign exchange contract derivative liabilities ($815M)"
+    description: Noncurrent foreign exchange contract derivative liabilities ($815M)
     section: financial_instruments
   contingent_consideration_liabilities:
-    description: "Level 3 contingent consideration liabilities from acquisitions ($1,790M total)"
+    description: Level 3 contingent consideration liabilities from acquisitions ($1,790M total)
     section: financial_instruments
   available_for_sale_debt_securities:
-    description: "AFS debt securities by category in fair value hierarchy ($9,183M total)"
+    description: AFS debt securities by category in fair value hierarchy ($9,183M total)
     section: financial_instruments
   fair_value_hierarchy:
-    description: "Full Level 1/2/3 fair value hierarchy table for all financial assets and liabilities"
+    description: Full Level 1/2/3 fair value hierarchy table for all financial assets and liabilities
     section: financial_instruments
-
-# Unusual features identified:
-#   - Comprehensive fair value hierarchy table with Level 1/2/3 breakdown for all financial instruments
-#   - Derivative assets and liabilities split between current and noncurrent on balance sheet
-#   - Significant contingent consideration liabilities ($1,790M) from Metsera acquisition valued using Level 3 inputs
-#   - Market risk section (Item 7A) is a cross-reference stub to MD&A; substantive data is in Note 7
-#   - Insurance contracts held in restricted trusts for employee benefit plans included in fair value table
-#   - Rollforward table provided for Level 3 contingent consideration liabilities
-#   - All derivatives classified as Level 2 in the fair value hierarchy
-
+sections:
+  market_risk:
+    heading: Market\s+Risk

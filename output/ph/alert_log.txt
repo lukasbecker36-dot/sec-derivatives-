@@ -1,70 +1,75 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($24M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($69M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($24M)
-[NUMERIC] total_derivative_asset: $369M → $30M (-91.9%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $369M → $14M (-96.2%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $8M, now missing
-[NUMERIC] ir_sensitivity_100bp: $35M → $21M (-40.0%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_10pct: $-27M → $142M (+625.9%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] cross_currency_swaps: was $24M, now missing
-[DISAPPEARED_FIELD] net_investment_hedges: was $125M, now missing
-[LLM_FLAG] fx_derivatives_notional differs from prior period by more than 50%.
-[LLM_FLAG] ir_sensitivity_100bp has decreased by more than 50% compared to the prior period (from 35.0 to 21.0).
-[LLM_FLAG] fx_sensitivity_10pct indicates a significant change from the previous -27.0, suggesting greater exposure to FX risk.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $8M → $30M (+275.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $35M → $14M (-60.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $8M → $30M (+275.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $35M → $14M (-60.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-27M → $16M (+159.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_fair_value: $-27M → $16M (+159.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX/IR swap notional amounts are disclosed in this section; only aggregate fair value levels for total derivative assets/liabilities are given.
+[HISTORICAL] [LLM_FLAG] Net position flips to a net derivative asset ($16M) for the first time in this sequence of filings, driven by derivative assets rising to $30M while liabilities fell to $14M — worth noting as a trend change.
+[HISTORICAL] [LLM_FLAG] Comparative June 30, 2025 figures ($7M asset / $64M liability) match the prior 10-K exactly.
+[HISTORICAL] [LLM_FLAG] derivative_fair_value schema description is ambiguous; interpreted as net derivative asset/(liability) position.
+[HISTORICAL] [LLM_FLAG] No interest rate swap, commodity, or equity derivatives disclosed
+[HISTORICAL] [LLM_FLAG] FX notional amounts disclosed in EUR/JPY, not USD, so fx_derivatives_notional/fx_designated_notional/fx_not_designated_notional left null rather than fabricating a conversion
+[HISTORICAL] [LLM_FLAG] Company uses net investment hedges rather than cash flow hedges
+[HISTORICAL] [LLM_FLAG] Net derivative position turned positive (net asset) this quarter versus net liability in prior quarters
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding and fixed_rate_notes_billion not quantified in this section
+[HISTORICAL] [LLM_FLAG] marketable_equity_value / equity_sensitivity_10pct not applicable — no equity price risk disclosed
+[HISTORICAL] [LLM_FLAG] qualitative fields extracted as boolean presence flags
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($369M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($369M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($8M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($35M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-27M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $100M → $24M (-76.0%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_10pct: $10M → $125M (+1150.0%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp decreased by 76% compared to prior period; change in debt composition or borrowing amounts is indicated with a potentially lower rate burden.
-[LLM_FLAG] fx_sensitivity_10pct significantly increased; indicates a higher foreign currency exposure or more hedging activity than before.
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-07-06 ===
+[HISTORICAL] [LLM_FLAG] No FX/IR swap notional amounts are disclosed in this section; only aggregate fair value levels for total derivative assets/liabilities are given.
+[HISTORICAL] [LLM_FLAG] Comparative June 30, 2025 figures ($7M asset / $64M liability) match the prior 10-K exactly.
+[HISTORICAL] [LLM_FLAG] derivative_fair_value schema description is ambiguous; interpreted as net derivative asset/(liability) position.
+[HISTORICAL] [LLM_FLAG] No interest rate swap, commodity, or equity derivatives disclosed
+[HISTORICAL] [LLM_FLAG] FX notional amounts disclosed in EUR/JPY, not USD, so fx_derivatives_notional/fx_designated_notional/fx_not_designated_notional left null rather than fabricating a conversion
+[HISTORICAL] [LLM_FLAG] Company uses net investment hedges rather than cash flow hedges
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding and fixed_rate_notes_billion not quantified in this section
+[HISTORICAL] [LLM_FLAG] marketable_equity_value / equity_sensitivity_10pct not applicable — no equity price risk disclosed
+[HISTORICAL] [LLM_FLAG] qualitative fields extracted as boolean presence flags
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($21M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($142M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] forward_exchange_contracts: appeared for first time ($0M)
-[DROPPED_TO_ZERO] cross_currency_swaps: $24M → $0M
-[DROPPED_TO_ZERO] net_investment_hedges: $125M → $0M
-[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (equity_sensitivity_10pct)
-[LLM_FLAG] fx_sensitivity_10pct increased significantly from prior period values of 0.0 indicating a substantial exposure to foreign currency fluctuations
-[LLM_FLAG] ir_sensitivity_100bp value reflects interest rate sensitivity greater than prior period, suggesting increased exposure or more variable rate debt.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $7M → $9M (+28.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $64M → $42M (-34.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $7M → $9M (+28.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $64M → $42M (-34.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-57M → $-33M (+42.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $18M → $28M (+55.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $80M → $116M (+45.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_fair_value: $-57M → $-33M (+42.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX/IR swap notional amounts are disclosed in this section; only aggregate fair value levels for total derivative assets/liabilities are given.
+[HISTORICAL] [LLM_FLAG] Comparative June 30, 2025 figures ($7M asset / $64M liability) match the prior 10-K (accession 0000076334-25-000035) exactly.
+[HISTORICAL] [LLM_FLAG] derivative_fair_value schema description is ambiguous; interpreted as net derivative asset/(liability) position.
+[HISTORICAL] [LLM_FLAG] No interest rate swap, commodity, or equity derivatives disclosed
+[HISTORICAL] [LLM_FLAG] FX notional amounts disclosed in EUR/JPY, not USD, so fx_derivatives_notional/fx_designated_notional/fx_not_designated_notional left null rather than fabricating a conversion
+[HISTORICAL] [LLM_FLAG] Company uses net investment hedges rather than cash flow hedges
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding and fixed_rate_notes_billion not quantified in this section
+[HISTORICAL] [LLM_FLAG] marketable_equity_value / equity_sensitivity_10pct not applicable — no equity price risk disclosed
+[HISTORICAL] [LLM_FLAG] qualitative fields extracted as boolean presence flags
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $100M → $24M (-76.0%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_10pct: $10M → $125M (+1150.0%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp increased from 100.0 to 24.0, which is a decline greater than 50%. This indicates a potential change in the company's debt portfolio or interest rate strategy.
-[LLM_FLAG] fx_sensitivity_10pct increased from 10.0 to 125.0, which is a significant increase indicating a possible change in exposure or derivative usage.
+=== 10-K | Period ending 2025-06-30 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $27M → $7M (-73.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $28M → $64M (+128.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $27M → $7M (-73.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $28M → $64M (+128.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-1M → $-57M (-4261.1%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($80M)
+[HISTORICAL] [NUMERIC] derivative_fair_value: $-1M → $-57M (-4261.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX/IR swap notional amounts are disclosed anywhere in this section; only aggregate fair value levels for total derivative assets/liabilities are given.
+[HISTORICAL] [LLM_FLAG] Unlike the FY2025 Q3 10-Q (accession 0000076334-25-000021), this 10-K reports derivative fair values directly in millions (not thousands) — confirmed by comparable scale of long-term debt figures ($7,555M carrying value).
+[HISTORICAL] [LLM_FLAG] derivative_fair_value schema description is ambiguous; interpreted as net derivative asset/(liability) position.
+[HISTORICAL] [LLM_FLAG] No interest rate swap, commodity, or equity derivatives disclosed for Parker Hannifin — hedging activity limited to FX forward exchange contracts and cross-currency swaps
+[HISTORICAL] [LLM_FLAG] FX notional amounts are disclosed in EUR/JPY, not USD, so cannot populate fx_derivatives_notional/fx_designated_notional/fx_not_designated_notional without fabricating an FX conversion
+[HISTORICAL] [LLM_FLAG] Company uses net investment hedges rather than cash flow hedges, so cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci are not applicable/disclosed
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding and fixed_rate_notes_billion not quantified in this section
+[HISTORICAL] [LLM_FLAG] marketable_equity_value / equity_sensitivity_10pct not applicable — no equity price risk disclosed
+[HISTORICAL] [LLM_FLAG] qualitative fields (forward_exchange_contracts, cross_currency_swaps, net_investment_hedges, counterparty_credit_quality) extracted as boolean presence flags
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
-
-=== 10-K | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($28M)
-[LLM_FLAG] ir_sensitivity_100bp increased from $18M (Q3 FY2025 3/31) to $28M (Q1 FY2026 9/30) - >50% increase, suggesting higher variable rate debt outstanding
-
-=== 10-K | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $18M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($18M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-06 ===
+[HISTORICAL] [LLM_FLAG] FX derivative notionals disclosed only in EUR/JPY, not converted to USD or aggregated in the filing; left null rather than estimated.
+[HISTORICAL] [LLM_FLAG] No cash-equivalents / marketable-securities fair value breakdown appears in this section text (Note 17 here focuses on debt and derivative fair values only).
+[HISTORICAL] [LLM_FLAG] derivative_fair_value schema description is ambiguous ('referenced in Note 17'); interpreted as net derivative asset/(liability) position for consistency with the paired derivatives_note extraction.
+[HISTORICAL] [LLM_FLAG] FX derivative notionals are disclosed only in EUR/JPY (cross-currency swaps: €69M, €290M, ¥2.1B); no USD-converted total or forward-contract notional is given in the filing, so fx_derivatives_notional/fx_designated_notional/fx_not_designated_notional are left null rather than estimated with an FX rate.
+[HISTORICAL] [LLM_FLAG] Balance-sheet derivative fair values in this note are stated in thousands ($26,733 / $28,040); converted to millions per schema instructions.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct and fx_forwards_outstanding not quantified in this filing period's market risk section
+[HISTORICAL] [LLM_FLAG] forward_exchange_contracts / cross_currency_swaps / net_investment_hedges / counterparty_credit_quality are qualitative confirmation fields (no numeric value in schema description), extracted as boolean presence flags rather than numbers

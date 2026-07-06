@@ -1,103 +1,61 @@
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($11,779M)
-[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($2,596M)
-[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($1,294M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($116M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($1,248M)
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($45,561M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($22,984M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($22,777M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($6,750M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($532M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($1,458M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-926M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-16M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] derivative_assets_current_fx: appeared for first time ($416M)
-[NEW_FIELD] derivative_assets_noncurrent_ir: appeared for first time ($52M)
-[NEW_FIELD] derivative_assets_noncurrent_fx: appeared for first time ($64M)
-[NEW_FIELD] derivative_liabilities_current_ir: appeared for first time ($16M)
-[NEW_FIELD] derivative_liabilities_current_fx: appeared for first time ($412M)
-[NEW_FIELD] derivative_liabilities_noncurrent_ir: appeared for first time ($215M)
-[NEW_FIELD] derivative_liabilities_noncurrent_fx: appeared for first time ($815M)
-[NEW_FIELD] contingent_consideration_liabilities: appeared for first time ($1,695M)
-[NEW_FIELD] available_for_sale_debt_securities: appeared for first time ($9,183M)
+=== 10-Q | Period ending 2026-03-29 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $2,596M → $1,865M (-28.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $532M → $659M (+23.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $22,777M → $17,134M (-24.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $532M → $659M (+23.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-926M → $-706M (+23.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-16M → $-9M (+43.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_assets_noncurrent_ir: $52M → $27M (-48.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_assets_noncurrent_fx: $64M → $128M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_liabilities_current_ir: $16M → $1M (-93.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_liabilities_current_fx: $412M → $283M (-31.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_liabilities_noncurrent_ir: $215M → $275M (+27.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Schema hint dollar amounts (e.g. '$416M', '$1,790M') match the December 31, 2025 comparative column shown in this filing, not the current Q1 2026 period — current-period figures were used instead.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci: cumulative balance not disclosed in text
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($11,779M)
-[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($2,596M)
-[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($1,294M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($116M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($2,725M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] derivative_assets_current_fx: appeared for first time ($416M)
-[NEW_FIELD] derivative_assets_noncurrent_ir: appeared for first time ($52M)
-[NEW_FIELD] derivative_assets_noncurrent_fx: appeared for first time ($64M)
-[NEW_FIELD] derivative_liabilities_current_ir: appeared for first time ($16M)
-[NEW_FIELD] derivative_liabilities_current_fx: appeared for first time ($412M)
-[NEW_FIELD] derivative_liabilities_noncurrent_ir: appeared for first time ($215M)
-[NEW_FIELD] derivative_liabilities_noncurrent_fx: appeared for first time ($815M)
-[NEW_FIELD] contingent_consideration_liabilities: appeared for first time ($1,790M)
-[NEW_FIELD] available_for_sale_debt_securities: appeared for first time ($9,183M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $418M → $532M (+27.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $418M → $532M (+27.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-1,159M → $-926M (+20.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-63M → $-16M (+74.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_assets_current_fx: $301M → $416M (+38.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_liabilities_current_ir: $10M → $16M (+60.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] contingent_consideration_liabilities: appeared for first time ($1,790M)
+[HISTORICAL] [LLM_FLAG] This is the one period where the schema's parenthetical dollar hints actually match the filing's figures exactly — confirms the hints in this schema were generated from this FY2025 10-K (this file) and mistakenly reused verbatim in the Q1-Q3 2025 and Q1 2026 extraction requests for this ticker.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci: cumulative balance not disclosed in text
+[HISTORICAL] [LLM_FLAG] All sensitivities described qualitatively as 'not significant' with no quantitative figures disclosed in this section — all fields null.
 
-=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaKoN4LtK82aqNe4bi6'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaKtxuBCwauMdBaXc9c'}
+=== 10-Q | Period ending 2025-09-28 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $1,687M → $2,390M (+41.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-1,544M → $-1,159M (+24.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-230M → $-63M (+72.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_assets_noncurrent_fx: $27M → $56M (+107.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_liabilities_current_ir: $18M → $10M (-44.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_liabilities_current_fx: $681M → $387M (-43.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Schema hint dollar amounts belong to a different period (Pfizer's FY2025 10-K, accession 0000078003-26-000026) and were ignored in favor of this filing's actual Q3 2025 figures.
+[HISTORICAL] [LLM_FLAG] No Level 3 / contingent consideration liabilities disclosed this quarter.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci: cumulative balance not disclosed in text
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaKMofbEkmKg54F3tJX'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaKTH4sfV24TDwaHCQ1'}
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $15,207M → $11,212M (-26.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $1,255M → $1,687M (+34.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $842M → $367M (-56.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $1,314M → $1,911M (+45.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $842M → $367M (-56.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $1,314M → $1,911M (+45.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-472M → $-1,544M (-227.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $94M → $-230M (-344.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_assets_current_fx: $548M → $281M (-48.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_assets_noncurrent_ir: $36M → $59M (+63.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_assets_noncurrent_fx: $256M → $27M (-89.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_liabilities_current_ir: $10M → $18M (+80.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_liabilities_current_fx: $200M → $681M (+240.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] available_for_sale_debt_securities: $13,952M → $9,525M (-31.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Schema hint dollar amounts (e.g. '$416M' current FX asset, '$1,790M' contingent consideration) belong to a different period (Pfizer's FY2025 10-K) and were ignored in favor of this filing's actual Q2 2025 figures.
+[HISTORICAL] [LLM_FLAG] No Level 3 / contingent consideration liabilities disclosed this quarter.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci: cumulative balance not disclosed in text
 
-=== 10-Q | Period ending 2025-09-28 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaJmbNN9cZECSKAMYU2'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaJrkg3Q8tUTVUmvtEP'}
-
-=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaJJREp2aJpzBLnN3qP'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaJPjyCAFRJfyFSGm9C'}
-
-=== 10-Q | Period ending 2025-03-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaHsDgHSqQRC676rm2G'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaHxoXUoYN3xzho6vhv'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $2M, now missing
-[NUMERIC] derivative_assets_current_fx: $301M → $416M (+38.2%) — exceeds 20% threshold
-[NUMERIC] derivative_liabilities_current_ir: $10M → $16M (+60.0%) — exceeds 20% threshold
-[NEW_FIELD] contingent_consideration_liabilities: appeared for first time ($1,790M)
-[LLM_FLAG] contingent_consideration_liabilities: $1,790M total (current $95M + noncurrent $1,695M), up significantly from $517M at Dec 2024, driven by $1,266M Metsera acquisition addition
-
-=== 10-Q | Period ending 2025-09-28 | Processed 2026-06-04 ===
-[NUMERIC] marketable_equity_securities_fv: $2,805M → $3,566M (+27.1%) — exceeds 20% threshold
-[NUMERIC] gross_unrealized_gains_debt: $87M → $2M (-97.7%) — exceeds 20% threshold
-[NUMERIC] derivative_assets_noncurrent_fx: $27M → $56M (+107.4%) — exceeds 20% threshold
-[NUMERIC] derivative_liabilities_current_ir: $18M → $10M (-44.4%) — exceeds 20% threshold
-[NUMERIC] derivative_liabilities_current_fx: $681M → $387M (-43.2%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-04 ===
-[NUMERIC] total_marketable_securities_fv: $15,207M → $11,212M (-26.3%) — exceeds 20% threshold
-[NUMERIC] marketable_equity_securities_fv: $2,286M → $2,805M (+22.7%) — exceeds 20% threshold
-[NUMERIC] gross_unrealized_gains_debt: $39M → $87M (+123.1%) — exceeds 20% threshold
-[NUMERIC] derivative_assets_current_fx: $548M → $281M (-48.7%) — exceeds 20% threshold
-[NUMERIC] derivative_assets_noncurrent_ir: $36M → $59M (+63.9%) — exceeds 20% threshold
-[NUMERIC] derivative_assets_noncurrent_fx: $256M → $27M (-89.5%) — exceeds 20% threshold
-[NUMERIC] derivative_liabilities_current_ir: $10M → $18M (+80.0%) — exceeds 20% threshold
-[NUMERIC] derivative_liabilities_current_fx: $200M → $681M (+240.5%) — exceeds 20% threshold
-[NUMERIC] available_for_sale_debt_securities: $13,952M → $9,526M (-31.7%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-03-30 | Processed 2026-06-04 ===
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($15,207M)
-[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($2,286M)
-[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($1,464M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($39M)
-[NEW_FIELD] derivative_assets_current_fx: appeared for first time ($548M)
-[NEW_FIELD] derivative_assets_noncurrent_ir: appeared for first time ($36M)
-[NEW_FIELD] derivative_assets_noncurrent_fx: appeared for first time ($256M)
-[NEW_FIELD] derivative_liabilities_current_ir: appeared for first time ($10M)
-[NEW_FIELD] derivative_liabilities_current_fx: appeared for first time ($200M)
-[NEW_FIELD] derivative_liabilities_noncurrent_ir: appeared for first time ($278M)
-[NEW_FIELD] derivative_liabilities_noncurrent_fx: appeared for first time ($826M)
-[NEW_FIELD] available_for_sale_debt_securities: appeared for first time ($13,952M)
-
+=== 10-Q | Period ending 2025-03-30 | Processed 2026-07-06 ===
+[HISTORICAL] [LLM_FLAG] The schema's parenthetical dollar hints (e.g. 'derivative_assets_current_fx ($416M)', 'contingent_consideration_liabilities ($1,790M total)') do not match this filing period (Q1 2025 10-Q) — they match Pfizer's FY2025 10-K (accession 0000078003-26-000026) instead, indicating the schema description was generated from a different period's filing and reused unchanged. All values above are taken directly from THIS filing's section_text, not from the hints.
+[HISTORICAL] [LLM_FLAG] No Level 3 / contingent consideration liabilities disclosed this quarter.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci: only period activity disclosed, not the cumulative AOCI balance — left null rather than fabricating a value

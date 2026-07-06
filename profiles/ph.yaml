@@ -1,32 +1,27 @@
 issuer: Parker Hannifin
 ticker: PH
-cik: "76334"
+cik: '76334'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   forward_exchange_contracts:
-    description: "FX forward contracts for managing currency transaction and translation risk"
+    description: FX forward contracts for managing currency transaction and translation risk
     section: market_risk
   cross_currency_swaps:
-    description: "Cross-currency swap contracts for managing foreign currency risk"
+    description: Cross-currency swap contracts for managing foreign currency risk
     section: market_risk
   net_investment_hedges:
-    description: "Foreign currency denominated debt designated as net investment hedges"
+    description: Foreign currency denominated debt designated as net investment hedges
     section: market_risk
   derivative_fair_value:
-    description: "Fair value of derivative instruments on consolidated balance sheet (referenced in Note 17)"
+    description: Fair value of derivative instruments on consolidated balance sheet (referenced in Note 17)
     section: financial_instruments
   counterparty_credit_quality:
-    description: "Major investment grade financial institutions as counterparties"
+    description: Major investment grade financial institutions as counterparties
     section: market_risk
-
-# Unusual features identified:
-#   - Uses both derivative and non-derivative instruments (foreign currency debt) for hedging
-#   - Net investment hedge designation for foreign currency denominated debt
-#   - Cross-currency swap contracts in addition to standard FX forwards
-#   - Detailed disclosure referenced in Note 17 to Consolidated Financial Statements not included in this extract
-#   - Market risk section text is truncated; full details require Note 17 extraction
-
+sections:
+  financial_instruments:
+    heading: Fair\s+Values\s+of\s+Financial\s+Instruments
+  derivatives_note:
+    heading: 17\.\s+Financial\s+instruments
