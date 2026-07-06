@@ -12,14 +12,18 @@
 #
 # One-time setup on this machine:
 #   python -m pip install -r requirements.txt
-#   python -m playwright install chromium        # browser used for the fallback
+#   # Uses your installed Chrome/Edge — no browser download needed. Only if
+#   # neither is present: python -m playwright install chromium
 #
-# Register the task (weekdays 15:00 local — adjust as needed):
+# The download drives a REAL, HEADED browser (a window briefly opens), because
+# CME blocks headless/scripted clients. So register the task to run only while
+# you're logged on:
 #   $Action  = New-ScheduledTaskAction -Execute "powershell.exe" `
 #       -Argument "-NoProfile -ExecutionPolicy Bypass -File `"C:\Users\lukasbecker\claudeprojects\sec-derivatives\run_cme_bulletin.ps1`""
 #   $Trigger = New-ScheduledTaskTrigger -Weekly `
 #       -DaysOfWeek Monday,Tuesday,Wednesday,Thursday,Friday -At 3:00PM
 #   Register-ScheduledTask -TaskName "CME IR Bulletin" -Action $Action -Trigger $Trigger
+#       # (default "run only when user is logged on" is what we want here)
 #
 # Note: CME's Data Terms of Use restrict automated access. This runs on your own
 # machine for content you're entitled to view; the compliant alternatives (CME's
