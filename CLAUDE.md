@@ -109,7 +109,13 @@ A `run_scheduler.ps1` script also exists for local API-mode runs (requires `ANTH
 A standalone daily tracker for CME Daily Bulletin **Section 02A — Summary Volume and Open Interest, Interest Rate Futures and Options**. It is independent of the SEC pipeline and uses **no LLM / API** — parsing is deterministic (`pdfplumber`).
 
 ```bash
-# Parse a bulletin PDF you downloaded yourself, append to the store (recommended)
+# Download today's bulletin, parse it, append to the store (hands-off)
+python -m src.cme_bulletin pull --verbose
+
+# Force the headless-browser download (skip the plain-request attempt)
+python -m src.cme_bulletin pull --browser --verbose
+
+# Parse a bulletin PDF you downloaded yourself (bypasses the download)
 python -m src.cme_bulletin pull --file ~/Downloads/Section02A.pdf --verbose
 
 # Re-parse a previously archived PDF (no download)
@@ -119,13 +125,22 @@ python -m src.cme_bulletin pull --date 2026-07-02 --force
 python -m src.cme_bulletin query "SELECT trade_date, total_volume, open_interest FROM data WHERE product_code='SR3' AND report_section='FUTURES' ORDER BY trade_date"
 ```
 
-> **Acquisition — important.** CME blocks automated downloads of the daily bulletin (HTTP 403, "IP blocked due to suspected web scraping"), and CME Group's website Data Terms of Use prohibit scraping. So the plain `pull` (auto-download) path is unreliable and non-compliant from shared/cloud IPs. Obtain the PDF through a channel you're entitled to — your browser, or a licensed CME data service (CME DataMine / the Daily Bulletin subscription; contact `gcc@cmegroup.com`) — then feed it to the parser with `--file`. The download path remains in the code for completeness but should not be relied on.
+### Downloading (`pull`)
+
+`pull` fetches the bulletin in two stages: a plain `requests` call first, then an automatic **headless-Chromium (Playwright)** fallback that satisfies CME's Akamai bot check when the plain request is refused (HTTP 403). One-time setup on the machine that runs it:
+
+```bash
+python -m pip install -r requirements.txt
+python -m playwright install chromium
+```
+
+> **Terms of Use.** CME's website Data Terms of Use restrict automated access to the daily bulletin, and CME blocks scripted requests from data-center/shared IPs (a 403 "suspected web scraping" message). Run `pull` only from a machine/network you're entitled to use for this content. The clearly-compliant alternatives — CME's **free Daily Bulletin email subscription** (Subscription Center) and the licensed **CME DataMine** feed (structured volume/OI via REST/SFTP/S3; `dataminesales@cmegroup.com`) — remain available; the parser/storage/query layer works unchanged behind any source (`--file`).
 
 ### Local scheduled job (`run_cme_bulletin.ps1`)
 
-For hands-off daily updates, `run_cme_bulletin.ps1` runs as a Windows Scheduled Task on your own machine (registration snippet is in the script header). Each run:
-1. **Drains an inbox** — parses any PDF you dropped into `inbox\cme\` via `pull --file`, then moves it to `inbox\cme\processed\`. This is the reliable, compliant path: download the bulletin yourself, drop it in the folder.
-2. **Attempts a direct download** as best-effort (works only if your network isn't blocked by CME; a 403 is logged and skipped, not fatal).
+For hands-off daily updates, `run_cme_bulletin.ps1` runs as a Windows Scheduled Task on your own machine (setup + registration snippet in the script header). Each run:
+1. **Downloads directly** via `pull` (requests → headless-browser fallback). This is the primary, no-manual-upload path.
+2. **Drains an inbox** as a safety net — parses any PDF dropped into `inbox\cme\` via `pull --file`, then moves it to `inbox\cme\processed\`.
 3. **Commits & pushes** any new `data/cme/` rows.
 
 `inbox/` is gitignored. Logs go to `logs/` (30-day retention).

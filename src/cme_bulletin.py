@@ -32,6 +32,7 @@ import logging
 import os
 import re
 import tempfile
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -46,13 +47,17 @@ BULLETIN_URL = (
     'https://www.cmegroup.com/daily_bulletin/current/'
     'Section02A_Summary_Volume_And_Open_Interest_Int_Rates_Futures_And_Options.pdf'
 )
-# CME's CDN rejects unfamiliar user agents; present a browser-like one.
+# CME's CDN (Akamai) rejects unfamiliar clients; present a browser-like profile.
+DAILY_BULLETIN_PAGE = 'https://www.cmegroup.com/market-data/daily-bulletin.html'
+USER_AGENT = (
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+    '(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+)
 HEADERS = {
-    'User-Agent': (
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
-        '(KHTML, like Gecko) Chrome/124.0 Safari/537.36'
-    ),
-    'Accept': 'application/pdf,*/*',
+    'User-Agent': USER_AGENT,
+    'Accept': 'text/html,application/xhtml+xml,application/pdf,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.9',
+    'Referer': DAILY_BULLETIN_PAGE,
 }
 
 DATA_DIR = Path(__file__).resolve().parent.parent / 'data' / 'cme'
@@ -96,15 +101,92 @@ class BulletinParseError(RuntimeError):
 # Fetch
 # ---------------------------------------------------------------------------
 
-def fetch_pdf(url: str = BULLETIN_URL) -> bytes:
-    """Download the bulletin PDF and return its bytes."""
-    rate_limiter.wait()
-    logger.debug('Fetching %s', url)
-    resp = requests.get(url, headers=HEADERS, timeout=60)
-    resp.raise_for_status()
-    if not resp.content[:5] == b'%PDF-':
-        raise BulletinParseError(f'URL did not return a PDF (got {resp.content[:20]!r})')
-    return resp.content
+class DownloadBlockedError(RuntimeError):
+    """Raised when CME refuses the download (HTTP 403 / non-PDF body)."""
+
+
+def fetch_pdf(url: str = BULLETIN_URL, retries: int = 2) -> bytes:
+    """Download the bulletin PDF with requests. Fast path; may be blocked by Akamai.
+
+    Raises DownloadBlockedError on a 403 or a non-PDF body so the caller can fall
+    back to a real browser; other network errors propagate.
+    """
+    session = requests.Session()
+    session.headers.update(HEADERS)
+    last_exc = None
+    for attempt in range(retries + 1):
+        rate_limiter.wait()
+        logger.debug('Fetching %s (attempt %d)', url, attempt + 1)
+        try:
+            resp = session.get(url, timeout=60)
+        except requests.RequestException as e:
+            last_exc = e
+            time.sleep(2 ** attempt)
+            continue
+        if resp.status_code == 403:
+            raise DownloadBlockedError(
+                f'CME returned 403 (bot/IP block): {resp.text[:200]}')
+        resp.raise_for_status()
+        if resp.content[:5] != b'%PDF-':
+            raise DownloadBlockedError(
+                f'URL did not return a PDF (got {resp.content[:40]!r})')
+        return resp.content
+    raise last_exc  # exhausted retries on network errors
+
+
+def fetch_pdf_browser(url: str = BULLETIN_URL) -> bytes:
+    """Download the bulletin using headless Chromium (Playwright).
+
+    A real browser satisfies Akamai's cookie/JS challenge, so this succeeds where
+    plain requests are blocked — provided the network egress itself isn't IP-banned.
+    Requires a one-time `python -m playwright install chromium`.
+    """
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError as e:
+        raise BulletinParseError(
+            'Playwright is not installed. Run `pip install playwright` and '
+            '`python -m playwright install chromium`.') from e
+
+    logger.debug('Fetching %s via headless Chromium', url)
+    with sync_playwright() as p:
+        try:
+            browser = p.chromium.launch(headless=True)
+        except Exception as e:
+            raise BulletinParseError(
+                'Could not launch Chromium. Run `python -m playwright install '
+                f'chromium`. ({e})') from e
+        try:
+            context = browser.new_context(user_agent=USER_AGENT)
+            page = context.new_page()
+            # Prime Akamai cookies by visiting the bulletin landing page first
+            # (best effort — the direct download can still work without it).
+            try:
+                page.goto(DAILY_BULLETIN_PAGE, wait_until='domcontentloaded', timeout=60000)
+            except Exception as e:
+                logger.debug('Landing-page prime failed (continuing): %s', e)
+            resp = context.request.get(url, timeout=60000)
+            if resp.status != 200:
+                raise DownloadBlockedError(
+                    f'CME returned HTTP {resp.status} to the browser download')
+            body = resp.body()
+        finally:
+            browser.close()
+
+    if body[:5] != b'%PDF-':
+        raise DownloadBlockedError(f'browser download was not a PDF (got {body[:40]!r})')
+    return body
+
+
+def download_pdf(url: str = BULLETIN_URL, browser: bool = False) -> bytes:
+    """Fetch the PDF: requests first, then fall back to a headless browser."""
+    if browser:
+        return fetch_pdf_browser(url)
+    try:
+        return fetch_pdf(url)
+    except DownloadBlockedError as e:
+        logger.info('Direct download blocked (%s); retrying via headless browser', e)
+        return fetch_pdf_browser(url)
 
 
 # ---------------------------------------------------------------------------
@@ -339,16 +421,18 @@ def upsert_rows(new_rows: list[dict]) -> int:
 # ---------------------------------------------------------------------------
 
 def pull(url: str = BULLETIN_URL, date_override: str | None = None,
-         force: bool = False, file: str | None = None) -> dict:
+         force: bool = False, file: str | None = None,
+         browser: bool = False) -> dict:
     """Fetch (or read) the bulletin, parse it, and upsert to the CSV.
 
     Source precedence: ``file`` (a local PDF you downloaded yourself) →
-    ``force`` (re-read an archived PDF for ``date_override``) → download.
+    ``force`` (re-read an archived PDF for ``date_override``) → download
+    (requests, then a headless-browser fallback for Akamai-blocked requests).
 
-    Note: CME blocks automated downloads and its Data Terms of Use prohibit
-    scraping the daily bulletin, so the download path often returns HTTP 403.
-    The ``--file`` workflow (parse a PDF you obtained through your browser or a
-    licensed CME data service) is the reliable, compliant way to use this tool.
+    Note: CME's Data Terms of Use restrict automated access to the daily
+    bulletin. The download path is intended for a machine/network you're
+    entitled to use; ``--file`` (parse a PDF you obtained yourself) remains the
+    most clearly compliant option.
     """
     if file:
         logger.info('Parsing local PDF %s', file)
@@ -358,7 +442,7 @@ def pull(url: str = BULLETIN_URL, date_override: str | None = None,
         logger.info('Re-parsing cached %s', raw_path)
         pdf_bytes = raw_path.read_bytes()
     else:
-        pdf_bytes = fetch_pdf(url)
+        pdf_bytes = download_pdf(url, browser=browser)
 
     trade_date, report_status, rows = parse_bulletin(pdf_bytes)
     if date_override:
@@ -404,10 +488,11 @@ def main():
         description='CME Interest-Rate futures & options volume / open-interest tracker')
     sub = parser.add_subparsers(dest='command', required=True)
 
-    p = sub.add_parser('pull', help='parse and store a bulletin (local file or download)')
+    p = sub.add_parser('pull', help='parse and store a bulletin (download or local file)')
     p.add_argument('--file', default=None,
-                   help='parse a local PDF you downloaded yourself (recommended; '
-                        'CME blocks and prohibits automated downloads)')
+                   help='parse a local PDF you downloaded yourself (bypasses download)')
+    p.add_argument('--browser', action='store_true',
+                   help='force the headless-browser download (skip the requests attempt)')
     p.add_argument('--date', default=None, help='override trade date (YYYY-MM-DD)')
     p.add_argument('--force', action='store_true',
                    help='re-parse the stored raw PDF for --date instead of downloading')
@@ -426,7 +511,8 @@ def main():
     )
 
     if args.command == 'pull':
-        pull(url=args.url, date_override=args.date, force=args.force, file=args.file)
+        pull(url=args.url, date_override=args.date, force=args.force,
+             file=args.file, browser=args.browser)
     elif args.command == 'query':
         query(args.sql)
 

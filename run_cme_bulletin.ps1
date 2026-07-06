@@ -3,20 +3,28 @@
 # prior session's Daily Bulletin, ~10:00 CT).
 #
 # Ingest order each run:
-#   1. Drain the inbox — any *.pdf you dropped into inbox\cme\ is parsed with
-#      `pull --file`, then moved to inbox\cme\processed\.  This always works and
-#      is the compliant path: you download the bulletin yourself, drop it in.
-#   2. Best-effort direct download — `pull` tries the CME URL from THIS machine's
-#      network.  If CME returns HTTP 403 (blocked / ToU) the job logs it and
-#      carries on; it does not fail the run.
+#   1. Direct download (primary) — `pull` fetches the bulletin from THIS machine's
+#      network: plain request first, then an automatic headless-Chromium fallback
+#      for Akamai's bot check.  This is the hands-off path (no manual upload).
+#   2. Inbox drain (safety net) — any *.pdf you happen to drop into inbox\cme\ is
+#      parsed with `pull --file`, then moved to inbox\cme\processed\.
 #   3. Commit & push any new data under data/cme/.
 #
-# One-time setup (register the task, weekdays 15:00 UTC — adjust as needed):
+# One-time setup on this machine:
+#   python -m pip install -r requirements.txt
+#   python -m playwright install chromium        # browser used for the fallback
+#
+# Register the task (weekdays 15:00 local — adjust as needed):
 #   $Action  = New-ScheduledTaskAction -Execute "powershell.exe" `
 #       -Argument "-NoProfile -ExecutionPolicy Bypass -File `"C:\Users\lukasbecker\claudeprojects\sec-derivatives\run_cme_bulletin.ps1`""
 #   $Trigger = New-ScheduledTaskTrigger -Weekly `
 #       -DaysOfWeek Monday,Tuesday,Wednesday,Thursday,Friday -At 3:00PM
 #   Register-ScheduledTask -TaskName "CME IR Bulletin" -Action $Action -Trigger $Trigger
+#
+# Note: CME's Data Terms of Use restrict automated access. This runs on your own
+# machine for content you're entitled to view; the compliant alternatives (CME's
+# free Daily Bulletin email subscription, or a licensed CME DataMine feed) remain
+# available if you prefer.
 
 $ErrorActionPreference = "Stop"
 $RepoDir  = "C:\Users\lukasbecker\claudeprojects\sec-derivatives"
@@ -44,7 +52,14 @@ try {
     Log "Installing dependencies..."
     python -m pip install -q -r requirements.txt 2>&1 | Out-String | ForEach-Object { Log $_ }
 
-    # 1. Drain the inbox -----------------------------------------------------
+    # 1. Direct download (primary, hands-off) --------------------------------
+    Log "Downloading today's bulletin from CME (requests, then headless browser)..."
+    python -m src.cme_bulletin pull --verbose 2>&1 | Out-String | ForEach-Object { Log $_ }
+    if ($LASTEXITCODE -ne 0) {
+        Log "WARNING: direct download failed (CME may have blocked this network). Drop today's PDF into $InboxDir to ingest it, or check the log above."
+    }
+
+    # 2. Drain the inbox (safety net for any manually dropped PDFs) -----------
     $pdfs = Get-ChildItem "$InboxDir\*.pdf" -ErrorAction SilentlyContinue
     if ($pdfs) {
         foreach ($pdf in $pdfs) {
@@ -57,15 +72,6 @@ try {
                 Log "WARNING: failed to parse $($pdf.Name); leaving it in the inbox."
             }
         }
-    } else {
-        Log "Inbox empty."
-    }
-
-    # 2. Best-effort direct download ----------------------------------------
-    Log "Attempting direct download from CME (best effort)..."
-    python -m src.cme_bulletin pull --verbose 2>&1 | Out-String | ForEach-Object { Log $_ }
-    if ($LASTEXITCODE -ne 0) {
-        Log "Direct download unavailable (CME likely returned 403 / blocked). Drop today's PDF into $InboxDir to ingest it next run."
     }
 
     # 3. Commit & push -------------------------------------------------------
