@@ -1,64 +1,68 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NUMERIC] commodity_derivatives_notional: $11M → $26M (+144.9%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $-103M → $-82M (+20.1%) — exceeds 20% threshold
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-39M)
-[NUMERIC] expected_12mo_reclass_from_aoci: $41M → $26M (-35.4%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-58M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-97M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-06 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($3,214M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($4M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($13M)
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $11M → $26M (+144.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-103M → $-82M (+20.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $41M → $26M (-35.4%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-58M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-97M, now missing
+[HISTORICAL] [LLM_FLAG] section_text is limited to Note C (Marketable Securities), Note D (Inventories), and the start of Note E (Finance and Other Receivables); it does not include the derivatives/financial instruments disclosure, so all derivative-related fields (FX notional, IR swap notional, derivative asset/liability fair values) could not be located and are null
+[HISTORICAL] [LLM_FLAG] corporate_debt_securities_fv left null: the text splits corporate debt into 'U.S. corporate securities' ($972.3M fair value) and 'Non-U.S. corporate securities' ($616.7M fair value) rather than a single combined 'corporate debt securities' line, so no single verbatim value exists
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv not present in the provided section_text
+[HISTORICAL] [LLM_FLAG] net_derivative_position was computed (asset minus liability) rather than directly stated in the text
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci ($26.3) is stated net of taxes rather than pre-tax
+[HISTORICAL] [LLM_FLAG] FX and IR notionals are not split between hedge-designated and not-designated categories in this section (only fair values are split)
+[HISTORICAL] [LLM_FLAG] Net investment hedge notional ($471.1) is disclosed separately from the $1,698.5 total FX contract notional and may or may not be a subset of it
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,668M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($4,391M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($11M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($63M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($166M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-103M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($41M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-58M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-97M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-06 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $2,946M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $5M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $28M, now missing
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $7M → $11M (+44.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $215M → $166M (-22.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-156M → $-103M (+33.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($41M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-58M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-97M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/9 previously-populated fields are now null (total_marketable_securities_fv, marketable_equity_securities_fv, gross_unrealized_gains_debt)
+[HISTORICAL] [LLM_FLAG] net_derivative_position was computed (asset minus liability) rather than directly stated in the text
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci ($40.7) is stated net of taxes rather than pre-tax
+[HISTORICAL] [LLM_FLAG] FX and IR notionals are not split between hedge-designated and not-designated categories in this section (only fair values are split)
+[HISTORICAL] [LLM_FLAG] Net investment hedge notional ($638.1) is disclosed separately from the $1,668.1 total FX contract notional and may or may not be a subset of it
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct and ir_sensitivity_100bp are reported here as the stated loss amounts made negative to reflect an adverse fair-value change; verify sign convention against schema expectations
+[HISTORICAL] [LLM_FLAG] This section explicitly cross-references Note P for FX/commodity/IR notional detail, which is not included in the supplied text
+[HISTORICAL] [LLM_FLAG] No equity price risk disclosure appears in this filing's Item 7A (commodity price risk is the third category instead)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-58M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-97M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
-[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $20M → $7M (-63.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $32M, now missing
+[HISTORICAL] [LLM_FLAG] section_text is limited to Note C (Marketable Securities), Note D (Inventories), and the start of Note E (Finance and Other Receivables); it does not include the derivatives/financial instruments disclosure, so all derivative-related fields (FX notional, IR swap notional, derivative asset/liability fair values) could not be located and are null
+[HISTORICAL] [LLM_FLAG] corporate_debt_securities_fv left null: the text splits corporate debt into 'U.S. corporate securities' ($917.7M fair value) and 'Non-U.S. corporate securities' ($601.6M fair value) rather than a single combined 'corporate debt securities' line, so no single verbatim value exists
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv not present in the provided section_text
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci could not be extracted because the section text was cut off before the amount was stated
+[HISTORICAL] [LLM_FLAG] net_derivative_position was computed (asset minus liability) rather than directly stated in the text
+[HISTORICAL] [LLM_FLAG] FX and IR notionals are not split between hedge-designated and not-designated categories in this section (only fair values are split)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-58M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-97M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[LLM_FLAG] The FX sensitivity increased significantly, going from a loss of $126.3 in 2024 to a loss of $96.8 in 2025, indicating potential improvements in hedging effectiveness or shifts in underlying exposures.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $7M → $5M (-22.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $18M → $25M (+39.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $28M → $20M (-27.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $95M → $56M (-40.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $93M → $235M (+152.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $2M → $-178M (-9484.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $19M → $32M (+68.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] section_text is limited to Note C (Marketable Securities), Note D (Inventories), and the start of Note E (Finance and Other Receivables); it does not include the derivatives/financial instruments disclosure, so all derivative-related fields (FX notional, IR swap notional, derivative asset/liability fair values) could not be located and are null
+[HISTORICAL] [LLM_FLAG] corporate_debt_securities_fv left null: the text splits corporate debt into 'U.S. corporate securities' ($899.5M fair value) and 'Non-U.S. corporate securities' ($618.3M fair value) rather than a single combined 'corporate debt securities' line, so no single verbatim value exists
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv not present in the provided section_text
+[HISTORICAL] [LLM_FLAG] net_derivative_position was computed (asset minus liability) rather than directly stated in the text
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci text was truncated at the end of the supplied section (cut off after '$ 32.5 ,') so the net-of-tax qualifier could not be confirmed
+[HISTORICAL] [LLM_FLAG] FX and IR notionals are not split between hedge-designated and not-designated categories in this section (only fair values are split)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7S84iUmtAMix2ahRjS'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7Rm4fWGVCqe5j3TFNP'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7RGXvr9d9WpXMaGQcC'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7QnZRe3pfdz8nbwWJ9'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7Q6qzEEi7WXKaRZQSR'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-58M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-58M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-06 ===
+[HISTORICAL] [LLM_FLAG] section_text is limited to Note C (Marketable Securities), Note D (Inventories), and the start of Note E (Finance and Other Receivables); it does not include the derivatives/financial instruments disclosure, so all derivative-related fields (FX notional, IR swap notional, derivative asset/liability fair values) could not be located and are null
+[HISTORICAL] [LLM_FLAG] corporate_debt_securities_fv left null: the text splits corporate debt into 'U.S. corporate securities' ($908.6M fair value) and 'Non-U.S. corporate securities' ($609.2M fair value) rather than a single combined 'corporate debt securities' line, so no single verbatim value exists
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv not present in the provided section_text
+[HISTORICAL] [LLM_FLAG] net_derivative_position was computed (asset minus liability) rather than directly stated in the text
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci ($19.3) is stated net of taxes rather than pre-tax
+[HISTORICAL] [LLM_FLAG] FX and IR notionals are not split between hedge-designated and not-designated categories in this section (only fair values are split)

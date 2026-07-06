@@ -1,20 +1,39 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] total_derivative_liability: $223M → $161M (-27.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $60M → $136M (+126.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $37M, now missing
+[HISTORICAL] [LLM_FLAG] No FX, interest rate, or equity derivative notional disclosed; company only discloses commodity (natural gas/electricity) derivatives
+[HISTORICAL] [LLM_FLAG] Commodity derivative volumes disclosed in physical units (MMBtus, MWh, CRRs) rather than dollar notional, so commodity_derivatives_notional left null
+[HISTORICAL] [LLM_FLAG] No cash flow hedge AOCI disclosure; unrealized gains/losses are deferred to regulatory assets/liabilities rather than OCI
+[HISTORICAL] [LLM_FLAG] section_text is only a cross-reference to Notes 8 and 9; no market risk figures are provided in the supplied text
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] net_derivative_position: $79M → $60M (-24.1%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($37M)
+[HISTORICAL] [LLM_FLAG] No FX, interest rate, or equity derivative notional disclosed; company only discloses commodity (natural gas/electricity) derivatives
+[HISTORICAL] [LLM_FLAG] Commodity derivative volumes disclosed in physical units (MMBtus, MWh, CRRs) rather than dollar notional, so commodity_derivatives_notional left null
+[HISTORICAL] [LLM_FLAG] No cash flow hedge AOCI disclosure; unrealized gains/losses are deferred to regulatory assets/liabilities rather than OCI
+[HISTORICAL] [LLM_FLAG] No FX derivatives, marketable equity securities, or fixed-rate notes risk disclosed in this section
+[HISTORICAL] [LLM_FLAG] A value-at-risk figure of approximately $4 million (2025) / $5 million (2024) for commodity price risk is mentioned but does not map to any schema field
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] total_derivative_liability: $198M → $251M (+26.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $188M → $79M (-58.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX, interest rate, or equity derivative notional disclosed; company only discloses commodity (natural gas/electricity) derivatives
+[HISTORICAL] [LLM_FLAG] Commodity derivative volumes disclosed in physical units (MMBtus, MWh, CRRs) rather than dollar notional, so commodity_derivatives_notional left null
+[HISTORICAL] [LLM_FLAG] No cash flow hedge AOCI disclosure; unrealized gains/losses are deferred to regulatory assets/liabilities rather than OCI
+[HISTORICAL] [LLM_FLAG] section_text is only a cross-reference to Notes 8 and 9; no market risk figures are provided in the supplied text
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] total_derivative_liability: $269M → $198M (-26.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $147M → $188M (+27.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX, interest rate, or equity derivative notional disclosed; company only discloses commodity (natural gas/electricity) derivatives
+[HISTORICAL] [LLM_FLAG] Commodity derivative volumes disclosed in physical units (MMBtus, MWh, CRRs) rather than dollar notional, so commodity_derivatives_notional left null
+[HISTORICAL] [LLM_FLAG] No cash flow hedge AOCI disclosure; unrealized gains/losses are deferred to regulatory assets/liabilities rather than OCI
+[HISTORICAL] [LLM_FLAG] section_text is only a cross-reference to Notes 8 and 9; no market risk figures are provided in the supplied text
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_forwards_outstanding)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-06 ===
+[HISTORICAL] [LLM_FLAG] No FX, interest rate, or equity derivative notional disclosed; company only discloses commodity (natural gas/electricity) derivatives
+[HISTORICAL] [LLM_FLAG] Commodity derivative volumes disclosed in physical units (MMBtus, MWh, CRRs) rather than dollar notional, so commodity_derivatives_notional left null
+[HISTORICAL] [LLM_FLAG] No cash flow hedge AOCI disclosure; unrealized gains/losses are deferred to regulatory assets/liabilities rather than OCI
+[HISTORICAL] [LLM_FLAG] section_text is only a cross-reference to Notes 8 and 9; no market risk figures are provided in the supplied text
