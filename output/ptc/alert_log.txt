@@ -1,84 +1,87 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,059M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($536M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($523M)
-[NUMERIC] total_derivative_asset: $1,315M → $8M (-99.4%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $548M → $5M (-99.0%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $767M → $2M (-99.7%) — exceeds 20% threshold
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $9M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $2M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $7M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] fx_forward_notional: appeared for first time ($678M)
-[NEW_FIELD] fx_option_notional: appeared for first time ($143M)
-[NEW_FIELD] net_investment_hedge_notional: appeared for first time ($536M)
-[NEW_FIELD] gains_losses_other_income: appeared for first time ($931M)
-[NEW_FIELD] aoci_net_investment_hedge: appeared for first time ($8,942M)
-[DISAPPEARED_FIELD] fx_sensitivity_eur: was $755M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_jpy: was $279M, now missing
-[VALIDATION] Likely extraction failure: 6/9 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct, fx_sensitivity_eur...)
-[VALIDATION] Likely units mismatch: total_derivative_asset changed from 1,315 to 8 (0x)
-[VALIDATION] Likely units mismatch: total_derivative_liability changed from 548 to 5 (0x)
-[VALIDATION] Likely units mismatch: net_derivative_position changed from 767 to 2 (0x)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-07 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $45M → $269M (+496.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $2M → $5M (+178.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $2M → $5M (+178.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $7M → $2M (-66.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gains_losses_other_income: $0M → $1M (+350.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No marketable securities (debt or equity) beyond cash equivalents are disclosed in this Fair Value Measurements note.
+[HISTORICAL] [LLM_FLAG] No interest rate, commodity, or equity derivatives are disclosed — only FX forward and option contracts.
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional declined from $1,315.0M (prior quarter, Sept 30 2025 comparative was $1,518.1M) to $1,059.2M this quarter, driven mainly by a drop in the Euro/USD notional ($1,202.8M to $820.8M).
+[HISTORICAL] [LLM_FLAG] Only Euro and Japanese Yen notional splits between forward vs. option contracts are disclosed (via footnotes); company-wide fx_forward_notional/fx_option_notional totals across all hedged currencies are not derivable from this text and are left null.
+[HISTORICAL] [LLM_FLAG] This quarter includes the Kepware/ThingWorx divestiture (gain on sale $462.6 million, included in Other income, net) — unrelated to derivatives but present in the surrounding text; not reflected in any derivatives field.
+[HISTORICAL] [LLM_FLAG] No interest rate, commodity, or equity derivatives disclosed.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,315M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($548M)
-[NUMERIC] fx_not_designated_notional: $15M → $767M (+5015.5%) — exceeds 20% threshold
-[NEW_FIELD] total_derivative_asset: appeared for first time ($9M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($2M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($7M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $30M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $30M, now missing
-[NEW_FIELD] fx_forward_notional: appeared for first time ($755M)
-[NEW_FIELD] fx_option_notional: appeared for first time ($279M)
-[NEW_FIELD] net_investment_hedge_notional: appeared for first time ($548M)
-[NEW_FIELD] gains_losses_other_income: appeared for first time ($0M)
-[NEW_FIELD] aoci_net_investment_hedge: appeared for first time ($-1M)
-[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct)
-[LLM_FLAG] fx_not_designated_notional differs from prior period by more than 50%.
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-07-07 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($45M)
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($1,863M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($548M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($1,315M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($9M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,863M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($548M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($9M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($7M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $7M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[HISTORICAL] [NEW_FIELD] net_investment_hedge_notional: appeared for first time ($548M)
+[HISTORICAL] [NEW_FIELD] gains_losses_other_income: appeared for first time ($0M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_eur: was $44M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_jpy: was $10M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fixed_rate_notes_billion, fx_sensitivity_eur, fx_sensitivity_jpy)
+[HISTORICAL] [LLM_FLAG] This filing introduces foreign exchange option contracts (used to hedge forecasted USD cash flows) in addition to forward contracts, unlike the prior quarter (100879 accession) which had forwards only.
+[HISTORICAL] [LLM_FLAG] No marketable securities (debt or equity) beyond cash equivalents are disclosed in this Fair Value Measurements note.
+[HISTORICAL] [LLM_FLAG] No interest rate, commodity, or equity derivatives are disclosed.
+[HISTORICAL] [LLM_FLAG] Only Euro and Japanese Yen notional splits between forward vs. option contracts are disclosed (via footnotes); company-wide fx_forward_notional/fx_option_notional totals across all hedged currencies are not derivable from this text and are left null.
+[HISTORICAL] [LLM_FLAG] No interest rate, commodity, or equity derivatives disclosed.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-K | Period ending 2025-09-30 | Processed 2026-07-07 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $53M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $1,384M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $482M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $902M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $14M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $1,384M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $482M, now missing
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $902M → $1,518M (+68.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $14M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-8M, now missing
+[HISTORICAL] [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-2M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($7M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forward_notional: was $902M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_investment_hedge_notional: was $482M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gains_losses_other_income: was $4M, now missing
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_eur: appeared for first time ($44M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_jpy: appeared for first time ($10M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 14/15 previously-populated fields are now null (total_cash_equivalents_fv, fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_total_derivative_asset...)
+[HISTORICAL] [LLM_FLAG] This section_text is the Item 7A / MD&A market-risk narrative for the 10-K (largely identical to the companion market_risk_extract request for this same accession), not the numbered derivatives note (Note 15) containing the fair-value and designated/non-designated asset-liability tables. Most balance-sheet-oriented fields (total_derivative_asset/liability, fx_designated_notional, net_investment_hedge_notional) could not be extracted from this text and are left null rather than guessed.
+[HISTORICAL] [LLM_FLAG] fx_forward_notional/fx_option_notional could only be partially derived from Euro and Yen per-currency footnotes, not a company-wide total, so left null.
+[HISTORICAL] [LLM_FLAG] The text mentions 'Changes in foreign currencies relative to the U.S. Dollar had an unfavorable impact of $2.4 million ... on our consolidated cash balances in FY'25' — this is a cash-translation impact, not the derivatives' realized/unrealized gain-loss line, so it was not used for gains_losses_other_income.
+[HISTORICAL] [LLM_FLAG] fx_transaction_gain_loss reflects FX translation impact on cash balances as stated in this Item 7A text, not a discrete realized/unrealized derivatives gain-loss income-statement line (that figure would be in Note 15, not shown here).
+[HISTORICAL] [LLM_FLAG] The 10% sensitivity mentioned in this section applies to interest rate risk on cash equivalents, not FX exposure — fx_sensitivity_10pct left null to avoid conflating the two metrics.
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding intentionally left null per the field's own instruction, since the companion derivatives_note extraction for this accession already reports fx_not_designated_notional.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] fx_not_designated_notional: was $15M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $30M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $30M, now missing
-[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_not_designated_notional, ir_sensitivity_100bp, fx_sensitivity_10pct)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-07 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $74M → $53M (-28.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $4M → $14M (+234.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $4M → $14M (+234.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $2M → $-8M (-582.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gains_losses_other_income: $-1M → $4M (+544.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No marketable securities (debt or equity) beyond cash equivalents are disclosed in this Fair Value Measurements note; only cash equivalents, a Level 3 convertible note (already impaired to zero and not part of the recurring fair value table), and forward contracts appear.
+[HISTORICAL] [LLM_FLAG] No interest rate, commodity, or equity derivatives are disclosed — only FX forward contracts.
+[HISTORICAL] [LLM_FLAG] Consistent with the companion derivatives_note_extract for this same accession (fx_designated_notional 482.4, fx_not_designated_notional 901.9, total_derivative_asset 6.2, total_derivative_liability 14.4).
+[HISTORICAL] [LLM_FLAG] No interest rate swaps, commodity, or equity derivatives disclosed.
+[HISTORICAL] [LLM_FLAG] gains_losses_other_income reflects the three-month figure; nine-month figure was $3,661 thousand.
+[HISTORICAL] [LLM_FLAG] total_derivative_liability ($14.4M) exceeds total_derivative_asset ($6.2M) this quarter, driven by a $7,895K designated-hedge forward liability not present the prior quarter — net derivative position swung to a liability.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_not_designated_notional: was $15M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $30M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $30M, now missing
-[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_not_designated_notional, ir_sensitivity_100bp, fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($15M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($30M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($30M)
-
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $1,518M, now missing
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-2M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $7M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_eur: was $44M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_jpy: was $10M, now missing
-[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (fx_forwards_outstanding, fx_transaction_gain_loss, ir_sensitivity_100bp, fixed_rate_notes_billion, fx_sensitivity_eur...)
-
-=== 10-K | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($1,518M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-2M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($7M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_eur: appeared for first time ($44M)
-[NEW_FIELD] fx_sensitivity_jpy: appeared for first time ($10M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-07 ===
+[HISTORICAL] [LLM_FLAG] No marketable securities (debt or equity) beyond cash equivalents are disclosed in this Fair Value Measurements note; only cash equivalents, a Level 3 convertible note (already impaired, not part of the recurring fair value table), and forward contracts appear.
+[HISTORICAL] [LLM_FLAG] No interest rate, commodity, or equity derivatives are disclosed — only FX forward contracts.
+[HISTORICAL] [LLM_FLAG] Consistent with the companion derivatives_note_extract for this same accession.
+[HISTORICAL] [LLM_FLAG] No interest rate swaps, commodity, or equity derivatives disclosed — PTC's derivative program in this filing is limited to FX forward contracts.
+[HISTORICAL] [LLM_FLAG] gains_losses_other_income reflects the three-month figure; the six-month figure was $(360) thousand — note the period convention if aggregating across filings.
