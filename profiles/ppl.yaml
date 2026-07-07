@@ -1,9 +1,10 @@
-issuer: "PPL Corporation"
+issuer: PPL Corporation
 ticker: PPL
-cik: "922224"
+cik: '922224'
 archetype: minimal_hedger
 extraction_mode: llm
-
-# Derivatives section matched by: ITEM\s*7A
-# Market risk section matched by: Quantitative\s+and\s+Qualitat\s*ive\s+Disclosures?\s+About\s+Market\s+Risk
-
+sections:
+  financial_instruments:
+    heading: 13\.\s+Fair\s+Value\s+Measurements
+  market_risk:
+    heading: Risk\s+Management\s+\(All\s+Registrants\)\s+Market\s+Risk
