@@ -507,6 +507,9 @@ def _row_fill_rate(staged: dict) -> float | None:
     return filled / applicable if applicable else None
 
 
+ANNUAL_FORMS = ('10-K', '10-K/A')
+
+
 def _rebuild_issuer(ticker: str, staged_rows: list[dict],
                     config: IssuerConfig) -> dict:
     """Chronological rebuild: alerts, notes, fill rates, gate verdict."""
@@ -528,6 +531,7 @@ def _rebuild_issuer(ticker: str, staged_rows: list[dict],
     alert_blocks = []
     notes_blocks = []
     fill_rates = []
+    annual_fill_rates = []
     prior_row = None
     now = datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
@@ -561,6 +565,8 @@ def _rebuild_issuer(ticker: str, staged_rows: list[dict],
         fr = _row_fill_rate(staged)
         if fr is not None:
             fill_rates.append(fr)
+            if row.get('form_type') in ANNUAL_FORMS:
+                annual_fill_rates.append(fr)
         prior_row = row
 
     # Newest first, matching live file conventions
@@ -580,9 +586,21 @@ def _rebuild_issuer(ticker: str, staged_rows: list[dict],
     any_missing = any('section_missing' in s['provenance'].values()
                       for s in staged_rows)
     median_fill = statistics.median(fill_rates) if fill_rates else None
+    annual_median_fill = statistics.median(annual_fill_rates) if annual_fill_rates else None
 
     if median_fill is not None:
-        gate_passed = median_fill >= GATE_MEDIAN_FILL
+        # Some issuers only restate derivatives notionals in the annual 10-K
+        # and merely cross-reference it from interim 10-Qs (e.g. "See Note 8.
+        # Debt for additional information..."). That's a genuine, correct
+        # disclosure pattern, not an extraction failure — but it drags the
+        # overall median below the gate even when the 10-K itself extracted
+        # cleanly. Pass on either the overall median or a strong annual filing
+        # alone, so the well-extracted 10-K data isn't held hostage by
+        # interim periods that were never going to have the data.
+        gate_passed = (
+            median_fill >= GATE_MEDIAN_FILL
+            or (annual_median_fill is not None and annual_median_fill >= GATE_MEDIAN_FILL)
+        )
     else:
         # No applicable fields anywhere: honest minimal filer passes only if
         # nothing actually failed to locate.
@@ -592,6 +610,7 @@ def _rebuild_issuer(ticker: str, staged_rows: list[dict],
         'ticker': ticker,
         'rows': len(staged_rows),
         'median_fill_rate': round(median_fill, 3) if median_fill is not None else None,
+        'annual_median_fill_rate': round(annual_median_fill, 3) if annual_median_fill is not None else None,
         'rows_with_missing_sections': sum(
             1 for s in staged_rows if 'section_missing' in s['provenance'].values()),
         'gate_passed': gate_passed,
@@ -721,7 +740,8 @@ def finalize(commit: bool):
             append_review_item(
                 ticker, units[keys[0]].get('cik', ''),
                 reason=f"backfill gate failed: median fill "
-                       f"{verdict['median_fill_rate']}, "
+                       f"{verdict['median_fill_rate']} "
+                       f"(annual-only median {verdict['annual_median_fill_rate']}), "
                        f"{verdict['rows_with_missing_sections']} rows with missing sections",
                 severity='warning')
             continue

@@ -163,11 +163,11 @@ class TestFillRate:
 
 
 class TestRebuildIssuer:
-    def _staged(self, period, fx, accession, missing=False):
+    def _staged(self, period, fx, accession, missing=False, form_type='10-Q'):
         prov = {'fx_notional': 'extracted' if fx is not None else 'not_disclosed',
                 'ir_notional': 'not_disclosed',
                 'rate_sensitivity': 'section_missing' if missing else 'not_disclosed'}
-        row = {'period_end_date': period, 'form_type': '10-Q',
+        row = {'period_end_date': period, 'form_type': form_type,
                'accession_number': accession, 'filing_date': '',
                'processed_at': '', 'extraction_version': 2}
         if fx is not None:
@@ -232,6 +232,36 @@ class TestRebuildIssuer:
         verdict = backfill._rebuild_issuer('TST', staged_rows, _config())
         assert verdict['median_fill_rate'] is None
         assert verdict['gate_passed']
+
+    def test_annual_only_discloser_passes_on_10k_alone(self, workspace):
+        # ITW-style pattern: the 10-K fully discloses notionals but each
+        # 10-Q just cross-references it ("See Note 8. Debt for additional
+        # information...") and has nothing extractable. The overall median
+        # is dragged to 0 by the four empty quarters, but the well-extracted
+        # annual filing alone should be enough to pass the gate and commit.
+        staged_rows = [
+            self._staged('2025-03-31', None, 'acc-q1', missing=True, form_type='10-Q'),
+            self._staged('2025-06-30', None, 'acc-q2', missing=True, form_type='10-Q'),
+            self._staged('2025-09-30', None, 'acc-q3', missing=True, form_type='10-Q'),
+            self._staged('2025-12-31', 1600, 'acc-10k', form_type='10-K'),
+            self._staged('2026-03-31', None, 'acc-q4', missing=True, form_type='10-Q'),
+        ]
+        verdict = backfill._rebuild_issuer('TST', staged_rows, _config())
+        assert verdict['median_fill_rate'] == 0.0
+        assert verdict['annual_median_fill_rate'] == 1.0
+        assert verdict['gate_passed']
+
+    def test_genuine_non_discloser_still_fails_despite_annual_check(self, workspace):
+        # A company with no derivatives at all (like ROP/UNP): the 10-K also
+        # has nothing extractable, so neither the overall nor the annual-only
+        # median should rescue it, and any_missing correctly fails the gate.
+        staged_rows = [
+            self._staged('2025-03-31', None, 'acc-q1', missing=True, form_type='10-Q'),
+            self._staged('2025-12-31', None, 'acc-10k', missing=True, form_type='10-K'),
+        ]
+        verdict = backfill._rebuild_issuer('TST', staged_rows, _config())
+        assert verdict['annual_median_fill_rate'] == 0.0
+        assert not verdict['gate_passed']
 
 
 class TestCommitIssuer:
