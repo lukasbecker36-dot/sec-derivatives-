@@ -1,15 +1,32 @@
-=== 10-Q | Period ending 2026-02-28 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ4Appzp1v2n5iTy7n5'}
+=== 10-Q | Period ending 2026-02-28 | Processed 2026-07-15 ===
+[HISTORICAL] [LLM_FLAG] Debt securities total ($211M) includes both corporate debt and U.S. Treasury securities; the schema field 'corporate_debt_securities_fv' may overstate pure corporate debt exposure.
+[HISTORICAL] [LLM_FLAG] Section also discloses FedEx's intended InPost acquisition investment ($2.6B based on offer price) — this is a pending strategic investment, not a marketable security.
+[HISTORICAL] [LLM_FLAG] Section contains no quantitative sensitivity or notional figures; it explicitly states no material changes since the Annual Report.
 
-=== 10-Q | Period ending 2025-11-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ3ueXAWYoyo6KFMLsC'}
+=== 10-Q | Period ending 2025-11-30 | Processed 2026-07-15 ===
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $71M → $187M (+163.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Debt securities total ($187M) includes both corporate debt and U.S. Treasury securities; the schema field 'corporate_debt_securities_fv' may overstate pure corporate debt exposure.
+[HISTORICAL] [LLM_FLAG] Section contains no quantitative sensitivity or notional figures; it explicitly states no material changes since the Annual Report.
 
-=== 10-Q | Period ending 2025-08-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ3h1W6DYJkiuoYQnjB'}
+=== 10-Q | Period ending 2025-08-31 | Processed 2026-07-15 ===
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($71M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-450M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $17M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (fx_sensitivity_10pct, fixed_rate_notes_billion)
+[HISTORICAL] [LLM_FLAG] Debt securities total ($71M) includes all available-for-sale debt securities; filing does not break out corporate vs. government separately in this section.
+[HISTORICAL] [LLM_FLAG] Section contains no quantitative sensitivity or notional figures; it explicitly states no material changes since the Annual Report.
 
-=== 10-K | Period ending 2025-05-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ3UrWaLBSojsLxruZA'}
+=== 10-K | Period ending 2025-05-31 | Processed 2026-07-15 ===
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $72M, now missing
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-450M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($17M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (corporate_debt_securities_fv)
+[HISTORICAL] [LLM_FLAG] Section text contains primarily accounting policy disclosures, treasury share activity, and business optimization costs; the $506M equity investment figure is from the MD&A section and represents total carrying value (mixing fair-value and cost-method securities), not a pure fair-value total.
+[HISTORICAL] [LLM_FLAG] Derivative fair value data would be found in the separate derivatives note (Note 16) of the 10-K.
+[HISTORICAL] [LLM_FLAG] Section text is MD&A content (annual results discussion, income tax analysis, business outlook, seasonality) rather than the derivatives accounting note; no specific derivative notional or fair value amounts are present — refer to Note 16 of the 10-K for detailed derivatives disclosures.
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity ($600M for 10% rate increase) is not directly convertible to a 100bp measure; fixed_rate_notes_billion uses fair value ($17.2B) rather than face/par value.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap OCI loss of $86M recognized in 2025 is not a transaction gain/loss — it is recorded in OCI for net investment hedges.
 
-=== 10-Q | Period ending 2025-02-28 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ3Cv4XjpBs1LJBDrfq'}
-
+=== 10-Q | Period ending 2025-02-28 | Processed 2026-07-15 ===
+[HISTORICAL] [LLM_FLAG] Debt securities total ($72M) includes all available-for-sale debt securities; filing does not break out corporate vs. government separately in this section.
+[HISTORICAL] [LLM_FLAG] Section contains no quantitative sensitivity or notional figures; it explicitly states no material changes since the Annual Report.

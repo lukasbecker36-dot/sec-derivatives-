@@ -1,55 +1,33 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
-[DISAPPEARED_FIELD] fi_total_derivative_asset: was $7,456M, now missing
-[DISAPPEARED_FIELD] fi_total_derivative_liability: was $7,037M, now missing
-[VALIDATION] Likely extraction failure: 3/5 previously-populated fields are now null (gross_unrealized_gains_debt, fi_total_derivative_asset, fi_total_derivative_liability)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-15 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $7,456M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $7,037M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] Commodity notional positions at Mar 31, 2026 (physical units): Crude oil +25Mbbls, Petroleum products -47Mbbls, Natural gas -658MMBTUs
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($7,456M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($7,037M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($6M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-15 ===
+[HISTORICAL] [LLM_FLAG] Annual realized/unrealized trading gains/losses: 2025 +$1.1B, 2024 -$0.7B, 2023 +$1.0B (before-tax)
+[HISTORICAL] [LLM_FLAG] Collateral under master netting not on balance sheet: $0.5B each for Dec 31, 2025 and Dec 31, 2024
+[HISTORICAL] [LLM_FLAG] Commodity notional positions at Dec 31, 2025 (physical units): Crude oil +6Mbbls, Petroleum products -27Mbbls, Natural gas -449MMBTUs
+[HISTORICAL] [LLM_FLAG] Annual trading gains/losses are disclosed in Financial Instruments note (Note 6): 2025 gains $1.1B, 2024 losses $0.7B, 2023 gains $1.0B — not present in this section text
+[HISTORICAL] [LLM_FLAG] Item 7A section text (430 chars) only cross-references 'Market Risks' in the Financial Section of the Annual Report; no quantitative data is present in the supplied section_text
+[HISTORICAL] [LLM_FLAG] Quantitative market risk disclosures are located in the Financial Section of the 10-K, not in this Item 7A stub
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] fi_total_derivative_asset: was $7,456M, now missing
-[DISAPPEARED_FIELD] fi_total_derivative_liability: was $7,037M, now missing
-[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-15 ===
+[HISTORICAL] [LLM_FLAG] Euro-denominated debt designated as net investment hedge: $3.5 billion as of Sep 30, 2025
+[HISTORICAL] [LLM_FLAG] Collateral under master netting not on balance sheet: $836M (Sep 30, 2025)
+[HISTORICAL] [LLM_FLAG] Commodity notional positions at Sep 30, 2025 (physical units): Crude oil -24Mbbls, Petroleum products -28Mbbls, Natural gas -709MMBTUs
+[HISTORICAL] [LLM_FLAG] Q3 2025 trading gains: Total -$48M; 9mo 2025 Total $492M
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($7,456M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($7,037M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-15 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $6,127M → $9,445M (+54.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $6,297M → $9,542M (+51.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Euro-denominated debt designated as net investment hedge: $3.5 billion as of Jun 30, 2025
+[HISTORICAL] [LLM_FLAG] Collateral under master netting not on balance sheet: $849M (Jun 30, 2025)
+[HISTORICAL] [LLM_FLAG] Commodity notional positions at Jun 30, 2025 (physical units): Crude oil 0Mbbls, Petroleum products -26Mbbls, Natural gas -647MMBTUs
+[HISTORICAL] [LLM_FLAG] Q2 2025 trading gains: Total $519M; 6mo 2025 Total $540M; Q2 2024 Total -$108M
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ2DPK7da1RZqN5Crob'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ1vKPzhikWpuKDheDq'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ1znHQmtzcKThpChFp'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ1SuP6ZRQRiXG28rKa'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ1XQVixtYzbKthM2hP'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYzwDwR96XyoD56zjsH'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ14JasvRAfT612cQDu'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYzXD4UTnvWxgrXjQAQ'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYzdvdQGZ9Zc5GhkNsC'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
-[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (gross_unrealized_gains_debt)
-[LLM_FLAG] The provided Note 7 section focuses on financial instruments and derivatives rather than cash equivalents and marketable securities typical of a liquidity/investment disclosure section. The requested fields are not present in this excerpt.
-[LLM_FLAG] Filing section is abbreviated - directs reader to 2024 Form 10-K Item 7A for detailed market risk disclosures. No specific derivative or market risk data provided in this excerpt.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[LLM_FLAG] Note 7 focuses on derivative instruments and long-term financial instruments but does not contain information on cash equivalents, marketable securities, or marketable equity securities typically found in liquidity/current assets sections of financial statements
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
-[LLM_FLAG] Provided text is only the header/introduction to Item 7A and does not contain actual quantitative disclosure data. Reference indicates detailed market risk information exists in 'Market Risks' section, but that section is not provided in the filing text.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-15 ===
+[HISTORICAL] [LLM_FLAG] Euro-denominated debt designated as net investment hedge: $3.2 billion as of Mar 31, 2025
+[HISTORICAL] [LLM_FLAG] Collateral under master netting not on balance sheet: $538M (Mar 31, 2025)
+[HISTORICAL] [LLM_FLAG] Commodity notional positions at Mar 31, 2025 (physical units): Crude oil +35Mbbls, Petroleum products -28Mbbls, Natural gas -702MMBTUs
+[HISTORICAL] [LLM_FLAG] Q1 2025 trading gains: Sales $19M, Crude purchases $2M, Total $21M; Q1 2024: Sales -$792M, Crude $3M, Total -$789M

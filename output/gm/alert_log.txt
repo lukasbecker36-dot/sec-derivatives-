@@ -1,87 +1,62 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] commodity_derivatives_notional: was $1,243M, now missing
-[NUMERIC] total_derivative_liability: $1,175M → $836M (-28.9%) — exceeds 20% threshold
-[NUMERIC] cash_flow_hedge_aoci: $385M → $-6M (-101.6%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $367M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $353M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $4M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $800M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $16M, now missing
-[DISAPPEARED_FIELD] fair_value_assets: was $500M, now missing
-[DISAPPEARED_FIELD] fair_value_liabilities: was $300M, now missing
-[VALIDATION] Likely extraction failure: 8/15 previously-populated fields are now null (commodity_derivatives_notional, expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct...)
-[LLM_FLAG] fx_derivatives_notional differs from prior period by more than 50% (7182.0 to 8190.0 indicates possible strategy adjustment).
-[LLM_FLAG] total_derivative_asset decreased slightly by more than 50% from 167913.0 to 165734.0, which may suggest a shift in derivatives strategy or risk exposure.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-15 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $6,724M → $4,618M (-31.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $16,402M → $8,190M (-50.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $16,402M → $8,190M (-50.1%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_derivatives_notional: was $1,243M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1,593M → $836M (-47.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $312M → $-291M (-193.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $367M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-363M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $4,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $800M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] notional_amount: was $9,200M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fair_value_assets: was $500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fair_value_liabilities: was $300M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 8/18 previously-populated fields are now null (commodity_derivatives_notional, expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct...)
+[HISTORICAL] [LLM_FLAG] The financial_instruments section contains only cash, cash equivalents, and marketable debt security data; derivative data is in derivatives_note.
+[HISTORICAL] [LLM_FLAG] Total marketable securities declined significantly from $6,724M (Dec 31, 2025) to $4,618M (Mar 31, 2026), driven by reduction in U.S. government and agencies holdings from $2,370M to $631M.
+[HISTORICAL] [LLM_FLAG] Note covers only GM Financial derivatives; automotive segment derivatives not disclosed in this 10-Q quarterly note (see 10-K for full picture).
+[HISTORICAL] [LLM_FLAG] FX swaps notional declined from $9,226M (Dec 31, 2025) to $8,190M (Mar 31, 2026), consistent with maturing hedges.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($7,182M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($7,182M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($38,905M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($1,243M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($167,913M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($1,175M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($166,738M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($385M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($367M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($353M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($4M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($800M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($16M)
-[NEW_FIELD] fair_value_assets: appeared for first time ($500M)
-[NEW_FIELD] fair_value_liabilities: appeared for first time ($300M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-15 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $9,412M → $16,402M (+74.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $9,231M → $16,402M (+77.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $181M, now missing
+[HISTORICAL] [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($1,243M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1,187M → $1,593M (+34.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-54M → $312M (+677.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($367M)
+[HISTORICAL] [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-363M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($4,000M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($800M)
+[HISTORICAL] [NEW_FIELD] notional_amount: appeared for first time ($9,200M)
+[HISTORICAL] [NEW_FIELD] fair_value_assets: appeared for first time ($500M)
+[HISTORICAL] [NEW_FIELD] fair_value_liabilities: appeared for first time ($300M)
+[HISTORICAL] [LLM_FLAG] The financial_instruments section (Marketable and Other Securities) contains only cash, cash equivalents, and marketable debt security data; derivative instrument data is in Note 14 (derivatives_note).
+[HISTORICAL] [LLM_FLAG] 10-K discloses both Automotive and GM Financial derivative tables under Note 14; totals above combine both segments.
+[HISTORICAL] [LLM_FLAG] Automotive segment includes commodity derivatives (steel, copper, aluminum, palladium, lithium, nickel) not present in quarterly 10-Q notes.
+[HISTORICAL] [LLM_FLAG] Automotive FV-hedge IR swaps hedging $5,825M long-term unsecured debt with cumulative hedge adjustment of -$95M.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp uses GMF NII sensitivity ($4.0B at 100bp); automotive IR is expressed as 10% rate decrease → $0.6B FV change on debt — different basis and methodology.
+[HISTORICAL] [LLM_FLAG] fx_transaction_gain_loss of -363 combines automotive (-353) and GMF (-10) transaction/remeasurement losses for 2025; translation losses (in AOCI) are separate.
+[HISTORICAL] [LLM_FLAG] fair_value_assets and fair_value_liabilities in this section are partial (segment-level net figures); comprehensive totals are in Note 14.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZCkuezbQcGZpUopHWC'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZCqkribhZKdzqe3h5w'}
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-15 ===
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($181M)
+[HISTORICAL] [NUMERIC] net_derivative_position: $2M → $-54M (-2800.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] The financial_instruments section contains only cash, cash equivalents, and marketable debt security data; derivative data is in derivatives_note.
+[HISTORICAL] [LLM_FLAG] Note covers only GM Financial derivatives; automotive segment derivatives are not disclosed in 10-Q quarterly notes.
+[HISTORICAL] [LLM_FLAG] Foreign currency contracts (not designated, $181M) appear for the first time in Q3 2025; all other periods show zero for this line.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZCEw6xxPmWzGebV6Fk'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZCSRAUTVygoReEQyeF'}
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-15 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $870M → $1,370M (+57.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $1,715M → $1,368M (-20.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-845M → $2M (+100.2%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely units mismatch: net_derivative_position changed from -845 to 2 (0x)
+[HISTORICAL] [LLM_FLAG] The financial_instruments section contains only cash, cash equivalents, and marketable debt security data; derivative data is in derivatives_note.
+[HISTORICAL] [LLM_FLAG] Note covers only GM Financial derivatives; automotive segment derivatives are not disclosed in 10-Q quarterly notes.
+[HISTORICAL] [LLM_FLAG] Net derivative position is nearly flat ($2M net asset) at June 30, 2025.
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZBUDHVFVcbkWCN3WyJ'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZBbLfbozuN1qrL2CTi'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZB3efyoieTTerjSvnP'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZB8EzpF5m2wiAdzh7v'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZAfmnRKUM2UCJ3PmRJ'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZAkNcD5cE2mRwa7C2P'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] fx_derivatives_notional: was $25M, now missing
-[DISAPPEARED_FIELD] commodity_derivatives_notional: was $2M, now missing
-[NUMERIC] cash_flow_hedge_aoci: $385M → $163M (-57.7%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $2,024M → $231M (-88.6%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10,000M, now missing
-[VALIDATION] Likely extraction failure: 3/8 previously-populated fields are now null (fx_derivatives_notional, commodity_derivatives_notional, fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_derivatives_notional: $2M → $25M (+1150.0%) — exceeds 20% threshold
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($2M)
-[NUMERIC] cash_flow_hedge_aoci: $246M → $385M (+56.5%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $291M → $2,024M (+595.5%) — exceeds 20% threshold
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10,000M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2M)
-[NUMERIC] cash_flow_hedge_aoci: $489M → $246M (-49.7%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $480M → $291M (-39.4%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] cash_flow_hedge_aoci: $141M → $489M (+246.8%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $231M → $480M (+107.8%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $353M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $4M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp)
-[LLM_FLAG] CRITICAL: The provided filing section is extremely brief and contains only a boilerplate cross-reference statement. It explicitly directs readers to the 2024 Form 10-K for market risk discussion. This is a common abbreviated disclosure in Q1 10-Q filings when no material changes have occurred. All quantitative fields cannot be extracted from this excerpt.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-15 ===
+[HISTORICAL] [LLM_FLAG] The financial_instruments section (Marketable and Other Securities) contains only cash, cash equivalents, and marketable debt security data; derivative instrument data is in the separate derivatives_note.
+[HISTORICAL] [LLM_FLAG] Note covers only GM Financial derivatives; automotive segment derivatives are not disclosed in 10-Q quarterly notes.
+[HISTORICAL] [LLM_FLAG] FX exposure is exclusively through foreign currency swaps (GMF cross-currency funding); no standalone FX forwards or options.

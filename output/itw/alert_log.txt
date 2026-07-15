@@ -1,21 +1,14 @@
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-15 ===
+[HISTORICAL] [DISAPPEARED_FIELD] market_risk_exposures: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_risk: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] speculative_activity: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] trading_instruments: was $1M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (market_risk_exposures, interest_rate_risk, speculative_activity, trading_instruments)
+[HISTORICAL] [LLM_FLAG] section_text is entirely a cross-reference to the 2025 Annual Report on Form 10-K Item 7A; no quantitative or qualitative market risk data is disclosed in this 10-Q filing
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZQfEBbEsZ1AtfgzDYk'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZQXsB13B4NuHgFJXin'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZQPTekKhHNW1dY3aYG'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZQGZAq4XXqL7MchYhC'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZQ9v4tuUNW4FK8Pb5P'}
-
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-15 ===
+[HISTORICAL] [NEW_FIELD] market_risk_exposures: appeared for first time ($1M)
+[HISTORICAL] [NEW_FIELD] interest_rate_risk: appeared for first time ($1M)
+[HISTORICAL] [NEW_FIELD] speculative_activity: appeared for first time ($1M)
+[HISTORICAL] [NEW_FIELD] trading_instruments: appeared for first time ($1M)
+[HISTORICAL] [LLM_FLAG] section_text truncated mid-sentence; numeric sensitivity figures (100bp, 10pct) and fixed-rate notes outstanding may exist later in the full filing text but are not present in the supplied window
