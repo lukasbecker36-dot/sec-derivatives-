@@ -39,12 +39,23 @@ python -m src.backfill prepare --since 2025-01-01 \
 ```
 
 Each fire picks up wherever the last one left off (it checks
-`backfill/state.csv` for tickers already marked `committed` and skips
-them), and once all 38 have committed, it logs "all tickers already
-committed — nothing to seed" and exits cleanly rather than looping.
-That means the **same routine prompt can be scheduled to fire repeatedly**
-— no manual ticker-list editing between runs — and it will naturally wind
-itself down after roughly 8 fires (38 tickers ÷ 5 per batch).
+`backfill/state.csv` for tickers already `committed` and skips them), and
+once nothing is left to seed it logs "nothing to seed" and exits cleanly
+rather than looping. That means the **same routine prompt can be
+scheduled to fire repeatedly** — no manual ticker-list editing between
+runs — and it winds itself down after roughly 8 fires (38 tickers ÷ 5
+per batch).
+
+**Termination guarantee.** A ticker is dropped from the rotation once it
+either commits *or* burns `--max-attempts` seed attempts (default 2)
+without committing — the attempt counter is written to `state.csv`, so it
+survives across fires. Without this cap, any ticker that kept failing the
+gate would be re-seeded and re-processed on every fire forever (a full
+session's quota each time, committing nothing), and a recurring routine
+would never stop. With it, the routine provably reaches the "nothing to
+seed" no-op even if some tickers never pass. Tickers that exhaust their
+attempts are left in `review_queue.csv` for manual attention rather than
+silently retried forever.
 
 ## Routine prompt
 
@@ -74,10 +85,10 @@ Step 1 — Seed the next batch from the retry list:
     python -m src.backfill prepare --since 2025-01-01 \
         --retry-file backfill/retry_list_annual_gate.txt --batch-size 5
 
-This seeds up to 5 tickers that are on the retry list and not yet
-committed. If it logs "all tickers already committed — nothing to seed",
-there is no more work for this routine — commit nothing, skip straight to
-git status and stop; do not fall back to --next or process anything else.
+This seeds up to 5 tickers that are on the retry list, not yet committed,
+and not yet out of attempts. If the log contains "nothing to seed", there
+is no more work for this routine — commit nothing, skip straight to git
+status and stop; do not fall back to --next or process anything else.
 
 Step 2 — Process request files using SUBAGENTS.
 
@@ -144,9 +155,11 @@ seeded. This routine is done after Step 6.
   end up `committed`.
 - Any that still fail (unexpected — the simulation said all 38 should
   pass) are worth a manual look; they may have a different failure mode
-  than the annual-only pattern this fix targets. They'll keep showing up
-  in each subsequent fire's batch until you either fix them or remove
-  them from the retry list.
+  than the annual-only pattern this fix targets. Each gets `--max-attempts`
+  (default 2) re-tries, then is abandoned and logged to `review_queue.csv`
+  — it will NOT be re-seeded on every fire after that.
 - Once `prepare --retry-file ...` reports "nothing to seed" for the first
-  time, the retry is done — stop the routine (or let it keep firing; it's
-  a harmless no-op from then on, just wasted quota).
+  time, the retry is done — stop the routine. From then on it's a harmless
+  no-op, but a stopped routine doesn't burn scheduled quota, so disable it.
+- To force another pass at abandoned tickers (e.g. after fixing a config),
+  bump `--max-attempts` or clear their `attempts` in `state.csv`.

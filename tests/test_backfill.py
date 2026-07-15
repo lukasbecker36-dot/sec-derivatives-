@@ -335,3 +335,35 @@ class TestRetryList:
         units = {'k1': {'ticker': 'AAA', 'status': 'committed'}}
         batch = backfill._select_retry_batch(['AAA'], batch_size=5, units=units)
         assert batch == []
+
+    def test_ticker_attempts_is_max_across_units(self, workspace):
+        units = {
+            'k1': {'ticker': 'AAA', 'status': 'staged', 'attempts': '1'},
+            'k2': {'ticker': 'AAA', 'status': 'staged', 'attempts': '2'},
+            'k3': {'ticker': 'BBB', 'status': 'staged', 'attempts': '0'},
+        }
+        assert backfill._ticker_attempts(units, 'AAA') == 2
+        assert backfill._ticker_attempts(units, 'BBB') == 0
+        assert backfill._ticker_attempts(units, 'CCC') == 0
+
+    def test_select_retry_batch_drops_ticker_at_max_attempts(self, workspace):
+        # AAA has burned its attempts (gate kept failing) -> abandoned;
+        # BBB still has an attempt left -> still eligible.
+        units = {
+            'k1': {'ticker': 'AAA', 'status': 'staged', 'attempts': '2'},
+            'k2': {'ticker': 'BBB', 'status': 'staged', 'attempts': '1'},
+        }
+        batch = backfill._select_retry_batch(['AAA', 'BBB'], batch_size=5,
+                                             units=units, max_attempts=2)
+        assert batch == ['BBB']
+
+    def test_select_retry_batch_terminates_when_all_committed_or_exhausted(self, workspace):
+        # The termination guarantee: nothing committable and nothing left with
+        # attempts remaining -> empty batch -> routine becomes a no-op.
+        units = {
+            'k1': {'ticker': 'AAA', 'status': 'committed', 'attempts': '1'},
+            'k2': {'ticker': 'BBB', 'status': 'staged', 'attempts': '2'},
+        }
+        batch = backfill._select_retry_batch(['AAA', 'BBB'], batch_size=5,
+                                             units=units, max_attempts=2)
+        assert batch == []

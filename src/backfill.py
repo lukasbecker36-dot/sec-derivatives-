@@ -213,16 +213,39 @@ def load_retry_list(path: Path) -> list[str]:
             if ln.strip() and not ln.strip().startswith('#')]
 
 
-def _select_retry_batch(retry_tickers: list[str], batch_size: int, units: dict) -> list[str]:
-    """Next N tickers from a fixed retry list that haven't committed yet.
+def _ticker_attempts(units: dict, ticker: str) -> int:
+    """Max retry attempts recorded across a ticker's units (0 if never seeded)."""
+    t = ticker.upper()
+    best = 0
+    for u in units.values():
+        if u.get('ticker', '').upper() == t:
+            try:
+                best = max(best, int(u.get('attempts', '0') or '0'))
+            except ValueError:
+                pass
+    return best
+
+
+def _select_retry_batch(retry_tickers: list[str], batch_size: int, units: dict,
+                        max_attempts: int = 2) -> list[str]:
+    """Next N tickers from a fixed retry list still worth (re)seeding.
 
     Lets a single static routine prompt work through a known list (e.g.
     tickers rescued by a gate change) across repeated fires: each run picks
-    up wherever the last one left off, and naturally stops seeding once
-    everything on the list has committed.
+    up wherever the last one left off, and provably terminates.
+
+    A ticker is dropped from consideration once it has either committed OR
+    burned `max_attempts` seed attempts without committing. The attempt cap
+    is the circuit breaker: without it, any ticker that keeps failing the
+    gate would be re-seeded and re-processed on every fire forever, so a
+    recurring routine would never reach the "nothing to seed" no-op.
     """
     committed = {u['ticker'].upper() for u in units.values() if u.get('status') == 'committed'}
-    pending = [t for t in retry_tickers if t not in committed]
+    pending = [
+        t for t in retry_tickers
+        if t.upper() not in committed
+        and _ticker_attempts(units, t) < max_attempts
+    ]
     return pending[:batch_size]
 
 
@@ -261,13 +284,14 @@ def _write_extraction_request(config: IssuerConfig, config_path: Path,
 
 
 def prepare(since: str, tickers: list[str], next_n: int,
-           retry_file: str = '', batch_size: int = 5):
+           retry_file: str = '', batch_size: int = 5, max_attempts: int = 2):
     """Seed ledger units and write locate/extraction requests.
 
     retry_file (if given) takes precedence over tickers/next_n: it reads a
-    fixed ticker list and seeds the next `batch_size` not yet committed,
-    so the same command can be fired repeatedly (e.g. from a routine) and
-    will work through the whole list before naturally becoming a no-op.
+    fixed ticker list and seeds the next `batch_size` tickers that haven't
+    committed and haven't yet burned `max_attempts` seed attempts, so the
+    same command can be fired repeatedly (e.g. from a routine) and will
+    work through the whole list before provably becoming a no-op.
     """
     REQUESTS_DIR.mkdir(parents=True, exist_ok=True)
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -282,12 +306,26 @@ def prepare(since: str, tickers: list[str], next_n: int,
         retry_tickers = load_retry_list(Path(retry_file))
         if not retry_tickers:
             logger.warning(f'Retry list {retry_file} is empty or missing')
-        batch = _select_retry_batch(retry_tickers, batch_size, units)
+        batch = _select_retry_batch(retry_tickers, batch_size, units, max_attempts)
         if not batch:
-            logger.info(f'Retry list {retry_file}: all tickers already committed — nothing to seed')
+            n_committed = sum(1 for t in retry_tickers
+                              if t.upper() in {u['ticker'].upper() for u in units.values()
+                                               if u.get('status') == 'committed'})
+            logger.info(f'Retry list {retry_file}: nothing to seed — '
+                       f'{n_committed}/{len(retry_tickers)} committed, '
+                       f'the rest exhausted {max_attempts} attempts (see review_queue.csv)')
             return
-        logger.info(f'Retry list {retry_file}: seeding {batch} '
-                   f'({len(retry_tickers) - len(batch)} of {len(retry_tickers)} already committed)')
+        # Count this seed attempt against each batch ticker so a ticker that
+        # keeps failing the gate is eventually abandoned rather than re-seeded
+        # on every fire forever.
+        batch_upper = {t.upper() for t in batch}
+        for u in units.values():
+            if u.get('ticker', '').upper() in batch_upper:
+                try:
+                    u['attempts'] = str(int(u.get('attempts', '0') or '0') + 1)
+                except ValueError:
+                    u['attempts'] = '1'
+        logger.info(f'Retry list {retry_file}: seeding {batch}')
         tickers = batch
 
     issuers = _select_issuers(universe, tickers, next_n, units)
@@ -853,6 +891,10 @@ def main():
                            '--batch-size not-yet-committed tickers each run')
     prep.add_argument('--batch-size', type=int, default=5,
                       help='Tickers to seed per run from --retry-file (default 5)')
+    prep.add_argument('--max-attempts', type=int, default=2,
+                      help='With --retry-file, give up on a ticker after this many '
+                           'seed attempts without committing (default 2) so a '
+                           'recurring routine provably terminates')
     prep.add_argument('--verbose', '-v', action='store_true')
 
     res = sub.add_parser('resolve', help='Apply locate results, emit extraction requests')
@@ -875,7 +917,8 @@ def main():
     if args.command == 'prepare':
         tickers = [t.strip() for t in args.tickers.split(',') if t.strip()]
         prepare(since=args.since, tickers=tickers, next_n=args.next_n,
-               retry_file=args.retry_file, batch_size=args.batch_size)
+               retry_file=args.retry_file, batch_size=args.batch_size,
+               max_attempts=args.max_attempts)
     elif args.command == 'resolve':
         resolve()
     elif args.command == 'finalize':
