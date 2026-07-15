@@ -1,8 +1,8 @@
 # Wave 1 Retry — Annual-Only Disclosers
 
-One-off retry pass for 38 tickers that were stuck `staged` (gate-failed)
-under the old all-or-nothing gate. `_rebuild_issuer` now passes the gate
-if *either* the overall median fill rate *or* the 10-K-only median clears
+Retry pass for 38 tickers that were stuck `staged` (gate-failed) under the
+old all-or-nothing gate. `_rebuild_issuer` now passes the gate if *either*
+the overall median fill rate *or* the 10-K-only median clears
 `GATE_MEDIAN_FILL` (0.5) — see the "gate on annual-only fill rate" commit.
 Simulating the new gate against the live ledger showed these 38 tickers
 would now pass on their 10-K alone, even though interim 10-Qs correctly
@@ -10,43 +10,48 @@ show near-zero fill (they cross-reference the 10-K rather than restating
 notionals — e.g. ITW's 10-Q says "See Note 8. Debt for additional
 information" and nothing else).
 
-The other 31 originally-stuck tickers (ROP, UNP, COR, MAS, PWR, TPL, NSC,
-etc.) are **not** in this list — their 10-Ks genuinely have nothing
-extractable either, and re-running them would just burn quota for no
-gain.
+The full list lives in `backfill/retry_list_annual_gate.txt` (one ticker
+per line, `#` comments ignored). The other 31 originally-stuck tickers
+(ROP, UNP, COR, MAS, PWR, TPL, NSC, etc.) are **not** on this list — their
+10-Ks genuinely have nothing extractable either, and re-running them would
+just burn quota for no gain.
 
-## Why this needs `--tickers`, not `--next`
+## Why this needs a retry list, not `--next`
 
 `prepare --next N` only seeds issuers that have **never** been seeded.
-All 391 universe issuers have been seeded at least once, so `--next` now
-always returns 0. These 38 need to be **re-seeded explicitly by name**,
+All 391 universe issuers have been seeded at least once, so `--next`
+always returns 0 now. These 38 need to be **re-seeded explicitly**,
 because their original extraction artifacts (`backfill/requests/`,
 `backfill/results/`, `backfill/units/`) are gitignored and don't survive
 between separate cloud sessions — only `backfill/state.csv` and
 `manifest.json` persist. `prepare()` already detects this
 (`_unit_artifacts_present`) and re-seeds automatically when artifacts are
-missing, so this is a normal chunk — just targeted by ticker instead of
-"next unseeded".
+missing.
 
-## Batches
+## One static command, works across repeated fires
 
-38 tickers is too many for one session (Wave 1 chunks were capped at
-3–4 to avoid the context blowup documented in `BACKFILL_ROUTINE.md`).
-Run these as **8 separate one-off sessions** (not a recurring cron),
-back to back or spread across a day:
+`prepare` now supports `--retry-file`, which reads a fixed ticker list and
+seeds the next `--batch-size` tickers **that haven't committed yet**:
 
-1. `ITW,GE,GM,XOM,FDX`
-2. `CI,CHTR,DAL,DDOG,DG`
-3. `ETN,FOXA,HLT,IEX,ISRG`
-4. `JBL,LDOS,LII,LOW,NSC`
-5. `NXPI,ON,PLTR,PNR,SRE`
-6. `SW,SWK,SWKS,TDY,TECH`
-7. `TEL,VRSN,WAT,XYL,YUM`
-8. `HSIC,LHX,UAL`
+```
+python -m src.backfill prepare --since 2025-01-01 \
+    --retry-file backfill/retry_list_annual_gate.txt --batch-size 5
+```
 
-## Retry prompt (fill in {BATCH} with one line from the list above)
+Each fire picks up wherever the last one left off (it checks
+`backfill/state.csv` for tickers already marked `committed` and skips
+them), and once all 38 have committed, it logs "all tickers already
+committed — nothing to seed" and exits cleanly rather than looping.
+That means the **same routine prompt can be scheduled to fire repeatedly**
+— no manual ticker-list editing between runs — and it will naturally wind
+itself down after roughly 8 fires (38 tickers ÷ 5 per batch).
 
-Copy this verbatim, substituting the ticker list for `{BATCH}`:
+## Routine prompt
+
+Copy this verbatim into the routine prompt field. Point the routine at
+this branch and schedule it (e.g. every 4-6 hours) until the retry list
+is exhausted, then switch back to the standard `BACKFILL_ROUTINE.md`
+prompt or pause the routine.
 
 ```
 Run one Wave 1 RETRY batch for the sec-derivatives- repo.
@@ -54,22 +59,25 @@ Run one Wave 1 RETRY batch for the sec-derivatives- repo.
 Branch: claude/determined-franklin-1yztdn
 Working dir: repo root
 
-Context: these tickers previously failed the backfill gate because their
-10-Qs cross-reference the 10-K instead of restating derivatives notionals
-(a genuine disclosure pattern, not an extraction bug). The gate now passes
-on a strong 10-K alone. Their original request/result artifacts are gone
-(gitignored, ephemeral), so this re-seeds them from scratch.
+Context: the tickers in backfill/retry_list_annual_gate.txt previously
+failed the backfill gate because their 10-Qs cross-reference the 10-K
+instead of restating derivatives notionals (a genuine disclosure pattern,
+not an extraction bug). The gate now passes on a strong 10-K alone. Their
+original request/result artifacts are gone (gitignored, ephemeral), so
+this re-seeds them from scratch.
 
 BUDGET RULE: This routine MUST complete in a single session. Do NOT
 continue into a second quota window. If you hit a spend-cap or context
 warning, skip to Step 6 immediately and commit whatever is done.
 
-Step 1 — Re-seed this batch explicitly by ticker:
-    python -m src.backfill prepare --since 2025-01-01 --tickers {BATCH}
+Step 1 — Seed the next batch from the retry list:
+    python -m src.backfill prepare --since 2025-01-01 \
+        --retry-file backfill/retry_list_annual_gate.txt --batch-size 5
 
-This re-fetches filings and writes fresh request files to
-backfill/requests/ for these 5 tickers (artifacts from any prior session
-are gone, so prepare will detect that and regenerate them).
+This seeds up to 5 tickers that are on the retry list and not yet
+committed. If it logs "all tickers already committed — nothing to seed",
+there is no more work for this routine — commit nothing, skip straight to
+git status and stop; do not fall back to --next or process anything else.
 
 Step 2 — Process request files using SUBAGENTS.
 
@@ -124,18 +132,21 @@ Step 6 — Commit and push:
     "
     git push -u origin claude/determined-franklin-1yztdn
 
-STOP HERE. Do not loop back. Do not process more tickers. Do not
-start the next batch. This routine is done after Step 6.
+STOP HERE. Do not loop back. Do not process more tickers than this batch
+seeded. This routine is done after Step 6.
 ```
 
-## After all 8 batches
+## Monitoring
 
-- Check `python -m src.backfill status` (or `state.csv`) — all 38 should
-  show `committed`.
+- Each fire commits a `backfill retry: annual-only gate` commit naming
+  which tickers passed.
+- `python -m src.backfill status` shows the ledger state; all 38 should
+  end up `committed`.
 - Any that still fail (unexpected — the simulation said all 38 should
   pass) are worth a manual look; they may have a different failure mode
-  than the annual-only pattern this fix targets.
-- Once done, this doc's job is finished — go back to the steady-state
-  Wave 1 routine (`BACKFILL_ROUTINE.md`) only if new issuers get added to
-  the universe; otherwise the routine can be paused, since `--next` will
-  keep returning 0.
+  than the annual-only pattern this fix targets. They'll keep showing up
+  in each subsequent fire's batch until you either fix them or remove
+  them from the retry list.
+- Once `prepare --retry-file ...` reports "nothing to seed" for the first
+  time, the retry is done — stop the routine (or let it keep firing; it's
+  a harmless no-op from then on, just wasted quota).

@@ -308,3 +308,30 @@ class TestCommitIssuer:
         assert cols[-4:] == ['accession_number', 'filing_date',
                              'processed_at', 'extraction_version']
         assert cols[2:-4] == list(config.fields.keys())
+
+
+class TestRetryList:
+    def test_load_retry_list_parses_and_skips_comments(self, workspace, tmp_path):
+        path = tmp_path / 'retry.txt'
+        path.write_text('# comment\nAAA\n\nbbb\n  ccc  \n')
+        assert backfill.load_retry_list(path) == ['AAA', 'BBB', 'CCC']
+
+    def test_load_retry_list_missing_file(self, workspace, tmp_path):
+        assert backfill.load_retry_list(tmp_path / 'nope.txt') == []
+
+    def test_select_retry_batch_skips_committed(self, workspace):
+        units = {
+            'k1': {'ticker': 'AAA', 'status': 'committed'},
+            'k2': {'ticker': 'BBB', 'status': 'staged'},
+        }
+        batch = backfill._select_retry_batch(['AAA', 'BBB', 'CCC'], batch_size=5, units=units)
+        assert batch == ['BBB', 'CCC']
+
+    def test_select_retry_batch_respects_batch_size(self, workspace):
+        batch = backfill._select_retry_batch(['AAA', 'BBB', 'CCC', 'DDD'], batch_size=2, units={})
+        assert batch == ['AAA', 'BBB']
+
+    def test_select_retry_batch_empty_when_all_committed(self, workspace):
+        units = {'k1': {'ticker': 'AAA', 'status': 'committed'}}
+        batch = backfill._select_retry_batch(['AAA'], batch_size=5, units=units)
+        assert batch == []

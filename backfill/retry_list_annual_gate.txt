@@ -1,0 +1,46 @@
+# Tickers rescued by the annual-only-fill-rate gate change.
+# These previously failed the backfill gate because their 10-Qs merely
+# cross-reference the 10-K instead of restating derivatives notionals
+# (a genuine disclosure pattern, not an extraction bug). The gate now
+# passes if the 10-K alone clears the fill-rate threshold.
+#
+# Used with: python -m src.backfill prepare --retry-file backfill/retry_list_annual_gate.txt --batch-size 5
+# Each run seeds the next N not-yet-committed tickers from this list.
+ITW
+GE
+GM
+XOM
+FDX
+CI
+CHTR
+DAL
+DDOG
+DG
+ETN
+FOXA
+HLT
+IEX
+ISRG
+JBL
+LDOS
+LII
+LOW
+NSC
+NXPI
+ON
+PLTR
+PNR
+SRE
+SW
+SWK
+SWKS
+TDY
+TECH
+TEL
+VRSN
+WAT
+XYL
+YUM
+HSIC
+LHX
+UAL

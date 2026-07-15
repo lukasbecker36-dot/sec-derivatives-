@@ -204,6 +204,28 @@ def _select_issuers(universe: list[dict], tickers: list[str],
     return fresh[:next_n]
 
 
+def load_retry_list(path: Path) -> list[str]:
+    """Read a fixed ticker retry list, one per line (blank lines / '#' comments ignored)."""
+    if not path.exists():
+        return []
+    lines = path.read_text(encoding='utf-8').splitlines()
+    return [ln.strip().upper() for ln in lines
+            if ln.strip() and not ln.strip().startswith('#')]
+
+
+def _select_retry_batch(retry_tickers: list[str], batch_size: int, units: dict) -> list[str]:
+    """Next N tickers from a fixed retry list that haven't committed yet.
+
+    Lets a single static routine prompt work through a known list (e.g.
+    tickers rescued by a gate change) across repeated fires: each run picks
+    up wherever the last one left off, and naturally stops seeding once
+    everything on the list has committed.
+    """
+    committed = {u['ticker'].upper() for u in units.values() if u.get('status') == 'committed'}
+    pending = [t for t in retry_tickers if t not in committed]
+    return pending[:batch_size]
+
+
 def _resolve_config_path(raw_path: str) -> Path:
     from .cc_bridge import _resolve_config_path as rcp
     return rcp(raw_path)
@@ -238,8 +260,15 @@ def _write_extraction_request(config: IssuerConfig, config_path: Path,
     return filename
 
 
-def prepare(since: str, tickers: list[str], next_n: int):
-    """Seed ledger units and write locate/extraction requests."""
+def prepare(since: str, tickers: list[str], next_n: int,
+           retry_file: str = '', batch_size: int = 5):
+    """Seed ledger units and write locate/extraction requests.
+
+    retry_file (if given) takes precedence over tickers/next_n: it reads a
+    fixed ticker list and seeds the next `batch_size` not yet committed,
+    so the same command can be fired repeatedly (e.g. from a routine) and
+    will work through the whole list before naturally becoming a no-op.
+    """
     REQUESTS_DIR.mkdir(parents=True, exist_ok=True)
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     universe = load_universe()
@@ -248,6 +277,19 @@ def prepare(since: str, tickers: list[str], next_n: int):
         return
 
     units = load_state()
+
+    if retry_file:
+        retry_tickers = load_retry_list(Path(retry_file))
+        if not retry_tickers:
+            logger.warning(f'Retry list {retry_file} is empty or missing')
+        batch = _select_retry_batch(retry_tickers, batch_size, units)
+        if not batch:
+            logger.info(f'Retry list {retry_file}: all tickers already committed — nothing to seed')
+            return
+        logger.info(f'Retry list {retry_file}: seeding {batch} '
+                   f'({len(retry_tickers) - len(batch)} of {len(retry_tickers)} already committed)')
+        tickers = batch
+
     issuers = _select_issuers(universe, tickers, next_n, units)
     logger.info(f'Preparing {len(issuers)} issuers (since {since})')
 
@@ -805,6 +847,12 @@ def main():
     prep.add_argument('--tickers', default='', help='Comma-separated tickers')
     prep.add_argument('--next', dest='next_n', type=int, default=25,
                       help='Number of not-yet-seeded issuers to take (default 25)')
+    prep.add_argument('--retry-file', default='',
+                      help='Path to a fixed ticker retry list (one per line); takes '
+                           'precedence over --tickers/--next, seeding the next '
+                           '--batch-size not-yet-committed tickers each run')
+    prep.add_argument('--batch-size', type=int, default=5,
+                      help='Tickers to seed per run from --retry-file (default 5)')
     prep.add_argument('--verbose', '-v', action='store_true')
 
     res = sub.add_parser('resolve', help='Apply locate results, emit extraction requests')
@@ -826,7 +874,8 @@ def main():
 
     if args.command == 'prepare':
         tickers = [t.strip() for t in args.tickers.split(',') if t.strip()]
-        prepare(since=args.since, tickers=tickers, next_n=args.next_n)
+        prepare(since=args.since, tickers=tickers, next_n=args.next_n,
+               retry_file=args.retry_file, batch_size=args.batch_size)
     elif args.command == 'resolve':
         resolve()
     elif args.command == 'finalize':
