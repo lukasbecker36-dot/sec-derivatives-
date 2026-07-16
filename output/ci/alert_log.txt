@@ -1,27 +1,63 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($3,500M)
-[NUMERIC] total_derivative_asset: $908M → $1,270M (+39.9%) — exceeds 20% threshold
-[NEW_FIELD] total_derivative_liability: appeared for first time ($351M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($919M)
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $3,150M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (cash_flow_hedge_aoci, equity_sensitivity_10pct)
-[LLM_FLAG] ir_swap_notional increased by more than 50% compared to prior period ($3.5 billion vs $3.2 billion), which indications of active management of interest rate risks.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-16 ===
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($85M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($7,377M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($145M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $1,323M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $1,323M, now missing
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($1,270M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($351M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($919M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (fx_derivatives_notional, fx_designated_notional)
+[HISTORICAL] [LLM_FLAG] Section text covers Note 9 (Investments) only.
+[HISTORICAL] [LLM_FLAG] Equity securities with no readily determinable fair value = $3,584M (primarily Shields preferred stock); marketable_equity_securities_fv of $85M is only the readily determinable FV portion.
+[HISTORICAL] [LLM_FLAG] Total investment portfolio as of March 31, 2026: $19,714M.
+[HISTORICAL] [LLM_FLAG] Derivative assets include $1,173M in Level 3 instruments associated with equity securities (valued via Monte Carlo/business enterprise value); Level 2 portion of $97M represents conventional hedging instruments.
+[HISTORICAL] [LLM_FLAG] Derivative liabilities include $343M in Level 3 instruments associated with equity securities.
+[HISTORICAL] [LLM_FLAG] Effects of derivative hedging strategies stated to be not material to Consolidated Financial Statements as of March 31, 2026.
+[HISTORICAL] [LLM_FLAG] FX derivative notional amounts not disclosed in quarterly filing; see 2025 10-K for full schedule ($1,323M FX, $3,150M IR as of December 31, 2025).
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($908M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($3,150M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $134M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $7,443M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $199M, now missing
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,323M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($1,323M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $1,010M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $340M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $670M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt, total_derivative_asset, total_derivative_liability...)
+[HISTORICAL] [LLM_FLAG] Section text appears to be severely truncated — ends mid-sentence after the investment summary table and partial accounting policy; full Note 11 detail (debt security breakdown, equity breakdown, unrealized gains table) not available.
+[HISTORICAL] [LLM_FLAG] Investment summary as of December 31, 2025: debt securities $8,362M, equity securities $3,556M, commercial mortgage loans $1,233M.
+[HISTORICAL] [LLM_FLAG] This is the annual 10-K; full notional schedule is disclosed with three programs: fair value hedge FX swaps ($908M), fair value hedge IR swaps ($3,150M), and net investment hedge FX swaps ($415M).
+[HISTORICAL] [LLM_FLAG] Effects of derivative hedging strategies stated to be not material to Consolidated Financial Statements.
+[HISTORICAL] [LLM_FLAG] Equity-associated derivative instruments exist but no notional amount disclosed; classified as Level 3 in fair value hierarchy.
+[HISTORICAL] [LLM_FLAG] The provided section text does not contain market risk quantitative disclosures. The text covers AOCI (Note 15), Strategic Optimization Program (Note 16), Pension Plans (Note 17), Employee Incentive Plans (Note 18), Goodwill and Intangibles (Note 19), Shareholders' Equity (Note 20), Income Taxes (Note 21), and Contingencies (Note 22). Market risk disclosures (IR sensitivity, FX sensitivity, equity sensitivity) are typically in Item 7A Quantitative and Qualitative Disclosures About Market Risk in the 10-K.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-16 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $64M → $1,010M (+1478.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $30M → $340M (+1033.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $34M → $670M (+1870.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Equity securities include $3,383M in securities with no readily determinable fair value (Shields preferred stock investment of $3.5B made in Q3 2025); marketable_equity_securities_fv of $134M is only the readily determinable FV portion.
+[HISTORICAL] [LLM_FLAG] Section text covers Note 11 (Investments) only.
+[HISTORICAL] [LLM_FLAG] Derivative assets include $936M in Level 3 instruments associated with certain equity securities (valued using Monte Carlo simulation/business enterprise value), not traditional financial hedging instruments; Level 2 derivatives of $74M represent conventional hedging instruments.
+[HISTORICAL] [LLM_FLAG] Effects of derivative hedging strategies stated to be not material to Consolidated Financial Statements as of September 30, 2025.
+[HISTORICAL] [LLM_FLAG] FX derivative notional amounts not disclosed in quarterly filing; full schedule in annual 10-K.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-16 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $38M → $118M (+210.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $143M → $172M (+20.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $153M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $2M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $153M → $64M (-58.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $2M → $30M (+1400.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $151M → $34M (-77.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text covers Note 11 (Investments) only; Note 12 fair value table with derivative amounts not included in this extract.
+[HISTORICAL] [LLM_FLAG] Equity securities with no readily determinable fair value = $458M carrying value (excluded from marketable_equity_securities_fv).
+[HISTORICAL] [LLM_FLAG] Effects of derivative financial instruments stated to be not material to Consolidated Financial Statements as of June 30, 2025.
+[HISTORICAL] [LLM_FLAG] FX derivative notional amounts not disclosed in quarterly filings; full schedule available in annual 10-K.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-25 ===
-[LLM_FLAG] This excerpt is minimal and only contains a cross-reference to the full Market Risk disclosure in MD&A. The actual quantitative and qualitative market risk details are not included in this provided text.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-16 ===
+[HISTORICAL] [LLM_FLAG] Cigna does not categorize investments as 'marketable securities'; total_marketable_securities_fv concept is not applicable to this filer's structure.
+[HISTORICAL] [LLM_FLAG] Equity securities with no readily determinable fair value ($521M carrying value) are excluded from the $38M fair value figure.
+[HISTORICAL] [LLM_FLAG] FX derivatives are used (hedging foreign subsidiaries and FX rate risk) but no specific notional amount provided in 10-Q; full notional schedule appears in annual 10-K.
+[HISTORICAL] [LLM_FLAG] Effects of derivative financial instruments were stated to be not material to Consolidated Financial Statements as of March 31, 2025.

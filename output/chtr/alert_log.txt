@@ -1,56 +1,39 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] cross_currency_notional_amount: appeared for first time ($1,275M)
-[NEW_FIELD] cross_currency_fair_value_2025: appeared for first time ($406M)
-[NEW_FIELD] cross_currency_fair_value_2024: appeared for first time ($504M)
-[DISAPPEARED_FIELD] hedge_purpose: was $1M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, hedge_purpose)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $1,275M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cross_currency_notional_amount: was $1,275M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cross_currency_fair_value_2025: was $406M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cross_currency_fair_value_2024: was $504M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (fx_not_designated_notional, cross_currency_notional_amount, cross_currency_fair_value_2025, cross_currency_fair_value_2024)
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional of 1275 is in GBP millions (£1.275 billion), not USD millions; no USD-equivalent notional is stated in the filing.
+[HISTORICAL] [LLM_FLAG] Cross-currency derivatives are not explicitly designated as cash flow or fair value hedges under ASC 815; no hedge designation disclosed in this note.
+[HISTORICAL] [LLM_FLAG] Fair value classified as Level 2 in valuation hierarchy.
+[HISTORICAL] [LLM_FLAG] Comparative prior-period fair value is $406 million (Dec 31, 2025), not the $504 million from Dec 31, 2024 used in earlier filings, reflecting the year-end 2025 balance.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[NEW_FIELD] cross_currency_notional_amount: appeared for first time ($1M)
-[NEW_FIELD] cross_currency_fair_value_2025: appeared for first time ($406M)
-[NEW_FIELD] cross_currency_fair_value_2024: appeared for first time ($504M)
-[LLM_FLAG] The cross currency fair value decreased from $504 million in 2024 to $406 million in 2025, indicating a significant change in the valuation of the instruments used for hedging.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-16 ===
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,275M)
+[HISTORICAL] [NEW_FIELD] cross_currency_notional_amount: appeared for first time ($1,275M)
+[HISTORICAL] [NEW_FIELD] cross_currency_fair_value_2025: appeared for first time ($406M)
+[HISTORICAL] [NEW_FIELD] cross_currency_fair_value_2024: appeared for first time ($504M)
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional reported in GBP millions (£1,275M); USD equivalent not explicitly stated in this note section
+[HISTORICAL] [LLM_FLAG] Derivatives are marked to fair value through P&L (not designated as hedges for accounting purposes)
+[HISTORICAL] [LLM_FLAG] Section text is brief; most quantitative market risk detail is in the maturity table in Item 7A and Note 13 of the full filing
+[HISTORICAL] [LLM_FLAG] cross_currency_notional_amount reported in GBP millions (£1,275M)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] cross_currency_notional_amount: appeared for first time ($1,275M)
-[NEW_FIELD] cross_currency_fair_value_2025: appeared for first time ($406M)
-[NEW_FIELD] cross_currency_fair_value_2024: appeared for first time ($504M)
-[DISAPPEARED_FIELD] hedge_purpose: was $1M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, hedge_purpose)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-16 ===
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional of 1275 is in GBP millions (£1.275 billion), not USD millions; no USD-equivalent notional is stated in the filing.
+[HISTORICAL] [LLM_FLAG] Cross-currency derivatives are not explicitly designated as cash flow or fair value hedges under ASC 815; no hedge designation disclosed in this note.
+[HISTORICAL] [LLM_FLAG] Fair value classified as Level 2 in valuation hierarchy.
+[HISTORICAL] [LLM_FLAG] Fair value rebounded from $393 million (Jun 30, 2025) to $465 million (Sep 30, 2025) following the Q3 change in fair value of -$72 million.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[NEW_FIELD] cross_currency_notional_amount: appeared for first time ($1M)
-[NEW_FIELD] cross_currency_fair_value_2025: appeared for first time ($406M)
-[NEW_FIELD] cross_currency_fair_value_2024: appeared for first time ($504M)
-[LLM_FLAG] cross_currency_fair_value_2025 reduced by more than 50% from cross_currency_fair_value_2024; warrants further investigation into the causes of this decline.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-16 ===
+[HISTORICAL] [NUMERIC] total_derivative_liability: $517M → $393M (-24.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-517M → $-393M (+24.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional of 1275 is in GBP millions (£1.275 billion), not USD millions; no USD-equivalent notional is stated in the filing.
+[HISTORICAL] [LLM_FLAG] Cross-currency derivatives are not explicitly designated as cash flow or fair value hedges under ASC 815; no hedge designation disclosed in this note.
+[HISTORICAL] [LLM_FLAG] Fair value classified as Level 2 in valuation hierarchy.
+[HISTORICAL] [LLM_FLAG] Fair value declined from $504 million (Dec 31, 2024) to $393 million (Jun 30, 2025), a $111 million decrease consistent with the six-month change in fair value disclosed in the P&L.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] cross_currency_notional_amount: was $1,275M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (cross_currency_notional_amount)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] cross_currency_notional_amount: appeared for first time ($1,275M)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-28 ===
-[DISAPPEARED_FIELD] cross_currency_fair_value_2025: was $406M, now missing
-[DISAPPEARED_FIELD] cross_currency_fair_value_2024: was $504M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (cross_currency_fair_value_2025, cross_currency_fair_value_2024)
-[LLM_FLAG] Filing text is minimal and contains only a reference statement to prior 10-K disclosure. No detailed market risk quantitative data is provided in this excerpt. This appears to be a condensed disclosure indicating 'no material changes' rather than a full restatement of derivative and market risk positions.
-[LLM_FLAG] Prior period had cross_currency_fair_value values (406M and 504M) but these are not reproduced or referenced in the current filing text provided.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-28 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (fx_forwards_outstanding)
-[LLM_FLAG] The provided filing excerpt contains only a brief reference statement indicating no material changes to interest rate risk disclosures. Most quantitative market risk metrics are not disclosed in this excerpt; they are referenced as being in the 2024 10-K. The extracted values for cross-currency derivatives are based on prior period data carried forward per the filing's statement of no material changes.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-27 ===
-[LLM_FLAG] Cross-currency fair value decreased 19.4% from $504 million (2024) to $406 million (2025), which is within normal range for derivative revaluations based on currency and interest rate movements
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-16 ===
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional of 1275 is in GBP millions (£1.275 billion), not USD millions; no USD-equivalent notional is stated in the filing.
+[HISTORICAL] [LLM_FLAG] Cross-currency derivatives are not explicitly designated as cash flow or fair value hedges under ASC 815; no hedge designation disclosed in this note.
+[HISTORICAL] [LLM_FLAG] Fair value classified as Level 2 in valuation hierarchy.

@@ -1,23 +1,40 @@
-=== 10-Q | Period ending 2026-05-01 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $30M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+=== 10-Q | Period ending 2026-05-01 | Processed 2026-07-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $350M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_swap_notional: was $350M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] sensitivity_analysis_current: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] sensitivity_analysis_prior: was $4M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (ir_swap_notional, fx_forwards_outstanding, ir_sensitivity_100bp, interest_rate_swap_notional, sensitivity_analysis_current...)
+[HISTORICAL] [LLM_FLAG] Section discloses only current/long-term obligations ($4,477.3M) and deferred compensation ($54.9M) at fair value; no cash, securities, or derivative line items
 
-=== 10-K | Period ending 2026-01-30 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($30M)
+=== 10-K | Period ending 2026-01-30 | Processed 2026-07-16 ===
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($350M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] interest_rate_swap_notional: appeared for first time ($350M)
+[HISTORICAL] [NEW_FIELD] sensitivity_analysis_current: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] sensitivity_analysis_prior: appeared for first time ($4M)
+[HISTORICAL] [LLM_FLAG] Section discloses only current/long-term obligations ($4,555.9M) and deferred compensation ($54.1M) at fair value; no cash, securities, or derivative line items
+[HISTORICAL] [LLM_FLAG] Section is from Item 7A market risk disclosure, not a standalone derivatives note; swap fair value and AOCI details not included here
 
-=== 10-Q | Period ending 2025-05-02 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $31M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+=== 10-Q | Period ending 2025-10-31 | Processed 2026-07-16 ===
+[HISTORICAL] [LLM_FLAG] Section only discloses long-term obligations and deferred compensation at fair value; no cash, securities, or derivative line items present
 
-=== 10-Q | Period ending 2025-05-02 | Processed 2026-05-26 ===
-[LLM_FLAG] The filing section provided contains only a boilerplate statement referring to the 10-K rather than standalone disclosures. All values are inferred from prior period and the statement of 'no material changes.'
+=== 10-Q | Period ending 2025-08-01 | Processed 2026-07-16 ===
+[HISTORICAL] [LLM_FLAG] Section discloses only current/long-term obligations ($5,671.5M) and deferred compensation ($51.6M) at fair value; no cash, securities, or derivative line items
 
-=== 10-K | Period ending 2025-01-31 | Processed 2026-05-26 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($4M)
-[NUMERIC] sensitivity_analysis_current: $6M → $4M (-37.5%) — exceeds 20% threshold
-[LLM_FLAG] swap_entry_date changed from 'June 2021' in prior period to 'May 2021' in current filing - discrepancy of one month requires clarification
-[LLM_FLAG] sensitivity_analysis_current value of $3.5 million remains unchanged from prior period, which is unusual given this should represent 2024/2025 data with potentially different variable rate balances
+=== 10-Q | Period ending 2025-05-02 | Processed 2026-07-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $350M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_swap_notional: was $350M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] sensitivity_analysis_current: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] sensitivity_analysis_prior: was $4M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (ir_swap_notional, fx_forwards_outstanding, ir_sensitivity_100bp, interest_rate_swap_notional, sensitivity_analysis_current...)
+[HISTORICAL] [LLM_FLAG] Section discloses only current/long-term obligations ($5,551.3M) and deferred compensation ($47.2M) at fair value; no cash, securities, or derivative line items
 
-=== 10-K | Period ending 2026-01-30 | Processed 2026-05-25 ===
-[LLM_FLAG] Sensitivity analysis increased 60% from $3.5 million (2024) to $5.6 million (2025), which exceeds the 50% threshold. This significant increase is attributed to increased cash and cash equivalents driven primarily from cash from operations, as stated in the filing.
-
+=== 10-K | Period ending 2025-01-31 | Processed 2026-07-16 ===
+[HISTORICAL] [LLM_FLAG] Section discloses only current/long-term obligations ($6,033.4M) and deferred compensation ($49.7M) at fair value; no cash, securities, or derivative line items
+[HISTORICAL] [LLM_FLAG] Section is from Item 7A market risk disclosure, not a standalone derivatives note; swap fair value and AOCI details not included
+[HISTORICAL] [LLM_FLAG] swap_entry_date is May 2021 in this 10-K (fiscal year ended Jan 31, 2025), differing from June 2021 stated in the later 10-K (fiscal year ended Jan 30, 2026)
