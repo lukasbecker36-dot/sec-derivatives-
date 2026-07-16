@@ -1,37 +1,31 @@
 issuer: IDEX Corporation
 ticker: IEX
-cik: "832101"
+cik: '832101'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   foreign_sales_percentage:
-    description: "Percentage of net sales recorded by subsidiaries with non-USD functional currencies"
+    description: Percentage of net sales recorded by subsidiaries with non-USD functional currencies
     section: market_risk
   foreign_exchange_gains_losses:
-    description: "Annual foreign currency transaction gains/losses for current and prior years"
+    description: Annual foreign currency transaction gains/losses for current and prior years
     section: market_risk
   floating_rate_debt_amount:
-    description: "Amount of floating rate debt outstanding"
+    description: Amount of floating rate debt outstanding
     section: market_risk
   total_debt_outstanding:
-    description: "Total debt outstanding"
+    description: Total debt outstanding
     section: market_risk
   current_interest_rate:
-    description: "Current interest rate on floating rate debt"
+    description: Current interest rate on floating rate debt
     section: market_risk
   interest_rate_sensitivity:
-    description: "Hypothetical impact of 1% interest rate change on annual interest expense"
+    description: Hypothetical impact of 1% interest rate change on annual interest expense
     section: market_risk
   revolving_facility_outstanding:
-    description: "Amount outstanding under revolving credit facility"
+    description: Amount outstanding under revolving credit facility
     section: market_risk
-
-# Unusual features identified:
-#   - No derivatives disclosed despite foreign currency exposure
-#   - Company relies on natural hedging (invoicing in same currency as product source) rather than financial instruments
-#   - Market risk disclosure appears outside standard notes structure
-#   - No credit risk or commodity price risk derivatives mentioned despite inflation concerns
-
+sections:
+  financial_instruments:
+    heading: 9\.\s+Fair\s+Value\s+Measurements

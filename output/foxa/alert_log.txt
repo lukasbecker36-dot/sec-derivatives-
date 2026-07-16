@@ -1,38 +1,34 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-16 ===
+[HISTORICAL] [LLM_FLAG] Section text for this 10-Q only covers borrowings fair vs. carrying value and credit risk concentration; no derivative or investment security data is disclosed here.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-07-16 ===
+[HISTORICAL] [LLM_FLAG] Section text for this 10-Q only covers borrowings fair vs. carrying value and credit risk concentration; no derivative or investment security data is disclosed here.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $7M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_value: was $1,249M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $-125M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_debt_outstanding: was $6,700M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] borrowings_fair_value: was $6,625M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $258M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] stock_investments_fair_value: was $1,249M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] stock_price_sensitivity: was $-125M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct, fixed_rate_debt_outstanding, borrowings_fair_value...)
+[HISTORICAL] [LLM_FLAG] Section text for this 10-Q only covers borrowings fair vs. carrying value and credit risk concentration; no derivative or investment security data is disclosed here.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-06-30 | Processed 2026-07-16 ===
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($7M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_value: appeared for first time ($1,249M)
+[HISTORICAL] [NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-125M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($6,700M)
+[HISTORICAL] [NEW_FIELD] borrowings_fair_value: appeared for first time ($6,625M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($258M)
+[HISTORICAL] [NEW_FIELD] stock_investments_fair_value: appeared for first time ($1,249M)
+[HISTORICAL] [NEW_FIELD] stock_price_sensitivity: appeared for first time ($-125M)
+[HISTORICAL] [LLM_FLAG] Section text provided is a fragment from the market risk section (interest-rate and stock-price risk tables), not a financial instruments note; no schema fields are extractable from this text.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp is null because the filing discloses sensitivity to a 10% adverse change in quoted interest rates, not a 100bp parallel shift; $258M corresponds to the 10%-change metric captured in interest_rate_sensitivity.
+[HISTORICAL] [LLM_FLAG] fixed_rate_debt_outstanding reported in millions ($6,700M) consistent with other fields; fixed_rate_notes_billion reported in billions (6.7) per schema label.
+[HISTORICAL] [LLM_FLAG] As of June 30, 2025 all financial instruments with interest-rate exposure were USD-denominated and no variable-rate debt was outstanding.
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[DISAPPEARED_FIELD] stock_investments_fair_value: was $30M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_sensitivity_10pct, stock_investments_fair_value)
-
-=== 10-K | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
-[NEW_FIELD] stock_investments_fair_value: appeared for first time ($30M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
-[LLM_FLAG] This section contains only a boilerplate reference statement indicating no material changes from the 2025 Form 10-K. No quantitative market risk data is disclosed in this excerpt. The complete market risk disclosures would need to be found in the referenced 2025 Form 10-K filing.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $7M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $1,249M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $-125M, now missing
-[DISAPPEARED_FIELD] borrowings_fair_value: was $6,625M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $258M, now missing
-[DISAPPEARED_FIELD] stock_investments_fair_value: was $1,249M, now missing
-[DISAPPEARED_FIELD] stock_price_sensitivity: was $-125M, now missing
-[VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct, borrowings_fair_value...)
-[LLM_FLAG] The 10-Q filing section provided contains only a boilerplate statement referring to the 2024 Form 10-K, with no actual quantitative or qualitative market risk disclosures. All fields cannot be extracted from the text provided. To verify values, the 2024 Form 10-K must be consulted.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-16 ===
+[HISTORICAL] [LLM_FLAG] Section text for this 10-Q only covers borrowings fair vs. carrying value and credit risk concentration; no derivative or investment security data is disclosed here.

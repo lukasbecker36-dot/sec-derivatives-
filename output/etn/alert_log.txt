@@ -1,33 +1,44 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-16 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($565M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($186M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($19M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($61M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-617M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+[HISTORICAL] [LLM_FLAG] Q1 2026 filing changed presentation to show gross derivative contract assets ($19M) and liabilities ($61M) separately, rather than net derivative contracts as in prior quarters; net position = $(42)M liability
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[DISAPPEARED_FIELD] fx_designated_notional: was $30M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_designated_notional)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $328M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $237M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $5,658M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $1,653M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $4,005M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $264M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_derivatives_notional: was $5M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $25M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $66M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-41M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $9M, now missing
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-617M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 11/11 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional...)
+[HISTORICAL] [LLM_FLAG] Section text contains pension plan fair value asset disclosures (total pension plan assets $4,191M for 2025 and $3,993M for 2024), not corporate-level financial instruments; all schema fields are null
+[HISTORICAL] [LLM_FLAG] Section text provided is from the 10-K Market Risk Disclosure and Forward-Looking Statements sections, not the detailed derivatives accounting note with notional amounts and fair value tables; all quantitative fields are null
+[HISTORICAL] [LLM_FLAG] Two separate interest rate sensitivity disclosures: (1) 100bp increase in short-term rates reduces net pre-tax interest expense by $8M (earnings sensitivity); (2) 100bp increase reduces aggregate debt market value by $617M (fair value sensitivity, reported as ir_sensitivity_100bp); commodity price sensitivity: hypothetical 10% fluctuation produces gain/loss less than $1M
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-16 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $186M → $237M (+27.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($264M)
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $12M → $9M (-25.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Derivative fair values shown only on net basis ($(41)M net liability); gross asset/liability breakdown is in the derivatives note
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] fx_designated_notional: was $30M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_designated_notional)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-16 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,777M → $398M (-77.6%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $162M, now missing
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $4M → $5M (+25.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $28M → $68M (+142.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $1M → $-37M (-3800.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Derivative fair values shown only on net basis ($(37)M net liability); gross asset/liability breakdown is in the derivatives note
+[HISTORICAL] [LLM_FLAG] Forward starting floating-to-fixed IR swaps ($162M at Q1 2025) no longer appear in the Q2 2025 derivatives table; fixed-to-floating swap hedged item carrying amount reduced from $647M to $502M suggesting partial maturity or termination
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] fx_designated_notional: was $30M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_designated_notional)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $5M, now missing
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (expected_12mo_reclass_from_aoci)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($5M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
-[LLM_FLAG] Provided text is only a header/reference statement directing readers to the 'Market Risk Disclosure' section. No actual quantitative or qualitative data on derivatives, hedging, or market risk sensitivities is present in the excerpt provided.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-16 ===
+[HISTORICAL] [LLM_FLAG] Derivative fair values shown only on net basis ($1M net asset); gross asset/liability breakdown is in the derivatives note
