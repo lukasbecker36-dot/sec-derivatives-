@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-17 ===
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[DISAPPEARED_FIELD] has_derivatives: was $5,866M, now missing
+[NUMERIC] fx_derivatives_notional: $461M → $9,269M (+1910.6%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $5M → $4,893M (+97760.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $500M → $4,376M (+775.2%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $177M → $1,150M (+549.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $145M, now missing
+[NEW_FIELD] total_derivative_asset: appeared for first time ($113M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($132M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-19M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 4/8 previously-populated fields are now null (gross_unrealized_gains_debt, has_derivatives, commodity_derivatives_notional, equity_sensitivity_10pct)
+[VALIDATION] Likely units mismatch: fx_designated_notional changed from 5 to 4,893 (979x)
+[LLM_FLAG] fx_derivatives_notional changed from 461 to 9,269 (>50% change). Prior value likely from a different section or extraction methodology. Current value includes all FX-related derivatives (currency exchange + cross-currency swaps + non-qualifying). Dec 2025 gross notional was $10,659M vs Jun 2026 $10,419M, so quarter-over-quarter change is modest (-2.3%).
+[LLM_FLAG] fx_designated_notional changed from 5 to 4,893 (>50% change). Same explanation as above — prior extraction may have used a narrower definition.
+[LLM_FLAG] ir_swap_notional changed from 177 to 1,150 (>50% change). GE Aerospace entered new qualifying interest rate swaps in 2026 (Dec 2025 notional was $0, Jun 2026 is $1,150M).
+[LLM_FLAG] Non-qualifying currency exchange contracts include 'other' instruments; notional may include non-FX items bundled in the same line.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($5,866M)
 [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($461M)
