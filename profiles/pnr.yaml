@@ -1,26 +1,19 @@
 issuer: Pentair
 ticker: PNR
-cik: "77360"
+cik: '77360'
 archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: TODO
 extraction_mode: llm
-
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   interest_rate_derivatives:
-    description: "Derivative instruments used to manage interest rate risk"
+    description: Derivative instruments used to manage interest rate risk
     section: market_risk
   foreign_currency_derivatives:
-    description: "Derivative instruments used to manage foreign currency rate risk"
+    description: Derivative instruments used to manage foreign currency rate risk
     section: market_risk
   derivative_policy_details:
-    description: "Full accounting policies and utilization details referenced in notes"
+    description: Full accounting policies and utilization details referenced in notes
     section: financial_instruments
-
-# Unusual features identified:
-#   - Market risk section text is truncated; references notes for full derivative accounting policies
-#   - States derivatives are used periodically (not continuously) to manage interest rate and FX risk
-#   - Specifies counterparties are major financial institutions and instruments are not for trading
-#   - Hedge designation status (ASC 815) not explicitly stated in available text; would need notes for confirmation
-#   - Note headings reference pension/actuarial and segment information but no specific derivatives note heading found
-
+sections:
+  financial_instruments:
+    heading: Derivatives\s+and\s+Financial\s+Instruments

@@ -1,55 +1,40 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[DISAPPEARED_FIELD] interest_rate_risk_exposure: was $0M, now missing
-[DISAPPEARED_FIELD] no_hedging_statement: was $23M, now missing
-[VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (interest_rate_risk_exposure, no_hedging_statement)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-17 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($1,731M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($5,735M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($3M)
+[HISTORICAL] [NUMERIC] publicly_traded_equity_securities: $23M → $6M (-74.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] privately_held_equity_securities: $170M → $245M (+44.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No derivatives of any kind disclosed; Palantir is a software company that does not hedge FX or use other derivative instruments
+[HISTORICAL] [LLM_FLAG] No quantitative sensitivity figures disclosed; Palantir provides only qualitative market risk disclosures
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($23M)
-[NEW_FIELD] publicly_traded_equity_securities: appeared for first time ($23M)
-[NEW_FIELD] privately_held_equity_securities: appeared for first time ($170M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-17 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $972M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $4,822M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $42M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $7M, now missing
+[HISTORICAL] [NUMERIC] publicly_traded_equity_securities: $42M → $23M (-44.4%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, gross_unrealized_gains_debt)
+[HISTORICAL] [LLM_FLAG] section_text_is_MD&A_not_Note_4: the provided section_text cross-references Note 4 but contains MD&A financial tables (cost of revenue, operating expenses) rather than the actual fair value hierarchy table; balance sheet fair value data cannot be extracted
+[HISTORICAL] [LLM_FLAG] no_derivatives: Palantir does not use derivative instruments in any period
+[HISTORICAL] [LLM_FLAG] No quantitative sensitivity figures disclosed; Palantir provides only qualitative market risk disclosures in 10-K
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[DISAPPEARED_FIELD] interest_rate_risk_exposure: was $0M, now missing
-[DISAPPEARED_FIELD] no_hedging_statement: was $23M, now missing
-[VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (interest_rate_risk_exposure, no_hedging_statement)
-[LLM_FLAG] equity_sensitivity_10pct increased significantly from the prior period value of 0.0 to 24.5, indicating a substantial increase in exposure to equity market risks.
-[LLM_FLAG] The absence of any FX hedging activity could represent a significant risk given the company's reliance on foreign currencies.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-17 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $477M → $972M (+103.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $0M → $7M (+70850.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] privately_held_equity_securities: $123M → $163M (+32.8%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely units mismatch: gross_unrealized_gains_debt changed from 0 to 7 (710x)
+[HISTORICAL] [LLM_FLAG] No derivatives of any kind disclosed; Palantir is a software company that does not hedge FX or use other derivative instruments
+[HISTORICAL] [LLM_FLAG] No quantitative sensitivity figures disclosed; Palantir provides only qualitative market risk disclosures
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($23M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($2M)
-[NEW_FIELD] publicly_traded_equity_securities: appeared for first time ($23M)
-[NEW_FIELD] privately_held_equity_securities: appeared for first time ($170M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-17 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $679M → $477M (-29.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $11M → $48M (+320.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $0M → $0M (-97.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] publicly_traded_equity_securities: $11M → $48M (+321.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No derivatives of any kind disclosed; Palantir is a software company that does not hedge FX or use other derivative instruments
+[HISTORICAL] [LLM_FLAG] No quantitative sensitivity figures disclosed; Palantir provides only qualitative market risk disclosures
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NUMERIC] publicly_traded_equity_securities: $42M → $23M (-44.4%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NUMERIC] privately_held_equity_securities: $123M → $163M (+32.8%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NUMERIC] publicly_traded_equity_securities: $11M → $48M (+321.9%) — exceeds 20% threshold
-[LLM_FLAG] publicly_traded_equity_securities increased from $11.4M (Q1) to $48.1M (Q2) - >50% increase
-[LLM_FLAG] privately_held_equity_securities increased from $104.5M (Q1) to $122.9M (Q2)
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] publicly_traded_equity_securities: appeared for first time ($11M)
-[NEW_FIELD] privately_held_equity_securities: appeared for first time ($104M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-17 ===
+[HISTORICAL] [LLM_FLAG] No derivatives of any kind disclosed; Palantir is a software company that does not hedge FX or use other derivative instruments
+[HISTORICAL] [LLM_FLAG] No quantitative sensitivity figures (100bp, 10% FX, 10% equity) disclosed; Palantir provides only qualitative market risk disclosures
