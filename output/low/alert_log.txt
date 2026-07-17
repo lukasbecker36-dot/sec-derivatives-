@@ -1,6 +1,21 @@
-=== 10-Q | Period ending 2025-05-02 | Processed 2026-06-02 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_forwards_outstanding)
-[LLM_FLAG] This 10-Q section provides minimal disclosure - it explicitly references the Annual Report (10-K) for fiscal year ended January 31, 2025 and states market risks 'have not changed materially.' Detailed quantitative metrics are not provided in the excerpt.
-[LLM_FLAG] Prior period showed 'has_derivatives: Yes' with interest rate swap agreements and fair value hedges, but current excerpt makes no mention of derivatives despite covering market risk disclosures.
+=== 10-Q | Period ending 2026-05-01 | Processed 2026-07-17 ===
+[HISTORICAL] [LLM_FLAG] Section is a brief cross-reference to the 10-K annual report; transportation costs added as new risk category vs. prior periods.
 
+=== 10-K | Period ending 2026-01-30 | Processed 2026-07-17 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $25M → $15M (-40.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] IR swap notional remained at $550M (same as Oct 31, 2025), reduced from prior year $850M.
+
+=== 10-Q | Period ending 2025-10-31 | Processed 2026-07-17 ===
+[HISTORICAL] [NUMERIC] ir_swap_notional: $850M → $550M (-35.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] IR swap notional reduced from $850M to $550M compared to prior periods, indicating partial termination of swap positions.
+[HISTORICAL] [LLM_FLAG] Section is a brief cross-reference to the 10-K annual report.
+
+=== 10-Q | Period ending 2025-08-01 | Processed 2026-07-17 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $39M → $30M (-23.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section is a brief cross-reference to the 10-K annual report.
+
+=== 10-Q | Period ending 2025-05-02 | Processed 2026-07-17 ===
+[HISTORICAL] [LLM_FLAG] Section is a brief cross-reference to the 10-K annual report; minimal quantitative disclosure.
+
+=== 10-K | Period ending 2025-01-31 | Processed 2026-07-17 ===
+[HISTORICAL] [LLM_FLAG] Cash flow hedge OCI flows disclosed (-$13M 2024, -$14M 2023, $311M 2022) but accumulated AOCI balance not in text; $17M interest reclassified in 2024 is past period flow, not 12-month forward estimate.
