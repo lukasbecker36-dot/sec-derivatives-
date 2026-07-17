@@ -59,10 +59,15 @@ silently retried forever.
 
 ## Routine prompt
 
-Copy this verbatim into the routine prompt field. Point the routine at
-this branch and schedule it (e.g. every 4-6 hours) until the retry list
-is exhausted, then switch back to the standard `BACKFILL_ROUTINE.md`
-prompt or pause the routine.
+Copy this verbatim into the routine prompt field. Schedule it (e.g. every
+4-6 hours) until the retry list is exhausted, then pause the routine.
+
+IMPORTANT — set the routine's branch to `claude/determined-franklin-1yztdn`
+in the routine config, AND keep Step 0 below. All the backfill code
+(`src/backfill.py`, the retry list) lives ONLY on that branch — it has
+never been merged to `master`. If a fire starts on `master`, `src.backfill`
+and everything else will look "missing"; that is a wrong-branch symptom,
+NOT a missing module. Step 0 defends against it.
 
 ```
 Run one Wave 1 RETRY batch for the sec-derivatives- repo.
@@ -80,6 +85,19 @@ this re-seeds them from scratch.
 BUDGET RULE: This routine MUST complete in a single session. Do NOT
 continue into a second quota window. If you hit a spend-cap or context
 warning, skip to Step 6 immediately and commit whatever is done.
+
+Step 0 — Get onto the right branch FIRST (do not skip):
+    git fetch origin claude/determined-franklin-1yztdn
+    git checkout claude/determined-franklin-1yztdn
+    git pull --ff-only origin claude/determined-franklin-1yztdn
+    test -f src/backfill.py || { echo "ABORT: src/backfill.py absent after checkout"; exit 1; }
+
+All the backfill code lives ONLY on this branch, never on master. If
+src/backfill.py is absent after checkout, the branch checkout failed —
+STOP and report "wrong branch / checkout failed". Do NOT try to
+reimplement src.backfill, do NOT fall back to src.cc_bridge, do NOT
+switch directory layouts. The module exists; a fresh clone just needs
+the branch checked out.
 
 Step 1 — Seed the next batch from the retry list:
     python -m src.backfill prepare --since 2025-01-01 \
