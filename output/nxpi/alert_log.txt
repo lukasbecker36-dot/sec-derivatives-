@@ -1,13 +1,59 @@
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] rcf_borrowing_capacity: appeared for first time ($2,500M)
-[LLM_FLAG] extraction_failed: Expecting ',' delimiter: line 9 column 17 (char 371)
+=== 10-Q | Period ending 2026-03-29 | Processed 2026-07-18 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($2M)
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $1M → $2M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $9M → $6M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $1,866M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] rcf_borrowing_capacity: was $2,500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $0M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/7 previously-populated fields are now null (fx_derivatives_notional, rcf_borrowing_capacity, interest_rate_sensitivity)
+[HISTORICAL] [LLM_FLAG] No notional amounts disclosed in this fair value note; may appear in a separate derivatives/hedging note not captured in this section
+[HISTORICAL] [LLM_FLAG] New Level 3 item this quarter: Earn-out receivable $44M (up to $50M) related to divested MEMS sensor business in Q1 2026 — not a derivative, not included in derivative totals
+[HISTORICAL] [LLM_FLAG] Derivative liabilities increased to $13M (from $9M in Q3 2025 and $11M at Dec 31, 2025)
+[HISTORICAL] [LLM_FLAG] Section text begins mid-note after the fair value table; no notional amounts or derivative fair values present in supplied section_text.
+[HISTORICAL] [LLM_FLAG] From the locate windows for this filing: derivative instruments-assets $6M and derivative instruments-liabilities $(13)M as of March 29, 2026 — absent from the extracted section_text.
+[HISTORICAL] [LLM_FLAG] No FX derivative notional amounts disclosed in this 10-Q section; notionals appear only in the annual 10-K.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] rcf_borrowing_capacity: appeared for first time ($2,500M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $2,373M → $1,757M (-26.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $1M, now missing
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $4M → $9M (+125.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $9M → $11M (+22.2%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,866M)
+[HISTORICAL] [NEW_FIELD] rcf_borrowing_capacity: appeared for first time ($2,500M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($0M)
+[HISTORICAL] [LLM_FLAG] Money market funds are classified as cash equivalents per the filing's own disclosure; no other cash equivalent categories are shown.
+[HISTORICAL] [LLM_FLAG] No marketable debt or corporate debt securities held; NXPI's investment portfolio consists of money market funds and a small amount of marketable equity securities.
+[HISTORICAL] [LLM_FLAG] Derivative notionals are disclosed only in the derivatives note (see derivatives_note_extract result).
+[HISTORICAL] [LLM_FLAG] FX notional of $1,866M is the sum of gross notional amounts by currency as explicitly tabulated in the section; designated vs not-designated breakdown not provided.
+[HISTORICAL] [LLM_FLAG] Derivative fair values (assets/liabilities) appear in the separate financial_instruments section, not here.
+[HISTORICAL] [LLM_FLAG] No IR swap, commodity, or equity derivative notionals disclosed; NXPI uses FX derivatives only based on this disclosure.
+[HISTORICAL] [LLM_FLAG] The 10-K market risk section is qualitative; no quantitative sensitivity tables (100bp IR move, 10% FX move) are provided in the supplied section_text.
+[HISTORICAL] [LLM_FLAG] RCF is undrawn at December 31, 2025, so floating rate interest expense sensitivity is zero.
+[HISTORICAL] [LLM_FLAG] Fixed-rate note totals and equity price risk figures would need to be sourced from the debt and investments notes respectively.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] rcf_borrowing_capacity: appeared for first time ($2,500M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-28 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $18M → $4M (-77.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $2M → $9M (+350.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No notional amounts disclosed in this fair value note; may appear in a separate derivatives/hedging note not captured in this section
+[HISTORICAL] [LLM_FLAG] New line item this quarter: Short-term deposits $500M (Level 1) — liquid assets with original maturity beyond three months; not classified as cash equivalents per the filing
+[HISTORICAL] [LLM_FLAG] Debt fair value increased to $11.5B (from $9.8B at Dec 31, 2024)
+[HISTORICAL] [LLM_FLAG] Section text begins mid-note after the fair value table; no notional amounts or derivative fair values present in supplied section_text.
+[HISTORICAL] [LLM_FLAG] From the locate windows for this filing: derivative instruments-assets $4M and derivative instruments-liabilities $(9)M as of September 28, 2025 — absent from the extracted section_text.
+[HISTORICAL] [LLM_FLAG] No FX derivative notional amounts disclosed in this 10-Q section; notionals appear only in the annual 10-K.
 
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $3,396M → $2,056M (-39.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $3M → $18M (+500.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $9M → $2M (-77.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No notional amounts disclosed in this fair value note; may appear in a separate derivatives/hedging note not captured in this section
+[HISTORICAL] [LLM_FLAG] Derivative assets increased materially quarter-over-quarter from $3M (Q1 2025) to $18M (Q2 2025)
+[HISTORICAL] [LLM_FLAG] Section text begins mid-note after the fair value table; no notional amounts or derivative fair values present in supplied section_text.
+[HISTORICAL] [LLM_FLAG] From the locate windows for this filing: derivative instruments-assets $18M and derivative instruments-liabilities $(2)M as of June 29, 2025 — absent from the extracted section_text.
+[HISTORICAL] [LLM_FLAG] No FX derivative notional amounts disclosed in this 10-Q section; notionals appear only in the annual 10-K.
+
+=== 10-Q | Period ending 2025-03-30 | Processed 2026-07-18 ===
+[HISTORICAL] [LLM_FLAG] No notional amounts disclosed in this fair value note; may appear in a separate derivatives/hedging note not captured in this section
+[HISTORICAL] [LLM_FLAG] Derivative positions are very small (assets $3M, liabilities $9M) relative to company size
+[HISTORICAL] [LLM_FLAG] Section text begins mid-note after the fair value table; no notional amounts or derivative fair values are present in the supplied section_text.
+[HISTORICAL] [LLM_FLAG] From the locate windows for this filing: derivative instruments-assets $3M and derivative instruments-liabilities $(9)M as of March 30, 2025 — but these values are absent from the extracted section_text and cannot be confirmed here without fabricating.
+[HISTORICAL] [LLM_FLAG] No FX derivative notional amounts disclosed in this 10-Q section; notionals appear only in the 10-K.

@@ -1,20 +1,38 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($55M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($300M)
-[NUMERIC] total_derivative_asset: $23M → $6M (-75.9%) — exceeds 20% threshold
-[NEW_FIELD] total_derivative_liability: appeared for first time ($51M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-45M)
-[NUMERIC] cash_flow_hedge_aoci: $500M → $-50M (-109.9%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $69M → $51M (-26.1%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($51M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-45M)
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-50M)
+[HISTORICAL] [LLM_FLAG] Interest rate swaps ($300M notional) expired on April 15, 2026 — subsequent event.
+[HISTORICAL] [LLM_FLAG] IR swap/collar had zero AOCI balance at March 31, 2026.
+[HISTORICAL] [LLM_FLAG] Interest rate swaps ($300M notional) expired on April 15, 2026 — subsequent event, not reflected in March 31, 2026 balance sheet.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($23M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $868M → $1,123M (+29.3%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] fi_total_derivative_asset: $0M → $0M
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $88M → $69M (-21.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $868M → $1,123M (+29.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $88M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-88M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-88M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/10 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, cash_flow_hedge_aoci)
+[HISTORICAL] [LLM_FLAG] Cross-currency swap portfolio materially restructured in 2025: EUR 150M matured in December 2025 (replaced), new EUR 212M swap added October 2025, resulting in total notional growth from $728.5M to $1.1B.
+[HISTORICAL] [LLM_FLAG] This section_text covers Item 7A (market risk disclosures) and contains sensitivity analysis: 100bp interest rate move on fixed-rate debt = ~$38-40M fair value change; 100bp move on variable-rate debt = ~$6M interest expense change; 10% EUR/USD move = ~$80M AOCI impact on cross-currency swaps.
+[HISTORICAL] [LLM_FLAG] Fair value balance sheet data (derivative assets/liabilities, AOCI) is in the financial_instruments section (Note 9).
+[HISTORICAL] [LLM_FLAG] Section text is severely truncated — ends with 'The major accounting policies and utilization of these instruments is described more fully in' (incomplete sentence). Numeric sensitivity fields could not be extracted from this section.
+[HISTORICAL] [LLM_FLAG] Sensitivity data IS present in the derivatives_note section_text for this same filing (10-K Item 7A): IR sensitivity ~$38-40M on fixed-rate debt fair value; FX 10% sensitivity ~$80M AOCI impact on cross-currency swaps.
+[HISTORICAL] [LLM_FLAG] All instruments entered into for other than trading purposes; counterparties are major financial institutions.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $0M → $0M (-75.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $0M → $0M (-75.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Subsequent event: new cross currency swap entered October 3, 2025 with notional EUR 212M, designated as cash flow hedge.
+[HISTORICAL] [LLM_FLAG] Subsequent event: new cross currency swap entered October 3, 2025 with notional EUR 212M, designated as cash flow hedge — not reflected in September 30, 2025 balances.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $34M → $94M (+176.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $34M → $94M (+176.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-34M → $-94M (-178.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-34M → $-94M (-180.9%) — exceeds 20% threshold
