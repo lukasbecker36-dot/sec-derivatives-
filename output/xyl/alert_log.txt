@@ -1,25 +1,23 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_derivatives_notional: $759M → $563M (-25.8%) — exceeds 20% threshold
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($31M)
-[NUMERIC] expected_12mo_reclass_from_aoci: $35M → $8M (-77.1%) — exceeds 20% threshold
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $3,930M → $4,922M (+25.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $3,930M → $4,922M (+25.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $7M → $5M (-28.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $319M → $253M (-20.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-312M → $-248M (+20.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $9M → $3M (-66.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_derivatives_notional: $193M → $759M (+293.3%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $30M, now missing
-[NUMERIC] expected_12mo_reclass_from_aoci: $1M → $35M (+3400.0%) — exceeds 20% threshold
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $13M → $9M (-30.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
+[HISTORICAL] [LLM_FLAG] Item 7A provides only qualitative sensitivity statements ('not material'); all quantitative derivative detail is in Note 13 (derivatives_note_extract)
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_derivatives_notional: $365M → $193M (-47.1%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $15M → $1M (-93.3%) — exceeds 20% threshold
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $14M → $8M (-42.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $17M → $13M (-23.5%) — exceeds 20% threshold
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_derivatives_notional: $518M → $365M (-29.5%) — exceeds 20% threshold
-[NUMERIC] total_derivative_asset: $19M → $2M (-89.5%) — exceeds 20% threshold
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
-
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $37M → $14M (-62.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $95M → $333M (+250.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-58M → $-319M (-450.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $1M → $17M (+1600.0%) — exceeds 20% threshold

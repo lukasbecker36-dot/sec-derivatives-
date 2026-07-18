@@ -1,73 +1,99 @@
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-10 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($900M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($58M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-2M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($3M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[NEW_FIELD] fx_contract_notional_asset: appeared for first time ($39M)
-[NEW_FIELD] fx_contract_fair_value_asset: appeared for first time ($0M)
-[NEW_FIELD] fx_contract_notional_liability: appeared for first time ($19M)
-[NEW_FIELD] fx_contract_fair_value_liability: appeared for first time ($0M)
-[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($900M)
-[NEW_FIELD] cross_currency_swap_fair_value_asset: appeared for first time ($0M)
-[NEW_FIELD] cross_currency_swap_fair_value_liability: appeared for first time ($50M)
-[NEW_FIELD] cross_currency_swap_aoci: appeared for first time ($-54M)
-[NEW_FIELD] ir_swap_notional_asset: appeared for first time ($50M)
-[NEW_FIELD] ir_swap_notional_liability: appeared for first time ($100M)
-[NEW_FIELD] ir_swap_aoci: appeared for first time ($-2M)
-[NEW_FIELD] cross_currency_swap_interest_earned: appeared for first time ($11M)
-[NEW_FIELD] cross_currency_sensitivity_10pct: appeared for first time ($95M)
-[LLM_FLAG] Section text appears to be from MD&A/Liquidity section rather than the derivatives footnote, limiting available detail
-[LLM_FLAG] Cross-currency swap AOCI swung from +$32,979K (2024) to -$53,730K (2025), a change of ~$87M due to FX movements
-[LLM_FLAG] FX contract notional values are in thousands (not millions) in the source filing
+=== 10-Q | Period ending 2026-04-04 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $958M → $1,200M (+25.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $900M → $1,200M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] fi_fx_not_designated_notional: $58M → $0M
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $1M → $9M (+1169.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $53M → $32M (-39.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $900M → $1,246M (+38.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $900M → $1,200M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($46M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($9M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($32M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-23M)
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-1M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-2M, now missing
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-3M → $2M (+166.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_contract_notional_asset: was $39M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_contract_fair_value_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_contract_notional_liability: was $19M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_contract_fair_value_liability: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cross_currency_swap_notional: was $900M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cross_currency_swap_fair_value_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cross_currency_swap_fair_value_liability: was $50M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cross_currency_swap_aoci: was $-54M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional_asset: was $50M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional_liability: was $100M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_aoci: was $-2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cross_currency_swap_interest_earned: was $11M, now missing
+[HISTORICAL] [NUMERIC] cross_currency_sensitivity_10pct: $95M → $117M (+23.2%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 13/24 previously-populated fields are now null (fx_transaction_gain_loss, fx_contract_notional_asset, fx_contract_fair_value_asset, fx_contract_notional_liability, fx_contract_fair_value_liability...)
+[HISTORICAL] [LLM_FLAG] This filing reports fair value table in millions (not thousands) — no conversion required
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional increased significantly to $1.2B (from $730M in Q3 2025), likely related to the large increase in fixed-rate debt from $1.3B to $4.6B (acquisition-related)
+[HISTORICAL] [LLM_FLAG] FX forward contracts show zero fair value — fi_fx_not_designated_notional set to 0
+[HISTORICAL] [LLM_FLAG] Fair value figures are rounded to whole millions; precision is lower than prior quarters
+[HISTORICAL] [LLM_FLAG] Filing units changed to millions in Q1 2026 due to BDS Business Acquisition (large acquisition closed February 2026)
+[HISTORICAL] [LLM_FLAG] Section also discloses 10% adverse FX change on $321M non-USD cash ($32M decrease to OCI); section refers to 2025 Annual Report for full market risk details
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-3M)
-[NEW_FIELD] fx_contract_notional_asset: appeared for first time ($39M)
-[NEW_FIELD] fx_contract_fair_value_asset: appeared for first time ($0M)
-[NEW_FIELD] fx_contract_notional_liability: appeared for first time ($19M)
-[NEW_FIELD] fx_contract_fair_value_liability: appeared for first time ($0M)
-[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($900M)
-[NEW_FIELD] cross_currency_swap_fair_value_asset: appeared for first time ($0M)
-[NEW_FIELD] cross_currency_swap_fair_value_liability: appeared for first time ($50M)
-[NEW_FIELD] cross_currency_swap_aoci: appeared for first time ($-54M)
-[NEW_FIELD] ir_swap_notional_asset: appeared for first time ($50M)
-[NEW_FIELD] ir_swap_notional_liability: appeared for first time ($100M)
-[NEW_FIELD] ir_swap_aoci: appeared for first time ($-2M)
-[NEW_FIELD] cross_currency_swap_interest_earned: appeared for first time ($11M)
-[NEW_FIELD] cross_currency_sensitivity_10pct: appeared for first time ($95M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-18 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($958M)
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $730M → $900M (+23.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($58M)
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $0M → $1M (+78.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $730M → $900M (+23.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $68M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $54M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-53M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-2M, now missing
+[HISTORICAL] [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-2M)
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $2M → $-3M (-250.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_contract_notional_asset: appeared for first time ($39M)
+[HISTORICAL] [NEW_FIELD] fx_contract_fair_value_asset: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fx_contract_notional_liability: appeared for first time ($19M)
+[HISTORICAL] [NEW_FIELD] fx_contract_fair_value_liability: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] cross_currency_swap_notional: appeared for first time ($900M)
+[HISTORICAL] [NEW_FIELD] cross_currency_swap_fair_value_asset: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] cross_currency_swap_fair_value_liability: appeared for first time ($50M)
+[HISTORICAL] [NEW_FIELD] cross_currency_swap_aoci: appeared for first time ($-54M)
+[HISTORICAL] [NEW_FIELD] ir_swap_notional_asset: appeared for first time ($50M)
+[HISTORICAL] [NEW_FIELD] ir_swap_notional_liability: appeared for first time ($100M)
+[HISTORICAL] [NEW_FIELD] ir_swap_aoci: appeared for first time ($-2M)
+[HISTORICAL] [NEW_FIELD] cross_currency_swap_interest_earned: appeared for first time ($11M)
+[HISTORICAL] [NUMERIC] cross_currency_sensitivity_10pct: $78M → $95M (+21.8%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/14 previously-populated fields are now null (fx_not_designated_notional, total_derivative_asset, total_derivative_liability, net_derivative_position, cash_flow_hedge_aoci)
+[HISTORICAL] [LLM_FLAG] Section is narrative only (liquidity/capital discussion); detailed FV table and AOCI balances are in Item 7A (financial_instruments section)
 
-=== 10-Q | Period ending 2026-04-04 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-07-18 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $65M, now missing
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $1M → $0M (-62.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $88M → $68M (-22.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1M → $0M (-62.5%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] cross_currency_sensitivity_10pct: appeared for first time ($78M)
+[HISTORICAL] [LLM_FLAG] Values in fair value tables are reported in thousands; converted to millions
+[HISTORICAL] [LLM_FLAG] Section text truncated before FX forward notional table — fi_fx_not_designated_notional and fi_fx_derivatives_notional set to null
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional increased to $730M (from $705M in Q1 and Q2 2025)
+[HISTORICAL] [LLM_FLAG] Total derivative assets fell to $0.398M — smallest across the WAT quarterly filings reviewed
+[HISTORICAL] [LLM_FLAG] Subsequent event: additional $50M cross-currency swap derivative entered in October 2025; not reflected in Q3 figures
+[HISTORICAL] [LLM_FLAG] Section also discloses 10% adverse FX change on $285M non-USD cash ($29M decrease to OCI)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-07-18 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($65M)
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $3M → $1M (-68.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $6M → $57M (+804.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $51M → $88M (+74.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $3M → $1M (-68.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $6M → $57M (+804.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-3M → $-56M (-1828.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-2M → $-2M (-38.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Values in fair value tables are reported in thousands; converted to millions
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional is partial — only asset-side FX forward notional visible ($65.483M); section truncated before liability-side notional row
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional set to null because FX forward total is incomplete; designated portion alone is $705M
+[HISTORICAL] [LLM_FLAG] Cross-currency swap fair value liability increased significantly to $54.404M vs $3.940M in Q1 2025
+[HISTORICAL] [LLM_FLAG] Section only discloses 10% adverse FX change impact on $267M non-USD cash ($27M decrease); all other market risk quantitative data deferred to 2024 Annual Report
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($58M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-2M)
-[NEW_FIELD] fx_contract_notional_asset: appeared for first time ($39M)
-[NEW_FIELD] fx_contract_fair_value_asset: appeared for first time ($0M)
-[NEW_FIELD] fx_contract_notional_liability: appeared for first time ($19M)
-[NEW_FIELD] fx_contract_fair_value_liability: appeared for first time ($0M)
-[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($900M)
-[NEW_FIELD] cross_currency_swap_fair_value_asset: appeared for first time ($0M)
-[NEW_FIELD] cross_currency_swap_fair_value_liability: appeared for first time ($50M)
-[NEW_FIELD] cross_currency_swap_aoci: appeared for first time ($-54M)
-[NEW_FIELD] ir_swap_notional_asset: appeared for first time ($50M)
-[NEW_FIELD] ir_swap_notional_liability: appeared for first time ($100M)
-[NEW_FIELD] ir_swap_aoci: appeared for first time ($-2M)
-[NEW_FIELD] cross_currency_swap_interest_earned: appeared for first time ($11M)
-[NUMERIC] fx_sensitivity_10pct: $2M → $-3M (-250.0%) — exceeds 20% threshold
-[NUMERIC] cross_currency_sensitivity_10pct: $78M → $95M (+21.8%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-09-27 | Processed 2026-06-04 ===
-[NUMERIC] fx_sensitivity_10pct: $-27M → $2M (+107.4%) — exceeds 20% threshold
-[NEW_FIELD] cross_currency_sensitivity_10pct: appeared for first time ($78M)
-
-=== 10-Q | Period ending 2025-03-29 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-23M)
-
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-07-18 ===
+[HISTORICAL] [LLM_FLAG] Values in fair value tables are reported in thousands; converted to millions
+[HISTORICAL] [LLM_FLAG] Section text truncated before FX forward notional table — fi_fx_not_designated_notional and fi_fx_derivatives_notional set to null
+[HISTORICAL] [LLM_FLAG] fi_fx_designated_notional reflects cross-currency swap notional only ($705M); FX forward designated notional not applicable (FX forwards are not designated)
+[HISTORICAL] [LLM_FLAG] Section only discloses 10% adverse FX change impact on $226M non-USD cash ($23M decrease); all other market risk quantitative data deferred to 2024 Annual Report

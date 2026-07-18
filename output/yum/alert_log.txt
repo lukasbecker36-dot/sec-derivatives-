@@ -1,40 +1,43 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_derivatives_notional: $2,025M → $75M (-96.3%) — exceeds 20% threshold
-[NUMERIC] fx_designated_notional: $4,000M → $5M (-99.9%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] ir_swap_notional: was $31,000M, now missing
-[DISAPPEARED_FIELD] equity_derivatives_notional: was $1M, now missing
-[NEW_FIELD] total_derivative_asset: appeared for first time ($13M)
-[NUMERIC] expected_12mo_reclass_from_aoci: $31M → $12M (-61.3%) — exceeds 20% threshold
-[VALIDATION] Likely extraction failure: 2/6 previously-populated fields are now null (ir_swap_notional, equity_derivatives_notional)
-[VALIDATION] Likely units mismatch: fx_designated_notional changed from 4,000 to 5 (0x)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-18 ===
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $1,500M, now missing
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $1M → $4M (+300.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $10M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] pct_fixed_rate_debt: was $96M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_fair_value_sensitivity_100bp: was $31M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_debt_fair_value_sensitivity_100bp: was $-375M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_net_asset_exposure: was $1,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_operating_profit_sensitivity_10pct: was $-150M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 8/11 previously-populated fields are now null (ir_swap_notional, ir_sensitivity_100bp, fixed_rate_notes_billion, pct_fixed_rate_debt, ir_swap_fair_value_sensitivity_100bp...)
+[HISTORICAL] [LLM_FLAG] Recurring FV table in Note 13 section_text is truncated before derivative line items; no derivative FV values extractable from this section
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_derivatives_notional: $30M → $2,025M (+6650.0%) — exceeds 20% threshold
-[NEW_FIELD] ir_swap_notional: appeared for first time ($31,000M)
-[NUMERIC] equity_derivatives_notional: $24M → $1M (-95.8%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] total_derivative_asset: was $13M, now missing
-[NUMERIC] expected_12mo_reclass_from_aoci: $12M → $31M (+158.3%) — exceeds 20% threshold
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-18 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $4M, now missing
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($1,500M)
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $4M → $1M (-75.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($4M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)
+[HISTORICAL] [NEW_FIELD] pct_fixed_rate_debt: appeared for first time ($96M)
+[HISTORICAL] [NEW_FIELD] ir_swap_fair_value_sensitivity_100bp: appeared for first time ($31M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_debt_fair_value_sensitivity_100bp: appeared for first time ($-375M)
+[HISTORICAL] [NEW_FIELD] fx_net_asset_exposure: appeared for first time ($1,000M)
+[HISTORICAL] [NEW_FIELD] fx_operating_profit_sensitivity_10pct: appeared for first time ($-150M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] Recurring FV table in Note 14 section_text is truncated before derivative line items; no derivative FV values extractable from this section
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($24M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $7M → $4M (-42.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $7M → $4M (-42.9%) — exceeds 20% threshold
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($30M)
-[DISAPPEARED_FIELD] equity_derivatives_notional: was $9M, now missing
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($30M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($12M)
-[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (equity_derivatives_notional)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-18 ===
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($80M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($80M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $0M, now missing
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($7M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/5 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($4M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($1,500M)
-[NEW_FIELD] ir_swap_fair_value_sensitivity_100bp: appeared for first time ($31M)
-[NEW_FIELD] fixed_rate_debt_fair_value_sensitivity_100bp: appeared for first time ($-375M)
-[NEW_FIELD] fx_net_asset_exposure: appeared for first time ($1,000M)
-[NEW_FIELD] fx_operating_profit_sensitivity_10pct: appeared for first time ($-150M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-18 ===
+[HISTORICAL] [LLM_FLAG] IR swaps expired in March 2025 before period end; new 2025 IR swaps ($1.5B) entered April 4, 2025 as a subsequent event — not reflected in Q1 2025 balance sheet
