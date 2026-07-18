@@ -1,48 +1,43 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($130M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($150M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($200M)
-[DISAPPEARED_FIELD] total_derivative_asset: was $130M, now missing
-[DISAPPEARED_FIELD] total_derivative_liability: was $130M, now missing
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-820M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $1,746M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-6,001M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-4,255M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4,419M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $-2,759M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 8/9 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct...)
-[LLM_FLAG] The cash flow hedge AOCI remains unchanged from the prior period, which is notable amidst the changes in their foreign currency hedging strategy.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $7M → $4M (-35.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Only remaining derivative is the cross-currency swap (CHF net investment hedge); IR swaps fully matured
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($130M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($130M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($200M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($1,746M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($-6,001M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-4,255M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($4,419M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-2,759M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] The total derivative asset decreased significantly compared to the prior period due to material losses in hedging instruments.
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $9M → $7M (-23.2%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] fi_ir_swap_notional: $200M → $0M
+[HISTORICAL] [DROPPED_TO_ZERO] fi_total_derivative_asset: $1M → $0M
+[HISTORICAL] [DROPPED_TO_ZERO] ir_swap_notional: $200M → $0M
+[HISTORICAL] [DROPPED_TO_ZERO] total_derivative_asset: $1M → $0M
+[HISTORICAL] [LLM_FLAG] Forward starting swaps matured November 2025 and are no longer outstanding
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-18 ===
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($9M)
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $3M → $1M (-59.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $3M → $1M (-59.9%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_sales_percentage: was $32M, now missing
+[HISTORICAL] [LLM_FLAG] Forward starting swap ($200M) matures November 2025 — will be zero in next quarter
+[HISTORICAL] [LLM_FLAG] Cross-currency swap reducing by $10M at each interim settlement date toward $110M at maturity
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section (period ended September 30, 2025) is a cross-reference only: 'not changed materially from its exposure discussed in the Company's Annual Report on Form 10-K for the year ended June 30, 2025' — no quantitative data present
+[HISTORICAL] [LLM_FLAG] Quantitative market risk detail lives in the FY2025 10-K; see TECH_0001558370-25-011716_market_risk_extract for those values
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-06-30 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] fi_ir_swap_notional: $300M → $200M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $4M → $3M (-34.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $4M → $18M (+394.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $300M → $200M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $4M → $3M (-34.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $4M → $18M (+394.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $1M → $-15M (-2264.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] foreign_currency_sales_percentage: appeared for first time ($32M)
+[HISTORICAL] [LLM_FLAG] Forward starting swap ($200M) matures November 2025 — will be zero in Q1 FY2026
+[HISTORICAL] [LLM_FLAG] Cross-currency swap to reduce by $10M at each interim settlement, reaching $110M at maturity
+[HISTORICAL] [LLM_FLAG] 10-Q filings for FY2026 (Sep 2025, Dec 2025, Mar 2026) all cross-reference this 10-K for market risk, stating no material change
+[HISTORICAL] [LLM_FLAG] No FX derivative hedging; only cross-currency swap used for CHF net investment hedge (classified under derivatives, not market risk)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[LLM_FLAG] Minimal disclosure in provided text: The filing section is a single boilerplate paragraph referring readers to the prior year 10-K for detailed market risk disclosures. Most quantitative and qualitative data points are not included in this excerpt.
-
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-05-23 ===
-[LLM_FLAG] Filing section is minimal boilerplate referencing prior 10-K; most quantitative disclosures deferred to annual report filed June 30, 2025
-[LLM_FLAG] Note: Filing period ending date is 2025-12-31 but references Form 10-K for year ended June 30, 2025, suggesting this may be Q2 or Q3 FY2025-2026
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
-[LLM_FLAG] The provided excerpt is minimal and appears to be a summary statement referring readers to the 10-K for full market risk disclosure. Most quantitative and qualitative details are not included in this excerpt.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[LLM_FLAG] Filing contains minimal market risk disclosure, referring to prior 10-K (year ended June 30, 2024) for details rather than repeating them. Quantitative details not provided in excerpt.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-18 ===
+[HISTORICAL] [LLM_FLAG] $100M August 2024 forward starting swap was sold during Q3 FY2025 for a gain of $0.6M
+[HISTORICAL] [LLM_FLAG] Remaining $100M March 2023 swap maturing April 2025 (next quarter)
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section (period ended March 31, 2025) is a cross-reference only: 'not changed materially from its exposure discussed in the Company's Annual Report on Form 10-K for the year ended June 30, 2024' — no quantitative data present
+[HISTORICAL] [LLM_FLAG] Quantitative market risk detail lives in the FY2024 10-K; no corresponding market_risk_extract result exists in backfill/results/ for that annual filing

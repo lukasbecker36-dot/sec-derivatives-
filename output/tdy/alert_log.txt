@@ -1,30 +1,54 @@
-=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] total_derivative_asset: $1,058M → $1,398M (+32.1%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $2,025M → $29M (-98.6%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $36M → $12M (-66.5%) — exceeds 20% threshold
+=== 10-Q | Period ending 2026-03-29 | Processed 2026-07-18 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($8M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($-44M)
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $816M → $642M (-21.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $22M → $8M (-62.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-20M → $-36M (-80.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $0M → $-0M (-160.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $5M, now missing
+[HISTORICAL] [LLM_FLAG] All derivatives measured at Level 2 fair value hierarchy.
+[HISTORICAL] [LLM_FLAG] Net derivatives at fair value: ($35.7M). Netting agreements exist ($0.5M effect) but gross presentation elected.
+[HISTORICAL] [LLM_FLAG] Cross-currency swaps ($518.7M notional, €450.0M) included in fx_designated_notional as net investment hedges; these mature September 2026 through September 2030.
+[HISTORICAL] [LLM_FLAG] No new cross-currency swaps entered in Q1 2026; the €450M program was established in 2025.
 
-=== 10-K | Period ending 2025-12-28 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_designated_notional: $28M → $2,025M (+7132.1%) — exceeds 20% threshold
-[NUMERIC] total_derivative_asset: $9M → $1,058M (+11656.7%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $28M → $2,025M (+7132.1%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $3M → $36M (+1237.0%) — exceeds 20% threshold
-[VALIDATION] Likely units mismatch: total_derivative_asset changed from 9 to 1,058 (118x)
+=== 10-K | Period ending 2025-12-28 | Processed 2026-07-18 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $8M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $-44M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $8M → $22M (+168.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-36M → $-20M (+45.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $0M → $0M (+66.7%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($5M)
+[HISTORICAL] [LLM_FLAG] The 10-K financial_instruments section text provided is the accounting policy / fair value hierarchy definition note, not the derivative fair value table. Derivative fair values ($22.0M asset, $41.8M liability) are available in the derivatives_note extraction for this filing.
+[HISTORICAL] [LLM_FLAG] Cross-reference: Note 14 and Note 15 contain derivative fair value data per the filing's own reference.
+[HISTORICAL] [LLM_FLAG] Cross-currency swaps ($530.0M notional) included in fx_designated_notional as net investment hedges.
+[HISTORICAL] [LLM_FLAG] The €450.0M notional cross-currency swaps entered in 2025 mature between September 2026 and September 2030.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct reports $5.1M (sum of $3.2M CAD forward + $1.9M GBP forward cash flow hedges, both from 10% USD move). Cross-currency swap net investment hedges show a separate $53.5M sensitivity to a 10% EUR move — different instrument and different currency scenario; not included in the $5.1M figure.
+[HISTORICAL] [LLM_FLAG] Interest rate risk currently immaterial: $1.20 billion credit facility has zero borrowings outstanding as of 2025-12-28; no IR sensitivity figure is quantifiable from current exposure.
+[HISTORICAL] [LLM_FLAG] This is the market risk MD&A section only. Notional amounts, fair values, maturity dates, AOCI balances, and effectiveness disclosures are in Notes 2, 14, and 15, which are not included in this section_text.
 
-=== 10-Q | Period ending 2025-09-28 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_designated_notional: $2,024M → $28M (-98.6%) — exceeds 20% threshold
-[NUMERIC] total_derivative_asset: $1,058M → $9M (-99.1%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $32M → $3M (-91.6%) — exceeds 20% threshold
-[VALIDATION] Likely units mismatch: total_derivative_asset changed from 1,058 to 9 (0x)
+=== 10-Q | Period ending 2025-09-28 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $18M → $8M (-55.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $18M → $8M (-55.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-26M → $-36M (-39.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $2M → $0M (-81.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All derivatives measured at Level 2 fair value hierarchy.
+[HISTORICAL] [LLM_FLAG] Net derivatives at fair value: ($36.2M). Netting agreements exist ($0.2M effect) but gross presentation elected.
+[HISTORICAL] [LLM_FLAG] Cross-currency swaps ($524.9M notional) included in fx_designated_notional as net investment hedges.
+[HISTORICAL] [LLM_FLAG] The €450.0M notional cross-currency swaps entered first nine months 2025 mature between September 2026 and September 2030.
 
-=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_not_designated_notional: $150M → $2,024M (+1249.3%) — exceeds 20% threshold
-[NEW_FIELD] total_derivative_liability: appeared for first time ($29M)
-[NUMERIC] expected_12mo_reclass_from_aoci: $6M → $32M (+481.8%) — exceeds 20% threshold
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $-12M → $-44M (-253.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $424M → $594M (+40.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-12M → $-44M (-253.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $8M → $-26M (-445.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-1M → $2M (+260.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All derivatives measured at Level 2 fair value hierarchy.
+[HISTORICAL] [LLM_FLAG] Net derivatives at fair value: ($25.9M). Netting agreements exist ($0.2M effect) but gross presentation elected.
+[HISTORICAL] [LLM_FLAG] Cross-currency swaps ($526.5M notional) are included in fx_designated_notional as net investment hedges, not as IR swaps.
+[HISTORICAL] [LLM_FLAG] The €450.0M notional cross-currency swaps entered first half 2025 mature between September 2026 and September 2030.
 
-=== 10-Q | Period ending 2025-03-30 | Processed 2026-04-28 ===
-[LLM_FLAG] This 10-Q filing contains only a reference statement indicating no material changes from the 2024 Form 10-K. No substantive market risk disclosure is provided in the filing text provided. All detailed market risk metrics must be obtained from the referenced 2024 Form 10-K.
-
+=== 10-Q | Period ending 2025-03-30 | Processed 2026-07-18 ===
+[HISTORICAL] [LLM_FLAG] All derivatives measured at Level 2 fair value hierarchy.
+[HISTORICAL] [LLM_FLAG] Net derivatives at fair value: $7.5M. Netting agreements exist but gross presentation elected on balance sheet.
+[HISTORICAL] [LLM_FLAG] Cross-currency swaps ($324.0M notional) are included in fx_designated_notional as net investment hedges, not as IR swaps.
+[HISTORICAL] [LLM_FLAG] The $324.0M cross-currency swap notional is euro-denominated (€300.0M entered Q1 2025) converted at prevailing rate.
