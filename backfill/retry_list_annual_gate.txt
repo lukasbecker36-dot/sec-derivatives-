@@ -1,8 +1,8 @@
-# Tickers rescued by the annual-only-fill-rate gate change.
-# These previously failed the backfill gate because their 10-Qs merely
-# cross-reference the 10-K instead of restating derivatives notionals
-# (a genuine disclosure pattern, not an extraction bug). The gate now
-# passes if the 10-K alone clears the fill-rate threshold.
+# Tickers rescued by the annual-only-fill-rate gate change, PLUS a few added
+# later after a manual audit found config bugs hiding real derivative content
+# (see comments below on GD, PAYX, ORCL). Same retry mechanism either way —
+# the fix (config or gate) already landed; this just re-seeds since prior
+# session artifacts don't survive between cloud sessions.
 #
 # Used with: python -m src.backfill prepare --retry-file backfill/retry_list_annual_gate.txt --batch-size 5
 # Each run seeds the next N not-yet-committed tickers from this list.
@@ -44,3 +44,16 @@ YUM
 HSIC
 LHX
 UAL
+# Added after manual audit (config bugs, not gate/quality issues):
+GD
+# GD: real $8.5bn FX forward notional extracts fine from market_risk; the
+# archetype's inherited financial_instruments/derivatives_note fields (which
+# GD's filing doesn't have) were dragging the fill rate down. Schema pruned.
+PAYX
+# PAYX: notes are LETTERED ("Note M"), not numbered, so the digit-only
+# derivatives_note regex never matched a real $3.0bn Swaption Contracts
+# programme. Added a custom heading for the lettered note.
+ORCL
+# ORCL: notes are bare numbered ALL-CAPS captions with no "Note" word at all
+# ("6. NOTES PAYABLE AND OTHER BORROWINGS"), hiding a real ~$4.7bn interest
+# rate swap notional. Added a custom heading matching that caption style.

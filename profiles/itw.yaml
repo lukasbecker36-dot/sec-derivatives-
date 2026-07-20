@@ -1,23 +1,26 @@
 issuer: Illinois Tool Works
 ticker: ITW
 cik: "49826"
-archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: Industrials
 extraction_mode: llm
 
-# The archetype's market_risk end_boundary ('Item 8/9/4') matched an INLINE
-# cross-reference ("Refer to Note 10. Debt in Item 8. Financial Statements")
-# ~600 chars into the section, truncating it before ITW's net-investment-hedge
-# disclosure. Anchor the boundary on the real, page-numbered Item heading
-# ("43 ITEM 8. Financial Statements") so the full section is captured.
+# No archetype: ITW has no separate derivatives/financial-instruments note (it
+# uses NO derivatives at all — see below), so inheriting minimal_hedger would
+# pull in ~23 fields for sections that don't exist in this filer's 10-K,
+# inflating the fill-rate denominator with fields that can only ever be
+# 'section_missing'. Fully self-contained schema instead.
 sections:
   market_risk:
     heading: 'Quantitative and Qualitative Disclosures About Market Risk'
     match_strategy: last
+    # The archetype default boundary ('Item 8/9/4') matched an INLINE
+    # cross-reference ("Refer to Note 10. Debt in Item 8. Financial
+    # Statements") ~600 chars into the section, truncating it before ITW's
+    # net-investment-hedge paragraph. Anchor on the real, page-numbered Item
+    # heading ("43 ITEM 8. Financial Statements") instead.
     end_boundary: '\d{1,3}\s+Item\s*[\s\xa0]*[89]\.\s+Financial'
     max_length: 8000
 
-# Additional fields identified by LLM analysis (review and adjust)
 fields:
   market_risk_exposures:
     description: "currency exchange rates, commodity price volatility, interest rate changes"
@@ -46,4 +49,3 @@ fields:
 #   - No derivatives at all: manages EUR translation risk via non-derivative
 #     net investment hedge (designating ~$5.0bn of Euro-denominated debt).
 #   - Market-risk disclosure is brief and cross-references Note 10 (Debt).
-

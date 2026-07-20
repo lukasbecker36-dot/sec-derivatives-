@@ -1,25 +1,44 @@
 issuer: General Dynamics
 ticker: GD
-cik: '40533'
-archetype: minimal_hedger
-sector: TODO
+cik: "40533"
+sector: Industrials
 extraction_mode: llm
+
+# No archetype: GD's only derivative disclosure is the FX forward paragraph
+# inside Item 7A Market Risk — there is no separate derivatives/financial-
+# instruments note. Inheriting minimal_hedger pulled in ~23 fields for
+# sections that don't exist here, so every backfill pass scored a low fill
+# rate (0.48) despite the real content (an $8.5bn FX forward notional)
+# extracting cleanly. Fully self-contained schema instead.
+sections:
+  market_risk:
+    heading: 'Quantitative and Qualitative Disclosures About Market Risk'
+    match_strategy: last
+    end_boundary: 'Item\s*[\s\xa0]*[489]'
+    max_length: 8000
+
 fields:
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: market_risk
   fx_forward_notional:
-    description: notional amount of forward exchange contracts outstanding
+    description: "notional amount of forward exchange contracts outstanding, in millions"
     section: market_risk
   fx_sensitivity_recognized:
-    description: hypothetical pretax losses from 10% adverse rate movement - recognized
+    description: "hypothetical pretax losses from 10% adverse rate movement - recognized, in millions"
     section: market_risk
   fx_sensitivity_unrecognized:
-    description: hypothetical pretax losses from 10% adverse rate movement - unrecognized
+    description: "hypothetical pretax losses from 10% adverse rate movement - unrecognized, in millions"
     section: market_risk
   fixed_rate_debt_principal:
-    description: principal amount of fixed-rate debt
+    description: "principal amount of fixed-rate debt, in millions"
     section: market_risk
   primary_currencies:
-    description: Canadian dollar, euro and Swiss franc
+    description: "Canadian dollar, euro and Swiss franc"
     section: market_risk
-sections:
-  financial_instruments:
-    heading: M\.\s+FAIR\s+VALUE
+
+# Unusual features:
+#   - Only derivative activity is FX forwards (notional ~$8.5bn), disclosed
+#     entirely within Item 7A; no separate derivatives note.
+#   - Sensitivity analysis splits losses into 'Recognized' and 'Unrecognized'
+#     categories using a 10% adverse rate movement rather than basis points.

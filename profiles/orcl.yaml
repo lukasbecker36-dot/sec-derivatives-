@@ -1,28 +1,68 @@
 issuer: Oracle Corporation
 ticker: ORCL
-cik: '1341439'
-archetype: minimal_hedger
-sector: TODO
+cik: "1341439"
+sector: Information Technology
 extraction_mode: llm
+
+# No archetype: ORCL's notes use bare numbered ALL-CAPS captions with NO
+# "Note" word at all ("6. NOTES PAYABLE AND OTHER BORROWINGS"), so the
+# minimal_hedger archetype's derivatives_note heading (Note\s+\d+...) can
+# never match. The original bootstrap comment "no_notional_amounts_disclosed"
+# was wrong — the pipeline was simply blind to a real derivatives book
+# (a $4.7bn interest-rate swap notional converting Term Loan floating debt,
+# plus a historical $871m cross-currency swap) embedded inside that debt
+# note. Fully self-contained schema with a custom heading instead.
+sections:
+  market_risk:
+    heading: 'Quantitative and Qualitative Disclosures About Market Risk'
+    match_strategy: last
+    end_boundary: 'Item\s*[\s\xa0]*[489]'
+    max_length: 8000
+  derivatives_note:
+    heading: '6\.\s*NOTES PAYABLE AND OTHER BORROWINGS'
+    match_strategy: last
+    max_length: 15000
+
 fields:
+  # Market risk section — FX translation/transaction risk (qualitative, no
+  # notionals disclosed here)
   non_marketable_equity_investments:
-    description: total value of non-marketable equity and convertible debt investments
+    description: "total value of non-marketable equity and convertible debt investments, in millions"
     section: market_risk
   principal_currency_exposures:
-    description: list of primary foreign currencies with exposure
+    description: "list of primary foreign currencies with exposure"
     section: market_risk
   foreign_currency_forward_contracts:
-    description: description of hedging program and contract characteristics
+    description: "description of hedging program and contract characteristics"
     section: market_risk
   sensitivity_analysis_table:
-    description: hypothetical potential losses from market rate changes
+    description: "hypothetical potential losses from market rate changes"
     section: market_risk
   foreign_exchange_earnings_impact:
-    description: potential earnings impact from 10% FX rate decrease
+    description: "potential earnings impact from 10% FX rate decrease, in millions"
     section: market_risk
   foreign_exchange_fair_value_impact:
-    description: potential fair value impact on cash and receivables from 10% FX rate decrease
+    description: "potential fair value impact on cash and receivables from 10% FX rate decrease, in millions"
     section: market_risk
-sections:
-  financial_instruments:
-    heading: Fair\s+Values\s+of\s+Financial\s+Instruments
+  # Derivatives note ("6. NOTES PAYABLE AND OTHER BORROWINGS") — interest
+  # rate swaps and a historical cross-currency swap, disclosed as footnotes
+  # to the debt table rather than in a standalone derivatives note.
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: derivatives_note
+  ir_swap_notional:
+    description: "Notional amount of interest rate swap agreements converting floating-rate Term Loan borrowings to a different rate, in millions (e.g. $4.7 billion -> 4700)"
+    section: derivatives_note
+  cross_currency_swap_notional:
+    description: "Notional amount of cross-currency interest rate swap agreements converting Euro-denominated fixed-rate debt to USD variable-rate, in millions. May be historical/matured — check if still outstanding."
+    section: derivatives_note
+
+# Unusual features:
+#   - Notes use bare numbered ALL-CAPS captions with no "Note" word at all
+#     (e.g. "6. NOTES PAYABLE AND OTHER BORROWINGS") — breaks the standard
+#     'Note \d+' heading regex used by most other filers.
+#   - Real derivative activity exists (IR swaps ~$4.7bn, historical cross-
+#     currency swap ~$871m), contrary to the original bootstrap comment
+#     "no_notional_amounts_disclosed" — it was simply invisible under the
+#     standard heading pattern, disclosed as debt-note footnotes instead of
+#     a standalone derivatives note.

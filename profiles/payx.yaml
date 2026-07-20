@@ -1,34 +1,69 @@
 issuer: Paychex
 ticker: PAYX
-cik: '723531'
-archetype: minimal_hedger
-sector: TODO
+cik: "723531"
+sector: Information Technology
 extraction_mode: llm
+
+# No archetype: PAYX numbers its notes with LETTERS ("Note M — Short-term
+# Financing"), not digits, so the minimal_hedger archetype's derivatives_note
+# heading (Note\s+\d+...) can never match — the pipeline was entirely blind
+# to a real $3.0bn interest-rate Swaption Contracts programme (cash flow
+# hedges tied to the Paycor acquisition financing) that sits inside that
+# lettered note. Fully self-contained schema with a custom heading instead
+# of inheriting the archetype's digit-only pattern.
+sections:
+  market_risk:
+    heading: 'Quantitative and Qualitative Disclosures About Market Risk'
+    match_strategy: last
+    end_boundary: 'Item\s*[\s\xa0]*[489]'
+    max_length: 8000
+  derivatives_note:
+    heading: 'Note\s+[A-Z]\s*[—\-]?\s*Short-term Financing'
+    match_strategy: last
+    max_length: 6200
+
 fields:
+  # Market risk section — investment portfolio (no derivatives here)
   average_interest_rate:
-    description: Average interest rate earned on combined portfolios
+    description: "Average interest rate earned on combined portfolios"
     section: market_risk
   federal_funds_rate:
-    description: Federal Funds rate range as of period end
+    description: "Federal Funds rate range as of period end"
     section: market_risk
   afs_duration:
-    description: Average duration of available-for-sale securities
+    description: "Average duration of available-for-sale securities"
     section: market_risk
   maturity_schedule:
-    description: Amortized cost and fair value by maturity buckets
+    description: "Amortized cost and fair value by maturity buckets"
     section: market_risk
   sensitivity_analysis:
-    description: Impact of 25 basis point change on earnings
+    description: "Impact of 25 basis point change on earnings"
     section: market_risk
   portfolio_allocation:
-    description: Percentage allocation between short-term and AFS securities
+    description: "Percentage allocation between short-term and AFS securities"
     section: market_risk
   unrealized_losses:
-    description: Net unrealized losses on AFS securities
+    description: "Net unrealized losses on AFS securities"
     section: market_risk
   total_portfolio_value:
-    description: Average total investment portfolio value
+    description: "Average total investment portfolio value"
     section: market_risk
-sections:
-  financial_instruments:
-    heading: Note\s+G:\s+Fair\s+Value\s+Measurements
+  # Derivatives note ("Note M — Short-term Financing") — interest rate
+  # Swaption Contracts entered into for the Paycor acquisition financing
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: derivatives_note
+  ir_swaption_notional:
+    description: "Aggregate notional amount of interest rate Swaption Contracts, in millions (e.g. $3.0 billion -> 3000)"
+    section: derivatives_note
+  ir_swaption_premium_paid:
+    description: "Premium paid at inception for the Swaption Contracts, in millions"
+    section: derivatives_note
+
+# Unusual features:
+#   - Notes lettered (Note A, B, C...), not numbered — breaks the standard
+#     'Note \d+' heading regex used by most other filers.
+#   - Real derivative activity exists (Swaption Contracts, cash flow hedges),
+#     contrary to the original bootstrap comment "no derivative instruments
+#     disclosed" — it was simply invisible under the standard heading pattern.
+#   - Includes client funds exposure which is atypical for most companies.
