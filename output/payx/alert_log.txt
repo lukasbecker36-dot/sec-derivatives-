@@ -1,3 +1,20 @@
+=== 10-K | Period ending 2026-05-31 | Processed 2026-07-20 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($0M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($19M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
+[NEW_FIELD] unrealized_losses: appeared for first time ($-52M)
+[NEW_FIELD] total_portfolio_value: appeared for first time ($7,400M)
+[LLM_FLAG] Paychex used $3.0B interest rate swaption contracts during the reporting period to hedge benchmark rate exposure for Corporate Bond issuance (Paycor acquisition financing), but all three swaption contracts expired unexercised — no derivatives outstanding as of May 31, 2026
+[LLM_FLAG] Swaption premiums of $19.2 million were paid at inception and recorded as prepaid assets; these expired with the unexercised contracts
+[LLM_FLAG] has_derivatives set to 'Yes' because company utilized derivatives during the fiscal year, although none are outstanding at period end
+[LLM_FLAG] IR sensitivity of $19M for 100bp is extrapolated from the stated 25bp sensitivity of $4.5-5.0M — the company does not directly disclose a 100bp figure
+[LLM_FLAG] Sensitivity applies only to short-term interest rates, not the full portfolio; AFS securities with 3.1-year duration would have additional mark-to-market impact not captured in the earnings sensitivity figure
+[LLM_FLAG] Net unrealized losses narrowed slightly from $53.6M (May 2025) to $52.5M (May 2026) despite Fed rate cuts, suggesting portfolio turnover into higher-yielding securities
+
 === 10-Q | Period ending 2026-02-28 | Processed 2026-03-29 ===
 [LLM_FLAG] The filing excerpt is primarily focused on disclosure controls, internal controls, stock repurchase programs, and Rule 10b5-1 trading arrangements. The actual 'Market Risk Factors' content referenced in Item 3 is not included in the provided text, meaning all quantitative and qualitative market risk disclosures are unavailable in this excerpt.
 
