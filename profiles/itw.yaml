@@ -5,6 +5,18 @@ archetype: minimal_hedger
 sector: TODO  # e.g., technology, industrials, financials
 extraction_mode: llm
 
+# The archetype's market_risk end_boundary ('Item 8/9/4') matched an INLINE
+# cross-reference ("Refer to Note 10. Debt in Item 8. Financial Statements")
+# ~600 chars into the section, truncating it before ITW's net-investment-hedge
+# disclosure. Anchor the boundary on the real, page-numbered Item heading
+# ("43 ITEM 8. Financial Statements") so the full section is captured.
+sections:
+  market_risk:
+    heading: 'Quantitative and Qualitative Disclosures About Market Risk'
+    match_strategy: last
+    end_boundary: '\d{1,3}\s+Item\s*[\s\xa0]*[89]\.\s+Financial'
+    max_length: 8000
+
 # Additional fields identified by LLM analysis (review and adjust)
 fields:
   market_risk_exposures:
@@ -19,10 +31,19 @@ fields:
   trading_instruments:
     description: "statement that company does not hold/issue instruments for trading"
     section: market_risk
+  # ITW hedges its European net investment with non-derivative instruments
+  # (designated Euro-denominated debt), not derivatives — so it has no
+  # notionals, but the designated-debt balance and its OCI impact are the
+  # substantive, editorially-relevant figures.
+  fx_net_investment_hedge_debt:
+    description: "Carrying value of foreign-currency-denominated debt designated as a non-derivative net investment hedge, in millions (e.g. $5.0 billion -> 5000)"
+    section: market_risk
+  net_investment_hedge_oci_gain_loss:
+    description: "Pre-tax gain/(loss) on the net investment hedge recorded in OCI for the period, in millions (negative for a loss)"
+    section: market_risk
 
-# Unusual features identified:
-#   - Very brief market risk disclosure with minimal quantitative detail
-#   - No derivative instruments mentioned despite exposure to FX, commodity, and interest rate risks
-#   - Section appears truncated - references Note 10 but text cuts off
-#   - No hedging strategies disclosed despite identified market exposures
+# Unusual features:
+#   - No derivatives at all: manages EUR translation risk via non-derivative
+#     net investment hedge (designating ~$5.0bn of Euro-denominated debt).
+#   - Market-risk disclosure is brief and cross-references Note 10 (Debt).
 
