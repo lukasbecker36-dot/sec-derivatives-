@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-22 ===
+[NUMERIC] fx_derivatives_notional: $6,410M → $16,955M (+164.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $0M, now missing
+[DISAPPEARED_FIELD] equity_derivatives_notional: was $0M, now missing
+[NUMERIC] net_derivative_position: $-65M → $-90M (-38.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/12 previously-populated fields are now null (ir_swap_notional, commodity_derivatives_notional, equity_derivatives_notional, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci...)
+[LLM_FLAG] fx_derivatives_notional increased from 6,410 to 16,955 (>50% change). 3M entered $4.1B of new FX forward/collared contracts in Q1 2026 designated as net investment hedges, significantly expanding the hedging program.
+[LLM_FLAG] fx_designated_notional prior was 0 but current is 14,561 — prior value appears to have been an extraction error; Dec 2025 designated notional was $10,036.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($6,410M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

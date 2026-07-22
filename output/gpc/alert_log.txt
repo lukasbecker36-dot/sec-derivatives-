@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-22 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,766M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,766M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $1,879M → $22M (-98.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $179M → $26M (-85.6%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($-4M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $246M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $1,868M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-1,622M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 4/6 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct)
+[LLM_FLAG] total_derivative_asset prior value of 1,879.356 does not match current 22.273M — prior value may have included notional amounts or used different units. Current balance is $22.3M in fair value.
+[LLM_FLAG] total_derivative_liability prior value of 179.073 vs current 25.85M — similar discrepancy, likely prior extraction error.
+[LLM_FLAG] GPC net investment hedge generated $55M gain in AOCL for H1 2026, a significant reversal from ($215.5M) loss in H1 2025.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,879M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($179M)

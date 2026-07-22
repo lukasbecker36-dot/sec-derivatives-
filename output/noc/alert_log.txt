@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-22 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($280M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($129M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($151M)
+[NUMERIC] total_derivative_asset: $318M → $1M (-99.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $149M → $2M (-98.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $169M → $-1M (-100.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $2M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (fx_transaction_gain_loss, equity_sensitivity_10pct)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 318 to 1 (0x)
+[VALIDATION] Likely units mismatch: net_derivative_position changed from 169 to -1 (0x)
+[LLM_FLAG] total_derivative_asset prior value of 318.0 does not match current 1.0 — prior likely included marketable securities or other financial instruments, not just derivatives.
+[LLM_FLAG] total_derivative_liability prior of 149.0 vs current 2.0 — same issue as above.
+[LLM_FLAG] net_derivative_position prior of 169.0 vs current -1.0 — prior values appear to have been extracted from a broader financial instruments table.
+[LLM_FLAG] Prior equity_derivatives_notional value of 'Yes' appears corrupted.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($318M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($149M)
