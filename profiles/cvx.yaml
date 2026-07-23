@@ -1,41 +1,31 @@
 issuer: Chevron Corporation
 ticker: CVX
-cik: "93410"
+cik: '93410'
 sector: Energy
 extraction_mode: llm
-
-# No archetype: Chevron captions its derivatives note "Note 10 Financial and
-# Derivative Instruments" (no period after the number) and discloses commodity
-# derivatives at fair value rather than by "notional" amount, so both the
-# archetype's 'Note \d+.' heading and the notional content-fallback missed it.
-# The real content is a commodity derivatives fair-value table (total assets at
-# fair value ~$264M) inside Note 10, plus a qualitative Item 7A market-risk
-# discussion titled "Financial and Derivative Instrument Market Risk". Fully
-# self-contained.
 sections:
   derivatives_note:
-    heading: 'Note 10 Financial and Derivative Instruments'
+    heading: Financial\s+and\s+Derivative\s+Instruments
     match_strategy: last
-    end_boundary: 'Note 11 Assets Held for Sale'
+    end_boundary: Note 11 Assets Held for Sale
     max_length: 6000
   market_risk:
-    heading: 'Financial and Derivative Instrument Market Risk'
+    heading: Financial and Derivative Instrument Market Risk
     match_strategy: last
     max_length: 6000
-
 fields:
   has_derivatives:
-    description: "Does the company use derivatives? Yes/No/No mention"
+    description: Does the company use derivatives? Yes/No/No mention
     section: derivatives_note
   commodity_derivatives_fair_value:
-    description: "Total commodity derivative assets carried at fair value, in millions (e.g. $264)"
+    description: Total commodity derivative assets carried at fair value, in millions (e.g. $264)
     section: derivatives_note
   commodity_derivatives_liabilities_fair_value:
-    description: "Total commodity derivative liabilities carried at fair value, in millions"
+    description: Total commodity derivative liabilities carried at fair value, in millions
     section: derivatives_note
   risk_types:
-    description: "Types of market risk disclosed (commodity price, interest rate, foreign currency)"
+    description: Types of market risk disclosed (commodity price, interest rate, foreign currency)
     section: market_risk
   value_at_risk:
-    description: "Value-at-risk or sensitivity measure for derivative commodity instruments, if disclosed"
+    description: Value-at-risk or sensitivity measure for derivative commodity instruments, if disclosed
     section: market_risk

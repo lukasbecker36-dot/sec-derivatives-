@@ -1,40 +1,25 @@
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($994M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($584M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($410M)
-[DISAPPEARED_FIELD] total_derivative_asset: was $3M, now missing
-[DISAPPEARED_FIELD] total_derivative_liability: was $2M, now missing
-[DROPPED_TO_ZERO] expected_12mo_reclass_from_aoci: $3M → $0M
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (total_derivative_asset, total_derivative_liability)
-[LLM_FLAG] fx_derivatives_notional differs significantly from prior period value, as it was previously reported at 3.0 million.
+=== 10-Q | Period ending 2026-04-03 | Processed 2026-07-23 ===
+[HISTORICAL] [NUMERIC] oci_gains_losses: $-79M → $15M (+119.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] derivative_fair_values: $-9M → $-6M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] derivative_fair_values reported as net (-6), combining derivative asset of $2M (Other long-term assets) and derivative liability of $8M (Other long-term liabilities) as of April 3, 2026.
+[HISTORICAL] [LLM_FLAG] Both instruments together form a total net investment hedge notional of ~$982M ($410M swaps + $572M EUR debt) as of April 3, 2026.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($584M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NUMERIC] total_derivative_asset: $3M → $9M (+200.0%) — exceeds 20% threshold
-[DROPPED_TO_ZERO] total_derivative_liability: $2M → $0M
-[NEW_FIELD] net_derivative_position: appeared for first time ($9M)
-[DROPPED_TO_ZERO] expected_12mo_reclass_from_aoci: $3M → $0M
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-23 ===
+[HISTORICAL] [NUMERIC] oci_gains_losses: $-8M → $-79M (-887.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] derivative_fair_values reported as negative (-9) to reflect a liability position (recorded in Other long-term liabilities).
+[HISTORICAL] [LLM_FLAG] Both instruments (cross-currency swaps $410M + EUR-denominated debt $584M) together form a total net investment hedge notional of ~$994M as of December 31, 2025.
 
-=== 10-Q | Period ending 2026-04-03 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($3M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($2M)
-[NUMERIC] expected_12mo_reclass_from_aoci: $31M → $3M (-90.3%) — exceeds 20% threshold
+=== 10-Q | Period ending 2025-10-03 | Processed 2026-07-23 ===
+[HISTORICAL] [NEW_FIELD] cross_currency_swap_notional: appeared for first time ($410M)
+[HISTORICAL] [NUMERIC] oci_gains_losses: $-42M → $-8M (+81.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] derivative_fair_values: appeared for first time ($-10M)
+[HISTORICAL] [LLM_FLAG] This is the first period in which cross-currency swaps appear; they were entered July 29, 2025, mid-way through Q3 2025.
+[HISTORICAL] [LLM_FLAG] derivative_fair_values reported as negative (-10) to reflect a liability position (recorded in Other long-term liabilities).
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] expected_12mo_reclass_from_aoci: $3M → $31M (+933.3%) — exceeds 20% threshold
+=== 10-Q | Period ending 2025-07-04 | Processed 2026-07-23 ===
+[HISTORICAL] [NUMERIC] oci_gains_losses: $-29M → $-42M (-44.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Cross-currency swap contracts ($410M notional) were entered July 29, 2025, three weeks after this period end; they first appear on the balance sheet in the Q3 2025 (October 3, 2025) filing.
+[HISTORICAL] [LLM_FLAG] net_investment_hedge_debt uses the OCI-table notional amount ($584M) as a proxy; carrying amount net of issuance costs not separately disclosed in this section.
 
-=== 10-Q | Period ending 2025-10-03 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] expected_12mo_reclass_from_aoci: $4M → $3M (-25.0%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-07-04 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
+=== 10-Q | Period ending 2025-04-04 | Processed 2026-07-23 ===
+[HISTORICAL] [LLM_FLAG] net_investment_hedge_debt uses the OCI-table notional amount ($543M) as a proxy for carrying value; the actual carrying amount (net of debt discount/issuance costs) is not separately disclosed in the section text for this period.
