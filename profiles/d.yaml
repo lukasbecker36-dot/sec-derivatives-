@@ -1,44 +1,33 @@
 issuer: Dominion Energy
 ticker: D
-cik: "715957"
+cik: '715957'
 sector: Utilities
 extraction_mode: llm
-
-# No archetype: Dominion is a multi-registrant filer with a single large
-# "Combined Notes to Consolidated Financial Statements" section; its derivatives
-# note is "Note 7. Derivatives And Hedge Accounting Activities" (whose first
-# sentence is "See Note 2 ...", which the generic cross-reference filter would
-# otherwise reject — the heading pattern here extends past that phrase). The
-# note itself uses currency/commodity fair-value and notional-by-currency
-# tables (commodity OTC derivative assets ~$464M) but not the bare word
-# "notional" near the euro figure, so the largest FX exposure — €3.2 billion of
-# forward purchase agreements hedging the CVOW offshore-wind project — is
-# disclosed in MD&A instead and is captured via the notional content fallback.
-# Fully self-contained; generous max_length for the 1MB+ document.
 sections:
   derivatives_note:
-    heading: 'Note 7 . Derivatives And Hedge Accounting Activities See Note 2 for'
+    heading: Note 7 . Derivatives And Hedge Accounting Activities See Note 2 for
     match_strategy: last
     max_length: 12000
   combined_notes_derivatives:
-    heading: 'Note 7 . Derivatives And Hedge Accounting Activities See Note 2 for'
+    heading: Derivatives\s+and\s+Hedge\s+Accounting\s+Activities
     match_strategy: last
-    end_boundary: 'Note 8 \.'
+    end_boundary: Note 8 \.
     max_length: 26000
-
 fields:
   has_derivatives:
-    description: "Does the company use derivatives? Yes/No/No mention"
+    description: Does the company use derivatives? Yes/No/No mention
     section: combined_notes_derivatives
   commodity_derivatives_fair_value:
-    description: "Over-the-counter commodity derivative assets/liabilities carried at fair value, in millions (e.g. $464)"
+    description: Over-the-counter commodity derivative assets/liabilities carried at fair value, in millions (e.g. $464)
     section: combined_notes_derivatives
   fx_forward_notional:
-    description: "Notional amount of forward purchase agreements hedging foreign currency risk (CVOW offshore-wind equipment), in billions of euro (e.g. €3.2 billion)"
+    description: Notional amount of forward purchase agreements hedging foreign currency risk (CVOW offshore-wind equipment),
+      in billions of euro (e.g. €3.2 billion)
     section: derivatives_note
   ir_swap_settlements:
-    description: "Cash settlements of interest rate swaps during the period, in millions (e.g. $635)"
+    description: Cash settlements of interest rate swaps during the period, in millions (e.g. $635)
     section: derivatives_note
   notional_volumes:
-    description: "Notional amounts/volumes of derivatives by type (gas in bcf, electricity in MWh, interest rate and foreign currency in millions)"
+    description: Notional amounts/volumes of derivatives by type (gas in bcf, electricity in MWh, interest rate and foreign
+      currency in millions)
     section: combined_notes_derivatives
