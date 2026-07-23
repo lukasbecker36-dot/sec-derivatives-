@@ -1,8 +1,38 @@
 issuer: Southern Company
 ticker: SO
-cik: '92122'
-archetype: minimal_hedger
+cik: "92122"
+sector: Utilities
 extraction_mode: llm
+
+# No archetype: Southern Company is a multi-registrant filer using a single
+# combined "Notes to Financial Statements"; its derivatives note is a bare
+# numbered ALL-CAPS caption ("14. DERIVATIVES") that the archetype's 'Note \d+'
+# heading never matched. Real content: interest rate fair-value hedges of
+# existing debt with notionals of $400M / $1,000M / $565M (Southern Company
+# parent, 1-day SOFR-based), energy-related cash-flow hedges, and foreign
+# currency (cross-currency) cash-flow hedges. Fully self-contained; generous
+# max_length for the large combined document (the notional table sits well into
+# the note).
 sections:
-  market_risk:
-    heading: Market\s+Price\s+Risk
+  derivatives_note:
+    heading: '14\. DERIVATIVES'
+    match_strategy: last
+    end_boundary: '15\. ACQUISITIONS AND DISPOSITIONS'
+    max_length: 20000
+
+fields:
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: derivatives_note
+  ir_swap_notional:
+    description: "Notional amounts of interest rate derivatives designated as fair value hedges of existing debt, in millions (e.g. $400, $1,000, $565)"
+    section: derivatives_note
+  ir_swap_notional_total:
+    description: "Total notional of interest rate fair-value-hedge derivatives outstanding, in millions (e.g. $2,465)"
+    section: derivatives_note
+  cross_currency_swap_notional:
+    description: "Pay/receive notional of foreign currency (cross-currency) derivatives designated as cash flow hedges, in millions"
+    section: derivatives_note
+  energy_derivatives_notional:
+    description: "Notional volumes of energy-related derivatives (electricity in MWh, natural gas in mmBtu) designated as cash flow hedges"
+    section: derivatives_note

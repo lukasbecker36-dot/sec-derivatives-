@@ -1,32 +1,40 @@
 issuer: Marriott International
 ticker: MAR
-cik: '1048286'
-archetype: minimal_hedger
-sector: TODO
+cik: "1048286"
+sector: Consumer Discretionary
 extraction_mode: llm
-fields:
-  derivative_strategy:
-    description: overall hedging strategy and risk management approach
-    section: market_risk
-  forward_contracts_purpose:
-    description: currency exchange rate risk management for cash and intercompany loans
-    section: market_risk
-  interest_rate_exposure:
-    description: floating-rate and fixed-rate debt/receivables exposure
-    section: market_risk
-  maturity_schedule:
-    description: scheduled maturities by year for financial instruments
-    section: market_risk
-  fair_values:
-    description: total fair value vs carrying amount for rate-sensitive instruments
-    section: market_risk
-  average_interest_rates:
-    description: weighted average rates for fixed and floating instruments
-    section: market_risk
+
+# No archetype: Marriott discloses its key derivative inside the debt note
+# ("9. LONG-TERM DEBT"), not a standalone derivatives note, and the word
+# "notional" appears zero times in the filing, so both the archetype heading
+# and the notional content-fallback missed it entirely. Real content: interest
+# rate swaps with the economic effect of converting $500M of the Series VV
+# Notes to floating rate (SOFR + ~1.44%); FX forward contracts and net-
+# investment hedges are discussed qualitatively in Item 7A. Fully self-contained.
 sections:
-  financial_instruments:
-    heading: Note\s+\d+\s*[.–—―‒:\-]?\s*FAIR\s+VALUE\s+OF\s+FINANCIAL\s+INSTRUMENTS
   market_risk:
-    heading: Item\s+3\.\s+Quantitative\s+and\s+Qualitative\s+Disclosures\s+About\s+Market\s+Risk
+    heading: 'Quantitative and Qualitative Disclosures About Market Risk'
+    match_strategy: last
+    max_length: 8000
   derivatives_note:
-    heading: Derivative\s+Instruments
+    heading: '9\. LONG-TERM DEBT'
+    match_strategy: last
+    end_boundary: '10\. INTANGIBLE ASSETS'
+    max_length: 7000
+
+fields:
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: derivatives_note
+  ir_swap_notional:
+    description: "Principal amount of fixed-rate notes converted to floating via interest rate swaps, in millions (e.g. $500 of Series VV Notes to SOFR + ~1.44%)"
+    section: derivatives_note
+  ir_swap_floating_rate:
+    description: "Resulting variable interest rate on the swapped debt (e.g. SOFR plus ~1.44%)"
+    section: derivatives_note
+  fx_forward_purpose:
+    description: "Use of foreign currency forward contracts and net investment hedges (qualitative)"
+    section: market_risk
+  fixed_rate_debt_fair_value:
+    description: "Total fair value versus carrying amount of fixed-rate debt, in millions"
+    section: market_risk

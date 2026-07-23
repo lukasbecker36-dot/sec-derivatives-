@@ -57,3 +57,29 @@ ORCL
 # ORCL: notes are bare numbered ALL-CAPS captions with no "Note" word at all
 # ("6. NOTES PAYABLE AND OTHER BORROWINGS"), hiding a real ~$4.7bn interest
 # rate swap notional. Added a custom heading matching that caption style.
+# Added after a second manual audit (2026-07): 11 more tickers where the
+# minimal_hedger archetype's heading regex missed a real derivatives note.
+# Each got a self-contained config with a custom heading matching its actual
+# note caption, verified end-to-end against the live 10-K.
+JCI
+# JCI: note "10. DERIVATIVE INSTRUMENTS AND HEDGING ACTIVITIES" (no "Note" word)
+VLTO
+# VLTO: "NOTE 13. DERIVATIVES AND HEDGING TRANSACTIONS" (ALL-CAPS)
+CVX
+# CVX: "Financial and Derivative Instruments" note; discloses fair values not notionals
+SYY
+# SYY: "10. DERIVATIVE FINANCIAL INSTRUMENTS"; IR swaps $1,050M / fuel / cross-ccy
+MSI
+# MSI: risk-management note; FX $1.6bn notional
+SHW
+# SHW: "NOTE 16 - DERIVATIVES AND HEDGING"; cross-ccy NIH $1,712.7M
+SLB
+# SLB: "10. Derivative Instruments and Hedging Activities"; cross-ccy + CDS
+MAR
+# MAR: swaps disclosed in long-term-debt note; filing never uses word "notional"
+MNST
+# MNST: no derivatives note; aluminum commodity hedges via OCI ($45.5M)
+D
+# D: Dominion combined multi-registrant notes; commodity $464M + EUR3.2bn FX fwd
+SO
+# SO: Southern combined notes; IR fair-value-hedge notionals $400M/$1,000M/$565M

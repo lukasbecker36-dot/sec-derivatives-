@@ -1,8 +1,39 @@
 issuer: Motorola Solutions
 ticker: MSI
-cik: '68505'
-archetype: minimal_hedger
+cik: "68505"
+sector: Information Technology
 extraction_mode: llm
+
+# No archetype: Motorola numbers its notes bare ("6. Risk Management") with no
+# "Note" word, so the archetype's 'Note \d+ ...' heading never matched. Real
+# content inside that note: foreign exchange contracts with ~$1.6 billion
+# notional, net investment hedges, and Treasury Rate Lock cash-flow hedges tied
+# to note issuances. The same $1.6bn FX figure also appears in the Item 7A
+# market-risk discussion. Fully self-contained.
 sections:
   market_risk:
-    heading: Quantitative\s+and\s+Qualitative\s+Disclosures\s+About\s+Market\s+Risk
+    heading: 'Quantitative and Qualitative Disclosures About Market Risk'
+    match_strategy: last
+    max_length: 8000
+  derivatives_note:
+    heading: '6\. Risk Management'
+    match_strategy: last
+    end_boundary: '7\. Income Taxes'
+    max_length: 6000
+
+fields:
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: derivatives_note
+  fx_forward_notional:
+    description: "Notional amount of outstanding foreign exchange contracts, in millions (e.g. $1.6 billion -> 1600)"
+    section: derivatives_note
+  net_investment_hedge_debt:
+    description: "Foreign-denominated debt or instruments designated as net investment hedges, in millions"
+    section: derivatives_note
+  treasury_rate_lock_notional:
+    description: "Notional amount of Treasury Rate Lock contracts designated as cash flow hedges, in millions"
+    section: derivatives_note
+  fx_largest_positions:
+    description: "Five largest net notional foreign currency buy/sell positions by currency, in millions"
+    section: derivatives_note

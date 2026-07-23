@@ -1,43 +1,35 @@
 issuer: Schlumberger
 ticker: SLB
-cik: '87347'
-archetype: minimal_hedger
-sector: TODO
+cik: "87347"
+sector: Energy
 extraction_mode: llm
-fields:
-  fx_contracts_notional:
-    description: Notional amount of FX contracts
-    section: market_risk
-  fx_contracts_fair_value:
-    description: Fair value of FX contracts
-    section: market_risk
-  interest_rate_contracts_notional:
-    description: Notional amount of interest rate contracts
-    section: market_risk
-  interest_rate_contracts_fair_value:
-    description: Fair value of interest rate contracts
-    section: market_risk
-  commodity_contracts_notional:
-    description: Notional amount/volume of commodity contracts
-    section: market_risk
-  commodity_contracts_fair_value:
-    description: Fair value of commodity contracts
-    section: market_risk
-  cross-currency_interest_rate_swaps_notional:
-    description: Notional amount of cross-currency interest rate swaps
-    section: market_risk
-  cross-currency_interest_rate_swaps_fair_value:
-    description: Fair value of cross-currency interest rate swaps
-    section: market_risk
-  hedge_ineffectiveness:
-    description: Hedge ineffectiveness recognized in income
-    section: market_risk
-  aoci_derivative_gain_loss:
-    description: Derivative gains/losses in AOCI
-    section: market_risk
-  non_designated_gain_loss:
-    description: Gain/loss on non-designated derivatives
-    section: market_risk
+
+# No archetype: SLB's derivatives note is a bare numbered caption ("10.
+# Derivative Instruments and Hedging Activities") and the archetype's fields
+# pointed at a nonexistent market_risk section. Real content: cross-currency
+# interest rate swaps (two euro tranches of ~€0.5bn each), foreign exchange
+# forward contracts, and credit default swaps issued with an aggregate notional
+# of ~$0.6 billion. Fully self-contained.
 sections:
-  financial_instruments:
-    heading: 8\.\s+Derivative\s+Instruments\s+and\s+Hedging\s+Activities
+  derivatives_note:
+    heading: '10\. Derivative Instruments and Hedging Activities'
+    match_strategy: last
+    end_boundary: '11\. Stockholders'
+    max_length: 7000
+
+fields:
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: derivatives_note
+  cross_currency_swap_notional:
+    description: "Notional amount of cross-currency interest rate swaps, in billions of euro (e.g. two ~€0.5bn tranches)"
+    section: derivatives_note
+  fx_forward_notional:
+    description: "Notional amount of foreign exchange forward contracts, in millions"
+    section: derivatives_note
+  cds_notional:
+    description: "Aggregate notional amount of credit default swaps (CDSs) issued, outstanding at period end, in billions (e.g. $0.6 billion)"
+    section: derivatives_note
+  derivative_fair_values:
+    description: "Fair value of derivative instruments designated and not designated as hedges, in millions"
+    section: derivatives_note

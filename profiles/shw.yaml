@@ -1,25 +1,35 @@
 issuer: Sherwin-Williams
 ticker: SHW
 cik: "89800"
-archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+sector: Materials
 extraction_mode: llm
 
-# Additional fields identified by LLM analysis (review and adjust)
-fields:
-  currency_swaps_notional:
-    description: "Notional amount of currency swaps"
-    section: market_risk
-  currency_swaps_fair_value:
-    description: "Fair value of currency swaps"
-    section: market_risk
-  hedge_ineffectiveness:
-    description: "Hedge ineffectiveness recognized in income"
-    section: market_risk
-  aoci_derivative_gain_loss:
-    description: "Derivative gains/losses in AOCI"
-    section: market_risk
-  foreign_currency_sensitivity:
-    description: "Impact of foreign currency rate changes on results"
-    section: market_risk
+# No archetype: Sherwin-Williams captions its derivatives note "NOTE 16 –
+# DERIVATIVES AND HEDGING" (en-dash separator, ALL-CAPS) which the archetype's
+# 'Note \d+ ...' heading never matched. Real content: U.S. dollar-to-euro
+# cross-currency swap contracts designated as net investment hedges, summarized
+# in a notional-value-by-maturity table totalling $1,712.7M, plus $300M of
+# interest rate lock contracts (cash flow hedges). Fully self-contained.
+sections:
+  derivatives_note:
+    heading: 'NOTE 16 – DERIVATIVES AND HEDGING'
+    match_strategy: last
+    end_boundary: 'NOTE 17 – FAIR VALUE MEASUREMENTS'
+    max_length: 6000
 
+fields:
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: derivatives_note
+  cross_currency_swap_notional:
+    description: "Total notional value of U.S. dollar-to-euro cross-currency swap contracts designated as net investment hedges, in millions (e.g. $1,712.7)"
+    section: derivatives_note
+  net_investment_hedge_debt:
+    description: "Notional value of any foreign-denominated debt or single net investment hedge instrument, in millions (e.g. $200.0)"
+    section: derivatives_note
+  ir_lock_notional:
+    description: "Aggregate notional amount of interest rate lock contracts designated as cash flow hedges, in millions (e.g. $300.0)"
+    section: derivatives_note
+  aoci_derivative_gain_loss:
+    description: "Derivative gains/losses recorded in accumulated other comprehensive income, in millions"
+    section: derivatives_note

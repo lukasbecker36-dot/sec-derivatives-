@@ -1,9 +1,47 @@
-issuer: "Sysco"
+issuer: Sysco
 ticker: SYY
 cik: "96021"
-archetype: minimal_hedger
+sector: Consumer Staples
 extraction_mode: llm
 
-# Derivatives section matched by: ITEM\s*7A
-# Market risk section matched by: Quantitative\s+and\s+Qualitat\s*ive\s+Disclosures?\s+About\s+Market\s+Risk
+# No archetype: Sysco's derivatives note is a bare numbered ALL-CAPS caption
+# ("10. DERIVATIVE FINANCIAL INSTRUMENTS") that the archetype's 'Note \d+ ...'
+# heading never matched. Real content: interest rate swaps ($500M + $550M =
+# $1,050M notional, the $550M tranche a fair-value hedge of senior notes),
+# euro/CAD cross-currency swaps, diesel fuel swaps, and net investment hedges.
+# The $1,050M aggregate IR-swap position is also shown in the Item 7A market-
+# risk table. Fully self-contained.
+sections:
+  market_risk:
+    heading: 'Quantitative and Qualitative Disclosures about Market Risk'
+    match_strategy: last
+    end_boundary: 'Item\s+8'
+    max_length: 8000
+  derivatives_note:
+    heading: '10\. DERIVATIVE FINANCIAL INSTRUMENTS'
+    match_strategy: last
+    end_boundary: '11\. SELF-INSURED LIABILITIES'
+    max_length: 9000
 
+fields:
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: derivatives_note
+  ir_swap_notional:
+    description: "Aggregate notional value of interest rate swap agreements, in millions (e.g. $500 + $550 = $1,050)"
+    section: derivatives_note
+  ir_swap_fair_value_hedge_notional:
+    description: "Notional of receive-fixed/pay-floating interest rate swaps designated as fair value hedges of senior notes, in millions (e.g. $550)"
+    section: derivatives_note
+  cross_currency_swap_notional:
+    description: "Notional value of cross-currency swap contracts hedging foreign currency risk (euro and Canadian dollar), in millions"
+    section: derivatives_note
+  fuel_swap_notional:
+    description: "Notional volume of diesel fuel swaps designated as cash flow hedges, in millions of gallons"
+    section: derivatives_note
+  net_investment_hedge_debt:
+    description: "Foreign-denominated debt designated as net investment hedges, in millions"
+    section: derivatives_note
+  ir_swap_notional_market_risk:
+    description: "Pay-variable/receive-fixed interest rate swap notional shown in the Item 7A market-risk table, in millions (e.g. $1,050)"
+    section: market_risk

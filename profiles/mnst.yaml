@@ -1,22 +1,45 @@
 issuer: Monster Beverage
 ticker: MNST
-cik: '865752'
-archetype: minimal_hedger
-sector: TODO
+cik: "865752"
+sector: Consumer Staples
 extraction_mode: llm
-fields:
-  fx_forward_contracts:
-    description: Forward currency exchange contracts used for balance sheet hedging of non-functional currency assets/liabilities
-    section: market_risk
-  fx_forward_maturity:
-    description: All FX forwards have terms of three months or less
-    section: market_risk
-  international_sales_pct:
-    description: Percentage of consolidated net sales from customers outside US
-    section: market_risk
-  commodity_exposure:
-    description: Commodity price risks on aluminum cans, sugar, sweeteners, juice concentrates, etc.
-    section: market_risk
+
+# No archetype: Monster has NO standalone derivatives note and never uses the
+# word "notional" — so both the archetype heading and the notional content-
+# fallback found nothing. Its only material hedging is aluminum commodity
+# cash-flow hedges, disclosed qualitatively in Item 7A and quantitatively only
+# through (a) the change in net gain (loss) on commodity derivatives routed
+# through OCI ($45.5M in the Consolidated Statements of Comprehensive Income)
+# and (b) the commodity derivatives fair value in the fair-value note ($35.2M).
+# There is genuinely no dollar-denominated notional to capture, so this is a
+# market-risk / OCI-oriented schema. Fully self-contained.
 sections:
-  financial_instruments:
-    heading: FAIR\s+VALUE\s+OF\s+CERTAIN\s+FINANCIAL\s+ASSETS\s+AND\s+LIABILITIES
+  market_risk:
+    heading: 'QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK'
+    match_strategy: last
+    max_length: 6000
+  comprehensive_income:
+    heading: 'CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME'
+    match_strategy: last
+    max_length: 1800
+  fair_value:
+    heading: '4\. FAIR VALUE OF CERTAIN FINANCIAL ASSETS AND LIABILITIES'
+    match_strategy: last
+    max_length: 5000
+
+fields:
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: market_risk
+  commodity_hedge_description:
+    description: "Description of aluminum commodity cash-flow hedging (the only commodity Monster hedges)"
+    section: market_risk
+  commodity_derivatives_oci:
+    description: "Change in net gain (loss) on commodity derivatives recognized in OCI for the year, in thousands (e.g. 45,512 = $45.5M)"
+    section: comprehensive_income
+  commodity_derivatives_fair_value:
+    description: "Fair value of commodity derivatives carried on the balance sheet, in thousands (e.g. 35,188 = $35.2M)"
+    section: fair_value
+  fx_forward_fair_value:
+    description: "Fair value of foreign currency derivatives, in thousands"
+    section: fair_value

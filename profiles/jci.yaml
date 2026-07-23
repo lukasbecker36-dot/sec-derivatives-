@@ -1,13 +1,40 @@
 issuer: Johnson Controls
 ticker: JCI
-cik: '833444'
-archetype: minimal_hedger
-sector: TODO
+cik: "833444"
+sector: Industrials
 extraction_mode: llm
-fields:
-  reference_location:
-    description: Cross-reference to Risk Management section in MD&A
-    section: market_risk
+
+# No archetype: JCI's derivatives disclosure lives in a numbered ALL-CAPS note
+# ("10. DERIVATIVE INSTRUMENTS AND HEDGING ACTIVITIES") with no "Note" prefix,
+# so the minimal_hedger archetype's 'Note \d+ ...' heading never matched and
+# its ~23 fields targeted sections that don't exist here. Fully self-contained
+# schema instead. Real content: forward-starting interest rate swaps (a $600M
+# tranche terminated), euro/yen net-investment hedges, and a net-investment-
+# hedge CTA loss of $(159) million.
 sections:
-  financial_instruments:
-    heading: 10\.\s+FAIR\s+VALUE\s+MEASUREMENTS
+  market_risk:
+    heading: 'QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK'
+    match_strategy: last
+    max_length: 8000
+  derivatives_note:
+    heading: '10\. DERIVATIVE INSTRUMENTS AND HEDGING ACTIVITIES'
+    match_strategy: last
+    end_boundary: '11\. FAIR VALUE MEASUREMENTS'
+    max_length: 12000
+
+fields:
+  has_derivatives:
+    description: "Does the company use derivatives? Yes/No/No mention"
+    section: derivatives_note
+  ir_swap_notional:
+    description: "Notional amount of forward-starting interest rate swaps entered into ahead of anticipated note issuances, in millions (e.g. a $600 million tranche)"
+    section: derivatives_note
+  net_investment_hedge_debt:
+    description: "Aggregate principal of euro- and yen-denominated debt designated as net investment hedges of non-U.S. operations, in the respective currency (e.g. billions of euro/yen)"
+    section: derivatives_note
+  net_investment_hedge_cta:
+    description: "Pre-tax gains (losses) on net investment hedges recorded in foreign currency translation adjustments (CTA) within OCI, in millions (e.g. $(159))"
+    section: derivatives_note
+  commodity_derivatives_notional:
+    description: "Notional quantities of outstanding commodity derivatives (e.g. copper, aluminum) in metric tons"
+    section: derivatives_note
