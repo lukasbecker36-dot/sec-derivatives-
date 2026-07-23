@@ -187,16 +187,50 @@ def _sync_text_files_to_db(ticker: str, issuer_dir: Path):
 
 
 def append_csv_row(csv_path: Path, row: dict, config: IssuerConfig):
-    """Append a row to the tracking CSV, creating the file if needed."""
+    """Append a row to the tracking CSV, creating the file if needed.
+
+    If the config has gained/renamed columns since the file was written, the
+    existing header no longer matches `columns`. Appending blindly would write
+    values in the new column order under the old header, silently misaligning
+    every field after the first inserted one (DictReader maps by the stale
+    header). So when the header drifts, migrate the whole file: re-map existing
+    rows by name into the new column set, then append. Migration only happens on
+    the rare run where columns changed; steady-state appends stay O(1).
+    """
     columns = _get_csv_columns(config)
     csv_path.parent.mkdir(parents=True, exist_ok=True)
 
-    write_header = not csv_path.exists()
-    with open(csv_path, 'a', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=columns, extrasaction='ignore')
-        if write_header:
+    if not csv_path.exists():
+        with open(csv_path, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=columns, extrasaction='ignore')
             writer.writeheader()
+            writer.writerow(row)
+        return
+
+    with open(csv_path, 'r', newline='', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        existing_header = reader.fieldnames or []
+        existing_rows = list(reader)
+
+    if existing_header == columns:
+        with open(csv_path, 'a', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=columns, extrasaction='ignore')
+            writer.writerow(row)
+        return
+
+    # Header drifted — rewrite the whole file under the new columns, preserving
+    # existing data by field name (any column the old file lacked stays blank;
+    # any column no longer in the schema is dropped).
+    logger.info(f'{csv_path.name}: column set changed, migrating '
+                f'{len(existing_header)}->{len(columns)} columns')
+    tmp = csv_path.with_suffix('.csv.tmp')
+    with open(tmp, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=columns, extrasaction='ignore')
+        writer.writeheader()
+        for old in existing_rows:
+            writer.writerow(old)
         writer.writerow(row)
+    tmp.replace(csv_path)
 
 
 def append_notes(notes_path: Path, period_end: str, form_type: str, notes: dict):

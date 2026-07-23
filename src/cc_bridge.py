@@ -392,6 +392,7 @@ def finalize(since: str, max_activations: int, json_summary: str = '', verbose: 
             all_llm_results = {}
             all_flags = []
 
+            from .validate import validate_source_quotes
             for item in group:
                 section_name = item['req_info']['section']
                 llm_result = item['result']
@@ -400,6 +401,12 @@ def finalize(since: str, max_activations: int, json_summary: str = '', verbose: 
                 for field_name, field_data in llm_result.get('fields', {}).items():
                     row[field_name] = field_data.get('value')
                 all_flags.extend(llm_result.get('flags', []))
+                # Catch date fragments leaking from table headers into numeric
+                # fields (e.g. an IR-swap notional of 2025.0). Same check the
+                # API-mode engine runs; cc_bridge reassembles rows itself so it
+                # must invoke it here too.
+                section_schema = _build_schema_for_section(config, section_name)
+                all_flags.extend(validate_source_quotes(llm_result, section_schema))
 
             # Load sections text for qualitative extraction
             sections = {}

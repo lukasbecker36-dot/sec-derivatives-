@@ -99,3 +99,50 @@ class TestRetryableFailure:
         """
         result = process_filing(config, filing_meta, filing_text)
         assert result['retryable_failure'] is False
+
+
+class TestAppendCsvRow:
+    def _cfg(self, field_names):
+        from src.config import IssuerConfig, FieldConfig
+        return IssuerConfig(
+            issuer='T', ticker='TST', cik='1',
+            fields={n: FieldConfig(description='d', section='s') for n in field_names},
+        )
+
+    def test_creates_file_with_header(self, tmp_path):
+        from src.engine import append_csv_row
+        p = tmp_path / 'tracking.csv'
+        append_csv_row(p, {'period_end_date': '2025-03-31', 'form_type': '10-Q', 'a': 1}, self._cfg(['a']))
+        lines = p.read_text().splitlines()
+        assert lines[0].startswith('period_end_date,form_type,a,')
+        assert '2025-03-31' in lines[1]
+
+    def test_plain_append_when_header_matches(self, tmp_path):
+        from src.engine import append_csv_row
+        import csv
+        p = tmp_path / 'tracking.csv'
+        cfg = self._cfg(['a', 'b'])
+        append_csv_row(p, {'period_end_date': 'p1', 'form_type': '10-Q', 'a': 1, 'b': 2}, cfg)
+        append_csv_row(p, {'period_end_date': 'p2', 'form_type': '10-Q', 'a': 3, 'b': 4}, cfg)
+        rows = list(csv.DictReader(open(p)))
+        assert len(rows) == 2
+        assert rows[0]['a'] == '1' and rows[1]['b'] == '4'
+
+    def test_migrates_when_columns_added(self, tmp_path):
+        # Row written under old 2-field schema, then config gains a field
+        # inserted before the metadata tail. Reading back must keep values
+        # aligned to the right names, not shifted.
+        from src.engine import append_csv_row
+        import csv
+        p = tmp_path / 'tracking.csv'
+        append_csv_row(p, {'period_end_date': 'p1', 'form_type': '10-Q', 'a': 10, 'b': 20},
+                       self._cfg(['a', 'b']))
+        # config now has a new field 'a2' between a and b
+        append_csv_row(p, {'period_end_date': 'p2', 'form_type': '10-Q', 'a': 30, 'a2': 99, 'b': 40},
+                       self._cfg(['a', 'a2', 'b']))
+        rows = list(csv.DictReader(open(p)))
+        assert len(rows) == 2
+        # old row's values still map to the correct names, a2 blank
+        assert rows[0]['a'] == '10' and rows[0]['b'] == '20' and rows[0]['a2'] == ''
+        # new row intact
+        assert rows[1]['a'] == '30' and rows[1]['a2'] == '99' and rows[1]['b'] == '40'
