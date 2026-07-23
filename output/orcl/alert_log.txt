@@ -1,15 +1,24 @@
-=== 10-Q | Period ending 2026-02-28 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaCDLE8hPbLUQuezcie'}
+=== 10-K | Period ending 2026-05-31 | Processed 2026-07-23 ===
+[NEW_FIELD] foreign_exchange_earnings_impact: appeared for first time ($-2,767M)
+[NEW_FIELD] foreign_exchange_fair_value_impact: appeared for first time ($-2,384M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($4,700M)
+[LLM_FLAG] The fiscal 2026 market risk section does not include an equity price risk / non-marketable equity investments paragraph that was present in the fiscal 2025 10-K; value set to null — verify whether Oracle dropped this disclosure or whether the section text is incomplete.
+[LLM_FLAG] Cross-currency swaps ($871M notional, fiscal 2018 vintage) terminated in July 2025 when the hedged Euro 750M notes matured; not outstanding as of May 31, 2026.
+[LLM_FLAG] IR swap notional ($4.7B) is unchanged from fiscal 2025 and remains active on the Term Loan Credit Agreement 2 outstanding balance of $5,137M.
 
-=== 10-Q | Period ending 2025-11-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaBoFduRt3W7mZ9tS9r'}
+=== 10-Q | Period ending 2025-08-31 | Processed 2026-07-23 ===
+[HISTORICAL] [DISAPPEARED_FIELD] non_marketable_equity_investments: was $2,100M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_exchange_earnings_impact: was $-2,379M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_exchange_fair_value_impact: was $-1,788M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $4,700M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cross_currency_swap_notional: was $871M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (non_marketable_equity_investments, foreign_exchange_earnings_impact, foreign_exchange_fair_value_impact, ir_swap_notional, cross_currency_swap_notional)
 
-=== 10-Q | Period ending 2025-08-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaBRgMRmYKre1qDemEY'}
-
-=== 10-K | Period ending 2025-05-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaB74fuAko5fQ3TgpwF'}
-
-=== 10-Q | Period ending 2025-02-28 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaAbC52ySrveA11Annb'}
-
+=== 10-K | Period ending 2025-05-31 | Processed 2026-07-23 ===
+[HISTORICAL] [NEW_FIELD] non_marketable_equity_investments: appeared for first time ($2,100M)
+[HISTORICAL] [NEW_FIELD] foreign_exchange_earnings_impact: appeared for first time ($-2,379M)
+[HISTORICAL] [NEW_FIELD] foreign_exchange_fair_value_impact: appeared for first time ($-1,788M)
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($4,700M)
+[HISTORICAL] [NEW_FIELD] cross_currency_swap_notional: appeared for first time ($871M)
+[HISTORICAL] [LLM_FLAG] The $4.7B IR swap notional matches the Term Loan Credit Agreement original borrowed amount; the actual outstanding Term Loan balance at May 31, 2025 is $5,419M under Term Loan Credit Agreement 2, but the swap is described as covering $4.7B.
+[HISTORICAL] [LLM_FLAG] Cross-currency swaps ($871M) are tied to the Euro 750M July 2025 Notes, which mature in July 2025 — these swaps are outstanding as of May 31, 2025 but will terminate upon note maturity one month later.

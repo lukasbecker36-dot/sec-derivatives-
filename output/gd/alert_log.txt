@@ -1,59 +1,12 @@
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($8,500M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-483M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($113M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($8,500M)
-[NEW_FIELD] fx_forward_notional: appeared for first time ($8,500M)
-[NEW_FIELD] fx_sensitivity_recognized: appeared for first time ($-68M)
-[NEW_FIELD] fx_sensitivity_unrecognized: appeared for first time ($-498M)
-[NEW_FIELD] fixed_rate_debt_principal: appeared for first time ($8,000M)
-[LLM_FLAG] fx_sensitivity_recognized decreased by 88% compared to the previous period.
-[LLM_FLAG] fx_sensitivity_unrecognized increased by 177% compared to the previous period.
+=== 10-Q | Period ending 2026-04-05 | Processed 2026-07-23 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forward_notional: was $8,500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_recognized: was $-68M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_unrecognized: was $-498M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_debt_principal: was $8,000M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_forward_notional, fx_sensitivity_recognized, fx_sensitivity_unrecognized, fixed_rate_debt_principal)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($8,500M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
-[NEW_FIELD] fx_forward_notional: appeared for first time ($8,500M)
-[NEW_FIELD] fx_sensitivity_recognized: appeared for first time ($-68M)
-[NEW_FIELD] fx_sensitivity_unrecognized: appeared for first time ($-498M)
-[NEW_FIELD] fixed_rate_debt_principal: appeared for first time ($8,000M)
-[LLM_FLAG] The notional amount of forward exchange contracts has increased significantly by more than 50% from the prior period (notional was $6200 million in 2024).
-
-=== 10-Q | Period ending 2026-04-05 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ9y9mwczRVqo1TK4g2'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ9fpEnLNwYUBiVkzeS'}
-
-=== 10-Q | Period ending 2025-09-28 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ9L1cmPubyPYEXNqLG'}
-
-=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ963EUmab4XEiqs2VY'}
-
-=== 10-Q | Period ending 2025-03-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ8tREwL8znUXyG2yUf'}
-
-=== 10-Q | Period ending 2026-04-05 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fixed_rate_debt_principal: was $31,000M, now missing
-[DISAPPEARED_FIELD] primary_currencies: was $8,500M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fixed_rate_debt_principal, primary_currencies)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fixed_rate_debt_principal: appeared for first time ($31,000M)
-[NEW_FIELD] primary_currencies: appeared for first time ($8,500M)
-
-=== 10-Q | Period ending 2025-03-30 | Processed 2026-05-02 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $8,500M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $8M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_recognized: was $-68M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_unrecognized: was $-498M, now missing
-[DISAPPEARED_FIELD] fixed_rate_debt_principal: was $8,000M, now missing
-[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, fx_sensitivity_recognized, fx_sensitivity_unrecognized, fixed_rate_debt_principal)
-[LLM_FLAG] Material disclosure deferred: The 10-Q explicitly states there are no material changes from the 10-K and provides no actual quantitative or qualitative data on derivatives, FX exposure, interest rate sensitivity, debt composition, or equity holdings. All market risk disclosures must be obtained from the 2024 10-K filing.
-
-=== 10-Q | Period ending 2026-04-05 | Processed 2026-05-01 ===
-[LLM_FLAG] fx_forwards_outstanding increased 37% from $6.2B (2024) to $8.5B (2025) - significant increase in notional exposure
-[LLM_FLAG] fx_sensitivity_recognized loss increased 89% from $36M (2024) to $68M (2025) - notable deterioration in near-term FX risk
-[LLM_FLAG] fx_sensitivity_unrecognized loss increased 177% from $180M (2024) to $498M (2025) - substantial increase in deferred FX exposure
-
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-23 ===
+[HISTORICAL] [NEW_FIELD] fx_forward_notional: appeared for first time ($8,500M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_recognized: appeared for first time ($-68M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_unrecognized: appeared for first time ($-498M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_debt_principal: appeared for first time ($8,000M)
