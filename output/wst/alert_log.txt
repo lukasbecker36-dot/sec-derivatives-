@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($19M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $378M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $263M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $115M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $17M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $217M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $17M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $200M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $1M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 11/11 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci...)
+[LLM_FLAG] FX derivative notional amounts cannot be aggregated into a single USD figure because contracts are denominated in multiple currencies (SGD, EUR, JPY, USD). Key components: Fair value hedges -- SGD 209.1M intercompany loans + EUR 23.5M demand notes; Cash flow hedges -- sell-side USD totals $100.0M (EUR/USD $32.2M + JPY/USD $20.3M + SGD/USD $47.5M) plus EUR sell amounts of EUR 15.8M; Cross-currency swap (net investment hedge) -- $130.0M (JPY 17.0 billion); Not-designated forwards -- notional not disclosed.
+[LLM_FLAG] total_derivative_asset, total_derivative_liability, net_derivative_position, cash_flow_hedge_aoci, and expected_12mo_reclass_from_aoci are referenced in Note 10 (Fair Value Measurements) but that section is truncated in the provided text.
+[LLM_FLAG] Prior equity_derivatives_notional was 'Yes' which appears to be a data-type mismatch; no equity derivatives are mentioned in current period.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($378M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($263M)

@@ -1,3 +1,28 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($3M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $2M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2M, now missing
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] notional_amount_hedging_instruments: appeared for first time ($5,000M)
+[NUMERIC] uncommitted_irlcs_notional: $1M → $3,000M (+272627.3%) — exceeds 20% threshold
+[NEW_FIELD] uncommitted_mortgage_loans_notional: appeared for first time ($2,200M)
+[NUMERIC] mbs_balance: $4M → $1,000M (+24893.8%) — exceeds 20% threshold
+[NUMERIC] variable_rate_debt_amounts: $6,200M → $3,133M (-49.5%) — exceeds 20% threshold
+[NUMERIC] debt_fair_values: $3,400M → $7,134M (+109.8%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 4/8 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct)
+[VALIDATION] Likely units mismatch: uncommitted_irlcs_notional changed from 1 to 3,000 (2727x)
+[VALIDATION] Likely units mismatch: mbs_balance changed from 4 to 1,000 (250x)
+[LLM_FLAG] uncommitted_irlcs_notional changed from 1.1 to 3000 (in millions) - prior value appears to have been in billions (1.1B vs current 3.0B), representing a >50% increase in IRLC notional
+[LLM_FLAG] variable_rate_debt_amounts changed from 6200.0 to 3133.2 (>50% decrease)
+[LLM_FLAG] debt_fair_values changed from 3400.0 to 7134.4 (>50% increase)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] total_derivative_asset: appeared for first time ($2M)
 [NEW_FIELD] total_derivative_liability: appeared for first time ($0M)

@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
+[NUMERIC] fx_derivatives_notional: $9,000M → $35,900M (+298.9%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $7,100M → $27,900M (+293.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($8,000M)
+[NUMERIC] cash_flow_hedge_aoci: $180M → $326M (+81.1%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $145M → $249M (+71.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional changed from 9000 to 35900 (>50% change) — prior value likely captured only a subset of FX derivative categories; current value sums all four FX programs (net investment, cash flow royalties, cash flow FC debt, economic hedges)
+[LLM_FLAG] fx_designated_notional changed from 7100 to 27900 (>50% change) — same methodology difference as above
+[LLM_FLAG] cash_flow_hedge_aoci changed from 180 to 326 (81% increase) — royalty hedge AOCI swung to $301M net gain vs prior $4M
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed from 145 to 249 (72% increase)
+[LLM_FLAG] Additional $130M losses on excluded forward points from FC debt hedges expected to be amortized within 12 months (not included in the $249M figure)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($9,000M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($7,100M)

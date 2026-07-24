@@ -1,3 +1,26 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($8,210M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($8,210M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $7,300M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $7,300M, now missing
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-671M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($285M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $720M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $720M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $279M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] currency_swaps_notional: appeared for first time ($8,210M)
+[DISAPPEARED_FIELD] currency_swaps_fair_value: was $7M, now missing
+[VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct...)
+[LLM_FLAG] equity_derivatives_notional was 'Yes' in prior period but no equity derivatives are mentioned in the current filing
+[LLM_FLAG] fx_derivatives_notional reported as $8,210M (USD carrying amount of EUR-denominated debt); underlying notional is €7.3 billion (€7,300M). Prior total_derivative_asset was 7300.0 which likely represented the EUR notional; current USD equivalent is $8,210M based on carrying amount of hedged EUR debt
+[LLM_FLAG] cash_flow_hedge_aoci is -$671M from terminated interest rate lock derivatives (entered Oct 2018, terminated April 2020); being amortized over remaining life of hedged debt
+[LLM_FLAG] currency_swaps_notional reported as $8,210M (USD carrying value); underlying EUR notional is €7.3 billion. Prior currency_swaps_fair_value of 7.3 likely represented €7.3B notional in billions, not fair value
+[LLM_FLAG] No quantitative sensitivity metrics (100bp IR / 10% FX) disclosed in this market risk section; T-Mobile describes establishing interest rate risk limits but does not provide specific numerical sensitivities
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($7,300M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($7,300M)

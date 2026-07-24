@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($750M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($28M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-28M)
+[NUMERIC] cash_flow_hedge_aoci: $750M → $-79M (-110.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $20M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-20M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-108M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $29M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct)
+[LLM_FLAG] cash_flow_hedge_aoci changed from 750.0 to -79 (prior value may have been the IR swap notional rather than AOCI; current value is the fuel derivatives AOCI balance at June 30, 2026)
+[LLM_FLAG] equity_derivatives_notional was 'Yes' in prior period but no equity derivatives are mentioned in the current filing
+[LLM_FLAG] Fuel hedging program fully terminated in Q2 2025; AOCI balance of -$79M relates to reclassification adjustments from previously terminated fuel hedges
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($750M)
 [NEW_FIELD] total_derivative_liability: appeared for first time ($20M)

@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
+[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($21M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-21M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($4M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $3M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $2M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $1M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, equity_sensitivity_10pct)
+[LLM_FLAG] equity_derivatives_notional: prior was 'Yes' but no equity derivatives found in current filing
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] total_derivative_asset: appeared for first time ($3M)
 [NEW_FIELD] total_derivative_liability: appeared for first time ($2M)

@@ -1,3 +1,32 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
+[NUMERIC] total_marketable_securities_fv: $88,777M → $186,563M (+110.1%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $6,044M → $101,189M (+1574.2%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $21,763M → $26,157M (+20.2%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $505M → $317M (-37.2%) — exceeds 20% threshold
+[NUMERIC] fx_derivatives_notional: $52M → $93,400M (+179598.3%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $23M → $39,013M (+166280.9%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $52M → $54,387M (+104538.7%) — exceeds 20% threshold
+[NUMERIC] equity_derivatives_notional: $30M → $20,000M (+66566.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $2M → $1,702M (+105614.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $1M → $1,958M (+219900.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $1M → $-256M (-35655.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[VALIDATION] Likely units mismatch: fx_derivatives_notional changed from 52 to 93,400 (1797x)
+[VALIDATION] Likely units mismatch: fx_designated_notional changed from 23 to 39,013 (1664x)
+[VALIDATION] Likely units mismatch: fx_not_designated_notional changed from 52 to 54,387 (1046x)
+[VALIDATION] Likely units mismatch: equity_derivatives_notional changed from 30 to 20,000 (667x)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 2 to 1,702 (1057x)
+[VALIDATION] Likely units mismatch: total_derivative_liability changed from 1 to 1,958 (2200x)
+[VALIDATION] Likely units mismatch: net_derivative_position changed from 1 to -256 (356x)
+[LLM_FLAG] total_marketable_securities_fv changed from 88,777 to 186,563 (>50% increase, +110%), largely driven by SpaceX equity securities ($80.0B short-term restricted + $14.1B long-term restricted)
+[LLM_FLAG] marketable_equity_securities_fv changed from 6,044 to 101,189 (>50% increase, +1574%), driven by SpaceX share distributions
+[LLM_FLAG] total_cash_equivalents_fv changed from 38,063 to 43,088 (+13%, within tolerance)
+[LLM_FLAG] gross_unrealized_gains_debt changed from 505 to 317 (-37%, within tolerance)
+[LLM_FLAG] total_derivative_liability changed significantly: prior 0.89 (likely billions = 890M) vs current 1,958M (+120% increase), driven by new equity derivative liabilities ($457M), credit derivative liabilities ($815M), and FX not-designated liabilities ($646M)
+[LLM_FLAG] equity_derivatives_notional: new $20,000M position (prior was $0 at Dec 2025 per filing tables; prior_values show 30.0 which may be from earlier period or different unit)
+[LLM_FLAG] Credit derivatives notional surged from $16,940M (Dec 2025) to $43,785M (Jun 2026), a 158% increase, related to data center backstop agreements
+[LLM_FLAG] Net derivative position shifted from net asset (prior ~720M) to net liability (-256M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NUMERIC] total_cash_equivalents_fv: $30,708M → $38,063M (+24.0%) — exceeds 20% threshold
 [NUMERIC] gross_unrealized_gains_debt: $859M → $505M (-41.2%) — exceeds 20% threshold

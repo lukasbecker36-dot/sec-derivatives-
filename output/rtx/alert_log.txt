@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
+[DISAPPEARED_FIELD] fx_designated_notional: was $293M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $10M, now missing
+[NUMERIC] total_derivative_liability: $311M → $472M (+51.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-8M → $-172M (-2050.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[VALIDATION] Likely extraction failure: 3/7 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, fx_forwards_outstanding)
+[LLM_FLAG] total_derivative_liability: 472 vs prior 311.0, change of +51.8% exceeds 50% threshold
+[LLM_FLAG] net_derivative_position: -172 vs prior -8.0, magnitude change exceeds 50% threshold
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_designated_notional: appeared for first time ($293M)
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($10M)

@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
+[NUMERIC] fx_derivatives_notional: $13,128M → $19,326M (+47.2%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $385M → $6,422M (+1568.1%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $3,180M → $2,067M (-35.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $19M → $13M (-31.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-14M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $1M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[LLM_FLAG] fx_designated_notional changed from 385 to 6422 (>50% change) - prior value of 385 likely excluded cross-currency swap agreements ($6,139M) designated as net investment hedges; current extraction includes all designated FX derivatives per schema definition (forwards + options + cross-currency swaps)
+[LLM_FLAG] ir_swap_notional changed from 3180 to 2067 (35% decrease) - Honeywell reduced IR swap notional from $4,068M at Dec 2025 to $2,067M at June 2026
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NUMERIC] fx_derivatives_notional: $10,191M → $13,128M (+28.8%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $509M → $385M (-24.4%) — exceeds 20% threshold
