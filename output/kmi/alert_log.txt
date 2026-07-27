@@ -1,3 +1,25 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-27 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($543M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($543M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($4,250M)
+[NUMERIC] total_derivative_asset: $543M → $124M (-77.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $543M → $-284M (-152.3%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($-160M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $3,750M, now missing
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($6M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $109M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $416M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-307M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $70M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $70M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] debt_fair_value_sensitivity: was $0M, now missing
+[VALIDATION] Likely extraction failure: 8/10 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion...)
+[LLM_FLAG] total_derivative_asset changed from 543.0 to 124 (77% decrease vs prior)
+[LLM_FLAG] total_derivative_liability changed from 543.0 to -284 (prior value sign/magnitude mismatch suggests prior extraction issue or major change)
+[LLM_FLAG] Prior equity_derivatives_notional was 'Yes' (non-numeric) but no equity derivatives found in current filing
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($543M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($543M)

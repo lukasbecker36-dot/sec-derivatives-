@@ -20,7 +20,8 @@
       "cross-currency",
       "interest rate swap",
       "commodity swap",
-      "notional value"
+      "notional value",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -81,6 +82,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 14
+    },
+    {
+      "filing_date": "2026-06-26",
+      "form_type": "10-Q",
+      "period_end": "2026-06-26",
+      "processed_at": "2026-07-27T09:21:03Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 7,
+      "fields_null": 20
     }
   ]
 }

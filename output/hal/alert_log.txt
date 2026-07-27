@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-27 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $374M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_forwards_outstanding, equity_sensitivity_10pct)
+[LLM_FLAG] CDS notional decreased 63% from $592M (Dec 2025) to $217M (Jun 2026) — credit protection on Mexican customer borrowings substantially reduced
+[LLM_FLAG] Section extraction may have missed the primary derivatives disclosure (Note 11); extracted text covers trade receivables, inventories, taxes, and shareholders' equity rather than a dedicated derivatives note
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] equity_derivatives_notional: appeared for first time ($374M)
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)

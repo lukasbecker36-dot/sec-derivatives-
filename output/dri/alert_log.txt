@@ -1,3 +1,20 @@
+=== 10-K | Period ending 2026-05-31 | Processed 2026-07-27 ===
+[DROPPED_TO_ZERO] fx_derivatives_notional: $31M → $0M
+[DROPPED_TO_ZERO] fx_designated_notional: $815M → $0M
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $0M, now missing
+[NEW_FIELD] ir_swap_notional: appeared for first time ($300M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($1M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($83M)
+[NUMERIC] total_derivative_asset: $1M → $4M (+320.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $1M → $36M (+3500.0%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($-32M)
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $22M, now missing
+[LLM_FLAG] fx_derivatives_notional changed from 31.1 to 0 (100% decrease) - FX forwards program appears fully unwound
+[LLM_FLAG] fx_designated_notional changed from 815.0 to 0 (100% decrease) - significant reduction; prior value may reflect a different measurement or period
+[LLM_FLAG] fx_not_designated_notional changed from 0.2 to null - no undesignated FX derivatives disclosed this period
+[LLM_FLAG] total_derivative_asset changed from 1.0 to 4.2 (320% increase)
+[LLM_FLAG] total_derivative_liability changed from 1.0 to 36.0 (3500% increase) - prior value appears anomalously low; current period IR swap liability alone is $36M
+
 === 10-Q | Period ending 2026-02-22 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 

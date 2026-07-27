@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-06-27 | Processed 2026-07-27 ===
+[NUMERIC] ir_swap_notional: $9,700M → $22,920M (+136.3%) — exceeds 15% threshold
+[NUMERIC] total_derivative_asset: $444M → $652M (+46.8%) — exceeds 25% threshold
+[NUMERIC] total_derivative_liability: $4,947M → $16,220M (+227.9%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional changed >50% from prior (9700 -> 22920). Note: prior value (9700) appears to have tracked only the fair-value-hedge subset ($9.7B at Dec 2025), whereas 22920 is the total interest rate contracts notional from the volume table. The comparable Dec 2025 total was 21,796 (only ~5% change period-over-period).
+[LLM_FLAG] total_derivative_liability changed >50% from prior (4947 -> 16220). Driven by Escrowed Shares derivative liability of $15,570M recognized in Q2 2026 (vs $2,654M at Dec 2025). Escrowed Shares generated -$12,529M loss in Q2 2026 and -$13,619M loss in H1 2026.
+
 === 10-Q | Period ending 2026-03-28 | Processed 2026-04-25 ===
 [NUMERIC] fx_forward_notional: $22,740M → $19,177M (-15.7%) — exceeds 15% threshold
 [NUMERIC] total_derivative_asset: $1,041M → $444M (-57.3%) — exceeds 25% threshold

@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-27 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-4M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_level: was $-6M, now missing
+[NEW_FIELD] average_variable_rate: appeared for first time ($5M)
+[NUMERIC] fixed_rate_range: $0M → $5M (+900.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fuel_hedging_status: was $0M, now missing
+[VALIDATION] Likely extraction failure: 3/5 previously-populated fields are now null (equity_sensitivity_10pct, variable_rate_debt_level, fuel_hedging_status)
+[LLM_FLAG] interest_rate_sensitivity changed from prior 0.0 to -4.0. Prior value of 0.0 may have been a default or extraction miss; the current $4.0M impact is clearly stated in the filing.
+[LLM_FLAG] fixed_rate_range changed from prior 0.49 to 4.90 (>50% change). Possible unit mismatch: prior may have stored 4.90% as 0.049 (decimal) rather than 4.90 (percentage). The filing clearly states 4.90%.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)

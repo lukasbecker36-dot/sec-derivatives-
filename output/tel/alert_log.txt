@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-26 | Processed 2026-07-27 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,755M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($5,755M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($770M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($186M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($237M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-51M)
+[LLM_FLAG] Section text is truncated at the start; FX cash flow hedge forward/option notional amounts are missing from the excerpt, so fx_derivatives_notional of $5,755M (cross-currency swaps only) understates the true total
+[LLM_FLAG] Intercompany loans and external borrowings ($3,888M) are natural hedges, not derivative contracts, and are excluded from fx_derivatives_notional
+[LLM_FLAG] total_derivative_asset and total_derivative_liability are partial; FX cash flow hedge balance sheet positions are missing from the truncated section
+[LLM_FLAG] expected_12mo_reclass_from_aoci: text says 'significantly all' of the AOCI balance will be reclassified within 12 months but gives no specific dollar amount
+
 === 10-Q | Period ending 2025-12-26 | Processed 2026-06-04 ===
 [DISAPPEARED_FIELD] xccy_swap_unrealized_sensitivity: was $594M, now missing
 [DISAPPEARED_FIELD] commodity_hedge_fair_value: was $80M, now missing

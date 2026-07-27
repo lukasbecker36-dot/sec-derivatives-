@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-27 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($9,600M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($55,100M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $9,600M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $54,100M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $1,083M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $6,000M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $4,400M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $1,600M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $47,300M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $1,336M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 9/9 previously-populated fields are now null (total_derivative_asset, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp...)
+[LLM_FLAG] Section text appears truncated — begins mid-table with gain/loss data; derivative fair value balance sheet table, AOCI balance, and 12-month reclassification disclosures are missing from this excerpt
+[LLM_FLAG] Prior total_derivative_asset was 9600, cash_flow_hedge_aoci was 54100, expected_12mo_reclass_from_aoci was 1083 — all now not_found due to section truncation
+[LLM_FLAG] Commodity derivatives are reported in physical volumes (MWh, MMBtu, barrels) rather than dollar notional; no dollar notional available for commodity derivatives
+[LLM_FLAG] ir_swap_notional increased from $47.3B (Dec 2025) to $55.1B (Jun 2026), a 16.5% increase within the filing period
+[LLM_FLAG] fx_derivatives_notional increased from $6.0B (Dec 2025) to $9.6B (Jun 2026), a 60% increase within the filing period
+[LLM_FLAG] Market risk section contains only a cross-reference to Management's Discussion; no quantitative data available
+[LLM_FLAG] All prior-period values (fx_transaction_gain_loss: 6000, ir_sensitivity_100bp: 4400, fx_sensitivity_10pct: 1600, fixed_rate_notes_billion: 47300, marketable_equity_value: 1336) could not be compared — quantitative disclosures may be in the referenced MD&A section rather than Item 3
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($9,600M)
 [NEW_FIELD] ir_swap_notional: appeared for first time ($54,100M)

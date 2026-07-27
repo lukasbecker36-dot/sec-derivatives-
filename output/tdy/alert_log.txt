@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-06-28 | Processed 2026-07-27 ===
+[NUMERIC] fx_derivatives_notional: $2,026M → $1,308M (-35.4%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $2,025M → $578M (-71.4%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $2,026M → $729M (-64.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $1,398M → $8M (-99.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $29M → $47M (+61.0%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($-39M)
+[NUMERIC] cash_flow_hedge_aoci: $2,026M → $-1M (-100.1%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $12M → $-1M (-111.6%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 1,398 to 8 (0x)
+[VALIDATION] Likely units mismatch: cash_flow_hedge_aoci changed from 2,026 to -1 (0x)
+[LLM_FLAG] fx_designated_notional changed from 2025.0 to 578.5 (-71.4%); however prior value 2025.0 appears to be a year erroneously stored as a value rather than a legitimate prior notional
+[LLM_FLAG] fx_not_designated_notional changed from 2026.0 to 729.4 (-64.0%); prior value 2026.0 also appears to be an erroneous year-as-value
+[LLM_FLAG] total_derivative_asset changed from 1397.8 to 7.5 (-99.5%); prior value 1397.8 matches the Dec 2025 total notional amount, suggesting the prior value was incorrectly mapped to this field
+[LLM_FLAG] total_derivative_liability changed from 29.0 to 46.7 (+61.0%)
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed from 12.1 to 1.4 (-88.4%)
+[LLM_FLAG] cash_flow_hedge_aoci: the $1.4M figure is specifically for forward contracts maturing in next 12 months; total AOCI balance including cross-currency swaps may differ
+
 === 10-Q | Period ending 2026-03-29 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [NUMERIC] total_derivative_asset: $1,058M → $1,398M (+32.1%) — exceeds 20% threshold
