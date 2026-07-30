@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($3,400M)
+[NUMERIC] total_derivative_asset: $17M → $38M (+123.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-3M → $15M (+600.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[LLM_FLAG] total_derivative_asset changed from 17.0 to 38.0 (+124%) — increase driven by FX forward contract assets rising from $5M to $17M and cross currency swap assets rising from $15M to $21M vs. prior period
+[LLM_FLAG] net_derivative_position changed from -3.0 to +15.0 (sign reversal) — moved from net liability to net asset position due to FX forward and cross currency swap fair value improvements
+[LLM_FLAG] ir_swap_notional: notional not explicitly stated in derivatives note text; $375M inferred from market risk section context and fair value hedge designation. Prior was 0.0.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NUMERIC] fx_derivatives_notional: $375M → $3,200M (+753.3%) — exceeds 20% threshold
 [NEW_FIELD] fx_designated_notional: appeared for first time ($375M)

@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
+[NEW_FIELD] total_derivative_asset: appeared for first time ($1,904M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $2,178M, now missing
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($102M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2,178M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NUMERIC] unrealized_gains_derivatives: $24M → $1,904M (+7833.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] derivative_fair_value_gains_losses: was $99M, now missing
+[DISAPPEARED_FIELD] commodity_exposures: was $15M, now missing
+[VALIDATION] Likely extraction failure: 5/7 previously-populated fields are now null (fx_transaction_gain_loss, fx_sensitivity_10pct, equity_sensitivity_10pct, derivative_fair_value_gains_losses, commodity_exposures)
+[LLM_FLAG] Extracted section does not contain the full derivatives note (Note 12); it covers Notes 3-6 (trade structured finance, trade receivables, inventories, other current assets). Derivative notional breakdowns by type are not available in this section.
+[LLM_FLAG] total_derivative_asset of $1,904M reflects only 'Unrealized gains on derivative contracts' in Other current assets; derivative liabilities (likely in Other current liabilities) are not shown in this section, so net position cannot be determined.
+[LLM_FLAG] Prior equity_derivatives_notional was 'Yes' but no equity derivatives notional is quantified in this section.
+[LLM_FLAG] Prior fx_transaction_gain_loss was 2178.0 and fx_sensitivity_10pct was 2178.0; current fx_sensitivity_10pct is 'not material' — substantial change. The prior values appear anomalously identical and high; the current disclosure explicitly states FX 10% sensitivity is not material.
+[LLM_FLAG] Prior unrealized_gains_derivatives was 24.0; current is 1904.0 — this is a >50% change. However, the $1,904M figure is from the Other current assets balance sheet line (Note 6), which the prior extraction may not have captured; prior value of 24.0 may reference a different line item or period.
+[LLM_FLAG] Prior margin_deposits was 0.0; current is 1034.0 — significant increase. The $1,034M is from the Other current assets table; the prior value of 0.0 suggests margin deposits were not previously extracted from this section.
+[LLM_FLAG] Commodity position highest daily value reached $2,645M in H1 2026 vs $1,307M in FY2025 — significant increase in commodity position size.
+[LLM_FLAG] The 100bp interest rate sensitivity of $102M applies only to variable rate debt interest expense; a separate qualitative note says 100bp change results in less than 1% change in fair value of fixed-rate debt and IR swaps.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] total_derivative_asset: appeared for first time ($2,178M)
 [NEW_FIELD] net_derivative_position: appeared for first time ($2,178M)

@@ -20,7 +20,13 @@
       "interest rate swap",
       "commodity derivative",
       "notional value",
-      "unrealized gain"
+      "unrealized gain",
+      "net investment hedge",
+      "cash flow hedging",
+      "fair value hedging",
+      "cross-currency",
+      "commodity contract",
+      "aoci"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -81,6 +87,18 @@
       ],
       "fields_extracted": 0,
       "fields_null": 21
+    },
+    {
+      "filing_date": "2026-07-03",
+      "form_type": "10-Q",
+      "period_end": "2026-07-03",
+      "processed_at": "2026-07-30T09:22:35Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 6,
+      "fields_null": 27
     }
   ]
 }

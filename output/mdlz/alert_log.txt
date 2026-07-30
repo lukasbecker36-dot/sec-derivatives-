@@ -1,3 +1,36 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $209M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $7M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $209M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $2M, now missing
+[NUMERIC] fi_total_derivative_asset: $1,189M → $1,470M (+23.6%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $2,232M → $1,767M (-20.8%) — exceeds 20% threshold
+[NUMERIC] fx_derivatives_notional: $18,220M → $26,626M (+46.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $868M → $1,470M (+69.4%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-1,048M → $-297M (+71.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $4M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $4M → $1M (-75.0%) — exceeds 20% threshold
+[NUMERIC] fx_derivative_designated_fair_value: $-156M → $-71M (+54.5%) — exceeds 20% threshold
+[NEW_FIELD] fx_derivative_undesignated_fair_value: appeared for first time ($-43M)
+[NUMERIC] commodity_derivative_fair_value: $-785M → $13M (+101.7%) — exceeds 20% threshold
+[NEW_FIELD] interest_rate_derivative_designated_fair_value: appeared for first time ($-8M)
+[NUMERIC] interest_rate_derivative_undesignated_fair_value: $-12M → $1M (+108.3%) — exceeds 20% threshold
+[NUMERIC] cross_currency_swap_fair_value: $-90M → $-189M (-110.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_assets: $868M → $1,470M (+69.4%) — exceeds 20% threshold
+[NUMERIC] variation_margin_balance: $318M → $87M (-72.6%) — exceeds 20% threshold
+[NUMERIC] bs_location_other_current_assets: $868M → $1,207M (+39.1%) — exceeds 20% threshold
+[NUMERIC] bs_location_other_current_liabilities: $1,916M → $1,275M (-33.5%) — exceeds 20% threshold
+[NUMERIC] bs_location_other_liabilities: $316M → $492M (+55.7%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset: $1,470M vs prior $868M (+69.4%). Driven by large increase in commodity contract assets ($1,089M vs $422M at Dec 2025) and FX contract assets ($196M designated+undesignated vs $164M prior).
+[LLM_FLAG] net_derivative_position: -$297M vs prior -$1,048M (71.7% improvement). Commodity contracts swung from -$502M net to +$13M net, and FX contracts improved from -$318M to -$114M.
+[LLM_FLAG] expected_12mo_reclass_from_aoci: <$1M vs prior $4M (-75%+). Text states 'less than $1 million' expected to be reclassified.
+[LLM_FLAG] commodity_derivative_fair_value: +$13M vs prior -$785M (massive swing). Commodity net position improved from -$502M at Dec 2025 to +$13M at June 2026.
+[LLM_FLAG] cross_currency_swap_fair_value: -$189M vs prior -$90M (110% increase in liability). Cross-currency swap net liability deepened significantly.
+[LLM_FLAG] variation_margin_balance: $87M vs prior $318M (-72.6%). Substantial decline in futures variation margin.
+[LLM_FLAG] bs_location_other_liabilities: $492M vs prior $316M (+55.7%). Increase in non-current derivative liabilities.
+[LLM_FLAG] total_derivative_assets: $1,470M vs prior $868M (+69.4%). Same as total_derivative_asset flag above.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
 [NUMERIC] fi_fx_derivatives_notional: $161M → $209M (+29.8%) — exceeds 20% threshold

@@ -15,7 +15,15 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "cash flow hedging",
+      "fair value hedging",
+      "interest rate swap",
+      "foreign exchange forward",
+      "notional amount",
+      "designated as hedging",
+      "accumulated other comprehensive"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -74,6 +82,18 @@
         "market_risk"
       ],
       "fields_extracted": 9,
+      "fields_null": 4
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-K",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-07-30T09:22:35Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 21,
       "fields_null": 4
     }
   ]

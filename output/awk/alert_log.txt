@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($75M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $175M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $0M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 10/10 previously-populated fields are now null (total_derivative_asset, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_forwards_outstanding, fx_transaction_gain_loss...)
+[LLM_FLAG] Prior equity_derivatives_notional was 'Yes' but no equity derivatives are mentioned in this filing; prior value may have been a miscoding
+[LLM_FLAG] Prior cash_flow_hedge_aoci was 175.0 but no explicit AOCI balance is disclosed in this section
+[LLM_FLAG] Company terminated 16 treasury locks during H1 2026 (totaling $1,175M notional), reducing outstanding notional from a much higher level to $75M
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
 [NEW_FIELD] ir_swap_notional: appeared for first time ($175M)

@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
+[DISAPPEARED_FIELD] net_derivative_position: was $25M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $122M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-122M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (net_derivative_position, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct)
+[LLM_FLAG] Prior ir_sensitivity_100bp was 122.0 but not available in this abbreviated section — value likely unchanged per company statement but cannot confirm
+[LLM_FLAG] Prior fx_sensitivity_10pct was -122.0 but not available in this abbreviated section — value likely unchanged per company statement but cannot confirm
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($25M)
 [DISAPPEARED_FIELD] total_derivative_asset: was $26M, now missing

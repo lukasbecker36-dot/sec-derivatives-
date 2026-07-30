@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($368M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($4,277M)
+[NUMERIC] long_term_debt_face_value: $366M → $4,440M (+1113.5%) — exceeds 20% threshold
+[NEW_FIELD] interest_rate_sensitivity_1pct: appeared for first time ($368M)
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (equity_sensitivity_10pct)
+[LLM_FLAG] long_term_debt_face_value changed from prior 365.9 to 4440.1 (>50% increase). The prior value of 365.9 appears anomalous for Vulcan Materials — it may have been a prior-period interest rate sensitivity figure rather than the debt face value. Current extraction of $4,440.1M face value is clearly stated in the filing text.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($366M)

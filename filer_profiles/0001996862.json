@@ -23,7 +23,8 @@
       "foreign exchange forward",
       "commodity derivative",
       "unrealized gain",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "notional amount"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -85,6 +86,18 @@
       ],
       "fields_extracted": 4,
       "fields_null": 20
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-07-30T09:22:35Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 9,
+      "fields_null": 15
     }
   ]
 }

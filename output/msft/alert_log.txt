@@ -1,3 +1,21 @@
+=== 10-K | Period ending 2026-06-30 | Processed 2026-07-30 ===
+[NUMERIC] fx_not_designated_notional: $14,050M → $63,465M (+351.7%) — exceeds 20% threshold
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $1,080M → $2,176M (+101.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $671M → $1,430M (+113.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $409M → $746M (+82.4%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $-34M → $-42M (-23.5%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-5M)
+[LLM_FLAG] fx_derivatives_notional: current value $64,957M vs prior $54,543M — increase of 19%. Driven by growth in non-designated FX contracts sold ($51,413M vs prior implied ~$43,307M from FY2025).
+[LLM_FLAG] equity_derivatives_notional: current $8,119M vs prior $7,198M — increase of 13%, within normal range.
+[LLM_FLAG] total_derivative_asset: current $2,176M vs prior $1,080M — increase of 101%. This is a significant swing driven by non-designated FX contract assets rising from $248M to $1,742M, likely reflecting large FX moves during the period.
+[LLM_FLAG] total_derivative_liability: current $1,430M vs prior $671M — increase of 113%. Also a significant swing, though gross positions offset each other.
+[LLM_FLAG] net_derivative_position: current $746M vs prior $409M — increase of 82%, exceeding the 50% threshold. The swing is driven by the large increase in gross FX derivative assets exceeding the increase in liabilities.
+[LLM_FLAG] cash_flow_hedge_aoci: current -$42M vs prior -$34M. Note: the $42M figure is the comprehensive income flow for FY2026, not necessarily the cumulative AOCI balance. The actual AOCI balance is not separately stated in this section.
+[LLM_FLAG] fx_revenue_sensitivity: current -$13,653M vs prior -$12,938M — increase of 5.5% in absolute terms. Reflects growth in international revenue base.
+[LLM_FLAG] equity_sensitivity_10pct / equity_price_sensitivity: current -$2,654M vs prior -$2,248M — increase of 18% in absolute terms, reflecting growth in MSFT's equity investment portfolio.
+[LLM_FLAG] credit_spread_sensitivity: current -$412M vs prior -$429M — decrease of 4%, modest change within normal range.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NUMERIC] fx_not_designated_notional: $8,994M → $14,050M (+56.2%) — exceeds 20% threshold
 [NUMERIC] total_derivative_asset: $320M → $1,080M (+237.5%) — exceeds 20% threshold
