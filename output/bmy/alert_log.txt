@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[NUMERIC] total_marketable_securities_fv: $1,872M → $2,742M (+46.5%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $322M → $434M (+34.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[NUMERIC] fi_total_derivative_asset: $316M → $394M (+24.7%) — exceeds 20% threshold
+[NUMERIC] fx_derivatives_notional: $5,304M → $11,826M (+123.0%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $5,304M → $7,111M (+34.1%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $1,502M → $4,715M (+213.9%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $3,500M → $4,855M (+38.7%) — exceeds 20% threshold
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($486M)
+[NUMERIC] total_derivative_asset: $253M → $395M (+56.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $69M → $122M (+76.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $184M → $273M (+48.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-340M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $14M → $11M (-21.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[LLM_FLAG] fx_derivatives_notional: prior $5,304M -> current $11,826M (+123%). The increase reflects growth in both designated FX contracts (from cash flow and net investment hedges totaling $7,111M across asset and liability positions) and a large increase in not-designated FX contracts ($4,715M vs prior $1,502M). The prior total may have excluded some categories or used a different aggregation method. The underlying table clearly supports the current figure.
+[LLM_FLAG] fx_not_designated_notional: prior $1,502M -> current $4,715M (+214%). BMS substantially increased not-designated FX exchange contracts, with asset-position notional of $3,015M and liability-position notional of $1,700M. Prior period (Dec 2025) showed $1,887M + $667M = $2,554M, so the increase is also significant quarter-over-quarter.
+[LLM_FLAG] total_derivative_asset: prior $253M -> current $395M (+56%). Increase driven primarily by cash flow hedge FX contract assets ($206M) and net investment hedge cross-currency swap gains ($47M). The fair value table in Note 9 reports $394M (minor rounding difference).
+[LLM_FLAG] total_derivative_liability: prior $69M -> current $122M (+77%). Increase from cash flow hedge FX liabilities ($45M), not-designated FX liabilities ($34M), and fair value hedge IR swap liabilities ($22M). The fair value table in Note 9 reports $123M (minor rounding difference).
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($7,187M)
 [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1,872M)

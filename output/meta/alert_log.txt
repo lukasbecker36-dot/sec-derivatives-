@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[NUMERIC] total_cash_equivalents_fv: $19,280M → $12,133M (-37.1%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $57,754M → $74,798M (+29.5%) — exceeds 15% threshold
+[NUMERIC] corporate_debt_securities_fv: $21,627M → $28,591M (+32.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 2/6 previously-populated fields are now null (gross_unrealized_gains_debt, equity_sensitivity_10pct)
+[LLM_FLAG] total_cash_equivalents_fv dropped 37% vs prior ($19,280M -> $12,133M); consistent with the Dec 2025 balance of $31,482M declining as money market funds fell from $27,928M to $5,223M
+[LLM_FLAG] total_marketable_securities_fv rose 30% vs prior ($57,754M -> $74,798M); driven by increases in US government securities and corporate debt securities
+[LLM_FLAG] Section text appears truncated (ends mid-sentence with 'See'), so derivatives, unrealized gains, and maturity breakdown data may exist in the full filing but was not captured in this extract
+[LLM_FLAG] Section contains only a boilerplate cross-reference to the 10-K; no quantitative market risk data available for extraction
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NUMERIC] total_cash_equivalents_fv: $31,482M → $19,280M (-38.8%) — exceeds 20% threshold
 [NUMERIC] total_marketable_securities_fv: $45,719M → $57,754M (+26.3%) — exceeds 15% threshold

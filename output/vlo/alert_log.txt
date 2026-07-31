@@ -1,3 +1,27 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($445M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($445M)
+[NUMERIC] total_derivative_asset: $530M → $2,189M (+313.0%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($2,323M)
+[NUMERIC] net_derivative_position: $530M → $-134M (-125.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $468M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $5,018M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $5,088M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-70M, now missing
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($9M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NUMERIC] fixed_rate_debt_fair_value: $9M → $8,960M (+97738.0%) — exceeds 20% threshold
+[NEW_FIELD] floating_rate_debt_outstanding: appeared for first time ($2M)
+[DISAPPEARED_FIELD] floating_rate_interest_sensitivity: was $0M, now missing
+[DISAPPEARED_FIELD] fx_contracts_fair_value: was $0M, now missing
+[VALIDATION] Likely extraction failure: 7/10 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct...)
+[VALIDATION] Likely units mismatch: fixed_rate_debt_fair_value changed from 9 to 8,960 (978x)
+[LLM_FLAG] total_derivative_asset increased from prior 530 to 2189 (313% increase); driven by large increase in not-designated commodity derivative gross fair values (prior Dec 2025 not-designated assets were $460M vs current $2,141M)
+[LLM_FLAG] net_derivative_position changed from prior 530 to -134; prior appeared to be assets-only rather than a net figure, and current period shows net liability
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed from prior 468 to immaterial; prior value appears erroneous
+[LLM_FLAG] fixed_rate_debt_fair_value prior was 9.158 (likely confused with the principal total of $9,158M expressed in billions); current fair value is $8,960M
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($530M)
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($530M)

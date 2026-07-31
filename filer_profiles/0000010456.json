@@ -16,7 +16,13 @@
   },
   "idiosyncrasies": {
     "recurring_phrases": [
-      "cash flow hedge"
+      "cash flow hedge",
+      "net investment hedge",
+      "fair value hedge",
+      "cross-currency",
+      "interest rate swap",
+      "notional amount",
+      "aoci"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -77,6 +83,18 @@
       ],
       "fields_extracted": 0,
       "fields_null": 8
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-07-31T09:20:48Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 13,
+      "fields_null": 7
     }
   ]
 }

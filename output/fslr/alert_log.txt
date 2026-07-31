@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($148M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($148M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[DROPPED_TO_ZERO] total_derivative_asset: $415M → $0M
+[NEW_FIELD] total_derivative_liability: appeared for first time ($4M)
+[NUMERIC] net_derivative_position: $415M → $-4M (-100.9%) — exceeds 20% threshold
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
+[DROPPED_TO_ZERO] expected_12mo_reclass_from_aoci: $8M → $0M
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $16M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $3M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $13M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct)
+[VALIDATION] Likely units mismatch: net_derivative_position changed from 415 to -4 (0x)
+[LLM_FLAG] total_derivative_asset changed from 415.0 to 0: prior value appears erroneous or from a different section; the Dec 2025 fair value table in this filing shows only $4.001M in derivative assets, not $415M. At June 30, 2026, no derivative assets appear in the fair value table.
+[LLM_FLAG] net_derivative_position changed from 415.0 to -3.863: consistent with total_derivative_asset correction above; company now has net derivative liabilities of $3.863M.
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed from 7.6 to 0: all commodity swap cash flow hedges expired during 2024; company confirms no outstanding cash flow hedges at June 30, 2026 or Dec 31, 2025.
+[LLM_FLAG] prior equity_derivatives_notional was 'Yes' (string) but no equity derivatives are mentioned in this filing; set to null.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($415M)
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($415M)

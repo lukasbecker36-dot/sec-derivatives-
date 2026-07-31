@@ -1,3 +1,27 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($376M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($376M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $356M → $11M (-96.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_liability: was $337M, now missing
+[NUMERIC] net_derivative_position: $18M → $11M (-40.1%) — exceeds 20% threshold
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($8M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $8M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $8M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] notional_values: was $0M, now missing
+[DISAPPEARED_FIELD] fair_values: was $-16M, now missing
+[DISAPPEARED_FIELD] settlement_amounts: was $-34M, now missing
+[DISAPPEARED_FIELD] aocl_changes: was $0M, now missing
+[DISAPPEARED_FIELD] subsequent_events: was $0M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity: was $0M, now missing
+[VALIDATION] Likely extraction failure: 11/13 previously-populated fields are now null (total_derivative_liability, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct...)
+[LLM_FLAG] total_derivative_asset changed from 355.53 to 10.977 (>97% decrease). Prior value of 355.53 appears to have been the total notional ($355,526 thousands) rather than the fair value. Current value of 10.977 is the correctly extracted fair value in other current assets.
+[LLM_FLAG] total_derivative_liability changed from 337.18 to null. Prior value of 337.18 appears to have been the designated notional ($337,183 thousands) rather than a derivative liability amount. No derivative liabilities are disclosed for June 30, 2026.
+[LLM_FLAG] net_derivative_position changed from 18.34 to 10.977 (>50% decrease). See notes on prior value methodology issues.
+[LLM_FLAG] equity_derivatives_notional prior was 'Yes' but no equity derivatives are disclosed in this filing. Company uses only FX derivatives.
+
 === 10-K | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($356M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($337M)
