@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NUMERIC] cash_flow_hedge_aoci: $2,500M → $-67M (-102.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $88M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] fx_forward_fair_value: was $0M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity: was $88M, now missing
+[DISAPPEARED_FIELD] treasury_lock_notional: was $-88M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/9 previously-populated fields are now null (fixed_rate_notes_billion, equity_sensitivity_10pct, fx_forward_fair_value, fx_sensitivity, treasury_lock_notional...)
+[LLM_FLAG] FX forward contract notional amounts not disclosed in this section; only stated that AOCI impacts were 'not material'
+[LLM_FLAG] Treasury lock derivatives ($2,500M notional) were settled in Q4 2025 — no outstanding IR derivatives as of June 30, 2026
+[LLM_FLAG] cash_flow_hedge_aoci reported as after-tax settlement loss on treasury locks being amortized; prior was 2500.0 — significant change if prior represented something different
+[LLM_FLAG] treasury_lock_settlement_loss changed from 0.0 to -88.0 (new settlement loss recorded)
+[LLM_FLAG] floating_rate_exposure changed from 0.0 to 2468.2 (new Delayed Draw Term Loan borrowings in H1 2026)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($2,500M)
 [NUMERIC] cash_flow_hedge_aoci: $2,500M → $88M (-96.5%) — exceeds 20% threshold

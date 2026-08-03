@@ -20,7 +20,9 @@
   },
   "idiosyncrasies": {
     "recurring_phrases": [
-      "unrealized gain"
+      "unrealized gain",
+      "net investment hedge",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -86,6 +88,18 @@
       ],
       "fields_extracted": 0,
       "fields_null": 19
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-03T09:24:16Z",
+      "sections_found": [
+        "financial_instruments",
+        "market_risk"
+      ],
+      "fields_extracted": 14,
+      "fields_null": 11
     }
   ]
 }

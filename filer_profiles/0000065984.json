@@ -15,7 +15,13 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "economic hedge",
+      "interest rate swap",
+      "mark-to-market",
+      "unrealized gain",
+      "designated as hedging"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -75,6 +81,18 @@
       ],
       "fields_extracted": 0,
       "fields_null": 8
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-03T09:24:16Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 6,
+      "fields_null": 14
     }
   ]
 }

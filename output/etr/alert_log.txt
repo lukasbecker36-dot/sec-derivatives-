@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,100M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($4M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($69M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $1,100M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $12,506M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $16M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $8M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $8M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 7/8 previously-populated fields are now null (cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_forwards_outstanding, fx_transaction_gain_loss, ir_sensitivity_100bp...)
+[LLM_FLAG] total_derivative_asset changed from $0M (prior) to $73M - significant increase driven by FTR assets ($64M net) and IR swap assets ($9M net)
+[LLM_FLAG] equity_derivatives_notional prior was 'Yes' but no equity derivatives are mentioned in this filing - prior value appears erroneous
+[LLM_FLAG] cash_flow_hedge_aoci prior was $1,100M but all derivatives in this section are described as 'not designated as hedging instruments' - prior value may be erroneous or from a different section
+[LLM_FLAG] expected_12mo_reclass_from_aoci prior was $12,505.9M which appears implausibly large for Entergy - likely an erroneous prior extraction
+[LLM_FLAG] Commodity notional not available in dollar terms; only physical volumes stated (9,124,250 MMBtu gas swaps; 131,545 GWh financial transmission rights)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
 [NEW_FIELD] ir_swap_notional: appeared for first time ($1,100M)

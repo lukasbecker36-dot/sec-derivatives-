@@ -17,7 +17,9 @@
   "idiosyncrasies": {
     "recurring_phrases": [
       "foreign exchange forward",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "net investment hedge",
+      "cash flow hedge"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -78,6 +80,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 13
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-03T09:24:16Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 6,
+      "fields_null": 20
     }
   ]
 }

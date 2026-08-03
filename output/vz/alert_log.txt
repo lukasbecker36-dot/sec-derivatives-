@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($40,773M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($600M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($422M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $590M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $590M, now missing
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($82M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $570M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $570M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $84M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (total_derivative_asset, net_derivative_position, fx_transaction_gain_loss, fx_sensitivity_10pct, marketable_equity_value...)
+[LLM_FLAG] New equity derivative position: Variable Prepaid Forward with $422M notional entered May 2026 to hedge marketable equity securities ($546M fair value); VZ received $358M prepayment
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($590M)
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($590M)

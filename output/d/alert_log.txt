@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($108M)
+[DISAPPEARED_FIELD] fx_designated_notional: was $1M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $1M, now missing
+[NEW_FIELD] ir_swap_notional: appeared for first time ($9,400M)
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $31M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $40M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $2M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $30M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $12M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($108M)
+[NUMERIC] fx_sensitivity_10pct: $10M → $14M (+40.0%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 7/8 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, commodity_derivatives_notional, total_derivative_liability, net_derivative_position...)
+[LLM_FLAG] fx_derivatives_notional reported in EUR (€0.1 billion); approximate USD conversion used (~$108M). Prior values showed ~$1M each for designated/non-designated - large discrepancy likely due to CVOW project FX hedges ramping
+[LLM_FLAG] IR swap notional of $9,400M is a new field not present in prior_values
+[LLM_FLAG] Section text is from market risk quantitative disclosures rather than derivatives footnote balance sheet tables - derivative asset/liability, AOCI, and reclassification amounts not available in this section
+[LLM_FLAG] fx_sensitivity_10pct changed from $10M (prior) to $14M (current) - 40% increase, below 50% threshold
+[LLM_FLAG] ir_sensitivity_100bp requested but text only discloses 10% rate change sensitivity ($294M for Dominion Energy IR derivatives), not 100bp - field left null
+[LLM_FLAG] Commodity price sensitivity for Dominion Energy jumped from $15M (Dec 2025) to $108M (Jun 2026) - a 620% increase suggesting substantial increase in commodity derivative positions
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [NUMERIC] total_derivative_liability: $301M → $40M (-86.7%) — exceeds 20% threshold

@@ -1,3 +1,31 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
+[NUMERIC] total_cash_equivalents_fv: $1,113M → $1,356M (+21.8%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] total_marketable_securities_fv: $1M → $0M
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($39M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($97M)
+[DISAPPEARED_FIELD] has_derivatives: was $1,027M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional: was $7M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $153M, now missing
+[NEW_FIELD] total_derivative_asset: appeared for first time ($39M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($97M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-58M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-21M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-18M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $7M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $153M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-146M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $33M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $-27M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 10/12 previously-populated fields are now null (gross_unrealized_gains_debt, has_derivatives, ir_swap_notional, commodity_derivatives_notional, fx_transaction_gain_loss...)
+[LLM_FLAG] total_cash_equivalents_fv: prior 1113.0, current 1356 (22% increase)
+[LLM_FLAG] total_marketable_securities_fv: prior 1.0, current 0 (decreased to zero but amounts trivial)
+[LLM_FLAG] fi_fx_derivatives_notional: aggregate notional of $1,041M is reported for all derivatives combined (FX + commodity), not split by type -- cannot isolate FX-only notional
+[LLM_FLAG] ir_swap_notional: prior was 7.0 but no interest rate swaps mentioned in current period
+[LLM_FLAG] commodity_derivatives_notional: prior was 153.0 but current period only reports aggregate notional of $1,041M (FX + commodity combined) -- cannot isolate commodity-only notional
+[LLM_FLAG] fx_derivatives_notional: cannot be separated from the aggregate $1,041M notional that includes both FX and commodity derivatives
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($1,113M)
 [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1M)
