@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-04 ===
+[DISAPPEARED_FIELD] fx_designated_notional: was $31M, now missing
+[NUMERIC] ir_swap_notional: $2,026M → $940M (-53.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $31M → $45M (+45.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $2M → $126M (+6200.0%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($-81M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $31M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $31M, now missing
+[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (fx_designated_notional, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci)
+[LLM_FLAG] fx_designated_notional: prior was $31M but no FX derivatives are mentioned in this filing at all — possible prior value was erroneous or FX hedging program was discontinued
+[LLM_FLAG] ir_swap_notional: $940M vs prior $2,026M is a 53.6% decrease — verify prior value correctness (2026 may have been a year misread as a notional amount)
+[LLM_FLAG] total_derivative_liability: $126M vs prior $2M is a >50x increase — prior value likely from a different scope or extraction error; current $126M is clearly stated in the table
+[LLM_FLAG] total_derivative_asset and total_derivative_liability reflect commodity derivatives only (from the fair value table); interest rate swap fair values are not separately quantified as assets/liabilities in this section
+[LLM_FLAG] net_derivative_position of -$81M is computed from commodity derivatives only; does not include the IR swap position whose balance sheet carrying value is not disclosed here
+[LLM_FLAG] commodity_derivatives_notional is null because volumes are disclosed in physical units (gallons, MMBtu, MWh) rather than dollar notional amounts
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($31M)

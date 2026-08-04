@@ -18,7 +18,10 @@
     "recurring_phrases": [
       "cash flow hedging",
       "unrealized gain",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "cash flow hedge",
+      "notional amount",
+      "designated as hedging"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -78,6 +81,18 @@
         "market_risk"
       ],
       "fields_extracted": 5,
+      "fields_null": 8
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-04T09:25:57Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 17,
       "fields_null": 8
     }
   ]

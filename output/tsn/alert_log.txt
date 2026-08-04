@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-27 | Processed 2026-08-04 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($288M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($50M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($17M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($33M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-12M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-4M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $41M, now missing
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+[LLM_FLAG] fx_sensitivity_10pct: prior value was $41M but no FX sensitivity analysis is disclosed in the current filing's market risk section
+
 === 10-Q | Period ending 2026-03-28 | Processed 2026-06-04 ===
 [NUMERIC] fx_sensitivity_10pct: $10M → $41M (+310.0%) — exceeds 20% threshold
 

@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-04 ===
+[NUMERIC] fx_derivatives_notional: $9,300M → $13,000M (+39.8%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $2,400M → $3,800M (+58.3%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $6,900M → $9,200M (+33.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $155M → $279M (+80.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-183M → $-5M (+97.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $10M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $24M → $68M (+183.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[LLM_FLAG] fx_designated_notional increased 58% from prior (2,400 -> 3,800). Cash flow hedge FX forward notional grew from $2.5B (Dec 2025) to $3.8B (Jun 2026), reflecting increased hedging of anticipated intercompany transactions.
+[LLM_FLAG] total_derivative_asset increased 80% from prior (155 -> 279). Driven by large swing in FX contract fair values: FX contract assets rose from $61M to $260M as of June 30, 2026 per the fair value table, consistent with favorable FX rate moves during the period.
+[LLM_FLAG] net_derivative_position changed from -183 to -5 (97% change in absolute terms). Derivative assets rose sharply ($91M to $279M) while liabilities fell ($540M to $284M), driven by FX rate movements reversing the prior net liability position.
+[LLM_FLAG] expected_12mo_reclass_from_aoci increased 183% from prior (24 -> 68). Reflects $45M expected reclass for FX cash flow hedges plus $23M for IR swap cash flow hedges, up from $24M prior, consistent with the new $750M IR swap cash flow hedge position and larger FX hedge book.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NUMERIC] ir_swap_notional: $1,800M → $4,080M (+126.7%) — exceeds 20% threshold
 [NUMERIC] total_derivative_asset: $91M → $155M (+70.3%) — exceeds 20% threshold

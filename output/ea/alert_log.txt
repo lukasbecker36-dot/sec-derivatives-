@@ -1,3 +1,37 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-04 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,000M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($2,102M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($898M)
+[NUMERIC] total_derivative_asset: $2,210M → $50M (-97.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $2,004M → $25M (-98.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $1,192M → $25M (-97.9%) — exceeds 20% threshold
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($13M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($3,000M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $3,174M, now missing
+[NUMERIC] ir_sensitivity_100bp: $1,879M → $1M (-99.9%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $1,295M → $292M (-77.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-12M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $36M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] cash_flow_hedge_sensitivity: appeared for first time ($204M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($1M)
+[DISAPPEARED_FIELD] hedge_designation: was $198M, now missing
+[NEW_FIELD] comprehensive_income_derivatives: appeared for first time ($25M)
+[NEW_FIELD] short_term_investments_value: appeared for first time ($100M)
+[VALIDATION] Likely extraction failure: 5/10 previously-populated fields are now null (fx_transaction_gain_loss, fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct, hedge_designation)
+[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 1,879 to 1 (0x)
+[LLM_FLAG] total_derivative_asset changed from 2210.0 to 50 (>50% decrease) -- prior value appears implausible for EA; likely prior data error or different issuer
+[LLM_FLAG] total_derivative_liability changed from 2004.0 to 25 (>50% decrease) -- prior value appears implausible for EA; likely prior data error or different issuer
+[LLM_FLAG] net_derivative_position changed from 1192.0 to 25 (>50% decrease) -- prior value appears implausible for EA; likely prior data error or different issuer
+[LLM_FLAG] equity_derivatives_notional prior was 'Yes' (non-numeric) but no equity derivatives found in current filing -- EA uses only FX forward contracts
+[LLM_FLAG] ir_sensitivity_100bp: prior value was 1879.0; current is ~$1M for 150bp -- prior value appears implausible for EA (a video game company); likely prior data error or different issuer
+[LLM_FLAG] fx_sensitivity_10pct: prior value was 1295.0; current is $292M (>50% decrease) -- prior value appears implausible for EA's hedging program
+[LLM_FLAG] fx_transaction_gain_loss: prior value was 3174.0 but no FX transaction gain/loss figure found in current market risk section
+[LLM_FLAG] fixed_rate_notes_billion: prior value was -12.0 (negative, implausible) but no fixed-rate notes disclosed in current filing
+[LLM_FLAG] hedge_designation: prior value was 198.0 (numeric, but this is a qualitative field) -- prior data appears corrupted
+[LLM_FLAG] ir_sensitivity_100bp reported as $1M but disclosure is for 150bp, not 100bp; linear approximation would give ~$0.67M for 100bp
+[LLM_FLAG] short_term_investments_value is inferred from the 1% = $1M sensitivity disclosure, not directly stated
+
 === 10-K | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,210M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($2,004M)
