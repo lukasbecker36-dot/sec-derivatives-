@@ -19,46 +19,71 @@
 [VALIDATION] Likely units mismatch: net_derivative_position changed from 3,010 to 30 (0x)
 [LLM_FLAG] Total notional amount of FX derivatives not designated increased significantly (previously high levels), indicating potential strategic shifts or increased business exposure.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,010M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($3,010M)
-[NUMERIC] ir_swap_notional: $25M → $700M (+2700.0%) — exceeds 20% threshold
-[NEW_FIELD] total_derivative_asset: appeared for first time ($118M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($145M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-27M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($11M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($18M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] ir_swap_notional increased significantly compared to prior period, indicating a potential shift in interest rate hedging strategy.
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-17 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $448M, now missing
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($5,603M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($2,593M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($3,010M)
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($1,600M)
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $74M → $118M (+59.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $1,300M → $1,600M (+23.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $74M → $118M (+59.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-67M → $-27M (+59.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $3M → $11M (+266.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-24M → $-18M (+25.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $186M → $137M (-26.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] New 2034 Senior Notes IR swap ($600M) added this period, increasing total IR swap notional from $1,000M to $1,600M.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap contracts ($491M) designated as fair value hedges of intercompany FX-denominated debt; included in fx_derivatives_notional and fx_designated_notional.
+[HISTORICAL] [LLM_FLAG] Net investment hedges ($1,077M) include both FX forwards and cross-currency swaps per December 31, 2025 disclosures.
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci is a net loss of $18M (negative reclassification to earnings).
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct covers FX forward portfolio only; cross-currency swap sensitivity is separately $85M for 10% USD weakening (same as prior periods).
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($448M)
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $6,313M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $3,063M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $3,250M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $1,000M, now missing
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $216M → $141M (-34.7%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($6,152M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($2,838M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($3,314M)
+[HISTORICAL] [NUMERIC] ir_swap_notional: $1,000M → $1,300M (+30.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($74M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($141M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-67M)
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($3M)
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-24M)
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $43M → $63M (+46.5%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/9 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional)
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives not disclosed in this fair value note; they may appear in a separate derivatives note.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap contracts appear on both asset ($64M) and liability ($1M) sides, indicating multiple positions with different settlement values.
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional is a constructed total: FX cash flow hedges ($1,270M) + net investment hedges ($1,077M, includes both FX forwards and cross-currency swaps combined) + cross-currency swap fair value hedges ($491M) + not-designated FX forwards ($3,314M). Individual splits within the net investment hedge bucket are not disclosed.
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci reported as -24 (net loss) for cash flow hedges; a separate $14M net gain is expected for fair value hedges from AOCI — schema field assumed to target cash flow hedges only.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap contracts ($491M) classified within FX derivatives per schema instruction combining forwards + options + cross-currency swaps.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap sensitivity ($85M for 10% USD weakening) is disclosed separately from FX forward sensitivity ($186M); the $186M figure covers FX forward contracts only, not cross-currency swaps.
+[HISTORICAL] [LLM_FLAG] IR sensitivity figure of $63M relates specifically to interest rate derivative instruments, not to the total debt portfolio.
+[HISTORICAL] [LLM_FLAG] Sensitivity figures are reported as decreases in fair value (adverse move scenario), presented as positive magnitudes in the text.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] ir_swap_notional: was $25M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_swap_notional)
+=== 10-K | Period ending 2025-06-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $3,916M → $3,063M (-21.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $119M → $82M (-31.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $171M → $216M (+26.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $7,620M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $3,916M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $3,704M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $119M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $171M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-52M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $50M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $13M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 8/17 previously-populated fields are now null (fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional, total_derivative_asset, total_derivative_liability...)
+[HISTORICAL] [LLM_FLAG] Section text provided was the long-term debt note footnotes leading into Note 13; the Note 13 derivative tables were not included in the section_text snippet, so most numeric fields cannot be extracted.
+[HISTORICAL] [LLM_FLAG] IR swap notional of $1,000M inferred from debt note footnote reference to the same swaps in Note 13.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct covers FX forward portfolio only; cross-currency swap sensitivity is separately $85M for 10% USD weakening as of June 30, 2025.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($25M)
-
-=== 10-K | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_swap_notional)
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
-[LLM_FLAG] This is a reference section only - actual market risk quantitative data is incorporated by reference to Item 2. The detailed quantitative metrics cannot be extracted from this excerpt alone.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
-[LLM_FLAG] This section only provides a cross-reference to Item 7 without disclosing specific market risk quantitative data. Actual market risk metrics must be extracted from Item 7 of the 10-K filing.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [LLM_FLAG] Cross-currency swap contracts ($491M) classified as fair value hedges on intercompany FX debt; included in both fx_designated_notional and fx_derivatives_notional as they hedge FX exposure.
+[HISTORICAL] [LLM_FLAG] Net investment hedges ($1,296M) comprise both FX forwards and cross-currency swaps; total included in fx_designated_notional.
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci reflects cash flow hedge reclassification of $13M; fair value hedge AOCI expected reclassification is separately $14M.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct covers FX forward portfolio only; cross-currency swap sensitivity is separately $85M for 10% USD weakening as of March 31, 2025.

@@ -1,47 +1,64 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,430M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($102M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,319M)
-[NUMERIC] total_derivative_asset: $2,919M → $7M (-99.7%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $1,794M → $-138M (-107.7%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $8M, now missing
-[DROPPED_TO_ZERO] ir_sensitivity_100bp: $128M → $0M
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-120M, now missing
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 3/7 previously-populated fields are now null (fx_transaction_gain_loss, fx_sensitivity_10pct, equity_sensitivity_10pct)
-[VALIDATION] Likely units mismatch: total_derivative_asset changed from 2,919 to 7 (0x)
-[LLM_FLAG] Total derivative asset decreased by more than 50% compared to the previous period (2919.0 million in the prior period).
-[LLM_FLAG] Total derivative liability increased by more than 50% compared to the previous period (126.0 million in the prior period).
-[LLM_FLAG] Net derivative position shows a drastic change to a liability of 138.0 million, compared to a net asset of 1794.0 million in the prior period.
-[LLM_FLAG] ir_sensitivity_100bp is 100% lower than prior period indicating cessation of interest rate hedging.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-24 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $2,919M → $4,749M (+62.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $1,125M → $3,430M (+205.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $1,794M → $1,319M (-26.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $2,919M → $4,749M (+62.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $1,125M → $3,430M (+205.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $1,794M → $1,319M (-26.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text amounts are in thousands; converted to millions here
+[HISTORICAL] [LLM_FLAG] SIGNIFICANT CHANGE: Designated cross-currency swap notional tripled from $1,128.3M (June 30, 2025) to $3,430.5M (March 31, 2026), with maturity extended to January 2036 vs prior December 2029 — indicates major new hedging transactions entered during the period
+[HISTORICAL] [LLM_FLAG] No interest rate hedging instruments present
+[HISTORICAL] [LLM_FLAG] Large increase in designated cross-currency swap notional to $3,430.5M from $1,128.3M — company entered new net investment/fair value hedges with maturities extended to January 2036
+[HISTORICAL] [LLM_FLAG] USD/SGD cross-currency swaps newly added per market_risk section ($2,326.6M notional at March 31, 2026)
+[HISTORICAL] [LLM_FLAG] New USD/SGD cross-currency swap appears in March 31, 2026 table with $2,326.6M notional — a major new position consistent with large increase in designated notional
+[HISTORICAL] [LLM_FLAG] Market risk section provides FX notional table by currency pair but no aggregate sensitivity figures
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,919M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($126M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,794M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($8M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($128M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-120M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] The notional value of outstanding cross-currency swaps has decreased by more than 50% compared to the prior period, which may indicate a significant shift in hedging strategy.
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-24 ===
+[HISTORICAL] [LLM_FLAG] Section text amounts are in thousands; converted to millions here
+[HISTORICAL] [LLM_FLAG] Non-designated derivative assets reclassified to current assets (prepaid taxes and other current assets) vs prior quarters where classified as non-current
+[HISTORICAL] [LLM_FLAG] No interest rate hedging instruments present
+[HISTORICAL] [LLM_FLAG] Note that the December 31, 2025 filing does not show designated derivative assets (cross-currency swaps show $0 FV asset), only non-designated assets
+[HISTORICAL] [LLM_FLAG] SGD/USD notional increased to $720M at December 31, 2025 from $580M at September 30, 2025
+[HISTORICAL] [LLM_FLAG] Market risk section provides FX notional table by currency pair but no aggregate sensitivity figures
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-24 ===
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $1,410M → $1,853M (+31.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($8M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($137M)
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $1,410M → $1,853M (+31.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($8M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($137M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-129M)
+[HISTORICAL] [LLM_FLAG] Section text amounts are in thousands; converted to millions here
+[HISTORICAL] [LLM_FLAG] Significant increase in total derivative liabilities vs prior quarters driven by both fair value and net investment hedge swaps
+[HISTORICAL] [LLM_FLAG] No interest rate hedging instruments present
+[HISTORICAL] [LLM_FLAG] Significant increase in non-designated hedge notional vs prior period ($1,852.8M vs $1,410.2M at June 30, 2025)
+[HISTORICAL] [LLM_FLAG] Total derivative liability substantially higher than prior period due to cross-currency swap FV changes
+[HISTORICAL] [LLM_FLAG] AUD/USD notional increased significantly to $675M at September 30, 2025 from $340M at June 30, 2025
+[HISTORICAL] [LLM_FLAG] Market risk section provides FX notional table by currency pair but no aggregate sensitivity figures
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[LLM_FLAG] FX forwards outstanding is zero, indicating no active hedging for foreign currency risks.
+=== 10-K | Period ending 2025-06-30 | Processed 2026-06-24 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $10M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $48M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $10M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $48M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-38M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/12 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability, total_derivative_asset, total_derivative_liability, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] 10-K section uses a currency-pair maturity table with net fair values per contract rather than the gross derivative asset/liability balance sheet table used in quarterly filings; gross totals cannot be derived
+[HISTORICAL] [LLM_FLAG] No interest rate hedging agreements — explicitly stated
+[HISTORICAL] [LLM_FLAG] Section amounts are in thousands where stated; notional amounts converted to millions
+[HISTORICAL] [LLM_FLAG] 10-K format places gross derivative FV table in financial statements notes (not in Item 7A section_text provided); total_derivative_asset and total_derivative_liability cannot be extracted without fabrication
+[HISTORICAL] [LLM_FLAG] All FX derivatives are fair value hedges, net investment hedges, or non-designated; no cash flow hedges
+[HISTORICAL] [LLM_FLAG] Market risk section provides FX notional table by currency pair but no aggregate sensitivity figures
+[HISTORICAL] [LLM_FLAG] Interest rate risk disclosed qualitatively only (not material)
+[HISTORICAL] [LLM_FLAG] 10-K includes additional table of net FX exposures by functional currency not present in 10-Q format
 
-=== 10-K | Period ending 2025-06-30 | Processed 2026-06-07 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NUMERIC] fx_forwards_outstanding: $2,919M → $4,749M (+62.7%) — exceeds 20% threshold
-[LLM_FLAG] fx_forwards_outstanding increased significantly from ~$2,919M (Dec 2025) to ~$4,749M (Mar 2026) — >50% increase driven by new USD/SGD contract of $2,326.6M
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-24 ===
+[HISTORICAL] [LLM_FLAG] Section text amounts are in thousands; converted to millions here
+[HISTORICAL] [LLM_FLAG] Designated cross-currency swaps carry zero fair value asset; all asset value is from non-designated instruments
+[HISTORICAL] [LLM_FLAG] No interest rate hedging instruments present
+[HISTORICAL] [LLM_FLAG] All FX derivatives are either fair value hedges, net investment hedges, or non-designated; no cash flow hedges disclosed
+[HISTORICAL] [LLM_FLAG] Notional values are in thousands in filing; converted to millions here
+[HISTORICAL] [LLM_FLAG] Market risk section provides FX notional table by currency pair but no single aggregate sensitivity figure
+[HISTORICAL] [LLM_FLAG] Interest rate risk disclosed qualitatively only (not material)
+[HISTORICAL] [LLM_FLAG] Fixed-rate notes value sourced from debt note context, not this section directly

@@ -19,72 +19,74 @@
 [LLM_FLAG] sensitivity_10pct_change total of $77M vs prior of $127M (39% decrease). Within 50% threshold but notable decline in provisional pricing exposure.
 [LLM_FLAG] fx_transaction_gain_loss not found in this section; prior was 103.0. May be reported elsewhere in the filing.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_designated_notional: appeared for first time ($80M)
-[NUMERIC] total_derivative_asset: $67M → $103M (+53.7%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $60M → $3M (-95.0%) — exceeds 20% threshold
-[NEW_FIELD] net_derivative_position: appeared for first time ($100M)
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $0M, now missing
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $262M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $1M, now missing
-[NUMERIC] fx_sensitivity_10pct: $261M → $127M (-51.3%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $7M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $45M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] provisionally_priced_sales_volume: appeared for first time ($131M)
-[NUMERIC] sensitivity_10pct_change: $498M → $41M (-91.8%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] hedging_instruments_description: was $141M, now missing
-[VALIDATION] Likely extraction failure: 7/14 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fixed_rate_notes_billion, marketable_equity_value...)
-[LLM_FLAG] Total derivative asset increased by more than 50% from prior period (from $67.0M to $103.0M).
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($8,775M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($232M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($256M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($3M)
+[HISTORICAL] [NUMERIC] total_derivative_liability: $1M → $3M (+200.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $32M → $45M (+40.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $498M → $127M (-74.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section extracted is Note 10 (Fair Value Accounting), not the full derivatives note (Note 11); FX/IR notional details are not present in this section.
+[HISTORICAL] [LLM_FLAG] Cash and cash equivalents includes short-term deposits with original maturity of three months or less per footnote.
+[HISTORICAL] [LLM_FLAG] 'Marketable equity and other securities' label includes 'other' — may not be purely equity securities.
+[HISTORICAL] [LLM_FLAG] FX hedge notional amounts disclosed in AUD/CAD only (A$1,734 capex + A$4,002 opex + C$1,088 opex); USD equivalents not stated.
+[HISTORICAL] [LLM_FLAG] Contingent consideration assets ($20 current) are no longer classified as derivatives following ASU 2025-07 adoption at December 31, 2025, but appear in derivative assets table here.
+[HISTORICAL] [LLM_FLAG] Section text is truncated at the end; the hedging table with program details is complete but subsequent text is cut off.
+[HISTORICAL] [LLM_FLAG] AOCI of $156 represents total AOCI, which may include non-hedge items; hedge instruments AOCI component not separately stated in this extract.
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $127 is quarterly impact to Costs applicable to sales, a significant increase vs $76 in Q1 2025.
+[HISTORICAL] [LLM_FLAG] Sensitivity analyses: Cadia PPA -$40 and FX cash flow hedges -$155 fair value decrease from 10% adverse move at March 31, 2026.
+[HISTORICAL] [LLM_FLAG] Argentine peso float arrangement described in detail; IMF 48-month $20bn extended arrangement approved April 2025.
+[HISTORICAL] [LLM_FLAG] AUD/USD short-term rate assumption moved to $0.70 (same as long-term) reflecting AUD strengthening.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($67M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($60M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($262M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($1M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($261M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($7M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($45M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NUMERIC] fx_sensitivity_10pct: $10M → $498M (+4880.0%) — exceeds 20% threshold
-[NEW_FIELD] provisionally_priced_sales_volume: appeared for first time ($141M)
-[NEW_FIELD] provisional_average_price: appeared for first time ($4,332M)
-[NEW_FIELD] sensitivity_10pct_change: appeared for first time ($42M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-23 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $415M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $15M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $356M → $262M (-26.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $7M → $1M (-85.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $349M → $261M (-25.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $20M → $137M (+585.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($32M)
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $75M → $498M (+564.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX hedge notional amounts disclosed in AUD/CAD only (A$1,734 capex + A$4,002 opex + C$1,088 opex); USD equivalents not stated.
+[HISTORICAL] [LLM_FLAG] Contingent consideration assets ($40 total: $20 current + $20 non-current) reclassified from derivative accounting due to early adoption of ASU 2025-07; these are no longer treated as derivatives at December 31, 2025.
+[HISTORICAL] [LLM_FLAG] SCFA derivative (non-designated) was sold in Q2 2024; no longer outstanding.
+[HISTORICAL] [LLM_FLAG] Expected 12-month AOCI reclassification is net of interest rate contracts (-$3), FX hedges (+$45), and Cadia PPA (-$10).
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $498 is total annual impact to Costs applicable to sales (annual 10-K figure, not per ounce or per quarter).
+[HISTORICAL] [LLM_FLAG] Sensitivity analyses: Cadia PPA -$40 and FX cash flow hedges -$220 fair value decrease from 10% adverse move at December 31, 2025.
+[HISTORICAL] [LLM_FLAG] Long-term gold price assumption raised to $2,500/oz vs. $1,900/oz in Q1 2025.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($127M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] provisionally_priced_sales_volume: appeared for first time ($131M)
-[NEW_FIELD] provisional_average_price: appeared for first time ($4,657M)
-[NUMERIC] sensitivity_10pct_change: $498M → $41M (-91.8%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] hedging_instruments_description: was $141M, now missing
-[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (equity_sensitivity_10pct, hedging_instruments_description)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $491M → $356M (-27.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $17M → $7M (-58.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $474M → $349M (-26.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($20M)
+[HISTORICAL] [LLM_FLAG] FX notional amounts disclosed in AUD and CAD (not USD); USD equivalent not derivable from section text — fi_fx_derivatives_notional set to null.
+[HISTORICAL] [LLM_FLAG] IR swap contracts mentioned but were previously settled; no outstanding notional at period end.
+[HISTORICAL] [LLM_FLAG] Section text is extracted from the wrong note area (Note 15-18 rather than Note 11); derivative fair value totals derived from balance sheet data in the locate file windows.
+[HISTORICAL] [LLM_FLAG] Total derivative asset of $356 is balance sheet line item and may include both hedging instruments and contingent consideration assets.
+[HISTORICAL] [LLM_FLAG] Debt redemption table shows nine months ended September 30, 2025 senior note redemptions totaling $3,376 settled notional — these are debt, not derivatives.
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $75 is per ounce increase to Costs applicable to sales, not a dollar net income impact.
+[HISTORICAL] [LLM_FLAG] Sensitivity analyses: Cadia PPA -$40 and FX cash flow hedges -$250 fair value decrease from 10% adverse move at September 30, 2025.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] fx_sensitivity_10pct: $10M → $498M (+4880.0%) — exceeds 20% threshold
-[NEW_FIELD] provisionally_priced_sales_volume: appeared for first time ($141M)
-[NEW_FIELD] provisional_average_price: appeared for first time ($4,332M)
-[NEW_FIELD] sensitivity_10pct_change: appeared for first time ($42M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $364M → $491M (+34.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $98M → $17M (-82.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $364M → $491M (+34.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $98M → $17M (-82.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $266M → $474M (+78.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX notional amounts disclosed in AUD and CAD (not USD); USD equivalent not derivable from section text — fi_fx_derivatives_notional set to null.
+[HISTORICAL] [LLM_FLAG] IR swap contracts mentioned but were previously settled; no outstanding notional at period end.
+[HISTORICAL] [LLM_FLAG] Section text is truncated; notional amount tables for FX hedges are absent.
+[HISTORICAL] [LLM_FLAG] Total derivative asset of $491 includes contingent consideration assets ($296) which are non-hedging items; hedging instruments alone total $195 asset.
+[HISTORICAL] [LLM_FLAG] Non-current derivative liability is $5 (contingent consideration only); hedging instrument liabilities are entirely current ($10).
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $74 is per ounce increase to Costs applicable to sales, not a dollar net income impact.
+[HISTORICAL] [LLM_FLAG] Sensitivity analyses: Cadia PPA -$38 and FX cash flow hedges -$274 fair value decrease from 10% adverse move at June 30, 2025.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DROPPED_TO_ZERO] fx_sensitivity_10pct: $10M → $0M
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[LLM_FLAG] FX CAS sensitivity changed to total $498M (previously reported per ounce: ~$75-76); different metric in 10-K vs 10-Q
-[LLM_FLAG] Silver sensitivity tripled from $9M (Q1) to $33M (year-end) driven by silver price surge to $70.31/oz
-[LLM_FLAG] Long-term gold price assumption raised to $2,500 from $2,100 mid-year
-[LLM_FLAG] Short-term gold assumption now $4,135 vs $2,860 at start of year
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[LLM_FLAG] Silver sensitivity nearly doubled from $9M (Q1) to $17M (Q3) driven by higher provisional prices ($46.39 vs $34.57)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[LLM_FLAG] FX hedge sensitivity increased from $211M (Q1) to $274M (Q2), suggesting larger hedge book
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [LLM_FLAG] FX notional amounts disclosed in AUD and CAD (not USD); USD equivalent not derivable from section text — fi_fx_derivatives_notional set to null.
+[HISTORICAL] [LLM_FLAG] IR swap contracts mentioned but were previously settled; no outstanding notional at period end.
+[HISTORICAL] [LLM_FLAG] Section text is truncated and does not include the full Note 11 (notional amount tables for FX hedges are missing); total derivative asset computed from balance sheet line items.
+[HISTORICAL] [LLM_FLAG] Total derivative asset of $364 includes contingent consideration assets ($225) which are non-hedging items; hedging instruments alone total $139 asset.
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $76 is expressed as increase to Costs applicable to sales per ounce, not a dollar change in net income.
+[HISTORICAL] [LLM_FLAG] No FX derivative notional explicitly stated in market risk section; sensitivity analyses for Cadia PPA: -$37 and FX cash flow hedges: -$211 fair value impact from 10% adverse move.

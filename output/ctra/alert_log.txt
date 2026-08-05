@@ -1,63 +1,79 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($-57M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-210M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $150M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $150M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
-[DISAPPEARED_FIELD] hedging_strategy: was $0M, now missing
-[DISAPPEARED_FIELD] governance: was $0M, now missing
-[VALIDATION] Likely extraction failure: 5/13 previously-populated fields are now null (fx_transaction_gain_loss, fx_sensitivity_10pct, marketable_equity_value, hedging_strategy, governance)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-15 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($294M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($387M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($231M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($324M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-93M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
+[HISTORICAL] [LLM_FLAG] Coterra uses commodity derivatives only (natural gas/oil); no FX or IR derivatives disclosed in this filing.
+[HISTORICAL] [LLM_FLAG] Net derivative liability position: $(93)M (assets $294M less liabilities $387M) — reversal from net asset position in Q3 2025.
+[HISTORICAL] [LLM_FLAG] Large swing in Level 3 derivative liabilities (from $6M at Dec 31, 2025 to $347M at Mar 31, 2026) alongside Level 3 assets growing to $294M; may reflect significant new commodity hedging positions or mark-to-market moves.
+[HISTORICAL] [LLM_FLAG] Commodity derivatives are the only derivative type used; no FX or IR swaps.
+[HISTORICAL] [LLM_FLAG] Notional amounts are in physical volumes (MBbl/MMBtu), not dollar millions — commodity_derivatives_notional set to null.
+[HISTORICAL] [LLM_FLAG] Fair values presented per instrument (net), not a gross offsetting balance sheet table.
+[HISTORICAL] [LLM_FLAG] Oil derivatives are heavily in-the-money for counterparties (net liability of -$324M on oil book) while gas derivatives are net assets (+$231M), reflecting lower oil prices relative to hedged levels.
+[HISTORICAL] [LLM_FLAG] No floating rate debt outstanding as of March 31, 2026 (term loan repaid); no interest rate sensitivity figure disclosed.
+[HISTORICAL] [LLM_FLAG] No FX or equity derivatives; commodity price risk is primary market risk.
+[HISTORICAL] [LLM_FLAG] All $3.5B of debt is now fixed-rate as of Q1 2026.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($150M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($150M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
+=== 10-K/A | Period ending 2025-12-31 | Processed 2026-06-15 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $238M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $236M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, fx_forwards_outstanding, ir_sensitivity_100bp...)
 
-=== 10-K/A | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-15 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $153M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $29M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $134M → $238M (+77.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $10M → $2M (-80.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $124M → $236M (+90.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Commodity derivatives are the only derivative type used; no FX or IR swaps.
+[HISTORICAL] [LLM_FLAG] Notional amounts are in physical volumes (MBbl/MMBtu), not dollar millions — commodity_derivatives_notional set to null.
+[HISTORICAL] [LLM_FLAG] Fair values presented per instrument (net), not a gross offsetting balance sheet table; oil subtotal $86M and natural gas net $150M confirmed by filing subtotals.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp reflects annual interest expense sensitivity (cash flow impact), not fair value change, on $300M floating rate term loan.
+[HISTORICAL] [LLM_FLAG] No FX or equity derivatives; commodity price risk is primary market risk.
+[HISTORICAL] [LLM_FLAG] 10-K filing for full year ended December 31, 2025.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-15 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $41M → $29M (-29.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $41M → $10M (-75.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $98M → $124M (+26.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $3M → $5M (+66.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Coterra uses commodity derivatives only (natural gas/oil); no FX or IR derivatives disclosed in this filing.
+[HISTORICAL] [LLM_FLAG] Net derivative asset position: $124M (assets $153M less liabilities $29M) — continued net asset position from Q2 2025.
+[HISTORICAL] [LLM_FLAG] All derivative fair values are measured under Level 2 and Level 3 inputs; no Level 1 derivative positions.
+[HISTORICAL] [LLM_FLAG] Commodity derivatives are the only derivative type used; no FX or IR swaps.
+[HISTORICAL] [LLM_FLAG] Notional amounts are in physical volumes (MBbl/MMBtu), not dollar millions — commodity_derivatives_notional set to null.
+[HISTORICAL] [LLM_FLAG] Fair values presented per instrument (net), not a gross offsetting balance sheet table; total_derivative_asset and total_derivative_liability are sums of positive/negative per-instrument values respectively.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp reflects annual interest expense sensitivity (cash flow impact), not fair value change, on $400M floating rate term loan.
+[HISTORICAL] [LLM_FLAG] No FX or equity derivatives; commodity price risk is primary market risk.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-15 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $49M → $139M (+183.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $148M → $41M (-72.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $49M → $139M (+183.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $148M → $41M (-72.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-99M → $98M (+199.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $2M → $3M (+50.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Coterra uses commodity derivatives only (natural gas/oil); no FX or IR derivatives disclosed in this filing.
+[HISTORICAL] [LLM_FLAG] Net derivative asset position: $98M (assets $139M less liabilities $41M) — a significant shift from Q1 2025 net liability of $(99)M.
+[HISTORICAL] [LLM_FLAG] All derivative fair values are measured under Level 2 and Level 3 inputs; no Level 1 derivative positions.
+[HISTORICAL] [LLM_FLAG] Commodity derivatives are the only derivative type used; no FX or IR swaps.
+[HISTORICAL] [LLM_FLAG] Net derivative position is net asset of $98M at June 30, 2025, compared to net liability of -$99M at March 31, 2025.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp of $3M is stated as annual increase based on $650M floating rate term loan balance at June 30, 2025.
+[HISTORICAL] [LLM_FLAG] No FX exposure or equity price risk.
 
-=== 10-K/A | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $5M, now missing
-[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
-[NUMERIC] ir_sensitivity_100bp: $3M → $5M (+66.7%) — exceeds 20% threshold
-[LLM_FLAG] IR_SENSITIVITY_100BP: Increased from $3.0M to $5.0M (67% increase). This is due to increased term loan borrowings from $0 to $400M outstanding as of Sept 30, 2025.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
-[NUMERIC] ir_sensitivity_100bp: $2M → $3M (+50.0%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp increased from $2.0M to $3.0M (50% increase); likely due to increased floating rate debt outstanding under term loan ($650M as of June 30, 2025)
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-15 ===
+[HISTORICAL] [LLM_FLAG] Coterra uses commodity derivatives only (natural gas/oil); no FX or IR derivatives disclosed in this filing.
+[HISTORICAL] [LLM_FLAG] All derivative fair values are measured under Level 2 and Level 3 inputs; no Level 1 derivative positions.
+[HISTORICAL] [LLM_FLAG] Net derivative liability position: $(99)M (assets $49M less liabilities $148M).
+[HISTORICAL] [LLM_FLAG] Commodity derivatives are the only derivative type used; no FX or IR swaps.
+[HISTORICAL] [LLM_FLAG] Notional amounts are in physical volumes (MBbl/MMBtu), not dollar millions — commodity_derivatives_notional set to null.
+[HISTORICAL] [LLM_FLAG] Net derivative asset/liability computed from gross offsetting table: $49M assets - $148M liabilities = -$99M.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp of $2M is per-quarter (three months ended March 31, 2025), not annualized.
+[HISTORICAL] [LLM_FLAG] No FX exposure or equity price risk — Coterra is a pure-play domestic E&P.

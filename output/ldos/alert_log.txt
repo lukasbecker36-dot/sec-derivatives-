@@ -1,52 +1,59 @@
-=== 10-Q | Period ending 2026-04-03 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_designated_notional: was $3M, now missing
-[DISAPPEARED_FIELD] ir_swap_notional: was $12M, now missing
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $1M, now missing
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $84M, now missing
-[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_designated_notional, ir_swap_notional, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci)
+=== 10-Q | Period ending 2026-04-03 | Processed 2026-07-17 ===
+[HISTORICAL] [DISAPPEARED_FIELD] debt_amount: was $4,600M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] variable_rate_exposure: was $500M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (debt_amount, variable_rate_exposure)
+[HISTORICAL] [LLM_FLAG] Section text shows fair value of debt ($6.3B at April 3, 2026) and notes receivable ($4M), but no derivative instruments — consistent with swaps having matured in August 2025
+[HISTORICAL] [LLM_FLAG] AOCI table in Note 6 shows residual $(3)M 'Unrecognized gain (loss) on derivative instruments' balance at April 3, 2026
 
-=== 10-K | Period ending 2026-01-02 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($12M)
-[NUMERIC] cash_flow_hedge_aoci: $4M → $1M (-75.0%) — exceeds 20% threshold
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($84M)
+=== 10-K | Period ending 2026-01-02 | Processed 2026-07-17 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $0M, now missing
+[HISTORICAL] [NEW_FIELD] debt_amount: appeared for first time ($4,600M)
+[HISTORICAL] [NEW_FIELD] variable_rate_exposure: appeared for first time ($500M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (total_derivative_asset, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] Section text provided is from the goodwill and intangible assets footnotes, not the Fair Value Measurements note; no financial instrument fair values are extractable from this text
+[HISTORICAL] [LLM_FLAG] Interest rate swap agreements matured in August 2025; no active derivatives as of January 2, 2026 period end
+[HISTORICAL] [LLM_FLAG] Section text is from MD&A (market risk discussion) which references Note 12—Derivative Instruments for further detail
+[HISTORICAL] [LLM_FLAG] IR swaps matured August 2025; no active hedging instruments at January 2, 2026 period end; $500M variable rate term loan is now unhedged
+[HISTORICAL] [LLM_FLAG] notional_amount and fair_value reflect historical (prior year) values only; current period has no active swaps
 
-=== 10-Q | Period ending 2025-10-03 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_designated_notional: $4M → $3M (-25.0%) — exceeds 20% threshold
-[NUMERIC] cash_flow_hedge_aoci: $1M → $4M (+300.0%) — exceeds 20% threshold
+=== 10-Q | Period ending 2025-10-03 | Processed 2026-07-17 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $500M, now missing
+[HISTORICAL] [DROPPED_TO_ZERO] total_derivative_asset: $1M → $0M
+[HISTORICAL] [DROPPED_TO_ZERO] net_derivative_position: $1M → $0M
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/5 previously-populated fields are now null (fi_ir_swap_notional, fi_total_derivative_asset, ir_swap_notional)
+[HISTORICAL] [LLM_FLAG] Section text is truncated; the fair value measurements note for October 3, 2025 likely shows no derivative line item (swaps matured August 2025)
+[HISTORICAL] [LLM_FLAG] Note 5 (derivatives_note) confirms zero fair value at Oct 3, 2025
+[HISTORICAL] [LLM_FLAG] Interest rate swap agreements matured in August 2025; as of October 3, 2025 fair value is zero
+[HISTORICAL] [LLM_FLAG] Nine-month OCI activity shown: Amount reclassified from AOCI to interest expense: $(4) million (nine months ended Oct 3, 2025)
 
-=== 10-Q | Period ending 2025-07-04 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] cash_flow_hedge_aoci: $5M → $1M (-80.0%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $12M, now missing
-[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (expected_12mo_reclass_from_aoci)
+=== 10-Q | Period ending 2025-07-04 | Processed 2026-07-17 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $3M → $1M (-66.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $3M → $1M (-66.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $3M → $1M (-66.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $2M, now missing
+[HISTORICAL] [LLM_FLAG] Swaps mature August 2025; fair value declining as maturity approaches
+[HISTORICAL] [LLM_FLAG] Swaps mature August 2025, shortly after the July 4, 2025 period end; $1M asset reflects near-expiry fair value
+[HISTORICAL] [LLM_FLAG] Fixed rate on swaps: 2.96%
 
-=== 10-Q | Period ending 2025-04-04 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_designated_notional: $500M → $4M (-99.2%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] ir_swap_notional: was $12M, now missing
-[VALIDATION] Likely units mismatch: fx_designated_notional changed from 500 to 4 (0x)
+=== 10-Q | Period ending 2025-04-04 | Processed 2026-07-17 ===
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($500M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($3M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $4M → $3M (-25.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $4M → $3M (-25.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($2M)
+[HISTORICAL] [DISAPPEARED_FIELD] notional_amount: was $500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fair_value: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] debt_amount: was $4,700M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] variable_rate_exposure: was $1,000M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (notional_amount, fair_value, debt_amount, variable_rate_exposure)
+[HISTORICAL] [LLM_FLAG] Swap maturity date is August 2025; at April 4, 2025 these are short-dated instruments
+[HISTORICAL] [LLM_FLAG] Fixed rate on swaps: 2.96%
 
-=== 10-Q | Period ending 2025-04-04 | Processed 2026-06-02 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4M, now missing
-[DISAPPEARED_FIELD] notional_amount: was $500M, now missing
-[DISAPPEARED_FIELD] fair_value: was $4M, now missing
-[DISAPPEARED_FIELD] debt_amount: was $4,700M, now missing
-[DISAPPEARED_FIELD] variable_rate_exposure: was $1,000M, now missing
-[DISAPPEARED_FIELD] foreign_currency_exposure: was $8M, now missing
-[VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, notional_amount, fair_value, debt_amount...)
-[LLM_FLAG] This filing section is extremely abbreviated and contains only a reference to prior period disclosures without substantive detail. All specific quantitative data points are unavailable in this excerpt.
-[LLM_FLAG] The filing explicitly states 'no material changes' from the 10-K for year ended January 3, 2025, indicating detailed data should be found in that document rather than this 10-Q.
-
-=== 10-K | Period ending 2025-01-03 | Processed 2026-06-02 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
-[NUMERIC] variable_rate_exposure: $500M → $1,000M (+100.0%) — exceeds 20% threshold
-[LLM_FLAG] fair_value decreased from $11 million to $4 million (63.6% decline) - likely due to market conditions and interest rate environment changes rather than structural change
-[LLM_FLAG] debt_amount increased from $4,600 million to $4,700 million (2.2% increase) - modest increase, plausible
-[LLM_FLAG] maturity_date not disclosed in current filing section - prior period showed August 2025; recommend checking Note 12 as referenced
-
-=== 10-Q | Period ending 2026-04-03 | Processed 2026-06-01 ===
-[LLM_FLAG] Interest rate swap agreements matured in August 2025, which is after the January 2, 2026 reporting date. The notional amount and fair value provided are as of January 3, 2025 (prior year end), not January 2, 2026 (current period end). Current period swap status is not explicitly disclosed.
-
+=== 10-K | Period ending 2025-01-03 | Processed 2026-07-17 ===
+[HISTORICAL] [LLM_FLAG] Section text provided is from the goodwill and intangible assets footnotes, not the Fair Value Measurements note; no financial instrument fair values are extractable from this text
+[HISTORICAL] [LLM_FLAG] Section text is from MD&A (market risk discussion), not the formal Note 12; values confirmed consistent with Note 12 reference in text
+[HISTORICAL] [LLM_FLAG] Swap covers $500M of the $1.0B variable rate exposure; the remaining $500M variable rate debt is unhedged
+[HISTORICAL] [LLM_FLAG] No quantified sensitivity amounts provided; company uses qualitative 'not significant' language

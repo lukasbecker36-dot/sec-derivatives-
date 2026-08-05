@@ -1,48 +1,26 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-04 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cash_equivalents_amount: was $2,500M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_forwards_outstanding, cash_equivalents_amount)
+[HISTORICAL] [LLM_FLAG] This section (Q1 2026 10-Q) discloses only money market funds ($200.0M, Level 1), non-marketable equity securities measured at NAV (private equity fund interests), and non-marketable equity securities under the measurement alternative (Level 3 when re-measured). No marketable debt/equity securities, corporate debt securities, or any derivative instruments (FX, interest rate, commodity, equity) are mentioned in this section, so all schema fields are null.
+[HISTORICAL] [LLM_FLAG] Section text is boilerplate stating there have been no material changes in market risk from the FY2025 Form 10-K Item 7A disclosure. No numeric or descriptive values are given in this section itself, so all schema fields are null.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[NEW_FIELD] cash_equivalents_amount: appeared for first time ($2,500M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-04 ===
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] cash_equivalents_amount: appeared for first time ($2,500M)
+[HISTORICAL] [LLM_FLAG] This section (FY2025 10-K) discloses only money market funds ($200.1M, Level 1), non-marketable equity securities measured at NAV (private equity fund interests), and non-marketable equity securities under the measurement alternative (Level 3 when re-measured). No marketable debt/equity securities, corporate debt securities, or any derivative instruments (FX, interest rate, commodity, equity) are mentioned in this section, so all schema fields are null.
+[HISTORICAL] [LLM_FLAG] cash_equivalents_amount schema does not specify a unit; reported here in millions (2500 = $2.5 billion) for consistency with other numeric fields in this pipeline.
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding set to 0 based on the qualitative statement that the company does not currently use derivatives/hedging instruments for FX risk — no explicit notional figure is given since no FX derivatives program exists.
+[HISTORICAL] [LLM_FLAG] No dollar-denominated sensitivity figures (100bp interest rate impact, 10% FX move, fixed-rate notes balance, equity price risk) are disclosed anywhere in this section; all described qualitatively as 'not material' or not quantified.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] foreign_exchange_exposure: was $2M, now missing
-[VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (gross_unrealized_gains_debt, foreign_exchange_exposure)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-04 ===
+[HISTORICAL] [LLM_FLAG] This section discloses money market deposit accounts and money market funds (Level 1), non-marketable equity securities measured at NAV (private equity fund interests, with $7.0M/$9.6M unrealized gains disclosed on these equity fund investments — not marketable debt securities, so not mapped to gross_unrealized_gains_debt), and non-marketable equity securities under the measurement alternative. No marketable debt/equity securities, corporate debt securities, or any derivative instruments (FX, interest rate, commodity, equity) are mentioned, so all schema fields are null.
+[HISTORICAL] [LLM_FLAG] Section text is boilerplate stating there have been no material changes in market risk from the FY2024 Form 10-K Item 7A disclosure. No numeric or descriptive values are given in this section itself, so all schema fields are null.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
-[NEW_FIELD] cash_equivalents_amount: appeared for first time ($2,500M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-04 ===
+[HISTORICAL] [LLM_FLAG] This section discloses only money market deposit accounts (balance described as 'not material' as of June 30, 2025, with no specific dollar figure), non-marketable equity securities measured at NAV (private equity fund interests), and non-marketable equity securities measured under the measurement alternative. No marketable debt/equity securities, corporate debt securities, or any derivative instruments (FX, interest rate, commodity, equity) are mentioned anywhere in this section, so all schema fields are null.
+[HISTORICAL] [LLM_FLAG] Section text is boilerplate stating there have been no material changes in market risk from the FY2024 Form 10-K Item 7A disclosure. No numeric or descriptive values are given in this section itself, so all schema fields are null.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $2,500M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2,500M)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp)
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[DISAPPEARED_FIELD] cash_equivalents_amount: was $2,500M, now missing
-[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (cash_equivalents_amount)
-[LLM_FLAG] The provided excerpt is minimal and appears to be a cross-reference to the 10-K filing rather than actual market risk disclosures. Most fields cannot be reliably extracted from this text.
-[LLM_FLAG] This appears to be a 10-Q filing section that defers detailed market risk discussion to the annual 10-K, which is a common practice for interim quarterly filings.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
-[LLM_FLAG] Filing excerpt provided appears to be introductory disclosure about fair value measurement methodology rather than the actual financial instruments table with specific values. Refer to Note 4 and balance sheet sections for actual fair value amounts.
-[LLM_FLAG] fixed_rate_notes_billion: Outstanding balance of Senior Notes not explicitly stated in this disclosure section; reference points to Note 9—Debt for additional information
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-04 ===
+[HISTORICAL] [LLM_FLAG] This section discloses money market deposit accounts of $41.5 million as of December 31, 2024, but states the balance was 'not material' as of March 31, 2025 (the current period end) with no specific dollar figure, so total_cash_equivalents_fv is left null. Also discloses non-marketable equity securities measured at NAV (private equity fund interests of $97.7 million) and non-marketable equity securities measured under the measurement alternative ($68.1 million), neither of which map to the marketable-securities schema fields. No marketable debt/equity securities, corporate debt securities, or any derivative instruments (FX, interest rate, commodity, equity) are mentioned anywhere in this section, so all schema fields are null.
+[HISTORICAL] [LLM_FLAG] Section text is boilerplate stating there have been no material changes in market risk from the FY2024 Form 10-K Item 7A disclosure. No numeric or descriptive values are given in this section itself, so all schema fields are null.

@@ -1,25 +1,32 @@
-=== 10-Q | Period ending 2026-03-28 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7dQj8Xjp2aCpgWDbqq'}
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-07-23 ===
+[HISTORICAL] [NUMERIC] ir_swap_notional: $1,050M → $2,300M (+119.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_fair_value_hedge_notional: $1,050M → $2,300M (+119.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cross_currency_swap_notional: $1,468M → $2,282M (+55.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section cross-references fiscal 2025 10-K for standard market risk disclosures; no quantitative IR swap table in this 10-Q section.
+[HISTORICAL] [LLM_FLAG] Section discloses cash-settled deal-contingent rate lock transactions on $6.3B of future acquisition financing debt (JRD/Proposed Transaction), not recorded under hedge accounting — excluded from ir_swap_notional_market_risk as it is not a designated hedging instrument.
+[HISTORICAL] [LLM_FLAG] cross_currency_swap_notional is a sum of EUR and CAD face values in native currencies; USD equivalents not disclosed in this section.
+[HISTORICAL] [LLM_FLAG] Significant increase in ir_swap_notional from $1,050M to $2,300M due to new $600M (Jun-2031) and $650M (Mar-2036) receive-fixed swaps entered following February 13, 2026 issuance of $1.25B in senior notes.
+[HISTORICAL] [LLM_FLAG] New CAD 814M cross-currency swap (Jun-2031) added, likely a net investment hedge on Canadian operations linked to the new 2031 notes structure.
+[HISTORICAL] [LLM_FLAG] Deal-contingent rate locks on $6.3B of future debt for the 'Proposed Transaction' (JRD acquisition) mentioned in the market risk section but not designated under hedge accounting — not included here.
 
-=== 10-Q | Period ending 2025-12-27 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7d2wx3AFNTUhBqAJF8'}
+=== 10-Q | Period ending 2025-12-27 | Processed 2026-07-23 ===
+[HISTORICAL] [LLM_FLAG] Section is a pass-through reference to the fiscal 2025 10-K (accession 0000096021-25-000099); no quantitative market-risk table is present in this 10-Q filing.
+[HISTORICAL] [LLM_FLAG] cross_currency_swap_notional is a sum of EUR and CAD face values in native currencies; USD equivalents not disclosed in this section.
+[HISTORICAL] [LLM_FLAG] Euro 670M (Sep-2030) cross-currency swap that appeared in the June 2025 10-K continues to be absent from this filing.
 
-=== 10-Q | Period ending 2025-09-27 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7chUAvHVgpttq8e6WL'}
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-07-23 ===
+[HISTORICAL] [NUMERIC] cross_currency_swap_notional: $2,138M → $1,468M (-31.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional_market_risk: was $1,050M, now missing
+[HISTORICAL] [LLM_FLAG] Section is a pass-through reference to the fiscal 2025 10-K (accession 0000096021-25-000099); no quantitative market-risk table is present in this 10-Q filing.
+[HISTORICAL] [LLM_FLAG] cross_currency_swap_notional is a sum of EUR and CAD face values in native currencies; USD equivalents not disclosed in this section.
+[HISTORICAL] [LLM_FLAG] Euro 670M (Sep-2030) cross-currency swap present in the June 2025 10-K no longer appears in this filing — possible termination during Q1 FY2026.
 
-=== 10-K | Period ending 2025-06-28 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7cPNjzLB8851N8oZ3f'}
+=== 10-K | Period ending 2025-06-28 | Processed 2026-07-23 ===
+[HISTORICAL] [NEW_FIELD] ir_swap_notional_market_risk: appeared for first time ($1,050M)
+[HISTORICAL] [LLM_FLAG] cross_currency_swap_notional is a sum of EUR and CAD face values in their native currencies; USD equivalents are not disclosed in the section.
+[HISTORICAL] [LLM_FLAG] The Euro 670M (Sep-2030) cross-currency swap present at June 28, 2025 does not appear in the subsequent Q1-FY2026 (Sep-2025) filing — possible termination between periods.
 
-=== 10-Q | Period ending 2025-03-29 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7bsSRRBT6pHXUEuXkN'}
-
-=== 10-Q | Period ending 2026-03-28 | Processed 2026-06-04 ===
-[LLM_FLAG] New material derivatives activity: $6.3 billion deal-contingent rate lock transactions related to proposed JRD acquisition
-
-=== 10-Q | Period ending 2025-09-27 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $11M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fixed_rate_notes_billion)
-
-=== 10-K | Period ending 2025-06-28 | Processed 2026-06-04 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($11M)
-
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-07-23 ===
+[HISTORICAL] [LLM_FLAG] Section is a pass-through reference to the prior fiscal-year 10-K; no quantitative market-risk table is present in this 10-Q filing.
+[HISTORICAL] [LLM_FLAG] cross_currency_swap_notional is a sum of amounts in mixed currencies (EUR and CAD face values); USD equivalents are not disclosed in the section text.
+[HISTORICAL] [LLM_FLAG] CAD 180M (Apr-2025) and CAD 137M (Jun-2025) hedges mature within weeks of the period end; their notionals are included as they are outstanding as of March 29, 2025.

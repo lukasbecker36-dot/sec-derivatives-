@@ -1,16 +1,28 @@
-=== 10-Q | Period ending 2026-04-03 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+=== 10-Q | Period ending 2026-04-03 | Processed 2026-07-18 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $203M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $203M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $11M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_forward_notional: was $203M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cumulative_translation_impact: was $-185M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_business_percentage: was $10M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] long_term_debt_carrying_value: was $10,876M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] long_term_debt_fair_value: was $10,913M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (fx_derivatives_notional, fx_forwards_outstanding, fixed_rate_notes_billion, foreign_currency_forward_notional, cumulative_translation_impact...)
+[HISTORICAL] [LLM_FLAG] Section contains only a cross-reference to Fiscal 2025 Form 10-K Item 7A; no quantitative market risk values are present in this 10-Q section text
 
-=== 10-K | Period ending 2026-01-02 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($2M)
-
-=== 10-Q | Period ending 2025-03-28 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $3M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-Q | Period ending 2026-04-03 | Processed 2026-05-02 ===
-[LLM_FLAG] Provided text is only a header/reference to 'Quantitative and Qualitative Disclosures About Market Risk' section with page number. Actual market risk disclosure content is not included in the provided excerpt.
+=== 10-K | Period ending 2026-01-02 | Processed 2026-07-18 ===
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($203M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($203M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($11M)
+[HISTORICAL] [NEW_FIELD] foreign_currency_forward_notional: appeared for first time ($203M)
+[HISTORICAL] [NEW_FIELD] cumulative_translation_impact: appeared for first time ($-185M)
+[HISTORICAL] [NEW_FIELD] foreign_business_percentage: appeared for first time ($10M)
+[HISTORICAL] [NEW_FIELD] long_term_debt_carrying_value: appeared for first time ($10,876M)
+[HISTORICAL] [NEW_FIELD] long_term_debt_fair_value: appeared for first time ($10,913M)
+[HISTORICAL] [LLM_FLAG] Section text is from Item 7A (market risk MD&A) rather than a dedicated financial statements note; fair values and AOCI amounts for FX hedges are not disclosed at this location
+[HISTORICAL] [LLM_FLAG] All sensitivity figures stated as 'not material' with no dollar amounts; numeric values for fx_sensitivity_10pct, ir_sensitivity_100bp, and both sensitivity_analysis fields are therefore null
+[HISTORICAL] [LLM_FLAG] Debt language changed from 'exclusively fixed-rate' (FY2024 10-K) to 'predominately fixed-rate' in this FY2025 10-K, suggesting a possible floating-rate component; no short-term CP Program debt mentioned here unlike prior year
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding and foreign_currency_forward_notional both map to the same $203 million figure
 
 === 10-Q | Period ending 2025-10-03 | Processed 2026-05-02 ===
 [LLM_FLAG] Prior period indicated 'has_derivatives: Yes' but current filing text contains only a header reference to Form 10-K with no actual market risk disclosures
@@ -30,10 +42,8 @@
 [VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, foreign_currency_forward_notional, cumulative_translation_impact, foreign_business_percentage...)
 [LLM_FLAG] Provided text is only a header/reference to the full disclosure section. The actual quantitative market risk data is not included in the excerpt provided. This appears to be a reference line rather than the complete disclosure section.
 
-=== 10-K | Period ending 2025-01-03 | Processed 2026-05-02 ===
-[NUMERIC] cumulative_translation_impact: $-185M → $-265M (-43.2%) — exceeds 20% threshold
-[LLM_FLAG] fx_forwards_outstanding decreased from $203 million to $201 million (1% decrease - within normal range)
-[LLM_FLAG] cumulative_translation_impact changed from -$185 million loss to -$265 million loss (43% increase in magnitude - significant deterioration in cumulative translation position)
-[LLM_FLAG] long_term_debt_carrying_value increased from $10,876 million to $11,530 million (6% increase - plausible given debt activity)
-[LLM_FLAG] long_term_debt_fair_value changed from $10,913 million to $11,179 million (2.4% increase - reasonable given interest rate environment)
-
+=== 10-K | Period ending 2025-01-03 | Processed 2026-07-18 ===
+[HISTORICAL] [LLM_FLAG] Section text is from Item 7A (market risk MD&A) rather than a dedicated financial statements note; fair values and AOCI amounts for FX hedges are not disclosed at this location
+[HISTORICAL] [LLM_FLAG] All sensitivity figures stated as 'not material' with no dollar amounts; numeric values for fx_sensitivity_10pct, ir_sensitivity_100bp, and both sensitivity_analysis fields are therefore null
+[HISTORICAL] [LLM_FLAG] Short-term variable-rate CP Program debt of $515 million also outstanding as of January 3, 2025; not reflected in long_term_debt fields which cover fixed-rate long-term debt only
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding and foreign_currency_forward_notional both map to the same $201 million figure

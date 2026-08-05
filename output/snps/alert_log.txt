@@ -1,15 +1,130 @@
-=== 10-Q | Period ending 2026-01-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $1,508M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $10M, now missing
-[DISAPPEARED_FIELD] fx_forwards_notional: was $1,508M, now missing
-[DISAPPEARED_FIELD] fx_contracts_notional: was $1,508M, now missing
-[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $3M, now missing
-[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, fx_forwards_notional, fx_contracts_notional, foreign_currency_sensitivity)
+=== 10-Q | Period ending 2026-04-30 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $43M → $198M (+359.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $0M → $0M (-54.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $12M → $16M (+34.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $28M → $39M (+40.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $12M → $16M (+34.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $28M → $39M (+40.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-16M → $-23M (-44.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $10M, now missing
+[HISTORICAL] [NUMERIC] non_designated_gain_loss: $-4M → $-8M (-81.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text truncates; FX notional and derivative fair value figures confirmed by derivatives_note extract for same filing
+[HISTORICAL] [LLM_FLAG] 2025 Rate Lock Agreements fully settled; unamortized OCI loss of $113.5M being amortized; $7.0M expected reclassification over next 12 months
+[HISTORICAL] [LLM_FLAG] FX notional reached highest level in the backfill series at $1,780.4M, reflecting post-Ansys Merger expanded international operations
+[HISTORICAL] [LLM_FLAG] IR notional is null; no interest rate contracts outstanding as of April 30, 2026
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci of -113.5M is the unamortized OCI loss from the settled 2025 Rate Lock Agreements
+[HISTORICAL] [LLM_FLAG] FX notional designated/not-designated split not disclosed in notional table
+[HISTORICAL] [LLM_FLAG] Section text is the qualitative Risk Factors section, NOT Item 3 quantitative market risk disclosures
+[HISTORICAL] [LLM_FLAG] non_designated_gain_loss sourced from derivatives_note section of same filing
 
-=== 10-K | Period ending 2025-10-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($1,508M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)
-[NEW_FIELD] fx_forwards_notional: appeared for first time ($1,508M)
-[NEW_FIELD] fx_contracts_notional: appeared for first time ($1,508M)
-[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($3M)
+=== 10-Q | Period ending 2026-01-31 | Processed 2026-06-25 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($43M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($74M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($46M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($12M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($28M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($12M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($28M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-16M)
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-115M)
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-7M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $1,508M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $3M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_notional: was $1,508M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_contracts_notional: was $1,508M, now missing
+[HISTORICAL] [NEW_FIELD] non_designated_gain_loss: appeared for first time ($-4M)
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_sensitivity: was $3M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (fx_forwards_outstanding, fx_sensitivity_10pct, fx_forwards_notional, fx_contracts_notional, foreign_currency_sensitivity)
+[HISTORICAL] [LLM_FLAG] Significant reduction in cash equivalents vs. prior periods reflects post-Ansys Merger capital deployment; cash equivalents fell from $877.9M (Oct 2024) to $43.1M (Jan 2026)
+[HISTORICAL] [LLM_FLAG] Section text truncates; FX notional and derivative fair value figures confirmed by derivatives_note extract for same filing
+[HISTORICAL] [LLM_FLAG] 2025 Rate Lock Agreements fully settled; unamortized OCI loss of $115.3M being amortized to interest expense; $7.0M expected reclassification over next 12 months
+[HISTORICAL] [LLM_FLAG] IR notional is null; no interest rate contracts outstanding as of January 31, 2026
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci of -115.3M is the unamortized OCI loss from the settled 2025 Rate Lock Agreements
+[HISTORICAL] [LLM_FLAG] FX notional designated/not-designated split not disclosed in notional table; fair value split by designation is available
+[HISTORICAL] [LLM_FLAG] Section text is the qualitative Risk Factors section, NOT Item 3 quantitative market risk disclosures
+[HISTORICAL] [LLM_FLAG] fixed_rate_notes_billion sourced from incidental mention in risk factor text about total debt level
+[HISTORICAL] [LLM_FLAG] non_designated_gain_loss sourced from derivatives_note section of same filing
 
+=== 10-K | Period ending 2025-10-31 | Processed 2026-06-25 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $268M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $67M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $45M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $1,224M → $1,508M (+23.2%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $11M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $7M, now missing
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $1,224M → $1,508M (+23.2%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $11M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $7M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-119M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-7M, now missing
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($1,508M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($3M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_notional: appeared for first time ($1,508M)
+[HISTORICAL] [NEW_FIELD] fx_contracts_notional: appeared for first time ($1,508M)
+[HISTORICAL] [DISAPPEARED_FIELD] non_designated_gain_loss: was $-5M, now missing
+[HISTORICAL] [NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($3M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 12/14 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt, fi_total_derivative_asset...)
+[HISTORICAL] [LLM_FLAG] Section text extracted is MD&A/cash flows content, not the Note 8 financial statement balance sheet note; investment schedule and derivative fair value tables are absent
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional sourced from currency-by-currency notional table in the market risk/derivatives section of the 10-K (same section_text); all other FX/IR notional and fair values are not present in the extracted text
+[HISTORICAL] [LLM_FLAG] Investment table data (cash equivalents FV, short-term investments FV, corporate debt FV, unrealized gains) would need Note 8 balance sheet section extraction to populate
+[HISTORICAL] [LLM_FLAG] Section text is the MD&A foreign currency risk section (Item 7A / market risk), not the financial statement Note 8; fair value and AOCI data not present
+[HISTORICAL] [LLM_FLAG] FX notional of $1,508,066K reflects currency-by-currency forward contract table as of October 31, 2025
+[HISTORICAL] [LLM_FLAG] Non-marketable equity securities totaled $45.0M and $15.7M as of October 31, 2025 and 2024 respectively (disclosed in same section for equity price risk)
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct and foreign_currency_sensitivity of 3.4M are Euro-only examples, not a comprehensive total-portfolio 10% FX sensitivity
+[HISTORICAL] [LLM_FLAG] Non-marketable equity securities total $45.0M (not marketable); no marketable equity securities for equity price risk schema field
+[HISTORICAL] [LLM_FLAG] Deferred payment on settled rate lock totals $110.6M at 3.45% implied rate — this is a debt instrument, not a derivative
+
+=== 10-Q | Period ending 2025-07-31 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $630M → $268M (-57.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $145M → $67M (-53.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $103M → $45M (-56.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $0M → $0M (-94.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $9M → $11M (+21.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $9M → $11M (+21.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $3M → $4M (+47.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] non_designated_gain_loss: $11M → $-5M (-147.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Ansys Merger closed July 17, 2025; filing now includes Ansys operations but no Ansys-specific derivatives disclosed in this note
+[HISTORICAL] [LLM_FLAG] Short-term investments portfolio changed composition vs. prior quarters (added municipal bonds, dropped asset-backed securities)
+[HISTORICAL] [LLM_FLAG] Section text truncates before notional table; FX notional and fair value figures confirmed by derivatives_note extract for same filing
+[HISTORICAL] [LLM_FLAG] IR notional is null because 2025 Rate Lock Agreements settled Q2 FY2025; $121.6M loss recorded in OCI and being amortized
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci of -118.7M represents the unamortized OCI loss from the settled rate lock as of July 31, 2025
+[HISTORICAL] [LLM_FLAG] Ansys Merger closed July 17, 2025; filing now includes Ansys operations but no Ansys-specific derivatives disclosed
+[HISTORICAL] [LLM_FLAG] Section text is qualitative Risk Factors section, NOT Item 3 quantitative market risk disclosures
+[HISTORICAL] [LLM_FLAG] non_designated_gain_loss sourced from derivatives_note section of same filing
+
+=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $1,590M → $1,243M (-21.8%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $2,000M, now missing
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $7M → $9M (+32.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $46M → $6M (-86.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $1,590M → $1,243M (-21.8%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $2,000M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $7M → $9M (+32.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $46M → $6M (-86.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-39M → $3M (+107.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-20M → $-120M (-499.5%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-7M)
+[HISTORICAL] [NUMERIC] non_designated_gain_loss: $-4M → $11M (+353.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] 2025 Rate Lock Agreements ($2.0B notional) settled in Q2 FY2025; $121.6M loss recorded in OCI and being amortized to interest expense over life of related debt
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional sourced from derivatives subsection of Note 8 within this section_text
+[HISTORICAL] [LLM_FLAG] Section text truncates before the notional amount table is explicitly shown, but total is confirmed by the derivatives_note extract for the same filing
+[HISTORICAL] [LLM_FLAG] IR notional is null because 2025 Rate Lock Agreements settled in Q2 FY2025; $121.6M loss recorded in OCI and being amortized
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci of -120.5M represents the unamortized OCI loss from the settled rate lock; FX cash flow hedge AOCI balance is a separate (smaller) amount not explicitly quantified
+[HISTORICAL] [LLM_FLAG] FX notional designated/not-designated split not disclosed in notional table
+[HISTORICAL] [LLM_FLAG] Section text is the qualitative Risk Factors section, NOT Item 3 quantitative market risk disclosures
+[HISTORICAL] [LLM_FLAG] non_designated_gain_loss sourced from derivatives_note section of same filing, not from this section text
+
+=== 10-Q | Period ending 2025-01-31 | Processed 2026-06-25 ===
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt uses short-term investments total only ($447K); cash equivalents had an additional $2K unrealized gain
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional and derivative fair values sourced from the derivatives subsection of Note 8, which is included in the section_text
+[HISTORICAL] [LLM_FLAG] IR rate lock notional of $2.0B was entered Q1 FY2025 and was outstanding at January 31, 2025; settled in Q2 FY2025
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci reflects only the IR rate lock change of $(20.1)M net of tax; the total combined FX+IR AOCI balance is not stated as a single figure
+[HISTORICAL] [LLM_FLAG] FX notional designated/not-designated split is not disclosed in the notional table; only fair value splits by category are shown
+[HISTORICAL] [LLM_FLAG] IR rate lock contracts ($2.0B) were entered Q1 FY2025 and were still outstanding at Jan 31, 2025
+[HISTORICAL] [LLM_FLAG] Section text is the qualitative Risk Factors section, NOT Item 3 (Quantitative and Qualitative Disclosures About Market Risk); virtually all quantitative schema fields are null
+[HISTORICAL] [LLM_FLAG] non_designated_gain_loss value sourced from derivatives_note section of same filing, not from this section text — extracted here for convenience but flagged accordingly
+[HISTORICAL] [LLM_FLAG] The 10-Q Item 3 quantitative market risk section for this period would contain sensitivity data if properly extracted

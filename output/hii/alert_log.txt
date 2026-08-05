@@ -10,26 +10,11 @@
 [LLM_FLAG] commercial_paper_program_amount: prior value was 0.0, current is 1700.0 (>50% change). The prior value likely reflected zero outstanding balance rather than the program size. The $1.7 billion program capacity has been disclosed; no amounts are drawn.
 [LLM_FLAG] cost_inflation_impact: prior value was 0.0 (numeric), current is a qualitative statement. The company does not quantify inflation impact; the prior numeric zero may have been a default for 'not quantified'.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] revolving_credit_facility_amount: appeared for first time ($2M)
-[NEW_FIELD] outstanding_debt_revolving: appeared for first time ($0M)
-[NEW_FIELD] outstanding_debt_commercial_paper: appeared for first time ($0M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] revolving_credit_facility_amount: appeared for first time ($2M)
-[NEW_FIELD] commercial_paper_program_amount: appeared for first time ($2M)
-[NEW_FIELD] outstanding_debt_revolving: appeared for first time ($0M)
-[NEW_FIELD] outstanding_debt_commercial_paper: appeared for first time ($0M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] revolving_credit_facility_amount: appeared for first time ($1,700M)
-[NEW_FIELD] outstanding_debt_revolving: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-19 ===
+[HISTORICAL] [LLM_FLAG] Section covers only long-term debt fair value (Level 2, $2,688M at Mar 31 2026 and $2,730M at Dec 31 2025) and grantor trust pension investments (Level 1, $244M at Mar 31 2026). No derivatives or investment portfolio fair value schedules present.
+[HISTORICAL] [LLM_FLAG] Consistent with prior quarters: HII does not disclose FX/IR derivatives or a detailed fair value investment hierarchy table in this section.
+[HISTORICAL] [LLM_FLAG] revolving_credit_facility_amount and commercial_paper_program_amount expressed in millions (1700) converted from $1.7 billion stated in text
+[HISTORICAL] [LLM_FLAG] no quantitative sensitivity figures disclosed; company had zero outstanding floating-rate debt as of period-end so no interest rate risk
 
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
@@ -40,3 +25,20 @@
 [NEW_FIELD] outstanding_debt_revolving: appeared for first time ($0M)
 [NEW_FIELD] outstanding_debt_commercial_paper: appeared for first time ($0M)
 
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-19 ===
+[HISTORICAL] [LLM_FLAG] Section covers only long-term debt fair value (Level 2, $2,707M at Sep 30 2025) and grantor trust pension investments (Level 1, $249M at Sep 30 2025). No current portion of long-term debt and no finance lease liabilities as of Sep 30 2025.
+[HISTORICAL] [LLM_FLAG] No derivatives or investment portfolio fair value schedules present in this section.
+[HISTORICAL] [LLM_FLAG] revolving_credit_facility_amount and commercial_paper_program_amount expressed in millions (1700) converted from $1.7 billion stated in text
+[HISTORICAL] [LLM_FLAG] no quantitative sensitivity figures disclosed; company had zero outstanding floating-rate debt as of period-end so no interest rate risk
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-19 ===
+[HISTORICAL] [LLM_FLAG] Section covers only long-term debt fair value (Level 2, $2,690M at Jun 30 2025) and grantor trust pension investments (Level 1, $237M at Jun 30 2025). No derivatives or investment portfolio fair value schedules present.
+[HISTORICAL] [LLM_FLAG] No current portion of long-term debt as of Jun 30 2025 (compared to $500M current portion at Mar 31 2025 filing), indicating debt repayment between periods.
+[HISTORICAL] [LLM_FLAG] revolving_credit_facility_amount and commercial_paper_program_amount expressed in millions (1700) converted from $1.7 billion stated in text
+[HISTORICAL] [LLM_FLAG] no quantitative sensitivity figures disclosed; company had zero outstanding floating-rate debt as of period-end so no interest rate risk
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-19 ===
+[HISTORICAL] [LLM_FLAG] Section covers only long-term debt fair value (Level 2) and grantor trust pension investments (Level 1, $234M at Mar 31 2025). No derivatives or investment portfolio fair value schedules present.
+[HISTORICAL] [LLM_FLAG] Grantor trust value ($234M) could be considered a marketable securities proxy, but it is a pension vehicle, not a direct marketable securities holding on the balance sheet.
+[HISTORICAL] [LLM_FLAG] revolving_credit_facility_amount and commercial_paper_program_amount expressed in millions (1700) converted from $1.7 billion stated in text
+[HISTORICAL] [LLM_FLAG] no quantitative sensitivity figures disclosed; company had zero outstanding floating-rate debt as of period-end so no interest rate risk

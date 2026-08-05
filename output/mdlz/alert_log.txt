@@ -97,45 +97,51 @@
 [NEW_FIELD] bs_location_other_current_liabilities: appeared for first time ($1,328M)
 [NEW_FIELD] bs_location_other_liabilities: appeared for first time ($452M)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NUMERIC] fi_ir_swap_notional: $1,932M → $3,149M (+63.0%) — exceeds 20% threshold
-[NUMERIC] fi_total_derivative_asset: $826M → $1,189M (+43.9%) — exceeds 20% threshold
-[NUMERIC] fi_total_derivative_liability: $1,780M → $2,232M (+25.4%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $42M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $44M, now missing
-[LLM_FLAG] fi_ir_swap_notional increased by over 50% compared to prior period (from 1932 to 3149). This may indicate a shift in interest rate hedging strategy.
-[LLM_FLAG] fi_total_derivative_liability increased by over 50% compared to prior period (from 1780 to 2232). This may raise concerns about increased risk exposure.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $1,199M → $824M (-31.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $2,089M → $2,732M (+30.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1,199M → $824M (-31.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-57M → $27M (+147.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_assets: $1,199M → $824M (-31.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] variation_margin_balance: appeared for first time ($230M)
+[HISTORICAL] [NUMERIC] bs_location_other_current_assets: $1,008M → $657M (-34.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] bs_location_other_liabilities: $609M → $445M (-26.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section focuses on derivative fair values only; no cash equivalents or other financial instruments disclosed.
+[HISTORICAL] [LLM_FLAG] Total assets confirmed: $241M + $583M = $824M. Total liabilities: $613M + $878M = $1,491M.
+[HISTORICAL] [LLM_FLAG] FX notional combines foreign currency contracts ($19,956M) and cross-currency swaps ($6,912M).
+[HISTORICAL] [LLM_FLAG] Net derivative position of -$667M confirmed by level hierarchy table.
+[HISTORICAL] [LLM_FLAG] Variation margin ($230M) is excluded from the fair value table figures.
+[HISTORICAL] [LLM_FLAG] BS location total assets ($657+$167=$824M) and liabilities ($1,046+$445=$1,491M) match total fair values.
+[HISTORICAL] [LLM_FLAG] The market risk section is qualitative only for this 10-Q period; refers to Note 8 (Financial Instruments) and the 10-K for quantitative details.
+[HISTORICAL] [LLM_FLAG] No VAR or sensitivity tables present in this quarterly market risk section.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($19,853M)
-[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($0M)
-[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($19,853M)
-[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($1,932M)
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($826M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($1,780M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($42M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($44M)
-[LLM_FLAG] Interest rate sensitivity decreased from $76 million in prior period to $42 million - significant decline.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $1,159M → $1,811M (+56.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $4,536M → $2,089M (-53.9%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($1,199M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($1,811M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-612M)
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-24M → $-57M (-137.5%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_assets: appeared for first time ($1,199M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liabilities: appeared for first time ($1,811M)
+[HISTORICAL] [NEW_FIELD] bs_location_other_current_assets: appeared for first time ($1,008M)
+[HISTORICAL] [NEW_FIELD] bs_location_other_assets: appeared for first time ($191M)
+[HISTORICAL] [NEW_FIELD] bs_location_other_current_liabilities: appeared for first time ($1,202M)
+[HISTORICAL] [NEW_FIELD] bs_location_other_liabilities: appeared for first time ($609M)
+[HISTORICAL] [LLM_FLAG] Section focuses on derivative fair values only; no cash equivalents, marketable securities, or other financial instrument fair values disclosed in this note.
+[HISTORICAL] [LLM_FLAG] Total asset figure confirmed: $212M + $987M = $1,199M. Total liability: $901M + $910M = $1,811M.
+[HISTORICAL] [LLM_FLAG] FX notional combines foreign currency contracts ($20,667M) and cross-currency swaps ($7,219M); schema intent may vary.
+[HISTORICAL] [LLM_FLAG] Net derivative position of -$612M confirmed by level hierarchy table.
+[HISTORICAL] [LLM_FLAG] AOCI balance for cash flow hedges not directly stated in section; only expected 12-month reclassification ($57M loss).
+[HISTORICAL] [LLM_FLAG] BS location total assets ($1,008+$191=$1,199M) matches total fair value assets.
+[HISTORICAL] [LLM_FLAG] The market risk section is qualitative only for this 10-Q period; refers to Note 8 (Financial Instruments) and the 10-K for quantitative details.
+[HISTORICAL] [LLM_FLAG] No VAR or sensitivity tables present in this quarterly market risk section.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbqa2awU577A2jHecZAFr'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbqa2gCyEkE6v2DVEg2Wd'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbqa2BEhE7kaiD5DxZmVs'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbqa2Go4g46sMJkrjvHWp'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbqa1f11qSbzkPqwifrzm'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbqa1kLjq9Y13VUM4pmXn'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbqa1FJEy9Ed3MkfDVRrY'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbqa1LxouUs3X4tYrjNvs'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZzqWWQ4YRoeM9EN25q'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZzvwC3cvNgcFWn7tTf'}
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] Section focuses on fair value of derivative instruments only; no cash equivalents or marketable securities disclosed in this note.
+[HISTORICAL] [LLM_FLAG] The section text is truncated but the total fair value figures ($1,397M assets, $1,159M liabilities) are clearly stated.
+[HISTORICAL] [LLM_FLAG] FX notional combines currency exchange contracts ($16,284M) and NIH derivative contracts ($9,421M); these may or may not be intended to be summed depending on schema intent.
+[HISTORICAL] [LLM_FLAG] Cash flow hedge AOCI balance not stated; only the expected 12-month reclassification is given ($24M loss).
+[HISTORICAL] [LLM_FLAG] Fair value details for each instrument type are in the financial_instruments section, not repeated here.
+[HISTORICAL] [LLM_FLAG] The market risk section is qualitative only for this 10-Q period; refers to Note 8 (Financial Instruments) and the 10-K for quantitative details.
+[HISTORICAL] [LLM_FLAG] No VAR or sensitivity tables present in this quarterly market risk section.

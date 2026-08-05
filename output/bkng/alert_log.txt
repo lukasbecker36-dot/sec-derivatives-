@@ -17,83 +17,104 @@
 [LLM_FLAG] total_derivative_asset: prior was 14300.0 but now not found in text (fair value not separately disclosed in this section)
 [LLM_FLAG] net_derivative_position: prior was 14300.0 but now not found in text
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($14,300M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($14,300M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[DROPPED_TO_ZERO] total_derivative_asset: $8,900M → $0M
-[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
-[DROPPED_TO_ZERO] net_derivative_position: $8,900M → $0M
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,000M)
-[NEW_FIELD] fx_impact_on_revenues: appeared for first time ($6M)
-[NEW_FIELD] equity_price_sensitivity: appeared for first time ($-4M)
-[DISAPPEARED_FIELD] derivative_policies: was $60M, now missing
-[LLM_FLAG] All derivative values indicate that the company is not designating derivatives for hedge accounting, which is a significant change from the usual practice.
-[LLM_FLAG] equity_sensitivity_10pct differs from prior period by more than 50%; significant loss indicated.
-[LLM_FLAG] fx_impact_on_revenues indicates a benefit from foreign currency influence.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-05 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($14,043M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($321M)
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($13,400M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($13,400M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($59M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($86M)
+[HISTORICAL] [NUMERIC] equity_sensitivity_10pct: $-60M → $-45M (+25.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_impact_on_bookings: $2M → $7M (+250.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_impact_on_revenues: $3M → $6M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] equity_price_sensitivity: $-60M → $-45M (+25.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional and fi_fx_not_designated_notional are computed as the sum of the FX purchase notional ($8.6bn) and sale notional ($4.8bn) converted to millions; the filing does not state a single combined total, and since the Company designates no derivatives as hedges, not-designated equals the full total
+[HISTORICAL] [LLM_FLAG] No embedded derivative liability line appears in this period's fair-value table, so fi_total_derivative_liability reflects only the FX derivative liability of $86M
+[HISTORICAL] [LLM_FLAG] marketable_equity_securities_fv (321) is taken from the recurring 'Equity securities' fair-value line (Level 1, presumably publicly traded); a separate nonrecurring Level 3 'Investments in equity securities of private entities' line ($11M) is excluded because those are private/non-marketable holdings
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt, and fi_ir_swap_notional are not disclosed anywhere in this section_text
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional is a computed sum of separately disclosed purchase ($8.6bn) and sale ($4.8bn) notionals, not a single reported total figure
+[HISTORICAL] [LLM_FLAG] fx_designated_notional/fx_not_designated_notional inferred as 0/13400 because the filing states no derivatives were designated as hedges (not an explicit split-out table)
+[HISTORICAL] [LLM_FLAG] total_derivative_asset/liability fair values (59 asset / 86 liability at March 31, 2026 per the fair value measurements table) are disclosed in the financial_instruments/fair value note, not within this derivatives_note section_text excerpt, so left null here
+[HISTORICAL] [LLM_FLAG] fx_impact_on_revenues is a directly disclosed FX benefit percentage (6%); fx_impact_on_bookings is inferred as reported-minus-constant-currency gap (15% vs ~8% = 7pp), not a millions figure
+[HISTORICAL] [LLM_FLAG] equity_sensitivity_10pct decreased to -$45 million this quarter from -$60 million at FY2025 year-end, consistent with a lower marketable equity fair value ($321 million per Note 5, down from $428 million)
+[HISTORICAL] [LLM_FLAG] Unlike prior quarters, this market_risk section_text does not restate the Euro-denominated debt net-investment-hedge designation language, so euro_debt_hedge_designation is left null here (the designation itself likely still exists per Note 12/the 10-K, just not repeated in this excerpt)
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding left null because notional detail is captured separately in the derivatives_note extraction (fx_derivatives_notional)
+[HISTORICAL] [LLM_FLAG] derivative_policies, marketable_equity_value, fixed_rate_notes_billion, fx_transaction_gain_loss, and fx_sensitivity_10pct not stated as figures within this market_risk section_text
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($8,900M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($8,900M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($60M)
-[NEW_FIELD] fx_impact_on_bookings: appeared for first time ($2M)
-[NEW_FIELD] fx_impact_on_revenues: appeared for first time ($3M)
-[NEW_FIELD] equity_price_sensitivity: appeared for first time ($6M)
-[LLM_FLAG] ir_sensitivity_100bp
-[LLM_FLAG] fx_impact_on_bookings
-[LLM_FLAG] fx_impact_on_revenues
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-05 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $15,212M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $507M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $15,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $15,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $30M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $36M, now missing
+[HISTORICAL] [NUMERIC] fx_impact_on_bookings: $4M → $2M (-50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_impact_on_revenues: $4M → $3M (-25.0%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 7/16 previously-populated fields are now null (total_cash_equivalents_fv, marketable_equity_securities_fv, fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional...)
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional is a computed sum of separately disclosed purchase ($8.9bn) and sale ($6.0bn) notionals, not a single reported total figure
+[HISTORICAL] [LLM_FLAG] fx_designated_notional/fx_not_designated_notional inferred as 0/14900 because the excerpt states the Company did not designate any derivatives as hedges (the leading clause is truncated at the start of section_text, '...ompany did not designate...', but the full sentence is unambiguous from context and prior quarters' identical disclosure)
+[HISTORICAL] [LLM_FLAG] total_derivative_asset/liability fair values are disclosed in the fair value measurements note (Note 6, not captured in this section_text excerpt), so left null here
+[HISTORICAL] [LLM_FLAG] No commodity, equity, or interest rate swap derivatives disclosed; company uses Euro-denominated debt (not a derivative) as a net investment hedge
+[HISTORICAL] [LLM_FLAG] Annual (full-year) loss on FX derivatives for 2025 was $35 million per the income statement effect table, down from $156 million in 2024 and $106 million in 2023
+[HISTORICAL] [LLM_FLAG] fx_impact_on_revenues is a directly disclosed FX benefit percentage (3%); fx_impact_on_bookings is inferred as reported-minus-constant-currency gap (12% vs ~10% = 2pp), not a millions figure
+[HISTORICAL] [LLM_FLAG] equity_sensitivity_10pct rose to -$60 million for FY2025 from -$55 million for FY2024, consistent with a higher marketable equity portfolio fair value
+[HISTORICAL] [LLM_FLAG] This 10-K's Item 7A includes an explicit derivative-use policy statement (no speculation, no trading purposes, no leveraged derivatives) not present in the quarterly 10-Q market_risk excerpts reviewed earlier this year
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding left null because notional detail is captured separately in the derivatives_note extraction (fx_derivatives_notional)
+[HISTORICAL] [LLM_FLAG] marketable_equity_value and fixed_rate_notes_billion not stated as dollar figures within this market_risk section_text
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,000M)
-[NEW_FIELD] fx_impact_on_revenues: appeared for first time ($6M)
-[NEW_FIELD] equity_price_sensitivity: appeared for first time ($45M)
-[LLM_FLAG] equity_sensitivity_10pct has a significant change (from 0.0 to 45.0) indicating increased risk due to equity investments.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-05 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $415M → $507M (+22.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $83M → $30M (-63.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $88M → $36M (-59.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional and fi_fx_not_designated_notional are computed as the sum of the FX purchase notional ($9.6bn) and sale notional ($5.4bn) converted to millions; the filing does not state a single combined total, and since the Company designates no derivatives as hedges, not-designated equals the full total
+[HISTORICAL] [LLM_FLAG] No embedded derivative liability appears in the September 30, 2025 fair-value table (only the Dec 31, 2024 comparative period shows one), so fi_total_derivative_liability reflects only the FX derivative liability of $36M
+[HISTORICAL] [LLM_FLAG] This filing's fair-value table also reports nonrecurring Level 3 measurements for long-lived assets ($179M) and goodwill ($203M); these are impairment-related, not marketable securities or derivatives, and were excluded from all schema fields
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt, and fi_ir_swap_notional are not disclosed anywhere in this section_text
+[HISTORICAL] [LLM_FLAG] marketable_equity_securities_fv is taken from the 'Investments in equity securities' recurring fair-value table line; the filing does not use the label 'marketable equity securities'
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional is a computed sum of separately disclosed purchase ($9.6bn) and sale ($5.4bn) notionals, not a single reported total figure
+[HISTORICAL] [LLM_FLAG] fx_designated_notional/fx_not_designated_notional inferred as 0/15000 because the filing states no derivatives were designated as hedges (not an explicit split-out table)
+[HISTORICAL] [LLM_FLAG] total_derivative_asset/liability fair values (30 asset / 36 liability per fair value table) are disclosed in the financial_instruments/fair value note, not within this derivatives_note section_text, so left null here
+[HISTORICAL] [LLM_FLAG] No commodity, equity, or interest rate swap derivatives disclosed; company uses Euro-denominated debt (not a derivative) as a net investment hedge
+[HISTORICAL] [LLM_FLAG] This filing directly discloses fx_impact_on_revenues as a stated FX benefit percentage (unlike prior quarters where it was inferred as a reported-minus-constant-currency gap): three months = 4%, nine months = 3%. Value uses the three-month figure
+[HISTORICAL] [LLM_FLAG] fx_impact_on_bookings still inferred as reported-minus-constant-currency gap: three months 14% vs ~10% = 4pp; nine months 11% vs ~10% = 1pp. Value uses the three-month figure
+[HISTORICAL] [LLM_FLAG] equity_sensitivity_10pct increased to -$65 million this quarter from -$55 million in Q1/Q2 2025, reflecting a higher marketable equity securities fair value at September 30, 2025
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding left null because notional detail is already captured in the derivatives_note extraction (fx_derivatives_notional)
+[HISTORICAL] [LLM_FLAG] derivative_policies, marketable_equity_value, fixed_rate_notes_billion, fx_transaction_gain_loss, and fx_sensitivity_10pct not stated as figures within this market_risk section_text
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($60M)
-[NEW_FIELD] fx_impact_on_bookings: appeared for first time ($2M)
-[NEW_FIELD] fx_impact_on_revenues: appeared for first time ($3M)
-[LLM_FLAG] ir_sensitivity_100bp has changed from 100000.0 to 110000.0, a difference of 10%.
-[LLM_FLAG] The company's foreign currency transaction gains/losses were not reported, which may indicate stability or limited exposure.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-05 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $1,224M → $88M (-92.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $900M → $1,200M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity: $900M → $1,200M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_impact_on_bookings: $-3M → $4M (+233.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_impact_on_revenues: $-2M → $4M (+300.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional and fi_fx_not_designated_notional are computed as the sum of the FX purchase notional ($10.0bn) and sale notional ($5.4bn) converted to millions; the filing does not state a single combined total, and since the Company designates no derivatives as hedges, not-designated equals the full total
+[HISTORICAL] [LLM_FLAG] Unlike the March 31, 2025 filing, this period's fair-value table shows no embedded derivative liability (the convertible senior notes matured/converted in May 2025), so fi_total_derivative_liability reflects only the FX derivative liability of $88M
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt, and fi_ir_swap_notional are not disclosed anywhere in this section_text
+[HISTORICAL] [LLM_FLAG] marketable_equity_securities_fv is taken from the 'Investments in equity securities' fair-value table line; the filing does not use the label 'marketable equity securities'
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional is a computed sum of separately disclosed purchase ($10.0bn) and sale ($5.4bn) notionals, not a single reported total figure
+[HISTORICAL] [LLM_FLAG] fx_designated_notional/fx_not_designated_notional inferred as 0/15400 because the filing states no derivatives were designated as hedges (not an explicit split-out table)
+[HISTORICAL] [LLM_FLAG] total_derivative_asset/liability fair values (83 asset / 88 liability per fair value table) are disclosed in the financial_instruments/fair value note, not within this derivatives_note section_text, so left null here
+[HISTORICAL] [LLM_FLAG] No commodity, equity, or interest rate swap derivatives disclosed; company uses Euro-denominated debt (not a derivative) as a net investment hedge
+[HISTORICAL] [LLM_FLAG] Embedded derivative liability related to the convertible notes was extinguished in May 2025 upon note maturity (see debt note); no embedded derivative liability remains at June 30, 2025
+[HISTORICAL] [LLM_FLAG] This filing discloses both three-month and six-month FX impact figures. fx_impact_on_bookings uses the three-month figure (13% reported vs ~9% constant currency = 4pp); the six-month gap is smaller (10% vs 9% = 1pp)
+[HISTORICAL] [LLM_FLAG] fx_impact_on_revenues uses the three-month figure (16% reported vs ~12% constant currency = 4pp); the six-month gap is 13% vs 11% = 2pp
+[HISTORICAL] [LLM_FLAG] Both fx_impact fields are percentage-point gaps between reported and constant-currency growth, not dollar amounts
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp/interest_rate_sensitivity now reference 'outstanding debt' broadly (not just nonconvertible debt as in the prior quarter) since the convertible notes matured in May 2025
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding left null because notional detail is already captured in the derivatives_note extraction (fx_derivatives_notional)
+[HISTORICAL] [LLM_FLAG] derivative_policies, marketable_equity_value, fixed_rate_notes_billion, fx_transaction_gain_loss, and fx_sensitivity_10pct not stated as figures within this market_risk section_text
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NUMERIC] ir_sensitivity_100bp: $100M → $100,000M (+99900.0%) — exceeds 20% threshold
-[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 100 to 100,000 (1000x)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[NUMERIC] marketable_equity_value: $650M → $450M (-30.8%) — exceeds 20% threshold
-[NUMERIC] equity_sensitivity_10pct: $65M → $45M (-30.8%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp decreased from $1,100M to $1,000M (9.1% decrease) - within normal range but suggests slight reduction in outstanding debt or rate sensitivity
-[LLM_FLAG] equity_sensitivity_10pct decreased from $65M to $45M (30.8% decrease) - indicates significant reduction in marketable equity value from $650M to approximately $450M
-[LLM_FLAG] fx_impact_on_bookings changed from +4% to +1% range to +7% single quarter impact - different period (3M only vs prior 3M/9M comparisons) but shows increased FX headwinds
-[LLM_FLAG] fx_impact_on_revenues changed from +4% to +3% estimated range to +6% benefit - consistent direction but slightly lower benefit than prior period estimates
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
-[LLM_FLAG] ir_sensitivity_100bp: Decreased from $1,200M to $1,100M (8.3% decrease) - minor variance within normal range
-[LLM_FLAG] marketable_equity_value: Increased from $550M to $650M (18.2% increase) - moderate change but plausible based on market conditions
-[LLM_FLAG] equity_sensitivity_10pct: Increased from $55M to $65M (18.2% increase) - consistent with equity value increase
-[LLM_FLAG] fx_impact_on_bookings: Current period shows lower FX impact (+4% to +1%) versus prior period (+3% to +4%), with bookings growth at consistent 10% constant currency for both 3M and 9M periods
-[LLM_FLAG] fx_impact_on_revenues: FX benefit increased to +4% and +3% from prior period +3% to +4%, indicating stronger currency headwind/tailwind changes
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
-[NUMERIC] ir_sensitivity_100bp: $900M → $1,200M (+33.3%) — exceeds 20% threshold
-[LLM_FLAG] IR_SENSITIVITY_100BP: Prior period was $900M, current is $1,200M - a 33% increase. This is within the 50% threshold but represents a significant change in interest rate exposure or debt composition
-[LLM_FLAG] FX_IMPACT_ON_BOOKINGS: Prior period showed -3% impact (negative benefit from FX), but current period shows +3-4% benefit (positive impact). This is a significant reversal, suggesting FX headwinds in prior period became tailwinds in current period
-[LLM_FLAG] FX_IMPACT_ON_REVENUES: Prior period showed -2% impact, current shows +3-4% impact. Similar reversal pattern as bookings, indicating strengthening of foreign currencies vs USD in current period
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[LLM_FLAG] IR_SENSITIVITY_100BP: Decreased from $1,100M to $900M (18% decrease) - within normal range but noteworthy decrease in interest rate sensitivity
-[LLM_FLAG] MARKETABLE_EQUITY_VALUE: Inferred value of $550M (based on 10% sensitivity = $55M) is slightly lower than prior $600M, but decline is less than 50%
-[LLM_FLAG] EQUITY_SENSITIVITY_10PCT: Decreased from $60M to $55M (8% decrease) - within normal range
-[LLM_FLAG] FX_IMPACT_ON_BOOKINGS: Changed from -2% (prior period implied) to -3% (Q1 2025), showing slightly increased headwind
-[LLM_FLAG] FX_IMPACT_ON_REVENUES: Changed from -3% (prior period) to -2% (Q1 2025), showing improved FX environment
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-05 ===
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional and fi_fx_not_designated_notional are computed as the sum of the FX purchase notional ($9.1bn) and sale notional ($4.7bn) converted to millions; the filing does not state a single combined total, and since the Company designates no derivatives as hedges, not-designated equals the full total
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_liability is computed as the sum of the FX derivative liability ($82M) and the embedded derivative liability on the convertible notes ($1,142M); the filing does not state a single combined total, and it is debatable whether the conversion-related embedded derivative should be aggregated with FX hedging derivatives
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt, and fi_ir_swap_notional are not disclosed anywhere in this section_text
+[HISTORICAL] [LLM_FLAG] marketable_equity_securities_fv is taken from the 'Investments in equity securities' fair-value table line; the filing does not use the label 'marketable equity securities'
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional is a computed sum of separately disclosed purchase ($9.1bn) and sale ($4.7bn) notionals, not a single reported total figure
+[HISTORICAL] [LLM_FLAG] fx_designated_notional/fx_not_designated_notional inferred as 0/13800 because the filing states no derivatives were designated as hedges (not an explicit split-out table)
+[HISTORICAL] [LLM_FLAG] total_derivative_asset/liability fair values (73 asset / 82 liability per fair value table) are disclosed in the financial_instruments/fair value note, not within this derivatives_note section_text, so left null here
+[HISTORICAL] [LLM_FLAG] No commodity, equity, or interest rate swap derivatives disclosed; company uses Euro-denominated debt (not a derivative) as a net investment hedge
+[HISTORICAL] [LLM_FLAG] fx_impact_on_bookings and fx_impact_on_revenues reported as percentage-point gaps (reported growth minus constant-currency growth), not millions: bookings 7% reported vs ~10% constant currency (-3pp); revenue 8% reported vs ~10% constant currency (-2pp)
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding left null because notional detail is already captured in the derivatives_note extraction (fx_derivatives_notional)
+[HISTORICAL] [LLM_FLAG] derivative_policies not disclosed in this excerpt; the filing cross-references Item 7A of the FY2024 Form 10-K for policy detail instead of restating it
+[HISTORICAL] [LLM_FLAG] marketable_equity_value and fixed_rate_notes_billion not stated as dollar figures within this market_risk section_text (values appear in Notes 5/6/9 instead)

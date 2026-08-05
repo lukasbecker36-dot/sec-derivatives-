@@ -19,26 +19,76 @@
 [LLM_FLAG] Market risk section contains only a cross-reference to Management's Discussion; no quantitative data available
 [LLM_FLAG] All prior-period values (fx_transaction_gain_loss: 6000, ir_sensitivity_100bp: 4400, fx_sensitivity_10pct: 1600, fixed_rate_notes_billion: 47300, marketable_equity_value: 1336) could not be compared — quantitative disclosures may be in the referenced MD&A section rather than Item 3
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($9,600M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($54,100M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($1,083M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($4,400M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($1,600M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,913M → $960M (-49.8%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $62M, now missing
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $6,000M → $9,600M (+60.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($3,057M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($3,010M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($47M)
+[HISTORICAL] [LLM_FLAG] Section is non-derivative fair value measurements only — FX/IR derivative notionals and derivative asset/liability totals absent
+[HISTORICAL] [LLM_FLAG] marketable_equity_securities_fv: NEE spec use $6,856M + FPL spec use $4,748M + NEE other $116M + FPL other $8M = $11,728M; includes nuclear decommissioning fund equities
+[HISTORICAL] [LLM_FLAG] corporate_debt_securities_fv: NEE spec use $676M + FPL spec use $490M + NEE other $1,350M = $2,516M
+[HISTORICAL] [LLM_FLAG] Section text truncated — gross unrealized gains/losses on AFS debt securities table not visible in the provided text
+[HISTORICAL] [LLM_FLAG] NEE does not use hedge accounting for cash flow and fair value hedges; AOCI amounts described as immaterial
+[HISTORICAL] [LLM_FLAG] FX notional jumped significantly from $6.0B (FY2025) to $9.6B (Q1 2026)
+[HISTORICAL] [LLM_FLAG] Net derivative position turned slightly positive in Q1 2026
+[HISTORICAL] [LLM_FLAG] NEE's market risk section focuses on commodity price risk (energy contracts via VaR) and interest rate risk; no FX or equity sensitivity figures quantified
+[HISTORICAL] [LLM_FLAG] Energy contract derivative assets at March 31, 2026: current $1,190M + noncurrent $1,678M = $2,868M; liabilities: current $(900)M + noncurrent $(1,511)M = $(2,411)M
+[HISTORICAL] [LLM_FLAG] Interest rate contracts net unrealized losses $(96)M at March 31, 2026 (improved from $(252)M at Dec 31, 2025) — position fair value, not a sensitivity metric
+[HISTORICAL] [LLM_FLAG] NEE total VaR at March 31, 2026: $55M (commodity)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($6,000M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($47,300M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($1,336M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] fx_derivatives_notional increased significantly from prior period (1.2 billion to 6 billion), needs investigation into additional currency exposure.
-[LLM_FLAG] ir_swap_notional increased significantly from prior period (35.2 billion to 47.3 billion), suggests new hedging strategies or increased interest rate risk management.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,365M → $1,913M (+40.1%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($62M)
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $3,200M → $6,000M (+87.5%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $2,692M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $3,509M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-817M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/8 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] 10-K filing (annual report) for period ending December 31, 2025
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt of $62M is NEE consolidated figure from the AFS debt securities unrealized gains/losses table explicitly shown in this section
+[HISTORICAL] [LLM_FLAG] marketable_equity_securities_fv: NEE spec use $7,007M + FPL spec use $4,840M + NEE other $131M + FPL other $7M = $11,985M; includes nuclear decommissioning fund equities
+[HISTORICAL] [LLM_FLAG] corporate_debt_securities_fv: NEE spec use $732M + FPL spec use $550M + NEE other investments $1,419M = $2,701M
+[HISTORICAL] [LLM_FLAG] Derivative fair value totals (assets/liabilities) not present in section_text — only non-derivative FV measurements (Note 4) and notional volumes from Note 3 are included
+[HISTORICAL] [LLM_FLAG] FX notional jumped significantly from $3.2B (Q3 2025) to $6.0B (FY2025)
+[HISTORICAL] [LLM_FLAG] 10-K filing (annual) for period ending December 31, 2025
+[HISTORICAL] [LLM_FLAG] NEE's market risk section focuses on commodity price risk (energy contracts via VaR) and interest rate risk; no FX or equity sensitivity figures quantified
+[HISTORICAL] [LLM_FLAG] Energy contract derivative assets at December 31, 2025: current $935M + noncurrent $1,780M = $2,715M; liabilities: current $(767)M + noncurrent $(1,881)M = $(2,648)M
+[HISTORICAL] [LLM_FLAG] Interest rate contracts net unrealized losses $(252)M at Dec 31, 2025 (vs. gains $293M at Dec 31, 2024) — position fair value disclosed but not a sensitivity metric
+[HISTORICAL] [LLM_FLAG] NEE total VaR at December 31, 2025: $83M (commodity)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $802M → $1,365M (+70.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-1,065M → $-817M (+23.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section is non-derivative fair value measurements only — FX/IR derivative notionals and derivative asset/liability totals absent
+[HISTORICAL] [LLM_FLAG] marketable_equity_securities_fv: $6,907M (NEE spec use) + $4,786M (FPL spec use) + $104M (NEE other) + $7M (FPL other) = $11,804M; includes nuclear decommissioning fund equities
+[HISTORICAL] [LLM_FLAG] corporate_debt_securities_fv: NEE spec use $709M + FPL spec use $519M + NEE other $1,290M = $2,518M; text truncated so FPL other investments corporate debt not visible
+[HISTORICAL] [LLM_FLAG] NEE does not use hedge accounting for cash flow and fair value hedges; AOCI amounts described as immaterial
+[HISTORICAL] [LLM_FLAG] NEE's market risk section focuses on commodity price risk (energy contracts via VaR) and interest rate risk; no FX or equity sensitivity figures are quantified
+[HISTORICAL] [LLM_FLAG] Energy contract derivative assets at September 30, 2025: current $819M + noncurrent $1,773M = $2,592M; liabilities: current $(701)M + noncurrent $(1,782)M = $(2,483)M
+[HISTORICAL] [LLM_FLAG] No standard sensitivity tables (100bp, 10% FX, 10% equity) presented; NEE uses VaR for commodity risk (NEE total VaR $52M at Sept 30, 2025)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,856M → $802M (-56.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $1,710M → $2,444M (+42.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $1,200M → $3,200M (+166.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section is non-derivative fair value measurements only — FX/IR derivative notionals and derivative asset/liability totals absent; those appear in Note 2
+[HISTORICAL] [LLM_FLAG] corporate_debt_securities_fv summed NEE special use ($727M) + FPL special use ($539M) + NEE other investments ($1,178M); FPL other investments corporate debt not separately shown
+[HISTORICAL] [LLM_FLAG] marketable_equity_securities_fv summed across NEE and FPL special use funds and other investments; includes nuclear decommissioning fund equities — total ~$11,037M
+[HISTORICAL] [LLM_FLAG] NEE does not use hedge accounting for cash flow and fair value hedges; AOCI amounts described as immaterial
+[HISTORICAL] [LLM_FLAG] FX notional jumped significantly from $1.2B (Q1 2025) to $3.2B (Q2 2025)
+[HISTORICAL] [LLM_FLAG] NEE's market risk section focuses primarily on commodity price risk (energy contracts) and interest rate risk; no FX risk sensitivity figures are quantified
+[HISTORICAL] [LLM_FLAG] No standard sensitivity analysis tables (100bp IR, 10% FX, 10% equity) are presented — NEE uses VaR methodology for commodity risk
+[HISTORICAL] [LLM_FLAG] Energy contract derivative assets at June 30, 2025: current $803M + noncurrent $1,527M = $2,330M total; liabilities: current $(873)M + noncurrent $(1,775)M = $(2,648)M total
+[HISTORICAL] [LLM_FLAG] Section text truncated — full interest rate risk sensitivity details may not have been fully captured
 
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [LLM_FLAG] Section is non-derivative fair value measurements only — FX/IR derivative notionals and derivative asset/liability totals are absent; those appear in the derivatives note (Note 2)
+[HISTORICAL] [LLM_FLAG] corporate_debt_securities_fv is ambiguous: multiple entity/category breakdowns; reported $2,236M summing NEE special use ($715M) + FPL special use ($526M) + NEE other investments ($995M); FPL other investments corporate debt not shown
+[HISTORICAL] [LLM_FLAG] marketable_equity_securities_fv summed across NEE and FPL special use funds and other investments; includes nuclear decommissioning fund equities
+[HISTORICAL] [LLM_FLAG] NEE does not use hedge accounting for cash flow and fair value hedges; AOCI amounts described as immaterial
+[HISTORICAL] [LLM_FLAG] NEE's market risk section focuses primarily on commodity price risk (energy contracts) and interest rate risk; no FX risk sensitivity figures are quantified
+[HISTORICAL] [LLM_FLAG] No standard sensitivity analysis tables (100bp IR, 10% FX, 10% equity) are presented — NEE uses VaR methodology for commodity risk instead
+[HISTORICAL] [LLM_FLAG] Interest rate contracts net unrealized loss of $(679)M at March 31, 2025 noted but not extracted as it is a fair value position, not a sensitivity figure
+[HISTORICAL] [LLM_FLAG] Energy contract derivative assets: current $933M + noncurrent $1,594M = $2,527M total; liabilities: current $(1,322)M + noncurrent $(1,588)M = $(2,910)M total — available in this section for cross-reference

@@ -13,32 +13,88 @@
 [VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct...)
 [LLM_FLAG] ir_swap_notional changed from prior period $970M (December 31, 2025) to $570M (June 30, 2026), a 41.2% decrease. This reflects maturing or unwinding of interest rate derivative positions.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($1,050M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($17M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($9M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($128M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-119M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $13M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $86M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-73M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] unrealized_gains_losses: appeared for first time ($-353M)
-[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $80M → $365M (+356.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $86M → $128M (+48.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-69M → $-113M (-63.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] unrealized_gains_losses: $-111M → $-353M (-218.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX derivatives are disclosed in this fair value note; only Energy-Related Contracts and Interest Rate Derivatives appear, so all FX notional fields are null.
+[HISTORICAL] [LLM_FLAG] Only fair values (not notional amounts) are given for Interest Rate Derivatives ($9 asset at March 31, 2026), so fi_ir_swap_notional is null.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability left null: Energy-Related Contracts ($6 asset / $(128) liability) and Interest Rate Derivatives ($9 asset, no liability line) are separate line items with no single combined 'total derivative' figure stated.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv, marketable_equity_securities_fv, and corporate_debt_securities_fv left null: equity and debt securities are reported separately under the NDT Fund and Rabbi Trust categories with no combined 'marketable securities' total line.
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt not disclosed in this section.
+[HISTORICAL] [LLM_FLAG] derivative_fair_values left null: no single combined figure for derivative assets and liabilities is stated; only separate per-category fair values are given.
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional is null because volumes are given in physical units (Dth, MWh) rather than a dollar notional
+[HISTORICAL] [LLM_FLAG] total_derivative_asset and net_derivative_position were computed by summing/differencing individual line items in the fair value table rather than being stated as totals directly
+[HISTORICAL] [LLM_FLAG] exchange_clearing_prices could not be determined because the source text is truncated mid-word ('such as N')
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, and normal_purchase_sale_exclusions are not present in this specific excerpt of the note
+[HISTORICAL] [LLM_FLAG] This market risk section discusses only commodity-price Value-at-Risk (VaR) methodology and the MTM VaR table (95%/99.5% confidence levels); it contains no FX, interest-rate, fixed-rate-debt, or equity-sensitivity figures matching the schema fields.
+[HISTORICAL] [LLM_FLAG] MTM VaR range widened materially versus the prior year (high of $314 million at 95% confidence vs $71 million for FY2025), noted here for context though no schema field captures it.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($970M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($13M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($86M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-73M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] net_derivative_position changed from (9) to (73), a 711% increase.
-[LLM_FLAG] total_derivative_liability increased by 861% from previous period (from 9 to 86).
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $200M → $80M (-60.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $300M → $970M (+223.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $29M → $86M (+196.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-9M → $-69M (-666.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] unrealized_gains_losses: $36M → $-111M (-408.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX derivatives are disclosed in this fair value note; only Energy-Related Contracts and Interest Rate Derivatives appear, so all FX notional fields are null.
+[HISTORICAL] [LLM_FLAG] Only fair values (not notional amounts) are given for Interest Rate Derivatives ($4 asset at December 31, 2025), so fi_ir_swap_notional is null.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability left null: Energy-Related Contracts ($13 asset / $(86) liability) and Interest Rate Derivatives ($4 asset, no liability line) are separate line items with no single combined 'total derivative' figure stated.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv, marketable_equity_securities_fv, and corporate_debt_securities_fv left null: equity and debt securities are reported separately under the NDT Fund and Rabbi Trust categories with no combined 'marketable securities' total line.
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt not disclosed in this section.
+[HISTORICAL] [LLM_FLAG] derivative_fair_values left null: no single combined figure for derivative assets and liabilities is stated; only separate per-category fair values are given.
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional is null because volumes are given in physical units (Dth, MWh) rather than a dollar notional
+[HISTORICAL] [LLM_FLAG] total_derivative_asset and net_derivative_position were computed by summing/differencing individual line items in the fair value table rather than being stated as totals directly
+[HISTORICAL] [LLM_FLAG] unrealized_gains_losses reflects the FY2025 annual figure; two additional prior-year comparatives ($29 million in 2024, $1,567 million in 2023) are also disclosed
+[HISTORICAL] [LLM_FLAG] exchange_clearing_prices text is truncated after 'N' before a likely third exchange name (probably Nodal Exchange, per this filer's known idiosyncrasies) is fully spelled out
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, and normal_purchase_sale_exclusions are not present in this specific excerpt of the note
+[HISTORICAL] [LLM_FLAG] This market risk section discusses only commodity-price Value-at-Risk (VaR) methodology and the MTM VaR table (95%/99.5% confidence levels) for FY2025 vs FY2024; it contains no FX, interest-rate, fixed-rate-debt, or equity-sensitivity figures matching the schema fields.
+[HISTORICAL] [LLM_FLAG] Section text is truncated at 'See ' — a cross-reference to another note may have been cut off.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $40M → $200M (+400.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $100M → $300M (+200.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $35M → $20M (-42.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $41M → $29M (-29.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-6M → $-9M (-50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] unrealized_gains_losses: $232M → $36M (-84.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX derivatives are disclosed in this fair value note; only Energy-Related Contracts and Interest Rate Derivatives appear, so all FX notional fields are null.
+[HISTORICAL] [LLM_FLAG] Only fair values (not notional amounts) are given for Interest Rate Derivatives ($(1) liability at September 30, 2025), so fi_ir_swap_notional is null.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability left null: Energy-Related Contracts ($20 asset / $(28) liability) and Interest Rate Derivatives ($(1) liability) are separate line items with no single combined 'total derivative' figure stated.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv, marketable_equity_securities_fv, and corporate_debt_securities_fv left null: equity and debt securities are reported separately under the NDT Fund and Rabbi Trust categories with no combined 'marketable securities' total line.
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt not disclosed in this section.
+[HISTORICAL] [LLM_FLAG] derivative_fair_values left null: no single combined figure for derivative assets and liabilities is stated; only separate per-category fair values are given.
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional is null because volumes are given in physical units (Dth, MWh) rather than a dollar notional
+[HISTORICAL] [LLM_FLAG] total_derivative_liability and net_derivative_position were computed by summing/differencing individual line items in the fair value table rather than being stated as totals directly
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, normal_purchase_sale_exclusions, and exchange_clearing_prices are not present in this specific excerpt of the note
+[HISTORICAL] [LLM_FLAG] This market risk section discusses only commodity-price Value-at-Risk (VaR) methodology and the MTM VaR table (95%/99.5% confidence levels); it contains no FX, interest-rate, fixed-rate-debt, or equity-sensitivity figures matching the schema fields.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $750M → $40M (-94.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $1,000M → $100M (-90.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $71M → $35M (-50.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $101M → $41M (-59.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-30M → $-6M (+80.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] unrealized_gains_losses: $-243M → $232M (+195.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX derivatives are disclosed in this fair value note; only Energy-Related Contracts and Interest Rate Derivatives appear, so all FX notional fields are null.
+[HISTORICAL] [LLM_FLAG] Only fair values (not notional amounts) are given for Interest Rate Derivatives ($(1) liability at June 30, 2025), so fi_ir_swap_notional is null.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability left null: Energy-Related Contracts ($35 asset / $(40) liability) and Interest Rate Derivatives ($(1) liability) are separate line items with no single combined 'total derivative' figure stated.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv, marketable_equity_securities_fv, and corporate_debt_securities_fv left null: equity and debt securities are reported separately under the NDT Fund and Rabbi Trust categories with no combined 'marketable securities' total line.
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt not disclosed in this section.
+[HISTORICAL] [LLM_FLAG] derivative_fair_values left null: no single combined figure for derivative assets and liabilities is stated; only separate per-category fair values are given.
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional is null because volumes are given in physical units (Dth, MWh) rather than a dollar notional
+[HISTORICAL] [LLM_FLAG] total_derivative_liability and net_derivative_position were computed by summing/differencing individual line items in the fair value table rather than being stated as totals directly
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, normal_purchase_sale_exclusions, and exchange_clearing_prices are not present in this specific excerpt of the note
+[HISTORICAL] [LLM_FLAG] This market risk section discusses only commodity-price Value-at-Risk (VaR) methodology and the MTM VaR table (95%/99.5% confidence levels); it contains no FX, interest-rate, fixed-rate-debt, or equity-sensitivity figures matching the schema fields.
 
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-06 ===
+[HISTORICAL] [LLM_FLAG] No FX derivatives are disclosed in this fair value note; only Energy-Related Contracts and Interest Rate Derivatives appear, so all FX notional fields are null.
+[HISTORICAL] [LLM_FLAG] Only fair values (not notional amounts) are given for Interest Rate Derivatives ($7 asset / $(7) liability), so fi_ir_swap_notional is null.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability left null: Energy-Related Contracts ($64 asset / $(94) liability) and Interest Rate Derivatives ($7 asset / $(7) liability) are separate line items with no single combined 'total derivative' figure stated.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv, marketable_equity_securities_fv, and corporate_debt_securities_fv left null: equity and debt securities are reported separately under the NDT Fund and Rabbi Trust categories with no combined 'marketable securities' total line.
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt not disclosed in this section.
+[HISTORICAL] [LLM_FLAG] derivative_fair_values left null: no single combined figure for derivative assets and liabilities is stated; only separate per-category fair values are given.
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional is null because volumes are given in physical units (Dth, MWh) rather than a dollar notional
+[HISTORICAL] [LLM_FLAG] total_derivative_asset, total_derivative_liability, and net_derivative_position were computed by summing/differencing individual line items in the fair value table rather than being stated as totals directly
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, normal_purchase_sale_exclusions, and exchange_clearing_prices are not present in this specific excerpt of the note
+[HISTORICAL] [LLM_FLAG] This market risk section discusses only commodity-price Value-at-Risk (VaR) methodology and the MTM VaR table (95%/99.5% confidence levels); it contains no FX, interest-rate, fixed-rate-debt, or equity-sensitivity figures matching the schema fields.

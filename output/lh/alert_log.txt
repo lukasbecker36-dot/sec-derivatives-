@@ -1,41 +1,66 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,200M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($1,200M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
-[DISAPPEARED_FIELD] total_derivative_asset: was $238M, now missing
-[DISAPPEARED_FIELD] total_derivative_liability: was $1,200M, now missing
-[DISAPPEARED_FIELD] net_derivative_position: was $238M, now missing
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $500M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, cash_flow_hedge_aoci, equity_sensitivity_10pct)
-[LLM_FLAG] fx_derivatives_notional and fx_designated_notional combined reflect significant foreign currency exposure and hedging strategy pertaining to foreign investments, indicating a notable engagement with derivatives.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-21 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($323M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $238M, now missing
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($323M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-323M)
+[HISTORICAL] [NUMERIC] fx_forwards_outstanding: $238M → $367M (+54.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $32M → $8M (-74.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX forward contracts are not mentioned in Note 9; they appear in Item 3 (market risk) with notional of $367.3 at March 31, 2026.
+[HISTORICAL] [LLM_FLAG] Comparative period (December 31, 2025): cross currency swaps $274.0 + interest rate swaps $52.7 = $326.7 total derivative liabilities.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset is null because only liability positions appear in the fair value table.
+[HISTORICAL] [LLM_FLAG] FX forward contracts ($367.3M notional at March 31, 2026) are disclosed only in the market risk section (Item 3), not in this note.
+[HISTORICAL] [LLM_FLAG] Three-month OCI gain on cross-currency swaps was $5.2M for Q1 2026 vs $7.0M for Q1 2025.
+[HISTORICAL] [LLM_FLAG] Comparison balance at December 31, 2025: Cross currency swaps $274.0M liability, Interest rate swaps $52.7M liability.
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $8.1 is for the three months ended March 31, 2026 (quarterly figure, not annualized).
+[HISTORICAL] [LLM_FLAG] Variable rate debt: $750.0 (2026 Term Loan) and $525.0 (AR Facility) = $1,275.0 total variable rate; each 25bp move changes interest expense by ~$3.2/year.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap aggregate notional of $1,200.0 confirmed ($300M in 2029, $300M in 2031, $600M in 2034).
+[HISTORICAL] [LLM_FLAG] IR swap notional of $500.0 for 2.70% senior notes due 2031 confirmed (compounded SOFR plus 1.33%).
+[HISTORICAL] [LLM_FLAG] FX forwards notional at December 31, 2025 was $238.0 (8 contracts), increased to $367.3 (11 contracts) at March 31, 2026.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($238M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($1,200M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($238M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-21 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $336M, now missing
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($238M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $336M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-336M, now missing
+[HISTORICAL] [NUMERIC] fx_forwards_outstanding: $311M → $238M (-23.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $24M → $32M (+32.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] The extracted section for 10-K (Note 18) does not contain the full fair value hierarchy table — only the derivatives note text is present. The fair value table (Level 1/2/3) likely appears in a different note in this 10-K filing that was not captured in the extract.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_liability set to null because the fair value table is absent from this extract; the Dec 31, 2025 values can be inferred from the Q1 2026 comparative period ($326.7) but that comes from a different filing.
+[HISTORICAL] [LLM_FLAG] OCI loss for year ended December 31, 2025 was $(131.3) on cross currency swaps.
+[HISTORICAL] [LLM_FLAG] Section text captured is the Item 7A market risk discussion rather than Notes to Financial Statements Note 18; fair value table data not available in this extract.
+[HISTORICAL] [LLM_FLAG] FX forward contracts ($238.0M) are described as transaction risk hedges; designation status not explicitly stated but treated as not-designated for separate reporting.
+[HISTORICAL] [LLM_FLAG] At December 31, 2024 comparison: 12 FX forwards with notional $302.4M.
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $31.7 is for a 10% hypothetical change in average exchange rates on income before income taxes for the full year 2025 (annual figure, not quarterly).
+[HISTORICAL] [LLM_FLAG] IR swap notional of $500.0 for 2.70% senior notes due 2031 is confirmed; variable rate debt also exists (term loan, revolving credit facility) but no 100bp sensitivity quantified.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap aggregate notional of $1,200.0 confirmed ($300M in 2029, $300M in 2031, $600M in 2034).
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] fx_forwards_outstanding: $670M → $311M (-53.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $14M → $24M (+69.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX forward contracts are not mentioned in this section; they may appear in the market risk (Item 3) section only.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset is null because only liability positions appear in the fair value table — no derivative asset line items are present.
+[HISTORICAL] [LLM_FLAG] FX forward contracts ($311.2M notional at September 30, 2025) are disclosed only in the market risk section (Item 3), not in this note.
+[HISTORICAL] [LLM_FLAG] Nine-month OCI loss on cross currency swaps was $139.6M cumulative through September 30, 2025.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct of $23.9M covers translation risk for nine months ended September 30, 2025.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap aggregate notional $1,200.0M also mentioned as net investment hedge on Swiss subsidiary.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $201M → $348M (+73.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $201M → $348M (+73.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-201M → $-348M (-73.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_forwards_outstanding: $496M → $670M (+35.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $6M → $14M (+123.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Cross currency swap fair value increased significantly from $135.7 (March 31, 2025) to $291.0 (June 30, 2025), consistent with the OCI loss of $(155.3) reported for Q2 2025.
+[HISTORICAL] [LLM_FLAG] FX forward contracts are not mentioned in this section; they may appear in the market risk section only.
+[HISTORICAL] [LLM_FLAG] FX forward contracts ($670.0M notional at June 30, 2025) are disclosed only in the market risk section (Item 3), not in this note.
+[HISTORICAL] [LLM_FLAG] Cross currency swap fair value liability increased substantially to $291.0M at June 30, 2025 from $135.7M at March 31, 2025, reflecting large adverse CHF/USD move; six-month OCI loss on cross currency swaps was $148.3M.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct of $14.1M covers only translation risk for six months ended June 30, 2025.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap aggregate notional $1,200.0M also mentioned as net investment hedge on Swiss subsidiary.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $311M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_forwards_outstanding)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NUMERIC] fx_forwards_outstanding: $670M → $311M (-53.6%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NUMERIC] fx_forwards_outstanding: $496M → $670M (+35.0%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($496M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-21 ===
+[HISTORICAL] [LLM_FLAG] FX forward contracts are not mentioned in this section; they may appear in the market risk (Item 3) section only.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset is null because only liability positions appear in the fair value table — no derivative asset line items are present.
+[HISTORICAL] [LLM_FLAG] FX forward contracts ($496.4M notional at March 31, 2025) are disclosed only in the market risk section (Item 3), not in this note; fx_derivatives_notional here reflects only cross-currency swaps from the notes section.
+[HISTORICAL] [LLM_FLAG] Interest rate swaps are fair value hedges, not cash flow hedges, so no cash flow hedge AOCI balance applies.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct of $6.3M covers only translation risk for three months ended March 31, 2025, not a balance-sheet fair-value sensitivity.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap aggregate notional $1,200.0M also mentioned in this section as a hedge on net investment in Swiss subsidiary.

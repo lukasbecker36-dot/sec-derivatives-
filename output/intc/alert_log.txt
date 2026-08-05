@@ -5,22 +5,30 @@
 [LLM_FLAG] ir_swap_notional changed >50% from prior (9700 -> 22920). Note: prior value (9700) appears to have tracked only the fair-value-hedge subset ($9.7B at Dec 2025), whereas 22920 is the total interest rate contracts notional from the volume table. The comparable Dec 2025 total was 21,796 (only ~5% change period-over-period).
 [LLM_FLAG] total_derivative_liability changed >50% from prior (4947 -> 16220). Driven by Escrowed Shares derivative liability of $15,570M recognized in Q2 2026 (vs $2,654M at Dec 2025). Escrowed Shares generated -$12,529M loss in Q2 2026 and -$13,619M loss in H1 2026.
 
-=== 10-Q | Period ending 2026-03-28 | Processed 2026-04-25 ===
-[NUMERIC] fx_forward_notional: $22,740M → $19,177M (-15.7%) — exceeds 15% threshold
-[NUMERIC] total_derivative_asset: $1,041M → $444M (-57.3%) — exceeds 25% threshold
-[LLM_FLAG] fx_forward_notional decreased 15.7% from $22,740M to $19,177M - within normal range but notable decline
-[LLM_FLAG] equity_hedge_notional decreased 7.5% from $2,689M to $2,488M - within normal range
-[LLM_FLAG] total_derivative_asset decreased 57.3% from $1,041M to $444M - exceeds 50% threshold, likely due to mark-to-market valuation changes and reduced escrowed shares liability impact
-[LLM_FLAG] total_derivative_liability increased 19.9% from $4,124M to $4,947M - notable increase driven by escrowed shares and Ireland SCIP arrangement fair value changes
-[LLM_FLAG] Market Risk section header found but no quantitative sensitivity data provided in the excerpt. The filing text appears to be incomplete or truncated, showing only the section heading on page 39 without the actual sensitivity calculations.
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] fx_forward_notional: $22,740M → $19,177M (-15.7%) — exceeds 15% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1,041M → $444M (-57.3%) — exceeds 25% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $38M, now missing
+[HISTORICAL] [LLM_FLAG] total_derivative_liability is elevated at $4,947M (gross) due to Escrowed Shares liability of $3,593M and Ireland SCIP arrangement of $532M
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci not disclosed in the section text provided
+[HISTORICAL] [LLM_FLAG] ir_swap_notional uses the pay-variable receive-fixed swap figure ($9.7B); total IR contracts notional is $18,528M
+[HISTORICAL] [LLM_FLAG] Equity contracts fair value: assets $0, liabilities $157M for Mar 28, 2026 (non-designated)
+[HISTORICAL] [LLM_FLAG] Section cross-references 2025 Form 10-K for sensitivity analysis; no numeric sensitivity figures are disclosed in this Q1 2026 10-Q filing.
 
-=== 10-K | Period ending 2025-12-27 | Processed 2026-03-28 ===
-[NUMERIC] total_derivative_asset: $823M → $1,041M (+26.5%) — exceeds 25% threshold
-[NUMERIC] total_derivative_liability: $7,078M → $4,124M (-41.7%) — exceeds 20% threshold
-[LLM_FLAG] ir_swap_notional: DECREASED 0% from $9,700M to $9,700M - within tolerance but note absolute notional decreased from $12.0B mentioned for Dec 28, 2024 in text (prior period shows $9.7B which appears to be the designated hedging notional only)
-[LLM_FLAG] total_derivative_liability: DECREASED 42% from $7,078M (prior period) to $4,124M - significant decline of approximately $2,954M. The prior period figure of $7,078M appears to have combined multiple line items; current period shows $4,124M in total derivatives
-[LLM_FLAG] fx_forward_notional: DECREASED 8% from $20,967M to $22,740M - actually INCREASED by 8%, so prior period comparison shows decrease from subsequent year perspective
-[LLM_FLAG] The provided filing text contains only a section header 'Quantitative and Qualitative Disclosures About Market Risk' with no actual content or numeric data. Unable to extract sensitivity values without the full disclosure text.
+=== 10-K | Period ending 2025-12-27 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $823M → $1,041M (+26.5%) — exceeds 25% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $7,078M → $4,124M (-41.7%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($38M)
+[HISTORICAL] [LLM_FLAG] total_derivative_liability is elevated at $4,124M (gross) due to Escrowed Shares liability of $2,654M and Ireland SCIP arrangement of $755M
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci not present in the section text provided (text references further note disclosure that was cut off)
+[HISTORICAL] [LLM_FLAG] ir_swap_notional uses the pay-variable receive-fixed swap figure ($9.7B); total IR contracts notional is $21,796M
+[HISTORICAL] [LLM_FLAG] The 10-K format presents net derivatives after collateral netting on the face of the table: net derivative assets $134M, net derivative liabilities $3,553M — gross figures used above per schema definition of 'fair value'
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp: figure is stated as 'less than $100 million' — using 100 as the ceiling bound; actual impact could be materially lower.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct: figure is stated as 'less than $38 million' — using 38 as the ceiling bound; actual impact could be lower.
+[HISTORICAL] [LLM_FLAG] IR sensitivity relates to fair value of investment portfolio only; separately, a 100bp rate rise increases annual interest expense by ~$97 million from floating-rate debt (after fixed-to-floating swaps) — this debt-side figure is not captured in the schema field.
+[HISTORICAL] [LLM_FLAG] Prior-year (Dec 28, 2024) FX sensitivity was less than $54 million for comparison.
 
 === 10-Q | Period ending 2025-09-27 | Processed 2026-03-28 ===
 [NUMERIC] ir_swap_notional: $12,000M → $9,700M (-19.2%) — exceeds 15% threshold

@@ -1,62 +1,48 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NUMERIC] credit_facility_amount: $0M → $300M (+149900.0%) — exceeds 20% threshold
-[NEW_FIELD] outstanding_letters_of_credit: appeared for first time ($9M)
-[NEW_FIELD] available_borrowing_capacity: appeared for first time ($291M)
-[VALIDATION] Likely units mismatch: credit_facility_amount changed from 0 to 300 (1500x)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-04 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($459M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($18M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($18M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[HISTORICAL] [DROPPED_TO_ZERO] ir_sensitivity_100bp: $-0M → $0M
+[HISTORICAL] [DROPPED_TO_ZERO] interest_rate_sensitivity: $-0M → $0M
+[HISTORICAL] [LLM_FLAG] This section text is Note 3 (Cash, Cash Equivalents and Investments) only; it contains no derivative notional or derivative fair value disclosures, so all fi_fx_*, fi_ir_swap_notional, and fi_total_derivative_* fields are null.
+[HISTORICAL] [LLM_FLAG] corporate_debt_securities_fv and gross_unrealized_gains_debt inferred as 0 from the absence of any debt-security line items in the current-period table (table total reconciles without them), not from an explicit zero statement in the text.
+[HISTORICAL] [LLM_FLAG] Company explicitly states no investments are subject to interest rate risk this period (portfolio composition shifted to instruments not exposed to rate risk) and has not engaged in currency hedging; no derivatives note exists in this filing.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $30M → $0M (-99.3%) — exceeds 20% threshold
-[NEW_FIELD] credit_facility_amount: appeared for first time ($300M)
-[NEW_FIELD] outstanding_letters_of_credit: appeared for first time ($9M)
-[NEW_FIELD] available_borrowing_capacity: appeared for first time ($291M)
-[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 30 to 0 (0x)
-[LLM_FLAG] ir_sensitivity_100bp decreased significantly from prior period value of 30.0 million, reflecting a substantial change in risk profile or investment strategy.
-[LLM_FLAG] The company has not engaged in any currency hedging activities to date, indicating potential exposure to foreign exchange risks.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-04 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,424M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $68M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $68M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $126M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $-1M → $-0M (+71.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity: $-1M → $-0M (+71.4%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/11 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt)
+[HISTORICAL] [LLM_FLAG] Section text for this accession is the qualitative 'Fair Value Measurements and Financial Instruments' policy narrative (fair value hierarchy levels, strategic investments, stock-based compensation accounting policy), not the Note 3 cash/marketable securities table nor any derivatives note. It contains no numeric values matching any schema field (only unrelated corporate-owned life insurance balances of $9.9M/$8.4M are mentioned). All fields set to null; likely the wrong section/an incomplete section slice was captured for this 10-K.
+[HISTORICAL] [LLM_FLAG] Company explicitly states it has not engaged in currency hedging activities and no derivatives note exists in this 10-K; FX/IR/equity notional and sensitivity fields are null or 0 by design, not extraction gaps.
+[HISTORICAL] [LLM_FLAG] financial_instruments locate anchor is based on the note headings index (no direct text window was provided for that note's content); verify against source HTML if precision matters.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NUMERIC] credit_facility_amount: $-0M → $300M (+150100.0%) — exceeds 20% threshold
-[NEW_FIELD] outstanding_letters_of_credit: appeared for first time ($9M)
-[NEW_FIELD] available_borrowing_capacity: appeared for first time ($291M)
-[DISAPPEARED_FIELD] hedging_policy: was $-0M, now missing
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (hedging_policy)
-[VALIDATION] Likely units mismatch: credit_facility_amount changed from -0 to 300 (1500x)
-[LLM_FLAG] The credit facility amount of $300 million represents a significant potential borrowing capability, while previous reports indicated it might be lower. Management's lack of usage since inception raises questions about their borrowing strategy.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-04 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $615M → $1,424M (+131.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $144M → $68M (-52.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $144M → $68M (-52.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $374M → $126M (-66.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $0M → $0M (+36.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $-2M → $-1M (+63.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity: $-2M → $-1M (+63.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] This section text is Note 3 (Cash, Cash Equivalents and Investments) only; it contains no derivative notional or derivative fair value disclosures, so all fi_fx_*, fi_ir_swap_notional, and fi_total_derivative_* fields are null.
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt was derived by subtracting the equity 'Marketable securities' line's unrealized gain from the table total, not stated directly in the text.
+[HISTORICAL] [LLM_FLAG] Company explicitly states it has not engaged in currency hedging activities and no derivatives note exists in this filing; FX/IR/equity notional and sensitivity fields are null or 0 by design, not extraction gaps.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NUMERIC] ir_sensitivity_100bp: $30M → $-0M (-100.7%) — exceeds 20% threshold
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-0M)
-[NEW_FIELD] credit_facility_amount: appeared for first time ($300M)
-[NEW_FIELD] outstanding_letters_of_credit: appeared for first time ($9M)
-[NEW_FIELD] available_borrowing_capacity: appeared for first time ($291M)
-[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 30 to -0 (0x)
-[LLM_FLAG] ir_sensitivity_100bp decreased by more than 50% compared to prior period, changing from 30.0 to -0.2.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-04 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,093M → $615M (-43.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $0M → $0M (+85.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] This section text is Note 3 (Cash, Cash Equivalents and Investments) only; it contains no derivative notional or derivative fair value disclosures, so all fi_fx_*, fi_ir_swap_notional, and fi_total_derivative_* fields are null.
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt was derived by subtracting the equity 'Marketable securities' line's unrealized gain from the table total, not stated directly in the text.
+[HISTORICAL] [LLM_FLAG] Company explicitly states it has not engaged in currency hedging activities and no derivatives note exists in this filing; FX/IR/equity notional and sensitivity fields are null or 0 by design, not extraction gaps.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $31M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $1M, now missing
-[LLM_FLAG] ir_sensitivity_100bp: Prior period disclosed $0.7 million sensitivity; current period states 'no investments are subject to interest rate risk' which appears to be a material change in disclosure approach rather than actual change in risk profile.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
-[NUMERIC] ir_sensitivity_100bp: $2M → $1M (-63.2%) — exceeds 20% threshold
-[LLM_FLAG] IR_SENSITIVITY_100BP: Declined from $1.9 million to $0.7 million (63% decrease). This represents a significant change in interest rate sensitivity, likely due to different investment portfolio composition or maturity structure as of September 30, 2025.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
-[LLM_FLAG] ir_sensitivity_100bp: Decreased from $2.1M to $1.9M (-9.5%). This modest change is likely due to changes in investment portfolio composition and interest rate environment as of June 30, 2025 compared to prior period.
-[LLM_FLAG] outstanding_letters_of_credit: Increased from $8.7M to $8.9M (+2.3%). Immaterial change, likely due to routine business operations.
-[LLM_FLAG] available_borrowing_capacity: Decreased slightly from $291.3M to $291.1M (-0.07%). Consistent with the increase in letters of credit.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[NUMERIC] ir_sensitivity_100bp: $0M → $2M (+950.0%) — exceeds 20% threshold
-[LLM_FLAG] IR_SENSITIVITY_100BP increased 950% from $0.2M to $2.1M - significant change warrants investigation. This represents a material change in interest rate risk exposure on the investment portfolio.
-[LLM_FLAG] OUTSTANDING_LETTERS_OF_CREDIT decreased from $8.9M to $8.7M (2.2% decrease) - minor change but within normal variance.
-[LLM_FLAG] AVAILABLE_BORROWING_CAPACITY increased from $291.1M to $291.3M (0.1% increase) - consistent with slight reduction in letters of credit.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-04 ===
+[HISTORICAL] [LLM_FLAG] This section text is Note 3 (Cash, Cash Equivalents and Investments) only; it contains no derivative notional or derivative fair value disclosures, so all fi_fx_*, fi_ir_swap_notional, and fi_total_derivative_* fields are null.
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt was derived by subtracting the equity 'Marketable securities' line's unrealized gain from the table total, not stated directly in the text.
+[HISTORICAL] [LLM_FLAG] Company explicitly states it has not engaged in currency hedging activities and no derivatives note exists in this filing; FX/IR/equity notional and sensitivity fields are null or 0 by design, not extraction gaps.

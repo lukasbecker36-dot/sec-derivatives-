@@ -16,33 +16,65 @@
 [LLM_FLAG] equity_derivatives_notional: convertible note hedges exist (0% Notes, 2031 0% Notes, 0.50% Notes) but notional is disclosed in Note 7, not in this section. Prior value was 'Yes' (existence flag); current extraction returns null for notional amount.
 [LLM_FLAG] Section text is a single-sentence cross-reference to the 2025 Form 10-K with no quantitative market risk data. All prior values (fixed_rate_debt_total=1.9, interest_rate_sensitivity=102.3, fx_sensitivity=3.0049) cannot be compared -- they likely came from the annual filing.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($190M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($102M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
-[NEW_FIELD] fx_forward_notional: appeared for first time ($190M)
-[NEW_FIELD] fixed_rate_debt_total: appeared for first time ($3M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($2M)
-[NEW_FIELD] fx_sensitivity: appeared for first time ($102M)
-[LLM_FLAG] fx_forward_notional decreased significantly from $256.8 million in 2024 to $190.5 million in 2025, a flag indicating a potential strategic shift in hedging activities.
-[LLM_FLAG] fixed_rate_notes_billion reflects a stable long-term debt position. No significant change from prior year indicating stability in financing.
+=== 10-Q | Period ending 2026-04-03 | Processed 2026-07-17 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $0M → $1M (+333.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($11M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($628M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($462M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($1M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($11M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-9M)
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-6M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $190M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $102M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forward_notional: was $190M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_debt_total: was $3,005M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity: was $102M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 7/12 previously-populated fields are now null (fx_forwards_outstanding, fx_sensitivity_10pct, fixed_rate_notes_billion, fx_forward_notional, fixed_rate_debt_total...)
+[HISTORICAL] [LLM_FLAG] Convertible note hedges on 0% Notes and 0.50% Notes mentioned but no notional disclosed in text
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($102M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
-[NEW_FIELD] fx_forward_notional: appeared for first time ($190M)
-[NEW_FIELD] fixed_rate_debt_total: appeared for first time ($3M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($2M)
-[NEW_FIELD] fx_sensitivity: appeared for first time ($102M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-17 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $326M → $577M (+77.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $100M → $387M (+286.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($0M)
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $100M, now missing
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($190M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-0M, now missing
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($190M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($102M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+[HISTORICAL] [NEW_FIELD] fx_forward_notional: appeared for first time ($190M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_debt_total: appeared for first time ($3,005M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity: appeared for first time ($102M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (fi_total_derivative_liability, fx_designated_notional, total_derivative_liability, net_derivative_position, cash_flow_hedge_aoci)
+[HISTORICAL] [LLM_FLAG] Section text for 'derivatives_note' is from Item 7A (market risk) of the 10-K, not Note 15 Financial Instruments; designated FX notional ($386.7M) and derivative fair values are in Note 15 (available in financial_instruments section for this filing)
+[HISTORICAL] [LLM_FLAG] fx_transaction_gain_loss not in market risk section text; Note 15 reports net loss of $5.5M for 2025
+[HISTORICAL] [LLM_FLAG] fx_forward_notional of $190.5M reflects undesignated balance sheet hedges only; designated cash flow hedge contracts ($386.7M) referenced to Note 15
+[HISTORICAL] [LLM_FLAG] interest_rate_sensitivity is for 50bp (not 100bp) on revolving credit facility which had no outstanding balance at December 31, 2025
+[HISTORICAL] [LLM_FLAG] fixed_rate_debt_total is in millions ($3,004.9M); fixed_rate_notes_billion converted to billions (3.005)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($190M)
-[NEW_FIELD] fx_forward_notional: appeared for first time ($190M)
-[NEW_FIELD] fixed_rate_debt_total: appeared for first time ($3,005M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($2M)
-[NEW_FIELD] fx_sensitivity: appeared for first time ($102M)
+=== 10-Q | Period ending 2025-10-03 | Processed 2026-07-17 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $4M, now missing
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($0M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $338M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $229M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $4M, now missing
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[HISTORICAL] [NUMERIC] net_derivative_position: $4M → $-0M (-108.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $3M → $-0M (-114.8%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/10 previously-populated fields are now null (fi_total_derivative_asset, fx_derivatives_notional, fx_not_designated_notional, total_derivative_asset)
+[HISTORICAL] [LLM_FLAG] Section text truncated at start; undesignated FX notional ($225.5M per financial_instruments section for this filing) not present in derivatives_note window
 
+=== 10-Q | Period ending 2025-07-04 | Processed 2026-07-17 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($4M)
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $2M, now missing
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($4M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $2M, now missing
+[HISTORICAL] [NUMERIC] net_derivative_position: $-2M → $4M (+260.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-2M → $3M (+235.0%) — exceeds 20% threshold

@@ -15,38 +15,56 @@
 [LLM_FLAG] cash_flow_hedge_aoci decreased from $31.0M (prior) to -$3.8M (current) - >50% change; this represents only the terminated forward-starting IR swap hedges from Q2 2024
 [LLM_FLAG] expected_12mo_reclass_from_aoci decreased from $31.0M (prior) to $0.3M (current) - 99% decrease; prior value appears to have been erroneous or from a different component
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($1M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,333M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($31M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($31M)
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $187M → $288M (+54.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-101M → $-78M (+22.7%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-2M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $10M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_swap_notional: was $1,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_swap_count: was $9M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $10M, now missing
+[HISTORICAL] [NUMERIC] fx_forward_contract_count: $10M → $17M (+70.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional includes cross-currency interest rate swaps (net investment hedges) which have both FX and IR components
+[HISTORICAL] [LLM_FLAG] seventeen FX forward contracts outstanding as of March 31, 2026 with notional amounts ranging from $2.4M to $65.2M
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section is brief and cross-references 2025 Annual Report for full quantitative disclosures
+[HISTORICAL] [LLM_FLAG] fx_transaction_gain_loss sourced from derivatives note: Q1 2026 -$2.2M
+[HISTORICAL] [LLM_FLAG] fx_forward_contract_count sourced from derivatives note; count increased to 17 from 10 at year-end 2025
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_designated_notional: was $1M, now missing
-[DISAPPEARED_FIELD] fx_not_designated_notional: was $1,333M, now missing
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $30M, now missing
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $30M, now missing
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
-[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $40M → $30M (-22.8%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-3M, now missing
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($10M)
+[HISTORICAL] [NEW_FIELD] interest_rate_swap_notional: appeared for first time ($1,000M)
+[HISTORICAL] [NEW_FIELD] interest_rate_swap_count: appeared for first time ($9M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($10M)
+[HISTORICAL] [LLM_FLAG] Section text begins mid-sentence (truncated start); derivative instruments table fully present
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional includes cross-currency interest rate swaps (net investment hedges) which have both FX and IR components
+[HISTORICAL] [LLM_FLAG] 10-K form; CC swap designated classification shows as 'Net investment' in 2025 column but 'Cash flow' for 2024 comparison — likely a prior period label; 2025 column used
+[HISTORICAL] [LLM_FLAG] Ten FX forward contracts outstanding as of December 31, 2025 per market risk section
+[HISTORICAL] [LLM_FLAG] 10-K has full quantitative market risk disclosures unlike 10-Q filings which cross-reference prior annual report
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp of $10.0M is the annualized impact including effect of IR swaps; with $1,000M of fixed-to-floating swaps and no variable rate debt otherwise
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_analysis figures represent impact of 10% USD appreciation on revenues/gross profit by currency
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] fx_transaction_gain_loss: $-6M → $-3M (+53.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_forward_contract_count: $7M → $11M (+57.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional includes cross-currency interest rate swaps (net investment hedges) which have both FX and IR components
+[HISTORICAL] [LLM_FLAG] eleven FX forward contracts outstanding as of September 30, 2025 with notional amounts ranging from $2.9M to $72.9M
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section is brief and cross-references 2024 Annual Report for full quantitative disclosures
+[HISTORICAL] [LLM_FLAG] fx_transaction_gain_loss sourced from derivatives note: Q3 2025 -$2.8M; nine months -$15.6M
+[HISTORICAL] [LLM_FLAG] fx_forward_contract_count sourced from derivatives note
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
-[LLM_FLAG] Filing contains only qualitative disclosure of market risk with no quantitative details. Text explicitly states 'there have been no material changes to our market risk assessment previously disclosed in the 2025 Annual Report,' suggesting detailed quantitative data may be in the 2025 Annual Report rather than this 10-Q excerpt.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-02 ===
-[LLM_FLAG] This is a brief market risk disclosure stating 'no material changes' from 2024 Annual Report. Most quantitative metrics are not provided in this section and would need to be extracted from the full 10-Q disclosure elsewhere or the referenced 2024 Annual Report.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-02 ===
-[LLM_FLAG] This appears to be a high-level summary disclosure referring back to 2024 Annual Report ('no material changes to our market risk assessment previously disclosed in the 2024 Annual Report'). Specific quantitative metrics are absent from this 10-Q section.
-[LLM_FLAG] All numeric fields are null due to lack of specific quantitative disclosures in this excerpt. Detailed derivative position data, sensitivities, and currency breakdowns are not included in this section.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] total_derivative_liability: $33M → $149M (+347.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $2M → $-114M (-7700.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-1M → $-4M (-272.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $3M → $-0M (-111.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional includes cross-currency interest rate swaps (net investment hedges) which have both FX and IR components
+[HISTORICAL] [LLM_FLAG] CC swap OtherLiab jumped from $31.6M (Mar 2025) to $147.3M (Jun 2025) reflecting significant USD weakening against EUR
+[HISTORICAL] [LLM_FLAG] SOFR swap and cap contract AOCI gains were fully reclassified into earnings by June 2025 per filing narrative
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section is brief and cross-references 2024 Annual Report for full quantitative disclosures
+[HISTORICAL] [LLM_FLAG] fx_transaction_gain_loss sourced from derivatives note: Q2 2025 -$6.0M; H1 2025 -$12.8M
+[HISTORICAL] [LLM_FLAG] fx_forward_contract_count sourced from derivatives note
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-06-02 ===
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $10M, now missing

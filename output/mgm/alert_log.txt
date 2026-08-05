@@ -2,69 +2,80 @@
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[DISAPPEARED_FIELD] total_derivative_asset: was $1,459M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $154M, now missing
-[DISAPPEARED_FIELD] debt_maturity_schedule: was $-20M, now missing
-[DISAPPEARED_FIELD] intercompany_debt_sensitivity_10pct: was $5M, now missing
-[DISAPPEARED_FIELD] forward_contracts_notional_jpy: was $35M, now missing
-[DISAPPEARED_FIELD] forward_contracts_sensitivity: was $13M, now missing
-[DISAPPEARED_FIELD] credit_facility_sensitivity: was $-20M, now missing
-[DISAPPEARED_FIELD] equity_price_sensitivity_10pct: was $-220M, now missing
-[VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (total_derivative_asset, equity_sensitivity_10pct, debt_maturity_schedule, intercompany_debt_sensitivity_10pct, forward_contracts_notional_jpy...)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($182M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($212M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($342M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($136M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($25M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-220M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $-35M, now missing
+[HISTORICAL] [NUMERIC] variable_rate_percentage: $13M → $16M (+23.1%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_sensitivity_1pct: was $-20M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] intercompany_debt_sensitivity_10pct: was $-220M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] mgm_osaka_commitment_jpy: was $357M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] forward_contracts_notional_jpy: was $154M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] yen_credit_facility_amount: was $54M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] forward_contracts_sensitivity: was $-109M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] credit_facility_sensitivity: was $-35M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_price_sensitivity_10pct: was $-35M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 10/12 previously-populated fields are now null (fx_sensitivity_10pct, equity_sensitivity_10pct, foreign_currency_sensitivity_1pct, intercompany_debt_sensitivity_10pct, mgm_osaka_commitment_jpy...)
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX forwards are not disclosed in USD in this 10-Q filing's financial instruments section
+[HISTORICAL] [LLM_FLAG] Debt investment table values are stated in thousands — converted to millions for output
+[HISTORICAL] [LLM_FLAG] Net loss on derivatives of $19M in Q1 2026 vs net gain of $40M in Q1 2025
+[HISTORICAL] [LLM_FLAG] Equity investments declined to $342M from $355M at December 31, 2025; net loss on equity investments of $13M in Q1 2026
+[HISTORICAL] [LLM_FLAG] MGM Northfield Park operations classified as held for sale; sold in April 2026 for $546M cash
+[HISTORICAL] [LLM_FLAG] This 10-Q market risk section explicitly states no material changes from 10-K (December 31, 2025) other than interest rate risk; FX and equity sensitivity disclosures are only in the annual 10-K
+[HISTORICAL] [LLM_FLAG] Variable rate percentage increased to 16% in Q1 2026 from 13% at year-end 2025 and 12% in Q3 2025; variable-rate amount rose to $1,005M (all maturing in 2030) from $835M at year-end 2025
+[HISTORICAL] [LLM_FLAG] Variable rate avg rate dropped to 3.7% from 6.2% in Q3 2025 — significant change suggesting refinancing or new facility
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,459M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($154M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-20M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($35M)
-[NEW_FIELD] variable_rate_percentage: appeared for first time ($13M)
-[NEW_FIELD] foreign_currency_sensitivity_1pct: appeared for first time ($-20M)
-[NEW_FIELD] intercompany_debt_sensitivity_10pct: appeared for first time ($-220M)
-[NEW_FIELD] mgm_osaka_commitment_jpy: appeared for first time ($357M)
-[NEW_FIELD] forward_contracts_notional_jpy: appeared for first time ($154M)
-[NEW_FIELD] yen_credit_facility_amount: appeared for first time ($54M)
-[NEW_FIELD] forward_contracts_sensitivity: appeared for first time ($-109M)
-[NEW_FIELD] credit_facility_sensitivity: appeared for first time ($-35M)
-[NEW_FIELD] equity_price_sensitivity_10pct: appeared for first time ($35M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-22 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $284M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $209M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $415M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $151M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $39M, now missing
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-220M)
+[HISTORICAL] [NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-35M)
+[HISTORICAL] [NEW_FIELD] foreign_currency_sensitivity_1pct: appeared for first time ($-20M)
+[HISTORICAL] [NEW_FIELD] intercompany_debt_sensitivity_10pct: appeared for first time ($-220M)
+[HISTORICAL] [NEW_FIELD] mgm_osaka_commitment_jpy: appeared for first time ($357M)
+[HISTORICAL] [NEW_FIELD] forward_contracts_notional_jpy: appeared for first time ($154M)
+[HISTORICAL] [NEW_FIELD] yen_credit_facility_amount: appeared for first time ($54M)
+[HISTORICAL] [NEW_FIELD] forward_contracts_sensitivity: appeared for first time ($-109M)
+[HISTORICAL] [NEW_FIELD] credit_facility_sensitivity: appeared for first time ($-35M)
+[HISTORICAL] [NEW_FIELD] equity_price_sensitivity_10pct: appeared for first time ($-35M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/8 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, fi_total_derivative_asset...)
+[HISTORICAL] [LLM_FLAG] Section text for this 10-K financial_instruments extract is severely truncated — ends after the fair value hierarchy bullet list with no quantitative data
+[HISTORICAL] [LLM_FLAG] Cross-reference: the 26-000018 market_risk_extract already contains key quantitative data for December 31, 2025 (fixed-rate debt $5,425M, variable-rate 13%, equity sensitivity $35M, FX forward notional JPY154.3B)
+[HISTORICAL] [LLM_FLAG] Cross-reference: the Q1 2026 filing (26-000035) discloses December 31, 2025 derivative liability as $88M ($69M current + $19M long-term) and equity investments fair value as $355M
+[HISTORICAL] [LLM_FLAG] Section text is from the market risk (Item 7A) section rather than a dedicated derivatives accounting note; fair value of derivatives and USD-equivalent notional amounts are not provided here — those appear in the financial_instruments section
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct and intercompany_debt_sensitivity_10pct both refer to the same $220M figure — intercompany USD-denominated debt held at MGM China subsidiaries
+[HISTORICAL] [LLM_FLAG] forward_contracts_sensitivity and equity_sensitivity_10pct both coincidentally equal $35M but refer to different instruments
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $154M, now missing
-[DISAPPEARED_FIELD] debt_maturity_schedule: was $-20M, now missing
-[DISAPPEARED_FIELD] intercompany_debt_sensitivity_10pct: was $6M, now missing
-[DISAPPEARED_FIELD] forward_contracts_notional_jpy: was $-35M, now missing
-[DISAPPEARED_FIELD] forward_contracts_sensitivity: was $13M, now missing
-[DISAPPEARED_FIELD] credit_facility_sensitivity: was $-20M, now missing
-[DISAPPEARED_FIELD] equity_price_sensitivity_10pct: was $-220M, now missing
-[VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (equity_sensitivity_10pct, debt_maturity_schedule, intercompany_debt_sensitivity_10pct, forward_contracts_notional_jpy, forward_contracts_sensitivity...)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $195M → $284M (+45.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $10M → $1M (-90.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $12M → $39M (+225.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX forwards are not disclosed in USD in this 10-Q filing's financial instruments section
+[HISTORICAL] [LLM_FLAG] Debt investment table values are stated in thousands — converted to millions for output
+[HISTORICAL] [LLM_FLAG] Net loss on derivatives of $41M in Q3 2025 reversed most of the $75M YTD gain through Q2 2025, resulting in $34M net gain for nine months ended September 30, 2025
+[HISTORICAL] [LLM_FLAG] Empire City goodwill impairment of $93M recorded in Q3 2025 — company withdrawing gaming license application
+[HISTORICAL] [LLM_FLAG] This 10-Q market risk section explicitly states no material changes from 10-K other than interest rate risk; FX and equity sensitivity disclosures are only in the annual 10-K
+[HISTORICAL] [LLM_FLAG] Variable rate percentage decreased slightly to 12% (Q3 2025) from 13% (Q2 2025); variable-rate amount dropped from $815M to $771M
+[HISTORICAL] [LLM_FLAG] Variable rate average interest rate rose significantly to 6.2% from 2.2% in Q2 2025 — suggests change in mix or new facility
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($154M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-20M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($6M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-35M)
-[NEW_FIELD] variable_rate_percentage: appeared for first time ($13M)
-[NEW_FIELD] foreign_currency_sensitivity_1pct: appeared for first time ($-20M)
-[NEW_FIELD] intercompany_debt_sensitivity_10pct: appeared for first time ($-220M)
-[NEW_FIELD] mgm_osaka_commitment_jpy: appeared for first time ($357M)
-[NEW_FIELD] forward_contracts_notional_jpy: appeared for first time ($154M)
-[NEW_FIELD] yen_credit_facility_amount: appeared for first time ($54M)
-[NEW_FIELD] forward_contracts_sensitivity: appeared for first time ($-109M)
-[NEW_FIELD] credit_facility_sensitivity: appeared for first time ($-35M)
-[NEW_FIELD] equity_price_sensitivity_10pct: appeared for first time ($-35M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $31M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($31M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-02 ===
-[LLM_FLAG] The provided text is only a header/reference section that incorporates information by reference to Part I, Item 2. The actual quantitative and qualitative market risk disclosures are not included in this excerpt. Full extraction requires the actual 'Market Risk' section content.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $2M → $10M (+400.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $60M → $12M (-80.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] variable_rate_percentage: $8M → $13M (+62.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX forwards are not disclosed in USD in this 10-Q filing's financial instruments section
+[HISTORICAL] [LLM_FLAG] Debt investment table values are stated in thousands — converted to millions for output
+[HISTORICAL] [LLM_FLAG] Significant improvement in derivative liability position vs December 31, 2024 ($96M) — liability dropped from $96M to $12M by June 30, 2025
+[HISTORICAL] [LLM_FLAG] This 10-Q market risk section explicitly states no material changes from 10-K other than interest rate risk; FX and equity sensitivity disclosures are only in the annual 10-K
+[HISTORICAL] [LLM_FLAG] Variable rate percentage jumped from 8% (Q1 2025) to 13% (Q2 2025), suggesting new variable-rate borrowings; variable-rate maturity shifted to 'Thereafter' bucket at $815M vs $527M in 2026 at Q1
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-06-02 ===
 [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing

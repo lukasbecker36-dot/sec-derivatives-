@@ -2,48 +2,33 @@
 [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_forwards_outstanding)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[DISAPPEARED_FIELD] ir_swap_notional: was $2M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $6M, now missing
-[DISAPPEARED_FIELD] derivative_impact_on_interest_expense: was $45M, now missing
-[DISAPPEARED_FIELD] swap_notional_amounts: was $2M, now missing
-[DISAPPEARED_FIELD] fair_values: was $87M, now missing
-[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (ir_swap_notional, fixed_rate_notes_billion, derivative_impact_on_interest_expense, swap_notional_amounts, fair_values)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-13 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $2,500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $2,500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $102M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] derivative_impact_on_interest_expense: was $45M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fi_ir_swap_notional, ir_swap_notional, fixed_rate_notes_billion, derivative_impact_on_interest_expense)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($2M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($6M)
-[NEW_FIELD] derivative_impact_on_interest_expense: appeared for first time ($45M)
-[NEW_FIELD] swap_notional_amounts: appeared for first time ($2M)
-[NEW_FIELD] fair_values: appeared for first time ($87M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $102M, now missing
-[DISAPPEARED_FIELD] derivative_impact_on_interest_expense: was $45M, now missing
-[DISAPPEARED_FIELD] fair_values: was $87M, now missing
-[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fixed_rate_notes_billion, derivative_impact_on_interest_expense, fair_values)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($102M)
-[NEW_FIELD] derivative_impact_on_interest_expense: appeared for first time ($45M)
-[NEW_FIELD] fair_values: appeared for first time ($87M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYZhMooGqiP6CDtfCwa'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYZWSjCU29Ksnujxxcn'}
-
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-13 ===
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($2,500M)
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($2,500M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($102M)
+[HISTORICAL] [NEW_FIELD] derivative_impact_on_interest_expense: appeared for first time ($45M)
+[HISTORICAL] [LLM_FLAG] Section is Item 7A (market risk narrative + maturity table only); balance sheet fair value totals for derivatives and investment securities are in the financial statement notes (Note 6, Note 16) which are not included in this section_text.
+[HISTORICAL] [LLM_FLAG] Fixed-to-variable IR swap notional of $2.5B is explicitly stated; however, cross-currency swaps (used for both IR and FX hedging) have notionals not disclosed in this section.
+[HISTORICAL] [LLM_FLAG] FX derivative notionals (cross-currency swaps + forwards) are referenced but quantified only in Note 6 — not extractable from this section.
+[HISTORICAL] [LLM_FLAG] The table is denominated in billions per the header '(in billions)'; converted to millions for schema output.
+[HISTORICAL] [LLM_FLAG] IR swap notional converted from billions to millions: $2.5B = 2,500M
+[HISTORICAL] [LLM_FLAG] FX derivative notionals (cross-currency swaps and forwards) are described qualitatively but no amounts are stated in Item 7A; may be in a financial statement note not included in this section
+[HISTORICAL] [LLM_FLAG] IR swap net fair value is $(0.1)B = approximately -$100M but this is at the table level combining maturity buckets
+[HISTORICAL] [LLM_FLAG] Fixed-rate debt total of $101.6B is pre-Separation; note states Versant's $1.0B notes ceased to be Comcast's obligation after December 31, 2025 following the Separation
+[HISTORICAL] [LLM_FLAG] derivative_impact_on_interest_expense is in millions ($45M increase in 2025)
+[HISTORICAL] [LLM_FLAG] No standalone FX derivative notional amounts are disclosed in Item 7A — cross-currency swap notionals may be disclosed in Note 6 which is not in this section text
 === 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
 [LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYZFbkukwKULYUx8crp'}
 
 === 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
 [LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYZ2m6MabUpo7TsipSj'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYYpG1TPfy589DJ3ssi'}
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-04-25 ===
 [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $102M, now missing

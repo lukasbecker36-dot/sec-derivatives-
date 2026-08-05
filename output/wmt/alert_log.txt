@@ -1,61 +1,102 @@
-=== 10-Q | Period ending 2026-04-30 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_swap_notional: was $2,026,000M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $31,000M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $700M, now missing
-[DISAPPEARED_FIELD] variable_rate_debt_pct: was $2,026,000M, now missing
-[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (ir_swap_notional, ir_sensitivity_100bp, fx_sensitivity_10pct, variable_rate_debt_pct)
+=== 10-Q | Period ending 2026-04-30 | Processed 2026-06-28 ===
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,163M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($5,163M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $4,771M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_liability: $900M → $1,366M (+51.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-1,366M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $700M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $37M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_value: was $4,500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $400M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] variable_rate_debt_pct: was $27M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_sensitivity_100bp: was $100M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] currency_swap_fair_value: was $900M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] currency_swap_sensitivity_10pct: was $700M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_investment_fair_value: was $4,500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_investment_sensitivity_10pct: was $400M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 11/16 previously-populated fields are now null (ir_swap_notional, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct...)
+[HISTORICAL] [LLM_FLAG] All derivative fair values are liabilities (negative); no asset positions exist in this filing.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional decreased notably from $6,020M (Jan 31 2026) to $5,163M (Apr 30 2026), suggesting some hedges matured or were unwound in Q1 FY2027.
+[HISTORICAL] [LLM_FLAG] IR swap notional unchanged at $4,771M across all periods in this series.
+[HISTORICAL] [LLM_FLAG] Level 3 debt investments ($1,192M) continue to appear alongside equity investments as introduced in the FY2026 10-K.
+[HISTORICAL] [LLM_FLAG] IR swap notional unchanged at $4,771M across all periods.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional decreased from $6,020M (January 31, 2026) to $5,163M (April 30, 2026), a reduction of $857M — likely reflecting scheduled maturities.
+[HISTORICAL] [LLM_FLAG] Total notional across all derivatives: $9,934M as of April 30, 2026.
+[HISTORICAL] [LLM_FLAG] Prior period (January 31, 2026) cross-currency notional shown as $6,020M, up from $5,831M at October 31, 2025.
 
-=== 10-K | Period ending 2026-01-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($2,026,000M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($31,000M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($700M)
-[NEW_FIELD] variable_rate_debt_pct: appeared for first time ($2,026,000M)
+=== 10-K | Period ending 2026-01-31 | Processed 2026-06-28 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $5,831M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $5,831M, now missing
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($4,771M)
+[HISTORICAL] [NUMERIC] total_derivative_liability: $1,537M → $900M (-41.4%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-1,537M, now missing
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($700M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($37M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_value: appeared for first time ($4,500M)
+[HISTORICAL] [NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($400M)
+[HISTORICAL] [NEW_FIELD] variable_rate_debt_pct: appeared for first time ($27M)
+[HISTORICAL] [NEW_FIELD] interest_sensitivity_100bp: appeared for first time ($100M)
+[HISTORICAL] [NEW_FIELD] currency_swap_fair_value: appeared for first time ($900M)
+[HISTORICAL] [NEW_FIELD] currency_swap_sensitivity_10pct: appeared for first time ($700M)
+[HISTORICAL] [NEW_FIELD] equity_investment_fair_value: appeared for first time ($4,500M)
+[HISTORICAL] [NEW_FIELD] equity_investment_sensitivity_10pct: appeared for first time ($400M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/8 previously-populated fields are now null (fx_derivatives_notional, fx_designated_notional, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] All derivative fair values are liabilities (negative); no asset positions exist in this filing.
+[HISTORICAL] [LLM_FLAG] New in this 10-K: Level 3 debt investments ($1,176M) added to fair value table alongside equity investments. This is a new disclosure category vs. prior year filings.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional increased to $6,020M (highest in the tracked series), consistent with expanded FX hedging program.
+[HISTORICAL] [LLM_FLAG] IR swap notional unchanged at $4,771M across all periods in this series.
+[HISTORICAL] [LLM_FLAG] Section text is from Item 7A (market risk MD&A) rather than the financial statement note — detailed notional tables for cross-currency swaps are in Note 7, not in this excerpt.
+[HISTORICAL] [LLM_FLAG] Currency swap liability of $0.9 billion is approximate (prose disclosure); exact figure and IR swap fair value require Note 7.
+[HISTORICAL] [LLM_FLAG] The IR swap notional of $4,771M is confirmed by the maturity table in this section (fixed-to-variable swaps total $4,771M).
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $0.7 billion and currency swap fair value of $0.9 billion refer to cross-currency interest rate swaps, not forward contracts.
+[HISTORICAL] [LLM_FLAG] IR swap pay/receive rates are weighted averages across maturities; the Fiscal 2031 tranche shows an unusually high 9.8% pay rate, suggesting a reset or new swap at market rates.
+[HISTORICAL] [LLM_FLAG] Variable rate LT debt of $750M maturing Fiscal 2028 at 4.1% represents a new item not present in FY2025 disclosures.
 
-=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_swap_notional: was $2,025M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $31,000M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $600M, now missing
-[DISAPPEARED_FIELD] variable_rate_debt_pct: was $2,025M, now missing
-[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (ir_swap_notional, ir_sensitivity_100bp, fx_sensitivity_10pct, variable_rate_debt_pct)
+=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-28 ===
+[HISTORICAL] [LLM_FLAG] All derivative fair values are liabilities (negative); no asset positions exist in this filing.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional continues to modestly decrease: $5,831M vs $5,840M at Jul 31 2025.
+[HISTORICAL] [LLM_FLAG] IR swap notional unchanged at $4,771M across all periods.
+[HISTORICAL] [LLM_FLAG] IR swap notional unchanged at $4,771M across all periods.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional: $5,831M (Oct 31, 2025) vs $5,840M (Jul 31, 2025) — slight decrease.
+[HISTORICAL] [LLM_FLAG] Total notional across all derivatives: $10,602M as of October 31, 2025.
 
-=== 10-K | Period ending 2026-01-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($37M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($4,500M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($400M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($4,771M)
-[NEW_FIELD] variable_rate_debt_pct: appeared for first time ($27M)
-[NEW_FIELD] interest_sensitivity_100bp: appeared for first time ($100M)
-[NEW_FIELD] currency_swap_fair_value: appeared for first time ($900M)
-[NEW_FIELD] currency_swap_sensitivity_10pct: appeared for first time ($700M)
-[NEW_FIELD] equity_investment_fair_value: appeared for first time ($4,500M)
-[NEW_FIELD] equity_investment_sensitivity_10pct: appeared for first time ($400M)
-[LLM_FLAG] variable_rate_debt_pct increased from 20% (FY2025) to 27% (FY2026) — significant increase in variable rate exposure
-[LLM_FLAG] currency_swap_fair_value liability decreased from $1,400M to $900M — improvement due to strengthening of certain currencies vs USD
-[LLM_FLAG] equity_investment_fair_value increased from $3,000M to $4,500M (50% increase) — crosses >50% change threshold vs prior 10-K
-[LLM_FLAG] Variable rate short-term borrowings more than doubled from $3,068M to $6,596M
+=== 10-Q | Period ending 2025-07-31 | Processed 2026-06-28 ===
+[HISTORICAL] [LLM_FLAG] All derivative fair values are liabilities (negative); no asset positions exist in this filing.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional slightly decreased from $5,903M (Apr 30 2025) to $5,840M (Jul 31 2025).
+[HISTORICAL] [LLM_FLAG] IR swap notional unchanged at $4,771M across all periods.
+[HISTORICAL] [LLM_FLAG] IR swap notional unchanged at $4,771M (same as January 31, 2025 and April 30, 2025).
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional decreased slightly from $5,903M (April 30, 2025) to $5,840M (July 31, 2025).
+[HISTORICAL] [LLM_FLAG] Total notional across all derivatives: $10,611M as of July 31, 2025.
 
-=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $36M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $3,000M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $300M, now missing
-[DISAPPEARED_FIELD] ir_swap_notional: was $4,771M, now missing
-[DISAPPEARED_FIELD] variable_rate_debt_pct: was $20M, now missing
-[DISAPPEARED_FIELD] interest_sensitivity_100bp: was $100M, now missing
-[DISAPPEARED_FIELD] currency_swap_fair_value: was $1,400M, now missing
-[DISAPPEARED_FIELD] currency_swap_sensitivity_10pct: was $600M, now missing
-[DISAPPEARED_FIELD] equity_investment_fair_value: was $3,000M, now missing
-[DISAPPEARED_FIELD] equity_investment_sensitivity_10pct: was $300M, now missing
-[VALIDATION] Likely extraction failure: 10/10 previously-populated fields are now null (fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct, ir_swap_notional, variable_rate_debt_pct...)
+=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-28 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $1,999M → $1,488M (-25.6%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,903M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($5,903M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $4,771M, now missing
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-1,488M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $600M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $36M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_value: was $3,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $300M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] variable_rate_debt_pct: was $20M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_sensitivity_100bp: was $100M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] currency_swap_fair_value: was $1,400M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] currency_swap_sensitivity_10pct: was $600M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_investment_fair_value: was $3,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_investment_sensitivity_10pct: was $300M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 11/16 previously-populated fields are now null (ir_swap_notional, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct...)
+[HISTORICAL] [LLM_FLAG] All derivative fair values are liabilities (negative); no asset positions exist in this filing.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional increased from $5,452M (Jan 31 2025) to $5,903M (Apr 30 2025), indicating new hedges added during Q1 FY2026.
+[HISTORICAL] [LLM_FLAG] Equity investments ($2,392M total) are long-term strategic holdings, not marketable equity securities in the portfolio/trading sense.
+[HISTORICAL] [LLM_FLAG] IR swap notional unchanged at $4,771M quarter-over-quarter (same as January 31, 2025).
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional increased from $5,452M to $5,903M between January 31 and April 30, 2025.
+[HISTORICAL] [LLM_FLAG] Total notional across all derivatives: $10,674M as of April 30, 2025.
 
-=== 10-K | Period ending 2025-01-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($36M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($3,000M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($300M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($4,771M)
-[NEW_FIELD] variable_rate_debt_pct: appeared for first time ($20M)
-[NEW_FIELD] interest_sensitivity_100bp: appeared for first time ($100M)
-[NEW_FIELD] currency_swap_fair_value: appeared for first time ($1,400M)
-[NEW_FIELD] currency_swap_sensitivity_10pct: appeared for first time ($600M)
-[NEW_FIELD] equity_investment_fair_value: appeared for first time ($3,000M)
-[NEW_FIELD] equity_investment_sensitivity_10pct: appeared for first time ($300M)
-
+=== 10-K | Period ending 2025-01-31 | Processed 2026-06-28 ===
+[HISTORICAL] [LLM_FLAG] All derivative fair values are liabilities (negative); no asset positions exist in this filing.
+[HISTORICAL] [LLM_FLAG] Cross-currency swaps classified as FX instruments for fi_fx_derivatives_notional; IR swaps and cross-currency swaps together form total notional of $10,223M.
+[HISTORICAL] [LLM_FLAG] Equity investments ($3,041M total) are long-term strategic holdings, not marketable equity securities in the portfolio/trading sense.
+[HISTORICAL] [LLM_FLAG] Section text is from Item 7A (market risk MD&A) rather than a financial statement note — detailed notional tables for the 10-K are not present in this excerpt. The FY2025 10-K note-level table with full notionals (IR swaps $4,771M, cross-currency swaps $5,452M) appears in the Fair Value Measurements note, not in this section text.
+[HISTORICAL] [LLM_FLAG] Currency swap liability of $1.4 billion is approximate (stated as '$1.4 billion' in prose); exact figure requires Note 8.
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $0.6 billion and currency swap fair value of $1.4 billion refer to cross-currency interest rate swaps, not forward contracts.
+[HISTORICAL] [LLM_FLAG] IR swap pay/receive rates are weighted averages across maturities; no single blended rate is given for the full portfolio.

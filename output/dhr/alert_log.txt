@@ -10,50 +10,77 @@
 [LLM_FLAG] fx_derivatives_notional decreased from 7,795 to 5,100 (35% decline) as net investment hedge cross-currency contracts matured ($3,000 → $2,500 outstanding).
 [LLM_FLAG] ir_swap_notional decreased from 1,600 to 0 — all interest rate swaps were settled in 2019/2021; only the AOCI amortization remains.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($7,795M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($7,154M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($641M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($1,600M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($342M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($3M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-27 | Processed 2026-06-16 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($217M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($217M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($211M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $1,500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $1,900M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, marketable_equity_value)
+[HISTORICAL] [LLM_FLAG] Notional amounts not in this section — deferred to Note 11.
+[HISTORICAL] [LLM_FLAG] Investment in equity securities $167M consists entirely of non-marketable holdings under Fair Value Alternative; no publicly-traded equity securities noted (consistent with 10-K disclosure that no publicly-traded equity held as of December 31, 2025).
+[HISTORICAL] [LLM_FLAG] DHR uses only cross-currency swaps as derivative instruments; no FX forwards, options, commodity or equity derivatives present.
+[HISTORICAL] [LLM_FLAG] Interest rate swaps fully settled; outstanding notional is zero.
+[HISTORICAL] [LLM_FLAG] Three-month period ended March 27, 2026: total notional outstanding $12,801M (includes non-derivative FX debt $7,701M); derivative-only cross-currency = $5,100M.
+[HISTORICAL] [LLM_FLAG] Foreign currency denominated debt notional grew significantly to $7,701M (from $3,333M in Q1 2025), reflecting new debt issuances.
 
-=== 10-Q | Period ending 2026-03-27 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYhh98snQVdbANjxaJn'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYhmaHSb5sxE8BwNtoM'}
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $129M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $44M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $129M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $44M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $85M, now missing
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,500M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1,900M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability, total_derivative_asset, total_derivative_liability, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] This section is the MD&A Financial Instruments and Risk Management narrative — it does not contain the Note 14 fair value/notional tables. All derivative detail deferred to Note 14.
+[HISTORICAL] [LLM_FLAG] Section does contain IR sensitivity ($1.5B FV decrease for 100bp rise) and FX sensitivity ($1.9B equity reduction for 10% depreciation) — captured in the market_risk extract.
+[HISTORICAL] [LLM_FLAG] As of December 31, 2025 the Company held no publicly-traded equity securities.
+[HISTORICAL] [LLM_FLAG] DHR uses only cross-currency swaps as derivative instruments; no FX forwards, options, commodity or equity derivatives present.
+[HISTORICAL] [LLM_FLAG] Interest rate swaps fully settled; outstanding notional is zero.
+[HISTORICAL] [LLM_FLAG] This is the 10-K filing (year ended December 31, 2025); Note 14 instead of Note 11.
+[HISTORICAL] [LLM_FLAG] Year 2025 full-year: total notional outstanding $11,154M (includes non-derivative FX debt $6,054M); derivative-only cross-currency = $5,100M.
+[HISTORICAL] [LLM_FLAG] Total original notional $15,529M includes $6,054M foreign currency denominated debt (nonderivative) and $4,000M cash flow hedge cross-currency (original notional).
+[HISTORICAL] [LLM_FLAG] Derivative asset/liability FV values not present in section_text — would need Note 9 fair value table from the 10-K filing.
+[HISTORICAL] [LLM_FLAG] IR sensitivity figure of $1.5B and FX sensitivity of $1.9B are stated as approximate amounts in billions; converted to millions for consistency.
+[HISTORICAL] [LLM_FLAG] No variable-rate debt obligations as of December 31, 2025; primary interest rate exposure is from commercial paper (short-term, rate fixed at issuance). 100bp increase in commercial paper rate would have increased 2025 interest expense by approximately $11M.
+[HISTORICAL] [LLM_FLAG] No publicly-traded equity securities held as of December 31, 2025; equity price risk section accordingly empty.
+[HISTORICAL] [LLM_FLAG] All derivative notional and fair value details deferred to Note 14; not available in this section.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYhPv3GhztcK1N9ZXCx'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYhVkHMvJ4cDMiGPcxm'}
+=== 10-Q | Period ending 2025-09-26 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $84M → $129M (+53.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $86M → $44M (-48.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $84M → $129M (+53.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $86M → $44M (-48.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-2M → $85M (+4350.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts not in this section — deferred to Note 11.
+[HISTORICAL] [LLM_FLAG] Investment in equity securities $194M includes non-marketable holdings not in FV hierarchy.
+[HISTORICAL] [LLM_FLAG] DHR uses only cross-currency swaps as derivative instruments; no FX forwards, options, commodity or equity derivatives present.
+[HISTORICAL] [LLM_FLAG] Interest rate swaps fully settled; outstanding notional is zero.
+[HISTORICAL] [LLM_FLAG] Net investment hedge cross-currency notional decreased from $3,000M to $2,500M versus prior quarters, indicating partial maturity/termination.
+[HISTORICAL] [LLM_FLAG] Nine-month period total notional outstanding = $9,590M (includes non-derivative FX debt $4,490M); derivative-only cross-currency = $5,100M.
 
-=== 10-Q | Period ending 2025-09-26 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYguZixYZM6rF9MFF2u'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYh1ccFZ3WcnbbvXWYi'}
+=== 10-Q | Period ending 2025-06-27 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $400M → $84M (-79.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($86M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $400M → $84M (-79.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($86M)
+[HISTORICAL] [NUMERIC] net_derivative_position: $400M → $-2M (-100.5%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely units mismatch: net_derivative_position changed from 400 to -2 (0x)
+[HISTORICAL] [LLM_FLAG] Notional amounts not in this section — deferred to Note 11.
+[HISTORICAL] [LLM_FLAG] Investment in equity securities $195M includes non-marketable holdings not in FV hierarchy.
+[HISTORICAL] [LLM_FLAG] DHR uses only cross-currency swaps as derivative instruments; no FX forwards, options, commodity or equity derivatives present.
+[HISTORICAL] [LLM_FLAG] Interest rate swaps fully settled; outstanding notional is zero.
+[HISTORICAL] [LLM_FLAG] For the three-month period ended June 27, 2025: total notional outstanding $10,109M (includes non-derivative FX debt $4,509M); derivative-only cross-currency notional outstanding = $5,600M.
+[HISTORICAL] [LLM_FLAG] Period went net liability position ($-2M) compared to net asset in Q1 2025.
 
-=== 10-Q | Period ending 2025-06-27 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYgZSW42aDWqLRmxdBN'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYgdrAbz4yMu7xRf7oq'}
-
-=== 10-Q | Period ending 2025-03-28 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYgGmtzntWb7URzWgzN'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYgMNE1U6GXirgxTR5x'}
-
-=== 10-Q | Period ending 2026-03-27 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($27M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] fx_designated_notional: was $26M, now missing
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fx_designated_notional)
-
-=== 10-Q | Period ending 2025-09-26 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-06-27 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2026-03-27 | Processed 2026-04-24 ===
-[LLM_FLAG] This section is a cross-reference directing readers to Item 7 (MD&A). The actual quantitative and qualitative market risk disclosures are not included in this excerpt. All derivative and risk data fields cannot be extracted from this section alone.
-
+=== 10-Q | Period ending 2025-03-28 | Processed 2026-06-16 ===
+[HISTORICAL] [LLM_FLAG] Notional amounts not in this section — deferred to Note 11; derivative asset FV only, no liability at this date.
+[HISTORICAL] [LLM_FLAG] Investment in equity securities $215M includes non-marketable holdings not in FV hierarchy; publicly traded portion classified Level 1 but amount not split out.
+[HISTORICAL] [LLM_FLAG] DHR uses only cross-currency swaps as derivative instruments; no FX forwards, options, commodity or equity derivatives present.
+[HISTORICAL] [LLM_FLAG] Interest rate swaps fully settled; outstanding notional is zero.
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional represents sum of net investment hedge and cash flow hedge cross-currency swap notionals outstanding as of period end.

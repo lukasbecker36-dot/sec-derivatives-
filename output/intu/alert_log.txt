@@ -1,15 +1,60 @@
-=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-02 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_forwards_outstanding)
+=== 10-Q | Period ending 2026-04-30 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $318M → $1,852M (+482.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $183M → $2,249M (+1129.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $178M → $607M (+241.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX or IR derivative instruments mentioned in section text — Intuit does not appear to use hedging derivatives
+[HISTORICAL] [LLM_FLAG] Gross unrealized gains/losses on debt securities not disclosed in this section
+[HISTORICAL] [LLM_FLAG] Section is a truncated cross-reference to the annual 10-K (fiscal year ended July 31 2025); most market risk disclosures are not restated here
+[HISTORICAL] [LLM_FLAG] 2026 Credit Facility ($2.2B unsecured revolving, expires Jan 2031) referenced; $0 outstanding at April 30 2026
 
-=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-02 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] This excerpt is limited in scope - it primarily addresses a new $300 million secured revolving credit facility and defers detailed market risk discussion to the Form 10-K. Most quantitative and qualitative market risk disclosures are not included in this excerpt.
-[LLM_FLAG] The filing explicitly states to reference 'Part II, Item 7A of our Annual Report on Form 10-K for the fiscal year ended July 31, 2024 for a detailed discussion of our market risks,' indicating that comprehensive market risk disclosures are not in this 10-Q section.
+=== 10-Q | Period ending 2026-01-31 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $2,330M → $318M (-86.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $340M → $183M (-46.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $335M → $178M (-46.9%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [LLM_FLAG] No FX or IR derivative instruments mentioned in section text — Intuit does not appear to use hedging derivatives
+[HISTORICAL] [LLM_FLAG] Gross unrealized gains/losses on debt securities not disclosed in this section
+[HISTORICAL] [LLM_FLAG] Cash equivalents notably lower vs prior quarters (Q2 FY2026: $318M vs Q1 FY2026: $2,330M and FY2025 year-end: $1,790M) — likely seasonal (tax season cash deployment)
+[HISTORICAL] [LLM_FLAG] Section is a truncated cross-reference to the annual 10-K; most market risk disclosures are not restated here
+[HISTORICAL] [LLM_FLAG] New 2026 Credit Facility ($2.2B unsecured revolving, expires Jan 2031, SOFR-based) and 2026 Short-Term Credit Facility ($5.8B, matures March 2026 for TurboTax early refund) are new interest-rate exposures mentioned
+[HISTORICAL] [LLM_FLAG] At January 31 2026: $0 outstanding under both new credit facilities
 
-=== 10-Q | Period ending 2025-01-31 | Processed 2026-06-02 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_forwards_outstanding)
-[LLM_FLAG] Filing excerpt is incomplete - text explicitly references 'See Part II, Item 7A of our Annual Report on Form 10-K for the fiscal year ended July 31, 2024 for a detailed discussion of our market risks' indicating that quantitative and qualitative market risk disclosures are located elsewhere
-[LLM_FLAG] No derivatives information, investment policy details, or market risk sensitivities provided in this excerpt
+=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,790M → $2,330M (+30.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $1,818M → $340M (-81.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $502M → $335M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-5M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $5M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, fixed_rate_notes_billion)
+[HISTORICAL] [LLM_FLAG] No FX or IR derivative instruments mentioned in section text — Intuit does not appear to use hedging derivatives
+[HISTORICAL] [LLM_FLAG] Gross unrealized gains/losses on debt securities not disclosed in this section
+[HISTORICAL] [LLM_FLAG] Section text contains only a cross-reference: 'There were no material changes to our quantitative and qualitative disclosures about market risk during the three months ended October 31, 2025. See Part II, Item 7A of our Annual Report on Form 10-K for the fiscal year ended July 31, 2025 for a detailed discussion.' No quantitative data present in this section.
 
+=== 10-K | Period ending 2025-07-31 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $3,692M → $1,790M (-51.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $881M → $1,818M (+106.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-5M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
+[HISTORICAL] [LLM_FLAG] No FX or IR derivative instruments mentioned in section text — Intuit does not appear to use hedging derivatives
+[HISTORICAL] [LLM_FLAG] Gross unrealized gains/losses on debt securities not disclosed in this section
+[HISTORICAL] [LLM_FLAG] Section text is truncated mid-sentence; key sensitivity figures sourced from windows in financial_instruments_locate file
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp of -5 is the change in investment fair value, not total debt fair value change
+[HISTORICAL] [LLM_FLAG] Fixed-rate notes total $5.0B: 2020 Notes $1.0B remaining + 2023 Notes $4.0B
+[HISTORICAL] [LLM_FLAG] Cash equivalents and investments totaled $3.6B at July 31 2025; total interest income fiscal 2025 was $175M
+
+=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,193M → $3,692M (+209.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $174M → $881M (+406.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $159M → $529M (+232.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX or IR derivative instruments mentioned in section text — Intuit does not appear to use hedging derivatives
+[HISTORICAL] [LLM_FLAG] Gross unrealized gains/losses on debt securities not disclosed in this section
+[HISTORICAL] [LLM_FLAG] Section is a truncated cross-reference to the annual 10-K; most market risk disclosures are not restated here
+[HISTORICAL] [LLM_FLAG] 2024 Secured Facility ($300M, amended Feb 2025, now all committed) outstanding $209M at April 30 2025 is a new interest-rate exposure mentioned
+
+=== 10-Q | Period ending 2025-01-31 | Processed 2026-06-20 ===
+[HISTORICAL] [LLM_FLAG] No FX or IR derivative instruments mentioned in section text — Intuit does not appear to use hedging derivatives
+[HISTORICAL] [LLM_FLAG] Gross unrealized gains/losses on debt securities not disclosed in this section
+[HISTORICAL] [LLM_FLAG] Section is a truncated cross-reference to the annual 10-K; most market risk disclosures are not restated here
+[HISTORICAL] [LLM_FLAG] 2025 Credit Facility ($4.5B, variable SOFR-based) and 2024 Secured Facility ($300M, SOFR+1.15%) are new interest-rate exposures mentioned
+[HISTORICAL] [LLM_FLAG] At January 31 2025: $0 outstanding under 2025 Credit Facility; $109M outstanding under 2024 Secured Facility

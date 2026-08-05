@@ -1,16 +1,58 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($80M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($3M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($0M)
+[HISTORICAL] [LLM_FLAG] FirstEnergy's only derivatives are FTRs subject to regulatory accounting — changes in market value do not impact earnings
+[HISTORICAL] [LLM_FLAG] Cash line of $80M includes $28M of restricted cash; pure cash equivalents not separately broken out in the table
+[HISTORICAL] [LLM_FLAG] Debt securities ($282M) relate solely to JCP&L nuclear fuel disposal trusts
+[HISTORICAL] [LLM_FLAG] Prior period (Dec 31, 2025) shows FTR derivative asset of $21M and liability of $1M — significant decrease in FTR asset by Q1 2026
+[HISTORICAL] [LLM_FLAG] Market risk section is very brief — commodity price risk only, no quantitative sensitivity disclosures
+[HISTORICAL] [LLM_FLAG] Section notes a net FTR derivative asset of $3 million as of March 31, 2026 (non-hedge, regulatory accounting, no earnings impact)
+[HISTORICAL] [LLM_FLAG] No equity price risk, interest rate risk, or FX risk subsections present in this Q1 2026 filing's market risk section
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-18 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,431M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $9M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $6M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (total_cash_equivalents_fv, marketable_equity_securities_fv, gross_unrealized_gains_debt, fi_total_derivative_asset, fi_total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] The 10-K financial_instruments section contains a market risk maturity/sensitivity table for long-term debt (carrying value $26,390M at fixed rates totalling 4.4% avg) and fixed income trust assets ($280M), rather than the recurring fair value hierarchy table seen in quarterly filings
+[HISTORICAL] [LLM_FLAG] Fixed-rate long-term debt total = $26,390 million (approximately $26.4 billion) as of December 31, 2025 — not directly requested by schema but notable
+[HISTORICAL] [LLM_FLAG] No FX, IR swap, or equity derivative positions are disclosed in this section
+[HISTORICAL] [LLM_FLAG] The derivatives note section text is very brief — it only describes accounting policy, not specific positions or amounts
+[HISTORICAL] [LLM_FLAG] FirstEnergy uses FTRs (Financial Transmission Rights) as its primary derivatives; these are subject to regulatory accounting and do not flow through earnings
+[HISTORICAL] [LLM_FLAG] No FX, IR swap, or equity derivatives are disclosed anywhere in this filing section
+[HISTORICAL] [LLM_FLAG] Market risk section is qualitative only — no sensitivity dollar amounts provided
+[HISTORICAL] [LLM_FLAG] Section notes a net FTR derivative asset of $20 million as of December 31, 2025 (non-hedge, regulatory accounting, no earnings impact)
+[HISTORICAL] [LLM_FLAG] Pension plan assets gained 15.4% in 2025 vs 8.5% expected return; OPEB assets gained 15.7% vs 7.0% expected
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $614M → $1,431M (+133.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FirstEnergy's only derivatives are FTRs subject to regulatory accounting — changes in market value do not impact earnings
+[HISTORICAL] [LLM_FLAG] Cash line of $1,431M includes $27M of restricted cash; pure cash equivalents not separately broken out in the table
+[HISTORICAL] [LLM_FLAG] Debt securities ($283M) relate solely to JCP&L nuclear fuel disposal trusts; unrealized gain of $1M is first positive gain seen across this series
+[HISTORICAL] [LLM_FLAG] Market risk section is qualitative only — no sensitivity dollar amounts provided for any risk type
+[HISTORICAL] [LLM_FLAG] Interest rate risk subsection discusses pension/OPEB discount rates and SOFR-based credit facilities but provides no dollar sensitivity
+[HISTORICAL] [LLM_FLAG] FirstEnergy explicitly states it has not hedged floating rate debt interest rate exposure
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $163M → $614M (+276.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $1M → $8M (+700.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $1M → $7M (+600.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FirstEnergy's only derivatives are FTRs subject to regulatory accounting — changes in market value do not impact earnings
+[HISTORICAL] [LLM_FLAG] Cash line of $614M includes $45M of restricted cash; pure cash equivalents not separately stated in the table
+[HISTORICAL] [LLM_FLAG] Debt securities ($276M) relate solely to JCP&L nuclear fuel disposal trusts
+[HISTORICAL] [LLM_FLAG] Market risk section is qualitative only — no sensitivity dollar amounts provided for any risk type
+[HISTORICAL] [LLM_FLAG] Interest rate risk subsection discusses pension discount rate changes and SOFR-based credit facilities but provides no dollar sensitivity
+[HISTORICAL] [LLM_FLAG] FirstEnergy explicitly states it has not hedged floating rate debt interest rate exposure
 
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [LLM_FLAG] FirstEnergy's only derivatives are FTRs (Financial Transmission Rights) subject to regulatory accounting — changes in market value do not impact earnings
+[HISTORICAL] [LLM_FLAG] Cash, cash equivalents and restricted cash line includes $31M of restricted cash; pure cash equivalents cannot be separated from the table as presented
+[HISTORICAL] [LLM_FLAG] Debt securities ($272M) relate solely to JCP&L nuclear fuel disposal trusts, not a standard marketable securities portfolio
+[HISTORICAL] [LLM_FLAG] Market risk section is qualitative only — no sensitivity dollar amounts are provided for interest rate, FX, or equity risk
+[HISTORICAL] [LLM_FLAG] Equity price risk discussion is limited to pension and OPEB plan asset allocations; no direct equity securities sensitivity figure
+[HISTORICAL] [LLM_FLAG] FirstEnergy explicitly states it has not hedged floating rate debt interest rate exposure

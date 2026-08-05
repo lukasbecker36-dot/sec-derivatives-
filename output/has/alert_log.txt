@@ -6,17 +6,47 @@
 [NEW_FIELD] total_derivative_liability: appeared for first time ($5M)
 [NEW_FIELD] net_derivative_position: appeared for first time ($-2M)
 
-=== 10-Q | Period ending 2026-03-29 | Processed 2026-05-30 ===
-[LLM_FLAG] Cross-reference location changed from prior period (Part I, Item 2 vs. prior Part I, Item 2) - this appears consistent
-[LLM_FLAG] This is a boilerplate incorporation by reference section with no actual market risk quantitative disclosures. The actual detailed disclosures are deferred to MD&A in Part I, Item 2
+=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-19 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($529M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($3M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($6M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $2M → $3M (+70.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $9M → $6M (-32.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-7M → $-2M (+62.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-8M → $-13M (-51.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-4M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-23M, now missing
+[HISTORICAL] [LLM_FLAG] large_available_for_sale_portfolio — $528.6M AFS securities (U.S. Treasury) held at March 29, 2026, a significant increase from $106.0M at December 28, 2025, likely reflecting proceeds from debt issuance ($600M offering noted elsewhere)
+[HISTORICAL] [LLM_FLAG] market_risk_section_qualitative_only — no quantitative sensitivity figures provided for FX or IR risk in this 10-Q filing
+[HISTORICAL] [LLM_FLAG] fixed_rate_debt_increase — fixed-rate debt increased from $3.282B (Dec 28, 2025) to $3.6B (Mar 29, 2026), consistent with new debt issuance
 
-=== 10-Q | Period ending 2025-09-28 | Processed 2026-05-30 ===
-[LLM_FLAG] Cross-reference location changed from prior period 'Part I, Item 2' to same location, no change detected
-[LLM_FLAG] This is a short-form disclosure that defers all quantitative and qualitative market risk details to MD&A section - actual data not provided in this excerpt
+=== 10-K | Period ending 2025-12-28 | Processed 2026-06-19 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $9M, now missing
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $243M → $192M (-21.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1M → $2M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-8M)
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-6M, now missing
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-23M)
+[HISTORICAL] [LLM_FLAG] total_derivative_asset and total_derivative_liability are derived from balance sheet line items in the derivatives note rather than from a separate fair value table (10-K fair value table window not available); net_derivative_position may differ slightly from FV table aggregate due to netting conventions
 
-=== 10-Q | Period ending 2025-06-29 | Processed 2026-05-30 ===
-[LLM_FLAG] Cross-reference location changed from prior period: was 'Part I, Item 2' in prior period and remains 'Part I, Item 2' in current period - no change detected
-[LLM_FLAG] This section contains only a reference to MD&A rather than actual market risk disclosures. Actual quantitative and qualitative market risk data would need to be extracted from the MD&A section referenced (Part I, Item 2)
+=== 10-Q | Period ending 2025-09-28 | Processed 2026-06-19 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $2M → $1M (-56.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $12M → $9M (-25.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $2M → $1M (-56.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $12M → $9M (-25.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] market_risk_section_qualitative_only — no quantitative sensitivity figures provided for FX or IR risk in this 10-Q filing
+
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-19 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $5M → $2M (-54.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $2M → $12M (+447.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $368M → $446M (+21.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $5M → $2M (-54.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $2M → $12M (+447.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $3M → $-9M (-417.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $2M → $-6M (-343.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] notable_increase_in_derivative_liabilities — liability rose from $1.7M (Dec 29, 2024) to $11.5M (June 29, 2025), suggesting significant mark-to-market losses on FX hedges
+[HISTORICAL] [LLM_FLAG] market_risk_section_qualitative_only — no quantitative sensitivity figures provided for FX or IR risk in this 10-Q filing
 
 === 10-Q | Period ending 2025-03-30 | Processed 2026-05-30 ===
 [LLM_FLAG] Cross-reference location changed from 'Part II, Item 7' (prior period) to 'Part I, Item 2' (current period). Filing uses incorporation by reference approach rather than direct disclosure of quantitative market risk metrics.

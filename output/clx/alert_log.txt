@@ -1,24 +1,51 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($41M)
-[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($41M)
-[DISAPPEARED_FIELD] has_derivatives: was $53M, now missing
-[DISAPPEARED_FIELD] fx_derivatives_notional: was $53M, now missing
-[DISAPPEARED_FIELD] fx_not_designated_notional: was $0M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] referenced_exhibit: appeared for first time ($99M)
-[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (has_derivatives, fx_derivatives_notional, fx_not_designated_notional, equity_sensitivity_10pct)
-[LLM_FLAG] The notional amount of foreign currency forward contracts decreased from $67 million in the prior period to $41 million.
-
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($53M)
-[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($53M)
-[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-13 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $53M → $41M (-22.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $53M → $41M (-22.6%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $0M, now missing
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $53M → $41M (-22.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $53M → $41M (-22.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $18M → $29M (+61.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-1M → $17M (+1800.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $12M → $26M (+116.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] section_text is an abbreviated excerpt ending at the hedge designations paragraph; interest rate contract notional ($200M) and fair value tables available only in derivatives_note section_text
+[HISTORICAL] [LLM_FLAG] Interest rate contracts now active at $200M notional as of March 31, 2026 (were zero in prior quarters); linked to GOJO acquisition financing
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section contains no quantitative data; all disclosures cross-referenced to Exhibit 99.1 of the most recent 10-K
 
 === 10-Q | Period ending 2025-12-31 | Processed 2026-05-26 ===
 [LLM_FLAG] Filing section provided covers only derivative instruments and financial risk management (NOTE 6), not the balance sheet fair value measurements section where cash equivalents and marketable securities would typically be disclosed
 [LLM_FLAG] Filing section is a disclosure deferral to prior 10-K (Form 10-K for fiscal year ended June 30, 2025). No detailed quantitative market risk data is provided in this 10-Q excerpt.
 [LLM_FLAG] Period ending date in request (2025-12-31) does not match the referenced fiscal year end (June 30, 2025). This appears to be a calendar year 10-Q deferring to a fiscal year 10-K.
 
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-13 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($57M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($57M)
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($57M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($57M)
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($25M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($1M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($1M)
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($14M)
+[HISTORICAL] [LLM_FLAG] section_text is an abbreviated excerpt ending before the fair value hierarchy table; derivative asset/liability totals available in derivatives_note section_text
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section contains no quantitative data; all disclosures cross-referenced to Exhibit 99.1 of the most recent 10-K
+
+=== 10-K | Period ending 2025-06-30 | Processed 2026-06-13 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $37M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $37M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $37M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $37M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_derivatives_notional: was $27M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $12M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 11/11 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_ir_swap_notional, fx_derivatives_notional, fx_designated_notional...)
+[HISTORICAL] [LLM_FLAG] 10-K Item 7A body contains no quantitative data; all market risk disclosures are incorporated by reference from Exhibit 99.1 of this same 10-K filing
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-13 ===
+[HISTORICAL] [LLM_FLAG] section_text is an abbreviated excerpt; the fair value hierarchy table with derivative asset/liability totals appears only in the derivatives_note section_text for this filing
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section contains no quantitative data; all disclosures cross-referenced to Exhibit 99.1 of the most recent 10-K

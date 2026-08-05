@@ -54,59 +54,36 @@
 [LLM_FLAG] fx_sensitivity_10pct significantly higher than prior period - indicates increased currency risk exposure or a greater volume of transactions subject to foreign exchange risk.
 [LLM_FLAG] interest_rate_sensitivity indicates a reversal compared to prior period (from 11.0 to -1) which could reflect changes in the investment strategy or a different profile of short-term investments.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,169M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($2,179M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($2,017M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($55M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($11M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($44M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-44M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($19M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($221M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-1M)
-[LLM_FLAG] Significant amount of foreign currency derivatives designated as cash flow hedges (2,179M).
-[LLM_FLAG] Cash flow hedge accounting resulted in a reclassification of $19M expected in next 12 months.
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $1,514M → $2,017M (+33.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $12M → $30M (+150.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $88M → $57M (-35.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-76M → $-27M (+64.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-71M → $-44M (+38.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] short_term_investments_value: was $112M, now missing
+[HISTORICAL] [LLM_FLAG] Section covers only cash/cash equivalents and short-term investments; no derivatives disclosed here — derivative data likely in a separate hedging/derivatives note not captured in this section.
+[HISTORICAL] [LLM_FLAG] Cash and cash equivalents reported as a combined figure ($2,784M); cash equivalents component at fair value not separately stated.
+[HISTORICAL] [LLM_FLAG] Balance sheet hedging 10% sensitivity is $203M (separate from the $221M cash flow hedge sensitivity) — notably large relative to cash flow hedge sensitivity
 
-=== 10-K | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($198M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($1M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $1,062M → $1,514M (+42.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $117M → $88M (-24.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-102M → $-76M (+25.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section covers only cash/cash equivalents and short-term investments; no derivatives disclosed here — derivative data likely in a separate hedging/derivatives note not captured in this section.
+[HISTORICAL] [LLM_FLAG] Cash and cash equivalents reported as a combined figure ($1,148M); cash equivalents component at fair value not separately stated.
+[HISTORICAL] [LLM_FLAG] Balance sheet hedging 10% sensitivity is $145M (separate from the $249M cash flow hedge sensitivity)
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($221M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($1M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $28M → $15M (-46.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $26M → $117M (+350.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $2M → $-102M (-5200.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $11M → $-82M (-845.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section covers only cash/cash equivalents and short-term investments; no derivatives disclosed here — derivative data likely in a separate hedging/derivatives note not captured in this section.
+[HISTORICAL] [LLM_FLAG] Cash and cash equivalents reported as a combined figure ($1,518M); cash equivalents component at fair value not separately stated.
+[HISTORICAL] [LLM_FLAG] Large swing in derivative liability vs prior period: $117M vs $26M, driven by significant FX moves (EUR/GBP strength against USD)
+[HISTORICAL] [LLM_FLAG] Balance sheet hedging 10% sensitivity is $106M (separate from the $236M cash flow hedge sensitivity)
 
-=== 10-K | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($2,433M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($604M)
-
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] total_derivative_asset: was $2,420M, now missing
-[DISAPPEARED_FIELD] total_derivative_liability: was $594M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (total_derivative_asset, total_derivative_liability)
-
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-05-30 ===
-[LLM_FLAG] cash_flow_hedge_sensitivity decreased from $249 million (prior period) to $221 million (current period), representing an 11.2% decrease - within acceptable range but notable decline
-[LLM_FLAG] interest_rate_sensitivity remains stable at $1 million, consistent with prior period
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
-[LLM_FLAG] cash_flow_hedge_sensitivity: Increased from $236 million (prior period) to $249 million (current period) - 5.5% increase, within normal variance
-[LLM_FLAG] interest_rate_sensitivity: Remains at $1 million, unchanged from prior period
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
-[LLM_FLAG] cash_flow_hedge_sensitivity decreased from $241 million (prior period) to $236 million (current period) - 1.9% decline, within normal variance
-
-=== 10-K | Period ending 2025-03-31 | Processed 2026-05-30 ===
-[NUMERIC] cash_flow_hedge_sensitivity: $198M → $241M (+21.7%) — exceeds 20% threshold
-[LLM_FLAG] cash_flow_hedge_sensitivity decreased from $198 million (prior period) to $241 million (22% increase, within 50% threshold but directionally opposite to typical currency depreciation patterns)
-
+=== 10-K | Period ending 2025-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [LLM_FLAG] Section covers only cash/cash equivalents and short-term investments; no derivatives disclosed here — derivative data likely in a separate hedging/derivatives note not captured in this section.
+[HISTORICAL] [LLM_FLAG] Cash and cash equivalents reported as a combined figure ($2,136M); cash equivalents component at fair value not separately stated.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct reflects cash flow hedging contracts only; balance sheet hedging impact (10% = $109M) is a separate figure

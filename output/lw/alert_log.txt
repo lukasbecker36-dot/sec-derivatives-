@@ -10,18 +10,61 @@
 [NEW_FIELD] variable_rate_debt_current: appeared for first time ($989M)
 [NEW_FIELD] interest_rate_sensitivity_current: appeared for first time ($10M)
 
-=== 10-Q | Period ending 2025-08-24 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+=== 10-Q | Period ending 2026-02-22 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $3M → $9M (+210.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $6M → $2M (-67.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX, commodity, and interest rate derivatives are not disclosed in this fair value section.
+[HISTORICAL] [LLM_FLAG] Prior period (May 25, 2025) derivative assets were $10.2M and liabilities were $7.0M for comparison.
+[HISTORICAL] [LLM_FLAG] Fixed-rate debt of $2,945.6M and variable-rate debt of $1,056.7M are disclosed in this section but are not schema fields.
+[HISTORICAL] [LLM_FLAG] The footnote (a) description no longer mentions 'interest rate swap' in this Feb 2026 filing, listing only 'commodity swaps, option contracts, and currency contracts' — may indicate the IR swap position has matured or closed.
+[HISTORICAL] [LLM_FLAG] The 10-Q market risk section (Item 3) states 'There have been no other material changes to our market risk during the thirty-nine weeks ended February 22, 2026' and defers quantitative disclosures to the annual Form 10-K.
+[HISTORICAL] [LLM_FLAG] This filing includes a new qualitative disclosure about geopolitical risk: 'Since late February 2026, disruptions to shipping routes and heightened geopolitical tensions have contributed to increased volatility in global commodity and transportation markets' related to the Middle East conflict. This is qualitative only — no numeric sensitivity figures.
+[HISTORICAL] [LLM_FLAG] The company notes its hedging program and pricing actions help offset inflationary and supply-chain pressures.
 
-=== 10-K | Period ending 2025-05-25 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+=== 10-Q | Period ending 2025-11-23 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $16M → $3M (-82.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX, commodity, and interest rate derivatives are not disclosed in this fair value section.
+[HISTORICAL] [LLM_FLAG] Prior period (May 25, 2025) derivative assets were $10.2M and liabilities were $7.0M for comparison.
+[HISTORICAL] [LLM_FLAG] Fixed-rate debt of $2,956.0M and variable-rate debt of $973.0M are disclosed in this section but are not schema fields.
+[HISTORICAL] [LLM_FLAG] Note: footnote (a) in the Nov 2025 filing omits 'interest rate swap' versus Aug 2025 footnote — text now reads 'commodity swaps, option contracts, and currency contracts' without explicit mention of IR swaps.
+[HISTORICAL] [LLM_FLAG] The 10-Q market risk section (Item 3) states 'There have been no material changes to our market risk during the twenty-six weeks ended November 23, 2025' and defers all quantitative disclosures to the annual Form 10-K Item 7A. No numeric sensitivity or debt figures appear in this section.
 
-=== 10-Q | Period ending 2026-02-22 | Processed 2026-06-02 ===
-[LLM_FLAG] Provided text appears to be only a section header reference to 'Quantitative and Qualitative Disclosures about Market Risk' with direction to Form 10-K; the actual market risk disclosure content is not included
+=== 10-Q | Period ending 2025-08-24 | Processed 2026-06-21 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($16M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($6M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $68M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_sensitivity_current: was $7M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_sensitivity_prior: was $9M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_current: was $68M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_prior: was $63M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_debt_current: was $2,977M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] variable_rate_debt_current: was $1,166M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity_current: was $12M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 9/9 previously-populated fields are now null (fx_sensitivity_10pct, fixed_rate_notes_billion, commodity_sensitivity_current, commodity_sensitivity_prior, fx_sensitivity_current...)
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX, commodity, and interest rate derivatives are not disclosed in this fair value section.
+[HISTORICAL] [LLM_FLAG] Prior period (May 25, 2025) derivative assets were $10.2M and liabilities were $7.0M for comparison.
+[HISTORICAL] [LLM_FLAG] Fixed-rate debt of $2,966.3M and variable-rate debt of $1,012.7M are disclosed in this section but are not schema fields.
+[HISTORICAL] [LLM_FLAG] The 10-Q market risk section (Item 3) states 'There have been no material changes to our market risk during the thirteen weeks ended August 24, 2025' and defers all quantitative disclosures to the annual Form 10-K Item 7A. No numeric sensitivity or debt figures appear in this section.
 
-=== 10-Q | Period ending 2025-08-24 | Processed 2026-06-02 ===
-[LLM_FLAG] Change in has_derivatives from 'No mention' to 'Yes' - reflects that the provided text excerpt confirms use of commodity swaps, a significant change in disclosure status
+=== 10-K | Period ending 2025-05-25 | Processed 2026-06-21 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $9M, now missing
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($68M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+[HISTORICAL] [NEW_FIELD] commodity_sensitivity_current: appeared for first time ($7M)
+[HISTORICAL] [NEW_FIELD] commodity_sensitivity_prior: appeared for first time ($9M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_current: appeared for first time ($68M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_prior: appeared for first time ($63M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_debt_current: appeared for first time ($2,977M)
+[HISTORICAL] [NEW_FIELD] variable_rate_debt_current: appeared for first time ($1,166M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity_current: appeared for first time ($12M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] The section_text for this derivatives_note extract is a 10-K excerpt showing accounting policy text and tax/EPS/income tax notes — the actual derivatives notional and fair value tables do not appear to be captured in this window.
+[HISTORICAL] [LLM_FLAG] The accounting policy confirms: (1) commodity and interest rate derivatives are used; (2) commodity derivatives are NOT designated as hedges; (3) fair values are carried on the balance sheet; (4) NPNS exception is used where elected.
+[HISTORICAL] [LLM_FLAG] Notional amounts and fair values would need to be sourced from the complete derivatives note (Note 8 or similar) and the fair value measurements note, which were not fully included in this section_text window.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct and fx_sensitivity_current are the same figure ($68.5M) — both refer to the 10% adverse FX scenario at current period end
+[HISTORICAL] [LLM_FLAG] commodity_sensitivity values are pre-tax charges; after-tax figures are also provided ($5.1M and $6.9M respectively)
 
 === 10-Q | Period ending 2025-02-23 | Processed 2026-06-02 ===
 [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing
@@ -34,10 +77,4 @@
 [DISAPPEARED_FIELD] interest_rate_sensitivity_current: was $12M, now missing
 [VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (fixed_rate_notes_billion, commodity_sensitivity_current, commodity_sensitivity_prior, fx_sensitivity_current, fx_sensitivity_prior...)
 [LLM_FLAG] The provided filing text is incomplete - it only contains a reference statement directing readers to the Annual Report on Form 10-K for the year ended May 26, 2024 for quantitative and qualitative market risk disclosures. The actual 10-Q filing section with substantive risk disclosures was not provided.
-
-=== 10-Q | Period ending 2026-02-22 | Processed 2026-06-01 ===
-[LLM_FLAG] commodity_sensitivity_current decreased 26% from prior year ($6.8M vs $9.2M) - within normal variance but worth noting for trend analysis
-[LLM_FLAG] fixed_rate_debt_current increased 19.3% from prior year ($2,976.6M vs $2,495.0M) - significant increase in fixed-rate borrowing
-[LLM_FLAG] variable_rate_debt_current decreased 13.1% from prior year ($1,166.4M vs $1,341.7M) - company shifted debt composition toward fixed rate
-[LLM_FLAG] interest_rate_sensitivity_current decreased 13.2% from prior year ($11.8M vs $13.6M) - correlates with lower variable-rate debt outstanding
 

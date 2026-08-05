@@ -1,15 +1,72 @@
-=== 10-Q | Period ending 2026-03-28 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7hD4mGseScTkB3TJ9e'}
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] net_derivative_position: $-232M → $-55M (+76.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-228M → $-56M (+75.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] IR swap notional increased significantly to $12.1B at March 28, 2026 from $10.6B at September 27, 2025
+[HISTORICAL] [LLM_FLAG] FX not-designated notional decreased to $2.7B from $3.0B-$3.2B in prior periods
+[HISTORICAL] [LLM_FLAG] Expected 12mo AOCI reclassification is a net loss of $56M (much smaller loss than prior quarters)
+[HISTORICAL] [LLM_FLAG] Note renumbering consistent with Q1 FY2026: Fair Value = Note 13, Derivatives = Note 14
+[HISTORICAL] [LLM_FLAG] Market risk section is entirely qualitative for this period — describes policies for interest rate, FX, commodity, and total return swap hedging but provides no quantitative sensitivity disclosures.
+[HISTORICAL] [LLM_FLAG] Section transitions to Commitments & Contingencies and Supplemental Guarantor Financial Information. Registered debt par values visible in text: TWDC $32,068M par / $32,828M carrying; Legacy Disney $5,450M par / $5,408M carrying — these are guarantor debt disclosures, not market risk sensitivities.
+[HISTORICAL] [LLM_FLAG] Disney's 10-Q market risk sections appear to be consistently qualitative without embedded sensitivity tables for these filings.
 
-=== 10-Q | Period ending 2025-12-27 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7gmxQcGMDkMraAFENJ'}
+=== 10-Q | Period ending 2025-12-27 | Processed 2026-06-16 ===
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($14,300M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($11,100M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($3,200M)
+[HISTORICAL] [NEW_FIELD] equity_derivatives_notional: appeared for first time ($700M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($836M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($1,682M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-232M)
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-228M)
+[HISTORICAL] [LLM_FLAG] Note renumbered in Q1 FY2026: Fair Value = Note 13, Derivatives = Note 14 (vs Notes 14/15 in prior filings)
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional increased to USD$1.0B (CAD$1.3B) at December 27, 2025 vs $0.9B at September 27, 2025 due to FX rate changes
+[HISTORICAL] [LLM_FLAG] Expected 12mo AOCI reclassification is a net loss of $228M
+[HISTORICAL] [LLM_FLAG] Market risk section is entirely qualitative for this period — describes policies for interest rate, FX, commodity, and total return swap hedging but provides no quantitative sensitivity disclosures.
+[HISTORICAL] [LLM_FLAG] Section transitions to Commitments & Contingencies and Supplemental Guarantor Financial Information (registered debt par/carrying values shown for TWDC and Legacy Disney, but these are debt guarantor disclosures, not market risk sensitivities).
+[HISTORICAL] [LLM_FLAG] Registered debt par values visible in text: TWDC $29,583M par / $30,448M carrying; Legacy Disney $6,450M par / $6,402M carrying — these are not schema fields but may be useful context.
 
-=== 10-K | Period ending 2025-09-27 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7gKtWH8npZeEasi5vy'}
+=== 10-K | Period ending 2025-09-27 | Processed 2026-06-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $993M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $2,101M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $14,400M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $11,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $3,400M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_derivatives_notional: was $600M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $993M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $2,101M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-340M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-273M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 10/11 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability, fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional...)
+[HISTORICAL] [LLM_FLAG] Section extraction appears to have captured the wrong portion of the 10-K — the text contains accounting policy descriptions (EPS, hedging policy) and revenue segment breakdowns rather than the fair value measurement note with derivative asset/liability tables.
+[HISTORICAL] [LLM_FLAG] The actual fair value/derivatives note was likely in a different section of the filing. All schema fields are null as a result.
+[HISTORICAL] [LLM_FLAG] CRITICAL: Section text provided is from the borrowings/debt note (Note 8), not the derivatives note (Note 17). Most derivative fields are null as a result.
+[HISTORICAL] [LLM_FLAG] IR swap notional $10,558M includes both interest rate swaps and cross-currency swaps per borrowings table footnote (2)
+[HISTORICAL] [LLM_FLAG] The full derivatives note (Note 17) would be needed to populate most fields
+[HISTORICAL] [LLM_FLAG] Disney 10-K uses Value at Risk (VAR) methodology based on variance/co-variance at 95% confidence level, not traditional sensitivity analysis (100bp or 10% moves)
+[HISTORICAL] [LLM_FLAG] Combined VAR decreased to $201M at September 27, 2025 from $255M at September 28, 2024
+[HISTORICAL] [LLM_FLAG] IR VAR $164M, FX VAR $57M, Equity VAR $4M, Commodity VAR $2M at fiscal year-end 2025
+[HISTORICAL] [LLM_FLAG] Schema fields expecting sensitivity analysis not applicable; all null with VAR values noted in evidence
 
-=== 10-Q | Period ending 2025-06-28 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7fuYnaphFV9hp57fnc'}
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $676M → $993M (+46.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $1,386M → $2,101M (+51.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $9,100M → $11,000M (+20.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $676M → $993M (+46.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $1,386M → $2,101M (+51.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-88M → $-340M (-286.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $240M → $-273M (-213.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts not in this section — cross-referenced to Note 15 (derivatives note). Only fair values available here.
+[HISTORICAL] [LLM_FLAG] Notable increase in FX derivative liability versus prior quarter: $430M (Mar-25) to $1,190M (Jun-25), suggesting significant USD strengthening or increased hedge positions.
+[HISTORICAL] [LLM_FLAG] Prior period (Sept 28, 2024) shown for comparison: derivative assets FX $569M + Other $18M = $587M; liabilities IR $983M + FX $588M + Other $8M = $1,579M.
+[HISTORICAL] [LLM_FLAG] Expected 12mo AOCI reclassification is a net loss of $273M (negative sign), compared to a net gain of $240M in the prior quarter
+[HISTORICAL] [LLM_FLAG] FX total combines cash flow hedges, cross-currency swaps (designated) and not-designated FX contracts
+[HISTORICAL] [LLM_FLAG] Total derivative asset 993M includes Other (total return swap) asset of 14M
 
-=== 10-Q | Period ending 2025-03-29 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7fXF6wE5YjKxSxsLnh'}
-
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-06-16 ===
+[HISTORICAL] [LLM_FLAG] Notional amounts not in this section — cross-referenced to Note 15 (derivatives note). Only fair values available here.
+[HISTORICAL] [LLM_FLAG] Prior period (Sept 28, 2024) derivative assets: FX $569M + Other $18M = $587M; liabilities: IR $983M + FX $588M + Other $8M = $1,579M — shown for reference but not extracted as current period values.
+[HISTORICAL] [LLM_FLAG] IR swap notional stated as $10.5B for both March 29, 2025 and September 28, 2024 per text
+[HISTORICAL] [LLM_FLAG] FX total combines cash flow hedges, cross-currency swaps (designated) and not-designated FX contracts; cross-currency swap notional is CAD$1.3B = USD$0.9B
+[HISTORICAL] [LLM_FLAG] Total derivative asset uses Note 14 FV table (676M); gross positions table shows 758M before bilateral netting
+[HISTORICAL] [LLM_FLAG] Market risk section is entirely qualitative for this period — describes policies for interest rate, FX, commodity, and total return swap hedging but provides no quantitative sensitivity disclosures.
+[HISTORICAL] [LLM_FLAG] Section then transitions to Commitments & Contingencies and Accounting Policies unrelated to market risk numerics.

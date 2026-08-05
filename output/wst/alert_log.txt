@@ -16,54 +16,101 @@
 [LLM_FLAG] total_derivative_asset, total_derivative_liability, net_derivative_position, cash_flow_hedge_aoci, and expected_12mo_reclass_from_aoci are referenced in Note 10 (Fair Value Measurements) but that section is truncated in the provided text.
 [LLM_FLAG] Prior equity_derivatives_notional was 'Yes' which appears to be a data-type mismatch; no equity derivatives are mentioned in current period.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($378M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($263M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($115M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($17M)
-[NUMERIC] total_derivative_asset: $465M → $217M (-53.3%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $445M → $17M (-96.3%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $20M → $200M (+912.6%) — exceeds 20% threshold
-[NUMERIC] cash_flow_hedge_aoci: $130M → $2M (-98.5%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $1M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $1M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
-[VALIDATION] Likely extraction failure: 5/11 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-28 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($180M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($28M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($5M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($28M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($5M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($23M)
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-2M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cross_currency_swap_notional: was $130M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] crude_oil_call_options_barrels: was $184,075M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] crude_oil_call_options_strike_price: was $73M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_1pct: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_sensitivity_10pct: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] long_term_debt_fixed_rate: was $73M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] long_term_debt_variable_rate: was $130M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 9/9 previously-populated fields are now null (fx_sensitivity_10pct, fixed_rate_notes_billion, cross_currency_swap_notional, crude_oil_call_options_barrels, crude_oil_call_options_strike_price...)
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX/IR derivatives are not in this section; they appear in Note 9 (Derivative Financial Instruments)
+[HISTORICAL] [LLM_FLAG] Cross-currency swap ($25.3M asset) is classified as a net investment hedge in Daikyo; included in fi_total_derivative_asset but fi_ir_swap_notional left null as it is not an interest rate derivative
+[HISTORICAL] [LLM_FLAG] Significant drop in FX contract fair values vs Q2 2025: FX asset now $0.5M (vs $37.3M), FX liability now $4.8M (vs $47.0M), suggesting materially smaller or more balanced FX hedge portfolio
+[HISTORICAL] [LLM_FLAG] Commodity call option fair value jumped to $2.4M (vs $0.3M-$0.4M in prior quarters), potentially reflecting higher crude oil price or increased option position
+[HISTORICAL] [LLM_FLAG] Comparative Dec 31, 2025 money market funds of $443.9M are notably elevated vs March 31, 2026 balance of $137.6M
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv combines money market funds ($137.6M) and time deposits ($42.6M), both stated as cash and cash equivalents in the note
+[HISTORICAL] [LLM_FLAG] SGD fair value hedge notional reduced substantially to SGD 263.3M at Q1 2026 from SGD 421.9M at year-end 2025
+[HISTORICAL] [LLM_FLAG] Commodity call options fair value increased materially to $2.4M at Q1 2026 from $0.3M at Dec 31, 2025
+[HISTORICAL] [LLM_FLAG] AOCI Derivatives balance reflects net of fair value, cash flow, and net investment hedges combined
+[HISTORICAL] [LLM_FLAG] FX notionals in local currencies prevent USD aggregation
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($465M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($445M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($20M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($130M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($1M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($1M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
-[LLM_FLAG] extraction_failed: Expecting property name enclosed in double quotes: line 54 column 21 (char 2120)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-28 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $222M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $31M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $27M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $31M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $27M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $1M, now missing
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] cross_currency_swap_notional: appeared for first time ($130M)
+[HISTORICAL] [NEW_FIELD] crude_oil_call_options_barrels: appeared for first time ($184,075M)
+[HISTORICAL] [NEW_FIELD] crude_oil_call_options_strike_price: appeared for first time ($73M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_1pct: appeared for first time ($1M)
+[HISTORICAL] [NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] long_term_debt_fixed_rate: appeared for first time ($73M)
+[HISTORICAL] [NEW_FIELD] long_term_debt_variable_rate: appeared for first time ($130M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, total_derivative_asset, total_derivative_liability...)
+[HISTORICAL] [LLM_FLAG] This 10-K financial_instruments section is the market risk narrative, not a fair value measurement note; it does not contain fair value tables — those appear in the Notes to Financial Statements
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional is $130.0M (JPY 17.0 billion), designated as net investment hedge in Daikyo, terminating July 2, 2027
+[HISTORICAL] [LLM_FLAG] Fair value hedge forward contracts notionals are in local currency: SGD 421.9M and EUR 23.5M; USD equivalents not stated
+[HISTORICAL] [LLM_FLAG] Cash flow hedge USD sell-side amounts: EUR contracts $31.6M, JPY contracts $20.4M USD, SGD contracts $17.6M USD (total ~$69.6M sell-side USD)
+[HISTORICAL] [LLM_FLAG] Long-term debt: $130.0M variable at 5.02% (term loan, due 2027) + $73.0M fixed at 4.02% (Series C notes); a 1% rate change affects annual interest by $1.3M
+[HISTORICAL] [LLM_FLAG] Outstanding crude oil call options: 184,075 barrels, weighted-average strike $72.94/bbl, December 2025 to June 2027
+[HISTORICAL] [LLM_FLAG] Section text provided is Item 7A (market risk), not a separate Note 9 from the financial statements — derivative fair value totals are not available here
+[HISTORICAL] [LLM_FLAG] 10-K fair value tables (Note 9/10) would be needed for total_derivative_asset, total_derivative_liability, and cash_flow_hedge_aoci
+[HISTORICAL] [LLM_FLAG] FX notionals in local currencies prevent USD aggregation
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct reported as the larger (increase) figure of $10.2M; decrease sensitivity is $0.4M
+[HISTORICAL] [LLM_FLAG] commodity_sensitivity_10pct reported as the larger (increase) figure of $0.3M; decrease sensitivity is $0.1M
+[HISTORICAL] [LLM_FLAG] FX forward notionals for fair value hedges changed materially from 2024: USD $13.4M and EUR demand note USD $47.1M components now zero in 2025
+[HISTORICAL] [LLM_FLAG] fx_transaction_gain_loss not available in this section
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-28 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $173M → $222M (+28.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $53M → $31M (-42.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $47M → $27M (-42.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $53M → $31M (-42.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $47M → $27M (-42.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $6M → $4M (-37.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $2M → $1M (-64.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX/IR derivatives are not in this section; they appear in Note 9 (Derivative Financial Instruments)
+[HISTORICAL] [LLM_FLAG] Cross-currency swap ($18.3M asset) is classified as a net investment hedge in Daikyo; included in fi_total_derivative_asset but fi_ir_swap_notional left null as it is not an interest rate derivative
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv combines money market funds ($176.8M) and time deposits ($45.7M), both stated as cash and cash equivalents in the note
+[HISTORICAL] [LLM_FLAG] FX notionals in local currencies (SGD, EUR); null used for notional fields requiring USD aggregation
+[HISTORICAL] [LLM_FLAG] EUR demand note notional reduced to EUR 118.3M at Q3 2025 vs EUR 145.3M at Dec 31, 2024
+[HISTORICAL] [LLM_FLAG] AOCI Derivatives balance reflects net of fair value and cash flow hedges combined
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($130M)
-[NEW_FIELD] crude_oil_call_options_barrels: appeared for first time ($184M)
-[NEW_FIELD] crude_oil_call_options_strike_price: appeared for first time ($73M)
-[NEW_FIELD] ir_sensitivity_1pct: appeared for first time ($1M)
-[NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-28 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $117M → $173M (+48.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $32M → $53M (+67.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $13M → $47M (+256.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $32M → $53M (+67.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $13M → $47M (+256.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $18M → $6M (-68.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX/IR derivatives are not in this section; they appear in Note 9 (Derivative Financial Instruments)
+[HISTORICAL] [LLM_FLAG] Cross-currency swap ($15.2M asset) is classified as a net investment hedge in Daikyo; included in fi_total_derivative_asset but fi_ir_swap_notional left null as it is not an interest rate derivative
+[HISTORICAL] [LLM_FLAG] Significant increase in FX contract liability ($47.0M vs $13.2M prior quarter) and FX contract asset ($37.3M vs $11.4M) may indicate meaningful FX market movement or increased hedging activity
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv combines money market funds ($87.5M) and time deposits ($85.7M), both stated as cash and cash equivalents in the note
+[HISTORICAL] [LLM_FLAG] FX notionals in local currencies (SGD, EUR); null used for notional fields requiring USD aggregation
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional decreased from $130M because it is classified in fair value table as a separate line
+[HISTORICAL] [LLM_FLAG] AOCI Derivatives balance reflects net of fair value and cash flow hedges combined
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($130M)
-[NEW_FIELD] crude_oil_call_options_barrels: appeared for first time ($184,075M)
-[NEW_FIELD] crude_oil_call_options_strike_price: appeared for first time ($73M)
-[NEW_FIELD] ir_sensitivity_1pct: appeared for first time ($1M)
-[NEW_FIELD] long_term_debt_variable_rate: appeared for first time ($130M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-28 ===
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX/IR derivatives are not in this section; they appear in Note 9 (Derivative Financial Instruments)
+[HISTORICAL] [LLM_FLAG] Cross-currency swap ($19.7M asset) is classified as a net investment hedge in Daikyo, not an IR swap; included in fi_total_derivative_asset but fi_ir_swap_notional left null as it is not an interest rate derivative
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv combines money market funds ($37.8M) and time deposits ($79.1M), both stated as cash and cash equivalents in the note
+[HISTORICAL] [LLM_FLAG] FX notionals are reported in local currencies (SGD, EUR) making USD aggregation impossible without spot rates; null used for notional fields
+[HISTORICAL] [LLM_FLAG] AOCI Derivatives balance of $0 reflects net of fair value and cash flow hedges combined
+[HISTORICAL] [LLM_FLAG] Commodity derivatives measured in barrels, not dollar notional

@@ -7,28 +7,70 @@
 [NEW_FIELD] total_derivative_liability: appeared for first time ($15M)
 [NEW_FIELD] net_derivative_position: appeared for first time ($-10M)
 
-=== 10-Q | Period ending 2026-04-04 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+=== 10-Q | Period ending 2026-04-04 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $477M → $654M (+37.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $7M → $5M (-28.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $477M → $654M (+37.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $7M → $5M (-28.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-3M → $-7M (-133.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $477M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $34M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_notional_amounts: was $477M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_fair_values: was $-4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_swap_notional: was $264M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/14 previously-populated fields are now null (fx_forwards_outstanding, fx_sensitivity_10pct, foreign_currency_notional_amounts, foreign_currency_fair_values, interest_rate_swap_notional)
+[HISTORICAL] [LLM_FLAG] All FX derivatives designated as cash flow hedges; no not-designated split provided
+[HISTORICAL] [LLM_FLAG] No cash/investment securities fair value table present
+[HISTORICAL] [LLM_FLAG] FX notional rose sharply from $477M to $654M quarter-over-quarter
+[HISTORICAL] [LLM_FLAG] This is the first 10-Q of fiscal year 2026 (Q1 ended April 4, 2026); FX notional increased significantly from $477M at year-end to $654M
+[HISTORICAL] [LLM_FLAG] Item 3 market risk section is a single-sentence cross-reference to the 2025 Annual Report on Form 10-K; no quantitative disclosures present
+[HISTORICAL] [LLM_FLAG] All quantitative market risk data for this quarter is available in the financial_instruments section (Note 6)
 
-=== 10-K | Period ending 2026-01-03 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
+=== 10-K | Period ending 2026-01-03 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $10M → $7M (-30.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $15M → $10M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $10M → $7M (-30.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $15M → $10M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-5M → $-3M (+40.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($477M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($34M)
+[HISTORICAL] [NEW_FIELD] foreign_currency_notional_amounts: appeared for first time ($477M)
+[HISTORICAL] [NEW_FIELD] foreign_currency_fair_values: appeared for first time ($-4M)
+[HISTORICAL] [NEW_FIELD] interest_rate_swap_notional: appeared for first time ($264M)
+[HISTORICAL] [LLM_FLAG] The $25M term loan swap matured June 2025; only $264M Floating Rate Junior Subordinated Notes swaps remain
+[HISTORICAL] [LLM_FLAG] All FX derivatives designated as cash flow hedges; no not-designated split provided
+[HISTORICAL] [LLM_FLAG] No cash/investment securities fair value table present — 10-K format consistent with quarterly filings
+[HISTORICAL] [LLM_FLAG] This is the annual 10-K filing for fiscal year ended January 3, 2026; the $25M term loan swap that was outstanding at December 28, 2024 matured in June 2025 and is no longer included
+[HISTORICAL] [LLM_FLAG] IR sensitivity in the sensitivity table uses 10% change in interest rates (not 100bp); sensitivity of debt fair value is -$66M for Manufacturing and $0 for Finance at 10% decrease
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $34M represents increase in fair value from 10% strengthening of USD against foreign currencies
+[HISTORICAL] [LLM_FLAG] The market risk section cross-references Note 9 (derivatives note) for full IR swap details
 
-=== 10-Q | Period ending 2025-09-27 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $14M → $10M (-28.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $14M → $10M (-28.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] The $25M term loan interest rate swap matured in June 2025 so is no longer in the Q3 notional
+[HISTORICAL] [LLM_FLAG] The $30M forward-start swap from Q1/Q2 appears absorbed into the $264M aggregate by Q3 (maturities now August 2026 to August 2030)
+[HISTORICAL] [LLM_FLAG] All FX derivatives designated as cash flow hedges; no not-designated split provided
+[HISTORICAL] [LLM_FLAG] No cash/investment securities fair value table present
+[HISTORICAL] [LLM_FLAG] The $264M IR swap notional figure at Q3 2025 now includes swaps with maturities from August 2026 to August 2030 following the forward-start of the previously disclosed $30M swap in August 2025; the prior $25M term loan swap matured June 2025
+[HISTORICAL] [LLM_FLAG] Item 3 market risk section is a single-sentence cross-reference to the 2024 Annual Report on Form 10-K; no quantitative disclosures present
+[HISTORICAL] [LLM_FLAG] All quantitative market risk data for this quarter is available in the financial_instruments section (Note 7)
 
-=== 10-Q | Period ending 2025-06-28 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $10M → $14M (+40.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $10M → $14M (+40.0%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] net_derivative_position: $-6M → $0M
+[HISTORICAL] [LLM_FLAG] IR swap notional includes $264M on Floating Rate Junior Subordinated Notes plus $30M forward-start swap; the $30M has a forward start date of August 15, 2025
+[HISTORICAL] [LLM_FLAG] All FX derivatives designated as cash flow hedges; no not-designated split provided
+[HISTORICAL] [LLM_FLAG] No cash/investment securities fair value table present
+[HISTORICAL] [LLM_FLAG] IR swap notional includes $30M forward-start swap (start August 15, 2025) which matures August 15, 2030; some analyses may count only the $264M currently active portion
+[HISTORICAL] [LLM_FLAG] Item 3 market risk section is a single-sentence cross-reference to the 2024 Annual Report on Form 10-K; no quantitative disclosures present
+[HISTORICAL] [LLM_FLAG] All quantitative market risk data for this quarter is available in the financial_instruments section (Note 7)
 
-=== 10-Q | Period ending 2026-04-04 | Processed 2026-05-02 ===
-[LLM_FLAG] Prior period indicated 'has_derivatives': 'Yes', but current filing text contains no substantive derivative disclosure content. This represents a significant change in disclosure presence.
-[LLM_FLAG] Filing text provided is incomplete - only contains a reference line to the 2025 Annual Report on Form 10-K without actual quantitative and qualitative disclosure details.
-
-=== 10-Q | Period ending 2025-03-29 | Processed 2026-05-02 ===
-[LLM_FLAG] Excerpt only contains a reference to the 10-K filing without actual quantitative market risk disclosures. Full derivative, debt, and sensitivity details are not present in the provided text.
-
-=== 10-Q | Period ending 2026-04-04 | Processed 2026-05-01 ===
-[LLM_FLAG] extraction_failed: Expecting ',' delimiter: line 6 column 75 (char 165)
-
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-06-26 ===
+[HISTORICAL] [LLM_FLAG] IR swap notional includes $264M on Floating Rate Junior Subordinated Notes plus $30M forward-start swap maturing August 2030; the $30M has a forward start date of August 15, 2025
+[HISTORICAL] [LLM_FLAG] All FX derivatives designated as cash flow hedges; no not-designated split provided
+[HISTORICAL] [LLM_FLAG] No cash/securities fair value table present — Textron does not disclose a recurring fair value hierarchy table for investment securities
+[HISTORICAL] [LLM_FLAG] IR swap notional is the sum of $264M Floating Rate Junior Subordinated Notes swaps plus $30M forward-start swap; the $30M has a forward start date of August 15, 2025 so may be excluded from some analyses
+[HISTORICAL] [LLM_FLAG] Item 3 market risk section is a single-sentence cross-reference to the 2024 Annual Report on Form 10-K; no quantitative disclosures present in this section
+[HISTORICAL] [LLM_FLAG] All quantitative market risk data for this quarter is available in the financial_instruments section (Note 7)

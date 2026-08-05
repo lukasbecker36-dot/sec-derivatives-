@@ -5,43 +5,86 @@
 [LLM_FLAG] fx_not_designated_notional increased from prior 4600.0 to 5400.0 (17% increase).
 [LLM_FLAG] expected_12mo_reclass_from_aoci changed from prior 5.0 to -2.0 (losses). The sign reversal and magnitude change (140%) reflects the shift to net losses expected to be reclassified, likely influenced by the forward-starting IR swaps.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[DISAPPEARED_FIELD] fx_designated_notional: was $2,300M, now missing
-[NUMERIC] ir_swap_notional: $425M → $325M (-23.5%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $21M → $5M (-76.2%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] translation_exposure_impact: was $600M, now missing
-[VALIDATION] Likely extraction failure: 3/8 previously-populated fields are now null (fx_designated_notional, fx_forwards_outstanding, translation_exposure_impact)
-[LLM_FLAG] fx_derivatives_notional decreased by more than 50% compared to the prior period (2500.0 to 2100.0), warranting review of hedging strategy changes.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $688M → $542M (-21.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $81M → $135M (+66.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $3,400M → $4,100M (+20.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $425M → $325M (-23.5%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($135M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($175M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-40M)
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-21M → $-5M (+76.2%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] translation_exposure_impact: was $-600M, now missing
+[HISTORICAL] [LLM_FLAG] Net derivative position improved to a liability of $40M ($135M assets vs $175M liabilities) compared to net liability of $110M at December 31, 2025.
+[HISTORICAL] [LLM_FLAG] Non-US government bonds line item no longer appears in the Q1 2026 fair value table (zero balance).
+[HISTORICAL] [LLM_FLAG] Notional amounts are in Note 8 (derivatives note); not available in this section.
+[HISTORICAL] [LLM_FLAG] FX+commodity cash flow hedge notional ($2.1B) is a combined figure; no FX-only breakout.
+[HISTORICAL] [LLM_FLAG] Net investment hedges notional increased to $2.0B from $1.1B at December 31, 2025, likely reflecting new hedges tied to the pending Kenvue acquisition.
+[HISTORICAL] [LLM_FLAG] IR swap notional reduced to $325M from $425M at year-end.
+[HISTORICAL] [LLM_FLAG] Undesignated instruments now include only FX (commodity undesignated not mentioned for Q1 2026).
+[HISTORICAL] [LLM_FLAG] Net investment hedge notional increased significantly to $2.0B from $1.2B at Q3 2025 and $1.3B at Q2 2025, likely reflecting Kenvue merger-related activity.
+[HISTORICAL] [LLM_FLAG] IR fair value hedge notional further reduced to $325M from $425M (Q3 2025).
+[HISTORICAL] [LLM_FLAG] Cash flow hedge notional reduced to $2.1B from $2.6B at prior periods.
+[HISTORICAL] [LLM_FLAG] Undesignated notional decreased to $4.6B from $5.3B, possibly post-IFP disposal normalization.
+[HISTORICAL] [LLM_FLAG] Section is primarily qualitative; no quantitative sensitivity analysis presented.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,300M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($2,300M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($4,600M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($425M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($2,300M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($21M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] translation_exposure_impact: appeared for first time ($600M)
-[LLM_FLAG] Discontinued cash flow hedge accounting for certain instruments with a notional value of $ 690 due to forecasted transactions no longer probable. This indicates a significant change in the hedging strategy.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-21 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $73M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $208M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-135M, now missing
+[HISTORICAL] [NEW_FIELD] translation_exposure_impact: appeared for first time ($-600M)
+[HISTORICAL] [LLM_FLAG] Net derivative position is a liability of $110M ($81M assets vs $191M liabilities) at year-end 2025.
+[HISTORICAL] [LLM_FLAG] Notional amounts are in Note 13 (derivatives note); not available in this Fair Value Information section.
+[HISTORICAL] [LLM_FLAG] Redeemable preferred securities decreased to $22M from $37M at December 31, 2024.
+[HISTORICAL] [LLM_FLAG] Long-term debt carrying value: $6,886M; estimated fair value: $6,491M at December 31, 2025.
+[HISTORICAL] [LLM_FLAG] FX+commodity cash flow hedge notional ($2.3B) is a combined figure; no FX-only breakout.
+[HISTORICAL] [LLM_FLAG] Derivative asset/liability totals (from Fair Value note) not included in this section_text; cross-reference to Fair Value Information note needed.
+[HISTORICAL] [LLM_FLAG] During 2025, $690M of cash flow hedge instruments discontinued due to IFP Transaction with $20M pre-tax loss reclassified to discontinued ops.
+[HISTORICAL] [LLM_FLAG] Net investment hedges notional reduced to $1.1B from $1.2B at Sep 30, 2025.
+[HISTORICAL] [LLM_FLAG] Most sensitivity disclosures are qualitative ('not material') with no dollar amounts; only translation_exposure_impact has a specific dollar value ($600M reduction to stockholders' equity).
+[HISTORICAL] [LLM_FLAG] FX transaction gain/loss not in this section — would need the income statement or notes.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
-[DISAPPEARED_FIELD] translation_exposure_impact: was $600M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $0M, now missing
-[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, translation_exposure_impact, interest_rate_sensitivity)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] net_derivative_position: $-171M → $-135M (+21.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-32M → $-25M (+21.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Net derivative position is a liability of $135M ($73M assets vs $208M liabilities).
+[HISTORICAL] [LLM_FLAG] Derivative assets continued declining: $166M (Q1), $82M (Q2), $73M (Q3 2025).
+[HISTORICAL] [LLM_FLAG] Notional amounts are disclosed in Note 10; not available in this section.
+[HISTORICAL] [LLM_FLAG] FX+commodity cash flow hedge notional ($2.6B) is a combined figure; no separate FX-only breakout.
+[HISTORICAL] [LLM_FLAG] During 9M 2025, $694M of cash flow hedge instruments were discontinued due to IFP Transaction.
+[HISTORICAL] [LLM_FLAG] IR swap notional reduced to $425M from $525M at prior period.
+[HISTORICAL] [LLM_FLAG] IFP Business divestiture caused discontinuation of $694M notional cash flow hedges; $20M pre-tax losses reclassified from AOCI to Income from Discontinued Operations (cumulative through Q3).
+[HISTORICAL] [LLM_FLAG] IR fair value hedge notional decreased to $425M from $525M at prior quarters.
+[HISTORICAL] [LLM_FLAG] Net investment hedge notional further decreased to $1.2B from $1.3B (Q2) and $1.7B (Q1).
+[HISTORICAL] [LLM_FLAG] Undesignated notional remains elevated at $5.3B.
+[HISTORICAL] [LLM_FLAG] Section is primarily qualitative; no quantitative sensitivity analysis presented.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] translation_exposure_impact: appeared for first time ($600M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $166M → $82M (-50.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $109M → $253M (+132.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $4,900M → $3,900M (-20.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $3,400M → $5,200M (+52.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $166M → $82M (-50.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $109M → $253M (+132.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $57M → $-171M (-400.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $24M → $-32M (-233.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Derivative position moved to net liability of $171M ($82M assets vs $253M liabilities) vs net asset of $52M at March 31, 2025 — notable shift.
+[HISTORICAL] [LLM_FLAG] FX and IR notional amounts are in Note 7 (derivatives note), not in this Fair Value Information note.
+[HISTORICAL] [LLM_FLAG] Non-US government bonds balance went to zero (—) as of June 30, 2025.
+[HISTORICAL] [LLM_FLAG] FX+commodity cash flow hedge notional ($2.6B) is a combined figure; no separate FX-only breakout.
+[HISTORICAL] [LLM_FLAG] Due to IFP Transaction, $681M of cash flow hedge instruments were discontinued during H1 2025.
+[HISTORICAL] [LLM_FLAG] Net derivative position swung to net liability of $171M at June 30, 2025 vs net asset at March 31, 2025.
+[HISTORICAL] [LLM_FLAG] IFP Transaction (divestiture) caused discontinuation of $681M notional cash flow hedges; $20M pre-tax losses reclassified from AOCI to Income from Discontinued Operations.
+[HISTORICAL] [LLM_FLAG] Undesignated notional jumped to $5.2B from $3.4B at March 31, 2025, likely reflecting IFP-related activity.
+[HISTORICAL] [LLM_FLAG] Net investment hedge notional decreased to $1.3B from $1.7B at March 31, 2025.
+[HISTORICAL] [LLM_FLAG] Section is primarily qualitative; no quantitative sensitivity analysis presented.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZZp7UMMEoMdAkT9ehV'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-02 ===
-[DISAPPEARED_FIELD] translation_exposure_impact: was $600M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (translation_exposure_impact)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-21 ===
+[HISTORICAL] [LLM_FLAG] FX and IR notional amounts are not in this Fair Value Information note; they are in the Objectives and Strategies for Using Derivatives note (Note 6). Use derivatives_note extract for those fields.
+[HISTORICAL] [LLM_FLAG] Non-US government bonds ($7M) are held-to-maturity at amortized cost, not a marketable securities fair value disclosure.
+[HISTORICAL] [LLM_FLAG] FX designated notional combines cash flow hedges ($3,200M) and net investment hedges ($1,700M) as both are designated; schema field asks for designated combined.
+[HISTORICAL] [LLM_FLAG] Commodity derivatives are included in the $3.2B cash flow hedge notional but no separate commodity-only notional is disclosed.
+[HISTORICAL] [LLM_FLAG] Cash flow hedge AOCI balance not stated explicitly in the provided section text.
+[HISTORICAL] [LLM_FLAG] This section is primarily qualitative hedge accounting disclosure. No quantitative sensitivity analysis (100bp IR, 10% FX) is presented.
+[HISTORICAL] [LLM_FLAG] Undesignated hedge gains were $24M for Q1 2025; this is not a traditional FX transaction gain/loss figure.
+[HISTORICAL] [LLM_FLAG] Net investment hedge notional: $1.7B. Cash flow hedge FX notional: $3.2B. Undesignated notional: $3.4B. IR fair value hedge notional: $525M. These are covered by derivatives_note_extract.

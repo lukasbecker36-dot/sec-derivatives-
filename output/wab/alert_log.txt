@@ -13,21 +13,77 @@
 [LLM_FLAG] Total notional dropped significantly from prior: designated went from prior extraction showing 1290 (likely the €1,290M Frauscher/Dellner acquisition hedges) to 639, and non-designated from 1355 to 466 — the large acquisition-related FX forwards (€690M Frauscher + €600M Dellner) have been settled
 [LLM_FLAG] Prior total_derivative_asset 1290 and total_derivative_liability 690 and net_derivative_position 600 appear to have been incorrectly mapped to acquisition FX forward notionals rather than actual asset/liability fair values
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,290M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($690M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($600M)
-[NUMERIC] total_derivative_asset: $1,290M → $478M (-62.9%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $690M → $496M (-28.1%) — exceeds 20% threshold
-[NEW_FIELD] net_derivative_position: appeared for first time ($-18M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] Total derivative assets change from prior period is significant (down from 1290 million to 478 million) - may indicate a change in derivative strategy or a winding down of positions.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($974M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($478M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($496M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($974M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($478M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($496M)
+[HISTORICAL] [LLM_FLAG] No detailed derivative table in Q1 2026 filing; only aggregate notional totals disclosed in narrative. Derivative assets and liabilities described as 'not significant' with no dollar amount.
+[HISTORICAL] [LLM_FLAG] Large decrease in non-designated notional from Q3 2025 ($1,601M) to Q1 2026 ($496M) reflects settlement of acquisition FX hedges for Frauscher (EUR 690M utilized in Q4 2025) and Dellner Couplers (EUR 600M utilized in Q1 2026).
+[HISTORICAL] [LLM_FLAG] Large decline in non-designated notional from $1.355B (Dec 31, 2025) to $496M (Mar 31, 2026) as €600M Dellner Couplers acquisition FX contracts were utilized and settled in Q1 2026.
+[HISTORICAL] [LLM_FLAG] FX contracts for €600M (Dellner) resulted in $2M net gain in Q1 2026.
+[HISTORICAL] [LLM_FLAG] Derivative assets and liabilities described as 'not significant' — no precise fair value table provided in the section text.
+[HISTORICAL] [LLM_FLAG] The 10-Q market risk section (Item 3) is a brief cross-reference only: states exposure has not changed materially since December 31, 2025, directs to annual 10-K Item 7A and Note 13. No quantitative disclosures provided.
+[HISTORICAL] [LLM_FLAG] Quantitative derivative data should be sourced from derivatives_note_extract for this period.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,290M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($690M)
-[LLM_FLAG] The FX derivatives notional amount indicates significant hedging activity related to the acquisitions of Frauscher and Dellner Couplers.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-27 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $2,170M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $569M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $1,601M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $43M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $12M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $2,170M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $569M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $1,601M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $43M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $12M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $31M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 11/11 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_total_derivative_asset, fi_total_derivative_liability...)
+[HISTORICAL] [LLM_FLAG] The section_text provided for this 10-K extraction is MD&A/liquidity content and guarantor summarized financials, not the Note 17 Fair Value Measurement and Derivative Instruments table. The actual derivatives note with period-end notional/fair value tables was not captured in the extraction window.
+[HISTORICAL] [LLM_FLAG] Contextual data point: The Q1 2026 10-Q (next filing) states December 31, 2025 designated notional was $467M and non-designated was $1.355 billion — but this comes from a subsequent filing, not the section_text provided here.
+[HISTORICAL] [LLM_FLAG] The MD&A section text references €1,290M total FX acquisition hedges (€690M used for Frauscher, €600M for Dellner Couplers closing Feb 2026).
+[HISTORICAL] [LLM_FLAG] The 10-K Item 7A market risk section is qualitative; it describes interest rate and FX risks but provides no quantitative sensitivity figures. Refers readers to Note 2 (accounting policies), Note 17 (Fair Value and Derivatives), and Note 19 (Segment Information) for detail.
+[HISTORICAL] [LLM_FLAG] Variable-rate debt at December 31, 2025 limited to amounts under 2025 Credit Agreement and 2025 Term Credit Agreement (both entered during 2025, replacing 2022/2024 credit facilities).
+[HISTORICAL] [LLM_FLAG] Quantitative derivative data (notional amounts, fair values) are in the derivatives_note_extract for this period, though that section_text was incorrectly captured.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $1,394M → $2,170M (+55.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $733M → $1,601M (+118.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $16M → $12M (-25.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $1,394M → $2,170M (+55.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $733M → $1,601M (+118.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $16M → $12M (-25.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $24M → $31M (+29.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Very large increase in non-designated FX notional ($1,601M) driven by EUR 890M in acquisition hedges for Dellner Couplers and Frauscher; these are economic hedges not designated under ASC 815.
+[HISTORICAL] [LLM_FLAG] Very large spike in non-designated FX notional ($1,601M) due to €890M acquisition hedges for both Dellner Couplers and Frauscher, resulting in a net gain of $30M YTD and net loss of $2M in Q3 alone.
+[HISTORICAL] [LLM_FLAG] No interest rate derivative contracts outstanding at September 30, 2025.
+[HISTORICAL] [LLM_FLAG] Commodity swaps mentioned but no notional disclosed.
+[HISTORICAL] [LLM_FLAG] The 10-Q market risk section (Item 3) is a brief cross-reference only: states exposure has not changed materially since December 31, 2024, directs to annual 10-K Item 7A and Note 13. No quantitative disclosures provided.
+[HISTORICAL] [LLM_FLAG] Quantitative derivative data should be sourced from derivatives_note_extract for this period.
 
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $844M → $1,394M (+65.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $197M → $733M (+272.1%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $285M, now missing
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $10M → $40M (+300.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $8M → $16M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $844M → $1,394M (+65.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $197M → $733M (+272.1%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $285M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $10M → $40M (+300.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $8M → $16M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $2M → $24M (+1100.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Large increase in non-designated FX notional driven by EUR 440M Dellner Couplers acquisition hedge (non-designated); these are economic hedges not qualifying under ASC 815.
+[HISTORICAL] [LLM_FLAG] Large increase in non-designated FX notional ($733M vs $197M in Q1 2025) driven by €440M acquisition hedges for Dellner Couplers, which resulted in a $32M gain in Q2 2025.
+[HISTORICAL] [LLM_FLAG] Interest rate contracts from Q1 2025 ($285M notional) fully closed during Q2 2025.
+[HISTORICAL] [LLM_FLAG] Commodity swaps mentioned but no notional disclosed.
+[HISTORICAL] [LLM_FLAG] The 10-Q market risk section (Item 3) is a brief cross-reference only: states exposure has not changed materially since December 31, 2024, directs to annual 10-K Item 7A and Note 13. No quantitative disclosures provided.
+[HISTORICAL] [LLM_FLAG] Quantitative derivative data should be sourced from derivatives_note_extract for this period.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [LLM_FLAG] Total notional row shows $932M designated + $197M non-designated = $1,129M across all contract types (FX + IR combined). FX-only notional derived as $844M by subtracting IR designated $285M from $932M designated total and adding non-designated $197M FX.
+[HISTORICAL] [LLM_FLAG] Commodity swaps mentioned but no notional disclosed.
+[HISTORICAL] [LLM_FLAG] The 10-Q market risk section (Item 3) is a brief cross-reference only: states exposure to market risk has not changed materially since December 31, 2024, and directs readers to the annual 10-K Item 7A and Note 13. No quantitative disclosures are provided here.
+[HISTORICAL] [LLM_FLAG] Quantitative derivative data should be sourced from derivatives_note_extract for this period.

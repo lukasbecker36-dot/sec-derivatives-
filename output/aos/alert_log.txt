@@ -15,25 +15,88 @@
 [LLM_FLAG] Net investment hedge of ~$214.9 million uses intercompany debt (not a derivative instrument) plus third-party FX forwards (notional not stated); the intercompany debt notional is excluded from fx_derivatives_notional.
 [LLM_FLAG] All prior values (fx_transaction_gain_loss=0.4, fx_sensitivity_10pct=-0.4, fixed_rate_notes_billion=1.1, marketable_equity_value=0.5, equity_sensitivity_10pct=0.0) cannot be compared because this 10-Q market risk section contains no quantitative data -- it defers to the annual 10-K with a boilerplate 'no material change' statement.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($4,200M)
-[NUMERIC] total_derivative_asset: $93M → $0M (-99.6%) — exceeds 20% threshold
-[NEW_FIELD] net_derivative_position: appeared for first time ($-0M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($1M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[VALIDATION] Likely units mismatch: total_derivative_asset changed from 93 to 0 (0x)
-[LLM_FLAG] The notional amount of the interest rate swap (4,200 million) indicates a substantial hedging strategy regarding interest rate risk, which is notably significant given potential variable rate borrowings.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-28 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $1M → $2M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $1M → $0M (-60.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1M → $2M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $1M → $0M (-60.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-0M → $1M (+650.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $93M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $9M, now missing
+[HISTORICAL] [LLM_FLAG] IR swap notional is denominated in Indian rupees (4.2 billion INR), not USD — fi_ir_swap_notional left as null.
+[HISTORICAL] [LLM_FLAG] Level 2 fair value table shows 'Net Derivative Assets' of $1.6M as a single line with footnote reference to Note 11, consistent with $2.0M FX asset minus $0.4M IR swap liability.
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional left as null — section text ends before the balance sheet hedges subsection.
+[HISTORICAL] [LLM_FLAG] IR swap notional is denominated in Indian rupees (4.2 billion INR); no USD conversion provided in the filing.
+[HISTORICAL] [LLM_FLAG] AOCI on cash flow derivatives increased to $1.1M net gain by Q1 2026.
+[HISTORICAL] [LLM_FLAG] Leonard Valve acquisition closed in January 2026 ($470M); no derivative disclosures specific to the acquired entity in this section.
+[HISTORICAL] [LLM_FLAG] fx_not_designated_notional not visible in section text for this period.
+[HISTORICAL] [LLM_FLAG] Market risk section is a brief cross-reference statement only: 'quantitative and qualitative disclosures about market risk have not materially changed since that report was filed.' No quantitative data available.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($93M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-28 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $61M → $93M (+53.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $61M → $93M (+53.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $0M, now missing
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $2M → $1M (-52.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $61M → $93M (+53.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $61M → $93M (+53.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $0M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $2M → $1M (-52.4%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] net_derivative_position: $1M → $0M
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $0M → $-0M (-140.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($93M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($9M)
+[HISTORICAL] [LLM_FLAG] Section text is truncated — starts mid-note with the FX forward contracts table; the fair value table (Level 1/Level 2) is not present in section_text.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv and fi_total_derivative_asset derived from comparative disclosures in the subsequent Q1 2026 filing.
+[HISTORICAL] [LLM_FLAG] IR swap notional is denominated in Indian rupees (4.2 billion INR), not USD — fi_ir_swap_notional left as null.
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional left as null due to text truncation; non-designated contracts were $0 at September 30, 2025.
+[HISTORICAL] [LLM_FLAG] IR swap notional is denominated in Indian rupees (4.2 billion INR); no USD conversion provided in the filing.
+[HISTORICAL] [LLM_FLAG] fx_not_designated_notional not visible in provided section text for 10-K; likely zero based on prior quarters trend.
+[HISTORICAL] [LLM_FLAG] Total derivative asset sourced from Q1 2026 comparative disclosure.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci sourced from Q1 2026 AOCI rollforward comparative (opening balance).
+[HISTORICAL] [LLM_FLAG] Market risk section is brief and focused solely on FX currency risk; no interest rate, equity, or commodity sensitivity disclosures present.
+[HISTORICAL] [LLM_FLAG] The $93.3M FX notional aligns exactly with the derivatives note (Buy $35.5M + Sell $57.8M = $93.3M).
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-28 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $96M → $61M (-36.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $96M → $61M (-36.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $0M → $2M (+320.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $96M → $61M (-36.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $96M → $61M (-36.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $0M → $2M (+320.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-1M → $1M (+225.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-1M → $0M (+155.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] IR swap notional is denominated in Indian rupees (4.2 billion INR), not USD — fi_ir_swap_notional left as null.
+[HISTORICAL] [LLM_FLAG] Net derivative position is a net asset of $1.0M at September 30, 2025 (Level 2 shown as asset in 'Other current assets / Accrued liabilities' line).
+[HISTORICAL] [LLM_FLAG] Section text truncated before non-designated FX contracts table; fi_fx_not_designated_notional set to 0.0 based on pattern from prior quarters.
+[HISTORICAL] [LLM_FLAG] IR swap notional is denominated in Indian rupees (4.2 billion INR); no USD conversion provided in the filing.
+[HISTORICAL] [LLM_FLAG] Net derivative position flipped to a net asset ($1.0M) in Q3 2025, compared to net liability in prior quarters.
+[HISTORICAL] [LLM_FLAG] AOCI on cash flow derivatives turned positive ($0.5M) by end of Q3 2025.
+[HISTORICAL] [LLM_FLAG] Market risk section is a brief cross-reference statement only: 'quantitative and qualitative disclosures about market risk have not materially changed since that report was filed.' No quantitative data available.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-28 ===
+[HISTORICAL] [DROPPED_TO_ZERO] total_marketable_securities_fv: $27M → $0M
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $52M → $96M (+85.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $52M → $96M (+85.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $0M → $0M (+400.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $1M → $1M (+62.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $52M → $96M (+85.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $52M → $96M (+85.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $0M → $0M (+400.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $1M → $1M (+62.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-1M → $-1M (-28.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] IR swap notional is denominated in Indian rupees (4.2 billion INR), not USD — fi_ir_swap_notional left as null.
+[HISTORICAL] [LLM_FLAG] Marketable securities dropped to $0 at June 30, 2025 from $36.5M at Dec 31, 2024.
+[HISTORICAL] [LLM_FLAG] FX designated notional increased significantly to $95.6M from $51.6M at Q1 2025, driven by large CAD sell position ($76.3M).
+[HISTORICAL] [LLM_FLAG] IR swap notional is denominated in Indian rupees (4.2 billion INR); no USD conversion provided in the filing.
+[HISTORICAL] [LLM_FLAG] FX designated notional increased significantly from Q1 2025 ($51.6M) to Q2 2025 ($95.6M), driven by large CAD sell position ($76.3M).
+[HISTORICAL] [LLM_FLAG] Marketable securities balance is zero at June 30, 2025 (vs $36.5M at Dec 31, 2024).
+[HISTORICAL] [LLM_FLAG] Market risk section is a brief cross-reference statement only: 'quantitative and qualitative disclosures about market risk have not materially changed since that report was filed.' No quantitative data available.
 
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-28 ===
+[HISTORICAL] [LLM_FLAG] IR swap notional is denominated in Indian rupees (4.2 billion INR), not USD — fi_ir_swap_notional left as null.
+[HISTORICAL] [LLM_FLAG] Net investment hedge uses foreign-currency intercompany debt (¥1.5B RMB) — not included in fi_fx_derivatives_notional as it is not a forward contract.
+[HISTORICAL] [LLM_FLAG] Non-designated balance sheet hedge FX contracts had $0 notional at March 31, 2025 (vs. $6.4M CAD sell at Dec 31, 2024).
+[HISTORICAL] [LLM_FLAG] IR swap notional is denominated in Indian rupees (4.2 billion INR); no USD conversion provided in the filing.
+[HISTORICAL] [LLM_FLAG] FX not-designated notional is zero at period end; prior period had $6.4M CAD sell.
+[HISTORICAL] [LLM_FLAG] total_derivative_liability represents IR swap gross liability; FX forwards are net asset.
+[HISTORICAL] [LLM_FLAG] Market risk section is a brief cross-reference statement only: 'quantitative and qualitative disclosures about market risk have not materially changed since that report was filed.' No quantitative data is available in this section for this period.

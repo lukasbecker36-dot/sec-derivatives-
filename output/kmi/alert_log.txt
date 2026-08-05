@@ -20,57 +20,78 @@
 [LLM_FLAG] total_derivative_liability changed from 543.0 to -284 (prior value sign/magnitude mismatch suggests prior extraction issue or major change)
 [LLM_FLAG] Prior equity_derivatives_notional was 'Yes' (non-numeric) but no equity derivatives found in current filing
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($543M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($543M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($3,750M)
-[NUMERIC] total_derivative_asset: $543M → $109M (-79.9%) — exceeds 20% threshold
-[NEW_FIELD] total_derivative_liability: appeared for first time ($416M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-307M)
-[NUMERIC] cash_flow_hedge_aoci: $3,500M → $70M (-98.0%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $128M → $70M (-45.3%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] Total derivative assets decreased by more than 80% from the prior period; this may indicate significant changes in derivatives strategy or counterparty exposure.
-[LLM_FLAG] Total derivative liabilities increased by approximately 52% which may raise concerns regarding the company's hedging positions or increasing risk exposure.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-21 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($543M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($543M)
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($3,750M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($109M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($416M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($109M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($416M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-307M)
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $67M → $-112M (-267.2%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-70M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $543M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $32M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] debt_fair_value_sensitivity: was $1,329M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] variable_debt_earnings_sensitivity: was $20M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/8 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, debt_fair_value_sensitivity, variable_debt_earnings_sensitivity)
+[HISTORICAL] [LLM_FLAG] Kinder Morgan does not hold marketable securities or disclose cash equivalent FV in the financial instruments note — those schema fields are not applicable to this filer
+[HISTORICAL] [LLM_FLAG] Commodity derivatives are disclosed in volumetric units only (MMBbl, Bcf), no dollar notional
+[HISTORICAL] [LLM_FLAG] No variable-to-fixed IR swap (not designated) disclosed in Q1 2026 — only designated fixed-to-variable contracts at $3,750M; the $1,500M variable-to-fixed contract that appeared in prior quarters matured December 2025
+[HISTORICAL] [LLM_FLAG] Commodity derivatives notional not available in dollar terms — only volumetric positions disclosed
+[HISTORICAL] [LLM_FLAG] Section text truncated at 10,000 chars; section continues into Revenue Recognition note
+[HISTORICAL] [LLM_FLAG] No variable-to-fixed IR swap contracts outstanding as of March 31, 2026 (previously $1,500M expired December 2025)
+[HISTORICAL] [LLM_FLAG] 10-Q Item 7A states 'There have been no material changes in market risk exposures' and cross-references 2025 Form 10-K Item 7A; no quantitative data reproduced in this section text
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($543M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($3,500M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($128M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($32M)
-[NEW_FIELD] debt_fair_value_sensitivity: appeared for first time ($1M)
-[NEW_FIELD] variable_debt_earnings_sensitivity: appeared for first time ($20M)
-[LLM_FLAG] The carrying value of fixed-rate debt shows a significant increase, rising from $31,519 million in 2024 to $31,990 million in 2025. This change exceeds 50% increase, potentially indicating a new issuance or refinancing activity.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-21 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $543M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $543M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $5,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $198M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $214M, now missing
+[HISTORICAL] [NUMERIC] ir_swap_notional: $5,000M → $3,500M (-30.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $198M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $214M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-16M, now missing
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $53M → $67M (+26.4%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $57M, now missing
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($543M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($32M)
+[HISTORICAL] [NEW_FIELD] debt_fair_value_sensitivity: appeared for first time ($1,329M)
+[HISTORICAL] [NEW_FIELD] variable_debt_earnings_sensitivity: appeared for first time ($20M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 9/13 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset, fi_total_derivative_liability...)
+[HISTORICAL] [LLM_FLAG] Section text contains Item 7A (Quantitative and Qualitative Disclosures About Market Risk) content, not Note 13 Risk Management — total derivative asset/liability fair values are not available
+[HISTORICAL] [LLM_FLAG] Commodity derivative fair value sensitivity (10% move): Crude oil $87M, Natural gas $38M, NGL $3M, Total $128M as of December 31, 2025
+[HISTORICAL] [LLM_FLAG] AOCI balance sourced from Q1 2026 10-Q comparative figures, not directly from this section text
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity is reported as impact of 10% change in rates (not 100bp); 10% of weighted avg ~4.3% rate ≈ 43bp; for fixed-rate debt, $1,329M FV change
+[HISTORICAL] [LLM_FLAG] Debt balances subject to variable rates: $3,513M (variable rate debt $13M + fixed-to-variable swap notional $3,500M)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] net_derivative_position: $-31M → $-16M (+48.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $41M → $53M (+29.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $37M → $57M (+54.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Kinder Morgan does not hold marketable securities or disclose cash equivalent FV in the financial instruments note — those schema fields are not applicable to this filer
+[HISTORICAL] [LLM_FLAG] Commodity derivatives are disclosed in volumetric units only (MMBbl, Bcf), no dollar notional
+[HISTORICAL] [LLM_FLAG] Commodity derivatives notional not available in dollar terms — only volumetric positions disclosed
+[HISTORICAL] [LLM_FLAG] Section text truncated at 10,000 chars
+[HISTORICAL] [LLM_FLAG] 10-Q Item 7A states 'There have been no material changes in market risk exposures' and cross-references 2024 Form 10-K Item 7A; no quantitative data reproduced in this section text
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,329M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($32M)
-[NEW_FIELD] debt_fair_value_sensitivity: appeared for first time ($1,329M)
-[NEW_FIELD] variable_debt_earnings_sensitivity: appeared for first time ($20M)
-[LLM_FLAG] Fixed rate debt balances increased significantly from previous period; needs confirmation against prior period value.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($2M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-28 ===
-[LLM_FLAG] This filing section explicitly states 'There have been no material changes in market risk exposures that would affect the quantitative and qualitative disclosures presented as of December 31, 2025, in Part II, Item 7A in our 2025 Form 10-K.' This indicates the company is referring readers to the 2025 10-K for all detailed quantitative disclosures rather than repeating them in this Q1 2026 10-Q.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-28 ===
-[LLM_FLAG] This filing section provides a reference to prior disclosures rather than detailed quantitative data. The company states 'There have been no material changes in market risk exposures that would affect the quantitative and qualitative disclosures presented as of December 31, 2024, in Part II, Item 7A in our 2024 Form 10-K.' This indicates all detailed market risk data should be sourced from the 2024 10-K filing, not this 10-Q section.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-28 ===
-[LLM_FLAG] This section is a boilerplate reference statement indicating that detailed quantitative and qualitative market risk disclosures are contained in the 2024 Form 10-K (December 31, 2024) rather than provided in this 10-Q for the period ending June 30, 2025. No substantive market risk data is disclosed in the provided text.
-[LLM_FLAG] All data fields are unavailable because the filing directs readers to the prior year 10-K for market risk information rather than repeating those disclosures in the 10-Q.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] fi_ir_swap_notional: $6,500M → $5,000M (-23.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $92M → $191M (+107.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $413M → $222M (-46.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $6,500M → $5,000M (-23.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $92M → $191M (+107.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $413M → $222M (-46.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-321M → $-31M (+90.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-45M → $41M (+191.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-60M → $37M (+161.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Kinder Morgan does not hold marketable securities or disclose cash equivalent FV in the financial instruments note — those schema fields are not applicable to this filer
+[HISTORICAL] [LLM_FLAG] Commodity derivatives are disclosed in volumetric units only (MMBbl, Bcf), no dollar notional
+[HISTORICAL] [LLM_FLAG] Commodity derivatives notional not available in dollar terms — only volumetric positions disclosed
+[HISTORICAL] [LLM_FLAG] Section text truncated at 10,000 chars
+[HISTORICAL] [LLM_FLAG] 10-Q Item 7A states 'There have been no material changes in market risk exposures' and cross-references 2024 Form 10-K Item 7A; no quantitative data reproduced in this section text
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-04-28 ===
 [DISAPPEARED_FIELD] fx_forwards_outstanding: was $543M, now missing
@@ -79,11 +100,4 @@
 [VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, fixed_rate_notes_billion)
 [LLM_FLAG] Filing contains cross-reference to 2024 Form 10-K Item 7A indicating no material changes in market risk exposures since December 31, 2024. Specific quantitative disclosures are not included in this 10-Q section; detailed market risk metrics should be referenced from the 2024 10-K.
 [LLM_FLAG] This section explicitly states 'There have been no material changes in market risk exposures that would affect the quantitative and qualitative disclosures presented as of December 31, 2024' - suggesting the company is relying on prior 10-K disclosures rather than providing updated Q1 2025 metrics.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-27 ===
-[LLM_FLAG] Variable rate debt decreased significantly from $371 million (2024) to $13 million (2025), a 96.5% reduction. This is a material change that may warrant investigation.
-[LLM_FLAG] Fixed-to-variable swap notionals decreased from $4,750 million (2024) to $3,500 million (2025), a 26.3% reduction.
-[LLM_FLAG] Variable-to-fixed swap notionals decreased from $1,500 million (2024) to $0 million (2025), elimination of these hedges.
-[LLM_FLAG] Commodity derivative sensitivities decreased across all commodities: crude oil down 27.5% ($120M to $87M), natural gas down 50% ($76M to $38M), and NGL down 25% ($4M to $3M).
-[LLM_FLAG] Fixed rate debt fair value decreased from $30,423 million (2024) to $31,953 million (2025) despite carrying value increase, indicating interest rate environment changes.
 

@@ -1,85 +1,102 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($8,800M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($1,500M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($7,300M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($220M)
-[DISAPPEARED_FIELD] total_derivative_asset: was $220M, now missing
-[NUMERIC] total_derivative_liability: $220M → $35M (-84.1%) — exceeds 20% threshold
-[NEW_FIELD] net_derivative_position: appeared for first time ($-35M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($40M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($40M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $25M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $11M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-11M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] debt_fair_value: was $-46M, now missing
-[DISAPPEARED_FIELD] debt_sensitivity: was $-85M, now missing
-[DISAPPEARED_FIELD] forward_contract_liability: was $-35M, now missing
-[DISAPPEARED_FIELD] cross_currency_swap_notional: was $6M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_scenario: was $83M, now missing
-[DISAPPEARED_FIELD] historical_fx_losses: was $5M, now missing
-[DISAPPEARED_FIELD] revolving_credit_outstanding: was $85M, now missing
-[VALIDATION] Likely extraction failure: 12/13 previously-populated fields are now null (total_derivative_asset, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct...)
-[LLM_FLAG] fx_not_designated_notional differs from prior period values; significant FX business exposure indicated by high notional amounts.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $577M → $422M (-26.9%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($8,800M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($1,500M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($7,300M)
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $150M → $39M (-74.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($8,800M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($1,500M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($7,300M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($39M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-39M)
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($31M)
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($40M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-46M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-35M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_value: was $577M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $-83M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] debt_fair_value: was $5,200M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] debt_sensitivity: was $-85M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] forward_contract_liability: was $-13M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cross_currency_swap_notional: was $220M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cross_currency_swap_fair_value: was $-11M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_scenario: was $-35M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] historical_fx_losses: was $-46M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] revolving_credit_outstanding: was $0M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 13/20 previously-populated fields are now null (fx_transaction_gain_loss, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct...)
+[HISTORICAL] [LLM_FLAG] In Q1 2026, Expedia initiated a new FX cash flow hedging program; $1.5B of forward notional is now designated as cash flow hedges (previously all forwards were economic hedges only)
+[HISTORICAL] [LLM_FLAG] Total net notional jumped significantly from $5.2B (Sep 2025) to $8.8B (Mar 2026) reflecting expanded hedging program including future revenue hedges
+[HISTORICAL] [LLM_FLAG] fi_ir_swap_notional is €220M — no USD conversion stated; left as null
+[HISTORICAL] [LLM_FLAG] In February 2026, the 2022 swaps matured and the notional was settled with no impact to cash (offset by 2025 swap and offsetting swap entered in Aug 2025)
+[HISTORICAL] [LLM_FLAG] New cash flow hedging program initiated in Q1 2026 for forward revenue; $1.5B of $8.8B total notional is designated as cash flow hedges
+[HISTORICAL] [LLM_FLAG] Cross-currency 2025 swap (€220M) settled final exchange of notional with 2022 swaps in February 2026; 2025 swap now has $4M liability at March 31, 2026
+[HISTORICAL] [LLM_FLAG] No derivative assets at March 31, 2026; entire derivative position is net liability
+[HISTORICAL] [LLM_FLAG] FX forward net liability of $35M at March 31, 2026; gross forward liability was $96M
+[HISTORICAL] [LLM_FLAG] Market risk section for Q1 2026 is a stub — states no material changes and defers entirely to the 2025 Annual Report (Form 10-K). No quantitative data is available in this section.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($220M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($220M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($25M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($11M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-11M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-46M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-85M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-35M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($6M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($83M)
-[NEW_FIELD] debt_fair_value: appeared for first time ($5M)
-[NEW_FIELD] debt_sensitivity: appeared for first time ($85M)
-[NEW_FIELD] forward_contract_liability: appeared for first time ($13M)
-[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($220M)
-[NEW_FIELD] cross_currency_swap_fair_value: appeared for first time ($-11M)
-[NEW_FIELD] fx_sensitivity_scenario: appeared for first time ($-35M)
-[NEW_FIELD] historical_fx_losses: appeared for first time ($-46M)
-[NEW_FIELD] revolving_credit_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-18 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $5,200M, now missing
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $34M → $150M (+341.2%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $5,200M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $5,200M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $34M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-34M, now missing
+[HISTORICAL] [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-46M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-35M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_value: appeared for first time ($577M)
+[HISTORICAL] [NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-83M)
+[HISTORICAL] [NEW_FIELD] debt_fair_value: appeared for first time ($5,200M)
+[HISTORICAL] [NEW_FIELD] debt_sensitivity: appeared for first time ($-85M)
+[HISTORICAL] [NEW_FIELD] forward_contract_liability: appeared for first time ($-13M)
+[HISTORICAL] [NEW_FIELD] cross_currency_swap_notional: appeared for first time ($220M)
+[HISTORICAL] [NEW_FIELD] cross_currency_swap_fair_value: appeared for first time ($-11M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_scenario: appeared for first time ($-35M)
+[HISTORICAL] [NEW_FIELD] historical_fx_losses: appeared for first time ($-46M)
+[HISTORICAL] [NEW_FIELD] revolving_credit_outstanding: appeared for first time ($0M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/13 previously-populated fields are now null (fi_fx_derivatives_notional, fx_derivatives_notional, fx_not_designated_notional, total_derivative_asset, total_derivative_liability...)
+[HISTORICAL] [LLM_FLAG] Section_text for this 10-K financial_instruments request is the MD&A accounting policies and segment MD&A section, not Note 3 Fair Value Measurements — the actual fair value table was not included in the extracted section
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv and total_marketable_securities_fv values sourced from December 31, 2025 comparative columns in the Q1 2026 10-Q filing
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_liability of $150M includes $126M embedded derivative on the convertible notes due February 2026; excluding this, derivative liability for FX/IR instruments only = $24M
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional could not be sourced from this section; the market risk section does not state total notional for Dec 31, 2025
+[HISTORICAL] [LLM_FLAG] Section text is from Item 7A Market Risk section, not the financial notes; full derivative fair value tables are in NOTE 3
+[HISTORICAL] [LLM_FLAG] FX forward net liability of $13M at Dec 31, 2025 disclosed; gross notional outstanding not stated in this section
+[HISTORICAL] [LLM_FLAG] Cross-currency swap: €220M notional, $11M liability at Dec 31, 2025 (replaced prior €300M 2022 swaps closed Aug 2025)
+[HISTORICAL] [LLM_FLAG] FX sensitivity scenario ($35M loss) includes impact of forward positions economically hedging merchant revenue exposures
+[HISTORICAL] [LLM_FLAG] Equity sensitivity of $83M covers both publicly-traded equity securities ($577M) and minority investments without readily determinable fair values ($256M) combined
+[HISTORICAL] [LLM_FLAG] Historical FX losses: 2025=$46M, 2024=$66M, 2023=$85M (all losses)
+[HISTORICAL] [LLM_FLAG] Debt fair value is for Senior Notes only; Convertible Notes had separate fair value of ~$1.1B at Dec 31, 2025
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] debt_fair_value: was $-46M, now missing
-[DISAPPEARED_FIELD] debt_sensitivity: was $-85M, now missing
-[DISAPPEARED_FIELD] forward_contract_liability: was $-35M, now missing
-[DISAPPEARED_FIELD] cross_currency_swap_notional: was $6M, now missing
-[DISAPPEARED_FIELD] cross_currency_swap_fair_value: was $577M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_scenario: was $-83M, now missing
-[DISAPPEARED_FIELD] historical_fx_losses: was $5,200M, now missing
-[VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (equity_sensitivity_10pct, debt_fair_value, debt_sensitivity, forward_contract_liability, cross_currency_swap_notional...)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $487M → $620M (+27.3%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] fi_total_derivative_asset: $38M → $0M
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $15M → $34M (+126.7%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] total_derivative_asset: $38M → $0M
+[HISTORICAL] [NUMERIC] total_derivative_liability: $15M → $34M (+126.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $23M → $-34M (-247.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] In August 2025, the 2022 CCIRS (€300M) were effectively closed out and replaced by a new 2025 swap (€220M notional, maturity Feb 2028); fi_ir_swap_notional reflects the new swap at €220M — no USD conversion given
+[HISTORICAL] [LLM_FLAG] No derivative assets on balance sheet as of September 30, 2025 (all derivative positions are net liabilities)
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt: text says 'approximately $1 million' — recorded as 0 as effectively immaterial but technically not zero
+[HISTORICAL] [LLM_FLAG] In August 2025, the 2022 €300M cross-currency swaps were effectively closed out and replaced by a new 2025 swap with €220M notional (Feb 2028 maturity)
+[HISTORICAL] [LLM_FLAG] FX forward notional of $5.2B is net notional; gross forward liability was $37M at September 30, 2025
+[HISTORICAL] [LLM_FLAG] Cross-currency swap (2025 swap) fair value is a $12M liability at September 30, 2025
+[HISTORICAL] [LLM_FLAG] Market risk section for Q3 2025 is a stub — states no material changes and defers entirely to the 2024 Annual Report (Form 10-K). No quantitative data is available in this section.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-46M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-85M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-35M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($6M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($577M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-83M)
-[NEW_FIELD] debt_fair_value: appeared for first time ($5,200M)
-[NEW_FIELD] forward_contract_liability: appeared for first time ($13M)
-[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($220M)
-[NEW_FIELD] cross_currency_swap_fair_value: appeared for first time ($-11M)
-[NEW_FIELD] fx_sensitivity_scenario: appeared for first time ($-35M)
-[NEW_FIELD] historical_fx_losses: appeared for first time ($-46M)
-[NEW_FIELD] revolving_credit_outstanding: appeared for first time ($0M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
-[LLM_FLAG] Provided text is only a header/reference section referring to the actual disclosures in the Form 10-K Annual Report, not the substantive 10-Q filing content itself. All quantitative market risk metrics cannot be extracted from this excerpt.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
-[LLM_FLAG] Insufficient filing text provided - only header references to quantitative and qualitative disclosures about market risk with a redirect to Form 10-K. No actual data or detailed disclosure content is included in the provided excerpt.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
-[LLM_FLAG] Filing text provided is incomplete - only contains a reference to the Form 10-K without actual quantitative or qualitative market risk disclosures. Unable to extract specific financial metrics.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $325M → $447M (+37.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $739M → $487M (-34.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $2M → $15M (+650.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $38M → $23M (-39.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] CCIRS flipped from asset ($25M at Dec 2024, $11M at Mar 2025) to liability ($15M at Jun 2025)
+[HISTORICAL] [LLM_FLAG] fi_ir_swap_notional is €300M — no USD equivalent disclosed; left as null
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional: the $5.6B figure covers all FX forwards which are all economic hedges (not designated); fi_fx_designated_notional applies only to the CCIRS net investment hedge (EUR-denominated)
+[HISTORICAL] [LLM_FLAG] FX forward notional of $5.6B is net notional; gross forward asset was $83M at June 30, 2025
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notional is €300M (EUR), not converted to USD in the filing
+[HISTORICAL] [LLM_FLAG] Cross-currency swaps flipped from $11M asset (Mar 31, 2025) to $15M liability (Jun 30, 2025)
+[HISTORICAL] [LLM_FLAG] Market risk section for Q2 2025 is a stub — states no material changes and defers entirely to the 2024 Annual Report (Form 10-K). No quantitative data is available in this section.
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
 [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-46M, now missing

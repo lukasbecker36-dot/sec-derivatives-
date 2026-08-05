@@ -1,53 +1,81 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,289M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($993M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($3,289M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($863M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($544M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($319M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($53M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($15M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] sensitivity_analysis_jpy: was $1,000M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, sensitivity_analysis_jpy)
-[LLM_FLAG] fx_derivatives_notional decreased significantly by more than 50% from the prior period of 4,333 million to 3,289 million. This could indicate a reduction in foreign currency exposure or altered hedging strategies.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-19 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($18,478M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($993M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($17,485M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($863M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($544M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($18,478M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($993M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($17,485M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($863M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($544M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($319M)
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($53M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-1,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] sensitivity_analysis_total: was $-1,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] sensitivity_analysis_jpy: was $-400M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_sensitivity_10pct, sensitivity_analysis_total, sensitivity_analysis_jpy)
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional of $17,485M includes translated earnings contracts ($13,104M), which are currency options/forwards hedging multiple currency-denominated earnings
+[HISTORICAL] [LLM_FLAG] Cross currency swap notional increased to $1,092M (from $571M at prior quarters), indicating enlarged economic hedging of JPY-denominated debt
+[HISTORICAL] [LLM_FLAG] No precious metals fair value hedges outstanding as of March 31, 2026 (vs. 4,090 troy oz at December 31, 2025)
+[HISTORICAL] [LLM_FLAG] Non-derivative euro-denominated debt (€750M / $859M equivalent) designated as net investment hedge not included in notional totals
+[HISTORICAL] [LLM_FLAG] Precious metals fair value hedges fully wound down by March 31, 2026 (no troy ounces remaining)
+[HISTORICAL] [LLM_FLAG] Cross currency swap notional grew to $1,092M from $571M at Sep-2025, reflecting additional JPY debt hedging activity
+[HISTORICAL] [LLM_FLAG] Translated earnings contracts ($13,104M) dominate notional — these are JPY/KRW/CNY/TWD/MXN/EUR options and forwards for earnings translation protection
+[HISTORICAL] [LLM_FLAG] Item 3 is a pass-through reference to 2025 Form 10-K Part II Item 7A with explicit statement that there have been no material changes in market risk exposure since that filing; no quantitative market risk data is presented in this filing section
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1,000M)
-[NEW_FIELD] sensitivity_analysis_total: appeared for first time ($1,000M)
-[NEW_FIELD] sensitivity_analysis_jpy: appeared for first time ($400M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-19 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $15,864M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $1,452M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $14,412M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $739M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $445M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $15,864M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $1,452M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $14,412M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $739M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $445M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $294M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $1M, now missing
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-1,000M)
+[HISTORICAL] [NEW_FIELD] sensitivity_analysis_total: appeared for first time ($-1,000M)
+[HISTORICAL] [NEW_FIELD] sensitivity_analysis_jpy: appeared for first time ($-400M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 12/12 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_total_derivative_asset, fi_total_derivative_liability...)
+[HISTORICAL] [LLM_FLAG] section_text truncated at 10,000 characters and does not reach the Financial Instruments note; the text covers accounting policy disclosures (Notes 1-4) but the derivatives note appears later in the 10-K
+[HISTORICAL] [LLM_FLAG] Corning 10-K for 2025 is confirmed to use derivatives (cross currency swaps, translated earnings contracts, FX forwards referenced in text)
+[HISTORICAL] [LLM_FLAG] Recommend re-extraction with a longer section window or targeting the Financial Instruments note directly
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct reported in millions: $1.0 billion = $1,000M loss; value stored as -1000
+[HISTORICAL] [LLM_FLAG] sensitivity_analysis_jpy: $0.4 billion = $400M loss; value stored as -400
+[HISTORICAL] [LLM_FLAG] Market risk section is qualitative/sensitivity-focused; specific notional amounts for FX forwards are not repeated here (they are in the Financial Instruments note)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] sensitivity_analysis_jpy: was $1,000M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, sensitivity_analysis_jpy)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-19 ===
+[HISTORICAL] [NUMERIC] net_derivative_position: $425M → $294M (-30.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-31M → $1M (+103.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional of $14,412M includes translated earnings contracts ($10,902M), which are currency options/forwards hedging JPY, KRW, CNY, TWD, MXN and EUR-denominated earnings
+[HISTORICAL] [LLM_FLAG] Cross currency swaps ($571M) are economic hedges of JPY-denominated debt; no interest rate swaps present
+[HISTORICAL] [LLM_FLAG] Non-derivative euro-denominated debt (€750M / $874M equivalent) designated as net investment hedge not included in notional totals above
+[HISTORICAL] [LLM_FLAG] fx_not_designated_notional of $14,412M includes translated earnings contracts ($10,902M) which are currency options/average-rate forwards protecting JPY, KRW, CNY, TWD, MXN, EUR-denominated earnings
+[HISTORICAL] [LLM_FLAG] Cross currency swaps ($571M) relate to economically locking in JPY debt unrealized FX gains
+[HISTORICAL] [LLM_FLAG] Item 3 is a pass-through reference to 2024 Form 10-K Part II Item 7A; no quantitative market risk data is presented in this filing section
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1,000M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-19 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $552M → $436M (-21.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $552M → $436M (-21.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $259M → $425M (+64.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-5M → $-31M (-520.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional of $16,480M includes translated earnings contracts ($12,331M), which are currency options/forwards hedging multiple currency-denominated earnings
+[HISTORICAL] [LLM_FLAG] Cross currency swaps ($571M) are economic hedges of JPY-denominated debt
+[HISTORICAL] [LLM_FLAG] Non-derivative euro-denominated debt (€750M / $873M equivalent) designated as net investment hedge not included in notional totals
+[HISTORICAL] [LLM_FLAG] fx_not_designated_notional excludes translated earnings contracts ($12,331M) which are currency option/forward hedges for earnings translation — included in total fx_derivatives_notional
+[HISTORICAL] [LLM_FLAG] Total notional of $17,897M includes all derivative categories
+[HISTORICAL] [LLM_FLAG] Text truncated before undesignated derivatives income effect table; AOCI reclassification amount not stated
+[HISTORICAL] [LLM_FLAG] Item 3 is a pass-through reference to 2024 Form 10-K Part II Item 7A; no quantitative market risk data is presented in this filing section
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10,000M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10,000M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
-[DISAPPEARED_FIELD] sensitivity_analysis_total: was $1,000M, now missing
-[DISAPPEARED_FIELD] sensitivity_analysis_jpy: was $400M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (sensitivity_analysis_total, sensitivity_analysis_jpy)
-[LLM_FLAG] Insufficient text provided - only header reference to 'Quantitative and Qualitative Disclosures About Market Risks, contained in the 2024 Form 10-K' without actual content
-[LLM_FLAG] Cannot verify any data points from the actual 10-Q filing for period ending 2025-09-30
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
-[LLM_FLAG] Submitted filing text appears to be only a section header/reference ('Quantitative and Qualitative Disclosures About Market Risks, contained in the 2024 Form 10-K'). The actual detailed disclosures for the 2025-06-30 period ending 10-Q are not included in the provided text. Most quantitative fields could not be extracted from current period and were verified against prior period values only.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
-[LLM_FLAG] Provided text is only a section header reference to 2024 Form 10-K; actual disclosure details are not included in the excerpt
-[LLM_FLAG] Unable to verify current period values (Q1 2025) - all quantitative metrics are based on prior period or company patterns
-[LLM_FLAG] 10 fields out of 13 have 'not_found' or 'medium' confidence due to insufficient source text
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-19 ===
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional of $14,992M includes translated earnings contracts ($11,336M), which are currency options/forwards hedging JPY, KRW, CNY, TWD, EUR and MXN-denominated earnings; breakdown by currency provided in section
+[HISTORICAL] [LLM_FLAG] Cross currency swaps ($571M) are economic hedges of JPY-denominated debt
+[HISTORICAL] [LLM_FLAG] Non-derivative euro-denominated debt (€750M / $806M equivalent) designated as net investment hedge not included in notional totals
+[HISTORICAL] [LLM_FLAG] Total notional of $16,266M is dominated by translated earnings contracts ($11,336M) which are options/forwards on JPY, KRW, CNY, TWD, EUR, MXN — not traditional FX forwards; fx_derivatives_notional includes these
+[HISTORICAL] [LLM_FLAG] Precious metals lease contracts are included in the designated hedging line alongside FX hedges; no separate commodity notional split provided
+[HISTORICAL] [LLM_FLAG] Cross currency swap contracts ($571M) relate to JPY-denominated debt economic hedges
+[HISTORICAL] [LLM_FLAG] Item 3 is a pass-through reference to 2024 Form 10-K Part II Item 7A; no quantitative market risk data is presented in this filing section

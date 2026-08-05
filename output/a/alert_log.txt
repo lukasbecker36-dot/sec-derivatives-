@@ -1,13 +1,41 @@
-=== 10-Q | Period ending 2026-01-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] hedging_timeframe: was $59M, now missing
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (hedging_timeframe)
+=== 10-Q | Period ending 2026-04-30 | Processed 2026-06-11 ===
+[HISTORICAL] [NUMERIC] total_derivative_liability: $14M → $9M (-35.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-3M → $2M (+166.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $8M → $14M (+75.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-6M → $-1M (+83.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section is a fair-value policy paragraph (senior notes FV only); contains no fair value tables or derivative notional data — quantitative detail lives in Note 9 Fair Value Measurements and the derivatives note
 
-=== 10-K | Period ending 2025-10-31 | Processed 2026-06-04 ===
-[NEW_FIELD] hedging_timeframe: appeared for first time ($59M)
+=== 10-Q | Period ending 2026-01-31 | Processed 2026-06-11 ===
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $79M → $135M (+70.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $14M → $11M (-21.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $10M → $14M (+40.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $4M → $-3M (-175.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $16M → $8M (-50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $3M → $-6M (-300.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section is a fair-value policy paragraph (senior notes FV only); contains no fair value tables or derivative notional data — quantitative detail lives in Note 9 Fair Value Measurements and the derivatives note
 
-=== 10-Q | Period ending 2025-04-30 | Processed 2026-05-23 ===
-[LLM_FLAG] USD revenue percentage increased from 47% to 48% (1 percentage point increase), within normal variance
+=== 10-K | Period ending 2025-10-31 | Processed 2026-06-11 ===
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $30M → $79M (+163.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $16M → $10M (-37.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-3M → $4M (+233.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $10M → $16M (+60.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-3M → $3M (+200.0%) — exceeds 20% threshold
 
-=== 10-Q | Period ending 2025-01-31 | Processed 2026-05-23 ===
-[LLM_FLAG] USD revenue percentage changed from 48% (2025, prior period) to 47% (2025, current period) - minor 1 percentage point difference, within acceptable variance
+=== 10-Q | Period ending 2025-07-31 | Processed 2026-06-11 ===
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $52M → $30M (-42.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $18M → $13M (-27.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $24M → $16M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-6M → $-3M (+50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-12M → $-3M (+75.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section is a fair-value policy paragraph (senior notes FV only); contains no fair value tables or derivative notional data — quantitative detail lives in Note 9 Fair Value Measurements and the derivatives note
 
+=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-11 ===
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $19M → $52M (+173.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $4M → $24M (+500.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $13M → $-6M (-146.2%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] cash_flow_hedge_aoci: $20M → $0M
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $9M → $-12M (-233.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section is a fair-value policy paragraph (senior notes FV only); contains no fair value tables or derivative notional data — quantitative detail lives in Note 9 Fair Value Measurements and the derivatives note
+
+=== 10-Q | Period ending 2025-01-31 | Processed 2026-06-11 ===
+[HISTORICAL] [LLM_FLAG] Section is a fair-value policy paragraph (senior notes FV only); contains no fair value tables or derivative notional data — quantitative detail lives in Note 9 Fair Value Measurements and the derivatives note

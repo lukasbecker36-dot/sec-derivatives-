@@ -17,98 +17,82 @@
 [LLM_FLAG] expected_12mo_reclass_from_aoci decreased 67% vs prior (6 vs 18) — driven by larger negative commodity reclass of $(18)M partially offset by NII excluded components of $22M
 [LLM_FLAG] fx_not_designated_notional increased from $10,560M (Dec 2025) to $15,829M (Jun 2026), a 50% increase within the filing period
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NUMERIC] fx_derivatives_notional: $15,300M → $18,474M (+20.7%) — exceeds 20% threshold
-[NUMERIC] fx_not_designated_notional: $10,560M → $12,986M (+23.0%) — exceeds 20% threshold
-[NUMERIC] ir_swap_notional: $697M → $2,027M (+190.8%) — exceeds 20% threshold
-[NUMERIC] commodity_derivatives_notional: $11M → $6M (-47.3%) — exceeds 20% threshold
-[NUMERIC] total_derivative_asset: $67M → $217M (+223.9%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $434M → $124M (-71.4%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $-367M → $93M (+125.3%) — exceeds 20% threshold
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($18M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] composite_var: was $182M, now missing
-[LLM_FLAG] fx_not_designated_notional increased significantly from prior period value of 10560.0 to 12986.0, a 23% increase.
-[LLM_FLAG] Total derivative assets increased significantly compared to prior value of 67.0 to 217.0, a 224% increase.
-[LLM_FLAG] Total derivative liabilities increased significantly from prior period value of 434.0 to 124.0, a 71% decrease.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $15,674M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $5,114M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $10,560M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $697M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $67M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $122M, now missing
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $15,674M → $24,362M (+55.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $10,560M → $18,474M (+74.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $697M → $2,027M (+190.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $67M → $217M (+223.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $122M → $164M (+34.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-55M → $53M (+196.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($24M)
+[HISTORICAL] [DISAPPEARED_FIELD] composite_var: was $182M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 7/14 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset...)
+[HISTORICAL] [LLM_FLAG] Section text window does not contain Note 17 (Financial Instruments) derivative data for Q1 2026 (period ending Mar 31, 2026). The provided text covers the table of contents entry and early notes (Notes 1-3: basis of presentation, accounting guidance through ASU 2025-10, revenue) but not the actual Note 17 derivatives disclosures. The locate result confirms Note 17 exists at start_anchor '17\t\tFinancial Instruments\t29'. Insufficient context to extract values.
+[HISTORICAL] [LLM_FLAG] Commodity notionals are in volume units (million barrels of oil equivalent), not dollar amounts; reported as null.
+[HISTORICAL] [LLM_FLAG] AOCL balance for cash flow hedges not explicitly stated; only expected reclassifications provided.
+[HISTORICAL] [LLM_FLAG] Q1 2026 is the first period where net derivative position is a net asset ($53M) rather than net liability.
+[HISTORICAL] [LLM_FLAG] Market risk section (Item 3) is a pure cross-reference to Note 17 and the 2025 10-K annual report. No quantitative sensitivity or VAR data is provided in the Q1 2026 10-Q market risk section.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($15,300M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($5,114M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($10,560M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($697M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($11M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($67M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($434M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-367M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
-[NEW_FIELD] composite_var: appeared for first time ($182M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-16 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($15,674M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($5,114M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($10,560M)
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($697M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($67M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($122M)
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $29,686M → $15,674M (-47.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $6,910M → $5,114M (-26.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $22,776M → $10,560M (-53.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $101M → $67M (-33.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $4M, now missing
+[HISTORICAL] [NEW_FIELD] composite_var: appeared for first time ($182M)
+[HISTORICAL] [LLM_FLAG] Commodity derivatives disclosed in volume terms only (hydrocarbon derivatives designated: 9.5M barrels, not designated: 1.4M barrels at Dec 31, 2025), not in dollar notional.
+[HISTORICAL] [LLM_FLAG] Maximum maturity dates: interest rate contracts 2027, foreign currency contracts 2027, commodity contracts 2028.
+[HISTORICAL] [LLM_FLAG] Company posted cash collateral of $20M at Dec 31, 2025; no counterparty collateral received.
+[HISTORICAL] [LLM_FLAG] Section text is truncated at the effect-of-derivatives table; gain/loss details are partially omitted but all notional and fair value data is captured.
+[HISTORICAL] [LLM_FLAG] Section text truncated at 10,000 characters; AOCI balance and expected reclassification table not captured.
+[HISTORICAL] [LLM_FLAG] Commodity notionals are in volume units (million barrels of oil equivalent), not dollar amounts; reported as null.
+[HISTORICAL] [LLM_FLAG] This is an annual report (10-K); foreign-currency denominated debt of $2,121M is also designated as net foreign investment hedge.
+[HISTORICAL] [LLM_FLAG] Market risk section cross-references Note 21 for derivative instrument details rather than repeating notional amounts.
+[HISTORICAL] [LLM_FLAG] Sensitivity metrics (100bp IR, 10% FX/equity) are not disclosed in this 10-K market risk section; Dow uses VAR methodology instead.
+[HISTORICAL] [LLM_FLAG] VAR uses 97.5% confidence level and variance/covariance model with at least one year of historical data.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NUMERIC] fi_fx_derivatives_notional: $15,674M → $18,862M (+20.3%) — exceeds 20% threshold
-[NUMERIC] fi_fx_not_designated_notional: $10,560M → $12,974M (+22.9%) — exceeds 20% threshold
-[NUMERIC] fi_ir_swap_notional: $697M → $2,027M (+190.8%) — exceeds 20% threshold
-[NUMERIC] fi_total_derivative_asset: $364M → $217M (-40.4%) — exceeds 20% threshold
-[NUMERIC] fi_total_derivative_liability: $434M → $164M (-62.2%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] composite_var: was $182M, now missing
-[LLM_FLAG] total_marketable_securities_fv increased by 0.8% from the prior period. This is within the plausible range.
-[LLM_FLAG] marketable_equity_securities_fv decreased by 0.3% from the prior period. This small fluctuation is not significant.
-[LLM_FLAG] fi_fx_derivatives_notional increased by 78.5% from the prior period. This indicates a sizable increase in exposure to foreign currency derivatives.
-[LLM_FLAG] fi_fx_designated_notional increased by 14.9% from the prior period, suggesting an expansion of hedging activities related to foreign currency.
-[LLM_FLAG] fi_ir_swap_notional increased from 697.0 to 2027.0, which is a 191% increase, indicating a potential shift or expansion in interest rate hedging strategies.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] ir_swap_notional: $3,456M → $853M (-75.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $250M → $150M (-40.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-146M → $-49M (+66.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-2M → $4M (+300.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text window does not contain Note 20 (Financial Instruments) derivative data for Q3 2025 (period ending Sep 30, 2025). The provided text covers the table of contents entry and early notes (Notes 1-3: basis of presentation, accounting guidance through ASU 2025-06, revenue) but not the actual Note 20 derivatives disclosures. Insufficient context to extract values.
+[HISTORICAL] [LLM_FLAG] Commodity notionals are in volume units (million barrels of oil equivalent), not dollar amounts; reported as null.
+[HISTORICAL] [LLM_FLAG] AOCL balance for cash flow hedges not explicitly stated; only expected reclassifications provided.
+[HISTORICAL] [LLM_FLAG] Q3 2025 filing does not separately list excluded components for cash flow hedges in the expected reclassification table.
+[HISTORICAL] [LLM_FLAG] Market risk section (Item 3) is a pure cross-reference to Note 20 and the 2024 10-K annual report. No quantitative sensitivity or VAR data is provided in the Q3 2025 10-Q market risk section.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($2,203M)
-[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($234M)
-[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($996M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($15,674M)
-[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($5,114M)
-[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($10,560M)
-[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($697M)
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($364M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($434M)
-[NEW_FIELD] composite_var: appeared for first time ($182M)
-[LLM_FLAG] The notional amounts of interest rate swaps increased significantly from the previous period.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYpRHLffCHHzh78HKPb'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYpVZp5K8iUg8xJGtZE'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYp1mEE4fksSQ4JkTWD'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYp92nnEcVwrTQt4VBw'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYoVGRdrEXyvx5MRkbC'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYoaN1pBrqCJXhyJGw5'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYo6yjYpqXsgCR3AS2H'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYoBLRQPx6jFFRt8rsi'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYnmEqKz38uGAJn5D7S'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYnr6nHwB7sAYeUQdhc'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-28 ===
-[NUMERIC] marketable_equity_securities_fv: $180M → $232M (+28.9%) — exceeds 20% threshold
-[LLM_FLAG] total_marketable_securities_fv: Value decreased from 2,063 to 2,228 million (8.0% increase, within 50% threshold but note this is debt securities only)
-[LLM_FLAG] marketable_equity_securities_fv: Value increased from 180 to 232 million (28.9% increase). Change driven by 'not readily determinable fair value' component (224 vs 225) and 'readily determinable' component (8 vs 9)
-[LLM_FLAG] gross_unrealized_gains_debt: No explicit disclosure provided in filing. Debt securities show cost of $2,391M and fair value of $2,228M, indicating net unrealized losses, not gains
-[LLM_FLAG] The provided filing text is merely a cross-reference to the full 10-K for year ended December 31, 2025, and does not contain the actual quantitative and qualitative disclosures about market risk. All market risk data fields cannot be extracted from this excerpt.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-28 ===
-[LLM_FLAG] marketable_equity_securities_fv increased from $157.0M to $180.0M (14.6% increase) - within acceptable range but notable increase driven by addition of $17M in 'not readily determinable fair value' investments
-[LLM_FLAG] This excerpt is a reference section only, directing readers to the 2024 10-K for detailed market risk disclosures. No substantive derivative or market risk data is contained in the provided text.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-28 ===
-[LLM_FLAG] marketable_equity_securities_fv differs from prior period by -1.9% (157 vs 160): immaterial change, within normal variation
-[LLM_FLAG] total_marketable_securities_fv differs from prior period by -0.5% (2021 vs 2031): immaterial change, within normal variation
-[LLM_FLAG] gross_unrealized_gains_debt remains at 0.0, consistent with prior period; no explicit disclosure provided in current filing
-[LLM_FLAG] Provided text is a boilerplate reference section directing readers to prior year 10-K disclosures for market risk analysis, not substantive current period disclosure
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $2,031M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $11M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $23,818M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $4,080M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $19,738M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $801M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $68M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $265M, now missing
+[HISTORICAL] [NUMERIC] fx_designated_notional: $4,080M → $6,148M (+50.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $801M → $3,456M (+331.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $68M → $104M (+52.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-197M → $-146M (+25.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $31M → $-2M (-106.5%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 8/16 previously-populated fields are now null (total_marketable_securities_fv, marketable_equity_securities_fv, fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional...)
+[HISTORICAL] [LLM_FLAG] Section text window does not contain Note 20 (Financial Instruments) derivative data. The provided text covers the table of contents entry and early notes (Notes 1-3: basis of presentation, accounting guidance, revenue) but not the actual Note 20 derivatives disclosures. The locate result confirms Note 20 exists at start_anchor '20\t\tFinancial Instruments\t33'. Insufficient context to extract values.
+[HISTORICAL] [LLM_FLAG] Commodity notionals are in volume units (million barrels of oil equivalent), not dollar amounts; reported as null.
+[HISTORICAL] [LLM_FLAG] AOCL balance for cash flow hedges not explicitly stated; only expected reclassifications provided.
+[HISTORICAL] [LLM_FLAG] Market risk section (Item 3) is a pure cross-reference to Note 20 and the 2024 10-K annual report. No quantitative sensitivity or VAR data is provided in the Q2 2025 10-Q market risk section.
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-04-28 ===
 [NUMERIC] marketable_equity_securities_fv: $234M → $160M (-31.6%) — exceeds 20% threshold
@@ -120,10 +104,4 @@
 [LLM_FLAG] gross_unrealized_gains_debt: No material unrealized gains disclosed on debt securities. The fair value table shows cost exceeds fair value ($2,248M vs $2,031M), indicating unrealized losses. Marked as 0 per instructions.
 [LLM_FLAG] Filing excerpt provided contains only a cross-reference to Form 10-K disclosures without actual quantitative data. The excerpt refers readers to the 2024 10-K for market risk details but does not contain the substantive derivatives, VAR, or sensitivity data itself.
 [LLM_FLAG] Period ending 2025-03-31 is Q1 2025, but excerpt only references 'year ended December 31, 2024' 10-K filing.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-27 ===
-[LLM_FLAG] Foreign exchange VAR increased 78% from $23M (2024) to $41M (2025), attributed to increased exposure
-[LLM_FLAG] Equity securities VAR increased 45% from $11M (2024) to $16M (2025), attributed to increased volatility
-[LLM_FLAG] Interest rate VAR decreased slightly from $118M (2024) to $114M (2025) despite composite VAR increase
-[LLM_FLAG] Composite VAR increased 12% from $162M (2024) to $182M (2025)
 

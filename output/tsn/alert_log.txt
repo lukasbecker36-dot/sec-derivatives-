@@ -10,14 +10,66 @@
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
 [LLM_FLAG] fx_sensitivity_10pct: prior value was $41M but no FX sensitivity analysis is disclosed in the current filing's market risk section
 
-=== 10-Q | Period ending 2026-03-28 | Processed 2026-06-04 ===
-[NUMERIC] fx_sensitivity_10pct: $10M → $41M (+310.0%) — exceeds 20% threshold
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $75M → $112M (+49.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $141M → $180M (+27.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $75M → $112M (+49.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $60M → $99M (+65.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $8M → $15M (+87.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not contained in this section (Note 11); they are disclosed in Note 10: Derivative Financial Instruments which was not provided.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability reflect post-netting fair values as presented on the balance sheet, not gross fair values.
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed — company references interest rate swaps and locks as cash flow hedge instruments but does not state a notional amount
+[HISTORICAL] [LLM_FLAG] Commodity notionals in physical units only (bushels/tons/pounds), no dollar equivalent provided
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity reported as hypothetical 10% rate change, not 100bp; variable rate debt $67M, fixed rate debt $8,016M
+[HISTORICAL] [LLM_FLAG] No FX sensitivity quantification in market risk section
 
-=== 10-Q | Period ending 2025-06-28 | Processed 2026-06-04 ===
-[NUMERIC] fx_sensitivity_10pct: $38M → $10M (-73.7%) — exceeds 20% threshold
+=== 10-Q | Period ending 2025-12-27 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $98M → $75M (-23.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $9M → $15M (+66.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $208M → $141M (-32.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $98M → $75M (-23.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $9M → $15M (+66.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $89M → $60M (-32.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-20M → $8M (+140.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not contained in this section (Note 11); they are disclosed in Note 10: Derivative Financial Instruments which was not provided.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability reflect post-netting fair values as presented on the balance sheet, not gross fair values.
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed — company references interest rate swaps and locks as cash flow hedge instruments but does not state a notional amount
+[HISTORICAL] [LLM_FLAG] Commodity notionals in physical units only (bushels/tons/pounds), no dollar equivalent provided
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity reported as hypothetical 10% rate change, not 100bp; variable rate debt $44M, fixed rate debt $8,318M
+[HISTORICAL] [LLM_FLAG] No FX sensitivity quantification in market risk section
 
-=== 10-K | Period ending 2025-09-27 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($231M)
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fx_forwards_outstanding)
+=== 10-K | Period ending 2025-09-27 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $66M → $98M (+48.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $20M → $9M (-55.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $66M → $98M (+48.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $20M → $9M (-55.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $46M → $89M (+93.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-6M → $-20M (-233.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not contained in this section (Note 13); they are disclosed in Note 12: Derivative Financial Instruments which was not provided.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability reflect post-netting fair values as presented on the balance sheet, not gross fair values.
+[HISTORICAL] [LLM_FLAG] This is a 10-K (annual) filing for fiscal year ending September 27, 2025.
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed — company references interest rate swaps and locks as cash flow hedge instruments but does not state a notional amount
+[HISTORICAL] [LLM_FLAG] Commodity notionals in physical units only (bushels/tons/pounds), no dollar equivalent provided
+[HISTORICAL] [LLM_FLAG] Annual 10-K filing; fair value measurements in Note 13
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity reported as hypothetical 10% rate change, not 100bp; variable rate debt $484M, fixed rate debt $8,346M
+[HISTORICAL] [LLM_FLAG] No FX sensitivity quantification in market risk section
+[HISTORICAL] [LLM_FLAG] Annual 10-K filing
 
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $16M → $20M (+25.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $16M → $20M (+25.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-4M → $-6M (-50.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not contained in this section (Note 11); they are disclosed in Note 10: Derivative Financial Instruments which was not provided.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability reflect post-netting fair values as presented on the balance sheet, not gross fair values.
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed — company references interest rate swaps and locks as cash flow hedge instruments but does not state a notional amount in this section
+[HISTORICAL] [LLM_FLAG] Commodity notionals in physical units only (bushels/tons/pounds), no dollar equivalent provided
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity reported as hypothetical 10% rate change, not 100bp; variable rate debt $787M, fixed rate debt $8,278M
+[HISTORICAL] [LLM_FLAG] No FX sensitivity quantification in market risk section
+
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-06-26 ===
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not contained in this section (Note 11); they are disclosed in Note 10: Derivative Financial Instruments which was not provided.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability reflect post-netting fair values as presented on the balance sheet, not gross fair values.
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed — company references interest rate swaps and locks as cash flow hedge instruments but does not state a notional amount in this section
+[HISTORICAL] [LLM_FLAG] Commodity notionals in physical units only (bushels/tons/pounds), no dollar equivalent provided
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity reported as hypothetical 10% rate change, not 100bp; variable rate debt $781M, fixed rate debt $8,287M
+[HISTORICAL] [LLM_FLAG] No FX sensitivity quantification in market risk section

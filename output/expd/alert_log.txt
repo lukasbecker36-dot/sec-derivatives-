@@ -1,47 +1,48 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($2M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($17M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] fx_transaction_gain_loss: $-28M → $2M (+107.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-49M → $-14M (+71.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Note covers cash equivalents only (cash/overnight deposits, corporate commercial paper, time deposits/money market funds); no derivatives or marketable securities present
+[HISTORICAL] [LLM_FLAG] Values in source are in thousands — converted to millions by dividing by 1000
+[HISTORICAL] [LLM_FLAG] Corporate commercial paper is classified as cash equivalent, not as a debt security under marketable securities
+[HISTORICAL] [LLM_FLAG] No derivatives used; fx_forwards_outstanding set to 0 per schema instruction
+[HISTORICAL] [LLM_FLAG] FX sensitivity is based on operating income impact, not fair value change
+[HISTORICAL] [LLM_FLAG] IR sensitivity only disclosed for 10bp (not 100bp) and deemed not significant
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-28M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($60M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] fx_transaction_gain_loss: $-20M → $-28M (-40.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-38M → $-49M (-28.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Note covers cash equivalents only (cash/overnight deposits, corporate commercial paper, time deposits/money market funds); no derivatives or marketable securities present
+[HISTORICAL] [LLM_FLAG] Values in source are in thousands — converted to millions by dividing by 1000
+[HISTORICAL] [LLM_FLAG] Corporate commercial paper is classified as cash equivalent, not as a debt security under marketable securities
+[HISTORICAL] [LLM_FLAG] This is a 10-K (annual) filing for fiscal year ending December 31, 2025
+[HISTORICAL] [LLM_FLAG] No derivatives used; fx_forwards_outstanding set to 0 per schema instruction
+[HISTORICAL] [LLM_FLAG] FX sensitivity is based on operating income impact, not fair value change
+[HISTORICAL] [LLM_FLAG] IR sensitivity only disclosed for 10bp (not 100bp) and deemed not significant
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($2M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($17M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
-[LLM_FLAG] fx_sensitivity_10pct changed due to the increased operating income from a weaker dollar compared to prior expectations.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-24M → $-38M (-58.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Note covers cash equivalents only (cash/overnight deposits, corporate commercial paper, time deposits/money market funds); no derivatives or marketable securities present
+[HISTORICAL] [LLM_FLAG] Values in source are in thousands — converted to millions by dividing by 1000
+[HISTORICAL] [LLM_FLAG] Corporate commercial paper is classified as cash equivalent, not as a debt security under marketable securities
+[HISTORICAL] [LLM_FLAG] No derivatives used; fx_forwards_outstanding set to 0 per schema instruction
+[HISTORICAL] [LLM_FLAG] FX sensitivity is based on operating income impact, not fair value change
+[HISTORICAL] [LLM_FLAG] IR sensitivity only disclosed for 10bp (not 100bp) and deemed not significant
+[HISTORICAL] [LLM_FLAG] FX transaction gain/loss uses the nine-month cumulative figure as the period-level value
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-28M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($60M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] fx_transaction_gain_loss: $-5M → $-17M (-240.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-13M → $-24M (-84.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Note covers cash equivalents only (cash/overnight deposits, corporate commercial paper, time deposits/money market funds); no derivatives or marketable securities present
+[HISTORICAL] [LLM_FLAG] Values in source are in thousands — converted to millions by dividing by 1000
+[HISTORICAL] [LLM_FLAG] Corporate commercial paper is classified as cash equivalent, not as a debt security under marketable securities
+[HISTORICAL] [LLM_FLAG] No derivatives used; fx_forwards_outstanding set to 0 per schema instruction
+[HISTORICAL] [LLM_FLAG] FX sensitivity is based on operating income impact, not fair value change
+[HISTORICAL] [LLM_FLAG] IR sensitivity only disclosed for 10bp (not 100bp) and deemed not significant
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
-[NUMERIC] fx_transaction_gain_loss: $-20M → $2M (+110.0%) — exceeds 20% threshold
-[LLM_FLAG] fx_transaction_gain_loss changed from -$20 million (prior period) to +$2 million (current period) — swing of $22 million, representing a significant reversal from losses to gains year-over-year
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
-[LLM_FLAG] fx_transaction_gain_loss changed from -$17M (prior period) to -$20M (current period) - within normal variance but represents a worsening of FX losses
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
-[NUMERIC] fx_transaction_gain_loss: $-5M → $-17M (-240.0%) — exceeds 20% threshold
-[LLM_FLAG] fx_transaction_gain_loss changed from -$5 million (prior period) to -$17 million (current period): a 240% increase in losses. This represents a significant deterioration in foreign currency results, consistent with the filing's disclosure of $17M in losses for the six-month period ended June 30, 2025.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
-[NUMERIC] fx_transaction_gain_loss: $-28M → $-5M (+82.1%) — exceeds 20% threshold
-[LLM_FLAG] fx_transaction_gain_loss: Changed from -$28M (prior period) to -$5M (current period). This is a 82% improvement, which is plausible given the note discusses different period results (current period shows losses vs prior period gains in 2024 comparison), but note the prior period value may have been for a different timeframe.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [LLM_FLAG] Note covers cash equivalents only (cash/overnight deposits, corporate commercial paper, time deposits/money market funds); no derivatives or marketable securities present
+[HISTORICAL] [LLM_FLAG] Values in source are in thousands — converted to millions by dividing by 1000
+[HISTORICAL] [LLM_FLAG] Corporate commercial paper is classified as cash equivalent, not as a debt security under marketable securities
+[HISTORICAL] [LLM_FLAG] No derivatives used; fx_forwards_outstanding set to 0 per schema instruction
+[HISTORICAL] [LLM_FLAG] FX sensitivity is based on operating income impact, not fair value change
+[HISTORICAL] [LLM_FLAG] IR sensitivity only disclosed for 10bp (not 100bp) and deemed not significant

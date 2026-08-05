@@ -158,8 +158,63 @@ For hands-off daily updates, `run_cme_bulletin.ps1` runs as a Windows Scheduled 
 - Dependencies: `pip install -r requirements.txt` (anthropic, beautifulsoup4, pyyaml, requests, duckdb, pdfplumber)
 - **ANTHROPIC_API_KEY** only needed for API mode (not for Claude Code mode)
 
+## Data integrity gate — run this before writing any digest
+
+**Never write a briefing without running this first:**
+
+```bash
+./scripts/check_data_integrity.sh     # exit 0 = safe to publish, 1 = do not
+```
+
+A weekly briefing once reported Microsoft's non-designated FX notional as
+"+352%". The $63.5B figure was real (FY2026 10-K), but the percentage was
+computed against a corrupted prior value. **A percentage is only as
+trustworthy as both of its endpoints** — check the corpus before writing about
+it, not after a reader queries the number.
+
+`src/audit.py` reports four defect types:
+
+| Type | Meaning |
+|---|---|
+| `empty_row` | Every extracted field blank — extraction failed. Not the same as a genuine non-discloser, which records `has_derivatives=No`. Nothing to write about. |
+| `reconciliation` | A notional total doesn't equal the sum of its components. The values contradict each other, so at least one is wrong. |
+| `misaligned_row` | More values than header columns; values sat in the wrong fields. Zero tolerance. |
+| `stale_null` | Blank here but populated on another git ref — correct data exists and is being ignored. Zero tolerance. |
+
+The corpus carries known defects that need re-extraction, so the gate fails on
+**regression** against `audit_baseline.json`, not on any defect at all. After
+legitimately reducing defects, ratchet the baseline down:
+
+```bash
+python -m src.audit --write-baseline audit_baseline.json
+```
+
+Useful investigations:
+
+```bash
+python -m src.audit --limit 60                    # what's broken
+python -m src.audit --ticker MSFT                 # one issuer
+python -m src.audit --compare-ref origin/master   # data that exists elsewhere
+```
+
+### Writing the digest
+
+Report only what the data shows. Every figure must be traceable to a cell in
+`output/{ticker}/tracking.csv` or a line in `output/{ticker}/alert_log.txt`.
+Values there are final — never re-apply a growth rate to one, and never
+compute a change without reading both endpoints. A blank row is an extraction
+failure, not a story: list it as a gap rather than inferring what it would
+contain. Don't explain *why* a number moved unless the filing says so and you
+are quoting it. A quiet week is a legitimate outcome.
+
+Coverage is determined by what the pipeline extracted — never include an
+issuer because it is well known.
+
 ## Tests
 
 ```bash
 python -m pytest tests/ -v
 ```
+
+CI (`.github/workflows/ci.yml`) runs the tests and the integrity gate on every
+push and pull request, including the scheduler's own commits.

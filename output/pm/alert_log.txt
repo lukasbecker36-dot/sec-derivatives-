@@ -8,39 +8,40 @@
 [LLM_FLAG] net_liability changed >50%: prior -1 -> current -29 (magnitude increased significantly)
 [LLM_FLAG] Market risk section contains only a qualitative overview and cross-reference to Note 6; no quantitative sensitivity data available
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-25 ===
-[NEW_FIELD] fx_designated_notional: appeared for first time ($29,543M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($19,328M)
-[NEW_FIELD] commodity_designated_notional: appeared for first time ($5M)
-[NEW_FIELD] commodity_not_designated_notional: appeared for first time ($0M)
-[NEW_FIELD] total_notional: appeared for first time ($54,176M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($1,056M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($1,182M)
-[NEW_FIELD] net_asset: appeared for first time ($150M)
-[NEW_FIELD] net_liability: appeared for first time ($-1M)
-[NEW_FIELD] commodity_oci_gain_loss: appeared for first time ($1M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($159M)
-[NEW_FIELD] hedge_ineffectiveness: appeared for first time ($0M)
-[NEW_FIELD] credit_contingent_liability_fv: appeared for first time ($0M)
-[NEW_FIELD] collateral_posted: appeared for first time ($311M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-24 ===
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($29,543M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($19,328M)
+[HISTORICAL] [NEW_FIELD] commodity_designated_notional: appeared for first time ($5M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($1,056M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($1,182M)
+[HISTORICAL] [NEW_FIELD] net_asset: appeared for first time ($150M)
+[HISTORICAL] [NEW_FIELD] net_liability: appeared for first time ($-1M)
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $109M → $159M (+45.9%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] credit_contingent_liability_fv: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] collateral_posted: appeared for first time ($311M)
+[HISTORICAL] [LLM_FLAG] fx_oci_gain_loss and commodity_oci_gain_loss are stated pre-tax; net-of-tax split by instrument type not explicitly provided
+[HISTORICAL] [LLM_FLAG] net_liability is only $1M after netting; presented as -1 per schema convention
+[HISTORICAL] [LLM_FLAG] PMI's 10-Q market risk section is a brief qualitative cross-reference to Note 6; quantitative sensitivity disclosures are only provided in the annual 10-K using Value at Risk methodology
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-03-28 ===
-[DISAPPEARED_FIELD] fx_designated_notional: was $29,349M, now missing
-[DISAPPEARED_FIELD] fx_not_designated_notional: was $16,030M, now missing
-[DISAPPEARED_FIELD] commodity_designated_notional: was $6M, now missing
-[DISAPPEARED_FIELD] commodity_not_designated_notional: was $0M, now missing
-[DISAPPEARED_FIELD] total_notional: was $52,835M, now missing
-[DISAPPEARED_FIELD] total_derivative_asset: was $643M, now missing
-[DISAPPEARED_FIELD] total_derivative_liability: was $2,167M, now missing
-[DISAPPEARED_FIELD] net_asset: was $91M, now missing
-[DISAPPEARED_FIELD] net_liability: was $-115M, now missing
-[DISAPPEARED_FIELD] fx_oci_gain_loss: was $-168M, now missing
-[DISAPPEARED_FIELD] commodity_oci_gain_loss: was $0M, now missing
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $49M, now missing
-[DISAPPEARED_FIELD] hedge_ineffectiveness: was $0M, now missing
-[DISAPPEARED_FIELD] credit_contingent_liability_fv: was $0M, now missing
-[DISAPPEARED_FIELD] collateral_posted: was $91M, now missing
-[VALIDATION] Likely extraction failure: 15/15 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, commodity_designated_notional, commodity_not_designated_notional, total_notional...)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-24 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $29,349M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $16,030M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_designated_notional: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $643M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $2,167M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_asset: was $91M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_liability: was $-115M, now missing
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $49M → $109M (+122.4%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] credit_contingent_liability_fv: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] collateral_posted: was $91M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 9/12 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, commodity_designated_notional, total_derivative_asset, total_derivative_liability...)
+[HISTORICAL] [LLM_FLAG] WARNING: supplied section_text is the Item 7 MD&A liquidity/market risk narrative (pages 62-64), NOT Note 14 Financial Instruments — most derivatives-note fields cannot be populated from this text
+[HISTORICAL] [LLM_FLAG] total_notional of 50000 is approximate; the filing says 'approximately $50 billion'
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci of $109M sourced from Window 6 of the co-located market_risk_locate request file, which contains the AOCI rollforward from Note 14
+[HISTORICAL] [LLM_FLAG] Re-extraction from the actual Note 14 section of pm-20251231.htm would be needed to populate the remaining null fields
+[HISTORICAL] [LLM_FLAG] PM discloses market risk using a VaR (Value at Risk) methodology — one-day fair value impact at 95% confidence using a parametric delta-gamma approach — rather than the 10%/100bp sensitivity analysis format the schema expects. FX VaR at period-end: $97M; IR VaR at period-end: $135M. These VaR figures cannot be directly mapped to schema fields without fabrication.
+[HISTORICAL] [LLM_FLAG] No commodity sensitivity or commodity derivative data appears in this market risk section.
+[HISTORICAL] [LLM_FLAG] Prior-period (Dec 31, 2024) VaR also available in text: FX $130M at period-end (avg $92M, high $130M, low $69M); IR $221M at period-end (avg $233M, high $272M, low $200M).
 
 === 10-Q | Period ending 2025-09-30 | Processed 2026-03-28 ===
 [NUMERIC] net_asset: $61M → $91M (+49.2%) — exceeds 20% threshold

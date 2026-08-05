@@ -1,61 +1,59 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,632M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,241M)
-[NUMERIC] total_derivative_asset: $1,531M → $24M (-98.4%) — exceeds 20% threshold
-[NEW_FIELD] total_derivative_liability: appeared for first time ($38M)
-[NUMERIC] net_derivative_position: $1,194M → $-14M (-101.2%) — exceeds 20% threshold
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-6M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($16M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $10M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $57M, now missing
-[NUMERIC] fx_sensitivity_10pct: $-46M → $-254M (-448.8%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-73M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $68M, now missing
-[NEW_FIELD] hypothetical_fx_impact_current: appeared for first time ($-254M)
-[NEW_FIELD] hypothetical_fx_impact_prior: appeared for first time ($-278M)
-[VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fixed_rate_notes_billion, marketable_equity_value)
-[LLM_FLAG] Net derivative position is negative (-14.2), which represents a significant change in the company's derivative exposure compared to prior period net asset of 1193.7 million.
-[LLM_FLAG] fx_sensitivity_10pct flagged due to a decrease greater than 50% from prior period values.
-[LLM_FLAG] hypothetical_fx_impact_current flagged due to significant decrease of more than 50% from prior period.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-05 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($2,513M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1,503M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($137M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($734M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($2,873M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($1,632M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($1,241M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $10M → $25M (+140.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $59M → $38M (-35.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-48M → $-13M (+72.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-73M → $-6M (+91.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-68M → $-16M (+76.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] hypothetical_fx_impact_prior: $192M → $278M (+45.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] section_text is truncated mid-table ('As of Decembe') just as the derivative fair value/balance-sheet-location summary table begins; total derivative asset and liability fair values are not captured
+[HISTORICAL] [LLM_FLAG] No interest rate swap notional is disclosed in this excerpt despite filer_context noting interest rate swaps as a recurring term for Biogen -- likely appears later in Note 10, beyond the truncation point
+[HISTORICAL] [LLM_FLAG] ir_swap/commodity/equity derivative notionals not disclosed in this excerpt
+[HISTORICAL] [LLM_FLAG] Polish zloty and additional currencies (CHF, GBP) newly listed among designated FX forward notionals this quarter vs. year-end 2025 (Euro only)
+[HISTORICAL] [LLM_FLAG] Equity Price Risk subsection not present in this excerpt
+[HISTORICAL] [LLM_FLAG] FX sensitivity decreased quarter-over-quarter ($254.1M vs $278.0M) consistent with lower designated notional
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,531M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,194M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($10M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($57M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-46M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-73M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($68M)
-[NEW_FIELD] hypothetical_fx_impact_current: appeared for first time ($278M)
-[NEW_FIELD] hypothetical_fx_impact_prior: appeared for first time ($192M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-05 ===
+[HISTORICAL] [NUMERIC] total_derivative_liability: $99M → $59M (-40.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-90M → $-48M (+45.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-103M → $-73M (+29.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-91M → $-68M (+24.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci value is the pre-tax FX-hedge AOCI balance disclosed in this excerpt, not a net-of-tax rollforward figure
+[HISTORICAL] [LLM_FLAG] ir_swap/commodity/equity derivative notionals not disclosed in this excerpt
+[HISTORICAL] [LLM_FLAG] Company no longer has Swiss franc-denominated designated FX forward notional as of year-end 2025 (was present intra-year)
+[HISTORICAL] [LLM_FLAG] Equity Price Risk subsection not present in this excerpt
+[HISTORICAL] [LLM_FLAG] Polish złoty newly listed among primary currencies for this annual filing
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] hypothetical_fx_impact_current: appeared for first time ($254M)
-[NEW_FIELD] hypothetical_fx_impact_prior: appeared for first time ($278M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-05 ===
+[HISTORICAL] [NUMERIC] fx_designated_notional: $2,242M → $1,638M (-27.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $32M → $10M (-69.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $150M → $99M (-34.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-119M → $-90M (+24.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-135M → $-103M (+23.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci value is the pre-tax FX-hedge AOCI balance disclosed in this excerpt, not the net-of-tax rollforward figure
+[HISTORICAL] [LLM_FLAG] ir_swap/commodity/equity derivative notionals not disclosed in this excerpt
+[HISTORICAL] [LLM_FLAG] Equity Price Risk subsection not present in this excerpt
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] hypothetical_fx_impact_current: appeared for first time ($278M)
-[NEW_FIELD] hypothetical_fx_impact_prior: appeared for first time ($192M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[NUMERIC] hypothetical_fx_impact_prior: $192M → $278M (+45.0%) — exceeds 20% threshold
-[LLM_FLAG] hypothetical_fx_impact_current decreased by 12.0% from prior period ($254.1M vs $289.4M prior), which is within normal range but reflects improved hedging or reduced FX exposure
-[LLM_FLAG] hedge_horizon changed from 24 months (prior period) to 18 months (current period), a material shift in hedging strategy disclosure
-[LLM_FLAG] primary_currencies expanded to include Polish zloty in addition to prior currencies
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
-[LLM_FLAG] hypothetical_fx_impact_current increased 51% from $191.7M (prior year-end) to $289.4M (current year-end) - significant increase warrants investigation of potential increased hedging activity or enhanced FX volatility
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
-[DISAPPEARED_FIELD] marketable_equity_value: was $147M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $15M, now missing
-[NUMERIC] hypothetical_fx_impact_current: $242M → $316M (+30.5%) — exceeds 20% threshold
-[VALIDATION] Likely extraction failure: 2/4 previously-populated fields are now null (marketable_equity_value, equity_sensitivity_10pct)
-[LLM_FLAG] hypothetical_fx_impact_current increased 65% from prior period ($315.8M vs $191.7M). This significant increase likely reflects either a larger portfolio of outstanding FX forward contracts or more unfavorable currency positioning as of June 30, 2025 compared to December 31, 2024.
-[LLM_FLAG] hedge_horizon changed from '15 months' in prior period to '24 months' in current period. This represents an expansion of the hedging time window.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-05 ===
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $867M → $1,045M (+20.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $40M → $32M (-21.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $33M → $150M (+352.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $7M → $-119M (-1821.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-6M → $-135M (-2080.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-13M → $-111M (-729.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $242M → $316M (+30.5%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $15M, now missing
+[HISTORICAL] [NUMERIC] hypothetical_fx_impact_current: $242M → $316M (+30.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci value is the pre-tax FX-hedge AOCI balance disclosed in this excerpt; the net-of-tax AOCI rollforward table (as seen in the prior quarter's Note 14/Equity section) was not included in this section_text
+[HISTORICAL] [LLM_FLAG] ir_swap/commodity/equity derivative notionals not disclosed in this excerpt
+[HISTORICAL] [LLM_FLAG] Equity Price Risk subsection not present in this excerpt (hedge horizon lengthened from 15 to 24 months vs prior quarter)
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
 [NEW_FIELD] marketable_equity_value: appeared for first time ($147M)
@@ -64,7 +62,4 @@
 [LLM_FLAG] hypothetical_fx_impact_current increased from $191.7M (prior year-end) to $241.9M (current year-end) - this is a 26.2% increase, consistent with potential changes in FX exposure levels
 [LLM_FLAG] primary_currencies list no longer includes Polish złoty - it was listed in prior period but absent in current filing
 [LLM_FLAG] marketable_equity_value derived from equity_sensitivity_10pct: if 10% adverse move = $14.7M impact, then base value ≈ $147M (calculated value, not explicitly stated)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
-[LLM_FLAG] hypothetical_fx_impact_current increased 45.2% from prior year ($278.0M vs $191.7M), which is just under the 50% threshold. This is plausible given foreign exchange volatility and changes in hedging positions.
 

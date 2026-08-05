@@ -1,15 +1,14 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-01 ===
-[NUMERIC] fx_designated_notional: $22,650M → $16,384M (-27.7%) — exceeds 15% threshold
-[NEW_FIELD] fx_oci_gain_loss: appeared for first time ($28M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($3,000M)
-[NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($215M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($66M)
-[LLM_FLAG] total_derivative_asset decreased 11.2% from 1926 to 1711 - within normal volatility
-[LLM_FLAG] total_derivative_liability decreased 1.7% from 1167 to 1147 - minor decrease
-[LLM_FLAG] collateral_posted increased 8.8% from 102 to 111 - within normal range
-[LLM_FLAG] fx_designated_notional decreased 27.8% from 17750 to 16384 - moderate decrease, plausible due to hedging activity
-[LLM_FLAG] commodity_designated_notional increased 5.9% from 940 to 995 - within normal range
-[LLM_FLAG] ir_fair_value_hedge_notional increased 15.4% from 22740 to 26487 - moderate increase, plausible
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] net_asset: $1,112M → $868M (-21.9%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($3,000M)
+[HISTORICAL] [NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($215M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-66M)
+[HISTORICAL] [LLM_FLAG] Cross-currency interest rate swap contracts appear under both fair value hedges ($5,050M) and not-designated ($5,912M) categories; not captured in ir_ fields
+[HISTORICAL] [LLM_FLAG] fx_designated_notional includes only cash flow hedge FX contracts; no FX fair value hedge line exists in this filing
+[HISTORICAL] [LLM_FLAG] New nonderivative net investment hedge of $839M designated in Q1 2026 (foreign-denominated debt); $28M gain recognized in OCI for the quarter
+[HISTORICAL] [LLM_FLAG] OCI gain/loss, AOCI reclassification, ineffectiveness, and credit-contingent feature values not present in extracted section text
+[HISTORICAL] [LLM_FLAG] FX sensitivity reported as $3 billion; converted to $3,000 million
+[HISTORICAL] [LLM_FLAG] IR sensitivity reflects a decrease scenario (rate decrease reduces pre-tax cash flow by $66M); reported as -66
 
 === 10-K | Period ending 2025-12-31 | Processed 2026-03-28 ===
 [NUMERIC] fx_designated_notional: $16,248M → $22,650M (+39.4%) — exceeds 15% threshold
@@ -43,18 +42,19 @@
 [LLM_FLAG] commodity_sensitivity_10pct decreased from $186M to $178M (4.3% change) - within normal range
 [LLM_FLAG] ir_sensitivity_100bp decreased from $94M to $69M (26.6% decrease) - significant but plausible change in Ford Credit's interest rate exposure
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-03-28 ===
-[NUMERIC] fx_not_designated_notional: $20,604M → $26,220M (+27.3%) — exceeds 20% threshold
-[NUMERIC] collateral_held: $26M → $38M (+46.2%) — exceeds 20% threshold
-[NUMERIC] ir_sensitivity_100bp: $67M → $94M (+40.3%) — exceeds 20% threshold
-[LLM_FLAG] fx_not_designated_notional increased 27.3% from 20,604 to 26,220 - significant increase in undesignated FX derivatives
-[LLM_FLAG] ir_not_designated_notional increased 14.7% from 78,371 to 90,266 - notable increase in undesignated interest rate derivatives
-[LLM_FLAG] total_notional increased 7.1% from 149,013 to 159,599 - modest increase overall derivative portfolio
-[LLM_FLAG] ir_sensitivity_100bp: Value increased from $67M to $94M (40% increase). The filing explains this is a hypothetical 1% parallel shift scenario; the metric appears to measure the magnitude of cash flow sensitivity rather than a net impact direction.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $20,604M → $26,220M (+27.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] collateral_held: $26M → $38M (+46.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $-67M → $-94M (-40.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Cross-currency interest rate swap contracts appear under both fair value hedges ($3,802M) and not-designated ($5,325M) categories; not captured in ir_ fields
+[HISTORICAL] [LLM_FLAG] fx_designated_notional includes only cash flow hedge FX contracts; no FX fair value hedge line exists in this filing
+[HISTORICAL] [LLM_FLAG] OCI gain/loss, AOCI reclassification, ineffectiveness, and credit-contingent feature values not present in extracted section text
+[HISTORICAL] [LLM_FLAG] FX sensitivity reported as $2.8 billion; converted to $2,800 million
+[HISTORICAL] [LLM_FLAG] IR sensitivity reflects a decrease scenario (rate decrease reduces pre-tax cash flow by $94M); reported as -94
 
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-03-28 ===
-[LLM_FLAG] Total notional increased from $145,157M to $149,013M (2.7% increase) - within normal range
-[LLM_FLAG] Total derivative assets increased from $1,428M to $1,599M (12% increase) - reasonable movement
-[LLM_FLAG] Total derivative liabilities decreased from $2,234M to $1,647M (26% decrease) - favorable for the company
-[LLM_FLAG] Collateral posted decreased slightly from $127M to $119M (6% decrease) - immaterial change
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [LLM_FLAG] Cross-currency interest rate swap contracts appear under both fair value hedges ($3,802M) and not-designated ($4,333M) categories; their notionals are not captured in the ir_fair_value_hedge_notional and ir_not_designated_notional fields which cover plain interest rate contracts only
+[HISTORICAL] [LLM_FLAG] fx_designated_notional includes only cash flow hedge FX contracts; no FX fair value hedge line exists in this filing
+[HISTORICAL] [LLM_FLAG] OCI gain/loss, AOCI reclassification, ineffectiveness, and credit-contingent feature values are not present in the extracted section text — fuller note text may be needed
+[HISTORICAL] [LLM_FLAG] FX sensitivity reported as $2.9 billion; converted to $2,900 million
+[HISTORICAL] [LLM_FLAG] IR sensitivity reflects a decrease scenario (rate decrease reduces pre-tax cash flow by $67M); reported as -67

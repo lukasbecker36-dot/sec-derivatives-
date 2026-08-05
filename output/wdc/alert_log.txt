@@ -1,28 +1,52 @@
-=== 10-Q | Period ending 2025-10-03 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_derivatives_notional: was $27M, now missing
-[DISAPPEARED_FIELD] fx_designated_notional: was $12M, now missing
-[DISAPPEARED_FIELD] fx_not_designated_notional: was $12M, now missing
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $5M, now missing
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $12M, now missing
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
-[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci)
+=== 10-Q | Period ending 2026-04-03 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $133M → $93M (-30.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $13M → $5M (-61.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $7M → $29M (+314.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $16M, now missing
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
+[HISTORICAL] [LLM_FLAG] Retained interest in Sandisk of $1,187M (Level 1) is a significant equity investment not captured by schema fields
+[HISTORICAL] [LLM_FLAG] Certificates of deposit of $20M (Level 1) appear as a separate asset line; not included in total_cash_equivalents_fv as they are distinct from money market funds
+[HISTORICAL] [LLM_FLAG] FX notional amounts not disclosed in this note; see derivatives note for notional detail
+[HISTORICAL] [LLM_FLAG] FX derivative liability increased sharply to $29M vs $4-9M in prior periods — may warrant review
+[HISTORICAL] [LLM_FLAG] No variable rate debt as of Apr 3, 2026 — all remaining debt is fixed-rate convertible notes, so ir_sensitivity_100bp is null. FX sensitivity $72M is fair value loss. A convertible note embedded derivative was bifurcated in Q3 FY2026 per Note 7 (Debt).
 
-=== 10-K | Period ending 2025-06-27 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
+=== 10-Q | Period ending 2026-01-02 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $4M → $13M (+225.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $5M → $7M (+40.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Retained interest in Sandisk of $2,068M (Level 1) is a significant equity investment not captured by schema fields
+[HISTORICAL] [LLM_FLAG] FX notional amounts not disclosed in this note; see derivatives note for notional detail
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp is annual interest expense effect on variable rate debt (Term Loan A-3). FX sensitivity $78M is fair value loss at Jan 2, 2026.
 
-=== 10-Q | Period ending 2026-01-02 | Processed 2026-06-04 ===
-[LLM_FLAG] FX derivative sensitivity increased from $70M to $78M quarter-over-quarter (11.4% increase), suggesting growing FX derivative notional positions
+=== 10-Q | Period ending 2025-10-03 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $285M → $140M (-50.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $10M → $4M (-60.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $4M → $5M (+25.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $1,140M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $10M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forward_non_designated: was $1M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/11 previously-populated fields are now null (fx_derivatives_notional, total_derivative_asset, total_derivative_liability, net_derivative_position, fx_forward_non_designated)
+[HISTORICAL] [LLM_FLAG] Retained interest in Sandisk of $965M (Level 1) is a significant equity investment not captured by schema fields
+[HISTORICAL] [LLM_FLAG] FX notional amounts not disclosed in this note; see derivatives note for notional detail
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp is annual interest expense effect on variable rate debt (Term Loan A-3). FX sensitivity $70M is fair value loss. FX forward details are in Note 6 financial instruments section, not a dedicated derivatives note.
 
-=== 10-Q | Period ending 2025-10-03 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_net_transaction_gains_losses: appeared for first time ($-70M)
+=== 10-K | Period ending 2025-06-27 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,447M → $285M (-80.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $5M → $10M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $9M → $4M (-55.6%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,140M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $5M → $10M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $9M → $4M (-55.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-4M → $6M (+250.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $25M → $16M (-36.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Retained interest in Sandisk of $354M (Level 1) is a significant equity investment not captured by schema fields
+[HISTORICAL] [LLM_FLAG] FX notional amounts not disclosed in this note; see Note 7 Derivative Instruments and Hedging Activities for notional detail
+[HISTORICAL] [LLM_FLAG] Section text contains aggregate notional $1.14B for all FX contracts combined; no split between designated and non-designated. FV figures sourced from 10-K Note 6 fair value table in the locate windows for the same filing.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp is annual interest expense effect, not fair value. Variable rate debt was Term Loan A-3 at $1.65B outstanding as of June 27, 2025.
 
-=== 10-K | Period ending 2025-06-27 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $25M, now missing
-[DISAPPEARED_FIELD] fx_net_transaction_gains_losses: was $-68M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_sensitivity_100bp, fx_net_transaction_gains_losses)
-
-=== 10-Q | Period ending 2025-03-28 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($25M)
-[NEW_FIELD] fx_net_transaction_gains_losses: appeared for first time ($-68M)
-
+=== 10-Q | Period ending 2025-03-28 | Processed 2026-06-27 ===
+[HISTORICAL] [LLM_FLAG] Retained interest in Sandisk of $1,412M (Level 1) is a significant equity investment not captured by schema fields
+[HISTORICAL] [LLM_FLAG] FX notional amounts not disclosed in this note; see derivatives note for notional detail
+[HISTORICAL] [LLM_FLAG] Notional amount not disclosed in derivatives note section text; may be in financial_instruments section or omitted from filing. Asset/liability FV values sourced from Note 6 fair value table shown in the locate windows.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp sourced as annual interest expense sensitivity on variable rate debt, not fair value sensitivity. FX and IR sensitivity figures are as of March 28, 2025.

@@ -1,82 +1,73 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $34M, now missing
-[NEW_FIELD] maximum_credit_exposure: appeared for first time ($289M)
-[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (fx_transaction_gain_loss)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $289M → $81M (-72.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $107M → $50M (-53.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $949M → $1,222M (+28.8%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $34M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $9M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] maximum_credit_exposure: was $289M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (fx_transaction_gain_loss, fixed_rate_notes_billion, maximum_credit_exposure)
+[HISTORICAL] [LLM_FLAG] FCX uses only commodity derivatives (copper-related); no FX or IR swap notional amounts are disclosed in this note.
+[HISTORICAL] [LLM_FLAG] Designated instruments are copper futures and swap contracts qualifying as fair value hedges (126 million pounds at $5.51/lb through December 2027).
+[HISTORICAL] [LLM_FLAG] Copper forward contracts held by Atlantic Copper (93 million lbs net sales at $5.69/lb through May 2026) are economic hedges not qualifying for hedge accounting.
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional is computed from disclosed pound positions × average contract prices, not stated directly as a dollar notional in the filing
+[HISTORICAL] [LLM_FLAG] Fair value table for unsettled derivatives (total assets/liabilities) was not present in the section text; only maximum credit exposure of $81M is mentioned — lower than prior periods, suggesting smaller net derivative asset position at March 31, 2026
+[HISTORICAL] [LLM_FLAG] FX and IR derivatives are referenced implicitly (exchange rates, interest rates) but no separate notional disclosures appear for those instrument types in this section
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section contains no quantitative disclosures — states 'no material changes in our market risks during the three-month period ended March 31, 2026' and cross-references the 2025 Form 10-K.
+[HISTORICAL] [LLM_FLAG] Quantitative data for this period is in Note 5 (financial_instruments_extract).
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($34M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($9M)
-[LLM_FLAG] None
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $131M → $289M (+120.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $38M → $107M (+181.6%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($34M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($9M)
+[HISTORICAL] [NEW_FIELD] maximum_credit_exposure: appeared for first time ($289M)
+[HISTORICAL] [LLM_FLAG] FCX uses only commodity derivatives (copper-related); no FX or IR swap notional amounts are disclosed in this note.
+[HISTORICAL] [LLM_FLAG] Designated instruments are copper futures and swap contracts qualifying as fair value hedges (104 million pounds at $5.05/lb through December 2027).
+[HISTORICAL] [LLM_FLAG] Copper forward contracts held by Atlantic Copper (79 million lbs net sales at $5.36/lb through Feb 2026) are economic hedges not qualifying for hedge accounting.
+[HISTORICAL] [LLM_FLAG] This is a 10-K filing (annual); derivatives note is Note 12 rather than Note 5.
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional is computed from disclosed pound positions × average contract prices, not stated directly as a dollar notional in the filing
+[HISTORICAL] [LLM_FLAG] Fair value table for unsettled derivatives (total assets/liabilities) was not present in the section text for this 10-K; only maximum credit exposure of $289M is mentioned — significantly higher than Q3 2025 ($131M), suggesting a much larger gross derivative position at year-end
+[HISTORICAL] [LLM_FLAG] FX and IR derivatives are referenced in the credit risk section but no separate notional disclosures appear for those instrument types
+[HISTORICAL] [LLM_FLAG] 10-K market risk section contains qualitative and some quantitative FX and IR disclosures.
+[HISTORICAL] [LLM_FLAG] FX sensitivity is broken out by currency (rupiah, sol, peso, euro, AUD) rather than as a single aggregate figure.
+[HISTORICAL] [LLM_FLAG] Interest rate risk section discloses fixed vs. variable rate mix ($8.7B fixed, $0.7B variable) and fair value of fixed-rate debt ($8.8B), but no explicit 100bp sensitivity dollar impact.
+[HISTORICAL] [LLM_FLAG] FCX debt is 93% fixed-rate at Dec 31, 2025; total consolidated debt $9.4 billion with weighted-average interest rate of 5.2%.
+[HISTORICAL] [LLM_FLAG] FX translation gains of $34M in 2025 vs $17M in 2024.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $34M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $9M, now missing
-[VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (fx_transaction_gain_loss, fixed_rate_notes_billion)
-[LLM_FLAG] total_cash_equivalents_fv differs from prior period by more than 50% (3824.0 to 4149.0, increase of 325).
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $107M → $131M (+22.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $22M → $38M (+72.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FCX uses only commodity derivatives (copper-related); no FX or IR swap notional amounts are disclosed in this note.
+[HISTORICAL] [LLM_FLAG] Designated instruments are copper futures and swap contracts qualifying as fair value hedges (117 million pounds at $4.75/lb through September 2027).
+[HISTORICAL] [LLM_FLAG] Copper forward contracts held by Atlantic Copper (52 million lbs net sales at $4.51/lb through Nov 2025) are economic hedges not qualifying for hedge accounting.
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional is computed from disclosed pound positions × average contract prices, not stated directly as a dollar notional in the filing
+[HISTORICAL] [LLM_FLAG] Fair value table for unsettled derivatives (total assets/liabilities) was not present in the section text; only maximum credit exposure of $131M is mentioned
+[HISTORICAL] [LLM_FLAG] FX and IR derivatives are referenced in the credit risk section but no separate notional disclosures appear for those instrument types
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section contains no quantitative disclosures — states 'no material changes in our market risks during the nine-month period ended September 30, 2025' and cross-references the 2024 Form 10-K.
+[HISTORICAL] [LLM_FLAG] Quantitative data for this period is in Note 5 (financial_instruments_extract).
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($3,824M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($34M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($9M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $15M → $22M (+46.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $976M → $754M (-22.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $114M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $15M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $99M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] FCX uses only commodity derivatives (copper-related); no FX or IR swap notional amounts are disclosed in this note.
+[HISTORICAL] [LLM_FLAG] Designated instruments are copper futures and swap contracts qualifying as fair value hedges (109 million pounds at $4.75/lb through March 2027).
+[HISTORICAL] [LLM_FLAG] Copper forward contracts held by Atlantic Copper (53 million lbs net sales at $4.47/lb through Aug 2025) are economic hedges not qualifying for hedge accounting.
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional is computed from disclosed pound positions × average contract prices, not stated directly as a dollar notional in the filing
+[HISTORICAL] [LLM_FLAG] Fair value table for unsettled derivatives (total assets/liabilities) was not present in the section text; only maximum credit exposure of $107M is mentioned
+[HISTORICAL] [LLM_FLAG] FX and IR derivatives are referenced in the credit risk section but no separate notional disclosures appear for those instrument types
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section contains no quantitative disclosures — states 'no material changes in our market risks during the six-month period ended June 30, 2025' and cross-references the 2024 Form 10-K.
+[HISTORICAL] [LLM_FLAG] Quantitative data for this period is in Note 5 (financial_instruments_extract).
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ7KYXqWSF9yHXX5yRy'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ7PiZHBDpN6PbCtGkh'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ6waBmzcQQRQ7rAPY2'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ72Bzx7nM5FeMsNKuJ'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ6RyxUGcpL3dzkFH1K'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ6WRbkwbQkttbDRdSp'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ63jF1Tyc59ZDnRXwe'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ68A9dBSUQKWYmVrPj'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ5dr4AnTZV2u73Zoi1'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZ5iWbUBkUzWj5UE8L4'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $1M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
-[LLM_FLAG] total_cash_equivalents_fv decreased from 4318.0 (prior period) to 3737.0 (current period), a 13.4% decline - within acceptable range but notable decrease in cash position
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
-[LLM_FLAG] total_cash_equivalents_fv decreased 3.8% from prior period ($4,490M to $4,318M), within normal variance but reflects cash deployment
-[LLM_FLAG] No marketable securities or investment securities fair value data provided in this Note 5 section; the filing references 'refer to Note 6 for the fair values of investment securities' but Note 6 text not provided
-[LLM_FLAG] Provided text is a brief summary section that explicitly directs readers to 2024 Form 10-K for detailed market risk disclosures. No specific derivative or hedging data is included in this excerpt. This appears to be a cross-reference section rather than detailed disclosure.
-[LLM_FLAG] Prior period showed 'No mention' for has_derivatives; current period maintains same status, consistent with referential disclosure approach.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
-[LLM_FLAG] total_cash_equivalents_fv increased from $4,385 million (prior period) to $4,490 million (current period), a 2.4% increase within normal variance threshold
-[LLM_FLAG] Filing section provided is NOTE 5 - FINANCIAL INSTRUMENTS focused on derivative instruments and hedging activities; investment securities detail typically found in NOTE 6 or balance sheet section not included in provided text
-[LLM_FLAG] Filing text provided is a boilerplate reference section that defers detailed market risk disclosures to the 2024 Form 10-K. No specific derivative positions, sensitivities, or hedging data are disclosed in this excerpt.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $34M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $9M, now missing
-[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (fx_forwards_outstanding, fx_transaction_gain_loss, fixed_rate_notes_billion)
-[LLM_FLAG] total_cash_equivalents_fv increased from $3,824 million (prior period) to $4,385 million (current period), a 14.7% increase - within acceptable range but notable growth
-[LLM_FLAG] Filing excerpt provided is Note 5 on Financial Instruments focused on derivatives and commodity contracts; marketable securities data not included in this section - refer to Note 6 referenced in text for investment securities fair values
-[LLM_FLAG] This is a brief disclosure section that refers to 2024 Form 10-K for detailed market risk information. Most detailed derivative and market risk data are not included in this Q1 2025 excerpt.
-[LLM_FLAG] The filing explicitly states 'There have been no material changes in our market risks during the three-month period ended March 31, 2025,' indicating stability relative to year-end 2024, but specific values are not disclosed here.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
-[LLM_FLAG] The filing contains embedded derivatives related to provisionally priced copper and gold sales but does not provide comprehensive derivative market risk disclosures typically found in quantitative and qualitative market risk sections of 10-K filings. This 10-K excerpt does not appear to include the dedicated 'Quantitative and Qualitative Disclosures About Market Risks' section that typically contains detailed derivative and hedging information.
-[LLM_FLAG] No specific forward currency contract disclosures found despite significant international operations in Indonesia, Peru, and Chile with exposure to IDR, PEN, CLP, and EUR.
-[LLM_FLAG] Interest rate sensitivity analysis for 100 bp move not provided despite $9.4 billion debt outstanding with varying maturities.
-[LLM_FLAG] The filing references that quantitative and qualitative disclosures are contained in a separate section of the annual report not included in this excerpt.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [LLM_FLAG] FCX uses only commodity derivatives (copper-related); no FX or IR swap notional amounts are disclosed in this note.
+[HISTORICAL] [LLM_FLAG] Embedded derivatives in provisional sales/purchase contracts are the primary non-designated instruments.
+[HISTORICAL] [LLM_FLAG] Designated instruments are copper futures and swap contracts qualifying as fair value hedges (118 million pounds at $4.64/lb through Dec 2026).
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional is computed from disclosed pound/ounce positions × average contract prices, not stated directly as a dollar notional in the filing
+[HISTORICAL] [LLM_FLAG] FX and IR derivatives are referenced in the credit risk section but no separate notional disclosures appear for those instrument types in this section
+[HISTORICAL] [LLM_FLAG] Embedded derivatives in provisional sales/purchase contracts are excluded from commodity_derivatives_notional as they are bifurcated from host contracts and differ from standalone hedging instruments
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section contains no quantitative disclosures — states 'no material changes in our market risks during the three-month period ended March 31, 2025' and cross-references the 2024 Form 10-K.
+[HISTORICAL] [LLM_FLAG] Quantitative data for this period is in Note 5 (financial_instruments_extract).

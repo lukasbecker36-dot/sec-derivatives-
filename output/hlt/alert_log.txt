@@ -1,50 +1,53 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($1,600M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($1M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-6M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($0M)
-[DISAPPEARED_FIELD] interest_rate_swap_fair_value: was $-9M, now missing
-[DISAPPEARED_FIELD] fixed_interest_rate_payable: was $9M, now missing
-[DROPPED_TO_ZERO] fx_forward_contracts: $1,600M → $0M
-[VALIDATION] Likely extraction failure: 3/5 previously-populated fields are now null (equity_sensitivity_10pct, interest_rate_swap_fair_value, fixed_interest_rate_payable)
-[LLM_FLAG] The company has no interest rate swaps outstanding and no foreign currency forward contracts as of this period, which differs from prior reports.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $7M, now missing
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($1M)
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $9M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_swap_notional: was $1,600M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_swap_fair_value: was $7M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] variable_rate_debt_amount: was $3,119M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_debt_amount: was $9,000M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (fi_total_derivative_asset, fixed_rate_notes_billion, interest_rate_swap_notional, interest_rate_swap_fair_value, variable_rate_debt_amount...)
+[HISTORICAL] [LLM_FLAG] Interest rate swap with $1,600M notional matured in March 2026; Note 5 footnote (3) states 'the Company does not have any interest rate swaps outstanding as of March 31, 2026'
+[HISTORICAL] [LLM_FLAG] March 31, 2026 fair value table shows only long-term debt liability ($12,119M carrying value); no derivative instruments appear
+[HISTORICAL] [LLM_FLAG] December 31, 2025 comparative period shows interest rate swap asset of $7M (Level 2)
+[HISTORICAL] [LLM_FLAG] Interest rate swap with $1,600M notional matured in March 2026; no IR swaps outstanding as of March 31, 2026; ir_swap_notional reported as 0
+[HISTORICAL] [LLM_FLAG] FX forward contracts still in use (both cash flow hedge-designated and undesignated) but fair value and notional stated as not material
+[HISTORICAL] [LLM_FLAG] Section text is from the AOCI/equity rollforward section, not a standalone derivatives note; Hilton does not publish a separate derivatives footnote in its 10-Q filings
+[HISTORICAL] [LLM_FLAG] Cash flow hedge AOCI balance of $1M at March 31, 2026 relates primarily to residual FX forward hedge activity after IR swap maturation
+[HISTORICAL] [LLM_FLAG] Interest rate swap with $1,600M notional matured in March 2026; no IR swaps outstanding as of March 31, 2026
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section provides only qualitative disclosures; cross-references Annual Report on Form 10-K for December 31, 2025 for quantitative information
+[HISTORICAL] [LLM_FLAG] Matured swap had notional of $1,600M, received one-month term SOFR, paid fixed 1.76% (from prior period disclosures)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-9M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($9M)
-[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($1,600M)
-[NEW_FIELD] interest_rate_swap_fair_value: appeared for first time ($7M)
-[NEW_FIELD] variable_interest_rate_receivable: appeared for first time ($4M)
-[NEW_FIELD] fixed_interest_rate_payable: appeared for first time ($2M)
-[NEW_FIELD] variable_rate_debt_amount: appeared for first time ($3M)
-[NEW_FIELD] fixed_rate_debt_amount: appeared for first time ($9M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-16 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $16M → $7M (-56.2%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($9M)
+[HISTORICAL] [NEW_FIELD] interest_rate_swap_notional: appeared for first time ($1,600M)
+[HISTORICAL] [NEW_FIELD] interest_rate_swap_fair_value: appeared for first time ($7M)
+[HISTORICAL] [NEW_FIELD] variable_rate_debt_amount: appeared for first time ($3,119M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_debt_amount: appeared for first time ($9,000M)
+[HISTORICAL] [LLM_FLAG] Interest rate swap notional amount ($1,600M) not disclosed in this note; only fair value shown ($7M at December 31, 2025)
+[HISTORICAL] [LLM_FLAG] Long-term debt (carrying $12,119M; fair value Level 1 $8,922M + Level 3 $3,142M) shown as liability but is not a derivative instrument
+[HISTORICAL] [LLM_FLAG] Section text is the MD&A market risk discussion, not a standalone derivatives note; Hilton does not publish a separate derivatives footnote in its 10-K
+[HISTORICAL] [LLM_FLAG] IR swap notional ($1,600M) is visible in the full market risk quantitative table (see market_risk_extract for this accession); this section_text begins mid-footnote after the table body
+[HISTORICAL] [LLM_FLAG] IR swap fair value ($7M asset as of December 31, 2025) is in Note 11 Fair Value Measurements (see financial_instruments_extract)
+[HISTORICAL] [LLM_FLAG] FX forward contracts described qualitatively only; notional and fair value stated to be not material
+[HISTORICAL] [LLM_FLAG] interest_rate_swap_notional and interest_rate_swap_fair_value figures are from the 10-K market risk quantitative table (interest rate risk maturity schedule)
+[HISTORICAL] [LLM_FLAG] variable_interest_rate_receivable and fixed_interest_rate_payable are percentage rates, not dollar amounts
+[HISTORICAL] [LLM_FLAG] FX forward contracts described qualitatively with no notional amounts; filing states fair value and earnings effect are not material
+[HISTORICAL] [LLM_FLAG] Interest rate swap matures fully in 2026 (shown in '2026' maturity column)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] interest_rate_swap_fair_value: was $-7M, now missing
-[DISAPPEARED_FIELD] fixed_interest_rate_payable: was $9M, now missing
-[DROPPED_TO_ZERO] fx_forward_contracts: $1,600M → $0M
-[VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (interest_rate_swap_fair_value, fixed_interest_rate_payable)
-[LLM_FLAG] Interest rate swap with a notional amount of $1.6 billion matured in March 2026; no interest rate swaps are outstanding as of March 31, 2026, indicating a significant change in the hedging strategy.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-16 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $26M → $16M (-38.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Interest rate swap notional amount not disclosed in this note; only fair value shown ($16M at September 30, 2025)
+[HISTORICAL] [LLM_FLAG] Long-term debt (carrying $11,619M; fair value Level 1 $8,342M + Level 3 $3,123M) shown as liability but is not a derivative instrument
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section provides qualitative disclosure only and cross-references prior Annual Report on Form 10-K for December 31, 2024; no quantitative sensitivity tables in this section
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-7M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($9M)
-[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($1,600M)
-[NEW_FIELD] interest_rate_swap_fair_value: appeared for first time ($7M)
-[NEW_FIELD] variable_interest_rate_receivable: appeared for first time ($4M)
-[NEW_FIELD] fixed_interest_rate_payable: appeared for first time ($2M)
-[NEW_FIELD] variable_rate_debt_amount: appeared for first time ($3,119M)
-[NEW_FIELD] fixed_rate_debt_amount: appeared for first time ($9,000M)
-[LLM_FLAG] The fixed-rate notes outstanding are 9 billion, which solidifies a significant amount of fixed-rate debt exposure.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
-[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($0M)
-[LLM_FLAG] Material change in interest_rate_swap_notional: Prior period had active swaps, current period has $0 outstanding due to March 2026 maturity of $1.6 billion notional swap. This is a 100% decrease but is explained in the filing.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-16 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $33M → $26M (-21.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Interest rate swap notional amount not disclosed in this note; only fair value shown ($26M at June 30, 2025)
+[HISTORICAL] [LLM_FLAG] Long-term debt (carrying $10,909M; fair value Level 1 $7,304M + Level 3 $3,420M) shown as liability but is not a derivative instrument
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section provides qualitative disclosure only and cross-references prior Annual Report on Form 10-K for December 31, 2024; no quantitative sensitivity tables in this section
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
 [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $9M, now missing

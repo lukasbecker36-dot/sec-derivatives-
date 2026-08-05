@@ -2,25 +2,38 @@
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-15 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $58M → $15M (-74.1%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_outstanding_debt: was $58M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (total_outstanding_debt)
+[HISTORICAL] [LLM_FLAG] Root Warrants declined sharply to ~$15M ($14M ending balance per rollforward, $15M per balance sheet table) at March 31, 2026 due to $42M unrealized loss in Q1 2026
+[HISTORICAL] [LLM_FLAG] Fifth tranche of Root Warrants became exercisable February 28, 2026; valuation uses Black-Scholes with 90% expected volatility
+[HISTORICAL] [LLM_FLAG] Carvana has no traditional FX or IR derivatives
+[HISTORICAL] [LLM_FLAG] Market risk section for Q1 2026 (10-Q) states 'no material changes' from most recent Annual Report on Form 10-K filed February 18, 2026 — no quantitative disclosures in this filing
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] total_outstanding_debt: appeared for first time ($58M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-15 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $123M → $58M (-52.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_outstanding_debt: appeared for first time ($58M)
+[HISTORICAL] [LLM_FLAG] Root Warrants declined further to $58M at December 31, 2025 following expiration of three tranches in September 2025 and revaluation under Black-Scholes model
+[HISTORICAL] [LLM_FLAG] Carvana has no traditional FX or IR derivatives; only Root Warrant derivatives
+[HISTORICAL] [LLM_FLAG] 10-K labels the warrants simply as 'Warrants' rather than 'Root Warrants' in the fair value summary table
+[HISTORICAL] [LLM_FLAG] Market risk section is brief; it cross-references the MD&A for further discussion. Most sensitivity quantifications (IR, FX, equity) are not present in this excerpt — the filing may carry additional detail in the MD&A section not provided.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-15 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $718M → $1,145M (+59.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $243M → $123M (-49.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Root Warrants declined to $123M as three tranches (7.2M shares) expired September 1, 2025; remaining tranches revalued using Black-Scholes instead of Monte Carlo
+[HISTORICAL] [LLM_FLAG] Purchase price adjustment receivables no longer listed as an asset at September 30, 2025 (final payment received in Q3 2025)
+[HISTORICAL] [LLM_FLAG] Carvana has no traditional FX or IR derivatives
+[HISTORICAL] [LLM_FLAG] Market risk section for Q3 2025 (10-Q) states 'no material changes' from most recent Annual Report on Form 10-K filed February 19, 2025 — no quantitative disclosures in this filing
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] total_outstanding_debt: appeared for first time ($58M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-15 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,157M → $718M (-37.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Carvana has no traditional FX or IR derivatives; only Root Warrants (equity warrants, Level 3 derivatives) at $243M as of June 30, 2025
+[HISTORICAL] [LLM_FLAG] Money market funds ($718M) are cash equivalents, not marketable securities
+[HISTORICAL] [LLM_FLAG] Market risk section for Q2 2025 (10-Q) states 'no material changes' from most recent Annual Report on Form 10-K filed February 19, 2025 — no quantitative disclosures in this filing
 
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
-[DISAPPEARED_FIELD] total_outstanding_debt: was $58M, now missing
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (total_outstanding_debt)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-15 ===
+[HISTORICAL] [LLM_FLAG] Carvana has no traditional FX or IR derivatives; the only derivative instruments are Root Warrants (equity warrants classified as Level 3), valued at $278M at March 31, 2025
+[HISTORICAL] [LLM_FLAG] Money market funds ($1,157M) are cash equivalents, not marketable securities
+[HISTORICAL] [LLM_FLAG] Market risk section for Q1 2025 (10-Q) states 'no material changes' from most recent Annual Report on Form 10-K filed February 19, 2025 — no quantitative disclosures in this filing

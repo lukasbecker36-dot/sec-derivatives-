@@ -1,64 +1,39 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($24M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NUMERIC] fixed_rate_debt: $20M → $24M (+20.5%) — exceeds 20% threshold
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($8M)
-[NUMERIC] fair_value_sensitivity: $22M → $874M (+3927.6%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] zens_derivative_component: was $0M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity: was $2M, now missing
-[DISAPPEARED_FIELD] commodity_risk_exposure: was $21M, now missing
-[VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (equity_sensitivity_10pct, zens_derivative_component, equity_sensitivity, commodity_risk_exposure)
-[LLM_FLAG] floating_rate_obligations
-[LLM_FLAG] fixed_rate_debt
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-14 ===
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($555M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($0M)
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $15M → $8M (-46.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_value: was $510M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $1M, now missing
+[HISTORICAL] [NUMERIC] floating_rate_obligations: $1,500M → $800M (-46.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity: $15M → $8M (-46.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] zens_derivative_component: was $564M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_sensitivity: was $1M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/11 previously-populated fields are now null (marketable_equity_value, equity_sensitivity_10pct, zens_derivative_component, equity_sensitivity)
+[HISTORICAL] [LLM_FLAG] Indexed debt securities derivative ($606M) is the ZENS-related instrument unique to CenterPoint Energy.
+[HISTORICAL] [LLM_FLAG] No interest rate, FX, or commodity derivatives appear in the fair value table for March 31, 2026.
+[HISTORICAL] [LLM_FLAG] Phrasing 'interest rate derivative assets or liabilities and natural gas derivative assets or liabilities, if any' in the methodology description suggests these may have been fully unwound.
+[HISTORICAL] [LLM_FLAG] Section text is abbreviated — references 'Part II, Item 7A of our combined 2025 Form 10-K' for full disclosures; only interest rate risk changes are described here
+[HISTORICAL] [LLM_FLAG] Floating rate obligations decreased from $1.5B (Dec 31, 2025) to $0.8B (Mar 31, 2026)
+[HISTORICAL] [LLM_FLAG] Fixed-rate debt increased from $21.7B (Dec 31, 2025) to $24.1B (Mar 31, 2026) in principal; fair value $23.4B vs $21.1B
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity improved: $8M/year at Q1 2026 vs $15M/year at FY2025
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $100M → $20M (-80.0%) — exceeds 20% threshold
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($22M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
-[NEW_FIELD] floating_rate_obligations: appeared for first time ($2M)
-[NEW_FIELD] fixed_rate_debt: appeared for first time ($21M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($20M)
-[NEW_FIELD] fair_value_sensitivity: appeared for first time ($800M)
-[NEW_FIELD] zens_derivative_component: appeared for first time ($564M)
-[LLM_FLAG] ir_sensitivity_100bp increased compared to prior value of 100.0, indicating a notable change in interest expense sensitivity due to rising rates.
-[LLM_FLAG] fixed_rate_notes increased from 19.7 billion in the prior period, indicating increased borrowing in fixed-rate instruments.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($8M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($24M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] fixed_rate_debt: was $15M, now missing
-[NUMERIC] fair_value_sensitivity: $22M → $874M (+3927.6%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] equity_sensitivity: was $1,500M, now missing
-[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (equity_sensitivity_10pct, fixed_rate_debt, equity_sensitivity)
-[LLM_FLAG] fixed_rate_debt increased by more than 50% compared to the prior period (from 15.0 to 24.1 billion); significant update for stakeholders.
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $100M → $15M (-85.0%) — exceeds 20% threshold
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($22M)
-[NEW_FIELD] floating_rate_obligations: appeared for first time ($1,500M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($15M)
-[NEW_FIELD] fair_value_sensitivity: appeared for first time ($800M)
-[NEW_FIELD] zens_derivative_component: appeared for first time ($564M)
-[LLM_FLAG] ir_sensitivity_100bp increased from prior period value of 100.0 by 85%.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-25 ===
-[NUMERIC] ir_sensitivity_100bp: $11M → $8M (-27.3%) — exceeds 20% threshold
-[NUMERIC] interest_rate_sensitivity: $11M → $8M (-27.3%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp decreased from $11 million (Sept 30, 2025) to $8 million (March 31, 2026) - 27% decrease, within tolerance
-[LLM_FLAG] floating_rate_obligations decreased from $1.5 billion (Dec 31, 2025) to $0.8 billion (March 31, 2026) - 47% decrease, within tolerance
-[LLM_FLAG] fixed_rate_notes_billion increased from $21.4 billion (Sept 30, 2025) to $24.1 billion (March 31, 2026) - 13% increase, normal debt issuance pattern
-[LLM_FLAG] fair_value_sensitivity increased from $764 million to $874 million - 14% increase, consistent with higher debt principal outstanding
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-25 ===
-[LLM_FLAG] Floating rate obligations decreased from $1.5 billion (Dec 31, 2024) to $1.1 billion (Sep 30, 2025), a 26.7% decrease - within acceptable variance
-[LLM_FLAG] Fixed-rate debt principal increased from $19.7 billion to $21.4 billion, an 8.6% increase - within acceptable variance
-[LLM_FLAG] All comparable metrics remain consistent with prior period; no material changes detected
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-14 ===
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $579M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $11M → $15M (+36.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] marketable_equity_value: appeared for first time ($510M)
+[HISTORICAL] [NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($1M)
+[HISTORICAL] [NUMERIC] floating_rate_obligations: $1,100M → $1,500M (+36.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity: $11M → $15M (+36.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] zens_derivative_component: appeared for first time ($564M)
+[HISTORICAL] [NEW_FIELD] equity_sensitivity: appeared for first time ($1M)
+[HISTORICAL] [LLM_FLAG] The section_text for this 10-K filing is the interest rate risk narrative section, not the fair value measurements note. The fair value hierarchy table (which would show derivative assets/liabilities by level) is not present in this extract.
+[HISTORICAL] [LLM_FLAG] The $564M derivative liability is the ZENS indexed debt securities derivative component as of December 31, 2025.
+[HISTORICAL] [LLM_FLAG] Floating rate obligations: CenterPoint Energy $1.5B total; Houston Electric $500M; CERC $559M — these are debt exposures, not derivative notionals.
+[HISTORICAL] [LLM_FLAG] No interest rate swap notional amounts are disclosed for any outstanding swaps as of year-end.
+[HISTORICAL] [LLM_FLAG] 10-K contains the full market risk section; floating rate obligations at Houston Electric = $500M maturing Q1 2026; CERC floating rate = $559M as of Dec 31 2025
+[HISTORICAL] [LLM_FLAG] Indiana gas operations use financial derivatives for commodity hedging (up to 50% of annual purchases, up to 10-year term) but no notional disclosed
+[HISTORICAL] [LLM_FLAG] ZENS derivative component $564M liability at Dec 31, 2025 vs $619M at Dec 31, 2024
 
 === 10-Q/A | Period ending 2025-09-30 | Processed 2026-04-25 ===
 [NUMERIC] ir_sensitivity_100bp: $25M → $11M (-56.0%) — exceeds 20% threshold
@@ -68,15 +43,26 @@
 [LLM_FLAG] fixed_rate_notes_billion: Increased from $19.2 billion (June 30, 2025) to $21.4 billion (September 30, 2025) - 11.5% increase. Likely reflects issuance of new fixed-rate debt.
 [LLM_FLAG] fair_value_sensitivity: Increased from $748 million (June 30, 2025) to $764 million (September 30, 2025). Increase is consistent with larger fixed-rate debt portfolio.
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-25 ===
-[LLM_FLAG] ir_sensitivity_100bp increased from 21 to 25 million (19% increase) - plausible due to higher floating rate debt ($2.5B vs $2.1B)
-[LLM_FLAG] floating_rate_obligations increased from $2.1B to $2.5B (19% increase) - material change but within normal range
-[LLM_FLAG] fair_value_sensitivity increased from $792M to $748M (5% decrease) - not a significant variance despite interest rate environment changes
-[LLM_FLAG] fixed_rate_debt principal decreased from $20.3B to $19.2B (5% decrease) - consistent with debt repayment or refinancing activity
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-14 ===
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $25M → $11M (-56.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] floating_rate_obligations: $2,500M → $1,100M (-56.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity: $25M → $11M (-56.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Indexed debt securities derivative ($635M) is the ZENS-related instrument unique to CenterPoint Energy.
+[HISTORICAL] [LLM_FLAG] No interest rate, FX, or commodity derivatives appear in the fair value table for this period.
+[HISTORICAL] [LLM_FLAG] Market risk section cross-references 2024 Form 10-K Item 7A for full disclosures; Q3 2025 section only discloses changes
+[HISTORICAL] [LLM_FLAG] ZENS and equity risk sections appear truncated from the section_text provided
 
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-25 ===
-[LLM_FLAG] floating_rate_obligations increased from $1.5 billion (Dec 31, 2024) to $2.1 billion (Mar 31, 2025), a 40% increase within expected range
-[LLM_FLAG] ir_sensitivity_100bp decreased from $26 million (prior period) to $21 million (current period), a 19% decrease - likely due to mix of floating rate debt changes
-[LLM_FLAG] zens_derivative_component liability increased from $564 million to $698 million, a 24% increase - within expected quarterly volatility range
-[LLM_FLAG] fixed_rate_notes_billion increased from $19.7 billion to $20.3 billion, a 3% increase consistent with normal debt management
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-14 ===
+[HISTORICAL] [DROPPED_TO_ZERO] fi_total_derivative_asset: $11M → $0M
+[HISTORICAL] [DISAPPEARED_FIELD] zens_derivative_component: was $698M, now missing
+[HISTORICAL] [LLM_FLAG] Interest rate and natural gas derivatives that appeared in Q1 2025 are absent from the Q2 2025 fair value table, suggesting they matured or were terminated.
+[HISTORICAL] [LLM_FLAG] Indexed debt securities derivative ($740M) is a ZENS-related instrument unique to CenterPoint Energy, not a standard IR/FX derivative.
+[HISTORICAL] [LLM_FLAG] Market risk section cross-references 2024 Form 10-K Item 7A for full disclosures; Q2 2025 section only discloses changes
+[HISTORICAL] [LLM_FLAG] ZENS and equity risk sections appear to be truncated from the section_text provided
 
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-14 ===
+[HISTORICAL] [LLM_FLAG] Indexed debt securities derivative ($698M liability) is a ZENS-related derivative unique to CenterPoint Energy, not a standard interest rate or FX derivative.
+[HISTORICAL] [LLM_FLAG] Interest rate derivative asset notional amount not disclosed in this section.
+[HISTORICAL] [LLM_FLAG] Natural gas derivative liability appears at CERC subsidiary level ($2M) but nets to $0 at CenterPoint consolidated level in the fair value table.
+[HISTORICAL] [LLM_FLAG] Market risk section cross-references 2024 Form 10-K Item 7A for full disclosures; Q1 2025 section only discloses changes from prior year 10-K
+[HISTORICAL] [LLM_FLAG] ZENS derivative component ($698M liability) is an indexed debt securities derivative, not a traditional interest rate derivative

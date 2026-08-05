@@ -1,29 +1,70 @@
-=== 10-K | Period ending 2026-01-31 | Processed 2026-06-04 ===
-[NUMERIC] fx_sensitivity_10pct: $206M → $292M (+41.7%) — exceeds 20% threshold
+=== 10-Q | Period ending 2026-04-30 | Processed 2026-06-14 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($6,826M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($2,902M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($1,467M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($5M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($143M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($124M)
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $11,900M → $19,200M (+61.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($1,400M)
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $11,900M → $17,800M (+49.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $31M → $50M (+61.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fixed_rate_notes_billion: $8M → $34M (+294.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_value: $5M → $3M (-40.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX derivatives not disclosed in this section; may appear in a separate derivatives note
+[HISTORICAL] [LLM_FLAG] Equity securities ($3M) are classified as strategic investments, not marketable securities — marketable_equity_securities_fv set to null
+[HISTORICAL] [LLM_FLAG] No interest rate derivatives mentioned; Salesforce's derivatives appear to be FX-only
+[HISTORICAL] [LLM_FLAG] Material change from prior periods: Salesforce introduced designated cash flow hedges in Q1 FY2027 (Apr 30, 2026) — first appearance of hedge accounting. Prior filings had only non-designated derivatives.
+[HISTORICAL] [LLM_FLAG] Total FX notional surged to ~$19.2B from $11.9B at Jan 31, 2026, driven by the new cash flow hedge program plus growth in non-designated notional.
+[HISTORICAL] [LLM_FLAG] Fair value tables and AOCI balance not present in section text window.
+[HISTORICAL] [LLM_FLAG] Fixed-rate notes surged to $33.5B from $8.5B as Salesforce issued $25B of March 2026 Notes (maturities 2028-2066) to fund the Informatica acquisition. The 2026 Term Loan ($6B) and Revolving Loan ($0) are floating-rate and excluded.
+[HISTORICAL] [LLM_FLAG] Salesforce now has both designated cash flow hedges and non-designated FX forwards as of this filing.
 
-=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-04 ===
-[NUMERIC] fx_sensitivity_10pct: $79M → $206M (+160.8%) — exceeds 20% threshold
+=== 10-K | Period ending 2026-01-31 | Processed 2026-06-14 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $7,412M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $2,345M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $1,441M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $15M, now missing
+[HISTORICAL] [NUMERIC] marketable_equity_value: $68M → $5M (-92.6%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/9 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt)
+[HISTORICAL] [LLM_FLAG] Fair value tables not present in section text window. FX notional as of Jan 31, 2026 is $11.9B. Note: in the subsequent Q1 FY2027 filing (Apr 30, 2026), Salesforce introduced cash flow hedge designations, but this annual filing does not yet show designated hedges.
+[HISTORICAL] [LLM_FLAG] Fixed-rate notes total computed: $1,500 + $1,000 + $1,500 + $1,250 + $2,000 + $1,250 = $8,500M. The Informatica Credit Agreements ($4B 364-day + $2B three-year) are floating-rate and excluded from fixed_rate_notes_billion.
+[HISTORICAL] [LLM_FLAG] Cash and marketable securities fell to $9.6B from $14.0B; IR sensitivity fell to $31M reflecting the smaller investment portfolio.
 
-=== 10-K | Period ending 2026-01-31 | Processed 2026-06-04 ===
-[NUMERIC] marketable_equity_value: $68M → $5M (-92.6%) — exceeds 20% threshold
-[NUMERIC] equity_sensitivity_10pct: $206M → $292M (+41.7%) — exceeds 20% threshold
-[LLM_FLAG] equity_sensitivity_10pct increased from $206M (Oct 2025) to $292M (Jan 2026) — 42% increase driven by top-5 private holdings growing from $2.5B to $3.5B
-[LLM_FLAG] marketable_equity_value dropped from $68M to $5M — over 90% decrease as publicly held equity securities were largely exited
+=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-14 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $5,007M → $2,345M (-53.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $2,673M → $1,441M (-46.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $12M → $15M (+25.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $66M → $34M (-48.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX derivative notional amounts not present in this section; a separate hedging/derivatives note may contain notional data.
+[HISTORICAL] [LLM_FLAG] Salesforce's foreign currency derivative contracts are described in the policy text but no fair value line item appears in the current-period table.
+[HISTORICAL] [LLM_FLAG] Fair value tables not present in section text window. FX notional increased from $10.7B (Jan 31, 2025) to $13.3B (Oct 31, 2025).
+[HISTORICAL] [LLM_FLAG] Fixed-rate notes total computed: $1,500 + $1,000 + $1,500 + $1,250 + $2,000 + $1,250 = $8,500M. Informatica Credit Agreements were still unfunded at Oct 31, 2025 balance sheet date; funded in November 2025.
+[HISTORICAL] [LLM_FLAG] IR sensitivity dropped sharply from $66M (Jul 31) to $34M (Oct 31), likely reflecting reduced marketable securities portfolio.
 
-=== 10-Q | Period ending 2025-10-31 | Processed 2026-06-04 ===
-[NUMERIC] ir_sensitivity_100bp: $66M → $34M (-48.5%) — exceeds 20% threshold
-[NUMERIC] equity_sensitivity_10pct: $79M → $206M (+160.8%) — exceeds 20% threshold
-[LLM_FLAG] equity_sensitivity_10pct increased from $79M (Jul 2025) to $206M (Oct 2025) — over 160% increase driven by top-5 privately held investments growing from $1.3B to $2.5B
+=== 10-Q | Period ending 2025-07-31 | Processed 2026-06-14 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $6,480M → $5,007M (-22.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $19M → $12M (-36.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $9,000M → $12,700M (+41.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $9,000M → $12,700M (+41.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_value: $53M → $84M (+58.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX derivative notional amounts not present in this section; a separate hedging/derivatives note may contain notional data.
+[HISTORICAL] [LLM_FLAG] Salesforce's foreign currency derivative contracts are described in the policy text but no fair value line item appears in the current-period table.
+[HISTORICAL] [LLM_FLAG] Fair value tables not present in section text window. FX notional increased from $10.7B (Jan 31, 2025) to $12.7B (Jul 31, 2025).
+[HISTORICAL] [LLM_FLAG] Fixed-rate notes total computed: $1,500 + $1,000 + $1,500 + $1,250 + $2,000 + $1,250 = $8,500M. Informatica Credit Agreements were unfunded at July 31, 2025 (conditioned on Informatica acquisition consummation).
 
-=== 10-Q | Period ending 2025-07-31 | Processed 2026-06-04 ===
-[NUMERIC] marketable_equity_value: $53M → $84M (+58.5%) — exceeds 20% threshold
+=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-14 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($8,545M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($6,480M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($2,782M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($19M)
+[HISTORICAL] [NUMERIC] marketable_equity_value: $69M → $53M (-23.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX derivative notional amounts not present in this section; a separate hedging/derivatives note may contain notional data.
+[HISTORICAL] [LLM_FLAG] Salesforce's foreign currency derivative contracts were noted as Level 1/2 in the policy text, but no fair value table line item for derivatives appears in this period's table.
+[HISTORICAL] [LLM_FLAG] Fair value tables not present in section text window; section is accounting policy disclosure. FX notional declined from $10.7B (Jan 31, 2025) to $9.0B (Apr 30, 2025).
+[HISTORICAL] [LLM_FLAG] Fixed-rate notes total computed by summing line items from debt table: $1,500 + $1,000 + $1,500 + $1,250 + $2,000 + $1,250 = $8,500M.
 
-=== 10-Q | Period ending 2025-04-30 | Processed 2026-06-04 ===
-[NUMERIC] marketable_equity_value: $69M → $53M (-23.2%) — exceeds 20% threshold
-
-=== 10-K | Period ending 2025-01-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($61M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($69M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($84M)
-
+=== 10-K | Period ending 2025-01-31 | Processed 2026-06-14 ===
+[HISTORICAL] [LLM_FLAG] Fair value tables for derivative assets/liabilities not present in section text window; section appears to be accounting policy disclosure rather than full derivatives note with tables.
+[HISTORICAL] [LLM_FLAG] The $84M figure for private equity 10% sensitivity is for privately held strategic investments, not marketable equity securities — not reported as equity_sensitivity_10pct.
+[HISTORICAL] [LLM_FLAG] Fixed-rate notes total computed by summing line items from debt table: $1,500 + $1,000 + $1,500 + $1,250 + $2,000 + $1,250 = $8,500M.

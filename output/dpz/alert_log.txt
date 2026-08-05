@@ -3,20 +3,53 @@
 [NUMERIC] fx_sensitivity_10pct: $10M → $16M (+60.0%) — exceeds 20% threshold
 [LLM_FLAG] fx_sensitivity_10pct increased from $10.0M to $16.0M (60% increase vs prior), likely reflecting growth in international franchise royalty revenues
 
-=== 10-Q | Period ending 2026-03-22 | Processed 2026-05-30 ===
-[LLM_FLAG] FX sensitivity impact decreased from $20.4 million (3 quarters 2025) to $7.2 million (Q1 2026) - approximately 65% decrease. This is expected as the prior period covered three quarters while current period covers one quarter, but magnitude suggests potential real decline in foreign currency exposure or different calculation methodology.
-[LLM_FLAG] No outstanding borrowings under 2025 Variable Funding Notes as of March 22, 2026, whereas prior period implied active usage. This represents a significant change in leverage structure.
+=== 10-Q | Period ending 2026-03-22 | Processed 2026-06-16 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($139M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($26M)
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-30M → $-7M (+76.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Values in section text are in thousands (e.g. $138,976 = $138.976M); converted to millions
+[HISTORICAL] [LLM_FLAG] Domino's does not use derivative instruments; no FX, IR, or other derivative disclosures present in this note
+[HISTORICAL] [LLM_FLAG] Marketable securities ($25.890M) are restricted mutual funds held in rabbi trust for deferred compensation plan
+[HISTORICAL] [LLM_FLAG] New debt tranches added in 2025: 2025 Five-Year Notes ($500M) and 2025 Seven-Year Notes ($500M) appear in the debt fair value table for this period
+[HISTORICAL] [LLM_FLAG] No derivatives used — all derivative-related fields are null or zero by policy.
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $7.2M is for Q1 2026 royalty revenues only.
+[HISTORICAL] [LLM_FLAG] Fixed-rate notes total calculated from fair value table in Note 5.
 
-=== 10-Q | Period ending 2025-09-07 | Processed 2026-05-30 ===
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fixed_rate_notes_billion)
-[LLM_FLAG] Foreign currency risk quantification increased from $13.4 million (two quarters 2025) in prior period to $20.4 million (three quarters 2025) in current period - this represents a 52% increase but appears to be due to measurement of three quarters vs. two quarters (expected 50% increase), so likely not a material change in underlying exposure rate
+=== 10-K | Period ending 2025-12-28 | Processed 2026-06-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $96M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $24M, now missing
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-20M → $-30M (-47.1%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv)
+[HISTORICAL] [LLM_FLAG] No derivatives used — all derivative-related fields are null or zero by policy.
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $30.0M is a full-year 2025 figure for international franchise royalty and fee revenues.
+[HISTORICAL] [LLM_FLAG] Fixed-rate notes total approximated from note series principal amounts visible in windows; balance sheet shows total LT debt of $4.817B including amortized issue costs.
 
-=== 10-Q | Period ending 2025-06-15 | Processed 2026-05-30 ===
-[LLM_FLAG] Foreign currency risk impact increased from $7.4 million (Q1 2025) to $13.4 million (two fiscal quarters 2025) - this is expected as it represents cumulative impact over two quarters rather than single quarter
+=== 10-Q | Period ending 2025-09-07 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $165M → $96M (-42.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-13M → $-20M (-52.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Values in section text are in thousands (e.g. $95,531 = $95.531M); converted to millions
+[HISTORICAL] [LLM_FLAG] Section text ends mid-table without the fair value of debt section, but all required fair value measurement data for financial instruments is present
+[HISTORICAL] [LLM_FLAG] Domino's does not use derivative instruments; no FX, IR, or other derivative disclosures present in this note
+[HISTORICAL] [LLM_FLAG] Marketable securities ($23.658M) are restricted mutual funds held in rabbi trust for deferred compensation plan
+[HISTORICAL] [LLM_FLAG] No derivatives used — all derivative-related fields are null or zero by policy.
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $20.4M is a YTD (three-quarter) figure for royalty revenues only.
+[HISTORICAL] [LLM_FLAG] 2025 Five-Year Notes ($500M) and 2025 Seven-Year Notes ($500M) were newly issued in September 2025 refinancing; 2015 Ten-Year Notes and 2018 7.5-Year Notes were redeemed.
+[HISTORICAL] [LLM_FLAG] Fixed-rate notes total calculated from fair value table in Note 5.
 
-=== 10-Q | Period ending 2025-03-23 | Processed 2026-05-30 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[LLM_FLAG] FX sensitivity value decreased from $30.0 million (prior period) to $7.4 million (current period Q1 2025) - a 75% decrease. This is a significant change and may warrant investigation into whether prior period amount was annualized or if there were actual business changes.
-[LLM_FLAG] Prior period indicated fixed-rate notes amount was not explicitly stated; current period shows $1.14 billion classified as current (due October 2025). Cannot determine if this represents an increase or decrease without prior period total debt disclosure.
+=== 10-Q | Period ending 2025-06-15 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $253M → $165M (-34.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-7M → $-13M (-81.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Values in section text are in thousands (e.g. $164,990 = $164.990M); converted to millions
+[HISTORICAL] [LLM_FLAG] Domino's does not use derivative instruments; no FX, IR, or other derivative disclosures present in this note
+[HISTORICAL] [LLM_FLAG] Marketable securities ($22.297M) are restricted mutual funds held in rabbi trust for deferred compensation plan
+[HISTORICAL] [LLM_FLAG] No derivatives used — all derivative-related fields are null or zero by policy.
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $13.4M is a YTD (two-quarter) figure for royalty revenues, not a single-quarter or balance-sheet fair value figure.
+[HISTORICAL] [LLM_FLAG] Fixed-rate notes total calculated from fair value table in Note 5.
 
+=== 10-Q | Period ending 2025-03-23 | Processed 2026-06-16 ===
+[HISTORICAL] [LLM_FLAG] Values in section text are in thousands (e.g. $253,286 = $253.286M); converted to millions
+[HISTORICAL] [LLM_FLAG] Domino's does not use derivative instruments; no FX, IR, or other derivative disclosures present in this note
+[HISTORICAL] [LLM_FLAG] Marketable securities ($22.387M) are restricted mutual funds held in rabbi trust for deferred compensation plan, not equity or debt securities in the conventional sense
+[HISTORICAL] [LLM_FLAG] No derivatives used — all derivative-related fields are null or zero by policy.
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $7.4M is for Q1 2025 royalty revenues only, not a balance sheet fair value sensitivity.
+[HISTORICAL] [LLM_FLAG] Fixed-rate notes total is calculated from the fair value table in Note 5, not stated directly in the market risk section.

@@ -11,80 +11,54 @@
 [LLM_FLAG] Prior value for 'equity_derivatives_notional' was 'Yes' (appears to be a data type mismatch; current value is null)
 [LLM_FLAG] Prior value for 'total_derivative_asset' was 343.4 but current is null/not material (>50% change; prior value may have been the notional amount rather than derivative asset fair value)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($343M)
-[DISAPPEARED_FIELD] has_derivatives: was $320M, now missing
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($343M)
-[DISAPPEARED_FIELD] total_derivative_asset: was $320M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] currency_derivatives_fair_value: was $2M, now missing
-[DISAPPEARED_FIELD] maximum_term: was $4M, now missing
-[DISAPPEARED_FIELD] sensitivity_analysis_loss: was $2M, now missing
-[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (has_derivatives, total_derivative_asset, equity_sensitivity_10pct, currency_derivatives_fair_value, maximum_term...)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-03 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] sensitivity_analysis_loss: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_debt: was $2,000M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_percentage: was $90M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] revolving_facility_outstanding: was $191M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $2M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/8 previously-populated fields are now null (fx_sensitivity_10pct, sensitivity_analysis_loss, total_debt, fixed_rate_percentage, revolving_facility_outstanding...)
+[HISTORICAL] [LLM_FLAG] Section text is truncated immediately after the FX derivatives notional disclosure; no data is available in this window for cash equivalents, marketable securities, unrealized gains, or derivative fair values.
+[HISTORICAL] [LLM_FLAG] Fair values of currency derivatives and the related Accumulated other comprehensive loss balance are described only as 'not material' with no dollar figures given, so total_derivative_asset/liability, net_derivative_position and cash_flow_hedge_aoci are left null rather than estimated as zero.
+[HISTORICAL] [LLM_FLAG] No interest rate swap, commodity, or equity derivative notionals are mentioned in this section; the company appears to use only FX currency derivatives.
+[HISTORICAL] [LLM_FLAG] The $343.4 million figure is not split between designated and not-designated notional in this text, so fx_designated_notional/fx_not_designated_notional are left null.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($320M)
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($320M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($4M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
-[NEW_FIELD] total_debt: appeared for first time ($2,000M)
-[NEW_FIELD] fixed_rate_percentage: appeared for first time ($90M)
-[NEW_FIELD] revolving_facility_outstanding: appeared for first time ($191M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($2M)
-[LLM_FLAG] The notional amount of currency derivatives increased significantly from $167.2 million in 2024 to $320.1 million in 2025, marking a change of over 50%. This could indicate a shift in hedging strategy.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-03 ===
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-4M)
+[HISTORICAL] [NEW_FIELD] sensitivity_analysis_loss: appeared for first time ($4M)
+[HISTORICAL] [NEW_FIELD] total_debt: appeared for first time ($2,000M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_percentage: appeared for first time ($90M)
+[HISTORICAL] [NEW_FIELD] revolving_facility_outstanding: appeared for first time ($191M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($2M)
+[HISTORICAL] [LLM_FLAG] Section text is truncated immediately after the FX derivatives notional disclosure; no data is available in this window for cash equivalents, marketable securities, unrealized gains, or derivative fair values.
+[HISTORICAL] [LLM_FLAG] Fair values of currency derivatives and the related Accumulated other comprehensive loss balance are described only as 'not material' with no dollar figures given, so total_derivative_asset/liability, net_derivative_position and cash_flow_hedge_aoci are left null rather than estimated as zero.
+[HISTORICAL] [LLM_FLAG] No interest rate swap, commodity, or equity derivative notionals are mentioned in this section (10-K FY2025); the company appears to use only FX currency derivatives, and separately states in the Item 7A market risk section that it had no committed commodity derivative instruments at December 31, 2025.
+[HISTORICAL] [LLM_FLAG] The $320.1 million figure is not split between designated and not-designated notional in this text, so fx_designated_notional/fx_not_designated_notional are left null.
+[HISTORICAL] [LLM_FLAG] total_debt is stated in this MD&A section only as a rounded '$2.0 billion' figure; more precise total debt values are disclosed elsewhere in the filing (e.g., the Fair Value Measurements note showed $1,990.8 million of future principal payments and $2,041.8 million of total debt not carried at fair value in nearby periods) — reported here as 2000 (millions) per the schema's stated unit, but note the rounding.
+[HISTORICAL] [LLM_FLAG] fixed_rate_notes_billion left null: the text gives a fixed-rate percentage (90%) and total debt ($2.0 billion) but does not explicitly state a dollar amount of fixed-rate notes outstanding; computing 90% x $2.0B was avoided to prevent fabricating a value not directly disclosed.
+[HISTORICAL] [LLM_FLAG] currency_derivatives_notional, currency_derivatives_fair_value and maximum_term are not disclosed in this Item 7A section (they appear instead in Note 9 – Financial Instruments of this same 10-K, a separate extraction request) — left null here to avoid fabricating cross-section values.
+[HISTORICAL] [LLM_FLAG] No FX forward-specific notional, FX transaction gain/loss, fair-value interest rate sensitivity (100bp), marketable equity holdings, or equity price sensitivity are disclosed in this section; the company states it does not hedge currency translation risk and had no committed commodity derivative instruments at December 31, 2025.
+[HISTORICAL] [LLM_FLAG] sensitivity_analysis_loss and fx_sensitivity_10pct both derive from the same disclosed $4.3 million FX sensitivity figure; sensitivity_analysis_loss is reported as a positive loss magnitude while fx_sensitivity_10pct is reported as a negative change in fair value.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($343M)
-[DISAPPEARED_FIELD] has_derivatives: was $320M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-03 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $245M → $349M (+42.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $245M → $349M (+42.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text is truncated immediately after the FX derivatives notional disclosure; no data is available in this window for cash equivalents, marketable securities, unrealized gains, or derivative fair values.
+[HISTORICAL] [LLM_FLAG] Fair values of currency derivatives and the related Accumulated other comprehensive loss balance are described only as 'not material' with no dollar figures given, so total_derivative_asset/liability, net_derivative_position and cash_flow_hedge_aoci are left null rather than estimated as zero.
+[HISTORICAL] [LLM_FLAG] No interest rate swap, commodity, or equity derivative notionals are mentioned in this section; the company appears to use only FX currency derivatives.
+[HISTORICAL] [LLM_FLAG] The $349.4 million figure is not split between designated and not-designated notional in this text, so fx_designated_notional/fx_not_designated_notional are left null.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($320M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($4M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
-[NEW_FIELD] sensitivity_analysis_loss: appeared for first time ($4M)
-[NEW_FIELD] total_debt: appeared for first time ($2,000M)
-[NEW_FIELD] fixed_rate_percentage: appeared for first time ($90M)
-[NEW_FIELD] revolving_facility_outstanding: appeared for first time ($191M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($2M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-03 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $171M → $245M (+43.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $171M → $245M (+43.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text is truncated immediately after the FX derivatives notional disclosure; no data is available in this window for cash equivalents, marketable securities, unrealized gains, or derivative fair values.
+[HISTORICAL] [LLM_FLAG] Fair values of currency derivatives and the related Accumulated other comprehensive loss balance are described only as 'not material' with no dollar figures given, so total_derivative_asset/liability, net_derivative_position and cash_flow_hedge_aoci are left null rather than estimated as zero.
+[HISTORICAL] [LLM_FLAG] No interest rate swap, commodity, or equity derivative notionals are mentioned in this section; the company appears to use only FX currency derivatives.
+[HISTORICAL] [LLM_FLAG] The $245.1 million figure is not split between designated and not-designated notional in this text, so fx_designated_notional/fx_not_designated_notional are left null.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[DISAPPEARED_FIELD] total_debt: was $2,000M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_sensitivity_10pct, total_debt)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
-[NEW_FIELD] total_debt: appeared for first time ($2,000M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[LLM_FLAG] The provided text is a reference/boilerplate statement directing readers to the Form 10-K for the year ended December 31, 2025, rather than actual market risk disclosures. This is not substantive disclosure content for the Q1 2026 period ending 2026-03-31.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
-[LLM_FLAG] Filing section focuses on currency hedging derivatives and does not contain information about cash equivalents, marketable securities, or debt securities fair values. This appears to be Note 8 focused on financial instruments hedging activities rather than balance sheet cash and securities.
-[LLM_FLAG] The provided filing text is incomplete - it only contains a header reference to the Quantitative and Qualitative Disclosures About Market Risk section and a reference to the 10-K, but does not include the actual disclosure content. All requested fields cannot be extracted from this limited text.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
-[LLM_FLAG] This filing excerpt contains only currency hedging derivative information from Note 8, not marketable securities or cash equivalents data. The requested fields typically appear in liquidity/investments disclosure sections (often Note 6 or similar), which are not included in this excerpt.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
-[DISAPPEARED_FIELD] sensitivity_analysis_loss: was $4M, now missing
-[DISAPPEARED_FIELD] total_debt: was $2,000M, now missing
-[DISAPPEARED_FIELD] fixed_rate_percentage: was $90M, now missing
-[DISAPPEARED_FIELD] revolving_facility_outstanding: was $191M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $2M, now missing
-[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (fixed_rate_notes_billion, sensitivity_analysis_loss, total_debt, fixed_rate_percentage, revolving_facility_outstanding...)
-[LLM_FLAG] Provided text is only a boilerplate reference to the full disclosure in the 2024 10-K; no actual market risk quantitative or qualitative data is present in the excerpt
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
-[LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKnTkUxknK71nyZBihh'}
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-03 ===
+[HISTORICAL] [LLM_FLAG] Section text is truncated immediately after the FX derivatives notional disclosure; no data is available in this window for cash equivalents, marketable securities, unrealized gains, or derivative fair values.
+[HISTORICAL] [LLM_FLAG] Fair values of currency derivatives and the related Accumulated other comprehensive loss balance are described only as 'not material' with no dollar figures given, so total_derivative_asset/liability, net_derivative_position and cash_flow_hedge_aoci are left null rather than estimated as zero.
+[HISTORICAL] [LLM_FLAG] No interest rate swap, commodity, or equity derivative notionals are mentioned in this section; the company appears to use only FX currency derivatives.
+[HISTORICAL] [LLM_FLAG] The $171.4 million figure is not split between designated and not-designated notional in this text, so fx_designated_notional/fx_not_designated_notional are left null.

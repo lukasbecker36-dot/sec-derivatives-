@@ -11,73 +11,59 @@
 [VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, equity_sensitivity_10pct)
 [LLM_FLAG] equity_derivatives_notional: prior was 'Yes' but no equity derivatives found in current filing
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] total_derivative_asset: appeared for first time ($3M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($2M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($1M)
-[NUMERIC] cash_flow_hedge_aoci: $1,800M → $4M (-99.8%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $14M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $14M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] secured_receivables_facility: was $14M, now missing
-[DISAPPEARED_FIELD] revolving_credit_facility: was $5,700M, now missing
-[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct, secured_receivables_facility...)
-[VALIDATION] Likely units mismatch: cash_flow_hedge_aoci changed from 1,800 to 4 (0x)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-16 ===
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($1,800M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($3M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($2M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $14M → $3M (-78.6%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($2M)
+[HISTORICAL] [NUMERIC] net_derivative_position: $14M → $1M (-92.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_fair_value: $14M → $1M (-92.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] debt_fv_vs_carrying: $59M → $-15M (-125.4%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] equity_investments_carrying: was $47M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] secured_receivables_facility: was $600M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] revolving_credit_facility: was $750M, now missing
+[HISTORICAL] [LLM_FLAG] At March 31, 2026, the fixed-to-variable IR swaps are split across both asset ($3M) and liability ($2M) positions, yielding a net asset of $1M.
+[HISTORICAL] [LLM_FLAG] IR swap notional unchanged at $1,800M as of March 31, 2026 (same as December 31, 2025)
+[HISTORICAL] [LLM_FLAG] Swaps now split between asset ($3M) and liability ($2M) at March 31, 2026, net asset $1M — compared to pure asset of $14M at Dec 31 2025
+[HISTORICAL] [LLM_FLAG] No FX derivative notionals disclosed
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($1,800M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($14M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($14M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_swap_fair_value: appeared for first time ($14M)
-[NEW_FIELD] debt_fair_value: appeared for first time ($5,700M)
-[NEW_FIELD] debt_fv_vs_carrying: appeared for first time ($59M)
-[NEW_FIELD] ir_sensitivity_10pct: appeared for first time ($135M)
-[NEW_FIELD] ir_swap_sensitivity_10pct: appeared for first time ($43M)
-[NEW_FIELD] equity_investments_carrying: appeared for first time ($47M)
-[NEW_FIELD] secured_receivables_facility: appeared for first time ($600M)
-[NEW_FIELD] revolving_credit_facility: appeared for first time ($750M)
-[LLM_FLAG] Notional amount of fixed-to-variable interest rate swaps increased by more than 50% compared to the prior period ($1.8 billion vs $700 million), indicating a significant shift in interest rate hedging strategy.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $1,800M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $18M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $18M → $14M (-22.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $18M → $14M (-22.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_fair_value: $18M → $14M (-22.2%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] equity_investments_carrying: appeared for first time ($47M)
+[HISTORICAL] [NEW_FIELD] secured_receivables_facility: appeared for first time ($600M)
+[HISTORICAL] [NEW_FIELD] revolving_credit_facility: appeared for first time ($750M)
+[HISTORICAL] [LLM_FLAG] Section text is the MD&A market risk section, not Note 15 (Financial Instruments); derivative detail tables in Note 15 are not in the supplied section_text
+[HISTORICAL] [LLM_FLAG] IR swap notional $1.8 billion as of December 31, 2025
+[HISTORICAL] [LLM_FLAG] AOCI cash flow hedge balance inferred from subsequent filing; not directly in this section text
+[HISTORICAL] [LLM_FLAG] IR swap fair value is net asset of $14M at Dec 31 2025
+[HISTORICAL] [LLM_FLAG] Debt fair value slightly above carrying value ($+59M) — reversed from prior year ($-112M)
+[HISTORICAL] [LLM_FLAG] No FX or equity sensitivity figures disclosed
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $1,800M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] debt_fv_vs_carrying: $-26M → $56M (+315.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX derivative notionals disclosed; company describes FX exposure as not material
+[HISTORICAL] [LLM_FLAG] IR swap total notional $1,800M as of September 30, 2025: $850M on 5.00% Senior Notes, $550M on 2.80% Senior Notes, $400M on 6.40% Senior Notes
+[HISTORICAL] [LLM_FLAG] debt_fv_vs_carrying is positive ($56M) meaning FV exceeds carrying value at Q3 2025, unlike prior periods where FV was below carrying value.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($1,800M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_swap_fair_value: appeared for first time ($14M)
-[NEW_FIELD] debt_fair_value: appeared for first time ($5,700M)
-[NEW_FIELD] debt_fv_vs_carrying: appeared for first time ($59M)
-[NEW_FIELD] ir_sensitivity_10pct: appeared for first time ($135M)
-[NEW_FIELD] ir_swap_sensitivity_10pct: appeared for first time ($43M)
-[NEW_FIELD] equity_investments_carrying: appeared for first time ($47M)
-[NEW_FIELD] secured_receivables_facility: appeared for first time ($600M)
-[NEW_FIELD] revolving_credit_facility: appeared for first time ($750M)
-[LLM_FLAG] ir_swap_notional has increased significantly from $700 million to $1.8 billion.
-[LLM_FLAG] debt_fv_vs_carrying reflects significant changes in fair value compared to the prior year.
-[LLM_FLAG] The large difference in debt repayment activity may suggest significant refinancing measures.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] fi_ir_swap_notional: $1,250M → $1,800M (+44.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($17M)
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $6M, now missing
+[HISTORICAL] [NUMERIC] ir_swap_notional: $1,250M → $1,800M (+44.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($17M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $6M, now missing
+[HISTORICAL] [NUMERIC] net_derivative_position: $-6M → $17M (+383.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_fair_value: $-6M → $17M (+383.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] debt_fv_vs_carrying: $-59M → $-26M (+55.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_sensitivity_10pct: $35M → $46M (+31.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX derivative notionals disclosed; company describes FX exposure as not material
+[HISTORICAL] [LLM_FLAG] IR swap notional increased to $1,800M at June 30, 2025 (from $1,250M at March 31, 2025) due to addition of $550M on 2.80% Senior Notes and $400M on 6.40% Senior Notes
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($1,800M)
-[NEW_FIELD] ir_swap_fair_value: appeared for first time ($14M)
-[NEW_FIELD] debt_fair_value: appeared for first time ($5,700M)
-[NEW_FIELD] debt_fv_vs_carrying: appeared for first time ($59M)
-[NEW_FIELD] ir_sensitivity_10pct: appeared for first time ($135M)
-[NEW_FIELD] ir_swap_sensitivity_10pct: appeared for first time ($43M)
-[NEW_FIELD] equity_investments_carrying: appeared for first time ($47M)
-[NEW_FIELD] secured_receivables_facility: appeared for first time ($600M)
-[NEW_FIELD] revolving_credit_facility: appeared for first time ($750M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-16 ===
+[HISTORICAL] [LLM_FLAG] No FX derivative notionals disclosed; company describes FX exposure as not material
+[HISTORICAL] [LLM_FLAG] IR swap notional of $1,250M (March 31, 2025) is in derivatives_note section but schema does not include that field — captured in market_risk section

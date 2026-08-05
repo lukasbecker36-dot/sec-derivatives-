@@ -4,7 +4,7 @@ import csv
 
 from src.audit import (
     is_empty_row, is_misaligned_row, audit_issuer, run_audit, format_report,
-    META_COLUMNS,
+    check_against_baseline, META_COLUMNS,
 )
 
 HEADER = [
@@ -139,3 +139,53 @@ class TestRunAudit:
         report = run_audit(tmp_path)
         assert report['defect_count'] == 0
         assert 'No integrity defects' in format_report(report)
+
+
+class TestCheckAgainstBaseline:
+    """The corpus carries known defects, so the gate must fail on regression
+    rather than on any defect at all — otherwise it blocks every digest."""
+
+    BASE = {'defect_count': 220,
+            'defects_by_type': {'empty_row': 189, 'reconciliation': 31}}
+
+    def _report(self, by_type):
+        return {'defect_count': sum(by_type.values()),
+                'defects_by_type': by_type}
+
+    def test_unchanged_corpus_passes(self):
+        report = self._report({'empty_row': 189, 'reconciliation': 31})
+        assert check_against_baseline(report, self.BASE, []) == []
+
+    def test_improvement_passes(self):
+        report = self._report({'empty_row': 100, 'reconciliation': 5})
+        assert check_against_baseline(report, self.BASE, []) == []
+
+    def test_total_growth_fails(self):
+        report = self._report({'empty_row': 190, 'reconciliation': 31})
+        failures = check_against_baseline(report, self.BASE, [])
+        assert any('total defects rose' in f for f in failures)
+
+    def test_single_type_growth_fails(self):
+        """A type worsening must fail even when the total does not grow."""
+        report = self._report({'empty_row': 150, 'reconciliation': 70})
+        failures = check_against_baseline(report, self.BASE, [])
+        assert any('reconciliation rose' in f for f in failures)
+        assert not any('total defects rose' in f for f in failures)
+
+    def test_new_defect_type_fails(self):
+        report = self._report({'empty_row': 189, 'reconciliation': 31,
+                               'misaligned_row': 1})
+        failures = check_against_baseline(report, self.BASE, [])
+        assert any('misaligned_row rose 0 -> 1' in f for f in failures)
+
+    def test_zero_tolerance_type_fails_even_within_baseline(self):
+        base = {'defect_count': 5, 'defects_by_type': {'misaligned_row': 5}}
+        report = self._report({'misaligned_row': 3})
+        failures = check_against_baseline(report, base, ['misaligned_row'])
+        assert any('must stay at zero' in f for f in failures)
+
+    def test_zero_tolerance_satisfied_when_absent(self):
+        report = self._report({'empty_row': 189, 'reconciliation': 31})
+        failures = check_against_baseline(report, self.BASE,
+                                         ['misaligned_row', 'stale_null'])
+        assert failures == []

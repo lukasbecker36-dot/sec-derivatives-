@@ -10,55 +10,93 @@
 [LLM_FLAG] equity_derivatives_notional: prior was 'Yes' but no equity derivatives found in current filing section
 [LLM_FLAG] cash_flow_hedge_aoci: prior was 180.0, current value of 2 represents the H1 2026 period change (gain), not the accumulated balance — the accumulated AOCI balance is referenced in Note 13 which is not in this section; the $4M net-of-tax AOCI loss from terminated swaps is being amortized over 5-year and 10-year terms
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($180M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-4M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($1M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] The notional amount of interest rate swaps decreased significantly from $ 700 million in the prior period to $ 180 million this quarter, a decrease of over 74%.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($945M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($-134M)
+[HISTORICAL] [NUMERIC] ir_swap_notional: $700M → $180M (-74.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $3M → $2M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $4M → $1M (-75.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-1M → $1M (+200.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($1M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NUMERIC] fair_value_hierarchy_level: $3M → $-133M (-4533.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] commodity_price_risk: appeared for first time ($-133M)
+[HISTORICAL] [LLM_FLAG] No FX derivatives; Exelon is a domestic utility
+[HISTORICAL] [LLM_FLAG] IR swap notional amounts not disclosed; only fair values shown
+[HISTORICAL] [LLM_FLAG] Commodity derivative liabilities are Level 3, related to ComEd floating-to-fixed energy swap contracts (current $22M + noncurrent $111M = $133M)
+[HISTORICAL] [LLM_FLAG] Note: Exelon's long-term debt now includes Convertible Senior Notes of $1 billion (noted in footnote b)
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_liability reported as negative to indicate liability position
+[HISTORICAL] [LLM_FLAG] IR swap notional decreased sharply to $180M at Mar 31, 2026 from $700M at Dec 31, 2025 following February 2026 termination of $550M upon $775M debt issuance.
+[HISTORICAL] [LLM_FLAG] Net cash payment of $6M was made upon termination (previously received $16M on the prior termination in Feb 2025).
+[HISTORICAL] [LLM_FLAG] Commodity derivative liabilities ($133M Level 3) are ComEd economic hedges offset by regulatory assets/liabilities; not included in Exelon consolidated net derivative position.
+[HISTORICAL] [LLM_FLAG] Exelon also has $1B Convertible Senior Notes issued Dec 4, 2025 — not a derivative instrument.
+[HISTORICAL] [LLM_FLAG] Exelon is a regulated utility; market risk section is primarily qualitative
+[HISTORICAL] [LLM_FLAG] No IR sensitivity tables or FX disclosures
+[HISTORICAL] [LLM_FLAG] New explicit statement added: 'The Registrants do not execute derivatives for speculative or proprietary trading purposes'
+[HISTORICAL] [LLM_FLAG] Commodity risk quantification limited to ComEd floating-to-fixed energy swap maturity table
+[HISTORICAL] [LLM_FLAG] Liability slightly increased from $(128)M at Q3 2025 to $(133)M at Q1 2026, roughly consistent with Q1 2025 level
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] commodity_contract_liabilities: appeared for first time ($-131M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-18 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,741M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $-136M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $2M → $3M (+50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $8M → $4M (-50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-6M → $-1M (+83.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-14M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [NUMERIC] fair_value_hierarchy_level: $-128M → $3M (+102.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_price_risk: was $-128M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/12 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, cash_flow_hedge_aoci, fx_forwards_outstanding...)
+[HISTORICAL] [LLM_FLAG] The section_text provided is the MD&A discussion of derivative accounting policies, not Note 13 itself; key quantitative data (notional, AOCI balance) is in Note 13 which was not included in section_text.
+[HISTORICAL] [LLM_FLAG] IR swap notional and derivative asset/liability balance inferred from Q1 2026 10-Q comparative December 31, 2025 figures.
+[HISTORICAL] [LLM_FLAG] Commodity derivative liabilities (Level 3) are ComEd economic hedges offset by regulatory assets/liabilities.
+[HISTORICAL] [LLM_FLAG] The 10-K also discloses Convertible Senior Notes ($1B, 3.25%) issued December 4, 2025 — these are not derivatives.
+[HISTORICAL] [LLM_FLAG] Commodity contract liabilities maturity table is for Exelon/ComEd only, related to ComEd's 20-year floating-to-fixed energy swap contracts with unaffiliated suppliers.
+[HISTORICAL] [LLM_FLAG] No quantitative FX, IR sensitivity or equity sensitivity figures are disclosed; Exelon's market risk disclosures are qualitative for interest rate and equity risks.
+[HISTORICAL] [LLM_FLAG] commodity_contract_liabilities reported as total $(131)M with annual maturity breakdown.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $926M → $1,741M (+88.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX derivatives; Exelon is a domestic utility
+[HISTORICAL] [LLM_FLAG] IR swap notional amounts not disclosed; only fair values shown
+[HISTORICAL] [LLM_FLAG] Commodity derivative liabilities are Level 3, related to ComEd floating-to-fixed energy swap contracts (current $28M + noncurrent $100M = $128M)
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_liability reported as negative to indicate liability position
+[HISTORICAL] [LLM_FLAG] Commodity derivative liabilities ($128M Level 3) are ComEd economic hedges offset by regulatory assets/liabilities; not included in Exelon consolidated net derivative position.
+[HISTORICAL] [LLM_FLAG] IR swap notional increased to $670M at Sep 30, 2025 from $610M at Jun 30, 2025 following Q3 2025 additions of $60M.
+[HISTORICAL] [LLM_FLAG] AOCI loss of $14M is nine-month cumulative figure for 2025.
+[HISTORICAL] [LLM_FLAG] Exelon is a regulated utility; market risk section is primarily qualitative
+[HISTORICAL] [LLM_FLAG] No IR sensitivity tables or FX disclosures
+[HISTORICAL] [LLM_FLAG] Commodity risk quantification limited to ComEd floating-to-fixed energy swap maturity table
+[HISTORICAL] [LLM_FLAG] Liability decreased from $(135)M at Q2 2025 to $(128)M at Q3 2025
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] commodity_contract_liabilities: appeared for first time ($-131M)
-[NEW_FIELD] fair_value_hierarchy_level: appeared for first time ($-24M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,190M → $926M (-22.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $4M → $2M (-50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $4M → $2M (-50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $4M → $7M (+75.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-9M → $-13M (-44.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No FX derivatives; Exelon is a domestic utility
+[HISTORICAL] [LLM_FLAG] IR swap notional amounts not disclosed; only fair values shown
+[HISTORICAL] [LLM_FLAG] Commodity derivative liabilities are Level 3, related entirely to ComEd floating-to-fixed energy swap contracts
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_liability reported as negative to indicate liability position
+[HISTORICAL] [LLM_FLAG] Commodity derivative liabilities ($135M Level 3) are ComEd economic hedges offset by regulatory assets/liabilities; not included in Exelon consolidated net derivative position.
+[HISTORICAL] [LLM_FLAG] IR swap notional increased to $610M at Jun 30, 2025 from $550M at Mar 31, 2025 following Q2 2025 additions of $60M.
+[HISTORICAL] [LLM_FLAG] Exelon is a regulated utility; market risk section is primarily qualitative
+[HISTORICAL] [LLM_FLAG] No IR sensitivity tables or FX disclosures
+[HISTORICAL] [LLM_FLAG] Commodity risk quantification limited to ComEd floating-to-fixed energy swap maturity table
+[HISTORICAL] [LLM_FLAG] Liability decreased from $(151)M at Q1 2025 to $(135)M at Q2 2025
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
-[LLM_FLAG] Incomplete filing text provided - only header and opening sentence of quantitative disclosures section included. Unable to extract 11 of 13 requested metrics.
-[LLM_FLAG] FX forwards outstanding remains at 0, consistent with prior period.
-[LLM_FLAG] Commodity price risk exposure confirmed as present, consistent with prior period.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
-[LLM_FLAG] Provided text is only a section header and does not contain substantive disclosure content needed to extract most requested fields
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
-[LLM_FLAG] Insufficient filing text provided - only section header visible. Cannot extract quantitative metrics for interest rate sensitivity, fair value measurements, commodity contract details, or other specific risk disclosures that typically follow this header in the complete 10-Q filing.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
-[LLM_FLAG] Insufficient filing text provided - only section header visible. Most quantitative fields cannot be extracted from 'QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK 123' without detailed content.
-[LLM_FLAG] commodity_contract_liabilities: Unable to verify change from prior period ($131M) due to missing detailed table in excerpt
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [LLM_FLAG] Exelon is a utility with no FX derivatives; all derivatives are interest rate (IR swaps, cash flow hedges) and commodity (floating-to-fixed energy swaps at ComEd)
+[HISTORICAL] [LLM_FLAG] IR swap notional amounts are not disclosed in this section; only fair values are shown
+[HISTORICAL] [LLM_FLAG] Commodity derivative liabilities are Level 3 and relate entirely to ComEd floating-to-fixed energy swap contracts with unaffiliated suppliers
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_liability reported as negative to indicate liability position
+[HISTORICAL] [LLM_FLAG] Commodity derivative liabilities ($151M Level 3) are ComEd economic hedges offset by regulatory assets/liabilities; not included in net derivative position.
+[HISTORICAL] [LLM_FLAG] AOCI cash_flow_hedge_aoci reports the Q1 2025 period loss of $9M net of tax; cumulative AOCI balance not separately stated in the provided section text.
+[HISTORICAL] [LLM_FLAG] IR swap notional reduced from $1,315M (Dec 2024) to $550M at Mar 31, 2025 following $765M termination in February 2025.
+[HISTORICAL] [LLM_FLAG] Exelon is a regulated utility; market risk section is primarily qualitative with limited quantitative data
+[HISTORICAL] [LLM_FLAG] No sensitivity tables for IR or FX are provided; text notes most debt is fixed rate
+[HISTORICAL] [LLM_FLAG] Commodity risk quantification limited to the ComEd floating-to-fixed energy swap maturity table
+[HISTORICAL] [LLM_FLAG] No FX exposure disclosed anywhere in this filing

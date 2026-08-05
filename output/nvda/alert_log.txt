@@ -1,32 +1,89 @@
-=== 10-Q | Period ending 2026-04-26 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-Q | Period ending 2026-04-26 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $8,285M → $12,347M (+49.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $51,951M → $37,098M (-28.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $12,886M → $30,237M (+134.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $174M → $94M (-46.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $2,332M → $1,850M (-20.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $8M, now missing
+[HISTORICAL] [NEW_FIELD] marketable_equity_value: appeared for first time ($39,101M)
+[HISTORICAL] [NUMERIC] equity_sensitivity_10pct: $1,800M → $-3,900M (-316.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] notional_non_designated: $2,332M → $1,850M (-20.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $200M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_aoci: was $180M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_balance_sheet: was $124M, now missing
+[HISTORICAL] [LLM_FLAG] Section covers cash equivalents and marketable securities only; no derivatives disclosures present
+[HISTORICAL] [LLM_FLAG] Balance sheet presentation changed in Q1 FY2027: equity securities now split into separate 'Marketable Debt Securities' and 'Marketable Equity Securities' columns
+[HISTORICAL] [LLM_FLAG] Total publicly-held equity = $39,101M ($21,023M + $9,214M in marketable equity + $8,864M in other assets with lock-up through Dec 2027); $27.4B subject to short-term lock-up
+[HISTORICAL] [LLM_FLAG] Level 2 equity includes warrants and preferred stock convertible to public company common stock
+[HISTORICAL] [LLM_FLAG] Net unrealized gains on publicly-held equity: $13.4B for Q1 FY2027
+[HISTORICAL] [LLM_FLAG] Total fair value across all categories: $88,546M
+[HISTORICAL] [LLM_FLAG] Equity sensitivity explicitly quantified: 10% decrease = $3.9B impact as of Apr 26, 2026 (vs $1.8B as of Jan 25, 2026)
+[HISTORICAL] [LLM_FLAG] FX and interest rate risk deferred to 10-K (Jan 25, 2026) with no material changes noted
+[HISTORICAL] [LLM_FLAG] equity_sensitivity_10pct stored as -3900 (millions) based on $3.9 billion disclosed figure
 
-=== 10-K | Period ending 2026-01-25 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-K | Period ending 2026-01-25 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $3,869M → $12,886M (+233.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $21,439M → $15,154M (-29.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $373M → $174M (-53.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $2,328M → $4,097M (+76.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $592M → $2,332M (+293.9%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_value: was $3,869M, now missing
+[HISTORICAL] [NUMERIC] equity_sensitivity_10pct: $-387M → $1,800M (+565.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] notional_non_designated: $592M → $2,332M (+293.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] facility_lease_guarantee_exposure: $860M → $3,500M (+307.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] escrow_mitigation: $470M → $712M (+51.5%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($200M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_aoci: appeared for first time ($180M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_balance_sheet: appeared for first time ($124M)
+[HISTORICAL] [LLM_FLAG] Section covers cash equivalents and marketable securities only; no derivatives disclosures present
+[HISTORICAL] [LLM_FLAG] Total publicly-held equity securities = $17,726M ($12,886M in marketable securities + $4,840M in other assets with lock-up through Dec 2027)
+[HISTORICAL] [LLM_FLAG] Net unrealized gains on publicly-held equity securities: $6.6B for FY2026 — major increase from prior year
+[HISTORICAL] [LLM_FLAG] Total fair value including all categories: $65,076M; debt securities only total: $47,350M
+[HISTORICAL] [LLM_FLAG] Facility lease guarantees expanded significantly from Q3 FY2026 ($860M single agreement) to $3.5B total across multiple agreements by year-end FY2026.
+[HISTORICAL] [LLM_FLAG] interest_rate_sensitivity of $200M is an approximation from $0.2 billion stated in filing
 
-=== 10-Q | Period ending 2025-10-26 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-Q | Period ending 2025-10-26 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $3,199M → $3,869M (+20.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $164M → $373M (+127.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $939M → $592M (-37.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_value: $3,199M → $3,869M (+20.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] equity_sensitivity_10pct: $-320M → $-387M (-20.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] notional_non_designated: $939M → $592M (-37.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] facility_lease_guarantee_exposure: appeared for first time ($860M)
+[HISTORICAL] [NEW_FIELD] escrow_mitigation: appeared for first time ($470M)
+[HISTORICAL] [LLM_FLAG] Section covers cash equivalents and marketable securities only; no derivatives disclosures present
+[HISTORICAL] [LLM_FLAG] Net unrealized gains on publicly-held equity securities: $670M for Q3 FY2026 and $2.4B for first nine months of FY2026
+[HISTORICAL] [LLM_FLAG] Facility lease guarantee ($860M exposure, $470M escrow) is a new credit derivative first appearing in this Q3 FY2026 filing.
+[HISTORICAL] [LLM_FLAG] Equity sensitivity explicitly quantified: 10% decrease = $387M impact as of Oct 26, 2025
+[HISTORICAL] [LLM_FLAG] FX and interest rate risk deferred to 10-K (Jan 26, 2025) with no material changes noted
 
-=== 10-Q | Period ending 2025-07-27 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-Q | Period ending 2025-07-27 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $14,930M → $11,351M (-24.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $1,251M → $3,199M (+155.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $218M → $164M (-24.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] marketable_equity_value: appeared for first time ($3,199M)
+[HISTORICAL] [NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-320M)
+[HISTORICAL] [LLM_FLAG] Section covers cash equivalents and marketable securities only; no derivatives disclosures present
+[HISTORICAL] [LLM_FLAG] Equity securities (publicly-held) grew from $1,251M (Apr 2025) to $3,199M, with CoreWeave investment of $2.8B subject to short-term lock-up
+[HISTORICAL] [LLM_FLAG] Net unrealized gains on equity securities: $1.9B for Q2 and $1.7B for H1 FY2026
+[HISTORICAL] [LLM_FLAG] Equity sensitivity explicitly quantified: 10% decrease = $320M impact as of Jul 27, 2025
+[HISTORICAL] [LLM_FLAG] FX and interest rate risk deferred to 10-K (Jan 26, 2025) with no material changes noted
 
-=== 10-Q | Period ending 2025-04-27 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-K | Period ending 2026-01-25 | Processed 2026-06-04 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($18,000M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($1,800M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-200M)
-[NEW_FIELD] fx_sensitivity_aoci: appeared for first time ($180M)
-[NEW_FIELD] fx_sensitivity_balance_sheet: appeared for first time ($124M)
-
-=== 10-Q | Period ending 2025-04-27 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $8M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $238M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_aoci: was $136M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_balance_sheet: was $129M, now missing
-[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fixed_rate_notes_billion, interest_rate_sensitivity, fx_sensitivity_aoci, fx_sensitivity_balance_sheet)
+=== 10-Q | Period ending 2025-04-27 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $7,866M → $14,930M (+89.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $381M → $1,251M (+228.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $100M → $218M (+118.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $1,297M → $988M (-23.8%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $8M, now missing
+[HISTORICAL] [NUMERIC] notional_non_designated: $1,297M → $988M (-23.8%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $238M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_aoci: was $136M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_balance_sheet: was $129M, now missing
+[HISTORICAL] [LLM_FLAG] Section covers cash equivalents and marketable securities only; no derivatives disclosures present
+[HISTORICAL] [LLM_FLAG] Equity securities balance increased substantially from $381M (Jan 2025) to $1,251M due to CoreWeave reclassification from non-marketable
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section states no material changes from 10-K (Jan 26, 2025); all quantitative disclosures deferred to prior annual filing
+[HISTORICAL] [LLM_FLAG] No numeric sensitivity figures provided in this section
 
 === 10-K | Period ending 2025-01-26 | Processed 2026-06-04 ===
 [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)

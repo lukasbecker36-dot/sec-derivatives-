@@ -5,26 +5,56 @@
 [LLM_FLAG] CDS notional decreased 63% from $592M (Dec 2025) to $217M (Jun 2026) — credit protection on Mexican customer borrowings substantially reduced
 [LLM_FLAG] Section extraction may have missed the primary derivatives disclosure (Note 11); extracted text covers trade receivables, inventories, taxes, and shareholders' equity rather than a dedicated derivatives note
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($374M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
-[LLM_FLAG] The notional amount of credit default swaps reported has decreased significantly from the prior period, indicating potential risk or changes in hedging strategy.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-19 ===
+[HISTORICAL] [LLM_FLAG] Only derivative instruments in this section are credit default swaps (CDSs) with $374M aggregate notional as of March 31, 2026, down from $592M at December 31, 2025 — these are credit risk instruments, not FX/IR/commodity hedges
+[HISTORICAL] [LLM_FLAG] CDS notional has been declining materially throughout 2025–2026 ($1.0B Q1 2025 → $909M Q2 2025 → $750M Q3 2025 → $592M Dec 2025 → $374M Q1 2026)
+[HISTORICAL] [LLM_FLAG] CDS derivative liability fair value described as 'not material'; no numeric fair value given
+[HISTORICAL] [LLM_FLAG] Debt fair value table present: Level 1 $6,916M, Level 2 $98M, Total FV $7,014M, Carrying value $7,160M at March 31, 2026 — these are debt fair value measurements, not derivative fields in schema
+[HISTORICAL] [LLM_FLAG] Only derivative instruments disclosed are credit default swaps (CDSs) with $374M notional at March 31 2026 — credit risk instruments related to Mexico customer receivables
+[HISTORICAL] [LLM_FLAG] CDS notional declining from $592M at December 31 2025 to $374M at March 31 2026
+[HISTORICAL] [LLM_FLAG] CDS fair value liabilities described as not material; no numeric FV given
+[HISTORICAL] [LLM_FLAG] Section text covers Notes 5-10 (inventories, accounts payable, income taxes, shareholders equity, commitments, income per share); Note 11 Fair Value content not included in this section_text
+[HISTORICAL] [LLM_FLAG] Section contains no quantitative market risk data — entirely a cross-reference to the 2025 Annual Report on Form 10-K
+[HISTORICAL] [LLM_FLAG] Disclosure states market risk exposure has not changed materially since December 31, 2025
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-19 ===
+[HISTORICAL] [LLM_FLAG] 10-K financial_instruments section (Financial Instruments and Risk Management) contains no derivative disclosures — only debt fair value table
+[HISTORICAL] [LLM_FLAG] No CDS or other derivative instruments mentioned in this section (contrast with 2025 quarterly filings)
+[HISTORICAL] [LLM_FLAG] Debt fair value table present: Level 1 $6,722M, Level 2 $357M, Total FV $7,079M, Carrying value $7,158M at December 31, 2025 — these are debt fair value measurements, not derivative fields in schema
+[HISTORICAL] [LLM_FLAG] Decrease in debt fair value attributed to retirement of 3.8% senior notes at scheduled maturity
+[HISTORICAL] [LLM_FLAG] Section text includes Note 1 derivative accounting policy — company states it hedges FX, IR, and credit risk but provides no notional amounts here
+[HISTORICAL] [LLM_FLAG] CDSs with $592M notional at December 31 2025 disclosed as credit risk instruments (related to Mexico customer receivables)
+[HISTORICAL] [LLM_FLAG] Quantitative derivative data (notionals, fair values) expected in Note 16 Financial Instruments and Risk Management, not captured in this section_text
+[HISTORICAL] [LLM_FLAG] Section text is Item 7(a) cross-reference only — all quantitative market risk data resides in Item 7 MD&A Financial Instrument Market Risk section and Note 16
+[HISTORICAL] [LLM_FLAG] No numeric values extractable from this section_text
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-19 ===
+[HISTORICAL] [LLM_FLAG] Only derivative instruments in this section are credit default swaps (CDSs) with $750M aggregate notional as of September 30, 2025 — these are credit risk instruments, not FX/IR/commodity hedges
+[HISTORICAL] [LLM_FLAG] CDS notional increased slightly vs December 31, 2024 ($739M) — note in section text for context
+[HISTORICAL] [LLM_FLAG] CDS derivative liability fair value described as 'not material'; no numeric fair value given
+[HISTORICAL] [LLM_FLAG] Debt fair value table present: Level 1 $7,166M, Level 2 $361M, Total FV $7,527M, Carrying value $7,539M at September 30, 2025 — these are debt fair value measurements, not derivative fields in schema
+[HISTORICAL] [LLM_FLAG] Only derivative instruments disclosed are credit default swaps (CDSs) with $750M notional at September 30 2025 — credit risk instruments, not FX/IR/commodity hedges
+[HISTORICAL] [LLM_FLAG] CDS fair value liabilities described as not material; no numeric FV given
+[HISTORICAL] [LLM_FLAG] Section text covers Notes 5-9 (inventories, accounts payable, debt, income taxes, shareholders equity); Note 12 Fair Value content not included in this section_text
+[HISTORICAL] [LLM_FLAG] Section contains no quantitative market risk data — entirely a cross-reference to the 2024 Annual Report on Form 10-K
+[HISTORICAL] [LLM_FLAG] Disclosure states market risk exposure has not changed materially since December 31, 2024
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-19 ===
+[HISTORICAL] [LLM_FLAG] Only derivative instruments in this section are credit default swaps (CDSs) with $909M aggregate notional as of June 30, 2025 (down from $1.0B at March 31, 2025) — these are credit risk instruments, not FX/IR/commodity hedges
+[HISTORICAL] [LLM_FLAG] CDS derivative liability fair value described as 'not material'; no numeric fair value given
+[HISTORICAL] [LLM_FLAG] Debt fair value table present: Level 1 $7,044M, Level 2 $357M, Total FV $7,401M, Carrying value $7,544M at June 30, 2025 — these are debt fair value measurements, not derivative fields in schema
+[HISTORICAL] [LLM_FLAG] Only derivative instruments disclosed are credit default swaps (CDSs) with $909M notional at June 30 2025 — credit risk instruments, not FX/IR/commodity hedges
+[HISTORICAL] [LLM_FLAG] CDS fair value liabilities described as not material; no numeric FV given in this section
+[HISTORICAL] [LLM_FLAG] Section text covers Notes 5-8 (inventories, accounts payable, income taxes, shareholders equity); Note 11 Fair Value content not in this section_text
+[HISTORICAL] [LLM_FLAG] Section contains no quantitative market risk data — entirely a cross-reference to the 2024 Annual Report on Form 10-K
+[HISTORICAL] [LLM_FLAG] Disclosure states market risk exposure has not changed materially since December 31, 2024
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-28 ===
-[LLM_FLAG] This 10-Q appears to be a minimal disclosure section that refers to the 2025 10-K for detailed market risk disclosures rather than providing substantive quantitative metrics in the current filing
-[LLM_FLAG] No specific market risk quantitative data provided in this excerpt; company states exposure has not changed materially since December 31, 2025
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-27 ===
-[LLM_FLAG] This excerpt is only a reference/redirect section and does not contain the actual quantitative disclosures. All specific numerical data fields are not found in this section.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-19 ===
+[HISTORICAL] [LLM_FLAG] Only derivative instruments in this section are credit default swaps (CDSs) with $1.0B aggregate notional as of March 31, 2025 — these are credit risk instruments, not FX/IR/commodity hedges
+[HISTORICAL] [LLM_FLAG] CDS derivative liability fair value described as 'not material'; no numeric fair value given
+[HISTORICAL] [LLM_FLAG] Debt fair value table present: Level 1 $7,051M, Level 2 $353M, Total FV $7,404M, Carrying value $7,541M at March 31, 2025 — these are debt fair value measurements, not derivative fields in schema
+[HISTORICAL] [LLM_FLAG] Only derivative instruments disclosed are credit default swaps (CDSs) with $1.0B notional at March 31 2025 — these are credit risk instruments, not FX/IR/commodity hedges
+[HISTORICAL] [LLM_FLAG] CDS fair value liabilities described as not material; no numeric FV given
+[HISTORICAL] [LLM_FLAG] Section text covers Notes 5-9; Note 11 Fair Value note not included in this section_text
+[HISTORICAL] [LLM_FLAG] Section contains no quantitative market risk data — entirely a cross-reference to the 2024 Annual Report on Form 10-K
+[HISTORICAL] [LLM_FLAG] Disclosure states market risk exposure has not changed materially since December 31, 2024

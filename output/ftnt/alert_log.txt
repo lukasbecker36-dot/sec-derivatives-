@@ -3,33 +3,45 @@
 [DISAPPEARED_FIELD] derivative_purpose: was $0M, now missing
 [VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, derivative_purpose)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] derivative_maturity: was $17M, now missing
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (derivative_maturity)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($288M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1,411M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($30M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($219M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-5M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $17M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_transaction_losses: was $-5M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] hypothetical_fx_sensitivity: was $17M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_transaction_gain_loss, fx_sensitivity_10pct, foreign_currency_transaction_losses, hypothetical_fx_sensitivity)
+[HISTORICAL] [LLM_FLAG] No derivative instruments (FX or IR) appear in the financial instruments note — Fortinet does not appear to use derivatives for hedging as of this filing period
+[HISTORICAL] [LLM_FLAG] Marketable equity securities dropped sharply from $98.2M (Dec 2025) to $29.5M due to sales of $115.9M net proceeds during Q1 2026
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($17M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($16M)
-[NEW_FIELD] foreign_currency_transaction_losses: appeared for first time ($5M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-18 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $209M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $1,417M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $98M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $120M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $1M, now missing
+[HISTORICAL] [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-5M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($17M)
+[HISTORICAL] [NEW_FIELD] foreign_currency_transaction_losses: appeared for first time ($-5M)
+[HISTORICAL] [NEW_FIELD] hypothetical_fx_sensitivity: appeared for first time ($17M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt)
+[HISTORICAL] [LLM_FLAG] FX forward notional amount not disclosed in this section — only qualitative description of CAD-focused hedging program
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity expressed as 10% rate decrease impact on income (not 100bp fair value sensitivity)
+[HISTORICAL] [LLM_FLAG] fx_transaction_gain_loss recorded as negative (expense/loss)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $-5M, now missing
-[DISAPPEARED_FIELD] derivative_maturity: was $17M, now missing
-[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (interest_rate_sensitivity, derivative_maturity)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $290M → $209M (-27.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $0M → $1M (+1000.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No derivative instruments (FX or IR) appear in the financial instruments note — Fortinet does not appear to use derivatives for hedging as of this filing period
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-5M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($17M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-16M)
-[NEW_FIELD] foreign_currency_transaction_losses: appeared for first time ($-5M)
-[NEW_FIELD] hypothetical_fx_sensitivity: appeared for first time ($17M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
-[LLM_FLAG] This 10-Q section contains a reference to prior year 10-K disclosures rather than standalone quantitative data. The company explicitly states there were no material changes in market risk compared to prior 10-K disclosures in Part II, Item 7A. All detailed market risk information must be obtained from the Form 10-K for the fiscal year ending December 31, 2024.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $68M → $84M (+24.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $158M → $126M (-20.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $0M → $0M (-66.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No derivative instruments (FX or IR) appear in the financial instruments note — Fortinet does not appear to use derivatives for hedging as of this filing period
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
 [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-5M, now missing

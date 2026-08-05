@@ -17,48 +17,37 @@
 [VALIDATION] Likely extraction failure: 8/9 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion...)
 [VALIDATION] Likely units mismatch: cash_flow_hedge_aoci changed from 100 to 1 (0x)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($100M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($264M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($82M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($75M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($8M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($1M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($13M)
-[NEW_FIELD] var_end_value: appeared for first time ($1M)
-[NEW_FIELD] var_high_value: appeared for first time ($3M)
-[NEW_FIELD] var_average_value: appeared for first time ($1M)
-[NEW_FIELD] var_low_value: appeared for first time ($0M)
-[NEW_FIELD] variable_rate_debt_amount: appeared for first time ($1,525M)
-[NEW_FIELD] variable_debt_percentage: appeared for first time ($10M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] ir_swap_notional: $75M → $100M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $68M → $83M (+22.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $55M → $75M (+35.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $13M → $8M (-34.6%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] var_end_value: appeared for first time ($1M)
+[HISTORICAL] [NEW_FIELD] var_high_value: appeared for first time ($3M)
+[HISTORICAL] [NEW_FIELD] var_average_value: appeared for first time ($1M)
+[HISTORICAL] [NEW_FIELD] var_low_value: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] variable_rate_debt_amount: appeared for first time ($1,525M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($13M)
+[HISTORICAL] [NEW_FIELD] variable_debt_percentage: appeared for first time ($10M)
+[HISTORICAL] [LLM_FLAG] Commodity notional amounts are in physical volume units (MWhs, MMBtu) not dollars
+[HISTORICAL] [LLM_FLAG] IR swap notional increased from $75M (Q3 2025) to $100M at year-end 2025, designated as cash flow hedges
+[HISTORICAL] [LLM_FLAG] VaR uses 95% confidence level and one-day holding period; covers non-regulated energy marketing trading portfolio only
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity is impact on income before taxes (not fair value change)
+[HISTORICAL] [LLM_FLAG] $1,524.6M includes short-term borrowings, variable rate debt, AND current maturities of fixed rate debt
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] var_high_value: was $13M, now missing
-[DISAPPEARED_FIELD] variable_debt_percentage: was $1M, now missing
-[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (equity_sensitivity_10pct, var_high_value, variable_debt_percentage)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($75M)
+[HISTORICAL] [NUMERIC] net_derivative_position: $-1M → $13M (+1511.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Commodity notional amounts are in physical volume units (MWhs, MMBtu) not dollars
+[HISTORICAL] [LLM_FLAG] New in Q3 2025: $75.0M notional interest rate swaps designated as cash flow hedges; fair value asset $0.2M and liability $0.2M (offsetting)
+[HISTORICAL] [LLM_FLAG] Item 3 contains no quantitative disclosures — boilerplate only. Text states 'Evergy's exposure to market risk has not changed materially since December 31, 2024' and defers all quantitative data to the annual 10-K (Part II, Item 7A).
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($13M)
-[NEW_FIELD] var_end_value: appeared for first time ($1M)
-[NEW_FIELD] var_high_value: appeared for first time ($3M)
-[NEW_FIELD] var_average_value: appeared for first time ($1M)
-[NEW_FIELD] var_low_value: appeared for first time ($0M)
-[NEW_FIELD] variable_rate_debt_amount: appeared for first time ($1,525M)
-[NEW_FIELD] variable_debt_percentage: appeared for first time ($10M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
-[LLM_FLAG] Provided text is only a header/reference section referring to 2024 Form 10-K for detailed market risk disclosures; actual quantitative metrics are not included in this excerpt
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $82M → $64M (-21.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $11M → $-1M (-108.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts are in physical volume units (MWhs, MMBtu) not dollars — dollar notional not extractable
+[HISTORICAL] [LLM_FLAG] All derivatives are non-hedging (economic hedges / trading); no designated cash flow hedges in Q2 2025
+[HISTORICAL] [LLM_FLAG] Item 3 contains no quantitative disclosures — boilerplate only. Text states 'Evergy's exposure to market risk has not changed materially since December 31, 2024' and defers all quantitative data to the annual 10-K (Part II, Item 7A).
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
 [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
