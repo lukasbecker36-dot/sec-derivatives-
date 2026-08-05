@@ -21,100 +21,79 @@
 [LLM_FLAG] interest_rate_sensitivity decreased from $1,290M to $1,135M (100bp down) and from $1,128M to $1,010M (100bp up), consistent with the maturity of interest rate swaps designated as fair value hedges during October 2025 and the repayment of the 1.50% U.S. senior note.
 [LLM_FLAG] net_financial_instrument_position reported as $17.0 billion liability (converted to -17000 in millions). Text states 'billion' explicitly.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1,044M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-734M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] net_financial_instrument_position: appeared for first time ($-16,800M)
-[NEW_FIELD] debt_composition_fixed_rate_percent: appeared for first time ($92M)
-[NUMERIC] debt_composition_variable_rate_percent: $750M → $8M (-98.9%) — exceeds 20% threshold
-[NEW_FIELD] interest_rate_sensitivity_100bp_up_fixed: appeared for first time ($-1,044M)
-[NEW_FIELD] interest_rate_sensitivity_100bp_down_fixed: appeared for first time ($1,174M)
-[NUMERIC] fx_sensitivity_10_percent: $-17,000M → $-734M (+95.7%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] operating_income_fx_sensitivity_cny: was $92M, now missing
-[DISAPPEARED_FIELD] operating_income_fx_sensitivity_eur: was $8M, now missing
-[VALIDATION] Likely extraction failure: 3/5 previously-populated fields are now null (equity_sensitivity_10pct, operating_income_fx_sensitivity_cny, operating_income_fx_sensitivity_eur)
-[LLM_FLAG] Significant change in net financial instrument position, which decreased by $400 million, potentially driven by repayment of senior note and new borrowings under project financing. This is noteworthy given the prior period's liability position.
-[LLM_FLAG] The 10% adverse foreign currency movement impact decreased by $5,000 million compared to prior period, which is more than 50% difference, warranting further examination of foreign currency risk management.
-[LLM_FLAG] Introduction of cross currency interest rate swaps indicates possible shifts in hedging strategy towards additional currency risk management.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-03 ===
+[HISTORICAL] [LLM_FLAG] The supplied section_text for this request does NOT appear to be the Financial Instruments / derivatives note (Note 8). It is instead the tail of the Variable Interest Entities note (NGHC/JIGPC/World Energy VIE disclosures) followed by Note 4 (Business and Asset Actions). None of the standard derivatives tables (FX forward notional, interest rate swap notional, cross currency swap notional, derivative fair value by balance sheet location) are present in this excerpt -- this is the same recurring section-extraction issue observed in the two prior filings for this issuer (accessions 0000002969-25-000055 and 0000002969-26-000008).
+[HISTORICAL] [LLM_FLAG] The only derivatives-related figures present relate specifically to NGHC's de-designated/re-designated interest rate swaps (unrealized loss $11.5 / gain $27.3 for the prior-year comparison period) and a $6.3 loss on cross-currency interest rate swap termination tied to one gasification project -- these are narrow, project-specific amounts, not the company-wide notional/fair-value summary needed for the schema fields, so they were not mapped.
+[HISTORICAL] [LLM_FLAG] Recommend re-running section extraction for this filing/section to pull the actual Note 8, Financial Instruments text (visible in the companion financial_instruments_locate windows 3-5) before attempting this extraction again.
+[HISTORICAL] [LLM_FLAG] net_financial_instrument_position values in this filing are rounded to the nearest $0.1 billion ('$17.2 billion' / '$16.8 billion') rather than exact decimals as in earlier quarters; recorded as 16800 (millions).
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding left null: companion derivatives_note_extract for this accession could not extract notional data (wrong section supplied), but this market_risk section_text also does not state an explicit FX forwards notional figure.
+[HISTORICAL] [LLM_FLAG] interest_rate_sensitivity_100bp_variable: text states no material change but gives no numeric value for this period, so left null.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] fx_sensitivity_10pct: $10M → $750M (+7400.0%) — exceeds 20% threshold
-[NEW_FIELD] net_financial_instrument_position: appeared for first time ($-17,000M)
-[NEW_FIELD] debt_composition_fixed_rate_percent: appeared for first time ($92M)
-[NEW_FIELD] debt_composition_variable_rate_percent: appeared for first time ($8M)
-[NEW_FIELD] interest_rate_sensitivity_100bp_up_fixed: appeared for first time ($-1,116M)
-[NEW_FIELD] interest_rate_sensitivity_100bp_down_fixed: appeared for first time ($1,276M)
-[LLM_FLAG] fx_sensitivity_10pct increased from prior value of 10.0 to 750.0, likely due to origination of cross currency interest rate swaps.
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-07-03 ===
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $565M → $750M (+32.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity_100bp_variable: was $16M, now missing
+[HISTORICAL] [NUMERIC] fx_sensitivity_10_percent: $565M → $750M (+32.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] operating_income_fx_sensitivity_cny: was $50M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] operating_income_fx_sensitivity_eur: was $34M, now missing
+[HISTORICAL] [LLM_FLAG] The supplied section_text for this request does NOT appear to be the Financial Instruments / derivatives note (Note 8). It is instead the tail of the Variable Interest Entities note (NGHC/JIGPC/World Energy VIE disclosures) followed by Note 4 (Business and Asset Actions). None of the standard derivatives tables (FX forward notional, interest rate swap notional, cross currency swap notional, derivative fair value by balance sheet location) are present in this excerpt -- this mirrors the same section-extraction issue observed in the FY2025 10-K (accession 0000002969-25-000055) for this issuer.
+[HISTORICAL] [LLM_FLAG] The only derivatives-related figures present relate specifically to NGHC's de-designated/re-designated interest rate swaps ($38.8 unrealized gain) and a $6.3 loss on cross-currency interest rate swap termination tied to one gasification project -- these are narrow, project-specific amounts, not the company-wide notional/fair-value summary needed for the schema fields, so they were not mapped.
+[HISTORICAL] [LLM_FLAG] Recommend re-running section extraction for this filing/section to pull the actual Note 8, Financial Instruments text (visible in the companion financial_instruments_locate windows 3-5) before attempting this extraction again.
+[HISTORICAL] [LLM_FLAG] net_financial_instrument_position values in this filing are rounded to the nearest $0.1 billion ('$17.2 billion' / '$17.0 billion') rather than exact decimals as in earlier quarters; recorded as 17000 (millions).
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding left null: companion derivatives_note_extract for this accession could not extract notional data (wrong section supplied), but this market_risk section_text also does not state an explicit FX forwards notional figure.
+[HISTORICAL] [LLM_FLAG] interest_rate_sensitivity_100bp_variable: text states no material change but gives no numeric value for this period (unlike the FY2025 10-K, which did quantify it), so left null.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1,044M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-734M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] net_financial_instrument_position: appeared for first time ($-16,800M)
-[NUMERIC] debt_composition_fixed_rate_percent: $-1M → $92M (+8343.7%) — exceeds 20% threshold
-[NUMERIC] debt_composition_variable_rate_percent: $-1M → $8M (+1166.7%) — exceeds 20% threshold
-[NEW_FIELD] interest_rate_sensitivity_100bp_up_fixed: appeared for first time ($-1,044M)
-[NEW_FIELD] interest_rate_sensitivity_100bp_down_fixed: appeared for first time ($1,174M)
-[NUMERIC] fx_sensitivity_10_percent: $-17M → $-734M (-4217.6%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] operating_income_fx_sensitivity_cny: was $92M, now missing
-[DISAPPEARED_FIELD] operating_income_fx_sensitivity_eur: was $8M, now missing
-[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (equity_sensitivity_10pct, operating_income_fx_sensitivity_cny, operating_income_fx_sensitivity_eur)
-[LLM_FLAG] net_financial_instrument_position decreased by $400 million, which may indicate improved financial health or changes in borrowing.
-[LLM_FLAG] fx_sensitivity_10pct has worsened compared to prior period value of -17.0 million, indicating increased exposure to currency fluctuations due to new cross currency hedges.
+=== 10-K | Period ending 2025-09-30 | Processed 2026-07-03 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $6,416M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $3,580M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $2,836M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $4,111M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $317M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $140M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $6,416M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $3,580M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $2,836M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $4,111M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $317M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $140M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $177M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity_100bp_variable: appeared for first time ($16M)
+[HISTORICAL] [NEW_FIELD] operating_income_fx_sensitivity_cny: appeared for first time ($50M)
+[HISTORICAL] [NEW_FIELD] operating_income_fx_sensitivity_eur: appeared for first time ($34M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 14/22 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset...)
+[HISTORICAL] [LLM_FLAG] The supplied section_text for this request does NOT appear to be the Financial Instruments / derivatives note (Note 15). It is instead a mix of the end of the Variable Interest Entities note (NGHC/JIGPC/World Energy VIE disclosures) and the beginning of Notes 4-5 (Gain on Sale of Business, Business and Asset Actions). None of the standard derivatives tables (FX forward notional, interest rate swap notional, cross currency swap notional, derivative fair value by balance sheet location) are present in this excerpt.
+[HISTORICAL] [LLM_FLAG] The only derivatives-related figure present is 'Gain (loss) on de-designation of cash flow hedges $27.0 / ($16.3) / $-' for FY2025/2024/2023, which relates specifically to NGHC's de-designated interest rate swaps within the VIE note, not an overall company-wide derivatives summary, so it was not mapped to any schema field.
+[HISTORICAL] [LLM_FLAG] Recommend re-running section extraction for this filing/section to pull the actual Note 15, Financial Instruments text before attempting this extraction again.
+[HISTORICAL] [LLM_FLAG] net_financial_instrument_position is a rounded approximate figure ('approximately $17.2 billion') rather than an exact decimal figure as in prior quarters; recorded as 17200 (millions).
+[HISTORICAL] [LLM_FLAG] fixed_rate_notes_billion left null: text only gives amounts of fixed-rate notes issued during the year (€1.5bn / $1.1bn), not a total outstanding balance.
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding left null: companion derivatives_note_extract for this accession could not extract notional data from its section_text (wrong section was supplied), but this market_risk section_text also does not state an explicit FX forwards notional figure.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1M)
-[NUMERIC] fx_sensitivity_10pct: $10M → $-1M (-107.5%) — exceeds 20% threshold
-[NEW_FIELD] net_financial_instrument_position: appeared for first time ($-17M)
-[NEW_FIELD] debt_composition_fixed_rate_percent: appeared for first time ($92M)
-[NEW_FIELD] debt_composition_variable_rate_percent: appeared for first time ($8M)
-[NEW_FIELD] interest_rate_sensitivity_100bp_up_fixed: appeared for first time ($-1M)
-[NEW_FIELD] interest_rate_sensitivity_100bp_down_fixed: appeared for first time ($1M)
-[NEW_FIELD] fx_sensitivity_10_percent: appeared for first time ($-1M)
-[LLM_FLAG] fx_sensitivity_10pct has changed by more than 50% from the prior period value of 10.0
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-03 ===
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $1,939M → $2,836M (+46.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $239M → $317M (+32.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $1,939M → $2,836M (+46.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $239M → $317M (+32.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $115M → $177M (+53.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt: this section (Note 10, Financial Instruments) covers currency/interest rate derivatives only and contains no discussion of cash equivalents or marketable securities; those disclosures live in a different note not present in this excerpt.
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional / fi_fx_designated_notional / fi_fx_not_designated_notional are computed sums of forward exchange contracts + cross currency interest rate swaps as instructed by the schema; no single stated total for this combination appears verbatim in the text.
+[HISTORICAL] [LLM_FLAG] section_text is truncated mid-table near the end (cuts off after 'Nin' at the start of a headers row), but no schema fields depended on the cut-off portion.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci: the AOCI rollforward table (Note 16) was not present in the supplied section_text, so this field could not be populated from this excerpt.
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci: text states amount is 'not material' rather than giving a number; recorded as 0 per convention for immaterial disclosures.
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional / fx_designated_notional / fx_not_designated_notional are computed sums of forward exchange contracts + cross currency interest rate swaps as instructed by the schema; no single stated total for this combination appears verbatim in the text.
+[HISTORICAL] [LLM_FLAG] section_text is truncated mid-table at the end (cuts off after 'Other Non-Operating In'), but no schema fields depended on the cut-off portion.
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding left null per schema instruction ('Use only if derivatives_note fields above are empty') since the companion derivatives_note_extract for this accession has FX notional data populated.
+[HISTORICAL] [LLM_FLAG] fixed_rate_notes_billion left null: text only gives amounts of fixed-rate notes issued during the period (€1.5 billion and $1.1 billion), not a total outstanding fixed-rate notes balance.
+[HISTORICAL] [LLM_FLAG] interest_rate_sensitivity_100bp_variable: text explicitly states no material change occurred but does not give a numeric value, so left null rather than assuming 0.
+[HISTORICAL] [LLM_FLAG] net_financial_instrument_position recorded as a positive magnitude representing the stated liability position (text describes it as a 'liability of $16,564.3').
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[LLM_FLAG] ir_sensitivity_100bp: 1044 vs prior 1116 represents 6.4% decrease (within 50% threshold but declining)
-[LLM_FLAG] interest_rate_sensitivity_100bp_up_fixed: 1044 vs prior 1116 represents 6.4% decrease, consistent with overall declining interest rate sensitivity
-[LLM_FLAG] interest_rate_sensitivity_100bp_down_fixed: 1174 vs prior 1276 represents 8.0% decrease, consistent with declining sensitivity
-[LLM_FLAG] fx_sensitivity_10_percent: 734 vs prior 750 represents 2.1% decrease, but filing notes increase in sensitivity is primarily due to new cross currency swaps; the lower absolute value suggests offsetting fair value changes
-[LLM_FLAG] net_financial_instrument_position: 16800 vs prior 17200 represents 2.3% decrease, attributed to $550M note repayment partially offset by $415M new borrowings - change is explained
-
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-05-23 ===
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing
-[NUMERIC] fx_sensitivity_10_percent: $571M → $750M (+31.3%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp: decreased from 1151.0 to 1116.0 (-3.0% change, within normal bounds)
-[LLM_FLAG] fx_sensitivity_10_percent: increased from 571.0 to 750.0 (+31.3% change) - primarily attributed to new cross currency interest rate swaps with CNY, KRW, and TWD per filing
-[LLM_FLAG] interest_rate_sensitivity_100bp_up_fixed: changed from -1151.0 to -1116.0 (-3.0% change, within normal bounds)
-[LLM_FLAG] interest_rate_sensitivity_100bp_down_fixed: changed from 1316.0 to 1276.0 (-2.9% change, within normal bounds)
-[LLM_FLAG] net_financial_instrument_position: decreased from 17200.0 to 17000.0 (-1.2% change, attributed to $550M repayment of 1.50% senior note and $365M additional NEOM project financing)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
-[LLM_FLAG] net_financial_instrument_position: Increased 19.5% from $13,855.3M to $16,564.3M - within expected range given issuance of €1.5B and $1.1B in fixed-rate notes
-[LLM_FLAG] interest_rate_sensitivity_100bp_up_fixed: Increased 8.4% from -$1,062M to -$1,151M - consistent with higher debt levels from new issuances
-[LLM_FLAG] interest_rate_sensitivity_100bp_down_fixed: Increased 7.5% from $1,224M to $1,316M - consistent with higher debt levels
-[LLM_FLAG] debt_composition_fixed_rate_percent: Increased from 91% to 92% - consistent with issuance of fixed-rate notes and derecognition of BHIG variable-rate debt
-[LLM_FLAG] debt_composition_variable_rate_percent: Decreased from 9% to 8% - opposite direction of fixed-rate increase
-[LLM_FLAG] fx_sensitivity_10_percent: Increased 14.2% from $500M to $571M - primarily due to issuance of €1.5B Euro-denominated notes
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,062M)
-[NEW_FIELD] net_financial_instrument_position: appeared for first time ($14,474M)
-[NEW_FIELD] debt_composition_fixed_rate_percent: appeared for first time ($91M)
-[NEW_FIELD] debt_composition_variable_rate_percent: appeared for first time ($9M)
-[NEW_FIELD] interest_rate_sensitivity_100bp_up_fixed: appeared for first time ($-1,062M)
-[NEW_FIELD] interest_rate_sensitivity_100bp_down_fixed: appeared for first time ($1,224M)
-[NEW_FIELD] fx_sensitivity_10_percent: appeared for first time ($500M)
-[LLM_FLAG] Fixed-rate debt composition increased from 87% to 91% (4 percentage point increase), explained by Eurobonds issuance and BHIG derecognition
-[LLM_FLAG] Net financial instrument liability position increased 4.4% from $13,855.3M to $14,473.5M, driven by Euro-denominated senior fixed-rate notes issuance
-[LLM_FLAG] FX sensitivity increased from $408M to $500M (22.5% increase) due to Eurobonds issuance
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
-[LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKeZivnSNg4nnvmaShi'}
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-03 ===
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt: this section (Note 8, Financial Instruments) covers currency/interest rate derivatives only and contains no discussion of cash equivalents or marketable securities; those disclosures live in a different note not present in this excerpt.
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional / fi_fx_designated_notional / fi_fx_not_designated_notional are computed sums of forward exchange contracts + cross currency interest rate swaps as instructed by the schema; no single stated total for this combination appears verbatim in the text.
+[HISTORICAL] [LLM_FLAG] section_text appears truncated mid-sentence/mid-table near the end (cuts off after '($' in the OCI gain/loss table), but no schema fields depended on the cut-off portion.
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci: the AOCI rollforward table (Note 14) was not present in the supplied section_text, so this field could not be populated from this excerpt.
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci: text states amount is 'not material' rather than giving a number; recorded as 0 per convention for immaterial disclosures.
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional / fx_designated_notional / fx_not_designated_notional are computed sums of forward exchange contracts + cross currency interest rate swaps as instructed by the schema; no single stated total for this combination appears verbatim in the text.
+[HISTORICAL] [LLM_FLAG] section_text appears truncated mid-sentence/mid-table at the end (cuts off after '(' in a Gain/Loss table), but no schema fields depended on the cut-off portion.
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding left null per schema instruction ('Use only if derivatives_note fields above are empty') since the companion derivatives_note_extract for this accession has FX notional data populated.
+[HISTORICAL] [LLM_FLAG] interest_rate_sensitivity_100bp_variable: text explicitly states no material change occurred but does not give a numeric value, so left null rather than assuming 0.
+[HISTORICAL] [LLM_FLAG] net_financial_instrument_position recorded as a positive magnitude representing the stated liability position (text describes it as a 'liability of $14,473.5').

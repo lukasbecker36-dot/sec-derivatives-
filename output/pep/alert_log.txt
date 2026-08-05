@@ -17,33 +17,37 @@
 [LLM_FLAG] Item 3 (Quantitative and Qualitative Disclosures About Market Risk) is a cross-reference only — refers readers to Item 2 MD&A Business Risks section and Note 9 of the 2025 10-K. No quantitative market risk data is disclosed in this section.
 [LLM_FLAG] Key market risk data (variable debt %, sensitivities, hedge terms) is in the derivatives note and MD&A sections rather than this standalone Item 3 section.
 
-=== 10-Q | Period ending 2026-03-21 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaGxHFGdzYHE7fYFBfi'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaH4KdseoB9GmmdawWQ'}
+=== 10-Q | Period ending 2026-03-21 | Processed 2026-07-06 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $4,800M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $2,000M, now missing
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($185M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($237M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-52M)
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($171M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-36M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-308M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (fi_fx_derivatives_notional, fi_ir_swap_notional, ir_sensitivity_100bp, fx_sensitivity_10pct)
+[HISTORICAL] [LLM_FLAG] section_text is a cross-reference stub only ('no material changes ... disclosed in' prior filing); no numeric data present in this window
+[HISTORICAL] [LLM_FLAG] [QUOTE_CHECK] ir_swap_notional=2000 looks like a calendar year — possible date contamination (source_quote: "")
+[HISTORICAL] [LLM_FLAG] section_text is only the Item 7A cross-reference stub ('See Item 2 ... Note 9 ... in our 2025 Form 10-K'); no substantive market risk data in this window
 
-=== 10-K | Period ending 2025-12-27 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaGYzXd4n4iTsQtC1fq'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaGeAaTrqdn8ABeFNJX'}
-
-=== 10-Q | Period ending 2025-09-06 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaG4ntd9CNSCyk4RZKg'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaG9eqM8XHvFqjSo2NG'}
-
-=== 10-Q | Period ending 2025-06-14 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaFduBGuidEh1Tqxbux'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaFjFeDvgNEVrZcVqWk'}
-
-=== 10-Q | Period ending 2025-03-22 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaFCZS33hF8N86xUjNR'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaFHuQFzS8LgQfMWsEC'}
-
-=== 10-Q | Period ending 2026-03-21 | Processed 2026-04-21 ===
-[DISAPPEARED_FIELD] total_marketable_securities_fv: was $2,611M, now missing
-[NUMERIC] gross_unrealized_gains_debt: $1,067M → $745M (-30.2%) — exceeds 20% threshold
-[LLM_FLAG] corporate_debt_securities_fv decreased from 2,344 million to 1,998 million (14.8% decrease) - plausible given market conditions but within normal range
-[LLM_FLAG] gross_unrealized_gains_debt decreased from 1,067 million to 745 million (30.2% decrease) - significant but plausible given market interest rate movements
-[LLM_FLAG] marketable_equity_securities_fv (index funds) decreased slightly from 341 to 336 million (1.5%) - minor change
-[LLM_FLAG] Provided text is a cross-reference section only, not substantive disclosure. All quantitative and qualitative market risk details are referenced in other sections (Item 2, Item 1A, Item 7, and Note 9 to consolidated financial statements). Actual derivative and market risk data cannot be extracted from this excerpt.
+=== 10-K | Period ending 2025-12-27 | Processed 2026-07-06 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($4,800M)
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($2,000M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $132M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $185M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-53M, now missing
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-36M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-308M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] Text window ends before the Recurring Fair Value Measurements table; cash/marketable-securities fair values and total derivative asset/liability figures are not available here (see derivatives_note extraction for those)
+[HISTORICAL] [LLM_FLAG] [QUOTE_CHECK] fi_ir_swap_notional=2000 looks like a calendar year — possible date contamination (source_quote: "")
+[HISTORICAL] [LLM_FLAG] section_text supplied for 'derivatives_note' is actually the MD&A 'Market Risks' narrative (Item 7), not Note 9's fair value/AOCI tables; only notional amounts were extractable here
+[HISTORICAL] [LLM_FLAG] [QUOTE_CHECK] ir_swap_notional=2000 looks like a calendar year — possible date contamination (source_quote: "")
+[HISTORICAL] [LLM_FLAG] Unlike the other PEP filings in this batch, this section_text is the full 10-K Item 7A 'Market Risks' narrative, not a cross-reference stub, so several fields are populated
+[HISTORICAL] [LLM_FLAG] Commodity price sensitivity is disclosed ($155 million decrease in net unrealized gains from a 10% commodity price decrease, on $1.5 billion notional) but there is no schema field for it
+[HISTORICAL] [LLM_FLAG] Cross-currency swap contracts ($1.7 billion notional) have a separate 10% adverse-move sensitivity of $173 million, distinct from the $308 million reported under fx_sensitivity_10pct for FX forward contracts; only the FX forward figure was recorded since the schema has a single fx_sensitivity_10pct field
+[HISTORICAL] [LLM_FLAG] hedge_types only reflects 'net investment hedges' since that is the only hedge designation explicitly named in this text window; cash flow/fair value hedge language (noted in filer_context) does not appear here
 
 === 10-Q | Period ending 2025-09-06 | Processed 2026-04-21 ===
 [NUMERIC] total_marketable_securities_fv: $1,219M → $2,611M (+114.2%) — exceeds 20% threshold
@@ -70,7 +74,4 @@
 [LLM_FLAG] gross_unrealized_gains_debt: Value decreased 50.0% from prior period ($860M to $430M). This represents a significant decline in unrealized gains on debt securities, likely due to interest rate changes or portfolio composition shifts during the quarter.
 [LLM_FLAG] total_marketable_securities_fv: Value increased 64.5% from prior period ($2,127M to $1,372M appears inconsistent with total assets of $1,546M shown in table). Reconciliation note: The $1,372M calculation represents available-for-sale securities ($1,130M) + index funds ($314M) + prepaid forwards ($9M), but excludes derivative assets. The table shows total assets of $1,546M including derivatives. Prior period comparison is unclear due to classification differences.
 [LLM_FLAG] The provided filing text only contains a cross-reference section header with no substantive quantitative or qualitative market risk disclosures. All substantive data would be found in Note 9 of the 2024 Form 10-K and the referenced sections of Item 2 and Item 7, which are not provided in this excerpt.
-
-=== 10-Q | Period ending 2026-03-21 | Processed 2026-04-20 ===
-[LLM_FLAG] Provided text is only a section header/reference that redirects to Item 7 MD&A - the actual quantitative and qualitative disclosures about market risk are not included in the excerpt provided.
 

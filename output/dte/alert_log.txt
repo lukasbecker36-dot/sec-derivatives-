@@ -1,41 +1,36 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-981M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] floating_rate_debt_amount: appeared for first time ($0M)
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (equity_sensitivity_10pct)
-[LLM_FLAG] fx_forwards_outstanding not found but noted the presence of foreign currency contracts with maturity information.
-[LLM_FLAG] ir_sensitivity_100bp shows significant increase compared to the prior period (-789 to -981).
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $249M → $302M (+21.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $-152M → $-205M (-34.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-597M → $-750M (-25.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $110M → $-27M (-124.5%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] floating_rate_debt_amount: $900M → $0M
+[HISTORICAL] [DROPPED_TO_ZERO] floating_rate_debt_ratio: $4M → $0M
+[HISTORICAL] [LLM_FLAG] DTE does not hold 'marketable securities' in the traditional sense; investments are nuclear decommissioning trusts and other investment portfolios
+[HISTORICAL] [LLM_FLAG] Cash equivalents substantially elevated at $228M 'Cash equivalents and Restricted cash' vs prior quarters
+[HISTORICAL] [LLM_FLAG] Derivative figures from fair value hierarchy table are after netting; gross amounts before netting are substantially higher ($723M assets / $750M liabilities per derivatives note)
+[HISTORICAL] [LLM_FLAG] Net derivative position in fair value hierarchy also shows near-balance: net asset $204M vs net liability $205M after netting
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in this note
+[HISTORICAL] [LLM_FLAG] Net derivative position flipped to net liability of $(27)M at March 31, 2026 vs net asset of $110M at December 31, 2025 — significant move driven by increased electricity liabilities
+[HISTORICAL] [LLM_FLAG] Electricity not-designated: assets $357M vs liabilities $(370)M at March 31, 2026 — sharp increase from prior period
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in this filing for any derivative category — DTE reports only fair values
+[HISTORICAL] [LLM_FLAG] AOCI and reclassification data not present in the extracted section text
+[HISTORICAL] [LLM_FLAG] floating_rate_debt_amount and ratio are 0 as explicitly stated in the filing
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-904M)
-[NEW_FIELD] floating_rate_debt_amount: appeared for first time ($1M)
-[NEW_FIELD] floating_rate_debt_ratio: appeared for first time ($4M)
-[LLM_FLAG] The interest rate sensitivity shows a significant increase of more than 50% from the prior period's value of -789 million, indicating heightened risk exposure.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] sensitivity_analysis_table: was $904M, now missing
-[NEW_FIELD] floating_rate_debt_amount: appeared for first time ($0M)
-[NEW_FIELD] floating_rate_debt_ratio: appeared for first time ($0M)
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, sensitivity_analysis_table)
-[LLM_FLAG] The equity sensitivity from prior period of 0.0 to null cannot be conclusively checked; however, if null is found, it likely signifies that changes were material but unreported.
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($904M)
-[NEW_FIELD] floating_rate_debt_amount: appeared for first time ($900M)
-[NEW_FIELD] floating_rate_debt_ratio: appeared for first time ($4M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
-[DROPPED_TO_ZERO] floating_rate_debt_amount: $216M → $0M
-[DROPPED_TO_ZERO] floating_rate_debt_ratio: $1M → $0M
-[LLM_FLAG] Floating rate debt decreased to $0 million from $216 million in prior period - significant change of 100%
-[LLM_FLAG] Total net credit exposure increased to $1,652 million from $1,077 million - increase of 53.5%, primarily driven by higher internally rated investment grade counterparties ($612M vs $381M prior)
-[LLM_FLAG] Interest rate sensitivity for DTE Energy increased 24% (from -$906M to -$981M for 10% increase scenario)
-[LLM_FLAG] Gas commodity contract sensitivity decreased significantly from $21M to $18M for 10% increase
-[LLM_FLAG] Power commodity contract sensitivity increased from $5M to $8M for 10% increase
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $86M → $249M (+189.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $172M → $232M (+34.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $-103M → $-152M (-47.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] floating_rate_debt_amount: $216M → $900M (+316.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] floating_rate_debt_ratio: $1M → $4M (+288.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Annual 10-K filing (period end December 31, 2025)
+[HISTORICAL] [LLM_FLAG] Cash equivalents line includes $176M 'Cash equivalents and Restricted cash' which is substantially elevated vs prior quarters — likely reflects year-end cash management
+[HISTORICAL] [LLM_FLAG] DTE does not hold 'marketable securities' in the traditional sense; investments are nuclear decommissioning trusts and other investment portfolios
+[HISTORICAL] [LLM_FLAG] Derivative figures from fair value hierarchy table are after netting; gross amounts before netting are substantially higher ($707M assets / $597M liabilities per derivatives note)
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in this note
+[HISTORICAL] [LLM_FLAG] Annual 10-K filing (period end December 31, 2025)
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in this filing for any derivative category — DTE reports only fair values
+[HISTORICAL] [LLM_FLAG] AOCI and reclassification data not present in the extracted section text
+[HISTORICAL] [LLM_FLAG] floating_rate_debt_amount stated as $0.9 billion in the filing; converted to ~$900M for consistency
 
 === 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
 [NUMERIC] floating_rate_debt_amount: $597M → $216M (-63.8%) — exceeds 20% threshold

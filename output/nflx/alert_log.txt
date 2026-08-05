@@ -38,107 +38,88 @@
 [LLM_FLAG] Prior primary_currencies was 58.0 (a numeric) vs current is a string listing — prior value corrupted
 [LLM_FLAG] Multiple prior values appear to be corrupted or cross-mapped to wrong fields — recommend review of prior extraction data quality
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($25,314M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($24M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1M)
-[NUMERIC] total_derivative_asset: $25,507M → $286M (-98.9%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $23,852M → $244M (-99.0%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $1,556M → $42M (-97.3%) — exceeds 20% threshold
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($23M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($133M)
-[NUMERIC] fx_transaction_gain_loss: $196M → $-32M (-116.3%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $653M, now missing
-[NUMERIC] fx_sensitivity_10pct: $-457M → $-2,263M (-395.2%) — exceeds 20% threshold
-[NUMERIC] fixed_rate_notes_billion: $-275M → $14M (+105.2%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] debt_amount: appeared for first time ($14,400M)
-[NEW_FIELD] foreign_currency_revenue_percentage: appeared for first time ($58M)
-[NEW_FIELD] foreign_currency_expense_percentage: appeared for first time ($30M)
-[NUMERIC] constant_currency_impact: $14M → $-408M (-2913.8%) — exceeds 20% threshold
-[NEW_FIELD] fx_sensitivity_revenue_hedges: appeared for first time ($-2,263M)
-[NEW_FIELD] fx_sensitivity_content_hedges: appeared for first time ($-274M)
-[NUMERIC] fx_sensitivity_monetary_items: $14,500M → $-32M (-100.2%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] primary_currencies: was $56M, now missing
-[VALIDATION] Likely units mismatch: fx_sensitivity_monetary_items changed from 14,500 to -32 (0x)
-[LLM_FLAG] fx_transaction_gain_loss shows a material loss compared to prior period gain of 196.0
-[LLM_FLAG] fx_sensitivity_10pct significantly differs from prior period value of -457.0
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($12,260M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($29M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $285M → $531M (+86.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $653M → $466M (-28.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-367M → $64M (+117.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-389M → $128M (+132.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-275M → $23M (+108.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $1M → $32M (+3100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] constant_currency_impact: $271M → $-408M (-250.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_monetary_items: $-1M → $-32M (-3100.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section covers Note 4 (cash and investments) only; derivative fields require Note 8 (renumbered from Note 7 in prior periods) which is not included in section_text
+[HISTORICAL] [LLM_FLAG] All figures are in thousands per filing header; converted to millions by dividing by 1000
+[HISTORICAL] [LLM_FLAG] Derivative note renumbered to Note 8 in this 10-Q (was Note 7 in 2025 filings)
+[HISTORICAL] [LLM_FLAG] Cash equivalents surged to $12,259.8M, driven by money market funds of $7,754.5M — substantially higher than prior periods
+[HISTORICAL] [LLM_FLAG] Short-term investments further reduced to $28.7M (time deposits only)
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt set to 0.0 as all lines show $— for unrealized gains
+[HISTORICAL] [LLM_FLAG] All derivatives are FX-only; position swung back to net asset in Q1 2026 ($64M) from net liability end-2025 (-$367M)
+[HISTORICAL] [LLM_FLAG] AOCI cash flow hedge balance recovered substantially to +$128M from -$389M at December 31, 2025
+[HISTORICAL] [LLM_FLAG] Q1 2026: USD weakened, so constant currency revenues were LOWER than reported (unusual — FX tailwind for Netflix in this quarter)
+[HISTORICAL] [LLM_FLAG] Non-USD revenue share rose to 58%, highest in this series
+[HISTORICAL] [LLM_FLAG] Debt declined slightly to $14.4B
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($25,507M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($23,852M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,556M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($196M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($653M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-457M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-275M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($14M)
-[NEW_FIELD] debt_amount: appeared for first time ($14,500M)
-[NEW_FIELD] foreign_currency_revenue_percentage: appeared for first time ($56M)
-[NEW_FIELD] foreign_currency_expense_percentage: appeared for first time ($31M)
-[NEW_FIELD] constant_currency_impact: appeared for first time ($271M)
-[NEW_FIELD] fx_sensitivity_revenue_hedges: appeared for first time ($2,296M)
-[NEW_FIELD] fx_sensitivity_content_hedges: appeared for first time ($237M)
-[NEW_FIELD] fx_sensitivity_monetary_items: appeared for first time ($1M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-23 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $9,287M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $37M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[HISTORICAL] [NUMERIC] net_derivative_position: $-488M → $-367M (+24.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-609M → $-389M (+36.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-396M → $-275M (+30.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $54M → $1M (-98.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] constant_currency_impact: $349M → $271M (-22.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_monetary_items: $-54M → $-1M (+98.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All derivatives are FX-only (10-K filing); net liability continues to improve through Q4 2025
+[HISTORICAL] [LLM_FLAG] Cash flow hedge AOCI balance taken from subsequent 10-Q comparative disclosure as it was not directly shown in the extract window
+[HISTORICAL] [LLM_FLAG] 10-K annual filing; FX sensitivity to monetary items declined sharply to $1M (from $54M at Q3 2025), suggesting much improved hedge coverage or offsetting positions at year-end
+[HISTORICAL] [LLM_FLAG] Total revenues $45.183B for full year 2025
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($14M)
-[NEW_FIELD] debt_amount: appeared for first time ($14,400M)
-[NEW_FIELD] foreign_currency_revenue_percentage: appeared for first time ($58M)
-[NEW_FIELD] foreign_currency_expense_percentage: appeared for first time ($30M)
-[NUMERIC] constant_currency_impact: $14M → $408M (+2713.8%) — exceeds 20% threshold
-[NEW_FIELD] fx_sensitivity_revenue_hedges: appeared for first time ($-33M)
-[NEW_FIELD] fx_sensitivity_content_hedges: appeared for first time ($-37M)
-[NUMERIC] fx_sensitivity_monetary_items: $14M → $32M (+120.7%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] primary_currencies: was $56M, now missing
-[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (primary_currencies)
-[LLM_FLAG] constant_currency_impact differs significantly from prior period (14.5) indicating a notable change in revenue dynamics.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $213M → $37M (-82.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $1,069M → $786M (-26.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-722M → $-488M (+32.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-920M → $-609M (+33.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-543M → $-396M (+27.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $10M → $54M (+440.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_monetary_items: $-10M → $-54M (-440.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section covers Note 4 (cash and investments) only; derivative fields require Note 7 which is not included in section_text
+[HISTORICAL] [LLM_FLAG] All figures are in thousands per filing header; converted to millions by dividing by 1000
+[HISTORICAL] [LLM_FLAG] Short-term investments collapsed further to $37.1M (only time deposits); government securities absent again
+[HISTORICAL] [LLM_FLAG] Cash equivalents jumped to $9,287.3M driven by large money market fund balance of $4,137.3M
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt set to 0.0 as all lines explicitly show $— for unrealized gains
+[HISTORICAL] [LLM_FLAG] All derivatives are FX-only; net liability position improved from Q2 2025 (-$722M) to Q3 2025 (-$488M)
+[HISTORICAL] [LLM_FLAG] AOCI cash flow hedge balance improved from -$920M at June 30 to -$609M at September 30
+[HISTORICAL] [LLM_FLAG] Argentine peso added to primary currencies list vs prior quarters
+[HISTORICAL] [LLM_FLAG] Non-USD revenue share rose to 56% (from 55% in first half) and operating expense share rose to 32% (from 29%)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($14M)
-[NEW_FIELD] debt_amount: appeared for first time ($14M)
-[NEW_FIELD] foreign_currency_revenue_percentage: appeared for first time ($56M)
-[NEW_FIELD] foreign_currency_expense_percentage: appeared for first time ($31M)
-[NEW_FIELD] constant_currency_impact: appeared for first time ($271M)
-[NEW_FIELD] fx_sensitivity_revenue_hedges: appeared for first time ($2,296M)
-[NEW_FIELD] fx_sensitivity_content_hedges: appeared for first time ($237M)
-[NEW_FIELD] fx_sensitivity_monetary_items: appeared for first time ($1M)
-[LLM_FLAG] fixed_rate_notes_billion and debt_amount are the same; ensure that reported debt reflects fixed-rate notes accurately.
-[LLM_FLAG] fx_sensitivity_revenue_hedges shows a significant increase compared to previous year, indicating greater exposure or change in hedging effectiveness.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $1,171M → $213M (-81.8%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] gross_unrealized_gains_debt: $1M → $0M
+[HISTORICAL] [NUMERIC] total_derivative_asset: $446M → $347M (-22.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $248M → $1,069M (+331.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $198M → $-722M (-464.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $265M → $-920M (-447.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $186M → $-543M (-391.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $46M → $10M (-78.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] constant_currency_impact: $311M → $379M (+21.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_monetary_items: $-46M → $-10M (+78.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section covers Note 4 (cash and investments) only; derivative fields require Note 7 which is not included in section_text
+[HISTORICAL] [LLM_FLAG] All figures are in thousands per filing header; converted to millions by dividing by 1000
+[HISTORICAL] [LLM_FLAG] Government securities absent from June 30, 2025 balance (were $1,741.9M at Dec 31, 2024); only time deposits remain as short-term investments
+[HISTORICAL] [LLM_FLAG] gross_unrealized_gains_debt set to 0.0 as all lines explicitly show $— for unrealized gains
+[HISTORICAL] [LLM_FLAG] All derivatives are FX-only; large swing to net liability position vs March 2025 (net asset of $198M to net liability of $722M)
+[HISTORICAL] [LLM_FLAG] AOCI cash flow hedge balance swung from +$265M to -$920M, reflecting significant adverse FX moves in Q2 2025
+[HISTORICAL] [LLM_FLAG] Debt declined from $15.1B at Q1 2025 to $14.5B at Q2 2025 following maturity of two senior note tranches in June 2025
+[HISTORICAL] [LLM_FLAG] Short-term investments no longer include government securities as of June 30, 2025 (matured)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-21 ===
-[NUMERIC] fx_sensitivity_content_hedges: $-210M → $-274M (-30.5%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_monetary_items: $-54M → $-32M (+40.7%) — exceeds 20% threshold
-[LLM_FLAG] fx_sensitivity_revenue_hedges increased by 3% from prior period ($2,263M vs $2,298M) - within normal range
-[LLM_FLAG] fx_sensitivity_content_hedges increased by 30% from prior period ($274M vs $210M) - moderate change, within acceptable range
-[LLM_FLAG] fx_sensitivity_monetary_items increased significantly by 41% from prior period ($32M vs $54M) but absolute value decreased - note prior period had $54M shown as negative impact
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-21 ===
-[NUMERIC] fx_sensitivity_monetary_items: $-10M → $-54M (-440.0%) — exceeds 20% threshold
-[LLM_FLAG] fx_sensitivity_revenue_hedges: -2198 vs prior -2224 (1.2% decrease, within acceptable range)
-[LLM_FLAG] fx_sensitivity_content_hedges: -210 vs prior -195 (7.7% increase, within acceptable range)
-[LLM_FLAG] fx_sensitivity_monetary_items: -54 vs prior -10 (440% increase, significant change but company added new sensitivity details)
-[LLM_FLAG] primary_currencies: Argentine peso added to prior list, likely due to increased business exposure in Argentina
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-21 ===
-[NUMERIC] constant_currency_impact: $311M → $379M (+21.9%) — exceeds 20% threshold
-[NUMERIC] fx_sensitivity_monetary_items: $-46M → $-10M (+78.3%) — exceeds 20% threshold
-[LLM_FLAG] fx_sensitivity_revenue_hedges: Increased from -$1,908M (prior period) to -$2,224M (316 basis point increase). This represents a 16.6% increase in AOCI sensitivity, potentially due to larger hedge positions or increased volatility in foreign currencies
-[LLM_FLAG] fx_sensitivity_content_hedges: Decreased from -$201M (prior period) to -$195M (3% decrease). Minor change, within reasonable variance
-[LLM_FLAG] fx_sensitivity_monetary_items: Decreased significantly from -$46M (prior period) to -$10M (78% decrease). This substantial change may reflect reduced net monetary asset exposure or improved hedging effectiveness
-[LLM_FLAG] fixed_rate_notes_billion: Decreased from $15.1B (prior period) to $14.5B (4% decrease). Likely reflects debt repayment activity
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-21 ===
-[NUMERIC] fx_sensitivity_monetary_items: $-1M → $-46M (-4500.0%) — exceeds 20% threshold
-[LLM_FLAG] fx_sensitivity_revenue_hedges: Changed from -2296.0 to -1908.0 (17% decrease) - within expected range but notable change
-[LLM_FLAG] fx_sensitivity_content_hedges: Changed from -237.0 to -201.0 (15% decrease) - within expected range
-[LLM_FLAG] debt_amount: Increased from 14500.0 to 15100.0 (4% increase) - modest increase in debt outstanding
-[LLM_FLAG] foreign_currency_revenue_percentage: Decreased from 56.0% to 55.0% (2% decrease) - relatively stable
-[LLM_FLAG] foreign_currency_expense_percentage: Decreased from 31.0% to 29.0% (6% decrease) - modest change
-[LLM_FLAG] constant_currency_impact: Increased from 271.0 to 311.0 (15% increase) - larger FX headwind in Q1 2025
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-20 ===
-[LLM_FLAG] fx_sensitivity_monetary_items shows 97% decrease from prior period ($38M to $1M) - significant decline warrants investigation into whether exposure has changed materially or if hedging activities have been adjusted
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [LLM_FLAG] Section covers Note 4 (cash and investments) only; derivative fields require Note 7 which is not included in section_text
+[HISTORICAL] [LLM_FLAG] All figures are in thousands per filing header; converted to millions by dividing by 1000
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv uses the 'Cash and Cash Equivalents' column total from the table ($7,199,848 thousand)
+[HISTORICAL] [LLM_FLAG] All derivatives are FX-only (foreign exchange forward contracts); no IR swaps or other derivative types
+[HISTORICAL] [LLM_FLAG] Net notional figures are stated as 'net notional amounts' — may net longs vs shorts within each category
+[HISTORICAL] [LLM_FLAG] No interest rate sensitivity dollar amount disclosed — only qualitative description of fair value fluctuation
+[HISTORICAL] [LLM_FLAG] Constant currency impact stated as revenues would have been $311M higher (i.e., USD strength hurt revenues by ~$311M)

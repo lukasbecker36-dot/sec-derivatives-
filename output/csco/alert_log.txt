@@ -1,41 +1,103 @@
-=== 10-Q | Period ending 2026-04-25 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYUmedqm9iQtcmToBZq'}
+=== 10-Q | Period ending 2026-04-25 | Processed 2026-06-15 ===
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $15M → $6M (-60.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $90M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $83M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $7M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $103M, now missing
+[HISTORICAL] [LLM_FLAG] Cash equivalents now include Non-U.S. government and agency securities ($58M) as a new line item not present in prior periods; also includes separate Certificates of deposit line ($25M). Signals broader diversification in cash equivalent mix.
+[HISTORICAL] [LLM_FLAG] Total notional of all derivatives (FX + TRS) = $10,148 million as of April 25, 2026
+[HISTORICAL] [LLM_FLAG] Foreign currency derivatives notional decreased slightly from $8,978M (July 26, 2025) to $8,895M (April 25, 2026)
+[HISTORICAL] [LLM_FLAG] TRS notional increased from $1,087M (July 26, 2025) to $1,253M (April 25, 2026)
+[HISTORICAL] [LLM_FLAG] Gains/losses on FX derivatives (not designated): Q3 FY2026 $31M gain, Q3 FY2025 $163M gain; YTD FY2026 $(18)M loss, YTD FY2025 $68M gain
+[HISTORICAL] [LLM_FLAG] Section text appears to start mid-sentence ('he Consolidated Statements...') — beginning of section may be truncated; fair value balance sheet table likely in preceding section
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section contains only qualitative risk factor boilerplate and stock repurchase table — quantitative sensitivity tables and FX forward schedules not included in this section window
+[HISTORICAL] [LLM_FLAG] Only extractable numeric value is the $23.0B senior notes figure from debt-risk narrative
+[HISTORICAL] [LLM_FLAG] Note: debt declined from $24.8B (Q1/Q2 FY2026) to $23.0B (Q3 FY2026), suggesting debt repayment during the period
 
-=== 10-Q | Period ending 2026-01-24 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYUVjvYX4FLD3AAeT5B'}
+=== 10-Q | Period ending 2026-01-24 | Processed 2026-06-15 ===
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $22M → $15M (-31.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $55M → $90M (+63.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $58M → $83M (+43.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $55M → $90M (+63.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $58M → $83M (+43.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-3M → $7M (+333.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No interest rate derivatives outstanding as of January 24, 2026
+[HISTORICAL] [LLM_FLAG] Derivative assets and liabilities cross-referenced from the fair value table in the locate file windows
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section contains only qualitative risk factor boilerplate and stock repurchase table — quantitative sensitivity tables and FX forward schedules not included in this section window
+[HISTORICAL] [LLM_FLAG] Only extractable numeric value is the $24.8B senior notes figure from debt-risk narrative
 
-=== 10-Q | Period ending 2025-10-25 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYU9p7WjZxrUoEY1o38'}
+=== 10-Q | Period ending 2025-10-25 | Processed 2026-06-15 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($6,231M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($6,942M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($394M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($2,949M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($22M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($55M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($58M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $32M → $55M (+71.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $31M → $58M (+87.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $1M → $-3M (-400.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $65M → $90M (+38.5%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-16M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_value: was $383M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forward_notional_purchased: was $4,498M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forward_notional_sold: was $4,480M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forward_fair_value_purchased: was $-21M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forward_fair_value_sold: was $22M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] available_for_sale_debt_fair_value: was $7,381M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] financing_receivables_carrying_value: was $6,500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_fair_value: was $383M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] privately_held_investments_carrying_amount: was $1,900M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 10/18 previously-populated fields are now null (fx_transaction_gain_loss, marketable_equity_value, fx_forward_notional_purchased, fx_forward_notional_sold, fx_forward_fair_value_purchased...)
+[HISTORICAL] [LLM_FLAG] Derivative assets are now classified under 'Other current assets' rather than 'Other assets' as in prior periods — possible balance sheet reclassification in FY2026 Q1 filing
+[HISTORICAL] [LLM_FLAG] No interest rate derivatives outstanding as of October 25, 2025
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section contains only qualitative risk factor boilerplate and stock repurchase table — quantitative sensitivity tables and FX forward schedules not included in this section window
+[HISTORICAL] [LLM_FLAG] Only extractable numeric value is the $24.8B senior notes figure from debt-risk narrative
 
-=== 10-K | Period ending 2025-07-26 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYTtYbVC4Rz6fThs3qe'}
+=== 10-K | Period ending 2025-07-26 | Processed 2026-06-15 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $5,824M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $7,194M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $287M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $3,138M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $12M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $48M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $35M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $500M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $48M → $32M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $13M → $1M (-92.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($65M)
+[HISTORICAL] [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-16M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_value: appeared for first time ($383M)
+[HISTORICAL] [NEW_FIELD] fx_forward_notional_purchased: appeared for first time ($4,498M)
+[HISTORICAL] [NEW_FIELD] fx_forward_notional_sold: appeared for first time ($4,480M)
+[HISTORICAL] [NEW_FIELD] fx_forward_fair_value_purchased: appeared for first time ($-21M)
+[HISTORICAL] [NEW_FIELD] fx_forward_fair_value_sold: appeared for first time ($22M)
+[HISTORICAL] [NEW_FIELD] available_for_sale_debt_fair_value: appeared for first time ($7,381M)
+[HISTORICAL] [NEW_FIELD] financing_receivables_carrying_value: appeared for first time ($6,500M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_fair_value: appeared for first time ($383M)
+[HISTORICAL] [NEW_FIELD] privately_held_investments_carrying_amount: appeared for first time ($1,900M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 8/15 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt...)
+[HISTORICAL] [LLM_FLAG] Section text is from the MD&A market risk section, not Note 13 Derivative Instruments; key notional and fair value figures inferred from subsequent 10-Q comparative data for July 26, 2025
+[HISTORICAL] [LLM_FLAG] FX notional computed as sum of purchased ($4,498M) and sold ($4,480M) forward contract notionals from the forward contracts table
+[HISTORICAL] [LLM_FLAG] 10-K annual filing — full quantitative market risk tables present including AFS sensitivity, financing receivables, FX forward schedule, and equity investments
+[HISTORICAL] [LLM_FLAG] FX forward table shows July 26, 2025 and July 27, 2024 comparative data; extracted current period values
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity given only at 50 BPS increments; no explicit 100 BPS combined debt+AFS figure; AFS 100 BPS scenario extracted from table
+[HISTORICAL] [LLM_FLAG] fx_transaction_gain_loss reported as expense reduction ($16M decrease in opex), recorded as negative to indicate savings vs. prior year
+[HISTORICAL] [LLM_FLAG] Financing receivables $6.5B stated in billions; converted to $6,500M for consistency
 
-=== 10-Q | Period ending 2025-04-26 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYTbebLFom1xFwEKZkC'}
-
-=== 10-Q | Period ending 2025-01-25 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYTH4QMZGQMyc6K14Ay'}
-
-=== 10-Q | Period ending 2025-10-25 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] debt_principal_amount: was $26,000M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (debt_principal_amount)
-
-=== 10-K | Period ending 2025-07-26 | Processed 2026-06-04 ===
-[NEW_FIELD] debt_principal_amount: appeared for first time ($26,000M)
-
-=== 10-Q | Period ending 2026-04-25 | Processed 2026-05-26 ===
-[LLM_FLAG] fixed_rate_notes_billion decreased from 24.8 billion in prior period to 23.0 billion (7.3% decrease), within acceptable range
-[LLM_FLAG] debt_principal_amount decreased from 24,800 million to 23,000 million (7.3% decrease), consistent with fixed-rate notes decrease
-
-=== 10-Q | Period ending 2025-10-25 | Processed 2026-05-26 ===
-[LLM_FLAG] fixed_rate_notes_billion decreased from 25.3 to 24.8 (1.98% change, within acceptable range)
-[LLM_FLAG] debt_principal_amount decreased from 25,300 to 24,800 million (1.98% change, within acceptable range)
-[LLM_FLAG] This filing section is primarily Risk Factors and does not contain detailed quantitative market risk disclosures typically found in Item 7A
-
-=== 10-Q | Period ending 2025-04-26 | Processed 2026-05-26 ===
-[NUMERIC] fixed_rate_notes_billion: $20M → $25M (+24.6%) — exceeds 20% threshold
-[NUMERIC] debt_principal_amount: $20,300M → $25,300M (+24.6%) — exceeds 20% threshold
-[LLM_FLAG] debt_principal_amount increased from 20,300 million to 25,300 million (24.4% increase) - within acceptable range but represents significant increase in debt outstanding as of Q3 FY2025
+=== 10-Q | Period ending 2025-04-26 | Processed 2026-06-15 ===
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $7M → $12M (+71.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $105M → $48M (-54.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $70M → $35M (-50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $2,950M → $500M (-83.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $105M → $48M (-54.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $70M → $35M (-50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $35M → $13M (-62.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fixed_rate_notes_billion: $20M → $25M (+24.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] debt_principal_amount: $20,300M → $25,300M (+24.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Interest rate swap notional returned to $500M from $2,950M in prior quarter — treasury lock agreements from Q2 were settled/matured after February 2025 debt issuance
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section contains only qualitative risk factor boilerplate and stock repurchase table — quantitative sensitivity tables and FX forward schedules not included in this section window
+[HISTORICAL] [LLM_FLAG] Only extractable numeric value is the $25.3B senior notes figure from debt-risk narrative
 
 === 10-Q | Period ending 2025-01-25 | Processed 2026-05-26 ===
 [DISAPPEARED_FIELD] fx_forwards_outstanding: was $8,978M, now missing
@@ -54,9 +116,4 @@
 [LLM_FLAG] Debt principal amount decreased from $24,800M to $20,300M (18% reduction). This is plausible as debt may have matured or been repaid, but the magnitude suggests significant debt management activity.
 [LLM_FLAG] Commercial paper outstanding noted as $10.9 billion as of January 25, 2025, which is a significant financing component not fully captured in the fixed-rate notes figure.
 [LLM_FLAG] This filing section is primarily risk factor and equity repurchase disclosure, not quantitative market risk disclosure. The actual quantitative derivatives and market risk data would be in a separate 'Quantitative and Qualitative Disclosures About Market Risk' section referenced but not provided in this excerpt.
-
-=== 10-Q | Period ending 2026-04-25 | Processed 2026-05-25 ===
-[LLM_FLAG] Marketable equity fair value decreased 20% from $481M (2024) to $383M (2025), a material decline that may warrant review of individual position changes
-[LLM_FLAG] Available-for-sale debt investments decreased significantly from $9,865M (2024 fair value at 0 BPS) to $7,381M (2025 fair value at 0 BPS), a decline of approximately 25%, likely reflecting changes in portfolio composition or market conditions
-[LLM_FLAG] Financing receivables decreased from $6.7B (2024) to $6.5B (2025), a modest 3% decline
 

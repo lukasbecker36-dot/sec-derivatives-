@@ -1,23 +1,29 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-19 ===
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($323M)
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $-25M → $-40M (-60.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] HCA does not use derivatives; fair value note covers insurance subsidiary investment portfolio only
+[HISTORICAL] [LLM_FLAG] IR sensitivity expressed as reduction to pretax earnings (earnings exposure), not fair value change — recorded as negative $40M
+[HISTORICAL] [LLM_FLAG] Variable debt $3.950B at March 31, 2026 — notably elevated vs prior quarters
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-19 ===
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $328M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (corporate_debt_securities_fv)
+[HISTORICAL] [LLM_FLAG] Section text supplied is from Risk Factors/Cybersecurity/Properties sections, not a derivatives note; only a passing qualitative reference to interest rate swaps was found — no notional amounts or fair values are quantified in the provided text.
+[HISTORICAL] [LLM_FLAG] IR sensitivity expressed as reduction to pretax earnings (earnings exposure), not fair value change — recorded as negative $25M
+[HISTORICAL] [LLM_FLAG] Variable debt $2.507B at December 31, 2025; full-year 10-K filing
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-19 ===
+[HISTORICAL] [LLM_FLAG] HCA does not use derivatives; fair value note covers insurance subsidiary investment portfolio only
+[HISTORICAL] [LLM_FLAG] IR sensitivity expressed as reduction to pretax earnings (earnings exposure), not fair value change — recorded as negative $22M
+[HISTORICAL] [LLM_FLAG] Variable debt $2.210B at September 30, 2025
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-19 ===
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $-5M → $-21M (-320.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] HCA does not use derivatives; fair value note covers insurance subsidiary investment portfolio only
+[HISTORICAL] [LLM_FLAG] IR sensitivity expressed as reduction to pretax earnings (earnings exposure), not fair value change — recorded as negative $21M
+[HISTORICAL] [LLM_FLAG] Variable debt $2.078B, substantially higher than Q1 2025 ($520M)
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
-[LLM_FLAG] This section is a cross-reference only and does not contain the actual market risk disclosures. All quantitative metrics are not found in the provided text.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
-[LLM_FLAG] This section contains only a cross-reference to Item 2 MD&A. The actual Market Risk disclosures are deferred to that section and are not included in the provided text. All quantitative metrics cannot be extracted from this excerpt.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
-[LLM_FLAG] The provided text is only a cross-reference to Item 7 and does not contain actual market risk quantitative disclosures. All specific metric values cannot be extracted from this snippet.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-19 ===
+[HISTORICAL] [LLM_FLAG] HCA does not appear to use derivatives; fair value note covers insurance subsidiary investment portfolio only
+[HISTORICAL] [LLM_FLAG] IR sensitivity expressed as reduction to pretax earnings (earnings exposure), not fair value change — recorded as negative $5M
+[HISTORICAL] [LLM_FLAG] Variable debt of $520M at period end

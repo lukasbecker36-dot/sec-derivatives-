@@ -21,107 +21,103 @@
 [LLM_FLAG] fx_transaction_gain_loss changed from prior 7.8 to -0.69 (H1 2026 losses vs prior gains). This represents a sign reversal and magnitude change, likely due to different FX rate movements year-over-year.
 [LLM_FLAG] operating_profit_fx_impact changed from prior 0.25 to 6.053 (Q2 2026 vs prior period). Significant increase driven by favorable FX movements in current period.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($115M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($115M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($250M)
-[NUMERIC] total_derivative_asset: $398M → $8M (-98.0%) — exceeds 20% threshold
-[NEW_FIELD] total_derivative_liability: appeared for first time ($14M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-6M)
-[NUMERIC] cash_flow_hedge_aoci: $250M → $1M (-99.5%) — exceeds 20% threshold
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($1M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-0M)
-[NUMERIC] fixed_rate_notes_billion: $2M → $0M (-90.0%) — exceeds 20% threshold
-[NUMERIC] hedge_gain_losses_current: $-4M → $0M (+103.6%) — exceeds 20% threshold
-[NEW_FIELD] foreign_currency_transaction_losses: appeared for first time ($-0M)
-[NEW_FIELD] revenue_fx_impact: appeared for first time ($31M)
-[NEW_FIELD] operating_profit_fx_impact: appeared for first time ($18M)
-[NEW_FIELD] eps_fx_impact: appeared for first time ($0M)
-[NUMERIC] hedge_duration: $-1M → $3M (+524.5%) — exceeds 20% threshold
-[VALIDATION] Likely units mismatch: cash_flow_hedge_aoci changed from 250 to 1 (0x)
-[LLM_FLAG] net_derivative_position is negative indicating total derivative liabilities exceed assets.
-[LLM_FLAG] total_derivative_asset decreased by more than 50% compared to prior period (398.0 to 7.8). Needs further investigation.
-[LLM_FLAG] foreign currency transaction losses significantly decreased from prior period's value of 0.671, indicating an improvement in this aspect of the financial situation.
-[LLM_FLAG] hedge gains increased sharply compared to previous period's losses, reflecting a substantial positive shift in hedging effectiveness.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-20 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($4M)
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $4M → $13M (+190.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $20M → $14M (-32.9%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $398M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $398M, now missing
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($13M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($14M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-1M)
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-2M, now missing
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($2M)
+[HISTORICAL] [NUMERIC] fx_transaction_gain_loss: $-4M → $-0M (+89.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] hedge_gain_losses_current: $-1M → $0M (+118.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] foreign_currency_transaction_losses: $-4M → $-0M (+89.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] operating_profit_fx_impact: $12M → $17M (+48.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] eps_fx_impact: $0M → $0M (+40.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in this section — only fair values available.
+[HISTORICAL] [LLM_FLAG] All figures in table are in thousands; converted to millions.
+[HISTORICAL] [LLM_FLAG] Contingent consideration excluded from derivative totals as it is a non-derivative liability.
+[HISTORICAL] [LLM_FLAG] Total derivative asset/liability figures in thousands converted to millions.
+[HISTORICAL] [LLM_FLAG] Cross currency swap notionals at maturity: €35M (3/31/28), €90M (6/30/28), €20M (6/29/29), €76M (7/17/28), €39M (7/31/28), ¥3,683,750k (9/11/32).
+[HISTORICAL] [LLM_FLAG] New IR swap: $250M Term Loan fixed at 3.4% through November 12, 2028.
+[HISTORICAL] [LLM_FLAG] FX impact figures for Q1 2026 (in thousands, converted to millions).
+[HISTORICAL] [LLM_FLAG] USD was weaker vs prior year in Q1 2026, resulting in favorable revenue impact of $31M.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($398M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($250M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($2M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-4M)
-[NEW_FIELD] hedge_gain_losses_current: appeared for first time ($-1M)
-[NEW_FIELD] foreign_currency_transaction_losses: appeared for first time ($-4M)
-[NEW_FIELD] revenue_fx_impact: appeared for first time ($33M)
-[NEW_FIELD] operating_profit_fx_impact: appeared for first time ($17M)
-[NEW_FIELD] eps_fx_impact: appeared for first time ($0M)
-[NEW_FIELD] sensitivity_analysis: appeared for first time ($-16M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-20 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $6M, now missing
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $3M → $4M (+58.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($398M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($398M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $3M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $21M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-18M, now missing
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-2M)
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-2M, now missing
+[HISTORICAL] [NUMERIC] fx_transaction_gain_loss: $-3M → $-4M (-47.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] hedge_gain_losses_current: $1M → $-1M (-233.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] foreign_currency_transaction_losses: $-3M → $-4M (-47.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] revenue_fx_impact: $13M → $33M (+150.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] operating_profit_fx_impact: $3M → $12M (+249.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] eps_fx_impact: $0M → $0M (+900.0%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/14 previously-populated fields are now null (total_cash_equivalents_fv, total_derivative_asset, total_derivative_liability, net_derivative_position, expected_12mo_reclass_from_aoci)
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in this section — only fair values available.
+[HISTORICAL] [LLM_FLAG] All figures in table are in thousands; converted to millions.
+[HISTORICAL] [LLM_FLAG] Interest rate swap flipped from asset position in Q3 2025 to liability position in this 10-K period.
+[HISTORICAL] [LLM_FLAG] Contingent consideration excluded from derivative totals as it is a non-derivative liability.
+[HISTORICAL] [LLM_FLAG] Section text provided is from Item 7A (MD&A), not from the financial statement notes; FV balance sheet table not available in provided text.
+[HISTORICAL] [LLM_FLAG] FX notional $397.6M is for FX forwards only; cross currency swap notionals would add to total but are not quantified in this section.
+[HISTORICAL] [LLM_FLAG] FX impact figures for full year ended December 31, 2025 (in thousands, converted to millions).
+[HISTORICAL] [LLM_FLAG] New IR swap entered in November 2025 on $250M Term Loan at 3.4% fixed, replacing prior swap that expired Oct 2025.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[NUMERIC] hedge_gain_losses_current: $-4M → $0M (+103.6%) — exceeds 20% threshold
-[NEW_FIELD] foreign_currency_transaction_losses: appeared for first time ($-0M)
-[NEW_FIELD] revenue_fx_impact: appeared for first time ($31M)
-[NEW_FIELD] operating_profit_fx_impact: appeared for first time ($18M)
-[NEW_FIELD] eps_fx_impact: appeared for first time ($0M)
-[NUMERIC] hedge_duration: $-1M → $3M (+516.1%) — exceeds 20% threshold
-[NUMERIC] sensitivity_analysis: $-4M → $-12M (-188.5%) — exceeds 20% threshold
-[LLM_FLAG] The hedge gain/loss in the current period shows a significant change compared to the prior period of -4.16 to 0.150, which is over 100% difference.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $8M → $6M (-26.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $1M → $3M (+169.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $27M → $21M (-24.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1M → $3M (+169.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $27M → $21M (-24.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-26M → $-18M (+32.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-7M → $-2M (+62.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_transaction_gain_loss: $-1M → $-3M (-128.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] hedge_gain_losses_current: $3M → $1M (-76.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] foreign_currency_transaction_losses: $-1M → $-3M (-128.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] revenue_fx_impact: $0M → $13M (+6484.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] operating_profit_fx_impact: $-0M → $3M (+809.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] eps_fx_impact: $-0M → $0M (+200.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in this section — only fair values available.
+[HISTORICAL] [LLM_FLAG] All figures in table are in thousands; converted to millions.
+[HISTORICAL] [LLM_FLAG] Contingent consideration excluded from derivative totals as it is a non-derivative liability.
+[HISTORICAL] [LLM_FLAG] Total derivative asset/liability figures in thousands converted to millions.
+[HISTORICAL] [LLM_FLAG] Cross currency swap notionals: €35M (3/31/28), €90M (6/30/28), €20M (6/29/29), €76M (7/17/28), €39M (7/31/28), ¥3,683,750k (9/11/32) = total ~€260M EUR-denominated + JPY tranche.
+[HISTORICAL] [LLM_FLAG] IR swap expires October 20, 2025 — effectively expired at this report date.
+[HISTORICAL] [LLM_FLAG] FX impact figures for nine-month period ended September 30, 2025 (in thousands, converted to millions).
+[HISTORICAL] [LLM_FLAG] Q3-only figures also available but nine-month cumulative used as primary.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-4M)
-[NEW_FIELD] hedge_gain_losses_current: appeared for first time ($-1M)
-[NEW_FIELD] foreign_currency_transaction_losses: appeared for first time ($-4M)
-[NEW_FIELD] revenue_fx_impact: appeared for first time ($33M)
-[NEW_FIELD] operating_profit_fx_impact: appeared for first time ($17M)
-[NEW_FIELD] eps_fx_impact: appeared for first time ($0M)
-[NEW_FIELD] sensitivity_analysis: appeared for first time ($-16M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-02 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[NUMERIC] fx_transaction_gain_loss: $-3M → $-0M (+84.3%) — exceeds 20% threshold
-[NUMERIC] hedge_gain_losses_current: $1M → $0M (-75.0%) — exceeds 20% threshold
-[NUMERIC] foreign_currency_transaction_losses: $-3M → $-0M (+84.3%) — exceeds 20% threshold
-[NUMERIC] revenue_fx_impact: $13M → $31M (+135.5%) — exceeds 20% threshold
-[NUMERIC] operating_profit_fx_impact: $3M → $14M (+326.7%) — exceeds 20% threshold
-[NUMERIC] eps_fx_impact: $0M → $0M (+1300.0%) — exceeds 20% threshold
-[LLM_FLAG] revenue_fx_impact: Q1 2026 revenue FX impact of $31.2M is significantly higher than prior year impact of -$12.3M (diff > 50%), indicating favorable currency environment in current period
-[LLM_FLAG] operating_profit_fx_impact: Operating profit FX impact of $14.2M is significantly higher than prior year of -$4.1M, suggesting strengthening of certain foreign currencies relative to prior year comparison
-[LLM_FLAG] hedge_gain_losses_current: Decreased from prior period $3.745M to current period $0.150M (96% decline), indicating reduced hedge gains
-[LLM_FLAG] fx_transaction_gain_loss: Losses increased from -$0.671M in prior period to -$0.444M in current period (34% improvement, not a concern)
-[LLM_FLAG] sensitivity_analysis: Updated to $12M revenue and $4M operating income impact from 1% USD strengthening (prior was $4M and $1M), suggesting increased foreign currency exposure or higher international sales mix
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-02 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] fx_transaction_gain_loss: $-1M → $-3M (-128.1%) — exceeds 20% threshold
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[NUMERIC] hedge_gain_losses_current: $3M → $1M (-76.6%) — exceeds 20% threshold
-[NUMERIC] foreign_currency_transaction_losses: $-1M → $-3M (-128.1%) — exceeds 20% threshold
-[NUMERIC] revenue_fx_impact: $0M → $13M (+6484.6%) — exceeds 20% threshold
-[NUMERIC] operating_profit_fx_impact: $-0M → $3M (+809.6%) — exceeds 20% threshold
-[NUMERIC] eps_fx_impact: $-0M → $0M (+200.0%) — exceeds 20% threshold
-[LLM_FLAG] sensitivity_analysis shows 50% reduction in revenue impact from prior period ($8M to $4M) - likely due to different assumptions or hedging strategy changes
-[LLM_FLAG] operating_profit_fx_impact improved significantly from negative territory in prior year periods to positive $5.554M and $3.328M in current periods
-[LLM_FLAG] hedge_gain_losses_current decreased from positive $3.043M in prior 9-month period to $0.6M in current period
-[LLM_FLAG] fixed_rate_notes value of $0.25B is correctly stated as portion of total borrowings ($455M outstanding); only $250M is effectively fixed
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-02 ===
-[NUMERIC] fx_transaction_gain_loss: $-1M → $-1M (-84.6%) — exceeds 20% threshold
-[NUMERIC] hedge_gain_losses_current: $4M → $3M (-31.5%) — exceeds 20% threshold
-[NUMERIC] foreign_currency_transaction_losses: $-1M → $-1M (-84.6%) — exceeds 20% threshold
-[NUMERIC] revenue_fx_impact: $-12M → $0M (+101.6%) — exceeds 20% threshold
-[NUMERIC] operating_profit_fx_impact: $-4M → $-0M (+88.9%) — exceeds 20% threshold
-[NUMERIC] eps_fx_impact: $-0M → $-0M (+75.0%) — exceeds 20% threshold
-[LLM_FLAG] revenue_fx_impact: Current period value of $0.201M is significantly lower than prior period of -$12.253M (98% decline), suggesting substantially improved currency headwinds
-[LLM_FLAG] operating_profit_fx_impact: Current period value of -$0.469M is substantially improved compared to prior period of -$4.211M (89% improvement), indicating better FX management
-[LLM_FLAG] hedge_gain_losses_current: Current period value of $2.565M is lower than prior period of $3.745M (31% decline), within expected variance
-[LLM_FLAG] forward_fx_assumptions: Exchange rates have shifted materially - EUR moved from 1.08 to 1.15 (6.5% weaker USD), GBP from 1.25 to 1.34 (7.2% weaker USD), CAD from 0.69 to 0.72 (4.3% weaker USD), indicating significant currency appreciation relative to USD
-[LLM_FLAG] sensitivity_analysis: 2025 projection of $8M revenue impact and $3M operating income impact from 1% USD strengthening is lower than prior period estimate of $11M and $4M respectively, consistent with the changed currency environment
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-20 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($8M)
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $9M → $1M (-88.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $3M → $27M (+739.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $9M → $1M (-88.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $3M → $27M (+739.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $6M → $-26M (-541.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $5M → $-7M (-236.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_transaction_gain_loss: $-1M → $-1M (-84.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] hedge_gain_losses_current: $4M → $3M (-31.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] foreign_currency_transaction_losses: $-1M → $-1M (-84.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] revenue_fx_impact: $-12M → $0M (+101.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] operating_profit_fx_impact: $-4M → $-0M (+88.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] eps_fx_impact: $-0M → $-0M (+75.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in this section — only fair values available.
+[HISTORICAL] [LLM_FLAG] All figures in table are in thousands; converted to millions.
+[HISTORICAL] [LLM_FLAG] Significant increase in derivative liabilities vs Q1 2025 (from $3.262M to $27.374M), driven by cross currency swaps swinging from net asset to large liability.
+[HISTORICAL] [LLM_FLAG] Contingent consideration excluded from derivative totals as it is a non-derivative liability.
+[HISTORICAL] [LLM_FLAG] Total derivative asset/liability figures in thousands converted to millions.
+[HISTORICAL] [LLM_FLAG] Expected 12-month reclassification is a loss (negative) of $6.7M from FX contracts, partially offset by $0.3M gain from IR swap.
+[HISTORICAL] [LLM_FLAG] Cross currency swaps settled €15M on June 18, 2025.
+[HISTORICAL] [LLM_FLAG] FX impact figures for six-month period ended June 30, 2025 (in thousands, converted to millions).
+[HISTORICAL] [LLM_FLAG] Q2-only figures also available in text but six-month cumulative used as primary.
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-06-02 ===
 [NUMERIC] fx_transaction_gain_loss: $-4,160M → $-1M (+100.0%) — exceeds 20% threshold

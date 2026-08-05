@@ -1,31 +1,79 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] total_derivative_asset: $10M → $13M (+30.0%) — exceeds 20% threshold
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-03 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $650M, now missing
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $10M → $13M (+30.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $10M → $13M (+30.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, and gross_unrealized_gains_debt not disclosed — no marketable securities/investment portfolio in this fair value note
+[HISTORICAL] [LLM_FLAG] fi_ir_swap_notional left null: the provided text is truncated mid-sentence in the Interest Rate Risk discussion of Note 10 before any notional figure is stated; only the resulting $57M interest rate swap liability fair value is shown in the recurring fair value table
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional/fi_fx_designated_notional/fi_fx_not_designated_notional not disclosed — the provided text ends before reaching the Foreign Currency Risk section
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset excludes a new $5M Level 3 'Contingent sale consideration' asset introduced this quarter (related to the ePac Holdings disposal), treated as non-derivative consistent with how contingent purchase consideration is excluded from the liability side
+[HISTORICAL] [LLM_FLAG] fx_designated_notional/fx_not_designated_notional left null: cross currency swap notional is disclosed in mixed sub-programs (a $500M USD fair value hedge, unspecified EUR/GBP net investment hedges, and an economic hedge of intercompany loans) without a single consolidated USD designated/non-designated split
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional not disclosed in dollar terms (only physical volumes: 18,167 tons aluminum, 10,524 tons 'aluminum premium', 8,600,000 lbs PET resin)
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci not disclosed in this section text
+[HISTORICAL] [LLM_FLAG] This Item 3 disclosure for the quarter ended March 31, 2026 states there were no material changes in market risk and incorporates by reference Note 9 (Fair Value Measurements), Note 10 (Derivative Instruments), and Item 7A of the FY2025 Form 10-K; no quantitative figures are present in this section's text
+[HISTORICAL] [LLM_FLAG] All schema fields left null — no sensitivity, notional, or exposure figures are disclosed in this specific Item 3 text
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_not_designated_notional: $3M → $269M (+8866.7%) — exceeds 20% threshold
-[NUMERIC] total_derivative_asset: $6M → $10M (+66.7%) — exceeds 20% threshold
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-07-03 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $6M → $10M (+66.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $6M → $10M (+66.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, and gross_unrealized_gains_debt not disclosed — no marketable securities/investment portfolio in this fair value note
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional/fi_fx_designated_notional/fi_fx_not_designated_notional not disclosed: the provided text names the FX instruments used (forward contracts and cross currency swaps designated as cash flow hedges) but is truncated before stating any notional dollar amounts
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_liability computed by subtracting the $19M non-derivative contingent purchase consideration liability from the $542M total liabilities measured at fair value; commodity contracts liability was reported as '—' (nil) in the table this period
+[HISTORICAL] [LLM_FLAG] fx_designated_notional/fx_not_designated_notional left null: cross currency swap notional is disclosed in mixed sub-programs (a $500M USD fair value hedge, unspecified EUR/GBP net investment hedges, and an economic hedge of intercompany loans) without a single consolidated USD designated/non-designated split
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional not disclosed in dollar terms (only physical volumes: 16,429 tons aluminum, 12,793 tons 'aluminum premium', 1,400,000 lbs PET resin)
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci not disclosed in this section text
+[HISTORICAL] [LLM_FLAG] This Item 3 disclosure for the quarter ended December 31, 2025 states there were no material changes in market risk and incorporates by reference Note 8 (Fair Value Measurements), Note 9 (Derivative Instruments), and Item 7A of the FY2025 Form 10-K; no quantitative figures are present in this section's text
+[HISTORICAL] [LLM_FLAG] All schema fields left null — no sensitivity, notional, or exposure figures are disclosed in this specific Item 3 text
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_designated_notional: $5M → $30M (+500.0%) — exceeds 20% threshold
-[NUMERIC] fx_not_designated_notional: $294M → $3M (-99.0%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $16M → $89M (+456.2%) — exceeds 20% threshold
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-03 ===
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($650M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-24M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $-24M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity: was $-26M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] argentina_peso_exposure: was $-6M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/11 previously-populated fields are now null (ir_sensitivity_100bp, interest_rate_sensitivity, fx_sensitivity, argentina_peso_exposure)
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, and gross_unrealized_gains_debt not disclosed — no marketable securities/investment portfolio in this fair value note
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional/fi_fx_designated_notional/fi_fx_not_designated_notional not disclosed: the provided text names the FX instruments used (forward contracts and cross currency swaps designated as cash flow hedges) but is truncated before stating any notional dollar amounts
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_liability computed by subtracting the $18M non-derivative contingent purchase consideration liability from the $540M total liabilities measured at fair value
+[HISTORICAL] [LLM_FLAG] fx_designated_notional/fx_not_designated_notional left null: cross currency swap notional is disclosed in mixed currencies across sub-programs (a $500M USD fair value hedge, unspecified EUR/GBP net investment hedges, and an economic hedge of intercompany loans) without a single consolidated USD designated/non-designated split
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional not disclosed in dollar terms (only physical volumes: 21,066 tons aluminum; 1,763,805 lbs PET resin)
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci not disclosed in this section text
+[HISTORICAL] [LLM_FLAG] This Item 3 disclosure for the quarter ended September 30, 2025 states there were no material changes in market risk and incorporates by reference Note 8 (Fair Value Measurements), Note 9 (Derivative Instruments), and Item 7A of the FY2025 Form 10-K; no quantitative figures are present in this section's text
+[HISTORICAL] [LLM_FLAG] All schema fields left null — no sensitivity, notional, or exposure figures are disclosed in this specific Item 3 text
 
-=== 10-K | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_not_designated_notional: $5M → $294M (+5780.0%) — exceeds 20% threshold
+=== 10-K | Period ending 2025-06-30 | Processed 2026-07-03 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $1,050M, now missing
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $103M → $568M (+451.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $1,076M → $3,600M (+234.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $1,050M → $650M (-38.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $103M → $568M (+451.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-96M → $-561M (-484.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-24M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-24M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity: appeared for first time ($-26M)
+[HISTORICAL] [NEW_FIELD] argentina_peso_exposure: appeared for first time ($-6M)
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, and gross_unrealized_gains_debt not disclosed — no marketable securities/investment portfolio in this fair value note
+[HISTORICAL] [LLM_FLAG] fi_ir_swap_notional left null: the only interest rate swap notional explicitly stated in the provided text ($500M initial, downsized to $400M, hedging commercial paper) matured on June 30, 2025 (this filing's period end); the text is truncated mid-sentence before disclosing the notional of the receive-fixed/pay-variable swap program that remained outstanding at period end (per the Level 2 interest rate swap liability of $63M shown in the fair value table)
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional/fi_fx_designated_notional/fi_fx_not_designated_notional not disclosed — the provided text ends before the Foreign Currency Risk section states any notional figures
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_liability computed by subtracting the $20M non-derivative contingent purchase consideration liability from the $588M total liabilities measured at fair value
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional combines forward contracts ($600M) and cross currency swaps ($3,000M) at June 30, 2025; the cross currency swap balance grew sharply from $500M in FY2024 due to legacy Berry Global swaps assumed in the April 30, 2025 merger
+[HISTORICAL] [LLM_FLAG] fx_designated_notional/fx_not_designated_notional left null because designated amounts are disclosed in mixed currencies (USD $500M, EUR 925M, GBP 700M) and cannot be summed to one USD total without an FX rate not provided in the text; forward contract designated/non-designated split also not given
+[HISTORICAL] [LLM_FLAG] ir_swap_notional reflects only the swap outstanding at fiscal year-end (the $400M swap matured before June 30, 2025)
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional not disclosed in dollar terms (only physical volumes: 29,354 tons aluminum; 5,840,909 lbs PET resin)
+[HISTORICAL] [LLM_FLAG] total_derivative_liability rose substantially year over year (from $113M to $568M) largely due to legacy Berry cross currency swaps assumed in the merger
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci not disclosed as year-end balances in this section
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp/interest_rate_sensitivity is an income-statement impact (adverse expense) disclosed for a 1%/100bp floating rate move, not a fair-value change of instruments; reported as -24 (adverse) using the figure as given
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct not disclosed as a distinct 10% FX scenario in this section (only a 1% EUR sensitivity of $26 million and a 10% Argentine peso devaluation scenario of $6 million are given); not extrapolated/scaled to avoid fabricating a value
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding, notional_amounts_by_instrument, hedge_accounting_designation, derivative_balance_sheet_location, commodity_contract_volumes, cross_currency_swap_details, fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct, and fx_transaction_gain_loss are not disclosed with specific figures in this market-risk (Item 7A) text; that data resides in the separate Derivative Instruments and Fair Value Measurements notes
+[HISTORICAL] [LLM_FLAG] argentina_peso_exposure reported using the FY2025 10% devaluation scenario impact (~$6 million); prior-year 55% devaluation loss ($53 million) included in evidence for context only
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[LLM_FLAG] Filing text appears to be truncated or incomplete - only contains a reference to quantitative and qualitative disclosures in the annual report. No actual market risk disclosure data is present in the provided excerpt.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
-[LLM_FLAG] This section is a cross-reference only. All detailed market risk disclosures are deferred to the Annual Report on Form 10-K for fiscal year ended June 30, 2025. No quantitative or qualitative market risk information is actually provided in this 10-Q excerpt.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[LLM_FLAG] The provided filing section is minimal and appears to be only a reference to a different section. It states 'Quantitative and Qualitative Disclosures About Market Risk' exists in the Form 10-K for fiscal year ended June 30, 2024, but does not contain the actual market risk disclosures for the 10-Q period ending March 31, 2025.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
-[LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKvhsGKGWhastBVnZuA'}
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-03 ===
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, and gross_unrealized_gains_debt not disclosed in this section — Amcor's fair value note covers only debt, derivatives, and contingent consideration, with no marketable securities/investment portfolio
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional/fi_fx_designated_notional/fi_fx_not_designated_notional not disclosed in the provided text, which is truncated mid-sentence in the Foreign Currency Risk discussion before any notional figures are given
+[HISTORICAL] [LLM_FLAG] fi_ir_swap_notional sums two separate programs disclosed in the text: a $400M pay-fixed/receive-variable swap hedging commercial paper (economic hedge, not designated) and $650M receive-fixed/pay-variable swaps (fair value hedges)
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_liability computed by subtracting the $26M non-derivative contingent purchase consideration liability from the $129M total liabilities measured at fair value
+[HISTORICAL] [LLM_FLAG] fx_designated_notional/fx_not_designated_notional not split by notional amount in the text (only fair values are split by designation); cross currency swap ($500M) is fully designated as a fair value hedge but forward contract designated/non-designated notional split is not disclosed
+[HISTORICAL] [LLM_FLAG] ir_swap_notional is a sum of two separate swap programs: $400M pay-fixed/receive-variable (economic hedge, not designated) and $650M receive-fixed/pay-variable (fair value hedges)
+[HISTORICAL] [LLM_FLAG] commodity_derivatives_notional not disclosed in dollar notional terms; only physical volumes given (23,167 tons aluminum; 14,181,818 lbs PET resin)
+[HISTORICAL] [LLM_FLAG] cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci not disclosed in this section
+[HISTORICAL] [LLM_FLAG] This Item 3 disclosure for the quarter ended March 31, 2025 states there were no material changes in market risk and incorporates by reference Note 9 (Fair Value Measurements), Note 10 (Derivative Instruments), and Item 7A of the FY2024 Form 10-K; no quantitative figures are present in this section's text
+[HISTORICAL] [LLM_FLAG] All schema fields left null — no sensitivity, notional, or exposure figures are disclosed in this specific Item 3 text

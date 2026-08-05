@@ -1,81 +1,123 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
-[NUMERIC] total_derivative_asset: $9M → $44M (+388.9%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $174M → $102M (-41.4%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $-165M → $-58M (+64.8%) — exceeds 20% threshold
-[NUMERIC] cash_flow_hedge_aoci: $-434M → $41M (+109.4%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $85M → $41M (-51.8%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-647M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $22M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-647M, now missing
-[LLM_FLAG] total_derivative_liability increased from 174.0 to 102.0, a change of over 50%
-[LLM_FLAG] net_derivative_position changed from -165.0 to -58.0, a change of over 50%
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [DISAPPEARED_FIELD] has_derivatives: was $1M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $9M → $44M (+388.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $174M → $102M (-41.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-165M → $-58M (+64.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-85M → $-41M (+51.8%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $22M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-647M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_hedge_eur_notional: was $2,764M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_hedge_gbp_notional: was $410M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_hedge_cad_notional: was $1,574M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_hedge_hkd_notional: was $4,317M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_hedge_cnh_notional: was $6,743M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_asset_derivatives_current_fv: was $5M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_asset_derivatives_noncurrent_fv: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_liability_derivatives_current_fv: was $83M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_liability_derivatives_noncurrent_fv: was $91M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_cash_flow_hedge_revenue_gain_loss: was $26M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_cash_flow_hedge_interest_expense: was $-6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fair_value_hedge_carrying_amount: was $279M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fair_value_hedge_basis_adjustment: was $3M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_contracts_outstanding: was $0M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 17/22 previously-populated fields are now null (has_derivatives, ir_sensitivity_100bp, fx_sensitivity_10pct, fx_hedge_eur_notional, fx_hedge_gbp_notional...)
+[HISTORICAL] [LLM_FLAG] FX notionals are in local currency (EUR/GBP/CAD/HKD/CNH millions), not USD — no aggregate USD notional provided.
+[HISTORICAL] [LLM_FLAG] Q1 2026 note does not include a separate interest contracts cash flow hedge table; IR cash flow hedge interest expense not separately stated.
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($15,280M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($15,280M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($6M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($9M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($174M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-165M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-434M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($85M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-647M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($22M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-647M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-27 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $68M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[HISTORICAL] [NEW_FIELD] has_derivatives: appeared for first time ($1M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $27M → $9M (-66.7%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($22M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-647M)
+[HISTORICAL] [NEW_FIELD] fx_hedge_eur_notional: appeared for first time ($2,764M)
+[HISTORICAL] [NEW_FIELD] fx_hedge_gbp_notional: appeared for first time ($410M)
+[HISTORICAL] [NEW_FIELD] fx_hedge_cad_notional: appeared for first time ($1,574M)
+[HISTORICAL] [NEW_FIELD] fx_hedge_hkd_notional: appeared for first time ($4,317M)
+[HISTORICAL] [NEW_FIELD] fx_hedge_cnh_notional: appeared for first time ($6,743M)
+[HISTORICAL] [NEW_FIELD] fx_asset_derivatives_current_fv: appeared for first time ($5M)
+[HISTORICAL] [NEW_FIELD] fx_asset_derivatives_noncurrent_fv: appeared for first time ($4M)
+[HISTORICAL] [NEW_FIELD] fx_liability_derivatives_current_fv: appeared for first time ($83M)
+[HISTORICAL] [NEW_FIELD] fx_liability_derivatives_noncurrent_fv: appeared for first time ($91M)
+[HISTORICAL] [NEW_FIELD] fx_cash_flow_hedge_revenue_gain_loss: appeared for first time ($26M)
+[HISTORICAL] [NEW_FIELD] ir_cash_flow_hedge_interest_expense: appeared for first time ($-6M)
+[HISTORICAL] [NEW_FIELD] fair_value_hedge_carrying_amount: appeared for first time ($279M)
+[HISTORICAL] [NEW_FIELD] fair_value_hedge_basis_adjustment: appeared for first time ($3M)
+[HISTORICAL] [NEW_FIELD] commodity_contracts_outstanding: appeared for first time ($0M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/9 previously-populated fields are now null (total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt)
+[HISTORICAL] [LLM_FLAG] FX notionals are in local currency (EUR/GBP/CAD/HKD/CNH millions), not USD — no aggregate USD notional provided.
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed; only carrying amount of hedged liabilities ($279M) given.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp is stated as change in annual interest expense (not fair value) for variable-rate debt only.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct is change in fair value of currency derivatives from 10% USD weakening — this is the shock-test result.
+[HISTORICAL] [LLM_FLAG] FX notionals are in local currency millions (EUR/GBP/CAD/HKD/CNH), not USD equivalents.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaonMK9dNHgsnRs7Js2'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbqaot2NuURsuVHcMZq9E'}
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $92M → $68M (-26.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $3M → $2M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] corporate_debt_securities_fv: $1M → $0M
+[HISTORICAL] [DISAPPEARED_FIELD] has_derivatives: was $1M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $16M → $27M (+68.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $292M → $203M (-30.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-276M → $-176M (+36.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-112M → $-85M (+24.1%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_hedge_eur_notional: was $3,138M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_hedge_gbp_notional: was $463M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_hedge_cad_notional: was $1,672M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_hedge_hkd_notional: was $4,388M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_hedge_cnh_notional: was $7,693M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_asset_derivatives_current_fv: was $14M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_asset_derivatives_noncurrent_fv: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_liability_derivatives_current_fv: was $120M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_liability_derivatives_noncurrent_fv: was $172M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_cash_flow_hedge_revenue_gain_loss: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_cash_flow_hedge_interest_expense: was $-2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fair_value_hedge_carrying_amount: was $279M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fair_value_hedge_basis_adjustment: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_contracts_outstanding: was $0M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 15/24 previously-populated fields are now null (has_derivatives, fx_hedge_eur_notional, fx_hedge_gbp_notional, fx_hedge_cad_notional, fx_hedge_hkd_notional...)
+[HISTORICAL] [LLM_FLAG] Note 5 covers marketable securities and non-current investments only — derivative notionals and fair values are disclosed separately in the derivatives note.
+[HISTORICAL] [LLM_FLAG] Total current marketable securities declined further to $68M (Q3 2025) from $92M (Q2 2025) and $263M (Q1 2025).
+[HISTORICAL] [LLM_FLAG] Corporate debt securities reached $0 as of Q3 2025 (down from $1M in Q2, $122M in Q1).
+[HISTORICAL] [LLM_FLAG] Other non-current investments (variable life insurance policy) fair value = $20M as of September 30, 2025; not included in total_marketable_securities_fv.
+[HISTORICAL] [LLM_FLAG] Section does not include a variable life insurance policy line item in the September 30 table (the 'Other non-current investments' row with footnote (1) is only shown in the December 31, 2024 comparison period in this filing).
+[HISTORICAL] [LLM_FLAG] FX notionals are in local currency (EUR/GBP/CAD/HKD/CNH millions), not USD — no aggregate USD notional provided.
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in 10-Q notes.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaoPUtt9idtDEAh8SZu'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaoVKPL1Y415spJ4cCg'}
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $263M → $92M (-65.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $2M → $3M (+50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $122M → $1M (-99.2%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] gross_unrealized_gains_debt: $1M → $0M
+[HISTORICAL] [NUMERIC] total_derivative_asset: $132M → $16M (-87.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $29M → $292M (+906.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $103M → $-276M (-368.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $64M → $-112M (-275.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_asset_derivatives_current_fv: $85M → $14M (-83.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_asset_derivatives_noncurrent_fv: $47M → $2M (-95.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_liability_derivatives_current_fv: $15M → $120M (+700.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_liability_derivatives_noncurrent_fv: $14M → $172M (+1128.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_cash_flow_hedge_revenue_gain_loss: $57M → $4M (-93.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_cash_flow_hedge_interest_expense: $-1M → $-2M (-100.0%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely units mismatch: corporate_debt_securities_fv changed from 122 to 1 (0x)
+[HISTORICAL] [LLM_FLAG] Note 5 covers marketable securities and non-current investments only — derivative notionals and fair values are disclosed separately in the derivatives note.
+[HISTORICAL] [LLM_FLAG] Total current marketable securities declined sharply from $263M (Q1 2025) to $92M (Q2 2025).
+[HISTORICAL] [LLM_FLAG] Other non-current investments (variable life insurance policy) fair value = $20M as of June 30, 2025; not included in total_marketable_securities_fv.
+[HISTORICAL] [LLM_FLAG] An equity method investment with carrying value of $31M was sold in Q2 2025 in exchange for a promissory note.
+[HISTORICAL] [LLM_FLAG] FX notionals are in local currency (EUR/GBP/CAD/HKD/CNH millions), not USD — no aggregate USD notional provided.
+[HISTORICAL] [LLM_FLAG] Significant swing from net asset position in Q1 2025 ($103M) to net liability ($276M) in Q2 2025, driven by large USD appreciation vs. hedged currencies.
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in 10-Q notes.
+[HISTORICAL] [LLM_FLAG] Market risk section cross-references the 10-K for quantitative sensitivity tables; no standalone sensitivity analysis in this 10-Q section.
+[HISTORICAL] [LLM_FLAG] FX notionals are in local currency millions (EUR/GBP/CAD/HKD/CNH), not USD equivalents.
+[HISTORICAL] [LLM_FLAG] fx_liability_derivatives_current_fv includes both designated ($119M) and non-designated ($1M) current FX liabilities.
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqanpNLGMpam53ZR3iMd'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbqanv1fS8rM4bQfuzY9R'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqanMMdRFGng3VxDLPZZ'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqanT992gnfANim7nENH'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqamtPQHQLDMv2rUuRYH'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqamzrqJ1X36y6T9YZc1'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_derivatives_notional: was $2,025M, now missing
-[DISAPPEARED_FIELD] fx_not_designated_notional: was $254M, now missing
-[DISAPPEARED_FIELD] ir_swap_notional: was $165M, now missing
-[NUMERIC] commodity_derivatives_notional: $31M → $2,026M (+6435.5%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $250M → $31M (-87.6%) — exceeds 20% threshold
-[NUMERIC] cash_flow_hedge_aoci: $6M → $24M (+300.0%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $6M → $24M (+300.0%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[VALIDATION] Likely extraction failure: 4/11 previously-populated fields are now null (fx_derivatives_notional, fx_not_designated_notional, ir_swap_notional, ir_sensitivity_100bp)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_derivatives_notional: $30M → $2,025M (+6650.0%) — exceeds 20% threshold
-[NUMERIC] fx_designated_notional: $30M → $2,025M (+6650.0%) — exceeds 20% threshold
-[NEW_FIELD] ir_swap_notional: appeared for first time ($165M)
-[NUMERIC] commodity_derivatives_notional: $2,025M → $31M (-98.5%) — exceeds 20% threshold
-[NUMERIC] cash_flow_hedge_aoci: $1M → $6M (+500.0%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $1M → $6M (+500.0%) — exceeds 20% threshold
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NUMERIC] fx_designated_notional: $2,024M → $30M (-98.5%) — exceeds 20% threshold
-[NUMERIC] fx_not_designated_notional: $2M → $260M (+12900.0%) — exceeds 20% threshold
-[NUMERIC] cash_flow_hedge_aoci: $2M → $1M (-50.0%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $2M → $1M (-50.0%) — exceeds 20% threshold
-[VALIDATION] Likely units mismatch: fx_not_designated_notional changed from 2 to 260 (130x)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_not_designated_notional: $81M → $2M (-97.5%) — exceeds 20% threshold
-[NUMERIC] cash_flow_hedge_aoci: $1M → $2M (+100.0%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $1M → $2M (+100.0%) — exceeds 20% threshold
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [LLM_FLAG] Note 5 covers marketable securities and non-current investments only — derivative notionals and fair values are disclosed separately in the derivatives note (already extracted).
+[HISTORICAL] [LLM_FLAG] Other non-current investments (variable life insurance policy) fair value = $19M as of March 31, 2025; not included in total_marketable_securities_fv.
+[HISTORICAL] [LLM_FLAG] FX notionals are in local currency (EUR/GBP/CAD/HKD/CNH millions), not USD — no aggregate USD notional provided in filing.
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in 10-Q notes; only carrying amount of hedged liabilities ($279M) is shown.
+[HISTORICAL] [LLM_FLAG] Market risk section for Q1 2025 cross-references the 10-K for quantitative sensitivity tables; no standalone sensitivity analysis in this section.
+[HISTORICAL] [LLM_FLAG] FX notionals are in local currency millions (EUR/GBP/CAD/HKD/CNH), not USD equivalents.

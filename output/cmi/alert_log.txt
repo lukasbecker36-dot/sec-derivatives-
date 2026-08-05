@@ -9,80 +9,63 @@
 [LLM_FLAG] total_derivative_asset changed from 39.0 to 70 (79% increase) - designated derivative assets increased significantly
 [LLM_FLAG] total_derivative_liability changed from 101.0 to 122 (21% increase) - driven by increase in designated derivative liabilities
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NUMERIC] fx_designated_notional: $989M → $1,300M (+31.4%) — exceeds 20% threshold
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($3,500M)
-[NUMERIC] total_derivative_asset: $16M → $39M (+143.8%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $-85M → $-62M (+27.1%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-40M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $64M, now missing
-[LLM_FLAG] fx_derivatives_notional decreased by more than 50% compared to prior period.
-[LLM_FLAG] Total derivative assets increased more than 50% relative to prior period.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-14 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $5,700M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $2,411M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $4,316M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $830M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $55M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $104M, now missing
+[HISTORICAL] [NUMERIC] fx_designated_notional: $2,411M → $4,098M (+70.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $55M → $76M (+38.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-49M → $-28M (+42.9%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $40M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $64M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 8/15 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset...)
+[HISTORICAL] [LLM_FLAG] The $4.8B FX forward total at March 31, 2026 likely includes both the cash flow hedge forwards and economic hedge (non-designated) forwards; the net investment hedge FX forwards ($1.3B notional) and cross-currency swaps ($500M) are separately identified as net investment hedges and are included within the designated $4,098M total notional.
+[HISTORICAL] [LLM_FLAG] IR swap notional: $680M on 2030 notes + $300M on 2054 notes = $980M total at March 31, 2026 (the 2030 swap was $765M originally, reduced to $680M as of this filing).
+[HISTORICAL] [LLM_FLAG] Net derivative position of -$28M calculated from the gross fair value table; filing also discloses net basis positions of +$35M asset and -$63M liability (individual netting) for a net of -$28M — consistent.
+[HISTORICAL] [LLM_FLAG] Non-hedge derivative income: Loss of $20M in Other income, net and $0 in Cost of sales for Q1 2026.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,200M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($989M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($830M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($16M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($101M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-85M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-40M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($64M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-14 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $593M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $20M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $9M, now missing
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($5,700M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($2,411M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($4,316M)
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($830M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($55M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($104M)
+[HISTORICAL] [NUMERIC] ir_swap_notional: $680M → $830M (+22.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $86M → $104M (+20.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-31M → $-49M (-58.1%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($40M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($64M)
+[HISTORICAL] [LLM_FLAG] Section text is Note 20 Derivatives; marketable securities schema fields are null as that note is separate. FX forwards total $5.2B stated explicitly; cross-currency swaps $500M added to get combined FX figure of $5,700M. Designated notional $3,241M includes both IR instruments ($830M total) and FX/cross-currency instruments ($2,411M); split is derived by subtraction. New in December 2025: $150M IR swaps on 2054 senior notes (fair value hedge). Net investment hedge FX forwards declined to $989M from $1,300M at Q3 2025. Prior year (December 31, 2024): designated notional $3,512M, not designated $2,713M; derivative assets $72M, derivative liabilities $166M.
+[HISTORICAL] [LLM_FLAG] New in Q4 2025: $150M IR swaps on 2054 notes added in December 2025. Net investment FX forward hedge notional declined to $989M. Commodity hedges described as not material. Cross-currency swaps $500M remain designated.
+[HISTORICAL] [LLM_FLAG] This is a 10-K annual market risk (Item 7A) qualitative/sensitivity section. Key numeric disclosures are: ir_sensitivity_100bp=$40M and fx_sensitivity_10pct=$64M at December 31, 2025. Most derivative notional and fair value details reside in NOTE 20 (DERIVATIVES) which is not included in this section_text.
+[HISTORICAL] [LLM_FLAG] Cross-currency interest rate swaps as net investment hedges were a new instrument introduced in Q2 2025 per this text, but notional amounts are not given here.
+[HISTORICAL] [LLM_FLAG] Physical forward contracts for platinum, palladium, iridium are explicitly noted as out-of-scope (normal purchases exception).
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYfd7VL2oa8cMfPeQvG'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYfhUv1HjSCmBFiYak6'}
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-14 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $755M → $593M (-21.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $5M → $9M (+80.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $96M → $55M (-42.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $125M → $86M (-31.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text contains only Note 6 Marketable Securities; all derivative schema fields are null because the derivatives note (Note 13) was not included in this section window. Total marketable securities of $593M at September 30, 2025 equals the December 31, 2024 balance coincidentally ($593M), though composition shifted: debt mutual funds rose to $307M and certificates of deposit fell to $230M. Publicly-traded shares have zero fair value due to full unrealized loss offsetting cost basis.
+[HISTORICAL] [LLM_FLAG] Net investment FX forwards notional declined to $1.3B (from $1.6B in Q2). Cross-currency IR swaps remain at $500M. Designated notional $3,327M includes IR swaps ($680M) and cross-currency swaps ($500M).
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYfHpNivXEt9X4U3cj1'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYfNKk32xfThGmWCcfU'}
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-14 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $626M → $755M (+20.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $2M → $5M (+150.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $4,400M → $5,300M (+20.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $3,604M → $4,503M (+24.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $39M → $96M (+146.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-67M → $-29M (+56.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text contains only Note 6 Marketable Securities; all derivative schema fields are null because the derivatives note (Note 13) was not included in this section window. Total marketable securities rose to $755M at June 30, 2025 from $593M at December 31, 2024, driven by increased debt mutual funds ($386M vs $263M) and certificates of deposit ($303M vs $262M). Equity securities FV includes Level 1 shares ($1M) and Level 2 equity mutual funds ($24M).
+[HISTORICAL] [LLM_FLAG] New in Q2 2025: cross-currency interest rate swaps ($500M notional) added as net investment hedges. Designated notional $3,592M includes IR swaps ($680M) and cross-currency swaps ($500M); FX designated estimate is $2,912M. Cross-currency swaps are included in the designated notional but are IR-linked instruments.
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYeq8Whiz71PwswjMWz'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYev6AqGpoSgHkz2Nzo'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYeTQJfDywgkm3uyDnf'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYeYUAFs2YE9b3KDkWD'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYe5ZQaic459iqJ9QaZ'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYe9tbiNEfoHLhkX69z'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] fx_designated_notional: was $31M, now missing
-[DISAPPEARED_FIELD] fx_not_designated_notional: was $31M, now missing
-[NUMERIC] total_derivative_asset: $16M → $1M (-93.8%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $29M → $23M (-20.7%) — exceeds 20% threshold
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($5M)
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $40M, now missing
-[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, ir_sensitivity_100bp)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] total_derivative_asset: $1M → $16M (+1500.0%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $20M → $29M (+45.0%) — exceeds 20% threshold
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($40M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] total_derivative_liability: $40M → $20M (-50.0%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] total_derivative_liability: $11M → $40M (+263.6%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $24M, now missing
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
-[LLM_FLAG] Filing text is limited to a cross-reference to Item 7A of the 2025 Form 10-K with a statement that there have been no material changes. Detailed derivative and market risk disclosures are not included in this 10-Q excerpt.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $40M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-[LLM_FLAG] Filing excerpt is a boilerplate reference to Item 7A of 2024 Form 10-K with no actual quantitative disclosures. This appears to be the standard market risk language in a 10-Q indicating no material changes from prior year, but provides no specific numerical data for validation or extraction.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-25 ===
-[LLM_FLAG] Many derivative-related quantitative metrics not disclosed in this Market Risk section; document references NOTE 20 for detailed information on derivative fair values, gains/losses, and notional amounts
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-14 ===
+[HISTORICAL] [LLM_FLAG] Section text contains only Note 6 Marketable Securities; all derivative schema fields are null because the derivatives note (Note 13) was not included in this section window. Equity securities FV includes both Level 1 shares ($1M) and Level 2 equity mutual funds ($23M). Gross unrealized gains on debt instruments: debt mutual funds +$2M, certificates of deposit $0, debt securities $0.
+[HISTORICAL] [LLM_FLAG] IR swap notional on 2030 debt only; $350M swaps on 2025 debt were settled in Q1 2025. Designated notional of $3,717M includes both FX and IR swaps; FX designated split is estimated. Net investment hedge forwards = $1.6B included within the $3,037M FX designated figure.

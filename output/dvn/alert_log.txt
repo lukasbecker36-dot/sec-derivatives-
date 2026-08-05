@@ -1,61 +1,49 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($7M)
-[LLM_FLAG] equity_sensitivity_10pct value has increased significantly from the prior period, indicating greater exposure to price movements in commodity markets.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($126M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($577M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-451M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($7M)
+[HISTORICAL] [LLM_FLAG] Devon uses only commodity derivatives (oil, gas, NGL); no FX, IR, or equity derivatives disclosed.
+[HISTORICAL] [LLM_FLAG] No hedge accounting designation — all fair value changes flow directly to earnings, no AOCI.
+[HISTORICAL] [LLM_FLAG] Commodity notional only available in volumetric terms (Bbls/d, MMBtu/d), not in dollar millions.
+[HISTORICAL] [LLM_FLAG] Significant swing to net liability position (-$451M) vs prior quarter net asset ($193M at Dec 31, 2025); large short-term liability of $522M gross likely reflects mark-to-market on expanded collar/swap book as oil prices moved.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K/A | Period ending 2025-12-31 | Processed 2026-06-17 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $194M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $193M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $7M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, fx_forwards_outstanding, fixed_rate_notes_billion)
 
-=== 10-K/A | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $30M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $155M → $194M (+25.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $21M → $1M (-95.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $134M → $193M (+44.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text is truncated — contains accounting policy narrative only; no fair value table present in extracted text.
+[HISTORICAL] [LLM_FLAG] Fair value figures sourced from December 31, 2025 comparative column in the Q1 2026 10-Q (accession 0001193125-26-208143).
+[HISTORICAL] [LLM_FLAG] Devon uses only commodity derivatives (oil, gas, NGL); no FX, IR, or equity derivatives disclosed.
+[HISTORICAL] [LLM_FLAG] No hedge accounting designation — all fair value changes flow directly to earnings, no AOCI.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($7M)
-[LLM_FLAG] The equity_sensitivity_10pct value of 300.0 million is a significant increase from the prior period value of 0.0, indicating a substantial rise in the company's exposure to equity price risk.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] total_derivative_liability: $62M → $21M (-66.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $104M → $134M (+28.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Devon uses only commodity derivatives (oil, gas, NGL); no FX, IR, or equity derivatives disclosed.
+[HISTORICAL] [LLM_FLAG] No hedge accounting designation — all fair value changes flow directly to earnings, no AOCI.
+[HISTORICAL] [LLM_FLAG] Commodity notional only available in volumetric terms (Bbls/d, MMBtu/d), not in dollar millions.
+[HISTORICAL] [LLM_FLAG] No explicit 'Total derivative asset (liability)' line shown in this filing excerpt; net position computed from individual line items.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $68M → $166M (+144.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $133M → $62M (-53.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-65M → $104M (+260.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Devon uses only commodity derivatives (oil, gas, NGL); no FX, IR, or equity derivatives disclosed.
+[HISTORICAL] [LLM_FLAG] No hedge accounting designation — all fair value changes flow directly to earnings, no AOCI.
+[HISTORICAL] [LLM_FLAG] Commodity notional only available in volumetric terms (Bbls/d, MMBtu/d), not in dollar millions.
+[HISTORICAL] [LLM_FLAG] No explicit 'Total derivative asset (liability)' line shown in this filing excerpt; net position computed from individual line items.
 
-=== 10-K/A | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $30M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($31M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $30M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
-[LLM_FLAG] Commodity sensitivity increased 50% from $200 million (Q3 2025) to $300 million (Q1 2026) - a 50% increase in sensitivity to 10% forward curve movements. This could indicate higher derivative positions or increased market volatility.
-[LLM_FLAG] Production hedging period shifted from 'last three months of 2025, and for 2026 and 2027' to 'last nine months of 2026, as well as for 2027' - reflects natural progression through the year
-[LLM_FLAG] Term Loan interest rate decreased from 5.8% (Sept 2025) to 5.2% (March 2026) - a 60bp reduction
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
-[LLM_FLAG] fixed_rate_notes_billion decreased from $7.9B (Q2 2025) to $7.4B (Q3 2025) - a 6.3% decline, within normal range for quarterly debt management
-[LLM_FLAG] 10% commodity derivative sensitivity decreased from $270M (Q2 2025) to $200M (Q3 2025) - a 25.9% decline, likely reflecting changed market conditions and derivative positions
-[LLM_FLAG] total_debt decreased from $8.9B (Q2 2025) to $8.4B (Q3 2025) - a 5.6% decline
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
-[LLM_FLAG] Commodity derivative sensitivity decreased slightly from $275 million (March 31, 2025) to $270 million (June 30, 2025), a 1.8% decrease - within normal quarterly variance, no concern
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-25 ===
-[LLM_FLAG] Text appears to be incomplete - ends mid-sentence with reference to Note 3, suggesting full derivative and market risk disclosures are in supplementary notes not included in provided excerpt
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [LLM_FLAG] Devon uses only commodity derivatives (oil, gas, NGL); no FX, IR, or equity derivatives disclosed.
+[HISTORICAL] [LLM_FLAG] No hedge accounting designation — all fair value changes flow directly to earnings, no AOCI.
+[HISTORICAL] [LLM_FLAG] Commodity notional only available in volumetric terms (Bbls/d, MMBtu/d), not in dollar millions.

@@ -1,66 +1,51 @@
-=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-17 ===
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp_interest_income: was $0M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, ir_sensitivity_100bp_interest_income)
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-18 ===
+[NUMERIC] total_cash_equivalents_fv: $7,869M → $10,166M (+29.2%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $123M → $170M (+38.2%) — exceeds 20% threshold
+[LLM_FLAG] No derivative instruments appear in the fair value table; UAL's stated policy is to not hedge fuel or foreign currency exposure
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] ir_sensitivity_100bp_variable: was $63M, now missing
-[DISAPPEARED_FIELD] fixed_rate_debt_fair_value: was $13M, now missing
-[DISAPPEARED_FIELD] fuel_price_sensitivity_1dollar: was $8,528M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_1pct_pretax: was $63M, now missing
-[DISAPPEARED_FIELD] primary_fx_exposures: was $12,737M, now missing
-[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (ir_sensitivity_100bp_variable, fixed_rate_debt_fair_value, fuel_price_sensitivity_1dollar, fx_sensitivity_1pct_pretax, primary_fx_exposures)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $5,942M → $7,869M (+32.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $34M → $123M (+261.8%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] has_derivatives: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-342M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] variable_rate_debt: was $8,528M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp_variable: was $63M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_debt: was $12,737M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_debt_fair_value: was $12,734M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp_fixed_fv: was $-342M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp_interest_income: was $140M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fuel_price_sensitivity_1dollar: was $116M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_1pct_pretax: was $-12M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 11/15 previously-populated fields are now null (has_derivatives, fx_forwards_outstanding, ir_sensitivity_100bp, variable_rate_debt, ir_sensitivity_100bp_variable...)
+[HISTORICAL] [LLM_FLAG] No derivative instruments appear in the fair value table; UAL's stated policy is to not hedge fuel or foreign currency exposure
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($63M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($13M)
-[NEW_FIELD] variable_rate_debt: appeared for first time ($8,528M)
-[NEW_FIELD] ir_sensitivity_100bp_variable: appeared for first time ($63M)
-[NEW_FIELD] fixed_rate_debt: appeared for first time ($12,737M)
-[NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($12,734M)
-[NEW_FIELD] ir_sensitivity_100bp_fixed_fv: appeared for first time ($-342M)
-[NEW_FIELD] ir_sensitivity_100bp_interest_income: appeared for first time ($140M)
-[NEW_FIELD] fuel_price_sensitivity_1dollar: appeared for first time ($116M)
-[NEW_FIELD] fx_sensitivity_1pct_pretax: appeared for first time ($-12M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $50M → $34M (-32.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] has_derivatives: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-342M)
+[HISTORICAL] [NEW_FIELD] variable_rate_debt: appeared for first time ($8,528M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp_variable: appeared for first time ($63M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_debt: appeared for first time ($12,737M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($12,734M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp_fixed_fv: appeared for first time ($-342M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp_interest_income: appeared for first time ($140M)
+[HISTORICAL] [NEW_FIELD] fuel_price_sensitivity_1dollar: appeared for first time ($116M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_1pct_pretax: appeared for first time ($-12M)
+[HISTORICAL] [LLM_FLAG] Derivative instruments (FX, IR swaps) are not covered in Note 9 (Fair Value Measurements, Investments and Notes Receivable); notional amounts and derivative FV figures will be in a separate derivatives note not supplied in section_text — all derivative fields are null as a result
+[HISTORICAL] [LLM_FLAG] UAL's filer context notes cross-currency swaps and interest rate swaps as recurring terms, confirming those disclosures exist elsewhere in the filing
+[HISTORICAL] [LLM_FLAG] Company explicitly states no fuel or FX hedging; has_derivatives set to false as no active positions are mentioned
+[HISTORICAL] [LLM_FLAG] Variable rate debt note: $8.6B includes increased-cost provisions; $5.4B from non-U.S. entities subject to tax law changes
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] ir_sensitivity_100bp_variable: was $63M, now missing
-[DISAPPEARED_FIELD] fixed_rate_debt_fair_value: was $13M, now missing
-[DISAPPEARED_FIELD] fuel_price_sensitivity_1dollar: was $8,528M, now missing
-[DISAPPEARED_FIELD] primary_fx_exposures: was $12,737M, now missing
-[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (ir_sensitivity_100bp_variable, fixed_rate_debt_fair_value, fuel_price_sensitivity_1dollar, primary_fx_exposures)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $9,354M → $6,730M (-28.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $70M → $50M (-28.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No derivative instruments appear in the fair value table; UAL's stated policy is to not hedge fuel or foreign currency exposure
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($63M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($13M)
-[NEW_FIELD] variable_rate_debt: appeared for first time ($8,528M)
-[NEW_FIELD] fixed_rate_debt: appeared for first time ($12,737M)
-[NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($12,734M)
-[NEW_FIELD] ir_sensitivity_100bp_fixed_fv: appeared for first time ($-342M)
-[NEW_FIELD] ir_sensitivity_100bp_interest_income: appeared for first time ($140M)
-[NEW_FIELD] fuel_price_sensitivity_1dollar: appeared for first time ($116M)
-[NEW_FIELD] fx_sensitivity_1pct_pretax: appeared for first time ($-12M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-18 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $50M → $70M (+40.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No derivative instruments appear in the fair value table; UAL's stated policy is to not hedge fuel or foreign currency exposure
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $8,528M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($8,528M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] variable_rate_debt: appeared for first time ($8,528M)
-[NEW_FIELD] ir_sensitivity_100bp_variable: appeared for first time ($63M)
-[NEW_FIELD] fixed_rate_debt: appeared for first time ($12,737M)
-[NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($12,734M)
-[NEW_FIELD] ir_sensitivity_100bp_fixed_fv: appeared for first time ($-342M)
-[NEW_FIELD] ir_sensitivity_100bp_interest_income: appeared for first time ($140M)
-[NEW_FIELD] fuel_price_sensitivity_1dollar: appeared for first time ($116M)
-[NEW_FIELD] fx_sensitivity_1pct_pretax: appeared for first time ($-12M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-18 ===
+[HISTORICAL] [LLM_FLAG] No derivative instruments appear in the fair value table; UAL's stated policy is to not hedge fuel or foreign currency exposure

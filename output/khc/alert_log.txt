@@ -1,47 +1,78 @@
-=== 10-Q | Period ending 2026-03-28 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZcV4qK387UiVtcwCDB'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZcbhgygn45ntpP2eBt'}
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $221M → $711M (+221.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $1,060M → $783M (-26.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $456M → $348M (-23.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $80M → $215M (+168.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $326M → $216M (-33.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $80M → $215M (+168.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $326M → $216M (-33.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-246M → $-1M (+99.6%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely units mismatch: net_derivative_position changed from -246 to -1 (0x)
+[HISTORICAL] [LLM_FLAG] AFS portfolio: corporate bonds $348M, commercial paper $1,086M, U.S. treasury and agency $60M, money market funds $0M; total $1,494M.
+[HISTORICAL] [LLM_FLAG] Cash equivalents AFS ($711M) significantly higher than prior quarter ($221M at Dec 27, 2025) reflecting commercial paper buildup.
+[HISTORICAL] [LLM_FLAG] No marketable equity securities; KHC holds only fixed-income AFS.
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional combines FX contracts ($3,647M) and cross-currency contracts ($3,083M).
+[HISTORICAL] [LLM_FLAG] Commodity derivative position reversed: net asset at March 28, 2026 ($140M assets vs $22M liabilities) vs net liability in prior periods.
+[HISTORICAL] [LLM_FLAG] Collateral position changed: KHC collected $38M collateral at March 28, 2026 (vs posting collateral in prior periods).
+[HISTORICAL] [LLM_FLAG] Netting impact: $65M reduction if positions were netted at March 28, 2026.
+[HISTORICAL] [LLM_FLAG] Item 3 is a boilerplate cross-reference disclosure: 'There have been no material changes to our market risk during the three months ended March 28, 2026. For additional information, refer to Item 7A...in our Annual Report on Form 10-K for the year ended December 27, 2025.'
+[HISTORICAL] [LLM_FLAG] All quantitative fields require the annual 10-K Item 7A or the financial instruments note, neither of which is reproduced in this section text.
+[HISTORICAL] [LLM_FLAG] No extractable numeric values are present in the supplied section text.
 
-=== 10-K | Period ending 2025-12-27 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZc5TmABzR1oB7nxXuB'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZcAxAFxCYTAQjeduqW'}
+=== 10-K | Period ending 2025-12-27 | Processed 2026-06-21 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($221M)
+[HISTORICAL] [NUMERIC] net_derivative_position: $-201M → $-246M (-22.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] AFS portfolio: corporate bonds $456M, commercial paper $752M, U.S. treasury and agency $72M, money market funds $1M; total $1,281M.
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv ($221M) reflects AFS securities classified within cash equivalents, not total cash balance.
+[HISTORICAL] [LLM_FLAG] No marketable equity securities; KHC holds only fixed-income AFS and money market funds.
+[HISTORICAL] [LLM_FLAG] This is the annual 10-K (period_end 2025-12-27); note is Note 13 (previously Note 11 in 10-Qs).
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional combines FX contracts ($4,229M) and cross-currency contracts ($3,083M).
+[HISTORICAL] [LLM_FLAG] All 12-month AOCI reclassification amounts stated as insignificant; no quantified figure available.
+[HISTORICAL] [LLM_FLAG] Netting: derivative positions reduced by $45M if netted at Dec 27, 2025 (vs $141M at Dec 28, 2024).
+[HISTORICAL] [LLM_FLAG] Collateral posted: $52M at December 27, 2025 (commodity derivative margins).
+[HISTORICAL] [LLM_FLAG] The section_text provided is the introductory paragraph of Item 7A only; it references Note 2 and Note 13 for quantitative data but does not reproduce the quantitative disclosures.
+[HISTORICAL] [LLM_FLAG] All quantitative fields (sensitivity, notionals, fair values, hedging details) would need to be extracted from the Financial Instruments note (Note 13) rather than this section.
+[HISTORICAL] [LLM_FLAG] market_risk_exposures is the only field with substantive content in the supplied text.
 
-=== 10-Q | Period ending 2025-09-27 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZbZdPqifdYgdU8Zcqy'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZbgCHF7gezSsPKrSS3'}
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-06-21 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $14M, now missing
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $292M → $428M (+46.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $10,169M → $7,319M (-28.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $304M → $95M (-68.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $490M → $296M (-39.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $10,169M → $7,319M (-28.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $304M → $95M (-68.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $490M → $296M (-39.6%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-8M, now missing
+[HISTORICAL] [LLM_FLAG] No AFS securities in cash and cash equivalents at September 27, 2025; all $1,020M in marketable securities.
+[HISTORICAL] [LLM_FLAG] AFS portfolio: corporate bonds $428M, commercial paper $532M, U.S. treasury and agency $60M.
+[HISTORICAL] [LLM_FLAG] No marketable equity securities; KHC holds only fixed-income AFS.
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional combines FX contracts ($4,236M) and cross-currency contracts ($3,083M); cross-currency notional dropped sharply from $7,449M (Dec 2024) reflecting settlements/restructuring.
+[HISTORICAL] [LLM_FLAG] No quantified 12-month AOCI reclassification — stated as insignificant for all cash flow hedge categories.
+[HISTORICAL] [LLM_FLAG] Cross-currency contracts now used as net investment hedges include FX contracts (CNY) in addition to cross-currency swaps.
+[HISTORICAL] [LLM_FLAG] Item 3 is a boilerplate cross-reference disclosure: 'There have been no material changes to our market risk during the nine months ended September 27, 2025. For additional information, refer to Item 7A...in our Annual Report on Form 10-K for the year ended December 28, 2024.'
+[HISTORICAL] [LLM_FLAG] All quantitative fields require the annual 10-K Item 7A or the financial instruments note, neither of which is reproduced in this section text.
+[HISTORICAL] [LLM_FLAG] No extractable numeric values are present in the supplied section text.
 
-=== 10-Q | Period ending 2025-06-28 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZb8Y2RWwnhcHYi8eDz'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZbE1SJ4Bdqy1PFeKKC'}
-
-=== 10-Q | Period ending 2025-03-29 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZahGzdpWkXyyonxHAv'}
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZao3m8pfvenCW8X1Rc'}
-
-=== 10-Q | Period ending 2026-03-28 | Processed 2026-06-02 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($711M)
-[NUMERIC] total_marketable_securities_fv: $1,020M → $783M (-23.2%) — exceeds 20% threshold
-[LLM_FLAG] total_marketable_securities_fv decreased 23.2% from prior period (1020 to 783): Decrease driven by maturity of securities ($729 million received from maturity) exceeding new purchases ($935 million) during the quarter, combined with shift in investment composition.
-[LLM_FLAG] corporate_debt_securities_fv decreased 18.7% from prior period (428 to 348): Decline consistent with maturities ($729 million total from all securities) without corresponding replacement of corporate bond holdings specifically.
-[LLM_FLAG] Provided text is only a reference header to the Annual Report on Form 10-K and does not contain actual market risk disclosure data. Complete derivative and hedging information would be found in the full 10-K filing referenced.
-
-=== 10-Q | Period ending 2025-09-27 | Processed 2026-06-02 ===
-[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $14M, now missing
-[NUMERIC] corporate_debt_securities_fv: $292M → $428M (+46.6%) — exceeds 20% threshold
-[LLM_FLAG] total_marketable_securities_fv increased from 997.0 to 1020.0 (2.3% increase within 50% threshold, no flag required)
-[LLM_FLAG] corporate_debt_securities_fv changed from 292.0 to 428.0 (46.6% increase, within 50% threshold)
-[LLM_FLAG] Significant portfolio composition change: Prior period had 997M in total marketable securities but this period's available-for-sale securities statement shows no prior year disclosure (stated as 'We had no available-for-sale debt securities as of December 28, 2024'). The current 1,020M may represent newly reported category or reclassification.
-[LLM_FLAG] All gross unrealized gains/losses are zero ($ —) with no credit or non-credit losses recorded
-[LLM_FLAG] The provided filing text is incomplete—it contains only a reference/cross-reference to market risk disclosures in the 10-K rather than the actual disclosures from the 10-Q filing. No substantive market risk data is available for extraction.
-
-=== 10-Q | Period ending 2025-06-28 | Processed 2026-06-02 ===
-[NUMERIC] total_cash_equivalents_fv: $327M → $14M (-95.7%) — exceeds 20% threshold
-[NUMERIC] total_marketable_securities_fv: $674M → $997M (+47.9%) — exceeds 20% threshold
-[NUMERIC] corporate_debt_securities_fv: $146M → $292M (+100.0%) — exceeds 20% threshold
-[LLM_FLAG] total_cash_equivalents_fv: 14 vs prior 327 = 95.6% decrease. Prior period included more liquid investments; current period shows minimal cash equivalents, with most investments in marketable securities (997 vs 674 in prior period, a 47.9% increase).
-[LLM_FLAG] total_marketable_securities_fv: 997 vs prior 674 = 47.9% increase. This is significant but does not exceed the 50% threshold. The company increased its investment position in available-for-sale debt securities (approximately $1.6 billion purchased for the six months ended June 28, 2025).
-[LLM_FLAG] Note: Available-for-sale securities disclosure is new to this period. Prior period shows 'We had no available-for-sale debt securities as of December 28, 2024.' This represents a significant change in investment strategy between the two periods.
-[LLM_FLAG] Filing excerpt is incomplete—only contains section header and reference to Form 10-K for year ended December 28, 2024. Actual quantitative and qualitative market risk disclosures not provided in supplied text.
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $327M → $14M (-95.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $674M → $997M (+47.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $146M → $292M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $224M → $304M (+35.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $235M → $490M (+108.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $224M → $304M (+35.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $235M → $490M (+108.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-11M → $-186M (-1590.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $15M → $-8M (-153.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv reflects only AFS securities within cash equivalents ($14M), not total cash balance.
+[HISTORICAL] [LLM_FLAG] No marketable equity securities; KHC holds only fixed-income AFS (corporate bonds, commercial paper, U.S. treasury).
+[HISTORICAL] [LLM_FLAG] Commercial paper fair value: $668M; U.S. treasury and agency: $51M.
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional combines FX contracts ($3,808M) and cross-currency contracts ($6,361M).
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci is a net loss of $8M from FX cash flow hedges; reported as -8 (negative = loss to be reclassified).
+[HISTORICAL] [LLM_FLAG] Cross-currency contract notional fell significantly from $7,449M (Dec 2024) to $6,361M (Jun 2025).
+[HISTORICAL] [LLM_FLAG] Item 3 is a boilerplate cross-reference disclosure: 'There have been no material changes to our market risk during the six months ended June 28, 2025. For additional information, refer to Item 7A...in our Annual Report on Form 10-K for the year ended December 28, 2024.'
+[HISTORICAL] [LLM_FLAG] All quantitative fields require the annual 10-K Item 7A or the financial instruments note, neither of which is reproduced in this section text.
+[HISTORICAL] [LLM_FLAG] No extractable numeric values are present in the supplied section text.
 
 === 10-Q | Period ending 2025-03-29 | Processed 2026-06-02 ===
 [NUMERIC] total_cash_equivalents_fv: $221M → $327M (+48.0%) — exceeds 20% threshold
@@ -50,7 +81,4 @@
 [LLM_FLAG] total_marketable_securities_fv decreased from 1,060.0 to 674.0 (36% decrease). This is a significant change. However, this is explained by the disclosure: 'We had no available-for-sale debt securities as of December 28, 2024' and newly shows 1,001 total available-for-sale securities (327 in cash equivalents + 674 in marketable securities). The prior period of 1,060 likely included different investment categories not present in Q1 2025.
 [LLM_FLAG] corporate_debt_securities_fv decreased from 456.0 to 146.0 (68% decrease). Prior period classification of corporate debt securities is not directly comparable as the filing states no available-for-sale debt securities existed as of December 28, 2024. The Q1 2025 figure represents only the corporate bonds portion of newly disclosed available-for-sale securities.
 [LLM_FLAG] Provided text is only a header/reference statement directing to Annual Report on Form 10-K for year ended December 28, 2024. No actual quantitative or qualitative market risk disclosure data is present in the provided excerpt. All derivative and market risk fields cannot be extracted.
-
-=== 10-Q | Period ending 2026-03-28 | Processed 2026-06-01 ===
-[LLM_FLAG] This section appears to be introductory text only. Detailed quantitative and qualitative disclosures about market risk are referenced as being in Note 2 and Note 13, which are not included in the provided filing text. Most specific data fields cannot be extracted from this introductory paragraph alone.
 

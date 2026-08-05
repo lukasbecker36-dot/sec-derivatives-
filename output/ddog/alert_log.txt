@@ -1,75 +1,56 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($194M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($194M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-3M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-3M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] marketable_securities_types: was $0M, now missing
-[DISAPPEARED_FIELD] convertible_notes_amount: was $1M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $0M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity: was $0M, now missing
-[DISAPPEARED_FIELD] hedging_status: was $300M, now missing
-[DISAPPEARED_FIELD] revenue_currency: was $4,100M, now missing
-[VALIDATION] Likely extraction failure: 7/9 previously-populated fields are now null (equity_sensitivity_10pct, marketable_securities_types, convertible_notes_amount, interest_rate_sensitivity, fx_sensitivity...)
-[LLM_FLAG] marketable_securities_amount increased significantly from prior period ($0 to $4300.0).
-[LLM_FLAG] Cash equivalents much higher than prior period ($0 to $389.3)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-16 ===
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $9M → $2M (-72.5%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($194M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($194M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($3M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($194M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($194M)
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-3M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] convertible_notes_amount: was $1M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/9 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, convertible_notes_amount)
+[HISTORICAL] [LLM_FLAG] This is the first period in which Datadog reports derivative financial instruments (FX forward contracts designated as cash flow hedges).
+[HISTORICAL] [LLM_FLAG] Values are in thousands in source filing; converted to millions in extracted fields.
+[HISTORICAL] [LLM_FLAG] Derivative asset value ($0.039M) is very small relative to the notional ($194.0M), indicating these contracts are mostly out-of-the-money at the reporting date.
+[HISTORICAL] [LLM_FLAG] This is the first period (Q1 2026) in which Datadog discloses any derivative financial instruments; all prior filings (through FY 2025) had no derivatives.
+[HISTORICAL] [LLM_FLAG] Fair value amounts (total_derivative_asset, total_derivative_liability) are not stated in Note 16 itself — the note cross-references Note 4 (Fair Value Measurements); these values are captured in the financial_instruments_extract result ($0.039M asset, $3.067M liability from Note 4).
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci of -3.0M indicates the hedges are currently in a net loss position in AOCI.
+[HISTORICAL] [LLM_FLAG] All FX forwards have maturities of 12 months or less, consistent with short-term operating expense hedging.
+[HISTORICAL] [LLM_FLAG] This is the first period in which Datadog has active FX hedging (forward contracts as cash flow hedges); key change from all prior periods where no derivatives were used.
+[HISTORICAL] [LLM_FLAG] fx_forwards_outstanding set to null because derivatives_note is populated for this filing; Note 16 discloses $194.0M notional.
+[HISTORICAL] [LLM_FLAG] Marketable securities amount stated as '$4.3 billion' in this section (rounded); precise figure from Note 3 is $4,332.3M.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] cash_equivalents_amount: appeared for first time ($300M)
-[NEW_FIELD] marketable_securities_amount: appeared for first time ($4,100M)
-[NEW_FIELD] convertible_notes_amount: appeared for first time ($1,000M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-16 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $507M → $343M (-32.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
+[HISTORICAL] [NUMERIC] cash_equivalents_amount: $507M → $342M (-32.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] convertible_notes_amount: appeared for first time ($1M)
+[HISTORICAL] [LLM_FLAG] Datadog holds no derivative instruments as of December 31, 2025 (fiscal year 2025); all derivative-related fields are null.
+[HISTORICAL] [LLM_FLAG] Values are in thousands in source filing; converted to millions in extracted fields.
+[HISTORICAL] [LLM_FLAG] Note: Datadog began hedging in Q1 2026; derivative instruments appear for the first time in the March 31, 2026 10-Q.
+[HISTORICAL] [LLM_FLAG] No derivatives or hedging arrangements in place for fiscal year 2025 (December 31, 2025).
+[HISTORICAL] [LLM_FLAG] The 2029 Notes ($1.0 billion) are convertible senior notes; fair value is affected by both interest rates and stock price.
+[HISTORICAL] [LLM_FLAG] Cash equivalents stated as '$0.3 billion' (approximate); precise figure from fair value table is $342.5M.
+[HISTORICAL] [LLM_FLAG] Operating locations changed from prior filings: United Kingdom no longer listed (now only US, France, Ireland).
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
-[DISAPPEARED_FIELD] marketable_securities_types: was $0M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $0M, now missing
-[DISAPPEARED_FIELD] hedging_status: was $300M, now missing
-[DISAPPEARED_FIELD] revenue_currency: was $4,100M, now missing
-[VALIDATION] Likely extraction failure: 4/8 previously-populated fields are now null (marketable_securities_types, interest_rate_sensitivity, hedging_status, revenue_currency)
-[LLM_FLAG] Marketable securities amount has changed significantly (from 0.0 to 4300.0 million) indicating a substantial investment strategy or cash reserve increase.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-16 ===
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $6M → $8M (+29.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Datadog holds no derivative instruments as of September 30, 2025; all derivative-related fields are null.
+[HISTORICAL] [LLM_FLAG] Values are in thousands in source filing; converted to millions in extracted fields.
+[HISTORICAL] [LLM_FLAG] No derivatives or hedging arrangements in place as of September 30, 2025.
+[HISTORICAL] [LLM_FLAG] Marketable securities amount stated as '$3.6 billion' in this section (rounded); precise figure from Note 3 is $3,599.7M.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
-[NEW_FIELD] cash_equivalents_amount: appeared for first time ($300M)
-[NEW_FIELD] marketable_securities_amount: appeared for first time ($4,100M)
-[NEW_FIELD] convertible_notes_amount: appeared for first time ($1,000M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[NUMERIC] cash_equivalents_amount: $1M → $0M (-23.2%) — exceeds 20% threshold
-[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (fx_forwards_outstanding)
-[LLM_FLAG] fx_forwards_outstanding: Notional amount of outstanding FX forward contracts is not disclosed in the provided text; prior period showed 0, but current filing indicates active hedging program without quantifying position size
-[LLM_FLAG] hedging_status: Changed from 'no hedging arrangements entered into' in prior period to active cash flow hedging program in current period. This is a material change in hedging policy.
-[LLM_FLAG] operating_locations: United Kingdom mentioned in prior period but not in current period text. Either operations ceased or disclosure narrowed to three primary locations.
-[LLM_FLAG] marketable_securities_amount: Increased from $3.6B to $4.3B (19.4% increase), which is plausible and within expected variation
-[LLM_FLAG] cash_equivalents_amount: Decreased from $0.5068B to $0.3893B (23.2% decrease), plausible working capital fluctuation
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
-[LLM_FLAG] cash_equivalents_amount increased 15% from $0.4395B to $0.5068B - within normal range
-[LLM_FLAG] marketable_securities_amount increased 5.9% from $3.4B to $3.6B - within normal range
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
-[NUMERIC] cash_equivalents_amount: $1M → $0M (-58.2%) — exceeds 20% threshold
-[LLM_FLAG] cash_equivalents_amount decreased from $1.0522 billion to $0.4395 billion (58% decrease) - significant reduction warrants investigation
-[LLM_FLAG] operating_locations now include United Kingdom explicitly, whereas prior period only noted 'primarily US, France, Ireland' - expansion noted
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-16 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,052M → $439M (-58.2%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
+[HISTORICAL] [NUMERIC] cash_equivalents_amount: $1,052M → $440M (-58.2%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] convertible_notes_amount: was $1M, now missing
+[HISTORICAL] [LLM_FLAG] Datadog holds no derivative instruments as of June 30, 2025; all derivative-related fields are null.
+[HISTORICAL] [LLM_FLAG] Values are in thousands in source filing; converted to millions in extracted fields.
+[HISTORICAL] [LLM_FLAG] No derivatives or hedging arrangements in place as of June 30, 2025.
+[HISTORICAL] [LLM_FLAG] Marketable securities amount stated as '$3.4 billion' in this section (approximate); precise figure from Note 3 is $3,421.9M.
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
 [NUMERIC] fixed_rate_notes_billion: $1M → $1M (-25.2%) — exceeds 20% threshold

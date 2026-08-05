@@ -1,44 +1,79 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[DISAPPEARED_FIELD] fx_designated_notional: was $1,600M, now missing
-[NUMERIC] total_derivative_asset: $80M → $129M (+61.9%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $80M → $129M (+61.9%) — exceeds 20% threshold
-[NUMERIC] cash_flow_hedge_aoci: $-7M → $57M (+947.8%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $30M → $43M (+44.1%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2M, now missing
-[LLM_FLAG] The notional amount of foreign currency derivatives is significantly higher than the prior period value of 1599.6, indicating increased hedging activity.
-[LLM_FLAG] The total derivative asset value has increased compared to the prior period, warranting attention for changes in hedging effectiveness.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-28 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($2,095M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($2,095M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $95M → $129M (+35.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-33M → $12M (+135.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $36M → $50M (+38.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $30M → $42M (+41.5%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-109M, now missing
+[HISTORICAL] [LLM_FLAG] Section text truncated — fair value balance sheet table for derivative assets/liabilities not present; fi_total_derivative_asset and fi_total_derivative_liability are null
+[HISTORICAL] [LLM_FLAG] Cross-currency interest rate swap notionals (JPY 54.1B, CHF 290M) are net investment hedges quoted in foreign currency; not included in fi_fx_derivatives_notional USD total
+[HISTORICAL] [LLM_FLAG] Not-designated FX forward notional disclosed as a quarterly range ($1.25B-$1.75B), not a period-end point-in-time figure
+[HISTORICAL] [LLM_FLAG] IR swap notional not explicitly disclosed; hedged LTD carrying amount $882.4M and cumulative FV adj $(114.1)M available as proxy context only
+[HISTORICAL] [LLM_FLAG] No cash/marketable securities fair value schedule in this section (derivatives-only note)
+[HISTORICAL] [LLM_FLAG] IR swap notional not explicitly stated; IR swap FV liability at March 31, 2026 = $114.1M
+[HISTORICAL] [LLM_FLAG] Not-designated FX forward notional stated as a range ($1.25B-$1.75B) rather than a point-in-time figure
+[HISTORICAL] [LLM_FLAG] Cross-currency interest rate swap notionals are net investment hedges (JPY 54.1B + CHF 290M) and excluded from FX designated total
+[HISTORICAL] [LLM_FLAG] Total asset derivatives sourced from gross balance sheet table in section_text ($129.0M); non-designated portion cut off but FV table shows $107.3M net designated asset, implying non-designated assets may add ~$22M
+[HISTORICAL] [LLM_FLAG] Net derivative position is positive (net asset) for the first time across the filings reviewed
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,600M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($1,600M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($290M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($80M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($80M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-7M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($30M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($2M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-28 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $1,961M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $1,961M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $47M → $95M (+103.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-88M → $-33M (+62.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $13M → $36M (+176.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $21M → $30M (+45.1%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-109M)
+[HISTORICAL] [LLM_FLAG] Section text is from 10-K MD&A market risk / credit risk discussion — qualitative prose only with no derivative notional or fair value tables
+[HISTORICAL] [LLM_FLAG] Filing references 'Note 14' for derivative/financial instrument details, but that note text is not supplied in section_text
+[HISTORICAL] [LLM_FLAG] All quantitative fields are null due to insufficient context in the supplied section; use the derivatives_note_extract result for quantitative data
+[HISTORICAL] [LLM_FLAG] Section includes auditor report text (PwC, PCAOB ID 238) suggesting the extracted window is wider than just the financial instruments note
+[HISTORICAL] [LLM_FLAG] IR swap notional not explicitly stated in section text; IR swap FV liability at Dec 31, 2025 = $112.4M
+[HISTORICAL] [LLM_FLAG] Not-designated FX forward notional stated as a range ($1.25B-$1.75B) rather than a point-in-time figure
+[HISTORICAL] [LLM_FLAG] Cross-currency interest rate swap notionals are net investment hedges (JPY 54.1B + CHF 290M) and excluded from FX designated total
+[HISTORICAL] [LLM_FLAG] Total derivative assets and liabilities sourced from the comparison column in the Q1 2026 10-Q fair value table, which shows Dec 31, 2025 values
+[HISTORICAL] [LLM_FLAG] FX sensitivity stated as a range (-$109M to +$107M); used the adverse-move (USD strengthening) figure of -$109M
+[HISTORICAL] [LLM_FLAG] IR sensitivity stated qualitatively only ('not material'); no dollar figure available
+[HISTORICAL] [LLM_FLAG] Fixed-rate debt composition mentioned but no total stated in market risk section; see debt note for breakdown
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $109M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-28 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $32M → $47M (+45.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $180M → $134M (-25.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-148M → $-88M (+40.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $3M → $13M (+371.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text truncated — fair value balance sheet table for derivative assets/liabilities not present; fi_total_derivative_asset and fi_total_derivative_liability are null
+[HISTORICAL] [LLM_FLAG] New disclosure this quarter: ZBH issued Swiss Franc notes in September 2025 and designated them as net investment hedges; cross-currency swap CHF notional increased from CHF 235M (Q2 2025) to CHF 290M (Q3 2025) following maturity of CHF 75M swap
+[HISTORICAL] [LLM_FLAG] Cross-currency interest rate swap notionals (JPY 54.1B, CHF 290M) are net investment hedges quoted in foreign currency; not included in fi_fx_derivatives_notional USD total
+[HISTORICAL] [LLM_FLAG] Not-designated FX forward notional disclosed as a quarterly range ($1.25B-$1.75B), not a period-end point-in-time figure
+[HISTORICAL] [LLM_FLAG] IR swap notional not explicitly disclosed; hedged LTD carrying amount $881.4M used as proxy context only
+[HISTORICAL] [LLM_FLAG] No cash/marketable securities fair value schedule in this section (derivatives-only note)
+[HISTORICAL] [LLM_FLAG] IR swap notional not explicitly stated; inferred from fair value hedge table (hedged long-term debt $881.4M)
+[HISTORICAL] [LLM_FLAG] Not-designated FX forward notional stated as a range ($1.25B-$1.75B) rather than a point-in-time figure
+[HISTORICAL] [LLM_FLAG] Cross-currency interest rate swap notionals are net investment hedges (JPY 54.1B + CHF 290M) and excluded from the FX designated total
+[HISTORICAL] [LLM_FLAG] Swiss Franc notes issued September 2025 also designated as net investment hedges
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($109M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-28 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $90M → $32M (-64.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-78M → $-148M (-89.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $39M → $3M (-92.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $56M → $23M (-59.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text truncated — fair value balance sheet table for derivative assets/liabilities not present; fi_total_derivative_asset and fi_total_derivative_liability are null
+[HISTORICAL] [LLM_FLAG] Cross-currency interest rate swap notionals (JPY 54.1B, CHF 235M) are net investment hedges quoted in foreign currency; not included in fi_fx_derivatives_notional USD total
+[HISTORICAL] [LLM_FLAG] Not-designated FX forward notional disclosed as a quarterly range ($1.25B-$1.75B), not a period-end point-in-time figure
+[HISTORICAL] [LLM_FLAG] IR swap notional not explicitly disclosed; hedged LTD carrying amount $875.2M used as proxy context only
+[HISTORICAL] [LLM_FLAG] No cash/marketable securities fair value schedule in this section (derivatives-only note)
+[HISTORICAL] [LLM_FLAG] IR swap notional not explicitly stated; inferred from fair value hedge table (hedged long-term debt $875.2M)
+[HISTORICAL] [LLM_FLAG] Not-designated FX forward notional stated as a range ($1.25B-$1.75B) rather than a point-in-time figure
+[HISTORICAL] [LLM_FLAG] Cross-currency interest rate swap notionals are net investment hedges (JPY 54.1B + CHF 235M) and excluded from the FX designated total
+[HISTORICAL] [LLM_FLAG] Section text truncated; gross derivative balance sheet table not fully visible in extract, but fair value table from locate windows used
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7mwRZyPxHTvH4CxzZD'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7mf6o4VLr1BXiaCecz'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7m88Txw6RyB3CSHsRY'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7kYFWgRM7rum45ARfi'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7kDSRfBbsrAkFU91yB'}
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-28 ===
+[HISTORICAL] [LLM_FLAG] Section text truncated — fair value balance sheet table for derivative assets/liabilities not present; fi_total_derivative_asset and fi_total_derivative_liability are null
+[HISTORICAL] [LLM_FLAG] Cross-currency interest rate swap notionals (JPY 54.1B, CHF 125M) are net investment hedges quoted in foreign currency; not included in fi_fx_derivatives_notional USD total
+[HISTORICAL] [LLM_FLAG] Not-designated FX forward notional disclosed as a quarterly range ($1.25B-$1.75B), not a period-end point-in-time figure
+[HISTORICAL] [LLM_FLAG] IR swap notional not explicitly disclosed; hedged LTD carrying amount $860.0M used as proxy context only
+[HISTORICAL] [LLM_FLAG] No cash/marketable securities fair value schedule in this section (derivatives-only note)
+[HISTORICAL] [LLM_FLAG] IR swap notional not explicitly stated; derived from fair value hedge table (hedged long-term debt $860.0M)
+[HISTORICAL] [LLM_FLAG] Not-designated FX forward notional stated as a range ($1.25B-$1.75B) rather than a point-in-time figure
+[HISTORICAL] [LLM_FLAG] Cross-currency interest rate swap notionals are in JPY and CHF (JPY 54.1 billion, CHF 125M) and are excluded from the FX designated total above as they are net investment hedges, not cash flow hedges

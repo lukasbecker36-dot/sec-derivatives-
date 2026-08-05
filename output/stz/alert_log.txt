@@ -26,40 +26,97 @@
 [LLM_FLAG] fx_sensitivity_10pct changed from 10.0 to -222.7 — prior value appears to be from a different definition or period. Current value of $222.7M adverse impact is consistent with $3.3B FX notional.
 [LLM_FLAG] commodity_sensitivity changed from 79.0 to -37.2 — 53% decrease in absolute terms; consistent with reduced commodity notional and current in-the-money position ($61.7M net asset vs prior net liability)
 
-=== 10-Q | Period ending 2025-11-30 | Processed 2026-05-26 ===
-[NUMERIC] commodity_fair_value: $-1M → $14M (+1275.0%) — exceeds 20% threshold
-[NUMERIC] commodity_sensitivity: $29M → $-28M (-196.6%) — exceeds 20% threshold
-[LLM_FLAG] FX forwards notional decreased 10.8% from $3,303.3M to $2,947.6M - within normal range
-[LLM_FLAG] Commodity notional decreased 9.9% from $337.9M to $304.0M - within normal range
-[LLM_FLAG] Fixed debt notional decreased 3.8% from $10,759.6M to $10,356.2M - within normal range
-[LLM_FLAG] Net investment hedge contracts newly disclosed at $145.5M (was $0 in prior period) - substantial new position
-[LLM_FLAG] Pre-issuance hedge contracts decreased to $0 from $75.0M - fully matured/expired
-[LLM_FLAG] Commodity hedge ratio increased from 82% to 85% - modest improvement
-[LLM_FLAG] FX transaction gains/losses and equity-related fields not disclosed in this section
+=== 10-K | Period ending 2026-02-28 | Processed 2026-06-25 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($2,603M)
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $271M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $26M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $2,652M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $296M, now missing
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($50M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $271M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $26M, now missing
+[HISTORICAL] [NUMERIC] net_derivative_position: $245M → $351M (+43.4%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $97M, now missing
+[HISTORICAL] [NUMERIC] foreign_currency_fair_value: $234M → $334M (+42.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_fair_value: $14M → $24M (+68.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] preissuance_hedge_notional: appeared for first time ($50M)
+[HISTORICAL] [NUMERIC] variable_debt_sensitivity: $2M → $3M (+21.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] This is the 10-K quantitative market risk sensitivity table for FY2026. Notionals: FX $2,603.1M (down from $3,221.8M prior year), commodity $335.5M, net investment hedge $145.5M (new line item vs. prior year).
+[HISTORICAL] [LLM_FLAG] Net investment hedge contracts now appear in the annual sensitivity table for the first time (notional $145.5M, net fair value -$6.7M).
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability are null because only net fair values appear here; gross figures in the derivatives note.
+[HISTORICAL] [LLM_FLAG] Commodity notional: $335.5M as of February 28, 2026 (vs. $322.1M prior year).
+[HISTORICAL] [LLM_FLAG] Section text is from MD&A/Item 7A market risk disclosure; it contains notional and net fair values but not the full derivative balance sheet split.
+[HISTORICAL] [LLM_FLAG] Pre-issuance hedge contracts ($50.0M notional) are classified under IR instruments; they are not traditional IR swaps.
+[HISTORICAL] [LLM_FLAG] fx_designated_notional and fx_not_designated_notional are null here because the MD&A presents combined FX notional; the split is available in Note 7.
+[HISTORICAL] [LLM_FLAG] Net investment hedge contracts ($145.5M notional, cross-currency swaps) not included in fx_derivatives_notional total.
+[HISTORICAL] [LLM_FLAG] hedge_ratios left null because multiple ratios disclosed (FX 73%, commodity 79%).
+[HISTORICAL] [LLM_FLAG] Net investment hedge contracts fair value $(6.7)M net liability.
+[HISTORICAL] [LLM_FLAG] Pre-issuance hedge contracts sensitivity: +$4.0M from 1% rate increase (separate from fixed debt sensitivity).
+[HISTORICAL] [LLM_FLAG] Commodity sensitivity sign is negative $(32.1)M on 10% adverse change — adverse move means commodity price drop for long hedges.
 
-=== 10-Q | Period ending 2025-08-31 | Processed 2026-05-26 ===
-[NUMERIC] foreign_currency_fair_value: $152M → $217M (+42.0%) — exceeds 20% threshold
-[NUMERIC] commodity_fair_value: $-18M → $-1M (+93.3%) — exceeds 20% threshold
-[NUMERIC] variable_debt_sensitivity: $2M → $2M (+25.0%) — exceeds 20% threshold
-[LLM_FLAG] fixed_debt_notional: decreased 7.2% from $11,161.8M to $10,357.3M - within normal range
-[LLM_FLAG] foreign_currency_fair_value: significant increase of 306% from $53.3M to $216.6M - suggests improved hedging position or FX rate movements favorable to company
-[LLM_FLAG] commodity_fair_value: improved 95% from $(23.9)M liability to $(1.2)M - substantial change but within context of normal commodity volatility
-[LLM_FLAG] net_investment_hedge_notional: new position of $145.5M in current period (was $0 prior period) - new hedging activity related to acquisitions or investments
-[LLM_FLAG] hedge_ratios: forecasted transactional FX exposures increased from 79% to 83%; forecasted commodity exposures increased from 73% to 82% - improved hedging coverage
+=== 10-Q | Period ending 2025-11-30 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $35M → $26M (-25.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $487M → $296M (-39.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $35M → $26M (-25.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $66M → $97M (+46.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_fair_value: $-1M → $14M (+1275.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_sensitivity: $29M → $-28M (-196.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section is the fair value hierarchy note (Note 6) for Q3 FY2026 10-Q. No notional amounts here; notionals in the derivatives note.
+[HISTORICAL] [LLM_FLAG] Net investment hedge contracts of $4.0M included in total derivative liabilities.
+[HISTORICAL] [LLM_FLAG] Prior period (February 28, 2025) also shown: FX asset $97.0M, commodity asset $9.6M, pre-issuance hedge asset $2.2M; FX liability $76.4M, commodity liability $12.8M.
+[HISTORICAL] [LLM_FLAG] Net investment hedge contracts ($145.5M notional, cross-currency swaps) are classified separately; not included in fx_derivatives_notional.
+[HISTORICAL] [LLM_FLAG] Interest rate swap contracts appear in undesignated activity table ($(0.1)M for Q3, $(0.3)M nine months) but no notional is disclosed — suggesting a small or recently established position.
+[HISTORICAL] [LLM_FLAG] total_derivative_asset and total_derivative_liability from Note 6 Fair Value recurring table.
+[HISTORICAL] [LLM_FLAG] variable_debt_sensitivity is for the nine-month period (Q1-Q3), not annualized.
+[HISTORICAL] [LLM_FLAG] hedge_ratios left null because multiple ratios disclosed (FX 83%, commodity 85%).
+[HISTORICAL] [LLM_FLAG] Net investment hedge contracts fair value $(4.0)M net liability per Note 6 recurring table.
+[HISTORICAL] [LLM_FLAG] Commodity sensitivity is negative $(28.1)M — adverse 10% change decreases commodity fair value, suggesting net long position in commodity contracts that benefit from price rises.
 
-=== 10-Q | Period ending 2025-05-31 | Processed 2026-05-26 ===
-[NUMERIC] foreign_currency_fair_value: $21M → $152M (+640.3%) — exceeds 20% threshold
-[NUMERIC] commodity_fair_value: $-3M → $-18M (-459.4%) — exceeds 20% threshold
-[NEW_FIELD] net_investment_hedge_notional: appeared for first time ($146M)
-[DROPPED_TO_ZERO] preissuance_hedge_notional: $275M → $0M
-[NUMERIC] variable_debt_sensitivity: $5M → $2M (-69.8%) — exceeds 20% threshold
-[LLM_FLAG] foreign_currency_notional: Increased 1.7% from $3,221.8M to $3,275.5M - within normal range
-[LLM_FLAG] foreign_currency_fair_value: Decreased 46.4% from $284.9M to $152.5M - significant change but plausible given market conditions
-[LLM_FLAG] net_investment_hedge_notional: New position of $145.5M (was $0M in prior period) - represents new hedging activity
-[LLM_FLAG] fixed_debt_notional: Increased 4.6% from $11,165.7M to $11,258.1M - within normal range
-[LLM_FLAG] preissuance_hedge_notional: Changed from $275.0M to $0M - all pre-issuance hedges appear to have been settled/completed
-[LLM_FLAG] variable_debt_sensitivity: Increased 77.8% from $0.9M to $1.6M - plausible due to higher interest rate environment
-[LLM_FLAG] hedge_ratios: FX forecasted exposures changed from 72% to 79%; commodity hedges changed from 63% to 73% - both increased
+=== 10-Q | Period ending 2025-08-31 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $179M → $245M (+36.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $48M → $35M (-27.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $396M → $487M (+23.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $179M → $245M (+36.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $48M → $35M (-27.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $132M → $210M (+59.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] foreign_currency_fair_value: $152M → $217M (+42.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_fair_value: $-18M → $-1M (+93.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] variable_debt_sensitivity: $2M → $2M (+25.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section is the fair value hierarchy note (Note 7) for Q2 FY2026 10-Q. No notional amounts here; notionals in the derivatives note.
+[HISTORICAL] [LLM_FLAG] Net investment hedge contracts of $5.6M included in total derivative liabilities.
+[HISTORICAL] [LLM_FLAG] Prior period (February 28, 2025) also shown: FX asset $97.0M, commodity asset $9.6M, pre-issuance hedge asset $2.2M; FX liability $76.4M, commodity liability $12.8M.
+[HISTORICAL] [LLM_FLAG] Net investment hedge contracts ($145.5M notional, cross-currency swaps) are classified separately; not included in fx_derivatives_notional.
+[HISTORICAL] [LLM_FLAG] Interest rate swap contracts appear in undesignated activity table ($(0.2)M reclassified) but no notional is disclosed for IR swaps specifically in this filing — suggesting minimal or hedged-only volume not captured in the notional table.
+[HISTORICAL] [LLM_FLAG] total_derivative_asset and total_derivative_liability from Note 7 Fair Value recurring table.
+[HISTORICAL] [LLM_FLAG] variable_debt_sensitivity is for the six-month period (H1), not annualized.
+[HISTORICAL] [LLM_FLAG] hedge_ratios left null because multiple ratios disclosed (FX 83%, commodity 82%).
+[HISTORICAL] [LLM_FLAG] Net investment hedge contracts fair value $(5.6)M net liability per Note 7 recurring table.
+
+=== 10-Q | Period ending 2025-05-31 | Processed 2026-06-25 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $3,222M, now missing
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($179M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($48M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($2,880M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($396M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $275M, now missing
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($179M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($48M)
+[HISTORICAL] [NUMERIC] net_derivative_position: $20M → $132M (+571.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($66M)
+[HISTORICAL] [NUMERIC] foreign_currency_fair_value: $21M → $152M (+640.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_fair_value: $-3M → $-18M (-459.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] net_investment_hedge_notional: appeared for first time ($146M)
+[HISTORICAL] [DISAPPEARED_FIELD] preissuance_hedge_notional: was $275M, now missing
+[HISTORICAL] [NUMERIC] variable_debt_sensitivity: $5M → $2M (-69.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section is the fair value hierarchy note (Note 6) for Q1 FY2026 10-Q. No notional amounts disclosed here; notionals appear in the derivatives note.
+[HISTORICAL] [LLM_FLAG] Net investment hedge contracts of $3.0M are included in total derivative liabilities.
+[HISTORICAL] [LLM_FLAG] Prior period (February 28, 2025) also shown in table: FX asset $97.0M, commodity asset $9.6M, pre-issuance hedge asset $2.2M; FX liability $76.4M, commodity liability $12.8M.
+[HISTORICAL] [LLM_FLAG] Net investment hedge contracts ($145.5M notional, cross-currency swaps entered April 2025) are classified as net investment hedges, not FX cash flow hedges; they are not included in fx_derivatives_notional per the designated FX line above.
+[HISTORICAL] [LLM_FLAG] ir_swap_notional is null because no IR swaps outstanding; only pre-issuance hedges existed and they are now $0 as of May 31, 2025.
+[HISTORICAL] [LLM_FLAG] total_derivative_asset and total_derivative_liability are from Note 6 Fair Value recurring table and include all derivative types.
+[HISTORICAL] [LLM_FLAG] variable_debt_sensitivity is for the three-month period (Q1), not annualized.
+[HISTORICAL] [LLM_FLAG] hedge_ratios left null because multiple ratios disclosed (FX 79%, commodity 73%); not a single value.
+[HISTORICAL] [LLM_FLAG] net_investment_hedge fair value: $(3.0)M net liability not shown in market risk table explicitly — the $(3.0)M is the fair value from the derivatives note.
 
 === 10-K | Period ending 2025-02-28 | Processed 2026-05-26 ===
 [NUMERIC] fx_forwards_outstanding: $2,603M → $3,222M (+23.8%) — exceeds 20% threshold

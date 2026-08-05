@@ -4,34 +4,57 @@
 [LLM_FLAG] fx_derivatives_notional changed from 4300.0 to 3900 (9% decrease) — within normal variation, from approximately $4.3B to approximately $3.9B
 [LLM_FLAG] cash_flow_hedge_aoci changed from 20.0 to 27 (35% increase) — driven by gains deferred during the period of $35M (nine months) net of reclassifications of $21M
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NUMERIC] expected_12mo_reclass_from_aoci: $4M → $6M (+50.0%) — exceeds 20% threshold
-[LLM_FLAG] fx_derivatives_notional increased from 4200.0 to 4300.0, which is a change of less than 50%.
-[LLM_FLAG] Cash flow hedge AOCI decreased from 21.0 to 20.0, which is a change of less than 50%.
-[LLM_FLAG] Expected reclass from AOCI increased from 4.0 to 6.0, which is greater than a 50% increase.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [LLM_FLAG] Derivative fair values not quantified in this period; text states they did not materially change since September 30, 2025 (year-end values: assets $33M, liabilities $23M per 10-K).
+[HISTORICAL] [LLM_FLAG] All FX derivatives are cash flow hedges; designated/non-designated split not disclosed.
+[HISTORICAL] [LLM_FLAG] Euro-denominated debt (net investment hedge) is a non-derivative hedging instrument — notional not included in fi_fx_derivatives_notional.
+[HISTORICAL] [LLM_FLAG] FX notional rounded to nearest $100M ($4.3 billion); no split between designated and not designated
+[HISTORICAL] [LLM_FLAG] Derivative fair values (asset/liability) not explicitly quantified in section text for Q2 FY2026; only stated to have not materially changed since September 30, 2025
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($4,200M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($21M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($4M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-17 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $33M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $23M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $33M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $23M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $10M, now missing
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($21M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/7 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability, total_derivative_asset, total_derivative_liability, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] Derivative fair values not quantified in this period; text states they did not materially change since September 30, 2025 (year-end values: assets $33M, liabilities $23M per 10-K).
+[HISTORICAL] [LLM_FLAG] All FX derivatives are cash flow hedges; designated/non-designated split not disclosed.
+[HISTORICAL] [LLM_FLAG] Euro-denominated debt (net investment hedge) is a non-derivative hedging instrument — notional not included in fi_fx_derivatives_notional.
+[HISTORICAL] [LLM_FLAG] Company repaid an additional EUR 500M of 1.25% euro notes that matured in October 2025, reducing net investment hedge notional.
+[HISTORICAL] [LLM_FLAG] FX notional rounded to nearest $100M ($4.2 billion); no split between designated and not designated
+[HISTORICAL] [LLM_FLAG] Derivative fair values (asset/liability) not explicitly quantified in section text for Q1 FY2026; only stated to have not materially changed since September 30, 2025
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-09-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $3,200M → $4,100M (+28.1%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($33M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($23M)
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $3,200M → $4,100M (+28.1%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($33M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($23M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($10M)
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $2M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (cash_flow_hedge_aoci)
+[HISTORICAL] [LLM_FLAG] 10-K filing; fair value table explicitly disclosed for balance sheet date (2025) and prior year (2024: assets $31M, liabilities $20M).
+[HISTORICAL] [LLM_FLAG] All FX derivatives are cash flow hedges; designated/non-designated notional split not disclosed.
+[HISTORICAL] [LLM_FLAG] Euro-denominated debt (net investment hedge) is a non-derivative hedging instrument — notional not included in fi_fx_derivatives_notional.
+[HISTORICAL] [LLM_FLAG] Commodity derivatives mentioned only in the P&L gains/losses table (fiscal 2023 activity only; no commodity positions as of September 30, 2025).
+[HISTORICAL] [LLM_FLAG] FX notional rounded to nearest $100M ($4.1 billion); no split between designated and not designated
+[HISTORICAL] [LLM_FLAG] Derivative asset/liability values are for foreign currency contracts only; full fair value table present for 2024 and 2025
+[HISTORICAL] [LLM_FLAG] Commodity derivatives were used in 2023 (non-zero) but appear zero/absent in 2024 and 2025
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYwjn2YFgX8biS6Un4S'}
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $3M → $2M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Derivative fair values not quantified in this period; text states they did not materially change since September 30, 2024.
+[HISTORICAL] [LLM_FLAG] All FX derivatives are cash flow hedges; designated/non-designated split not disclosed.
+[HISTORICAL] [LLM_FLAG] Euro-denominated debt (net investment hedge) is a non-derivative hedging instrument — notional not included in fi_fx_derivatives_notional.
+[HISTORICAL] [LLM_FLAG] FX notional rounded to nearest $100M ($3.2 billion); no split between designated and not designated
+[HISTORICAL] [LLM_FLAG] Derivative fair values (asset/liability) not explicitly quantified in section text for Q3 2025; only stated to have not materially changed since September 30, 2024
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYwXf24xrLuobvz3MZF'}
-
-=== 10-K | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYwJW12c2wnVTsJitBP'}
-
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-05-30 ===
-[LLM_FLAG] Provided text is only a cross-reference to the 10-K filing, not actual market risk disclosures. All market risk metrics cannot be extracted from this excerpt.
-[LLM_FLAG] Period mismatch: Filing is dated 2025-12-31 (10-Q) but references fiscal year ended September 30, 2025 (10-K).
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
-[LLM_FLAG] The provided filing text is only a cross-reference section. Actual derivative, foreign exchange, interest rate, and equity market risk quantitative disclosures are located in Item 7 'Financial Instruments' which was not provided for extraction.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [LLM_FLAG] Derivative fair values not quantified in this period; text states they did not materially change since September 30, 2024.
+[HISTORICAL] [LLM_FLAG] All FX derivatives are cash flow hedges; designated/non-designated split not disclosed.
+[HISTORICAL] [LLM_FLAG] Euro-denominated debt (net investment hedge) is a non-derivative hedging instrument — notional not included in fi_fx_derivatives_notional.
+[HISTORICAL] [LLM_FLAG] FX notional rounded to nearest $100M ($3.8 billion); no split between designated and not designated
+[HISTORICAL] [LLM_FLAG] Derivative fair values (asset/liability) not explicitly quantified in section text for Q2 2025; only stated to have not materially changed since September 30, 2024

@@ -1,21 +1,3 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($28M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NUMERIC] variable_rate_debt_outstanding: $26M → $2,800M (+10669.2%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fixed_rate_debt_maturity_profile: was $11M, now missing
-[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (equity_sensitivity_10pct, fixed_rate_debt_maturity_profile)
-[VALIDATION] Likely units mismatch: variable_rate_debt_outstanding changed from 26 to 2,800 (108x)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $100M → $26M (-74.0%) — exceeds 20% threshold
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($11M)
-[NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($11,157M)
-[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($2,553M)
-[NEW_FIELD] total_debt_fair_value: appeared for first time ($10,945M)
-[LLM_FLAG] ir_sensitivity_100bp changed from 100.0 to 26.0, which is a decrease of more than 50%. Updated methodology may reflect changing interest rates impacting debt servicing costs.
-
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($28M)
@@ -25,21 +7,29 @@
 [VALIDATION] Likely units mismatch: variable_rate_debt_outstanding changed from 26 to 2,800 (108x)
 [LLM_FLAG] Variable rate debt outstanding matches prior period value and is plausible, but monitor for significant changes in future filings.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $100M → $26M (-74.0%) — exceeds 20% threshold
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($11M)
-[NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($11,157M)
-[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($2,546M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-25 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $36M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $51M, now missing
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $19M → $26M (+36.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($11M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($11,157M)
+[HISTORICAL] [NUMERIC] variable_rate_debt_outstanding: $1,941M → $2,553M (+31.5%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_debt_fair_value: appeared for first time ($13,491M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] This is the 10-K with a full debt maturity table; RSG had no active fuel hedges, commodity hedges, or FX derivatives; the 2022 interest rate swap and terminated interest rate locks are referenced only in past tense in the AOCI note — no active IR swaps as of year-end 2025
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NUMERIC] ir_sensitivity_100bp: $19M → $26M (+36.8%) — exceeds 20% threshold
-[NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($11,157M)
-[NUMERIC] variable_rate_debt_outstanding: $1,941M → $2,553M (+31.5%) — exceeds 20% threshold
-[LLM_FLAG] Variable rate debt increased significantly from $1,941M (Q3 2025) to $2,553M (FY 2025), a 31.5% increase
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-25 ===
+[HISTORICAL] [LLM_FLAG] Notional amounts for derivatives are not disclosed in this section; they may appear in a separate derivatives note.
+[HISTORICAL] [LLM_FLAG] Money market mutual funds and bonds are grouped with restricted cash, not separated into a pure cash-equivalents or marketable-securities bucket.
+[HISTORICAL] [LLM_FLAG] RSG has no active fuel hedges, commodity hedges, or FX derivatives as of Q3 2025; floating rate debt increased from $1,674M (Q2) to $1,941M (Q3 2025)
 
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($20M)
-[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($2,022M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $47M → $36M (-23.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for derivatives are not disclosed in this section; they may appear in a separate derivatives note.
+[HISTORICAL] [LLM_FLAG] Money market mutual funds and bonds are grouped with restricted cash, not separated into a pure cash-equivalents or marketable-securities bucket.
+[HISTORICAL] [LLM_FLAG] RSG has no active fuel hedges, commodity hedges, or FX derivatives as of this period; floating rate debt decreased from $2,022M (Q1 2025) to $1,674M (Q2 2025)
 
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-25 ===
+[HISTORICAL] [LLM_FLAG] Notional amounts for derivatives are not disclosed in this section; they may appear in a separate derivatives note.
+[HISTORICAL] [LLM_FLAG] Money market mutual funds and bonds are grouped with restricted cash, not separated into a pure cash-equivalents or marketable-securities bucket.
+[HISTORICAL] [LLM_FLAG] RSG has no active fuel hedges, commodity hedges, or FX derivatives as of this period; interest rate risk is the only active market risk with quantified sensitivity

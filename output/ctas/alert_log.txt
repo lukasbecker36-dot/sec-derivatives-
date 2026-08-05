@@ -9,11 +9,53 @@
 [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($0M)
 [LLM_FLAG] ir_sensitivity_100bp is extrapolated: the disclosure states 50bp = $0.4M, so 100bp is estimated at $0.8M assuming linearity. The original disclosure uses 50bp, not 100bp.
 
-=== 10-Q | Period ending 2025-08-31 | Processed 2026-05-26 ===
-[LLM_FLAG] Foreign currency exposure details incomplete in excerpt - prior period stated 'less than 10% of revenue and operating income' but current period excerpt does not provide this quantification
+=== 10-Q | Period ending 2026-02-28 | Processed 2026-06-15 ===
+[HISTORICAL] [LLM_FLAG] Figures reported in thousands — converted to millions
+[HISTORICAL] [LLM_FLAG] Interest rate lock agreements are the only derivative instrument disclosed; notional amount is not provided, only fair value
+[HISTORICAL] [LLM_FLAG] No FX derivatives, marketable securities, or derivative liabilities disclosed in this section
+[HISTORICAL] [LLM_FLAG] All derivatives are interest rate lock agreements (cash flow hedges); no FX or commodity derivatives disclosed.
+[HISTORICAL] [LLM_FLAG] Derivative asset values are in thousands in the filing — converted to millions here.
+[HISTORICAL] [LLM_FLAG] Section text is a brief cross-reference to the 10-K market risk disclosures with no quantitative values; all fields are null.
 
-=== 10-Q | Period ending 2025-02-28 | Processed 2026-05-26 ===
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (interest_rate_sensitivity)
-[LLM_FLAG] This appears to be an introductory excerpt from the Quantitative and Qualitative Disclosures About Market Risk section rather than complete disclosure. The text references deferral to the 10-K filing and does not contain detailed quantitative sensitivity analysis that would typically be expected in a 10-Q market risk section.
+=== 10-Q | Period ending 2025-11-30 | Processed 2026-06-15 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $138M → $201M (+45.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Figures reported in thousands — converted to millions
+[HISTORICAL] [LLM_FLAG] Interest rate lock agreements are the only derivative instrument disclosed; notional amount is not provided, only fair value
+[HISTORICAL] [LLM_FLAG] No FX derivatives, marketable securities, or derivative liabilities disclosed in this section
+[HISTORICAL] [LLM_FLAG] Cintas' 'interest rate locks' are forward-starting rate locks on forecasted debt issuances, functioning as cash flow hedges.
+[HISTORICAL] [LLM_FLAG] Fair value confirmed by both the derivatives note individual lock values and the Fair Value Measurements table.
+[HISTORICAL] [LLM_FLAG] No FX derivatives despite ongoing FX exposure.
+[HISTORICAL] [LLM_FLAG] Section text is a brief cross-reference to the 10-K market risk disclosures with no quantitative values; all fields are null.
 
+=== 10-Q | Period ending 2025-08-31 | Processed 2026-06-15 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $264M → $138M (-47.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $0M, now missing
+[HISTORICAL] [LLM_FLAG] Figures reported in thousands — converted to millions
+[HISTORICAL] [LLM_FLAG] Interest rate lock agreements are the only derivative instrument disclosed; notional amount is not provided, only fair value
+[HISTORICAL] [LLM_FLAG] No FX derivatives, marketable securities, or derivative liabilities disclosed in this section
+[HISTORICAL] [LLM_FLAG] Cintas' 'interest rate locks' are forward-starting rate locks on forecasted debt issuances, functioning as cash flow hedges but structurally different from traditional IR swaps.
+[HISTORICAL] [LLM_FLAG] Fair value confirmed by both the AOCI table entries and the Fair Value Measurements note.
+[HISTORICAL] [LLM_FLAG] No FX derivatives despite ongoing FX exposure; Cintas accepts FX translation risk without hedging.
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section is abbreviated, cross-referencing the annual 10-K (fiscal year ended May 31, 2025) for full quantitative disclosures.
+[HISTORICAL] [LLM_FLAG] All quantitative market risk fields are null as the 10-Q provides only qualitative discussion.
+
+=== 10-K | Period ending 2025-05-31 | Processed 2026-06-15 ===
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($0M)
+[HISTORICAL] [LLM_FLAG] Figures reported in thousands — converted to millions
+[HISTORICAL] [LLM_FLAG] Interest rate lock agreements are the only derivative instrument disclosed; notional amount is not provided, only fair value
+[HISTORICAL] [LLM_FLAG] No FX derivatives, marketable securities, or derivative liabilities disclosed in this section
+[HISTORICAL] [LLM_FLAG] Cintas' 'interest rate locks' are forward-starting rate locks on forecasted debt issuances, not traditional interest rate swaps — they function as cash flow hedges but are structurally different.
+[HISTORICAL] [LLM_FLAG] Fair value of IR locks shown in thousands in the filing ($61,230 and $41,320); converted to millions here.
+[HISTORICAL] [LLM_FLAG] No FX derivatives despite FX exposure disclosure in Item 7A — Cintas accepts FX translation risk without hedging.
+[HISTORICAL] [LLM_FLAG] Interest rate sensitivity of $0.3M is for a 50bp move, not 100bp — field ir_sensitivity_100bp left null.
+[HISTORICAL] [LLM_FLAG] Cintas does not quantify FX sensitivity beyond stating foreign revenue/income is <10% of consolidated totals.
+[HISTORICAL] [LLM_FLAG] No marketable securities held for equity price risk purposes.
+
+=== 10-Q | Period ending 2025-02-28 | Processed 2026-06-15 ===
+[HISTORICAL] [LLM_FLAG] Figures reported in thousands — converted to millions
+[HISTORICAL] [LLM_FLAG] Interest rate lock agreements are the only derivative instrument disclosed; notional amount is not provided, only fair value
+[HISTORICAL] [LLM_FLAG] No FX derivatives, marketable securities, or derivative liabilities disclosed in this section
+[HISTORICAL] [LLM_FLAG] All derivatives are interest rate lock agreements (cash flow hedges); no FX or commodity derivatives disclosed.
+[HISTORICAL] [LLM_FLAG] Derivative asset values are in thousands in the filing — converted to millions here.
+[HISTORICAL] [LLM_FLAG] Minor rounding: sum of individual lock fair values ($95,394k) vs. Note 4 table total ($95,395k) — used $95.395M from the Note 4 table for total_derivative_asset and net position.
+[HISTORICAL] [LLM_FLAG] Section text is a brief cross-reference to the 10-K market risk disclosures with no quantitative values; all fields are null.

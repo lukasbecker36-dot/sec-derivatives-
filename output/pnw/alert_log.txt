@@ -5,48 +5,65 @@
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $542M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $8M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $37M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-26M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct)
-[LLM_FLAG] extraction_failed: Expecting property name enclosed in double quotes: line 44 column 19 (char 1314)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-24 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $19M → $15M (-22.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $45M → $73M (+62.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-26M → $-58M (-126.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $9M, now missing
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional reported in physical volume units only (GWh and Bcf), not in dollar millions.
+[HISTORICAL] [LLM_FLAG] Net position is a significant net liability ($58.2M) at March 31, 2026, a material increase from December 31, 2025 ($25.7M net liability).
+[HISTORICAL] [LLM_FLAG] All energy derivative gains/losses flow through regulatory assets/liabilities (PSA mechanism), not income.
+[HISTORICAL] [LLM_FLAG] Equity-linked transactions excluded from derivative disclosures per scope exception.
+[HISTORICAL] [LLM_FLAG] Aggregate fair value of derivative instruments in net liability position: $69,364k with $30,038k additional collateral if credit downgraded.
+[HISTORICAL] [LLM_FLAG] PNW is a US domestic utility with no FX exposure disclosed
+[HISTORICAL] [LLM_FLAG] Interest rate risk discussed qualitatively only — no 100bp sensitivity dollar figure given
+[HISTORICAL] [LLM_FLAG] Commodity price sensitivity (10% move) disclosed for energy derivatives only, not an FX or equity metric — not mapped to schema fields
+[HISTORICAL] [LLM_FLAG] Nuclear decommissioning trust and benefit plan equity risk mentioned qualitatively; no dollar value disclosed in this section
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($542M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($8M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($37M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-26M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] Total derivative asset increased from the prior period.
-[LLM_FLAG] Total derivative liability decreased from the prior period.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-24 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $34M → $19M (-42.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-11M → $-26M (-132.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($9M)
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional reported in physical volume units only (GWh and Bcf), not in dollar millions.
+[HISTORICAL] [LLM_FLAG] Net position is a net liability ($25.7M) at December 31, 2025.
+[HISTORICAL] [LLM_FLAG] All energy derivative gains/losses flow through regulatory assets/liabilities (PSA mechanism), not income.
+[HISTORICAL] [LLM_FLAG] Equity-linked transactions excluded from derivative disclosures per scope exception.
+[HISTORICAL] [LLM_FLAG] 10-K filing — note reference is Note 13 for Derivative Accounting.
+[HISTORICAL] [LLM_FLAG] PNW is a US domestic utility with no FX exposure disclosed
+[HISTORICAL] [LLM_FLAG] IR sensitivity disclosed only qualitatively (10% variable rate increase = not material); no 100bp dollar figure available
+[HISTORICAL] [LLM_FLAG] fixed_rate_notes_billion derived from Pinnacle West Consolidated debt maturity table; APS subsidiary fixed-rate debt is $8,030M — parent figure used as primary
+[HISTORICAL] [LLM_FLAG] Commodity price sensitivity (10% move on energy derivatives) disclosed but not mapped to FX/equity schema fields
+[HISTORICAL] [LLM_FLAG] Nuclear decommissioning trust and benefit plan equity risk mentioned qualitatively; no dollar value disclosed in this section
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] total_derivative_asset: appeared for first time ($854M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($62M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($792M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-24 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $56M → $34M (-40.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $17M → $-11M (-163.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional reported in physical volume units only (GWh and Bcf), not in dollar millions.
+[HISTORICAL] [LLM_FLAG] Net position is a net liability ($11.1M) at September 30, 2025, reversing from prior periods.
+[HISTORICAL] [LLM_FLAG] All energy derivative gains/losses flow through regulatory assets/liabilities (PSA mechanism), not income.
+[HISTORICAL] [LLM_FLAG] Equity-linked transactions excluded from derivative disclosures per scope exception.
+[HISTORICAL] [LLM_FLAG] PNW is a US domestic utility with no FX exposure disclosed
+[HISTORICAL] [LLM_FLAG] Interest rate risk discussed qualitatively only — no 100bp sensitivity dollar figure given
+[HISTORICAL] [LLM_FLAG] Commodity price sensitivity (10% move) disclosed for energy derivatives only, not an FX or equity metric — not mapped to schema fields
+[HISTORICAL] [LLM_FLAG] Nuclear decommissioning trust and benefit plan equity risk mentioned qualitatively; no dollar value disclosed in this section
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-24 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $111M → $56M (-49.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $26M → $39M (+51.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $86M → $17M (-79.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional reported in physical volume units only (GWh and Bcf), not in dollar millions.
+[HISTORICAL] [LLM_FLAG] All energy derivative gains/losses flow through regulatory assets/liabilities (PSA mechanism), not income.
+[HISTORICAL] [LLM_FLAG] Equity-linked transactions excluded from derivative disclosures per scope exception.
+[HISTORICAL] [LLM_FLAG] PNW is a US domestic utility with no FX exposure disclosed
+[HISTORICAL] [LLM_FLAG] Interest rate risk discussed qualitatively only — no 100bp sensitivity dollar figure given
+[HISTORICAL] [LLM_FLAG] Commodity price sensitivity (10% move) disclosed for energy derivatives only, not an FX or equity metric — not mapped to schema fields
+[HISTORICAL] [LLM_FLAG] Nuclear decommissioning trust and benefit plan equity risk mentioned qualitatively; no dollar value disclosed in this section
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($68M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($96,299M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($9M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($65M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($7M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-24 ===
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional reported in physical volume units only (GWh and Bcf), not in dollar millions — cannot populate commodity_derivatives_notional in dollars.
+[HISTORICAL] [LLM_FLAG] All energy derivative gains/losses flow through regulatory assets/liabilities (PSA mechanism), not income — this is a regulated utility accounting treatment.
+[HISTORICAL] [LLM_FLAG] Equity-linked transactions (ATM forward sale agreements, convertible notes) excluded from derivative disclosures per scope exception.
+[HISTORICAL] [LLM_FLAG] PNW is a US domestic utility with no FX exposure disclosed
+[HISTORICAL] [LLM_FLAG] Interest rate risk discussed qualitatively only — no 100bp sensitivity dollar figure given
+[HISTORICAL] [LLM_FLAG] Commodity price sensitivity (10% move) disclosed for energy derivatives only, not an FX or equity metric — not mapped to schema fields
+[HISTORICAL] [LLM_FLAG] Nuclear decommissioning trust and benefit plan equity risk mentioned qualitatively; no dollar value disclosed in this section

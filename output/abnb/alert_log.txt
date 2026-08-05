@@ -1,38 +1,80 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($1,700M)
-[NUMERIC] total_derivative_liability: $23M → $16M (-30.4%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $18M → $42M (+133.3%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $31M → $15M (-51.6%) — exceeds 20% threshold
-[NUMERIC] ir_sensitivity_100bp: $100M → $1,700M (+1600.0%) — exceeds 20% threshold
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-11 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,063M → $1,367M (+28.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $20M → $97M (+385.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $68M → $43M (-36.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($1,700M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $20M → $97M (+385.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $68M → $43M (-36.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-50M → $62M (+224.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-59M → $14M (+123.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-63M → $-7M (+88.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $30M → $17M (-43.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $38M, now missing
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity: was $38M, now missing
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity: $30M → $17M (-43.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Airbnb issued $2.5 billion of unsecured senior notes in March 2026 — its first major straight-debt raise; fair value disclosed at $2.5bn (Level 2). Short-term investments rose to $3,836m from $3,322m at year-end, consistent with deployment of proceeds.
+[HISTORICAL] [LLM_FLAG] FX hedge book swung back to a net asset position: derivative assets $97m vs liabilities $43m (net +$54m) at Mar 31, 2026, from net -$48m at Dec 31, 2025.
+[HISTORICAL] [LLM_FLAG] Notional amounts and designated/non-designated split are not in this fair value section; Airbnb discloses those in its derivatives note.
+[HISTORICAL] [LLM_FLAG] New interest rate hedging programme: in March 2026 Airbnb issued $2.5bn of senior notes and entered ~$1.7bn of receive-fixed/pay-SOFR interest rate swaps, designated as fair value hedges under the shortcut method, converting the 4.65% 2031 notes ($850m) and $800m of the 5.25% 2036 notes to floating
+[HISTORICAL] [LLM_FLAG] FX derivative book grew to $6.5bn total notional ($3.3bn designated, $3.2bn non-designated) from $5.8bn at year-end 2025
+[HISTORICAL] [LLM_FLAG] Cash flow hedge AOCI swung from -$59m (Dec 2025) to +$14m (Mar 2026) on a +$58m Q1 OCI gain; $15m of realized losses reclassified to revenue in Q1 2026
+[HISTORICAL] [LLM_FLAG] New interest rate risk disclosure supplements the 2025 10-K: $2.5bn senior notes issued, ~$1.7bn swapped to floating via interest rate swaps, creating $17m annualized interest expense sensitivity per 100bp move
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp value is an annualized interest expense change (floating-rate exposure), not a fair value change
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] net_derivative_position: $8M → $18M (+125.0%) — exceeds 20% threshold
-[DROPPED_TO_ZERO] cash_flow_hedge_aoci: $30M → $0M
-[NUMERIC] expected_12mo_reclass_from_aoci: $42M → $31M (-26.2%) — exceeds 20% threshold
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-11 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,954M → $1,063M (-45.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $8M → $20M (+150.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $90M → $68M (-24.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $3,900M → $5,800M (+48.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $1,300M → $2,700M (+107.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $8M → $20M (+150.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $90M → $68M (-24.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-81M → $-50M (+38.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-77M → $-59M (+23.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($30M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($38M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity: appeared for first time ($38M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($30M)
+[HISTORICAL] [LLM_FLAG] Year-on-year reversal in Airbnb's FX hedge book: at Dec 31, 2025 derivative liabilities $68m vs assets $20m (net -$48m), compared with assets $120m vs liabilities $20m (net +$100m) at Dec 31, 2024 — a roughly $150m mark-to-market swing over the year, consistent with dollar weakness against hedged currencies.
+[HISTORICAL] [LLM_FLAG] Cash equivalents at fair value fell to $1,063m from $1,822m at Dec 31, 2024, with money market funds down from $1,635m to $901m.
+[HISTORICAL] [LLM_FLAG] Notional amounts and designated/non-designated split are not in this fair value section; Airbnb discloses those in its derivatives note.
+[HISTORICAL] [LLM_FLAG] Level 3 corporate debt securities ($4m at Dec 31, 2024 in prior filings) no longer appear; the Dec 31, 2024 comparative in this 10-K shows Level 3 total of zero.
+[HISTORICAL] [LLM_FLAG] Total FX derivative notional grew from $4.6bn (Dec 2024) to $5.8bn (Dec 2025), with designated cash flow hedges up to $3.1bn and non-designated up to $2.7bn
+[HISTORICAL] [LLM_FLAG] Full-year 2025 OCI loss of $203m on cash flow hedges and $64m of realized losses reclassified from AOCI to revenue (immaterial in 2023/2024); AOCI flipped from +$80m to -$59m
+[HISTORICAL] [LLM_FLAG] 10-K notes the FX cash flow hedging programme was initiated in Q1 2023
+[HISTORICAL] [LLM_FLAG] Item 7A discloses qualitative FX hedging programme and sensitivities only; derivative fair values and notionals are in the derivatives note, not this section
+[HISTORICAL] [LLM_FLAG] Company explicitly states it does not use derivatives to manage interest rate risk
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] net_derivative_position: $24M → $8M (-66.7%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $30M → $42M (+40.0%) — exceeds 20% threshold
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-11 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $25M → $8M (-68.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $158M → $90M (-43.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $1,900M → $1,300M (-31.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $25M → $8M (-68.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $158M → $90M (-43.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-133M → $-81M (+39.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-123M → $-77M (+37.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-104M → $-76M (+26.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Airbnb's FX hedge book remains deep in negative territory: derivative liabilities $90m vs assets $8m at Sep 30, 2025 (net -$82m), though the position improved from net -$133m at June 30 (assets $25m vs liabilities $158m).
+[HISTORICAL] [LLM_FLAG] Notional amounts and designated/non-designated split are not in this fair value section; Airbnb discloses those in its derivatives note.
+[HISTORICAL] [LLM_FLAG] Funds held on behalf of customers (money market funds) of $2,485m, down from the Q2 seasonal peak of $3,399m.
+[HISTORICAL] [LLM_FLAG] Cash flow hedge position improved in Q3 2025 versus Q2 (+$4m OCI gain in Q3 vs -$141m in Q2), but still -$198m for nine months; AOCI remains negative at -$77m with $76m of deferred losses expected to be reclassified to revenue over next 12 months
+[HISTORICAL] [LLM_FLAG] Realized losses of $42m (Q3) / $41m (9M 2025) on designated hedges reclassified from AOCI to revenue, versus immaterial amounts in 2024
+[HISTORICAL] [LLM_FLAG] Non-designated FX notional cut from $2.1bn (Dec 2024) to $1.3bn (Sep 2025)
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-11 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $39M → $158M (+305.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $39M → $158M (+305.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-11M → $-133M (-1109.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $7M → $-123M (-1857.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $16M → $-104M (-750.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Sharp swing in Airbnb's FX hedge book: derivative liabilities jumped to $158m at June 30, 2025 (from $20m at Dec 31, 2024 and $39m at Mar 31) while derivative assets fell from $120m to $25m — a net mark-to-market swing of roughly $230m against the hedge book in six months, consistent with sustained dollar weakness against hedged currencies.
+[HISTORICAL] [LLM_FLAG] Notional amounts and designated/non-designated split are not in this fair value section; Airbnb discloses those in its derivatives note.
+[HISTORICAL] [LLM_FLAG] Funds held on behalf of customers (money market funds) rose to $3,399m from $1,340m at year-end 2024.
+[HISTORICAL] [LLM_FLAG] Sharp deterioration in cash flow hedge position: designated FX derivatives moved from $97m net asset (Dec 2024) to $148m gross liability (Jun 2025); -$141m OCI hit in Q2 and -$202m for H1 2025; AOCI flipped from +$80m to -$123m with $104m of deferred losses expected to hit revenue over next 12 months
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($17M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
-[NEW_FIELD] notional_hedging_instruments: appeared for first time ($1,700M)
-[NEW_FIELD] notional_non_hedging_instruments: appeared for first time ($0M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($17M)
-[LLM_FLAG] has_derivatives changed from 'No mention' to 'Yes' - this is a significant disclosure change indicating the company now explicitly reports derivative usage
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[LLM_FLAG] Provided text appears to be only a header/reference statement directing to 2024 Annual Report rather than substantive disclosure content. No actual quantitative or qualitative market risk data is included.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
-[LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKgErvGoWGCYRwJLguz'}
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-11 ===
+[HISTORICAL] [LLM_FLAG] FX derivative assets dropped sharply quarter-on-quarter, from $120m (114 current + 6 noncurrent) at Dec 31, 2024 to $28m at Mar 31, 2025, while FX derivative liabilities roughly doubled to $39m — suggests dollar weakening moved Airbnb's FX hedge book against it.
+[HISTORICAL] [LLM_FLAG] Notional amounts and designated/non-designated split are not in this fair value section; Airbnb discloses those in its derivatives note.
+[HISTORICAL] [LLM_FLAG] Funds held on behalf of customers (money market funds) doubled to $2,687m, reflecting seasonal booking build.
+[HISTORICAL] [LLM_FLAG] Designated FX cash flow hedges swung from a $97m net asset position at Dec 31, 2024 to a $31m liability / $21m asset at Mar 31, 2025; OCI impact of -$61m in Q1 2025 vs +$50m in Q1 2024, with cumulative AOCI gains falling from $80m to $7m

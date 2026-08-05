@@ -1,30 +1,27 @@
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-23 ===
+[HISTORICAL] [NUMERIC] commodity_derivatives_fair_value: $264M → $24M (-90.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] commodity_derivatives_liabilities_fair_value: $68M → $49M (-27.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Extreme mark-to-market derivative losses: total $(3,112)M in Q1 2026 vs $(194)M in Q1 2025 — primarily $(2,967)M loss in Sales and other operating revenues. Company attributes spike to heightened commodity price volatility from ongoing Middle East conflict.
+[HISTORICAL] [LLM_FLAG] $870M margin calls under master netting arrangements outstanding at March 31, 2026, up from approximately $0 at December 31, 2025.
+[HISTORICAL] [LLM_FLAG] Net short commodity derivative position grew from ~29M barrels of oil-equivalent at Dec 31, 2025 to ~40M BOE at March 31, 2026.
+[HISTORICAL] [LLM_FLAG] Gross notional positions collapsed sharply: derivative assets (not designated) fell from $2,525M (Dec 31, 2025) to $697M (Mar 31, 2026); liabilities fell from $2,339M to $722M — suggesting significant position unwind or mark-down between periods.
+[HISTORICAL] [LLM_FLAG] Before-tax deferred losses in AOCL of $153M related to outstanding crude oil price hedging contracts, all expected to reclassify into earnings within the next 12 months.
+[HISTORICAL] [LLM_FLAG] Cash flow hedge accounting applied on a limited basis to crude oil price risk; AOCL reclassification to Sales and other operating revenues was a gain of $10M in Q1 2026 vs a loss of $17M in Q1 2025.
+[HISTORICAL] [LLM_FLAG] Market risk section cross-references 2025 10-K Item 7A; interest rate and foreign currency risk types not addressed in this Q1 2026 section text
+[HISTORICAL] [LLM_FLAG] Commodity price risk flagged due to heightened volatility from ongoing Middle East conflict in Q1 2026 — material mark-to-market losses noted in Note 14
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYS4AjF19StbR4YtroF'}
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYRmQRLmbLatgMc6x4m'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYRNJrtzxUBUHEAcVgf'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYR58zedCec3ET5T3Wt'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYQpk4YJTYhoA9yJZe9'}
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
-[LLM_FLAG] Provided filing text is minimal and contains only cross-references to other sections rather than detailed quantitative disclosures. Most specific financial metrics cannot be extracted from this excerpt.
-
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-23 ===
+[HISTORICAL] [NEW_FIELD] commodity_derivatives_fair_value: appeared for first time ($264M)
+[HISTORICAL] [NEW_FIELD] commodity_derivatives_liabilities_fair_value: appeared for first time ($68M)
+[HISTORICAL] [LLM_FLAG] VaR model described (Monte Carlo, 95% CI, 1-day horizon) but no quantitative dollar figure given — result stated as 'not material'
+[HISTORICAL] [LLM_FLAG] No open foreign currency derivative contracts at December 31, 2025
+[HISTORICAL] [LLM_FLAG] No interest rate swaps outstanding at year-end 2025
 === 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
 [LLM_FLAG] Filing contains minimal quantitative disclosure - company uses a 'no material change' reference to prior year 10-K rather than repeating detailed market risk metrics in the 10-Q. All specific numerical fields are unavailable from the provided text.
 [LLM_FLAG] Cannot verify quantitative changes year-over-year as the 10-Q explicitly defers to 2024 10-K disclosures.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
+[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYR58zedCec3ET5T3Wt'}
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
 [LLM_FLAG] This 10-Q section incorporates market risk disclosures by reference to the 2024 10-K Item 7A rather than providing detailed current period quantitative metrics. Most specific quantitative fields cannot be extracted from this section alone.

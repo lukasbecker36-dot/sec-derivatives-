@@ -1,40 +1,80 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($338M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($2M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($2M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($0M)
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $1M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($38M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-0M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-0M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 4/6 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, fx_sensitivity_10pct, equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($282M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($338M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($338M)
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($0M)
+[HISTORICAL] [LLM_FLAG] Section covers only the financial instruments fair value table (cash, receivables, equity securities, payables, debt); no derivatives disclosed here
+[HISTORICAL] [LLM_FLAG] Equity securities ($1,916.7M) are Ma'aden shares on Tadawul, not standard marketable equity securities
+[HISTORICAL] [LLM_FLAG] Marketable securities held in trusts are referenced to Note 8, not included in this section text
+[HISTORICAL] [LLM_FLAG] Commodity notional is reported in MMBtu (0 MMBtu as of March 31, 2026) not USD millions
+[HISTORICAL] [LLM_FLAG] AOCI includes $7.9M 'Amortization of Gain on Interest Rate Swap' — this is a legacy amortization from a historical swap, not a current cash flow hedge position
+[HISTORICAL] [LLM_FLAG] FX table in section_text shows March 31, 2026 contracts: CAD long $38.2M, INR short $6.0M, BRL short NDF $177.5M, INR short NDF $29.2M, CNY short NDF $87.2M — total notional from market risk section adds to ~$338.1M consistent with derivatives note
+[HISTORICAL] [LLM_FLAG] Fair value of major FX contracts as of March 31, 2026 was $0.1M (net asset)
+[HISTORICAL] [LLM_FLAG] Natural gas swaps: zero notional and $0.0M fair value as of March 31, 2026
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($1M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($-0M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K/A | Period ending 2025-12-31 | Processed 2026-06-22 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $181M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_derivatives_notional: was $1M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_derivatives_notional, ir_swap_notional, commodity_derivatives_notional)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($44M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-22 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $153M, now missing
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $660M → $181M (-72.6%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $660M, now missing
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $1M → $1M (-35.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $5M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $0M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (total_cash_equivalents_fv, fx_not_designated_notional, total_derivative_asset, total_derivative_liability, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] FX notional total is incomplete — Brazilian Real NDF notional amount is cut off in the provided section text window; only CAD $181.1M long and INR $42.0M short are fully visible for December 31, 2025
+[HISTORICAL] [LLM_FLAG] Commodity notional is in MMBtu (0.9 million MMBtu), not millions of USD — schema asks for millions but unit conversion is not possible without price
+[HISTORICAL] [LLM_FLAG] Mosaic explicitly states it does not apply hedge accounting to FX or commodity contracts, so designated/not-designated split is N/A and AOCI hedge fields are null
+[HISTORICAL] [LLM_FLAG] Item 7A section text is a pure cross-reference with no numeric data; all quantitative fields are null
+[HISTORICAL] [LLM_FLAG] Actual market risk data (FX tables, natural gas swaps) is in the MD&A Market Risk subsection of Part II Item 7, not in this Item 7A section text
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $286M → $153M (-46.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $1,222M → $660M (-46.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $1,222M → $660M (-46.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $33M → $5M (-86.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $28M → $0M (-99.6%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely units mismatch: net_derivative_position changed from 28 to 0 (0x)
+[HISTORICAL] [LLM_FLAG] Section covers only the financial instruments fair value table (cash, receivables, equity securities, payables, debt); no derivatives disclosed here
+[HISTORICAL] [LLM_FLAG] Equity securities ($1,894.5M) are Ma'aden shares on Tadawul, not standard marketable equity securities
+[HISTORICAL] [LLM_FLAG] Marketable securities held in trusts are referenced to Note 8, not included in this section text
+[HISTORICAL] [LLM_FLAG] Commodity notional is 1.4 million MMBtu not USD millions; fair value is $(0.5)M
+[HISTORICAL] [LLM_FLAG] AOCI table shows $8.0M 'Amortization of Gain on Interest Rate Swap' reducing to $7.9M after Q3 2025 — legacy amortization from a historical swap, not a current cash flow hedge
+[HISTORICAL] [LLM_FLAG] Net position calculation: FX $0.5M + commodity $(0.5)M = $0.0M combined, or using gross positions $4.6M - $4.5M = $0.1M; slight discrepancy due to FX vs total instrument split
+[HISTORICAL] [LLM_FLAG] FX table shows September 30, 2025 contracts: CAD short $56.8M + CAD long $249.4M + $181.1M (2026), INR short $27.0M (2026), BRL long NDF $80.0M, INR short NDF $29.5M, CNY short NDF $36.3M — total approximately $660.1M consistent with derivatives note
+[HISTORICAL] [LLM_FLAG] Total fair value of FX contracts as of September 30, 2025: $0.5M (net asset)
+[HISTORICAL] [LLM_FLAG] Natural gas: 0.6 MMBtu 2025 + 0.9 MMBtu 2026 = 1.5 MMBtu notional per market risk table, fair value $(0.5)M
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $659M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_forwards_outstanding)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $1,654M → $1,222M (-26.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $1,654M → $1,222M (-26.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $5M → $33M (+518.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $32M → $5M (-83.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-27M → $28M (+203.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section covers only the financial instruments fair value table (cash, receivables, equity securities, payables, debt); no derivatives disclosed here
+[HISTORICAL] [LLM_FLAG] Equity securities ($1,586.5M) are Ma'aden shares on Tadawul, not standard marketable equity securities
+[HISTORICAL] [LLM_FLAG] Marketable securities held in trusts are referenced to Note 8, not included in this section text
+[HISTORICAL] [LLM_FLAG] Commodity notional is 1.4 million MMBtu not USD millions; fair value is $(0.1)M
+[HISTORICAL] [LLM_FLAG] AOCI table shows $8.0M 'Amortization of Gain on Interest Rate Swap' — legacy amortization, not current cash flow hedge
+[HISTORICAL] [LLM_FLAG] FX table shows June 30, 2025 contracts: CAD short $388.2M + CAD long $814.3M + $181.1M, INR short $3.5M, BRL long NDF $262.3M, INR short NDF $30.3M, CNY short NDF $92.6M — consistent with $1,222.1M total notional in derivatives note (though exact sum of individual items in table may differ due to netting)
+[HISTORICAL] [LLM_FLAG] Total fair value of FX contracts as of June 30, 2025: $27.6M (net asset)
+[HISTORICAL] [LLM_FLAG] Natural gas: 0.6 MMBtu 2025 + 0.9 MMBtu 2026 maturity = 1.5 MMBtu notional per market risk table (slight difference from 1.4 in derivatives note; likely rounding), fair value $(0.1)M
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NUMERIC] fx_forwards_outstanding: $1,591M → $659M (-58.6%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($1,654M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] Section covers only the financial instruments fair value table (cash, receivables, equity securities, payables, debt); no derivatives disclosed here
+[HISTORICAL] [LLM_FLAG] Equity securities ($1,370.2M) are Ma'aden shares on Tadawul, not standard marketable equity securities
+[HISTORICAL] [LLM_FLAG] Marketable securities held in trusts are referenced to Note 8, not included in this section text
+[HISTORICAL] [LLM_FLAG] Commodity notional is reported in MMBtu (0 MMBtu as of March 31, 2025) not USD millions
+[HISTORICAL] [LLM_FLAG] AOCI table shows $8.0M 'Amortization of Gain on Interest Rate Swap' — legacy amortization, not current cash flow hedge
+[HISTORICAL] [LLM_FLAG] FX table in section_text shows March 31, 2025 contracts: CAD short $218.1M + CAD long $616.5M + $94.4M, INR short $0, BRL long NDF $446.0M, INR short NDF $159.3M, CNY short NDF $120.0M — total approximately $1,654.3M consistent with derivatives note
+[HISTORICAL] [LLM_FLAG] Total fair value of FX contracts as of March 31, 2025: $(26.7)M (net liability)
+[HISTORICAL] [LLM_FLAG] Natural gas swaps: 0 MMBtu notional, $0.0M fair value as of March 31, 2025

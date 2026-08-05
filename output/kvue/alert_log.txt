@@ -1,16 +1,51 @@
-=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-02 ===
-[LLM_FLAG] Provided text is incomplete - only contains a header reference to 'Quantitative and Qualitative Disclosures About Market Risk' from Annual Report. Full 10-Q section with detailed market risk disclosures not provided.
-[LLM_FLAG] Cannot verify derivatives usage change from prior period due to insufficient data in excerpt.
-[LLM_FLAG] All substantive market risk quantitative data appears to be in the full 10-Q section not included in provided text.
+=== 10-Q | Period ending 2026-03-29 | Processed 2026-06-21 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($107M)
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($5,816M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($5,204M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($612M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($86M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($130M)
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $502M → $612M (+21.9%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($86M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($-130M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-44M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $182M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_earnings: was $122M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_derivatives: was $182M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (fx_sensitivity_10pct, fx_sensitivity_earnings, fx_sensitivity_derivatives)
+
+=== 10-K | Period ending 2025-12-28 | Processed 2026-06-21 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $145M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $7,459M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $6,894M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $565M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $107M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $172M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $107M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $-172M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-65M, now missing
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($182M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_earnings: appeared for first time ($122M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_derivatives: appeared for first time ($182M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 9/12 previously-populated fields are now null (total_cash_equivalents_fv, fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_total_derivative_asset...)
+[HISTORICAL] [LLM_FLAG] Fair value (asset/liability) figures not extractable from supplied section_text; Note 16 fair value hierarchy table not included in the excerpt
 
 === 10-Q | Period ending 2025-09-28 | Processed 2026-06-02 ===
 [LLM_FLAG] Change from prior period: has_derivatives changed from 'No mention' to 'Yes' - represents a significant shift in disclosure
 [LLM_FLAG] Incomplete excerpt: Text appears to be a section header/reference only ('Quantitative and Qualitative Disclosures About Market Risk') with no actual quantitative data provided
 [LLM_FLAG] Cannot verify most fields due to insufficient text - only a reference to the full disclosure section is included
 
-=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-02 ===
-[LLM_FLAG] Provided text excerpt is incomplete - only contains a section header reference to 'Quantitative and Qualitative Disclosures About Market Risk' without actual disclosure content. Complete filing section required for substantive data extraction.
-
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $5,996M → $7,211M (+20.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_designated_notional: $5,456M → $6,586M (+20.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $72M → $103M (+43.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $63M → $194M (+207.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $5,996M → $7,211M (+20.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $5,456M → $6,586M (+20.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $72M → $103M (+43.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-63M → $-194M (-207.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $9M → $-91M (-1111.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Cross currency swap liabilities increased sharply from $(1)M at Dec 2024 to $(117)M at Jun 2025, likely driven by USD strengthening against hedged currencies.
 === 10-Q | Period ending 2025-03-30 | Processed 2026-06-02 ===
 [DISAPPEARED_FIELD] fx_sensitivity_earnings: was $122M, now missing
 [DISAPPEARED_FIELD] fx_sensitivity_derivatives: was $182M, now missing

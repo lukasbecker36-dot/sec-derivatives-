@@ -1,36 +1,101 @@
-=== 10-Q | Period ending 2026-05-02 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_swap_notional: was $31M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_swap_notional)
+=== 10-Q | Period ending 2026-05-02 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $4,611M → $2,544M (-44.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $18M → $22M (+22.2%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $2,200M, now missing
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($244M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] floating_rate_excess: was $2,400M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $24M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] insurance_liability_rate_sensitivity: was $20M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] pension_discount_rate_sensitivity: was $38M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] pension_interest_rate_hedge_pct: was $75M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] prepaid_forward_own_stock: was $18M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 8/13 previously-populated fields are now null (ir_swap_notional, fx_forwards_outstanding, floating_rate_excess, interest_rate_sensitivity, insurance_liability_rate_sensitivity...)
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in this fair value section; see separate derivatives note for notional amounts
+[HISTORICAL] [LLM_FLAG] Prepaid forward contracts are equity-linked (TGT stock), not FX derivatives
+[HISTORICAL] [LLM_FLAG] IR swap notional increased to $2.45 billion (2,450 million) as of May 2, 2026, up from $2.20 billion — all designated as fair value hedges.
+[HISTORICAL] [LLM_FLAG] No FX, commodity, or equity derivatives — interest rate swaps only.
+[HISTORICAL] [LLM_FLAG] Derivative liability: $0M current + $65M noncurrent = $65M total.
+[HISTORICAL] [LLM_FLAG] Cash flow hedge AOCI of $244M net of tax.
+[HISTORICAL] [LLM_FLAG] Notable: notional increased from $2.20B to $2.45B quarter-over-quarter.
 
-=== 10-K | Period ending 2026-01-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($31M)
+=== 10-K | Period ending 2026-01-31 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $2,894M → $4,611M (+59.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($2,200M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $252M, now missing
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] floating_rate_excess: appeared for first time ($2,400M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($24M)
+[HISTORICAL] [NEW_FIELD] insurance_liability_rate_sensitivity: appeared for first time ($20M)
+[HISTORICAL] [NEW_FIELD] pension_discount_rate_sensitivity: appeared for first time ($38M)
+[HISTORICAL] [NEW_FIELD] pension_interest_rate_hedge_pct: appeared for first time ($75M)
+[HISTORICAL] [NEW_FIELD] prepaid_forward_own_stock: appeared for first time ($18M)
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in this fair value section; see Note 18 for notional amounts
+[HISTORICAL] [LLM_FLAG] Prepaid forward contracts are equity-linked (TGT stock), not FX derivatives
+[HISTORICAL] [LLM_FLAG] IR swap notional is $2.20 billion (2,200 million) as of January 31, 2026, all designated as fair value hedges.
+[HISTORICAL] [LLM_FLAG] No FX, commodity, or equity derivatives — interest rate swaps only.
+[HISTORICAL] [LLM_FLAG] Derivative liability: $1M current + $54M noncurrent = $55M total.
+[HISTORICAL] [LLM_FLAG] No derivative asset row visible in the fair value table for January 31, 2026.
+[HISTORICAL] [LLM_FLAG] Weighted average remaining maturity of swaps shortened to 3.5 years (from 4.5 years in prior year 10-K).
+[HISTORICAL] [LLM_FLAG] floating_rate_excess expressed in millions: $2,400M (stated as approximately $2.4 billion).
+[HISTORICAL] [LLM_FLAG] Pension hedge percentage increased to 75% from 70% in prior year.
+[HISTORICAL] [LLM_FLAG] No FX sensitivity or equity price sensitivity disclosed.
+[HISTORICAL] [LLM_FLAG] Prepaid forward contract value sourced from fair value measurements note cross-referenced in the section.
 
-=== 10-Q | Period ending 2025-05-03 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_swap_notional: was $1M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_swap_notional)
+=== 10-Q | Period ending 2025-11-01 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $63M → $48M (-23.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1M → $2M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $63M → $48M (-23.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-62M → $-46M (+25.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in this fair value section; see separate derivatives note for notional amounts
+[HISTORICAL] [LLM_FLAG] Prepaid forward contracts are equity-linked (TGT stock), not FX derivatives
+[HISTORICAL] [LLM_FLAG] IR swap notional is $2.20 billion (2,200 million) as of November 1, 2025, all designated as fair value hedges.
+[HISTORICAL] [LLM_FLAG] No FX, commodity, or equity derivatives — interest rate swaps only.
+[HISTORICAL] [LLM_FLAG] Derivative asset $2M noncurrent; liability $1M current + $47M noncurrent = $48M total.
+[HISTORICAL] [LLM_FLAG] Cash flow hedge AOCI of $252M net of tax.
 
-=== 10-K | Period ending 2026-01-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] floating_rate_excess: appeared for first time ($2,400M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($24M)
-[NEW_FIELD] insurance_liability_rate_sensitivity: appeared for first time ($20M)
-[NEW_FIELD] pension_discount_rate_sensitivity: appeared for first time ($38M)
-[NEW_FIELD] pension_interest_rate_hedge_pct: appeared for first time ($75M)
+=== 10-Q | Period ending 2025-08-02 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,975M → $3,348M (+69.5%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($1M)
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in this fair value section; see derivatives note for notional amounts
+[HISTORICAL] [LLM_FLAG] Prepaid forward contracts are equity-linked (TGT stock), not FX derivatives
+[HISTORICAL] [LLM_FLAG] Q2 2025: IR swap asset of $1M appeared in Other Noncurrent Assets (new this quarter)
+[HISTORICAL] [LLM_FLAG] IR swap notional is $2.20 billion (2,200 million) as of August 2, 2025, all designated as fair value hedges.
+[HISTORICAL] [LLM_FLAG] No FX, commodity, or equity derivatives — interest rate swaps only.
+[HISTORICAL] [LLM_FLAG] Q2 2025 is the first period showing a derivative asset ($1M in noncurrent assets) alongside the liability.
+[HISTORICAL] [LLM_FLAG] Cash flow hedge AOCI of $256M net of tax.
 
-=== 10-Q | Period ending 2025-05-03 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] floating_rate_excess: was $1,700M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $17M, now missing
-[DISAPPEARED_FIELD] insurance_liability_rate_sensitivity: was $17M, now missing
-[DISAPPEARED_FIELD] pension_discount_rate_sensitivity: was $33M, now missing
-[DISAPPEARED_FIELD] pension_interest_rate_hedge_pct: was $70M, now missing
-[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (fx_forwards_outstanding, floating_rate_excess, interest_rate_sensitivity, insurance_liability_rate_sensitivity, pension_discount_rate_sensitivity...)
+=== 10-Q | Period ending 2025-05-03 | Processed 2026-06-26 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $3,893M → $1,975M (-49.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $23M → $17M (-26.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $125M → $68M (-45.6%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $2,200M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_liability: $125M → $68M (-45.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-125M → $-68M (+45.6%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($261M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] floating_rate_excess: was $1,700M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $17M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] insurance_liability_rate_sensitivity: was $17M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] pension_discount_rate_sensitivity: was $33M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] pension_interest_rate_hedge_pct: was $70M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] prepaid_forward_own_stock: was $23M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 8/13 previously-populated fields are now null (ir_swap_notional, fx_forwards_outstanding, floating_rate_excess, interest_rate_sensitivity, insurance_liability_rate_sensitivity...)
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in this fair value section; see derivatives note for notional amounts
+[HISTORICAL] [LLM_FLAG] Prepaid forward contracts are equity-linked (TGT stock), not FX derivatives
+[HISTORICAL] [LLM_FLAG] IR swap notional is $2.20 billion (2,200 million) as of May 3, 2025, all designated as fair value hedges.
+[HISTORICAL] [LLM_FLAG] No FX, commodity, or equity derivatives — interest rate swaps only.
+[HISTORICAL] [LLM_FLAG] Cash flow hedge AOCI of $261M represents cumulative gain balance net of tax.
+[HISTORICAL] [LLM_FLAG] Derivative liability: $3M current + $65M noncurrent = $68M total.
 
-=== 10-K | Period ending 2025-02-01 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] floating_rate_excess: appeared for first time ($1,700M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($17M)
-[NEW_FIELD] insurance_liability_rate_sensitivity: appeared for first time ($17M)
-[NEW_FIELD] pension_discount_rate_sensitivity: appeared for first time ($33M)
-[NEW_FIELD] pension_interest_rate_hedge_pct: appeared for first time ($70M)
-
+=== 10-K | Period ending 2025-02-01 | Processed 2026-06-26 ===
+[HISTORICAL] [LLM_FLAG] IR swap notional not disclosed in this fair value section; see derivatives note for notional amounts
+[HISTORICAL] [LLM_FLAG] Prepaid forward contracts are equity-linked (TGT stock), not FX derivatives
+[HISTORICAL] [LLM_FLAG] IR swap notional is $2.20 billion (2,200 million) as of Feb 1, 2025, all designated as fair value hedges.
+[HISTORICAL] [LLM_FLAG] No FX, commodity, or equity derivatives — interest rate swaps only.
+[HISTORICAL] [LLM_FLAG] Derivative asset is zero/nil at period end; liability is $125M noncurrent + $0 current = $125M total.
+[HISTORICAL] [LLM_FLAG] Cash flow hedge AOCI balance not explicitly stated in section; only the gain reclassified ($23M) is shown.
+[HISTORICAL] [LLM_FLAG] floating_rate_excess expressed in millions: $1,700M (stated as approximately $1.7 billion).
+[HISTORICAL] [LLM_FLAG] No FX sensitivity or equity price sensitivity disclosed in market risk section.
+[HISTORICAL] [LLM_FLAG] Prepaid forward contract value sourced from fair value measurements note, which is cross-referenced.

@@ -15,61 +15,74 @@
 [LLM_FLAG] Prior cash_flow_hedge_aoci was 175.0 but no explicit AOCI balance is disclosed in this section
 [LLM_FLAG] Company terminated 16 treasury locks during H1 2026 (totaling $1,175M notional), reducing outstanding notional from a much higher level to $75M
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($175M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($0M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] treasury_lock_notional: was $12M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $6M, now missing
-[DISAPPEARED_FIELD] treasury_lock_sensitivity: was $200M, now missing
-[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (equity_sensitivity_10pct, treasury_lock_notional, interest_rate_sensitivity, treasury_lock_sensitivity)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-04 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($18M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($1M)
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-23M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] treasury_lock_count: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] treasury_lock_notional: was $200M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] treasury_lock_fair_value: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $12M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] treasury_lock_sensitivity: was $-23M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (ir_sensitivity_100bp, treasury_lock_count, treasury_lock_notional, treasury_lock_fair_value, interest_rate_sensitivity...)
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv mapped to the 'Fixed-income securities' (available-for-sale) line under Other investments; no separate 'cash equivalents' or 'marketable equity securities' line item is disclosed, so those fields are null.
+[HISTORICAL] [LLM_FLAG] fi_ir_swap_notional is null because this Fair Value of Financial Instruments note does not restate the treasury lock notional amount (that figure appears only in the separate derivatives note for this filing).
+[HISTORICAL] [LLM_FLAG] Outstanding notional at period end (March 31, 2026) is $175 million across five treasury lock agreements, mapped to ir_swap_notional as the only interest-rate derivative disclosed.
+[HISTORICAL] [LLM_FLAG] In March 2026 the Company terminated 10 treasury lock agreements with $600 million aggregate notional, realizing a $3 million pre-tax gain to AOCI to be amortized over 10 years; this is a historical/terminated position, not included in the outstanding notional above.
+[HISTORICAL] [LLM_FLAG] No derivative fair value asset/liability table or AOCI hedge balance appears within this section_text excerpt, so those fields are null (a $2 million derivative asset and $1 million derivative liability appear elsewhere in the filing's Fair Value of Financial Instruments note, outside this excerpt).
+[HISTORICAL] [LLM_FLAG] This Item 3 excerpt is boilerplate: it states the Company is exposed to commodity, equity, and interest rate risk, refers the reader to Item 7A of the Form 10-K for detail, and states there have been no significant changes to market risk exposure since December 31, 2025. It contains no quantitative disclosures (no notionals, sensitivities, or treasury lock detail), so all fields are null.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($12M)
-[NEW_FIELD] treasury_lock_count: appeared for first time ($6M)
-[NEW_FIELD] treasury_lock_notional: appeared for first time ($200M)
-[NEW_FIELD] treasury_lock_average_rate: appeared for first time ($4M)
-[NEW_FIELD] treasury_lock_fair_value: appeared for first time ($2M)
-[NEW_FIELD] treasury_lock_sensitivity: appeared for first time ($-21M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-04 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $57M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $1M, now missing
+[HISTORICAL] [NUMERIC] ir_swap_notional: $100M → $150M (+50.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-23M)
+[HISTORICAL] [NEW_FIELD] treasury_lock_count: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] treasury_lock_notional: appeared for first time ($200M)
+[HISTORICAL] [NEW_FIELD] treasury_lock_fair_value: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($12M)
+[HISTORICAL] [NEW_FIELD] treasury_lock_sensitivity: appeared for first time ($-23M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (total_marketable_securities_fv, gross_unrealized_gains_debt, fi_total_derivative_asset, fi_total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] section_text begins mid-sentence ('ents, with a term of...'), so the number of treasury lock agreements referenced with the $150 million notional is not stated in this excerpt.
+[HISTORICAL] [LLM_FLAG] This filing's market_risk (Item 7A) section reports a different figure as of the same December 31, 2025 date -- six treasury lock agreements totaling $200 million notional at an average rate of 4.47%, versus $150 million / 4.62% quoted in this derivatives_note excerpt. Flagging this apparent inconsistency between the two disclosures within the same 10-K; used the figure literally present in this section's text ($150 million) for ir_swap_notional.
+[HISTORICAL] [LLM_FLAG] During 2025 the Company terminated 11 treasury lock agreements (May/August 2025, $450 million notional, $13 million pre-tax gain to AOCI) and 10 treasury lock agreements (February 2025, $500 million notional, $3 million pre-tax gain to AOCI); both are historical/terminated positions excluded from the outstanding notional above.
+[HISTORICAL] [LLM_FLAG] No derivative fair value asset/liability table or AOCI hedge balance appears within this section_text excerpt, so those fields are null.
+[HISTORICAL] [LLM_FLAG] This section reports six treasury lock agreements totaling $200 million notional at 4.47% average rate as of December 31, 2025, which differs from the $150 million / 4.62% figures quoted in this same filing's derivatives_note excerpt; used the market_risk section's own figures for all treasury_lock_* fields here.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp was inferred as the treasury lock fair-value sensitivity (~$23 million decrease) since the text does not separately state a company-wide 100bp fair-value sensitivity distinct from the treasury lock and short-term-borrowing interest-expense sensitivities.
+[HISTORICAL] [LLM_FLAG] No FX, marketable equity, or fixed-rate-notes-in-billions figures appear in this Item 3 excerpt; the Company states market risk exposure is to commodity prices, equity prices (via retirement trust assets, no dollar value given), and interest rates only.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] treasury_lock_notional: was $12M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $6M, now missing
-[DISAPPEARED_FIELD] treasury_lock_sensitivity: was $200M, now missing
-[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (treasury_lock_notional, interest_rate_sensitivity, treasury_lock_sensitivity)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-04 ===
+[HISTORICAL] [DROPPED_TO_ZERO] fi_total_derivative_asset: $4M → $0M
+[HISTORICAL] [NUMERIC] ir_swap_notional: $180M → $100M (-44.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv mapped to the 'Fixed-income securities' (available-for-sale) line under Other investments; no separate 'cash equivalents' or 'marketable equity securities' line item is disclosed, so those fields are null.
+[HISTORICAL] [LLM_FLAG] fi_ir_swap_notional is null because this Fair Value of Financial Instruments note does not restate the treasury lock notional amount (that figure appears only in the separate derivatives note for this filing).
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset of 0 is inferred from the completeness of the recurring fair-value table (line items sum exactly to the stated totals with no derivative-asset line listed), not an explicitly stated zero — this contrasts with the prior and following quarters where a Mark-to-market derivative asset of $4M/$2M was disclosed.
+[HISTORICAL] [LLM_FLAG] Outstanding notional at period end (September 30, 2025) is $100 million across two treasury lock agreements, mapped to ir_swap_notional as the only interest-rate derivative disclosed.
+[HISTORICAL] [LLM_FLAG] During the period the Company terminated eleven treasury locks (two in May 2025 totaling $100 million, nine in August 2025 totaling $350 million) plus ten terminated in February 2025 totaling $500 million; all are historical/terminated and excluded from the outstanding balance.
+[HISTORICAL] [LLM_FLAG] No derivative fair value asset/liability table or AOCI hedge balance appears within this section_text excerpt, so those fields are null (a $1 million mark-to-market derivative liability and no derivative asset appear elsewhere in the filing's Fair Value of Financial Instruments note, outside this excerpt).
+[HISTORICAL] [LLM_FLAG] This Item 3 excerpt is boilerplate: it states the Company is exposed to commodity, equity, and interest rate risk, refers the reader to Item 7A of the Form 10-K for detail, and states there have been no significant changes to market risk exposure since December 31, 2024. It contains no quantitative disclosures (no notionals, sensitivities, or treasury lock detail), so all fields are null.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($12M)
-[NEW_FIELD] treasury_lock_count: appeared for first time ($6M)
-[NEW_FIELD] treasury_lock_notional: appeared for first time ($200M)
-[NEW_FIELD] treasury_lock_average_rate: appeared for first time ($4M)
-[NEW_FIELD] treasury_lock_fair_value: appeared for first time ($2M)
-[NEW_FIELD] treasury_lock_sensitivity: appeared for first time ($-21M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-04 ===
+[HISTORICAL] [DROPPED_TO_ZERO] gross_unrealized_gains_debt: $1M → $0M
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $10M → $4M (-60.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $130M → $180M (+38.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv mapped to the 'Fixed-income securities' (available-for-sale) line under Other investments; no separate 'cash equivalents' or 'marketable equity securities' line item is disclosed, so those fields are null.
+[HISTORICAL] [LLM_FLAG] fi_ir_swap_notional is null because this Fair Value of Financial Instruments note does not restate the treasury lock notional amount (that figure appears only in the separate derivatives note for this filing).
+[HISTORICAL] [LLM_FLAG] Outstanding notional at period end (June 30, 2025) is $180 million across five treasury lock agreements, mapped to ir_swap_notional as the only interest-rate derivative disclosed.
+[HISTORICAL] [LLM_FLAG] In July 2025 (subsequent event) the Company entered four additional treasury locks totaling $170 million; excluded from the June 30, 2025 outstanding balance.
+[HISTORICAL] [LLM_FLAG] In May 2025 two treasury locks ($100 million notional) were terminated realizing a $12 million pre-tax gain to AOCI; in February 2025 ten treasury locks ($500 million notional) were terminated realizing a $3 million pre-tax gain to AOCI. Both are historical/terminated, not outstanding.
+[HISTORICAL] [LLM_FLAG] No derivative fair value asset/liability table or AOCI hedge balance appears within this section_text excerpt, so those fields are null (a $4 million derivative asset and $1 million derivative liability appear elsewhere in the filing's Fair Value of Financial Instruments note, outside this excerpt).
+[HISTORICAL] [LLM_FLAG] This Item 3 excerpt is boilerplate: it states the Company is exposed to commodity, equity, and interest rate risk, refers the reader to Item 7A of the Form 10-K for detail, and states there have been no significant changes to market risk exposure since December 31, 2024. It contains no quantitative disclosures (no notionals, sensitivities, or treasury lock detail), so all fields are null.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[LLM_FLAG] Filing section is extremely brief and references Form 10-K for details. Appears to be a placeholder disclosure stating no significant changes since prior year-end. Comprehensive market risk disclosures likely found in the full 10-K, not this 10-Q excerpt.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $12M, now missing
-[DISAPPEARED_FIELD] treasury_lock_count: was $6M, now missing
-[DISAPPEARED_FIELD] treasury_lock_notional: was $200M, now missing
-[DISAPPEARED_FIELD] treasury_lock_average_rate: was $4M, now missing
-[DISAPPEARED_FIELD] treasury_lock_fair_value: was $2M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $12M, now missing
-[DISAPPEARED_FIELD] treasury_lock_sensitivity: was $-21M, now missing
-[VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, treasury_lock_count, treasury_lock_notional, treasury_lock_average_rate...)
-[LLM_FLAG] Filing text is minimal and references the Form 10-K for detailed market risk disclosures. No specific derivative, treasury lock, or sensitivity data provided in this 10-Q excerpt.
-[LLM_FLAG] Statement 'no significant changes since December 31, 2024' suggests data should be consistent with prior period, but actual figures are not disclosed in this section.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-04 ===
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv mapped to the 'Fixed-income securities' (available-for-sale) line under Other investments, the only marketable-securities-like disclosure in this note; there is no separate 'cash equivalents' or 'marketable equity securities' line item, so those fields are null. The rabbi trust ($28M, equity and index funds) is a separate deferred-comp funding vehicle, not disclosed as marketable equity securities, so it was not used for marketable_equity_securities_fv.
+[HISTORICAL] [LLM_FLAG] fi_ir_swap_notional is null because this Fair Value of Financial Instruments note does not restate the treasury lock notional amount (that figure, $130 million, appears only in the separate derivatives note for this filing).
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_liability of 0 is inferred from the completeness of the recurring fair-value table (Level 1 total of $33 million matches Total liabilities of $33 million with only the deferred-compensation line listed), not an explicitly stated zero.
+[HISTORICAL] [LLM_FLAG] The only derivative instruments disclosed in this text are treasury lock agreements (cash flow hedges of interest rate exposure); mapped their $130 million outstanding notional to ir_swap_notional since no separate interest rate swap is disclosed.
+[HISTORICAL] [LLM_FLAG] In February 2025 the Company terminated 10 treasury lock agreements with $500 million aggregate notional (pre-tax gain of $3 million recorded to AOCI, to be amortized over 10 years); this is a historical/terminated position, not included in the outstanding notional above.
+[HISTORICAL] [LLM_FLAG] No derivative fair value tables (asset/liability) or AOCI balance for cash flow hedges appear in this excerpt, so those fields are null.
+[HISTORICAL] [LLM_FLAG] This Item 3 excerpt is boilerplate: it states the Company is exposed to commodity, equity, and interest rate risk, refers the reader to Item 7A of the Form 10-K for detail, and states there have been no significant changes to market risk exposure since December 31, 2024. It contains no quantitative disclosures (no notionals, sensitivities, or treasury lock detail), so all fields are null.

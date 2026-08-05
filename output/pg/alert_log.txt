@@ -11,55 +11,67 @@
 [LLM_FLAG] total_derivative_liability changed from 568 to 401 (29.4% decrease). Reduction driven by lower net investment hedge liabilities ($173M vs prior period significant liability) and lower IR swap liabilities.
 [LLM_FLAG] net_derivative_position changed from -480 to -225 (53% improvement). Driven by favorable FX swap mark-to-market and reduced IR swap liabilities.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NUMERIC] total_derivative_asset: $33M → $88M (+166.7%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $712M → $568M (-20.2%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $-679M → $-480M (+29.3%) — exceeds 20% threshold
-[LLM_FLAG] fx_derivatives_notional decreased by more than 50% compared to the prior period; Possible revaluation or change in hedging needs.
-[LLM_FLAG] net_derivative_position reflects significant changes in derivative liabilities.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $33M → $88M (+166.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $-712M → $-568M (+20.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $33M → $88M (+166.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-712M → $-568M (+20.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-679M → $-480M (+29.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] This section only covers derivative hedging instruments; no cash equivalents/marketable securities fair value data present
+[HISTORICAL] [LLM_FLAG] Notional balance of net investment hedges decreased ($11,874M to $9,860M) due to maturity of certain swaps per filing text
+[HISTORICAL] [LLM_FLAG] Notional of FX net-investment-hedge swaps decreased from $11,992M to $9,860M — text attributes this to maturity of certain swaps
+[HISTORICAL] [LLM_FLAG] No commodity or equity derivatives disclosed
+[HISTORICAL] [LLM_FLAG] Item 3 market_risk text is boilerplate: 'There have been no material changes in the Company's exposure to market risk since June 30, 2025,' cross-referencing the prior 10-K — no quantitative sensitivity data is disclosed in this 10-Q
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($4,381M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($11,992M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($4,381M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($5,336M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($33M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($712M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-679M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($9M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($124M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] Increase in notional amount of interest rate contracts designated as hedging instruments by over 50% compared to the prior period, driven by debt portfolio rebalancing.
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-07-06 ===
+[HISTORICAL] [NUMERIC] fi_ir_swap_notional: $3,283M → $5,336M (+62.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $11M → $33M (+200.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $3,283M → $5,336M (+62.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $11M → $33M (+200.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] This section only covers derivative hedging instruments; no cash equivalents/marketable securities fair value data present
+[HISTORICAL] [LLM_FLAG] Notional balance of interest rate contracts designated as fair value hedges increased ($3,280M to $5,336M) due to debt portfolio rebalancing per filing text
+[HISTORICAL] [LLM_FLAG] Interest rate contracts notional increased materially (from $3,280M to $5,336M) — text attributes this to debt portfolio rebalancing
+[HISTORICAL] [LLM_FLAG] No commodity or equity derivatives disclosed
+[HISTORICAL] [LLM_FLAG] Item 3 market_risk text is boilerplate: 'There have been no material changes in the Company's exposure to market risk since June 30, 2025,' cross-referencing the prior 10-K — no quantitative sensitivity data is disclosed in this 10-Q
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-06 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($18,920M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($14,581M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($4,339M)
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($3,283M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($11M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($-786M)
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $15,450M → $18,920M (+22.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $11,874M → $14,581M (+22.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $3,576M → $4,339M (+21.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_derivatives_notional: was $0M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_asset: $19M → $11M (-42.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-1,062M → $-786M (+26.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-1,043M → $-775M (+25.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] This section only covers derivative hedging instruments; no cash equivalents/marketable securities fair value data present
+[HISTORICAL] [LLM_FLAG] No commodity or equity derivatives, or cash-flow-hedge AOCI balance, disclosed in this filing section
+[HISTORICAL] [LLM_FLAG] Item 3 market_risk text is boilerplate: 'There have been no material changes in the Company's exposure to market risk since June 30, 2025,' cross-referencing the prior 10-K — no quantitative sensitivity data is disclosed in this 10-Q
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaQqxDfMJtGh39fSeyS'}
+=== 10-K | Period ending 2025-06-30 | Processed 2026-07-06 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $16,115M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $12,657M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $3,458M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $3,034M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $84M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $-347M, now missing
+[HISTORICAL] [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[HISTORICAL] [NUMERIC] total_derivative_asset: $84M → $19M (-77.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-347M → $-1,062M (-206.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-263M → $-1,043M (-296.6%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/13 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset...)
+[HISTORICAL] [LLM_FLAG] This section slice is the general 'Fair Values of Financial Instruments' accounting-policy paragraph plus unrelated New Accounting Pronouncements and Segment Information (Note 2) content; the actual derivative notional/fair value table is cross-referenced to Note 9, which is not included in this section_text
+[HISTORICAL] [LLM_FLAG] Confirms no commodity hedging activity for FY2025/FY2024 explicitly stated in text
+[HISTORICAL] [LLM_FLAG] No cash-flow-hedge program or equity derivatives disclosed
+[HISTORICAL] [LLM_FLAG] Item 7A market risk disclosure is entirely qualitative (VaR-model description) with no quantitative sensitivity figures for interest rate, currency, or commodity exposure
+[HISTORICAL] [LLM_FLAG] Company states it 'did not have any financial commodity hedging activity' during fiscal years 2025 and 2024
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaQYXUMEv6LZjmZe4tF'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaQG5Wg1ePhBJr4he3j'}
-
-=== 10-K | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaQ2FKP6boLwWqSt3XJ'}
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaPhsXGEpKiHbgcGiZ2'}
-
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-04-28 ===
-[LLM_FLAG] This 10-Q filing (period ending 2025-12-31) contains minimal market risk disclosure and directs readers to the Form 10-K filed for fiscal year ended June 30, 2025 instead of providing current period details. The section states 'no material changes' in market risk exposure, suggesting this is a condensed disclosure typical of interim filings.
-[LLM_FLAG] Period mismatch: The filing references Form 10-K for fiscal year ended June 30, 2025, which is approximately 6 months prior to the stated 10-Q period (December 31, 2025). This is consistent with P&G's fiscal year (June 30 year-end) but indicates market risk details are not fully updated in this 10-Q.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-28 ===
-[LLM_FLAG] This excerpt contains minimal quantitative market risk disclosure. The filing appears to cross-reference the prior year 10-K (fiscal year ended June 30, 2025) rather than providing updated disclosures for the current period ending September 30, 2025.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-04-28 ===
-[LLM_FLAG] Filing section is extremely brief and references prior year 10-K instead of providing current period disclosures. This appears to be a reference-based disclosure indicating no material changes from prior period.
-[LLM_FLAG] Specific quantitative market risk data not provided in this excerpt - company directs readers to Note 9 of the 10-K for detailed information.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-27 ===
-[LLM_FLAG] This section is a brief cross-reference section that incorporates by reference. The actual quantitative and qualitative market risk disclosures are located in the MD&A Other Information section and Note 9, which are not provided in this excerpt.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-06 ===
+[HISTORICAL] [LLM_FLAG] This section only covers derivative hedging instruments; no cash equivalents/marketable securities fair value data present
+[HISTORICAL] [LLM_FLAG] No cash-flow-hedge program disclosed for this issuer; derivatives are limited to fair value hedges (interest rate) and net investment hedges (FX)
+[HISTORICAL] [LLM_FLAG] No commodity or equity derivatives disclosed in this filing section
+[HISTORICAL] [LLM_FLAG] Item 3 market_risk text is boilerplate: 'There have been no material changes in the Company's exposure to market risk since June 30, 2024,' cross-referencing the prior 10-K — no quantitative sensitivity data is disclosed in this 10-Q

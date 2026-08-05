@@ -1,29 +1,28 @@
-=== 10-K | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($6M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] total_debt: appeared for first time ($6M)
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-K | Period ending 2026-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($0M)
+[HISTORICAL] [LLM_FLAG] No derivative instruments (FX, IR, or other) disclosed in this note. Section covers only debt fair value disclosures.
+[HISTORICAL] [LLM_FLAG] No marketable securities or investment portfolio disclosed.
+[HISTORICAL] [LLM_FLAG] Company explicitly states no money-market fund holdings as of March 31, 2026; cash equivalents FV set to 0.
+[HISTORICAL] [LLM_FLAG] New 2026 Senior Convertible Debt ($883.9M carrying, $875.0M fair value) appeared in the debt table this period.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
-[NEW_FIELD] total_debt: appeared for first time ($5M)
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] No derivative instruments (FX, IR, or other) disclosed in this note. Section covers only debt fair value disclosures.
+[HISTORICAL] [LLM_FLAG] No marketable securities or investment portfolio disclosed.
+[HISTORICAL] [LLM_FLAG] Current-period (December 31, 2025) money-market fund balance not stated; only the prior-year-end figure ($491.1M as of March 31, 2025) is referenced. Cash equivalents FV set to null.
 
-=== 10-K | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($6M)
-[NEW_FIELD] total_debt: appeared for first time ($6M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-22 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $289M, now missing
+[HISTORICAL] [LLM_FLAG] No derivative instruments (FX, IR, or other) disclosed in this note. Section covers only debt fair value disclosures.
+[HISTORICAL] [LLM_FLAG] No marketable securities or investment portfolio disclosed.
+[HISTORICAL] [LLM_FLAG] Current-period (September 30, 2025) money-market fund balance not stated; only the prior-year-end figure ($491.1M as of March 31, 2025) is referenced. Cash equivalents FV set to null.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
-[NEW_FIELD] total_debt: appeared for first time ($5M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $491M → $289M (-41.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No derivative instruments (FX, IR, or other) disclosed in this note. Section covers only debt fair value disclosures and money-market cash equivalents.
+[HISTORICAL] [LLM_FLAG] No marketable securities or investment portfolio disclosed.
+[HISTORICAL] [LLM_FLAG] Cash equivalents figure ($289.1M) is carrying value approximating fair value, not a formal FV hierarchy table entry.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[LLM_FLAG] Refinancing language expanded in Q3 FY2026 to include 'new fixed rate debt, new notes or convertible debt' — not present in prior quarters
-
-=== 10-K | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($6M)
-[NEW_FIELD] total_debt: appeared for first time ($5,660M)
-
+=== 10-K | Period ending 2025-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] No derivative instruments (FX, IR, or other) disclosed in this note. Section covers only debt fair value disclosures and money-market cash equivalents.
+[HISTORICAL] [LLM_FLAG] No marketable securities or investment portfolio disclosed.
+[HISTORICAL] [LLM_FLAG] Cash equivalents figure ($491.1M) is carrying value approximating fair value, not a formal FV hierarchy table entry.

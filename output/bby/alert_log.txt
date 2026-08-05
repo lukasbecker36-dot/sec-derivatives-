@@ -1,16 +1,93 @@
-=== 10-Q | Period ending 2026-05-02 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqYD1A3FaWcNFdnVPcUf'}
+=== 10-Q | Period ending 2026-05-02 | Processed 2026-07-05 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($277M)
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($150M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($119M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($31M)
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($500M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($8M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($150M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($119M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($31M)
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv computed by summing money market funds, time deposits, and commercial paper (nil) classified under the 'Cash and cash equivalents' balance sheet location (excludes identical instrument types classified under 'Other current assets')
+[HISTORICAL] [LLM_FLAG] No marketable debt/equity securities (available-for-sale) portfolio is disclosed in this excerpt
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional computed by summing 'Derivatives designated as net investment hedges' and 'No hedge designation (foreign exchange contracts)' notional lines; cross-checked against stated Total notional of $650M ($119+$500+$31)
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset left null — the supplied fair value table lists only an interest rate swap liability; no derivative assets are shown in this excerpt
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional computed as sum of net-investment-hedge FX forwards ($119M) and non-designated FX forwards ($31M); no separate cross-currency swap or FX option notional is disclosed.
+[HISTORICAL] [LLM_FLAG] Total derivative asset/liability fair values and AOCI balances are not in this excerpt (referenced Note 4, Fair Value Measurements table not included here).
+[HISTORICAL] [LLM_FLAG] Text discloses a 50-basis-point sensitivity ($2 million change in net interest income), not the 100bp fair-value sensitivity requested by the schema, so ir_sensitivity_100bp was left null rather than extrapolated.
+[HISTORICAL] [LLM_FLAG] Text discloses a $23 million favorable FX impact on revenue (translation effect from actual rate moves), not a 10%-adverse-move fair-value sensitivity or a net transaction gain/loss figure, so fx_sensitivity_10pct and fx_transaction_gain_loss were left null.
+[HISTORICAL] [LLM_FLAG] No fixed-rate notes total, marketable equity value, or FX forward notional figure appears in this excerpt.
+[HISTORICAL] [LLM_FLAG] interest_rate_exposure, swap_description, and affected_instruments are descriptive schema fields (not numeric values), so no 'value' was extracted for them.
 
-=== 10-Q | Period ending 2025-11-01 | Processed 2026-05-23 ===
-[NUMERIC] ir_sensitivity_100bp: $12M → $6M (-50.0%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp: Prior period showed 12.0 million (implied from 100bp sensitivity), current filing shows 6.0 million (derived from 50bp sensitivity of $3 million). This is a 50% decrease, but the prior period value appears to have been extrapolated from 50bp data. The filing now explicitly states 50bp sensitivity rather than 100bp, so direct comparison requires doubling the disclosed figure to 6.0 million for 100bp equivalent.
-[LLM_FLAG] net_asset_balance_exposed: Decreased from $1.2 billion (prior period, August 2, 2025) to $0.7 billion (current period, November 1, 2025), a 42% decrease. This represents a significant reduction in interest rate exposure.
+=== 10-K | Period ending 2026-01-31 | Processed 2026-07-05 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $163M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $194M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $119M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $75M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $7M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $194M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $119M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $75M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 9/10 previously-populated fields are now null (total_cash_equivalents_fv, fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional...)
+[HISTORICAL] [LLM_FLAG] This excerpt is qualitative (Fair Value Hedges / Derivatives Not Designated as Hedging Instruments discussion) and does not include the notional-amount table or fair-value table, so FX notional, derivative asset/liability, and AOCI fields could not be extracted.
+[HISTORICAL] [LLM_FLAG] ir_swap_notional inferred from the $500M principal amount of hedged notes, which the text states matches the swap's notional under the shortcut method.
+[HISTORICAL] [LLM_FLAG] section_text is truncated before any quantitative figures appear (it ends mid-sentence at 'included in'); only a qualitative description of interest rate risk exposure is present, with no dollar amounts or sensitivity percentages to extract.
+[HISTORICAL] [LLM_FLAG] interest_rate_exposure, swap_description, and affected_instruments are descriptive schema fields (not numeric values), so no 'value' was extracted for them.
 
-=== 10-Q | Period ending 2025-08-02 | Processed 2026-05-23 ===
-[LLM_FLAG] ir_sensitivity_100bp differs from prior period: prior was 10.0 million (100bp sensitivity implied), current filing shows 6 million for 50bp move (implying 12 million for 100bp). This 20% increase may reflect changes in cash/debt balances or different calculation methodology.
+=== 10-Q | Period ending 2025-11-01 | Processed 2026-07-05 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $336M → $163M (-51.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $62M → $75M (+21.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $62M → $75M (+21.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv computed by summing only the money market funds and time deposits classified under the 'Cash and cash equivalents' balance sheet location (excludes identical instrument types classified under 'Other current assets')
+[HISTORICAL] [LLM_FLAG] No marketable debt/equity securities (available-for-sale) portfolio is disclosed in this excerpt
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional computed by summing 'Derivatives designated as net investment hedges' and 'No hedge designation (foreign exchange contracts)' notional lines; cross-checked against stated Total notional of $694M ($119+$500+$75)
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset left null — the supplied fair value table lists only an interest rate swap liability; no derivative assets are shown in this excerpt
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional computed as sum of net-investment-hedge FX forwards ($119M) and non-designated FX forwards ($75M); no separate cross-currency swap or FX option notional is disclosed.
+[HISTORICAL] [LLM_FLAG] Total derivative asset/liability fair values and AOCI balances are not in this excerpt (referenced Note 4, Fair Value Measurements table not included here).
+[HISTORICAL] [LLM_FLAG] Text discloses a 50-basis-point sensitivity ($3 million change in interest income), not the 100bp fair-value sensitivity requested by the schema, so ir_sensitivity_100bp was left null rather than extrapolated.
+[HISTORICAL] [LLM_FLAG] Text discloses unfavorable FX revenue impacts of $13 million (Q3) and $44 million (nine months), not a 10%-adverse-move fair-value sensitivity or a net transaction gain/loss figure, so fx_sensitivity_10pct and fx_transaction_gain_loss were left null.
+[HISTORICAL] [LLM_FLAG] No fixed-rate notes total, marketable equity value, or FX forward notional figure appears in this excerpt.
+[HISTORICAL] [LLM_FLAG] interest_rate_exposure, swap_description, and affected_instruments are descriptive schema fields (not numeric values), so no 'value' was extracted for them.
 
-=== 10-Q | Period ending 2025-05-03 | Processed 2026-05-23 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($10M)
-[LLM_FLAG] ir_sensitivity_100bp: Value of 10 million (extrapolated from 50bp = $5 million) differs from prior period but is calculated from disclosed 50bp sensitivity; filing does not provide direct 100bp figure
-[LLM_FLAG] fixed_rate_notes_billion: Only $0.5 billion swapped portion disclosed; total fixed-rate debt outstanding not provided in this excerpt
+=== 10-Q | Period ending 2025-08-02 | Processed 2026-07-05 ===
+[HISTORICAL] [DROPPED_TO_ZERO] fi_total_derivative_liability: $8M → $0M
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv computed by summing only the money market funds and time deposits classified under the 'Cash and cash equivalents' balance sheet location (excludes identical instrument types classified under 'Other current assets')
+[HISTORICAL] [LLM_FLAG] No marketable debt/equity securities (available-for-sale) portfolio is disclosed in this excerpt
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional computed by summing 'Derivatives designated as net investment hedges' and 'No hedge designation (foreign exchange contracts)' notional lines; cross-checked against stated Total notional of $681M ($119+$500+$62)
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_liability shown as '-' in the table for August 2, 2025, interpreted as zero/not material rather than not disclosed
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset left null — the supplied fair value table lists only an interest rate swap liability; no derivative assets are shown in this excerpt
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional computed as sum of net-investment-hedge FX forwards ($119M) and non-designated FX forwards ($62M); no separate cross-currency swap or FX option notional is disclosed.
+[HISTORICAL] [LLM_FLAG] Total derivative asset/liability fair values and AOCI balances are not in this excerpt (referenced Note 4, Fair Value Measurements table not included here).
+[HISTORICAL] [LLM_FLAG] Text discloses a 50-basis-point sensitivity ($6 million change in interest income), not the 100bp fair-value sensitivity requested by the schema, so ir_sensitivity_100bp was left null rather than extrapolated.
+[HISTORICAL] [LLM_FLAG] Text discloses a $31 million unfavorable FX impact on revenue for the first six months of fiscal 2026 (translation effect from actual rate moves), not a 10%-adverse-move fair-value sensitivity or a net transaction gain/loss figure, so fx_sensitivity_10pct and fx_transaction_gain_loss were left null.
+[HISTORICAL] [LLM_FLAG] No fixed-rate notes total, marketable equity value, or FX forward notional figure appears in this excerpt.
+[HISTORICAL] [LLM_FLAG] interest_rate_exposure, swap_description, and affected_instruments are descriptive schema fields (not numeric values), so no 'value' was extracted for them.
 
+=== 10-Q | Period ending 2025-05-03 | Processed 2026-07-05 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $589M → $311M (-47.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $42M → $54M (+28.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $14M → $8M (-42.9%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($173M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($119M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($54M)
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv computed by summing only the money market funds and time deposits classified under the 'Cash and cash equivalents' balance sheet location (excludes identical instrument types classified under 'Other current assets')
+[HISTORICAL] [LLM_FLAG] No marketable debt/equity securities (available-for-sale) portfolio is disclosed in this excerpt
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional computed by summing 'Derivatives designated as net investment hedges' and 'No hedge designation (foreign exchange contracts)' notional lines; cross-checked against stated Total notional of $673M ($119+$500+$54)
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset left null — the supplied fair value table lists only an interest rate swap liability; no derivative assets are shown in this excerpt
+[HISTORICAL] [LLM_FLAG] fx_derivatives_notional computed as sum of net-investment-hedge FX forwards ($119M) and non-designated FX forwards ($54M); no separate cross-currency swap or FX option notional is disclosed.
+[HISTORICAL] [LLM_FLAG] Total derivative asset/liability fair values and AOCI balances are not in this excerpt; the text references Note 4, Fair Value Measurements for the fair-value classifications but that table is not included here.
+[HISTORICAL] [LLM_FLAG] Text discloses a 50-basis-point sensitivity ($5 million change in interest income), not the 100bp fair-value sensitivity requested by the schema, so ir_sensitivity_100bp was left null rather than extrapolated.
+[HISTORICAL] [LLM_FLAG] Text discloses a $29 million unfavorable FX impact on revenue (translation effect from actual rate moves), not a 10%-adverse-move fair-value sensitivity or a net transaction gain/loss figure, so fx_sensitivity_10pct and fx_transaction_gain_loss were left null.
+[HISTORICAL] [LLM_FLAG] No fixed-rate notes total, marketable equity value, or FX forward notional figure appears in this excerpt.
+[HISTORICAL] [LLM_FLAG] interest_rate_exposure, swap_description, and affected_instruments are descriptive schema fields (not numeric values), so no 'value' was extracted for them.
+
+=== 10-K | Period ending 2025-02-01 | Processed 2026-07-05 ===
+[HISTORICAL] [LLM_FLAG] total_cash_equivalents_fv computed by summing only the money market funds and time deposits classified under the 'Cash and cash equivalents' balance sheet location (excludes identical instrument types classified under 'Other current assets', which per table footnote (1) reflects longer maturity/restricted-use classification and are not part of the balance-sheet cash-equivalents caption)
+[HISTORICAL] [LLM_FLAG] No marketable debt/equity securities (available-for-sale) portfolio is disclosed; the only similar line item is 'Marketable securities that fund deferred compensation' ($39M), which was not mapped to total_marketable_securities_fv since it lacks the equity/debt breakdown the schema implies and is a distinct deferred-comp funding vehicle
+[HISTORICAL] [LLM_FLAG] fi_fx_derivatives_notional computed by summing 'Derivatives designated as net investment hedges' and 'No hedging designation (foreign exchange contracts)' notional lines; cross-checked against stated Total notional of $661M ($119+$500+$42)
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset left null — the supplied fair value table lists only an interest rate swap liability; no derivative assets are shown in this excerpt
+[HISTORICAL] [LLM_FLAG] This excerpt is qualitative (Fair Value Hedges / Derivatives Not Designated as Hedging Instruments discussion) and does not include the notional-amount table or fair-value table (those are in Note 4/Note 5 tables not present in this section_text), so FX notional, derivative asset/liability, and AOCI fields could not be extracted.
+[HISTORICAL] [LLM_FLAG] ir_swap_notional inferred from the $500M principal amount of hedged notes, which the text states matches the swap's notional under the shortcut method.
+[HISTORICAL] [LLM_FLAG] section_text is truncated before any quantitative figures appear (it ends mid-sentence at 'included in'); only a qualitative description of interest rate risk exposure is present, with no dollar amounts or sensitivity percentages to extract.
+[HISTORICAL] [LLM_FLAG] interest_rate_exposure, swap_description, and affected_instruments are descriptive schema fields (not numeric values), so no 'value' was extracted for them per the numeric-extraction rule.

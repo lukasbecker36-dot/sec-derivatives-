@@ -18,61 +18,69 @@
 [LLM_FLAG] equity_derivatives_notional prior was 'Yes' but no equity derivatives are disclosed in this filing; prior was likely an extraction error
 [LLM_FLAG] Designated FX notional decreased from $6,080.1M (Dec 2025) to $4,612.6M (June 2026) as hedges matured, a reduction of ~24%
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,322M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($5,322M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($868M)
-[NUMERIC] total_derivative_asset: $6,100M → $76M (-98.8%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $6,100M → $78M (-98.7%) — exceeds 20% threshold
-[NEW_FIELD] net_derivative_position: appeared for first time ($-3M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $112M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-112M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $608M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $6,100M, now missing
-[DISAPPEARED_FIELD] fx_forward_sensitivity_10pct: was $608M, now missing
-[VALIDATION] Likely extraction failure: 5/7 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, marketable_equity_value, equity_sensitivity_10pct, fx_forward_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($2,570M)
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($7,504M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($20M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($4,170M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($76M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($78M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($868M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($76M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($78M)
+[HISTORICAL] [NUMERIC] net_derivative_position: $-112M → $-3M (+97.6%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-2M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $608M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forward_notional_cash_flow_hedges: was $6,100M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forward_net_liability: was $-112M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forward_sensitivity_10pct: was $608M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] revolving_credit_facility_capacity: was $500M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] revolving_credit_outstanding: was $0M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/9 previously-populated fields are now null (fx_sensitivity_10pct, fx_forward_notional_cash_flow_hedges, fx_forward_net_liability, fx_forward_sensitivity_10pct, revolving_credit_facility_capacity...)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($6,100M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($6,100M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($112M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-112M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($608M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($6,100M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($608M)
-[NEW_FIELD] fx_forward_notional_cash_flow_hedges: appeared for first time ($6,100M)
-[NEW_FIELD] fx_forward_net_liability: appeared for first time ($112M)
-[NEW_FIELD] revolving_credit_facility_capacity: appeared for first time ($500M)
-[NEW_FIELD] revolving_credit_outstanding: appeared for first time ($0M)
-[LLM_FLAG] fx_forwards_outstanding and fx_forward_notional_cash_flow_hedges reflect substantial foreign exchange risk management activities, indicating a proactive hedging strategy.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-27 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,217M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $7,070M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $9M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $3,538M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $16M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $193M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $619M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $16M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $193M, now missing
+[HISTORICAL] [NUMERIC] net_derivative_position: $-176M → $-112M (+36.8%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-138M, now missing
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($608M)
+[HISTORICAL] [NEW_FIELD] fx_forward_notional_cash_flow_hedges: appeared for first time ($6,100M)
+[HISTORICAL] [NEW_FIELD] fx_forward_net_liability: appeared for first time ($-112M)
+[HISTORICAL] [NEW_FIELD] fx_forward_sensitivity_10pct: appeared for first time ($608M)
+[HISTORICAL] [NEW_FIELD] revolving_credit_facility_capacity: appeared for first time ($500M)
+[HISTORICAL] [NEW_FIELD] revolving_credit_outstanding: appeared for first time ($0M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 10/13 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, fi_total_derivative_asset...)
+[HISTORICAL] [LLM_FLAG] The section_text supplied is the Item 7A market risk discussion (not the detailed hedge note from the financial statements); some fields are null because the detailed note data is not present in this excerpt.
+[HISTORICAL] [LLM_FLAG] The $6.1 billion notional is a rounded figure; precise per-currency breakdown is in the financial statements hedge note.
+[HISTORICAL] [LLM_FLAG] The $6.1 billion notional is stated as a round figure in the market risk section; the detailed note breakdown by currency (from the financial statements) would have more precision.
+[HISTORICAL] [LLM_FLAG] No quantitative IR sensitivity or equity price sensitivity is disclosed in this filing's market risk section.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $6,100M, now missing
-[DISAPPEARED_FIELD] fx_forward_sensitivity_10pct: was $608M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, fx_forward_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,013M → $1,217M (+20.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $28M → $9M (-66.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $3M → $16M (+519.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $3,727M → $7,420M (+99.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $3,727M → $6,801M (+82.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $3M → $16M (+519.2%) — exceeds 20% threshold
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($6,100M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($608M)
-[NEW_FIELD] fx_forward_notional_cash_flow_hedges: appeared for first time ($6,100M)
-[NEW_FIELD] fx_forward_net_liability: appeared for first time ($112M)
-[NEW_FIELD] revolving_credit_facility_capacity: appeared for first time ($500M)
-[NEW_FIELD] revolving_credit_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-27 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,411M → $1,013M (-28.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $22M → $28M (+29.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $51M → $3M (-94.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $25M → $222M (+802.8%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] fx_not_designated_notional: $44M → $0M
+[HISTORICAL] [NUMERIC] total_derivative_asset: $51M → $3M (-94.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $25M → $222M (+802.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $26M → $-220M (-928.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $21M → $-171M (-927.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Large swing in derivative liability vs prior quarter: $222.1M vs $24.6M at Q1 2025, and large swing in derivative asset from $51.1M to $2.6M — may warrant review
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($6,100M)
-[NEW_FIELD] fx_forward_notional_cash_flow_hedges: appeared for first time ($6,100M)
-[NEW_FIELD] fx_forward_net_liability: appeared for first time ($112M)
-[NEW_FIELD] fx_forward_sensitivity_10pct: appeared for first time ($608M)
-[NEW_FIELD] revolving_credit_facility_capacity: appeared for first time ($500M)
-[NEW_FIELD] revolving_credit_outstanding: appeared for first time ($0M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-27 ===
+[HISTORICAL] [LLM_FLAG] Non-designated FX forward assets ($0.6M shown in FV table under 'Other assets') are included in total derivative assets alongside designated contracts; the $51.1M figure reflects only designated hedge assets per the hedge table.

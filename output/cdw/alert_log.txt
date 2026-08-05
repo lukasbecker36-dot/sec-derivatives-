@@ -1,19 +1,29 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($400M)
-[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $400M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (cash_flow_hedge_aoci, equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-13 ===
+[HISTORICAL] [LLM_FLAG] Derivative fair values reported as 'not material' — no numeric asset/liability amounts extractable. Collar now classified as current liability (matures September 30, 2026). No short-term investments section present in this period's text. Collar agreements are interest rate collars (cap+floor), captured under fi_ir_swap_notional.
+[HISTORICAL] [LLM_FLAG] Only derivative instrument is interest rate collars ($400M notional); fair value and AOCI amounts described as not material with no dollar figures provided.
+[HISTORICAL] [LLM_FLAG] No FX, commodity, or equity derivatives disclosed.
+[HISTORICAL] [LLM_FLAG] Balance sheet classification: collars now in Current liabilities - Other as of March 31, 2026, consistent with September 30, 2026 maturity being within 12 months.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($400M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-13 ===
+[HISTORICAL] [LLM_FLAG] Derivative fair values reported as 'not material' — no numeric asset/liability amounts extractable. CD of $211M matured April 2025; no short-term investments outstanding at year-end. Collar agreements are interest rate collars (cap+floor), captured under fi_ir_swap_notional as the sole IR derivative notional.
+[HISTORICAL] [LLM_FLAG] Only derivative instrument is interest rate collars ($400M notional); fair value and AOCI amounts described as not material with no dollar figures provided.
+[HISTORICAL] [LLM_FLAG] No FX, commodity, or equity derivatives disclosed.
+[HISTORICAL] [LLM_FLAG] This is the annual 10-K (year ended December 31, 2025); collars mature September 30, 2026 — still within one year as of filing date.
+[HISTORICAL] [LLM_FLAG] All sensitivity disclosures are qualitative only ('no material impact') — no numeric values are present in the text. Market risk is limited to floating-rate debt (hedged with IR collars) and foreign currency translation from UK and Canadian operations.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-13 ===
+[HISTORICAL] [LLM_FLAG] Derivative fair values reported as 'not material' — no numeric asset/liability amounts extractable. Collar reclassified to current liabilities as of Q3 2025 (maturing September 30, 2026). No short-term investments outstanding as of September 30, 2025. Collar agreements are interest rate collars (cap+floor), captured under fi_ir_swap_notional.
+[HISTORICAL] [LLM_FLAG] Only derivative instrument is interest rate collars ($400M notional); fair value and AOCI amounts described as not material with no dollar figures provided.
+[HISTORICAL] [LLM_FLAG] No FX, commodity, or equity derivatives disclosed.
+[HISTORICAL] [LLM_FLAG] Balance sheet classification changed: as of Sep 30, 2025 collar is in Other current liabilities (vs Long-term liabilities at Dec 31, 2024), reflecting the Sept 30, 2026 maturity date approaching within 12 months.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-13 ===
+[HISTORICAL] [LLM_FLAG] Derivative fair values reported as 'not material' — no numeric asset/liability amounts extractable. Short-term investment (CD of $211M) matured April 2025 and is no longer on balance sheet. Collar agreements are interest rate collars (cap+floor), captured under fi_ir_swap_notional.
+[HISTORICAL] [LLM_FLAG] Only derivative instrument is interest rate collars ($400M notional); fair value and AOCI amounts described as not material with no dollar figures provided.
+[HISTORICAL] [LLM_FLAG] No FX, commodity, or equity derivatives disclosed.
+[HISTORICAL] [LLM_FLAG] Short-term investments (certificate of deposit $211M) matured in April 2025; no short-term investments outstanding as of June 30, 2025.
 
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-13 ===
+[HISTORICAL] [LLM_FLAG] Derivative fair values reported as 'not material' — no numeric asset/liability amounts extractable. Collar agreements are interest rate collars (cap+floor), not plain swaps, but captured under fi_ir_swap_notional as the only IR derivative notional disclosed.
+[HISTORICAL] [LLM_FLAG] Only derivative instrument is interest rate collars ($400M notional); fair value and AOCI amounts described as not material with no dollar figures provided.
+[HISTORICAL] [LLM_FLAG] No FX, commodity, or equity derivatives disclosed.

@@ -15,49 +15,83 @@
 [LLM_FLAG] net_derivative_position prior of 169.0 vs current -1.0 — prior values appear to have been extracted from a broader financial instruments table.
 [LLM_FLAG] Prior equity_derivatives_notional value of 'Yes' appears corrupted.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($318M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($149M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($169M)
-[NUMERIC] total_derivative_asset: $308M → $2M (-99.4%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[VALIDATION] Likely units mismatch: total_derivative_asset changed from 308 to 2 (0x)
-[LLM_FLAG] The total derivative asset value of $2 million is significantly lower than the prior period value of $308 million, which raises concerns about potential derecognition or ineffectiveness of derivative positions.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($492M)
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($318M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($149M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($169M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($149M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($169M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($0M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $308M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $16M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_value: was $483M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forward_notional: was $308M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_securities_fair_value: was $483M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] long_term_debt_carrying_value: was $15,700M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] long_term_debt_fair_value: was $15,100M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 7/8 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, marketable_equity_value, fx_forward_notional, marketable_securities_fair_value...)
+[HISTORICAL] [LLM_FLAG] Derivatives row shows all zeros (—) at March 31, 2026 across all levels; no derivative asset or liability recorded at period end. Filing confirms fair values were 'not material.'
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional is calculated (318-149) rather than explicitly stated.
+[HISTORICAL] [LLM_FLAG] In March 2026, the company repaid $270M of 7.875% notes and $257M of 7.75% notes upon maturity — significant debt reduction event in the period.
+[HISTORICAL] [LLM_FLAG] Derivative fair values stated as 'not material'; at March 31, 2026, derivatives show as zero in the fair value table (compared to $2M asset at December 31, 2025).
+[HISTORICAL] [LLM_FLAG] fx_not_designated_notional is derived by subtraction, not stated directly.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($308M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($16M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($483M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fx_forward_notional: appeared for first time ($308M)
-[NEW_FIELD] marketable_securities_fair_value: appeared for first time ($483M)
-[NEW_FIELD] long_term_debt_carrying_value: appeared for first time ($16M)
-[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($15M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-23 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $516M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $334M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $241M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $93M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $7M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $241M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $93M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $7M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $7M, now missing
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($308M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($16M)
+[HISTORICAL] [NEW_FIELD] marketable_equity_value: appeared for first time ($483M)
+[HISTORICAL] [NEW_FIELD] fx_forward_notional: appeared for first time ($308M)
+[HISTORICAL] [NEW_FIELD] marketable_securities_fair_value: appeared for first time ($483M)
+[HISTORICAL] [NEW_FIELD] long_term_debt_carrying_value: appeared for first time ($15,700M)
+[HISTORICAL] [NEW_FIELD] long_term_debt_fair_value: appeared for first time ($15,100M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 9/10 previously-populated fields are now null (total_marketable_securities_fv, fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_total_derivative_asset...)
+[HISTORICAL] [LLM_FLAG] Section text provided is the Item 7A market risk narrative rather than Note 8 (Fair Value of Financial Instruments); derivative fair value table not included in this excerpt.
+[HISTORICAL] [LLM_FLAG] Designated/not-designated notional split and derivative fair values would be in Note 8 of the 10-K, which is not in this section_text.
+[HISTORICAL] [LLM_FLAG] long_term_debt_carrying_value and long_term_debt_fair_value expressed in millions ($15,700M and $15,100M) consistent with schema unit convention, though source text states in billions.
+[HISTORICAL] [LLM_FLAG] fx_sensitivity_10pct is qualitative ('not material') — no numeric value available.
+[HISTORICAL] [LLM_FLAG] equity_sensitivity_10pct not quantified in this filing.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp not quantified; company states immaterial exposure for fixed-rate debt.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $308M, now missing
-[DISAPPEARED_FIELD] long_term_debt_fair_value: was $16M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, long_term_debt_fair_value)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $413M → $516M (+24.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $9M → $7M (-22.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $9M → $7M (-22.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $9M → $7M (-22.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Derivative fair value table shows a net $7M position (asset) at September 30, 2025; gross asset and gross liability not separately disclosed — filing describes fair values as 'not material'.
+[HISTORICAL] [LLM_FLAG] During Q3 2025, $50M of securities were transferred from Level 3 to Level 1 due to an IPO; this explains the Level 1 marketable securities jump to $496M from $343M at June 30, 2025.
+[HISTORICAL] [LLM_FLAG] The $82M unrealized gain noted for Q3 2025 relates to the IPO investment (equity-type), not debt securities; schema field gross_unrealized_gains_debt is not applicable here.
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional is calculated (334-241) rather than explicitly stated.
+[HISTORICAL] [LLM_FLAG] Derivative fair values stated as 'not material'; the $7M figure is the net fair value from the hierarchy table.
+[HISTORICAL] [LLM_FLAG] fx_not_designated_notional is derived by subtraction, not stated directly.
+[HISTORICAL] [LLM_FLAG] Q3 2025 filing also notes a $50M transfer of securities from Level 3 to Level 1 due to an IPO; company holds $115M investment in that entity as of September 30, 2025.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($308M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($16M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($483M)
-[NEW_FIELD] fx_forward_notional: appeared for first time ($308M)
-[NEW_FIELD] marketable_securities_fair_value: appeared for first time ($483M)
-[NEW_FIELD] long_term_debt_carrying_value: appeared for first time ($16M)
-[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($15M)
-[LLM_FLAG] Noteworthy decrease in foreign currency forward contracts outstanding from $399 million in 2024 to $308 million in 2025 (over 22% decline).
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-23 ===
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $152M → $99M (-34.9%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($9M)
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $2M, now missing
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $152M → $99M (-34.9%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($9M)
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $2M, now missing
+[HISTORICAL] [NUMERIC] net_derivative_position: $-2M → $9M (+550.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Derivative fair value table shows a net $9M position (asset) at June 30, 2025; gross asset and gross liability not separately disclosed — filing describes fair values as 'not material'.
+[HISTORICAL] [LLM_FLAG] Level 3 marketable securities increased significantly from $14M (Dec 31, 2024) to $64M (June 30, 2025), likely due to new investments in technology companies.
+[HISTORICAL] [LLM_FLAG] fi_fx_not_designated_notional is calculated (335-236) rather than explicitly stated.
+[HISTORICAL] [LLM_FLAG] Derivative fair values stated as 'not material'; the $9M figure is the net fair value from the hierarchy table.
+[HISTORICAL] [LLM_FLAG] fx_not_designated_notional is derived by subtraction, not stated directly.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($308M)
-[NEW_FIELD] fx_forward_notional: appeared for first time ($308M)
-[NEW_FIELD] marketable_securities_fair_value: appeared for first time ($483M)
-[NEW_FIELD] long_term_debt_carrying_value: appeared for first time ($15,700M)
-[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($15,100M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [LLM_FLAG] Derivative fair value table shows a net $(2)M position (liability) at March 31, 2025; gross asset and gross liability not separately disclosed — filing describes fair values as 'not material'.
+[HISTORICAL] [LLM_FLAG] Marketable securities not broken down into equity vs. debt sub-categories; fi_fx_not_designated_notional is calculated (408-256) rather than explicitly stated.
+[HISTORICAL] [LLM_FLAG] Derivative fair values stated as 'not material'; the ($2M) figure is the net fair value from the hierarchy table, not a separately labelled asset/liability split.
+[HISTORICAL] [LLM_FLAG] fx_not_designated_notional is derived by subtraction, not stated directly.

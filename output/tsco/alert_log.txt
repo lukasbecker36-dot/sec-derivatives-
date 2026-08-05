@@ -1,3 +1,35 @@
-=== 10-K | Period ending 2025-12-27 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-06-26 ===
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $0M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (ir_swap_notional, total_derivative_asset, total_derivative_liability, net_derivative_position)
+[HISTORICAL] [LLM_FLAG] No derivatives outstanding as of March 28, 2026 (confirmed by 10-K filing for Dec 27, 2025)
+[HISTORICAL] [LLM_FLAG] Section covers only debt fair value disclosures (1.75% Senior Notes and 5.25% Senior Notes); no derivative content
+[HISTORICAL] [LLM_FLAG] Total debt borrowings at March 28, 2026: $2.14 billion
 
+=== 10-K | Period ending 2025-12-27 | Processed 2026-06-26 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $0M, now missing
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($0M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] Tractor Supply explicitly has zero outstanding derivatives as of December 27, 2025 (10-K period end)
+[HISTORICAL] [LLM_FLAG] Interest rate swap agreement matured in Q1 fiscal 2025 (early 2025)
+[HISTORICAL] [LLM_FLAG] Company describes hedge accounting framework but no instruments are active
+[HISTORICAL] [LLM_FLAG] No quantitative sensitivity figures (100bp IR move, 10% FX/equity move) are disclosed in the 10-K market risk section; Tractor Supply provides only qualitative descriptions and cross-references to Note 5 for debt details.
+
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-06-26 ===
+[HISTORICAL] [LLM_FLAG] Interest rate swap matured in Q1 fiscal 2025; no active derivatives as of September 27, 2025
+[HISTORICAL] [LLM_FLAG] Swap was $0 at report date vs $1.600M at December 28, 2024 and $3.395M at September 28, 2024
+
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-06-26 ===
+[HISTORICAL] [LLM_FLAG] Interest rate swap matured in Q1 fiscal 2025; no active derivatives as of June 28, 2025
+[HISTORICAL] [LLM_FLAG] Swap was $0 fair value at report date vs $1.600M at December 28, 2024
+
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-06-26 ===
+[HISTORICAL] [LLM_FLAG] Interest rate swap matured in Q1 fiscal 2025 (before March 29, 2025 period end)
+[HISTORICAL] [LLM_FLAG] Swap was $0 fair value at report date vs $1.600M at December 28, 2024 and $8.102M at March 30, 2024
+[HISTORICAL] [LLM_FLAG] Company effectively had no active derivatives as of March 29, 2025

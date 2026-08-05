@@ -1,63 +1,53 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-13M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
-[NUMERIC] convertible_notes_principal: $14M → $4M (-70.8%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] fx_forward_contracts_materiality: was $0M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity: was $4M, now missing
-[VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (fx_forward_contracts_materiality, fx_sensitivity)
-[LLM_FLAG] fx_transaction_gain_loss was determined to be immaterial, indicating potential low hedging activity.
-[LLM_FLAG] The decline in interest rate sensitivity ($12.8 million) is a new disclosure indicating increased sensitivity compared to past periods.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-11 ===
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($183M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($1,028M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($1M)
+[HISTORICAL] [LLM_FLAG] No derivative instruments disclosed in Akamai's fair value note; section covers only AFS securities and fair value hierarchy.
+[HISTORICAL] [LLM_FLAG] AFS portfolio at net unrealized loss position at Mar 31, 2026 (gross losses $2.7m vs gains $0.9m), reversing the net-gain position at Dec 31, 2025; consistent with rate moves on the now $1.0bn longer-dated corporate bond book.
+[HISTORICAL] [LLM_FLAG] Marketable equity securities figure (183.4) includes money market funds ($155.0m) which Akamai classifies as equity securities; mutual funds alone are $28.3m.
+[HISTORICAL] [LLM_FLAG] Credit concentration normalized: the customer at 10% of receivables at Dec 31, 2025 no longer exceeded 10% at March 31, 2026.
+[HISTORICAL] [LLM_FLAG] Company explicitly does not hedge interest rate exposure; FX hedging limited to short-term forwards on balance-sheet re-measurement with no notional disclosed.
+[HISTORICAL] [LLM_FLAG] No borrowings outstanding under the 2025 or 2022 Credit Agreements (variable rate) at March 31, 2026.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $100M → $14M (-85.8%) — exceeds 20% threshold
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
-[NEW_FIELD] convertible_notes_principal: appeared for first time ($4M)
-[LLM_FLAG] ir_sensitivity_100bp changed from 100.0 in the prior period to 14.2, indicating a significant difference in exposure.
-[LLM_FLAG] fx_forwards_outstanding assessed at 0 million indicates no current derivative hedging strategy despite previous activity.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-11 ===
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $399M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $812M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $3M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/7 previously-populated fields are now null (marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt)
+[HISTORICAL] [LLM_FLAG] New credit concentration: one customer exceeded 10% of accounts receivable at Dec 31, 2025 (none at Dec 31, 2024) — matches schema hint.
+[HISTORICAL] [LLM_FLAG] Company explicitly does not hedge interest rate exposure; FX hedging limited to short-term forwards on balance-sheet re-measurement with no notional disclosed.
+[HISTORICAL] [LLM_FLAG] No borrowings outstanding under the 2025 or 2022 Credit Agreements (variable rate) at December 31, 2025.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-13M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
-[NUMERIC] convertible_notes_principal: $14M → $4,140M (+29054.9%) — exceeds 20% threshold
-[DROPPED_TO_ZERO] fx_sensitivity: $4M → $0M
-[VALIDATION] Likely units mismatch: convertible_notes_principal changed from 14 to 4,140 (292x)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-11 ===
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $646M → $812M (+25.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $2M → $3M (+77.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $10M → $13M (+24.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] interest_rate_sensitivity: $10M → $13M (+24.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No derivative instruments disclosed in Akamai's fair value note; section covers only AFS securities and fair value hierarchy.
+[HISTORICAL] [LLM_FLAG] Continued portfolio rebuild: AFS securities up to $844.4m at Sep 30, 2025 (from $670.4m at Q2), with $667.6m in corporate bonds due after one year.
+[HISTORICAL] [LLM_FLAG] Marketable equity securities figure (398.6) includes money market funds ($369.0m) which Akamai classifies as equity securities; mutual funds alone are $29.5m.
+[HISTORICAL] [LLM_FLAG] Schema hint of one >10% receivables customer contradicts the filing, which states no customer had >=10% of accounts receivable.
+[HISTORICAL] [LLM_FLAG] Company explicitly does not hedge interest rate exposure; FX hedging limited to short-term forwards on balance-sheet re-measurement with no notional disclosed.
+[HISTORICAL] [LLM_FLAG] No borrowings outstanding under the 2025 or 2022 Credit Agreements (variable rate) at September 30, 2025.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NUMERIC] ir_sensitivity_100bp: $100M → $14M (-85.8%) — exceeds 20% threshold
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
-[NEW_FIELD] convertible_notes_principal: appeared for first time ($4,140M)
-[LLM_FLAG] ir_sensitivity_100bp has decreased from 100.0 to 14.2, which is a more than 50% change.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-11 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $735M → $371M (-49.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $200M → $646M (+223.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $0M → $2M (+5900.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($10M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($10M)
+[HISTORICAL] [LLM_FLAG] No derivative instruments disclosed in Akamai's fair value note; section covers only AFS securities and fair value hierarchy.
+[HISTORICAL] [LLM_FLAG] AFS portfolio rebuilt to $670.4m at June 30, 2025 (from $212.0m at Q1), mostly longer-dated corporate bonds ($566.6m due after 1 year); still well below the $1,320.7m held at Dec 31, 2024.
+[HISTORICAL] [LLM_FLAG] Marketable equity securities figure (370.9) includes money market funds ($343.2m) which Akamai classifies as equity securities; mutual funds alone are $27.6m.
+[HISTORICAL] [LLM_FLAG] Convertible notes principal jumped to $4,140.0m from $3,565.0m at year-end (new 2033 Notes issued; 2025 Notes repaid), keeping interest rate exposure fixed-rate.
+[HISTORICAL] [LLM_FLAG] Company mentions both a 2025 Credit Agreement and 2022 Credit Agreement with variable rates; no borrowings outstanding at June 30, 2025.
+[HISTORICAL] [LLM_FLAG] Schema hint of one >10% receivables customer contradicts the filing, which states no customer had >=10% of accounts receivable.
+[HISTORICAL] [LLM_FLAG] Company explicitly does not hedge interest rate exposure; FX hedging limited to short-term forwards on balance-sheet re-measurement with no notional disclosed.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[LLM_FLAG] ir_sensitivity_100bp decreased from $12.9M to $12.8M (-0.8%) - minor variation, within normal range
-[LLM_FLAG] credit_concentration changed from 'Yes' (one customer at 10% as of Dec 31, 2025) to 'No' (no customer >10% as of Mar 31, 2026) - this reflects the required disclosure timing for different reporting dates, not a material change in methodology
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
-[NUMERIC] ir_sensitivity_100bp: $10M → $13M (+24.0%) — exceeds 20% threshold
-[LLM_FLAG] ir_sensitivity_100bp increased from $10.4 million to $12.9 million (24% increase) - within plausibility but notable change in portfolio composition or interest rate environment
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
-[LLM_FLAG] ir_sensitivity_100bp increased from 0.0 to 10.4 million (significant change) - likely reflects different portfolio composition or measurement methodology between periods
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[DROPPED_TO_ZERO] ir_sensitivity_100bp: $-14M → $0M
-[LLM_FLAG] SIGNIFICANT CHANGE: convertible_notes_principal decreased from $4,140.0 million (prior period) to $3,565.0 million (current period) - a 13.8% decrease. This represents a material reduction in convertible debt outstanding.
-[LLM_FLAG] CHANGE: fixed_rate_notes_billion decreased from 4.14 billion to 3.565 billion, corresponding to the convertible notes principal reduction.
-[LLM_FLAG] CHANGE: credit_concentration changed from 'Yes' (one customer >10%) in prior period to 'No' (no customer ≥10%) in current period - indicates improved customer diversification.
-[LLM_FLAG] NOTE: interest_rate_sensitivity changed from '$14.2 million decline' (prior period) to 'insignificant amount' (current period) - represents a meaningful change in disclosure characterization, though the actual quantified impact is not provided in current filing.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
-[LLM_FLAG] Credit concentration changed from prior period: As of December 31, 2024, no customer had >10% of accounts receivable, but as of December 31, 2025, one customer exceeded this threshold. This represents a significant change.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-11 ===
+[HISTORICAL] [LLM_FLAG] No derivative instruments disclosed in Akamai's fair value note; section covers only AFS securities and fair value hierarchy.
+[HISTORICAL] [LLM_FLAG] Large portfolio drawdown: AFS marketable securities fell from $1,320.7m (Dec 31, 2024) to $212.0m (Mar 31, 2025), with corporate bonds down from ~$1.0bn to $199.8m and agency obligations fully liquidated; money market funds rose from $163.7m to $709.6m.
+[HISTORICAL] [LLM_FLAG] Marketable equity securities figure (734.9) includes money market funds ($709.6m) which Akamai classifies as equity securities; mutual funds alone are $25.4m.
+[HISTORICAL] [LLM_FLAG] Schema hints appear stale: filing shows $3,565.0m convertible notes (not $4,140.0m) and states NO customer had >=10% of receivables, contradicting the schema hint of one >10% customer.
+[HISTORICAL] [LLM_FLAG] Subsequent event: in April 2025 Akamai borrowed $250.0 million under its 2022 Credit Agreement (variable rate), creating new floating-rate exposure.
+[HISTORICAL] [LLM_FLAG] Company explicitly does not hedge interest rate exposure; FX hedging limited to short-term forwards on balance-sheet re-measurement with no notional disclosed.

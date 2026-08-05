@@ -1,3 +1,56 @@
-=== 10-Q | Period ending 2025-01-26 | Processed 2026-05-26 ===
-[LLM_FLAG] This 10-Q section provides minimal disclosure, referring readers to the prior 10-K filing rather than providing detailed quantitative data. All specific financial metrics are unavailable from this excerpt as the company defers detailed disclosure to annual reporting.
+=== 10-Q | Period ending 2026-05-03 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $347M → $270M (-22.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $10,175M → $12,302M (+20.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $347M → $270M (-22.2%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not included in this fair value measurements section; they appear in a separate derivatives/hedging note not captured here.
+[HISTORICAL] [LLM_FLAG] Total marketable securities FV computed as sum of Level 1 ($295) and Level 2 ($1,093) subtotals; held-to-maturity securities ($42 at May 3, 2026) are excluded as carried at amortized cost.
+[HISTORICAL] [LLM_FLAG] Net position is a net liability of $268M at May 3, 2026.
 
+=== 10-Q | Period ending 2026-02-01 | Processed 2026-06-16 ===
+[HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1,398M)
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($510M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($347M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($593M)
+[HISTORICAL] [NUMERIC] total_derivative_liability: $389M → $593M (+52.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $4M → $-246M (-6250.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-9M, now missing
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not included in this fair value measurements section; they appear in a separate derivatives/hedging note not captured here.
+[HISTORICAL] [LLM_FLAG] Total marketable securities FV computed as sum of Level 1 ($264) and Level 2 ($1,134) subtotals; held-to-maturity securities ($60 at Nov 2, 2025, matured Q1 2026) are excluded as carried at amortized cost.
+[HISTORICAL] [LLM_FLAG] Cross-currency interest rate contracts counted under FX per schema instruction. FX total = foreign exchange contracts $7,984 + all cross-currency IR $3,322 = $11,306.
+[HISTORICAL] [LLM_FLAG] Net position is a net liability of $246M.
+
+=== 10-K | Period ending 2025-11-02 | Processed 2026-06-16 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $1,345M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $477M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $370M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $517M, now missing
+[HISTORICAL] [NUMERIC] fx_designated_notional: $2,106M → $3,189M (+51.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $517M → $389M (-24.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-147M → $4M (+102.7%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-9M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/11 previously-populated fields are now null (total_marketable_securities_fv, corporate_debt_securities_fv, fi_total_derivative_asset, fi_total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] Cross-currency interest rate contracts are included in both FX and IR totals; fx_derivatives_notional includes cross-currency swaps per schema instruction 'cross-currency swaps combined'.
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci is stated as a loss (negative) of $9 after-tax.
+[HISTORICAL] [LLM_FLAG] The market risk section for this 10-K is a stub that cross-references MD&A and Note 26 for all quantitative detail; numeric sensitivity figures are not in the provided section_text.
+
+=== 10-Q | Period ending 2025-07-27 | Processed 2026-06-16 ===
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not included in this fair value measurements section; they appear in a separate derivatives/hedging note not captured here.
+[HISTORICAL] [LLM_FLAG] Total marketable securities FV computed as sum of Level 1 ($229) and Level 2 ($1,116) subtotals. Held-to-maturity marketable securities ($62 carrying value) are excluded as carried at amortized cost.
+[HISTORICAL] [LLM_FLAG] Net investment hedge cross-currency IR swap ($1,131) entered in April 2025 continues to be carried here.
+[HISTORICAL] [LLM_FLAG] Net position is a net liability of $147M at July 27, 2025.
+
+=== 10-Q | Period ending 2025-04-27 | Processed 2026-06-16 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $216M → $434M (+100.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $8,547M → $10,350M (+21.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $975M → $2,106M (+116.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $216M → $434M (+100.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-534M → $-180M (+66.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not included in this fair value measurements section; they appear in a separate derivatives/hedging note not captured here.
+[HISTORICAL] [LLM_FLAG] Total marketable securities FV computed as sum of Level 1 ($259) and Level 2 ($1,013) subtotals. Prior period comparatives (Apr 28, 2024) included equity securities in Level 1 that are absent at the current period date.
+[HISTORICAL] [LLM_FLAG] In April 2025, a new cross-currency interest rate swap was entered as a net investment hedge ($1,131 notional), which is included in the FX total.
+[HISTORICAL] [LLM_FLAG] Net position is a net liability of $180M at April 27, 2025.
+
+=== 10-Q | Period ending 2025-01-26 | Processed 2026-06-16 ===
+[HISTORICAL] [LLM_FLAG] Notional amounts for FX and IR derivatives are not included in this fair value measurements section; they appear in a separate derivatives/hedging note not captured here.
+[HISTORICAL] [LLM_FLAG] Total marketable securities FV computed as sum of Level 1 ($301) and Level 2 ($913) subtotals. Note that prior period (Jan 28, 2024) included equity mutual funds and equity securities in Level 1 that are absent at the current period date.
+[HISTORICAL] [LLM_FLAG] Net position is a significant net liability of $534M at January 26, 2025, driven by large fair value hedge liabilities on interest rate contracts.

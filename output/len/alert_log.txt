@@ -1,10 +1,58 @@
-=== 10-Q | Period ending 2025-02-28 | Processed 2026-06-02 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_forwards_outstanding)
-[LLM_FLAG] The 10-Q excerpt does not contain detailed market risk disclosures - instead it references the prior fiscal year's Form 10-K (ended November 30, 2024). This is standard practice for 10-Q filings but means no new quantitative data is available for the quarter ended February 28, 2025.
-[LLM_FLAG] All substantive market risk data points are deferred rather than disclosed in this 10-Q section.
+=== 10-Q | Period ending 2026-02-28 | Processed 2026-06-21 ===
+[HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($108M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($2M)
+[HISTORICAL] [LLM_FLAG] Lennar reports derivatives (forward contracts, interest rate swaps, forward options) for its Financial Services mortgage hedging program; no notional amounts disclosed.
+[HISTORICAL] [LLM_FLAG] Forward options fair value ($2.076M) is the only derivative line item with a stated balance sheet amount. Note: forward options line item absent from FY2026 Q1 fair value changes table (only forward contracts and IR swaps shown), suggesting forward options may have de minimis activity.
+[HISTORICAL] [LLM_FLAG] Figures are in thousands in the filing; converted to millions here.
+[HISTORICAL] [LLM_FLAG] Homebuilding senior notes payable increased significantly to ~$4.065B (carrying) vs ~$2.211B in Feb 2025, reflecting debt issuances and the Ryder Homes acquisition financing per context.
+[HISTORICAL] [LLM_FLAG] Investments in equity securities ($108.012M) are technology investments (Lennar Other segment).
+[HISTORICAL] [LLM_FLAG] Section references November 30, 2025 as prior year-end (changed from November 30, 2024 in prior filings).
+[HISTORICAL] [LLM_FLAG] No quantitative sensitivity analysis (100bp, 10% FX, etc.) — Lennar refers readers to the 2025 Form 10-K.
+[HISTORICAL] [LLM_FLAG] fixed_rate_notes_billion combines Homebuilding ($2,361.2M) and Financial Services ($121.4M) fixed-rate instruments.
+[HISTORICAL] [LLM_FLAG] Homebuilding variable-rate debt increased substantially to $1,710.0M due 2028, likely reflecting acquisition financing (Ryder Homes or similar); no credit facility drawn at period end.
+[HISTORICAL] [LLM_FLAG] No FX risk disclosed — Lennar is a domestic homebuilder.
+[HISTORICAL] [LLM_FLAG] Maturity schedule now uses fiscal years ending November 30, 2026 through 2031 (one year later than prior year's schedule).
 
-=== 10-Q | Period ending 2026-02-28 | Processed 2026-06-01 ===
-[LLM_FLAG] Critical limitation: The actual numerical tables referenced in the text are not included in the provided excerpt. Fields like interest_rate_sensitive_instruments, weighted_average_interest_rates, estimated_fair_values, and principal_cash_flows cannot be populated without the complete table data.
-[LLM_FLAG] Text appears to be incomplete, ending mid-sentence with 'See Management's Discussion and Analysis...' suggesting the full disclosure section was not provided.
+=== 10-K | Period ending 2025-11-30 | Processed 2026-06-21 ===
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $167M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $2M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (marketable_equity_securities_fv, fi_total_derivative_asset)
+[HISTORICAL] [LLM_FLAG] Forward commitments of $3.0 billion to sell MBS/interest rate swaps and futures contracts of $1.4 million are Financial Services mortgage pipeline hedges, not corporate FX or IR derivatives.
+[HISTORICAL] [LLM_FLAG] Interest rate swap futures and CMBX/CDX credit instruments used by LMF Commercial are economic hedges; no ASC 815 hedge accounting applied.
+[HISTORICAL] [LLM_FLAG] No FX risk or equity sensitivity disclosures in the section text.
+[HISTORICAL] [LLM_FLAG] Section text is truncated mid-sentence; the full maturity table may contain additional line items.
 
+=== 10-Q | Period ending 2025-08-31 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $83M → $167M (+102.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Lennar reports derivatives (forward contracts, interest rate swaps, forward options) for its Financial Services mortgage hedging program; no notional amounts disclosed.
+[HISTORICAL] [LLM_FLAG] Forward options fair value ($1.776M) is the only derivative line item with a stated balance sheet amount.
+[HISTORICAL] [LLM_FLAG] Figures are in thousands in the filing; converted to millions here.
+[HISTORICAL] [LLM_FLAG] Note (1): As of August 31, 2025, $61.0M of loans held-for-investment were transferred to held-for-sale; balance sheet now shows Loans held-for-sale (Level 3) at $50.284M rather than the prior Loans held-for-investment.
+[HISTORICAL] [LLM_FLAG] Investments in equity securities ($167.325M) are technology investments (Lennar Other segment).
+[HISTORICAL] [LLM_FLAG] No quantitative sensitivity analysis (100bp, 10% FX, etc.) — Lennar refers readers to the 10-K.
+[HISTORICAL] [LLM_FLAG] fixed_rate_notes_billion combines Homebuilding ($2,389.6M) and Financial Services ($123.6M) fixed-rate instruments.
+[HISTORICAL] [LLM_FLAG] Credit facility usage increased to $1.1B by August 31, 2025; variable-rate Homebuilding debt is significantly higher than prior quarters.
+[HISTORICAL] [LLM_FLAG] No FX risk disclosed — Lennar is a domestic homebuilder.
+[HISTORICAL] [LLM_FLAG] $700M 5.20% notes issued May 2025 (due 2030) and $500M 4.75% notes repaid are reflected in this period's balance.
+
+=== 10-Q | Period ending 2025-05-31 | Processed 2026-06-21 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $112M → $83M (-26.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $3M → $2M (-24.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Lennar reports derivatives (forward contracts, interest rate swaps, forward options) for its Financial Services mortgage hedging program; no notional amounts are disclosed in this section.
+[HISTORICAL] [LLM_FLAG] Forward options fair value ($2.037M) is the only derivative line item with a stated balance sheet amount.
+[HISTORICAL] [LLM_FLAG] Figures are in thousands in the filing; converted to millions here.
+[HISTORICAL] [LLM_FLAG] Investments in equity securities ($82.714M) are technology investments (Lennar Other segment), not traditional marketable equity securities.
+[HISTORICAL] [LLM_FLAG] No quantitative sensitivity analysis (100bp, 10% FX, etc.) — Lennar refers readers to the 10-K.
+[HISTORICAL] [LLM_FLAG] fixed_rate_notes_billion combines Homebuilding ($2,398.0M) and Financial Services ($124.3M) fixed-rate instruments.
+[HISTORICAL] [LLM_FLAG] In May 2025 Lennar issued $700M 5.20% senior notes due 2030 and repaid $500M 4.75% senior notes; $400M credit facility drawn.
+[HISTORICAL] [LLM_FLAG] No FX risk disclosed — Lennar is a domestic homebuilder.
+
+=== 10-Q | Period ending 2025-02-28 | Processed 2026-06-21 ===
+[HISTORICAL] [LLM_FLAG] Lennar reports derivatives (forward contracts, interest rate swaps, forward options) for its Financial Services mortgage hedging program; no notional amounts are disclosed in this section.
+[HISTORICAL] [LLM_FLAG] Forward options fair value ($2.693M) is the only derivative line item with a stated balance sheet amount; forward contracts and IR swaps are bundled in 'other assets/liabilities'.
+[HISTORICAL] [LLM_FLAG] Figures are in thousands in the filing; converted to millions here.
+[HISTORICAL] [LLM_FLAG] Investments in equity securities ($112.154M) are technology investments, not traditional marketable equity securities.
+[HISTORICAL] [LLM_FLAG] No quantitative sensitivity analysis (100bp, 10% FX, etc.) — Lennar refers readers to the 10-K for full market risk disclosure.
+[HISTORICAL] [LLM_FLAG] fixed_rate_notes_billion combines Homebuilding ($2,210.6M) and Financial Services ($124.7M) fixed-rate instruments.
+[HISTORICAL] [LLM_FLAG] Lennar's fiscal year ends November 30; the 'nine months ending November 30, 2025' column is the near-term maturity bucket.
+[HISTORICAL] [LLM_FLAG] No FX risk disclosed — Lennar is a domestic homebuilder.

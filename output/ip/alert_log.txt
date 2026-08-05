@@ -1,26 +1,40 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($3M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($3M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($5M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($31M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($31M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $69M → $224M (+224.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-21M → $139M (+761.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-69M → $137M (+298.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Commodity derivative notionals are in volume units (MWh/tons) not dollar millions; dollar notional cannot be extracted
+[HISTORICAL] [LLM_FLAG] FX hedging is via non-derivative EUR-denominated debt (net investment hedge), not FX derivative contracts
+[HISTORICAL] [LLM_FLAG] No interest rate swaps outstanding as of period end
+[HISTORICAL] [LLM_FLAG] Large swing in derivative positions: net position moved from -$21M at Dec 31, 2025 to +$139M at Mar 31, 2026, reflecting large gains on commodity cash flow hedges ($137M AOCL gain in Q1 2026)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_designated_notional: was $49M, now missing
-[DISAPPEARED_FIELD] fx_not_designated_notional: was $49M, now missing
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $12M, now missing
-[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, expected_12mo_reclass_from_aoci)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] net_derivative_position: $-5M → $-21M (-320.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-54M → $-69M (-27.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Commodity derivative notionals are in volume units (MWh/tons) not dollar millions; dollar notional cannot be extracted from section text
+[HISTORICAL] [LLM_FLAG] FX hedging is via non-derivative EUR-denominated debt (net investment hedge), not FX derivative contracts
+[HISTORICAL] [LLM_FLAG] No interest rate swaps outstanding for full year 2025 and 2024
+[HISTORICAL] [LLM_FLAG] Balance sheet derivative totals sourced from Q1 2026 comparative data since 10-K section text was truncated before the table
+[HISTORICAL] [LLM_FLAG] 10-K Market Risk section confirms net commodity fair value is $21M liability and FX derivative fair value is immaterial
+[HISTORICAL] [LLM_FLAG] IR sensitivity disclosed as 10% rate shift ($895M at 2025, $206M at 2024) rather than standard 100bp parallel shift — cannot map to ir_sensitivity_100bp without assuming proportionality.
+[HISTORICAL] [LLM_FLAG] Commodity price risk: net fair value of commodity contracts was $21M liability (2025) vs $3M asset (2024); 10% adverse commodity price sensitivity was $40M (2025) — not in schema but notable.
+[HISTORICAL] [LLM_FLAG] FX derivative fair value explicitly described as immaterial; no numeric FX sensitivity available.
+[HISTORICAL] [LLM_FLAG] Total net liability fair value for interest rate risk instruments: $7.1B (2025), $4.0B (2024) — large YoY increase likely due to DS Smith acquisition debt.
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_designated_notional: $23M → $49M (+113.0%) — exceeds 20% threshold
-[NUMERIC] fx_not_designated_notional: $23M → $49M (+113.0%) — exceeds 20% threshold
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $58M → $76M (+31.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-33M → $-5M (+84.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Commodity derivative notionals are in volume units (MWh/tons) not dollar millions; dollar notional cannot be extracted
+[HISTORICAL] [LLM_FLAG] FX hedging is via non-derivative EUR-denominated debt (net investment hedge), not FX derivative contracts
+[HISTORICAL] [LLM_FLAG] No interest rate swaps outstanding as of period end
+[HISTORICAL] [LLM_FLAG] Credit-risk-related contingent features note added in Q3: no derivatives in net liability position as of September 30, 2025 requiring collateral posting
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_designated_notional: $3,198M → $23M (-99.3%) — exceeds 20% threshold
-[NUMERIC] fx_not_designated_notional: $3,198M → $23M (-99.3%) — exceeds 20% threshold
-[VALIDATION] Likely units mismatch: fx_designated_notional changed from 3,198 to 23 (0x)
-[VALIDATION] Likely units mismatch: fx_not_designated_notional changed from 3,198 to 23 (0x)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-20 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $48M → $58M (+20.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Commodity derivative notionals are in volume units (MWh/tons) not dollar millions; dollar notional cannot be extracted
+[HISTORICAL] [LLM_FLAG] FX hedging is via non-derivative EUR-denominated debt (net investment hedge), not FX derivative contracts
+[HISTORICAL] [LLM_FLAG] No interest rate swaps outstanding as of period end
 
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-20 ===
+[HISTORICAL] [LLM_FLAG] Commodity derivative notionals are in volume units (MWh/tons) not dollar millions; dollar notional cannot be extracted
+[HISTORICAL] [LLM_FLAG] FX hedging is via non-derivative EUR-denominated debt (net investment hedge), not FX derivative contracts
+[HISTORICAL] [LLM_FLAG] No interest rate swaps outstanding as of period end

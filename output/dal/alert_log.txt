@@ -1,76 +1,66 @@
-=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-13 ===
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-16 ===
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($29M)
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $48M, now missing
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fi_total_derivative_liability)
+[LLM_FLAG] Only fuel hedge contracts reported as derivatives; no FX or interest rate derivatives present
+[LLM_FLAG] No marketable securities line in fair value table; total_marketable_securities_fv and related fields are null
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity_fair_value: was $-470M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity_expense: was $290M, now missing
-[DISAPPEARED_FIELD] foreign_currency_investment_exposure: was $13M, now missing
-[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $2,900M, now missing
-[DISAPPEARED_FIELD] equity_investment_fair_value: was $360M, now missing
-[DISAPPEARED_FIELD] equity_investment_sensitivity: was $40M, now missing
-[DISAPPEARED_FIELD] debt_amounts: was $-470M, now missing
-[VALIDATION] Likely extraction failure: 8/8 previously-populated fields are now null (equity_sensitivity_10pct, interest_rate_sensitivity_fair_value, interest_rate_sensitivity_expense, foreign_currency_investment_exposure, foreign_currency_sensitivity...)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-16 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $2,868M → $3,468M (+20.9%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $1M, now missing
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($48M)
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-470M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $290M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $13M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $360M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fuel_price_sensitivity: was $40M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity_fair_value: was $-470M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity_expense: was $11M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_investment_exposure: was $2,900M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_sensitivity: was $290M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_investment_fair_value: was $3,600M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_investment_sensitivity: was $360M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 13/14 previously-populated fields are now null (fi_total_derivative_asset, fx_forwards_outstanding, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion...)
+[HISTORICAL] [LLM_FLAG] Only fuel hedge contracts reported as derivatives; no FX or interest rate derivatives present
+[HISTORICAL] [LLM_FLAG] No marketable securities line in fair value table; total_marketable_securities_fv and related fields are null
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-470M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($290M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($13M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($2,900M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($360M)
-[NEW_FIELD] fuel_price_sensitivity: appeared for first time ($40M)
-[NEW_FIELD] interest_rate_sensitivity_fair_value: appeared for first time ($-470M)
-[NEW_FIELD] interest_rate_sensitivity_expense: appeared for first time ($11M)
-[NEW_FIELD] foreign_currency_investment_exposure: appeared for first time ($2,900M)
-[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($290M)
-[NEW_FIELD] equity_investment_fair_value: appeared for first time ($3,600M)
-[NEW_FIELD] equity_investment_sensitivity: appeared for first time ($360M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-16 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $2,364M → $2,868M (+21.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $4M → $1M (-75.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-470M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($290M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($13M)
+[HISTORICAL] [NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($360M)
+[HISTORICAL] [NEW_FIELD] fuel_price_sensitivity: appeared for first time ($40M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity_fair_value: appeared for first time ($-470M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity_expense: appeared for first time ($11M)
+[HISTORICAL] [NEW_FIELD] foreign_currency_investment_exposure: appeared for first time ($2,900M)
+[HISTORICAL] [NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($290M)
+[HISTORICAL] [NEW_FIELD] equity_investment_fair_value: appeared for first time ($3,600M)
+[HISTORICAL] [NEW_FIELD] equity_investment_sensitivity: appeared for first time ($360M)
+[HISTORICAL] [LLM_FLAG] Only fuel hedge contracts reported as derivatives; no FX or interest rate derivatives present
+[HISTORICAL] [LLM_FLAG] No marketable securities line in fair value table; total_marketable_securities_fv and related fields are null
+[HISTORICAL] [LLM_FLAG] fuel_price_sensitivity value of 40 represents $40M per 1-cent-per-gallon increase in jet fuel cost
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp and interest_rate_sensitivity_fair_value both derived from same disclosure ($470M decrease); reported as -470 (adverse impact)
+[HISTORICAL] [LLM_FLAG] foreign_currency_sensitivity and fx_sensitivity_10pct both derived from same $290M disclosure
+[HISTORICAL] [LLM_FLAG] equity_sensitivity_10pct and equity_investment_sensitivity both derived from same $360M disclosure
+[HISTORICAL] [LLM_FLAG] debt_amounts returned as structured object since three separate amounts are disclosed
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] interest_rate_sensitivity_fair_value: was $-470M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity_expense: was $-290M, now missing
-[DISAPPEARED_FIELD] foreign_currency_investment_exposure: was $13M, now missing
-[DISAPPEARED_FIELD] equity_investment_fair_value: was $-360M, now missing
-[DISAPPEARED_FIELD] equity_investment_sensitivity: was $40M, now missing
-[DISAPPEARED_FIELD] debt_amounts: was $-470M, now missing
-[VALIDATION] Likely extraction failure: 6/8 previously-populated fields are now null (interest_rate_sensitivity_fair_value, interest_rate_sensitivity_expense, foreign_currency_investment_exposure, equity_investment_fair_value, equity_investment_sensitivity...)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-16 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,864M → $2,364M (+26.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $15M → $4M (-73.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Only fuel hedge contracts reported as derivatives; no FX or interest rate derivatives present
+[HISTORICAL] [LLM_FLAG] No marketable securities line in fair value table; total_marketable_securities_fv and related fields are null
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-470M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-290M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($13M)
-[NEW_FIELD] marketable_equity_value: appeared for first time ($0M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-360M)
-[NEW_FIELD] fuel_price_sensitivity: appeared for first time ($40M)
-[NEW_FIELD] interest_rate_sensitivity_fair_value: appeared for first time ($-470M)
-[NEW_FIELD] interest_rate_sensitivity_expense: appeared for first time ($11M)
-[NEW_FIELD] foreign_currency_investment_exposure: appeared for first time ($2,900M)
-[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($-290M)
-[NEW_FIELD] equity_investment_fair_value: appeared for first time ($3,600M)
-[NEW_FIELD] equity_investment_sensitivity: appeared for first time ($-360M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2,900M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($2,900M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-17 ===
-[LLM_FLAG] The provided filing section is incomplete - it only contains a section header and cross-reference to Form 10-K. Substantive market risk disclosures are absent. Full detailed quantitative disclosures appear to be contained in the referenced Form 10-K document, not in this 10-Q excerpt.
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-04-17 ===
-[LLM_FLAG] The provided text is only a section header reference directing readers to the Form 10-K. No actual quantitative or qualitative market risk disclosures are present in this excerpt.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-17 ===
-[LLM_FLAG] Insufficient text provided - only a section header reference to Form 10-K disclosure. No actual quantitative or qualitative market risk data present in the extracted text.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-16 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $2,343M → $1,864M (-20.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($15M)
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $39M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fi_total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] Only fuel hedge contracts reported as derivatives; no FX or interest rate derivatives present
+[HISTORICAL] [LLM_FLAG] No marketable securities line in fair value table; total_marketable_securities_fv and related fields are null
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-04-17 ===
 [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing

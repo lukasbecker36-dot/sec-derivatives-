@@ -1,66 +1,69 @@
-=== 10-K | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($17M)
-[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($750M)
-[NEW_FIELD] cash_equivalents_balance: appeared for first time ($4,000M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($17M)
+=== 10-K | Period ending 2026-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $5,550M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $5,550M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $750M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $141M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $223M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $5,550M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $5,550M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $141M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $223M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-82M, now missing
+[HISTORICAL] [NEW_FIELD] interest_rate_swap_notional: appeared for first time ($750M)
+[HISTORICAL] [NEW_FIELD] cash_equivalents_balance: appeared for first time ($4,000M)
+[HISTORICAL] [NEW_FIELD] interest_rate_sensitivity: appeared for first time ($17M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 12/13 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset...)
+[HISTORICAL] [LLM_FLAG] Section text supplied is Item 7A narrative only; Note 14 (Hedging Activities) tabular data with FX notional and fair value tables was not included — key fields are null as a result. IR swap notional of $750M extracted from the narrative.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($750M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($141M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($223M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-82M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] Net derivative position shows a liability, indicating more derivative liabilities than assets.
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $163M → $223M (+36.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $163M → $223M (+36.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-23M → $-82M (-256.5%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX notional declined materially from $6,249M (September 30, 2025) to $5,550M (December 31, 2025), reflecting settlement of €600M of fair value cross-currency swaps upon repayment of 1.50% Euro Notes due November 17, 2025.
+[HISTORICAL] [LLM_FLAG] EUR cross-currency swaps reduced from €1,100M to €500M at December 31, 2025 (after settlement of €600M tranche).
+[HISTORICAL] [LLM_FLAG] USD notional distribution shifted: $2,935M current and $2,615M non-current at December 31, 2025, reflecting reclassification of instruments maturing within one year.
+[HISTORICAL] [LLM_FLAG] Interest rate swap locks with notional $850M were terminated in Q1 FY2026; $0 outstanding at December 31, 2025.
+[HISTORICAL] [LLM_FLAG] CAD cross-currency swaps (C$6,500M net investment hedge) unchanged across all three quarters.
+[HISTORICAL] [LLM_FLAG] During Q3 FY2026, the Company settled the €600M fair value cross-currency swaps upon repayment of its 1.50% Euro Notes due November 17, 2025, reducing EUR cross-currency swap notional from €1,100M to €500M and total USD FX notional from ~$6.2B to $5.55B.
+[HISTORICAL] [LLM_FLAG] Market risk section contains only: 'We believe there has been no material change in our exposure to risks associated with fluctuations in interest and foreign currency exchange rates as disclosed in our Annual Report on Form 10-K for the fiscal year ended March 31, 2025.' All quantitative data is in the 10-K (accession 0000927653-25-000036).
 
-=== 10-K | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($17M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($0M)
-[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($750M)
-[NEW_FIELD] cash_equivalents_balance: appeared for first time ($4,000M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($17M)
-[NEW_FIELD] foreign_exchange_sensitivity: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $268M → $140M (-47.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $263M → $163M (-38.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $268M → $140M (-47.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $263M → $163M (-38.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $5M → $-23M (-560.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX notional amounts for CAD cross-currency swaps (C$6,500M) and GBP/EUR cross-currency swaps (£450M, €1,100M) are reported in foreign currency; USD equivalents taken from the fair value table USD notional column.
+[HISTORICAL] [LLM_FLAG] During Q2 FY2026, the Company settled €600M of fair value cross-currency swaps (maturing August 2025) and entered into new €600M swaps with November 2025 maturity; net EUR notional unchanged at €1,100M at September 30, 2025.
+[HISTORICAL] [LLM_FLAG] The current USD notional for cross-currency swaps increased from $595M (June 30, 2025) to $1,200M (September 30, 2025), reflecting reclassification of soon-to-mature instruments.
+[HISTORICAL] [LLM_FLAG] Interest rate swap locks with notional $850M were terminated in Q1 FY2026; $0 outstanding at September 30, 2025.
+[HISTORICAL] [LLM_FLAG] During Q2 FY2026, the Company settled €600M of fair value cross-currency swaps (Aug-25 maturity) and entered into €600M new cross-currency swaps (Nov-25 maturity), which explains the shift in current vs non-current notional split compared to prior period. USD notionals taken from the fair value table.
+[HISTORICAL] [LLM_FLAG] Market risk section contains only: 'We believe there has been no material change in our exposure to risks associated with fluctuations in interest and foreign currency exchange rates as disclosed in our Annual Report on Form 10-K for the fiscal year ended March 31, 2025.' All quantitative data is in the 10-K (accession 0000927653-25-000036).
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-
-=== 10-K | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZra8pafL3v66JpU2Mu'}
-
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZrDA1SpLo3JK24gbti'}
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZqsvrs8tX4UKuYfHp6'}
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZqb37Y9dmyL3Enjb5B'}
-
-=== 10-K | Period ending 2025-03-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqZqJG4RL1k7iMFYAEuE'}
-
-=== 10-K | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($26M)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $25M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-02 ===
-[LLM_FLAG] Filing contains minimal market risk disclosure - appears to be a cross-reference to Form 10-K rather than detailed quantitative disclosure. The text explicitly states 'no material change' from prior fiscal year end (March 31, 2025) rather than providing specific derivative or exposure data.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-02 ===
-[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $16M, now missing
-[DISAPPEARED_FIELD] interest_rate_swap_notional: was $750M, now missing
-[DISAPPEARED_FIELD] cash_equivalents_balance: was $5,700M, now missing
-[DISAPPEARED_FIELD] interest_rate_sensitivity: was $8M, now missing
-[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fx_forwards_outstanding, ir_sensitivity_100bp, interest_rate_swap_notional, cash_equivalents_balance, interest_rate_sensitivity)
-[LLM_FLAG] Filing contains minimal disclosure - references Form 10-K instead of providing detailed current period data. Most quantitative fields cannot be extracted from this brief section.
-[LLM_FLAG] The provided text is a standard 'no material change' disclosure that defers to the annual report rather than providing specific current quarter figures.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-22 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($6,148M)
+[HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($6,148M)
+[HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($750M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($268M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($263M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($6,148M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($6,148M)
+[HISTORICAL] [NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($268M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($263M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($5M)
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_swap_notional: was $750M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] cash_equivalents_balance: was $5,700M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_sensitivity: was $8M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (interest_rate_swap_notional, cash_equivalents_balance, interest_rate_sensitivity)
+[HISTORICAL] [LLM_FLAG] FX notional amounts for CAD cross-currency swaps (C$6,500M) and GBP/EUR cross-currency swaps (£450M, €1,100M) are reported in foreign currency; USD equivalents are taken from the separate fair value table USD notional column ($595M current + $5,550M non-current = $6,145M for cross-currency swaps, plus $3M FX forwards).
+[HISTORICAL] [LLM_FLAG] Interest rate swap locks with original notional of $850M were terminated in Q1 FY2026 upon completion of public debt offering; $0 notional outstanding at June 30, 2025.
+[HISTORICAL] [LLM_FLAG] FX notional split between designated/not-designated inferred from text disclosure rather than a separate table; all derivatives confirmed as designated.
+[HISTORICAL] [LLM_FLAG] Cross-currency swap notionals are reported in foreign currencies (C$6.5B, £450M, €1,100M) in the notional table; USD notional is taken from the fair value table which shows USD equivalent notionals ($595M current + $5,550M non-current for cross-currency swaps). IR swap locks had $0 notional outstanding at June 30, 2025 (terminated after debt offering).
+[HISTORICAL] [LLM_FLAG] Market risk section contains only: 'We believe there has been no material change in our exposure to risks associated with fluctuations in interest and foreign currency exchange rates as disclosed in our Annual Report on Form 10-K for the fiscal year ended March 31, 2025.' All quantitative data is in the 10-K (accession 0000927653-25-000036).
 
 === 10-K | Period ending 2025-03-31 | Processed 2026-06-02 ===
 [NUMERIC] ir_sensitivity_100bp: $34M → $16M (-52.9%) — exceeds 20% threshold
@@ -69,7 +72,4 @@
 [LLM_FLAG] ir_sensitivity_100bp: Value calculated from 50bp disclosure ($8M) extrapolated to 100bp ($16M). Prior period was $34M. Change of 53% decrease may be due to reduced foreign currency exposure following Canadian retail disposal completion in December 2024 and prior year European divestitures.
 [LLM_FLAG] interest_rate_swap_notional: Decreased 42% from $1.3 billion (prior period) to $750 million (current period). This is within the 50% threshold but significant.
 [LLM_FLAG] cash_equivalents_balance: Increased 43% from $4.0 billion (estimated from prior period $4.6 billion stated in filing) to $5.7 billion current period.
-
-=== 10-K | Period ending 2026-03-31 | Processed 2026-06-01 ===
-[LLM_FLAG] ir_sensitivity_100bp calculated by doubling the disclosed 50bp sensitivity ($17M × 2 = $34M); this is an extrapolation rather than direct disclosure
 

@@ -1,26 +1,61 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($84M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($39M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($5M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($15M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-10M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-1M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
-[LLM_FLAG] Total derivative assets decreased by 16.67% compared to prior period, suggesting a shift in PPL's derivative strategies or market conditions.
-[LLM_FLAG] Notable net derivative liability position of $10 million indicates potential exposure and reliance on derivatives for financial management.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-07 ===
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($84M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($5M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($15M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($-10M)
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[HISTORICAL] [LLM_FLAG] ir_swap_notional aggregates two distinct programs (a new $20M PPL cash flow hedge plus the pre-existing $64M LG&E economic hedge) rather than a single reported total figure.
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional is disclosed only in Bcf (39 Bcf), not dollars, so left null.
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci is described only qualitatively as 'insignificant' with no dollar amount; recorded as 0 rather than an exact figure.
+[HISTORICAL] [LLM_FLAG] The section discloses interest rate sensitivity only as a 10% adverse rate movement (not a 100bp shift), so ir_sensitivity_100bp is left null. For reference, the disclosed 10% adverse-movement figures on debt fair value are: PPL $(734)M; PPL Electric $(282)M; LG&E $(134)M; KU $(173)M.
+[HISTORICAL] [LLM_FLAG] No FX or equity price risk exposure is disclosed anywhere in this market_risk section; the commodity price risk discussion here is notably shorter than in prior quarters (references cost recovery mechanisms without the detailed RIE derivatives narrative seen in earlier filings).
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-07 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,102M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $16M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $64M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $16M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-12M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, ir_swap_notional, total_derivative_asset...)
+[HISTORICAL] [LLM_FLAG] The provided section_text is the Note 1 'Price Risk Management' accounting-policy narrative (general description of derivative accounting treatment), not the Note 16 'Derivative Instruments and Hedging Activities' disclosure that contains the actual notional amounts and fair-value tables. As a result, nearly all numeric schema fields are null even though the company clearly uses derivatives (has_derivatives = Yes).
+[HISTORICAL] [LLM_FLAG] The provided section_text for Item 3 'Quantitative and Qualitative Disclosures About Market Risk' consists solely of a one-line cross-reference ('Reference is made to "Risk Management" ... in Item 7') followed by four unrelated independent auditor's reports (Deloitte & Touche). None of the requested sensitivity, notional, or fair-value figures appear anywhere in this text. The actual market-risk sensitivity data (interest rate hedges, 10% adverse-movement sensitivities, etc.) resides in the MD&A 'Risk Management' section of Item 7, which was not included in this extraction request — all fields are therefore null.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-07 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $294M → $1,102M (+274.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $12M → $4M (-66.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $13M → $16M (+23.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $149M → $64M (-57.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $12M → $4M (-66.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $13M → $16M (+23.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-1M → $-12M (-1100.0%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[HISTORICAL] [LLM_FLAG] fi_ir_swap_notional left null: only fair values are disclosed in this section; the $64M economic-hedge notional appears in the market_risk section, not this financial_instruments text.
+[HISTORICAL] [LLM_FLAG] Schema fields for 'marketable securities' do not map cleanly to PPL's 'special use funds' disclosures; left null rather than force a mapping.
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional is disclosed only in Bcf (52 Bcf), not dollars, so left null.
+[HISTORICAL] [LLM_FLAG] Given text excerpt begins mid-note (starts with '...c Activity (PPL and LG&E)'), so some introductory disclosures (e.g. any PPL-level cash flow hedge notional, 12-month AOCI reclass estimate) may exist earlier in the actual note but are not present in the supplied section_text.
+[HISTORICAL] [LLM_FLAG] The section discloses interest rate sensitivity only as a 10% adverse rate movement (not a 100bp shift), so ir_sensitivity_100bp is left null. For reference, the disclosed 10% adverse-movement figures on debt fair value are: PPL $(727)M; PPL Electric $(288)M; LG&E $(137)M; KU $(177)M.
+[HISTORICAL] [LLM_FLAG] No FX or equity price risk exposure is disclosed anywhere in this market_risk section.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-07 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $22M → $12M (-45.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] ir_swap_notional: $64M → $149M (+132.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $22M → $12M (-45.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $11M → $-1M (-109.1%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[HISTORICAL] [LLM_FLAG] fi_ir_swap_notional left null: only fair values are disclosed in this section; the $85M (cash flow hedge) and $64M (economic hedge) notional figures appear in the market_risk section, not this financial_instruments text.
+[HISTORICAL] [LLM_FLAG] Schema fields for 'marketable securities' do not map cleanly to PPL's 'special use funds' disclosures; left null rather than force a mapping.
+[HISTORICAL] [LLM_FLAG] ir_swap_notional aggregates two distinct programs (a new $85M PPL cash flow hedge plus the pre-existing $64M LG&E economic hedge) rather than a single reported total figure.
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional is disclosed only in Bcf (45 Bcf), not dollars, so left null.
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci is described only qualitatively as 'insignificant' with no dollar amount; recorded as 0 rather than an exact figure.
+[HISTORICAL] [LLM_FLAG] The section discloses interest rate sensitivity only as a 10% adverse rate movement (not a 100bp shift), so ir_sensitivity_100bp is left null. For reference, the disclosed 10% adverse-movement figures on debt fair value are: PPL $(587)M; PPL Electric $(253)M; LG&E $(85)M; KU $(126)M.
+[HISTORICAL] [LLM_FLAG] No FX or equity price risk exposure is disclosed anywhere in this market_risk section.
 
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-07 ===
+[HISTORICAL] [LLM_FLAG] fi_ir_swap_notional left null: this section discloses only the fair value of interest rate swaps ($5M liability), not notional amounts; the $64M notional figure for LG&E's economic hedge appears in the market_risk section, not in this financial_instruments text.
+[HISTORICAL] [LLM_FLAG] Schema fields for 'marketable securities' (total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt) do not map cleanly to PPL's disclosures, which instead describe 'special use funds' (commingled debt/equity funds at NAV); left null rather than force a mapping.
+[HISTORICAL] [LLM_FLAG] Commodity derivative notional is disclosed only as a physical volume (40 Bcf), not a dollar amount, so commodity_derivatives_notional is left null despite derivatives clearly existing.
+[HISTORICAL] [LLM_FLAG] ir_swap_notional reflects only the LG&E $64M economic hedge; no PPL-level cash flow hedge notional is mentioned in this quarter's text.
+[HISTORICAL] [LLM_FLAG] The section discloses interest rate sensitivity only as a 10% adverse rate movement (not a 100bp shift), so ir_sensitivity_100bp is left null rather than substituting a differently-scaled figure. For reference, the disclosed 10% adverse-movement figures are: LG&E economic hedge fair value $(1)M; PPL total debt fair value $(601)M; PPL Electric $(257)M; LG&E $(86)M; KU $(127)M.
+[HISTORICAL] [LLM_FLAG] No FX or equity price risk exposure is disclosed anywhere in this market_risk section, consistent with PPL being a domestic regulated utility with no marketable equity securities noted here.

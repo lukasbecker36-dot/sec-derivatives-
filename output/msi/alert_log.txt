@@ -1,3 +1,8 @@
+=== 10-Q | Period ending 2026-04-04 | Processed 2026-07-23 ===
+[HISTORICAL] [LLM_FLAG] net_investment_hedge_debt is null because MSI uses FX forward/option contracts (not debt) for net investment hedging; EUR and GBP notionals are in local currency only.
+[HISTORICAL] [LLM_FLAG] treasury_rate_lock_notional is null; the program is not mentioned in Q1 2026 — fully wound down post-2034 note issuance.
+[HISTORICAL] [LLM_FLAG] FX total notional declined from $1.6B (FY2025) to $1.4B (Q1 2026); AUD short decreased materially.
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,600M)
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($10M)
@@ -14,30 +19,15 @@
 [LLM_FLAG] net_derivative_position
 [LLM_FLAG] expected_12mo_reclass_from_aoci
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-202M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-07-23 ===
+[HISTORICAL] [LLM_FLAG] net_investment_hedge_debt is null because MSI uses FX forward/option contracts (not debt) for net investment hedging; EUR and GBP notionals are in local currency only.
+[HISTORICAL] [LLM_FLAG] treasury_rate_lock_notional is null because the $200M agreements were terminated upon issuance of the 2034 senior notes; no live contracts as of period end.
+[HISTORICAL] [LLM_FLAG] Brazilian Real entered the top-5 positions this quarter, displacing Chinese renminbi.
 
-=== 10-Q | Period ending 2026-04-04 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7N9xxWq4sowDjirDUU'}
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-07-23 ===
+[HISTORICAL] [LLM_FLAG] net_investment_hedge_debt is null because MSI uses FX forward/option contracts (not debt) for net investment hedging; EUR and GBP notionals are in local currency only.
+[HISTORICAL] [LLM_FLAG] treasury_rate_lock_notional is null because the $200M agreements were terminated upon issuance of the 2034 senior notes; no live contracts as of period end.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7MrbBnwomxEBrAFTEL'}
-
-=== 10-Q | Period ending 2025-09-27 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7MQo9hJD2bVWgCeXd5'}
-
-=== 10-Q | Period ending 2025-06-28 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7Ldh1wsmvDmMxLWup7'}
-
-=== 10-Q | Period ending 2025-03-29 | Processed 2026-06-07 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbp7KudwKPhUEPcisggxN'}
-
-=== 10-Q | Period ending 2026-04-04 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $8M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fixed_rate_notes_billion)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
-
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-07-23 ===
+[HISTORICAL] [LLM_FLAG] net_investment_hedge_debt is null because MSI uses FX forward/option contracts (not debt) for net investment hedging; EUR and GBP notionals are provided in local currency only.
+[HISTORICAL] [LLM_FLAG] treasury_rate_lock_notional is null because the $200M agreements were terminated in Q1 2024 upon issuance of the 2034 senior notes; no live contracts as of period end.

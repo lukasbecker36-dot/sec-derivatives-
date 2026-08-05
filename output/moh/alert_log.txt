@@ -7,32 +7,20 @@
 [LLM_FLAG] interest_rate_sensitivity changed from 0.0 to -120 — prior value of 0.0 may have been a placeholder for not_found; current filing clearly states $120M decrease from 1% rate increase
 [LLM_FLAG] variable_rate_debt_reference prior value was -117.0 (numeric); current extraction is qualitative text — the prior numeric value may have been the interest rate sensitivity from a previous period that was mapped to the wrong field
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-117M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-117M)
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] Section covers investment securities and notes payable only — no derivatives of any kind are mentioned. Molina Healthcare appears to hold no derivative instruments.
+[HISTORICAL] [LLM_FLAG] Credit facility referred to simply as 'the Credit Agreement' in this 10-Q, vs 'Amended Credit Agreement' in prior 10-Qs — likely reflects a new credit agreement entered into in 2026 (First Amendment to Credit Agreement dated February 4, 2026 referenced in exhibits)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($113M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] Section covers investment securities and notes payable only — no derivatives of any kind are mentioned. Molina Healthcare appears to hold no derivative instruments.
+[HISTORICAL] [LLM_FLAG] 10-K filing: Term Loan and Credit Facility from Q1 2025 no longer appear — notes payable now consist of five senior notes only (new 6.500% Notes due 2031 added).
+[HISTORICAL] [LLM_FLAG] 10-K filing (FY2025); credit facility referred to as 'New Credit Agreement' rather than 'Amended Credit Agreement' used in prior 10-Qs
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($117M)
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] Section covers investment securities and notes payable only — no derivatives of any kind are mentioned. Molina Healthcare appears to hold no derivative instruments.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($113M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] Section covers investment securities and notes payable only — no derivatives of any kind are mentioned. Molina Healthcare appears to hold no derivative instruments.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[LLM_FLAG] Credit agreement referenced changed from 'Amended Credit Agreement' to 'New Credit Agreement' — suggests refinancing occurred
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-120M)
-[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-120M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] Section covers investment securities and notes payable only — no derivatives of any kind are mentioned. Molina Healthcare appears to hold no derivative instruments.

@@ -29,18 +29,19 @@
 [LLM_FLAG] The filing section provided contains only qualitative discussion of market risk exposures and references the 10-K for detailed quantitative disclosures. No specific sensitivity figures (10% adverse move calculations) are included in this excerpt.
 [LLM_FLAG] The text explicitly directs readers to Item 7A in the 10-K for detailed market risk information, suggesting the quantitative sensitivities are disclosed elsewhere in the full filing.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-03-28 ===
-[NUMERIC] net_asset: $227M → $296M (+30.4%) — exceeds 20% threshold
-[NUMERIC] net_liability: $-102M → $-137M (-34.3%) — exceeds 20% threshold
-[NEW_FIELD] fx_oci_gain_loss: appeared for first time ($54M)
-[NEW_FIELD] commodity_oci_gain_loss: appeared for first time ($0M)
-[NEW_FIELD] credit_contingent_liability_fv: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($100M)
-[LLM_FLAG] total_notional increased 9.8% from $40,858M to $44,940M - within normal range
-[LLM_FLAG] total_derivative_asset increased 1.3% from $835M to $846M - within normal range
-[LLM_FLAG] total_derivative_liability declined 15.3% from $621M to $526M - reasonable given market conditions
-[LLM_FLAG] net_asset calculation: Prior period showed net asset of $227M but this filing shows gross assets $846M minus gross liabilities $526M = $320M before netting adjustments; after netting per table: $233M + $223M = $456M assets net of $74M + $63M = $137M liabilities; clarification: the table shows 'Net derivatives recognized' line showing $233, $223, $74, $63 which are already netted positions by balance sheet line item
-[LLM_FLAG] fx_oci_gain_loss: Prior period shows cash flow hedge AOCI gain/loss separately from net investment; 2025 shows combined pre-tax gains of $56M (cash flow) and loss of $2M (net investment) = $54M net, which is materially higher than prior year pattern
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-19 ===
+[HISTORICAL] [NUMERIC] net_liability: $-180M → $-137M (+23.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_oci_gain_loss: $2M → $56M (+2700.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-8M → $8M (+200.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-100M)
+[HISTORICAL] [LLM_FLAG] FX designated notional ($6,547M) includes both cash flow hedges and net investment hedges — not separately broken out in the table
+[HISTORICAL] [LLM_FLAG] Commodity contracts ($389M) appear only under non-designated; no separate designated commodity line
+[HISTORICAL] [LLM_FLAG] 10-K discloses expected 12-month reclassification as net gains ($8M), whereas prior quarters disclosed net losses
+[HISTORICAL] [LLM_FLAG] Net investment hedge AOCI balance: $31M gain as of December 31, 2025 (disclosed separately in text)
+[HISTORICAL] [LLM_FLAG] Collateral: explicitly confirmed no collateral arrangements exist
+[HISTORICAL] [LLM_FLAG] FX sensitivity is stated as 'approximately $0.1 billion' — rounded figure only; sign is negative (adverse impact on net income)
+[HISTORICAL] [LLM_FLAG] A separate AOCI sensitivity of ~$0.1 billion decrease is also stated for a 10% decrease in exchange rates on cash flow hedges, reflecting a different exposure basis
+[HISTORICAL] [LLM_FLAG] No quantified commodity sensitivity figure provided in this section
 
 === 10-Q | Period ending 2025-09-30 | Processed 2026-03-28 ===
 [NUMERIC] net_asset: $146M → $227M (+55.5%) — exceeds 20% threshold

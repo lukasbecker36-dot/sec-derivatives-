@@ -1,62 +1,59 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($260,102M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($1,497M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($27,524M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-26,027M)
-[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $2,804M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $2,804M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $2,711M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $93M, now missing
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NUMERIC] var_amount: $-191M → $647M (+438.4%) — exceeds 20% threshold
-[DISAPPEARED_FIELD] floating_rate_debt_maturity_schedule: was $19M, now missing
-[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct...)
-[LLM_FLAG] commodity_derivatives_notional is significantly higher than in the prior period, indicating increased activity or exposure.
-[LLM_FLAG] net_derivative_position indicates a substantial liability position, which may be concerning.
-[LLM_FLAG] VaR value of 647 million indicates a shift in risk profile, likely due to heightened commodity price volatility.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-07 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $2,804M → $26,102M (+830.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $2,711M → $27,524M (+915.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $19M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_debt_fair_value: was $18,324M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/4 previously-populated fields are now null (fixed_rate_notes_billion, fixed_rate_debt_fair_value)
+[HISTORICAL] [LLM_FLAG] Section text discloses only commodity derivatives (no FX or interest-rate derivative notional amounts, no marketable securities / cash equivalents fair-value schedule) — all such schema fields left null as not present in the supplied text.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset/liability are the gross 'Commodity Derivatives' column totals before collateral netting, not the net $75M carrying value actually presented on the balance sheet.
+[HISTORICAL] [LLM_FLAG] Gross commodity-derivative asset/liability totals (~$26.1B/$27.5B) are roughly 9-10x the prior quarter (~$2.8B), driven almost entirely by the 'Other accruals' line (25,153/(27,226) vs 67/(108) at 12/31/25) — this is an unusually large swing worth verifying against the source filing rather than treating as routine.
+[HISTORICAL] [LLM_FLAG] Text references an unquantified foreign currency derivative gain tied to the Coop disposition, but no dollar amount is given in this excerpt.
+[HISTORICAL] [LLM_FLAG] Balance-sheet presentation table covers commodity derivatives only; text is truncated before the fair-value hierarchy table's totals -- total_derivative_asset/liability could not be reliably determined.
+[HISTORICAL] [LLM_FLAG] Gross notional exposure on the commodity balance-sheet table grew sharply this quarter (Total commodity derivatives gross assets $26,102m / gross liabilities $(27,524)m at March 31, 2026, vs. $2,804m / $(2,711)m at December 31, 2025) -- worth flagging for review even though net carrying value (75) is modest.
+[HISTORICAL] [LLM_FLAG] No dollar notional disclosed for commodity derivatives -- only physical volume positions (barrels, cubic feet) are given.
+[HISTORICAL] [LLM_FLAG] No FX or interest-rate derivative notional amounts are disclosed in the supplied text.
+[HISTORICAL] [LLM_FLAG] IMPORTANT -- this quarter's Item 3 disclosure is materially different from prior quarters: it adds a quantified commodity price sensitivity not seen before: 'A hypothetical 10% increase in the market prices of commodities for our outstanding financial commodity derivative instruments as of March 31, 2026, would reduce the income before income taxes by approximately $647 million, and a hypothetical 10% decrease...would increase the income before income taxes by approximately $647 million.' This is attributed to 'elevated commodity price volatility driven by ongoing conflict in the Middle East.' No existing schema field cleanly captures this (fx_sensitivity_10pct is FX-specific and var_amount expects a VaR dollar figure, not a price-sensitivity figure) -- flagging as a notable standalone data point: commodity price sensitivity (10% move) = approximately $647 million pre-tax income impact, as of March 31, 2026.
+[HISTORICAL] [LLM_FLAG] VaR itself is described only qualitatively as having 'increased' vs. December 31, 2025 -- no dollar VaR figure disclosed in either period.
+[HISTORICAL] [LLM_FLAG] No FX risk, marketable equity, or fixed/floating-rate debt maturity/fair-value data is included in this excerpt -- IR risk and debt detail are cross-referenced to Note 9-Debt rather than repeated in Item 3.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NUMERIC] commodity_derivatives_notional: $1M → $2,804M (+280300.0%) — exceeds 20% threshold
-[NEW_FIELD] total_derivative_asset: appeared for first time ($2,804M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($2,711M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($93M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-191M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($19M)
-[NEW_FIELD] var_amount: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($18,324M)
-[VALIDATION] Likely units mismatch: commodity_derivatives_notional changed from 1 to 2,804 (2804x)
-[LLM_FLAG] The fair value of fixed-rate debt of $18,324 million significantly increased from $16,913 million in the prior period, indicating a material change in market conditions or debt structure.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-07 ===
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($19M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($18,324M)
+[HISTORICAL] [LLM_FLAG] 10-K annual section text discloses only commodity derivatives (no FX or interest-rate derivative notional amounts, no marketable securities / cash equivalents fair-value schedule) — all such schema fields left null as not present in the supplied text.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset/liability are the gross 'Commodity Derivatives' column totals before collateral netting, not the net $113M carrying value actually presented on the balance sheet.
+[HISTORICAL] [LLM_FLAG] This excerpt does not mention an FX derivative tied to a disposition (unlike the surrounding quarters); no foreign-currency derivative gain/loss figure is given.
+[HISTORICAL] [LLM_FLAG] Balance-sheet presentation table covers commodity derivatives only; text is truncated before the fair-value hierarchy table's totals -- total_derivative_asset/liability could not be reliably determined.
+[HISTORICAL] [LLM_FLAG] No dollar notional disclosed for commodity derivatives -- only physical volume positions (barrels, cubic feet) are given.
+[HISTORICAL] [LLM_FLAG] No FX or interest-rate derivative notional amounts are disclosed in the supplied text (10-K, FY2025).
+[HISTORICAL] [LLM_FLAG] VaR for commodity derivatives is disclosed only qualitatively as 'immaterial' -- no dollar figure given.
+[HISTORICAL] [LLM_FLAG] No FX or interest-rate sensitivity (10%/100bp) dollar impacts are disclosed in this text.
+[HISTORICAL] [LLM_FLAG] No marketable equity securities value or equity sensitivity is disclosed in this text.
+[HISTORICAL] [LLM_FLAG] fixed_rate_notes_billion figure is the total from the interest-rate-sensitivity maturity table (which includes junior subordinated notes per footnote), not a separately itemized 'notes' balance -- treated as the best available proxy.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-07 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $4,951M → $2,618M (-47.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $4,938M → $2,448M (-50.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text discloses only commodity derivatives (no FX or interest-rate derivative notional amounts, no marketable securities / cash equivalents fair-value schedule) — all such schema fields left null as not present in the supplied text.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset/liability are the gross 'Commodity Derivatives' column totals before collateral netting, not the net $200M carrying value actually presented on the balance sheet.
+[HISTORICAL] [LLM_FLAG] Text references unquantified foreign currency derivative gains/losses tied to investment dispositions, but no dollar amount is given in this excerpt.
+[HISTORICAL] [LLM_FLAG] Balance-sheet presentation table covers commodity derivatives only; text is truncated before the fair-value hierarchy table's totals -- total_derivative_asset/liability could not be reliably determined.
+[HISTORICAL] [LLM_FLAG] No dollar notional disclosed for commodity derivatives -- only physical volume positions (barrels, cubic feet) are given.
+[HISTORICAL] [LLM_FLAG] No FX or interest-rate derivative notional amounts are disclosed in the supplied text.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[DISAPPEARED_FIELD] commodity_derivatives_notional: was $1M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (commodity_derivatives_notional)
-[LLM_FLAG] api_error: Connection error.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-07 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $3,230M → $4,951M (+53.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $3,320M → $4,938M (+48.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text discloses only commodity derivatives (no FX or interest-rate derivative notional amounts, no marketable securities / cash equivalents fair-value schedule) — all such schema fields left null as not present in the supplied text.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset/liability are the gross 'Commodity Derivatives' column totals before collateral netting, not the net $83M carrying value actually presented on the balance sheet.
+[HISTORICAL] [LLM_FLAG] Text references unquantified foreign currency derivative gains/losses tied to investment dispositions, but no dollar amount is given in this excerpt.
+[HISTORICAL] [LLM_FLAG] Balance-sheet presentation table covers commodity derivatives only; a separate FX derivative position is referenced in the note but not quantified in this excerpt, and the text is truncated before the fair-value hierarchy table's totals -- total_derivative_asset/liability could not be reliably determined.
+[HISTORICAL] [LLM_FLAG] No dollar notional disclosed for commodity derivatives -- only physical volume positions (barrels, cubic feet) are given.
+[HISTORICAL] [LLM_FLAG] No FX or interest-rate derivative notional amounts are disclosed in the supplied text.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] commodity_derivatives_notional: $141M → $1M (-99.3%) — exceeds 20% threshold
-[VALIDATION] Likely units mismatch: commodity_derivatives_notional changed from 141 to 1 (0x)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] commodity_derivatives_notional: $1M → $141M (+14000.0%) — exceeds 20% threshold
-[VALIDATION] Likely units mismatch: commodity_derivatives_notional changed from 1 to 141 (141x)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] commodity_derivatives_notional: $2,024M → $1M (-100.0%) — exceeds 20% threshold
-[VALIDATION] Likely units mismatch: commodity_derivatives_notional changed from 2,024 to 1 (0x)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($18,324M)
-[LLM_FLAG] fixed_rate_debt_total increased from $18,102M (2024) to $19,117M (2025), includes junior subordinated notes issued September 2025
-[LLM_FLAG] floating_rate_debt decreased from $1,760M (2024) to $400M (2025)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-07-07 ===
+[HISTORICAL] [LLM_FLAG] Section text discloses only commodity derivatives (no FX or interest-rate derivative notional amounts, no marketable securities / cash equivalents fair-value schedule) — all such schema fields left null as not present in the supplied text.
+[HISTORICAL] [LLM_FLAG] fi_total_derivative_asset/liability are the gross 'Commodity Derivatives' column totals before collateral netting, not the net $31M carrying value actually presented on the balance sheet (which is split across asset and liability captions individually, not as a single asset/liability pair).
+[HISTORICAL] [LLM_FLAG] Text references an unquantified foreign currency derivative gain tied to the Coop disposition, but no dollar amount is given in this excerpt.
+[HISTORICAL] [LLM_FLAG] Commodity derivative balance-sheet presentation table and fair-value hierarchy table appear as garbled/tab-separated HTML extraction; totals for derivative assets/liabilities could not be confidently reconciled and the liabilities table is truncated mid-row.
+[HISTORICAL] [LLM_FLAG] No dollar notional disclosed for commodity derivatives -- only physical volume positions (barrels, cubic feet) are given.
+[HISTORICAL] [LLM_FLAG] No FX, interest-rate, or equity derivative notional amounts are disclosed in the supplied text.

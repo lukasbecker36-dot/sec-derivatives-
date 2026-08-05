@@ -2,32 +2,31 @@
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-18 ===
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $1,500M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_sensitivity_100bp)
+[HISTORICAL] [LLM_FLAG] Norfolk Southern carries no derivatives of any kind; the Fair Values note covers only debt instruments and short-maturity items
+[HISTORICAL] [LLM_FLAG] Long-term debt at March 31, 2026: carrying amount $17,101M, fair value $15,576M (Level 1 inputs)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-18 ===
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,500M)
+[HISTORICAL] [LLM_FLAG] Norfolk Southern carries no derivatives of any kind; the Fair Values note covers only debt instruments and short-maturity items
+[HISTORICAL] [LLM_FLAG] Long-term debt at December 31, 2025: carrying amount $17,087M, fair value $15,865M (Level 1 inputs)
+[HISTORICAL] [LLM_FLAG] 10-K section text extends into Note 8 Investments showing equity method investments: Conrail $1,827M, TTX $1,056M, Other $433M at Dec 31 2025 — these are not marketable securities
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp expressed in billions in source text ($1.5 billion); converted to millions (1500) per schema convention
+[HISTORICAL] [LLM_FLAG] Text states no floating-rate debt outstanding at Dec 31, 2025; sensitivity figure applies to fixed-rate debt only
+[HISTORICAL] [LLM_FLAG] Very sparse market risk disclosure — interest rate sensitivity only; no FX, commodity, or equity risk discussed
+[HISTORICAL] [LLM_FLAG] Fixed-rate debt outstanding notional not stated; only the fair-value sensitivity is disclosed
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-18 ===
+[HISTORICAL] [LLM_FLAG] Norfolk Southern carries no derivatives of any kind; the Fair Values note covers only debt instruments and short-maturity items
+[HISTORICAL] [LLM_FLAG] Long-term debt at September 30, 2025: carrying amount $17,083M, fair value $16,083M (Level 1 inputs)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-28 ===
-[LLM_FLAG] This is a cross-reference disclosure only. The actual market risk quantitative and qualitative disclosures are stated to be in the MD&A section under "Financial Condition and Liquidity," not provided in the extracted text. No substantive market risk data could be extracted.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-04-28 ===
-[LLM_FLAG] Cross-reference changed from prior period - now references "Financial Condition and Liquidity" instead of prior location. This is a redirection to MD&A rather than quantitative disclosure in the current section.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-18 ===
+[HISTORICAL] [LLM_FLAG] Norfolk Southern carries no derivatives of any kind; the Fair Values note covers only debt instruments and short-maturity items
+[HISTORICAL] [LLM_FLAG] Long-term debt at June 30, 2025: carrying amount $17,367M, fair value $16,019M (Level 1 inputs)
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-04-28 ===
 [LLM_FLAG] Cross-reference differs from prior period: filing references "Financial Condition and Liquidity" instead of expected "Market Risks" section heading. This suggests market risk disclosures may be located elsewhere or consolidated with liquidity discussion.
 [LLM_FLAG] Quantitative market risk metrics (sensitivities, fair values, derivative positions) not provided in the excerpt - full MD&A section needed for complete extraction.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-04-27 ===
-[LLM_FLAG] This section is a cross-reference stub. All quantitative market risk data has been deferred to Item 7 MD&A. No actual derivative, sensitivity, or exposure data is provided in this excerpt.
 

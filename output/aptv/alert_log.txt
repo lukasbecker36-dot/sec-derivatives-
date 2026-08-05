@@ -19,91 +19,79 @@
 [LLM_FLAG] Note: Aptiv also has non-derivative net investment hedges (EUR 750M + EUR 500M = EUR 1,250M Senior Notes designated as net investment hedges) not included in derivative notional totals
 [LLM_FLAG] Additional commodity forward contracts with notional individually less than $10M exist beyond the $215M copper hedge
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,090M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($2M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($500M)
-[NUMERIC] total_derivative_asset: $3,395M → $154M (-95.5%) — exceeds 20% threshold
-[NUMERIC] total_derivative_liability: $3,395M → $11M (-99.7%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $2M → $143M (+7050.0%) — exceeds 20% threshold
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($151M)
-[NUMERIC] expected_12mo_reclass_from_aoci: $415M → $121M (-70.8%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $174M, now missing
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $10M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $164M, now missing
-[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $164M, now missing
-[DISAPPEARED_FIELD] marketable_equity_value: was $125M, now missing
-[DISAPPEARED_FIELD] currency_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] commodity_net_fair_value: was $77M, now missing
-[DISAPPEARED_FIELD] foreign_currency_translation_adjustment: was $476M, now missing
-[VALIDATION] Likely extraction failure: 8/12 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value...)
-[VALIDATION] Likely units mismatch: total_derivative_liability changed from 3,395 to 11 (0x)
-[LLM_FLAG] net_derivative_position increased by more than 50% compared to prior period (previously 2.0)
-[LLM_FLAG] total_derivative_asset decreased by more than 50% compared to prior period (previously 3395.0) indicating a significant reduction in situational hedging
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-07-04 ===
+[HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($59M)
+[HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($21M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($143M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($0M)
+[HISTORICAL] [NUMERIC] commodity_derivatives_notional: $415M → $500M (+20.5%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $77M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_fair_value_liability_currency: was $476M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] currency_sensitivity_10pct: was $77M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_net_fair_value: was $85M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_sensitivity_10pct: was $44M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_translation_adjustment: was $310M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/14 previously-populated fields are now null (fx_sensitivity_10pct, net_fair_value_liability_currency, currency_sensitivity_10pct, commodity_net_fair_value, commodity_sensitivity_10pct...)
+[HISTORICAL] [LLM_FLAG] No 'Publicly traded equity securities' section or line item appears in this filing at all (it was present in earlier quarters); consistent with prior-quarter observations that this holding may have been divested, so marketable_equity_securities_fv is null rather than 0.
+[HISTORICAL] [LLM_FLAG] The debt-securities holdings changed composition this period: only the Maxieye investment remains (StradVision was converted from preferred to common shares in October 2025 and is no longer classified as an available-for-sale debt security), which explains the large drop in corporate_debt_securities_fv from $207M (Sep 2025) to $59M.
+[HISTORICAL] [LLM_FLAG] No notional amounts for FX or interest rate derivatives are disclosed in this fair-value note; all notional fields are null.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv left null since no combined 'marketable securities' total is stated in the text.
+[HISTORICAL] [LLM_FLAG] No interest rate swap or equity derivative activity disclosed; RMB net investment hedge forward notional not cumulatively disclosed (only the $100M March 2026 addition mentioned); no non-designated derivatives line appears for March 31, 2026 vs prior period; 2015 Euro Senior Notes no longer mentioned as net investment hedge instrument (fully redeemed)
+[HISTORICAL] [LLM_FLAG] Item 3 market risk section is boilerplate incorporation-by-reference, identical in structure to prior quarters; all quantitative detail is in the derivatives_note section
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,395M)
-[NEW_FIELD] fx_designated_notional: appeared for first time ($3,395M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($2M)
-[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($415M)
-[NEW_FIELD] total_derivative_asset: appeared for first time ($174M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($10M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($164M)
-[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($164M)
-[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($125M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($77M)
-[NEW_FIELD] net_fair_value_liability_currency: appeared for first time ($476M)
-[NEW_FIELD] currency_sensitivity_10pct: appeared for first time ($-27M)
-[NEW_FIELD] commodity_net_fair_value: appeared for first time ($79M)
-[NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($44M)
-[NEW_FIELD] foreign_currency_translation_adjustment: appeared for first time ($310M)
-[LLM_FLAG] fx_derivatives_notional differs from prior period by more than 50% due to increased exposure.
-[LLM_FLAG] aggregate cash flow hedge AOCI increased by $ 130 million, indicating significant hedging activity impacting financial results.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-04 ===
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $207M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $19M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $82M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $1M, now missing
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $1,960M → $2,470M (+26.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_designated_notional: $1,960M → $2,470M (+26.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $86M → $176M (+104.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $5M → $10M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $81M → $166M (+104.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $80M → $164M (+105.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $60M → $125M (+108.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($77M)
+[HISTORICAL] [NEW_FIELD] net_fair_value_liability_currency: appeared for first time ($476M)
+[HISTORICAL] [NEW_FIELD] currency_sensitivity_10pct: appeared for first time ($77M)
+[HISTORICAL] [NEW_FIELD] commodity_net_fair_value: appeared for first time ($85M)
+[HISTORICAL] [NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($44M)
+[HISTORICAL] [NEW_FIELD] foreign_currency_translation_adjustment: appeared for first time ($310M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 4/12 previously-populated fields are now null (corporate_debt_securities_fv, gross_unrealized_gains_debt, fi_total_derivative_asset, fi_total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] Market_risk section for this same filing explicitly confirms 'We do not use interest rate swap or other derivative contracts' and 'no floating rate debt outstanding' as of Dec 31, 2025 — corroborates ir_swap_notional=null/0 despite not being stated in this section's own text; RMB net investment hedge forward notional not cumulatively disclosed
+[HISTORICAL] [LLM_FLAG] Text explicitly states no interest rate swaps are used and no floating rate debt outstanding as of Dec 31, 2025, so ir_sensitivity_100bp has no basis for a numeric figure; no equity price risk subsection present in this 10-K's Item 7A unlike some peer filers
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] currency_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] commodity_net_fair_value: was $77M, now missing
-[DISAPPEARED_FIELD] commodity_sensitivity_10pct: was $2M, now missing
-[DISAPPEARED_FIELD] foreign_currency_translation_adjustment: was $476M, now missing
-[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (currency_sensitivity_10pct, commodity_net_fair_value, commodity_sensitivity_10pct, foreign_currency_translation_adjustment)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-04 ===
+[HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $11M, now missing
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $54M → $82M (+51.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $2M → $1M (-50.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $64M → $86M (+34.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $12M → $5M (-58.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $52M → $81M (+55.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $40M → $80M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $26M → $60M (+130.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] The 'Publicly traded equity securities' line item, present in the December 31, 2024 comparative column, is absent from the September 30, 2025 assets table (only Commodity derivatives, Foreign currency derivatives, and Available-for-sale debt securities are listed, summing to the stated $289M total). Set marketable_equity_securities_fv to null for this period rather than assuming $0 or carrying forward the prior value; possible divestiture or reclassification worth confirming against the balance sheet.
+[HISTORICAL] [LLM_FLAG] No notional amounts for FX or interest rate derivatives are disclosed in this fair-value note; all notional fields are null.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv left null since no combined 'marketable securities' total is stated in the text.
+[HISTORICAL] [LLM_FLAG] No interest rate swap or equity derivative activity disclosed; RMB net investment hedge forward notional not cumulatively disclosed (only the $100M September 2025 addition mentioned); no non-designated derivatives line appears for Sept 30, 2025 vs prior period
+[HISTORICAL] [LLM_FLAG] Item 3 market risk section is boilerplate incorporation-by-reference, identical in structure to prior quarters; all quantitative detail is in the derivatives_note section
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($77M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
-[NEW_FIELD] net_fair_value_liability_currency: appeared for first time ($476M)
-[NEW_FIELD] currency_sensitivity_10pct: appeared for first time ($27M)
-[NEW_FIELD] commodity_net_fair_value: appeared for first time ($79M)
-[NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($44M)
-[NEW_FIELD] foreign_currency_translation_adjustment: appeared for first time ($310M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $31M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($31M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[LLM_FLAG] This filing section is a condensed disclosure referring to Form 10-K for detailed market risk information; most quantitative metrics are not provided in this excerpt
-[LLM_FLAG] The document explicitly states 'There have been no material changes to the information concerning our exposures to market risk as stated in the Company's Annual Report on Form 10-K for the year ended December 31, 2025', indicating detailed data should be sourced from the 10-K
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
-[LLM_FLAG] This disclosure explicitly states 'There have been no material changes to the information concerning our exposures to market risk as stated in the Company's Annual Report on Form 10-K for the year ended December 31, 2024.' This indicates the company is referencing the 10-K for detailed quantitative disclosures rather than providing them in the 10-Q. Specific numerical values are not available in this excerpt.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-23 ===
-[LLM_FLAG] Provided text is a summary disclosure stating 'no material changes' to prior year 10-K disclosures; specific quantitative values for derivatives, sensitivity analyses, and hedging amounts are not included in this excerpt and would appear in Note 14 referenced in the text
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-04 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $9M → $11M (+22.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $172M → $211M (+22.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $8M → $18M (+125.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $29M → $54M (+86.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $52M → $2M (-96.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $42M → $64M (+52.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $65M → $12M (-81.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-23M → $52M (+326.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] cash_flow_hedge_aoci: $-46M → $40M (+187.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-33M → $26M (+178.8%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No notional amounts for FX or interest rate derivatives are disclosed in this fair-value note (notional would be in the separate derivatives/hedging note, Note 14, not included in this excerpt); all notional fields are null.
+[HISTORICAL] [LLM_FLAG] No interest rate swap fair values appear in the recurring fair value tables, consistent with fi_ir_swap_notional being null.
+[HISTORICAL] [LLM_FLAG] total_marketable_securities_fv left null rather than summing equity ($11M) + debt ($211M) securities, since the text does not state a combined 'marketable securities' total.
+[HISTORICAL] [LLM_FLAG] No interest rate swap or equity derivative activity disclosed; RMB net investment hedge forward notional not cumulatively disclosed (only the $100M March 2025 addition mentioned)
+[HISTORICAL] [LLM_FLAG] Item 3 market risk section is boilerplate incorporation-by-reference identical in structure to the prior quarter; all quantitative detail is in the derivatives_note section
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
 [DISAPPEARED_FIELD] net_fair_value_liability_currency: was $476M, now missing

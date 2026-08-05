@@ -9,38 +9,54 @@
 [LLM_FLAG] total_derivative_asset prior was 252.4 but no explicit fair value is disclosed this period. Prior value likely represented the notional amount (prior period notional was $229.3M at Dec 31, 2025). The filing states the impact from currency hedging was 'not significant', meaning fair values are immaterial.
 [LLM_FLAG] equity_derivatives_notional prior was 'Yes' but no equity derivatives are disclosed. Company holds non-marketable equity investments ($209.5M) which are equity securities, not equity derivatives.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($252M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($252M)
-[DISAPPEARED_FIELD] total_derivative_asset: was $229M, now missing
-[DISAPPEARED_FIELD] net_derivative_position: was $229M, now missing
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (total_derivative_asset, net_derivative_position)
-[LLM_FLAG] The notional amount of FX derivatives not designated as hedging instruments has increased by more than 50% compared to the prior period (from $229.3 million to $252.4 million).
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $393M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $1,081M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $600M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/7 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, corporate_debt_securities_fv)
+[HISTORICAL] [LLM_FLAG] Fair value hierarchy table (cash equivalents, debt securities) is missing from extracted section — section appears to be a partial extract covering only the FX derivatives paragraph
+[HISTORICAL] [LLM_FLAG] FX forward notional continues to grow: $252.4M (Q1 2026) vs $229.3M (Dec 31, 2025) vs $214.0M (Q3 2025)
+[HISTORICAL] [LLM_FLAG] Contract duration remains one to six months; still covering intercompany loans
+[HISTORICAL] [LLM_FLAG] FX forwards not designated as hedging instruments
+[HISTORICAL] [LLM_FLAG] FX forward duration 1-6 months (consistent with 10-K); notional grew further to $252.4M; still entirely not-designated hedges; no derivative fair value amounts disclosed separately; 2025 Notes matured in Nov 2025 and were repaid
+[HISTORICAL] [LLM_FLAG] Item 3 is a stub: 'no material changes' with full disclosure deferred to 10-K Item 7A for fiscal year ended December 31, 2025
+[HISTORICAL] [LLM_FLAG] All schema fields null; quantitative market risk data not present in this 10-Q section
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_derivatives_notional: appeared for first time ($229M)
-[NEW_FIELD] fx_not_designated_notional: appeared for first time ($229M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] The notional amount of foreign currency forward contracts increased from $66.0 million in 2024 to $229.3 million in 2025, which represents a significant increase (greater than 50%).
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,373M → $393M (-71.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $1,486M → $1,081M (-27.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX forward notional remains elevated at $229.3M (vs $66.0M at Dec 31, 2024); contract duration extended to 'one to six months'
+[HISTORICAL] [LLM_FLAG] Also covers intercompany loans (new disclosure vs earlier quarters)
+[HISTORICAL] [LLM_FLAG] Other assets ($20.0M) relate to deferred compensation mutual funds, not standard marketable equity securities
+[HISTORICAL] [LLM_FLAG] 10-K filing: total fair value assets dropped to $1,504.3M from $2,890.6M at Q3 2025 end
+[HISTORICAL] [LLM_FLAG] FX forward duration extended to 1-6 months in 10-K; notional $229.3M at year-end; still entirely not-designated hedges; no derivative fair value amounts disclosed separately
+[HISTORICAL] [LLM_FLAG] This is the 10-K full market risk section; provides qualitative policy statements but no numeric sensitivity figures; capped calls disclosure present; FX forwards covered under derivatives_note
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $610M → $1,373M (+125.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $57M → $214M (+278.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $57M → $214M (+278.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $57M → $214M (+278.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $57M → $214M (+278.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX forward notional increased significantly from $60.0M (Q1 2025) to $214.0M — a ~3.5x jump; contract duration extended from 'generally one month' to 'one to three months'
+[HISTORICAL] [LLM_FLAG] FX forward contracts not designated as hedges; now also cover intercompany loans in addition to monetary assets and liabilities
+[HISTORICAL] [LLM_FLAG] Other assets ($20.5M) relate to deferred compensation mutual funds, not standard marketable equity securities
+[HISTORICAL] [LLM_FLAG] Notable increase in FX forward notional from $60-66M to $214M, reflecting expanded intercompany hedging scope; duration extended to 1-3 months; still not designated hedges; no fair value amounts disclosed
+[HISTORICAL] [LLM_FLAG] Item 3 is a stub: 'no material changes' with full disclosure deferred to 10-K Item 7A for fiscal year ended December 31, 2024
+[HISTORICAL] [LLM_FLAG] All schema fields null; quantitative market risk data not present in this 10-Q section
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-17 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $363M → $610M (+68.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] corporate_debt_securities_fv: $509M → $680M (+33.6%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] FX forward contracts not designated as hedges; fair value impact described as not significant but no balance sheet line provided
+[HISTORICAL] [LLM_FLAG] Other assets ($19.7M) relate to deferred compensation mutual funds, not standard marketable equity securities
+[HISTORICAL] [LLM_FLAG] Dexcom uses only short-duration (1 month) FX forwards not designated as hedging instruments; no IR swaps, commodity, or equity derivatives disclosed; fair value impact described as not significant
+[HISTORICAL] [LLM_FLAG] Item 3 is a stub: 'no material changes' with full disclosure deferred to 10-K Item 7A for fiscal year ended December 31, 2024
+[HISTORICAL] [LLM_FLAG] All schema fields null; quantitative market risk data not present in this 10-Q section
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-26 ===
-[LLM_FLAG] Related debt reference changed from December 31, 2024 to December 31, 2025 - this represents a normal annual update in 10-Q filing referencing the most recent 10-K
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
-[LLM_FLAG] Provided filing section is a boilerplate reference to the 10-K rather than actual market risk disclosures. All quantitative and qualitative risk metrics are absent from this excerpt.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
-[LLM_FLAG] Prior period indicated 'has_derivatives': 'Yes', but current filing section shows 'No mention' - however this appears to be a limitation of the provided excerpt (only a reference statement), not an actual change in disclosure. Full 10-K should be reviewed.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
-[LLM_FLAG] Provided text is incomplete - only contains a cross-reference to the 10-K filing. Actual quantitative and qualitative disclosures about market risk are not included in the excerpt provided.
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-17 ===
+[HISTORICAL] [LLM_FLAG] FX forward contracts not designated as hedges; fair value impact described as not significant but no balance sheet line provided
+[HISTORICAL] [LLM_FLAG] Other assets ($18.4M) relate to deferred compensation mutual funds, not standard marketable equity securities
+[HISTORICAL] [LLM_FLAG] Dexcom uses only short-duration (1 month) FX forwards not designated as hedging instruments; no IR swaps, commodity, or equity derivatives disclosed; fair value impact described as not significant so no asset/liability amounts available
+[HISTORICAL] [LLM_FLAG] Item 3 is a stub: 'no material changes' with full disclosure deferred to 10-K Item 7A for fiscal year ended December 31, 2024
+[HISTORICAL] [LLM_FLAG] All schema fields null; quantitative market risk data not present in this 10-Q section

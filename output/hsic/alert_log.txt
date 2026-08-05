@@ -1,11 +1,57 @@
 === 10-Q | Period ending 2026-06-27 | Processed 2026-08-05 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($656M)
 
-=== 10-K | Period ending 2025-12-27 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-07-18 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $300M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_designated_notional: was $300M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $675M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_derivatives_notional: was $117M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $300M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] foreign_currency_forward_fair_value: was $-20M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] eur_usd_forward_notional: was $300M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] eur_usd_forward_fair_value: was $-20M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_return_swap_notional: was $117M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_return_swap_rate: was $5M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] interest_rate_swap_notional: was $675M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] term_loan_hedged_portion: was $90M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] weighted_average_rate: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] hypothetical_currency_impact: was $6M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] hypothetical_euro_impact: was $-18M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 15/15 previously-populated fields are now null (fx_derivatives_notional, fx_designated_notional, ir_swap_notional, equity_derivatives_notional, fx_forwards_outstanding...)
+[HISTORICAL] [LLM_FLAG] Section text is from the business acquisitions note (2025 acquisitions summary); no financial instruments fair value disclosures are present.
+[HISTORICAL] [LLM_FLAG] Section text is from the debt note (Note 7 Debt), not a dedicated derivatives note; term loan hedge details present (89% hedged, weighted average rate 5.60%) but no derivative notional or fair value amounts explicitly given.
 
-=== 10-Q | Period ending 2025-06-28 | Processed 2026-05-30 ===
-[LLM_FLAG] Filing contains minimal disclosure - refers entirely to prior year 10-K for market risk details. No specific quantitative data provided in this 10-Q section.
+=== 10-K | Period ending 2025-12-27 | Processed 2026-07-18 ===
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($300M)
+[HISTORICAL] [NEW_FIELD] fx_designated_notional: appeared for first time ($300M)
+[HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($675M)
+[HISTORICAL] [NEW_FIELD] equity_derivatives_notional: appeared for first time ($117M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($300M)
+[HISTORICAL] [NEW_FIELD] foreign_currency_forward_fair_value: appeared for first time ($-20M)
+[HISTORICAL] [NEW_FIELD] eur_usd_forward_notional: appeared for first time ($300M)
+[HISTORICAL] [NEW_FIELD] eur_usd_forward_fair_value: appeared for first time ($-20M)
+[HISTORICAL] [NEW_FIELD] total_return_swap_notional: appeared for first time ($117M)
+[HISTORICAL] [NEW_FIELD] total_return_swap_rate: appeared for first time ($5M)
+[HISTORICAL] [NEW_FIELD] interest_rate_swap_notional: appeared for first time ($675M)
+[HISTORICAL] [NEW_FIELD] term_loan_hedged_portion: appeared for first time ($90M)
+[HISTORICAL] [NEW_FIELD] weighted_average_rate: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] hypothetical_currency_impact: appeared for first time ($6M)
+[HISTORICAL] [NEW_FIELD] hypothetical_euro_impact: appeared for first time ($-18M)
+[HISTORICAL] [LLM_FLAG] Section text is from the business acquisitions note (TriMed and other 2024 acquisitions in the 10-K); no financial instruments fair value disclosures are present.
+[HISTORICAL] [LLM_FLAG] FX forward notional of 300 is EUR-denominated (€300 million), not USD millions.
+[HISTORICAL] [LLM_FLAG] equity_derivatives_notional (117) refers to total return swap on ETFs used to hedge deferred compensation plans.
+[HISTORICAL] [LLM_FLAG] Only FX forward fair value disclosed as $(20)M; TRS and IR swap fair values not stated in this section.
+[HISTORICAL] [LLM_FLAG] eur_usd_forward_notional and fx_forwards_outstanding are EUR-denominated (€300 million), not USD millions.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp not available; only 25bp sensitivities given ($0.5M for revolving credit and $1M for securitization facility).
+[HISTORICAL] [LLM_FLAG] hypothetical_euro_impact is for a 5% EUR move (not 10%); value is -18 (decrease).
+
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-07-18 ===
+[HISTORICAL] [LLM_FLAG] Section text is from the business acquisitions note (TriMed, other 2024 acquisitions); no financial instruments fair value disclosures are present.
+[HISTORICAL] [LLM_FLAG] Section text is from the debt note (Note 8 Debt), not a dedicated derivatives note; term loan hedge details present (91% hedged, weighted average rate 5.67%) but no derivative notional or fair value amounts explicitly given.
+
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-07-18 ===
+[HISTORICAL] [LLM_FLAG] Section text is Note 7 Fair Value Measurements methodology description only (debt fair value as of June 28, 2025 estimated at $3,018 million noted, but no derivative or securities fair value table disclosed).
+[HISTORICAL] [LLM_FLAG] Section text is from the debt note (Note 8 Debt), not a dedicated derivatives note; term loan hedge details present (93% hedged, weighted average rate 5.68%) but no derivative notional or fair value amounts explicitly given.
 
 === 10-Q | Period ending 2025-03-29 | Processed 2026-05-30 ===
 [DISAPPEARED_FIELD] fx_forwards_outstanding: was $300M, now missing

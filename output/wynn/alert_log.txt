@@ -1,37 +1,93 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_designated_notional: $28M → $22M (-21.4%) — exceeds 20% threshold
-[NUMERIC] fx_not_designated_notional: $28M → $22M (-21.4%) — exceeds 20% threshold
-[NUMERIC] net_derivative_position: $27M → $2,027M (+7407.4%) — exceeds 20% threshold
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-28 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($100M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($19M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($47M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($19M)
+[HISTORICAL] [NUMERIC] total_derivative_liability: $69M → $47M (-31.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-69M → $-28M (+59.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $9M, now missing
+[HISTORICAL] [NUMERIC] wml_convertible_bond_derivative_fair_value: $33M → $9M (-72.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] wml_convertible_bond_derivative_gain_loss: $0M → $24M (+5800.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_swap_fair_value_net: $-36M → $-20M (+43.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_swap_gain_loss: $-28M → $22M (+178.6%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_debt_total: was $8,730M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] variable_rate_debt_total: was $1,902M, now missing
+[HISTORICAL] [LLM_FLAG] All source figures in thousands (per 'in thousands' header); converted to millions by dividing by 1,000
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in Note 9 Fair Value Measurements; see derivatives note for notional data
+[HISTORICAL] [LLM_FLAG] WML Convertible Bond Conversion Option Derivative is a Level 3 liability ($8,990 thousand); included in fi_total_derivative_liability; significantly lower than prior periods
+[HISTORICAL] [LLM_FLAG] No interest rate swap liability at March 31, 2026 (prior period December 31, 2025 shows IR swap liability of $268 thousand)
+[HISTORICAL] [LLM_FLAG] Fixed deposits of $475,000 thousand (Level 2) present in both current and prior comparative period
+[HISTORICAL] [LLM_FLAG] WML convertible bond embedded derivative fair value dropped sharply from $32.6M (Dec 2025) to $9.0M (Mar 2026) as WML stock price fell and expected term shortened
+[HISTORICAL] [LLM_FLAG] Interest rate swap ($600M notional) not described in Derivative Instruments note text but appears in Fair Value Measurements table as $1.338M asset
+[HISTORICAL] [LLM_FLAG] FX sensitivity quoted at 1% move ($4.4M); 10% sensitivity not disclosed
+[HISTORICAL] [LLM_FLAG] Company also holds $475M in fixed deposits and U.S. treasuries ($133.5M + $64.0M) as of March 31, 2026 (disclosed in Basis of Presentation note)
+[HISTORICAL] [LLM_FLAG] WML convertible bond derivative reclassified from Long-term debt to Current portion of long-term debt as bonds mature in 2028 but conversion option matures sooner
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_designated_notional: $6M → $28M (+352.5%) — exceeds 20% threshold
-[NUMERIC] fx_not_designated_notional: $6M → $28M (+352.5%) — exceeds 20% threshold
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-28 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $43M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $17M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $92M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $17M, now missing
+[HISTORICAL] [NUMERIC] total_derivative_liability: $92M → $69M (-25.4%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($9M)
+[HISTORICAL] [NUMERIC] wml_convertible_bond_derivative_fair_value: $62M → $33M (-47.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] wml_convertible_bond_derivative_gain_loss: $-18M → $0M (+102.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_swap_fair_value_net: $-14M → $-36M (-150.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_swap_gain_loss: $6M → $-28M (-552.5%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fixed_rate_debt_total: appeared for first time ($8,730M)
+[HISTORICAL] [NEW_FIELD] variable_rate_debt_total: appeared for first time ($1,902M)
+[HISTORICAL] [LLM_FLAG] Interest rate swap ($600M notional, maturing Feb 2027) not described in Note 8 text provided; fair value should appear in Note 9 (Fair Value Measurements) which was not in provided windows
+[HISTORICAL] [LLM_FLAG] WML convertible bond gain of $0.4M for year ended December 31, 2025 represents near-flat fair value change from $33.0M to $32.6M
+[HISTORICAL] [LLM_FLAG] Section text is truncated; FX sensitivity figure (1% move in USD/HKD rate) likely disclosed but not captured in provided text
+[HISTORICAL] [LLM_FLAG] WML convertible bond 2025 full-year gain of $0.4M is substantially lower than 2024 ($40.7M gain) and 2023 ($49.7M gain)
+[HISTORICAL] [LLM_FLAG] 10-K also discloses interest rate swap contribution to change in derivatives fair value: loss of $7.7M for 2025 (from MD&A context)
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] net_derivative_position: $2,029M → $27M (-98.7%) — exceeds 20% threshold
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-28 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $517M → $43M (-91.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $3M → $17M (+438.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $62M → $92M (+47.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $3,100M → $4,100M (+32.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $3,100M → $4,100M (+32.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1M → $17M (+2666.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $61M → $92M (+50.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-60M → $-75M (-24.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] wml_convertible_bond_derivative_fair_value: $43M → $62M (+43.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] wml_convertible_bond_derivative_gain_loss: $6M → $-18M (-408.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] wml_stock_price: $5M → $7M (+33.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] wml_estimated_volatility: $36M → $27M (-25.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_swap_notional_aggregate: $3,100M → $4,100M (+32.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_swap_gain_loss: $-5M → $6M (+215.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All source figures in thousands (per 'in thousands' header); converted to millions by dividing by 1,000
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in Note 9 Fair Value Measurements; see derivatives note for notional data
+[HISTORICAL] [LLM_FLAG] WML Convertible Bond Conversion Option Derivative is a Level 3 liability ($61,522 thousand); included in fi_total_derivative_liability
+[HISTORICAL] [LLM_FLAG] Interest rate swap appears on both asset and liability sides in this period ($1,245 thousand asset, $599 thousand liability)
+[HISTORICAL] [LLM_FLAG] Fixed deposits of $475,000 thousand (Level 2) appear for first time in this filing period; not a derivative instrument
+[HISTORICAL] [LLM_FLAG] Interest rate swap ($600M notional) not described in Derivative Instruments note text but visible in Fair Value Measurements table as $1.245M asset / $0.599M liability
+[HISTORICAL] [LLM_FLAG] WML convertible bond derivative embedded in Long-term debt; not shown as separate derivative line in balance sheet
+[HISTORICAL] [LLM_FLAG] FX sensitivity quoted at 1% move ($3.4M); 10% sensitivity not disclosed
+[HISTORICAL] [LLM_FLAG] Company also holds $475M in fixed deposits (investments) as of September 30, 2025
 
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NEW_FIELD] has_derivatives: appeared for first time ($1M)
-[NUMERIC] fx_designated_notional: $9M → $5M (-43.0%) — exceeds 20% threshold
-[NUMERIC] fx_not_designated_notional: $9M → $5M (-43.0%) — exceeds 20% threshold
-[NEW_FIELD] net_derivative_position: appeared for first time ($2,029M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-28 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $776M → $517M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($1M)
+[HISTORICAL] [NUMERIC] wml_convertible_bond_derivative_gain_loss: $-16M → $6M (+137.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] wml_risk_free_rate: $3M → $3M (-21.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_swap_fair_value_net: $-9M → $-18M (-88.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_swap_gain_loss: $-9M → $-5M (+43.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All source figures in thousands (per 'in thousands' header); converted to millions by dividing by 1,000
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in Note 9 Fair Value Measurements; see derivatives note for notional data
+[HISTORICAL] [LLM_FLAG] WML Convertible Bond Conversion Option Derivative is a Level 3 liability ($42,996 thousand); included in fi_total_derivative_liability
+[HISTORICAL] [LLM_FLAG] Interest rate swap appears on both asset and liability sides in this period ($2,526 thousand asset, $1,086 thousand liability)
+[HISTORICAL] [LLM_FLAG] Interest rate swap ($600M notional) appears in the Fair Value Measurements table as a $2.526M asset and $1.086M liability but is not described in the Derivative Instruments note text provided
+[HISTORICAL] [LLM_FLAG] FX swap gross asset ($0.554M from Fair Value table) and liability ($18.086M) differ from the net fair value of -$17.5M disclosed in the note
+[HISTORICAL] [LLM_FLAG] FX sensitivity quoted at 1% move ($7.9M); schema requests 10% sensitivity not disclosed
+[HISTORICAL] [LLM_FLAG] WML convertible bond H1 2025 loss was $10.0M but Q2 standalone was a gain of $6.0M
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($9M)
-[NEW_FIELD] fixed_rate_debt_total: appeared for first time ($8,730M)
-[NEW_FIELD] variable_rate_debt_total: appeared for first time ($1,902M)
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NUMERIC] fx_swap_notional_aggregate: $3,100M → $4,100M (+32.3%) — exceeds 20% threshold
-[LLM_FLAG] FX swap aggregate notional increased significantly from $3.1B (Q2) to $4.1B (Q3), a 32% increase. The January 2026 swap ($800M) likely matured/rolled, and new swaps were added extending to August 2030.
-[LLM_FLAG] Maturity range shifted from 'January 2026 to December 2029' to 'October 2027 to August 2030', indicating the nearest-term swap expired and longer-dated swaps were added.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($19M)
-[NEW_FIELD] fx_swap_notional_aggregate: appeared for first time ($2,900M)
-[NEW_FIELD] ir_swap_notional: appeared for first time ($600M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-28 ===
+[HISTORICAL] [LLM_FLAG] All source figures in thousands (per 'in thousands' header); converted to millions by dividing by 1,000
+[HISTORICAL] [LLM_FLAG] Notional amounts not disclosed in Note 9 Fair Value Measurements; see derivatives note for notional data
+[HISTORICAL] [LLM_FLAG] WML Convertible Bond Conversion Option Derivative is a Level 3 liability ($48,982 thousand); included in fi_total_derivative_liability
+[HISTORICAL] [LLM_FLAG] IR swap ($600M notional, $3.283M fair value asset) appears in the Fair Value Measurements note (Note 9) but is not described in the Derivative Instruments note text provided
+[HISTORICAL] [LLM_FLAG] WML convertible bond embedded derivative is classified within Long-term debt, not a standalone derivative line
+[HISTORICAL] [LLM_FLAG] FX sensitivity is quoted at 1% move ($12.5M gain/loss); schema asks for 10% sensitivity which is not disclosed
+[HISTORICAL] [LLM_FLAG] Foreign currency remeasurement loss of $8.4M for Q1 2025 mentioned in MD&A but not in the provided section text

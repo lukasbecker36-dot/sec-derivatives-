@@ -1,41 +1,31 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] variable_rate_debt_sensitivity: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] life_insurance_cash_surrender_value: was $98M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] life_insurance_market_exposure: was $79M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] life_insurance_sensitivity: was $8M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (ir_sensitivity_100bp, variable_rate_debt_sensitivity, life_insurance_cash_surrender_value, life_insurance_market_exposure, life_insurance_sensitivity)
+[HISTORICAL] [LLM_FLAG] 10-Q Item 3 contains no quantitative disclosures — boilerplate cross-reference only: 'There have been no material changes to our market risk exposures since our most recent fiscal year end.' Refers to 10-K Item 7A for fiscal year ended December 31, 2025.
+[HISTORICAL] [LLM_FLAG] All fields null; quantitative values are available only in the annual 10-K filing.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($8M)
-[NEW_FIELD] variable_rate_debt_sensitivity: appeared for first time ($0M)
-[NEW_FIELD] life_insurance_cash_surrender_value: appeared for first time ($98M)
-[NEW_FIELD] life_insurance_market_exposure: appeared for first time ($79M)
-[NEW_FIELD] life_insurance_sensitivity: appeared for first time ($8M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-23 ===
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] variable_rate_debt_sensitivity: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] life_insurance_cash_surrender_value: appeared for first time ($98M)
+[HISTORICAL] [NEW_FIELD] life_insurance_market_exposure: appeared for first time ($79M)
+[HISTORICAL] [NEW_FIELD] life_insurance_sensitivity: appeared for first time ($8M)
+[HISTORICAL] [LLM_FLAG] No FX exposure or FX forwards disclosed — ODFL derives less than 5% of revenue internationally and does not hedge currency risk.
+[HISTORICAL] [LLM_FLAG] No fixed-rate notes sensitivity figure given; the only long-term fixed-rate debt is the Series B Notes ($40.0M outstanding) but no IR sensitivity in basis points is quantified for them in this section.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp set to 0.0 reflecting the explicit statement that no borrowings were outstanding under the variable-rate Credit Agreement at year-end 2025.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-23 ===
+[HISTORICAL] [LLM_FLAG] 10-Q Item 3 contains no quantitative disclosures — boilerplate cross-reference only: 'There have been no material changes to our market risk exposures since our most recent fiscal year end.' Refers to 10-K Item 7A for fiscal year ended December 31, 2024.
+[HISTORICAL] [LLM_FLAG] All fields null; quantitative values are available only in the annual 10-K filing.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($8M)
-[NEW_FIELD] variable_rate_debt_sensitivity: appeared for first time ($0M)
-[NEW_FIELD] life_insurance_cash_surrender_value: appeared for first time ($98M)
-[NEW_FIELD] life_insurance_market_exposure: appeared for first time ($79M)
-[NEW_FIELD] life_insurance_sensitivity: appeared for first time ($8M)
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-23 ===
+[HISTORICAL] [LLM_FLAG] 10-Q Item 3 contains no quantitative disclosures — boilerplate cross-reference only: 'There have been no material changes to our market risk exposures since our most recent fiscal year end.' Refers to 10-K Item 7A for fiscal year ended December 31, 2024.
+[HISTORICAL] [LLM_FLAG] All fields null; quantitative values are available only in the annual 10-K filing.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing
-[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $10M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
-[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($10M)
-
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] variable_rate_debt_sensitivity: appeared for first time ($0M)
-[NEW_FIELD] life_insurance_cash_surrender_value: appeared for first time ($98M)
-[NEW_FIELD] life_insurance_market_exposure: appeared for first time ($79M)
-[NEW_FIELD] life_insurance_sensitivity: appeared for first time ($8M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-23 ===
+[HISTORICAL] [LLM_FLAG] 10-Q Item 3 contains no quantitative disclosures — boilerplate cross-reference only: 'There have been no material changes to our market risk exposures since our most recent fiscal year end.' Refers to 10-K Item 7A for fiscal year ended December 31, 2024.
+[HISTORICAL] [LLM_FLAG] All fields null; quantitative values are available only in the annual 10-K filing.

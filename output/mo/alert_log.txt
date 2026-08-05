@@ -13,60 +13,58 @@
 [VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (gross_unrealized_gains_debt, has_derivatives, equity_sensitivity_10pct, debt_characteristics)
 [LLM_FLAG] debt_characteristics: prior value was 22.7 (numeric) but schema describes 'all fixed-rate debt notation' (string); extracted as string per current schema definition. Prior value may have been the fair value of debt from an earlier period rather than a textual notation.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($23M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] fair_value_debt: appeared for first time ($23M)
-[NEW_FIELD] rate_sensitivity_increase: appeared for first time ($2M)
-[NEW_FIELD] rate_sensitivity_decrease: appeared for first time ($2M)
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,700M)
+[HISTORICAL] [NEW_FIELD] fair_value_debt: appeared for first time ($23M)
+[HISTORICAL] [NEW_FIELD] rate_sensitivity_increase: appeared for first time ($2M)
+[HISTORICAL] [NEW_FIELD] rate_sensitivity_decrease: appeared for first time ($2M)
+[HISTORICAL] [LLM_FLAG] No derivatives outstanding as of March 31, 2026; company uses Euro-denominated debt as net investment hedge instead of FX derivative contracts.
+[HISTORICAL] [LLM_FLAG] NJOY contingent payment liability of $45M is not a derivative instrument.
+[HISTORICAL] [LLM_FLAG] No derivative instruments outstanding at March 31, 2026. Pre-tax gains on net investment hedges (via Euro debt) of $(43)M for Q1 2026 (gain vs loss in prior year). NJOY contingent payment balance stable at $45M.
+[HISTORICAL] [LLM_FLAG] debt_characteristics is a text descriptor (all fixed-rate), not a numeric field — set to null.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp converted from billions: 1.7B = 1700M.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($24M)
-[NEW_FIELD] fair_value_debt: appeared for first time ($24M)
-[NEW_FIELD] rate_sensitivity_increase: appeared for first time ($2M)
-[NEW_FIELD] rate_sensitivity_decrease: appeared for first time ($2M)
-[LLM_FLAG] Increase in fair value from a 1% decrease in market interest rates (2.1) shows a greater sensitivity than the prior period's 2.0, suggesting a notable increase in the debt's sensitivity to rate changes.
+=== 10-K/A | Period ending 2025-12-31 | Processed 2026-06-22 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $1,800M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fair_value_debt: was $24M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] rate_sensitivity_increase: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] rate_sensitivity_decrease: was $2M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 12/12 previously-populated fields are now null (fi_fx_derivatives_notional, fi_total_derivative_asset, fi_total_derivative_liability, fx_derivatives_notional, total_derivative_asset...)
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($23M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[NEW_FIELD] fair_value_debt: appeared for first time ($23M)
-[NEW_FIELD] rate_sensitivity_increase: appeared for first time ($2M)
-[NEW_FIELD] rate_sensitivity_decrease: appeared for first time ($2M)
-[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (equity_sensitivity_10pct)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] No derivative instruments outstanding at year-end 2025. Section is from a 10-K and includes extensive long-term debt detail.
+[HISTORICAL] [LLM_FLAG] 10-K discloses that company 'enters into derivative financial instruments' but none were outstanding at December 31, 2025. Uses Euro-denominated long-term notes as net investment hedge of ABI. Pre-tax losses on net investment hedges of $393M for full year 2025.
+[HISTORICAL] [LLM_FLAG] debt_characteristics is a text descriptor (all fixed-rate), not a numeric field — set to null.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp converted from billions: 1.8B = 1800M.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($24M)
-[NEW_FIELD] fair_value_debt: appeared for first time ($24M)
-[NEW_FIELD] rate_sensitivity_increase: appeared for first time ($2M)
-[NEW_FIELD] rate_sensitivity_decrease: appeared for first time ($2M)
-[LLM_FLAG] Fixed-rate notes outstanding significantly increased compared to the prior period (24.3 billion to 22.7 billion) indicating potential changes in borrowing strategy or conditions.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] No derivative instruments outstanding. Section covers long-term debt fair value and NJOY contingent payment liability.
+[HISTORICAL] [LLM_FLAG] No derivative instruments outstanding at September 30, 2025. Pre-tax losses on net investment hedges (via Euro debt) of $391M for nine months ended September 30, 2025.
+[HISTORICAL] [LLM_FLAG] debt_characteristics is a text descriptor (all fixed-rate), not a numeric field — set to null.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp converted from billions: 1.9B = 1900M.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-23 ===
-[LLM_FLAG] fair_value_debt decreased from $24.5B to $22.7B (7.3% decline) - within normal range due to interest rate environment changes
-[LLM_FLAG] rate_sensitivity_increase decreased from 1.9 to 1.7 (10.5% decline) - consistent with lower debt fair value
-[LLM_FLAG] rate_sensitivity_decrease decreased from 2.1 to 2.0 (4.8% decline) - minor change, consistent with lower debt fair value
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] No derivative instruments outstanding. Section covers long-term debt fair value and NJOY contingent payment liability.
+[HISTORICAL] [LLM_FLAG] No derivative instruments outstanding at June 30, 2025. Pre-tax losses on net investment hedges (via Euro debt) of $403M for six months ended June 30, 2025.
+[HISTORICAL] [LLM_FLAG] debt_characteristics is a text descriptor (all fixed-rate), not a numeric field — set to null.
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp converted from billions: 1.8B = 1800M.
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-23 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[LLM_FLAG] fair_value_debt increased from $23.0B to $24.5B (6.5% increase) - within normal range but reflects market conditions
-[LLM_FLAG] rate_sensitivity_increase increased from $1.8B to $1.9B (5.6% increase) - consistent with higher debt fair value
-[LLM_FLAG] rate_sensitivity_decrease increased from $2.0B to $2.1B (5.0% increase) - consistent with higher debt fair value
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-23 ===
-[NEW_FIELD] fair_value_debt: appeared for first time ($24M)
-[NEW_FIELD] rate_sensitivity_increase: appeared for first time ($2M)
-[NEW_FIELD] rate_sensitivity_decrease: appeared for first time ($2M)
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-22 ===
-[LLM_FLAG] api_error: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHKsNYb2bRfKSfGkiVKn'}
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] No derivative instruments outstanding. Section primarily covers long-term debt fair value and NJOY contingent payment liability.
+[HISTORICAL] [LLM_FLAG] Altria uses Euro-denominated long-term notes as a net investment hedge of its ABI investment, not derivative contracts. No derivative instruments were outstanding at March 31, 2025. Pre-tax losses on net investment hedges (via debt) of $139M for Q1 2025.
+[HISTORICAL] [LLM_FLAG] Schema field 'debt_characteristics' appears to expect a text value, not numeric — marked null; narrative: all debt is fixed-rate.
+[HISTORICAL] [LLM_FLAG] Schema field 'ir_sensitivity_100bp' value expressed in millions (1800) converted from billions (1.8).

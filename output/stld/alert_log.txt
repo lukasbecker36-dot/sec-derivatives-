@@ -1,27 +1,54 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] futures_contracts_fair_value: was $4M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, futures_contracts_fair_value)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-25 ===
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($40M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($114M)
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_contracts_fair_value: was $-56M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (fixed_rate_notes_billion, commodity_contracts_fair_value)
+[HISTORICAL] [LLM_FLAG] Table is stated in thousands; converted to millions
+[HISTORICAL] [LLM_FLAG] No short-term investments at Mar 31 2026 (absent from table entirely, unlike prior periods)
+[HISTORICAL] [LLM_FLAG] Commodity futures liabilities have grown substantially: $113.884M at Mar 31 2026 vs $64.896M at Dec 31 2025 vs $6.272M at Dec 31 2024 — large increase in net short commodity position loss
+[HISTORICAL] [LLM_FLAG] Aggregate figure of $53.3M at Mar 31 2026 includes required margin deposits of $127.1M — implying net derivative FV is negative (liabilities exceed assets by ~$73.8M); use Fair Value Measurements note for breakdown
+[HISTORICAL] [LLM_FLAG] Company recognized losses of $60.9M on derivatives for Q1 2026 vs losses of $32.3M for Q1 2025 — significant escalation
+[HISTORICAL] [LLM_FLAG] Market risk section is qualitative only — no numeric figures
+[HISTORICAL] [LLM_FLAG] Commodity futures fair values available in Note 6 Fair Value Measurements: assets $40,123k, liabilities $113,884k at March 31, 2026
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-25 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $15M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $34M, now missing
+[HISTORICAL] [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
+[HISTORICAL] [NEW_FIELD] commodity_contracts_fair_value: appeared for first time ($-56M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (total_marketable_securities_fv, fi_total_derivative_asset, fi_total_derivative_liability)
+[HISTORICAL] [LLM_FLAG] Aggregate figure of $56.2M at Dec 31 2025 includes required margin deposits of $112.2M mixed with derivative fair values — implying net derivative fair value is negative (liabilities exceed assets); use Fair Value Measurements note for breakdown
+[HISTORICAL] [LLM_FLAG] Company recognized losses of $76.7M on fair value hedges and non-designated derivatives for year ended Dec 31, 2025 (vs gains of $11.4M in 2024 and $10.0M in 2023) — significant year-over-year reversal
+[HISTORICAL] [LLM_FLAG] fixed_rate_notes_billion converted from thousands: $4,253,448k = $4.253B
+[HISTORICAL] [LLM_FLAG] commodity_contracts_fair_value is the cumulative unrealized loss figure ($56.0M net loss position)
+[HISTORICAL] [LLM_FLAG] Commodity futures fair values (assets $8,925k / liabilities $64,896k at Dec 31 2025) are in the Fair Value Measurements note, not the market risk section
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] futures_contracts_fair_value: was $4M, now missing
-[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (futures_contracts_fair_value)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-25 ===
+[HISTORICAL] [DROPPED_TO_ZERO] total_marketable_securities_fv: $40M → $0M
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $29M → $15M (-46.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $45M → $34M (-24.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Table is stated in thousands; converted to millions
+[HISTORICAL] [LLM_FLAG] Short-term investments were $147.811M at Dec 31 2024 but $0 at Sep 30 2025
+[HISTORICAL] [LLM_FLAG] Commodity futures are Level 2 instruments
+[HISTORICAL] [LLM_FLAG] Aggregate figure of $38.0M at Sep 30 2025 includes required margin deposits mixed with derivative fair values — cannot separate derivative asset from liability here; use financial_instruments (Fair Value Measurements) note for clean fair values
+[HISTORICAL] [LLM_FLAG] Gains/losses on fair value and cash flow hedges described as insignificant for Q3 2025 and Q3 2024
+[HISTORICAL] [LLM_FLAG] Market risk section is qualitative only — no numeric figures; commodity futures fair values are in the Fair Value Measurements note (Note 6)
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
-[NEW_FIELD] commodity_price_sensitivity: appeared for first time ($-56M)
-[LLM_FLAG] Cumulative unrealized loss of $56.0 million related to financial contracts, indicating potential volatility in commodity prices; this figure is significant and noteworthy.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] total_marketable_securities_fv: $20M → $40M (+101.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $18M → $29M (+59.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $27M → $45M (+65.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Table is stated in thousands; converted to millions
+[HISTORICAL] [LLM_FLAG] Short-term investments increased from $19.636M at Mar 31 2025 to $39.577M at Jun 30 2025, but still well below Dec 31 2024 level of $147.811M
+[HISTORICAL] [LLM_FLAG] Aggregate figure of $31.5M at Jun 30 2025 includes required margin deposits mixed with derivative fair values — cannot cleanly separate asset/liability; use Fair Value Measurements note for breakdown
+[HISTORICAL] [LLM_FLAG] Gains/losses on fair value hedges and non-designated derivatives described as insignificant for all Q2 2025 and H1 2025 periods
+[HISTORICAL] [LLM_FLAG] Market risk section is qualitative only — no numeric figures
+[HISTORICAL] [LLM_FLAG] Commodity futures fair values available in Note 6: assets $28,546k, liabilities $44,938k at June 30, 2025; short-term investments $39,577k
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
-[NEW_FIELD] commodity_contracts_fair_value: appeared for first time ($-56M)
-[NEW_FIELD] futures_contracts_fair_value: appeared for first time ($-56M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-25 ===
+[HISTORICAL] [LLM_FLAG] Table is stated in thousands; converted to millions
+[HISTORICAL] [LLM_FLAG] Short-term investments declined from $147.811M at Dec 31 2024 to $19.636M at Mar 31 2025
+[HISTORICAL] [LLM_FLAG] Market risk section is qualitative only — no numeric figures
+[HISTORICAL] [LLM_FLAG] Commodity futures fair values available in Note 6: assets $17,956k, liabilities $27,221k at March 31, 2025; short-term investments $19,636k

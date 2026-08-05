@@ -1,15 +1,71 @@
-=== 10-Q | Period ending 2026-02-28 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXtVsubgxkRWbtYYdxs'}
+=== 10-Q | Period ending 2026-05-31 | Processed 2026-06-18 ===
+[NUMERIC] fi_total_derivative_asset: $30M → $41M (+37.1%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $407M → $684M (+68.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $30M → $41M (+37.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $407M → $684M (+68.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-377M → $-643M (-70.4%) — exceeds 20% threshold
+[LLM_FLAG] Notional not split by designated vs. non-designated. All derivatives are FX forwards only. Net fair value is very deeply negative at ($643,340) thousand — net liability position has more than doubled versus February 28, 2026. Derivative liabilities have surged to $684.1 million, largest in the series reviewed.
+[LLM_FLAG] Notional values converted from thousands to millions
+[LLM_FLAG] Designated vs. not-designated notional split not disclosed; only combined total provided
+[LLM_FLAG] AOCI balance and 12-month reclassification amount are in Note 4, not captured in this section text
+[LLM_FLAG] 10-Q market risk section contains only a cross-reference to the annual 10-K; no quantitative market risk data is present in this filing
 
-=== 10-Q | Period ending 2025-11-30 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXtJwLiP7QpxpzPURwk'}
+=== 10-Q | Period ending 2026-02-28 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $7M → $30M (+308.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $298M → $407M (+36.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $7M → $30M (+308.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $298M → $407M (+36.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-290M → $-377M (-30.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Notional not split by designated vs. non-designated. All derivatives are FX forwards only. Net fair value is deeply negative at ($377,445) thousand — net liability position has worsened significantly versus prior periods. Derivative liabilities have grown substantially to $407.2 million.
+[HISTORICAL] [LLM_FLAG] Notional values converted from thousands to millions
+[HISTORICAL] [LLM_FLAG] Designated vs. not-designated notional split not disclosed; only combined total provided
+[HISTORICAL] [LLM_FLAG] AOCI balance and 12-month reclassification amount are in Note 4, not captured in this section text
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section contains only a cross-reference to the annual 10-K; no quantitative market risk data is present in this filing
 
-=== 10-K | Period ending 2025-08-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXtCWtBSfxCe7UJFf59'}
+=== 10-Q | Period ending 2025-11-30 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $37M → $7M (-80.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $37M → $7M (-80.3%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-115M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $722M, now missing
+[HISTORICAL] [LLM_FLAG] Notional not split by designated vs. non-designated. All derivatives are FX forwards only. Net fair value is very negative at ($290,291) thousand — large net liability position, deepening from August 31, 2025. Derivative asset balance has fallen sharply to just $7.3 million.
+[HISTORICAL] [LLM_FLAG] Notional values converted from thousands to millions
+[HISTORICAL] [LLM_FLAG] Designated vs. not-designated notional split not disclosed; only combined total provided
+[HISTORICAL] [LLM_FLAG] AOCI balance and 12-month reclassification amount are in Note 4, not captured in this section text
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section contains only a cross-reference to the annual 10-K; no quantitative market risk data is present in this filing
 
-=== 10-Q | Period ending 2025-05-31 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXt3pVwJ8yYG78HeRci'}
+=== 10-K | Period ending 2025-08-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $127M → $37M (-71.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $126M → $281M (+122.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $127M → $37M (-71.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $126M → $281M (+122.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $1M → $-245M (-24554.2%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-115M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($722M)
+[HISTORICAL] [VALIDATION] Likely units mismatch: net_derivative_position changed from 1 to -245 (245x)
+[HISTORICAL] [LLM_FLAG] 10-K annual filing. Notional not split by designated vs. non-designated. All derivatives are FX forwards only. Net fair value is significantly negative at ($244,542) thousand — large net liability position. Also noted: no fair value or net investment hedges as of August 31, 2025.
+[HISTORICAL] [LLM_FLAG] Notional values converted from thousands to millions
+[HISTORICAL] [LLM_FLAG] Designated vs. not-designated notional split not disclosed; only combined total provided
+[HISTORICAL] [LLM_FLAG] Expected 12-month AOCI reclassification sourced from Item 7A section, not the note itself; value is net of tax and represents net losses (negative)
+[HISTORICAL] [LLM_FLAG] FX sensitivity of $722M is for 10% move on hedge portfolio fair value, not the broader FX exposure
+[HISTORICAL] [LLM_FLAG] Interest rate risk noted as not material; no IR derivatives used as of August 31, 2025
+[HISTORICAL] [LLM_FLAG] Equity investment risk described qualitatively; no numeric sensitivity provided
 
-=== 10-Q | Period ending 2025-02-28 | Processed 2026-06-08 ===
-[LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqXswFcLpirRrWAPw8io'}
+=== 10-Q | Period ending 2025-05-31 | Processed 2026-06-18 ===
+[HISTORICAL] [NUMERIC] fi_total_derivative_asset: $65M → $127M (+96.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fi_total_derivative_liability: $166M → $126M (-23.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $65M → $127M (+96.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $166M → $126M (-23.9%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-101M → $1M (+101.0%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely units mismatch: net_derivative_position changed from -101 to 1 (0x)
+[HISTORICAL] [LLM_FLAG] Notional not split by designated vs. non-designated in the disclosure. All derivatives are FX forwards only — no IR swaps or equity derivatives. Total fair value is net positive $1,000 thousand ($1.0 million), indicating near-zero net position.
+[HISTORICAL] [LLM_FLAG] Notional values converted from thousands to millions
+[HISTORICAL] [LLM_FLAG] Designated vs. not-designated notional split not disclosed; only combined total provided
+[HISTORICAL] [LLM_FLAG] AOCI balance and 12-month reclassification amount are in Note 4, not captured in this section text
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section contains only a cross-reference to the annual 10-K; no quantitative market risk data is present in this filing
 
+=== 10-Q | Period ending 2025-02-28 | Processed 2026-06-18 ===
+[HISTORICAL] [LLM_FLAG] Notional not split by designated vs. non-designated in the disclosure. All derivatives are FX forwards only — no IR swaps or equity derivatives.
+[HISTORICAL] [LLM_FLAG] Notional values converted from thousands to millions
+[HISTORICAL] [LLM_FLAG] Designated vs. not-designated notional split not disclosed; only combined total provided
+[HISTORICAL] [LLM_FLAG] AOCI balance and 12-month reclassification amount are in Note 4, not captured in this section text
+[HISTORICAL] [LLM_FLAG] 10-Q market risk section contains only a cross-reference to the annual 10-K; no quantitative market risk data is present in this filing

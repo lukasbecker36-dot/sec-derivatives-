@@ -1,44 +1,48 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NEW_FIELD] ir_swap_notional: appeared for first time ($209M)
-[NEW_FIELD] total_derivative_liability: appeared for first time ($3M)
-[NEW_FIELD] net_derivative_position: appeared for first time ($-3M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] sensitivity_assumption: was $1M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, sensitivity_assumption)
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-14 ===
+[HISTORICAL] [NUMERIC] ir_swap_notional: $109M → $209M (+91.7%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $2M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-1M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_financing_potential_loss_cms: was $792M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fixed_rate_financing_potential_loss_consumers: was $535M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] sensitivity_assumption: was $10M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 5/7 previously-populated fields are now null (total_derivative_asset, net_derivative_position, fixed_rate_financing_potential_loss_cms, fixed_rate_financing_potential_loss_consumers, sensitivity_assumption)
+[HISTORICAL] [LLM_FLAG] This note (Note 6, Financial Instruments) discloses carrying amounts and fair values of long-term debt and receivables NOT recorded at fair value. It does not contain derivatives or marketable securities data. Derivative and fair-value-measured instrument data would be in Note 5 (Fair Value Measurements) which is not included in this section_text.
+[HISTORICAL] [LLM_FLAG] IR swaps at NorthStar Clean Energy are economic hedges (not designated), so no hedge accounting / AOCI entries apply
+[HISTORICAL] [LLM_FLAG] FTR asset fair value not quantified in the text; only noted as having no material Level 3 activity
+[HISTORICAL] [LLM_FLAG] Gains/losses on IR swaps reported in other expense: less than $1 million for Q1 2026, $3 million for Q1 2025
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[NEW_FIELD] fixed_rate_financing_potential_loss_cms: appeared for first time ($792M)
-[NEW_FIELD] fixed_rate_financing_potential_loss_consumers: appeared for first time ($535M)
-[NEW_FIELD] sensitivity_assumption: appeared for first time ($10M)
-[LLM_FLAG] fixed_rate_financing_potential_loss_cms increased by more than 10% from previous period, indicating a greater risk exposure likely due to increased fixed-rate debt.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-14 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $3M → $2M (-33.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $4M → $3M (-25.0%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fixed_rate_financing_potential_loss_cms: appeared for first time ($792M)
+[HISTORICAL] [NEW_FIELD] fixed_rate_financing_potential_loss_consumers: appeared for first time ($535M)
+[HISTORICAL] [NEW_FIELD] sensitivity_assumption: appeared for first time ($10M)
+[HISTORICAL] [LLM_FLAG] This note (Note 7, Financial Instruments, from 10-K) discloses carrying amounts and fair values of long-term debt and receivables NOT recorded at fair value. It does not contain derivatives or marketable securities data. Derivative and fair-value-measured instrument data would be in Note 6 (Fair Value Measurements) which is not included in this section_text.
+[HISTORICAL] [LLM_FLAG] IR swaps at NorthStar Clean Energy are NOT designated as hedging instruments — gains/losses flow through income (other expense), not OCI
+[HISTORICAL] [LLM_FLAG] FTR fair values for Consumers are deferred as regulatory assets/liabilities per MPSC treatment
+[HISTORICAL] [LLM_FLAG] Section text is from accounting policies note; fair value data sourced from Note 6 Fair Value Measurements table in the same filing
+[HISTORICAL] [LLM_FLAG] Sensitivity assumption is 10% adverse change in market interest rates (not 100bp), applied to fair value of fixed-rate financing
+[HISTORICAL] [LLM_FLAG] Variable-rate earnings exposure described as immaterial — no dollar amount provided
+[HISTORICAL] [LLM_FLAG] No FX or equity market risk quantified in this section
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[DISAPPEARED_FIELD] sensitivity_assumption: was $1M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, sensitivity_assumption)
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-14 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $4M → $3M (-25.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] This note (Note 5, Financial Instruments) discloses carrying amounts and fair values of long-term debt and receivables NOT recorded at fair value. It does not contain derivatives or marketable securities data. Derivative and fair-value-measured instrument data would be in Note 4 (Fair Value Measurements) which is not included in this section_text.
+[HISTORICAL] [LLM_FLAG] IR swaps at NorthStar Clean Energy are NOT designated as hedging instruments — gains/losses flow through income (other expense), not OCI
+[HISTORICAL] [LLM_FLAG] FTR fair values for Consumers are deferred as regulatory assets/liabilities
+[HISTORICAL] [LLM_FLAG] Derivative asset of $3M includes FTRs (Level 3); IR swap liability of $4M is Level 2
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($1M)
-[NEW_FIELD] fixed_rate_financing_potential_loss_cms: appeared for first time ($792M)
-[NEW_FIELD] fixed_rate_financing_potential_loss_consumers: appeared for first time ($535M)
-[NEW_FIELD] variable_rate_exposure: appeared for first time ($0M)
-[NEW_FIELD] sensitivity_assumption: appeared for first time ($10M)
-[LLM_FLAG] fixed_rate_notes_billion significantly differs from prior period, indicating a potential change in debt structure.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-06-14 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $1M → $4M (+300.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $3M → $4M (+33.3%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] net_derivative_position: $-2M → $0M
+[HISTORICAL] [LLM_FLAG] This note (Note 5, Financial Instruments) discloses carrying amounts and fair values of long-term debt and receivables NOT recorded at fair value. It does not contain derivatives or marketable securities data. Derivative and fair-value-measured instrument data would be in Note 4 (Fair Value Measurements) which is not included in this section_text.
+[HISTORICAL] [LLM_FLAG] IR swaps at NorthStar Clean Energy are NOT designated as hedging instruments — gains/losses flow through income (other expense), not OCI
+[HISTORICAL] [LLM_FLAG] FTR fair values for Consumers are deferred as regulatory assets/liabilities
+[HISTORICAL] [LLM_FLAG] Derivative asset of $4M includes FTRs (Level 3); IR swap liability of $4M is Level 2
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-26 ===
-[LLM_FLAG] The provided filing text is incomplete and only contains a header reference to 'Quantitative and Qualitative Disclosures About Market Risk, in the 2024 Form 10‑K.' The actual disclosure content is not included in the provided excerpt.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-26 ===
-[LLM_FLAG] The provided filing text is only a header/reference to the 2024 Form 10-K and does not contain actual quantitative or qualitative market risk disclosures. All fields cannot be extracted from this excerpt.
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-05-26 ===
-[DISAPPEARED_FIELD] fixed_rate_financing_potential_loss_cms: was $792M, now missing
-[DISAPPEARED_FIELD] fixed_rate_financing_potential_loss_consumers: was $535M, now missing
-[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fixed_rate_financing_potential_loss_cms, fixed_rate_financing_potential_loss_consumers)
-[LLM_FLAG] Filing text appears to be incomplete - only contains a header reference to 'Quantitative and Qualitative Disclosures About Market Risk, in the 2024 Form 10‑K' with no actual substantive disclosure content
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-14 ===
+[HISTORICAL] [LLM_FLAG] This note (Note 5, Financial Instruments) discloses carrying amounts and fair values of long-term debt and receivables NOT recorded at fair value. It does not contain derivatives or marketable securities data. Derivative and fair-value-measured instrument data would be in Note 4 (Fair Value Measurements) which is not included in this section_text.
+[HISTORICAL] [LLM_FLAG] IR swaps at NorthStar Clean Energy are NOT designated as hedging instruments — gains/losses flow through income (other expense), not OCI
+[HISTORICAL] [LLM_FLAG] FTR fair values for Consumers are deferred as regulatory assets/liabilities, not AOCI
+[HISTORICAL] [LLM_FLAG] Derivative asset of $1M is entirely FTRs (Level 3); IR swap liability of $3M is Level 2

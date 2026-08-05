@@ -10,16 +10,49 @@
 [LLM_FLAG] total_derivative_asset and total_derivative_liability are partial; FX cash flow hedge balance sheet positions are missing from the truncated section
 [LLM_FLAG] expected_12mo_reclass_from_aoci: text says 'significantly all' of the AOCI balance will be reclassified within 12 months but gives no specific dollar amount
 
-=== 10-Q | Period ending 2025-12-26 | Processed 2026-06-04 ===
-[DISAPPEARED_FIELD] xccy_swap_unrealized_sensitivity: was $594M, now missing
-[DISAPPEARED_FIELD] commodity_hedge_fair_value: was $80M, now missing
-[DISAPPEARED_FIELD] commodity_hedge_notional: was $569M, now missing
-[DISAPPEARED_FIELD] commodity_sensitivity: was $65M, now missing
-[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (xccy_swap_unrealized_sensitivity, commodity_hedge_fair_value, commodity_hedge_notional, commodity_sensitivity)
+=== 10-Q | Period ending 2026-03-27 | Processed 2026-07-18 ===
+[HISTORICAL] [LLM_FLAG] section text is the hedge note, not a separate financial instruments fair value table; cash/marketable securities fair values not in this note; FX forward notional and fair values not disclosed
+[HISTORICAL] [LLM_FLAG] FX forward contract notional and fair values not disclosed in text; derivative totals not aggregated; cross-currency swap notional is net investment hedge program ($5,712M) only
+[HISTORICAL] [LLM_FLAG] 10-Q Item 3 states 'no significant changes in our exposures to market risk during the first six months of fiscal 2026' and cross-references FY2025 10-K Item 7A; no quantitative disclosures in this section
 
-=== 10-K | Period ending 2025-09-26 | Processed 2026-06-04 ===
-[NEW_FIELD] xccy_swap_unrealized_sensitivity: appeared for first time ($594M)
-[NEW_FIELD] commodity_hedge_fair_value: appeared for first time ($80M)
-[NEW_FIELD] commodity_hedge_notional: appeared for first time ($569M)
-[NEW_FIELD] commodity_sensitivity: appeared for first time ($65M)
+=== 10-Q | Period ending 2025-12-26 | Processed 2026-07-18 ===
+[HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($5,686M)
+[HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,686M)
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $80M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $594M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] xccy_swap_unrealized_sensitivity: was $594M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_hedge_fair_value: was $80M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_hedge_notional: was $569M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] commodity_sensitivity: was $65M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (net_derivative_position, fx_sensitivity_10pct, xccy_swap_unrealized_sensitivity, commodity_hedge_fair_value, commodity_hedge_notional...)
+[HISTORICAL] [LLM_FLAG] section text is the hedge note (Note 10), not a separate financial instruments fair value table; cash/marketable securities fair values not in this note; FX forward notional and fair values not disclosed
+[HISTORICAL] [LLM_FLAG] FX forward contract notional and fair values not disclosed in text; derivative asset/liability totals not aggregated; cross-currency swap notional includes net investment hedge program ($5,686M) only
+[HISTORICAL] [LLM_FLAG] 10-Q Item 3 states 'no significant changes in our exposures to market risk during the first quarter of fiscal 2026' and cross-references FY2025 10-K Item 7A; no quantitative disclosures in this section
 
+=== 10-K | Period ending 2025-09-26 | Processed 2026-07-18 ===
+[HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $5,665M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_derivatives_notional: was $5,665M, now missing
+[HISTORICAL] [NEW_FIELD] net_derivative_position: appeared for first time ($80M)
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($594M)
+[HISTORICAL] [NEW_FIELD] xccy_swap_unrealized_sensitivity: appeared for first time ($594M)
+[HISTORICAL] [NEW_FIELD] commodity_hedge_fair_value: appeared for first time ($80M)
+[HISTORICAL] [NEW_FIELD] commodity_hedge_notional: appeared for first time ($569M)
+[HISTORICAL] [NEW_FIELD] commodity_sensitivity: appeared for first time ($65M)
+[HISTORICAL] [VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (fi_fx_derivatives_notional, fx_derivatives_notional)
+[HISTORICAL] [LLM_FLAG] section_text is Risk Factors boilerplate (conflict minerals, cybersecurity, Irish law) — not the financial instruments fair value note; no financial instrument values extractable from this text
+[HISTORICAL] [LLM_FLAG] section_text is tail of Item 7A (commodity hedges discussion) not the full Note 13 financial instruments note; FX and IR derivative fair values absent; net_derivative_position reflects commodity hedges only
+[HISTORICAL] [LLM_FLAG] xccy_swap_unrealized_sensitivity and fx_sensitivity_10pct both map to the same $594M figure — the text does not disaggregate cross-currency swaps from FX forwards.
+[HISTORICAL] [LLM_FLAG] No notional disclosed for FX forwards or cross-currency swaps separately; combined sensitivity only.
+[HISTORICAL] [LLM_FLAG] Net investment hedge and cash flow hedge subsets of FX derivatives are confirmed present but no notional provided.
+[HISTORICAL] [LLM_FLAG] No interest rate contracts or floating debt outstanding at FY2025 year-end; no IR sensitivity figure available.
+[HISTORICAL] [LLM_FLAG] Prior-year (FY2024) comparatives available: FX combined sensitivity $538M, commodity notional $488M, commodity net gain $55M, commodity sensitivity $54M — not captured in fields above (current period only extracted).
+
+=== 10-Q | Period ending 2025-06-27 | Processed 2026-07-18 ===
+[HISTORICAL] [LLM_FLAG] section text is the hedge note, not a separate financial instruments fair value table; cash/marketable securities fair values not in this note; FX forward notional and fair values not disclosed
+[HISTORICAL] [LLM_FLAG] FX forward contract notional and fair values not disclosed in text; cross-currency swap notional is net investment hedge program ($5,665M) only; derivative totals not aggregated in text
+[HISTORICAL] [LLM_FLAG] 10-Q Item 3 states 'no significant changes in our exposures to market risk during the first nine months of fiscal 2025' and cross-references FY2024 10-K Item 7A; no quantitative disclosures in this section
+
+=== 10-Q | Period ending 2025-03-28 | Processed 2026-07-18 ===
+[HISTORICAL] [LLM_FLAG] section text is the hedge note, not a separate financial instruments fair value table; cash/marketable securities fair values not in this note; FX forward notional and fair values not disclosed
+[HISTORICAL] [LLM_FLAG] FX forward contract notional and fair values not disclosed in text; cross-currency swap notional is net investment hedge program ($5,886M) only; derivative totals not aggregated in text
+[HISTORICAL] [LLM_FLAG] 10-Q Item 3 states 'no significant changes in our exposures to market risk during the first six months of fiscal 2025' and cross-references FY2024 10-K Item 7A; no quantitative disclosures in this section

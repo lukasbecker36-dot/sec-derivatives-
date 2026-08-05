@@ -1,58 +1,66 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
-[NUMERIC] total_cash_equivalents_fv: $42M → $19M (-54.8%) — exceeds 20% threshold
-[NUMERIC] total_marketable_securities_fv: $100,498M → $60,157M (-40.1%) — exceeds 20% threshold
-[NUMERIC] marketable_equity_securities_fv: $15,192M → $15M (-99.9%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely units mismatch: marketable_equity_securities_fv changed from 15,192 to 15 (0x)
-[LLM_FLAG] total_marketable_securities_fv decreased more than 50% from prior period
-[LLM_FLAG] gross_unrealized_gains_debt increased more than 50% from prior period
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] money_market_funds_fair_value: $0M → $0M (-54.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] certificates_of_deposit_fair_value: $100M → $47M (-52.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_assets_at_fair_value: $116M → $62M (-46.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_lines_of_credit_term_loans: $223M → $4,114M (+1743.1%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All fair value figures reported in thousands in the source; converted to millions here. No derivatives of any kind disclosed. Auction rate security fair value immaterial as of March 31, 2026 (shown as $0). Total lines of credit and term loans increased significantly to $4,113.7M at March 31, 2026 from $112.5M at June 30, 2025.
+[HISTORICAL] [LLM_FLAG] All fair value table figures are in thousands in the source; converted to millions here.
+[HISTORICAL] [LLM_FLAG] No derivatives of any kind disclosed — Supermicro does not use derivative instruments.
+[HISTORICAL] [LLM_FLAG] Large step-up in total_lines_of_credit_term_loans: $4,113.7M at March 31, 2026 vs $112.5M at June 30, 2025 — approximately 36x increase indicating significant new borrowing.
+[HISTORICAL] [LLM_FLAG] Auction rate security fair value written down to $0 as of March 31, 2026 (immaterial).
+[HISTORICAL] [LLM_FLAG] unrealized_gain_loss_equity_security uses the nine-month cumulative figure ($8.5M gain); three-month figure is -$0.5M loss.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-09 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($42M)
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($100,498M)
-[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($15,192M)
-[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($0M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] money_market_funds_fair_value: $0M → $0M (+100.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] certificates_of_deposit_fair_value: $1M → $100M (+19722.1%) — exceeds 20% threshold
+[HISTORICAL] [DROPPED_TO_ZERO] auction_rate_security_fair_value: $2M → $0M
+[HISTORICAL] [NUMERIC] total_assets_at_fair_value: $16M → $116M (+601.8%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] convertible_notes_2029_fair_value: appeared for first time ($1,543M)
+[HISTORICAL] [NEW_FIELD] convertible_notes_2028_fair_value: appeared for first time ($668M)
+[HISTORICAL] [NEW_FIELD] convertible_notes_2030_fair_value: appeared for first time ($1,947M)
+[HISTORICAL] [NUMERIC] total_lines_of_credit_term_loans: $126M → $223M (+77.4%) — exceeds 20% threshold
+[HISTORICAL] [VALIDATION] Likely units mismatch: certificates_of_deposit_fair_value changed from 1 to 100 (198x)
+[HISTORICAL] [LLM_FLAG] All fair value figures reported in thousands in the source; converted to millions here. No derivatives of any kind disclosed. Auction rate security fair value was immaterial as of December 31, 2025 (written down to $0 in table). Large certificates of deposit position of $100.498M at December 31, 2025 vs $0.519M at June 30, 2025.
+[HISTORICAL] [LLM_FLAG] All fair value table figures are in thousands in the source; converted to millions here.
+[HISTORICAL] [LLM_FLAG] No derivatives of any kind disclosed — Supermicro does not use derivative instruments.
+[HISTORICAL] [LLM_FLAG] Large step-up in certificates of deposit from $0.519M (June 30, 2025) to $100.498M (December 31, 2025).
+[HISTORICAL] [LLM_FLAG] Auction rate security fair value written down to $0 as of December 31, 2025 (immaterial).
+[HISTORICAL] [LLM_FLAG] unrealized_gain_loss_equity_security uses the six-month cumulative figure ($7.2M gain); three-month figure is -$0.8M loss.
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
-[NUMERIC] total_cash_equivalents_fv: $42M → $19M (-54.8%) — exceeds 20% threshold
-[NUMERIC] total_marketable_securities_fv: $100,498M → $626M (-99.4%) — exceeds 20% threshold
-[NUMERIC] marketable_equity_securities_fv: $15,192M → $15M (-99.9%) — exceeds 20% threshold
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
-[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
-[VALIDATION] Likely units mismatch: total_marketable_securities_fv changed from 100,498 to 626 (0x)
-[VALIDATION] Likely units mismatch: marketable_equity_securities_fv changed from 15,192 to 15 (0x)
-[LLM_FLAG] total_cash_equivalents_fv decreased by more than 50% compared to prior period.
-[LLM_FLAG] total_marketable_securities_fv decreased by more than 50% compared to prior period.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $6M → $14M (+127.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_value: $6M → $14M (+127.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] money_market_funds_fair_value: $0M → $0M (-52.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_security_fair_value: $6M → $14M (+127.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_assets_at_fair_value: $9M → $16M (+92.8%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] convertible_notes_2029_fair_value: was $1,802M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] convertible_notes_2028_fair_value: was $818M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] convertible_notes_2030_fair_value: was $2,577M, now missing
+[HISTORICAL] [NUMERIC] unrealized_gain_loss_equity_security: $3M → $8M (+207.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All fair value figures reported in thousands in the source; converted to millions here. No derivatives of any kind disclosed. Section text truncated before convertible note fair values.
+[HISTORICAL] [LLM_FLAG] All fair value table figures are in thousands in the source; converted to millions here.
+[HISTORICAL] [LLM_FLAG] No derivatives of any kind disclosed — Supermicro does not use derivative instruments.
+[HISTORICAL] [LLM_FLAG] Convertible notes fair values as of September 30, 2025 are null due to section text truncation; they are not available in the financial instruments extract request either.
+[HISTORICAL] [LLM_FLAG] unrealized_gain_loss_equity_security uses the three-month figure ($8.0M gain) as cumulative period figure is not provided.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($42M)
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($100,498M)
-[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($15,192M)
-[NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($0M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+=== 10-K | Period ending 2025-06-30 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $3M → $6M (+79.2%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $4M, now missing
+[HISTORICAL] [NUMERIC] marketable_equity_value: $3M → $6M (+79.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] money_market_funds_fair_value: $0M → $0M (-84.8%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] marketable_equity_security_fair_value: $3M → $6M (+79.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_assets_at_fair_value: $6M → $9M (+40.7%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] convertible_notes_2030_fair_value: appeared for first time ($2,577M)
+[HISTORICAL] [NUMERIC] unrealized_gain_loss_equity_security: $-0M → $3M (+1400.0%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] All fair value figures reported in thousands in the source; converted to millions here. No derivatives of any kind disclosed. Section text is truncated and does not include convertible note fair values, which are available in the full filing.
+[HISTORICAL] [LLM_FLAG] All fair value table figures are in thousands in the source; converted to millions here.
+[HISTORICAL] [LLM_FLAG] No derivatives of any kind disclosed — Supermicro does not use derivative instruments.
+[HISTORICAL] [LLM_FLAG] 2030 Convertible Notes fair values sourced from the Q2 FY2026 (December 31, 2025) filing which shows June 30, 2025 comparative figures.
+[HISTORICAL] [LLM_FLAG] Market risk section text was truncated; convertible note fair values confirmed from the financial instruments note in the same filing.
 
-=== 10-Q | Period ending 2025-12-31 | Processed 2026-06-04 ===
-[NUMERIC] total_cash_equivalents_fv: $0M → $0M (+100.0%) — exceeds 20% threshold
-[NUMERIC] total_marketable_securities_fv: $16M → $116M (+601.8%) — exceeds 20% threshold
-[LLM_FLAG] total_marketable_securities_fv increased dramatically from ~$16.5M to ~$115.7M due to large increase in certificates of deposit from $0.507M to $100.498M
-
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-06-04 ===
-[NUMERIC] total_cash_equivalents_fv: $0M → $0M (-52.3%) — exceeds 20% threshold
-[NUMERIC] total_marketable_securities_fv: $9M → $16M (+92.8%) — exceeds 20% threshold
-[NUMERIC] marketable_equity_securities_fv: $6M → $14M (+127.8%) — exceeds 20% threshold
-
-=== 10-K | Period ending 2025-06-30 | Processed 2026-06-04 ===
-[NUMERIC] total_cash_equivalents_fv: $0M → $0M (-84.8%) — exceeds 20% threshold
-[NUMERIC] total_marketable_securities_fv: $6M → $9M (+40.7%) — exceeds 20% threshold
-[NUMERIC] marketable_equity_securities_fv: $3M → $6M (+79.2%) — exceeds 20% threshold
-
-=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-04 ===
-[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($0M)
-[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($6M)
-[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($3M)
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-25 ===
+[HISTORICAL] [LLM_FLAG] All fair value figures are reported in thousands in the source; converted to millions here. No derivatives of any kind are disclosed — Supermicro does not use derivative instruments.
+[HISTORICAL] [LLM_FLAG] All fair value table figures are in thousands in the source; converted to millions here.
+[HISTORICAL] [LLM_FLAG] No derivatives of any kind disclosed — Supermicro does not use derivative instruments.
+[HISTORICAL] [LLM_FLAG] fx_transaction_gain_loss uses the nine-month cumulative figure ($4.2M); three-month figure is $0.3M.
+[HISTORICAL] [LLM_FLAG] unrealized_gain_loss_equity_security uses the nine-month cumulative figure (-$0.2M loss); three-month figure is -$1.3M loss.

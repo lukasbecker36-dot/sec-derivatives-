@@ -10,36 +10,65 @@
 [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
 [NEW_FIELD] foreign_currency_forwards_fair_value: appeared for first time ($1M)
 
-=== 10-Q | Period ending 2026-04-03 | Processed 2026-05-02 ===
-[LLM_FLAG] fx_forwards_outstanding: Increased from $182M (prior period) to $214M (17.6% increase) - within normal range
-[LLM_FLAG] fixed_rate_notes_billion: Decreased from $4.546B to $3.905B (14.1% decrease) - likely due to 2028 maturity debt reduction from $1,000M to $399M
-[LLM_FLAG] money_market_investments: Decreased from $342M to $281M (17.8% decrease) - within normal operating variance
-[LLM_FLAG] foreign_currency_forwards_notional: GBP increased from $19M to $30M (57.9%), CNY increased from $27M to $39M (44.4%), SGD increased from $59M to $76M (28.8%), THB decreased from $77M to $69M (10.4%) - significant changes in individual currency positions
+=== 10-Q | Period ending 2026-04-03 | Processed 2026-06-25 ===
+[HISTORICAL] [LLM_FLAG] No derivative liabilities table entry present for April 3, 2026 — liabilities section absent from the recurring fair value table.
+[HISTORICAL] [LLM_FLAG] Derivative assets at zero for current period; prior period (June 27, 2025) had $1M.
+[HISTORICAL] [LLM_FLAG] Time deposits dropped to zero in current period vs $26M at June 27, 2025, so total cash equivalents consist entirely of money market funds.
+[HISTORICAL] [LLM_FLAG] 3.50% Exchangeable Senior Notes carrying amount reduced substantially from $1,500M (Jun 2025) to $399M (Apr 2026), reflecting partial conversions/repurchases.
+[HISTORICAL] [LLM_FLAG] New disclosure in Q3 FY2026: Seagate now uses commodity forward contracts for precious metals used in manufacturing, though notional is not material.
+[HISTORICAL] [LLM_FLAG] No dedicated Derivative Financial Instruments note; derivatives data only in Item 2 market risk section.
+[HISTORICAL] [LLM_FLAG] Fair Value note shows total assets of $280M (cash equivalents: all money market, no time deposits) with no derivative assets at Apr 3, 2026.
+[HISTORICAL] [LLM_FLAG] New commodity price risk disclosure: Seagate now uses commodity forward contracts for precious metals, but notional not material as of April 3, 2026.
+[HISTORICAL] [LLM_FLAG] 2028 Notes further reduced from $1,000M to $399M and other notes also retired since June 2025.
+[HISTORICAL] [LLM_FLAG] Market risk section heading adds 'commodity prices' as a new risk factor vs. prior periods.
 
-=== 10-Q | Period ending 2026-01-02 | Processed 2026-05-02 ===
-[NUMERIC] fixed_rate_notes_billion: $8M → $5M (-45.9%) — exceeds 20% threshold
-[LLM_FLAG] fx_forwards_outstanding increased 6.4% from $171M to $182M - within normal range
-[LLM_FLAG] money_market_investments increased 26.7% from $270M to $342M
-[LLM_FLAG] fixed_rate_notes decreased 9.8% from $5,046M to $4,546M - likely due to debt maturity and repayment of 2026 obligations
-[LLM_FLAG] 2028 fixed-rate debt decreased from $1,500M to $1,000M
-[LLM_FLAG] money_market average interest rate decreased from 4.0% to 3.71%
+=== 10-Q | Period ending 2026-01-02 | Processed 2026-06-25 ===
+[HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $268M → $340M (+26.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No derivative liabilities table entry present for January 2, 2026 — liabilities section absent from the recurring fair value table.
+[HISTORICAL] [LLM_FLAG] Derivative assets at zero for current period; prior period (June 27, 2025) had $1M.
+[HISTORICAL] [LLM_FLAG] 3.50% Exchangeable Senior Notes carrying value reduced from $1,500M to $1,000M between June 2025 and January 2026, while estimated fair value remains very high at $3,370M (vs $2,654M), reflecting significant premium due to equity conversion optionality.
+[HISTORICAL] [LLM_FLAG] No dedicated Derivative Financial Instruments note in this Q2 FY2026 filing; derivatives data only in Item 2 market risk section.
+[HISTORICAL] [LLM_FLAG] Fair Value note shows total assets of $340M (cash equivalents $313M money market + $27M time deposits) with no derivative assets at Jan 2, 2026.
+[HISTORICAL] [LLM_FLAG] 2028 Exchangeable Notes partially retired; outstanding principal reduced from $1,500M to $1,000M by Jan 2, 2026.
+[HISTORICAL] [LLM_FLAG] Fair value of total debt ($7,058M) far exceeds carrying amount ($4,499M) due to in-the-money exchangeable notes.
 
-=== 10-Q | Period ending 2025-10-03 | Processed 2026-05-02 ===
-[NUMERIC] fx_forwards_outstanding: $247M → $171M (-30.8%) — exceeds 20% threshold
-[NUMERIC] fixed_rate_notes_billion: $5M → $8M (+61.8%) — exceeds 20% threshold
-[LLM_FLAG] fx_forwards_outstanding decreased from 247 to 171 (30.8% decrease) - plausible quarterly variation
-[LLM_FLAG] fixed_rate_notes_billion increased from 5.193 to 8.403 (61.6% increase) - significant increase suggests new debt issuance, flag for verification
-[LLM_FLAG] money_market_investments floating rate increased from 171 to 270 (57.9% increase) - plausible increase in cash position
-[LLM_FLAG] fx_forwards_notional composition changed: Singapore Dollar decreased from 154 to 60; Thai Baht increased from 47 to 66; Chinese Renminbi decreased from 31 to 29; British Pound Sterling increased from 15 to 16 - significant reallocation of hedging activities
+=== 10-Q | Period ending 2025-10-03 | Processed 2026-06-25 ===
+[HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($268M)
+[HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($0M)
+[HISTORICAL] [NUMERIC] fx_derivatives_notional: $280M → $171M (-38.9%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[HISTORICAL] [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $0M, now missing
+[HISTORICAL] [NUMERIC] fx_forwards_outstanding: $280M → $171M (-38.9%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] No derivative liabilities table entry present for October 3, 2025 — liabilities section absent from the recurring fair value table in this filing.
+[HISTORICAL] [LLM_FLAG] Derivative assets at zero for current period; prior period (June 27, 2025) had $1M.
+[HISTORICAL] [LLM_FLAG] Cash equivalents increased to $268M vs $252M at prior period end, reflecting addition of time deposits.
+[HISTORICAL] [LLM_FLAG] This filing (Q1 FY2026, Oct 3 2025) no longer has a dedicated Derivative Financial Instruments note; derivatives data is only in Item 2 market risk section.
+[HISTORICAL] [LLM_FLAG] Fair Value note shows total assets = $268M (cash equivalents $241 money market + $27 time deposits) with no derivative assets at Oct 3 2025 (zero line shown).
+[HISTORICAL] [LLM_FLAG] TRS may have matured or been renewed but no notional disclosed for this period.
+[HISTORICAL] [LLM_FLAG] Fixed-rate debt carrying amount net of issuance costs is $4,994M; fair value of $8,403M reflects large premium on exchangeable notes.
+[HISTORICAL] [LLM_FLAG] FX forwards outstanding declined from $247M (Mar 2025) to $171M (Oct 2025).
 
-=== 10-Q | Period ending 2025-03-28 | Processed 2026-05-02 ===
-[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $0M, now missing
-[LLM_FLAG] FX forwards outstanding decreased from $280M to $247M (11.8% decrease) - within normal range
-[LLM_FLAG] Fixed-rate debt decreased from $6,318M to $5,193M (17.8% decrease) - significant reduction, likely due to debt repayment
-[LLM_FLAG] Money market investments decreased from $254M to $171M (32.7% decrease) - material change, possible cash deployment
-[LLM_FLAG] Interest rate on 'Thereafter' debt increased from 7.31% to 7.44% - minor change
-[LLM_FLAG] FX forward fair value remained at $0.0 in both periods - no unrealized gains or losses
-[LLM_FLAG] Chinese Renminbi notional decreased from $34M to $31M (8.8% decrease)
-[LLM_FLAG] Singapore Dollar notional increased from $127M to $154M (21.3% increase)
-[LLM_FLAG] Thai Baht notional decreased from $100M to $47M (53% decrease) - significant reduction
+=== 10-K | Period ending 2025-06-27 | Processed 2026-06-25 ===
+[HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $169M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_liability: was $-4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $247M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] equity_derivatives_notional: was $101M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] total_derivative_liability: was $-4M, now missing
+[HISTORICAL] [DISAPPEARED_FIELD] net_derivative_position: was $-4M, now missing
+[HISTORICAL] [VALIDATION] Likely extraction failure: 8/14 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, fx_not_designated_notional, equity_derivatives_notional...)
+[HISTORICAL] [LLM_FLAG] This is a 10-K filing; the derivatives_note section_text is from the Market Risk (Item 7A) section, not a separate financial statement note. The Fair Value note (Note 8) would contain the notional/fair value table but its text was not fully included.
+[HISTORICAL] [LLM_FLAG] TRS notional not stated; company may have let TRS lapse after June 2025 maturity or renewed it.
+[HISTORICAL] [LLM_FLAG] FX forward notional of $280M is from the Item 7A market risk table.
+[HISTORICAL] [LLM_FLAG] Fixed-rate debt total uses principal amounts; 10-K carrying amount net of issuance costs is $4,995M.
+[HISTORICAL] [LLM_FLAG] TRS for SDCP not quantified in market risk section of 10-K.
 
+=== 10-Q | Period ending 2025-03-28 | Processed 2026-06-25 ===
+[HISTORICAL] [LLM_FLAG] Derivative assets dropped to zero at March 28, 2025 vs $1M at June 28, 2024 prior period.
+[HISTORICAL] [LLM_FLAG] Derivative liabilities increased to $(4)M at March 28, 2025 vs $(1)M at June 28, 2024.
+[HISTORICAL] [LLM_FLAG] Available-for-sale investment portfolio described as 'immaterial' at current period end; $15M net loss recorded for nine months on downward adjustments.
+[HISTORICAL] [LLM_FLAG] TRS (Total Return Swap) for SDCP equity risk is classified under equity_derivatives_notional; it is not a traditional equity derivative but an equity index-linked swap for deferred compensation offset.
+[HISTORICAL] [LLM_FLAG] The $101M TRS matures June 2025, so likely absent in subsequent periods.
+[HISTORICAL] [LLM_FLAG] Fixed-rate debt total uses principal amounts from maturity table; carrying amount net of issuance costs is $5,146M.
+[HISTORICAL] [LLM_FLAG] TRS notional is $101M per the derivatives note; not stated in market risk section directly.

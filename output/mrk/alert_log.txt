@@ -1,28 +1,26 @@
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-05 ===
-[NUMERIC] ir_swap_notional: $1,750M → $2,500M (+42.9%) — exceeds 15% threshold
-[NUMERIC] fx_forward_notional: $36,352M → $42,106M (+15.8%) — exceeds 15% threshold
-[NUMERIC] total_derivative_asset: $323M → $562M (+74.0%) — exceeds 25% threshold
-[NUMERIC] total_derivative_liability: $324M → $229M (-29.3%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $178M → $69M (-61.2%) — exceeds 20% threshold
-[NUMERIC] ir_designated_notional: $1,750M → $2,500M (+42.9%) — exceeds 20% threshold
-[LLM_FLAG] ir_swap_notional increased 43% from $1,750M to $2,500M due to entry into two forward starting swaps of $250M each in February 2026, plus existing contracts of $2,000M
-[LLM_FLAG] expected_12mo_reclass_from_aoci decreased 61% from $178M to $69M, within reasonable variance for quarterly estimates
-[LLM_FLAG] fx_designated_notional increased 3% from $12,949M to $13,317M, within normal range
-[LLM_FLAG] total_derivative_asset increased 74% from $323M to $562M, driven by favorable FX movements and mark-to-market gains on derivatives
-[LLM_FLAG] The filing text provided only contains a cross-reference to the 2025 Form 10-K and does not include the actual 'Quantitative and Qualitative Disclosures about Market Risk' section with specific sensitivity metrics.
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] ir_swap_notional: $1,750M → $3,000M (+71.4%) — exceeds 15% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $323M → $562M (+74.0%) — exceeds 25% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $324M → $229M (-29.3%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-178M → $69M (+138.8%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $671M, now missing
+[HISTORICAL] [NUMERIC] ir_designated_notional: $1,750M → $3,000M (+71.4%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] ir_swap_notional increased significantly vs. prior periods due to addition of $500M on 4.75% notes due 2035 (2 new swaps) and expansion to 2 swaps on 5.00% notes (from 1) in late 2025 / early 2026, plus $500M forward starting swaps entered February 2026.
+[HISTORICAL] [LLM_FLAG] fx_designated_notional includes both cash flow hedges and net investment hedges; disaggregation not available in the notional table.
+[HISTORICAL] [LLM_FLAG] fx_forward_notional grand total includes the IR derivative notional; pure FX-only notional is $39,106M but the filing's grand total row states $42,106M.
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci is positive ($69M), reflecting net unrealized gains.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-03-28 ===
-[NUMERIC] fx_forward_notional: $42,872M → $36,352M (-15.2%) — exceeds 15% threshold
-[NUMERIC] total_derivative_liability: $492M → $324M (-34.1%) — exceeds 20% threshold
-[NUMERIC] expected_12mo_reclass_from_aoci: $298M → $178M (-40.3%) — exceeds 20% threshold
-[LLM_FLAG] fx_forward_notional decreased from 42,872 to 36,352 (15% decrease) - within acceptable range
-[LLM_FLAG] total_derivative_asset decreased from 316 to 323 (2% increase) - within acceptable range
-[LLM_FLAG] total_derivative_liability decreased from 492 to 324 (34% decrease) - notable but within 50% threshold
-[LLM_FLAG] expected_12mo_reclass_from_aoci decreased from 298 to 178 (40% decrease) - within acceptable range but represents material change in expected reclassifications
-[LLM_FLAG] ir_designated_notional increased from 1,500 to 1,750 (17% increase) - within acceptable range
-[LLM_FLAG] fx_designated_notional increased from 12,649 to 12,949 (2% increase) - within acceptable range
-[LLM_FLAG] fx_not_designated_notional decreased from 28,473 to 25,579 (10% decrease) - within acceptable range
-[LLM_FLAG] The provided text is an incorporation by reference to Item 7 and does not contain the actual quantitative market risk disclosure data. The specific sensitivity metrics would be found in the referenced MD&A section under 'Financial Instruments Market Risk Disclosures' which is not included in this excerpt.
+=== 10-K | Period ending 2025-12-31 | Processed 2026-06-22 ===
+[HISTORICAL] [NUMERIC] total_derivative_liability: $492M → $324M (-34.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-298M → $-178M (+40.3%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($671M)
+[HISTORICAL] [LLM_FLAG] fx_designated_notional includes both cash flow hedges and net investment hedges; disaggregation not available in the notional table.
+[HISTORICAL] [LLM_FLAG] fx_forward_notional grand total includes the IR swap notional; pure FX-only notional is $38,541M but the filing's grand total row states $40,291M.
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci recorded as negative ($-178M) reflecting net unrealized losses.
+[HISTORICAL] [LLM_FLAG] 10-K also contains a separate Item 7A market risk section with FX sensitivity: $131M income decline from 10% USD weakening at Dec 31, 2025 (not a field in this schema but noted for completeness).
+[HISTORICAL] [LLM_FLAG] Section text is truncated mid-sentence ('Foreign exchange risk is also managed through the use of foreign cur...'); interest rate sensitivity disclosure, if present, falls outside the supplied window — ir_sensitivity_100bp set to null.
+[HISTORICAL] [LLM_FLAG] Two distinct FX sensitivity figures are disclosed: $671 million (market value decline of revenue-hedging derivatives) and $131 million (income before taxes decline from net FX position including forward contracts). The $671 million figure is used as it reflects fair value of derivative instruments; $131 million is an earnings-impact figure on a net position basis.
+[HISTORICAL] [LLM_FLAG] Prior-year comparatives: FX hedge market value $569 million (2024); income impact $239 million (2024).
 
 === 10-Q | Period ending 2025-09-30 | Processed 2026-03-28 ===
 [NUMERIC] total_derivative_asset: $546M → $316M (-42.1%) — exceeds 25% threshold
@@ -47,3 +45,7 @@
 [LLM_FLAG] fx_not_designated_notional increased 2.7% from 28,522M to 29,291M, within normal range
 [LLM_FLAG] Filing text provided only references the location of market risk disclosures in the 2024 Form 10-K but does not include the actual quantitative sensitivity data itself. The text is a cross-reference statement rather than the detailed disclosure section.
 
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-06-22 ===
+[HISTORICAL] [LLM_FLAG] fx_designated_notional includes both cash flow hedges and net investment hedges; disaggregation not available in the notional table.
+[HISTORICAL] [LLM_FLAG] fx_forward_notional grand total includes the IR swap notional; pure FX-only notional is $40,610M but the filing's grand total row states $42,360M.
+[HISTORICAL] [LLM_FLAG] expected_12mo_reclass_from_aoci is positive ($16M) in this quarter, reflecting net unrealized gains (unusual vs. other periods).

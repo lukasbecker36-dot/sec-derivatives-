@@ -33,30 +33,33 @@
 [VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (has_derivatives, fx_derivatives_notional, fx_not_designated_notional, ir_swap_notional, commodity_derivatives_notional)
 [LLM_FLAG] fi_fx_derivatives_notional increased significantly from previous reporting period, requires further analysis for underlying reasons.
 
-=== 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
-[NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
-[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($10,659M)
-[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($7,125M)
-[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($3,079M)
-[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($187M)
-[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($71M)
+=== 10-K | Period ending 2025-12-31 | Processed 2026-07-15 ===
+[HISTORICAL] [NUMERIC] fx_designated_notional: $4,703M → $5,675M (+20.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $57M → $116M (+103.5%) — exceeds 20% threshold
+[HISTORICAL] [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($100M)
+[HISTORICAL] [LLM_FLAG] Section text truncated mid-sentence after the beginning of 'Liabilities Borrowings'; NOTE 22 covers non-fair-value assets/liabilities (loans, borrowings) and does not separately disclose derivative fair values or marketable securities
+[HISTORICAL] [LLM_FLAG] ir_sensitivity_100bp reported as $100M is the stated impact on net income (not fair value) from a +/-100bp interest rate move; the schema asks for change in fair value, but GE discloses this as a net income impact
+[HISTORICAL] [LLM_FLAG] fx_sensitivity stated qualitatively as 'insignificant' from a 10% shift; no numeric value available
+[HISTORICAL] [LLM_FLAG] The market risk section cross-references Note 22 for all derivative detail; most schema fields are populated in the derivatives_note extract, not here
 
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
-[LLM_FLAG] This filing section (NOTE 20) focuses on derivative financial instruments and hedging activities rather than investment securities. The text explicitly states that cash and cash equivalents and investment securities are detailed in Note 3, which is not provided in this extract.
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-07-15 ===
+[HISTORICAL] [NUMERIC] fx_designated_notional: $3,442M → $4,703M (+36.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_not_designated_notional: $6,903M → $4,554M (-34.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $306M → $215M (-29.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $121M → $159M (+31.4%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $185M → $57M (-69.2%) — exceeds 20% threshold
+[HISTORICAL] [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $64M, now missing
+[HISTORICAL] [LLM_FLAG] Section text truncated mid-sentence after the beginning of 'Liabilities Borrowings'; NOTE 20 covers non-fair-value assets/liabilities and does not separately disclose derivative fair values or marketable securities
 
-=== 10-Q | Period ending 2025-09-30 | Processed 2026-05-30 ===
-[LLM_FLAG] Critical: All investment security-related fields cannot be extracted from this section. Note 20 explicitly states that investment securities and their fair values are detailed in Note 3, which is not included in the provided filing text. To complete this extraction, Note 3 disclosure is required.
-
-=== 10-Q | Period ending 2025-06-30 | Processed 2026-05-30 ===
-[LLM_FLAG] All requested fields are disclosed in Note 3 (referenced but not provided in this excerpt). The filing text explicitly states 'Assets and liabilities that are reflected in the accompanying financial statements at fair value are not included in the above disclosures; such items include cash and cash equivalents, investment securities (Note 3)'. This Note 20 section focuses on financial instruments not carried at fair value and derivatives, not the requested investment securities fair value data.
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-07-15 ===
+[HISTORICAL] [NUMERIC] fx_designated_notional: $2,205M → $3,442M (+56.1%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_asset: $223M → $306M (+37.2%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $58M → $121M (+108.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $13M → $64M (+392.3%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Section text truncated mid-sentence after the beginning of 'Liabilities Borrowings'; NOTE 20 covers non-fair-value assets/liabilities and does not separately disclose derivative fair values or marketable securities
 
 === 10-Q | Period ending 2025-03-31 | Processed 2026-05-30 ===
 [LLM_FLAG] All requested fields relate to investment securities and cash equivalents, which Note 20 explicitly states are 'not included in the above disclosures' and are instead detailed in Note 3 (not provided in this filing section).
 [LLM_FLAG] This Note 20 focuses on non-fair-value items (loans, borrowings, investment contracts) and derivatives, not on the fair value details of marketable securities requested.
 [LLM_FLAG] Provided text contains only section header 'Quantitative and Qualitative Disclosures About Market Risk 9, 28-29' with no substantive content. Unable to extract any specific financial data or derivative information.
-
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-05-29 ===
-[LLM_FLAG] All requested fields are not found in the provided filing excerpt. The disclosure refers to Note 3 for investment securities fair value information, but Note 3 is not included in the extracted text.
-[LLM_FLAG] This excerpt is NOTE 22 (Financial Instruments, Derivatives and Hedging) which does not contain the typical investment portfolio disclosures that would include cash equivalents, marketable securities, and unrealized gains.
-[LLM_FLAG] Provided filing section is merely a header reference (Quantitative and Qualitative Disclosures About Market Risk, pages 13, 68-69) with no actual content. Full disclosure section text needed to extract required data.
 
