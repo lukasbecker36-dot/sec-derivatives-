@@ -1,3 +1,39 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-04 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,747M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($3,300M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($447M)
+[NUMERIC] total_derivative_asset: $3,600M → $66M (-98.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $3,600M → $61M (-98.3%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $303M → $5M (-98.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $27M, now missing
+[NUMERIC] fx_transaction_gain_loss: $151M → $33M (-78.3%) — exceeds 20% threshold
+[NUMERIC] ir_sensitivity_100bp: $29M → $15M (-47.2%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $122M → $1,500M (+1129.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $125M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $5M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] variable_rate_debt_pct: appeared for first time ($10M)
+[NUMERIC] interest_rate_sensitivity: $-14M → $15M (+206.2%) — exceeds 20% threshold
+[NUMERIC] fx_unhedged_payments_eur: $1,500M → $15,200M (+913.3%) — exceeds 20% threshold
+[NEW_FIELD] euro_denominated_debt_unhedged: appeared for first time ($2,400M)
+[NEW_FIELD] euro_debt_sensitivity_10pct: appeared for first time ($240M)
+[DISAPPEARED_FIELD] fuel_hedge_pct_by_year: was $0M, now missing
+[NUMERIC] fuel_expense_pct_of_operating: $9M → $14M (+53.3%) — exceeds 20% threshold
+[NUMERIC] fuel_sensitivity_10pct: $14M → $40M (+175.7%) — exceeds 20% threshold
+[NUMERIC] fx_remeasurement_gains_losses: $1,550M → $33M (-97.9%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 5/16 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct, fuel_hedge_pct_by_year)
+[LLM_FLAG] total_derivative_asset: prior 3600.0 vs current 66.092 (-98.2%); prior value appears erroneous or from a different source
+[LLM_FLAG] total_derivative_liability: prior 3600.0 vs current 61.426 (-98.3%); prior value appears erroneous or from a different source
+[LLM_FLAG] net_derivative_position: prior 303.0 vs current 4.666 (-98.5%); prior value appears erroneous or from a different source
+[LLM_FLAG] equity_derivatives_notional: prior value was 'Yes' (non-numeric) but no equity derivatives are disclosed; prior appears to be a data quality issue
+[LLM_FLAG] commodity_derivatives_notional: fuel hedges reported in metric tons (611k designated + 30k not designated) but no dollar notional is disclosed; fair values are available from the balance sheet table
+[LLM_FLAG] fx_sensitivity_10pct: prior 122.0 vs current 1500.0 (+1129%); prior value appears erroneous — $1.5B sensitivity on $15.2B unhedged payments is consistent
+[LLM_FLAG] fuel_expense_pct_of_operating: prior 9.0% vs current 13.8% (+53.3%); fuel as a share of operating expense increased materially
+[LLM_FLAG] fuel_sensitivity_10pct: prior 14.4 vs current 39.7 (+175.7%); note the $39.7M gross expense increase is partially offset by $18.5M from fuel swap fair value gains (net impact $21.2M)
+[LLM_FLAG] fx_remeasurement_gains_losses: prior 1550.0 vs current 32.7 (-97.9%); prior value appears erroneous or in different units
+[LLM_FLAG] fx_transaction_gain_loss: prior 151.0 vs current 32.7 (-78.3%); Q2 2026 gain of $32.7M vs prior period; H1 2026 gain was $70.3M
+[LLM_FLAG] fx_unhedged_payments_eur: prior 1500.0 vs current 15200.0 (+913%); prior value appears to be in billions ($1.5B) while schema is in millions — current $15.2B = $15,200M is consistent with EUR 13.3B unhedged payments
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,600M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($3,600M)

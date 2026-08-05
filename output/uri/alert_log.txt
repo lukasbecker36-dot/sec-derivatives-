@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-23 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($4,100M)
+[NEW_FIELD] variable_rate_sensitivity: appeared for first time ($30M)
+[NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($10,200M)
+[NUMERIC] fixed_rate_fair_value_sensitivity: $10M → $3M (-70.6%) — exceeds 20% threshold
+[NEW_FIELD] foreign_revenue: appeared for first time ($749M)
+[NEW_FIELD] foreign_revenue_pct: appeared for first time ($9M)
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (equity_sensitivity_10pct)
+[LLM_FLAG] fixed_rate_fair_value_sensitivity changed from 10.2 to 3; prior value 10.2 appears to have been incorrectly storing fixed_rate_notes_billion in this field
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)

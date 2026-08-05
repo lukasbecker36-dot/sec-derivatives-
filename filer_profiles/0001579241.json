@@ -20,7 +20,9 @@
       "commodity derivative",
       "notional amount",
       "unrealized loss",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "net investment hedge",
+      "cross-currency"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -86,6 +88,19 @@
       ],
       "fields_extracted": 2,
       "fields_null": 18
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-07-24T09:20:24Z",
+      "sections_found": [
+        "financial_instruments",
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 6,
+      "fields_null": 32
     }
   ]
 }

@@ -1,3 +1,27 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $6,019M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] gross_derivative_assets: appeared for first time ($16M)
+[NEW_FIELD] gross_derivative_liabilities: appeared for first time ($46M)
+[NEW_FIELD] net_derivative_assets: appeared for first time ($15M)
+[NEW_FIELD] net_derivative_liabilities: appeared for first time ($0M)
+[NEW_FIELD] cash_collateral_posted: appeared for first time ($60M)
+[NUMERIC] unrealized_gains_losses: $18M → $-21M (-216.7%) — exceeds 20% threshold
+[NUMERIC] electricity_notional_gwh: $35M → $7,851M (+22331.4%) — exceeds 20% threshold
+[NUMERIC] natural_gas_notional_bcf: $18M → $2M (-88.9%) — exceeds 20% threshold
+[NUMERIC] fin_toll_notional_gwh: $34M → $315M (+826.5%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: electricity_notional_gwh changed from 35 to 7,851 (224x)
+[LLM_FLAG] equity_derivatives_notional: prior was 'Yes' but no equity derivatives found in current filing section
+[LLM_FLAG] expected_12mo_reclass_from_aoci: prior was 6019.0 but no AOCI reclassification amount found; SCE's derivatives are economic hedges (not designated for hedge accounting), so no AOCI expected
+[LLM_FLAG] Commodity derivatives notional volumes are reported in physical units only: Electricity 7,851 GWh, Natural gas 2 Bcf, CRR 720 GWh, Fin Toll 315 GWh — no dollar notional provided
+[LLM_FLAG] realized_gains_losses: prior was 0.0, now -50 — SCE reported $(50)M realized losses on economic hedges for H1 2026 vs $(43)M in H1 2025
+[LLM_FLAG] unrealized_gains_losses: prior was 18.0, now -21 — swing from unrealized gains to losses; SCE recorded $(21)M unrealized losses for H1 2026 vs $11M gains in H1 2025
+[LLM_FLAG] electricity_notional_gwh: prior was 35.0, now 7,851 — prior value appears anomalous; Dec 2025 filing showed 3,249 GWh, current period 7,851 GWh (141% increase from Dec 2025)
+[LLM_FLAG] natural_gas_notional_bcf: prior was 18.0, now 2 — 89% decrease; Dec 2025 was 4 Bcf, now 2 Bcf (50% decrease from Dec 2025)
+[LLM_FLAG] congestion_rights_notional_gwh: prior was 0.0, now 720 — CRR notional was 5,566 GWh at Dec 2025, dropped to 720 GWh at Jun 2026 (87% decrease from Dec 2025)
+[LLM_FLAG] fin_toll_notional_gwh: prior was 34.0, now 315 — prior value appears anomalous; Dec 2025 was 228 GWh, Jun 2026 is 315 GWh (38% increase from Dec 2025)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($6,019M)
 [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $3,249M, now missing

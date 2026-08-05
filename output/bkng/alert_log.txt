@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($14,300M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($14,300M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $14,300M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $14,300M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $0M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
+[DISAPPEARED_FIELD] fx_impact_on_bookings: was $1,000M, now missing
+[DISAPPEARED_FIELD] derivative_policies: was $-45M, now missing
+[VALIDATION] Likely extraction failure: 11/14 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, expected_12mo_reclass_from_aoci, fx_forwards_outstanding...)
+[LLM_FLAG] total_derivative_asset: prior was 14300.0 but now not found in text (fair value not separately disclosed in this section)
+[LLM_FLAG] net_derivative_position: prior was 14300.0 but now not found in text
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($14,300M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

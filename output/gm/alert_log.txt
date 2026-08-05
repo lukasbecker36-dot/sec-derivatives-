@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-22 ===
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NUMERIC] ir_swap_notional: $38,905M → $153,391M (+294.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $165,734M → $884M (-99.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $836M → $1,178M (+40.9%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $164,898M → $-294M (-100.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-6M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 165,734 to 884 (0x)
+[VALIDATION] Likely units mismatch: net_derivative_position changed from 164,898 to -294 (0x)
+[LLM_FLAG] ir_swap_notional is $153,391M total (designated $39,733M + non-designated $113,658M). Prior value of 38,905 likely covered only designated IR swaps. Designated IR swaps increased slightly from $38,905M to $39,733M (2% change).
+[LLM_FLAG] total_derivative_asset prior value of 165,734 appears to be an extraction error (possibly a notional amount). Current fair value of assets is $884M.
+[LLM_FLAG] FX cash flow hedge OCI: losses of $156M for six months ended June 30, 2026 vs gains of $645M in prior year — significant reversal in hedge effectiveness direction.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [DISAPPEARED_FIELD] commodity_derivatives_notional: was $1,243M, now missing
 [NUMERIC] total_derivative_liability: $1,175M → $836M (-28.9%) — exceeds 20% threshold

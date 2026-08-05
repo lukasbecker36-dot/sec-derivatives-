@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($570M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($19M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($250M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-231M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $1,050M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $17M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $9M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $128M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-119M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $970M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct...)
+[LLM_FLAG] ir_swap_notional changed from prior period $970M (December 31, 2025) to $570M (June 30, 2026), a 41.2% decrease. This reflects maturing or unwinding of interest rate derivative positions.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($1,050M)
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($17M)

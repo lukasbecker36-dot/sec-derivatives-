@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($0M)
+[DISAPPEARED_FIELD] has_derivatives: was $0M, now missing
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,700M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] fair_value_debt: appeared for first time ($23M)
+[NEW_FIELD] rate_sensitivity_increase: appeared for first time ($2M)
+[NEW_FIELD] rate_sensitivity_decrease: appeared for first time ($2M)
+[DISAPPEARED_FIELD] debt_characteristics: was $23M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (gross_unrealized_gains_debt, has_derivatives, equity_sensitivity_10pct, debt_characteristics)
+[LLM_FLAG] debt_characteristics: prior value was 22.7 (numeric) but schema describes 'all fixed-rate debt notation' (string); extracted as string per current schema definition. Prior value may have been the fair value of debt from an earlier period rather than a textual notation.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
 [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($0M)

@@ -1,3 +1,31 @@
+=== 10-Q | Period ending 2026-05-31 | Processed 2026-07-02 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,331M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($2,662M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($669M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($369M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($377M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($16M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($361M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($126M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($3,331M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-515M)
+[NUMERIC] fx_sensitivity_10pct: $10M → $-223M (-2327.0%) — exceeds 20% threshold
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)
+[NEW_FIELD] foreign_currency_notional: appeared for first time ($3,331M)
+[NEW_FIELD] foreign_currency_fair_value: appeared for first time ($305M)
+[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($-223M)
+[NEW_FIELD] commodity_notional: appeared for first time ($369M)
+[NEW_FIELD] commodity_fair_value: appeared for first time ($62M)
+[NUMERIC] commodity_sensitivity: $79M → $-37M (-147.1%) — exceeds 20% threshold
+[NEW_FIELD] net_investment_hedge_notional: appeared for first time ($146M)
+[NEW_FIELD] fixed_debt_notional: appeared for first time ($10,262M)
+[NEW_FIELD] fixed_debt_fair_value: appeared for first time ($-9,588M)
+[NEW_FIELD] fixed_debt_sensitivity: appeared for first time ($-515M)
+[NEW_FIELD] preissuance_hedge_notional: appeared for first time ($0M)
+[NEW_FIELD] variable_debt_sensitivity: appeared for first time ($1M)
+[LLM_FLAG] fx_sensitivity_10pct changed from 10.0 to -222.7 — prior value appears to be from a different definition or period. Current value of $222.7M adverse impact is consistent with $3.3B FX notional.
+[LLM_FLAG] commodity_sensitivity changed from 79.0 to -37.2 — 53% decrease in absolute terms; consistent with reduced commodity notional and current in-the-money position ($61.7M net asset vs prior net liability)
+
 === 10-Q | Period ending 2025-11-30 | Processed 2026-05-26 ===
 [NUMERIC] commodity_fair_value: $-1M → $14M (+1275.0%) — exceeds 20% threshold
 [NUMERIC] commodity_sensitivity: $29M → $-28M (-196.6%) — exceeds 20% threshold

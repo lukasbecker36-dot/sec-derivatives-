@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,614M)
+[NUMERIC] fx_designated_notional: $1M → $1,333M (+133170.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $1,333M → $282M (-78.9%) — exceeds 20% threshold
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,000M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($11M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($102M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-91M)
+[NUMERIC] cash_flow_hedge_aoci: $31M → $-4M (-112.3%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $31M → $0M (-99.0%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: fx_designated_notional changed from 1 to 1,333 (1333x)
+[VALIDATION] Likely units mismatch: expected_12mo_reclass_from_aoci changed from 31 to 0 (0x)
+[LLM_FLAG] fx_designated_notional is $1,332.7M vs prior $1.0M - prior value appears erroneous; the cross-currency swaps have consistently been designated as net investment hedges
+[LLM_FLAG] fx_not_designated_notional is $281.8M vs prior $1,332.7M - prior extraction likely swapped designated/not-designated categories (cross-currency swaps were misclassified as not designated)
+[LLM_FLAG] cash_flow_hedge_aoci decreased from $31.0M (prior) to -$3.8M (current) - >50% change; this represents only the terminated forward-starting IR swap hedges from Q2 2024
+[LLM_FLAG] expected_12mo_reclass_from_aoci decreased from $31.0M (prior) to $0.3M (current) - 99% decrease; prior value appears to have been erroneous or from a different component
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($1M)

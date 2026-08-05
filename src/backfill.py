@@ -204,6 +204,51 @@ def _select_issuers(universe: list[dict], tickers: list[str],
     return fresh[:next_n]
 
 
+def load_retry_list(path: Path) -> list[str]:
+    """Read a fixed ticker retry list, one per line (blank lines / '#' comments ignored)."""
+    if not path.exists():
+        return []
+    lines = path.read_text(encoding='utf-8').splitlines()
+    return [ln.strip().upper() for ln in lines
+            if ln.strip() and not ln.strip().startswith('#')]
+
+
+def _ticker_attempts(units: dict, ticker: str) -> int:
+    """Max retry attempts recorded across a ticker's units (0 if never seeded)."""
+    t = ticker.upper()
+    best = 0
+    for u in units.values():
+        if u.get('ticker', '').upper() == t:
+            try:
+                best = max(best, int(u.get('attempts', '0') or '0'))
+            except ValueError:
+                pass
+    return best
+
+
+def _select_retry_batch(retry_tickers: list[str], batch_size: int, units: dict,
+                        max_attempts: int = 2) -> list[str]:
+    """Next N tickers from a fixed retry list still worth (re)seeding.
+
+    Lets a single static routine prompt work through a known list (e.g.
+    tickers rescued by a gate change) across repeated fires: each run picks
+    up wherever the last one left off, and provably terminates.
+
+    A ticker is dropped from consideration once it has either committed OR
+    burned `max_attempts` seed attempts without committing. The attempt cap
+    is the circuit breaker: without it, any ticker that keeps failing the
+    gate would be re-seeded and re-processed on every fire forever, so a
+    recurring routine would never reach the "nothing to seed" no-op.
+    """
+    committed = {u['ticker'].upper() for u in units.values() if u.get('status') == 'committed'}
+    pending = [
+        t for t in retry_tickers
+        if t.upper() not in committed
+        and _ticker_attempts(units, t) < max_attempts
+    ]
+    return pending[:batch_size]
+
+
 def _resolve_config_path(raw_path: str) -> Path:
     from .cc_bridge import _resolve_config_path as rcp
     return rcp(raw_path)
@@ -238,8 +283,16 @@ def _write_extraction_request(config: IssuerConfig, config_path: Path,
     return filename
 
 
-def prepare(since: str, tickers: list[str], next_n: int):
-    """Seed ledger units and write locate/extraction requests."""
+def prepare(since: str, tickers: list[str], next_n: int,
+           retry_file: str = '', batch_size: int = 5, max_attempts: int = 2):
+    """Seed ledger units and write locate/extraction requests.
+
+    retry_file (if given) takes precedence over tickers/next_n: it reads a
+    fixed ticker list and seeds the next `batch_size` tickers that haven't
+    committed and haven't yet burned `max_attempts` seed attempts, so the
+    same command can be fired repeatedly (e.g. from a routine) and will
+    work through the whole list before provably becoming a no-op.
+    """
     REQUESTS_DIR.mkdir(parents=True, exist_ok=True)
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     universe = load_universe()
@@ -248,6 +301,33 @@ def prepare(since: str, tickers: list[str], next_n: int):
         return
 
     units = load_state()
+
+    if retry_file:
+        retry_tickers = load_retry_list(Path(retry_file))
+        if not retry_tickers:
+            logger.warning(f'Retry list {retry_file} is empty or missing')
+        batch = _select_retry_batch(retry_tickers, batch_size, units, max_attempts)
+        if not batch:
+            n_committed = sum(1 for t in retry_tickers
+                              if t.upper() in {u['ticker'].upper() for u in units.values()
+                                               if u.get('status') == 'committed'})
+            logger.info(f'Retry list {retry_file}: nothing to seed — '
+                       f'{n_committed}/{len(retry_tickers)} committed, '
+                       f'the rest exhausted {max_attempts} attempts (see review_queue.csv)')
+            return
+        # Count this seed attempt against each batch ticker so a ticker that
+        # keeps failing the gate is eventually abandoned rather than re-seeded
+        # on every fire forever.
+        batch_upper = {t.upper() for t in batch}
+        for u in units.values():
+            if u.get('ticker', '').upper() in batch_upper:
+                try:
+                    u['attempts'] = str(int(u.get('attempts', '0') or '0') + 1)
+                except ValueError:
+                    u['attempts'] = '1'
+        logger.info(f'Retry list {retry_file}: seeding {batch}')
+        tickers = batch
+
     issuers = _select_issuers(universe, tickers, next_n, units)
     logger.info(f'Preparing {len(issuers)} issuers (since {since})')
 
@@ -467,8 +547,8 @@ def _assemble_row(key: str, detail: dict, config: IssuerConfig) -> dict | None:
             with open(result_path, 'r', encoding='utf-8') as f:
                 llm_result = json.load(f)
             for field_name in schema:
-                field_data = llm_result.get('fields', {}).get(field_name, {})
-                value = field_data.get('value')
+                field_data = llm_result.get('fields', {}).get(field_name)
+                value = field_data.get('value') if isinstance(field_data, dict) else field_data
                 row[field_name] = value
                 provenance[field_name] = 'extracted' if value is not None else 'not_disclosed'
             flags.extend(f for f in llm_result.get('flags', []) if f)
@@ -507,6 +587,9 @@ def _row_fill_rate(staged: dict) -> float | None:
     return filled / applicable if applicable else None
 
 
+ANNUAL_FORMS = ('10-K', '10-K/A')
+
+
 def _rebuild_issuer(ticker: str, staged_rows: list[dict],
                     config: IssuerConfig) -> dict:
     """Chronological rebuild: alerts, notes, fill rates, gate verdict."""
@@ -528,6 +611,7 @@ def _rebuild_issuer(ticker: str, staged_rows: list[dict],
     alert_blocks = []
     notes_blocks = []
     fill_rates = []
+    annual_fill_rates = []
     prior_row = None
     now = datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
@@ -561,6 +645,8 @@ def _rebuild_issuer(ticker: str, staged_rows: list[dict],
         fr = _row_fill_rate(staged)
         if fr is not None:
             fill_rates.append(fr)
+            if row.get('form_type') in ANNUAL_FORMS:
+                annual_fill_rates.append(fr)
         prior_row = row
 
     # Newest first, matching live file conventions
@@ -580,9 +666,21 @@ def _rebuild_issuer(ticker: str, staged_rows: list[dict],
     any_missing = any('section_missing' in s['provenance'].values()
                       for s in staged_rows)
     median_fill = statistics.median(fill_rates) if fill_rates else None
+    annual_median_fill = statistics.median(annual_fill_rates) if annual_fill_rates else None
 
     if median_fill is not None:
-        gate_passed = median_fill >= GATE_MEDIAN_FILL
+        # Some issuers only restate derivatives notionals in the annual 10-K
+        # and merely cross-reference it from interim 10-Qs (e.g. "See Note 8.
+        # Debt for additional information..."). That's a genuine, correct
+        # disclosure pattern, not an extraction failure — but it drags the
+        # overall median below the gate even when the 10-K itself extracted
+        # cleanly. Pass on either the overall median or a strong annual filing
+        # alone, so the well-extracted 10-K data isn't held hostage by
+        # interim periods that were never going to have the data.
+        gate_passed = (
+            median_fill >= GATE_MEDIAN_FILL
+            or (annual_median_fill is not None and annual_median_fill >= GATE_MEDIAN_FILL)
+        )
     else:
         # No applicable fields anywhere: honest minimal filer passes only if
         # nothing actually failed to locate.
@@ -592,6 +690,7 @@ def _rebuild_issuer(ticker: str, staged_rows: list[dict],
         'ticker': ticker,
         'rows': len(staged_rows),
         'median_fill_rate': round(median_fill, 3) if median_fill is not None else None,
+        'annual_median_fill_rate': round(annual_median_fill, 3) if annual_median_fill is not None else None,
         'rows_with_missing_sections': sum(
             1 for s in staged_rows if 'section_missing' in s['provenance'].values()),
         'gate_passed': gate_passed,
@@ -721,7 +820,8 @@ def finalize(commit: bool):
             append_review_item(
                 ticker, units[keys[0]].get('cik', ''),
                 reason=f"backfill gate failed: median fill "
-                       f"{verdict['median_fill_rate']}, "
+                       f"{verdict['median_fill_rate']} "
+                       f"(annual-only median {verdict['annual_median_fill_rate']}), "
                        f"{verdict['rows_with_missing_sections']} rows with missing sections",
                 severity='warning')
             continue
@@ -785,6 +885,16 @@ def main():
     prep.add_argument('--tickers', default='', help='Comma-separated tickers')
     prep.add_argument('--next', dest='next_n', type=int, default=25,
                       help='Number of not-yet-seeded issuers to take (default 25)')
+    prep.add_argument('--retry-file', default='',
+                      help='Path to a fixed ticker retry list (one per line); takes '
+                           'precedence over --tickers/--next, seeding the next '
+                           '--batch-size not-yet-committed tickers each run')
+    prep.add_argument('--batch-size', type=int, default=5,
+                      help='Tickers to seed per run from --retry-file (default 5)')
+    prep.add_argument('--max-attempts', type=int, default=2,
+                      help='With --retry-file, give up on a ticker after this many '
+                           'seed attempts without committing (default 2) so a '
+                           'recurring routine provably terminates')
     prep.add_argument('--verbose', '-v', action='store_true')
 
     res = sub.add_parser('resolve', help='Apply locate results, emit extraction requests')
@@ -806,7 +916,9 @@ def main():
 
     if args.command == 'prepare':
         tickers = [t.strip() for t in args.tickers.split(',') if t.strip()]
-        prepare(since=args.since, tickers=tickers, next_n=args.next_n)
+        prepare(since=args.since, tickers=tickers, next_n=args.next_n,
+               retry_file=args.retry_file, batch_size=args.batch_size,
+               max_attempts=args.max_attempts)
     elif args.command == 'resolve':
         resolve()
     elif args.command == 'finalize':

@@ -1,3 +1,43 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-20 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($27,491M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($26,174M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,317M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,400M)
+[NUMERIC] total_derivative_asset: $25,314M → $633M (-97.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $24M → $434M (+1720.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $1M → $199M (+13321.3%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($159M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $286M, now missing
+[NUMERIC] ir_sensitivity_100bp: $244M → $14M (-94.3%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $42M → $55M (+31.8%) — exceeds 20% threshold
+[NUMERIC] fixed_rate_notes_billion: $23M → $14M (-37.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] marketable_equity_value: was $133M, now missing
+[NUMERIC] debt_amount: $-32M → $14,400M (+45100.0%) — exceeds 20% threshold
+[NEW_FIELD] foreign_currency_revenue_percentage: appeared for first time ($57M)
+[NUMERIC] foreign_currency_expense_percentage: $-2,263M → $30M (+101.3%) — exceeds 20% threshold
+[NUMERIC] constant_currency_impact: $14M → $-535M (-3815.3%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_revenue_hedges: appeared for first time ($2,490M)
+[NEW_FIELD] fx_sensitivity_content_hedges: appeared for first time ($311M)
+[NUMERIC] fx_sensitivity_monetary_items: $14,400M → $55M (-99.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] primary_currencies: was $58M, now missing
+[VALIDATION] Likely units mismatch: net_derivative_position changed from 1 to 199 (134x)
+[VALIDATION] Likely units mismatch: debt_amount changed from -32 to 14,400 (450x)
+[VALIDATION] Likely units mismatch: fx_sensitivity_monetary_items changed from 14,400 to 55 (0x)
+[LLM_FLAG] Prior total_derivative_asset was 25313.747 vs current 632.715 — prior value appears to have been stored in thousands rather than millions, or is from a different filing period with different scale
+[LLM_FLAG] Prior total_derivative_liability was 23.832 vs current 433.863 — significant change suggesting prior value may have been incorrectly scaled
+[LLM_FLAG] Prior net_derivative_position was 1.482 vs current 198.852 — consistent with the asset/liability prior values being misscaled
+[LLM_FLAG] Prior equity_derivatives_notional was 'Yes' (a boolean string) vs current null — no equity derivatives found in this filing; prior value appears to be a data type error
+[LLM_FLAG] New interest rate swap program: $1.4B IR fair value hedges are new as of Q2 2026 (none as of Dec 2025)
+[LLM_FLAG] Total derivative notional increased to $28.89B from $25.51B (+13.3%), driven primarily by growth in FX cash flow hedges
+[LLM_FLAG] Prior ir_sensitivity_100bp was 244.483 vs current 14.0 — current filing clearly states $14M for 100bp SOFR increase; prior value may have been from a different sensitivity metric or filing period
+[LLM_FLAG] Prior fixed_rate_notes_billion was 23.0 vs current 14.4 — significant decrease; prior value may be incorrect or from different period
+[LLM_FLAG] Prior debt_amount was -32.0 vs current 14400.0 — prior value appears corrupted (negative and wrong scale)
+[LLM_FLAG] Prior foreign_currency_expense_percentage was -2263.0 vs current 30.0 — prior value clearly corrupted
+[LLM_FLAG] Prior constant_currency_impact was 14.4 vs current -535.0 — significant change; constant currency impact is now negative $535M (FX headwind)
+[LLM_FLAG] Prior fx_sensitivity_monetary_items was 14400.0 vs current 55.0 — prior value appears to have been the debt amount rather than FX sensitivity
+[LLM_FLAG] Prior primary_currencies was 58.0 (a numeric) vs current is a string listing — prior value corrupted
+[LLM_FLAG] Multiple prior values appear to be corrupted or cross-mapped to wrong fields — recommend review of prior extraction data quality
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($25,314M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($24M)

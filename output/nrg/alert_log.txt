@@ -1,3 +1,29 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($424M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($424M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($700M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($4,805M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($4,447M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($358M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($424M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,100M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-2M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $397M, now missing
+[NEW_FIELD] commodity_var: appeared for first time ($82M)
+[DISAPPEARED_FIELD] commodity_var_period_stats: was $66M, now missing
+[NUMERIC] derivative_mark_to_market_var: $-1M → $103M (+10400.0%) — exceeds 20% threshold
+[NEW_FIELD] collateral_held: appeared for first time ($66M)
+[DISAPPEARED_FIELD] credit_exposure_by_quality: was $85M, now missing
+[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (equity_sensitivity_10pct, commodity_var_period_stats, credit_exposure_by_quality)
+[VALIDATION] Likely units mismatch: derivative_mark_to_market_var changed from -1 to 103 (103x)
+[LLM_FLAG] Consumer Financing Program derivative liability of $271M is included in total derivative liabilities but is not a traditional financial derivative
+[LLM_FLAG] commodity_var_period_stats: prior avg was $66M (2025), now Q2 2026 avg is $87M (+32%), primarily due to addition of new generation assets in Q1 2026
+[LLM_FLAG] derivative_mark_to_market_var: prior was -1.0 (likely placeholder/not found), current is $103M
+[LLM_FLAG] collateral_held dropped significantly from prior $408M to current $66M (-84%); prior figure may have been from a different period or gross basis
+[LLM_FLAG] credit_exposure_by_quality: investment grade shifted from prior 67% to 74%, non-IG from 33% to 26%
+[LLM_FLAG] exposure_rolloff_timeline: prior was '89, 110, 57' (unclear format), current is 55% by end of 2027
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [DISAPPEARED_FIELD] total_derivative_asset: was $437M, now missing
 [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $700M, now missing

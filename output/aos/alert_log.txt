@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($38M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[NUMERIC] cash_flow_hedge_aoci: $4,200M → $1M (-100.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $0M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (fx_transaction_gain_loss, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct)
+[VALIDATION] Likely units mismatch: cash_flow_hedge_aoci changed from 4,200 to 1 (0x)
+[LLM_FLAG] cash_flow_hedge_aoci changed from prior 4200.0 to 1.3 (>50% change). Prior value of $4,200 million appears erroneous for A. O. Smith; current $1.3 million is consistent with the AOCI table in the filing.
+[LLM_FLAG] equity_derivatives_notional prior value was 'Yes' (a string, not a number); no equity derivatives found in current filing. Prior value appears to be a data-type error.
+[LLM_FLAG] total_derivative_liability of $0.5 million reflects only the IR swap; FX derivative fair values are not separately disclosed, so the true total may be higher.
+[LLM_FLAG] Net investment hedge of ~$214.9 million uses intercompany debt (not a derivative instrument) plus third-party FX forwards (notional not stated); the intercompany debt notional is excluded from fx_derivatives_notional.
+[LLM_FLAG] All prior values (fx_transaction_gain_loss=0.4, fx_sensitivity_10pct=-0.4, fixed_rate_notes_billion=1.1, marketable_equity_value=0.5, equity_sensitivity_10pct=0.0) cannot be compared because this 10-Q market risk section contains no quantitative data -- it defers to the annual 10-K with a boilerplate 'no material change' statement.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($4,200M)
 [NUMERIC] total_derivative_asset: $93M → $0M (-99.6%) — exceeds 20% threshold

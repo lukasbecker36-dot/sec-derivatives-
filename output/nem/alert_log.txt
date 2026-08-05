@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($183M)
+[NUMERIC] total_derivative_liability: $80M → $7M (-91.2%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($176M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($26M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $103M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $3M, now missing
+[NUMERIC] fx_sensitivity_10pct: $100M → $250M (+150.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] marketable_equity_value: was $58M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] sensitivity_10pct_change: was $127M, now missing
+[DISAPPEARED_FIELD] hedging_instruments_description: was $131M, now missing
+[VALIDATION] Likely extraction failure: 6/8 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, marketable_equity_value, equity_sensitivity_10pct, sensitivity_10pct_change...)
+[LLM_FLAG] total_derivative_liability changed from prior 80.0 to 7 (>50% decrease, -91%). Prior figure may have been from annual filing with different hedge positions.
+[LLM_FLAG] Prior equity_derivatives_notional was 'Yes' (appears to be a data quality issue from prior extraction answering has_derivatives instead of notional); current is null.
+[LLM_FLAG] FX notionals reported in local currencies only (A$5,736M + C$1,088M program amounts); no USD-equivalent total given in derivatives note. These are full program 'Amount entered into' figures (Oct 2024 - Dec 2026), not necessarily current outstanding notional.
+[LLM_FLAG] fx_sensitivity_10pct changed from prior 100.0 to 250 (150% increase). Prior may have been for a different period length or scope; current figure is for six months ended June 30, 2026 with no mitigation from hedges.
+[LLM_FLAG] sensitivity_10pct_change total of $77M vs prior of $127M (39% decrease). Within 50% threshold but notable decline in provisional pricing exposure.
+[LLM_FLAG] fx_transaction_gain_loss not found in this section; prior was 103.0. May be reported elsewhere in the filing.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_designated_notional: appeared for first time ($80M)
 [NUMERIC] total_derivative_asset: $67M → $103M (+53.7%) — exceeds 20% threshold

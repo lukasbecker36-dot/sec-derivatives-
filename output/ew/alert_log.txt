@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,297M)
+[NUMERIC] total_derivative_asset: $2,392M → $51M (-97.9%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $2,092M → $6M (-99.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $300M → $45M (-85.0%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($2M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $30M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $8M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $22M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $11M, now missing
+[NUMERIC] marketable_equity_value: $11M → $201M (+1730.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] diversification_strategy: was $242M, now missing
+[VALIDATION] Likely extraction failure: 6/10 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, equity_sensitivity_10pct...)
+[VALIDATION] Likely units mismatch: total_derivative_liability changed from 2,092 to 6 (0x)
+[LLM_FLAG] total_derivative_asset changed from 2391.9 to 51.4 (98% decrease) — prior value appears to have been an error or from a different reporting basis; current value is directly from the balance sheet fair value table showing designated hedge assets
+[LLM_FLAG] total_derivative_liability changed from 2091.9 to 6.3 (100% decrease) — similar to asset, prior value appears to have been misattributed; current period liabilities are $6.3M from FX forward contracts
+[LLM_FLAG] net_derivative_position changed from 300.0 to 45.1 (85% decrease) — prior $300M likely referred to the cross-currency swap notional, not the net derivative fair value position
+[LLM_FLAG] marketable_equity_value: prior value was 11.0; new value is 201.3 (1730% increase) — the $201.3M includes investments in equity instruments of both public and private companies; this is likely a different measurement than the prior period
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,392M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($2,092M)

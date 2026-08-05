@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($257M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($257M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $252M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $252M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (total_derivative_asset, net_derivative_position, equity_sensitivity_10pct)
+[LLM_FLAG] total_derivative_asset prior was 252.4 but no explicit fair value is disclosed this period. Prior value likely represented the notional amount (prior period notional was $229.3M at Dec 31, 2025). The filing states the impact from currency hedging was 'not significant', meaning fair values are immaterial.
+[LLM_FLAG] equity_derivatives_notional prior was 'Yes' but no equity derivatives are disclosed. Company holds non-marketable equity investments ($209.5M) which are equity securities, not equity derivatives.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($252M)
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($252M)

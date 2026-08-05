@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NUMERIC] fx_derivatives_notional: $31M → $2,935M (+9367.7%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $31M → $2,935M (+9367.7%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $12M → $500M (+4066.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $265M, now missing
+[NEW_FIELD] total_derivative_asset: appeared for first time ($1,213M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($1,134M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($79M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-22M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $12M → $-22M (-283.3%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional: prior $31M vs current $2,935M — prior value appears to have captured only a subset; current $2,935M includes $435M cross-currency swaps + $2,500M FX forwards designated as net investment hedges
+[LLM_FLAG] ir_swap_notional: prior $12M vs current $500M — prior value appears erroneous; $500M clearly stated for fair value hedges
+[LLM_FLAG] expected_12mo_reclass_from_aoci: prior $12M vs current -$22M — sign changed from gain to loss; hedging programs moved from net gain to net loss position
+[LLM_FLAG] Commodity derivatives notional not disclosed in dollar terms; fair values are $941M assets / $989M liabilities for non-designated commodity contracts, suggesting very large commodity derivative positions
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [NUMERIC] commodity_derivatives_notional: $108M → $265M (+145.4%) — exceeds 20% threshold

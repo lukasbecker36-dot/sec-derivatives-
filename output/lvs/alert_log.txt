@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-27 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,866M)
+[NUMERIC] fx_designated_notional: $31M → $5,866M (+18822.6%) — exceeds 20% threshold
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-4M)
+[NUMERIC] ir_sensitivity_100bp: $2M → $261M (+12950.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-21M)
+[VALIDATION] Likely units mismatch: fx_designated_notional changed from 31 to 5,866 (189x)
+[VALIDATION] Likely units mismatch: ir_sensitivity_100bp changed from 2 to 261 (130x)
+[LLM_FLAG] fx_designated_notional changed from 31.0 to 5866 (>18,000% increase vs prior); prior value may reflect a different extraction scope or unit error rather than a true change of this magnitude
+[LLM_FLAG] ir_sensitivity_100bp changed from 2.0 to 261 (>12,000% increase vs prior); prior value of 2.0 appears to be a unit or extraction error rather than a genuine prior-period figure
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [NUMERIC] fx_designated_notional: $2,024M → $31M (-98.5%) — exceeds 20% threshold

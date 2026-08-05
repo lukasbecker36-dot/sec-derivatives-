@@ -21,7 +21,11 @@
       "commodity derivative",
       "notional value",
       "unrealized gain",
-      "unrealized loss"
+      "unrealized loss",
+      "cash flow hedge",
+      "mark-to-market",
+      "designated as hedging",
+      "aoci"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -81,6 +85,18 @@
       ],
       "fields_extracted": 3,
       "fields_null": 24
+    },
+    {
+      "filing_date": "2026-06-28",
+      "form_type": "10-Q",
+      "period_end": "2026-06-28",
+      "processed_at": "2026-07-31T09:20:48Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 17,
+      "fields_null": 10
     }
   ]
 }

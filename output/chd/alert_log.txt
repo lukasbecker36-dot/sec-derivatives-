@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($384M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($377M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($7M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($12M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $400M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $391M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $9M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $55M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $13M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, expected_12mo_reclass_from_aoci, fx_forwards_outstanding...)
+[LLM_FLAG] total_derivative_asset: prior was 400.3 but current period states fair values were not material -- possible the prior value came from a different section or the company changed disclosure granularity
+[LLM_FLAG] total_derivative_liability: prior was 391.2 but current period states fair values were not material
+[LLM_FLAG] net_derivative_position: prior was 9.1 but current period does not disclose individual fair values
+[LLM_FLAG] expected_12mo_reclass_from_aoci: prior was 54.8 but not disclosed in current period section
+[LLM_FLAG] commodity_derivatives_notional given in physical units (2.3 gallons diesel, 33.4 pounds commodities) rather than dollar notional -- cannot convert to millions without price data
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($400M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($391M)

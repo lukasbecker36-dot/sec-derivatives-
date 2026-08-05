@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,863M)
+[NUMERIC] fx_designated_notional: $26M → $1,863M (+6982.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $26M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $11M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $15M, now missing
+[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (fx_not_designated_notional, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci)
+[LLM_FLAG] fx_designated_notional changed from 26.3 to 1862.7 (>50% change). Prior value likely reflected FX forwards/options only; current value is cross-currency swap notional for net investment hedges. Different instrument types may explain the variance.
+[LLM_FLAG] Prior fx_not_designated_notional was 26.3; no undesignated FX derivatives mentioned in this section.
+[LLM_FLAG] Section text appears truncated; derivative asset/liability fair values, cash flow hedge AOCI, and expected 12-month reclassification data may be in portions not captured.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [NUMERIC] fx_designated_notional: $129M → $26M (-79.6%) — exceeds 20% threshold

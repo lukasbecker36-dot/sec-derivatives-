@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-11 ===
 [HISTORICAL] [NUMERIC] total_derivative_asset: $320M → $1,080M (+237.5%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] total_derivative_liability: $-907M → $-671M (+26.0%) — exceeds 20% threshold
@@ -7,6 +8,41 @@
 [HISTORICAL] [NUMERIC] fx_investment_sensitivity: $-7M → $-5M (+28.6%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] equity_price_sensitivity: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
 [HISTORICAL] [LLM_FLAG] Located section is the Note 1 'Financial Instruments' accounting-policy text; the investments fair value and derivatives tables live in a separate Investments/Derivatives note not captured here
+=======
+=== 10-K | Period ending 2026-06-30 | Processed 2026-07-30 ===
+[NUMERIC] fx_not_designated_notional: $14,050M → $63,465M (+351.7%) — exceeds 20% threshold
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $1,080M → $2,176M (+101.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $671M → $1,430M (+113.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $409M → $746M (+82.4%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $-34M → $-42M (-23.5%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-5M)
+[LLM_FLAG] fx_derivatives_notional: current value $64,957M vs prior $54,543M — increase of 19%. Driven by growth in non-designated FX contracts sold ($51,413M vs prior implied ~$43,307M from FY2025).
+[LLM_FLAG] equity_derivatives_notional: current $8,119M vs prior $7,198M — increase of 13%, within normal range.
+[LLM_FLAG] total_derivative_asset: current $2,176M vs prior $1,080M — increase of 101%. This is a significant swing driven by non-designated FX contract assets rising from $248M to $1,742M, likely reflecting large FX moves during the period.
+[LLM_FLAG] total_derivative_liability: current $1,430M vs prior $671M — increase of 113%. Also a significant swing, though gross positions offset each other.
+[LLM_FLAG] net_derivative_position: current $746M vs prior $409M — increase of 82%, exceeding the 50% threshold. The swing is driven by the large increase in gross FX derivative assets exceeding the increase in liabilities.
+[LLM_FLAG] cash_flow_hedge_aoci: current -$42M vs prior -$34M. Note: the $42M figure is the comprehensive income flow for FY2026, not necessarily the cumulative AOCI balance. The actual AOCI balance is not separately stated in this section.
+[LLM_FLAG] fx_revenue_sensitivity: current -$13,653M vs prior -$12,938M — increase of 5.5% in absolute terms. Reflects growth in international revenue base.
+[LLM_FLAG] equity_sensitivity_10pct / equity_price_sensitivity: current -$2,654M vs prior -$2,248M — increase of 18% in absolute terms, reflecting growth in MSFT's equity investment portfolio.
+[LLM_FLAG] credit_spread_sensitivity: current -$412M vs prior -$429M — decrease of 4%, modest change within normal range.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
+[NUMERIC] fx_not_designated_notional: $8,994M → $14,050M (+56.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $320M → $1,080M (+237.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $907M → $671M (-26.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-587M → $409M (+169.7%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $-7M → $-34M (-385.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $16M, now missing
+[NUMERIC] equity_sensitivity_10pct: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[NUMERIC] fx_investment_sensitivity: $-7M → $-5M (+28.6%) — exceeds 20% threshold
+[NUMERIC] equity_price_sensitivity: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional increased by 3% from prior period (52784 to 54543), but is within plausibility.
+[LLM_FLAG] ir_swap_notional increased by 2.6% (1166 to 1180), within reasonable range.
+[LLM_FLAG] engaged in substantial use of equity derivatives with a net amount (purchased and sold) declining (7198 vs. 7364 in prior).
+[LLM_FLAG] interest_rate_sensitivity changed from -1462 to -1230, a reduction of more than 50%, indicating a potential change in interest rate risk management strategy.
+[LLM_FLAG] equity_sensitivity_10pct changed from -1847 to -2248, indicating an increase in sensitivity to equity market price changes.
+>>>>>>> origin/master
 
 === 10-Q | Period ending 2025-12-31 | Processed 2026-06-11 ===
 [HISTORICAL] [NUMERIC] total_derivative_asset: $1,575M → $320M (-79.7%) — exceeds 20% threshold

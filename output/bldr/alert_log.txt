@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] revolving_facility_interest_rate: was $0M, now missing
+[NUMERIC] revolving_facility_outstanding_amount: $2M → $165M (+8150.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fixed_rate_notes: was $0M, now missing
+[DISAPPEARED_FIELD] commodity_exposure: was $1M, now missing
+[DISAPPEARED_FIELD] freight_cost_exposure: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (equity_sensitivity_10pct, revolving_facility_interest_rate, fixed_rate_notes, commodity_exposure, freight_cost_exposure)
+[LLM_FLAG] revolving_facility_outstanding_amount changed from 2.0 to 165.0 (>50% change). Prior value of 2.0 may have been a different unit or a minimal draw; current filing clearly states $165.0 million outstanding as of June 30, 2026.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)

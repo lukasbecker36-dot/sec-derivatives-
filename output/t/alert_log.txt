@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-23 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($36,037M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($36,037M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $12M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] cross_currency_swaps_notional: appeared for first time ($36,037M)
+[NEW_FIELD] interest_rate_swaps_outstanding: appeared for first time ($0M)
+[NEW_FIELD] foreign_exchange_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] derivatives_policy: was $0M, now missing
+[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (fixed_rate_notes_billion, equity_sensitivity_10pct, derivatives_policy)
+[LLM_FLAG] cross_currency_swaps_fair_value changed from 0.0 to -1827; this is a first-time extraction of fair value from market risk section
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
 [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($12M)

@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($122,988M)
+[NUMERIC] marketable_equity_securities_fv: $2,801M → $4,687M (+67.3%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $86,595M → $59,431M (-31.4%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $13M → $7M (-46.2%) — exceeds 20% threshold
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-82M)
+[NUMERIC] fx_sensitivity_10pct: $-2,200M → $-2,795M (-27.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $14M, now missing
+[NUMERIC] marketable_equity_value: $3,800M → $7,400M (+94.7%) — exceeds 20% threshold
+[NUMERIC] equity_sensitivity_10pct: $-380M → $-740M (-94.7%) — exceeds 20% threshold
+[NEW_FIELD] restricted_cash_amounts: appeared for first time ($2,714M)
+[DISAPPEARED_FIELD] long_term_debt_face_value: was $14M, now missing
+[LLM_FLAG] marketable_equity_securities_fv changed from 2801.0 to 4687 (67% increase, >50% threshold)
+[LLM_FLAG] corporate_debt_securities_fv changed from 86595.0 to 59431 (31% decrease, >50% threshold from prior but within range)
+[LLM_FLAG] total_cash_equivalents_fv changed from 143089.0 to 125702 (12% decrease)
+[LLM_FLAG] fx_sensitivity_10pct changed from -2200.0 to -2795 (27% increase in magnitude)
+[LLM_FLAG] marketable_equity_value changed from 3800.0 to 7400 (95% increase, >50% threshold)
+[LLM_FLAG] equity_sensitivity_10pct changed from -380.0 to -740 (95% increase in magnitude, >50% threshold) — note: calculated as 10% of publicly traded equity value; text says private company sensitivities 'are not practicable'
+[LLM_FLAG] Amazon uses Euro- and CAD-denominated Notes ($20.7B) as net investment hedges rather than FX derivative contracts
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NUMERIC] marketable_equity_securities_fv: $3,687M → $2,801M (-24.0%) — exceeds 20% threshold
 [NUMERIC] corporate_debt_securities_fv: $69,585M → $86,595M (+24.4%) — exceeds 20% threshold

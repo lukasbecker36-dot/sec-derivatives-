@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,057M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($200M)
+[NUMERIC] total_derivative_asset: $55M → $6M (-89.9%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($50M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-44M)
+[NUMERIC] cash_flow_hedge_aoci: $300M → $-51M (-117.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $6M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $51M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-45M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-50M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/7 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, equity_sensitivity_10pct)
+[LLM_FLAG] total_derivative_asset: $5.6M vs prior $55.2M (-89.9%). The $300M in interest rate swaps expired on April 15, 2026, and remaining FX derivative contract notional is much smaller ($57.4M vs $23.2M at Dec 2025 for FX forwards, but cross-currency swaps declined from $1.1B to $1.0B). Fair value table confirms only $0.2M IR assets and $5.4M FX assets remain.
+[LLM_FLAG] cash_flow_hedge_aoci: -$50.9M vs prior $300.0M. The prior value of $300M appears anomalous for Pentair's scale; current period shows -$51.1M in cross-currency swap AOCI losses plus +$0.2M in IR swap/collar AOCI gains. Dec 2025 figures were -$68.0M (CCS) and -$0.2M (IR) = -$68.2M, consistent with current period direction.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($55M)
 [NEW_FIELD] ir_swap_notional: appeared for first time ($300M)

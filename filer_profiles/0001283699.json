@@ -17,7 +17,9 @@
   "idiosyncrasies": {
     "recurring_phrases": [
       "fair value hedge",
-      "cross-currency"
+      "cross-currency",
+      "notional amount",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -76,6 +78,18 @@
       ],
       "fields_extracted": 3,
       "fields_null": 8
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-07-24T09:20:24Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 8,
+      "fields_null": 15
     }
   ]
 }

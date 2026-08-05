@@ -15,7 +15,21 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "net investment hedge",
+      "cash flow hedge",
+      "fair value hedge",
+      "cross currency",
+      "interest rate swap",
+      "commodity contract",
+      "notional amount",
+      "unrealized gain",
+      "hedge ineffectiveness",
+      "designated as hedging",
+      "de-designated",
+      "aoci",
+      "accumulated other comprehensive"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -74,6 +88,18 @@
         "market_risk"
       ],
       "fields_extracted": 0,
+      "fields_null": 9
+    },
+    {
+      "filing_date": "2026-05-31",
+      "form_type": "10-Q",
+      "period_end": "2026-05-31",
+      "processed_at": "2026-06-26T09:18:14Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 12,
       "fields_null": 9
     }
   ]

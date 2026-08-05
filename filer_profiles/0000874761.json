@@ -17,7 +17,10 @@
   "idiosyncrasies": {
     "recurring_phrases": [
       "interest rate swap",
-      "commodity contract"
+      "commodity contract",
+      "cash flow hedge",
+      "commodity derivative",
+      "designated as hedging"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -79,6 +82,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 24
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-05T09:28:39Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 13,
+      "fields_null": 12
     }
   ]
 }

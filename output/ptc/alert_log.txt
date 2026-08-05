@@ -1,3 +1,30 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,468M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($527M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($941M)
+[NUMERIC] total_derivative_asset: $1,059M → $5M (-99.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $536M → $8M (-98.6%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $523M → $-3M (-100.5%) — exceeds 20% threshold
+[NUMERIC] fx_transaction_gain_loss: $8M → $-2M (-132.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $5M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $2M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] fx_forward_notional: appeared for first time ($854M)
+[NEW_FIELD] fx_option_notional: appeared for first time ($87M)
+[NEW_FIELD] net_investment_hedge_notional: appeared for first time ($527M)
+[NEW_FIELD] gains_losses_other_income: appeared for first time ($-2M)
+[NEW_FIELD] aoci_net_investment_hedge: appeared for first time ($14M)
+[DISAPPEARED_FIELD] fx_sensitivity_eur: was $678M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_jpy: was $143M, now missing
+[VALIDATION] Likely extraction failure: 6/10 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, marketable_equity_value, equity_sensitivity_10pct, fx_sensitivity_eur...)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 1,059 to 5 (0x)
+[VALIDATION] Likely units mismatch: net_derivative_position changed from 523 to -3 (0x)
+[LLM_FLAG] total_derivative_asset changed from 1059.158 to 5.065 (>99% decrease) — prior value appears anomalous or in different units; current $5.065M is consistent with company's scale of FX hedging
+[LLM_FLAG] total_derivative_liability changed from 535.811 to 7.573 (>98% decrease) — same observation as above
+[LLM_FLAG] net_derivative_position changed from 523.347 to -2.508 — sign flipped from net asset to net liability
+[LLM_FLAG] FX notional amounts are reported in thousands in the filing; converted to millions for output
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,059M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($536M)

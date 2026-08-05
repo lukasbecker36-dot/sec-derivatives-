@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-04 ===
+[NUMERIC] fx_designated_notional: $1,596M → $10,154M (+536.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $6M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $22M → $44M (+100.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1,042M)
+[LLM_FLAG] fx_designated_notional ($10,154M) vs prior ($1,596M) is +536%; prior extraction likely excluded cash flow hedge notional ($8,662M) and counted only net investment hedge forwards
+[LLM_FLAG] expected_12mo_reclass_from_aoci ($44M) vs prior ($22M) is +100%; current total includes cash flow hedge reclassification ($21M) plus net investment hedge excluded-component amortization ($23M)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($14,630M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($1,596M)

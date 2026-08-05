@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-23 ===
+[NUMERIC] commodity_not_designated_notional: $439M → $570M (+29.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $617M → $747M (+21.1%) — exceeds 20% threshold
+[NUMERIC] net_asset: $290M → $446M (+53.8%) — exceeds 20% threshold
+[NUMERIC] net_liability: $-131M → $-257M (-96.2%) — exceeds 20% threshold
+[NEW_FIELD] fx_oci_gain_loss: appeared for first time ($-11M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $9M → $5M (-44.4%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci_balance: $36M → $19M (-47.2%) — exceeds 20% threshold
+[LLM_FLAG] fx_designated_notional increased from 7011 to 7593 (+8.3%), consistent with normal business growth
+[LLM_FLAG] fx_not_designated_notional increased from 36964 to 38061 (+3.0%)
+[LLM_FLAG] commodity_not_designated_notional increased from 439 to 570 (+29.8%), significant increase in commodity hedging
+[LLM_FLAG] total_notional increased from 44414 to 46224 (+4.1%)
+[LLM_FLAG] total_derivative_asset increased from 904 to 939 (+3.9%)
+[LLM_FLAG] total_derivative_liability increased from 617 to 747 (+21.1%)
+[LLM_FLAG] expected_12mo_reclass_from_aoci decreased from 9 to 5 (-44.4%)
+[LLM_FLAG] cash_flow_hedge_aoci_balance decreased from 36 to 19 (-47.2%), reflecting gains reclassified to earnings
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-04-23 ===
 [DISAPPEARED_FIELD] fx_oci_gain_loss: was $54M, now missing
 [DISAPPEARED_FIELD] fx_sensitivity_10pct: was $100M, now missing

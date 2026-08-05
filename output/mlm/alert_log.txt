@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($7M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NUMERIC] interest_rate_sensitivity: $30M → $7M (-76.7%) — exceeds 20% threshold
+[NEW_FIELD] revolving_facility_amount: appeared for first time ($800M)
+[LLM_FLAG] variable_rate_facilities: prior value was 0.0, now 655 -- new disclosure or previously missed; the $655M represents the combined outstanding balance on the $800M Revolving Facility and $600M Trade Receivable Facility as of June 30, 2026
+[LLM_FLAG] interest_rate_sensitivity: prior value was 30.0, now 7 -- 76.7% decrease. The prior value may have been from a different metric or period; current value of $7M is specifically the 100bp sensitivity on $655M variable-rate borrowings
+[LLM_FLAG] energy_cost_sensitivity: prior value was 0.0, now 29 -- new disclosure of $29M for 10% energy price change
+[LLM_FLAG] trade_receivable_facility: prior value was 0.0, now 600 -- the $600M Trade Receivable Facility is clearly stated in the filing; prior extraction may have missed this
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)

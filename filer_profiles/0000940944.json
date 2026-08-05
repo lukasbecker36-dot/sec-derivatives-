@@ -25,7 +25,9 @@
       "notional value",
       "designated as hedging",
       "aoci",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "cash flow hedge",
+      "unrealized gain"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -87,6 +89,18 @@
       ],
       "fields_extracted": 9,
       "fields_null": 21
+    },
+    {
+      "filing_date": "2026-05-31",
+      "form_type": "10-K",
+      "period_end": "2026-05-31",
+      "processed_at": "2026-07-27T09:21:03Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 11,
+      "fields_null": 19
     }
   ]
 }

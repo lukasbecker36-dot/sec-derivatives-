@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
+[NUMERIC] fx_designated_notional: $345M → $3,993M (+1057.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[NUMERIC] total_derivative_asset: $144M → $191M (+32.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $139M → $85M (-38.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $5M → $106M (+2020.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-91M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[VALIDATION] Likely extraction failure: 3/9 previously-populated fields are now null (ir_swap_notional, cash_flow_hedge_aoci, fx_forwards_outstanding)
+[LLM_FLAG] net_derivative_position changed from 5.0 to 106.0 (>50% change) driven by asset increase and liability decrease vs prior
+[LLM_FLAG] total_derivative_asset changed from 144.0 to 191.0 (33% increase)
+[LLM_FLAG] fx_designated_notional changed from 345.0 to 3993.0 — large increase likely reflects inclusion of net investment hedge forward contracts ($3,337M) that may not have been included previously
+[LLM_FLAG] Commodity derivatives notional listed as N/A in the table; notional not disclosed in dollar terms
+[LLM_FLAG] No active interest rate swaps disclosed; company states it has 'historically used' IR swaps
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $12,940M, now missing

@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
+[NUMERIC] fx_designated_notional: $2,583M → $4,491M (+73.9%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $4,741M → $3,268M (-31.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $7M → $81M (+1057.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $66M → $107M (+62.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-59M → $-26M (+55.9%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $23M → $8M (-65.2%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $23M → $44M (+91.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[LLM_FLAG] fx_designated_notional changed from 2583 to 4491 (+74%), driven by Cash Flow hedge notional increasing from 1738 to 1925 and reclassification/methodology differences
+[LLM_FLAG] total_derivative_asset changed from 7.0 to 81.0 (prior value may be from an earlier period with different FV environment)
+[LLM_FLAG] total_derivative_liability changed from 66.0 to 107.0 (+62%)
+[LLM_FLAG] net_derivative_position changed from -59.0 to -26.0 (improved by 56%)
+[LLM_FLAG] cash_flow_hedge_aoci changed from 23.0 to 8.0 (-65%)
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed from 23.0 to 44.0 (+91%); current includes CF hedges $8 + NI hedges $30 + IR hedges $6
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NUMERIC] total_derivative_asset: $44M → $7M (-84.1%) — exceeds 20% threshold
 [NUMERIC] total_derivative_liability: $137M → $66M (-51.8%) — exceeds 20% threshold

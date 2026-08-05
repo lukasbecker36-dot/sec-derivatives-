@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-06-28 | Processed 2026-08-03 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($134M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($134M)
+[NUMERIC] total_derivative_asset: $139M → $1M (-99.4%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $139M → $-1M (-100.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $1M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $1M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, equity_sensitivity_10pct)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 139 to 1 (0x)
+[VALIDATION] Likely units mismatch: net_derivative_position changed from 139 to -1 (0x)
+[LLM_FLAG] total_derivative_asset changed from 139.0 to 0.823 (-99.4%); prior value appears anomalous for Teradyne's scale — current fair values are in thousands (823 thousand = $0.823M)
+[LLM_FLAG] total_derivative_liability changed from 0.0 to 2.045; new liability position
+[LLM_FLAG] net_derivative_position changed from 139.0 to -1.222; swung from large net asset to small net liability — prior value likely erroneous
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($139M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

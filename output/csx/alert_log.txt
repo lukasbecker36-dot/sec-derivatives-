@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-23 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,300M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($13M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($94M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-81M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $1,300M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $92M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-92M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $500M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] notional_amounts: was $87M, now missing
+[DISAPPEARED_FIELD] hedge_designation: was $-87M, now missing
+[DISAPPEARED_FIELD] underlying_debt_maturity: was $-1M, now missing
+[DISAPPEARED_FIELD] reference_rate: was $0M, now missing
+[VALIDATION] Likely extraction failure: 9/9 previously-populated fields are now null (cash_flow_hedge_aoci, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, equity_sensitivity_10pct...)
+[LLM_FLAG] Prior cash_flow_hedge_aoci was 1300.0 which appears to be a prior data error — that matches the IR swap notional, not an AOCI balance
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($1,300M)
 [NEW_FIELD] total_derivative_liability: appeared for first time ($92M)

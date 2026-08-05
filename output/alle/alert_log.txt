@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($341M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($0M)
+[DISAPPEARED_FIELD] has_derivatives: was $343M, now missing
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($341M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $343M, now missing
+[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (has_derivatives, total_derivative_asset, equity_sensitivity_10pct)
+[LLM_FLAG] Prior value for 'has_derivatives' was 343.4 (appears to be a data type mismatch; current value is 'Yes')
+[LLM_FLAG] Prior value for 'equity_derivatives_notional' was 'Yes' (appears to be a data type mismatch; current value is null)
+[LLM_FLAG] Prior value for 'total_derivative_asset' was 343.4 but current is null/not material (>50% change; prior value may have been the notional amount rather than derivative asset fair value)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($343M)
 [DISAPPEARED_FIELD] has_derivatives: was $320M, now missing

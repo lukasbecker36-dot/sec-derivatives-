@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NUMERIC] fx_derivatives_notional: $4,800M → $6,400M (+33.3%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $980M → $1,180M (+20.4%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $39M → $70M (+79.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $101M → $122M (+20.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[LLM_FLAG] fx_derivatives_notional changed from 4800.0 to 6400 (33% increase) - prior value was FX forwards only ($4.8B); current value includes FX forwards ($4.8B) + net investment hedge FX forwards ($1.1B) + cross-currency swaps ($0.5B) = $6.4B
+[LLM_FLAG] ir_swap_notional changed from 980.0 to 1180 (20% increase) - due to new $350M interest rate swaps entered in H1 2026 on 2054 debt, partially offset by reduction in 2030 swaps from $765M to $680M
+[LLM_FLAG] total_derivative_asset changed from 39.0 to 70 (79% increase) - designated derivative assets increased significantly
+[LLM_FLAG] total_derivative_liability changed from 101.0 to 122 (21% increase) - driven by increase in designated derivative liabilities
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NUMERIC] fx_designated_notional: $989M → $1,300M (+31.4%) — exceeds 20% threshold
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($3,500M)

@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $0M, now missing
+[DISAPPEARED_FIELD] equity_derivatives_notional: was $0M, now missing
+[NUMERIC] cash_flow_hedge_aoci: $-11M → $-4M (+63.6%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $4M → $-4M (-200.0%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $2M → $7M (+250.0%) — exceeds 20% threshold
+[LLM_FLAG] cash_flow_hedge_aoci changed from -11.0 to -4 (63.6% change). No active cash flow hedges remain (both FX and IR cash flow hedges had zero contracts outstanding at both June 30, 2026 and December 31, 2025). The residual AOCI balance is declining as prior-period hedge losses amortize to earnings ($3M reclassified in H1 2026).
+[LLM_FLAG] The $810M net investment hedge liability represents EUR 750 million of 1.3% senior notes due May 2029 designated as a net investment hedge of European operations; this is a nonderivative hedging instrument (debt) classified alongside derivatives in the balance sheet table. The prior EUR 600M notes (due May 2025) were dedesignated in March 2025 and repaid.
+[LLM_FLAG] fx_sensitivity_10pct changed from 2.0 to 7.0 (250% increase). The $7M sensitivity to a 10% USD weakening reflects the current portfolio of FX contracts ($204M notional); the prior $2M figure likely corresponded to a smaller or differently structured FX book.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NUMERIC] fx_derivatives_notional: $323M → $187M (-42.1%) — exceeds 20% threshold
 [DISAPPEARED_FIELD] fx_designated_notional: was $0M, now missing

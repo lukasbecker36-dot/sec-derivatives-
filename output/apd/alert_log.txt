@@ -1,3 +1,26 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,135M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($703M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] net_financial_instrument_position: appeared for first time ($-17,000M)
+[NUMERIC] debt_composition_fixed_rate_percent: $-1,044M → $92M (+108.8%) — exceeds 20% threshold
+[NUMERIC] debt_composition_variable_rate_percent: $-734M → $8M (+101.1%) — exceeds 20% threshold
+[NEW_FIELD] interest_rate_sensitivity_100bp_up_fixed: appeared for first time ($-1,010M)
+[NEW_FIELD] interest_rate_sensitivity_100bp_down_fixed: appeared for first time ($1,135M)
+[NUMERIC] fx_sensitivity_10_percent: $-16,800M → $703M (+104.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] operating_income_fx_sensitivity_cny: was $92M, now missing
+[DISAPPEARED_FIELD] operating_income_fx_sensitivity_eur: was $8M, now missing
+[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (equity_sensitivity_10pct, operating_income_fx_sensitivity_cny, operating_income_fx_sensitivity_eur)
+[LLM_FLAG] Section text appears to be a partial/truncated extract that begins mid-sentence and covers NGHC balance sheet, JIGPC JV, World Energy exit, and business/asset actions rather than the primary derivatives note tables. Notional amounts, fair value tables, and AOCI detail for derivatives are absent from this section.
+[LLM_FLAG] Prior value for equity_derivatives_notional was 'Yes' (non-numeric); current value is null/not_found. The prior value appears to be a data type error from a previous extraction.
+[LLM_FLAG] Text references cross-currency interest rate swaps terminated in connection with early repayment of intercompany loans for a China gasification project (Note 4 footnote A), and interest rate swaps re-designated as cash flow hedges at NGHC, but no notional or fair value figures are provided in this section.
+[LLM_FLAG] Prior value for debt_composition_fixed_rate_percent was -1044.0; current value is 92. The prior value appears to be erroneous/corrupted (negative percentage is not valid for debt composition). Current value of 92% is consistent with the filing text.
+[LLM_FLAG] Prior value for debt_composition_variable_rate_percent was -734.0; current value is 8. The prior value appears to be erroneous/corrupted. Current value of 8% is consistent with the filing text.
+[LLM_FLAG] Prior value for fx_sensitivity_10_percent was -16800.0; current value is 703. The prior value appears to be erroneous/corrupted (magnitude and sign inconsistent with typical market risk disclosures). Current value of $703M is consistent with the filing text.
+[LLM_FLAG] fx_sensitivity_10_percent increased from $565M (30 Sep 2025) to $703M (30 Jun 2026), a 24% increase. The filing attributes this to origination of cross currency interest rate swaps between the U.S. Dollar and each of the Chinese Renminbi, South Korean Won, and New Taiwan Dollar.
+[LLM_FLAG] interest_rate_sensitivity decreased from $1,290M to $1,135M (100bp down) and from $1,128M to $1,010M (100bp up), consistent with the maturity of interest rate swaps designated as fair value hedges during October 2025 and the repayment of the 1.50% U.S. senior note.
+[LLM_FLAG] net_financial_instrument_position reported as $17.0 billion liability (converted to -17000 in millions). Text states 'billion' explicitly.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1,044M)

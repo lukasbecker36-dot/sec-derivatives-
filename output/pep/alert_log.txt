@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-06-13 | Processed 2026-07-10 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,900M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($2,000M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($1,600M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($207M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($156M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($51M)
+[LLM_FLAG] Section text is truncated — contains only the introductory paragraph of Note 8 with no numerical data. The detailed financial instruments data (notionals, fair values, etc.) appears in the derivatives_note section.
+[LLM_FLAG] Notional amounts are stated 'in billions' per footnote (a) — converted to millions for all notional fields.
+[LLM_FLAG] FX notional combines foreign exchange contracts ($2.9B) and cross-currency contracts ($1.0B) per schema definition.
+[LLM_FLAG] FX designated vs. non-designated notional split is not provided in the notional table — only the fair value table shows designation categories. Set to null.
+[LLM_FLAG] Cash flow hedge AOCI balance is not disclosed as a stock figure in this section — only period changes are shown in the gains/losses tables.
+[LLM_FLAG] PepsiCo designated $4.5B of existing euro debt plus $2.9B of newly issued euro debt as net investment hedges during the 24-week period — these are non-derivative instruments, not included in FX derivative notionals.
+[LLM_FLAG] Cross-currency swap notional decreased from $1.7B to $1.0B as $0.7B matured; post-period, $0.3B new Thai baht swaps entered.
+[LLM_FLAG] Celsius Holdings available-for-sale debt security valued at $1,453M (Level 3) with $371M unrealized loss in 24 weeks ended 6/13/2026.
+[LLM_FLAG] Poppi (VNGR Beverage) contingent consideration liability at $117M fair value, down $161M in 24 weeks — signals potential milestone shortfall.
+[LLM_FLAG] Item 3 (Quantitative and Qualitative Disclosures About Market Risk) is a cross-reference only — refers readers to Item 2 MD&A Business Risks section and Note 9 of the 2025 10-K. No quantitative market risk data is disclosed in this section.
+[LLM_FLAG] Key market risk data (variable debt %, sensitivities, hedge terms) is in the derivatives note and MD&A sections rather than this standalone Item 3 section.
+
 === 10-Q | Period ending 2026-03-21 | Processed 2026-06-08 ===
 [LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaGxHFGdzYHE7fYFBfi'}
 [LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbqaH4KdseoB9GmmdawWQ'}

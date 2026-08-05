@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-05-28 | Processed 2026-06-26 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($22,095M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($9,664M)
+[NUMERIC] fx_not_designated_notional: $6,942M → $12,431M (+79.1%) — exceeds 20% threshold
+[NUMERIC] commodity_derivatives_notional: $4,106M → $406M (-90.1%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_asset: appeared for first time ($146M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($161M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-15M)
+[LLM_FLAG] fx_not_designated_notional: $12,431M vs prior $6,942M — 79% increase. Driven by significant growth in non-designated currency hedges (prior period Aug 2025 showed $3,477M, indicating rolling hedge program has expanded substantially).
+[LLM_FLAG] commodity_derivatives_notional: $406M vs prior $4,106M — 90% decrease. However, the prior value of $4,106M appears to be a data error (the Aug 2025 figure from this filing shows $393M, consistent with current $406M). The prior value may have been confused with cash flow currency hedges.
+
 === 10-Q | Period ending 2026-02-26 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [DISAPPEARED_FIELD] fx_derivatives_notional: was $12M, now missing

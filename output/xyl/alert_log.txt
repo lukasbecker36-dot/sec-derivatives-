@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
+[NUMERIC] fx_derivatives_notional: $563M → $4,665M (+728.6%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $31M → $4,665M (+14948.4%) — exceeds 20% threshold
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $2M → $6M (+200.0%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($241M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-235M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $31M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $8M → $-8M (-200.0%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: fx_designated_notional changed from 31 to 4,665 (150x)
+[LLM_FLAG] fx_derivatives_notional changed from prior 563.0 to 4665 (>50% increase). Current value includes both FX forwards ($374M) and cross-currency swaps ($4,291M) as the schema specifies 'forwards + options + cross-currency swaps combined'. The prior value of 563.0 may have excluded cross-currency swaps.
+[LLM_FLAG] fx_designated_notional changed from prior 31.0 to 4665. The prior value of 31.0 appears anomalously low and may reflect a different extraction methodology or period.
+[LLM_FLAG] total_derivative_asset changed from prior 2.0 to 6 (200% increase). The change reflects a shift from cash flow hedge assets ($7M at Dec 2025, now $0) to net investment hedge assets ($0 at Dec 2025, now $6M).
+[LLM_FLAG] expected_12mo_reclass_from_aoci: prior was 8.0, current is -8 (net loss). The magnitude is unchanged at $8M but the sign indicates a net loss position vs the prior unsigned value.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [NUMERIC] fx_derivatives_notional: $759M → $563M (-25.8%) — exceeds 20% threshold

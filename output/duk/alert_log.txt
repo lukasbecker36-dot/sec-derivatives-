@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,997M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,997M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($7,352M)
+[NUMERIC] total_derivative_asset: $1,997M → $383M (-80.8%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($283M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($100M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $7,327M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $327M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $283M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $44M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct)
+[LLM_FLAG] total_derivative_asset changed from 1997.0 to 383 (>50% decrease) - prior value of 1997.0 appears to have been the FX cross-currency swap notional amount, not the total derivative fair value asset
+[LLM_FLAG] cash_flow_hedge_aoci: prior was 7327.0 but current value not found - prior value appears to have been the total IR swap notional, not the AOCI balance; the actual AOCI reclassifications were 'not material' per the filing
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,997M)
 [NEW_FIELD] ir_swap_notional: appeared for first time ($7,327M)

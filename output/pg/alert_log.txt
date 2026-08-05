@@ -1,3 +1,16 @@
+=== 10-K | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NUMERIC] fx_derivatives_notional: $4,211M → $17,733M (+321.1%) — exceeds 20% threshold
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $88M → $176M (+100.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $568M → $401M (-29.4%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-480M → $-225M (+53.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $10M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $124M, now missing
+[LLM_FLAG] fx_derivatives_notional changed from 4211 to 17733 (>50% change). Prior value of 4211 appears to have captured only not-designated FX contracts; current value of 17733 includes designated net investment hedge contracts ($13,587M) plus not-designated ($4,146M) per schema definition of total FX notional.
+[LLM_FLAG] total_derivative_asset changed from 88 to 176 (100% increase). Increase reflects $170M in net investment hedge foreign currency swap assets that were zero in the prior period.
+[LLM_FLAG] total_derivative_liability changed from 568 to 401 (29.4% decrease). Reduction driven by lower net investment hedge liabilities ($173M vs prior period significant liability) and lower IR swap liabilities.
+[LLM_FLAG] net_derivative_position changed from -480 to -225 (53% improvement). Driven by favorable FX swap mark-to-market and reduced IR swap liabilities.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NUMERIC] total_derivative_asset: $33M → $88M (+166.7%) — exceeds 20% threshold
 [NUMERIC] total_derivative_liability: $712M → $568M (-20.2%) — exceeds 20% threshold

@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
+[DISAPPEARED_FIELD] fx_designated_notional: was $3,605M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $0M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/7 previously-populated fields are now null (fx_designated_notional, total_derivative_asset, total_derivative_liability, net_derivative_position, fx_forwards_outstanding)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,605M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($3,605M)

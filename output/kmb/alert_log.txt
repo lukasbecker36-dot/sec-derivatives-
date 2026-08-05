@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NUMERIC] ir_swap_notional: $325M → $4,625M (+1323.1%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $5M → $-2M (-140.0%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional increased from prior 325.0 to 4625.0 (1323% increase). This is driven by KMB entering $4.3B forward-starting interest rate swaps in Q2 2026 in anticipation of fixed-rate debt issuance for the Kenvue Acquisition, in addition to the existing $325M fair value hedge IR contracts.
+[LLM_FLAG] fx_not_designated_notional increased from prior 4600.0 to 5400.0 (17% increase).
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed from prior 5.0 to -2.0 (losses). The sign reversal and magnitude change (140%) reflects the shift to net losses expected to be reclassified, likely influenced by the forward-starting IR swaps.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [DISAPPEARED_FIELD] fx_designated_notional: was $2,300M, now missing
 [NUMERIC] ir_swap_notional: $425M → $325M (-23.5%) — exceeds 20% threshold

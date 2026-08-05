@@ -1,3 +1,28 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($7,250M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($20M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($1,746M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $7,100M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $1,380M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $25M, now missing
+[NUMERIC] ir_sensitivity_100bp: $1,380M → $-766M (-155.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-1,355M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] fair_value_sensitivity: appeared for first time ($-766M)
+[NEW_FIELD] unrealized_loss_position: appeared for first time ($-1,000M)
+[DISAPPEARED_FIELD] credit_rating: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (cash_flow_hedge_aoci, fx_forwards_outstanding, fx_transaction_gain_loss, fx_sensitivity_10pct, equity_sensitivity_10pct...)
+[LLM_FLAG] equity_derivatives_notional: prior value was 'Yes' (string, not a number). Humana has put and call options related to the WCAS primary care partnership valued at $1.6B and $20M respectively, but these are not standard equity derivatives with a notional amount — they are embedded options measured via Monte Carlo simulation.
+[LLM_FLAG] cash_flow_hedge_aoci: prior value was $7,100M but no AOCI balance is disclosed in this section. The swaps are described as reducing swap liabilities of $146M and $51M, suggesting fair value hedges rather than cash flow hedges.
+[LLM_FLAG] ir_swap_notional increased from implied prior to $7,250M — total swap notional grew from $6,500M (Dec 2025) to $7,250M (Jun 2026), an increase of $750M across multiple tranches.
+[LLM_FLAG] fx_forwards_outstanding: prior value was $1,380M but no FX forwards are mentioned in this market risk section. Humana is a healthcare insurer, not typically exposed to FX derivatives. Prior value may have been erroneous or from a different section.
+[LLM_FLAG] fx_transaction_gain_loss: prior value was $25M but no FX transaction gains/losses are disclosed here.
+[LLM_FLAG] ir_sensitivity_100bp: prior value was $1,380M, current value is -$766M — a 44% decrease. The change aligns with the shorter portfolio duration (3.3 years vs prior period) and different portfolio size.
+[LLM_FLAG] fx_sensitivity_10pct: prior value was -$1,355M but no FX sensitivity is disclosed. This prior value appears erroneous for a US healthcare insurer.
+[LLM_FLAG] credit_rating: prior value was 0.0 (numeric), current value is 'AA-' (string). The field should be a credit rating, not a number.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($7,100M)
 [NEW_FIELD] equity_derivatives_notional: appeared for first time ($1,380M)

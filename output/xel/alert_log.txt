@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($130M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $130M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $68M → $-3M (-104.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $16M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $4M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $12M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $1M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 7/8 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion...)
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed from prior 68.0 to -3 (>50% change and sign reversal); prior value of 68 appears erroneous and may have been confused with another field
+[LLM_FLAG] Prior cash_flow_hedge_aoci of 130.0 exactly matches the IR swap notional of $130M, suggesting a prior extraction error
+[LLM_FLAG] Fair value table for derivative assets/liabilities was truncated in the extracted section text, preventing extraction of total_derivative_asset and total_derivative_liability
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($130M)
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($68M)

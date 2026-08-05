@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-26 | Processed 2026-07-22 ===
+[NUMERIC] fx_derivatives_notional: $7,795M → $5,100M (-34.6%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $7,154M → $5,100M (-28.7%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] fx_not_designated_notional: $641M → $0M
+[DROPPED_TO_ZERO] ir_swap_notional: $1,600M → $0M
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $342M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $3M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[VALIDATION] Likely extraction failure: 3/7 previously-populated fields are now null (cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_forwards_outstanding)
+[LLM_FLAG] fx_derivatives_notional decreased from 7,795 to 5,100 (35% decline) as net investment hedge cross-currency contracts matured ($3,000 → $2,500 outstanding).
+[LLM_FLAG] ir_swap_notional decreased from 1,600 to 0 — all interest rate swaps were settled in 2019/2021; only the AOCI amortization remains.
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($7,795M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($7,154M)

@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] market_risk_exposure: was $0M, now missing
+[NEW_FIELD] variable_rate_debt: appeared for first time ($0M)
+[DISAPPEARED_FIELD] contingent_earnout_valuation: was $0M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (equity_sensitivity_10pct, market_risk_exposure, contingent_earnout_valuation)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)

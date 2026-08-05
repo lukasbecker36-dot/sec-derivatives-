@@ -1,3 +1,30 @@
+=== 10-Q | Period ending 2026-06-28 | Processed 2026-07-31 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($146M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($84M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($62M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($504M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($34M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($13M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($16M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-3M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $973M → $8M (-99.2%) — exceeds 20% threshold
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($233M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($24M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] foreign_currency_forward_contracts_sell: was $236M, now missing
+[DISAPPEARED_FIELD] foreign_currency_forwards_fair_value: was $39M, now missing
+[NEW_FIELD] interest_rate_sensitivity_variable_debt: appeared for first time ($3M)
+[NEW_FIELD] interest_rate_sensitivity_fixed_debt: appeared for first time ($233M)
+[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($24M)
+[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (equity_sensitivity_10pct, foreign_currency_forward_contracts_sell, foreign_currency_forwards_fair_value)
+[VALIDATION] Likely units mismatch: expected_12mo_reclass_from_aoci changed from 973 to 8 (0x)
+[LLM_FLAG] expected_12mo_reclass_from_aoci: prior value was 973.1 vs current 8.0 (>50% change). The prior value of 973.1 appears to have been a mapping error (likely the commodity notional of $973,083 thousand from Dec 2025). The current $8.0 million is the correctly extracted 12-month AOCI reclass estimate.
+[LLM_FLAG] equity_derivatives_notional: prior value was 'Yes' (string) vs current 34.3 (numeric). Prior appears to have been a has/has-not indicator rather than a notional amount.
+[LLM_FLAG] foreign_currency_forward_contracts_sell: prior value was 236.0 but this field is not available in the current market risk section (no buy/sell breakdown disclosed). Prior value may have been from a different section or period.
+[LLM_FLAG] foreign_currency_forwards_fair_value: prior value was 38.7, which matches the Dec 2025 FX sensitivity ($38.7M), not a fair value. Current FX sensitivity is $23.9M (38% decrease from prior).
+[LLM_FLAG] commodity_hedging_horizon: prior value '95.0, Euros; Malaysian ringgit; British pound' appears to have been a mapping error from a different field. Current value is the correct hedging horizon text.
+[LLM_FLAG] major_commodities: prior value '259.0, Canadian dollars; Brazilian reals; Japanese yen' appears to have been a mapping error from FX currency data. Current value correctly lists hedged commodities.
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($973M)
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)

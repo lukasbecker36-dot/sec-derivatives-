@@ -1,3 +1,14 @@
+=== 10-K | Period ending 2026-05-31 | Processed 2026-07-30 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($110M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($110M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($6M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($0M)
+[LLM_FLAG] ir_sensitivity_100bp is extrapolated: the disclosure states 50bp = $0.4M, so 100bp is estimated at $0.8M assuming linearity. The original disclosure uses 50bp, not 100bp.
+
 === 10-Q | Period ending 2025-08-31 | Processed 2026-05-26 ===
 [LLM_FLAG] Foreign currency exposure details incomplete in excerpt - prior period stated 'less than 10% of revenue and operating income' but current period excerpt does not provide this quantification
 

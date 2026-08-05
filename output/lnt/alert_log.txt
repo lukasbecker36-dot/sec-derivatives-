@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
+[NEW_FIELD] total_derivative_liability: appeared for first time ($71M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($50M)
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $149M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $39M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $61M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-22M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct)
+[LLM_FLAG] total_derivative_asset changed from 0.0 to 121 (prior was 0.0, >50% change)
+[LLM_FLAG] commodity_derivatives_notional given in physical units (MWhs, Dths in thousands) not dollar amounts; no dollar notional provided
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($149M)

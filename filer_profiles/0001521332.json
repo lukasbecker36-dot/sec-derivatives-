@@ -18,7 +18,10 @@
     "recurring_phrases": [
       "net investment hedge",
       "interest rate swap",
-      "commodity swap"
+      "commodity swap",
+      "cash flow hedge",
+      "commodity contract",
+      "notional amount"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -80,6 +83,18 @@
       ],
       "fields_extracted": 2,
       "fields_null": 24
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-05T09:28:39Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 10,
+      "fields_null": 16
     }
   ]
 }

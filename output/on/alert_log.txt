@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-07-03 | Processed 2026-08-04 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($618M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($470M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($148M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $190M → $2M (-99.0%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($14M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-12M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-10M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_debt_total: was $2M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $102M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity: was $3M, now missing
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (equity_sensitivity_10pct, fixed_rate_debt_total, interest_rate_sensitivity, fx_sensitivity)
+[LLM_FLAG] total_derivative_asset changed from 190.5 to 2.0 (>50% decrease). Prior value of 190.5 appears to be an extraction error from a previous run -- it matches the Dec 2025 undesignated FX notional, not derivative fair value assets. Current value of 2.0 is correct per the fair value table.
+[LLM_FLAG] equity_derivatives_notional: convertible note hedges exist (0% Notes, 2031 0% Notes, 0.50% Notes) but notional is disclosed in Note 7, not in this section. Prior value was 'Yes' (existence flag); current extraction returns null for notional amount.
+[LLM_FLAG] Section text is a single-sentence cross-reference to the 2025 Form 10-K with no quantitative market risk data. All prior values (fixed_rate_debt_total=1.9, interest_rate_sensitivity=102.3, fx_sensitivity=3.0049) cannot be compared -- they likely came from the annual filing.
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($190M)
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)

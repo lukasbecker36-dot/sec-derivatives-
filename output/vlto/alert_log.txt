@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-07-03 | Processed 2026-07-30 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($410M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($410M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $994M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $584M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $410M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, marketable_equity_value, equity_sensitivity_10pct)
+[LLM_FLAG] Prior total_derivative_asset was 994.0 but no balance sheet fair values are disclosed in this section — the prior value may have been derived from notional amounts rather than fair values
+[LLM_FLAG] Prior total_derivative_liability was 584.0 and net_derivative_position was 410.0; these closely match the prior-period EUR 500M debt notional ($584M) and cross-currency swap notional ($410M), suggesting prior extraction may have confused notional with fair value
+[LLM_FLAG] Prior equity_derivatives_notional was 'Yes' which appears to be a data type mismatch (boolean vs. notional amount)
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($994M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($584M)

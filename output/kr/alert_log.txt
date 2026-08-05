@@ -1,0 +1,49 @@
+=== 10-K | Period ending 2026-01-31 | Processed 2026-06-30 ===
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($26M)
+[NUMERIC] cash_flow_hedge_aoci: $48M → $-8M (-116.7%) — exceeds 20% threshold
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($16M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($142M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($14M)
+[NEW_FIELD] fixed_rate_debt_total: appeared for first time ($15,919M)
+[NEW_FIELD] variable_rate_debt_total: appeared for first time ($88M)
+[NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($14,884M)
+[NEW_FIELD] variable_rate_debt_fair_value: appeared for first time ($91M)
+[NEW_FIELD] deferred_hedge_gain_loss_aoci: appeared for first time ($-8M)
+[LLM_FLAG] Commodity derivatives notional decreased from $32M to $26M (19% decrease year-over-year)
+[LLM_FLAG] Marketable equity value decreased from $183M to $142M (22% decrease year-over-year)
+[LLM_FLAG] Variable rate debt decreased from $150M to $88M (41% decrease year-over-year)
+
+=== 10-Q | Period ending 2025-08-16 | Processed 2026-06-30 ===
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($48M)
+
+=== 10-Q | Period ending 2025-05-24 | Processed 2026-06-30 ===
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $32M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-8M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $16M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $183M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $18M, now missing
+[DISAPPEARED_FIELD] fixed_rate_debt_total: was $15,902M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_total: was $150M, now missing
+[DISAPPEARED_FIELD] fixed_rate_debt_fair_value: was $14,497M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_fair_value: was $151M, now missing
+[DISAPPEARED_FIELD] deferred_hedge_gain_loss_aoci: was $-8M, now missing
+[VALIDATION] Likely extraction failure: 10/16 previously-populated fields are now null (commodity_derivatives_notional, cash_flow_hedge_aoci, fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct...)
+
+=== 10-K | Period ending 2025-02-01 | Processed 2026-06-30 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($32M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-8M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($16M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($183M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($18M)
+[NEW_FIELD] ir_swap_notional_outstanding: appeared for first time ($0M)
+[NEW_FIELD] forward_starting_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] treasury_lock_notional: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_debt_total: appeared for first time ($15,902M)
+[NEW_FIELD] variable_rate_debt_total: appeared for first time ($150M)
+[NEW_FIELD] fixed_rate_debt_fair_value: appeared for first time ($14,497M)
+[NEW_FIELD] variable_rate_debt_fair_value: appeared for first time ($151M)
+[NEW_FIELD] cash_flow_hedge_notional: appeared for first time ($0M)
+[NEW_FIELD] deferred_hedge_gain_loss_aoci: appeared for first time ($-8M)
+

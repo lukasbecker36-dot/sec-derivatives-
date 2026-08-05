@@ -1,3 +1,35 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($546M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($1,999M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($1,458M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($541M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $30M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $291M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $1,408M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $1,180M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $228M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $500M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] counterparty_credit_exposure: was $253M, now missing
+[DISAPPEARED_FIELD] var_trading_portfolio: was $36M, now missing
+[DISAPPEARED_FIELD] var_non_trading_portfolio: was $0M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $50M, now missing
+[DISAPPEARED_FIELD] mtm_derivative_assets_liabilities: was $0M, now missing
+[DISAPPEARED_FIELD] credit_exposure_percentage: was $0M, now missing
+[VALIDATION] Likely extraction failure: 13/13 previously-populated fields are now null (cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct...)
+[LLM_FLAG] ir_swap_notional is the sum of two line items: 'Interest Rate (USD)' $46M (commodity portfolio IR risk) + 'Interest Rate on Long-term Debt (USD)' $500M (fair value hedging of fixed-rate debt) = $546M total
+[LLM_FLAG] commodity_derivatives_notional reported in physical units only (371M MWhs power, 181M MMBtus gas, 7M gallons heating oil/gasoline), not in dollar notional; no dollar-equivalent notional disclosed
+[LLM_FLAG] No FX or equity derivatives disclosed; AEP is a US electric utility with primarily commodity and interest rate hedging
+[LLM_FLAG] cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci are disclosed in the comprehensive income / hedging impact section rather than this derivatives note excerpt
+[LLM_FLAG] Prior value for equity_derivatives_notional was 'Yes' (not a numeric value) — likely a data quality issue in prior extraction
+[LLM_FLAG] mtm_derivative_assets_liabilities changed from prior value 0.0 to $541M — prior value of 0.0 appears to be a placeholder/default rather than a genuine prior extraction; the Dec 31, 2025 figure was $387M, indicating no discontinuity
+[LLM_FLAG] Prior values for fx_transaction_gain_loss ($1,408M), ir_sensitivity_100bp ($1,180M), fx_sensitivity_10pct ($228M), fixed_rate_notes_billion ($500B), and counterparty_credit_exposure ($253M) appear to be from a different company or template — AEP is a US electric utility with no FX exposure and these figures are inconsistent with its profile
+[LLM_FLAG] This is a 10-Q interim filing; Item 7A states 'no material changes' to market risk disclosures from the 10-K. Quantitative VaR, interest rate sensitivity, and other risk metrics are not restated — they are only in the annual 10-K filing
+[LLM_FLAG] No FX derivatives or FX exposure disclosed; AEP operates entirely in the US
+[LLM_FLAG] Total long-term debt outstanding is $50,808M ($50.8B) as of June 30, 2026, up from $47,322M at Dec 31, 2025. Fixed/floating split is not explicitly broken out, though the company uses $500M in IR swaps to convert fixed to floating
+[LLM_FLAG] Cash flow hedge AOCI balance is $84M ($85M commodity + $(1)M interest rate) with $50M expected to be reclassed to net income in next 12 months — this data is in the comprehensive income note within this section text but is mapped to the derivatives_note schema
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($30M)
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($291M)

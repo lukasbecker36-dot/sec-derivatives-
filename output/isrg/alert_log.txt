@@ -1,3 +1,31 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-22 ===
+[NUMERIC] total_cash_equivalents_fv: $800M → $2,760M (+245.2%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $765M → $5,865M (+666.5%) — exceeds 20% threshold
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($129M)
+[NUMERIC] gross_unrealized_gains_debt: $20M → $6M (-68.3%) — exceeds 20% threshold
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($1,489M)
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($675M)
+[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($814M)
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($38M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($5M)
+[DISAPPEARED_FIELD] has_derivatives: was $1,291M, now missing
+[NUMERIC] fx_derivatives_notional: $538M → $1,489M (+176.7%) — exceeds 20% threshold
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($814M)
+[DISAPPEARED_FIELD] ir_swap_notional: was $20M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $3M, now missing
+[NEW_FIELD] total_derivative_asset: appeared for first time ($38M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($5M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($33M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 4/10 previously-populated fields are now null (has_derivatives, ir_swap_notional, commodity_derivatives_notional, equity_sensitivity_10pct)
+[LLM_FLAG] total_cash_equivalents_fv increased from 799.6 to 2,760.4 (>50% change). The prior value appears to be from a much earlier period; Dec 2025 was $3,368.0M.
+[LLM_FLAG] gross_unrealized_gains_debt decreased from 19.9 to 6.3 (68% decline), driven by higher interest rates reducing mark-to-market on the debt securities portfolio.
+[LLM_FLAG] corporate_debt_securities_fv increased from 465.0 to 493.5 as ISRG added to its corporate bond holdings.
+[LLM_FLAG] fx_derivatives_notional increased from 538.2 to 1,489.0 (>50% change). Prior value of 538.2 likely reflected only designated notional (535.5 at Dec 2025). Current total includes both designated ($675.4) and non-designated ($813.6).
+[LLM_FLAG] Prior has_derivatives value of 1291.2 appears corrupted — should be 'Yes'.
+[LLM_FLAG] ir_swap_notional was 19.8 in prior but no IR swaps found in current filing.
+[LLM_FLAG] commodity_derivatives_notional was 3.3 in prior but no commodity derivatives in current filing.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NUMERIC] total_cash_equivalents_fv: $515M → $800M (+55.3%) — exceeds 20% threshold
 [NUMERIC] total_marketable_securities_fv: $7,539M → $765M (-89.9%) — exceeds 20% threshold

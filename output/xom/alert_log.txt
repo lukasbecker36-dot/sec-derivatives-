@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-04 ===
+[NUMERIC] commodity_derivatives_notional: $6M → $20M (+233.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fx_forwards_outstanding)
+[LLM_FLAG] commodity_derivatives_notional changed >50%: prior 6.0 vs current 20 (million barrels crude oil, +233%)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $7,456M, now missing

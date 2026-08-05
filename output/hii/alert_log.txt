@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] revolving_credit_facility_amount: appeared for first time ($1,700M)
+[NEW_FIELD] outstanding_debt_revolving: appeared for first time ($0M)
+[NEW_FIELD] outstanding_debt_commercial_paper: appeared for first time ($0M)
+[DISAPPEARED_FIELD] cost_inflation_impact: was $0M, now missing
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (equity_sensitivity_10pct, cost_inflation_impact)
+[LLM_FLAG] commercial_paper_program_amount: prior value was 0.0, current is 1700.0 (>50% change). The prior value likely reflected zero outstanding balance rather than the program size. The $1.7 billion program capacity has been disclosed; no amounts are drawn.
+[LLM_FLAG] cost_inflation_impact: prior value was 0.0 (numeric), current is a qualitative statement. The company does not quantify inflation impact; the prior numeric zero may have been a default for 'not quantified'.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)

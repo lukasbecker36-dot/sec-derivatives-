@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[DISAPPEARED_FIELD] has_derivatives: was $1,147M, now missing
+[NUMERIC] fx_derivatives_notional: $1,147M → $2,630M (+129.3%) — exceeds 20% threshold
+[NEW_FIELD] fx_designated_notional: appeared for first time ($2,630M)
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $250M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional: was $19M, now missing
+[NUMERIC] commodity_derivatives_notional: $34M → $4M (-89.3%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_asset: appeared for first time ($37M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($54M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-17M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/7 previously-populated fields are now null (gross_unrealized_gains_debt, has_derivatives, fx_not_designated_notional, ir_swap_notional, equity_sensitivity_10pct)
+[LLM_FLAG] fx_derivatives_notional: prior $1,147.3M vs current $2,630.5M (+129%) — increase driven by addition of net investment hedge collars ($1,139.9M) and cross-currency swap collars ($77.1M) not present in prior period, plus new $23.6M CF hedge FX forwards
+[LLM_FLAG] commodity_derivatives_notional: prior $33.8M vs current $3.6M (-89%) — significant reduction in commodity hedging positions; Dec 2025 was $1.7M so even Q4 was well below prior extraction value
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($1,147M)
 [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($1,147M)

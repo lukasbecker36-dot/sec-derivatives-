@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-05-09 | Processed 2026-06-15 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NUMERIC] ir_sensitivity_100bp: $8M → $284M (+3241.2%) — exceeds 20% threshold
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
+[NEW_FIELD] variable_rate_debt: appeared for first time ($1,400M)
+[NEW_FIELD] fixed_rate_debt: appeared for first time ($7,700M)
+[NEW_FIELD] debt_fair_value: appeared for first time ($9,000M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($284M)
+[LLM_FLAG] ir_sensitivity_100bp changed from prior 8.5 to 284.0 (>50% change). Prior value may have reflected variable-rate earnings impact ($13.6M this period) rather than fixed-rate fair value impact. Current extraction uses $284.0M fixed-rate debt fair value change as stated in the text, which matches the schema description 'change in fair value from 100bp move'.
+
 === 10-Q | Period ending 2026-02-14 | Processed 2026-06-04 ===
 [NUMERIC] ir_sensitivity_100bp: $6M → $8M (+49.1%) — exceeds 20% threshold
 

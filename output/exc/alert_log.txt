@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($210M)
+[NUMERIC] cash_flow_hedge_aoci: $180M → $2M (-98.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-4M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $1M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] commodity_price_risk: was $0M, now missing
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct, commodity_price_risk)
+[LLM_FLAG] ir_swap_notional: decreased 70% from $700M (Dec 2025) to $210M (Jun 2026) — Exelon terminated $550M notional of floating-to-fixed swaps in January 2026 upon issuance of $775M debt, and added $30M new 10-year swaps in Q2 2026
+[LLM_FLAG] equity_derivatives_notional: prior was 'Yes' but no equity derivatives found in current filing section
+[LLM_FLAG] cash_flow_hedge_aoci: prior was 180.0, current value of 2 represents the H1 2026 period change (gain), not the accumulated balance — the accumulated AOCI balance is referenced in Note 13 which is not in this section; the $4M net-of-tax AOCI loss from terminated swaps is being amortized over 5-year and 10-year terms
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($180M)
 [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-4M)

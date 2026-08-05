@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-120M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_reference: was $-117M, now missing
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (equity_sensitivity_10pct, variable_rate_debt_reference)
+[LLM_FLAG] interest_rate_sensitivity changed from 0.0 to -120 — prior value of 0.0 may have been a placeholder for not_found; current filing clearly states $120M decrease from 1% rate increase
+[LLM_FLAG] variable_rate_debt_reference prior value was -117.0 (numeric); current extraction is qualitative text — the prior numeric value may have been the interest rate sensitivity from a previous period that was mapped to the wrong field
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)

@@ -1,3 +1,16 @@
+=== 10-K | Period ending 2026-05-31 | Processed 2026-07-16 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($2,400M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
+[NEW_FIELD] fx_forward_var: appeared for first time ($66M)
+[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($2,400M)
+[NEW_FIELD] interest_rate_swap_fair_value: appeared for first time ($-4M)
+[NEW_FIELD] long_term_debt_principal: appeared for first time ($8,000M)
+[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($6,805M)
+[NEW_FIELD] average_monthly_fx_derivative_change: appeared for first time ($199M)
+[LLM_FLAG] Section extraction captured hedge accounting policy, income taxes, contingencies, and market risk narrative rather than the quantitative derivatives Note 12 tables — FX notional amounts, fair value tables, and AOCI details are likely in Note 12 but not present in this extract
+[LLM_FLAG] FX VaR decreased significantly from $107M to $66M (38% decline), attributed to decrease in foreign currency volatilities
+[LLM_FLAG] Nike uses VaR rather than the more common 10% hypothetical sensitivity, so ir_sensitivity_100bp and fx_sensitivity_10pct are not applicable
+
 === 10-Q | Period ending 2026-02-28 | Processed 2026-06-08 ===
 [LLM_FLAG] api_error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cbqa6ZNKiLXQseLo3kTBi'}
 

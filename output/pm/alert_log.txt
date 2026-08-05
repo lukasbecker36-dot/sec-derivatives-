@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-27 ===
+[NUMERIC] commodity_designated_notional: $5M → $3M (-40.0%) — exceeds 20% threshold
+[NUMERIC] net_asset: $150M → $47M (-68.7%) — exceeds 20% threshold
+[NUMERIC] net_liability: $-1M → $-29M (-2800.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_oci_gain_loss: appeared for first time ($148M)
+[NUMERIC] collateral_posted: $311M → $410M (+31.8%) — exceeds 20% threshold
+[LLM_FLAG] net_asset changed >50%: prior 150 -> current 47 (-68.7%)
+[LLM_FLAG] net_liability changed >50%: prior -1 -> current -29 (magnitude increased significantly)
+[LLM_FLAG] Market risk section contains only a qualitative overview and cross-reference to Note 6; no quantitative sensitivity data available
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-04-25 ===
 [NEW_FIELD] fx_designated_notional: appeared for first time ($29,543M)
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($19,328M)

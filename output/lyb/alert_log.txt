@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
+[NUMERIC] fx_derivatives_notional: $324M → $2,945M (+809.0%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $294M → $2,759M (+838.4%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $324M → $186M (-42.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $61M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $5M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[VALIDATION] Likely extraction failure: 3/8 previously-populated fields are now null (commodity_derivatives_notional, cash_flow_hedge_aoci, fx_forwards_outstanding)
+[LLM_FLAG] fx_derivatives_notional changed from 324.0 to 2945.0 — large increase because prior value may have excluded net investment hedges ($2,465M); including them gives $2,945M total
+[LLM_FLAG] fx_not_designated_notional changed from 324.0 to 186.0 (42% decrease)
+[LLM_FLAG] ir_swap_notional changed from 1879.0 to 2078.0 (11% increase)
+[LLM_FLAG] Commodity derivatives notional reported in physical units (MMBtu, Bbls, MWhs), not dollar amounts — cannot convert to millions without price data
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NUMERIC] fx_derivatives_notional: $877M → $324M (-63.1%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $921M → $294M (-68.1%) — exceeds 20% threshold

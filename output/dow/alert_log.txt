@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-07-27 ===
+[NUMERIC] fx_designated_notional: $5,888M → $4,568M (-22.4%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $12,986M → $15,829M (+21.9%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $2,027M → $1,445M (-28.7%) — exceeds 20% threshold
+[NUMERIC] commodity_derivatives_notional: $6M → $2M (-67.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] equity_derivatives_notional: was $0M, now missing
+[NUMERIC] total_derivative_asset: $217M → $478M (+120.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $124M → $450M (+262.9%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $93M → $28M (-69.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $6M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $18M → $6M (-66.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[LLM_FLAG] commodity_derivatives_notional decreased 67% vs prior (1.9 vs 5.8 million boe) — hydrocarbon hedge positions substantially reduced from Dec 2025 levels (designated: 1.6 vs 9.5, non-designated: 0.3 vs 1.4)
+[LLM_FLAG] total_derivative_asset increased 120% vs prior (478 vs 217) — prior values may be from a different reporting period; gross fair values used
+[LLM_FLAG] total_derivative_liability increased 263% vs prior (450 vs 124) — prior values may be from a different reporting period; gross fair values used
+[LLM_FLAG] net_derivative_position decreased 70% vs prior (28 vs 93) — driven by liability growth outpacing asset growth
+[LLM_FLAG] expected_12mo_reclass_from_aoci decreased 67% vs prior (6 vs 18) — driven by larger negative commodity reclass of $(18)M partially offset by NII excluded components of $22M
+[LLM_FLAG] fx_not_designated_notional increased from $10,560M (Dec 2025) to $15,829M (Jun 2026), a 50% increase within the filing period
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NUMERIC] fx_derivatives_notional: $15,300M → $18,474M (+20.7%) — exceeds 20% threshold
 [NUMERIC] fx_not_designated_notional: $10,560M → $12,986M (+23.0%) — exceeds 20% threshold
