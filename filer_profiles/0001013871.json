@@ -19,7 +19,13 @@
       "interest rate swap",
       "foreign exchange forward",
       "notional amount",
-      "mark-to-market"
+      "mark-to-market",
+      "cash flow hedge",
+      "fair value hedge",
+      "economic hedge",
+      "commodity contract",
+      "unrealized gain",
+      "designated as a hedging"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -78,6 +84,18 @@
       ],
       "fields_extracted": 12,
       "fields_null": 3
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-05T09:28:39Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 19,
+      "fields_null": 8
     }
   ]
 }

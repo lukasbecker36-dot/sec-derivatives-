@@ -1,3 +1,37 @@
+=== 10-Q | Period ending 2026-06-28 | Processed 2026-08-05 ===
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[NUMERIC] fi_total_derivative_asset: $116M → $656M (+465.5%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $22,777M → $15,709M (-31.0%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $6,750M → $9,245M (+37.0%) — exceeds 20% threshold
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $532M → $656M (+23.3%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-926M → $-625M (+32.5%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-16M → $72M (+550.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[NUMERIC] derivative_assets_noncurrent_ir: $52M → $21M (-59.6%) — exceeds 20% threshold
+[NUMERIC] derivative_assets_noncurrent_fx: $64M → $164M (+156.2%) — exceeds 20% threshold
+[NUMERIC] derivative_liabilities_current_ir: $16M → $9M (-43.8%) — exceeds 20% threshold
+[NUMERIC] derivative_liabilities_current_fx: $412M → $225M (-45.4%) — exceeds 20% threshold
+[NUMERIC] derivative_liabilities_noncurrent_ir: $215M → $277M (+28.8%) — exceeds 20% threshold
+[NUMERIC] contingent_consideration_liabilities: $1,695M → $2,259M (+33.3%) — exceeds 20% threshold
+[NUMERIC] available_for_sale_debt_securities: $9,183M → $7,281M (-20.7%) — exceeds 20% threshold
+[LLM_FLAG] total_marketable_securities_fv decreased from prior $12,421M to $9,462M (-24%), driven by decline in short-term equity securities ($2,596M to $1,630M) and AFS debt ($9,183M to $7,281M)
+[LLM_FLAG] marketable_equity_securities_fv decreased from prior $3,238M to $2,181M (-33%)
+[LLM_FLAG] fi_total_derivative_asset increased from prior $532M to $656M (+23%)
+[LLM_FLAG] fi_total_derivative_liability decreased from prior $1,458M to $1,281M (-12%)
+[LLM_FLAG] contingent_consideration_liabilities increased from prior $1,790M to $2,259M (+26%)
+[LLM_FLAG] derivative_liabilities_current_fx decreased from prior $412M to $225M (-45%)
+[LLM_FLAG] derivative_assets_noncurrent_fx increased from prior $64M to $164M (+156%)
+[LLM_FLAG] derivative_liabilities_noncurrent_ir increased from prior $215M to $277M (+29%)
+[LLM_FLAG] fx_derivatives_notional decreased from prior $45,561M to $39,786M (-13%), driven by reduction in non-designated FX contracts ($22,777M to $15,709M)
+[LLM_FLAG] ir_swap_notional increased from prior $6,750M to $9,245M (+37%)
+[LLM_FLAG] total_derivative_asset increased from prior $532M to $656M (+23%)
+[LLM_FLAG] total_derivative_liability decreased from prior $1,458M to $1,281M (-12%)
+[LLM_FLAG] net_derivative_position improved from prior $(926)M to $(625)M (+32%)
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed from prior $(16)M loss to $72M gain - sign reversal and significant change
+[LLM_FLAG] The market risk section is entirely an incorporation by reference to the 2025 10-K; no updated quantitative disclosures are provided in this 10-Q
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
 [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($11,779M)
 [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($2,596M)

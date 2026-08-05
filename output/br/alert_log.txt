@@ -1,3 +1,25 @@
+=== 10-K | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
+[NUMERIC] total_derivative_asset: $880M → $0M (-100.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $880M → $3M (-99.7%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($-3M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $8M, now missing
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($11M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $8M, now missing
+[NUMERIC] fixed_rate_notes_billion: $-4M → $2M (+151.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] marketable_equity_value: was $1M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] variable_rate_debt_amount: appeared for first time ($1,022M)
+[NEW_FIELD] variable_rate_debt_percentage: appeared for first time ($31M)
+[NEW_FIELD] non_us_revenue_percentage: appeared for first time ($15M)
+[NEW_FIELD] cross_currency_swap_fair_value: appeared for first time ($0M)
+[VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (fx_transaction_gain_loss, fx_sensitivity_10pct, marketable_equity_value, equity_sensitivity_10pct)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 880 to 0 (0x)
+[VALIDATION] Likely units mismatch: total_derivative_liability changed from 880 to 3 (0x)
+[LLM_FLAG] total_derivative_asset changed from 880.0 to 0.1 (>50% change) - prior value of 880.0 appears to have been the EUR notional amount of the net investment hedge, not the fair value asset
+[LLM_FLAG] total_derivative_liability changed from 880.0 to 2.9 (>50% change) - prior value of 880.0 appears to have been the EUR notional amount, not the fair value liability
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($880M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($880M)

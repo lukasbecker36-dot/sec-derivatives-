@@ -22,7 +22,10 @@
       "cash flow hedge",
       "interest rate swap",
       "de-designated",
-      "aoci"
+      "aoci",
+      "notional amount",
+      "unrealized gain",
+      "hedge ineffectiveness"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -84,6 +87,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 26
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-05T09:28:39Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 13,
+      "fields_null": 14
     }
   ]
 }

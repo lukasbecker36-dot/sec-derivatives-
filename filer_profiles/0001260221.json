@@ -16,9 +16,14 @@
   },
   "idiosyncrasies": {
     "recurring_phrases": [
-      "interest rate swap"
+      "interest rate swap",
+      "cash flow hedge",
+      "notional amount",
+      "accumulated other comprehensive"
     ],
-    "non_gaap_metrics": [],
+    "non_gaap_metrics": [
+      "non-gaap"
+    ],
     "unusual_disclosure_patterns": [],
     "known_issues": []
   },
@@ -77,6 +82,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 11
+    },
+    {
+      "filing_date": "2026-06-27",
+      "form_type": "10-Q",
+      "period_end": "2026-06-27",
+      "processed_at": "2026-08-05T09:28:40Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 12,
+      "fields_null": 17
     }
   ]
 }

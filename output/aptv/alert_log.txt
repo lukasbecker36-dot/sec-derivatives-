@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,000M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,000M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($215M)
+[NUMERIC] total_derivative_asset: $3,090M → $61M (-98.0%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($8M)
+[NUMERIC] net_derivative_position: $2M → $53M (+2550.0%) — exceeds 20% threshold
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($56M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $500M → $48M (-90.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $154M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $11M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $143M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $151M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $121M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/9 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value...)
+[LLM_FLAG] total_derivative_asset: prior $3,090M vs current $61M — prior value appears erroneous or from a different entity/period; current $61M is clearly supported by balance sheet tables
+[LLM_FLAG] expected_12mo_reclass_from_aoci: prior $500M vs current $48M — prior value appears erroneous; $48M is explicitly stated in filing
+[LLM_FLAG] Note: Aptiv also has non-derivative net investment hedges (EUR 750M + EUR 500M = EUR 1,250M Senior Notes designated as net investment hedges) not included in derivative notional totals
+[LLM_FLAG] Additional commodity forward contracts with notional individually less than $10M exist beyond the $215M copper hedge
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,090M)
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($2M)

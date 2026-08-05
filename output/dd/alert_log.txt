@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NUMERIC] total_cash_equivalents_fv: $86M → $721M (+738.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[NUMERIC] fi_total_derivative_asset: $40M → $75M (+87.5%) — exceeds 20% threshold
+[NUMERIC] fx_derivatives_notional: $347M → $1,378M (+297.1%) — exceeds 20% threshold
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($378M)
+[NUMERIC] total_derivative_asset: $221M → $78M (-64.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $168M → $15M (-91.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $64M, now missing
+[LLM_FLAG] total_cash_equivalents_fv changed from 86.0 to 721 (738% increase) — DuPont reports $679M in cash equivalents plus $42M restricted cash equivalents at June 30, 2026, up from $100M + $42M at Dec 31, 2025
+[LLM_FLAG] fi_total_derivative_asset changed from 40.0 to 75 (88% increase) — driven by net investment hedge gain increasing from $46M to $66M and FX contracts moving from ($10M) to $3M
+[LLM_FLAG] fx_derivatives_notional changed from 347.0 to 1378 (297% increase) — prior value likely counted only non-designated FX forwards; current total includes $1,000M net investment hedge (cross-currency swap) plus $378M non-designated FX contracts
+[LLM_FLAG] fx_designated_notional unchanged at $1,000M for net investment hedge
+[LLM_FLAG] total_derivative_asset changed from 221.0 to 78 (65% decrease) — significant decline; prior period may have included different items or different reporting format
+[LLM_FLAG] total_derivative_liability changed from 53.0 to 63 (19% increase)
+[LLM_FLAG] net_derivative_position changed from 168.0 to 15 (91% decrease) — driven by large decline in derivative assets
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($347M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($1,000M)

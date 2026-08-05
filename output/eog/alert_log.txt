@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($210M)
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $153M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $61M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $3M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $58M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 7/9 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion...)
+[LLM_FLAG] total_derivative_asset changed from 0.0 to 210 — significant change; EOG now has substantial commodity derivative assets including a $161M Brent Linked Gas Sales Contract (Level 3) and $49M in natural gas/NGL derivatives
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($153M)

@@ -11,16 +11,22 @@
   "filing_patterns": {
     "typical_note_numbering": "",
     "heading_variations_seen": [],
-    "uses_cross_reference_in_10q": false,
+    "uses_cross_reference_in_10q": true,
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
     "recurring_phrases": [
       "cash flow hedge",
       "commodity derivative",
-      "notional amount"
+      "notional amount",
+      "commodity contract",
+      "unrealized gain",
+      "designated as hedging",
+      "accumulated other comprehensive"
     ],
-    "non_gaap_metrics": [],
+    "non_gaap_metrics": [
+      "adjusted ebitda"
+    ],
     "unusual_disclosure_patterns": [],
     "known_issues": []
   },
@@ -79,6 +85,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 6
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-05T09:28:39Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 7,
+      "fields_null": 12
     }
   ]
 }

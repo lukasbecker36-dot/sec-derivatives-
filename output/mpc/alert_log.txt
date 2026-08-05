@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2,540M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($31M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] market_risk_exposures: was $0M, now missing
+[DISAPPEARED_FIELD] hedging_strategies: was $2,561M, now missing
+[DISAPPEARED_FIELD] risk_assessment: was $31M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (equity_sensitivity_10pct, market_risk_exposures, hedging_strategies, risk_assessment)
+[LLM_FLAG] fixed_rate_notes_billion changed from prior 31.018 to 31.111 (~0.3% change, within tolerance)
+[LLM_FLAG] hedging_strategies prior value was 2561.0 (numeric) but current extraction is descriptive text; field type mismatch with prior
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($0M)

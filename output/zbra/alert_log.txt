@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-07-04 | Processed 2026-08-05 ===
+[NEW_FIELD] fx_designated_notional: appeared for first time ($637M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $812M → $19M (-97.7%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] total_derivative_liability: $582M → $0M
+[NUMERIC] net_derivative_position: $230M → $19M (-91.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $0M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $7M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-7M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $39M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/9 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, marketable_equity_value...)
+[LLM_FLAG] fx_designated_notional of 637 is in EUR millions (not USD); no USD-equivalent notional is disclosed in this filing
+[LLM_FLAG] total_derivative_asset changed from prior 812.0 to 19 (>50% change) — prior value of 812.0 appears to have been an extraction error (likely confused EUR notional with USD fair value); current $19M is from the fair value table
+[LLM_FLAG] total_derivative_liability changed from prior 582.0 to 0 (>50% change) — prior value appears erroneous (possibly the EUR notional of designated hedges from Dec 2025 of EUR 582M); current period shows $0 liability
+[LLM_FLAG] net_derivative_position changed from prior 230.0 to 19 (>50% change) — consistent with corrections to asset/liability values above
+[LLM_FLAG] equity_derivatives_notional prior was 'Yes' but no equity derivatives are disclosed in this filing; prior was likely an extraction error
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($812M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($582M)

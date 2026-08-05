@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NUMERIC] fx_derivatives_notional: $-1,984M → $5,365M (+370.4%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $17M → $2,965M (+17341.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $5M, now missing
+[NUMERIC] total_derivative_asset: $25M → $13M (-48.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-195M → $-241M (-23.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[NUMERIC] fx_sensitivity_10pct: $206M → $252M (+22.3%) — exceeds 20% threshold
+[NUMERIC] cross_currency_swap_fair_value: $186M → $-194M (-204.3%) — exceeds 20% threshold
+[NUMERIC] cross_currency_swap_sensitivity: $206M → $252M (+22.3%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: fx_not_designated_notional changed from 17 to 2,965 (174x)
+[LLM_FLAG] fx_derivatives_notional changed from prior -1984.0 to 5365 (combined absolute notional of FX forwards $2,965M + cross currency swaps $2,400M). The prior value appears to have used a different convention (possibly net FX forwards only with sign). FX forward contracts grew from $1,840M to $2,965M and cross currency swaps grew from $1,900M to $2,400M.
+[LLM_FLAG] total_derivative_asset decreased from prior 25.0 to 13.0 (48% decrease), driven by decline in FX forward contract fair values from $17M to $2M asset position.
+[LLM_FLAG] total_derivative_liability increased from prior 220.0 to 254.0 (15% increase), driven by FX forward contracts moving to $49M liability from $3M.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NUMERIC] commodity_derivatives_notional: $11M → $5M (-54.5%) — exceeds 20% threshold
 [NUMERIC] total_derivative_asset: $18M → $25M (+38.9%) — exceeds 20% threshold

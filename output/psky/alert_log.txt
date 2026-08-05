@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($6,840M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($6,280M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($562M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($10,000M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($102M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $8,000M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $36M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $72M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-36M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-48M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/8 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion...)
+[LLM_FLAG] fx_derivatives_notional increased from prior $3,140M (Dec 2025) to $6,840M (Jun 2026) - a 118% increase, driven by hedging for content production/licensing and the WBD Merger
+[LLM_FLAG] ir_swap_notional: $10.0 billion is a new position entered in Q2 2026 for the WBD Merger; $3.0B designated as cash flow hedges, $7.0B not designated
+[LLM_FLAG] total_derivative_asset: prior was 0.0, now $64M (new IR contracts + increased FX activity)
+[LLM_FLAG] cash_flow_hedge_aoci: prior was $8,000M which seems like an error or different metric
+[LLM_FLAG] The market risk section was not successfully extracted - it appears to be just a table-of-contents entry ('Quantitative and Qualitative Disclosures About Market Risk. 88') rather than the actual content
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)

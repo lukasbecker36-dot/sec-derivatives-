@@ -16,7 +16,10 @@
   },
   "idiosyncrasies": {
     "recurring_phrases": [
-      "notional value"
+      "notional value",
+      "interest rate swap",
+      "foreign exchange forward",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -77,6 +80,18 @@
       ],
       "fields_extracted": 2,
       "fields_null": 11
+    },
+    {
+      "filing_date": "2026-06-26",
+      "form_type": "10-Q",
+      "period_end": "2026-06-26",
+      "processed_at": "2026-08-05T09:28:39Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 16,
+      "fields_null": 9
     }
   ]
 }

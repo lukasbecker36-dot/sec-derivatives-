@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,284M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($4,613M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($671M)
+[NUMERIC] total_derivative_asset: $5,322M → $101M (-98.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $5,322M → $53M (-99.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $868M → $48M (-94.5%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($26M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $76M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $78M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-3M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct)
+[VALIDATION] Likely units mismatch: total_derivative_liability changed from 5,322 to 53 (0x)
+[LLM_FLAG] total_derivative_asset changed from prior 5321.6 to 100.7 (>50% change) — prior value appears to have been an extraction error (likely confused notional with fair value); current $100.7M is consistent with the filing's fair value tables
+[LLM_FLAG] total_derivative_liability changed from prior 5321.6 to 52.6 (>50% change) — same likely prior extraction error
+[LLM_FLAG] net_derivative_position changed from prior 868.0 to 48.1 (>50% change) — prior value appears erroneous given the derivative asset/liability priors were wrong
+[LLM_FLAG] equity_derivatives_notional prior was 'Yes' but no equity derivatives are disclosed in this filing; prior was likely an extraction error
+[LLM_FLAG] Designated FX notional decreased from $6,080.1M (Dec 2025) to $4,612.6M (June 2026) as hedges matured, a reduction of ~24%
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,322M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($5,322M)

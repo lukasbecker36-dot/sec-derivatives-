@@ -1,3 +1,32 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($90M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($90M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $110M → $0M (-99.9%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[NUMERIC] net_derivative_position: $110M → $-0M (-100.2%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $0M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[NUMERIC] fx_sensitivity_10pct: $0M → $126M (+12589900.0%) — exceeds 20% threshold
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] total_debt_principal: appeared for first time ($3,000M)
+[NEW_FIELD] floating_rate_debt: appeared for first time ($0M)
+[NUMERIC] cash_equivalents_amount: $118M → $1,500M (+1176.6%) — exceeds 20% threshold
+[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($126M)
+[DISAPPEARED_FIELD] interest_rate_swap_status: was $3,000M, now missing
+[VALIDATION] Likely extraction failure: 4/8 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, equity_sensitivity_10pct, interest_rate_swap_status)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 110 to 0 (0x)
+[VALIDATION] Likely units mismatch: net_derivative_position changed from 110 to -0 (0x)
+[VALIDATION] Likely units mismatch: fx_sensitivity_10pct changed from 0 to 126 (125900x)
+[LLM_FLAG] total_derivative_asset changed from 110.353 to 0.063 (99.9% decrease) — prior value may have included interest rate swap fair values; current period shows only FX forward contract assets of $63 thousand; note all values in the filing are in thousands, not millions
+[LLM_FLAG] fx_derivatives_notional: $89.849M is significantly lower than prior periods ($427.5M at Dec 31, 2025) — number of contracts dropped from 104 to 28, and all outstanding contracts at June 30, 2026 matured before July 31, 2026
+[LLM_FLAG] ir_swap_notional: no interest rate swaps outstanding in current period (interest expense from IR swaps was $0 in both Q2 2026 and H1 2026)
+[LLM_FLAG] cash_equivalents_amount changed from 117.5 to 1500 (1177% increase) — $1.5 billion cash and cash equivalents at June 30, 2026; prior value of 117.5 may have been in a different unit or from a different field
+[LLM_FLAG] fx_sensitivity_10pct: 125.9 is much larger than prior 0.001 — this is the cash translation sensitivity ($125.9M impact from 10% FX move on $1.5B cash), not the derivative fair value sensitivity which is immaterial
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($110M)
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($110M)

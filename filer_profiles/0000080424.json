@@ -15,7 +15,16 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "net investment hedging",
+      "fair value hedge",
+      "natural hedge",
+      "interest rate swap",
+      "notional amount",
+      "mark-to-market",
+      "designated as hedging",
+      "aoci"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -74,6 +83,18 @@
         "market_risk"
       ],
       "fields_extracted": 0,
+      "fields_null": 9
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-K",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-05T09:28:40Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 12,
       "fields_null": 9
     }
   ]
