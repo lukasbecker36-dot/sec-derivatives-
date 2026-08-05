@@ -55,15 +55,25 @@ def _resolve_config_path(raw_path: str) -> Path:
     # If absolute and exists, use it
     if raw.exists():
         return raw
-    # Extract profiles/xxx.yaml from any absolute path
+    # Extract profiles/xxx.yaml from any absolute path (handles both / and \ separators)
     parts = raw.parts
     for i, part in enumerate(parts):
         if part == 'profiles' and i + 1 < len(parts):
             candidate = PROJECT_ROOT / 'profiles' / parts[i + 1]
             if candidate.exists():
                 return candidate
+    # Windows paths on Linux: Path() treats backslashes as literals, so parts has
+    # one element. Split manually on backslash.
+    raw_str = raw_path.replace('\\', '/')
+    win_parts = raw_str.split('/')
+    for i, part in enumerate(win_parts):
+        if part == 'profiles' and i + 1 < len(win_parts):
+            candidate = PROJECT_ROOT / 'profiles' / win_parts[i + 1]
+            if candidate.exists():
+                return candidate
     # Last resort: try profiles/<stem>.yaml
-    candidate = PROJECT_ROOT / 'profiles' / raw.name
+    stem = raw_path.replace('\\', '/').split('/')[-1]
+    candidate = PROJECT_ROOT / 'profiles' / stem
     if candidate.exists():
         return candidate
     return raw
@@ -417,12 +427,21 @@ def finalize(since: str, max_activations: int, json_summary: str = '', verbose: 
                     if flag:
                         alerts.append(f'[LLM_FLAG] {flag}')
 
+            # Add metadata columns
+            row['accession_number'] = req_data.get('accession_number', '')
+            row['filing_date'] = req_data.get('filing_date', '')
+            row['processed_at'] = datetime.now(timezone.utc).isoformat()
+            row['extraction_version'] = 1
+
             # Write outputs
             append_csv_row(csv_path, row, config)
+            from .engine import _write_to_db, _sync_text_files_to_db
+            _write_to_db(row, config)
             notes_path = OUTPUT_DIR / config.ticker.lower() / 'notes.txt'
             alert_path = OUTPUT_DIR / config.ticker.lower() / 'alert_log.txt'
             append_notes(notes_path, period_end, req_data['form_type'], notes)
             append_alerts(alert_path, period_end, req_data['form_type'], alerts)
+            _sync_text_files_to_db(config.ticker, OUTPUT_DIR / config.ticker.lower())
 
             # Update filer profile
             profile = get_or_create_profile(config.cik, config.ticker, config.issuer)

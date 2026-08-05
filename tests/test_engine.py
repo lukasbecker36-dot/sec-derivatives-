@@ -53,3 +53,49 @@ class TestProcessFiling:
         assert 'alerts' in result
         assert 'notes' in result
         assert 'validation' in result
+
+
+class TestRetryableFailure:
+    @patch('src.engine.extract_fields_llm')
+    def test_retryable_failure_surfaced(self, mock_llm):
+        meta_path = Path(__file__).resolve().parent.parent / 'profiles' / 'meta.yaml'
+        if not meta_path.exists():
+            pytest.skip('meta.yaml not found')
+        config = load_config(meta_path)
+
+        mock_llm.return_value = {
+            'fields': {},
+            'flags': ['api_error: Error code: 529 overloaded'],
+            'notes': 'LLM API error',
+            'retryable': True,
+        }
+
+        filing_meta = {'period_end': '2025-03-31', 'form_type': '10-Q'}
+        filing_text = """
+        Item 3. Quantitative and Qualitative Disclosures About Market Risk
+        Interest rate sensitivity of 100 basis points is $300 million.
+        Item 4. Controls
+        """
+        result = process_filing(config, filing_meta, filing_text)
+        assert result['retryable_failure'] is True
+
+    @patch('src.engine.extract_fields_llm')
+    def test_clean_extraction_not_retryable(self, mock_llm):
+        meta_path = Path(__file__).resolve().parent.parent / 'profiles' / 'meta.yaml'
+        if not meta_path.exists():
+            pytest.skip('meta.yaml not found')
+        config = load_config(meta_path)
+
+        mock_llm.return_value = {
+            'fields': {'ir_sensitivity_100bp': {'value': 300, 'confidence': 'high', 'source_quote': '$300 million'}},
+            'flags': [],
+            'notes': '',
+        }
+        filing_meta = {'period_end': '2025-03-31', 'form_type': '10-Q'}
+        filing_text = """
+        Item 3. Quantitative and Qualitative Disclosures About Market Risk
+        Interest rate sensitivity of 100 basis points is $300 million.
+        Item 4. Controls
+        """
+        result = process_filing(config, filing_meta, filing_text)
+        assert result['retryable_failure'] is False

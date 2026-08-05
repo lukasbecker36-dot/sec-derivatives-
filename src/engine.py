@@ -12,7 +12,7 @@ from .section_extract import extract_all_sections
 from .llm_extract import extract_fields_llm
 from .qualitative import extract_qualitative
 from .change_detect import detect_changes
-from .validate import validate_row
+from .validate import validate_row, validate_source_quotes
 
 logger = logging.getLogger(__name__)
 
@@ -115,6 +115,12 @@ def process_filing(
             row[field_name] = field_data.get('value')
 
         all_flags.extend(llm_result.get('flags', []))
+        all_flags.extend(validate_source_quotes(llm_result, schema))
+
+    # A transient API/parse failure in any section means this row is incomplete;
+    # surface it so run_issuer can leave the filing unprocessed and retry rather
+    # than persisting a null row that permanently blocks reprocessing.
+    retryable_failure = any(r.get('retryable') for r in all_llm_results.values())
 
     # Qualitative extraction
     notes = extract_qualitative(sections, config, prior_row)
@@ -138,14 +144,46 @@ def process_filing(
         'validation': validation,
         'llm_results': all_llm_results,
         'sections': sections,
+        'retryable_failure': retryable_failure,
     }
 
 
+METADATA_COLUMNS = ['accession_number', 'filing_date', 'processed_at', 'extraction_version']
+
+
 def _get_csv_columns(config: IssuerConfig) -> list[str]:
-    """Build ordered list of CSV columns."""
+    """Build ordered list of CSV columns (includes metadata tail)."""
     cols = ['period_end_date', 'form_type']
     cols.extend(config.fields.keys())
+    cols.extend(METADATA_COLUMNS)
     return cols
+
+
+def _write_to_db(row: dict, config: IssuerConfig):
+    """Best-effort write to the consolidated DuckDB store."""
+    try:
+        from .db import get_connection, upsert_extraction
+        db_row = dict(row)
+        db_row['ticker'] = config.ticker
+        db_row['issuer_name'] = config.issuer
+        db_row['cik'] = config.cik
+        db_row['sector'] = config.sector
+        conn = get_connection()
+        upsert_extraction(conn, db_row)
+        conn.close()
+    except Exception as e:
+        logger.debug(f'DB write skipped: {e}')
+
+
+def _sync_text_files_to_db(ticker: str, issuer_dir: Path):
+    """Best-effort refresh of qualitative findings/alerts from text files."""
+    try:
+        from .db import get_connection, load_issuer_text_files
+        conn = get_connection()
+        load_issuer_text_files(conn, issuer_dir, ticker)
+        conn.close()
+    except Exception as e:
+        logger.debug(f'Qualitative DB sync skipped for {ticker}: {e}')
 
 
 def append_csv_row(csv_path: Path, row: dict, config: IssuerConfig):
@@ -239,9 +277,27 @@ def run_issuer(config: IssuerConfig, output_dir: Path = OUTPUT_DIR, client=None,
             result = process_filing(config, filing_meta, filing_text, prior_row,
                                     client=client, profile=profile)
 
+            # Transient extraction failure: don't persist a null row (which would
+            # mark the period processed and block retry). Leave it for next run.
+            if result.get('retryable_failure'):
+                logger.warning(
+                    f"  Transient extraction failure for {filing_meta['period_end']}; "
+                    f"leaving unprocessed for retry"
+                )
+                errors.append({'period_end': filing_meta['period_end'],
+                               'error': 'transient extraction failure (will retry)'})
+                continue
+
+            result['row']['accession_number'] = filing_meta.get('accession_number', '')
+            result['row']['filing_date'] = filing_meta.get('filing_date', '')
+            result['row']['processed_at'] = datetime.now(timezone.utc).isoformat()
+            result['row']['extraction_version'] = 1
+
             append_csv_row(csv_path, result['row'], config)
+            _write_to_db(result['row'], config)
             append_notes(notes_path, filing_meta['period_end'], filing_meta['form_type'], result['notes'])
             append_alerts(alert_path, filing_meta['period_end'], filing_meta['form_type'], result['alerts'])
+            _sync_text_files_to_db(config.ticker, issuer_dir)
 
             # Update filer profile
             profile = update_profile_after_extraction(

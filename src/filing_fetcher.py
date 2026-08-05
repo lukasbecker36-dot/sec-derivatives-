@@ -34,6 +34,7 @@ def discover_filings(cik: str) -> list[dict]:
     accessions = recent.get('accessionNumber', [])
     dates = recent.get('reportDate', [])
     primary_docs = recent.get('primaryDocument', [])
+    filing_dates = recent.get('filingDate', [])
 
     filings = []
     for i, form in enumerate(forms):
@@ -43,6 +44,7 @@ def discover_filings(cik: str) -> list[dict]:
                 'form_type': form,
                 'accession_number': accessions[i],
                 'primary_document': primary_docs[i],
+                'filing_date': filing_dates[i] if i < len(filing_dates) else '',
             })
 
     # Handle older filings in additional files
@@ -52,6 +54,7 @@ def discover_filings(cik: str) -> list[dict]:
         resp2 = requests.get(file_url, headers=HEADERS, timeout=30)
         resp2.raise_for_status()
         older = resp2.json()
+        older_filing_dates = older.get('filingDate', [])
         for i, form in enumerate(older.get('form', [])):
             if form in ('10-Q', '10-K', '10-Q/A', '10-K/A'):
                 filings.append({
@@ -59,6 +62,7 @@ def discover_filings(cik: str) -> list[dict]:
                     'form_type': form,
                     'accession_number': older['accessionNumber'][i],
                     'primary_document': older['primaryDocument'][i],
+                    'filing_date': older_filing_dates[i] if i < len(older_filing_dates) else '',
                 })
 
     filings.sort(key=lambda x: x['period_end'])
