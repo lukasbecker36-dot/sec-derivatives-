@@ -21,6 +21,11 @@ This module scans the committed CSVs and reports three defects:
                  period on another git ref. Catches branch divergence,
                  where good data exists but never reached live output.
 
+  misaligned_row the row carries more values than the header has columns,
+                 so values have shifted out of their intended fields. Every
+                 number in such a row is suspect regardless of how sound it
+                 looks. 287 of these sat undetected across 178 tickers.
+
 Run before generating any digest:
 
     python -m src.audit                      # human summary, exit 1 on defects
@@ -62,6 +67,19 @@ def _flatten(value) -> str:
 def _row_key(row: dict) -> tuple[str, str]:
     return (_flatten(row.get('period_end_date')).strip(),
             _flatten(row.get('form_type')).strip())
+
+
+def is_misaligned_row(row: dict) -> bool:
+    """True when the row has more values than the header has columns.
+
+    csv.DictReader collects the surplus under a None key, so its presence
+    means the columns and values no longer line up and the named fields may
+    hold values belonging to their neighbours.
+    """
+    surplus = row.get(None)
+    if not surplus:
+        return False
+    return any(str(v or '').strip() for v in surplus)
 
 
 def is_empty_row(row: dict) -> bool:
@@ -109,6 +127,16 @@ def audit_issuer(ticker: str, csv_path: Path,
 
     for row in rows:
         period, form_type = _row_key(row)
+        if is_misaligned_row(row):
+            surplus = [str(v).strip() for v in (row.get(None) or []) if str(v or '').strip()]
+            defects.append({
+                'ticker': ticker, 'type': 'misaligned_row', 'period': period,
+                'form_type': form_type,
+                'detail': f'row has {len(surplus)} value(s) past the last header '
+                          f'column ({", ".join(surplus[:3])}) — columns and '
+                          f'values are out of step, all fields suspect',
+            })
+            continue
         if is_empty_row(row):
             defect = {'ticker': ticker, 'type': 'empty_row', 'period': period,
                       'form_type': form_type,

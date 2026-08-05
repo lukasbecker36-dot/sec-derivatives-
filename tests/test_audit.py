@@ -3,7 +3,8 @@
 import csv
 
 from src.audit import (
-    is_empty_row, audit_issuer, run_audit, format_report, META_COLUMNS,
+    is_empty_row, is_misaligned_row, audit_issuer, run_audit, format_report,
+    META_COLUMNS,
 )
 
 HEADER = [
@@ -49,6 +50,23 @@ class TestIsEmptyRow:
         row.update({'period_end_date': '2025-06-30', 'form_type': '10-K',
                     'fx_derivatives_notional': '60013'})
         assert not is_empty_row(row)
+
+
+class TestIsMisalignedRow:
+    def test_surplus_values_are_misaligned(self):
+        row = {'period_end_date': '2025-12-31', 'form_type': '10-Q',
+               None: ['', '', 'Item 2']}
+        assert is_misaligned_row(row)
+
+    def test_blank_surplus_is_not_misaligned(self):
+        """Trailing commas produce empty surplus — harmless."""
+        row = {'period_end_date': '2025-12-31', 'form_type': '10-Q',
+               None: ['', '', '']}
+        assert not is_misaligned_row(row)
+
+    def test_well_formed_row(self):
+        row = {'period_end_date': '2025-12-31', 'form_type': '10-Q'}
+        assert not is_misaligned_row(row)
 
 
 class TestAuditIssuer:
