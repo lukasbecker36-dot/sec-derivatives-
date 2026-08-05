@@ -1,7 +1,9 @@
 """Tests for src.validate — sanity checks on extracted data."""
 
 import pytest
-from src.validate import validate_row, validate_source_quotes, _parse_numeric
+from src.validate import (
+    validate_row, validate_source_quotes, check_reconciliations, _parse_numeric,
+)
 from src.config import IssuerConfig, FieldConfig
 
 
@@ -55,6 +57,61 @@ class TestValidateRow:
         results = validate_row(current, prior, config)
         errors = [r for r in results if r['level'] == 'error']
         assert len(errors) == 0
+
+
+class TestCheckReconciliations:
+    def test_minimal_hedger_total_is_checked(self):
+        """The MSFT case: total is fx_derivatives_notional, not total_notional.
+
+        The old check only looked for a field named 'total_notional', so this
+        contradiction shipped undetected for five consecutive quarters.
+        """
+        row = {
+            'fx_derivatives_notional': '52784',
+            'fx_designated_notional': '1492',
+            'fx_not_designated_notional': '8994',
+        }
+        results = check_reconciliations(row)
+        assert any(r['level'] == 'error' for r in results)
+        assert any('Reconciliation failure' in r['message'] for r in results)
+
+    def test_reconciling_row_passes(self):
+        row = {
+            'fx_derivatives_notional': '54086',
+            'fx_designated_notional': '1492',
+            'fx_not_designated_notional': '52594',
+        }
+        assert check_reconciliations(row) == []
+
+    def test_within_tolerance_passes(self):
+        row = {
+            'fx_derivatives_notional': '1000',
+            'fx_designated_notional': '500',
+            'fx_not_designated_notional': '520',  # 2% over
+        }
+        assert check_reconciliations(row) == []
+
+    def test_missing_components_are_not_flagged(self):
+        """Partial disclosure must not generate noise."""
+        row = {'fx_derivatives_notional': '54086'}
+        assert check_reconciliations(row) == []
+
+    def test_absent_total_is_not_flagged(self):
+        row = {'fx_designated_notional': '1492',
+               'fx_not_designated_notional': '52594'}
+        assert check_reconciliations(row) == []
+
+    def test_surfaces_through_validate_row(self):
+        config = _make_config({
+            'fx_derivatives_notional': 'Total FX notional',
+            'fx_designated_notional': 'Designated FX notional',
+            'fx_not_designated_notional': 'Non-designated FX notional',
+        })
+        row = {'fx_derivatives_notional': 52784,
+               'fx_designated_notional': 1492,
+               'fx_not_designated_notional': 8994}
+        results = validate_row(row, None, config)
+        assert any('Reconciliation failure' in r['message'] for r in results)
 
 
 class TestValidateSourceQuotes:

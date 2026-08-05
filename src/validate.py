@@ -84,6 +84,64 @@ def validate_source_quotes(llm_result: dict, schema: dict[str, str]) -> list[str
     return flags
 
 
+# Notional totals and the components that must sum to them. Keyed on the
+# actual field names the archetypes emit — the previous version of this check
+# only looked for a field literally named 'total_notional', so it silently
+# no-opped for every minimal_hedger issuer (whose total is
+# 'fx_derivatives_notional'). That is how MSFT shipped five quarters where
+# designated + not-designated came to a fifth of the reported total.
+RECONCILIATION_RULES: list[tuple[str, list[str]]] = [
+    ('fx_derivatives_notional',
+     ['fx_designated_notional', 'fx_not_designated_notional']),
+    ('fi_fx_derivatives_notional',
+     ['fi_fx_designated_notional', 'fi_fx_not_designated_notional']),
+    ('total_notional',
+     ['fx_designated_notional', 'fx_not_designated_notional',
+      'commodity_designated_notional', 'commodity_not_designated_notional']),
+]
+
+# Relative gap above which a total/component mismatch is reported.
+RECONCILIATION_TOLERANCE = 0.05
+
+
+def check_reconciliations(row: dict,
+                          tolerance: float = RECONCILIATION_TOLERANCE) -> list[dict]:
+    """Check that notional totals equal the sum of their components.
+
+    A mismatch means the extraction read the wrong table (or mixed two
+    tables), so this is an 'error' rather than a soft warning: the numbers
+    are mutually contradictory regardless of which one is right.
+
+    Only fires when the total and at least one component are populated, so
+    partially-disclosed filings don't generate noise.
+    """
+    results = []
+    for total_field, component_fields in RECONCILIATION_RULES:
+        total_val = _parse_numeric(row.get(total_field))
+        if total_val is None or total_val == 0:
+            continue
+        components = {
+            f: _parse_numeric(row.get(f))
+            for f in component_fields
+            if _parse_numeric(row.get(f)) is not None
+        }
+        if not components:
+            continue
+        component_sum = sum(components.values())
+        diff_pct = abs(abs(total_val) - abs(component_sum)) / abs(total_val)
+        if diff_pct > tolerance:
+            detail = ' + '.join(f'{f}={v:,.0f}' for f, v in components.items())
+            results.append({
+                'level': 'error',
+                'field': total_field,
+                'message': f'Reconciliation failure: {total_field}={total_val:,.0f} '
+                           f'but {detail} = {component_sum:,.0f} '
+                           f'(diff {diff_pct:.1%}) — extraction likely read the '
+                           f'wrong table',
+            })
+    return results
+
+
 def validate_row(
     row: dict,
     prior_row: dict | None,
@@ -128,28 +186,7 @@ def validate_row(
             })
 
     # --- 3. Summation checks ---
-    # Check if total_notional ≈ sum of component notionals
-    component_fields = [
-        f for f in config.fields
-        if 'notional' in config.fields[f].description.lower()
-        and f != 'total_notional'
-        and 'total' not in f
-    ]
-    total_val = _parse_numeric(row.get('total_notional'))
-    if total_val is not None and component_fields:
-        component_sum = sum(
-            _parse_numeric(row.get(f)) or 0
-            for f in component_fields
-        )
-        if component_sum > 0 and total_val > 0:
-            diff_pct = abs(total_val - component_sum) / total_val
-            if diff_pct > 0.05:
-                results.append({
-                    'level': 'warning',
-                    'field': 'total_notional',
-                    'message': f'Summation mismatch: total_notional={total_val:,.0f} vs '
-                               f'sum of components={component_sum:,.0f} (diff {diff_pct:.1%})',
-                })
+    results.extend(check_reconciliations(row))
 
     # --- 4. Units check (>100x swing) ---
     if prior_row:
