@@ -1,0 +1,43 @@
+name: CI
+
+# Runs on every push and pull request, including the commits the scheduler
+# pushes back. The daily routine spent two months writing into the corpus
+# while running code that predated every fix; nothing checked either the code
+# or the data it produced.
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m pytest tests/ -q
+
+      - name: Check data integrity
+        run: ./scripts/check_data_integrity.sh
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-report
+          path: audit_report.json
+          if-no-files-found: ignore

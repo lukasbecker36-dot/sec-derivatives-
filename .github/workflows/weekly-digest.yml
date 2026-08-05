@@ -15,6 +15,33 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # Gate the send, not just the generation. The briefing that reported
+      # Microsoft's non-designated FX notional as "+352%" was emailed by this
+      # workflow: the $63.5B figure was real, but the percentage was computed
+      # against a corrupted prior value. Checking the corpus here means bad
+      # data cannot reach a reader even if the routine writes a digest from it.
+      - name: Check data integrity
+        id: integrity
+        run: |
+          if ./scripts/check_data_integrity.sh; then
+            echo "clean=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "clean=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-report
+          path: audit_report.json
+          if-no-files-found: ignore
+
       - name: Check for digest
         id: check
         run: |
@@ -27,7 +54,7 @@ jobs:
           fi
 
       - name: Send email
-        if: steps.check.outputs.has_content == 'true'
+        if: steps.check.outputs.has_content == 'true' && steps.integrity.outputs.clean == 'true'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: ${{ secrets.SMTP_SERVER }}
@@ -38,3 +65,34 @@ jobs:
           to: Lukas.becker@infopro-digital.com
           from: SEC Derivatives Bot <${{ secrets.SMTP_USERNAME }}>
           html_body: file://WEEKLY_DIGEST.html
+
+      # A blocked digest must not look like a quiet week. Say so explicitly.
+      - name: Notify that the digest was withheld
+        if: steps.check.outputs.has_content == 'true' && steps.integrity.outputs.clean != 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: "SEC Derivatives — digest WITHHELD (data integrity regression)"
+          to: Lukas.becker@infopro-digital.com
+          from: SEC Derivatives Bot <${{ secrets.SMTP_USERNAME }}>
+          body: |
+            This week's digest was generated but NOT sent: the extracted data
+            regressed against the recorded baseline, so figures derived from it
+            (percentage changes especially) cannot be trusted.
+
+            This is not a quiet week. A digest exists and is being held back.
+
+            See the audit-report artifact on this workflow run, or locally:
+              python -m src.audit --limit 60
+
+            Run details:
+            ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      - name: Fail if data integrity blocked the digest
+        if: steps.integrity.outputs.clean != 'true'
+        run: |
+          echo "Digest withheld — data integrity regression. See audit-report artifact."
+          exit 1

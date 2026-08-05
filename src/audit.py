@@ -209,6 +209,36 @@ def format_report(report: dict, limit: int = 40) -> str:
     return '\n'.join(lines)
 
 
+def check_against_baseline(report: dict, baseline: dict,
+                           zero_tolerance: list[str]) -> list[str]:
+    """Compare a report to a recorded baseline. Returns failure messages.
+
+    The corpus carries known defects that need re-extraction to clear, so a
+    gate demanding zero defects would block every digest indefinitely. This
+    fails on regression instead: the total must not grow, no single defect
+    type may grow, and types listed in zero_tolerance must stay at zero.
+    """
+    failures = []
+    base_total = baseline.get('defect_count', 0)
+    if report['defect_count'] > base_total:
+        failures.append(
+            f"total defects rose {base_total} -> {report['defect_count']}")
+
+    base_by_type = baseline.get('defects_by_type', {})
+    for defect_type, count in sorted(report['defects_by_type'].items()):
+        was = base_by_type.get(defect_type, 0)
+        if count > was:
+            failures.append(f'{defect_type} rose {was} -> {count}')
+
+    for defect_type in zero_tolerance:
+        count = report['defects_by_type'].get(defect_type, 0)
+        if count:
+            failures.append(
+                f'{defect_type} must stay at zero, found {count}')
+
+    return failures
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description='Audit committed output/ for integrity defects.')
@@ -225,6 +255,14 @@ def main(argv: list[str] | None = None) -> int:
                         help='Max defects to print')
     parser.add_argument('--exit-zero', action='store_true',
                         help='Always exit 0, even when defects are found')
+    parser.add_argument('--baseline', type=Path,
+                        help='Baseline JSON to compare against. Fails only on '
+                             'regression rather than on any defect at all.')
+    parser.add_argument('--zero-tolerance', default='misaligned_row,stale_null',
+                        help='Comma-separated defect types that must stay at '
+                             'zero when --baseline is used')
+    parser.add_argument('--write-baseline', type=Path,
+                        help='Write the current report as a baseline and exit 0')
     args = parser.parse_args(argv)
 
     report = run_audit(args.output, tickers=args.tickers,
@@ -234,6 +272,34 @@ def main(argv: list[str] | None = None) -> int:
     if args.json:
         args.json.write_text(json.dumps(report, indent=2), encoding='utf-8')
         print(f'\nWrote {args.json}')
+
+    if args.write_baseline:
+        summary = {
+            'defect_count': report['defect_count'],
+            'defects_by_type': report['defects_by_type'],
+            'issuers_audited': report['issuers_audited'],
+        }
+        args.write_baseline.write_text(json.dumps(summary, indent=2) + '\n',
+                                      encoding='utf-8')
+        print(f'\nWrote baseline {args.write_baseline}')
+        return 0
+
+    if args.baseline:
+        if not args.baseline.exists():
+            print(f'\nBaseline {args.baseline} not found — cannot gate.')
+            return 0 if args.exit_zero else 1
+        baseline = json.loads(args.baseline.read_text(encoding='utf-8'))
+        zero_tolerance = [t.strip() for t in args.zero_tolerance.split(',')
+                          if t.strip()]
+        failures = check_against_baseline(report, baseline, zero_tolerance)
+        if failures:
+            print('\nDATA INTEGRITY REGRESSION:')
+            for f in failures:
+                print(f'  - {f}')
+            return 0 if args.exit_zero else 1
+        print(f"\nNo regression against baseline "
+              f"({baseline.get('defect_count', 0)} known defects).")
+        return 0
 
     if report['defect_count'] and not args.exit_zero:
         return 1
