@@ -26,6 +26,16 @@ This module scans the committed CSVs and reports three defects:
                  number in such a row is suspect regardless of how sound it
                  looks. 287 of these sat undetected across 178 tickers.
 
+  implausible_swing
+                 a single numeric field moved by 10x or more between adjacent
+                 periods, with the prior magnitude non-trivial. Almost always
+                 an extraction picked the wrong column: a notional value
+                 (10-100x larger than fair values) landing in an asset or
+                 liability field, so the number itself is real but its label
+                 is not. reconciliation only catches this when the offending
+                 field is a total-of-components; this catches the standalone
+                 fields it misses.
+
 Run before generating any digest:
 
     python -m src.audit                      # human summary, exit 1 on defects
@@ -43,7 +53,24 @@ import subprocess
 import sys
 from pathlib import Path
 
-from .validate import check_reconciliations
+from .validate import check_reconciliations, _parse_numeric
+
+# Bookkeeping columns to skip and fields whose values naturally can swing
+# hard on small bases without indicating a wrong-column extraction.
+_SWING_EXCLUDE_FIELDS = {
+    'has_derivatives', 'principal_currency_exposures', 'derivatives_policy',
+    'expected_reclassifications', 'processed_at', 'extraction_version',
+}
+
+# Prior magnitude below which a single-value swing isn't reported. A $10M
+# figure moving to $200M is 20x but often just a small position doubling
+# a few times; the failure mode we care about is the notional-in-fair-value
+# swap, which puts a 100M+ number where a 10M number was.
+_SWING_MIN_MAGNITUDE = 100.0
+
+# Fold-ratio at which we flag. Notional vs fair value is typically 10-100x
+# apart, so 10x catches those; real business swings almost never reach it.
+_SWING_THRESHOLD = 10.0
 
 logger = logging.getLogger(__name__)
 
@@ -67,6 +94,43 @@ def _flatten(value) -> str:
 def _row_key(row: dict) -> tuple[str, str]:
     return (_flatten(row.get('period_end_date')).strip(),
             _flatten(row.get('form_type')).strip())
+
+
+def check_implausible_swings(prior_row: dict, curr_row: dict,
+                             threshold: float = _SWING_THRESHOLD,
+                             min_magnitude: float = _SWING_MIN_MAGNITUDE) -> list[dict]:
+    """Flag single-value swings of >= threshold-fold between adjacent periods.
+
+    This catches the notional-in-fair-value-slot error class: a real number
+    from the filing lands in a field whose meaning differs by an order of
+    magnitude or more (typical when a table's column layout doesn't align
+    to the schema and the LLM picks the biggest number that matches the
+    field name). Skips small-magnitude priors so a $10M position doubling
+    a few times isn't reported.
+    """
+    results = []
+    for field, curr_str in curr_row.items():
+        if field is None or field in META_COLUMNS or field in _SWING_EXCLUDE_FIELDS:
+            continue
+        curr = _parse_numeric(_flatten(curr_str).strip())
+        prev = _parse_numeric(_flatten(prior_row.get(field)).strip())
+        if curr is None or prev is None:
+            continue
+        if abs(prev) < min_magnitude:
+            continue
+        if curr == 0 or prev == 0:
+            # A zero on either side is a real disclosure event
+            # (appeared / disappeared), handled by the daily alerts.
+            continue
+        ratio = max(abs(curr / prev), abs(prev / curr))
+        if ratio >= threshold:
+            results.append({
+                'field': field,
+                'prev': prev,
+                'curr': curr,
+                'ratio': ratio,
+            })
+    return results
 
 
 def is_misaligned_row(row: dict) -> bool:
@@ -125,7 +189,7 @@ def audit_issuer(ticker: str, csv_path: Path,
         if text:
             reference = {_row_key(r): r for r in read_tracking(text)}
 
-    for row in rows:
+    for idx, row in enumerate(rows):
         period, form_type = _row_key(row)
         if is_misaligned_row(row):
             surplus = [str(v).strip() for v in (row.get(None) or []) if str(v or '').strip()]
@@ -154,6 +218,27 @@ def audit_issuer(ticker: str, csv_path: Path,
                 'ticker': ticker, 'type': 'reconciliation', 'period': period,
                 'form_type': form_type, 'detail': result['message'],
             })
+
+        # Cross-period plausibility. Walk back to the most recent non-empty
+        # non-misaligned row so a stray null between two good rows doesn't
+        # break the chain.
+        prior_row = None
+        for j in range(idx - 1, -1, -1):
+            cand = rows[j]
+            if is_misaligned_row(cand) or is_empty_row(cand):
+                continue
+            prior_row = cand
+            break
+        if prior_row is not None:
+            for swing in check_implausible_swings(prior_row, row):
+                defects.append({
+                    'ticker': ticker, 'type': 'implausible_swing',
+                    'period': period, 'form_type': form_type,
+                    'detail': (f"{swing['field']} moved "
+                               f"{swing['prev']:,.0f} → {swing['curr']:,.0f} "
+                               f"({swing['ratio']:.0f}x) from "
+                               f"{_row_key(prior_row)[0]} — likely wrong column"),
+                })
 
     return defects
 
