@@ -4,7 +4,7 @@ import csv
 
 from src.audit import (
     is_empty_row, is_misaligned_row, audit_issuer, run_audit, format_report,
-    check_against_baseline, META_COLUMNS,
+    check_against_baseline, check_implausible_swings, META_COLUMNS,
 )
 
 HEADER = [
@@ -139,6 +139,72 @@ class TestRunAudit:
         report = run_audit(tmp_path)
         assert report['defect_count'] == 0
         assert 'No integrity defects' in format_report(report)
+
+
+class TestCheckImplausibleSwings:
+    """Cross-period plausibility.
+
+    The failure mode is not a bad number but a real number landing in the
+    wrong column — a notional (which is 10-100x larger than a fair value)
+    ending up in a fair-value field. So the check is on ratio, with a
+    magnitude floor to avoid noise on tiny bases.
+    """
+
+    def test_flags_notional_in_asset_slot(self):
+        """The AT&T pattern: $36B cross-currency notional lands in a fair
+        value asset field where the prior period had a normal $458M."""
+        prior = {'total_derivative_asset': '458'}
+        curr = {'total_derivative_asset': '36037'}
+        results = check_implausible_swings(prior, curr)
+        assert len(results) == 1
+        assert results[0]['field'] == 'total_derivative_asset'
+        assert results[0]['ratio'] > 70
+
+    def test_normal_business_move_passes(self):
+        """A 60% year-on-year growth in a $50B FX book is real, not a wrong-
+        column extraction, and the gate must not block on this class of move."""
+        prior = {'fx_derivatives_notional': '58521'}
+        curr = {'fx_derivatives_notional': '63465'}
+        assert check_implausible_swings(prior, curr) == []
+
+    def test_small_base_swing_ignored(self):
+        """$10M -> $250M is 25x but off a tiny base; those swings are common
+        and legitimate. The failure mode we care about starts higher."""
+        prior = {'some_field': '10'}
+        curr = {'some_field': '250'}
+        assert check_implausible_swings(prior, curr) == []
+
+    def test_zero_transitions_not_flagged(self):
+        """Appeared / disappeared events are handled by the daily alerts;
+        a 0 -> 500 is not a wrong-column error."""
+        prior = {'ir_swap_notional': '0'}
+        curr = {'ir_swap_notional': '500'}
+        assert check_implausible_swings(prior, curr) == []
+        assert check_implausible_swings({'ir_swap_notional': '500'},
+                                         {'ir_swap_notional': '0'}) == []
+
+    def test_sign_flip_with_magnitude_flagged(self):
+        """APD's fx_sensitivity_10pct went 734 -> -17,000; both magnitude
+        and sign changed. Sign flip alone is fine (sensitivities can flip);
+        it's the magnitude that indicates a wrong extraction."""
+        prior = {'fx_sensitivity_10pct': '734'}
+        curr = {'fx_sensitivity_10pct': '-17000'}
+        results = check_implausible_swings(prior, curr)
+        assert len(results) == 1
+        assert results[0]['ratio'] > 20
+
+    def test_pure_sign_flip_not_flagged(self):
+        """A sensitivity swinging 500 -> -450 is roughly equal magnitude
+        and reflects a real business event; this check should not fire."""
+        prior = {'net_derivative_position': '500'}
+        curr = {'net_derivative_position': '-450'}
+        assert check_implausible_swings(prior, curr) == []
+
+    def test_excluded_fields_never_swing(self):
+        """String fields like has_derivatives must never be checked."""
+        prior = {'has_derivatives': 'Yes'}
+        curr = {'has_derivatives': 'No'}
+        assert check_implausible_swings(prior, curr) == []
 
 
 class TestCheckAgainstBaseline:

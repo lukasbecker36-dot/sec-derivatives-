@@ -65,6 +65,18 @@ filing sections. Be precise. Use null for fields not found in the text. All \
 dollar amounts in millions unless the text explicitly states otherwise \
 (e.g. "billion" means multiply by 1000 to store in millions).
 
+Every field carries a "kind" (notional, fair_value, sensitivity, aoci, other) \
+alongside its description. Respect the kind: a NOTIONAL is the gross \
+contract amount and is typically 10-100x larger than a FAIR VALUE (the \
+mark-to-market position of the same derivative). Do NOT put a notional \
+number into a fair_value field just because it's the only large number in \
+the table that mentions "derivative" — that is the single most common \
+extraction error in this pipeline. If the only candidate you can find for a \
+fair_value field is in the wrong magnitude class (e.g. billions in a table \
+where fair values are in the hundreds of millions), return null with \
+confidence "not_found" instead of picking it. Same discipline in reverse for \
+notional fields.
+
 Beyond extracting the requested fields, you also watch for anything \
 editorially interesting about the company's derivatives and hedging activity. \
 Flag noteworthy items in the "flags" and "notes" fields of your response."""
@@ -116,13 +128,77 @@ RETRY_SYSTEM = """You are a financial data extraction assistant. Return ONLY val
 No preamble, no markdown fences, no explanation. Just the JSON object."""
 
 
+# Magnitude classes, keyed off field names. The AT&T failure — a $36B
+# cross-currency swap notional landing in a fair-value asset field — happens
+# because the prompt gives Haiku a schema of {field_name: description} and no
+# hint that a notional is orders of magnitude larger than a fair value.
+# The kind is included alongside each field so the model has explicit shape
+# information to reason about, not just a name.
+FIELD_KIND_HINTS = {
+    'notional': ('gross contract amount, typically $100M to $100B for a '
+                 'large corporate. This is NOT a fair value and NOT a '
+                 'sensitivity — never put a mark-to-market number here.'),
+    'fair_value': ('mark-to-market position, typically under $2B for a '
+                   'non-financial issuer. ALWAYS much smaller than any '
+                   'notional amount in the same table. NEVER put a notional '
+                   'figure here just because it is the largest '
+                   'derivative-related number available.'),
+    'sensitivity': ('hypothetical change from a market-rate move (e.g. 10% '
+                    'FX depreciation, 100bp IR increase). Typically hundreds '
+                    'of millions; can be negative. Not a notional and not a '
+                    'balance-sheet fair value.'),
+    'aoci': ('accumulated other comprehensive income component from hedge '
+             'accounting. Typically hundreds of millions; usually negative. '
+             'Not a notional.'),
+    'other': None,
+}
+
+
+def _infer_field_kind(name: str, description: str = '') -> str:
+    """Classify a field so the prompt can attach a magnitude hint.
+
+    Inference is deliberately conservative — anything that doesn't match a
+    clear pattern falls back to 'other' and no hint is added, rather than
+    misleading the model with the wrong magnitude expectation.
+    """
+    n = name.lower()
+    d = (description or '').lower()
+    if 'notional' in n or 'notional' in d:
+        return 'notional'
+    if n.endswith('_aoci') or 'aoci' in n or 'accumulated other comprehensive' in d:
+        return 'aoci'
+    if 'sensitivity' in n or 'sensitivity' in d or 'hypothetical' in d:
+        return 'sensitivity'
+    if (n.endswith('_asset') or n.endswith('_assets')
+            or n.endswith('_liability') or n.endswith('_liabilities')
+            or n.endswith('_fv') or 'fair_value' in n or 'fair value' in d):
+        return 'fair_value'
+    return 'other'
+
+
+def enrich_schema(schema: dict[str, str]) -> dict[str, dict]:
+    """Attach field kind and magnitude hint to each schema entry.
+
+    Input {name: description} → output {name: {description, kind, hint?}}.
+    The plain-dict shape is preserved everywhere else; this is only for the
+    LLM-facing rendering. Absent hints for kind='other' keep the output
+    compact.
+    """
+    enriched = {}
+    for name, desc in schema.items():
+        kind = _infer_field_kind(name, desc)
+        entry = {'description': desc, 'kind': kind}
+        hint = FIELD_KIND_HINTS.get(kind)
+        if hint:
+            entry['expected_magnitude'] = hint
+        enriched[name] = entry
+    return enriched
+
+
 def build_extraction_prompt(section_text: str, schema: dict, context: dict,
                            filer_context: str = '') -> str:
     """Build the extraction prompt from section text and schema."""
-    schema_json = json.dumps(
-        {name: desc for name, desc in schema.items()},
-        indent=2,
-    )
+    schema_json = json.dumps(enrich_schema(schema), indent=2)
     prior_json = json.dumps(context.get('prior_values', {}), indent=2)
     filer_block = f'\nCompany-specific patterns from prior filings:\n{filer_context}\n' if filer_context else ''
     return USER_TEMPLATE.format(

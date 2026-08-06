@@ -31,6 +31,7 @@ from .config import IssuerConfig, load_config
 from .engine import _build_schema_for_section, OUTPUT_DIR
 from .filer_profile import get_or_create_profile, build_prompt_context
 from .filing_fetcher import discover_filings, fetch_filing_text
+from .llm_extract import enrich_schema
 from .qualitative import extract_qualitative
 from .registry import (
     load_universe, save_universe, get_active, mark_active, append_review_item,
@@ -273,6 +274,7 @@ def _write_extraction_request(config: IssuerConfig, config_path: Path,
         'section_name': section_name,
         'section_text': section_text,
         'schema': schema,
+        'schema_enriched': enrich_schema(schema),
         'prior_values': {},
         'filer_context': filer_context,
         'config_path': str(config_path),
