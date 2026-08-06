@@ -24,7 +24,7 @@ from .filer_profile import (
     update_profile_after_extraction, save_profile,
 )
 from .filing_fetcher import fetch_filing_text, get_unprocessed_filings, discover_filings
-from .llm_extract import build_extraction_prompt
+from .llm_extract import build_extraction_prompt, enrich_schema
 from .registry import (
     load_universe, save_universe, get_active, get_registered, get_failed,
     update_last_checked, mark_activating, mark_active,
@@ -173,6 +173,7 @@ def prepare(since: str, max_activations: int, verbose: bool = False):
                         'section_name': section_name,
                         'section_text': section_text,
                         'schema': schema,
+                        'schema_enriched': enrich_schema(schema),
                         'prior_values': prior_vals,
                         'filer_context': filer_context,
                         'config_path': str(config_path),
