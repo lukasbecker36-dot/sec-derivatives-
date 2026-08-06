@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-06-27 | Processed 2026-08-06 ===
+[NUMERIC] total_derivative_liability: $1,381M → $1,689M (+22.3%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-55M → $-779M (-1316.4%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-56M → $14M (+125.0%) — exceeds 20% threshold
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed from -56.0 (loss) to +14 (gain), a significant sign change
+[LLM_FLAG] total_derivative_asset: gross value $910 vs prior $777 — using gross fair values for consistency
+[LLM_FLAG] total_derivative_liability: gross value $1,689 vs prior $1,381 — increase of 22.3%
+
 === 10-Q | Period ending 2026-03-28 | Processed 2026-06-16 ===
 [HISTORICAL] [NUMERIC] net_derivative_position: $-232M → $-55M (+76.3%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $-228M → $-56M (+75.4%) — exceeds 20% threshold

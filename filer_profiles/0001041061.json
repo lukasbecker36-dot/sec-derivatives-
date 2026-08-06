@@ -19,7 +19,12 @@
       "cross-currency",
       "interest rate swap",
       "commodity derivative",
-      "notional amount"
+      "notional amount",
+      "net investment hedge",
+      "cash flow hedge",
+      "economic hedge",
+      "mark-to-market",
+      "aoci"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -78,6 +83,18 @@
       ],
       "fields_extracted": 9,
       "fields_null": 12
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-06T09:38:19Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 13,
+      "fields_null": 19
     }
   ]
 }

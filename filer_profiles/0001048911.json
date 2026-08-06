@@ -18,7 +18,10 @@
     "recurring_phrases": [
       "net investment hedge",
       "cross-currency",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "interest rate swap",
+      "notional amount",
+      "unrealized gain"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -79,6 +82,18 @@
       ],
       "fields_extracted": 6,
       "fields_null": 6
+    },
+    {
+      "filing_date": "2026-05-31",
+      "form_type": "10-K",
+      "period_end": "2026-05-31",
+      "processed_at": "2026-08-06T09:38:07Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 16,
+      "fields_null": 8
     }
   ]
 }

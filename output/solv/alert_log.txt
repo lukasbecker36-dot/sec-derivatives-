@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[NUMERIC] fx_not_designated_notional: $569M → $878M (+54.3%) — exceeds 20% threshold
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_liability: $50M → $63M (+26.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-38M → $-50M (-31.6%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $-1M → $3M (+400.0%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-2M → $1M (+150.0%) — exceeds 20% threshold
+[LLM_FLAG] fx_not_designated_notional changed from $569M to $878M (54% increase vs prior)
+[LLM_FLAG] cash_flow_hedge_aoci changed sign from ($1M) to +$3M (prior was net loss, now net gain)
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed sign from ($2M) to +$1M (prior was net loss reclassification, now net gain)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-25 ===
 [HISTORICAL] [NUMERIC] ir_swap_notional: $100M → $300M (+200.0%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] total_derivative_asset: $5M → $12M (+140.0%) — exceeds 20% threshold

@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $1,200M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $1,200M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $500M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $323M, now missing
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[DISAPPEARED_FIELD] total_derivative_liability: was $323M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-323M, now missing
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($13M)
+[NUMERIC] fx_sensitivity_10pct: $8M → $17M (+111.1%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 6/11 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_ir_swap_notional, fi_total_derivative_liability, total_derivative_liability...)
+[LLM_FLAG] FX notional of $1,200M includes only cross-currency swaps from this section; FX forward contracts ($424.1M) are disclosed separately in the market_risk section and should be added for total FX exposure
+[LLM_FLAG] No derivative fair value balance sheet data (assets/liabilities) provided in this section; prior period showed total_derivative_liability of $322.6M
+[LLM_FLAG] fx_sensitivity_10pct changed from prior $8.1M to $17.1M (>50% increase, approximately 111% increase); this reflects increased foreign currency exposure as international revenues grew from 13.4% to 13.9%
+[LLM_FLAG] ir_sensitivity_100bp of $13.2M is extrapolated from the 25bp figure ($3.3M per year); the disclosed sensitivity is for interest expense on variable-rate debt ($750M Term Loan + $550M AR Facility), not fair value of fixed-rate notes
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-21 ===
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($323M)
 [HISTORICAL] [DISAPPEARED_FIELD] fx_not_designated_notional: was $238M, now missing

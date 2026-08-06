@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[NUMERIC] total_derivative_asset: $184M → $292M (+58.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $649M → $65M (-90.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-465M → $227M (+148.8%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset changed from $184M to $292M (59% increase vs prior)
+[LLM_FLAG] total_derivative_liability changed from $649M to $65M (90% decrease vs prior)
+[LLM_FLAG] net_derivative_position swung from ($465M) to +$227M (sign reversal, prior was net liability)
+[LLM_FLAG] Commodity notional is disclosed in volume (100 Mbbl/day for crude collars; oil 52 MMbbl and gas 307 Bcf for marketing) but not in dollar terms
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-05 ===
 [HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($184M)
 [HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($649M)

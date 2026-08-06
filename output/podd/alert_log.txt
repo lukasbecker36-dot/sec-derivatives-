@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $460M, now missing
+[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($0M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (fi_ir_swap_notional)
+[LLM_FLAG] total_cash_equivalents_fv increased from prior 314.5 to 346.3 (10.1% increase — within normal range)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-24 ===
 [HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $716M → $314M (-56.1%) — exceeds 20% threshold
 [HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $1M, now missing

@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $26,102M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $27,524M, now missing
+[NEW_FIELD] total_derivative_asset: appeared for first time ($9,800M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($9,404M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($248M)
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability)
+[LLM_FLAG] Commodity derivatives notional disclosed in volume only (36M barrels oil/NGL, 17 Bcf natural gas) not in dollar terms
+[LLM_FLAG] Gross derivative assets ($9,800M) and liabilities ($9,404M) are very large; the net carrying value after counterparty and collateral netting is $248M
+[LLM_FLAG] H1 2026 net loss from commodity derivative activity was ($2,003M) vs H1 2025 gain of $30M
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-07 ===
 [HISTORICAL] [NUMERIC] fi_total_derivative_asset: $2,804M → $26,102M (+830.9%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_total_derivative_liability: $2,711M → $27,524M (+915.3%) — exceeds 20% threshold

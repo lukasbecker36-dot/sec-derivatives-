@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-27 | Processed 2026-08-06 ===
+[NUMERIC] marketable_equity_securities_fv: $6M → $1,220M (+20233.3%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $4,446M → $5,354M (+20.4%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $2M → $1M (-50.0%) — exceeds 20% threshold
+[NUMERIC] fi_fx_not_designated_notional: $1,200M → $1,600M (+33.3%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $1,200M → $1,600M (+33.3%) — exceeds 20% threshold
+[NEW_FIELD] marketable_equity_value: appeared for first time ($1,200M)
+[VALIDATION] Likely units mismatch: marketable_equity_securities_fv changed from 6 to 1,220 (203x)
+[LLM_FLAG] marketable_equity_securities_fv changed from 6.0 to 1220 (>50% change): previously non-marketable equity securities became publicly traded during Q2 FY2026 and were reclassified to Level 1
+
 === 10-Q | Period ending 2026-03-28 | Processed 2026-07-03 ===
 [HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($4,188M)
 [HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($6,762M)

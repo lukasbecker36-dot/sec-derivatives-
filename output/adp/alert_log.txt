@@ -1,3 +1,11 @@
+=== 10-K | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($4M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+[LLM_FLAG] ir_swap_notional reported as 0: ADP entered $1.0B in pre-issuance interest rate hedges but terminated all of them upon the May 2036 note issuance; no outstanding derivative contracts are disclosed as of the period end
+[LLM_FLAG] cash_flow_hedge_aoci of $3.7M represents only the unamortized gain from the terminated hedges, not necessarily the total AOCI balance for all cash flow hedges
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-03 ===
 [HISTORICAL] [LLM_FLAG] section_text is truncated mid-sentence ('Net earnings $1,359.8 Weighted ') inside Note 5 EPS, well before Note 7 Corporate Investments and Funds Held for Clients (the note that would contain these figures). All fields left null; recommend re-slicing with a larger window to capture the target note.
 [HISTORICAL] [LLM_FLAG] section_text is truncated mid-sentence ('...impact our consolidated results of operations, financial...') before it discusses derivative instruments/FX/equity risk figures.

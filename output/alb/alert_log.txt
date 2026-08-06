@@ -1,3 +1,25 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $24M, now missing
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $1,600M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $1,600M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $8M, now missing
+[NUMERIC] fx_derivatives_notional: $1,600M → $2,500M (+56.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $8M → $5M (-38.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-8M → $-1M (+88.2%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($1,400M)
+[NUMERIC] fx_sensitivity_10pct: $-56M → $-38M (+33.2%) — exceeds 20% threshold
+[NUMERIC] fx_forward_fair_value: $-8M → $-4M (+48.1%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_up: $56M → $38M (-32.7%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_down: $-56M → $-38M (+33.2%) — exceeds 20% threshold
+[NEW_FIELD] variable_rate_debt_2025: appeared for first time ($17M)
+[LLM_FLAG] fx_derivatives_notional changed from 1600 to ~2500 (>50% increase) due to new €1B cross-currency swap designated as net investment hedge in June 2026
+[LLM_FLAG] fx_designated_notional changed from 0 to ~1100 (new net investment hedge introduced in June 2026; prior period had no designated hedges)
+[LLM_FLAG] total_derivative_asset changed from 0.0 to 3.909 (new designated hedge contributed $3.9M in assets)
+[LLM_FLAG] net_derivative_position changed from -7.9 to -0.93 (>50% change in magnitude)
+[LLM_FLAG] fx_sensitivity_up decreased from 56.0 to 37.7 (-32.7%), and fx_sensitivity_down changed from -56.1 to -37.5 (33.1% less negative), consistent with lower FX forward notional ($1.4B vs prior $1.6B)
+[LLM_FLAG] New cross-currency swap net investment hedge (€1B) separately disclosed: fair value = $3.1M net asset position, designated as net investment hedge of EUR-functional-currency subsidiaries
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-03 ===
 [HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($24M)
 [HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($1,600M)

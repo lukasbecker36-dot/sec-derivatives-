@@ -1,3 +1,7 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $400M, now missing
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fi_ir_swap_notional)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-13 ===
 [HISTORICAL] [LLM_FLAG] Derivative fair values reported as 'not material' — no numeric asset/liability amounts extractable. Collar now classified as current liability (matures September 30, 2026). No short-term investments section present in this period's text. Collar agreements are interest rate collars (cap+floor), captured under fi_ir_swap_notional.
 [HISTORICAL] [LLM_FLAG] Only derivative instrument is interest rate collars ($400M notional); fair value and AOCI amounts described as not material with no dollar figures provided.

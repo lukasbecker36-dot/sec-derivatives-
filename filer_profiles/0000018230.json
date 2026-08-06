@@ -15,7 +15,14 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "cash flow hedge",
+      "fair value hedge",
+      "commodity contract",
+      "notional amount",
+      "unrealized gain",
+      "aoci"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -75,6 +82,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 12
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-06T09:38:03Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 5,
+      "fields_null": 20
     }
   ]
 }

@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-07-04 | Processed 2026-08-06 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,500M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($150M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($24M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($4M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($11M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-7M)
+
 === 10-Q | Period ending 2026-04-04 | Processed 2026-07-23 ===
 [HISTORICAL] [LLM_FLAG] net_investment_hedge_debt is null because MSI uses FX forward/option contracts (not debt) for net investment hedging; EUR and GBP notionals are in local currency only.
 [HISTORICAL] [LLM_FLAG] treasury_rate_lock_notional is null; the program is not mentioned in Q1 2026 — fully wound down post-2034 note issuance.

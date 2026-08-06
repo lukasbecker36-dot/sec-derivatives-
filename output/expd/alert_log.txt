@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,317M, now missing
+[NUMERIC] fx_transaction_gain_loss: $2M → $-6M (-400.0%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $-14M → $-30M (-114.3%) — exceeds 20% threshold
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[LLM_FLAG] fx_transaction_gain_loss changed from prior +2 to -6 (sign reversal, >50% change) — swung from gain to loss
+[LLM_FLAG] fx_sensitivity_10pct changed from prior -14 to -30 (114% increase in magnitude) — likely reflects higher international revenue base
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-18 ===
 [HISTORICAL] [NUMERIC] fx_transaction_gain_loss: $-28M → $2M (+107.1%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-49M → $-14M (+71.4%) — exceeds 20% threshold

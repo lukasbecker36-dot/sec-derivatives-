@@ -1,3 +1,23 @@
+=== 10-K | Period ending 2026-05-31 | Processed 2026-08-06 ===
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $551M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $211M, now missing
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,753M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,000M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,753M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($2,300M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($25M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($119M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-94M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-541M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($21M)
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (marketable_equity_securities_fv, corporate_debt_securities_fv)
+[LLM_FLAG] New IR swap program in 2026 — $2,300M notional vs. $0 in prior year (not designated as hedges)
+[LLM_FLAG] FX contracts not designated grew from $1,118M (2025) to $1,753M (2026), a 56.8% increase
+[LLM_FLAG] Cross-currency swap liability of $115M is the dominant derivative liability
+[LLM_FLAG] Interest rate sensitivity disclosed as 10% rate increase ($694M fair value impact) rather than the standard 100bp metric — not directly comparable
+[LLM_FLAG] FX sensitivity of -$541M is a full-year fiscal 2026 operating income impact, not a point-in-time fair value change
+
 === 10-Q | Period ending 2026-02-28 | Processed 2026-07-15 ===
 [HISTORICAL] [LLM_FLAG] Debt securities total ($211M) includes both corporate debt and U.S. Treasury securities; the schema field 'corporate_debt_securities_fv' may overstate pure corporate debt exposure.
 [HISTORICAL] [LLM_FLAG] Section also discloses FedEx's intended InPost acquisition investment ($2.6B based on offer price) — this is a pending strategic investment, not a marketable security.

@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,500M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $4M → $9M (+125.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($75M)
+[NEW_FIELD] fx_forward_notional_net_investment_hedge: appeared for first time ($75M)
+[NEW_FIELD] ir_swap_gain_loss_oci: appeared for first time ($20M)
+[NEW_FIELD] ir_swap_reclassified_from_aoci: appeared for first time ($-3M)
+[NEW_FIELD] aoci_reclassification_next_12m: appeared for first time ($9M)
+[NEW_FIELD] total_return_swap_fair_value: appeared for first time ($0M)
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed from 4.0 to 9 (+125%), exceeds 50% threshold — but both are small amounts
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-18 ===
 [HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $1,500M, now missing
 [HISTORICAL] [NUMERIC] expected_12mo_reclass_from_aoci: $1M → $4M (+300.0%) — exceeds 20% threshold

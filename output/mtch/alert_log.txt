@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[NUMERIC] total_cash_equivalents_fv: $320M → $184M (-42.7%) — exceeds 20% threshold
+[NEW_FIELD] total_marketable_securities_fv: appeared for first time ($3M)
+[DISAPPEARED_FIELD] equity_investments_carrying_value: was $33M, now missing
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (equity_investments_carrying_value)
+[LLM_FLAG] total_cash_equivalents_fv decreased from $320.4M to $183.7M (-42.7% vs prior)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NUMERIC] total_cash_equivalents_fv: $387M → $177M (-54.3%) — exceeds 20% threshold
 [DISAPPEARED_FIELD] has_derivatives: was $0M, now missing

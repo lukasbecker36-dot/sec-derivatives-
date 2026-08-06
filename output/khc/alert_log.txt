@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-06-27 | Processed 2026-08-06 ===
+[NUMERIC] total_cash_equivalents_fv: $711M → $104M (-85.4%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $783M → $262M (-66.5%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $348M → $153M (-56.0%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_asset: $215M → $171M (-20.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $215M → $171M (-20.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-1M → $-88M (-8700.0%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[LLM_FLAG] total_cash_equivalents_fv dropped from prior $711M to $104M (>50% decrease); the section explains this was due to funding the repayment of $1.9 billion senior notes that matured in June 2026. The $104M figure represents only the AFS securities portion (money market funds) classified as cash equivalents, not total company cash
+[LLM_FLAG] total_marketable_securities_fv dropped from prior $783M to $262M (>50% decrease); same cause — AFS securities used to fund note repayment
+[LLM_FLAG] corporate_debt_securities_fv dropped from prior $348M to $153M (>50% decrease); related to AFS portfolio drawdown for note repayment
+[LLM_FLAG] FX designated/not-designated notional split unavailable; the notional table gives total FX and cross-currency without splitting designated vs non-designated portions of FX forwards
+[LLM_FLAG] No IR swap notional disclosed in the notional amounts table, though interest rate contracts appear in the P&L impact tables
+[LLM_FLAG] net_derivative_position changed from prior -$1M to -$88M; large absolute deterioration driven by increased cross-currency and FX derivative liabilities
+[LLM_FLAG] FX designated/not-designated notional split unavailable from the notional amounts table; the fair value table shows both designated and non-designated FX contracts but the notional split is not given
+[LLM_FLAG] Interest rate contracts appear in OCI and P&L impact tables (including -$12M OCI loss and -$37M P&L loss for not-designated IR contracts) but no notional amount is disclosed
+
 === 10-Q | Period ending 2026-03-28 | Processed 2026-06-21 ===
 [HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $221M → $711M (+221.7%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] total_marketable_securities_fv: $1,060M → $783M (-26.1%) — exceeds 20% threshold

@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $2,095M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $2,095M, now missing
+[NUMERIC] fx_derivatives_notional: $2,095M → $3,455M (+64.9%) — exceeds 20% threshold
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,250M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $129M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $117M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $12M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $42M → $22M (-46.8%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 5/9 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, total_derivative_asset, total_derivative_liability, net_derivative_position)
+[LLM_FLAG] fx_designated_notional changed from 2095.1 to 2205.1 (+5.3%)
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed from 42.3 to 22.5 (-46.8%), significant decrease in expected reclassification
+[LLM_FLAG] cash_flow_hedge_aoci changed from 50.5 to 54.3 (pre-tax was $61.6M) — modest increase
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-28 ===
 [HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($2,095M)
 [HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($2,095M)

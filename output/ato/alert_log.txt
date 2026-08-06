@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $120M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $48M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $3M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $1M, now missing
+[NEW_FIELD] total_derivative_asset: appeared for first time ($10M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($6M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($3M)
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (total_marketable_securities_fv, corporate_debt_securities_fv, fi_total_derivative_asset, fi_total_derivative_liability)
+[LLM_FLAG] Derivative fair values inferred from fair value hierarchy table: Level 2 financial instrument assets ($9.9M) computed as residual of total Level 2 assets ($56.3M) minus bonds ($42.8M) and money market funds ($3.6M); liability is explicit at $6.5M. Table units assumed thousands based on long-term debt carrying amount of $10,225,000 corresponding to $10.225B.
+[LLM_FLAG] No notional amounts disclosed in this section; only fair values from fair value hierarchy table are available
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-04 ===
 [HISTORICAL] [NUMERIC] fi_total_derivative_liability: $11M → $1M (-92.6%) — exceeds 20% threshold
 [HISTORICAL] [LLM_FLAG] The 'Financial instruments' asset/liability line in the fair value table is inferred to represent total derivatives based on footnote (1) ('Level 2 measurements consist of over-the-counter options and swaps'), but the table does not explicitly label it as 'derivatives' — moderate confidence.

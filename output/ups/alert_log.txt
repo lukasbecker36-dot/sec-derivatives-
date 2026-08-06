@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[NUMERIC] total_derivative_asset: $44M → $75M (+70.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $102M → $77M (-24.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-58M → $-2M (+96.6%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-41M → $-10M (+75.6%) — exceeds 20% threshold
+[NEW_FIELD] fx_hedge_eur_notional: appeared for first time ($2,947M)
+[NEW_FIELD] fx_hedge_gbp_notional: appeared for first time ($441M)
+[NEW_FIELD] fx_hedge_cad_notional: appeared for first time ($1,377M)
+[NEW_FIELD] fx_hedge_hkd_notional: appeared for first time ($5,217M)
+[NEW_FIELD] fx_hedge_cnh_notional: appeared for first time ($7,678M)
+[NEW_FIELD] fx_asset_derivatives_current_fv: appeared for first time ($33M)
+[NEW_FIELD] fx_asset_derivatives_noncurrent_fv: appeared for first time ($42M)
+[NEW_FIELD] fx_liability_derivatives_current_fv: appeared for first time ($37M)
+[NEW_FIELD] fx_liability_derivatives_noncurrent_fv: appeared for first time ($40M)
+[NEW_FIELD] fx_cash_flow_hedge_revenue_gain_loss: appeared for first time ($-40M)
+[NEW_FIELD] fair_value_hedge_carrying_amount: appeared for first time ($279M)
+[NEW_FIELD] fair_value_hedge_basis_adjustment: appeared for first time ($3M)
+[LLM_FLAG] total_derivative_asset changed from 44.0 to 75 (+70.5%), exceeds 50% threshold — significant increase from prior period $9 to $75 as FX moved favorably
+[LLM_FLAG] net_derivative_position changed from -58.0 to -2, a large improvement in net position
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed from -41.0 to -10, a significant reduction in expected losses to be reclassified
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-27 ===
 [HISTORICAL] [DISAPPEARED_FIELD] has_derivatives: was $1M, now missing
 [HISTORICAL] [NUMERIC] total_derivative_asset: $9M → $44M (+388.9%) — exceeds 20% threshold

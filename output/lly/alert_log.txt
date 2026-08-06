@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $2,383M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $146M, now missing
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $448M, now missing
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $19,114M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $297M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $18,817M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $41M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $20M, now missing
+[NUMERIC] fx_derivatives_notional: $19,114M → $28,238M (+47.7%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $18,817M → $27,992M (+48.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_asset: was $41M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $20M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $21M, now missing
+[VALIDATION] Likely extraction failure: 11/14 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, fi_fx_derivatives_notional, fi_fx_designated_notional...)
+[LLM_FLAG] fx_derivatives_notional increased from prior $19,114M to $28,238M (47.7% increase); driven by growth in non-designated purchase contracts ($14,281M to $17,869M) and sell contracts ($9,264M to $10,123M)
+[LLM_FLAG] fx_not_designated_notional increased from prior $18,817M to $27,992M (48.7% increase); Lilly has a very large non-designated FX forward book relative to its designated hedges
+[LLM_FLAG] fx_designated_notional decreased from prior $297M to $246M (17.2% decrease)
+[LLM_FLAG] No derivative fair value balance sheet data in this section; prior showed assets $41M and liabilities $20M
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-21 ===
 [HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $4,392M → $2,383M (-45.7%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] total_marketable_securities_fv: $105M → $146M (+39.0%) — exceeds 20% threshold

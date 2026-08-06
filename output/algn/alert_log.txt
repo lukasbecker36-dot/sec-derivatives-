@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($0M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($0M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($463M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($0M)
+[LLM_FLAG] hedging_currencies changed: Israeli Shekel now listed as primary hedge currency (previously Chinese Yuan was in the primary list); Chinese Yuan still hedged ($4.7M notional) but no longer primary
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-03 ===
 [HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $325M → $199M (-38.8%) — exceeds 20% threshold
 [HISTORICAL] [LLM_FLAG] Fair value of outstanding FX forward contracts described only as 'not material' with no dollar figure given, so fi_total_derivative_asset/fi_total_derivative_liability left null.

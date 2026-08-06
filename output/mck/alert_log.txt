@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,550M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($5,550M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($119M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($95M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($24M)
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $750M, now missing
+[DISAPPEARED_FIELD] cash_equivalents_balance: was $4,000M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $17M, now missing
+[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (interest_rate_swap_notional, cash_equivalents_balance, interest_rate_sensitivity)
+
 === 10-K | Period ending 2026-03-31 | Processed 2026-06-22 ===
 [HISTORICAL] [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $5,550M, now missing
 [HISTORICAL] [DISAPPEARED_FIELD] fi_fx_designated_notional: was $5,550M, now missing

@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[DISAPPEARED_FIELD] total_derivative_asset: was $126M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $577M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-451M, now missing
+[NUMERIC] fixed_rate_notes_billion: $7M → $11M (+44.6%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 3/5 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position)
+[LLM_FLAG] EXTRACTION_FAILURE: Section text contains only table-of-contents entry ('Note 3 – Derivative Financial Instruments 15'), not the actual note content. The section extraction failed to capture the body of the derivatives note.
+[LLM_FLAG] fixed_rate_notes_billion changed from $7.4B to $10.7B (44.6% increase) — likely reflects Grayson Mill acquisition debt consolidation
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-17 ===
 [HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($126M)
 [HISTORICAL] [NEW_FIELD] total_derivative_liability: appeared for first time ($577M)

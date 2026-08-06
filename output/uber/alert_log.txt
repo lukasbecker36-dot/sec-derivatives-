@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[NUMERIC] total_cash_equivalents_fv: $361M → $252M (-30.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $3M, now missing
+[NUMERIC] fi_total_derivative_asset: $97M → $147M (+51.5%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $7M → $2M (-71.4%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $97M → $147M (+51.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $7M → $2M (-71.4%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $90M → $145M (+61.1%) — exceeds 20% threshold
+[NEW_FIELD] credit_facility_drawn: appeared for first time ($2,000M)
+[LLM_FLAG] fi_total_derivative_asset changed from 97.0 to 147 (+51.5%), just over 50% threshold — driven by new Total Return Swaps of $1,504M appearing as separate line and new Level 3 derivative assets of $136M
+[LLM_FLAG] total_cash_equivalents_fv dropped from 361.0 to 252 (-30.2%), significant decline in money market fund holdings
+[LLM_FLAG] Total Return Swaps line of $1,504M appears separately from derivative assets; not included in fi_total_derivative_asset as it is listed as its own financial asset line
+[LLM_FLAG] fx_derivatives_notional decreased from 2565.0 to 2123 (-17.2%), driven by reduction in non-designated contracts from $1.6B to $1.4B partially offset by increase in designated hedges from $378M to $723M
+[LLM_FLAG] total_derivative_asset changed from 97.0 to 147 (+51.5%), exceeds 50% threshold
+[LLM_FLAG] net_derivative_position increased from 90.0 to 145 (+61.1%), exceeds 50% threshold
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-27 ===
 [HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($361M)
 [HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($9,837M)

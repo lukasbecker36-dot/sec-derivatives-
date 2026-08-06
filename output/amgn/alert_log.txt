@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $6,008M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $249M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $792M, now missing
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $10,442M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $584M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $-114M → $-57M (+50.0%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (marketable_equity_securities_fv, fi_total_derivative_asset, fi_total_derivative_liability, fx_derivatives_notional, fx_not_designated_notional)
+[LLM_FLAG] fx_derivatives_notional cannot be computed: non-designated FX derivatives section text was truncated before notional amount was disclosed
+[LLM_FLAG] fx_designated_notional computed as FX forwards ($8,000M) + cross-currency swaps USD notional ($747M + $1,111M = $1,858M) = $9,858M
+[LLM_FLAG] ir_swap_notional increased from $6,700M to $7,600M (+13.4%); text confirms $900M new swaps entered in Q2 2026
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed from -$114M to -$57M (50% decrease in magnitude)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-03 ===
 [HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($6,008M)
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($249M)
