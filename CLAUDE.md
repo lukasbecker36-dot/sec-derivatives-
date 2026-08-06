@@ -180,6 +180,7 @@ it, not after a reader queries the number.
 | `reconciliation` | A notional total doesn't equal the sum of its components. The values contradict each other, so at least one is wrong. |
 | `misaligned_row` | More values than header columns; values sat in the wrong fields. Zero tolerance. |
 | `stale_null` | Blank here but populated on another git ref — correct data exists and is being ignored. Zero tolerance. |
+| `implausible_swing` | A single numeric field moved ≥10x between adjacent periods with a prior magnitude ≥$100M. Almost always a real number from the filing landing in the wrong column — a notional (10-100x larger than fair values) extracted into a `total_derivative_asset` slot. The reconciliation check catches this when the offending field is a total-of-components; `implausible_swing` catches the standalone fields it misses. |
 
 The corpus carries known defects that need re-extraction, so the gate fails on
 **regression** against `audit_baseline.json`, not on any defect at all. After
@@ -196,6 +197,31 @@ python -m src.audit --limit 60                    # what's broken
 python -m src.audit --ticker MSFT                 # one issuer
 python -m src.audit --compare-ref origin/master   # data that exists elsewhere
 ```
+
+### Re-extraction queue
+
+The audit finds defective rows but does not repair them — that requires the
+LLM. The queue records what needs re-extraction and drops the row from
+`output/{ticker}/tracking.csv` so the next daily scheduler run picks the
+filing up as unprocessed (dedup is by `period_end_date`).
+
+```bash
+# 1. Build the queue from the current audit
+python scripts/generate_reextract_queue.py --since 2026-04-01
+
+# 2. Preview what would change, then apply
+python scripts/apply_reextract_queue.py            # dry-run
+python scripts/apply_reextract_queue.py --apply    # actually remove the rows
+
+# 3. Ratchet the baseline down and commit both
+python -m src.audit --write-baseline audit_baseline.json
+git add output/ backfill/ audit_baseline.json && git commit -m "queue re-extraction (N filings)"
+```
+
+The removed rows are backed up to `backfill/reextract_removed_<timestamp>.csv`,
+so the original values are recoverable without git archaeology. If the same
+accession keeps re-appearing in the queue across runs, the extraction isn't
+converging and the prompt needs work — not another retry.
 
 ### Writing the digest
 
