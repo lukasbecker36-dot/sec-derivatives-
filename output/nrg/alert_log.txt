@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $4,260M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $4,559M, now missing
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($424M)
+[NUMERIC] net_derivative_position: $-339M → $358M (+205.6%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($424M)
+[NUMERIC] ir_sensitivity_100bp: $905M → $1,100M (+21.5%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $-1M → $-2M (-100.0%) — exceeds 20% threshold
+[NUMERIC] derivative_mark_to_market_var: $151M → $103M (-31.8%) — exceeds 20% threshold
+[NUMERIC] collateral_held: $117M → $66M (-43.6%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position flipped from -$339M (prior) to +$358M (current) — verify against filing text (driven by commodity contracts moving from a net liability to a larger net asset position; the underlying asset/liability totals individually changed by less than 15%, so the swing is a function of the netting rather than a single misextracted field).
+[LLM_FLAG] ir_sensitivity_100bp: text contains two candidate figures - $56M (interest expense impact of 1% variable rate change) and $1.1B (fair value impact of 1% rate decrease on long-term debt). Selected the $1.1B fair-value figure to match the field definition ('change in fair value from 100bp move'); prior value was $905M (21.5% increase, within tolerance but worth a second look given two plausible candidates existed in the text.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($424M)
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($424M)

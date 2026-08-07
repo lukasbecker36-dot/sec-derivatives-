@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $18M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $0M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $18M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $18M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[NUMERIC] gross_derivative_liabilities: $35M → $46M (+31.4%) — exceeds 20% threshold
+[NUMERIC] realized_gains_losses: $-38M → $-12M (+68.4%) — exceeds 20% threshold
+[NUMERIC] unrealized_gains_losses: $-8M → $-14M (-75.0%) — exceeds 20% threshold
+[NUMERIC] electricity_notional_gwh: $6,019M → $7,851M (+30.4%) — exceeds 20% threshold
+[NUMERIC] congestion_rights_notional_gwh: $1,232M → $720M (-41.6%) — exceeds 20% threshold
+[NUMERIC] fin_toll_notional_gwh: $236M → $315M (+33.5%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 6/17 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability, total_derivative_asset, total_derivative_liability, net_derivative_position...)
+[LLM_FLAG] realized_gains_losses moved from -$38M (prior quarter) to -$12M (three months ended June 30, 2026) -- a swing >50%. Verified via reconciliation: six-month 2026 total of -$50M less the prior quarter's -$38M implies exactly -$12M for Q2, so this reflects genuine quarter-to-quarter movement in SCE's commodity hedge settlements, not an extraction error.
+[LLM_FLAG] unrealized_gains_losses moved from -$8M (prior quarter) to -$14M (three months ended June 30, 2026) -- a swing >50%. Verified via reconciliation: six-month 2026 total of -$21M less the prior quarter's -$8M implies approximately -$13M for Q2 (within $1M rounding of the reported -$14M), consistent with genuine quarterly volatility rather than a data error.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $6,019M, now missing
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)

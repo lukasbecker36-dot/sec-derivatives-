@@ -16,7 +16,9 @@
   },
   "idiosyncrasies": {
     "recurring_phrases": [
-      "commodity derivative"
+      "commodity derivative",
+      "mark-to-market",
+      "designated as hedging"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -75,6 +77,18 @@
       ],
       "fields_extracted": 7,
       "fields_null": 7
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-07T09:51:52Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 7,
+      "fields_null": 19
     }
   ]
 }

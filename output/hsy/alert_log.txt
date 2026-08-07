@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-28 | Processed 2026-08-07 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $11M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $130M, now missing
+[NUMERIC] fx_derivatives_notional: $221M → $146M (-34.2%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $158M → $84M (-46.8%) — exceeds 20% threshold
+[NUMERIC] commodity_derivatives_notional: $925M → $504M (-45.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $130M → $16M (-87.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-119M → $-3M (+97.1%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-3M → $-8M (-197.9%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $-32M → $-24M (+24.4%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity_variable_debt: $2M → $3M (+50.0%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_sensitivity: $-32M → $-24M (+24.4%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_liability fell from $129.587M (prior) to $16.163M (this filing) -- a decrease of about 87%, exceeding the 50% threshold. Verify against filing text: the June 28, 2026 balance sheet table shows Total derivative liabilities of $16,163 thousand ($16.163M), down sharply from what appears to be a much larger prior-quarter commodity-hedge liability; plausible given cocoa/commodity price volatility swinging Hershey's non-designated commodity derivative fair values, but flagged for verification.
+[LLM_FLAG] expected_12mo_reclass_from_aoci moved from -$2.686M (prior) to -$8.001M (this filing), a change of about 198%, exceeding the 50% threshold. The filing text explicitly states this figure ($8,001 thousand, pre-tax net loss) as of June 28, 2026, so the underlying number is directly sourced, but the magnitude of change versus the prior period should be reconciled with the prior filing's AOCI reclass disclosure.
+[LLM_FLAG] interest_rate_sensitivity_variable_debt rose from prior $1.8M to $2.7M (+50%) - at the flag threshold; verify against filing (this quarter's figure is explicitly a six-month, not quarterly, impact: 'for the first six months of 2026').
+
 === 10-Q | Period ending 2026-06-28 | Processed 2026-07-31 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($146M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($84M)

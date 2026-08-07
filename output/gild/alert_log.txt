@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[NUMERIC] total_derivative_liability: $30M → $18M (-40.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $43M → $64M (+48.8%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-2M → $35M (+1850.0%) — exceeds 20% threshold
+[LLM_FLAG] expected_12mo_reclass_from_aoci swung from -$2M (prior) to +$35M this quarter -- both a sign flip and >10x magnitude change; the $35M figure is explicitly and clearly stated in the filing text, but confirm the prior-period value wasn't itself an extraction error.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_designated_notional: appeared for first time ($52M)
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($21M)

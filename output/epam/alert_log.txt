@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[DISAPPEARED_FIELD] total_derivative_asset: was $1M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $13M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-12M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $2M, now missing
+[DISAPPEARED_FIELD] foreign_exchange_loss: was $2M, now missing
+[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, fx_transaction_gain_loss, foreign_exchange_loss)
+[LLM_FLAG] cash_ukraine_belarus changed materially since the prior filing (Ukraine $63.5M→$34.1M, -46%; Belarus $50.0M→$37.5M, -25%) — verify against filing text; both readings are within the current text but the year-over-year decline is large
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] cash_collateral_requirement: appeared for first time ($0M)

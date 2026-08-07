@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[NUMERIC] fi_fx_not_designated_notional: $7,600M → $13,600M (+78.9%) — exceeds 20% threshold
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($4,200M)
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($21,500M)
+[NUMERIC] fx_designated_notional: $12,600M → $7,900M (-37.3%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $577M → $13,600M (+2257.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $4,200M, now missing
+[NEW_FIELD] total_derivative_asset: appeared for first time ($242M)
+[NUMERIC] total_derivative_liability: $240M → $310M (+29.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $876M → $-68M (-107.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-636M, now missing
+[LLM_FLAG] fi_fx_derivatives_notional rose from $0.0M (prior) to $21,500.0M (current) — the prior value of $0 is almost certainly a stale/erroneous extraction, since Abbott routinely discloses billions in FX hedging notional; treat the prior $0 as suspect rather than the current figure.
+[LLM_FLAG] fi_fx_not_designated_notional rose from $7,600.0M (prior) to $13,600.0M (current) — a 78.9% increase. Note the prior value for fi_fx_not_designated_notional ($7,600M) is identical to the prior fi_fx_designated_notional ($7,600M), suggesting the same figure may have been duplicated into both fields in a prior extraction rather than reflecting the actual undesignated-contract notional — verify prior data quality.
+[LLM_FLAG] fx_not_designated_notional rose from $577M to $13,600M vs prior extraction — the current filing describes $13.6B of FX forwards for trade/intercompany exposures (not stated as designated hedges) while the designated cash-flow-hedge FX notional is $7.9B (down from a prior 'designated' figure of $12.6B). Possible category mismatch between quarters' extractions — verify against filing text and prior quarter's categorization.
+[LLM_FLAG] ir_swap_notional rose from $0M to $4,200M — filing explicitly attributes this to additional interest rate hedge contracts tied to fixed-rate debt issued for the Exact Sciences acquisition, so this appears to be a genuine increase rather than an error.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-28 ===
 [HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $13,100M, now missing
 [HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $1,200M, now missing

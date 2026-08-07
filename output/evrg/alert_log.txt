@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[NUMERIC] total_derivative_asset: $86M → $145M (+68.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $78M → $116M (+47.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $7M → $29M (+293.2%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset rose from prior $85.8M to $144.7M (+69%) - verify; driven by the Power commodity contracts asset (Other assets - current) rising from $40.8M to $92.0M, directly stated in the filing text.
+[LLM_FLAG] net_derivative_position rose from prior $7.3M to $28.7M (~293%) - same underlying driver as the asset increase above; both components are directly quoted in the filing.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($100M)
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($213M)

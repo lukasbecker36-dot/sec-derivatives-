@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[NUMERIC] total_derivative_asset: $155M → $279M (+80.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-183M → $-5M (+97.3%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $24M → $68M (+183.3%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset rose from $155M to $279M (+80%) — verify against filing text
+[LLM_FLAG] net_derivative_position moved from -$183M to -$5M, a large swing driven by the asset increase — verify
+[LLM_FLAG] expected_12mo_reclass_from_aoci rose from $24M to $68M (+183%) — this quarter combines both FX cash flow hedge ($45M) and IR swap cash flow hedge ($23M) reclass amounts, whereas prior figure may have captured only one component — verify
+[LLM_FLAG] fx_derivatives_notional and fx_designated_notional required approximating EUR/SEK/CAD/CHF notionals to USD since no explicit spot rate was given in the excerpt; treated EUR near 1:1 and included as approximation, so these two fields carry medium confidence
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-04 ===
 [NUMERIC] fx_derivatives_notional: $9,300M → $13,000M (+39.8%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $2,400M → $3,800M (+58.3%) — exceeds 20% threshold

@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-04-03 | Processed 2026-08-07 ===
+[NUMERIC] commodity_derivatives_notional: $89M → $33M (-62.9%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-34M → $-97M (-185.3%) — exceeds 20% threshold
+[LLM_FLAG] commodity_derivatives_notional fell from $89M (prior) to $33M (-62.9%) — verify against filing text; matches the filing's own comparative disclosure ($33M vs $53M at Dec 31, 2025) so likely a genuine decline in the commodity hedging book, not an extraction error.
+[LLM_FLAG] expected_12mo_reclass_from_aoci moved from -$35.1M (prior) to -$97M (+176%) — verify; directly stated in filing text as 'net losses of $97 million', so likely a genuine increase in expected reclassification.
+
 === 10-Q | Period ending 2026-07-03 | Processed 2026-07-30 ===
 [NUMERIC] fx_derivatives_notional: $21,128M → $12,470M (-41.0%) — exceeds 20% threshold
 [NEW_FIELD] fx_designated_notional: appeared for first time ($12,470M)

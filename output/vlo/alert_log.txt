@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $5,018M → $2,141M (-57.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $5,088M → $2,301M (-54.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-70M → $-160M (-128.6%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[NUMERIC] floating_rate_debt_outstanding: $110M → $2M (-98.2%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset fell from $5,018M to $2,141M (-57%) — verify against filing text (commodity fair values here are gross, unnetted, per company disclosure).
+[LLM_FLAG] total_derivative_liability fell from $5,088M to $2,301M (-55%) — verify against filing text.
+[LLM_FLAG] net_derivative_position moved from $(70)M to $(160)M (129% larger liability) — consistent direction with the asset/liability declines above but the swing between periods should be checked against underlying commodity price moves.
+[LLM_FLAG] floating_rate_debt_outstanding fell from $110M (prior) to $2M this quarter (-98%) -- verify against filing text; the filing table itself shows floating rate debt fell from $23M (Dec 31, 2025) to $2M (June 30, 2026), so a decline is directionally corroborated by the filing, but the prior extracted value of $110M doesn't match either of the filing's own comparative figures and should be checked.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($445M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

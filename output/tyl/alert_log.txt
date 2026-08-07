@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $316M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $82M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[NUMERIC] revolving_credit_available: $700M → $1,000M (+42.9%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, gross_unrealized_gains_debt)
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
 [NEW_FIELD] revolving_credit_available: appeared for first time ($1,000M)

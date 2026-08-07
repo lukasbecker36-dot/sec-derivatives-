@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-05-31 | Processed 2026-08-07 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $2,603M, now missing
+[NUMERIC] fx_derivatives_notional: $2,603M → $3,476M (+33.5%) — exceeds 20% threshold
+[NEW_FIELD] fx_designated_notional: appeared for first time ($2,807M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($669M)
+[DROPPED_TO_ZERO] ir_swap_notional: $50M → $0M
+[NEW_FIELD] total_derivative_asset: appeared for first time ($377M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($16M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($126M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($3,331M)
+[NUMERIC] fx_sensitivity_10pct: $-185M → $-223M (-20.2%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_notional: $2,603M → $3,331M (+27.9%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_sensitivity: $-185M → $-223M (-20.2%) — exceeds 20% threshold
+[NUMERIC] commodity_fair_value: $24M → $62M (+159.2%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] preissuance_hedge_notional: $50M → $0M
+[NUMERIC] variable_debt_sensitivity: $3M → $1M (-78.6%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional fell from $50.0M (prior) to $0.0M (current) -- explained directly by the filing text: the pre-issuance hedge contract notional shown for the prior period (Feb 28, 2026) has since fully rolled off/settled, leaving no outstanding pre-issuance hedge notional at May 31, 2026.
+[LLM_FLAG] commodity_fair_value rose from $23.8M (prior) to $61.7M (current) — a 159% increase — verify against filing text.
+[LLM_FLAG] preissuance_hedge_notional dropped from $50.0M (prior) to $0.0M — text explicitly confirms no pre-issuance hedge contracts were outstanding as of May 31, 2026, so this appears to be a legitimate contract settlement/maturity rather than an extraction error.
+[LLM_FLAG] variable_debt_sensitivity fell from $2.8M (prior) to $0.6M (current) — a 78.6% decrease — verify against filing text; may reflect a smaller variable-rate debt balance.
+
 === 10-Q | Period ending 2026-05-31 | Processed 2026-07-02 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,331M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($2,662M)

@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-05-01 | Processed 2026-08-07 ===
+[DISAPPEARED_FIELD] ir_swap_notional: was $350M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $6M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $350M, now missing
+[DISAPPEARED_FIELD] sensitivity_analysis_current: was $6M, now missing
+[DISAPPEARED_FIELD] sensitivity_analysis_prior: was $4M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (ir_swap_notional, fx_forwards_outstanding, ir_sensitivity_100bp, interest_rate_swap_notional, sensitivity_analysis_current...)
+[LLM_FLAG] All fields returned null this period versus multiple populated prior_values (e.g. interest_rate_swap_notional=350.0, ir_sensitivity_100bp=5.6, derivative_policy text, swap dates/structure) — this section_text is pure boilerplate ('no material changes...') and contains none of that detail. This is an extraction-source issue (the swap/derivative detail likely lives in the notes-to-financial-statements derivatives note or the prior fiscal-year 10-K, not in this Item 3 excerpt), not a genuine disappearance of the swap; do not treat prior values as stale without checking whether a fuller section is available for this filing.
+
 === 10-Q | Period ending 2026-05-01 | Processed 2026-07-16 ===
 [HISTORICAL] [DISAPPEARED_FIELD] ir_swap_notional: was $350M, now missing
 [HISTORICAL] [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing

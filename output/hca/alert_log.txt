@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $323M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-40M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $44M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (corporate_debt_securities_fv, ir_sensitivity_100bp, fixed_rate_notes_billion)
+[LLM_FLAG] prior_values included ir_sensitivity_100bp (-40.0) and fixed_rate_notes_billion (44.073), but the actual quantitative disclosure lives in the Item 2 MD&A 'Market Risk' section referenced here, not in this Item 3 stub — this section's text contains no numbers to verify or update those fields against.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-19 ===
 [HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($323M)
 [HISTORICAL] [NUMERIC] ir_sensitivity_100bp: $-25M → $-40M (-60.0%) — exceeds 20% threshold

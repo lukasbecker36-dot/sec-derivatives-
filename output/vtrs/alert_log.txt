@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[NUMERIC] total_derivative_asset: $141M → $104M (-26.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $145M → $108M (-26.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-5M → $-3M (+28.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-13M, now missing
+[LLM_FLAG] section_text does not contain the Financial Instruments/Risk Management note (Note 10) content at all -- likely a section-extraction boundary bug, not a genuine non-disclosure. The text only includes a passing cross-reference to 'Note 10 Financial Instruments and Risk Management' from within the Commitments & Contingencies note, then continues into Income Taxes (Note 16), Litigation (Note 17), and MD&A/Results-of-Operations revenue tables. Searched the full 83,748-character section for 'notional', 'interest rate swap', 'marketable securities' -- zero matches; 'fair value' appears once, referring to a Biocon equity investment mark-to-market, unrelated to derivatives.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($131M)

@@ -18,7 +18,13 @@
     "recurring_phrases": [
       "net investment hedging",
       "cross currency",
-      "foreign exchange forward"
+      "foreign exchange forward",
+      "net investment hedge",
+      "cash flow hedge",
+      "fair value hedge",
+      "notional amount",
+      "designated as hedging",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -79,6 +85,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 12
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-07T09:51:04Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 8,
+      "fields_null": 17
     }
   ]
 }

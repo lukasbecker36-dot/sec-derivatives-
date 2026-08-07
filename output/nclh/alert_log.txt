@@ -1,3 +1,28 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $3,903M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $3,600M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $303M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $151M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $29M, now missing
+[NUMERIC] fx_not_designated_notional: $303M → $447M (+47.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $151M → $66M (-56.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $29M → $61M (+112.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $122M → $5M (-96.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-479M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $87M, now missing
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($70M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($15M)
+[DISAPPEARED_FIELD] fuel_sensitivity_10pct: was $81M, now missing
+[NUMERIC] fx_remeasurement_gains_losses: $38M → $70M (+87.0%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 8/22 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_total_derivative_asset, fi_total_derivative_liability...)
+[LLM_FLAG] total_derivative_asset fell from $151.243M (prior) to $66.092M this quarter (-56%) -- verify against filing text.
+[LLM_FLAG] total_derivative_liability rose from $28.913M (prior) to $61.426M this quarter (+112%) -- verify against filing text.
+[LLM_FLAG] net_derivative_position fell from $122.33M (prior) to $4.666M this quarter (-96%) -- verify against filing text.
+[LLM_FLAG] expected_12mo_reclass_from_aoci is not_found in this excerpt versus a prior nonzero value of $86.9M -- the 12-month AOCI reclassification disclosure may appear elsewhere in the derivatives note outside this extracted section; do not treat as a real drop to zero.
+[LLM_FLAG] fuel_hedge_pct_by_year for 2027 rose from 22% (prior, as of Dec 31 2025) to 38% (current, as of June 30 2026) — a 72.7% relative increase — likely a legitimate forward hedging build-up as 2027 approaches, but worth noting.
+[LLM_FLAG] fuel_sensitivity_10pct gross fuel-expense-impact figure fell from $81.2M (prior) to $39.7M (current) — a 51.1% decrease — verify; plausible given this is a full-year 2026 estimate and less of the year remains unhedged/exposed as the year progresses, but flagging per threshold.
+[LLM_FLAG] fx_remeasurement_gains_losses swung from a $37.6M prior figure to $70.3M (six-month 2026) — an 87% increase, and the comparative prior-year period was actually a loss ($137.9M) — the swing itself (loss to gain year-over-year) is disclosed explicitly in the filing text, not an extraction artifact.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-04 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,747M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($3,300M)
