@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $0M → $0M (-70.4%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $0M → $0M (+40.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $0M → $-0M (-23500.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[VALIDATION] Likely units mismatch: net_derivative_position changed from 0 to -0 (234x)
+[LLM_FLAG] total_derivative_asset fell from prior $0.213M to $0.063M (-70%) - verify; consistent with FX forward notional shrinking from $427.5M to $89.8M and contract count falling from 104 to 28.
+[LLM_FLAG] net_derivative_position moved from ~$0.001M to $(0.234)M - same driver (fewer/smaller FX forward contracts outstanding at quarter end); directly stated as '$(234)' thousand net fair value in the filing.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($90M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

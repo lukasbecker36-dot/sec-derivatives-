@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-06-27 | Processed 2026-08-07 ===
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $2,023M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $1,635M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $6M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (total_marketable_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt)
+
 === 10-Q | Period ending 2026-03-28 | Processed 2026-06-19 ===
 [HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $2,279M, now missing
 [HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($1,635M)

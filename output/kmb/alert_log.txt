@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $542M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $135M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $175M, now missing
+[NUMERIC] fx_designated_notional: $4,100M → $1,800M (-56.1%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $325M → $4,625M (+1323.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_asset: was $135M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $175M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-40M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $-5M → $-2M (+60.0%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 6/11 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, total_derivative_asset, total_derivative_liability...)
+[LLM_FLAG] ir_swap_notional rose from $325M (prior) to $4,625M (current), a >1,000% increase -- verify against filing text; driven by $4.3 billion of new forward-starting interest rate swaps entered in Q2 2026 in anticipation of debt issuance for the Kenvue Acquisition. This is a real, filing-stated increase, not an extraction error.
+[LLM_FLAG] fx_designated_notional fell from $4,100M (prior) to $1,800M (current), a ~56% drop -- likely a data-quality artifact: this quarter's filing text discloses the $2.1 billion foreign-exchange-and-commodity cash flow hedge notional as a single combined figure that cannot be split between FX and commodity, so fx_designated_notional here reflects only the clearly-FX-only net investment hedge notional ($1.8B) and excludes the FX portion embedded in the combined $2.1B figure.
+[LLM_FLAG] expected_12mo_reclass_from_aoci fell in magnitude from -$5.0M (prior) to -$2.0M (current), a 60% change -- verify against filing text.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NUMERIC] ir_swap_notional: $325M → $4,625M (+1323.1%) — exceeds 20% threshold
 [NUMERIC] expected_12mo_reclass_from_aoci: $5M → $-2M (-140.0%) — exceeds 20% threshold

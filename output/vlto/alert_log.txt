@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-04-03 | Processed 2026-08-07 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($410M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($410M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $410M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $410M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $0M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position)
+[LLM_FLAG] prior_values lists equity_derivatives_notional as the string 'Yes', which is not a numeric value for a notional field — likely a data quality artifact from a prior extraction; flagging for review rather than propagating.
+[LLM_FLAG] prior_values shows total_derivative_asset = total_derivative_liability = $410M, exactly equal to the cross-currency swap NOTIONAL amount — this is a strong signature of the notional-for-fair-value confusion this pipeline explicitly guards against. This section_text does not state any fair value for the swaps (only notional and OCI gain/loss activity of $3M for the quarter), so total_derivative_asset/liability/net_derivative_position were left null rather than repeating the likely-erroneous $410M figure. Recommend checking the filing's full Note 10 fair-value table before publishing these fields for Veralto.
+
 === 10-Q | Period ending 2026-07-03 | Processed 2026-07-30 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($410M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($410M)

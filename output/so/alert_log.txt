@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,476M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,476M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($2,465M)
+[NUMERIC] total_derivative_asset: $2,040M → $74M (-96.4%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($434M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-360M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $2,465M, now missing
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $2,040M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $326M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $1,714M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2,465M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion...)
+[LLM_FLAG] prior total_derivative_asset value ($2,040M) looks implausibly large for a fair-value figure and is not corroborated by this filing text, which shows Southern Company's total gross derivative assets at only $74M (before netting) / $35M (net of master-netting and collateral) at June 30, 2026 -- likely a notional/fair-value mix-up in a prior extraction.
+[LLM_FLAG] prior cash_flow_hedge_aoci value ($2,465M) exactly equals this quarter's total interest-rate-derivative notional ($2,465M) shown in this filing -- looks like a notional was miscoded into the AOCI field previously; this section does not disclose a dollar AOCI balance for cash flow hedges, so left not_found rather than repeat a value the text doesn't support.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,476M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($1,476M)

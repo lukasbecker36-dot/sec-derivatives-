@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $766M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $458M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $2,626M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $458M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $-2,626M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-2,168M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-59M, now missing
+[VALIDATION] Likely extraction failure: 7/13 previously-populated fields are now null (marketable_equity_securities_fv, fi_total_derivative_asset, fi_total_derivative_liability, total_derivative_asset, total_derivative_liability...)
+[LLM_FLAG] prior_values shows total_derivative_liability as -2626 (negative), which is an implausible sign for a liability figure — likely a pre-existing data defect, not something this extraction can confirm since no fair value table appears in this excerpt
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-23 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($36,037M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($36,037M)

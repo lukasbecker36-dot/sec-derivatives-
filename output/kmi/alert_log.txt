@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $543M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $543M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $3,750M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $109M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $416M, now missing
+[NUMERIC] total_derivative_liability: $416M → $284M (-31.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-307M → $-160M (+47.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-112M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $-70M → $6M (+108.6%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 6/13 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset, fi_total_derivative_liability...)
+[LLM_FLAG] expected_12mo_reclass_from_aoci swung from -$70M (prior) to +$6M (current) -- a sign reversal, though both magnitudes are small; verify against filing text.
+[LLM_FLAG] commodity_derivatives_notional could not be extracted: the section text (which appears truncated at the start of the commodity table) only shows volumetric hedge positions (e.g. '(1.5) MMBbl') rather than a dollar notional, so no commodity notional in millions is stated in this excerpt.
+[LLM_FLAG] cash_flow_hedge_aoci not found: this excerpt discloses the forward-looking 12-month reclassification amount ($6M) but not the cumulative AOCI balance attributable to cash flow hedges.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-27 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($543M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($543M)

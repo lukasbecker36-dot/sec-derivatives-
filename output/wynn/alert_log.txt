@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $100M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $19M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $47M, now missing
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_liability: $47M → $10M (-78.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-28M → $7M (+125.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] wml_convertible_bond_derivative_fair_value: was $9M, now missing
+[DISAPPEARED_FIELD] wml_convertible_bond_derivative_gain_loss: was $24M, now missing
+[DISAPPEARED_FIELD] wml_stock_price: was $5M, now missing
+[DISAPPEARED_FIELD] wml_estimated_volatility: was $26M, now missing
+[DISAPPEARED_FIELD] wml_risk_free_rate: was $3M, now missing
+[DISAPPEARED_FIELD] wml_expected_term: was $3M, now missing
+[DISAPPEARED_FIELD] fx_swap_fair_value_net: was $-20M, now missing
+[DISAPPEARED_FIELD] fx_swap_gain_loss: was $22M, now missing
+[VALIDATION] Likely extraction failure: 11/22 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, wml_convertible_bond_derivative_fair_value, wml_convertible_bond_derivative_gain_loss...)
+[LLM_FLAG] total_derivative_liability fell from $46.9M (prior) to $10.3M this quarter (-78%) -- verify against filing text.
+[LLM_FLAG] net_derivative_position flipped from -$27.9M (prior, net liability) to +$7.1M this quarter (net asset) -- verify against filing text; this is consistent with the Foreign Currency Swaps' net position itself flipping from a $36.0M liability (Dec 31, 2025) to a $9.1M asset (June 30, 2026), which the filing states directly.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-28 ===
 [HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($100M)
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($19M)

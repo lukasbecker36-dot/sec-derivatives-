@@ -1,3 +1,14 @@
+=== 10-K | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($7M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($467M)
+[NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($6,700M)
+[NEW_FIELD] borrowings_fair_value: appeared for first time ($6,541M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($241M)
+[NEW_FIELD] stock_investments_fair_value: appeared for first time ($467M)
+[NEW_FIELD] stock_price_sensitivity: appeared for first time ($-47M)
+[LLM_FLAG] equity_sensitivity_10pct moved from $0.0 (prior) to -$47M this quarter -- a change from an effectively zero/immaterial disclosed sensitivity to a material one; verify the prior value wasn't itself a placeholder/extraction gap rather than a real zero, since the company's stock investment fair value ($467M this period, $1,249M prior year) implies this sensitivity should not have been zero previously either.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing

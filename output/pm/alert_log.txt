@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[NUMERIC] commodity_designated_notional: $5M → $3M (-40.0%) — exceeds 20% threshold
+[NUMERIC] net_asset: $150M → $47M (-68.7%) — exceeds 20% threshold
+[NUMERIC] net_liability: $-1M → $-29M (-2800.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_oci_gain_loss: appeared for first time ($786M)
+[NEW_FIELD] commodity_oci_gain_loss: appeared for first time ($1M)
+[DISAPPEARED_FIELD] hedge_ineffectiveness: was $0M, now missing
+[NUMERIC] collateral_posted: $311M → $410M (+31.8%) — exceeds 20% threshold
+[VALIDATION] Reconciliation failure: total_notional=52,154 but fx_designated_notional=29,207 + fx_not_designated_notional=18,144 + commodity_designated_notional=3 = 47,354 (diff 9.2%) — extraction likely read the wrong table
+[LLM_FLAG] net_asset fell from $150M (Dec 2025) to $47M (June 2026), a decline of ~69% -- verify against filing text.
+[LLM_FLAG] net_liability moved from -$1M (Dec 2025) to -$29M (June 2026); percentage change is large but both magnitudes are small (well under the $100M implausible-swing threshold), likely not a data error.
+[LLM_FLAG] fx_oci_gain_loss combines the cash flow hedge FX line ($148M) and the net investment hedge FX line ($638M) from the pre-tax OCI table for the six months ended June 30, 2026, since the filing does not disclose a single net-of-tax FX-only OCI figure; treat as medium confidence and pre-tax, not net of tax as the schema description implies.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-27 ===
 [NUMERIC] commodity_designated_notional: $5M → $3M (-40.0%) — exceeds 20% threshold
 [NUMERIC] net_asset: $150M → $47M (-68.7%) — exceeds 20% threshold

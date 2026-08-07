@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-07 ===
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $124M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $122M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-122M, now missing
+[NUMERIC] fx_sensitivity_10pct: $6M → $-9M (-250.0%) — exceeds 20% threshold
+[NUMERIC] natural_gas_derivatives_fair_value: $122M → $-6M (-104.9%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 3/8 previously-populated fields are now null (fi_total_derivative_liability, total_derivative_liability, net_derivative_position)
+[LLM_FLAG] fx_derivatives_notional (~$91M) is a currency conversion estimate: the filing states the FX contract notional only in GBP (£72 million) and does not give a USD figure or the exact GBP/USD rate used at June 30, 2026; ~1.27 was assumed. Treat as approximate.
+[LLM_FLAG] total_derivative_liability / total_derivative_asset not extractable from this section: the only fair value mentioned ($6 million liability) is specific to natural gas derivatives not designated as hedges, not a company-wide total across all derivative types (FX contracts' fair value is not disclosed in this text).
+[LLM_FLAG] fx_forwards_outstanding (~$91M, converted from £72M) is a currency-conversion estimate since the filing gives only the GBP notional, not a USD figure; treat as approximate. Also down from prior £108M -> ~$108M reported, roughly a 16-19% decrease depending on rate used, not itself alarming.
+[LLM_FLAG] fx_sensitivity_10pct is asymmetric in the filing: a 10% GBP strengthening gives a $4M gain, a 10% weakening gives a $9M loss. We reported the adverse-move convention (-$9M); prior value was +$6M (opposite sign and different magnitude) -- verify which convention the pipeline expects.
+[LLM_FLAG] natural_gas_derivatives_fair_value fell from a $122M liability (prior) to a $6M liability this quarter (-95%) -- verify against filing text; consistent internally with the much smaller stated sensitivities ($3-4M vs prior ~$21M each way), so the position size itself appears to have genuinely shrunk rather than a likely extraction error, but the magnitude of change warrants a second look.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-03 ===
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($124M)
 [HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($108M)
