@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $18M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $0M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $18M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $18M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[NEW_FIELD] marketable_equity_value: appeared for first time ($2,163M)
+[NUMERIC] gross_derivative_liabilities: $35M → $46M (+31.4%) — exceeds 20% threshold
+[NUMERIC] cash_collateral_posted: $53M → $85M (+60.4%) — exceeds 20% threshold
+[NUMERIC] realized_gains_losses: $-38M → $-12M (+68.4%) — exceeds 20% threshold
+[NUMERIC] unrealized_gains_losses: $-8M → $-14M (-75.0%) — exceeds 20% threshold
+[NUMERIC] electricity_notional_gwh: $6,019M → $7,851M (+30.4%) — exceeds 20% threshold
+[NUMERIC] congestion_rights_notional_gwh: $1,232M → $720M (-41.6%) — exceeds 20% threshold
+[NUMERIC] fin_toll_notional_gwh: $236M → $315M (+33.5%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 6/17 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability, total_derivative_asset, total_derivative_liability, net_derivative_position...)
+[LLM_FLAG] cash_collateral_posted rose from $53.0M (prior) to $85.0M (this period), a ~60% increase exceeding the 50% plausibility threshold. Directly quoted from the filing text ('SCE had $85 million of cash collateral and related accruals'), so likely a real increase, not an extraction error.
+[LLM_FLAG] realized_gains_losses moved from -$38.0M (prior, presumably prior quarter) to -$12.0M (this quarter's three-month figure), a ~68% reduction in magnitude exceeding the 50% threshold. Both this quarter's three-month (-$12M) and six-month (-$50M) figures are explicitly labeled in the table; used the three-month figure for period consistency with the prior value.
+[LLM_FLAG] unrealized_gains_losses moved from -$8.0M (prior) to -$14.0M (this quarter's three-month figure), a 75% increase in magnitude exceeding the 50% threshold. Taken directly from the labeled three-month 2026 column of the table.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $6,019M, now missing
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)

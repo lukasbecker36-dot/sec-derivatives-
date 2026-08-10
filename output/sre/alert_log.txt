@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $1,150M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $122M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $1,028M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $2,196M, now missing
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($783M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($783M)
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-18 ===
 [HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $162M → $1,150M (+609.9%) — exceeds 20% threshold
 [HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($122M)

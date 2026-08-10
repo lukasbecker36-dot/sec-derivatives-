@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $4,200M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $4,200M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $486M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $144M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $-96M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $144M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $-96M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $48M, now missing
+[NUMERIC] cash_flow_hedge_aoci: $37M → $66M (+78.4%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 8/12 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset, fi_total_derivative_liability...)
+[LLM_FLAG] cash_flow_hedge_aoci rose from prior $37M to $66M (+78%): explicitly stated in the filing as 'the $66 million in cumulative cash flow hedging gains, after tax,' so likely a real increase rather than an extraction error, but flagged given it exceeds the 50% threshold.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-22 ===
 [HISTORICAL] [NUMERIC] fi_total_derivative_liability: $-145M → $-96M (+33.8%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] total_derivative_liability: $-145M → $-96M (+33.8%) — exceeds 20% threshold

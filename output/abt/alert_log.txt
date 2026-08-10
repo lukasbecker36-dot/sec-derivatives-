@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[NUMERIC] fi_fx_not_designated_notional: $7,600M → $13,600M (+78.9%) — exceeds 20% threshold
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($4,200M)
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($21,500M)
+[NUMERIC] fx_designated_notional: $12,600M → $7,900M (-37.3%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $577M → $13,600M (+2257.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $4,200M, now missing
+[NEW_FIELD] total_derivative_asset: appeared for first time ($242M)
+[NUMERIC] total_derivative_liability: $240M → $310M (+29.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $876M → $-68M (-107.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-636M, now missing
+[LLM_FLAG] fi_fx_derivatives_notional: extracted $21,500M vs prior $0.0 — this section_text excerpt is truncated before any fair-value/derivative asset table, so no total_derivative_asset/liability could be extracted (correctly null), but the prose-based FX notional figures ($7.9B + $13.6B) are clearly stated; prior value of exactly 0.0 looks like a stale/placeholder value rather than a true prior balance.
+[LLM_FLAG] fi_fx_not_designated_notional: extracted $13,600M vs prior $7,600M (+79%) — exceeds 50% threshold. Note fi_fx_designated_notional prior was also $7,600M (identical to the not-designated prior value), which is an unusual coincidence suggesting the same number was duplicated into both fields in a prior extraction rather than reflecting two distinct genuine figures.
+[LLM_FLAG] PRIOR DATA ANOMALY: prior_values has a string 'Yes' stored under the numeric key 'fx_derivatives_notional' — this looks like a misaligned_row artifact from a previous extraction (a has_derivatives value landed in the wrong field), not a real prior notional. Ignored for comparison purposes.
+[LLM_FLAG] fx_not_designated_notional: extracted $13,600M vs prior $577M (+2257%) — far exceeds the 50% threshold. Combined with fx_designated_notional (extracted $7,900M vs prior $12,600M, -37%), the prior quarter's designated/not-designated split looks transposed or otherwise mislabeled (7,900+13,600=21,500 vs prior 12,600+577=13,177, and the current filing's own Dec-31-2025 comparative column shows designated=$7,400M / not-designated=$13,100M, which lines up with THIS quarter's categorization, not the prior extraction's). Strongly suspect the prior extraction swapped or mis-tagged these two fields rather than a real swing.
+[LLM_FLAG] ir_swap_notional: extracted $4,200M vs prior $0.0 — infinite increase. Text attributes part of this to real growth (Exact Sciences acquisition financing), but the filing's own Dec-31-2025 comparative shows $1,200M, which contradicts a prior extraction of exactly 0 — suggests the prior value was a stale/incorrect null-equivalent rather than the true prior balance.
+[LLM_FLAG] commodity_derivatives_notional: prior value was $4,200M but this filing's derivatives note contains no mention of commodity derivatives at all — set to null/not_found here. The prior $4,200M coincidentally equals this quarter's ir_swap_notional, raising suspicion the prior extraction mis-assigned the IR swap figure into the commodity field.
+[LLM_FLAG] net_derivative_position: computed as $242M (total derivative assets) minus $310M (total derivative liabilities, excluding the non-derivative debt-hedge line item of $568M/$589M) = -$68M, vs prior $876.0M — a large swing. Possible cause: prior extraction may have included/excluded the non-derivative debt-hedge balance-sheet line differently, or may reflect a genuinely different prior-quarter position; flagging for review rather than asserting which is correct.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-28 ===
 [HISTORICAL] [DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $13,100M, now missing
 [HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $1,200M, now missing

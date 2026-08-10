@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,476M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,476M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($2,465M)
+[NUMERIC] total_derivative_asset: $2,040M → $74M (-96.4%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($434M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-360M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $2,465M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $2,040M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $326M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $1,714M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2,465M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion...)
+[LLM_FLAG] total_derivative_asset extracted as $74M vs prior_values of $2,040.0M (-96.4%) — the prior figure is far outside plausible range for this filer's derivative book (this filing's total gross derivative assets across all categories, including energy-related, IR and FX derivatives, is $74M) and looks like a stale/misaligned prior value rather than a real change.
+[LLM_FLAG] prior_values for cash_flow_hedge_aoci ($2,465.0M) is numerically identical to this period's ir_swap_notional ($2,465M), and prior_values for equity_derivatives_notional is the string 'Yes' (which reads like a has_derivatives value) — both suggest the prior extraction had fields shifted/misaligned rather than reflecting genuine prior-period figures for those concepts.
+[LLM_FLAG] All fields are null in this extraction (boilerplate 'no material changes' statement with no figures), so no 50%-threshold comparisons apply. Flagging separately for audit awareness: prior_values for this section (fx_transaction_gain_loss=2040.0, fixed_rate_notes_billion=2465.0) numerically match this filing's derivatives-note total_derivative_asset (2040 in that note's prior_values) and ir_swap_notional (2465) respectively, suggesting the historical market_risk extraction for SO may have fields cross-contaminated from the derivatives_note extraction rather than genuine market-risk figures.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,476M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($1,476M)

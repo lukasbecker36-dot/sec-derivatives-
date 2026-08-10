@@ -1,3 +1,25 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $100M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $19M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $47M, now missing
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_liability: $47M → $10M (-78.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-28M → $7M (+125.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] wml_convertible_bond_derivative_fair_value: was $9M, now missing
+[DISAPPEARED_FIELD] wml_convertible_bond_derivative_gain_loss: was $24M, now missing
+[DISAPPEARED_FIELD] wml_stock_price: was $5M, now missing
+[DISAPPEARED_FIELD] wml_estimated_volatility: was $26M, now missing
+[DISAPPEARED_FIELD] wml_risk_free_rate: was $3M, now missing
+[DISAPPEARED_FIELD] wml_expected_term: was $3M, now missing
+[DISAPPEARED_FIELD] fx_swap_fair_value_net: was $-20M, now missing
+[DISAPPEARED_FIELD] fx_swap_gain_loss: was $22M, now missing
+[VALIDATION] Likely extraction failure: 12/22 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, fx_forwards_outstanding, wml_convertible_bond_derivative_fair_value...)
+[LLM_FLAG] total_derivative_liability computed at $10.3M vs prior_values 46.9 (-78%): the WML Convertible Bond Conversion Option Derivative liability fell from $32.6M (Dec 31, 2025) to $2.0M (June 30, 2026) per the text's own reconciliation (a $30.6M six-month gain: 32.6 - 30.6 = 2.0), and the FX swap liability leg also shrank ($53.0M -> $8.3M). This appears to be a real filing-driven change, not an extraction error, but flagging given the magnitude.
+[LLM_FLAG] net_derivative_position computed at +7.1M vs prior_values -27.9 (sign flip): driven by the same WML derivative fair-value decline and the FX swaps moving from a net liability ($36.0M) to a net asset ($9.1M) between Dec 31, 2025 and June 30, 2026, both explicitly stated in the text.
+[LLM_FLAG] Several fields populated in prior_values (wml_convertible_bond_derivative_fair_value=9.0, wml_convertible_bond_derivative_gain_loss=23.6, wml_stock_price=5.46, wml_estimated_volatility=26.0, wml_risk_free_rate=2.8, wml_expected_term=2.9, fx_swap_fair_value_net=-20.2, fx_swap_gain_loss=21.7) are null this quarter because the provided market_risk section_text for this filing does not restate the WML convertible bond valuation table or the swap fair-value/gain figures — that detail is disclosed in Note 7 (the derivatives_note section) of this same filing instead. This looks like a difference in what this quarter's Item 3 excerpt covers rather than a change in the underlying disclosure; not treated as a numeric discrepancy since no comparable value was found to compare.
+[LLM_FLAG] fx_sensitivity_10pct requested per the schema is a 10% FX move, but the filing text only discloses sensitivity to a 1% USD/HKD move ($2.9 million); left null rather than scaling 2.9 x 10 to avoid fabricating an unstated figure.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-28 ===
 [HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($100M)
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($19M)

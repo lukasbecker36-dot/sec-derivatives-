@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $201M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[NUMERIC] fx_sensitivity_10pct: $15M → $-43M (-392.6%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity: $2M → $6M (+148.0%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_intercompany: $15M → $-43M (-392.6%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_eur_debt: $400M → $-400M (-200.0%) — exceeds 20% threshold
+[LLM_FLAG] interest_rate_sensitivity rose from $2.5M (prior) to $6.2M (this period, six months ended June 30, 2026), a ~148% increase exceeding the 50% plausibility threshold. Figure is directly quoted from the filing; likely reflects higher variable-rate debt balances and/or a different comparison period basis (prior may have been a three-month figure) rather than an extraction error.
+[LLM_FLAG] fx_sensitivity_10pct / fx_sensitivity_intercompany moved from $14.8M (prior) to $43.3M in magnitude (this period), a ~193% increase exceeding the 50% threshold. Directly quoted from the filing text; the underlying intercompany/unaffiliated debt balance appears to have grown materially versus the prior period.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2M)

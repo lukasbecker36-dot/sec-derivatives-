@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $4,260M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $4,559M, now missing
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($424M)
+[NUMERIC] net_derivative_position: $-339M → $358M (+205.6%) — exceeds 20% threshold
+[NUMERIC] ir_sensitivity_100bp: $905M → $1,100M (+21.5%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $-1M → $-2M (-100.0%) — exceeds 20% threshold
+[NUMERIC] derivative_mark_to_market_var: $151M → $103M (-31.8%) — exceeds 20% threshold
+[NUMERIC] collateral_held: $117M → $66M (-43.6%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position: extracted +358M vs prior -339M — a sign flip, not just a magnitude change. The current figure is directly and unambiguously the filing's own total ($4,805M total derivative assets - $4,447M total derivative liabilities = $358M, corroborated exactly by the separate offsetting table's 'Total derivative instruments' net amount of $358 as of June 30, 2026). Neither of the two comparable totals visible in this filing's own December 31, 2025 columns ($3,757M-$3,360M=$397M asset-based, or $319M net-of-collateral per the offsetting table) is close to the prior_values figure of -339M, which suggests the previously recorded prior value may itself have been a mis-extraction (e.g. a sign error or a value pulled from the wrong column/period) rather than reflecting a real swing from a negative to a positive net position — worth checking against the actual prior filing rather than assuming a genuine reversal.
+[LLM_FLAG] fx_designated_notional: set to 0 rather than null. The filing's fair-value table only contains a single category, 'Derivatives Not Designated as Cash Flow or Fair Value Hedges,' which covers every disclosed derivative type (interest rate, foreign exchange, commodity, and Consumer Financing Program) — there is no designated-hedge category anywhere in this note, so 0 (rather than 'not split out') is the best-supported reading, but flagging since it's an inference from table structure rather than an explicit '$0 designated' statement.
+[LLM_FLAG] fx_sensitivity_10pct: extracted -2 vs prior -1, a +100% change (>50% threshold). The absolute dollar magnitude is very small (a $1 million difference on a $2 million total), so despite crossing the percentage threshold this reads as immaterial rather than an extraction concern — flagging per the mechanical rule.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($424M)
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($424M)

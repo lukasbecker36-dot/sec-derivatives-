@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $192M, now missing
+[NUMERIC] fx_not_designated_notional: $366M → $713M (+94.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-126M → $-82M (+34.9%) — exceeds 20% threshold
+[LLM_FLAG] fx_not_designated_notional: $713M ($270M FX forwards + $443M cross-currency swaps, both 'no hedging designation') vs prior $366M, a ~95% increase - a real, large increase in undesignated FX derivative notional (cross-currency swaps not-designated grew from $225M at Dec 31, 2025 to $443M at June 30, 2026 per the filing's own comparative column), not an apparent extraction error, but flagged given the size of the swing.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-27 ===
 [HISTORICAL] [NUMERIC] fx_derivatives_notional: $3,038M → $3,894M (+28.2%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fx_designated_notional: $2,687M → $3,528M (+31.3%) — exceeds 20% threshold

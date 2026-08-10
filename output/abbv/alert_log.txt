@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[NUMERIC] fx_derivatives_notional: $19,735M → $13,000M (-34.1%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $10,435M → $3,800M (-63.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $155M → $279M (+80.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-183M → $-5M (+97.3%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $24M → $68M (+183.3%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional computed as sum of designated ($3.8B) + not-designated ($9.2B) FX notionals = $13.0B; prior value was $19.735B, a decrease of ~34% (not >50% but notable) — possibly prior period also included net-investment-hedge FX notionals (EUR/SEK/CAD/CHF) that this filing keeps in separate currency-denominated form and were not aggregated into USD here.
+[LLM_FLAG] ir_swap_notional total ($4.05B, from $3.3B fair value hedges + $0.75B cash flow hedges) matches prior value ($4050.0) with high confidence
+[LLM_FLAG] expected_12mo_reclass_from_aoci: computed as sum of two disclosed reclass amounts ($45M + $23M = $68M); prior value was $24.0, an increase of ~183% (>50% threshold) — flagging as a real change or possible non-comparable prior aggregation (prior may have only included one of the two hedge programs).
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-04 ===
 [NUMERIC] fx_derivatives_notional: $9,300M → $13,000M (+39.8%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $2,400M → $3,800M (+58.3%) — exceeds 20% threshold

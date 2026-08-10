@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] net_asset: was $868M, now missing
+[DISAPPEARED_FIELD] net_liability: was $-304M, now missing
+[VALIDATION] Reconciliation failure: total_notional=157,290 but fx_designated_notional=14,383 + fx_not_designated_notional=21,855 + commodity_designated_notional=1,049 + commodity_not_designated_notional=977 = 38,264 (diff 75.7%) — extraction likely read the wrong table
+[LLM_FLAG] net_asset and net_liability were previously reported (868.0, -304.0) but this excerpt does not contain the specific 'net asset position / net liability position' sentence that produced those figures in a prior quarter -- it only gives a related but distinct footnote ('the fair value of assets and liabilities available for counterparty netting was $814 million and $855 million, respectively' for Dec 31 2025 / June 30 2026). Set both to not_found rather than reusing the prior figures or substituting the netting-eligibility number, since they are not the same metric; flagging so this isn't mistaken for a stale/unextracted value versus a genuine absence in this excerpt.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-18 ===
 [HISTORICAL] [NUMERIC] net_asset: $1,112M → $868M (-21.9%) — exceeds 20% threshold
 [HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($3,000M)

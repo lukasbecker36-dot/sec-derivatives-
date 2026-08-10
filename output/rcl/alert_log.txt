@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $512M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $326M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $92M, now missing
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $4,700M, now missing
+[NEW_FIELD] fx_designated_notional: appeared for first time ($4,900M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,400M)
+[NUMERIC] ir_swap_notional: $893M → $700M (-21.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_asset: was $326M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $92M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $234M, now missing
+[VALIDATION] Likely extraction failure: 7/8 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, fx_derivatives_notional, total_derivative_asset...)
+[LLM_FLAG] total_derivative_asset, total_derivative_liability, and net_derivative_position are not present anywhere in this excerpt (prior values of $326M/$92M/$234M exist for this issuer), suggesting the fair-value summary table for RCL's derivatives falls outside the bounds of this section_text excerpt — recommend re-checking the full note rather than treating this as a real drop to zero/missing.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($6,300M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($4,900M)

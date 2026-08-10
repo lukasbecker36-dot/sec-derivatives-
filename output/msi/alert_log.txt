@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-04-04 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] ir_swap_notional: was $150M, now missing
+[NUMERIC] total_derivative_asset: $4M → $5M (+25.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-7M → $-5M (+28.6%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional: prior value was 150 but no interest rate swap/derivative is mentioned anywhere in this excerpt (only foreign exchange contracts and equity swap contracts are disclosed). The excerpt begins mid-sentence ('ontracts with notional amounts...') indicating the section_text is truncated at the start, so this may be a section-extraction cut rather than an actual disappearance of the IR swap program; flagging for review rather than fabricating a value.
+
 === 10-Q | Period ending 2026-07-04 | Processed 2026-08-06 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,500M)
 [NEW_FIELD] ir_swap_notional: appeared for first time ($150M)

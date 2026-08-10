@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $124M, now missing
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $108M, now missing
+[NUMERIC] total_derivative_liability: $122M → $6M (-95.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] net_derivative_position: was $-122M, now missing
+[NUMERIC] fx_forwards_outstanding: $108M → $72M (-33.3%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $6M → $-9M (-250.0%) — exceeds 20% threshold
+[NUMERIC] natural_gas_derivatives_fair_value: $122M → $-6M (-104.9%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 3/8 previously-populated fields are now null (fi_total_derivative_liability, fx_derivatives_notional, net_derivative_position)
+[LLM_FLAG] This section_text (labeled 'derivatives_note') is actually the Item 3 Quantitative and Qualitative Disclosures About Market Risk MD&A narrative — identical to the companion market_risk request for this same filing — not the Note 4, Derivative Instruments and Hedging Activities note itself. The text explicitly says 'Refer to Note 4 ... for notional volumes and terms with the Company's derivative contracts,' confirming the real derivatives note table was not captured in this excerpt. Most schema fields (FX/IR/commodity notionals, total derivative asset, AOCI balances) cannot be extracted and are null as a result.
+[LLM_FLAG] total_derivative_liability: extracted $6M (natural gas derivative fair value only, the only derivative fair value figure present in this excerpt) vs prior $122.0M (-95%) — not a like-for-like comparison since the prior figure almost certainly came from the full Note 4 table (which would also include any FX derivative fair values), not available here.
+[LLM_FLAG] natural_gas_derivatives_fair_value: extracted -$6M vs prior $122.0M — a ~95% decrease. price_sensitivity_analysis magnitudes also dropped sharply in parallel (from ~$21M per 10% move to ~$3-4M), which is internally consistent and suggests a real reduction in APA's open natural gas hedge book rather than an extraction error, but flagging per the >50% rule.
+[LLM_FLAG] fx_forwards_outstanding: extracted £72M vs prior £108M (-33%) — within threshold, not flagged as a concern, but noting the figure is GBP-denominated, not USD, in both periods; no FX conversion was applied.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-03 ===
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($124M)
 [HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($108M)
