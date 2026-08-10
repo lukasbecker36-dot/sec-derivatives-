@@ -20,7 +20,12 @@
       "cash flow hedge",
       "cross-currency",
       "foreign exchange forward",
-      "notional amount"
+      "notional amount",
+      "fair value hedge",
+      "economic hedge",
+      "interest rate swap",
+      "commodity derivative",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -87,6 +92,19 @@
       ],
       "fields_extracted": 3,
       "fields_null": 25
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-10T02:31:15Z",
+      "sections_found": [
+        "financial_instruments",
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 7,
+      "fields_null": 27
     }
   ]
 }

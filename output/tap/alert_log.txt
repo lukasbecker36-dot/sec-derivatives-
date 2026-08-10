@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DROPPED_TO_ZERO] ir_swap_notional: $1,000M → $0M
+[NUMERIC] total_derivative_asset: $248M → $78M (-68.4%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $7M → $17M (+131.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $241M → $61M (-74.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $68M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $2M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $124M, now missing
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-486M)
+[NUMERIC] fx_sensitivity_10pct: $-13M → $-144M (-979.7%) — exceeds 20% threshold
+[NUMERIC] fixed_rate_notes_billion: $5M → $8M (+56.4%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional dropped from prior_values of $1,000.0M to $0 (-100%) — consistent with the text: the $1.0B forward-starting interest rate swaps were settled ('we settled our forward starting interest rate swaps for a realized gain of $107.5 million') in conjunction with issuing the 2036 USD senior notes during the quarter. Real event, not an extraction error.
+[LLM_FLAG] total_derivative_asset down 68.4% ($248.3M prior to $78.4M) and total_derivative_liability up 131% ($7.4M prior to $17.1M); net_derivative_position down 74.6% ($240.9M prior to $61.3M). Largely explained by the interest rate swap's $83.7M fair-value asset (Dec 31, 2025) going to $0 upon settlement, plus commodity/FX fair value movement — real changes given the settlement event, but flagged due to magnitude.
+[LLM_FLAG] fixed_rate_notes_billion up 56.4% ($4.9B prior to $7.666B) — consistent with two new debt issuances disclosed elsewhere in this filing (a $1.0B 5.5% USD senior notes issuance and a CAD 500M / ~$359.4M senior notes issuance during the quarter). Real, explainable increase.
+[LLM_FLAG] fx_sensitivity_10pct extracted at -143.6 vs prior_values of -13.3 (+979%). The new figure combines the 'Foreign Currency Exchange Risk' table's two 10%-adverse-change line items (FX-denominated fixed rate notes -130.8 and FX forwards -12.8); the much smaller prior value (-13.3) looks closer in magnitude to just the FX-forwards line alone in an earlier period (comparable prior-year forwards effect was -11.4), suggesting the earlier extraction captured only a single line item rather than the full combined FX sensitivity — a scope/definition mismatch rather than a real 979% market move.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_designated_notional: appeared for first time ($124M)
 [NUMERIC] commodity_derivatives_notional: $442M → $889M (+101.1%) — exceeds 20% threshold

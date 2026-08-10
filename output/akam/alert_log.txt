@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $183M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $1,028M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $1M, now missing
+[NUMERIC] ir_sensitivity_100bp: $13M → $-26M (-301.6%) — exceeds 20% threshold
+[NUMERIC] fixed_rate_notes_billion: $4M → $8M (+84.5%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity: $13M → $-26M (-301.6%) — exceeds 20% threshold
+[NUMERIC] convertible_notes_principal: $4,140M → $7,640M (+84.5%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 3/7 previously-populated fields are now null (marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt)
+[LLM_FLAG] ir_sensitivity_100bp / interest_rate_sensitivity: extracted -$25.8M vs prior $12.8M (+~102% in magnitude) — exceeds 50% threshold. This appears to be a real change (larger available-for-sale investment portfolio and/or duration), not an extraction issue, but flagging per rule.
+[LLM_FLAG] fixed_rate_notes_billion / convertible_notes_principal: extracted $7.64B vs prior $4.14B (+84.5%) — exceeds 50% threshold. The schema's own field description for these two fields cites an old example figure ('$14.2 million decline' and '$4,140.0 million') from a prior filing/quarter; the current section_text clearly states $25.8 million and $7,640.0 million respectively, which were used. The increase in convertible notes principal is consistent with a real new note issuance and matches the interest-rate-sensitivity increase (larger portfolio/debt base).
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-11 ===
 [HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($183M)
 [HISTORICAL] [NEW_FIELD] corporate_debt_securities_fv: appeared for first time ($1,028M)

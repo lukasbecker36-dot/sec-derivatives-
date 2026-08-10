@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $12,260M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $29M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,400M)
+[NUMERIC] net_derivative_position: $64M → $199M (+208.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $128M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $23M → $159M (+591.3%) — exceeds 20% threshold
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($14M)
+[NUMERIC] fx_sensitivity_10pct: $32M → $-55M (-271.9%) — exceeds 20% threshold
+[NUMERIC] debt_amount: $14M → $14,400M (+99900.0%) — exceeds 20% threshold
+[NUMERIC] constant_currency_impact: $-408M → $-535M (-31.1%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_monetary_items: $-32M → $-55M (-71.9%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: debt_amount changed from 14 to 14,400 (1000x)
+[LLM_FLAG] expected_12mo_reclass_from_aoci: extracted 159 vs prior 23, a +591% increase (>50% threshold). The $159 million figure is directly and unambiguously stated ('the pre-tax net accumulated gain on our foreign currency cash flow hedges included in...AOCI...expected to be recognized in earnings within the next 12 months is $159 million'), consistent with the large AOCI activity shown elsewhere in the note (e.g. $505.4 million pretax cash-flow-hedge gain included in the six-month AOCI effectiveness assessment), so this reads as a genuine swing rather than an extraction error.
+[LLM_FLAG] net_derivative_position: extracted 198.852M vs prior 64.456M, a +208% increase (>50% threshold). Computed directly from the filing's own total derivative asset ($632.715M) and liability ($433.863M) figures, which are unambiguous, so flagging the magnitude of change per threshold rule rather than an extraction concern.
+[LLM_FLAG] fx_sensitivity_10pct: extracted -55 vs prior -32, a +71.9% increase in magnitude (>50% threshold). This field is ambiguous in this filing — three distinct 10%-adverse-move FX sensitivities are disclosed (revenue hedges -$2,490M, content hedges -$311M, monetary items -$55M); the monetary-items figure was used here as the closest match in magnitude to the prior value, but the underlying prior extraction may have been referencing a different one of the three, so treat this comparison with caution.
+[LLM_FLAG] fx_sensitivity_monetary_items: extracted -55 vs prior -32, a +71.9% increase (>50% threshold). Directly and unambiguously stated in the text, so likely a genuine period-over-period change in this specific sensitivity rather than an extraction error.
+[LLM_FLAG] debt_amount: extracted 14,400 (millions) vs prior 14.4. The prior value appears to have been stored in billions (matching fixed_rate_notes_billion's convention and the raw filing language '$14.4 billion of debt'), whereas this extraction follows the pipeline's stated convention of storing all dollar figures in millions unless a field name explicitly specifies billions. No underlying change in Netflix's debt level is implied — this is a unit-convention flag, not a data-quality one; recommend confirming which convention the 'debt_amount' column downstream expects.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-20 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($27,491M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($26,174M)

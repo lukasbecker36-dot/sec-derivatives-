@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $542M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $135M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $175M, now missing
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $8,700M, now missing
+[DISAPPEARED_FIELD] fx_designated_notional: was $4,100M, now missing
+[NUMERIC] ir_swap_notional: $325M → $4,625M (+1323.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_asset: was $135M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $175M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-40M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $-5M → $-2M (+60.0%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 8/11 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, fx_derivatives_notional, fx_designated_notional...)
+[LLM_FLAG] ir_swap_notional rose from prior $325M to $4,625M (+1323%): this combines the unchanged $325M fair-value-hedge swap notional with a new $4.3 billion of forward-starting interest rate swaps entered in Q2 2026 ahead of anticipated Kenvue Acquisition debt issuance ('we entered into $4.3 billion of aggregate notional forward-starting interest rate swaps'). Real disclosed increase, not an extraction error, but flagged given the magnitude.
+[LLM_FLAG] fx_derivatives_notional and fx_designated_notional could not be computed this quarter (reported not_found) versus prior values of $8,700M/$4,100M: this filing discloses FX and commodity cash-flow-hedge notional as one combined figure ($2.1 billion) rather than splitting FX from commodity as before, so a comparable FX-only total is not available without guessing a split.
+[LLM_FLAG] expected_12mo_reclass_from_aoci changed from prior -$5M to -$2M (60% change): both figures are small-dollar and explicitly stated in their respective filings; likely a real quarter-over-quarter change rather than an error.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NUMERIC] ir_swap_notional: $325M → $4,625M (+1323.1%) — exceeds 20% threshold
 [NUMERIC] expected_12mo_reclass_from_aoci: $5M → $-2M (-140.0%) — exceeds 20% threshold

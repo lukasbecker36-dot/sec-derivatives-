@@ -1,3 +1,16 @@
+=== 10-K | Period ending 2026-05-31 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $5M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $4M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $92M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $5M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $4M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $1M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $92M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-7M, now missing
+[NEW_FIELD] foreign_exchange_sensitivity: appeared for first time ($10M)
+[NEW_FIELD] debt_fair_value: appeared for first time ($7,050M)
+[VALIDATION] Likely extraction failure: 8/13 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability, fx_not_designated_notional, total_derivative_asset, total_derivative_liability...)
+
 === 10-K | Period ending 2026-05-31 | Processed 2026-07-16 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($95M)
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($78M)

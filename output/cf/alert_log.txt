@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,597M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $1M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $2M, now missing
+[NUMERIC] natural_gas_notional_amounts: $9M → $16M (+73.3%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (total_cash_equivalents_fv, gross_unrealized_gains_debt, fi_total_derivative_asset, fi_total_derivative_liability)
+[LLM_FLAG] natural_gas_notional_amounts (15.6 million MMBtus) is 73% higher than prior_values (9.0 million MMBtus) — exceeds the 50% plausibility threshold. The text clearly states this figure and there is no unit-confusion apparent (both are MMBtu volumes, not dollars), so this looks like a genuine increase in hedged natural gas volume rather than an extraction error, but flagging per threshold rule.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-13 ===
 [HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($1,597M)
 [HISTORICAL] [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)

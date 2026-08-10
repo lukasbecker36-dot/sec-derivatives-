@@ -1,3 +1,8 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[NUMERIC] total_cash_equivalents_fv: $5M → $18M (+260.0%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $1,843M → $2,588M (+40.4%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv: extracted $18M (institutional money market accounts, Level 1 fair value) vs prior $5.0M (+260%) — exceeds 50% threshold. Both figures are small and represent only the fair-value-hierarchy-classified portion of cash equivalents, not the full $708M cash and equivalents balance; the increase could be a real balance change or reflect a different prior-quarter fair-value classification, flagging for review.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NUMERIC] fx_derivatives_notional: $5,860M → $3,926M (-33.0%) — exceeds 20% threshold
 [NUMERIC] fx_not_designated_notional: $2,906M → $3,926M (+35.1%) — exceeds 20% threshold

@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[NUMERIC] total_derivative_asset: $5,018M → $2,141M (-57.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $5,088M → $2,301M (-54.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-70M → $-160M (-128.6%) — exceeds 20% threshold
+[NUMERIC] floating_rate_debt_outstanding: $110M → $2M (-98.2%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset: $2,141M vs prior $5,018M, a ~57% decrease - large swing in commodity derivative fair values, consistent with commodity price volatility given Valero's large notional derivative book, but magnitude of change warrants review.
+[LLM_FLAG] total_derivative_liability: $2,301M vs prior $5,088M, a ~55% decrease - same commodity-price-driven pattern as the asset side.
+[LLM_FLAG] net_derivative_position: -$160M vs prior -$70M, a ~129% increase in magnitude (still net liability) - consistent with the large gross moves in asset/liability totals above, flagged for the same reason.
+[LLM_FLAG] floating_rate_debt_outstanding: $2M vs prior $110M, a ~98% decrease - real decline (floating-rate debt matured/was repaid), directly quoted from the filing's debt maturity table, not an extraction error.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($445M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

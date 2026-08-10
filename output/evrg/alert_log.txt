@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[NUMERIC] total_derivative_asset: $86M → $145M (+68.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $78M → $116M (+47.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $7M → $29M (+293.2%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset: computed value $144.7M is up 68.6% from prior $85.8M -- driven by the non-hedging commodity (power/natural gas) asset table rising from $82.3M to $143.5M at the Evergy consolidated level; large real increase in gross power/gas derivative asset fair values, worth noting but not reconciliation-inconsistent within this excerpt.
+[LLM_FLAG] net_derivative_position: computed value $28.7M is up ~293% from prior $7.3M, driven mainly by the derivative-asset increase above; flagging the magnitude of the swing for review.
+[LLM_FLAG] commodity_derivatives_notional: the filing discloses commodity notional only in physical volume units (MWhs for power, MMBtu for natural gas), not as a dollar notional amount. Left null rather than fabricating a $ millions figure; flagging so this isn't mistaken for a missing disclosure versus a unit-mismatch.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($100M)
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($213M)

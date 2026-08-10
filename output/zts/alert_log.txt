@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $2,393M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $2,393M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $250M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $25M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $75M, now missing
+[VALIDATION] Likely extraction failure: 5/11 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset, fi_total_derivative_liability)
+[LLM_FLAG] fx_derivatives_notional (2,231) and fx_designated_notional (null) understate/omit the designated FX hedge notional: the designated foreign exchange derivative instruments are disclosed only in foreign currency amounts (Euro 1,025M, Danish krone 400M, Swiss franc 35M), not USD, so they cannot be combined into a USD notional total without an exchange rate not provided in this text. fx_derivatives_notional here reflects only the USD-denominated non-designated forward contracts ($2,231M), consistent with how the prior extraction's fx_derivatives_notional equaled its fx_not_designated_notional (2,393.0) exactly -- i.e. the designated FX leg appears to have been excluded from the total in the prior period too. This is a real completeness gap in the combined FX notional metric, not a numeric extraction error.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-28 ===
 [HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($2,393M)
 [HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($2,393M)

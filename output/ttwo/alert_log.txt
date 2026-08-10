@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($426M)
+[NUMERIC] fx_transaction_gain_loss: $-17M → $-3M (+84.5%) — exceeds 20% threshold
+[NUMERIC] fx_forward_buy_notional: $140M → $88M (-37.4%) — exceeds 20% threshold
+[NUMERIC] fx_forward_gain_loss: $-6M → $6M (+205.5%) — exceeds 20% threshold
+[NUMERIC] fx_translation_adjustment: $30M → $-10M (-135.5%) — exceeds 20% threshold
+[NUMERIC] fx_transaction_loss: $-17M → $-3M (+84.5%) — exceeds 20% threshold
+[LLM_FLAG] fx_transaction_gain_loss (and duplicate fx_transaction_loss): current quarter -2.7 vs prior -17.4, a decrease of ~85% in magnitude - real change (quarter-over-quarter comparison, not necessarily like-for-like periods), not an extraction error but worth noting given the size of the swing.
+[LLM_FLAG] fx_translation_adjustment: current -10.5 vs prior 29.6, a sign reversal and >100% swing - genuine result of USD strengthening vs GBP this quarter per filing narrative, not an extraction issue.
+[LLM_FLAG] fx_forward_gain_loss: current +5.8 vs prior -5.5, a sign reversal - both values are directly quoted in filing (gain vs loss), appears to be a real period-over-period swing rather than an error.
+
 === 10-K | Period ending 2026-03-31 | Processed 2026-06-26 ===
 [HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,585M, now missing
 [HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $199M, now missing

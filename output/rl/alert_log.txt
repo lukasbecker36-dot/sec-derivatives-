@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-27 | Processed 2026-08-10 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,451M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,169M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($282M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($15M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($16M)
+[NUMERIC] net_derivative_position: $14M → $-1M (-109.2%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($17M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $141M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (fx_sensitivity_10pct, fixed_rate_notes_billion)
+[LLM_FLAG] net_derivative_position: -$1.3 million vs prior value +$14.2 million — a sign flip from net asset to net liability and a swing far exceeding 50%; flagging for review, though both figures are small in absolute dollar terms relative to the balance sheet.
+
 === 10-K | Period ending 2026-03-28 | Processed 2026-06-24 ===
 [HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $219M, now missing
 [HISTORICAL] [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing

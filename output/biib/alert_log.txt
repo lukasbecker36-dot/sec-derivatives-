@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $2,513M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $1,503M, now missing
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $137M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $734M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $2,873M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $1,632M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $1,241M, now missing
+[NUMERIC] total_derivative_liability: $38M → $26M (-30.6%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-13M → $3M (+121.2%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $-6M → $8M (+234.9%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-16M → $-2M (+89.6%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 8/19 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt...)
+[LLM_FLAG] net_derivative_position: computed +$2.8M (assets $29.3M minus liabilities $26.5M) vs prior -$13.2M — a sign flip from net liability to net asset. Both magnitudes are small; this looks like a real quarter-over-quarter fair-value swing typical of short-duration FX forwards, not an extraction error, but flagging the sign change per the comparison rule.
+[LLM_FLAG] cash_flow_hedge_aoci: extracted +$8.5M vs prior -$6.3M — also a sign flip (net cash flow hedge AOCI moved from a loss to a gain position quarter over quarter), a >50% swing in magnitude terms; flagging for review though it is directly read from the AOCI rollforward table's ending balance.
+[LLM_FLAG] expected_12mo_reclass_from_aoci: extracted -$1.7M vs prior -$16.4M (-89.6% in magnitude) — a large decrease in the expected 12-month reclassification amount, consistent with the smaller net unrealized AOCI position this quarter ($3.1M pretax vs a much larger prior imbalance), but flagging per the >50% threshold.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-05 ===
 [HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($2,513M)
 [HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1,503M)

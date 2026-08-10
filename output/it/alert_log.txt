@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $0M → $0M (-70.4%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $0M → $0M (+40.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $0M → $-0M (-23500.0%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: net_derivative_position changed from 0 to -0 (234x)
+[LLM_FLAG] total_derivative_asset fell from prior 0.213 to 0.063 (-70.4%), exceeding the 50% threshold. Both figures are very small (well under $1M), so the percentage swing is large in relative terms but small in dollar terms -- likely a real quarter-over-quarter fair-value fluctuation on a small FX forward book rather than an extraction error, but flagged given the magnitude.
+[LLM_FLAG] net_derivative_position flipped from a near-zero prior value (0.001) to -0.234, a large relative change driven by the same small-base fair-value swing noted above.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($90M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

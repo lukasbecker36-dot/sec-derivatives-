@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] total_derivative_asset: was $184M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $64M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $120M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position)
+[LLM_FLAG] section_text for this filing is only a single incorporation-by-reference sentence pointing to the FY2025 10-K ('Other Market Risks' section); prior_values shows this issuer previously reported detailed NYMEX sensitivity figures and specific hedge_objectives/hedged_items/counterparty_credit_risk language for the same fields. None of that content is present in this excerpt, so all fields were left not_found rather than reused from prior_values or fabricated. This may reflect a genuine incorporation-by-reference in EQT's Q2 filing, or a section-extraction boundary issue that only captured the boilerplate stub -- worth a human check against the actual filing before treating this as a real disappearance of disclosure.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-23 ===
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)

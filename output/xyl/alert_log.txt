@@ -1,3 +1,8 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $3M → $-8M (-366.7%) — exceeds 20% threshold
+[LLM_FLAG] expected_12mo_reclass_from_aoci = -8.0 vs prior_values 3.0 is more than a 50% change (and a sign/direction change to a net loss): the filing explicitly states an $8 million net loss expected to reclassify into earnings in the next 12 months. This is a directly stated figure (high confidence), so it reads as a real change rather than an extraction error, but is flagged given the magnitude and sign shift versus the prior figure.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
 [NUMERIC] fx_derivatives_notional: $563M → $4,665M (+728.6%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $31M → $4,665M (+14948.4%) — exceeds 20% threshold

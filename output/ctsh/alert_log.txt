@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $4,051M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $3,270M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $781M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $5M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $179M, now missing
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $4,051M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $781M, now missing
+[NUMERIC] total_derivative_asset: $5M → $10M (+100.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $179M → $116M (-35.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-174M → $-106M (+39.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-128M, now missing
+[VALIDATION] Likely extraction failure: 8/13 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_total_derivative_asset, fi_total_derivative_liability...)
+[LLM_FLAG] total_derivative_asset ($10M) is 100% higher than prior_values ($5.0M) — exceeds the 50% threshold. The $10M figure is the explicit grand 'Total' assets cell in the fair-value table (designated $9M + not-designated $1M), so it is directly stated rather than inferred; flagging as a large real move for editorial awareness.
+[LLM_FLAG] fx_derivatives_notional (combined designated + non-designated FX notional) could not be computed this period: the text's 'Total notional value of contracts outstanding' table ($3,060M) sits under the 'Cash Flow Hedges' subheading and appears to cover only the designated cash-flow-hedge contracts (matches fx_designated_notional), not the non-designated bucket. No notional dollar figure is given for the non-designated FX forwards (only their $1M/$2M fair values), unlike the prior filing which reported designated $3,270M + non-designated $781M = $4,051M total. This is a disclosure/extraction gap worth checking against the full filing rather than a computed total.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-15 ===
 [HISTORICAL] [NUMERIC] fi_total_derivative_asset: $3M → $5M (+66.7%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_total_derivative_liability: $86M → $179M (+108.1%) — exceeds 20% threshold
