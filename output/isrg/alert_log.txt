@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[NUMERIC] total_cash_equivalents_fv: $2,006M → $2,760M (+37.6%) — exceeds 20% threshold
+[NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($0M)
+[NUMERIC] gross_unrealized_gains_debt: $20M → $6M (-68.3%) — exceeds 20% threshold
+[NUMERIC] fi_fx_designated_notional: $538M → $675M (+25.5%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $3M → $5M (+42.4%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $538M → $675M (+25.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $3M → $5M (+42.4%) — exceeds 20% threshold
+[LLM_FLAG] gross_unrealized_gains_debt down from $19.9M to $6.3M (-68.3%) — verify against filing text; the current filing's fair value table shows total gross unrealized gains of $6.3M ($5.9M Level 1 + $0.4M Level 2) at June 30, 2026, consistent with rising interest rates cited in the filing as the cause of unrealized losses, so likely a genuine decline rather than an extraction error, but flagged given the size of the move.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-22 ===
 [NUMERIC] total_cash_equivalents_fv: $800M → $2,760M (+245.2%) — exceeds 20% threshold
 [NUMERIC] total_marketable_securities_fv: $765M → $5,865M (+666.5%) — exceeds 20% threshold

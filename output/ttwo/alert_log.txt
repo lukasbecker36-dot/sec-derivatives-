@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[NUMERIC] fx_transaction_gain_loss: $-17M → $-3M (+84.5%) — exceeds 20% threshold
+[NUMERIC] fx_forward_buy_notional: $140M → $88M (-37.4%) — exceeds 20% threshold
+[NUMERIC] fx_forward_gain_loss: $-6M → $6M (+205.5%) — exceeds 20% threshold
+[NUMERIC] fx_translation_adjustment: $30M → $-10M (-135.5%) — exceeds 20% threshold
+[NUMERIC] fx_transaction_loss: $-17M → $-3M (+84.5%) — exceeds 20% threshold
+[LLM_FLAG] fx_forward_gain_loss flipped from a loss of $5.5M to a gain of $5.8M — verify against filing text (sign reversal).
+[LLM_FLAG] fx_translation_adjustment flipped from a gain of $29.6M to a loss of $10.5M — verify against filing text (sign reversal, though both are modest in magnitude).
+[LLM_FLAG] fx_transaction_loss changed from -$17.4M to -$2.7M (-84%) — verify against filing text; this quarter's figure is the three-month loss ($2.7M) vs. what may have been a six-month figure previously ($17.4M); confirm period basis before treating as a real change.
+
 === 10-K | Period ending 2026-03-31 | Processed 2026-06-26 ===
 [HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,585M, now missing
 [HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $199M, now missing

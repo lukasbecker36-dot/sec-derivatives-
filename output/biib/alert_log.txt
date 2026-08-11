@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $2,513M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $1,503M, now missing
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $137M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $734M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $2,873M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $1,632M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $1,241M, now missing
+[NUMERIC] total_derivative_liability: $38M → $26M (-30.6%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-13M → $3M (+121.2%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $-6M → $8M (+234.9%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-16M → $-2M (+89.6%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $254M → $-243M (-195.6%) — exceeds 20% threshold
+[NUMERIC] hypothetical_fx_impact_current: $254M → $-243M (-195.6%) — exceeds 20% threshold
+[NUMERIC] hypothetical_fx_impact_prior: $278M → $-278M (-200.0%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 8/19 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt...)
+[LLM_FLAG] cash_flow_hedge_aoci sign-flipped from -$6.3M (prior) to +$8.5M (current) — verify against filing text; two candidate figures exist in this note (Note 13 AOCI rollforward balance of $8.5M net of tax used here, vs. a Note 10 pre-tax FX-hedge-specific 'net unrealized gains' balance of $3.1 million) — flagging the ambiguity for review.
+[LLM_FLAG] expected_12mo_reclass_from_aoci moved from -$16.4M to -$1.7M (-89.6% in magnitude) — verify against filing text.
+[LLM_FLAG] net_derivative_position sign-flipped from -$13.2M (prior) to +$2.8M (current) — small-base swing, verify.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-05 ===
 [HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($2,513M)
 [HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1,503M)

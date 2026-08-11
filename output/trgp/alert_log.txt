@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $100M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $138M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $480M, now missing
+[NUMERIC] total_derivative_liability: $481M → $263M (-45.4%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-342M → $-126M (+63.3%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-35M → $43M (+223.4%) — exceeds 20% threshold
+[NUMERIC] commodity_derivative_fair_value_asset: $139M → $19M (-86.4%) — exceeds 20% threshold
+[NUMERIC] commodity_derivative_fair_value_liability: $481M → $144M (-70.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] commodity_hedge_gain_loss: was $-0M, now missing
+[DISAPPEARED_FIELD] nondesignated_commodity_gain_loss: was $-244M, now missing
+[NUMERIC] derivative_settlement_cash_flow: $-244M → $-302M (-23.7%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 5/15 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, commodity_hedge_gain_loss, nondesignated_commodity_gain_loss)
+[LLM_FLAG] net_derivative_position moved from -$341.8M to -$125.6M (a 63% reduction in the net liability) — verify against filing text; consistent with the filing's own statement that the position moved to a $125.6M net liability from a $66.9M net liability at Dec 31 2025.
+[LLM_FLAG] expected_12mo_reclass_from_aoci flipped sign from -$35.1M to +$43.3M — this is a real reported figure ('net deferred gains of $43.3 million'), but the sign/direction change vs. prior quarter is large; verify against filing text.
+[LLM_FLAG] total_derivative_liability down from $480.9M to $262.7M (-45%) — within the review threshold but notable; consistent with reduced commodity price volatility exposure this quarter, verify against filing text.
+[LLM_FLAG] commodity_derivative_fair_value_asset down from $139.1M to $18.9M (-86%) and commodity_derivative_fair_value_liability down from $480.9M to $144.5M (-70%) — these new figures are derived from this section's by-commodity 'Fair Value' sensitivity table (summing positive lines as asset, negative lines as liability), which is NOT the same basis as the prior figures (which appear to be full balance-sheet gross asset/liability totals from the derivatives note, e.g. $137.1M/$262.7M this quarter). The two are not apples-to-apples; verify which basis the pipeline intends before treating this as a real swing.
+[LLM_FLAG] commodity_hedge_gain_loss and nondesignated_commodity_gain_loss and commodity_volumes_hedged are not present in this section's given text (they appear only in the companion derivatives_note section for this filing) — marked not_found rather than carried forward from prior quarter.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-26 ===
 [HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($100M)
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($138M)

@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $124M, now missing
+[NUMERIC] fx_derivatives_notional: $108M → $72M (-33.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $122M → $6M (-95.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-122M → $-6M (+95.1%) — exceeds 20% threshold
+[NUMERIC] fx_forwards_outstanding: $108M → $72M (-33.3%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $6M → $-9M (-250.0%) — exceeds 20% threshold
+[NUMERIC] natural_gas_derivatives_fair_value: $122M → $6M (-95.1%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_liability down from $122M to $6M (-95%) and net_derivative_position from -$122M to -$6M — large swing, verify against filing text.
+[LLM_FLAG] fx_derivatives_notional is reported in GBP (£72 million) as stated in the filing, not converted to USD, for comparability with the prior extraction's apparent convention (which also appears to store the GBP figure directly, e.g. prior value 108 for a filing stating £108 million).
+[LLM_FLAG] This section's text is essentially the Item 3 (Quantitative and Qualitative Disclosures About Market Risk) narrative rather than the balance-sheet derivatives note (Note 4) with full notional/fair-value tables — notional volumes for the referenced Note 4 are not present in this excerpt, so several notional/fair-value fields could not be located.
+[LLM_FLAG] natural_gas_derivatives_fair_value liability collapsed from $122M to $6M (-95%) — verify against filing text.
+[LLM_FLAG] fx_sensitivity_10pct changed from +$6M (prior) to -$9M (current, GBP weakening scenario) — sign and magnitude differ from prior; the filing gives two figures (a $4M gain on GBP strengthening and a $9M loss on GBP weakening) and the 'adverse' direction was taken as weakening; verify which direction the prior figure represented.
+[LLM_FLAG] fx_forwards_outstanding/foreign_exchange_contracts notional (£72 million) is reported in GBP as stated, not converted to USD, consistent with the apparent convention of the prior extraction (which recorded £108 million notional as '108' for the prior quarter).
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-03 ===
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($124M)
 [HISTORICAL] [NEW_FIELD] fx_derivatives_notional: appeared for first time ($108M)

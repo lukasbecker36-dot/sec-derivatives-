@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $201M, now missing
+[NUMERIC] fx_sensitivity_10pct: $15M → $43M (+192.6%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity: $2M → $6M (+148.0%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_intercompany: $15M → $43M (+192.6%) — exceeds 20% threshold
+[LLM_FLAG] fx_sensitivity_intercompany up from $14.8M to $43.3M (+193%) — verify against filing text; intercompany debt exposure grew materially or FX volatility assumption changed
+[LLM_FLAG] fx_sensitivity_10pct up from $14.8M to $43.3M (+193%) — same underlying figure as fx_sensitivity_intercompany, same discrepancy
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2M)

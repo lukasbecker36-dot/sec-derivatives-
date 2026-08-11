@@ -1,3 +1,16 @@
+=== 10-K | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $41M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $41M, now missing
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $41M, now missing
+[DISAPPEARED_FIELD] fx_designated_notional: was $41M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional: was $200M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $29M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $18M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $1M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $17M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $26M, now missing
+[VALIDATION] Likely extraction failure: 10/10 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fx_derivatives_notional, fx_designated_notional, ir_swap_notional...)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-13 ===
 [HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $53M → $41M (-22.6%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_fx_designated_notional: $53M → $41M (-22.6%) — exceeds 20% threshold

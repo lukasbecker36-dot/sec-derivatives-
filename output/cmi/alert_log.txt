@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[NUMERIC] fx_designated_notional: $1,300M → $1,600M (+23.1%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $980M → $1,180M (+20.4%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $39M → $70M (+79.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $101M → $122M (+20.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[LLM_FLAG] total_derivative_asset up from $39M to $70M (+79%) — the prior figure appears to have captured only the 'not designated' asset column ($39M at Dec 31, 2025) rather than the combined designated+not-designated total; current value sums both columns ($33M + $37M) per the fair-value table.
+[LLM_FLAG] total_derivative_liability up from $101M to $122M (+21%, below the 50% flag threshold but noted) — similarly, the prior figure ($101M) matches only the 'designated' liability column at Dec 31, 2025; current value sums designated ($119M) and not-designated ($3M).
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NUMERIC] fx_derivatives_notional: $4,800M → $6,400M (+33.3%) — exceeds 20% threshold
 [NUMERIC] ir_swap_notional: $980M → $1,180M (+20.4%) — exceeds 20% threshold

@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $18M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $0M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $18M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $18M, now missing
+[NEW_FIELD] marketable_equity_value: appeared for first time ($2,163M)
+[NUMERIC] gross_derivative_liabilities: $35M → $46M (+31.4%) — exceeds 20% threshold
+[NUMERIC] cash_collateral_posted: $53M → $85M (+60.4%) — exceeds 20% threshold
+[NUMERIC] realized_gains_losses: $-38M → $-12M (+68.4%) — exceeds 20% threshold
+[NUMERIC] unrealized_gains_losses: $-8M → $-14M (-75.0%) — exceeds 20% threshold
+[NUMERIC] electricity_notional_gwh: $6,019M → $7,851M (+30.4%) — exceeds 20% threshold
+[NUMERIC] congestion_rights_notional_gwh: $1,232M → $720M (-41.6%) — exceeds 20% threshold
+[NUMERIC] fin_toll_notional_gwh: $236M → $315M (+33.5%) — exceeds 20% threshold
+[LLM_FLAG] cash_collateral_posted up from $53.0M to $85.0M (+60.4%) — verify against filing text.
+[LLM_FLAG] realized_gains_losses (three months ended June 30, 2026) moved from -$38.0M (prior quarter) to -$12.0M (-68.4% in magnitude) — verify against filing text; the six-months-ended figure for the current period is -$50M if the comparison should instead be YTD.
+[LLM_FLAG] unrealized_gains_losses (three months ended June 30, 2026) moved from -$8.0M (prior quarter) to -$14.0M (+75.0% in magnitude) — verify against filing text; the six-months-ended figure for the current period is -$21M if the comparison should instead be YTD.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $6,019M, now missing
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)

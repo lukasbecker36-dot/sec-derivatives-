@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $4,260M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $4,559M, now missing
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($424M)
+[NUMERIC] net_derivative_position: $-339M → $358M (+205.6%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($424M)
+[NUMERIC] ir_sensitivity_100bp: $905M → $1,100M (+21.5%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $-1M → $-2M (-100.0%) — exceeds 20% threshold
+[NUMERIC] derivative_mark_to_market_var: $151M → $103M (-31.8%) — exceeds 20% threshold
+[NUMERIC] collateral_held: $117M → $66M (-43.6%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position swung from -$339M (net liability) to +$358M (net asset), a $697M change — verify against filing text
+[LLM_FLAG] fx_sensitivity_10pct (currency appreciation impact) up from -$1M to -$2M (+100%) — small base but doubled; verify against filing text
+[LLM_FLAG] ir_sensitivity_100bp: filing text contains two distinct 1% interest-rate sensitivities — a $56M rolling-12-month interest expense impact and a $1.1B long-term debt fair-value impact. Mapped to the $1.1B fair-value figure per schema description ('change in fair value'); verify which measure is intended.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($424M)
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($424M)

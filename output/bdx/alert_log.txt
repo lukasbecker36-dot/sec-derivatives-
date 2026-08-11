@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[NUMERIC] total_cash_equivalents_fv: $5M → $18M (+260.0%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $1,843M → $2,588M (+40.4%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv up from prior $5.0M to $18.0M (+260%) — verify against filing text; used the Level 1 'Institutional money market accounts' fair-value-hierarchy line rather than the $708M total balance-sheet 'Cash and equivalents' caption, since only the former is explicitly presented as a fair value measurement in this note.
+[LLM_FLAG] total_derivative_asset/liability and cash_flow_hedge_aoci not disclosed as specific balances — the filing states 'the fair values of the derivatives outstanding as of June 30, 2026 and September 30, 2025 were not material' and does not itemize a balance-sheet fair value table or a cumulative AOCI hedge balance in this note. Excluded the $2,541M foreign-currency-denominated debt line from fx_derivatives_notional as it is non-derivative debt, not a derivative contract.
+[LLM_FLAG] commodity_derivatives_notional not_found — filing states commodity derivative forward contracts 'were immaterial to the Company's consolidated financial results' with no notional disclosed.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NUMERIC] fx_derivatives_notional: $5,860M → $3,926M (-33.0%) — exceeds 20% threshold
 [NUMERIC] fx_not_designated_notional: $2,906M → $3,926M (+35.1%) — exceeds 20% threshold

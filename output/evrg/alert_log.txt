@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[NUMERIC] total_derivative_asset: $86M → $145M (+68.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $78M → $116M (+47.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $7M → $29M (+293.2%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset up from $85.8M to $144.7M (+68.6%) — verify against filing text; non-hedging commodity (power/natural gas) derivative notional volumes and fair values both grew materially versus the comparison period
+[LLM_FLAG] net_derivative_position up from $7.3M to $28.7M (+293%) — verify against filing text; driven by the same rise in non-hedging commodity derivative asset fair values
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($100M)
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($213M)

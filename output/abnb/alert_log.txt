@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,367M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $3,836M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $2,698M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $97M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $43M, now missing
+[NUMERIC] net_derivative_position: $62M → $45M (-27.4%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $14M → $39M (+178.6%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-7M → $-26M (-271.4%) — exceeds 20% threshold
+[LLM_FLAG] cash_flow_hedge_aoci up from $14M to $39M (+179%) — verify against filing text.
+[LLM_FLAG] expected_12mo_reclass_from_aoci from -$7M to -$26M (+271% in magnitude) — verify against filing text.
+[LLM_FLAG] total_derivative_asset/liability computed by summing the designated + not-designated rows in the balance-sheet table ($84M/$42M); this differs slightly from the text's explicitly stated post-offset 'net derivative assets of $45 million', likely due to immaterial noncurrent positions not itemized in the table.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-11 ===
 [HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,063M → $1,367M (+28.6%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_total_derivative_asset: $20M → $97M (+385.0%) — exceeds 20% threshold

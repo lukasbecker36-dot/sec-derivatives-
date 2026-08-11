@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $555M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $606M, now missing
+[NUMERIC] ir_sensitivity_100bp: $8M → $13M (+62.5%) — exceeds 20% threshold
+[NUMERIC] floating_rate_obligations: $800M → $1,300M (+62.5%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity: $8M → $13M (+62.5%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 3/9 previously-populated fields are now null (marketable_equity_securities_fv, fi_total_derivative_asset, fi_total_derivative_liability)
+[LLM_FLAG] ir_sensitivity_100bp / interest_rate_sensitivity up from $8M to $13M (+62.5%) — verify against filing text; figure is a 100bp increase's impact on annual interest expense from floating-rate obligations, not a fair-value sensitivity.
+[LLM_FLAG] floating_rate_obligations up from $800M to $1,300M (+62.5%) — verify against filing text.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-14 ===
 [HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($555M)
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($0M)

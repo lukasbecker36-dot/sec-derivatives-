@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $293M, now missing
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $14,104M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $8,214M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $5,890M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $2,700M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $283M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $143M, now missing
+[NUMERIC] total_derivative_asset: $283M → $222M (-21.6%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $140M → $55M (-60.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $29M, now missing
+[VALIDATION] Likely extraction failure: 8/16 previously-populated fields are now null (total_cash_equivalents_fv, fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional...)
+[LLM_FLAG] net_derivative_position down from $140M to $55M (-60.7%) -- total derivative assets fell from $283M to $222M while liabilities rose from $143M to $167M; verify against filing tables.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-19 ===
 [HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($293M)
 [HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($14,104M)

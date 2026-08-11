@@ -1,3 +1,7 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[NUMERIC] net_liability: $-304M → $-392M (-28.9%) — exceeds 20% threshold
+[VALIDATION] Reconciliation failure: total_notional=157,290 but fx_designated_notional=14,383 + fx_not_designated_notional=21,855 + commodity_designated_notional=1,049 + commodity_not_designated_notional=977 = 38,264 (diff 75.7%) — extraction likely read the wrong table
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-18 ===
 [HISTORICAL] [NUMERIC] net_asset: $1,112M → $868M (-21.9%) — exceeds 20% threshold
 [HISTORICAL] [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($3,000M)

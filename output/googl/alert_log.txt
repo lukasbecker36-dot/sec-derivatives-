@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[NUMERIC] total_marketable_securities_fv: $88,777M → $186,563M (+110.1%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $6,044M → $87,063M (+1340.5%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $21,763M → $26,157M (+20.2%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $505M → $317M (-37.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $89,444M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $37,468M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $51,976M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $1,610M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $890M, now missing
+[NUMERIC] equity_derivatives_notional: $30,000M → $20,000M (-33.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $890M → $1,958M (+120.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $720M → $-256M (-135.6%) — exceeds 20% threshold
+[LLM_FLAG] total_marketable_securities_fv up from $88,777M to $186,563M (+110%) -- driven by a large increase in marketable equity securities including SpaceX shares; verify against filing text.
+[LLM_FLAG] marketable_equity_securities_fv up from $6,044M to $87,063M (+1,340%) -- driven primarily by ~$80.0 billion of SpaceX shares reclassified/held as marketable equity securities per filing footnote (1); verify against filing text.
+[LLM_FLAG] total_derivative_liability up from $890M to $1,958M (+120%) -- driven mainly by new equity derivatives liability ($457M) and a large credit derivatives liability increase ($69M to $815M); verify against filing text.
+[LLM_FLAG] net_derivative_position flipped from +$720M (net asset) to -$256M (net liability), consistent with the liability-side increase above; verify against filing text.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
 [NUMERIC] total_marketable_securities_fv: $88,777M → $186,563M (+110.1%) — exceeds 20% threshold
 [NUMERIC] marketable_equity_securities_fv: $6,044M → $101,189M (+1574.2%) — exceeds 20% threshold

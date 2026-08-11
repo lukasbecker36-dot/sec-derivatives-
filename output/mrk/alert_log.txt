@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[NUMERIC] ir_swap_notional: $3,000M → $2,500M (-16.7%) — exceeds 15% threshold
+[NUMERIC] fx_forward_notional: $42,106M → $34,226M (-18.7%) — exceeds 15% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $69M → $152M (+120.3%) — exceeds 20% threshold
+[LLM_FLAG] expected_12mo_reclass_from_aoci up from $69M to $152M (+120%) — verify against filing text; figure is explicitly stated as a pretax estimate in the note, so likely correct, but flagged per >50% threshold.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-22 ===
 [HISTORICAL] [NUMERIC] ir_swap_notional: $1,750M → $3,000M (+71.4%) — exceeds 15% threshold
 [HISTORICAL] [NUMERIC] total_derivative_asset: $323M → $562M (+74.0%) — exceeds 25% threshold

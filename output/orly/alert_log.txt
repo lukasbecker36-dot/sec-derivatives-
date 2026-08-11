@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $65M, now missing
+[NUMERIC] commercial_paper_outstanding: $525M → $1,300M (+147.6%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity: $2M → $6M (+150.0%) — exceeds 20% threshold
+[LLM_FLAG] commercial_paper_outstanding up from $525M to $1,300M (+148%) — verify against filing text
+[LLM_FLAG] interest_rate_sensitivity up from $2.2M to $5.5M (+150%) — consistent with the increase in commercial paper balance; verify against filing text
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing

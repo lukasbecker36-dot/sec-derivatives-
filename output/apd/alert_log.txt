@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[NUMERIC] ir_sensitivity_100bp: $1,044M → $-1,010M (-196.7%) — exceeds 20% threshold
+[NUMERIC] net_financial_instrument_position: $16,800M → $-17,000M (-201.2%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity_100bp_up_fixed: $1,044M → $-1,010M (-196.7%) — exceeds 20% threshold
+[LLM_FLAG] This section_text does not contain Air Products' primary derivatives/financial-instruments note (with notional and fair-value tables) — it instead captured the adjacent NGHC (Non-Guarantor consolidating) balance sheet, JIGPC/World Energy VIE disclosures, and Note 4 Business and Asset Actions. Only incidental derivative-related language appears (NGHC interest-rate swap re-designation to cash flow hedges; a cross-currency interest rate swap termination loss in Note 4). No notional or fair-value tables for the company-wide derivatives book are present, so nearly all numeric fields are not_found.
+[LLM_FLAG] ir_sensitivity_100bp / interest_rate_sensitivity_100bp_up_fixed reported as -1010 (net liability decrease) vs prior value 1044 (positive) — likely a sign-convention difference (both represent the same ~$1.0-1.1B magnitude of change in the net liability position from a 100bp increase), not a genuine ~100% swing; flagging for disambiguation rather than as a magnitude discrepancy.
+[LLM_FLAG] net_financial_instrument_position reported as -17000 (a liability) vs prior value 16800 (positive, no sign) — same sign-convention note as above.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,135M)
 [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($703M)

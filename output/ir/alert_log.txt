@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[NUMERIC] total_derivative_asset: $30M → $11M (-61.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-2M, now missing
+[DISAPPEARED_FIELD] fx_forward_contract_count: was $17M, now missing
+[LLM_FLAG] total_derivative_asset down from $29.9M to $11.4M (-61.9%) — verify against filing text; the current-period balance sheet derivative table shows total fair value assets of $0.4+$2.3+$7.8+$0.9 = $11.4M at June 30, 2026, so this appears to be a genuine decline (largely in the cross-currency swap asset value) rather than an extraction error, but flagged given the size of the move.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,614M)
 [NUMERIC] fx_designated_notional: $1M → $1,333M (+133170.0%) — exceeds 20% threshold

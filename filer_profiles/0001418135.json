@@ -19,7 +19,17 @@
       "foreign exchange forward",
       "notional value",
       "unrealized loss",
-      "cash flow hedge"
+      "cash flow hedge",
+      "net investment hedge",
+      "economic hedge",
+      "cross-currency",
+      "interest rate swap",
+      "commodity contract",
+      "notional amount",
+      "unrealized gain",
+      "designated as hedging",
+      "aoci",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -80,6 +90,18 @@
       ],
       "fields_extracted": 2,
       "fields_null": 16
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-11T02:34:53Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 16,
+      "fields_null": 12
     }
   ]
 }

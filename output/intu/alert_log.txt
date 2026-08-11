@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-04-30 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $318M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $183M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $178M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, corporate_debt_securities_fv, fx_forwards_outstanding)
+
 === 10-Q | Period ending 2026-04-30 | Processed 2026-06-20 ===
 [HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $318M → $1,852M (+482.4%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] total_marketable_securities_fv: $183M → $2,249M (+1129.0%) — exceeds 20% threshold

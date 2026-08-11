@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-07-03 | Processed 2026-08-11 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($149M)
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $337M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $337M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_notional_current: was $0M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_notional_prior: was $1,000M, now missing
+[DISAPPEARED_FIELD] variable_debt_outstanding: was $5,825M, now missing
+[DISAPPEARED_FIELD] fixed_debt_carrying_amount: was $2,443M, now missing
+[DISAPPEARED_FIELD] fixed_debt_fair_value: was $2,443M, now missing
+[DISAPPEARED_FIELD] sofr_sensitivity: was $58M, now missing
+[VALIDATION] Likely extraction failure: 10/11 previously-populated fields are now null (fx_derivatives_notional, fx_not_designated_notional, ir_swap_notional, fixed_rate_notes_billion, interest_rate_swap_notional_current...)
+
 === 10-K | Period ending 2026-04-03 | Processed 2026-06-04 ===
 [NEW_FIELD] has_derivatives: appeared for first time ($1M)
 [NUMERIC] fx_designated_notional: $2M → $3M (+50.0%) — exceeds 20% threshold

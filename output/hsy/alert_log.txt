@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-28 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $11M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $130M, now missing
+[NUMERIC] fx_derivatives_notional: $221M → $146M (-34.2%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $158M → $84M (-46.8%) — exceeds 20% threshold
+[NUMERIC] commodity_derivatives_notional: $925M → $504M (-45.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $130M → $16M (-87.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-119M → $-3M (+97.1%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-3M → $-8M (-197.9%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $-32M → $-24M (+24.4%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity_variable_debt: $2M → $3M (+50.0%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_sensitivity: $-32M → $-24M (+24.4%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_liability down from $129.587M to $16.163M (-87.5%) — verify against filing text; corroborated by the current-period balance sheet table showing total liabilities of $16,163 thousand at June 28, 2026 vs prior comparative period Dec 31, 2025 of $23,924 thousand, so the large decline vs the prior extraction period appears genuine (driven largely by commodity futures/options liabilities falling from a much larger prior balance, consistent with cocoa prices declining ~51% during H1 2026 per the market_risk section).
+[LLM_FLAG] net_derivative_position swung from -$118.933M to -$3.39M — same underlying driver as the total_derivative_liability move; flagged for review even though it is directionally consistent with the liability decline.
+[LLM_FLAG] expected_12mo_reclass_from_aoci moved from -$2.686M to -$8.001M (+198% in magnitude) — verify against filing text; this is explicitly stated as a single figure in the current filing ('approximately $8,001' thousand) so is likely correct, but the swing is large enough to flag.
+
 === 10-Q | Period ending 2026-06-28 | Processed 2026-07-31 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($146M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($84M)

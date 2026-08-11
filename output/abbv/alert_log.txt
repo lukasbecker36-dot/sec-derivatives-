@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[NUMERIC] total_derivative_asset: $155M → $279M (+80.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-183M → $-5M (+97.3%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $24M → $68M (+183.3%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional/fx_designated_notional required converting non-USD notionals (EUR/SEK/CAD/CHF net-investment-hedge forwards) using approximate spot rates since the filing states them only in local currency; treat as approximate.
+[LLM_FLAG] expected_12mo_reclass_from_aoci up from $24M to $68M (+183%) — sum of two disclosed 12-month reclass amounts ($45M FX cash flow hedges + $23M other cash flow hedges); verify against filing text.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-04 ===
 [NUMERIC] fx_derivatives_notional: $9,300M → $13,000M (+39.8%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $2,400M → $3,800M (+58.3%) — exceeds 20% threshold

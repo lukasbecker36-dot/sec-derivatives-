@@ -1,3 +1,8 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $3M → $-8M (-366.7%) — exceeds 20% threshold
+[LLM_FLAG] expected_12mo_reclass_from_aoci flipped from +$3.0M (prior period, a net gain expected) to -$8.0M (current, a net loss expected) — a sign reversal exceeding the 50% threshold; the filing explicitly states this as a 'net loss', so the negative sign is intentional, not a parsing artifact, but flagging since direction reversed.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
 [NUMERIC] fx_derivatives_notional: $563M → $4,665M (+728.6%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $31M → $4,665M (+14948.4%) — exceeds 20% threshold

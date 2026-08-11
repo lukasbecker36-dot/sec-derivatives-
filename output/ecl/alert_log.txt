@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $47M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $269M, now missing
+[NUMERIC] total_derivative_asset: $47M → $11M (-77.0%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset down from $46.9M to $10.8M (-77.0%) — verify against filing text. (Note: net_derivative_position of -$220.6M is consistent with the prior -$222.1M, since total_derivative_liability also fell from $269.0M to $231.4M, so the large asset-side drop may be a genuine valuation swing rather than an extraction error.)
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-17 ===
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($47M)
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($269M)

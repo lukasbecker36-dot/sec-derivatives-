@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[NUMERIC] ir_swap_notional: $84M → $64M (-23.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $5M → $2M (-60.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $15M → $20M (+33.3%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-10M → $-18M (-80.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[LLM_FLAG] total_derivative_asset down from $5M to $2M (-60%) — verify against filing text
+[LLM_FLAG] net_derivative_position down from -$10M to -$18M (+80% larger net liability) — verify against filing text
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-07 ===
 [HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($84M)
 [HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($5M)

@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[NUMERIC] total_derivative_asset: $5,018M → $2,141M (-57.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $5,088M → $2,301M (-54.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-70M → $-160M (-128.6%) — exceeds 20% threshold
+[NUMERIC] floating_rate_debt_outstanding: $110M → $2M (-98.2%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset down from $5,018.0M to $2,141.0M (-57%) and total_derivative_liability down from $5,088.0M to $2,301.0M (-55%) — large swing, but plausible for an oil refiner's commodity derivative book given crude/product price volatility; verify against filing text before publishing.
+[LLM_FLAG] net_derivative_position moved from -$70.0M to -$160.0M — a large percentage change from a small base; verify against filing text.
+[LLM_FLAG] Note on total_derivative_asset/liability calculation: the filing's literal 'Total' row ($2,141 / $2,301) appears to sum only the 'not designated as hedging instruments' rows (commodity $2,134/$2,279 + physical purchase $2/$22 + FX $5/$0) and excludes the 'designated as hedging instruments' commodity row ($48/$22) — the same pattern holds for the Dec 31, 2025 column ($460 excludes $31). This literal reading was used, but it may not represent the true consolidated total; a full total including the designated row would be $2,189/$2,323 (June 30, 2026). Recommend verifying against the primary filing document/XBRL before treating this as the authoritative total.
+[LLM_FLAG] floating_rate_debt_outstanding down from $110.0M to $2.0M (-98%) — verify against filing text; the Dec 31, 2025 comparative column in the same table shows $23M, so a large paydown/reclassification appears to have occurred.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($445M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

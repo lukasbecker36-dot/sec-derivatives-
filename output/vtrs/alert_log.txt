@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[NEW_FIELD] fx_designated_notional: appeared for first time ($275M)
+[NUMERIC] total_derivative_asset: $141M → $104M (-26.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $145M → $108M (-26.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-5M → $-3M (+28.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-13M, now missing
+[LLM_FLAG] SECTION MISMATCH: the provided section_text for this 'financial_instruments' request does not contain any fair-value/cash-equivalents/marketable-securities/derivatives-notional content. It opens mid-sentence referencing 'Note 10 Financial Instruments and Risk Management' but the actual body is Viatris' commitments-and-contingencies disclosure (Mapi license/milestone payments, indemnification provisions, litigation, legal proceedings) followed by MD&A segment net-sales discussion (Developed Markets, Greater China, JANZ, Emerging Markets). None of the target concepts (cash equivalents, marketable securities, corporate debt securities, unrealized gains, FX/IR derivative notionals, derivative fair values) appear anywhere in the ~83.7k-character excerpt. This looks like a section_extract.py slicing error for this filing (likely grabbed the wrong note boundary) rather than a genuine non-disclosure -- recommend re-checking the regex/heading match for VTRS's 2026-06-30 10-Q rather than treating this as 'no derivatives'.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] gross_unrealized_gains_debt: appeared for first time ($0M)
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($131M)

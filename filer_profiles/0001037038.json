@@ -15,7 +15,14 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "net investment hedge",
+      "cash flow hedge",
+      "cross-currency",
+      "notional amount",
+      "unrealized gain",
+      "aoci"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -75,6 +82,17 @@
       ],
       "fields_extracted": 1,
       "fields_null": 6
+    },
+    {
+      "filing_date": "2026-06-27",
+      "form_type": "10-Q",
+      "period_end": "2026-06-27",
+      "processed_at": "2026-08-11T02:35:14Z",
+      "sections_found": [
+        "derivatives_note"
+      ],
+      "fields_extracted": 8,
+      "fields_null": 4
     }
   ]
 }

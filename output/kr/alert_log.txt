@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-05-23 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $26M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-8M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $16M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $142M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $14M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_debt_total: was $15,919M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_total: was $88M, now missing
+[DISAPPEARED_FIELD] fixed_rate_debt_fair_value: was $14,884M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_fair_value: was $91M, now missing
+[DISAPPEARED_FIELD] deferred_hedge_gain_loss_aoci: was $-8M, now missing
+[VALIDATION] Likely extraction failure: 13/16 previously-populated fields are now null (ir_swap_notional, commodity_derivatives_notional, cash_flow_hedge_aoci, fx_forwards_outstanding, fixed_rate_notes_billion...)
+
 === 10-K | Period ending 2026-01-31 | Processed 2026-06-30 ===
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($26M)
 [NUMERIC] cash_flow_hedge_aoci: $48M → $-8M (-116.7%) — exceeds 20% threshold

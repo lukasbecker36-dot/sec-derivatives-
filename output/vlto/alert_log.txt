@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-04-03 | Processed 2026-08-11 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($410M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($410M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $410M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $410M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $0M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position)
+[LLM_FLAG] Cannot compute a meaningful percentage-change flag for total_derivative_asset/total_derivative_liability because this section's text contains no derivative fair value figures at all — only notional ($410M) and the pretax OCI gain/loss from remeasurement ($3M this quarter). The prior_values on file (total_derivative_asset=410.0, total_derivative_liability=410.0, net_derivative_position=0.0) are numerically identical to the notional amount, which strongly suggests the notional was previously mis-recorded into the fair-value fields rather than a genuine mark-to-market figure — this matches the 'implausible_swing'/misaligned-field defect pattern described in the pipeline's data-integrity documentation. Recommend flagging this ticker/section for the re-extraction queue rather than treating the prior fair-value figures as trustworthy.
+[LLM_FLAG] prior_values also lists equity_derivatives_notional as the string "Yes" — a type mismatch (this field should be a numeric notional or null); it looks like a value intended for has_derivatives leaked into the wrong field in a prior run. Flagging for data-quality review.
+
 === 10-Q | Period ending 2026-07-03 | Processed 2026-07-30 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($410M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($410M)

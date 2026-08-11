@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $0M, now missing
+[NEW_FIELD] total_derivative_asset: appeared for first time ($3M)
+[DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-0M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[VALIDATION] Likely extraction failure: 4/9 previously-populated fields are now null (fi_total_derivative_liability, total_derivative_liability, net_derivative_position, fx_forwards_outstanding)
+[LLM_FLAG] total_derivative_asset: value of $2.8M is specifically the fair value of the MBS position without assigned IRLCs — it may not represent the company's FULL derivative asset total (IRLCs are also derivative instruments at Level 3 fair value, but their asset fair value is not separately stated in this excerpt); prior_values had no total_derivative_asset baseline. Flagging for reviewer verification against the complete filing text/balance sheet.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
 [NEW_FIELD] ir_swap_notional: appeared for first time ($0M)

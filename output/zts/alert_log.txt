@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $2,393M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $2,393M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $250M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $25M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $75M, now missing
+[NUMERIC] fx_derivatives_notional: $2,393M → $3,691M (+54.2%) — exceeds 20% threshold
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,460M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[VALIDATION] Likely extraction failure: 5/11 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset, fi_total_derivative_liability)
+[LLM_FLAG] fx_derivatives_notional up from $2,393M to $3,691M (+54.3%) — driven by a newly-quantified 'Derivatives Designated as Hedging Instruments' FX bucket (Euro $1,025M + Danish krone $400M + Swiss franc $35M = $1,460M) that either grew substantially or was not separately captured in the prior extraction (prior_values shows the entire $2,393M FX notional recorded under fx_not_designated_notional, i.e. no designated FX bucket was previously tracked). The undesignated FX forward book itself only moved from $2,393M to $2,231M (-6.8%), so the surge is concentrated in the designated hedge bucket; worth confirming against the prior quarter's filing whether this is genuine growth in designated FX hedges or a gap in the earlier extraction.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-28 ===
 [HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($2,393M)
 [HISTORICAL] [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($2,393M)

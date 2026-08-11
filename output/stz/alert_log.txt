@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-05-31 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $2,603M, now missing
+[NUMERIC] fx_derivatives_notional: $2,603M → $3,331M (+27.9%) — exceeds 20% threshold
+[NEW_FIELD] fx_designated_notional: appeared for first time ($2,662M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($669M)
+[DROPPED_TO_ZERO] ir_swap_notional: $50M → $0M
+[NEW_FIELD] total_derivative_asset: appeared for first time ($377M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($16M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($126M)
+[NUMERIC] fx_sensitivity_10pct: $-185M → $-223M (-20.2%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_notional: $2,603M → $3,331M (+27.9%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_sensitivity: $-185M → $-223M (-20.2%) — exceeds 20% threshold
+[NUMERIC] commodity_fair_value: $24M → $62M (+159.2%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] preissuance_hedge_notional: $50M → $0M
+[NUMERIC] variable_debt_sensitivity: $3M → $1M (-78.6%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional down from $50.0M (prior, Pre-issuance hedge contracts at Feb 28, 2026) to $0M (-100%). This is corroborated by the companion market_risk section's explicit statement that 'There were no cash flow designated or undesignated interest rate swap contracts or Pre-issuance hedge contracts outstanding as of May 31, 2026' — appears to be a genuine settlement/expiration of the pre-issuance hedge rather than an extraction error.
+[LLM_FLAG] commodity_fair_value up from $23.8M (prior) to $61.7M (+159%) — verify against filing text; table shows net fair value moving from a slightly negative $(17.9)M at May 31, 2025 to +$61.7M at May 31, 2026 (comparative column in the same table), so the move appears to be a genuine mark-to-market swing on commodity derivatives (aluminum/corn/diesel/natural gas hedges) rather than an extraction error, but flagging given the magnitude.
+[LLM_FLAG] preissuance_hedge_notional down from $50.0M (prior) to $0M (-100%) — consistent with the explicit filing statement that no pre-issuance hedge contracts were outstanding as of May 31, 2026, and with the companion derivatives_note section (Pre-issuance hedge contracts notional $0 vs $50.0M at Feb 28, 2026). Appears to be a genuine settlement, not an error.
+[LLM_FLAG] variable_debt_sensitivity down from $2.8M (prior) to $0.6M (-78.6%) — verify against filing text; consistent with a reduction in variable-rate debt balance and/or rates versus the prior comparable quarter (filing states $0.6M for the three months ended May 31, 2026 vs $1.6M for May 31, 2025 shown in the same sentence, so the magnitude of decline is corroborated within this filing itself).
+
 === 10-Q | Period ending 2026-05-31 | Processed 2026-07-02 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,331M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($2,662M)

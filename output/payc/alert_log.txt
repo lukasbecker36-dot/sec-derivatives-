@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-11 ===
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $375M, now missing
+[NUMERIC] ir_sensitivity_100bp: $2M → $1M (-50.0%) — exceeds 20% threshold
+[NUMERIC] corporate_cash_and_equivalents: $154M → $198M (+28.7%) — exceeds 20% threshold
+[NUMERIC] funds_held_for_clients: $2M → $2,600M (+118081.8%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity_afs: $2M → $1M (-50.0%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: funds_held_for_clients changed from 2 to 2,600 (1182x)
+[LLM_FLAG] funds_held_for_clients extracted as $2,600M (converted from '$2.6 billion'); prior_values shows 2.2, which appears to be an un-converted billions figure from a prior extraction rather than a true prior value in millions — flagging for review rather than treating as a real ~118,000% swing
+[LLM_FLAG] interest_rate_sensitivity_afs (and generic ir_sensitivity_100bp) down from $1.8M to $0.9M (-50%) — at the flag threshold; verify against filing text
+[LLM_FLAG] ir_sensitivity_100bp is ambiguous: the filing discloses three distinct 100bp sensitivities ($25.7M on client-fund interest income, $0.9M on AFS market value, and $5.9M on Revolving Credit Facility interest expense); mapped to the AFS figure to match the prior extraction's apparent pattern, but low confidence
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-05 ===
 [HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($375M)
 [HISTORICAL] [NUMERIC] corporate_cash_and_equivalents: $370M → $154M (-58.4%) — exceeds 20% threshold
