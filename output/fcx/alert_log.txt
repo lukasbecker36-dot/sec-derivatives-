@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $81M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $50M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $1,222M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability, commodity_derivatives_notional)
+[LLM_FLAG] fi_total_derivative_asset and fi_total_derivative_liability have prior values (81.0, 50.0) but this excerpt does not contain a derivative fair-value summary table -- it only covers commodity (copper/gold) hedge programs, embedded derivatives, and a $86 million maximum credit exposure figure (which is a distinct concept, not total derivative assets/liabilities at fair value). Set to not_found rather than reusing the prior value or the credit-exposure number, to avoid fabricating or misclassifying a figure. The fair-value summary table for these fields likely exists elsewhere in FCX's Note 5/6 but fell outside this section_text excerpt.
+[LLM_FLAG] This schema's field descriptions themselves contain specific figures from a prior filing (e.g. '104 million pounds at $5.05 average price', 'maturities through December 2027', '365 million pounds...', '$289 million as of Dec 31, 2025'). The actual section_text for this filing is pure boilerplate ('no material changes ... refer to ... 2025 Form 10-K') with none of that data restated. Did NOT copy the description-embedded example figures into the extracted fields -- doing so would fabricate current-period data from stale example text baked into the schema.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-18 ===
 [HISTORICAL] [NUMERIC] fi_total_derivative_asset: $289M → $81M (-72.0%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_total_derivative_liability: $107M → $50M (-53.3%) — exceeds 20% threshold

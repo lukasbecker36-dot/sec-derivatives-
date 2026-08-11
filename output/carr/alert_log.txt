@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $3,200M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $3,200M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $133M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $-153M, now missing
+[NUMERIC] net_derivative_position: $-20M → $-7M (+65.0%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 4/11 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_total_derivative_asset, fi_total_derivative_liability)
+[LLM_FLAG] net_derivative_position moved from prior -20.0 to -7.0, a 65% change; driven by total_derivative_asset (+3%) and total_derivative_liability (-8%) individually staying within tolerance but the net figure (a small difference of two large numbers) is inherently more volatile — not indicative of an extraction error.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-12 ===
 [HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($3,200M)
 [HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($3,200M)

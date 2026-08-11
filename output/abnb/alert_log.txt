@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,367M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $3,836M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $2,698M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $97M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $43M, now missing
+[NUMERIC] net_derivative_position: $62M → $42M (-32.3%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $14M → $39M (+178.6%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-7M → $-26M (-271.4%) — exceeds 20% threshold
+[NEW_FIELD] notional_hedging_instruments: appeared for first time ($1,700M)
+[LLM_FLAG] total_derivative_asset computed as $70M + $14M = $84M (designated + not designated FX current assets, June 30, 2026); differs from company-reported net offset figure of $45M net assets after applying $43M master-netting reduction — used gross balance-sheet table figures per field definition (fair value, not net).
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-11 ===
 [HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,063M → $1,367M (+28.6%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_total_derivative_asset: $20M → $97M (+385.0%) — exceeds 20% threshold

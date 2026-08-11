@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-04-03 | Processed 2026-08-10 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($410M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($410M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $410M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $410M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $0M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position)
+[LLM_FLAG] equity_derivatives_notional: prior_values contains the string 'Yes' for this numeric notional field, which is not a valid number and appears to be a data-quality issue in a prior extraction (likely a value from 'has_derivatives' misplaced into this field). Current text has no mention of equity derivatives at all.
+[LLM_FLAG] total_derivative_asset / total_derivative_liability: prior_values show both at exactly $410.0M (equal to the cross-currency swap notional) with net_derivative_position of $0.0 - this looks like a prior extraction that mistakenly copied the notional amount into the fair-value fields (the exact bug pattern CLAUDE.md warns about: notional-in-fair-value-slot). This excerpt does not disclose an actual derivative fair value/balance-sheet asset-liability table, so these fields were left null rather than repeating the suspect prior figures.
+
 === 10-Q | Period ending 2026-07-03 | Processed 2026-07-30 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($410M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($410M)

@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-05-31 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $2,603M, now missing
+[NUMERIC] fx_derivatives_notional: $2,603M → $3,331M (+27.9%) — exceeds 20% threshold
+[NEW_FIELD] fx_designated_notional: appeared for first time ($2,662M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($669M)
+[DROPPED_TO_ZERO] ir_swap_notional: $50M → $0M
+[NEW_FIELD] total_derivative_asset: appeared for first time ($377M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($16M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($126M)
+[NUMERIC] fx_sensitivity_10pct: $-185M → $-223M (-20.2%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_notional: $2,603M → $3,331M (+27.9%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_sensitivity: $-185M → $-223M (-20.2%) — exceeds 20% threshold
+[NUMERIC] commodity_fair_value: $24M → $62M (+159.2%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] preissuance_hedge_notional: $50M → $0M
+[NUMERIC] variable_debt_sensitivity: $3M → $1M (-78.6%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional extracted as 0 vs prior_values of 50.0 (-100%). No interest rate swap notional line appears anywhere in this period's aggregate notional table; only 'Pre-issuance hedge contracts $—' is shown (also zero). Note prior 50.0 exactly matches this filer's Pre-issuance hedge contracts notional as of Feb 28, 2026 disclosed elsewhere in this filing, suggesting the prior value may have actually been the pre-issuance hedge balance mislabeled as an interest-rate-swap notional rather than a real IR swap position that has now unwound.
+[LLM_FLAG] commodity_fair_value up 159% ($23.8M prior to $61.7M) — large move but plausible given commodity price volatility (aluminum, corn, diesel, natural gas) disclosed as hedged exposures; not flagged as an extraction error but worth noting the magnitude.
+[LLM_FLAG] preissuance_hedge_notional down 100% ($50.0M to $0) — corroborated independently by explicit text: 'There were no cash flow designated or undesignated interest rate swap contracts or Pre-issuance hedge contracts outstanding as of May 31, 2026'; real settlement, not an extraction error.
+[LLM_FLAG] variable_debt_sensitivity differs 78.6% from prior (2.8 vs 0.6) — this period's figure ($0.6M) is explicitly a three-month impact figure; the prior stored value (2.8) may reflect a different period length (e.g., annualized or FY10-K figure) rather than a comparable quarterly number — recommend verifying units before treating as a real decline.
+
 === 10-Q | Period ending 2026-05-31 | Processed 2026-07-02 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,331M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($2,662M)

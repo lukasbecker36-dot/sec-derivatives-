@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $47M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $269M, now missing
+[NUMERIC] total_derivative_asset: $47M → $11M (-77.0%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset fell from $46.9M (prior period) to $10.8M (this period, June 30, 2026), a ~77% decrease exceeding the 50% plausibility threshold. Taken from the 'Net value of derivatives' asset column of the fair-value table; the prior figure was for a different balance date (an earlier quarter) than the Dec 31, 2025 comparative shown in this table, so the drop may reflect real mark-to-market movement rather than a misextraction, but flagging given the magnitude.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-17 ===
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($47M)
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($269M)

@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[NUMERIC] ir_swap_notional: $84M → $64M (-23.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $5M → $2M (-60.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $15M → $20M (+33.3%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-10M → $-18M (-80.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[LLM_FLAG] total_derivative_asset: $2 million vs prior value $5 million — a 60% decrease; flagged per >50% threshold, though both figures are small (immaterial in absolute dollar terms).
+[LLM_FLAG] net_derivative_position: -$18 million vs prior value -$10 million — an 80% increase in net liability magnitude; flagged per >50% threshold.
+[LLM_FLAG] ir_swap_notional: this excerpt only explicitly discloses LG&E's $64 million interest rate swap notional; it does not restate a consolidated PPL-wide interest rate swap notional total. The prior value of $84 million may reflect a broader consolidated figure (PPL + LG&E + KU combined) not fully reproduced in this excerpt — flagging as a likely scope/completeness mismatch rather than a real ~24% decline.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-07 ===
 [HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($84M)
 [HISTORICAL] [NEW_FIELD] total_derivative_asset: appeared for first time ($5M)

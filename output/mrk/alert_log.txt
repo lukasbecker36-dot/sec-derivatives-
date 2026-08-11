@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[NUMERIC] ir_swap_notional: $3,000M → $2,500M (-16.7%) — exceeds 15% threshold
+[NUMERIC] fx_forward_notional: $42,106M → $34,226M (-18.7%) — exceeds 15% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $69M → $152M (+120.3%) — exceeds 20% threshold
+[LLM_FLAG] expected_12mo_reclass_from_aoci: extracted 152 vs prior 69, a +120% increase (>50% threshold). Value is explicitly and unambiguously stated in the text ('the Company estimates $152 million of pretax net unrealized gains on derivatives maturing within the next 12 months...will be reclassified from AOCL to Sales'), so this reads as a genuine period-over-period increase in hedged forecasted-sales gains rather than an extraction error, but flagging per threshold rule.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-22 ===
 [HISTORICAL] [NUMERIC] ir_swap_notional: $1,750M → $3,000M (+71.4%) — exceeds 15% threshold
 [HISTORICAL] [NUMERIC] total_derivative_asset: $323M → $562M (+74.0%) — exceeds 25% threshold

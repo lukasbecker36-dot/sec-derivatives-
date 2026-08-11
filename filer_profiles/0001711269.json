@@ -17,7 +17,11 @@
   "idiosyncrasies": {
     "recurring_phrases": [
       "mark-to-market",
-      "unrealized gain"
+      "unrealized gain",
+      "cash flow hedge",
+      "interest rate swap",
+      "commodity contract",
+      "designated as hedging"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -78,6 +82,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 13
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-10T02:31:40Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 5,
+      "fields_null": 21
     }
   ]
 }

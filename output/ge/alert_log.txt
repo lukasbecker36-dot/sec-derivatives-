@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[NUMERIC] ir_swap_notional: $500M → $1,150M (+130.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $177M → $70M (-60.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $145M → $89M (-38.6%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $33M → $-19M (-157.6%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset: current $70M (net recognized in Statement of Financial Position) vs prior $177M is a 60.5% decrease. This matches the filing's own 'counterparty credit risk' paragraph exposure figure of $70M, so it is a real filing value, but note it uses the post-netting line rather than the pre-netting 'Gross derivatives' total ($113M asset/$132M liability) — confirm this matches the basis used for the prior extraction.
+[LLM_FLAG] net_derivative_position: swung from +$33M (prior) to -$19M (current), a sign reversal driven by the asset-side decline noted above.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-17 ===
 [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
 [DISAPPEARED_FIELD] has_derivatives: was $5,866M, now missing

@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $302M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $204M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $-205M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $723M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $-750M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-27M, now missing
+[VALIDATION] Likely extraction failure: 6/8 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, total_derivative_asset, total_derivative_liability...)
+[LLM_FLAG] sensitivity_analysis_table: Gas contracts 10% sensitivity dropped from about +/-$18M (prior period) to +/-$8M this period, a ~56% decrease exceeding the 50% plausibility threshold. Both figures are explicitly stated in their respective filings (not an obvious extraction slot error), but the magnitude of change is large enough to flag for review — likely reflects a real drop in gas contract position size or price volatility, not confirmed from this text alone.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-16 ===
 [HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $249M → $302M (+21.3%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_total_derivative_liability: $-152M → $-205M (-34.9%) — exceeds 20% threshold

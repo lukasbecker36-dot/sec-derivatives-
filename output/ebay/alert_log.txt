@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[NUMERIC] total_derivative_asset: $45M → $67M (+48.9%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $18M → $31M (+72.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $27M → $36M (+33.3%) — exceeds 20% threshold
+[NUMERIC] ir_sensitivity_100bp: $-28M → $-37M (-32.1%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_fair_values: $24M → $37M (+54.2%) — exceeds 20% threshold
+[NUMERIC] non_hedge_fair_values: $6M → $4M (-33.3%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_liability rose from $18.0M (prior) to $31.0M (this period), a ~72% increase exceeding the 50% plausibility threshold. Both figures come from the Level 1/2/3 fair-value hierarchy table's 'Derivatives' liability line, so the extraction looks correct; likely a real mark-to-market move rather than an extraction error.
+[LLM_FLAG] cash_flow_hedge_fair_values rose from $24.0M (prior) to $37.0M (this period), a ~54% increase exceeding the 50% plausibility threshold. Figure comes directly from the labeled 'Fair Value Asset' column for FX cash flow hedges, so likely a real change rather than an extraction error.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-05-30 ===
 [NUMERIC] ir_sensitivity_100bp: $37M → $28M (-24.3%) — exceeds 20% threshold
 [NUMERIC] fixed_rate_notes_billion: $3M → $2M (-24.1%) — exceeds 20% threshold

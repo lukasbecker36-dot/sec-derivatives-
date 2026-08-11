@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $100M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $138M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $480M, now missing
+[NUMERIC] total_derivative_liability: $481M → $263M (-45.4%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-342M → $-126M (+63.3%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-35M → $43M (+223.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] commodity_derivative_fair_value_asset: was $139M, now missing
+[DISAPPEARED_FIELD] commodity_derivative_fair_value_liability: was $481M, now missing
+[DISAPPEARED_FIELD] commodity_hedge_gain_loss: was $-0M, now missing
+[DISAPPEARED_FIELD] nondesignated_commodity_gain_loss: was $-244M, now missing
+[DISAPPEARED_FIELD] derivative_settlement_cash_flow: was $-244M, now missing
+[VALIDATION] Likely extraction failure: 9/15 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, fx_forwards_outstanding, commodity_derivative_fair_value_asset...)
+[LLM_FLAG] net_derivative_position extracted at -125.6 vs prior_values of -341.8 (a 63% narrowing of the net liability). This is plausible given commodity price volatility (Targa's book is 100% commodity derivatives) and is internally consistent with the filing text, which separately states the position moved from a net liability of $66.9M at Dec 31, 2025 to $125.6M at June 30, 2026 (the pipeline's prior_values of -341.8 evidently reflects an earlier interim quarter, not the Dec 31, 2025 comparative shown in this filing) — flagging due to magnitude, not suspected error.
+[LLM_FLAG] expected_12mo_reclass_from_aoci extracted at +43.3 vs prior_values of -35.1 — both magnitude and sign differ substantially. Given commodity forward curves can flip AOCI-hedge positions from a net deferred loss to a net deferred gain quarter to quarter, this may be a real change, but the sign flip combined with the size of the swing warrants verification against the prior filing's own Note 8 disclosure.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-26 ===
 [HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($100M)
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($138M)

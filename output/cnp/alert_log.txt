@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $555M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $606M, now missing
+[NUMERIC] ir_sensitivity_100bp: $8M → $13M (+62.5%) — exceeds 20% threshold
+[NUMERIC] floating_rate_obligations: $800M → $1,300M (+62.5%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity: $8M → $13M (+62.5%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 3/9 previously-populated fields are now null (marketable_equity_securities_fv, fi_total_derivative_asset, fi_total_derivative_liability)
+[LLM_FLAG] ir_sensitivity_100bp / interest_rate_sensitivity: $13 million vs prior_values $8.0 million is a 62.5% increase, exceeding the 50% threshold. The figure is explicitly tied to a '100 basis points' floating-rate move in the text (interest-expense impact, not a fair-value change, consistent with how this field appears to have been populated previously given its small dollar scale vs. the company's $23.6B debt book) — plausible given floating obligations also grew, but flagging per threshold rule.
+[LLM_FLAG] floating_rate_obligations: $1.3 billion vs prior_values $0.8 billion is a 62.5% increase, exceeding the 50% threshold. Directly and unambiguously stated in the text alongside the comparative period figure ($1.5B at Dec 31, 2025), so likely a real increase rather than an extraction error, but flagging per threshold rule.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-14 ===
 [HISTORICAL] [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($555M)
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($0M)

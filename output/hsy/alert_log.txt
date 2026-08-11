@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-28 | Processed 2026-08-10 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $11M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $130M, now missing
+[NUMERIC] fx_derivatives_notional: $221M → $146M (-34.2%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $158M → $84M (-46.8%) — exceeds 20% threshold
+[NUMERIC] commodity_derivatives_notional: $925M → $504M (-45.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $130M → $16M (-87.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-119M → $-3M (+97.1%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-3M → $-8M (-197.9%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $-32M → $-24M (+24.4%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity_variable_debt: $2M → $3M (+50.0%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_sensitivity: $-32M → $-24M (+24.4%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_liability fell from prior 129.587 to 16.163 (-87.5%), a swing larger than 50%; prior figure may itself have been a misextraction (e.g. a commodity/notional figure landing in this field) rather than the current value being wrong -- worth checking prior period's source table.
+[LLM_FLAG] net_derivative_position moved from -118.933 to -3.39 (consistent with the total_derivative_liability discrepancy above), a change well over 50%.
+[LLM_FLAG] expected_12mo_reclass_from_aoci increased in magnitude from -2.686 to -8.001 (+198%), a real change tied to interest rate swap and FX forward AOCI amounts expected to reclassify; text explicitly attributes this 'primarily' to interest rate swap agreements.
+
 === 10-Q | Period ending 2026-06-28 | Processed 2026-07-31 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($146M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($84M)

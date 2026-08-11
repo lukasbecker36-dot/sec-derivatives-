@@ -1,3 +1,13 @@
+=== 10-K | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($7M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($467M)
+[NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($6,700M)
+[NEW_FIELD] borrowings_fair_value: appeared for first time ($6,541M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($241M)
+[NEW_FIELD] stock_investments_fair_value: appeared for first time ($467M)
+[NEW_FIELD] stock_price_sensitivity: appeared for first time ($-47M)
+[LLM_FLAG] equity_sensitivity_10pct: new value -$47M vs prior value $0.0M. Prior extraction recorded zero for this field; this filing (a 10-K, richer Item 7A disclosure) clearly discloses a nonzero stock-price sensitivity. Flagging the large relative change (from a zero baseline) so it's clear this is either newly-appearing data or a correction of a prior gap, not a real risk change.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-08 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing

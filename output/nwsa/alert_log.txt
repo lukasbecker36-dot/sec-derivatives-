@@ -1,3 +1,14 @@
+=== 10-K | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[NUMERIC] total_derivative_asset: $8M → $6M (-25.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $8M → $6M (-25.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $8M, now missing
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
+[NEW_FIELD] sensitivity_adverse_10pct_interest_rate: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($1,500M)
+[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($500M)
+[LLM_FLAG] variable_rate_debt_outstanding: schema description hinted '~$475M' but the filing text explicitly states $500 million for outstanding variable-rate bank facilities; extracted the value actually stated in the text (500), not the hint.
+[LLM_FLAG] ir_sensitivity_100bp and fx_sensitivity_10pct left not_found: the filing only discloses a sensitivity to a 10% adverse change in interest rates (not 100bp) and does not disclose a generic 10% FX fair-value sensitivity (only per-currency revenue/EBITDA translation impacts from a 1-cent move) — using those figures for the 100bp/10pct-FV fields would misrepresent the underlying calculation basis.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($456M)
 [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $463M, now missing

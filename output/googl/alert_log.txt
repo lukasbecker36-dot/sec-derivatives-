@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
+[NUMERIC] total_marketable_securities_fv: $88,777M → $186,563M (+110.1%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $6,044M → $87,063M (+1340.5%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $21,763M → $26,157M (+20.2%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $505M → $317M (-37.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $89,444M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $37,468M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $51,976M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $1,610M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $890M, now missing
+[NUMERIC] equity_derivatives_notional: $30,000M → $20,000M (-33.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $890M → $1,958M (+120.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $720M → $-256M (-135.6%) — exceeds 20% threshold
+[LLM_FLAG] total_marketable_securities_fv: current $186,563M vs prior $88,777M is a 110% increase, explained in-filing by footnote (1): '$80.0 billion of Space Exploration Technologies Corp. (SpaceX) shares' newly included in marketable equity securities — real, disclosed driver, not an extraction error.
+[LLM_FLAG] marketable_equity_securities_fv: current $87,063M vs prior $6,044M is a >1,300% increase, same disclosed SpaceX-share driver as above.
+[LLM_FLAG] total_derivative_liability: current $1,958M vs prior $890M is a 120% increase, largely driven by new equity derivative liabilities ($457M, up from $0) and credit derivative liabilities ($815M, up from $69M), tied to the new $20B equity-derivative notional and expanded $43.8B credit-derivative notional (data-center backstop / capital-funding arrangements) — appears to be a real, disclosed change rather than an extraction error.
+[LLM_FLAG] net_derivative_position: swung from +$720M (prior) to -$256M (current), consistent with the liability-side increase above.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
 [NUMERIC] total_marketable_securities_fv: $88,777M → $186,563M (+110.1%) — exceeds 20% threshold
 [NUMERIC] marketable_equity_securities_fv: $6,044M → $101,189M (+1574.2%) — exceeds 20% threshold

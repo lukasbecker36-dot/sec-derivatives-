@@ -18,9 +18,19 @@
     "recurring_phrases": [
       "interest rate swap",
       "notional amount",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "net investment hedge",
+      "cash flow hedge",
+      "fair value hedge",
+      "cross-currency",
+      "designated as hedging",
+      "de-designated"
     ],
-    "non_gaap_metrics": [],
+    "non_gaap_metrics": [
+      "adjusted ebitda",
+      "non-gaap",
+      "constant currency"
+    ],
     "unusual_disclosure_patterns": [],
     "known_issues": []
   },
@@ -79,6 +89,19 @@
       ],
       "fields_extracted": 0,
       "fields_null": 7
+    },
+    {
+      "filing_date": "2026-06-30",
+      "form_type": "10-Q",
+      "period_end": "2026-06-30",
+      "processed_at": "2026-08-10T02:32:37Z",
+      "sections_found": [
+        "financial_instruments",
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 5,
+      "fields_null": 25
     }
   ]
 }
