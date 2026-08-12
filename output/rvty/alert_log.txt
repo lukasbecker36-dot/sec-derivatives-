@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-07-05 | Processed 2026-08-12 ===
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $23M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $1M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $0M, now missing
+[NUMERIC] fx_derivatives_notional: $460M → $233M (-49.4%) — exceeds 20% threshold
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($233M)
+[NUMERIC] total_derivative_asset: $1M → $1M (+24.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $0M → $1M (+61.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $0M → $0M (-45.1%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[VALIDATION] Likely extraction failure: 3/7 previously-populated fields are now null (total_marketable_securities_fv, fi_total_derivative_asset, fi_total_derivative_liability)
+[LLM_FLAG] total_derivative_liability rose from 0.381 (prior quarter, 2026-04-05) to 0.614, a +61.2% change. Both figures are sub-$1M mark-to-market FX derivative balances (in thousands: 614 vs 381) — a normal-sized swing for a small MTM balance, not indicative of a notional/fair-value miscode. Directly stated in the Fair Value Measurements table.
+
 === 10-Q | Period ending 2026-04-05 | Processed 2026-06-25 ===
 [HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($23M)
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($1M)

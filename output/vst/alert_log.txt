@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-12 ===
+[NUMERIC] ir_swap_notional: $6,416M → $414M (-93.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-1,867M → $-2,354M (-26.1%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional fell from prior 6,416 to 414 (-93.5%), a >50% swing. This is explained in the text itself, not an extraction error: 'In April 2026, we settled and terminated Vistra Operations' $700 million ... and $3.0 billion ... swaps expiring July 2026 and $2.3 billion ... effective from August 2026 through December 2030' — roughly $6.0 billion of notional was terminated, leaving only the ~$414 million of BCOP project-level swaps outstanding at period end.
+[LLM_FLAG] commodity_derivatives_notional not_found: the 'Derivative Volumes' table gives commodity notional exposure only in physical units (Million MMBtu for natural gas, GWh for electricity/FTRs, Million U.S. tons for coal/emissions, Million gallons for fuel oil, Million certificates for RECs) — no dollar notional is disclosed for commodities, so a $-millions figure cannot be extracted without unit conversion/pricing assumptions not present in the text.
+[LLM_FLAG] fx_derivatives_notional/fx_designated_notional/fx_not_designated_notional not_found: no foreign-currency derivatives are mentioned anywhere in this section — Vistra's disclosed derivatives are limited to commodity contracts and interest rate swaps.
+[LLM_FLAG] cash_flow_hedge_aoci/expected_12mo_reclass_from_aoci not_found: no AOCI or hedge-accounting OCI balance is mentioned in this excerpt; Vistra's interest rate swaps here are not described as designated cash flow hedges (mark-to-market gains/losses flow through interest expense in the income statement per the 'Effect of Derivative Instruments' table).
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-27 ===
 [HISTORICAL] [NUMERIC] net_derivative_position: $-2,580M → $-1,867M (+27.6%) — exceeds 20% threshold
 [HISTORICAL] [LLM_FLAG] Vistra does not apply hedge accounting to any derivatives; all mark-to-market changes flow through earnings, not OCI.

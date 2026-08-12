@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-07-04 | Processed 2026-08-12 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $1,200M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $1,200M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $0M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $150M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $9M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $32M, now missing
+[DISAPPEARED_FIELD] fx_designated_notional: was $1,200M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $46M, now missing
+[NUMERIC] total_derivative_asset: $9M → $18M (+100.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $32M → $23M (-28.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-23M → $-5M (+78.3%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $-1M → $-23M (-2200.0%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $2M → $4M (+100.0%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 8/16 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset...)
+[LLM_FLAG] total_derivative_asset rose from prior 9.0 to 18 (+100%), a >50% swing, but both figures are small ($1M fair-value increments across three instruments) — informational only, no notional/fair_value miscoding: all three asset-side fair values (1, 17, 0) are individually consistent with the fair_value kind's expected magnitude and are far smaller than the corresponding notionals (43, 900, 50).
+[LLM_FLAG] fx_designated_notional/fx_not_designated_notional not_found: this section text opens mid-sentence ('...zilian real') and never uses the terms 'designated' / 'not designated' for the FX forward contracts specifically. The combined table's intro sentence ('foreign currency exchange contracts, interest rate cross-currency swap agreements and interest rate swap agreements designated as cash flow hedges') is grammatically ambiguous about whether 'designated as cash flow hedges' modifies all three instrument types or only the interest rate swaps — could not confidently split fx_derivatives_notional (1,332) into designated vs. not-designated without guessing, unlike the prior period which had an explicit 1,200/46 split from a different disclosure presentation.
+[LLM_FLAG] cash_flow_hedge_aoci computed as the sum of the two AOCI lines explicitly labeled in the table (cross-currency swap AOCI -22 + interest rate swap AOCI -1 = -23); flagged as medium confidence because the cross-currency swap's AOCI impact is described as coming from 'currency translation adjustment' (a net-investment-hedge-style OCI mechanic) rather than unambiguously as a 'cash flow hedge' — the schema field name may not perfectly match this instrument's hedge classification.
+[LLM_FLAG] fx_sensitivity_10pct rose from prior 2.0 to 4 (+100%), a >50% swing, but both figures are small ($2M) — informational only, both endpoints are directly stated dollar figures from the filing, not derived.
+
 === 10-Q | Period ending 2026-04-04 | Processed 2026-07-18 ===
 [HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $958M → $1,200M (+25.3%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_fx_designated_notional: $900M → $1,200M (+33.3%) — exceeds 20% threshold

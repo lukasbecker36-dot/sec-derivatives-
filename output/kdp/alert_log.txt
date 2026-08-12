@@ -1,3 +1,28 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-12 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $6,548M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $500M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $6,048M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $2,300M, now missing
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,906M)
+[NUMERIC] fx_designated_notional: $500M → $1,351M (+170.2%) — exceeds 20% threshold
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($269M)
+[NUMERIC] total_derivative_asset: $149M → $209M (+40.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $16M, now missing
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-73M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
+[NEW_FIELD] fixed_rate_debt_face_value: appeared for first time ($4,506M)
+[NEW_FIELD] variable_rate_debt: appeared for first time ($686M)
+[NEW_FIELD] commodity_derivatives_fair_value: appeared for first time ($25M)
+[NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($27M)
+[VALIDATION] Likely extraction failure: 5/11 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, expected_12mo_reclass_from_aoci)
+[VALIDATION] Reconciliation failure: fx_derivatives_notional=5,906 but fx_designated_notional=1,351 + fx_not_designated_notional=5,048 = 6,399 (diff 8.3%) — extraction likely read the wrong table
+[LLM_FLAG] fx_designated_notional rose from $500M (prior) to $1,351M (+170%), exceeding the 50% comparability threshold. This appears to be a genuine increase, not a miscoding: the text explicitly describes new FX forward contracts designated as cash flow hedges for forecasted inventory purchases, and $1,351M is a plausible notional-sized figure (not a fair-value-sized one), consistent with the 'notional' kind.
+[LLM_FLAG] fx_not_designated_notional ($5,048M) was computed by including the 'Cross-currency pay-fixed interest rate swaps, not designated as hedging instruments' line ($1,252M) together with 'Forward contracts, not designated' ($3,796M), because the filing's own notional table groups the cross-currency swap row under the 'FX contracts' subheading despite its 'interest rate swap' name. If that line is instead treated as an interest-rate instrument, the figure would be $3,796M. Flagging this classification judgment for reviewer awareness.
+[LLM_FLAG] total_derivative_asset/total_derivative_liability/net_derivative_position are computed sums of individual balance-sheet-location rows (no single 'Total' line was stated in this excerpt for the current period), so confidence is medium rather than high.
+[LLM_FLAG] expected_12mo_reclass_from_aoci was not disclosed in this excerpt (prior period value was $16M); marked not_found rather than carried forward.
+[LLM_FLAG] fixed_rate_notes_billion / fixed_rate_debt_face_value / variable_rate_debt reflect JDE Peet's Notes specifically (the acquisition-related debt discussed in this incremental-risk section), not Keurig Dr Pepper's total company-wide fixed/variable-rate debt, which this section explicitly says is covered elsewhere (Part II, Item 7A of the Annual Report). Do not treat these as KDP consolidated totals.
+[LLM_FLAG] prior_values was empty for this request, so no period-over-period comparison could be made for any field.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-21 ===
 [HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $13,033M → $6,548M (-49.8%) — exceeds 20% threshold
 [HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($500M)

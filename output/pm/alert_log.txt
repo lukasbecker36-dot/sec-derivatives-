@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-12 ===
+[NUMERIC] commodity_designated_notional: $5M → $3M (-40.0%) — exceeds 20% threshold
+[NUMERIC] net_asset: $150M → $47M (-68.7%) — exceeds 20% threshold
+[NUMERIC] net_liability: $-1M → $-29M (-2800.0%) — exceeds 20% threshold
+[NUMERIC] collateral_posted: $311M → $410M (+31.8%) — exceeds 20% threshold
+[VALIDATION] Reconciliation failure: total_notional=52,154 but fx_designated_notional=29,207 + fx_not_designated_notional=18,144 + commodity_designated_notional=3 = 47,354 (diff 9.2%) — extraction likely read the wrong table
+[LLM_FLAG] net_asset fell from 150 (prior quarter, 2026-03-31) to 47, a -68.7% change. Value is directly stated as the 'Net amount' asset-column figure in the offsetting/netting table (June 30, 2026), driven by a large increase in cash collateral received ($553M vs $183M at Dec 31 2025) and gross financial-instrument netting ($575M vs $444M) that offset a larger gross asset position ($1,175M vs $653M at Dec 31 2025). Not an extraction error.
+[LLM_FLAG] net_liability moved from -1 (prior quarter) to -29 this quarter; percentage change is extreme on a very small base but both figures come directly from the filing's explicit 'Net amount' liabilities-column row. Not an extraction error.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] commodity_designated_notional: $5M → $3M (-40.0%) — exceeds 20% threshold
 [NEW_FIELD] commodity_not_designated_notional: appeared for first time ($0M)

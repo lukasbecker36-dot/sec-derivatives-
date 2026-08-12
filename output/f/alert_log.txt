@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-12 ===
+[DISAPPEARED_FIELD] net_asset: was $868M, now missing
+[DISAPPEARED_FIELD] net_liability: was $-304M, now missing
+[VALIDATION] Reconciliation failure: total_notional=157,290 but fx_designated_notional=14,383 + fx_not_designated_notional=21,855 + commodity_designated_notional=1,049 + commodity_not_designated_notional=977 = 38,264 (diff 75.7%) — extraction likely read the wrong table
+[LLM_FLAG] net_asset and net_liability were not disclosed in this excerpt: the table presents only gross fair values (per the text, derivatives are 'presented on a gross basis' and collateral is not used to offset), and the only netting-related figure given is 'fair value of assets and liabilities available for counterparty netting' ($855M), which is not the same as a computed net position. Prior period had populated values (net_asset=868, net_liability=-304); marked not_found here rather than guessed or carried forward.
+[LLM_FLAG] expected_12mo_reclass_from_aoci, hedge_ineffectiveness, and credit_contingent_liability_fv are not covered in this section_text excerpt (likely disclosed elsewhere in Note 13 beyond this slice) and were left not_found rather than assumed zero.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] net_asset: was $868M, now missing
 [DISAPPEARED_FIELD] net_liability: was $-304M, now missing
