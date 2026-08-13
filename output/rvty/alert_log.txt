@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-07-05 | Processed 2026-08-13 ===
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $23M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $1M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $0M, now missing
+[NUMERIC] fx_derivatives_notional: $460M → $233M (-49.4%) — exceeds 20% threshold
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($233M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $1M → $1M (+24.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $0M → $1M (+61.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $0M → $0M (-45.1%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($0M)
+[VALIDATION] Likely extraction failure: 3/7 previously-populated fields are now null (total_marketable_securities_fv, fi_total_derivative_asset, fi_total_derivative_liability)
+[LLM_FLAG] fx_derivatives_notional fell from a prior tracked value of $459.8M to $232.8M (-49%); the filing's own comparative column shows an even larger drop from $598.4M at Dec 28, 2025, so this is a real period-over-period decline stated directly in the text, not an extraction inconsistency.
+[LLM_FLAG] The Company's FX forward program is described as 'designated as economic hedges' -- unusual phrasing that likely means these do NOT qualify for ASC 815 hedge accounting (i.e., they are economic/non-designated hedges), so the notional was placed in fx_not_designated_notional rather than fx_designated_notional. Treat this split with medium confidence.
+
 === 10-Q | Period ending 2026-04-05 | Processed 2026-06-25 ===
 [HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($23M)
 [HISTORICAL] [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($1M)

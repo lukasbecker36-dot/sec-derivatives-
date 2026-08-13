@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-07-04 | Processed 2026-08-13 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $1,200M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $1,200M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $0M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $150M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $9M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $32M, now missing
+[NUMERIC] total_derivative_asset: $9M → $18M (+100.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $32M → $23M (-28.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-23M → $-5M (+78.3%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $2M → $4M (+100.0%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 6/16 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset...)
+[LLM_FLAG] fx_designated_notional (1,280) is the interest rate cross-currency swap notional; fx_not_designated_notional (52) is the plain foreign currency exchange contracts notional. This split is inferred from context (cross-currency swaps are explicitly 'under hedge accounting' with OCI treatment for the FX-spot-rate component, matching a net-investment-hedge pattern; plain FX contract gains/losses instead hit Cost of revenue directly, consistent with non-designated treatment) rather than an explicit 'designated'/'not designated' label on the FX contracts line itself -- but it matches the prior tracked split (1,200/46) almost exactly in composition.
+[LLM_FLAG] net_derivative_position swung from a prior tracked -23 to -5 (a large relative change), and total_derivative_asset roughly doubled (9->18); both new figures are read directly from the filing's own fair-value table (July 4, 2026 column), so this reflects real balance-sheet movement, not an extraction inconsistency.
+[LLM_FLAG] fx_sensitivity_10pct rose from a prior tracked value of $2M to $4M (+100%), but this is exactly what the filing itself states ('would increase pre-tax earnings by approximately $4 million'), so it is a real filing-stated change, not an extraction error.
+
 === 10-Q | Period ending 2026-04-04 | Processed 2026-07-18 ===
 [HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $958M → $1,200M (+25.3%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_fx_designated_notional: $900M → $1,200M (+33.3%) — exceeds 20% threshold

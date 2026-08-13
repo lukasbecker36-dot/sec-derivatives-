@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-13 ===
+[NUMERIC] commodity_designated_notional: $5M → $3M (-40.0%) — exceeds 20% threshold
+[NEW_FIELD] commodity_not_designated_notional: appeared for first time ($0M)
+[NUMERIC] net_asset: $150M → $47M (-68.7%) — exceeds 20% threshold
+[NUMERIC] net_liability: $-1M → $-29M (-2800.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_oci_gain_loss: appeared for first time ($148M)
+[NEW_FIELD] commodity_oci_gain_loss: appeared for first time ($1M)
+[DISAPPEARED_FIELD] hedge_ineffectiveness: was $0M, now missing
+[NUMERIC] collateral_posted: $311M → $410M (+31.8%) — exceeds 20% threshold
+[VALIDATION] Reconciliation failure: total_notional=52,154 but fx_designated_notional=29,207 + fx_not_designated_notional=18,144 + commodity_designated_notional=3 + commodity_not_designated_notional=0 = 47,354 (diff 9.2%) — extraction likely read the wrong table
+[LLM_FLAG] total_notional (52,154) will not reconcile against fx_designated_notional+fx_not_designated_notional+commodity_designated_notional+commodity_not_designated_notional (=47,354) because the total also includes $4,800M of 'Interest rate contracts' (designated as hedging instruments) that has no dedicated bucket in this schema. The gap (52,154-47,354=4,800) is exactly the IR contracts notional, confirming all four component figures and the total are individually correct -- this mirrors the same reconciliation-rule coverage gap seen on Ford's row and is not an extraction error.
+[LLM_FLAG] collateral_posted (410) is inferred from the 'Cash collateral received/pledged' row appearing under the Liabilities fair-value column, under the standard convention that collateral offsetting a net liability position is collateral PMI pledged/posted (and collateral offsetting the asset-side $553M figure is collateral received). The table itself uses one combined label for both columns and does not explicitly state which side is 'received' vs 'pledged'.
+[LLM_FLAG] fx_oci_gain_loss and commodity_oci_gain_loss use the six-month (not three-month) cash-flow-hedge-only OCI figures, and are stated pre-tax in the filing even though the schema description asks for a net-of-tax amount -- no net-of-tax breakout for these specific line items is given in the text, so these should be treated as approximate/pre-tax, not a precise net-of-tax match.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] commodity_designated_notional: $5M → $3M (-40.0%) — exceeds 20% threshold
 [NEW_FIELD] commodity_not_designated_notional: appeared for first time ($0M)

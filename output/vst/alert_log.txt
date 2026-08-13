@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-13 ===
+[NUMERIC] ir_swap_notional: $6,416M → $414M (-93.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-1,867M → $-2,354M (-26.1%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional fell from a prior tracked value of 6,416 to 414 (-94%), but this is fully corroborated by the filing itself: the Derivative Volumes table's Dec 31, 2025 column shows $5,716M (variable/fixed) + $700M (fixed/variable) = $6,416M matching the prior value exactly, and the narrative explains the collapse -- 'In April 2026, we settled and terminated Vistra Operations' $700 million... and $3.0 billion... and $2.3 billion of pay fixed rate and receive variable rate swaps.' This is a real, filing-confirmed termination, not an extraction error.
+[LLM_FLAG] commodity_derivatives_notional left not_found: the 'Derivative Volumes' table reports commodity notional as physical volumes (Million MMBtu for natural gas, GWh for electricity, Million U.S. tons for coal, etc.), not a single dollar notional in millions as the schema field expects -- there is no like-for-like $ figure to combine across these differing units.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-27 ===
 [HISTORICAL] [NUMERIC] net_derivative_position: $-2,580M → $-1,867M (+27.6%) — exceeds 20% threshold
 [HISTORICAL] [LLM_FLAG] Vistra does not apply hedge accounting to any derivatives; all mark-to-market changes flow through earnings, not OCI.
