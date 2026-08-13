@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-13 ===
+[DISAPPEARED_FIELD] net_asset: was $868M, now missing
+[DISAPPEARED_FIELD] net_liability: was $-304M, now missing
+[VALIDATION] Reconciliation failure: total_notional=157,290 but fx_designated_notional=14,383 + fx_not_designated_notional=21,855 + commodity_designated_notional=1,049 + commodity_not_designated_notional=977 = 38,264 (diff 75.7%) — extraction likely read the wrong table
+[LLM_FLAG] total_notional (157,290) is the table's own stated grand total and verifies exactly against every line item in the table (14,383+1,049+22,422+6,330+21,855+5,406+84,868+977=157,290). It will NOT reconcile against fx_designated_notional+fx_not_designated_notional+commodity_designated_notional+commodity_not_designated_notional alone (=38,264) because Ford's total also includes large 'Interest rate contracts' (22,422+84,868=107,290) and 'Cross-currency interest rate swap contracts' (6,330+5,406=11,736) notionals that have no dedicated designated/not-designated bucket in this schema. This is a schema/reconciliation-rule coverage gap for IR-heavy filers, not an extraction error -- do not re-queue this row for that reason alone.
+[LLM_FLAG] net_asset/net_liability left not_found: prior extraction carried both a net_asset (868) and a net_liability (-304) simultaneously, implying a per-counterparty-group netting split not stated in this excerpt; a naive total_asset-minus-total_liability (352) would not match that convention, so it was omitted rather than guessed.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] net_asset: was $868M, now missing
 [DISAPPEARED_FIELD] net_liability: was $-304M, now missing

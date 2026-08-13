@@ -1,3 +1,26 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-13 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $6,548M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $500M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $6,048M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $2,300M, now missing
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,906M)
+[NUMERIC] fx_designated_notional: $500M → $1,351M (+170.2%) — exceeds 20% threshold
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($269M)
+[NUMERIC] total_derivative_asset: $149M → $209M (+40.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $16M, now missing
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-73M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
+[NEW_FIELD] fixed_rate_debt_face_value: appeared for first time ($4,506M)
+[NEW_FIELD] variable_rate_debt: appeared for first time ($686M)
+[NEW_FIELD] commodity_derivatives_fair_value: appeared for first time ($25M)
+[NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($27M)
+[VALIDATION] Likely extraction failure: 5/11 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, expected_12mo_reclass_from_aoci)
+[VALIDATION] Reconciliation failure: fx_derivatives_notional=5,906 but fx_designated_notional=1,351 + fx_not_designated_notional=5,048 = 6,399 (diff 8.3%) — extraction likely read the wrong table
+[LLM_FLAG] fx_designated_notional rose from a tracked prior value of 500 to 1,351 (+63%), but this matches the filing's own comparative column exactly ($597M at Dec 31, 2025 vs $1,351M at June 30, 2026 for FX forward contracts designated as cash flow hedges) -- a genuine period-over-period increase, not an extraction error.
+[LLM_FLAG] ir_swap_notional's composition changed structurally: the $2,300M (not designated) and $1,500M (designated) forward starting swaps outstanding at Dec 31, 2025 were terminated in March 2026 upon issuing the related Maple Notes; the $2,014M at June 30, 2026 is entirely new pay-variable interest rate swaps, not a continuation of the prior swaps.
+[LLM_FLAG] fx_sensitivity_10pct_usd_weak left not_found: the text states the impact of a 10% Euro weakening ($73M), not a 10% USD weakening -- these describe the opposite currency move, so the stated figure was not substituted for this differently-defined field.
+[LLM_FLAG] variable_rate_debt (686) is JDE Peet's variable-rate Notes only; the schema description mentions 'including commercial paper' but no commercial paper balance is stated in this excerpt.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-21 ===
 [HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $13,033M → $6,548M (-49.8%) — exceeds 20% threshold
 [HISTORICAL] [NEW_FIELD] fi_fx_designated_notional: appeared for first time ($500M)

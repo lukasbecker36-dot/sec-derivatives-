@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-07-03 | Processed 2026-08-13 ===
+[NUMERIC] fx_forward_purchased_notional: $367M → $-428M (-216.6%) — exceeds 20% threshold
+[NUMERIC] fx_forward_sold_notional: $51M → $33M (-34.3%) — exceeds 20% threshold
+[NUMERIC] fx_forward_purchased_fv: $2M → $-1M (-166.7%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] fx_forward_sold_fv: $-0M → $0M
+[NUMERIC] fx_revenue_impact: $24M → $9M (-60.0%) — exceeds 20% threshold
+[NUMERIC] fx_operating_income_impact: $-0M → $5M (+1666.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_revenue_impact (9.4, Q2-only) is down 60% from a prior tracked value of 23.5; the filing also discloses a six-month cumulative figure of $32.9M, which is only 29% below 23.5. Q2-only was used for period consistency, but the choice of period materially changes the year-over-year read -- flagging so the digest doesn't overstate the swing.
+[LLM_FLAG] fx_operating_income_impact (4.7, Q2) and fx_forward_purchased_fv (-1.0) both flip sign versus prior tracked values (-0.3 and +1.5 respectively); both are small-magnitude figures where a sign flip is a modest dollar swing, not necessarily a data problem, but worth a second look given the reversal.
+[LLM_FLAG] primary_fx_exposures now lists Indian Rupee instead of Brazilian Real (prior: EUR, CAD, NZD, NOK, BRL) -- this matches the filing's own explicit currency list, so it is a genuine change in disclosed exposures, not a formatting artifact.
+
 === 10-Q | Period ending 2026-04-03 | Processed 2026-06-26 ===
 [HISTORICAL] [NUMERIC] fx_forwards_outstanding: $330M → $418M (+26.5%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fx_forward_purchased_notional: $270M → $367M (+36.2%) — exceeds 20% threshold
