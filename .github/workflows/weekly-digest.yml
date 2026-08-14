@@ -20,6 +20,14 @@ jobs:
         with:
           python-version: '3.11'
 
+      # Without this the audit gate below cannot import src.audit — it depends
+      # on pyyaml / duckdb / anthropic transitively via src.config. When this
+      # step was missing, the audit failed on ModuleNotFoundError and the
+      # workflow interpreted that as a data-integrity regression, so the
+      # digest was silently withheld even when the corpus was fine.
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
       # Gate the send, not just the generation. The briefing that reported
       # Microsoft's non-designated FX notional as "+352%" was emailed by this
       # workflow: the $63.5B figure was real, but the percentage was computed
