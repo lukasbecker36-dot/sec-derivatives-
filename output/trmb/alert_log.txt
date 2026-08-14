@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-07-03 | Processed 2026-08-14 ===
+[NUMERIC] fx_forward_purchased_notional: $367M → $-428M (-216.6%) — exceeds 20% threshold
+[NUMERIC] fx_forward_sold_notional: $51M → $33M (-34.3%) — exceeds 20% threshold
+[NUMERIC] fx_forward_purchased_fv: $2M → $-1M (-166.7%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] fx_forward_sold_fv: $-0M → $0M
+[NUMERIC] fx_revenue_impact: $24M → $9M (-60.0%) — exceeds 20% threshold
+[NUMERIC] fx_operating_income_impact: $-0M → $5M (+1666.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_forward_purchased_notional and fx_forward_purchased_fv are reported here as negative, exactly as the filing presents them in parentheses; the prior stored values (367.2 and 1.5, both positive) suggest an earlier extraction normalized these to absolute values — treat sign carefully when comparing across periods.
+[LLM_FLAG] fx_revenue_impact ($9.4M, Q2 2026 only) is down 60% from the prior stored value ($23.5M); the filing also discloses a six-month figure of $32.9M, which is up 40% from the same prior value — the two are not directly comparable periods, so the apparent swing may partly reflect a quarter-vs-six-month mismatch rather than a real change. Reported value here is the single-quarter (Q2 2026) figure to match the likely single-quarter basis of the prior stored value.
+[LLM_FLAG] fx_operating_income_impact ($4.7M favorable, Q2 2026) reverses sign from the prior stored value (-$0.3M unfavorable); both figures are small in absolute terms.
+[LLM_FLAG] primary_fx_exposures now lists Indian Rupee where the prior stored value listed Brazilian Real (BRL); this may reflect a genuine change in the company's most significant hedged currencies between filings rather than an extraction error, since Indian Rupee is explicitly named in this filing's text and BRL is not mentioned anywhere in this excerpt.
+
 === 10-Q | Period ending 2026-04-03 | Processed 2026-06-26 ===
 [HISTORICAL] [NUMERIC] fx_forwards_outstanding: $330M → $418M (+26.5%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fx_forward_purchased_notional: $270M → $367M (+36.2%) — exceeds 20% threshold

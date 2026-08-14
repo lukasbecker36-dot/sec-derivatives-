@@ -1,3 +1,8 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-14 ===
+[NUMERIC] ir_swap_notional: $6,416M → $414M (-93.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-1,867M → $-2,354M (-26.1%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional ($414M) is down 93.5% from the prior period's stored value ($6,416M); this filing's own comparative column confirms the prior notional exactly ($5,716M variable/fixed + $700M fixed/variable = $6,416M at December 31, 2025) and explicitly explains the drop: 'In April 2026, we settled and terminated Vistra Operations' $700 million of pay variable rate and receive fixed rate swaps and $3.0 billion pay fixed rate and receive variable rate swaps expiring July 2026 and $2.3 billion of pay fixed rate and receive variable rate swaps effective from August 2026 through December 2030.' This is a genuine, filing-disclosed event, not an extraction error.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-27 ===
 [HISTORICAL] [NUMERIC] net_derivative_position: $-2,580M → $-1,867M (+27.6%) — exceeds 20% threshold
 [HISTORICAL] [LLM_FLAG] Vistra does not apply hedge accounting to any derivatives; all mark-to-market changes flow through earnings, not OCI.

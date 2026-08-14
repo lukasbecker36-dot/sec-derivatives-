@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-14 ===
+[NUMERIC] commodity_designated_notional: $5M → $3M (-40.0%) — exceeds 20% threshold
+[NEW_FIELD] commodity_not_designated_notional: appeared for first time ($0M)
+[NUMERIC] net_asset: $150M → $47M (-68.7%) — exceeds 20% threshold
+[NUMERIC] net_liability: $-1M → $-29M (-2800.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_oci_gain_loss: appeared for first time ($148M)
+[NEW_FIELD] commodity_oci_gain_loss: appeared for first time ($1M)
+[DISAPPEARED_FIELD] collateral_posted: was $311M, now missing
+[VALIDATION] Reconciliation failure: total_notional=52,154 but fx_designated_notional=29,207 + fx_not_designated_notional=18,144 + commodity_designated_notional=3 + commodity_not_designated_notional=0 = 47,354 (diff 9.2%) — extraction likely read the wrong table
+[LLM_FLAG] net_asset ($47M) is down 69% from the prior period's stored value ($150M); this is the exact 'Net amount' figure the filing states for the derivative-asset side after both financial-instrument and cash-collateral netting, so the swing reflects genuinely larger offsetting collateral/master-netting amounts this quarter ($553M cash collateral netted vs $183M at Dec 2025), not an extraction error.
+[LLM_FLAG] net_liability (-$29M) differs sharply from the prior stored value (-$1M), for the same reason: larger cash collateral netted against the liability side this quarter ($410M) versus the comparative period.
+[LLM_FLAG] collateral_posted was not found in this excerpt (prior value 311.0); this filing's netting table only discloses combined 'cash collateral received/pledged' amounts used in the offsetting calculation ($553M asset-side, $410M liability-side), not a standalone posted-collateral total comparable to the prior figure.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] commodity_designated_notional: $5M → $3M (-40.0%) — exceeds 20% threshold
 [NEW_FIELD] commodity_not_designated_notional: appeared for first time ($0M)
