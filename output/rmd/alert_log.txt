@@ -1,3 +1,17 @@
+=== 10-K | Period ending 2026-06-30 | Processed 2026-08-14 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $4,749M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $3,430M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $1,319M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $7M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $145M, now missing
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $7M → $5M (-31.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $145M → $218M (+49.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-138M → $-213M (-54.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/12 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_total_derivative_asset, fi_total_derivative_liability...)
+[LLM_FLAG] total_derivative_liability ($217.671M) is up ~50% from the prior period's stored value ($145.389M), and net_derivative_position (-$212.591M) is down 54% from the prior stored value (-$137.995M); both are driven mainly by two large USD/EUR and USD/SGD contract fair-value liabilities (-$96.6M and -$104.6M respectively) in the June 30, 2026 table, which is directly stated in the filing rather than inferred.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-24 ===
 [HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $2,919M → $4,749M (+62.7%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_fx_designated_notional: $1,125M → $3,430M (+205.0%) — exceeds 20% threshold

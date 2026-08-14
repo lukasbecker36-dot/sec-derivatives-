@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-08-14 ===
+[NUMERIC] fx_designated_notional: $16,384M → $20,713M (+26.4%) — exceeds 15% threshold
+[NUMERIC] net_asset: $868M → $352M (-59.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] net_liability: was $-304M, now missing
+[NEW_FIELD] fx_fair_value_hedge_notional: appeared for first time ($6,330M)
+[NEW_FIELD] ir_cash_flow_hedge_notional: appeared for first time ($0M)
+[VALIDATION] Reconciliation failure: total_notional=157,290 but fx_designated_notional=20,713 + fx_not_designated_notional=27,261 + commodity_designated_notional=1,049 + commodity_not_designated_notional=977 = 50,000 (diff 68.2%) — extraction likely read the wrong table
+[LLM_FLAG] This filing was queued for re-extraction because the prior extraction's component notionals did not reconcile against total_notional. Root cause: the $6,330M (designated fair value hedge) and $5,406M (non-designated) cross-currency interest rate swap notionals were previously omitted entirely from every bucket field. This extraction allocates cross-currency swap notional into the fx_designated_notional/fx_fair_value_hedge_notional and fx_not_designated_notional buckets (since these are FX-driven instruments), which makes fx_designated_notional + fx_not_designated_notional + commodity_designated_notional + commodity_not_designated_notional + ir_cash_flow_hedge_notional + ir_fair_value_hedge_notional + ir_not_designated_notional sum exactly to total_notional (157,290) for the first time.
+[LLM_FLAG] net_asset (352) differs from the prior period's stored value (868) by more than 50%, but the prior figure also had net_liability simultaneously populated (-304), which is internally inconsistent (a position cannot be both a net asset and net liability). This extraction computes net_asset as a straightforward gross-asset-minus-gross-liability derivation, since the filing does not state a single net position figure.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] net_asset: was $868M, now missing
 [DISAPPEARED_FIELD] net_liability: was $-304M, now missing

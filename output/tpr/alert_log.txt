@@ -1,3 +1,29 @@
+=== 10-K | Period ending 2026-06-27 | Processed 2026-08-14 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $211M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $22M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $76M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $232M, now missing
+[NUMERIC] fx_not_designated_notional: $77M → $222M (+187.7%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $250M → $375M (+50.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_asset: was $76M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $232M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-156M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $17M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $15M, now missing
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($162M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($2M)
+[NEW_FIELD] fx_forward_cf_hedge_notional: appeared for first time ($869M)
+[NEW_FIELD] fx_forward_non_hedge_notional: appeared for first time ($222M)
+[NEW_FIELD] fx_forward_asset_fair_value: appeared for first time ($31M)
+[NEW_FIELD] fx_forward_liability_fair_value: appeared for first time ($11M)
+[NEW_FIELD] net_investment_hedge_notional: appeared for first time ($1,820M)
+[NEW_FIELD] net_investment_hedge_asset: appeared for first time ($71M)
+[NEW_FIELD] net_investment_hedge_liability: appeared for first time ($221M)
+[VALIDATION] Likely extraction failure: 9/13 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, fi_total_derivative_asset, fi_total_derivative_liability, total_derivative_asset...)
+[LLM_FLAG] fx_not_designated_notional ($222.1M) is up 188% from the prior stored value ($77.2M); however, this filing's own comparative column states the June 28, 2025 (prior fiscal year-end) value for this exact bucket was $157.0M, not $77.2M — the stored prior value appears to predate this bucket or reflects a different/partial categorization from an earlier extraction, not a genuine one-year 41% increase implied by the filing's own comparatives.
+[LLM_FLAG] ir_swap_notional ($375.0M) is up 50% from the prior stored value ($250.0M); this filing does not provide a comparative prior-year figure for this specific $375.0M interest-rate-contract notional in this excerpt, so the swing could not be cross-checked against the filing's own comparative column.
+[LLM_FLAG] total_derivative_asset, total_derivative_liability, net_derivative_position, cash_flow_hedge_aoci, and expected_12mo_reclass_from_aoci could not be reconstructed from this excerpt: fair values are only disclosed here for two of the three FX derivative buckets (the $222.1M intercompany-hedge bucket: $31.2M assets/$11.3M liabilities, and the $1.82B net-investment-hedge bucket: $71.1M assets/$221.1M liabilities). No fair value is given in this excerpt for the $868.8M cash-flow-hedge forward contracts or the $375.0M interest rate contracts, so any total computed from only the two disclosed buckets would understate the true total and was not reported to avoid a reconciliation-style error.
+
 === 10-Q | Period ending 2026-03-28 | Processed 2026-06-26 ===
 [HISTORICAL] [NUMERIC] fi_total_derivative_asset: $61M → $76M (+24.6%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fx_not_designated_notional: $166M → $77M (-53.6%) — exceeds 20% threshold

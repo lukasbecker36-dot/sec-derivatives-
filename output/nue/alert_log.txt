@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-07-04 | Processed 2026-08-14 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,557M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $255M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $20M, now missing
+[NUMERIC] commodity_sensitivity_10pct: $42M → $31M (-26.2%) — exceeds 20% threshold
+[NUMERIC] commodity_sensitivity_25pct: $105M → $74M (-29.5%) — exceeds 20% threshold
+[NUMERIC] aoci_unrealized_losses: $15M → $2M (-86.7%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, fi_total_derivative_liability)
+[LLM_FLAG] aoci_unrealized_losses ($2M) is down 87% from the prior period's stored value ($15M); this is directly stated in the filing text for the current period, not an inferred figure, so the swing appears to be a genuine reduction in the mark-to-market position of designated commodity/FX hedges rather than an extraction error.
+[LLM_FLAG] schema description hints (aoci $13M, natural gas $7M/$17M, other commodities $24M/$60M) appear to be stale/placeholder values; actual figures extracted from this filing's table differ and were used instead.
+
 === 10-Q | Period ending 2026-04-04 | Processed 2026-06-11 ===
 [HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($1,557M)
 [HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($255M)
