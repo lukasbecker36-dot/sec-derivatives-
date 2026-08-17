@@ -1,3 +1,14 @@
+=== 10-K | Period ending 2026-07-03 | Processed 2026-08-17 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $93M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $5M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $29M, now missing
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,310M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-72M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
+[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, fx_sensitivity_10pct, fixed_rate_notes_billion)
+[LLM_FLAG] Section text appears to start mid-sentence ("foreign currencies. The purpose of entering into these hedging transactions...") and runs on into unrelated Notes (Pensions, Leases, Recent Accounting Pronouncements) before ending. This looks like a section-boundary detection issue in section_extract.py for this filer: the opening portion of the derivatives note (any preceding balance-sheet/fair-value table, and any interest rate or commodity derivative disclosure) is likely missing from this excerpt, which is why only the FX notional figure could be recovered.
+[LLM_FLAG] prior_values had fx_sensitivity_10pct=-72.0 and fixed_rate_notes_billion=1.6, but neither figure appears in this excerpt — text is cut off after "For additional information, see Part II," before reaching the quantitative sensitivity disclosure. Values could not be confirmed or refuted; left not_found rather than carried forward from prior_values.
+
 === 10-Q | Period ending 2026-04-03 | Processed 2026-06-27 ===
 [HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $133M → $93M (-30.1%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_total_derivative_asset: $13M → $5M (-61.5%) — exceeds 20% threshold
