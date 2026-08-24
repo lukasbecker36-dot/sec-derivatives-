@@ -1,3 +1,17 @@
+=== 10-K | Period ending 2026-06-30 | Processed 2026-08-24 ===
+[NUMERIC] fi_total_derivative_liability: $14M → $22M (+57.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $14M → $22M (+57.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $16M → $7M (-56.2%) — exceeds 20% threshold
+[NUMERIC] ir_sensitivity_100bp: $21M → $10M (-52.4%) — exceeds 20% threshold
+[NUMERIC] derivative_fair_value: $16M → $7M (-56.2%) — exceeds 20% threshold
+[LLM_FLAG] fi_total_derivative_liability rose from prior 14 to 22 (+57%), exceeding the 50% change threshold.
+[LLM_FLAG] derivative_fair_value (net position) fell from prior 16 to 7 (-56%), exceeding the 50% change threshold; driven by the liability increase above.
+[LLM_FLAG] Cross-currency swap notional is disclosed only in EUR/JPY (€69M, €290M, ¥2.1B) with no USD-equivalent total provided in this section, so fi_fx_derivatives_notional and fi_fx_designated_notional are left null rather than guessed via an unstated FX rate.
+[LLM_FLAG] total_derivative_liability rose from prior 14 to 22 (+57%), exceeding the 50% change threshold.
+[LLM_FLAG] net_derivative_position fell from prior 16 to 7 (-56%), exceeding the 50% change threshold.
+[LLM_FLAG] PH's hedges are net investment hedges, not cash flow hedges, so cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci are genuinely not applicable/disclosed here (left null rather than 0).
+[LLM_FLAG] ir_sensitivity_100bp fell from prior 21 to 10 (-52%), exceeding the 50% change threshold; consistent with the note that variable-rate debt (commercial paper) exposure is currently small.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-06 ===
 [HISTORICAL] [NUMERIC] fi_total_derivative_asset: $8M → $30M (+275.0%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_total_derivative_liability: $35M → $14M (-60.0%) — exceeds 20% threshold
