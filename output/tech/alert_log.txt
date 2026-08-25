@@ -1,3 +1,18 @@
+=== 10-K | Period ending 2026-06-30 | Processed 2026-08-25 ===
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $4M, now missing
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $130M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $130M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $0M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $15M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $15M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-15M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($57M)
+[VALIDATION] Likely extraction failure: 9/12 previously-populated fields are now null (marketable_equity_securities_fv, fi_fx_derivatives_notional, fi_fx_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset...)
+[LLM_FLAG] fx_sensitivity_10pct is low confidence: the filing discloses three separate hypothetical 10% USD-appreciation impacts (earnings translation $1.199M, net-asset translation $57.040M, transaction losses $4.514M) rather than a single fair-value sensitivity figure; the net-asset translation figure (largest, most commonly cited) was used as the representative value, but see sensitivity_analysis for the full breakdown.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($130M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($150M)
