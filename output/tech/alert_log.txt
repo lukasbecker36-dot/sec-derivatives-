@@ -1,3 +1,20 @@
+=== 10-K | Period ending 2026-06-30 | Processed 2026-08-26 ===
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $4M, now missing
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $130M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $130M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $0M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $15M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $15M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-15M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($57M)
+[NEW_FIELD] foreign_currency_sales_percentage: appeared for first time ($33M)
+[VALIDATION] Likely extraction failure: 9/12 previously-populated fields are now null (marketable_equity_securities_fv, fi_fx_derivatives_notional, fi_fx_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset...)
+[LLM_FLAG] Balance-sheet fair value table for derivative assets/liabilities was not present in the extracted section text (prior filing reported a $14.661M total derivative liability); total_derivative_asset/liability/net_derivative_position set to not_found rather than guessed.
+[LLM_FLAG] The forward starting swap (IR cash flow hedge) matured in November 2025 and had zero notional outstanding at June 30, 2026, versus $200M a year earlier -- consistent with the note's own maturity disclosure, not a data error.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($130M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($150M)

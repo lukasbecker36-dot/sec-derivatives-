@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-08-02 | Processed 2026-08-26 ===
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $5,400M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $574M, now missing
+[VALIDATION] Likely extraction failure: 2/6 previously-populated fields are now null (fi_ir_swap_notional, fi_total_derivative_liability)
+[LLM_FLAG] The narrative text states interest rate swap fair values 'totaled $621 million' at August 2, 2026, while the fair value measurement table's 'Derivative agreements - liabilities' total is $623 million for the same date; used the fair value table's $623M as total_derivative_liability since it is the comprehensive balance-sheet total, but the $2M gap between the two disclosures is unexplained in this excerpt.
+
 === 10-Q | Period ending 2026-05-03 | Processed 2026-06-19 ===
 [HISTORICAL] [DISAPPEARED_FIELD] floating_rate_debt_principal: was $5,400M, now missing
 [HISTORICAL] [DISAPPEARED_FIELD] floating_rate_debt_percentage: was $11M, now missing
