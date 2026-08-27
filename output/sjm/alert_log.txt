@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-07-31 | Processed 2026-08-27 ===
+[NUMERIC] total_derivative_liability: $11M → $6M (-48.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $21M → $26M (+23.1%) — exceeds 20% threshold
+[NUMERIC] commodity_sensitivity_high: $44M → $28M (-35.6%) — exceeds 20% threshold
+[NUMERIC] commodity_sensitivity_avg: $7M → $2M (-68.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_cash_flow_hedge_aoci: was $-105M, now missing
+[NUMERIC] revenue_pct_international: $4M → $3M (-25.0%) — exceeds 20% threshold
+[LLM_FLAG] commodity_sensitivity_avg fell from $7.0M (April 30, 2026) to $2.2M (July 31, 2026), a -68.6% change exceeding the 50% threshold. Directionally consistent with the High/Low band both narrowing and the commodity notional declining from $606.2M to $562.0M in the same filing, but flagged per the >50% rule.
+
 === 10-K | Period ending 2026-04-30 | Processed 2026-06-25 ===
 [HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $19M, now missing
 [HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $4M, now missing
