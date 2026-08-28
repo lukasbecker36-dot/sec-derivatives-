@@ -19,7 +19,9 @@
       "cash flow hedge",
       "natural hedge",
       "interest rate swap",
-      "designated as hedging"
+      "designated as hedging",
+      "fair value hedge",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -91,6 +93,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 11
+    },
+    {
+      "filing_date": "2026-07-31",
+      "form_type": "10-Q",
+      "period_end": "2026-07-31",
+      "processed_at": "2026-08-28T02:16:55Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 10,
+      "fields_null": 14
     }
   ]
 }

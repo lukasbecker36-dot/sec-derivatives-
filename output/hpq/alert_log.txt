@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-07-31 | Processed 2026-08-28 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $990M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $125M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $25M, now missing
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $21,715M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $17,541M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $4,174M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $0M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $163M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $252M, now missing
+[NUMERIC] total_derivative_asset: $163M → $210M (+28.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $252M → $169M (-32.9%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-89M → $41M (+146.1%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-79M → $21M (+126.6%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 9/18 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, gross_unrealized_gains_debt, fi_fx_derivatives_notional, fi_fx_designated_notional...)
+[LLM_FLAG] net_derivative_position flipped from a net liability of -$89M (prior) to a net asset of +$41M this quarter — a sign reversal driven by total_derivative_liability falling from $252M to $169M (-33%) while total_derivative_asset rose from $163M to $210M (+29%); both underlying moves are individually under 50% but the combined swing crosses zero.
+[LLM_FLAG] expected_12mo_reclass_from_aoci flipped from an expected $79M loss (prior) to an expected $21M gain this quarter — consistent with FX rates moving during the quarter (cash flow hedge AOCI gain/loss on FX contracts swung from $(6)M nine-month 2026 vs $(304)M nine-month 2025); directionally plausible given FX contract OCI activity disclosed in the same note, not flagged as an error.
+
 === 10-Q | Period ending 2026-04-30 | Processed 2026-06-19 ===
 [HISTORICAL] [NUMERIC] fi_fx_designated_notional: $13,938M → $17,541M (+25.9%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_total_derivative_asset: $99M → $163M (+64.6%) — exceeds 20% threshold

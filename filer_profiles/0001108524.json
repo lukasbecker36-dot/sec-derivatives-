@@ -17,7 +17,10 @@
   "idiosyncrasies": {
     "recurring_phrases": [
       "cross-currency",
-      "unrealized gain"
+      "unrealized gain",
+      "cash flow hedge",
+      "notional amount",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [
       "constant currency"
@@ -91,6 +94,18 @@
       ],
       "fields_extracted": 6,
       "fields_null": 5
+    },
+    {
+      "filing_date": "2026-07-31",
+      "form_type": "10-Q",
+      "period_end": "2026-07-31",
+      "processed_at": "2026-08-28T02:16:57Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 10,
+      "fields_null": 13
     }
   ]
 }

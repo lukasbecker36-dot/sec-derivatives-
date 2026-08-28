@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-07-31 | Processed 2026-08-28 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $204M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $3,794M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $1,897M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $15M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $27M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $128M, now missing
+[NUMERIC] total_derivative_asset: $27M → $44M (+63.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $128M → $94M (-26.6%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-101M → $-50M (+50.5%) — exceeds 20% threshold
+[NUMERIC] ir_sensitivity_100bp: $54M → $43M (-20.4%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 6/14 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt, fi_total_derivative_asset...)
+[LLM_FLAG] total_derivative_asset rose from $27M (prior) to $44M this quarter (+63%), exceeding the 50% threshold. This is consistent with the accompanying notional increase (cash flow hedge buy-USD notional grew from $3.0B to $3.3B) and a strengthening of hedged currencies against USD reflected in the OCI gain of $37M for the quarter (vs a $2M loss a year ago) — directionally plausible, not flagged as a likely extraction error.
+
 === 10-Q | Period ending 2026-04-30 | Processed 2026-06-27 ===
 [HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,092M → $204M (-81.3%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $36M → $15M (-58.3%) — exceeds 20% threshold

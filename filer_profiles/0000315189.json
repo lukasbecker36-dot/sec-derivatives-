@@ -15,7 +15,14 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "net investment hedge",
+      "cash flow hedge",
+      "fair value hedge",
+      "cross-currency",
+      "notional amount",
+      "designated as hedging"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -86,6 +93,18 @@
       ],
       "fields_extracted": 0,
       "fields_null": 9
+    },
+    {
+      "filing_date": "2026-08-02",
+      "form_type": "10-Q",
+      "period_end": "2026-08-02",
+      "processed_at": "2026-08-28T02:16:53Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 9,
+      "fields_null": 12
     }
   ]
 }
