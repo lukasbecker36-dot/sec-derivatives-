@@ -1,3 +1,30 @@
+=== 10-Q | Period ending 2026-07-31 | Processed 2026-09-01 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,775M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $638M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $246M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $25M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $22M, now missing
+[NUMERIC] fx_not_designated_notional: $450M → $126M (-72.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_asset: was $25M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $22M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $3M, now missing
+[NUMERIC] cash_flow_hedge_aoci: $-7M → $7M (+200.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($3,383M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-68M)
+[NUMERIC] forward_contracts_purchased_fair_value: $-2M → $-16M (-700.0%) — exceeds 20% threshold
+[NUMERIC] forward_contracts_sold_fair_value: $-13M → $1M (+107.7%) — exceeds 20% threshold
+[NUMERIC] option_contracts_purchased_fair_value: $15M → $21M (+40.0%) — exceeds 20% threshold
+[NUMERIC] option_contracts_sold_fair_value: $-7M → $-4M (+42.9%) — exceeds 20% threshold
+[NUMERIC] usd_depreciation_sensitivity: $-94M → $-68M (+27.7%) — exceeds 20% threshold
+[NUMERIC] cash_equivalents_marketable_securities: $2,410M → $782M (-67.6%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 9/24 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt, fi_total_derivative_asset...)
+[LLM_FLAG] fx_not_designated_notional fell from $450M to $126M (-72%), verify not a data error
+[LLM_FLAG] cash_flow_hedge_aoci swung from -$7M (net loss) to +$7M (net gain) versus prior period, verify sign
+[LLM_FLAG] cash_equivalents_marketable_securities fell from $2410M to $782M (-67.6%), verify not a data error
+[LLM_FLAG] forward_contracts_purchased_fair_value moved from -$2M to -$16M (8x), verify not a data error
+[LLM_FLAG] forward_contracts_sold_fair_value flipped from -$13M to $1M, verify not a data error
+
 === 10-Q | Period ending 2026-04-30 | Processed 2026-06-29 ===
 [HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($1,775M)
 [HISTORICAL] [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($638M)

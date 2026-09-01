@@ -17,7 +17,8 @@
   "idiosyncrasies": {
     "recurring_phrases": [
       "fair value hedge",
-      "interest rate swap"
+      "interest rate swap",
+      "notional amount"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [
@@ -91,6 +92,18 @@
       ],
       "fields_extracted": 0,
       "fields_null": 12
+    },
+    {
+      "filing_date": "2026-07-31",
+      "form_type": "10-Q",
+      "period_end": "2026-07-31",
+      "processed_at": "2026-09-01T02:17:15Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 3,
+      "fields_null": 21
     }
   ]
 }

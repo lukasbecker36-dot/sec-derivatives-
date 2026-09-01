@@ -18,9 +18,14 @@
     "recurring_phrases": [
       "cash flow hedge",
       "foreign exchange forward",
-      "notional amount"
+      "notional amount",
+      "designated as hedging",
+      "accumulated other comprehensive"
     ],
-    "non_gaap_metrics": [],
+    "non_gaap_metrics": [
+      "non-gaap",
+      "free cash flow"
+    ],
     "unusual_disclosure_patterns": [],
     "known_issues": []
   },
@@ -90,6 +95,18 @@
       ],
       "fields_extracted": 13,
       "fields_null": 5
+    },
+    {
+      "filing_date": "2026-07-31",
+      "form_type": "10-Q",
+      "period_end": "2026-07-31",
+      "processed_at": "2026-09-01T02:17:11Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 18,
+      "fields_null": 12
     }
   ]
 }

@@ -1,3 +1,22 @@
+=== 10-K | Period ending 2026-06-30 | Processed 2026-09-01 ===
+[NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($60M)
+[NUMERIC] marketable_equity_securities_fv: $15M → $23M (+57.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $15M, now missing
+[DISAPPEARED_FIELD] money_market_funds_fair_value: was $0M, now missing
+[DISAPPEARED_FIELD] certificates_of_deposit_fair_value: was $47M, now missing
+[DISAPPEARED_FIELD] marketable_equity_security_fair_value: was $15M, now missing
+[DISAPPEARED_FIELD] auction_rate_security_fair_value: was $0M, now missing
+[DISAPPEARED_FIELD] total_assets_at_fair_value: was $62M, now missing
+[DISAPPEARED_FIELD] convertible_notes_2029_fair_value: was $1,382M, now missing
+[DISAPPEARED_FIELD] convertible_notes_2028_fair_value: was $602M, now missing
+[DISAPPEARED_FIELD] convertible_notes_2030_fair_value: was $1,684M, now missing
+[DISAPPEARED_FIELD] total_lines_of_credit_term_loans: was $4,114M, now missing
+[DISAPPEARED_FIELD] unrealized_gain_loss_equity_security: was $8M, now missing
+[VALIDATION] Likely extraction failure: 12/13 previously-populated fields are now null (fx_forwards_outstanding, marketable_equity_value, money_market_funds_fair_value, certificates_of_deposit_fair_value, marketable_equity_security_fair_value...)
+[LLM_FLAG] marketable_equity_securities_fv = $23.11M is up 57.1% from prior value $14.709M (>50% threshold).
+[LLM_FLAG] section_text for this 'market_risk' request is actually Item 1A Risk Factors narrative (litigation, supply chain, AI risk, key-person, related-party, cybersecurity, delinquent-filing history, etc.), not the Item 7A Quantitative and Qualitative Disclosures About Market Risk section or the fair-value note. None of the schema's fair-value/derivative/sensitivity fields are addressed in this excerpt, even though every one of them has a non-null prior_value from an earlier run.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-25 ===
 [HISTORICAL] [NUMERIC] money_market_funds_fair_value: $0M → $0M (-54.8%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] certificates_of_deposit_fair_value: $100M → $47M (-52.7%) — exceeds 20% threshold
