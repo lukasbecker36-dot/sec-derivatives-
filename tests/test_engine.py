@@ -99,3 +99,90 @@ class TestRetryableFailure:
         """
         result = process_filing(config, filing_meta, filing_text)
         assert result['retryable_failure'] is False
+
+
+class TestAppendCsvRowUpsert:
+    """append_csv_row is now an upsert keyed on (period_end_date, form_type),
+    not a bare append. This is what makes the retry-on-blank story safe:
+    a retry writes over the prior blank row instead of duplicating it, and
+    extraction_attempts increments so the fetcher's retry cap eventually
+    stops the loop."""
+
+    def _make_config(self):
+        from src.config import IssuerConfig, FieldConfig
+        return IssuerConfig(
+            issuer='Test', ticker='TEST', cik='0000000001',
+            fields={
+                'notional': FieldConfig(description='Notional', section='m'),
+            },
+        )
+
+    def test_first_write_records_attempt_one(self, tmp_path):
+        from src.engine import append_csv_row
+        import csv
+        csv_path = tmp_path / 'tracking.csv'
+        append_csv_row(csv_path, {
+            'period_end_date': '2025-03-31', 'form_type': '10-Q',
+            'notional': 100,
+        }, self._make_config())
+        rows = list(csv.DictReader(open(csv_path)))
+        assert len(rows) == 1
+        assert rows[0]['extraction_attempts'] == '1'
+
+    def test_retry_replaces_prior_row(self, tmp_path):
+        """The retry writes over the blank predecessor. Duplicate rows for the
+        same period would appear as extraction failures in the audit and would
+        also break the QoQ / YoY comparisons in the report generator."""
+        from src.engine import append_csv_row
+        import csv
+        csv_path = tmp_path / 'tracking.csv'
+        cfg = self._make_config()
+        # First write: blank (extraction failed)
+        append_csv_row(csv_path, {'period_end_date': '2025-03-31',
+                                  'form_type': '10-Q'}, cfg)
+        # Retry: populated
+        append_csv_row(csv_path, {'period_end_date': '2025-03-31',
+                                  'form_type': '10-Q', 'notional': 250}, cfg)
+        rows = list(csv.DictReader(open(csv_path)))
+        assert len(rows) == 1
+        assert rows[0]['notional'] == '250'
+        assert rows[0]['extraction_attempts'] == '2'
+
+    def test_attempts_increments_across_retries(self, tmp_path):
+        from src.engine import append_csv_row
+        import csv
+        csv_path = tmp_path / 'tracking.csv'
+        cfg = self._make_config()
+        for _ in range(3):
+            append_csv_row(csv_path, {'period_end_date': '2025-03-31',
+                                      'form_type': '10-Q'}, cfg)
+        rows = list(csv.DictReader(open(csv_path)))
+        assert len(rows) == 1
+        assert rows[0]['extraction_attempts'] == '3'
+
+    def test_different_periods_coexist(self, tmp_path):
+        """Upsert must key on (period, form_type), NOT collapse everything."""
+        from src.engine import append_csv_row
+        import csv
+        csv_path = tmp_path / 'tracking.csv'
+        cfg = self._make_config()
+        append_csv_row(csv_path, {'period_end_date': '2025-03-31',
+                                  'form_type': '10-Q', 'notional': 100}, cfg)
+        append_csv_row(csv_path, {'period_end_date': '2025-06-30',
+                                  'form_type': '10-Q', 'notional': 200}, cfg)
+        rows = list(csv.DictReader(open(csv_path)))
+        assert len(rows) == 2
+        assert {r['period_end_date'] for r in rows} == {'2025-03-31', '2025-06-30'}
+
+    def test_different_form_types_same_period_coexist(self, tmp_path):
+        """A 10-Q/A restatement is a distinct row from the original 10-Q."""
+        from src.engine import append_csv_row
+        import csv
+        csv_path = tmp_path / 'tracking.csv'
+        cfg = self._make_config()
+        append_csv_row(csv_path, {'period_end_date': '2025-12-31',
+                                  'form_type': '10-K', 'notional': 100}, cfg)
+        append_csv_row(csv_path, {'period_end_date': '2025-12-31',
+                                  'form_type': '10-K/A', 'notional': 105}, cfg)
+        rows = list(csv.DictReader(open(csv_path)))
+        assert len(rows) == 2

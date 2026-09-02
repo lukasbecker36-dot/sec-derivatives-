@@ -80,11 +80,60 @@ def fetch_filing_text(cik: str, accession: str, document: str) -> str:
     return clean_filing_text(resp.text)
 
 
-def get_unprocessed_filings(cik: str, csv_path: Path, since: str = '') -> list[dict]:
+MAX_BLANK_RETRIES = 3
+
+# Metadata columns that never count as "extracted data" — presence of these
+# alone means the row is a bookkeeping stub, not a real extraction.
+_METADATA_COLUMNS = frozenset({
+    'period_end_date', 'form_type', 'accession_number', 'filing_date',
+    'processed_at', 'extraction_version', 'extraction_attempts',
+})
+
+
+def _row_has_extracted_data(row: dict) -> bool:
+    """True if any non-metadata field is populated with a value.
+
+    A row that carries only bookkeeping columns (accession, filing date,
+    timestamps, attempt counter) does NOT count as extracted data — that
+    was the historical failure mode where a blank row silently marked the
+    period 'processed' and blocked all future retries.
+    """
+    for k, v in row.items():
+        if k is None or k in _METADATA_COLUMNS:
+            continue
+        if isinstance(v, list):
+            if any(str(x).strip() for x in v if x):
+                return True
+        elif str(v or '').strip():
+            return True
+    return False
+
+
+def _row_attempts(row: dict) -> int:
+    """Read extraction_attempts (default 0, tolerant of missing/bad values)."""
+    raw = row.get('extraction_attempts', '') or '0'
+    try:
+        return int(str(raw).strip())
+    except (ValueError, TypeError):
+        return 0
+
+
+def get_unprocessed_filings(cik: str, csv_path: Path, since: str = '',
+                            max_blank_retries: int = MAX_BLANK_RETRIES) -> list[dict]:
     """Return filings not yet in the tracking CSV.
+
+    A period is considered 'processed' only if the corresponding row has
+    at least one populated extraction field OR has already been retried
+    the configured number of times. Rows that are still blank after
+    max_blank_retries stop being retried — this is the guard against
+    infinite loops on legitimate non-discloser filings (incorporation-
+    by-reference 10-Qs), while still recovering from silent extraction
+    failures on issuers that DO have derivative activity.
 
     Args:
         since: Optional cutoff date (YYYY-MM-DD). Only return filings on or after this date.
+        max_blank_retries: How many times to retry a period that keeps
+            producing a blank row before treating it as legitimately blank.
     """
     all_filings = discover_filings(cik)
 
@@ -94,9 +143,13 @@ def get_unprocessed_filings(cik: str, csv_path: Path, since: str = '') -> list[d
     processed_periods = set()
     if csv_path.exists():
         with open(csv_path, 'r', encoding='utf-8') as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                if row.get('period_end_date'):
-                    processed_periods.add(row['period_end_date'])
+            for row in csv.DictReader(f):
+                pe = row.get('period_end_date')
+                if not pe:
+                    continue
+                if _row_has_extracted_data(row):
+                    processed_periods.add(pe)
+                elif _row_attempts(row) >= max_blank_retries:
+                    processed_periods.add(pe)
 
     return [f for f in all_filings if f['period_end'] not in processed_periods]
