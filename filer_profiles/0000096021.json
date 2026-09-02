@@ -21,10 +21,13 @@
       "interest rate swap",
       "notional value",
       "unrealized gain",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "mark-to-market"
     ],
     "non_gaap_metrics": [],
-    "unusual_disclosure_patterns": [],
+    "unusual_disclosure_patterns": [
+      "derivatives_note: New JRD-related interest rate lock agreements ($6.3B, deal-contingent, marked to market through Other income and expense) are an unusual, one-off feature tied to a pending acquisition and are not desi"
+    ],
     "known_issues": []
   },
   "history": [
@@ -82,6 +85,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 6
+    },
+    {
+      "filing_date": "2026-06-27",
+      "form_type": "10-K",
+      "period_end": "2026-06-27",
+      "processed_at": "2026-08-24T02:15:45Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 7,
+      "fields_null": 12
     }
   ]
 }

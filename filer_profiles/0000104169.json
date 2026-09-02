@@ -19,7 +19,9 @@
       "fair value hedge",
       "interest rate swap",
       "notional amount",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "cash flow hedge",
+      "cross-currency"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -91,6 +93,18 @@
       ],
       "fields_extracted": 14,
       "fields_null": 3
+    },
+    {
+      "filing_date": "2026-07-31",
+      "form_type": "10-Q",
+      "period_end": "2026-07-31",
+      "processed_at": "2026-09-01T02:17:18Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 5,
+      "fields_null": 23
     }
   ]
 }

@@ -1,3 +1,18 @@
+=== 10-K | Period ending 2026-06-27 | Processed 2026-08-24 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($2,300M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($12M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($30M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-18M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($259M)
+[LLM_FLAG] ir_swap_notional (2,300) reflects only the six outstanding 'interest rate swap' agreements in the table; it excludes $2 billion of forward-starting interest rate swaps on anticipated FY2027 debt issuance and $6.3 billion of deal-contingent interest rate lock agreements tied to the pending JRD acquisition financing, which are distinct instrument types (not swaps) mentioned in the same section. Flagging so a reviewer can decide whether to capture those separately.
+[LLM_FLAG] total_derivative_asset/total_derivative_liability are summed only from the interest-rate swap fair-value table in this excerpt; the cross-currency swap and diesel fuel swap fair values are not shown in this section and may be reported elsewhere in Note 10, so these totals could understate company-wide derivative fair values.
+[LLM_FLAG] commodity_derivatives_notional could not be expressed in millions of dollars: the filing states diesel fuel swap notional as 87 million gallons (a volume, not a dollar notional), so left null; the volume figure is preserved in source_quote.
+[LLM_FLAG] No prior_values were available for comparison (first extraction for this issuer/section).
+[LLM_FLAG] ir_sensitivity_100bp left null: three distinct 100bp sensitivities are disclosed for three different instrument types ($140M fixed-to-floating swaps, $120M forward-starting swaps, $425M deal-contingent rate locks) with no single aggregate figure given in the filing; picking one or summing them would be an editorial judgment call not supported by the text.
+[LLM_FLAG] equity_sensitivity_10pct ($259M) is a 10% adverse move on the U.S. Retirement Plan's diversified investment portfolio (public/private equity, fixed income, real estate combined), not a narrow 'marketable equity securities' sensitivity — flagging the scope mismatch with the schema field name.
+[LLM_FLAG] No prior_values were available for comparison (first extraction for this issuer/section).
+
 === 10-Q | Period ending 2026-03-28 | Processed 2026-07-23 ===
 [HISTORICAL] [NUMERIC] ir_swap_notional: $1,050M → $2,300M (+119.0%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] ir_swap_fair_value_hedge_notional: $1,050M → $2,300M (+119.0%) — exceeds 20% threshold

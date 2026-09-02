@@ -1,3 +1,12 @@
+=== 10-K | Period ending 2026-06-30 | Processed 2026-08-17 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $13M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $467M, now missing
+[NUMERIC] total_derivative_asset: $13M → $8M (-38.5%) — exceeds 20% threshold
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-20M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-20M)
+[NEW_FIELD] fx_sensitivity: appeared for first time ($-49M)
+[LLM_FLAG] fx_sensitivity_10pct requested at a 10% adverse move, but the filing only discloses a 1% EUR sensitivity ($49M on net sales) and a separate 10% Argentine peso sensitivity ($6M on monetary assets) — no aggregate 10% FX sensitivity figure exists, so the field was left not_found rather than extrapolated.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-03 ===
 [HISTORICAL] [DISAPPEARED_FIELD] fi_ir_swap_notional: was $650M, now missing
 [HISTORICAL] [NUMERIC] fi_total_derivative_asset: $10M → $13M (+30.0%) — exceeds 20% threshold

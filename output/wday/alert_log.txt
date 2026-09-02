@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-07-31 | Processed 2026-09-01 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $204M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $3,794M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $1,897M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $15M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $27M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $128M, now missing
+[NUMERIC] total_derivative_asset: $27M → $44M (+63.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $128M → $94M (-26.6%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-101M → $-50M (+50.5%) — exceeds 20% threshold
+[NUMERIC] ir_sensitivity_100bp: $54M → $43M (-20.4%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 6/14 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt, fi_total_derivative_asset...)
+[LLM_FLAG] total_derivative_asset rose from 27.0 (prior) to 44 — a 63% increase, exceeding the 50% plausibility threshold, though both figures are directly stated in the fair-value table so the change appears genuine rather than a mapping error.
+[LLM_FLAG] net_derivative_position moved from -101.0 (prior) to -50 — a ~50.5% change, driven by the derivative-liability decrease from $148M to $94M; flagged per the >50% threshold but consistent with the underlying asset/liability table.
+
 === 10-Q | Period ending 2026-04-30 | Processed 2026-06-27 ===
 [HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,092M → $204M (-81.3%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $36M → $15M (-58.3%) — exceeds 20% threshold

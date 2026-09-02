@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-07-31 | Processed 2026-08-21 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $1,970M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $921M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $1,050M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $300M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $18M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $83M, now missing
+[NUMERIC] total_derivative_asset: $18M → $12M (-36.5%) — exceeds 20% threshold
+[NUMERIC] cumulative_hedge_adjustment_debt: $6M → $1M (-86.2%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 6/18 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset...)
+[LLM_FLAG] Prior stored cross_currency_swap_notional (920.584) and fx_forward_notional (1049.73) do not match the Oct 31, 2025 comparative column shown in this same filing (863.904 and 1137.956 respectively) — a discrepancy of roughly 6-8% that predates this extraction. Likely a prior-period extraction error; recommend the audit/reconciliation check flag the earlier row for review rather than this one.
+[LLM_FLAG] cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci are not applicable this period: Nordson's designated hedges here are a fair-value hedge (interest rate swap) and a net investment hedge (cross-currency swap), not cash-flow hedges, so no AOCI cash-flow-hedge balance is disclosed in this note.
+
 === 10-Q | Period ending 2026-04-30 | Processed 2026-06-22 ===
 [HISTORICAL] [NUMERIC] fi_total_derivative_asset: $28M → $18M (-33.3%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] total_derivative_asset: $28M → $18M (-33.3%) — exceeds 20% threshold

@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-07-26 | Processed 2026-08-21 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $4,804M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $7,082M, now missing
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $2,627M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $1,176M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $6M, now missing
+[NUMERIC] ir_swap_notional: $400M → $500M (+25.0%) — exceeds 20% threshold
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-34M)
+[NUMERIC] fx_sensitivity_10pct: $-213M → $-301M (-41.3%) — exceeds 20% threshold
+[NUMERIC] fx_hedge_sensitivity: $-213M → $-301M (-41.3%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 5/14 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt)
+[LLM_FLAG] Section text is truncated before the summary notional/fair-value table (text ends mid-sentence at 'See '); the fair value, AOCI, and total notional tables referenced by the note were not included in the extracted section and could not be extracted.
+[LLM_FLAG] ir_swap_notional (500) is the notional of new swaps entered into DURING the nine-month period per the narrative text, not necessarily the total outstanding interest rate swap notional at period end (prior stored value was 400.0 for a prior period's outstanding balance) — these may not be directly comparable line items. Flagging for review rather than treating as a like-for-like total.
+[LLM_FLAG] ir_sensitivity_100bp mapped to the $34 million interest-rate-swap hedging-contract sensitivity figure since separate fields already capture the securities (-$49M) and debt (-$390M... note opposite direction, a rate DECREASE) sensitivities; this generic field's intended target is ambiguous given three distinct 100bp figures appear in the text (securities, debt, swaps) — flagging for review rather than asserting certainty.
+[LLM_FLAG] fx_hedge_sensitivity (-301) moved 41% from prior (-213); below the 50% flag threshold but a notable increase worth a human glance.
+
 === 10-Q | Period ending 2026-04-26 | Processed 2026-07-03 ===
 [HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $13M → $6M (-53.8%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] available_for_sale_securities_value: $3,300M → $4,500M (+36.4%) — exceeds 20% threshold

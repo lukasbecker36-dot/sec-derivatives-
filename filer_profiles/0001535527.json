@@ -15,7 +15,12 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "cash flow hedge",
+      "notional amount",
+      "unrealized gain",
+      "accumulated other comprehensive"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -86,6 +91,18 @@
       ],
       "fields_extracted": 2,
       "fields_null": 13
+    },
+    {
+      "filing_date": "2026-07-31",
+      "form_type": "10-Q",
+      "period_end": "2026-07-31",
+      "processed_at": "2026-09-01T02:17:11Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 6,
+      "fields_null": 21
     }
   ]
 }

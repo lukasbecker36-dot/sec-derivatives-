@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head><meta charset="utf-8">
-<title>SEC Derivatives Weekly — 24-31 Jul 2026</title>
+<title>SEC Derivatives Weekly — 21&ndash;28 Aug 2026</title>
 <style>
   body { font-family: Georgia, 'Times New Roman', serif; max-width: 640px; margin: 2em auto; padding: 0 1em; color: #1a1a1a; line-height: 1.6; }
   h1 { font-size: 1.5em; border-bottom: 2px solid #1a1a1a; padding-bottom: 0.3em; margin-bottom: 0.2em; }
@@ -11,38 +11,45 @@
   footer { margin-top: 2.5em; padding-top: 1em; border-top: 1px solid #ccc; color: #888; font-size: 0.8em; }
   ul { padding-left: 1.2em; }
   li { margin-bottom: 0.3em; font-size: 0.95em; }
+  code { font-size: 0.85em; background: #f2f2f2; padding: 0 0.2em; }
 </style>
 </head><body>
 
 <h1>SEC Derivatives Weekly</h1>
-<p class="dateline">24&ndash;31 July 2026</p>
+<p class="dateline">21&ndash;28 August 2026</p>
 
-<p>Intel&rsquo;s escrowed-shares derivative blew up to a $16 billion liability, Microsoft quietly assembled a $64 billion FX book, and Darden Restaurants tore up its hedging playbook entirely. Meanwhile Halliburton is rapidly unwinding a rare corporate CDS portfolio. Five clear leads below.</p>
+<p>Seven filings across seven issuers this week: Parker Hannifin, Sysco, Home Depot, Bio-Techne, Nvidia, J.M. Smucker and Synopsys. Three produced clean, verifiable moves &mdash; Parker Hannifin&rsquo;s derivative book shrank on both sides, J.M. Smucker&rsquo;s derivative liability roughly halved while its commodity sensitivity narrowed sharply, and Nvidia&rsquo;s non-designated FX hedge notional grew by a fifth. Sysco&rsquo;s FY2026 10-K produced this issuer&rsquo;s first-ever populated row, so there is no prior period to compare it against. Bio-Techne&rsquo;s 10-K and Synopsys&rsquo;s 10-Q came back mostly blank, and Home Depot and Nvidia each lost several previously-populated fields even where other numbers held up &mdash; see Extraction gaps.</p>
 
 <h2>Story Leads</h2>
 
-<p><strong>Intel&rsquo;s derivative liability hits $16.2B on escrowed-shares instrument.</strong> INTC&rsquo;s total derivative liability surged 228% quarter-on-quarter, driven almost entirely by the Escrowed Shares derivative (tied to the Ireland SCIP arrangement) swinging to a $15.6B liability from $2.7B at year-end. That generated a $12.5B loss in Q2 alone &mdash; extraordinary for a non-financial. The instrument has been wildly volatile since first appearing in Sep 2025 ($7.1B liability) and is now dwarfing everything else on Intel&rsquo;s derivatives book.</p>
+<p><strong>Parker Hannifin&rsquo;s derivative book shrinks on both sides in its FY2026 10-K.</strong> Comparing the fiscal Q3 10-Q (period ended March 31, 2026) to the FY2026 10-K (period ended June 30, 2026), PH&rsquo;s total derivative liability rose from $14M to $22M (+57.1%), while its net derivative position &mdash; still a net asset &mdash; fell from $16M to $7M (&minus;56.2%). The 100bp interest-rate sensitivity figure fell from $21M to $10M (&minus;52.4%) over the same period. No filing text explaining these moves is captured in <code>notes.txt</code> for this period (see Worth Asking).</p>
 
-<p><strong>Microsoft&rsquo;s non-designated FX notional jumps 352% to $63.5B.</strong> The 10-K reveals MSFT has nearly quintupled its non-designated FX derivatives in a year while keeping its hedge-accounted book flat at ~$1.5B. The company now runs a $65B FX book, almost all economic hedges without designation. Total derivative assets doubled to $2.2B. Worth asking: what drove the shift away from hedge accounting, and how much P&amp;L volatility is this creating?</p>
+<p><strong>J.M. Smucker&rsquo;s derivative liability roughly halves; commodity sensitivity narrows sharply.</strong> Comparing the FY2026 10-K (period ended April 30, 2026) to the fiscal Q1 FY2027 10-Q (period ended July 31, 2026), SJM&rsquo;s total derivative liability fell from $11.4M to $5.9M (&minus;48.2%), and its net derivative position &mdash; a net asset &mdash; grew from $20.8M to $25.6M (+23.1%). Commodity price sensitivity narrowed on both ends of its disclosed range: the high scenario fell from $43.6M to $28.1M (&minus;35.6%) and the average scenario from $7.0M to $2.2M (&minus;68.6%). The underlying commodity derivatives notional also declined, from $606.2M to $562.0M, consistent with the tighter band. No filing text explaining the driver is captured in <code>notes.txt</code> (see Worth Asking).</p>
 
-<p><strong>Darden Restaurants exits FX entirely, pivots to IR swaps and equity derivatives.</strong> DRI&rsquo;s 10-K shows a complete restructuring: the $815M FX forward programme in place for years dropped to zero, replaced by $300M of IR swaps (carrying $36M negative fair value), $83M in equity derivatives, and a small commodity position. A restaurant chain voluntarily unwinding a large FX hedge book and pivoting to rate risk is an unusual move &mdash; the swap loss suggests rates moved against them after inception.</p>
+<p><strong>Nvidia&rsquo;s non-designated FX hedge notional grows 21.7%; new equity-derivatives line appears.</strong> Comparing the fiscal Q1 FY2027 10-Q (period ended April 26, 2026) to the fiscal Q2 FY2027 10-Q (period ended July 26, 2026), NVDA&rsquo;s non-designated FX hedge notional rose from $1,850M to $2,252M (+21.7%). This quarter&rsquo;s filing also introduced a new field, equity derivatives notional, populated for the first time at $5,800M &mdash; there is no prior value to compare it against. Five previously-populated fair-value-note fields (cash equivalents, marketable securities, corporate debt securities, marketable equity value and its 10% sensitivity) went blank this quarter; see Extraction gaps.</p>
 
-<p><strong>Halliburton winds down its CDS book by 71% in 18 months.</strong> HAL&rsquo;s CDS notional &mdash; credit protection on Mexican customer borrowings &mdash; fell from $739M (Dec 2024) to $217M (Jun 2026). Non-financial S&amp;P 500 companies using credit default swaps are rare; the steady wind-down raises questions about whether Pemex-related credit exposure is genuinely improving or Halliburton is simply accepting the risk unhedged.</p>
+<p><strong>Sysco: first successful extraction, notable exclusions flagged.</strong> SYY&rsquo;s FY2026 10-K (period ended June 27, 2026) is the first period this issuer has produced a populated row in <code>tracking.csv</code>, so no period-over-period comparison is possible. The filing shows an interest-rate swap notional of $2,300M, a total derivative liability of $30M, a net derivative position of &minus;$18M, and a 10% equity sensitivity of $259M &mdash; the latter applied to the U.S. retirement plan&rsquo;s broader investment portfolio, not narrowly to marketable equity securities, a scope note worth carrying into any story. <code>alert_log.txt</code> flags that the $2,300M swap figure excludes $2 billion of forward-starting interest-rate swaps on anticipated FY2027 debt issuance and $6.3 billion of deal-contingent interest-rate lock agreements tied to the pending JRD acquisition financing &mdash; both distinct instrument types not captured in this total (see Worth Asking).</p>
 
-<p><strong>PPG Industries ramps FX derivatives tenfold to $3.8B.</strong> The coatings maker went from $375M in total FX/IR notional at year-end to $3.8B by Q2, adding $3.4B in non-designated FX forwards in two quarters. The net derivative position flipped from liability to asset. PPG appears to be aggressively scaling up balance-sheet hedging of its international revenues.</p>
-
-<h2>Universe Update</h2>
-
-<p>375 issuers now tracked (194 fully active, 181 active-needs-review), with 5 failed activations and 3 still registered. One activation attempt this week: Trane Technologies (TT) tried again from failed status on a new Q2 10-Q but scored only 0.16 &mdash; its filing structure continues to defeat the extractor. No new successful activations.</p>
-
-<h2>Data Notes</h2>
-
+<h2>Extraction gaps</h2>
 <ul>
-<li>RTX&rsquo;s $164M deterioration in net derivative position (from &minus;$8M to &minus;$172M on its ~$25B FX book) was flagged last week; the designated/non-designated breakdown disappeared from the Q2 filing, possibly a section extraction issue.</li>
-<li>Hasbro and Starbucks both had first-time successful extractions of pre-existing derivatives programmes, so their &ldquo;new field&rdquo; alerts reflect improved coverage rather than new hedging activity.</li>
-<li>Exelon terminated $550M of floating-to-fixed IR swaps in January, replacing them with $775M of fixed-rate debt &mdash; a strategic shift from synthetic to natural fixed-rate exposure.</li>
+<li><strong>Bio-Techne (TECH), 10-K, period ended June 30, 2026:</strong> 9 of 12 previously-populated fields came back blank, including all three derivative asset/liability/net-position totals. Nothing to report this filing.</li>
+<li><strong>Synopsys (SNPS), 10-Q, period ended July 31, 2026:</strong> 8 of 14 previously-populated fields came back blank. <code>alert_log.txt</code> flags that the extracted section text opens with the Item 3 market-risk header but immediately continues into Item 1A risk-factors prose, never reaching the actual sensitivity tables &mdash; a likely section-boundary issue rather than a genuine absence of disclosure.</li>
+<li><strong>Home Depot (HD), 10-Q, period ended August 2, 2026:</strong> two fields, <code>fi_ir_swap_notional</code> (was $5,400M) and <code>fi_total_derivative_liability</code> (was $574M), came back blank. The parallel non-prefixed fields still populated: interest-rate swap notional unchanged at $5,400M, and total derivative liability at $623M versus $575M the prior quarter (+8.3%, below this pipeline&rsquo;s 20% alert threshold).</li>
+<li><strong>Nvidia (NVDA), 10-Q, period ended July 26, 2026:</strong> total cash equivalents fair value (was $12,347M), total marketable securities fair value (was $37,098M), marketable equity securities fair value (was $30,237M), corporate debt securities fair value (was $13,599M), gross unrealized gains on debt (was $94M), marketable equity value (was $39,101M) and its 10% sensitivity (was &minus;$3,900M) all came back blank this quarter.</li>
+<li><strong>J.M. Smucker (SJM), 10-Q, period ended July 31, 2026:</strong> the interest-rate cash-flow-hedge AOCI field came back blank this quarter (was &minus;$104.9M in the prior 10-K).</li>
 </ul>
 
-<footer>Automated digest from SEC Derivatives pipeline &middot; 31 July 2026</footer>
+<h2>Worth asking</h2>
+<ul>
+<li>Parker Hannifin: what drove the derivative liability&rsquo;s jump from $14M to $22M and the 100bp sensitivity&rsquo;s drop from $21M to $10M this quarter? <code>notes.txt</code> captures no filing text addressing either move for this period.</li>
+<li>J.M. Smucker: what&rsquo;s behind the narrower commodity sensitivity band (high scenario $43.6M to $28.1M) &mdash; new hedges, closed positions, or a smaller commodity book generally? No explanatory filing text was captured for this period.</li>
+<li>Sysco: what is the company&rsquo;s total interest-rate hedging exposure once the $2 billion of forward-starting swaps and $6.3 billion of deal-contingent rate locks tied to the JRD acquisition are added to the $2,300M reported here?</li>
+<li>Nvidia: why did the fair-value-note fields (cash equivalents, marketable securities, corporate debt, marketable equity value and its sensitivity) go blank this quarter after five consecutive quarters of being populated &mdash; extraction issue, or did the relevant note simply move within the filing?</li>
+</ul>
+
+<h2>Universe Update</h2>
+<p>391 issuers in the registry, unchanged from last digest: 194 active, 188 active-needs-review, 6 failed-activation, 3 still registered. No new activation attempts this week.</p>
+
+<footer>Automated digest from SEC Derivatives pipeline &middot; 28 August 2026 &middot; Verified: 40 figures, all traced to specific cells in tracking.csv or VALIDATION/DISAPPEARED_FIELD/LLM_FLAG lines in alert_log.txt &mdash; every stated percentage change was computed here from two adjacent-period cells of the same tracking.csv, both endpoints stated alongside it. 5 extraction gaps listed.</footer>
 
 </body></html>
