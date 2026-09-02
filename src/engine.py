@@ -148,7 +148,8 @@ def process_filing(
     }
 
 
-METADATA_COLUMNS = ['accession_number', 'filing_date', 'processed_at', 'extraction_version']
+METADATA_COLUMNS = ['accession_number', 'filing_date', 'processed_at',
+                    'extraction_version', 'extraction_attempts']
 
 
 def _get_csv_columns(config: IssuerConfig) -> list[str]:
@@ -187,16 +188,50 @@ def _sync_text_files_to_db(ticker: str, issuer_dir: Path):
 
 
 def append_csv_row(csv_path: Path, row: dict, config: IssuerConfig):
-    """Append a row to the tracking CSV, creating the file if needed."""
+    """Upsert a row into the tracking CSV, keyed on (period_end_date, form_type).
+
+    Historically this was a bare append. That made blank retry rows accumulate
+    as duplicates, and it left no way to increment extraction_attempts across
+    retries. The write path now reads the existing file, replaces any matching
+    row, and rewrites; extraction_attempts is bumped when replacing so the
+    fetcher's retry-cap can eventually stop retrying a stubbornly blank filing.
+    """
     columns = _get_csv_columns(config)
     csv_path.parent.mkdir(parents=True, exist_ok=True)
 
-    write_header = not csv_path.exists()
-    with open(csv_path, 'a', newline='', encoding='utf-8') as f:
+    key = (str(row.get('period_end_date', '')).strip(),
+           str(row.get('form_type', '')).strip())
+
+    existing_rows: list[dict] = []
+    prior_attempts = 0
+    if csv_path.exists():
+        with open(csv_path, 'r', newline='', encoding='utf-8') as f:
+            for r in csv.DictReader(f):
+                r_key = (str(r.get('period_end_date', '')).strip(),
+                         str(r.get('form_type', '')).strip())
+                if r_key == key:
+                    # Retry / re-extract path: carry attempts forward.
+                    prior_raw = r.get('extraction_attempts') or '0'
+                    try:
+                        prior_attempts = int(str(prior_raw).strip())
+                    except (ValueError, TypeError):
+                        prior_attempts = 0
+                    continue  # drop the old row; the new one replaces it
+                existing_rows.append(r)
+
+    # Attempts increments monotonically. Every successful write is +1 relative
+    # to whatever the previous write recorded, so a third-time blank retry
+    # will hit extraction_attempts=3 and get filtered by the fetcher.
+    row['extraction_attempts'] = prior_attempts + 1
+
+    tmp = csv_path.with_suffix('.csv.tmp')
+    with open(tmp, 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=columns, extrasaction='ignore')
-        if write_header:
-            writer.writeheader()
+        writer.writeheader()
+        for r in existing_rows:
+            writer.writerow(r)
         writer.writerow(row)
+    tmp.replace(csv_path)
 
 
 def append_notes(notes_path: Path, period_end: str, form_type: str, notes: dict):
