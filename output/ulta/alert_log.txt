@@ -1,3 +1,7 @@
+=== 10-Q | Period ending 2026-08-01 | Processed 2026-09-01 ===
+[NUMERIC] outstanding_borrowings: $145M → $340M (+134.4%) — exceeds 20% threshold
+[LLM_FLAG] outstanding_borrowings rose from $144.9M (prior extraction) to $339.6M (current), a >100% increase, which exceeds the 50% plausibility threshold. This is directly stated in the filing text (also shown moving $62.3M at Jan 31, 2026 to $339.6M at Aug 1, 2026), so it appears genuine rather than a extraction error, but flagging given the magnitude of the swing.
+
 === 10-Q | Period ending 2026-05-02 | Processed 2026-06-27 ===
 [HISTORICAL] [NUMERIC] outstanding_borrowings: $62M → $145M (+132.6%) — exceeds 20% threshold
 

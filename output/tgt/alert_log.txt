@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-08-01 | Processed 2026-09-01 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $2,544M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $22M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $65M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $65M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-65M, now missing
+[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, total_derivative_liability, net_derivative_position)
+[LLM_FLAG] total_derivative_asset/total_derivative_liability not found in this excerpt — the filing states 'Note 5 to the Consolidated Financial Statements provides the fair value and classification of these instruments,' but Note 5 is not included in this section_text. Prior total_derivative_liability was 65.0 (net position -65.0); could not be re-verified this period.
+
 === 10-Q | Period ending 2026-05-02 | Processed 2026-06-26 ===
 [HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $4,611M → $2,544M (-44.8%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_total_derivative_asset: $18M → $22M (+22.2%) — exceeds 20% threshold

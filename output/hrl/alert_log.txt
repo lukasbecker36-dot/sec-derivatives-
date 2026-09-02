@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-07-26 | Processed 2026-09-01 ===
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $0M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $0M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $0M, now missing
+[NUMERIC] total_derivative_liability: $3M → $5M (+37.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $20M, now missing
+[LLM_FLAG] total_derivative_asset/liability extracted from the 'Gross Fair Value of Commodity Contracts' table only (this excerpt begins mid-note, 'he fair value of the futures contracts...', so an earlier summary table by derivative category, if any, was not captured). Prior total_derivative_asset (22.516) and total_derivative_liability (3.394) do not reconcile cleanly against either the gross ($9.862M/$4.243M) or collateral-net-recognized ($10.166M/$0M) October 26, 2025 figures shown in this table, suggesting the prior extraction used a different/broader table not present in this section_text. Recommend spot-checking against the full derivatives note.
+[LLM_FLAG] expected_12mo_reclass_from_aoci: text only states the company expects to recognize 'the majority' of commodity-contract AOCL gains within twelve months, without a dollar figure — left null rather than reusing the prior value of $19.8M or approximating from the $15.5M commodity AOCL balance.
+
 === 10-Q | Period ending 2026-04-26 | Processed 2026-06-20 ===
 [HISTORICAL] [NUMERIC] fi_total_derivative_liability: $0M → $0M (-21.8%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] total_derivative_liability: $4M → $3M (-22.2%) — exceeds 20% threshold
