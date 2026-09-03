@@ -84,8 +84,21 @@ def _safe_filename(ticker: str, section: str, period: str, idx: int) -> str:
     return f'{safe}_{idx:03d}.json'
 
 
-def prepare(since: str, max_activations: int, verbose: bool = False):
-    """Phase 1: Fetch filings, extract sections, write request files."""
+DEFAULT_MAX_FILINGS_PER_RUN = 30
+
+
+def prepare(since: str, max_activations: int, verbose: bool = False,
+            max_filings: int = DEFAULT_MAX_FILINGS_PER_RUN):
+    """Phase 1: Fetch filings, extract sections, write request files.
+
+    max_filings caps how many active-issuer filings enter the run. Without
+    the cap a single fire tries to drain the entire backlog: the Sep 3 2026
+    fire attempted ~186 filings after the blank-row retry fix (#14) made
+    every historical extraction failure eligible again, blew the session
+    limit, and produced no committed output. The cap lets the backlog drain
+    gradually over consecutive daily runs while keeping each fire well
+    within budget. Set to 0 to disable (legacy behaviour).
+    """
     WORK_DIR.mkdir(parents=True, exist_ok=True)
 
     universe = load_universe()
@@ -98,12 +111,15 @@ def prepare(since: str, max_activations: int, verbose: bool = False):
 
     requests = []
     request_idx = 0
+    filings_queued = 0
     now = _now_iso()
     cutoff_date = (datetime.now(timezone.utc) - timedelta(days=120)).strftime('%Y-%m-%d')
 
     # === Pass 1: Active issuers ===
     active_rows = get_active(universe)
     logger.info(f'Pass 1: {len(active_rows)} active issuers')
+    if max_filings > 0:
+        logger.info(f'Filings cap this run: {max_filings}')
 
     for row in active_rows:
         ticker = row.get('ticker', '')
@@ -142,6 +158,13 @@ def prepare(since: str, max_activations: int, verbose: bool = False):
         prior_row = _get_prior_row(csv_path)
 
         for filing_meta in unprocessed:
+            if max_filings > 0 and filings_queued >= max_filings:
+                logger.info(
+                    f'Filings cap {max_filings} reached; deferring {ticker} '
+                    f'{filing_meta["form_type"]} {filing_meta["period_end"]} '
+                    f'and remainder of backlog to a later run.'
+                )
+                break
             try:
                 logger.info(f'  Fetching {ticker} {filing_meta["form_type"]} {filing_meta["period_end"]}...')
                 filing_text = fetch_filing_text(
@@ -193,8 +216,17 @@ def prepare(since: str, max_activations: int, verbose: bool = False):
                     })
                     request_idx += 1
 
+                filings_queued += 1
+
             except Exception as e:
                 logger.error(f'  Error preparing {ticker} {filing_meta["period_end"]}: {e}')
+
+        if max_filings > 0 and filings_queued >= max_filings:
+            logger.info(
+                f'Filings cap reached; stopping active-issuer pass '
+                f'at {filings_queued} filings queued.'
+            )
+            break
 
     # === Pass 2: Registered / failed issuers ===
     registered_rows = get_registered(universe)
@@ -687,6 +719,12 @@ def main():
     prep = sub.add_parser('prepare', help='Prepare extraction request files')
     prep.add_argument('--since', default='', help='Date cutoff (YYYY-MM-DD)')
     prep.add_argument('--max-activations', type=int, default=10)
+    prep.add_argument('--max-filings', type=int, default=DEFAULT_MAX_FILINGS_PER_RUN,
+                      help=('Cap on active-issuer filings queued per run '
+                            '(0 = no cap). Prevents a large one-off backlog '
+                            'from blowing the session token budget in a '
+                            'single fire; the leftover drains over subsequent '
+                            'daily runs.'))
     prep.add_argument('--verbose', '-v', action='store_true')
 
     fin = sub.add_parser('finalize', help='Process results and write outputs')
@@ -705,7 +743,8 @@ def main():
     )
 
     if args.command == 'prepare':
-        prepare(since=args.since, max_activations=args.max_activations, verbose=args.verbose)
+        prepare(since=args.since, max_activations=args.max_activations,
+                verbose=args.verbose, max_filings=args.max_filings)
     elif args.command == 'finalize':
         finalize(since=args.since, max_activations=args.max_activations,
                  json_summary=args.json_summary, verbose=args.verbose)
