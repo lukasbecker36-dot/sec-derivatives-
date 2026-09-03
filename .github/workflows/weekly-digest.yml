@@ -1,13 +1,19 @@
-name: Weekly Digest Email
+name: Weekly Digest Rollup Email
+
+# Fridays at 15:00 UTC (16:00 BST) — 10 hours after Friday's daily digest.
+# This is a summary of the week's daily digests, not a fresh generation.
+# The weekly rollup is composed by a small assembler script that reads the
+# five most-recent dated daily digests from digests/ and stitches them
+# into a single HTML with per-day sections and a top-of-week highlights
+# summary derived from the audit report.
 
 on:
   schedule:
-    # Every Friday at 12:00 UTC (1pm BST) — 3 hours after Claude Code generates the digest at 09:00 UTC
-    - cron: '0 12 * * 5'
+    - cron: '0 15 * * 5'
   workflow_dispatch:
 
 jobs:
-  send-digest:
+  send-weekly-rollup:
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
@@ -20,19 +26,9 @@ jobs:
         with:
           python-version: '3.11'
 
-      # Without this the audit gate below cannot import src.audit — it depends
-      # on pyyaml / duckdb / anthropic transitively via src.config. When this
-      # step was missing, the audit failed on ModuleNotFoundError and the
-      # workflow interpreted that as a data-integrity regression, so the
-      # digest was silently withheld even when the corpus was fine.
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # Gate the send, not just the generation. The briefing that reported
-      # Microsoft's non-designated FX notional as "+352%" was emailed by this
-      # workflow: the $63.5B figure was real, but the percentage was computed
-      # against a corrupted prior value. Checking the corpus here means bad
-      # data cannot reach a reader even if the routine writes a digest from it.
       - name: Check data integrity
         id: integrity
         run: |
@@ -42,65 +38,68 @@ jobs:
             echo "clean=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Upload audit report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: audit-report
-          path: audit_report.json
-          if-no-files-found: ignore
-
-      - name: Check for digest
-        id: check
+      - name: Assemble weekly rollup from the week's dailies
+        id: assemble
         run: |
-          if [ -f WEEKLY_DIGEST.html ] && [ -s WEEKLY_DIGEST.html ]; then
+          python -m src.weekly_rollup --out WEEKLY_ROLLUP.html
+          if [ -s WEEKLY_ROLLUP.html ]; then
             echo "has_content=true" >> "$GITHUB_OUTPUT"
-            echo "Found WEEKLY_DIGEST.html ($(wc -c < WEEKLY_DIGEST.html) bytes)"
+            echo "Assembled WEEKLY_ROLLUP.html ($(wc -c < WEEKLY_ROLLUP.html) bytes)"
           else
             echo "has_content=false" >> "$GITHUB_OUTPUT"
-            echo "No WEEKLY_DIGEST.html found — Claude Code routine may not have run yet"
           fi
 
-      - name: Send email
-        if: steps.check.outputs.has_content == 'true' && steps.integrity.outputs.clean == 'true'
+      - name: Send weekly rollup
+        if: steps.assemble.outputs.has_content == 'true' && steps.integrity.outputs.clean == 'true'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: ${{ secrets.SMTP_SERVER }}
           server_port: ${{ secrets.SMTP_PORT }}
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.GMAIL_APP_PASSWORD }}
-          subject: "SEC Derivatives — Weekly Digest"
+          subject: "SEC Derivatives — Weekly Rollup"
           to: Lukas.becker@infopro-digital.com
           from: SEC Derivatives Bot <${{ secrets.SMTP_USERNAME }}>
-          html_body: file://WEEKLY_DIGEST.html
+          html_body: file://WEEKLY_ROLLUP.html
 
-      # A blocked digest must not look like a quiet week. Say so explicitly.
-      - name: Notify that the digest was withheld
-        if: steps.check.outputs.has_content == 'true' && steps.integrity.outputs.clean != 'true'
+      - name: Notify no-dailies week
+        if: steps.assemble.outputs.has_content == 'false' && steps.integrity.outputs.clean == 'true'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: ${{ secrets.SMTP_SERVER }}
           server_port: ${{ secrets.SMTP_PORT }}
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.GMAIL_APP_PASSWORD }}
-          subject: "SEC Derivatives — digest WITHHELD (data integrity regression)"
+          subject: "SEC Derivatives — no daily digests this week"
           to: Lukas.becker@infopro-digital.com
           from: SEC Derivatives Bot <${{ secrets.SMTP_USERNAME }}>
           body: |
-            This week's digest was generated but NOT sent: the extracted data
-            regressed against the recorded baseline, so figures derived from it
-            (percentage changes especially) cannot be trusted.
+            The weekly rollup workflow ran but found no dated daily digest
+            files in digests/ for the last five weekdays.
 
-            This is not a quiet week. A digest exists and is being held back.
+            Either the digest routine did not fire at all this week, or it
+            fired but its pushes never reached master. Check:
+              ${{ github.server_url }}/${{ github.repository }}/commits/master
 
-            See the audit-report artifact on this workflow run, or locally:
-              python -m src.audit --limit 60
+      - name: Notify that the rollup was withheld
+        if: steps.assemble.outputs.has_content == 'true' && steps.integrity.outputs.clean != 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: "SEC Derivatives — weekly rollup WITHHELD (data integrity regression)"
+          to: Lukas.becker@infopro-digital.com
+          from: SEC Derivatives Bot <${{ secrets.SMTP_USERNAME }}>
+          body: |
+            This week's rollup was assembled but NOT sent: the extracted
+            data regressed against the recorded baseline. Any figures a
+            reader might quote from it may be wrong.
 
             Run details:
             ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
-      - name: Fail if data integrity blocked the digest
+      - name: Fail if data integrity blocked the rollup
         if: steps.integrity.outputs.clean != 'true'
-        run: |
-          echo "Digest withheld — data integrity regression. See audit-report artifact."
-          exit 1
+        run: exit 1
