@@ -1,0 +1,139 @@
+name: Daily Digest Email
+
+# Weekdays at 05:00 UTC (06:00 BST) — the digest routine writes to master at
+# ~04:00 UTC, one hour after the scheduler completes at 02:00 UTC. This
+# workflow reads whatever the routine committed, gates on the audit, and
+# sends. If the routine wrote nothing (quiet day), we send a short "no new
+# filings processed" note rather than going silent — silence should always
+# mean the pipeline broke, never that there was no news.
+
+on:
+  schedule:
+    - cron: '0 5 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  send-daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # Without this the audit gate cannot import src.audit — it depends
+      # on pyyaml / duckdb / anthropic transitively via src.config.
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check data integrity
+        id: integrity
+        run: |
+          if ./scripts/check_data_integrity.sh; then
+            echo "clean=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "clean=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-report
+          path: audit_report.json
+          if-no-files-found: ignore
+
+      - name: Locate today's digest
+        id: check
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          echo "date=$TODAY" >> "$GITHUB_OUTPUT"
+          # Prefer the dated file so the archive stays legible; fall back to
+          # DAILY_DIGEST.html if the routine only wrote to the latest-slot.
+          DIGEST_FILE=""
+          if [ -f "digests/${TODAY}.html" ] && [ -s "digests/${TODAY}.html" ]; then
+            DIGEST_FILE="digests/${TODAY}.html"
+          elif [ -f DAILY_DIGEST.html ] && [ -s DAILY_DIGEST.html ]; then
+            DIGEST_FILE="DAILY_DIGEST.html"
+          fi
+          if [ -n "$DIGEST_FILE" ]; then
+            echo "has_content=true" >> "$GITHUB_OUTPUT"
+            echo "digest_file=$DIGEST_FILE" >> "$GITHUB_OUTPUT"
+            echo "Found $DIGEST_FILE ($(wc -c < "$DIGEST_FILE") bytes)"
+          else
+            echo "has_content=false" >> "$GITHUB_OUTPUT"
+            echo "No digest for $TODAY on master — routine may not have run"
+          fi
+
+      - name: Send daily digest
+        if: steps.check.outputs.has_content == 'true' && steps.integrity.outputs.clean == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: "SEC Derivatives — Daily Digest (${{ steps.check.outputs.date }})"
+          to: Lukas.becker@infopro-digital.com
+          from: SEC Derivatives Bot <${{ secrets.SMTP_USERNAME }}>
+          html_body: file://${{ steps.check.outputs.digest_file }}
+
+      # If the routine ran but hit no new filings, no HTML gets committed —
+      # send a short note so silence never masks a broken pipeline.
+      - name: Notify no-news day
+        if: steps.check.outputs.has_content == 'false' && steps.integrity.outputs.clean == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: "SEC Derivatives — quiet day (${{ steps.check.outputs.date }})"
+          to: Lukas.becker@infopro-digital.com
+          from: SEC Derivatives Bot <${{ secrets.SMTP_USERNAME }}>
+          body: |
+            No daily digest was found on master for ${{ steps.check.outputs.date }}.
+
+            Either the scheduler processed zero new filings overnight, or the
+            digest routine did not run / did not push. If the pipeline is fine
+            this is a legitimate quiet day. If the pipeline is broken, this is
+            what silence looks like.
+
+            Recent scheduler activity:
+            ${{ github.server_url }}/${{ github.repository }}/commits/master
+
+      - name: Notify that the digest was withheld
+        if: steps.check.outputs.has_content == 'true' && steps.integrity.outputs.clean != 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: "SEC Derivatives — daily digest WITHHELD (data integrity regression)"
+          to: Lukas.becker@infopro-digital.com
+          from: SEC Derivatives Bot <${{ secrets.SMTP_USERNAME }}>
+          body: |
+            Today's daily digest was generated but NOT sent: the extracted
+            data regressed against the recorded baseline, so figures derived
+            from it — percentage changes especially — cannot be trusted.
+
+            This is not a quiet day. A digest exists and is being held back.
+
+            Investigate:
+              python -m src.audit --limit 60
+              python -m src.audit --compare-ref origin/master
+
+            Run details:
+            ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      - name: Fail if data integrity blocked the digest
+        if: steps.integrity.outputs.clean != 'true'
+        run: |
+          echo "Daily digest withheld — data integrity regression."
+          exit 1
