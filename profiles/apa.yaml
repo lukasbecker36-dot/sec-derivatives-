@@ -1,35 +1,126 @@
 issuer: APA Corporation
 ticker: APA
-cik: "1841666"
-archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+cik: '1841666'
+sector: Energy
 extraction_mode: llm
 
-# Additional fields identified by LLM analysis (review and adjust)
+# Self-contained profile. APA is an oil and gas E&P — commodity-heavy, not FX
+# — so the archetype's FX/IR-first schema forced the LLM to answer for
+# fields APA does not disclose and produced wrong-column values that hit
+# implausible_swing on total_derivative_liability AND natural_gas_derivatives
+# _fair_value simultaneously. This profile centres on the commodity price
+# sensitivity table APA does disclose, and captures fair-value totals from
+# both the Financial Instruments and Derivatives notes so cross-check is
+# possible.
+
+sections:
+  financial_instruments:
+    heading: 'Note\s+\d+\s*[.\-:–—]?\s*Financial\s+Instruments'
+    match_strategy: first
+    validation_keywords: [fair value, derivative]
+    end_boundary: 'Note\s+\d+\s*[.\-:–—]?\s*(?!Financial\s+Instruments)'
+    max_length: 10000
+  derivatives_note:
+    heading: 'Note\s+\d+\s*[.\-:–—]?\s*(?:Derivative|Hedging|Risk\s+Management)'
+    match_strategy: last
+    validation_keywords: [derivative, natural gas, oil, hedge]
+    end_boundary: 'Note\s+\d+\s*[.\-:–—]?\s*(?!Derivative|Hedging|Risk\s+Management)'
+    max_length: 10000
+  market_risk:
+    heading: 'Quantitative and Qualitative Disclosures About Market Risk'
+    match_strategy: last
+    end_boundary: 'Item\s*[\s\xa0]*[489]'
+    max_length: 10000
+
 fields:
   natural_gas_derivatives_fair_value:
-    description: "Fair value of natural gas derivatives in net liability position"
-    section: market_risk
-  price_sensitivity_analysis:
-    description: "Impact of 10% price changes on derivative liability values"
-    section: market_risk
-  commodity_price_realizations:
-    description: "Average prices received for oil, gas, and NGLs"
-    section: market_risk
-  revenue_sensitivity:
-    description: "Revenue impact from $1 price changes per commodity unit"
-    section: market_risk
+    description: >-
+      Net fair value of natural gas derivative positions, in millions.
+      Positive = net asset, negative = net liability.
+    section: derivatives_note
+  fi_total_derivative_asset:
+    description: >-
+      Total derivative assets at fair value (Financial Instruments note),
+      in millions.
+    section: financial_instruments
+  fi_total_derivative_liability:
+    description: >-
+      Total derivative liabilities at fair value (Financial Instruments
+      note), in millions.
+    section: financial_instruments
+  total_derivative_asset:
+    description: >-
+      Total derivative assets at fair value (Derivatives note), in millions.
+    section: derivatives_note
+  total_derivative_liability:
+    description: >-
+      Total derivative liabilities at fair value (Derivatives note), in
+      millions.
+    section: derivatives_note
+  net_derivative_position:
+    description: >-
+      Net derivative asset/(liability) position, in millions.
+    section: derivatives_note
+  fx_derivatives_notional:
+    description: >-
+      Total FX derivative notional if disclosed, in millions. APA's FX book
+      is small; null if the filing does not disclose one.
+    section: derivatives_note
   foreign_exchange_contracts:
-    description: "Notional amounts and terms of FX contracts"
+    description: >-
+      Foreign exchange contract notional or fair value if disclosed, in
+      millions. Free text of the specific disclosure if the filing gives
+      only a qualitative description.
+    section: market_risk
+  fx_forwards_outstanding:
+    description: >-
+      Notional of FX forward contracts outstanding, in millions. 0 if none.
+    section: market_risk
+  fx_sensitivity_10pct:
+    description: >-
+      Impact on earnings or fair value of a 10% adverse FX move, in millions.
+    section: market_risk
+  fixed_rate_notes_billion:
+    description: >-
+      Aggregate principal of fixed-rate notes outstanding, in billions.
     section: market_risk
   fixed_rate_debt:
-    description: "Outstanding debt amounts and weighted average interest rate"
+    description: >-
+      Total fixed-rate debt outstanding, in millions.
+    section: market_risk
+  price_sensitivity_analysis:
+    description: >-
+      Short description of the commodity price sensitivity scenario table
+      (typical: "10% change in oil / gas price").
+    section: market_risk
+  commodity_price_realizations:
+    description: >-
+      Realized commodity prices reported for the period, quoted verbatim
+      (e.g. "$74.32/bbl WTI, $2.15/Mcf natural gas").
+    section: market_risk
+  revenue_sensitivity:
+    description: >-
+      Reported change in revenue from a stated commodity price move, in
+      millions.
     section: market_risk
 
-# Unusual features identified:
-#   - Derivatives disclosure split between Note 4 reference and Item 7A market risk section
-#   - Only natural gas derivatives disclosed with fair values, no oil derivatives mentioned with values
-#   - Foreign exchange contracts entered into subsequent to period end
-#   - No cash flow hedge accounting designation mentioned for current derivatives
-#   - Detailed commodity price sensitivity analysis included in market risk section rather than derivatives note
+qualitative:
+  sections_to_search: [derivatives_note, market_risk]
+  categories:
+    Commodity risk:
+      - crude oil
+      - natural gas
+      - basis point
+      - price risk
+    Policy changes:
+      - de-designat
+      - discontinued
+      - terminat
+      - unwind
+    Event-driven:
+      - deal contingent
+      - 'acquisition.*hedg'
 
+dashboard_mapping:
+  total_derivatives_notional: fx_derivatives_notional
+  fx_hedging_notional: fx_derivatives_notional

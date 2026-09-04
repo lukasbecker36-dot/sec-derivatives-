@@ -1,32 +1,135 @@
 issuer: Bristol Myers Squibb
 ticker: BMY
-cik: "14272"
-archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+cik: '14272'
+sector: Health Care
 extraction_mode: llm
 
-# Additional fields identified by LLM analysis (review and adjust)
+# Self-contained profile. Bristol Myers Squibb consistently discloses FX
+# hedges (designated + non-designated), IR swaps, equity derivative
+# notionals (from strategic-investment collars and similar), and both
+# Financial Instruments-note and Derivatives-note fair values. Sensitivities
+# appear in market risk. The archetype's has_derivatives / commodity
+# insistence produced wrong-column values that hit the swing gate on
+# net_derivative_position.
+
+sections:
+  financial_instruments:
+    heading: 'Note\s+\d+\s*[.\-:–—]?\s*Financial\s+Instruments'
+    match_strategy: first
+    validation_keywords: [fair value, derivative, marketable]
+    end_boundary: 'Note\s+\d+\s*[.\-:–—]?\s*(?!Financial\s+Instruments)'
+    max_length: 12000
+  derivatives_note:
+    heading: 'Note\s+\d+\s*[.\-:–—]?\s*(?:Derivative|Hedging)'
+    match_strategy: last
+    validation_keywords: [notional, derivative, hedge]
+    end_boundary: 'Note\s+\d+\s*[.\-:–—]?\s*(?!Derivative|Hedging)'
+    max_length: 10000
+  market_risk:
+    heading: 'Quantitative and Qualitative Disclosures About Market Risk'
+    match_strategy: last
+    end_boundary: 'Item\s*[\s\xa0]*[489]'
+    max_length: 8000
+
 fields:
-  derivatives_qualifying_as_cash_flow_hedges:
-    description: "accumulated OCI balance for cash flow hedges"
+  total_cash_equivalents_fv:
+    description: >-
+      Total cash equivalents at fair value, in millions.
+    section: financial_instruments
+  total_marketable_securities_fv:
+    description: >-
+      Total marketable securities at fair value, in millions.
+    section: financial_instruments
+  marketable_equity_securities_fv:
+    description: >-
+      Marketable equity securities at fair value, in millions.
+    section: financial_instruments
+  corporate_debt_securities_fv:
+    description: >-
+      Corporate debt securities at fair value, in millions.
+    section: financial_instruments
+  fi_total_derivative_asset:
+    description: >-
+      Total derivative assets at fair value (Financial Instruments note),
+      in millions.
+    section: financial_instruments
+  fi_total_derivative_liability:
+    description: >-
+      Total derivative liabilities at fair value (Financial Instruments
+      note), in millions.
+    section: financial_instruments
+  fx_derivatives_notional:
+    description: >-
+      Total FX derivative notional (Derivatives note), in millions.
+    section: derivatives_note
+  fx_designated_notional:
+    description: >-
+      Designated FX derivative notional, in millions.
+    section: derivatives_note
+  fx_not_designated_notional:
+    description: >-
+      Non-designated FX derivative notional, in millions.
+    section: derivatives_note
+  ir_swap_notional:
+    description: >-
+      Interest rate swap notional, in millions.
+    section: derivatives_note
+  equity_derivatives_notional:
+    description: >-
+      Equity derivative notional (from strategic-investment collars, options
+      on marketable equity, etc.), in millions.
+    section: derivatives_note
+  total_derivative_asset:
+    description: >-
+      Total derivative assets at fair value (Derivatives note), in millions.
+    section: derivatives_note
+  total_derivative_liability:
+    description: >-
+      Total derivative liabilities at fair value (Derivatives note), in
+      millions.
+    section: derivatives_note
+  net_derivative_position:
+    description: >-
+      Net derivative asset/(liability) position, in millions.
+    section: derivatives_note
+  expected_12mo_reclass_from_aoci:
+    description: >-
+      Net gain/(loss) expected to be reclassified from AOCI to earnings in
+      the next 12 months, in millions.
+    section: derivatives_note
+  ir_sensitivity_100bp:
+    description: >-
+      Interest rate sensitivity — earnings or fair-value impact of a 100bp
+      move, in millions.
     section: market_risk
-  net_investment_hedge_gains:
-    description: "gains included in foreign currency translation"
-    section: market_risk
-  foreign_exchange_sensitivity_10pct:
-    description: "impact of 10% currency appreciation on FX contract fair values"
-    section: market_risk
-  cross_currency_swap_sensitivity_10pct:
-    description: "impact of 10% currency appreciation on cross-currency swap fair values"
-    section: market_risk
-  primary_currency_exposures:
-    description: "main foreign currencies creating translation exposure"
+  fx_sensitivity_10pct:
+    description: >-
+      FX sensitivity — earnings or fair-value impact of a 10% adverse move,
+      in millions.
     section: market_risk
 
-# Unusual features identified:
-#   - References Note 9 for further information but content appears incomplete
-#   - Includes both designated and non-designated hedge accounting treatments
-#   - Provides sensitivity analysis in dollar amounts rather than percentages
-#   - Cross-currency swaps show opposite directional impacts between years
-#   - Put options mentioned but limited detail provided
+qualitative:
+  sections_to_search: [financial_instruments, derivatives_note, market_risk]
+  categories:
+    Interest rate risk:
+      - interest rate
+      - basis point
+      - 'floating.rate'
+    FX exposure:
+      - foreign currency
+      - exchange rate
+    Equity investments:
+      - marketable equity
+      - equity method
+      - collar
+    Policy changes:
+      - de-designat
+      - discontinued
+      - terminat
+    Event-driven:
+      - deal contingent
+      - 'acquisition.*hedg'
 
+dashboard_mapping:
+  total_derivatives_notional: "fx_derivatives_notional + ir_swap_notional + equity_derivatives_notional"
+  fx_hedging_notional: fx_derivatives_notional

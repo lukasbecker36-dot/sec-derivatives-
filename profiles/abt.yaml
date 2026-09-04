@@ -1,38 +1,114 @@
 issuer: Abbott Laboratories
 ticker: ABT
-cik: "1800"
-archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+cik: '1800'
+sector: Health Care
 extraction_mode: llm
 
-# Additional fields identified by LLM analysis (review and adjust)
+# Self-contained profile. Abbott discloses derivative notionals in BOTH the
+# Financial Instruments note AND the standalone Derivatives note — the same
+# figures appear in both places. The pipeline captures both (fi_* variants
+# from Financial Instruments, main variants from the Derivatives note) and
+# they should agree per period. The prior archetype schema also asked for
+# has_derivatives, commodity_derivatives_notional, sensitivities and other
+# fields Abbott doesn't disclose, which produced wrong-column swings on
+# fx_not_designated_notional and net_derivative_position. Trimmed.
+
+sections:
+  financial_instruments:
+    heading: 'Note\s+\d+\s*[.\-:–—]?\s*Financial\s+Instruments'
+    match_strategy: first
+    validation_keywords: [derivative, notional, hedge]
+    end_boundary: 'Note\s+\d+\s*[.\-:–—]?\s*(?!Financial\s+Instruments)'
+    max_length: 12000
+  derivatives_note:
+    heading: 'Note\s+\d+\s*[.\-:–—]?\s*(?:Derivative|Hedging)'
+    match_strategy: last
+    validation_keywords: [notional, derivative, hedge]
+    end_boundary: 'Note\s+\d+\s*[.\-:–—]?\s*(?!Derivative|Hedging)'
+    max_length: 10000
+  market_risk:
+    heading: 'Quantitative and Qualitative Disclosures About Market Risk'
+    match_strategy: last
+    end_boundary: 'Item\s*[\s\xa0]*[489]'
+    max_length: 8000
+
 fields:
-  foreign_currency_forward_notional:
-    description: "notional values of foreign currency forward contracts by year"
+  # Same values expected in both notes; the pipeline captures both so
+  # cross-referencing catches extraction misses.
+  fi_fx_derivatives_notional:
+    description: >-
+      Total FX derivative notional as disclosed in the Financial Instruments
+      note, in millions.
+    section: financial_instruments
+  fi_fx_designated_notional:
+    description: >-
+      Designated FX derivative notional (Financial Instruments note), in
+      millions.
+    section: financial_instruments
+  fi_fx_not_designated_notional:
+    description: >-
+      Non-designated FX derivative notional (Financial Instruments note),
+      in millions.
+    section: financial_instruments
+  fi_ir_swap_notional:
+    description: >-
+      Interest rate swap notional (Financial Instruments note), in millions.
+    section: financial_instruments
+  fx_derivatives_notional:
+    description: >-
+      Total FX derivative notional (Derivatives note), in millions.
+    section: derivatives_note
+  fx_designated_notional:
+    description: >-
+      Designated FX derivative notional (Derivatives note), in millions.
+    section: derivatives_note
+  fx_not_designated_notional:
+    description: >-
+      Non-designated FX derivative notional (Derivatives note), in millions.
+    section: derivatives_note
+  ir_swap_notional:
+    description: >-
+      Interest rate swap notional (Derivatives note), in millions.
+    section: derivatives_note
+  total_derivative_asset:
+    description: >-
+      Total derivative assets at fair value, in millions.
+    section: derivatives_note
+  total_derivative_liability:
+    description: >-
+      Total derivative liabilities at fair value, in millions.
+    section: derivatives_note
+  net_derivative_position:
+    description: >-
+      Net derivative asset/(liability) position, in millions.
+    section: derivatives_note
+  fx_transaction_gain_loss:
+    description: >-
+      Net foreign currency transaction gain/(loss), in millions.
     section: market_risk
-  interest_rate_hedge_notional:
-    description: "notional values of interest rate hedge contracts"
-    section: market_risk
-  fx_contracts_table:
-    description: "detailed breakdown of foreign currency contracts by currency with notional amounts, exchange rates, and fair values"
-    section: market_risk
-  fair_value_hierarchy:
-    description: "fair value measurement approaches for different instrument types"
-    section: market_risk
-  hedge_designation:
-    description: "cash flow hedges vs fair value hedges vs net investment hedges"
-    section: market_risk
-  contract_maturities:
-    description: "maturity periods for different contract types"
-    section: market_risk
-  contingent_consideration:
-    description: "fair value of contingent consideration from acquisitions"
+  marketable_equity_value:
+    description: >-
+      Marketable equity securities carrying value, in millions.
     section: market_risk
 
-# Unusual features identified:
-#   - combines derivatives and market risk disclosures in single note
-#   - includes non-derivative financial instruments (equity securities, mutual funds) in market risk section
-#   - provides detailed currency-by-currency breakdown with weighted average exchange rates
-#   - includes rabbi trust investments for deferred compensation plan
-#   - net investment hedge using yen-denominated term loan rather than derivatives
+qualitative:
+  sections_to_search: [financial_instruments, derivatives_note, market_risk]
+  categories:
+    Interest rate risk:
+      - interest rate
+      - basis point
+    FX exposure:
+      - foreign currency
+      - exchange rate
+      - remeasur
+    Policy changes:
+      - de-designat
+      - discontinued
+      - terminat
+    Event-driven:
+      - deal contingent
+      - 'acquisition.*hedg'
 
+dashboard_mapping:
+  total_derivatives_notional: "fx_derivatives_notional + ir_swap_notional"
+  fx_hedging_notional: fx_derivatives_notional

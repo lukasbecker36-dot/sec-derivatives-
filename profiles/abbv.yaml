@@ -1,37 +1,85 @@
 issuer: AbbVie
 ticker: ABBV
-cik: "1551152"
-archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+cik: '1551152'
+sector: Health Care
 extraction_mode: llm
 
-# Additional fields identified by LLM analysis (review and adjust)
+# Self-contained profile (no archetype line). AbbVie's Q2 filing consistently
+# reports FX designated/non-designated notionals, IR swap notional, and the
+# three derivative fair-value fields — nothing else. When the pipeline
+# inherited the full minimal_hedger schema it kept trying to answer for
+# has_derivatives, commodity_derivatives_notional, sensitivities etc., and
+# produced wrong-column values that tripped implausible_swing on
+# net_derivative_position. Trimming the schema to what the filing actually
+# discloses removes those wrong-slot temptations.
+
+sections:
+  derivatives_note:
+    heading: 'Note\s+\d+\s*[.\-:–—]?\s*(?:Derivative|Hedging)'
+    match_strategy: last
+    validation_keywords: [notional, derivative, hedge]
+    end_boundary: 'Note\s+\d+\s*[.\-:–—]?\s*(?!Derivative|Hedging)'
+    max_length: 10000
+
 fields:
-  foreign_currency_contract_amounts:
-    description: "notional amounts by currency for forward contracts"
-    section: market_risk
-  weighted_average_exchange_rates:
-    description: "weighted average rates for each currency forward"
-    section: market_risk
-  fair_value_receivable_payable:
-    description: "net fair values of currency forwards by currency"
-    section: market_risk
-  fx_sensitivity_amount:
-    description: "impact of 10% currency appreciation on forward contracts"
-    section: market_risk
-  euro_notes_hedge_designation:
-    description: "€3.1 billion Euro notes designated as net investment hedges"
-    section: market_risk
-  interest_rate_swap_sensitivity:
-    description: "impact of 100bp rate increase on swap fair values"
-    section: market_risk
-  debt_fair_value_sensitivity:
-    description: "impact of 100bp rate increase on long-term debt fair value"
-    section: market_risk
+  fx_derivatives_notional:
+    description: >-
+      Total notional amount of foreign currency forward contracts outstanding,
+      in millions. Sum of designated + non-designated below.
+    section: derivatives_note
+  fx_designated_notional:
+    description: >-
+      Notional amount of FX forwards designated as cash flow hedges, in
+      millions.
+    section: derivatives_note
+  fx_not_designated_notional:
+    description: >-
+      Notional amount of FX forwards NOT designated as hedging instruments,
+      in millions.
+    section: derivatives_note
+  ir_swap_notional:
+    description: >-
+      Notional amount of interest rate swaps outstanding, in millions.
+    section: derivatives_note
+  total_derivative_asset:
+    description: >-
+      Total derivative assets at fair value, in millions.
+    section: derivatives_note
+  total_derivative_liability:
+    description: >-
+      Total derivative liabilities at fair value, in millions.
+    section: derivatives_note
+  net_derivative_position:
+    description: >-
+      Net derivative asset/(liability) position, in millions
+      (asset minus liability, positive = net asset).
+    section: derivatives_note
+  expected_12mo_reclass_from_aoci:
+    description: >-
+      Net gain/(loss) expected to be reclassified from AOCI to earnings in
+      the next 12 months, in millions.
+    section: derivatives_note
 
-# Unusual features identified:
-#   - Combined notional amounts and fair values in single table
-#   - Specific mention of unsecured senior Euro notes as hedging instruments
-#   - Uses 'receivable/(payable)' terminology for fair values
-#   - Includes 'All other currencies' aggregate line item
+qualitative:
+  sections_to_search: [derivatives_note]
+  categories:
+    Interest rate risk:
+      - interest rate
+      - basis point
+      - 'floating.rate'
+    FX exposure:
+      - foreign currency
+      - exchange rate
+      - remeasur
+    Policy changes:
+      - de-designat
+      - discontinued
+      - terminat
+      - unwind
+    Event-driven:
+      - deal contingent
+      - 'acquisition.*hedg'
 
+dashboard_mapping:
+  total_derivatives_notional: "fx_derivatives_notional + ir_swap_notional"
+  fx_hedging_notional: fx_derivatives_notional
