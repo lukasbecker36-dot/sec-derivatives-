@@ -1,22 +1,91 @@
 issuer: Accenture
 ticker: ACN
-cik: "1467373"
-archetype: minimal_hedger
-sector: TODO  # e.g., technology, industrials, financials
+cik: '1467373'
+sector: Information Technology
 extraction_mode: llm
 
-# Additional fields identified by LLM analysis (review and adjust)
+# Self-contained profile. Accenture is a minimal derivatives user: FX hedges
+# for revenue exposure and a small IR programme on its senior notes. Fair
+# values sit in a Financial Instruments-style note; notionals in a separate
+# Derivatives note. The prior archetype's insistence on commodity,
+# sensitivities, marketable equity etc. produced wrong-column values that
+# hit the swing gate on net_derivative_position. Trimmed to fields Accenture
+# actually populates every quarter.
+
+sections:
+  financial_instruments:
+    heading: 'Note\s+\d+\s*[.\-:–—]?\s*Financial\s+Instruments'
+    match_strategy: first
+    validation_keywords: [derivative, fair value, hedge]
+    end_boundary: 'Note\s+\d+\s*[.\-:–—]?\s*(?!Financial\s+Instruments)'
+    max_length: 10000
+  derivatives_note:
+    heading: 'Note\s+\d+\s*[.\-:–—]?\s*(?:Derivative|Hedging)'
+    match_strategy: last
+    validation_keywords: [notional, derivative, forward]
+    end_boundary: 'Note\s+\d+\s*[.\-:–—]?\s*(?!Derivative|Hedging)'
+    max_length: 10000
+
 fields:
+  fi_fx_derivatives_notional:
+    description: >-
+      Total FX derivative notional as disclosed in the Financial Instruments
+      note, in millions.
+    section: financial_instruments
+  fi_total_derivative_asset:
+    description: >-
+      Total derivative assets at fair value (Financial Instruments note),
+      in millions.
+    section: financial_instruments
+  fi_total_derivative_liability:
+    description: >-
+      Total derivative liabilities at fair value (Financial Instruments
+      note), in millions.
+    section: financial_instruments
+  fx_derivatives_notional:
+    description: >-
+      Total FX derivative notional as disclosed in the Derivatives note,
+      in millions.
+    section: derivatives_note
+  total_derivative_asset:
+    description: >-
+      Total derivative assets at fair value (Derivatives note), in millions.
+    section: derivatives_note
+  total_derivative_liability:
+    description: >-
+      Total derivative liabilities at fair value (Derivatives note), in
+      millions.
+    section: derivatives_note
+  net_derivative_position:
+    description: >-
+      Net derivative asset/(liability) position, in millions.
+    section: derivatives_note
   market_risk_reference:
-    description: "Reference to market risk disclosures in 10-K Item 7A"
-    section: market_risk
+    description: >-
+      "Yes" if the quarterly filing incorporates prior-period market risk
+      disclosures by reference (typical for a 10-Q pointing to the most
+      recent 10-K). Empty otherwise.
+    section: derivatives_note
   borrowings_reference:
-    description: "Reference to Note 9 for borrowings and debt information"
-    section: market_risk
+    description: >-
+      "Yes" if the filing incorporates its borrowings/debt disclosure by
+      reference to another note. Empty otherwise.
+    section: derivatives_note
 
-# Unusual features identified:
-#   - Section contains only cross-references to other parts of filing rather than actual market risk data
-#   - No quantitative derivative or market risk information present in this excerpt
-#   - References future date (August 31, 2025) which may be an error
-#   - Appears to be incomplete section or summary rather than full disclosure
+qualitative:
+  sections_to_search: [financial_instruments, derivatives_note]
+  categories:
+    FX exposure:
+      - foreign currency
+      - exchange rate
+      - revenue.*hedg
+    Policy changes:
+      - de-designat
+      - discontinued
+      - terminat
+    Event-driven:
+      - 'acquisition.*hedg'
 
+dashboard_mapping:
+  total_derivatives_notional: fx_derivatives_notional
+  fx_hedging_notional: fx_derivatives_notional
