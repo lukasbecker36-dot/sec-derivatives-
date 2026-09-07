@@ -120,3 +120,31 @@ class TestRowMoves:
         routine's own 'quiet in this asset class' handling."""
         moves = _row_moves({}, {'fx_derivatives_notional': '100'})
         assert list(moves.keys()) == ['fx']
+
+
+class TestHeldReviewBranches:
+    """The manifest surfaces gate-blocked review branches so the daily
+    digest can distinguish 'quiet day on master' from 'the pipeline is
+    working but the gate held today's content'. Without this, days when
+    the scheduler correctly refused to push would look identical to
+    days when nothing happened at all."""
+
+    def test_helper_returns_list_shape(self):
+        """The helper hits git-for-each-ref against the real repo; we're
+        not mocking git here, just confirming it returns a well-formed
+        list of dicts with the expected keys."""
+        from datetime import datetime, timezone
+        from src.digest_manifest import _held_review_branches
+        # Ask for anything since the epoch — will pick up all review/* refs.
+        result = _held_review_branches('1970-01-01T00:00:00+00:00')
+        assert isinstance(result, list)
+        for entry in result:
+            assert 'branch' in entry
+            assert 'committed_at' in entry
+            assert 'commit_subject' in entry
+            assert entry['branch'].startswith('review/')
+
+    def test_helper_filters_by_since(self):
+        """Passing a far-future since should return zero entries."""
+        from src.digest_manifest import _held_review_branches
+        assert _held_review_branches('2099-01-01T00:00:00+00:00') == []
