@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-09-07 ===
+[NUMERIC] total_cash_equivalents_fv: $3,401M → $4,188M (+23.1%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $1M → $2M (+100.0%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $1,220M → $6M (-99.5%) — exceeds 20% threshold
+[NUMERIC] fi_fx_not_designated_notional: $1,600M → $1,200M (-25.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $1,600M → $1,200M (-25.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] marketable_equity_value: was $1,200M, now missing
+[VALIDATION] Likely units mismatch: marketable_equity_securities_fv changed from 1,220 to 6 (0x)
+[LLM_FLAG] marketable_equity_securities_fv fell from $1,220M (prior) to $6M (>50% drop); the filing's 'Marketable equity securities' line item is explicitly $6M at both March 28, 2026 and (implied zero/blank) December 27, 2025, so the current value is read directly from the table, but the prior figure may have been drawn from a different line (e.g. long-term non-marketable equity investments, $1.8B) or a different filing section — worth reconciling against the source of the prior $1,220M value.
+[LLM_FLAG] total_cash_equivalents_fv and total_marketable_securities_fv were derived by summing the individual line items listed under the 'Cash equivalents' and 'Short-term investments' headings respectively in the fair-value hierarchy table; their sum (4,188 + 6,762 = 10,950) reconciles exactly with the combined 'cash equivalents and short-term investments' total in the adjacent cost/fair-value summary table, cross-validating the split.
+
 === 10-Q | Period ending 2026-06-27 | Processed 2026-08-06 ===
 [NUMERIC] marketable_equity_securities_fv: $6M → $1,220M (+20233.3%) — exceeds 20% threshold
 [NUMERIC] corporate_debt_securities_fv: $4,446M → $5,354M (+20.4%) — exceeds 20% threshold

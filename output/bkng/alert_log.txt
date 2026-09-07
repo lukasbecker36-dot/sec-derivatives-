@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-09-07 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($15,400M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($15,400M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $14,300M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $14,300M, now missing
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-1,200M)
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-55M)
+[DISAPPEARED_FIELD] fx_impact_on_bookings: was $1,200M, now missing
+[DISAPPEARED_FIELD] derivative_policies: was $45M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, fixed_rate_notes_billion, fx_impact_on_bookings...)
+[LLM_FLAG] The prior_values for this filing show total_derivative_asset=$14,300M, net_derivative_position=$14,300M, and equity_derivatives_notional="Yes" (a string, not a number) — none of these are plausible for a non-financial issuer's derivative book (the text's only quantified derivative fair-value item, an embedded conversion derivative liability, was $1.2-1.3 billion, not a $14.3B asset), and the 'Yes' string in a numeric notional field looks like a mismapped has_derivatives value from a prior run. This extraction does not carry those figures forward; total_derivative_asset/liability are left not_found because no June 30, 2025 dollar figure for the embedded derivative appears within this section's text (it is truncated right after citing the December 31, 2024 value of $1.3 billion).
+[LLM_FLAG] ir_sensitivity_100bp is recorded as -1,200 to represent the impact of a 100bp rate INCREASE (a decline in debt fair value), consistent with how this field is framed elsewhere in the pipeline; the filing itself states the opposite-direction scenario (a 100bp DECREASE increasing fair value by $1.2 billion) — same magnitude, opposite sign convention.
+[LLM_FLAG] The prior_values for fixed_rate_notes_billion (0.0) and derivative_policies (45.0) look like implausible or mismapped figures for a company with ~$18.6 billion of mostly fixed-rate notes outstanding; this section's text does not give a fixed-rate/floating-rate debt breakdown (that lives in the companion derivatives_note/debt note), so fixed_rate_notes_billion is left not_found rather than carrying forward a suspect prior value.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($14,300M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

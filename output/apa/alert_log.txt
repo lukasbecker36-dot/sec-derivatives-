@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-09-07 ===
+[NUMERIC] natural_gas_derivatives_fair_value: $122M → $-6M (-104.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $124M, now missing
+[NUMERIC] total_derivative_liability: $122M → $6M (-95.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-122M → $-6M (+95.1%) — exceeds 20% threshold
+[NUMERIC] fx_derivatives_notional: $108M → $72M (-33.3%) — exceeds 20% threshold
+[NUMERIC] fx_forwards_outstanding: $108M → $72M (-33.3%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $6M → $-9M (-250.0%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_liability fell from $122M to $6M (-95%) and natural_gas_derivatives_fair_value/net_derivative_position moved from -$122M to -$6M; this is consistent with the filing's own disclosure of a 74% decline in realized natural gas prices between the comparable periods, which would sharply reduce the mark-to-market liability on natural gas derivatives not designated as hedges.
+[LLM_FLAG] fx_sensitivity_10pct is reported here as -9 (the adverse/weakening-GBP scenario loss); the filing also discloses the opposite-direction scenario (a $4 million gain on a 10% GBP strengthening) not captured in this single-value field.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fi_total_derivative_liability: was $124M, now missing
 [DISAPPEARED_FIELD] fx_derivatives_notional: was $108M, now missing

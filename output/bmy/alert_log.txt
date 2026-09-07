@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-09-07 ===
+[NUMERIC] total_cash_equivalents_fv: $6,175M → $8,189M (+32.6%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $2,742M → $1,350M (-50.8%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $434M → $277M (-36.2%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $414M → $514M (+24.2%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_asset: $394M → $282M (-28.4%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $123M → $301M (+144.7%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $4,715M → $5,932M (+25.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $395M → $282M (-28.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $122M → $301M (+146.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $273M → $-19M (-107.0%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $11M → $-156M (-1518.2%) — exceeds 20% threshold
+[LLM_FLAG] total_marketable_securities_fv (computed as certificates of deposit + corporate debt + U.S. Treasury securities = 1,350) is far below the prior value of $2,742M; the prior figure does not match any combination of line items visible in this table for either period shown, suggesting a possible definitional or extraction inconsistency in an earlier run rather than in this one.
+[LLM_FLAG] fi_total_derivative_liability rose from $122-123M to $301M (+~145%); this is cross-validated against the companion derivatives_note section's detailed hedge table, whose liability fair values sum exactly to $301M, so the increase is genuine and tied to large FX moves against BMS reflected in that note.
+[LLM_FLAG] total_derivative_liability rose from $122-123M to $301M (+~145%) and net_derivative_position flipped from +$273M to -$19M; both figures are directly computed from the filing's own labeled notional/fair-value table and are corroborated by the companion financial_instruments section's Level 2 derivative asset/liability totals ($282M / $301M), so this is a real, cross-validated increase rather than an extraction error — consistent with the sizable FX cash-flow-hedge losses ($(299)M and $(515)M) recognized in OCI during the period.
+[LLM_FLAG] expected_12mo_reclass_from_aoci moved from +$11M to -$156M; this is the figure explicitly stated in the filing text for foreign exchange cash-flow hedges specifically (it does not include cross-currency swap or forward interest rate contract AOCI amounts, which the text separately describes as immaterial).
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NUMERIC] total_marketable_securities_fv: $1,872M → $2,742M (+46.5%) — exceeds 20% threshold
 [NUMERIC] marketable_equity_securities_fv: $322M → $434M (+34.8%) — exceeds 20% threshold

@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2025-05-31 | Processed 2026-09-07 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $16,944M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $41M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $684M, now missing
+[NUMERIC] total_derivative_asset: $41M → $127M (+213.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $684M → $126M (-81.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-643M → $1M (+100.2%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 3/7 previously-populated fields are now null (fi_fx_derivatives_notional, fi_total_derivative_asset, fi_total_derivative_liability)
+[VALIDATION] Likely units mismatch: net_derivative_position changed from -643 to 1 (0x)
+[LLM_FLAG] total_derivative_asset rose from $40.7M to $127.5M (+213%) and total_derivative_liability fell from $684.1M to $126.5M (-81.5%), flipping net_derivative_position from -$643.3M to +$1.0M; all values are read directly from the filing's labeled derivative fair-value table (figures originally in thousands, converted to millions), so this is reported as-is rather than adjusted, but the magnitude of the swing is unusual and may warrant secondary review.
+
 === 10-Q | Period ending 2026-05-31 | Processed 2026-06-18 ===
 [NUMERIC] fi_total_derivative_asset: $30M → $41M (+37.1%) — exceeds 20% threshold
 [NUMERIC] fi_total_derivative_liability: $407M → $684M (+68.0%) — exceeds 20% threshold

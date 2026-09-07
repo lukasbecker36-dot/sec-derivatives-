@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-08-01 | Processed 2026-09-07 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $277M, now missing
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $150M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $119M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $31M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $500M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $8M, now missing
+[NUMERIC] fx_not_designated_notional: $31M → $46M (+48.4%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 6/10 previously-populated fields are now null (total_cash_equivalents_fv, fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional...)
+
 === 10-Q | Period ending 2026-05-02 | Processed 2026-07-05 ===
 [HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($277M)
 [HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($150M)

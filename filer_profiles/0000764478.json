@@ -17,9 +17,14 @@
   "idiosyncrasies": {
     "recurring_phrases": [
       "interest rate swap",
-      "designated as hedging"
+      "designated as hedging",
+      "net investment hedge",
+      "fair value hedge",
+      "notional amount"
     ],
-    "non_gaap_metrics": [],
+    "non_gaap_metrics": [
+      "adjusted operating income"
+    ],
     "unusual_disclosure_patterns": [],
     "known_issues": []
   },
@@ -78,6 +83,18 @@
       ],
       "fields_extracted": 5,
       "fields_null": 5
+    },
+    {
+      "filing_date": "2026-08-01",
+      "form_type": "10-Q",
+      "period_end": "2026-08-01",
+      "processed_at": "2026-09-07T02:22:45Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 8,
+      "fields_null": 14
     }
   ]
 }

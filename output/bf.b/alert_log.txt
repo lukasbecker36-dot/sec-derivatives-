@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-07-31 | Processed 2026-09-07 ===
+[NUMERIC] fx_derivatives_notional: $586M → $341M (-41.8%) — exceeds 20% threshold
+[NEW_FIELD] fx_designated_notional: appeared for first time ($341M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($5M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($18M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-13M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-4M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-45M, now missing
+[DISAPPEARED_FIELD] currency_derivatives_notional_current: was $586M, now missing
+[DISAPPEARED_FIELD] currency_derivatives_notional_prior: was $463M, now missing
+[DISAPPEARED_FIELD] hypothetical_fx_sensitivity: was $-45M, now missing
+[DISAPPEARED_FIELD] cash_equivalents_balance: was $308M, now missing
+[DISAPPEARED_FIELD] commercial_paper_balance: was $68M, now missing
+[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (fx_sensitivity_10pct, currency_derivatives_notional_current, currency_derivatives_notional_prior, hypothetical_fx_sensitivity, cash_equivalents_balance...)
+[LLM_FLAG] fx_derivatives_notional (341) only captures the cross-currency swap notional explicitly quantified in this excerpt; the 'Designated as cash flow hedges: Currency derivatives' and 'Not designated as hedges: Currency derivatives' fair-value line items imply additional FX forward contracts whose notional amounts are not given anywhere in this section text, so the total is likely understated relative to the company's full FX derivative book (prior value was $586M).
+
 === 10-K | Period ending 2026-04-30 | Processed 2026-07-05 ===
 [HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $383M, now missing
 [HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $1M, now missing

@@ -1,3 +1,25 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-09-07 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,133M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,133M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $1,052M, now missing
+[NEW_FIELD] net_derivative_position: appeared for first time ($-17M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-3M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-14M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $1,052M, now missing
+[DISAPPEARED_FIELD] fx_forward_exchange_rates: was $-3M, now missing
+[NUMERIC] fx_forward_fair_value: $-12M → $-17M (-45.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_usd_decrease: appeared for first time ($6M)
+[NEW_FIELD] fx_sensitivity_usd_increase: appeared for first time ($0M)
+[NEW_FIELD] debt_securities_fair_value: appeared for first time ($80M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-3M)
+[NEW_FIELD] credit_facility_rate_sensitivity: appeared for first time ($4M)
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (total_derivative_asset, fx_sensitivity_10pct, equity_sensitivity_10pct, fx_forward_exchange_rates)
+[LLM_FLAG] The prior_values for this filing show equity_derivatives_notional="Yes" (a string, not a number) and total_derivative_asset=$1,051.5M — the latter is wildly implausible given this quarter's net derivative fair value is only $(17.4)M and last quarter's was $(26.0)M; neither prior figure is carried forward here.
+[LLM_FLAG] fx_sensitivity_usd_decrease (5.8) is a large swing versus the prior value (-13.8), including a sign flip; both are directly stated period figures reflecting a smaller/differently-composed hedge book quarter over quarter (notional fell from $3.3B at Dec 31, 2025 to $1,133M at March 31, 2026), not an extraction error.
+[LLM_FLAG] The prior_values for interest_rate_sensitivity and credit_facility_rate_sensitivity are per-currency dictionaries (e.g. {'japanese_yen': 290.5, ...}) that look like the fx_forward_notional_amounts breakdown mismapped into these two single-value sensitivity fields in an earlier run; this extraction instead populates them with the actual dollar sensitivity figures stated in the text ($3.3M and $4.4M respectively).
+[LLM_FLAG] equity_sensitivity_10pct is not_found here, but the prior value ($1,051.5M) matches the same implausible figure seen as 'total_derivative_asset' in the companion derivatives_note section for this filing — both appear to stem from the same mismapped figure in a prior extraction and are not carried forward.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,133M)
 [DISAPPEARED_FIELD] total_derivative_asset: was $3,258M, now missing

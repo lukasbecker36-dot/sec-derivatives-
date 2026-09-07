@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-07-31 | Processed 2026-09-07 ===
+[NUMERIC] fx_derivatives_notional: $665M → $832M (+25.1%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $116M → $140M (+20.7%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] net_derivative_position: $2M → $0M
+[NUMERIC] expected_12mo_reclass_from_aoci: $-1M → $-3M (-200.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing
+[VALIDATION] Reconciliation failure: fx_derivatives_notional=832 but fx_designated_notional=537 + fx_not_designated_notional=140 = 677 (diff 18.6%) — extraction likely read the wrong table
+[LLM_FLAG] fx_designated_notional (537) and fx_not_designated_notional (140) sum to 677, not to fx_derivatives_notional (832); the difference is the $155M net-investment-hedge FX forward notional, which is disclosed separately from both the cash-flow-hedge and non-designated buckets and is included in the total per the schema's 'forwards + options + cross-currency swaps combined' definition, but has no dedicated field of its own.
+[LLM_FLAG] expected_12mo_reclass_from_aoci moved from -$1M to -$3M (>50%, though both are small absolute amounts).
+
 === 10-Q | Period ending 2026-04-30 | Processed 2026-06-11 ===
 [HISTORICAL] [NUMERIC] total_derivative_liability: $14M → $9M (-35.7%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] net_derivative_position: $-3M → $2M (+166.7%) — exceeds 20% threshold

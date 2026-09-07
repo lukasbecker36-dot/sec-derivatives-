@@ -16,7 +16,13 @@
   },
   "idiosyncrasies": {
     "recurring_phrases": [
-      "notional amount"
+      "notional amount",
+      "net investment hedge",
+      "cash flow hedge",
+      "cross-currency",
+      "notional value",
+      "designated as hedging",
+      "aoci"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -89,6 +95,18 @@
       ],
       "fields_extracted": 13,
       "fields_null": 14
+    },
+    {
+      "filing_date": "2026-07-31",
+      "form_type": "10-Q",
+      "period_end": "2026-07-31",
+      "processed_at": "2026-09-07T02:22:47Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 7,
+      "fields_null": 20
     }
   ]
 }

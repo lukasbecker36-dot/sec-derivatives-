@@ -1,3 +1,33 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-09-07 ===
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($21,500M)
+[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($13,600M)
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($4,200M)
+[LLM_FLAG] fi_ir_swap_notional rose from $1.2B to $4.2B (>50%), but the filing text attributes this explicitly to additional interest rate hedges tied to fixed-rate debt issued for the Exact Sciences acquisition.
+[LLM_FLAG] ir_swap_notional rose from $1.2B to $4.2B (>50%), explicitly attributed in the text to additional interest rate hedges tied to fixed-rate debt issued for the Exact Sciences acquisition.
+[LLM_FLAG] total_derivative_liability excludes the $568M non-derivative 'Debt designated as a hedge of net investment in a foreign subsidiary' line, which the filing's own summary row of $878M bundles in with true derivative liabilities ($109 FX hedging + $89 FX non-designated + $100 non-current IR swap + $12 current IR swap = $310); using the raw $878M would misstate this field with a non-derivative amount.
+[LLM_FLAG] total_derivative_asset rose from prior-period value of $55M to $242M (>50%); consistent with growth in FX and interest-rate hedge fair values post-acquisition.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-09-07 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $20,500M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $13,100M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $1,200M, now missing
+[NUMERIC] ir_swap_notional: $1,200M → $4,200M (+250.0%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_asset: appeared for first time ($240M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($299M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-59M)
+[DISAPPEARED_FIELD] marketable_equity_value: was $343M, now missing
+[VALIDATION] Likely extraction failure: 4/9 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, marketable_equity_value)
+[LLM_FLAG] ir_swap_notional rose from $1.2B to $4.2B (3.5x, >50%) but the filing text explicitly attributes this to additional interest rate hedge contracts tied to fixed-rate debt issued for the Exact Sciences acquisition, so this is a genuine, explained increase rather than an extraction error.
+[LLM_FLAG] total_derivative_liability excludes the $577M non-derivative 'Debt designated as a hedge of net investment in a foreign subsidiary' line item, which the filing's own summary row of $876M incorrectly bundles in with true derivative liabilities ($117 FX hedging + $93 FX non-designated + $67 non-current IR swap + $22 current IR swap = $299); using the raw $876M total row would misstate this field with a non-derivative amount.
+[LLM_FLAG] total_derivative_asset rose from prior period value of $55M to $240M (>50%); this appears consistent with growth in FX hedge fair values and new interest-rate hedges post-acquisition, not an extraction error.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-09-07 ===
+[DISAPPEARED_FIELD] total_derivative_asset: was $55M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $338M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-283M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $44M, now missing
+[VALIDATION] Likely extraction failure: 4/13 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, fx_transaction_gain_loss)
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] fi_fx_not_designated_notional: $7,600M → $13,600M (+78.9%) — exceeds 20% threshold
 [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($4,200M)
