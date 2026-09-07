@@ -131,6 +131,48 @@ def _first_commit_at_or_after(since_iso: str) -> str | None:
     return r.stdout.strip() or None
 
 
+def _held_review_branches(since_iso: str) -> list[dict]:
+    """Return remote review/YYYY-MM-DD-* branches created since since_iso.
+
+    The scheduler pushes gate-blocked work to these branches instead of
+    master. The daily digest surfaces them so the reader knows "the
+    pipeline is not quiet — N filings are held for review" rather than
+    seeing an ambiguous silent day.
+    """
+    subprocess.run(['git', 'fetch', '--prune', 'origin'],
+                   capture_output=True, text=True, cwd=REPO)
+    r = subprocess.run(
+        ['git', 'for-each-ref',
+         '--format=%(refname:short)|%(committerdate:iso-strict)|%(subject)',
+         'refs/remotes/origin/review/'],
+        capture_output=True, text=True, cwd=REPO,
+    )
+    if r.returncode:
+        return []
+    since_dt = datetime.fromisoformat(since_iso.replace('Z', '+00:00'))
+    out = []
+    for line in r.stdout.splitlines():
+        parts = line.split('|', 2)
+        if len(parts) != 3:
+            continue
+        ref, dt_str, subject = parts
+        try:
+            dt = datetime.fromisoformat(dt_str)
+        except ValueError:
+            continue
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        if dt < since_dt:
+            continue
+        out.append({
+            'branch': ref.replace('origin/', ''),
+            'committed_at': dt_str,
+            'commit_subject': subject.strip(),
+        })
+    out.sort(key=lambda x: x['committed_at'])
+    return out
+
+
 def _notes_categories_for_period(ticker: str, period: str,
                                   form_type: str) -> dict[str, list[str]]:
     """Extract categorised notes for a specific period-block from notes.txt.
@@ -261,15 +303,19 @@ def build_manifest(since_iso: str) -> dict:
             }
             new_filings.append(entry)
 
+    held_branches = _held_review_branches(since_iso)
+
     return {
         'since': since_iso,
         'as_of': as_of,
         'baseline_sha': baseline_sha,
         'new_filings': new_filings,
         'extraction_gaps': extraction_gaps,
+        'held_for_review': held_branches,
         'counts': {
             'total_new_rows': len(new_filings),
             'extraction_gaps': len(extraction_gaps),
+            'held_review_branches': len(held_branches),
             'total_defects': report['defect_count'],
             'defects_by_type': report['defects_by_type'],
         },
