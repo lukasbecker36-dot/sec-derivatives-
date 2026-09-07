@@ -152,13 +152,44 @@ class TestCheckImplausibleSwings:
 
     def test_flags_notional_in_asset_slot(self):
         """The AT&T pattern: $36B cross-currency notional lands in a fair
-        value asset field where the prior period had a normal $458M."""
+        value asset field where the prior period had a normal $458M. A 78x
+        move on a fair-value-named field is well above the fair-value
+        threshold and gets flagged regardless of the softer FV rule."""
         prior = {'total_derivative_asset': '458'}
         curr = {'total_derivative_asset': '36037'}
         results = check_implausible_swings(prior, curr)
         assert len(results) == 1
         assert results[0]['field'] == 'total_derivative_asset'
         assert results[0]['ratio'] > 70
+
+    def test_fair_value_uses_softer_threshold(self):
+        """A fair-value mark can genuinely swing 10-25x on rate/FX moves for
+        smaller derivative books. The old 10x rule generated false positives
+        (ABBV $183M -> $5M net_derivative_position was flagged and probably
+        wasn't a wrong-column extraction). The fair-value threshold now
+        allows this class of move through."""
+        prior = {'net_derivative_position': '-183'}
+        curr = {'net_derivative_position': '-15'}
+        # 12x on a fair-value field: below 30x, passes.
+        assert check_implausible_swings(prior, curr) == []
+
+    def test_notional_keeps_strict_threshold(self):
+        """Notionals cannot legitimately move 10x QoQ — that's the whole
+        point of the check. The softer FV rule must not leak to notionals."""
+        prior = {'fx_derivatives_notional': '5000'}
+        curr = {'fx_derivatives_notional': '65000'}  # 13x
+        results = check_implausible_swings(prior, curr)
+        assert len(results) == 1
+        assert results[0]['field'] == 'fx_derivatives_notional'
+
+    def test_fair_value_still_flagged_at_extreme_ratio(self):
+        """A truly implausible fair-value swing (100x+) still trips even
+        with the softer threshold — that's how we catch the ACN kind of
+        error where a fair-value field goes from -$643M to $1M."""
+        prior = {'net_derivative_position': '-101'}
+        curr = {'net_derivative_position': '1'}  # 101x
+        results = check_implausible_swings(prior, curr)
+        assert len(results) == 1
 
     def test_normal_business_move_passes(self):
         """A 60% year-on-year growth in a $50B FX book is real, not a wrong-
@@ -255,3 +286,73 @@ class TestCheckAgainstBaseline:
         failures = check_against_baseline(report, self.BASE,
                                          ['misaligned_row', 'stale_null'])
         assert failures == []
+
+
+class TestChronologicalPriorFix:
+    """The 'prior period' for the swing check must be the most recent
+    EARLIER period, not the previous ROW in file order. tracking.csv is
+    not guaranteed to be chronologically sorted — some issuers (ACN, AMD
+    at various points) had newest-first ordering, which used to produce
+    reverse-time comparisons and massive false swings."""
+
+    def _make_config(self, fields):
+        from src.config import IssuerConfig, FieldConfig
+        return IssuerConfig(
+            issuer='Test', ticker='TEST', cik='0000000001',
+            fields={
+                f: FieldConfig(description=f'{f} description', section='m')
+                for f in fields
+            },
+        )
+
+    def test_prior_is_chronologically_prior_not_file_prior(self, tmp_path):
+        """A tracking.csv with rows in NEWEST-first order (Q2 2026, then
+        Q1 2026, then Q4 2025) must still have swing checks compare Q2 vs
+        Q1, not Q2 vs Q4 — and Q1 vs the CHRONOLOGICALLY prior Q4, not vs
+        the file-prior Q2."""
+        from src.audit import audit_issuer
+        csv_path = tmp_path / 't' / 'tracking.csv'
+        csv_path.parent.mkdir(parents=True, exist_ok=True)
+        header = ['period_end_date', 'form_type', 'fair_value_position']
+        csv_path.write_text(
+            ','.join(header) + '\n'
+            + '2026-06-30,10-Q,500\n'
+            + '2026-03-31,10-Q,510\n'
+            + '2025-12-31,10-K,505\n',
+            encoding='utf-8',
+        )
+        defects = audit_issuer('t', csv_path)
+        # No swing between 500 and 510 (ratio ~1x). No swing between 510
+        # and 505. The buggy file-order comparison would have compared
+        # Q1 (510) to Q2 (500), producing the exact same 1x ratio — but
+        # that comparison would be reversed in time. Verify none of the
+        # defects claim "from 2026-06-30" as prior of an earlier period.
+        for d in defects:
+            if d['type'] == 'implausible_swing':
+                # extract "from XXXX-XX-XX" from detail
+                import re
+                m = re.search(r'from (\d{4}-\d{2}-\d{2})', d['detail'])
+                if m:
+                    assert m.group(1) < d['period'], (
+                        f'prior date {m.group(1)} should be earlier than '
+                        f'current {d["period"]}'
+                    )
+
+    def test_chronological_prior_skips_blank_rows(self, tmp_path):
+        """A blank Q3 row shouldn't block the swing check between Q4 and Q2."""
+        from src.audit import audit_issuer
+        csv_path = tmp_path / 't' / 'tracking.csv'
+        csv_path.parent.mkdir(parents=True, exist_ok=True)
+        csv_path.write_text(
+            'period_end_date,form_type,ir_swap_notional\n'
+            '2025-03-31,10-Q,1000\n'
+            '2025-06-30,10-Q,\n'          # blank — skip
+            '2025-09-30,10-Q,15000\n',    # 15x jump vs Q1 (1000)
+            encoding='utf-8',
+        )
+        defects = audit_issuer('t', csv_path)
+        swings = [d for d in defects if d['type'] == 'implausible_swing']
+        assert len(swings) == 1
+        # The prior in the message should be Q1 (2025-03-31), skipping
+        # the blank Q2.
+        assert '2025-03-31' in swings[0]['detail']

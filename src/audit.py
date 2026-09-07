@@ -68,9 +68,27 @@ _SWING_EXCLUDE_FIELDS = {
 # swap, which puts a 100M+ number where a 10M number was.
 _SWING_MIN_MAGNITUDE = 100.0
 
-# Fold-ratio at which we flag. Notional vs fair value is typically 10-100x
-# apart, so 10x catches those; real business swings almost never reach it.
-_SWING_THRESHOLD = 10.0
+# Different thresholds by field kind. Notionals are gross contract amounts
+# that don't move 10x in a quarter, ever — anything that big is a
+# wrong-column extraction. Fair values are marks that CAN legitimately swing
+# 10-40x quarter-on-quarter when the underlying rate or FX environment moves,
+# especially on smaller books. The old single-threshold 10x rule generated
+# false positives on ABBV, ABT, AMD, APA, BMY fair-value moves (Sep 7 gate
+# regression) that were plausibly real. Splitting the threshold by kind
+# keeps the wrong-column notional-in-fair-value-slot catch working while
+# tolerating natural fair-value volatility.
+_SWING_THRESHOLD_NOTIONAL = 10.0
+_SWING_THRESHOLD_FAIR_VALUE = 30.0
+_SWING_THRESHOLD_OTHER = 20.0
+_SWING_THRESHOLD = _SWING_THRESHOLD_NOTIONAL  # default kept for callers that pass no threshold
+
+# Field-name substrings that identify fair-value / mark-to-market fields
+# and get the softer threshold.
+_FAIR_VALUE_MARKERS = (
+    'fair_value', '_fv', 'derivative_asset', 'derivative_liability',
+    'net_derivative_position', 'marketable_equity_securities',
+    'aoci', 'derivatives_fair_value',
+)
 
 logger = logging.getLogger(__name__)
 
@@ -96,10 +114,30 @@ def _row_key(row: dict) -> tuple[str, str]:
             _flatten(row.get('form_type')).strip())
 
 
+def _threshold_for_field(field: str, override: float | None) -> float:
+    """Pick the swing threshold for a given field name.
+
+    Notional fields keep the strict 10x rule (they never legitimately move
+    that much QoQ). Fair-value fields get 30x — enough headroom for real
+    mark-to-market moves on smaller books, tight enough to still catch a
+    notional-in-fair-value-slot misextraction. Other numeric fields (mostly
+    sensitivities and AOCI reclass amounts) get 20x.
+    """
+    if override is not None:
+        return override
+    fl = field.lower()
+    if 'notional' in fl:
+        return _SWING_THRESHOLD_NOTIONAL
+    if any(m in fl for m in _FAIR_VALUE_MARKERS):
+        return _SWING_THRESHOLD_FAIR_VALUE
+    return _SWING_THRESHOLD_OTHER
+
+
 def check_implausible_swings(prior_row: dict, curr_row: dict,
-                             threshold: float = _SWING_THRESHOLD,
+                             threshold: float | None = None,
                              min_magnitude: float = _SWING_MIN_MAGNITUDE) -> list[dict]:
-    """Flag single-value swings of >= threshold-fold between adjacent periods.
+    """Flag single-value swings between adjacent periods that exceed the
+    per-field-kind threshold.
 
     This catches the notional-in-fair-value-slot error class: a real number
     from the filing lands in a field whose meaning differs by an order of
@@ -107,6 +145,10 @@ def check_implausible_swings(prior_row: dict, curr_row: dict,
     to the schema and the LLM picks the biggest number that matches the
     field name). Skips small-magnitude priors so a $10M position doubling
     a few times isn't reported.
+
+    Notional fields use a stricter threshold than fair-value fields, since
+    real fair-value marks can move 10x+ QoQ on rate/FX changes but a real
+    notional cannot. Pass an explicit threshold to override for testing.
     """
     results = []
     for field, curr_str in curr_row.items():
@@ -123,7 +165,8 @@ def check_implausible_swings(prior_row: dict, curr_row: dict,
             # (appeared / disappeared), handled by the daily alerts.
             continue
         ratio = max(abs(curr / prev), abs(prev / curr))
-        if ratio >= threshold:
+        effective_threshold = _threshold_for_field(field, threshold)
+        if ratio >= effective_threshold:
             results.append({
                 'field': field,
                 'prev': prev,
@@ -219,16 +262,25 @@ def audit_issuer(ticker: str, csv_path: Path,
                 'form_type': form_type, 'detail': result['message'],
             })
 
-        # Cross-period plausibility. Walk back to the most recent non-empty
-        # non-misaligned row so a stray null between two good rows doesn't
-        # break the chain.
+        # Cross-period plausibility. Pick the CHRONOLOGICAL prior — the
+        # most recent non-empty non-misaligned row whose period_end_date is
+        # strictly earlier than this row's. Earlier logic walked back in
+        # file order and produced reverse-time comparisons for issuers
+        # whose tracking.csv happened to be newest-first (ACN, AMD), which
+        # then read as huge false swings against a "prior" a year later.
         prior_row = None
-        for j in range(idx - 1, -1, -1):
-            cand = rows[j]
+        best_prior_period = ''
+        for j, cand in enumerate(rows):
+            if j == idx:
+                continue
             if is_misaligned_row(cand) or is_empty_row(cand):
                 continue
-            prior_row = cand
-            break
+            cand_period = _flatten(cand.get('period_end_date')).strip()
+            if not cand_period or cand_period >= period:
+                continue
+            if cand_period > best_prior_period:
+                best_prior_period = cand_period
+                prior_row = cand
         if prior_row is not None:
             for swing in check_implausible_swings(prior_row, row):
                 defects.append({
