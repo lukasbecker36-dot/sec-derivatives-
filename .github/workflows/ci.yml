@@ -6,8 +6,14 @@ name: CI
 # or the data it produced.
 
 on:
+  # Only run CI on master and pull requests. Earlier this ran on every
+  # branch push, which produced two failure emails per gate-failed
+  # scheduler run — CCR auto-pushes the same commit to a session-default
+  # branch AND the routine explicitly pushes to review/YYYY-MM-DD-*, so
+  # CI fired twice on the same content. The audit gate has already flagged
+  # the review branch by its very existence; CI running there is redundant.
   push:
-    branches: ['**']
+    branches: [master]
   pull_request:
   workflow_dispatch:
 
