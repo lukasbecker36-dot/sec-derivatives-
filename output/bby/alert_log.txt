@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-08-01 | Processed 2026-09-08 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $277M, now missing
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $150M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $119M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $31M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $500M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $8M, now missing
+[NUMERIC] fx_not_designated_notional: $31M → $46M (+48.4%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 6/10 previously-populated fields are now null (total_cash_equivalents_fv, fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional...)
+[LLM_FLAG] Schema expects a 100bp interest-rate sensitivity, but this filing discloses sensitivity in 50bp increments only ('a 50-basis point increase ... an estimated $3 million increase in net interest income ... a 50-basis point decrease ... an estimated $3 million decrease'); no extrapolation to 100bp was performed, so ir_sensitivity_100bp is left null rather than doubling the disclosed figure.
+[LLM_FLAG] fx_transaction_gain_loss was left null: the filing discloses FX effects as an 'unfavorable impact on our revenue of approximately $12 million' (Q2) and a 'favorable impact on our revenue of approximately $11 million' (six months) — a revenue-translation impact estimate, not a booked 'foreign currency transaction gains/losses (net)' line item, so mapping it directly into this field risked misrepresenting its nature.
+[LLM_FLAG] fx_forwards_outstanding intentionally left null per its own field description ('Use only if derivatives_note fields above are empty') — the companion derivatives_note extraction for this same filing already populated fx_designated_notional ($119M) and fx_not_designated_notional ($46M).
+
 === 10-Q | Period ending 2026-05-02 | Processed 2026-07-05 ===
 [HISTORICAL] [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($277M)
 [HISTORICAL] [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($150M)

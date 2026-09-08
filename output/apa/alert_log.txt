@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-09-08 ===
+[NUMERIC] natural_gas_derivatives_fair_value: $122M → $-6M (-104.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $124M, now missing
+[NUMERIC] total_derivative_liability: $122M → $6M (-95.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-122M → $-6M (+95.1%) — exceeds 20% threshold
+[NUMERIC] fx_derivatives_notional: $108M → $72M (-33.3%) — exceeds 20% threshold
+[NUMERIC] fx_forwards_outstanding: $108M → $72M (-33.3%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $6M → $-9M (-250.0%) — exceeds 20% threshold
+[LLM_FLAG] natural_gas_derivatives_fair_value/total_derivative_liability fell from a prior magnitude of $122M to $6M (~95% decrease). No reconciliation is given in this section, but Q2 2026 natural gas price realizations fell 74% (to $0.60/Mcf per the market_risk section), which is directionally consistent with a much smaller net derivative liability given lower price volatility/moneyness of the hedges.
+[LLM_FLAG] fx_derivatives_notional is denominated in British pounds (£72 million), not U.S. dollars, consistent with prior extraction (£108 million); stored as the raw GBP-million figure, not converted to USD.
+[LLM_FLAG] fx_sensitivity_10pct: the filing gives two directional scenarios (strengthening GBP => +$4M gain; weakening GBP => -$9M loss), a sign/magnitude flip from the prior value of +6.0 (which appears to have been a single unsigned/gain figure). Selected the weakening (adverse-to-a-cost-exposure) scenario of -$9M per the schema's 'adverse move' framing; the +$4M alternative is available if the pipeline's sign convention differs.
+[LLM_FLAG] price_sensitivity_analysis: natural gas price-move impact fell from ~$21M (prior quarter) to $4M/$3M this quarter, a >50% change. Directionally consistent with the sharp natural-gas price decline reported in this same section (-74% to $0.60/Mcf), but the filing does not explicitly reconcile the two.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fi_total_derivative_liability: was $124M, now missing
 [DISAPPEARED_FIELD] fx_derivatives_notional: was $108M, now missing

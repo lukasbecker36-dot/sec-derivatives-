@@ -1,3 +1,26 @@
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-09-08 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($15,400M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($15,400M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $14,300M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $14,300M, now missing
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,200M)
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-55M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($1,200M)
+[DISAPPEARED_FIELD] fx_impact_on_bookings: was $1,200M, now missing
+[NEW_FIELD] equity_price_sensitivity: appeared for first time ($-55M)
+[DISAPPEARED_FIELD] derivative_policies: was $45M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, fixed_rate_notes_billion, fx_impact_on_bookings...)
+[LLM_FLAG] prior_values.total_derivative_asset ($14,300M) and net_derivative_position ($14,300M) are far outside the plausible fair-value range for this field (kind=fair_value, typically well under $2B for a non-financial issuer) and are not supported by anything in this filing's text. This looks like a legacy magnitude-confusion defect (e.g. an investment or notional balance recorded into a fair-value field) rather than a genuine derivative fair value, so null was returned instead of repeating it.
+[LLM_FLAG] prior_values.equity_derivatives_notional was the string 'Yes' for a field expected to be a numeric notional in millions — appears to be a data-mapping error from a prior run. No equity derivatives are disclosed in this section, so null was returned.
+[LLM_FLAG] prior_values.fx_impact_on_bookings was 1200.0 — identical to the $1.2 billion 100bp interest-rate/debt fair-value sensitivity figure disclosed elsewhere in this same filing, not anything about FX impact on bookings. This looks like a field-mapping error in a prior extraction. The current filing text only gives percentage-point FX effects on bookings growth (13% reported vs 9% constant-currency in Q2), not a dollar amount, so a qualitative value was recorded instead of a number.
+[LLM_FLAG] prior_values.derivative_policies was 45.0, an unexplained numeric value for what should be a qualitative policy description field. No content in this filing's market risk section supports any number here (it only cross-references Item 7A of the FY2024 10-K for policy detail), so null was returned.
+[LLM_FLAG] fx_forwards_outstanding intentionally left null per its own field description ('Use only if derivatives_note fields above are empty') — the companion derivatives_note extraction for this filing already populated fx_designated_notional ($0) and fx_not_designated_notional ($15,400M).
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($14,300M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

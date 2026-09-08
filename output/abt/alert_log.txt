@@ -1,3 +1,33 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-09-08 ===
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($21,500M)
+[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($13,600M)
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($4,200M)
+[LLM_FLAG] fi_ir_swap_notional rose from 1,200 (prior) to 4,200 (+250%). Filing explains this directly: 'The increase from December 31, 2025, was due to additional interest rate hedge contracts associated with fixed-rate debt issued as part of the Exact Sciences acquisition.'
+[LLM_FLAG] ir_swap_notional jumped from 1,200 (prior) to 4,200 (+250%). Filing explains this directly: 'The increase from December 31, 2025, was due to additional interest rate hedge contracts associated with fixed-rate debt issued as part of the Exact Sciences acquisition.'
+[LLM_FLAG] total_derivative_asset rose from 55 (prior) to 242 (+340%). The filing's own Dec 31, 2025 comparative column in this same table shows derivative-only assets of 108 (not 55), so the prior_value baseline appears to predate or mismatch this table.
+[LLM_FLAG] net_derivative_position moved from -283 (prior) to -68 (current), a >50% change; driven primarily by the total_derivative_asset increase above.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-09-08 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $20,500M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $13,100M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $1,200M, now missing
+[NUMERIC] ir_swap_notional: $1,200M → $4,200M (+250.0%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_asset: appeared for first time ($240M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($299M)
+[NUMERIC] net_derivative_position: $-189M → $-59M (+68.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] marketable_equity_value: was $343M, now missing
+[VALIDATION] Likely extraction failure: 4/10 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, marketable_equity_value)
+[LLM_FLAG] ir_swap_notional jumped from 1,200 (prior) to 4,200 (+250%). Filing explains this directly: 'The increase from December 31, 2025, was due to additional interest rate hedge contracts associated with fixed-rate debt issued as part of the Exact Sciences acquisition.'
+[LLM_FLAG] total_derivative_asset rose from 55 (prior) to 240 (+336%). The filing's own Dec 31, 2025 comparative column in this same table shows derivative-only assets of 108 (not 55), so the prior_value baseline appears to predate or mismatch this table -- the March 31, 2026 increase (108->240) is smaller and plausible given growing FX/IR hedge notional, but the year-over-year jump from the recorded baseline (55) is not directly explained in the text.
+[LLM_FLAG] net_derivative_position moved from -283 (prior) to -59 (current), a >50% change; driven by the total_derivative_asset increase above.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-09-08 ===
+[DISAPPEARED_FIELD] total_derivative_asset: was $55M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $338M, now missing
+[NUMERIC] net_derivative_position: $-283M → $-189M (+33.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $44M, now missing
+[LLM_FLAG] net_derivative_position (-189) is taken from the 'Total' row of the per-currency FX forward contract table (Fair and Carrying Value Receivable/(Payable)). This covers FX forward contracts only -- the note does not break out interest rate swap or net-investment-hedge fair values separately in this excerpt, so -189 likely understates the true consolidated net derivative position. prior_value (-283) may have been computed under a broader methodology; treat this field as partial, not a like-for-like comparison.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] fi_fx_not_designated_notional: $7,600M → $13,600M (+78.9%) — exceeds 20% threshold
 [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($4,200M)

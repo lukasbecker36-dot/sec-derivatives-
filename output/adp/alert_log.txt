@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-09-08 ===
+[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $4M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_swap_notional, cash_flow_hedge_aoci)
+[LLM_FLAG] prior_values.market_risk_reference cites 'Item 7' but this filing's cross-reference cites 'Item 2'. This is expected for a 10-Q (Item 2 is MD&A in a 10-Q; Item 7 is MD&A in a 10-K, where the prior extraction likely came from), not necessarily an extraction error, but noting the item-number change since it differs from the prior stored value.
+
 === 10-K | Period ending 2026-06-30 | Processed 2026-08-06 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
 [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($4M)

@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-09-08 ===
+[NUMERIC] total_cash_equivalents_fv: $6,175M → $8,189M (+32.6%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $2,742M → $1,350M (-50.8%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $434M → $277M (-36.2%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $414M → $514M (+24.2%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_asset: $394M → $282M (-28.4%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $123M → $301M (+144.7%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $4,715M → $5,932M (+25.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $395M → $282M (-28.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $122M → $301M (+146.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $273M → $-19M (-107.0%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $11M → $-156M (-1518.2%) — exceeds 20% threshold
+[LLM_FLAG] fi_total_derivative_liability rose from $123M (prior) to $301M (current), a +145% change. This is consistent (not a red flag on its own) with this quarter's derivatives-note OCI table showing a $(299) million unrealized loss on FX cash-flow-hedge contracts recognized in AOCI during Q2 2025, which would widen derivative liability positions carried at fair value.
+[LLM_FLAG] total_marketable_securities_fv ($1,350M, computed as CDs $800M + corporate debt $514M + U.S. Treasuries $36M; no explicit 'Total' row is present in this excerpt) differs from the prior extracted value ($2,742M) by about -51%. This may reflect a real change, a different composition assumption in the prior extraction (e.g., debt+equity combined, or additional securities not shown in this excerpt), or truncation of the table — worth checking the full note text.
+[LLM_FLAG] total_derivative_liability rose from $122M (prior) to $301M (current), +147%. Matches the same pattern in the companion financial_instruments note ($123M→$301M) and is consistent with the $(299)M unrealized loss on FX cash-flow-hedge contracts recognized in AOCI this quarter (USD moves vs. EUR/JPY exposures) per this note's own OCI table.
+[LLM_FLAG] net_derivative_position flipped from a net asset of +$273M (prior) to a net liability of -$19M (current) — driven by the liability increase above outpacing a smaller decline in derivative assets ($395M→$282M).
+[LLM_FLAG] expected_12mo_reclass_from_aoci swung from +$11M (prior) to -$156M (current, a loss) — directly stated in the filing text and consistent with the $(299)M / $(515)M AOCI losses on FX cash-flow-hedge contracts recognized in the three/six months ended June 30, 2025.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NUMERIC] total_marketable_securities_fv: $1,872M → $2,742M (+46.5%) — exceeds 20% threshold
 [NUMERIC] marketable_equity_securities_fv: $322M → $434M (+34.8%) — exceeds 20% threshold

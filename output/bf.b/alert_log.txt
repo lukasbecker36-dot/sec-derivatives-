@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-07-31 | Processed 2026-09-08 ===
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $586M, now missing
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($13M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-13M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-4M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-4M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-45M, now missing
+[DISAPPEARED_FIELD] currency_derivatives_notional_current: was $586M, now missing
+[DISAPPEARED_FIELD] currency_derivatives_notional_prior: was $463M, now missing
+[DISAPPEARED_FIELD] hypothetical_fx_sensitivity: was $-45M, now missing
+[DISAPPEARED_FIELD] cash_equivalents_balance: was $308M, now missing
+[DISAPPEARED_FIELD] commercial_paper_balance: was $68M, now missing
+[VALIDATION] Likely extraction failure: 7/7 previously-populated fields are now null (fx_derivatives_notional, fx_sensitivity_10pct, currency_derivatives_notional_current, currency_derivatives_notional_prior, hypothetical_fx_sensitivity...)
+[LLM_FLAG] fx_derivatives_notional could not be computed from this excerpt: only the cross-currency swap notional ($341M / €300M, of which $131M is designated as a net-investment hedge) is explicitly stated. The FX forward/spot contract notional is not itemized as a dollar total anywhere in this excerpt (only fair-value tables are shown, not a notional table). Prior value was $586M — unable to confirm consistency this quarter; the full derivatives note should be checked for a notional table if one exists.
+[LLM_FLAG] total_derivative_asset/total_derivative_liability are taken from the Fair Value Measurements note's balance-sheet ('net', i.e. post-counterparty-netting) presentation ($0M asset / $13M liability at July 31, 2026), not the gross pre-netting total from the fair-value-by-hedge-designation table ($5M asset / $18M liability). No prior-period value was available in this file to confirm which convention was used previously, so flagging the methodology choice for reviewer awareness.
+
 === 10-K | Period ending 2026-04-30 | Processed 2026-07-05 ===
 [HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $383M, now missing
 [HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $1M, now missing

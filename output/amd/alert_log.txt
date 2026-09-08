@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-09-08 ===
+[NUMERIC] total_cash_equivalents_fv: $3,401M → $4,188M (+23.1%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $1M → $2M (+100.0%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $1,220M → $6M (-99.5%) — exceeds 20% threshold
+[NUMERIC] fi_fx_not_designated_notional: $1,600M → $1,200M (-25.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $1,600M → $1,200M (-25.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] marketable_equity_value: was $1,200M, now missing
+[VALIDATION] Likely units mismatch: marketable_equity_securities_fv changed from 1,220 to 6 (0x)
+[LLM_FLAG] marketable_equity_securities_fv fell from prior 1220 to 6 (-99.5%). The note's actual 'Marketable equity securities' line is $6M (Mar 28, 2026) / $0 (Dec 27, 2025) for both periods shown here -- the prior stored value of 1220 looks like a magnitude-confusion error, likely pulling in the unrelated 'non-marketable equity securities' long-term investment balance (this filing states $1.8 billion / prior filing $1.1 billion) instead of the small marketable-equity line. Recommend re-checking the prior extraction rather than treating this as a real decline.
+[LLM_FLAG] fi_fx_derivatives_notional/designated/not_designated moved -14.6% / -9.4% / -25% vs prior quarter -- all within normal range, no concern.
+[LLM_FLAG] fx_derivatives_notional/designated/not_designated moved -14.6% / -9.4% / -25% vs prior quarter (4800->4100, 3200->2900, 1600->1200) -- all within normal range, no concern.
+[LLM_FLAG] prior_value for marketable_equity_value was 1200, but this quarter's Financial Instruments note (Note 8) shows the actual 'Marketable equity securities' fair-value line at only $6 million -- a roughly 200x discrepancy. This market-risk section's boilerplate text contains no equity-securities figure at all, so no value could be confirmed here, but the stored prior value looks like a magnitude-confusion error (likely the non-marketable long-term equity investment figure, ~$1.1-1.8 billion, was extracted into this field previously) rather than a real number for this filing.
+
 === 10-Q | Period ending 2026-06-27 | Processed 2026-08-06 ===
 [NUMERIC] marketable_equity_securities_fv: $6M → $1,220M (+20233.3%) — exceeds 20% threshold
 [NUMERIC] corporate_debt_securities_fv: $4,446M → $5,354M (+20.4%) — exceeds 20% threshold

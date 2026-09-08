@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-09-08 ===
+[NUMERIC] total_cash_equivalents_fv: $38,063M → $55,911M (+46.9%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $88,777M → $186,563M (+110.1%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $6,044M → $87,063M (+1340.5%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $21,763M → $26,157M (+20.2%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $505M → $317M (-37.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $89,444M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $37,468M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $51,976M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $1,610M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $890M, now missing
+[NUMERIC] equity_derivatives_notional: $30,000M → $20,000M (-33.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $890M → $1,958M (+120.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $720M → $-256M (-135.6%) — exceeds 20% threshold
+[LLM_FLAG] total_marketable_securities_fv rose from prior 88,777 to 186,563 (+110%) and marketable_equity_securities_fv rose from prior 6,044 to 87,063 (+1,341%). The filing text explains this directly: footnote (1) states the marketable equity securities line 'Includes $80.0 billion of Space Exploration Technologies Corp. (SpaceX) shares subject to short-term restrictions on the ability to sell' -- a large, real, disclosed valuation/classification event, not an extraction error.
+[LLM_FLAG] total_cash_equivalents_fv rose from prior 38,063 to 55,911 (+46.9%), just under the 50% flag threshold; the comparative column shown here indicates the increase is driven mainly by the Level 2 'Government bonds' cash-equivalent line (602 at Dec 31, 2025 vs 24,770 at Jun 30, 2026). Noting the driver though no flag is strictly required.
+[LLM_FLAG] total_derivative_liability rose from prior 890 to 1,958 (+120%), and net_derivative_position flipped from prior +720 to -256. The text's component breakdown explains most of the increase: Credit derivatives liability rose $69M->$815M and Equity derivatives liability $0->$457M (credit derivatives are described as 'the maximum potential exposure regarding future payments in the event of specified default scenarios'; equity derivatives are 'contingent upon the achievement of specified operational and financial milestones through 2030') -- these are contingent, milestone/default-linked fair values disclosed in the note, not an apparent extraction error, but the swing is large enough to flag for editorial attention.
+[LLM_FLAG] equity_derivatives_notional fell from prior 30,000 to 20,000 (-33%), within normal range.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] total_marketable_securities_fv: $88,777M → $186,563M (+110.1%) — exceeds 20% threshold
 [NUMERIC] marketable_equity_securities_fv: $6,044M → $87,063M (+1340.5%) — exceeds 20% threshold

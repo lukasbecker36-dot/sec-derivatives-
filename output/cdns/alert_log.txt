@@ -1,3 +1,26 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-09-08 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,133M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $1,052M, now missing
+[NEW_FIELD] net_derivative_position: appeared for first time ($-17M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-3M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-14M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $1,052M, now missing
+[DISAPPEARED_FIELD] fx_forward_exchange_rates: was $-3M, now missing
+[NUMERIC] fx_forward_fair_value: $-12M → $-17M (-45.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_usd_decrease: appeared for first time ($6M)
+[NEW_FIELD] fx_sensitivity_usd_increase: appeared for first time ($0M)
+[NEW_FIELD] debt_securities_fair_value: appeared for first time ($80M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-3M)
+[NEW_FIELD] credit_facility_rate_sensitivity: appeared for first time ($4M)
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (total_derivative_asset, fx_sensitivity_10pct, equity_sensitivity_10pct, fx_forward_exchange_rates)
+[LLM_FLAG] prior_values.total_derivative_asset = 1051.5 is far outside the plausible range implied by this filing's actual FX-forward fair values (-$17.4M at March 31, 2026; -$26.0M at December 31, 2025) — roughly a 60x magnitude mismatch. It exactly matches the prior 'equity_sensitivity_10pct' value recorded in the companion market_risk file, strongly suggesting the two fields were swapped or confused in an earlier extraction run (likely the equity-investment portfolio balance landing in a derivative-asset field). No number from that stale field is reused here — total_derivative_asset/total_derivative_liability both return not_found since this excerpt gives only a single already-netted fair value for the whole FX-forward book, not separate gross asset/liability totals. Flagging for the data-integrity audit.
+[LLM_FLAG] prior_values.equity_derivatives_notional = 'Yes' is a non-numeric string that appears to belong to the has_derivatives field rather than a notional amount — likely another misaligned-field artifact from the same prior run.
+[LLM_FLAG] fx_derivatives_notional ($1,133.0M) fell sharply from the $3.3 billion aggregate principal amount this same filing reports as of December 31, 2025 — a real, filing-stated ~66% reduction in FX forward notional quarter-over-quarter, consistent with the much smaller sensitivity figures reported for March 31, 2026 vs. December 31, 2025 (see market_risk section).
+[LLM_FLAG] prior_values.interest_rate_sensitivity and prior_values.credit_facility_rate_sensitivity are both stored as per-currency dictionaries (e.g. japanese_yen: 290.5 / 157.7) that look like FX-forward notional amounts and contract rates, not interest-rate sensitivity figures — almost certainly misaligned data from a prior extraction run (values that belong under fx_forward_notional_amounts/fx_forward_exchange_rates were attached to these field names instead). Current extraction instead returns single dollar-value sensitivities (-$3.3M and $4.4M) that match each field's actual definition.
+[LLM_FLAG] prior_values.equity_sensitivity_10pct = 1051.5 also appears anomalous — it matches the companion derivatives_note file's stale total_derivative_asset value exactly (see that file's flags), consistent with a cross-field mixup in a prior run. Current extraction returns equity_sensitivity_10pct as not_found since no equity-specific sensitivity percentage is disclosed in this excerpt.
+[LLM_FLAG] fx_sensitivity_10pct returned not_found because the filing presents two directional scenarios (10% USD decrease -> +$5.8M; 10% USD increase -> +$0.2M) without labeling either as the 'adverse' case; both are captured individually in fx_sensitivity_usd_decrease/fx_sensitivity_usd_increase rather than guessing which one belongs in the single generic field.
+[LLM_FLAG] fx_forwards_outstanding is left not_found per the schema's own instruction ('Use only if derivatives_note fields above are empty') since the companion derivatives_note extraction already captured fx_derivatives_notional = $1,133.0M from the same underlying table.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,133M)
 [DISAPPEARED_FIELD] total_derivative_asset: was $3,258M, now missing

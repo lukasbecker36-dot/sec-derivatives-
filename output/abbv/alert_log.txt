@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-09-08 ===
+[NUMERIC] fx_derivatives_notional: $19,735M → $13,000M (-34.1%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $10,435M → $3,800M (-63.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $155M → $279M (+80.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-183M → $-5M (+97.3%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $24M → $68M (+183.3%) — exceeds 20% threshold
+[LLM_FLAG] fx_designated_notional fell from 10,435 (prior) to 3,800 (-63.6%). The current figure is unambiguous in the text ($3.8B designated as cash flow hedges). A separate category -- FX forwards designated as NET INVESTMENT hedges (notional in EUR 6.7B, SEK 1.4B, CAD 0.8B, CHF 80M, not USD) -- is disclosed nearby but is explicitly a different hedge type and was correctly excluded here per the schema's 'cash flow hedges' wording. The prior_value of 10,435 may have incorrectly included net-investment-hedge FX notional (converted to USD) in the cash-flow-designated bucket; recommend reviewing the prior period's extraction.
+[LLM_FLAG] fx_derivatives_notional fell from 19,735 (prior) to 13,000 (-34.1%), consistent with (and driven by) the fx_designated_notional discrepancy flagged above.
+[LLM_FLAG] total_derivative_asset rose from 155 (prior) to 279 (+80%). Plausible given the OCI table in this same filing shows a $266 million six-month pre-tax gain on FX net-investment-hedge derivatives, and new net-investment-hedge asset positions ($66M + $7M) that were zero at Dec 31, 2025.
+[LLM_FLAG] net_derivative_position moved from -183 (prior) to -5 (current), a >50% change, driven by the asset increase noted above outpacing a smaller decline in total liabilities (338 -> 284).
+[LLM_FLAG] expected_12mo_reclass_from_aoci rose from 24 (prior) to 68 (+183%). Current figure is the sum of two explicitly stated components ($45M FX cash flow hedges + $23M other/interest-rate cash flow hedges); prior_value (24) may have only captured one component or a different period.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] fx_derivatives_notional: $19,735M → $13,000M (-34.1%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $10,435M → $3,800M (-63.6%) — exceeds 20% threshold
