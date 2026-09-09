@@ -139,6 +139,43 @@ qualitative:
       - 'new.*hedging.*program'
       - 'commenced.*hedg'
       - 'initiated.*hedg'
+    # A single, tightly-curated pool of the signals a markets reporter
+    # actually leads a story with: a new programme launched, a programme
+    # scaled up, a programme wound down, a novation, an M&A-linked
+    # deal-contingent trade. The digest routine reads notes_categories
+    # and leads the cross-cutting section with anything under this name,
+    # so keep it high-signal — a keyword that fires on routine language
+    # buries the real news.
+    Newsroom signals:
+      # New programme initiation
+      - 'commenc.*hedg'
+      - 'initiat.*hedg'
+      - 'began.*hedg'
+      - 'new.*hedging.*program'
+      - 'newly.*designat'
+      - 'for the first time.*(?:designat|hedg|entered)'
+      - 'first.*net investment hedg'
+      - 'first.*cash flow hedg'
+      # Programme expansion
+      - 'entered into.*additional'
+      - 'increased.*notional'
+      - 'expand.*hedg.*program'
+      # Termination / unwind
+      - 'terminat.*(?:hedg|swap|forward|program)'
+      - 'unwound.*(?:swap|hedg|forward)'
+      - 'early.*settle.*(?:swap|hedg)'
+      - 'closed out'
+      # M&A / deal-contingent
+      - deal.contingent
+      - 'contingent forward'
+      - 'acquisition.*hedg'
+      - 'merger.*hedg'
+      - 'pending.*acquisition.*hedg'
+      # Counterparty / clearing / documentation
+      - novation
+      - 'novated'
+      - 'amended.*ISDA'
+      - 'amended.*master.*agreement'
 
 alert_thresholds:
   fx_designated_notional: 0.15

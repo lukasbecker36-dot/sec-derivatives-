@@ -106,6 +106,34 @@ qualitative:
       - 'new.*hedging.*program'
       - 'commenced.*hedg'
       - 'initiated.*hedg'
+    # High-signal editorial pool — see comment in
+    # active_fx_commodity_hedger.yaml. The digest routine leads its
+    # cross-cutting section with entries under this name.
+    Newsroom signals:
+      - 'commenc.*hedg'
+      - 'initiat.*hedg'
+      - 'began.*hedg'
+      - 'new.*hedging.*program'
+      - 'newly.*designat'
+      - 'for the first time.*(?:designat|hedg|entered)'
+      - 'first.*net investment hedg'
+      - 'first.*cash flow hedg'
+      - 'entered into.*additional'
+      - 'increased.*notional'
+      - 'expand.*hedg.*program'
+      - 'terminat.*(?:hedg|swap|forward|program)'
+      - 'unwound.*(?:swap|hedg|forward)'
+      - 'early.*settle.*(?:swap|hedg)'
+      - 'closed out'
+      - deal.contingent
+      - 'contingent forward'
+      - 'acquisition.*hedg'
+      - 'merger.*hedg'
+      - 'pending.*acquisition.*hedg'
+      - novation
+      - 'novated'
+      - 'amended.*ISDA'
+      - 'amended.*master.*agreement'
 
 dashboard_mapping:
   total_derivatives_notional: "ir_swap_notional + fx_forward_notional"
