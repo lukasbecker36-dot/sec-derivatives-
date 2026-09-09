@@ -138,6 +138,13 @@ def _held_review_branches(since_iso: str) -> list[dict]:
     master. The daily digest surfaces them so the reader knows "the
     pipeline is not quiet — N filings are held for review" rather than
     seeing an ambiguous silent day.
+
+    Each returned entry carries a `content_preview`: up to 10 tickers on
+    the branch whose tracking.csv has populated rows master lacks, with a
+    handful of key derivative values pulled out so the reader can decide
+    whether the held content is worth chasing without checking out the
+    branch. Without this, the daily email says only "N filings held" and
+    the reader has no editorial signal to act on.
     """
     subprocess.run(['git', 'fetch', '--prune', 'origin'],
                    capture_output=True, text=True, cwd=REPO)
@@ -164,13 +171,75 @@ def _held_review_branches(since_iso: str) -> list[dict]:
             dt = dt.replace(tzinfo=timezone.utc)
         if dt < since_dt:
             continue
+        branch = ref.replace('origin/', '')
         out.append({
-            'branch': ref.replace('origin/', ''),
+            'branch': branch,
             'committed_at': dt_str,
             'commit_subject': subject.strip(),
+            'content_preview': _branch_content_preview(ref),
         })
     out.sort(key=lambda x: x['committed_at'])
     return out
+
+
+# Notable fields to include in the review-branch preview, ordered by
+# editorial priority. First N with populated values per row are surfaced.
+_PREVIEW_FIELDS = (
+    'fx_derivatives_notional', 'ir_swap_notional',
+    'commodity_derivatives_notional', 'equity_derivatives_notional',
+    'total_derivative_asset', 'total_derivative_liability',
+    'net_derivative_position', 'fx_designated_notional',
+    'fx_not_designated_notional', 'cash_flow_hedge_aoci',
+)
+
+
+def _branch_content_preview(ref: str, max_tickers: int = 10) -> list[dict]:
+    """For a review branch, list the tickers whose tracking.csv has
+    populated rows master doesn't, with a snapshot of the top derivative
+    values so the reader can eyeball whether the held content is worth
+    triaging.
+    """
+    r = subprocess.run(
+        ['git', 'diff', '--name-only', 'origin/master', ref, '--', 'output/'],
+        capture_output=True, text=True, cwd=REPO,
+    )
+    if r.returncode:
+        return []
+    preview = []
+    for path in r.stdout.splitlines():
+        if not path.endswith('/tracking.csv'):
+            continue
+        parts = path.split('/')
+        if len(parts) < 3:
+            continue
+        ticker = parts[1].upper()
+        branch_rows = _tracking_at(ref, path)
+        master_rows = _tracking_at('origin/master', path)
+        master_keys = {(r.get('period_end_date', ''), r.get('form_type', ''))
+                       for r in master_rows}
+        for row in branch_rows:
+            key = (row.get('period_end_date', ''), row.get('form_type', ''))
+            if not key[0] or key in master_keys:
+                continue
+            populated = {
+                f: flat(row.get(f)).strip()
+                for f in _PREVIEW_FIELDS
+                if flat(row.get(f)).strip()
+            }
+            if not populated:
+                continue
+            preview.append({
+                'ticker': ticker,
+                'period_end_date': key[0],
+                'form_type': key[1],
+                'values': populated,
+            })
+            break  # one entry per ticker keeps the preview scannable
+        if len(preview) >= max_tickers:
+            break
+    return preview
+
+
 
 
 def _notes_categories_for_period(ticker: str, period: str,
@@ -268,8 +337,19 @@ def build_manifest(since_iso: str) -> dict:
             if not is_new and populated_before:
                 continue
             if not populated_now:
-                # Blank current row that survived retries — surface as an
-                # extraction gap so the digest can call it out.
+                # Skip persistent blanks — a row that was blank in baseline
+                # AND is still blank now is not a daily-digest event.
+                # Historically the digest listed every blank row in the
+                # corpus, so a reader saw 186 tickers of noise instead of
+                # the handful of actual failures introduced today.
+                #
+                # Surface only the two categories that actually count as
+                # "news the reader needs to know":
+                #   - is_new  → a fresh row landed today and it's blank
+                #   - populated_before && !populated_now → REGRESSION
+                #     (a previously-populated row went blank on retry)
+                if not (is_new or populated_before):
+                    continue
                 attempts_raw = row.get('extraction_attempts', '') or '0'
                 try:
                     attempts = int(str(attempts_raw).strip())
@@ -280,6 +360,7 @@ def build_manifest(since_iso: str) -> dict:
                     'period_end_date': key[0],
                     'form_type': key[1],
                     'attempts': attempts,
+                    'is_regression': bool(populated_before),
                 })
                 continue
             # Prior row for delta computation is the one immediately before

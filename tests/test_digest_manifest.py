@@ -148,3 +148,53 @@ class TestHeldReviewBranches:
         """Passing a far-future since should return zero entries."""
         from src.digest_manifest import _held_review_branches
         assert _held_review_branches('2099-01-01T00:00:00+00:00') == []
+
+    def test_entries_carry_content_preview(self):
+        """Each held branch entry has a content_preview list. Without it
+        the daily digest sees only 'N filings held' with no editorial
+        signal — the reader can't tell if the branch is a real story or
+        a mechanical retry."""
+        from src.digest_manifest import _held_review_branches
+        result = _held_review_branches('1970-01-01T00:00:00+00:00')
+        for entry in result:
+            assert 'content_preview' in entry
+            assert isinstance(entry['content_preview'], list)
+            for item in entry['content_preview']:
+                assert 'ticker' in item
+                assert 'period_end_date' in item
+                assert 'values' in item
+                assert isinstance(item['values'], dict)
+
+
+class TestPreviewFields:
+    def test_preview_field_ordering(self):
+        """Fields are ordered by editorial priority — the top of the list
+        is what the reader most wants to see first. FX and IR notionals
+        lead because they're the newsroom's staple numbers."""
+        from src.digest_manifest import _PREVIEW_FIELDS
+        assert _PREVIEW_FIELDS[0] == 'fx_derivatives_notional'
+        assert _PREVIEW_FIELDS[1] == 'ir_swap_notional'
+        assert 'commodity_derivatives_notional' in _PREVIEW_FIELDS
+
+
+class TestExtractionGapsHaveIsRegression:
+    """The extraction_gaps entries now carry an `is_regression` flag so
+    the routine can lead the digest with genuine failures rather than
+    burying them under the corpus-wide historical blank list. Without
+    this flag the daily email showed 186 rows of noise every day."""
+
+    def test_gap_entry_shape_documented(self):
+        """Snapshot the contract: every extraction_gap row must expose
+        ticker, period_end_date, form_type, attempts, and is_regression.
+        A missing is_regression would silently drop every gap to
+        'not-a-regression', and the routine's lead paragraph would go
+        empty on the days that matter most."""
+        # Contract-only test — a real build_manifest run requires a git
+        # repo with output/ history, covered by the end-to-end sanity
+        # test elsewhere. Here we assert the emitting code still contains
+        # the field, so a future refactor doesn't drop it silently.
+        import inspect
+        from src import digest_manifest
+        src = inspect.getsource(digest_manifest.build_manifest)
+        assert "'is_regression'" in src
+        assert 'populated_before' in src
