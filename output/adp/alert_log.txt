@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-09-09 ===
+[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $4M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_swap_notional, cash_flow_hedge_aoci)
+[LLM_FLAG] market_risk_reference changed from prior 'Item 7 - Management's Discussion and Analysis of Financial Condition and Results of Operations' to 'Item 2 - Management's Discussion and Analysis of Financial Condition and Results of Operations' — a categorical (non-numeric) change worth a sanity check; may reflect a 10-Q (Item 2) vs 10-K (Item 7) cross-reference convention rather than an error.
+
 === 10-K | Period ending 2026-06-30 | Processed 2026-08-06 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
 [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($4M)

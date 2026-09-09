@@ -1,3 +1,33 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-09-09 ===
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($21,500M)
+[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($13,600M)
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($4,200M)
+[LLM_FLAG] fi_ir_swap_notional rose from $1,200M to $4,200M (+250%); filing attributes this to additional interest rate hedge contracts tied to fixed-rate debt issued for the Exact Sciences acquisition, but verify not a wrong-column pick.
+[LLM_FLAG] ir_swap_notional rose from $1,200M to $4,200M (+250%); filing attributes this to additional interest rate hedge contracts tied to fixed-rate debt issued for the Exact Sciences acquisition, but verify not a wrong-column pick.
+[LLM_FLAG] total_derivative_asset rose from $55M to $242M (+340%), verify against the filing's fair-value table.
+[LLM_FLAG] net_derivative_position moved from -$283M to -$68M (magnitude change of ~76%), consistent with the asset increase above; verify.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-09-09 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $20,500M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $13,100M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $1,200M, now missing
+[NUMERIC] ir_swap_notional: $1,200M → $4,200M (+250.0%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_asset: appeared for first time ($240M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($299M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-59M)
+[DISAPPEARED_FIELD] marketable_equity_value: was $343M, now missing
+[VALIDATION] Likely extraction failure: 4/9 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, marketable_equity_value)
+[LLM_FLAG] ir_swap_notional rose from $1,200M to $4,200M (+250%); filing attributes this to additional interest rate hedge contracts tied to fixed-rate debt issued for the Exact Sciences acquisition, but verify not a wrong-column pick.
+[LLM_FLAG] total_derivative_asset rose from $55M to $240M (+336%), verify against the filing's fair-value table.
+[LLM_FLAG] net_derivative_position moved from -$283M to -$59M (magnitude change of ~79%), consistent with the asset increase above; verify.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-09-09 ===
+[DISAPPEARED_FIELD] total_derivative_asset: was $55M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $338M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-283M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $44M, now missing
+[VALIDATION] Likely extraction failure: 4/13 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, fx_transaction_gain_loss)
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] fi_fx_not_designated_notional: $7,600M → $13,600M (+78.9%) — exceeds 20% threshold
 [NEW_FIELD] fi_ir_swap_notional: appeared for first time ($4,200M)

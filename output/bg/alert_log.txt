@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-09-09 ===
+[NEW_FIELD] total_derivative_asset: appeared for first time ($2,183M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $1,904M, now missing
+[DISAPPEARED_FIELD] derivative_fair_value_gains_losses: was $102M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fx_transaction_gain_loss, derivative_fair_value_gains_losses)
+[LLM_FLAG] total_derivative_asset ($2,183M) was pulled from the Note 6 'Other Current Assets' line item 'Unrealized gains on derivative contracts, at fair value', not from the actual Note 12 Derivative Instruments table (the section_text provided does not contain Note 12's content, only a cross-reference to it). This figure likely reflects only the current-asset unrealized-gain portion and may not equal the true 'total derivative asset' disclosed in Note 12 -- treat as a lower-bound proxy, not a confirmed total. It is also ~69% higher than the 12/31/2024 comparative ($1,286M) shown in the same line.
+[LLM_FLAG] prior_values listed equity_derivatives_notional as the string 'Yes', which is not a valid notional figure -- likely a misaligned prior extraction (possibly has_derivatives bleeding into this field). No equity derivatives notional is disclosed in this section_text, so returned null.
+[LLM_FLAG] ir_sensitivity_100bp: no fair-value-basis dollar figure for a 100bp move was disclosed. Text gives only a qualitative statement ('less than 1% change in the fair value of our debt and interest rate swaps') for fixed-rate debt/swaps, and a separate $93 million interest-expense (income-statement, not fair-value) impact for variable-rate debt from a 100bp reference-rate change. Neither cleanly matches the requested 'change in fair value' metric, so left as not_found rather than guessing.
+[LLM_FLAG] fx_transaction_gain_loss: the only FX gain/loss figure in this section ($56M gain for 9M-2025 / $101M loss for FY2024) relates specifically to permanently-invested intercompany loans recorded in OCI, not a general transaction gain/loss line -- returned null rather than risk a mismatched figure against the prior value of $1,904M.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
 [NEW_FIELD] total_derivative_asset: appeared for first time ($1,904M)
 [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $2,178M, now missing

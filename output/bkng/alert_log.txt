@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-09-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($15,400M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($15,400M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $14,300M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $14,300M, now missing
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,200M)
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-55M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($1,200M)
+[DISAPPEARED_FIELD] fx_impact_on_bookings: was $1,200M, now missing
+[NEW_FIELD] equity_price_sensitivity: appeared for first time ($-55M)
+[DISAPPEARED_FIELD] derivative_policies: was $45M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, fixed_rate_notes_billion, fx_impact_on_bookings...)
+[LLM_FLAG] prior total_derivative_asset of $14,300M is far above the expected <$2B magnitude for a non-financial issuer and is not corroborated anywhere in this section's text (no derivative fair-value table appears here) — likely a stale/miskeyed prior rather than a real figure; current value returned as null.
+[LLM_FLAG] prior equity_derivatives_notional value was the string 'Yes' (not a number), inconsistent with this being a notional field — cannot compute a percentage change; no equity derivative notional is disclosed in this section so current value is null.
+[LLM_FLAG] prior fx_impact_on_bookings value (1200.0) appears to be a misextracted number (matches the unrelated $1.2B IR-sensitivity figure) for what should be a qualitative growth-rate description; this section only gives percentages, not a dollar figure, so a descriptive string is returned instead.
+[LLM_FLAG] prior derivative_policies value (45.0) is a bare number for what should be a qualitative/policy field; this section only cross-references Notes 9/15 and the FY2024 10-K Item 7A for policy detail with no specifics stated here, so current value is null.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($14,300M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

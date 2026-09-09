@@ -1,3 +1,26 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-09-09 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,133M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $1,052M, now missing
+[NEW_FIELD] net_derivative_position: appeared for first time ($-17M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($1,133M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
+[NUMERIC] fx_sensitivity_10pct: $-14M → $6M (+142.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $1,052M, now missing
+[DISAPPEARED_FIELD] fx_forward_exchange_rates: was $-3M, now missing
+[NUMERIC] fx_forward_fair_value: $-12M → $-17M (-45.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_usd_decrease: appeared for first time ($6M)
+[NEW_FIELD] fx_sensitivity_usd_increase: appeared for first time ($0M)
+[NEW_FIELD] debt_securities_fair_value: appeared for first time ($80M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($3M)
+[NEW_FIELD] credit_facility_rate_sensitivity: appeared for first time ($4M)
+[VALIDATION] Likely extraction failure: 3/5 previously-populated fields are now null (total_derivative_asset, equity_sensitivity_10pct, fx_forward_exchange_rates)
+[LLM_FLAG] total_derivative_asset / total_derivative_liability: only a single net 'Estimated fair value' of $(17.4) million is disclosed for the FX forward book; there is no gross asset/liability split in this section, so both fields are left null rather than assigning the net figure to one side.
+[LLM_FLAG] prior_values lists total_derivative_asset = 1051.5, which cannot be reconciled with this filing's disclosure (net FX forward fair value of only $(17.4)M) and matches the number separately listed as 'equity_sensitivity_10pct' in the companion market_risk request for the same period -- this looks like a misaligned/duplicated figure from a prior extraction, not a real total_derivative_asset value.
+[LLM_FLAG] prior_values lists equity_derivatives_notional = 'Yes' (non-numeric), inconsistent with a notional-dollar field; likely a prior misextraction. No equity derivatives are disclosed in this text (only a marketable/non-marketable equity investment portfolio, which is not a derivative).
+[LLM_FLAG] fx_sensitivity_10pct fell from a prior value of -13.8 to 5.8 and switched sign. The filing text this quarter states BOTH a 10% USD decrease (+$5.8M) and a 10% USD increase (+$0.2M) result in fair-value increases (an unusual, non-symmetric outcome per the text as written) -- verify sign/scenario convention against the prior extraction rather than assuming an error.
+[LLM_FLAG] interest_rate_sensitivity and credit_facility_rate_sensitivity: prior_values for both are per-currency dictionaries (e.g. {'japanese_yen': 290.5, ...}), which do not match these fields' description (a single aggregate dollar sensitivity). Those per-currency dicts look like they were extracted into the wrong fields previously (possibly belonging under fx_forward_notional_amounts-style breakdowns); the current extraction uses the single explicit dollar figures stated in the text ($3.3M and $4.4M respectively).
+[LLM_FLAG] equity_sensitivity_10pct: prior value of 1051.5 cannot be corroborated -- this section states only that Cadence holds an equity investment portfolio, with no dollar value or sensitivity figure given.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,133M)
 [DISAPPEARED_FIELD] total_derivative_asset: was $3,258M, now missing
