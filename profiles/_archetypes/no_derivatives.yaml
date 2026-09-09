@@ -55,5 +55,27 @@ qualitative:
       - 'acquisition.*hedg'
       - 'merger.*hedg'
       - 'transaction.*hedg'
+    # For a no-derivatives filer, ANY of these is the biggest news the
+    # pipeline can surface — a non-hedger becoming one. Kept narrower
+    # than the active-hedger version because there's no existing
+    # programme to expand or terminate; the newsworthy events here are
+    # first-use signals.
+    Newsroom signals:
+      - 'commenc.*hedg'
+      - 'initiat.*hedg'
+      - 'began.*hedg'
+      - 'began.*using.*derivative'
+      - 'new.*hedging.*program'
+      - 'newly.*designat'
+      - 'for the first time.*(?:designat|hedg|entered)'
+      - 'first.*net investment hedg'
+      - 'first.*cash flow hedg'
+      - 'entered into.*derivative'
+      - 'entered into.*swap'
+      - 'entered into.*forward'
+      - deal.contingent
+      - 'contingent forward'
+      - 'acquisition.*hedg'
+      - 'merger.*hedg'
 
 dashboard_mapping: {}
