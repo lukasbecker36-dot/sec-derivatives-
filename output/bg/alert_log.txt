@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-09-10 ===
+[NEW_FIELD] total_derivative_asset: appeared for first time ($2,183M)
+[NUMERIC] fx_transaction_gain_loss: $1,904M → $56M (-97.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] derivative_fair_value_gains_losses: was $102M, now missing
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (derivative_fair_value_gains_losses)
+[LLM_FLAG] prior_values.equity_derivatives_notional = 'Yes' is not a numeric notional figure and appears to be a data-quality defect from a prior extraction (a Yes/No answer landing in a notional field); it is not comparable to a current value and current equity_derivatives_notional is returned as null since not found in this text.
+[LLM_FLAG] This section, labeled 'derivatives_note', does not actually contain Note 12 - Derivative Instruments And Hedging Activities (the note holding notional amounts, hedge designation, and AOCI disclosures); it only cross-references that note twice. Most schema fields are therefore null rather than extracted, and total_derivative_asset is a lower-confidence proxy taken from the 'Other current assets' breakdown (Note 6) rather than a Note 12 summary table, which may not represent the full balance-sheet derivative asset total (e.g., it may exclude any non-current derivative assets or be presented gross rather than net).
+[LLM_FLAG] fx_transaction_gain_loss fell from $1,904M to $56M (-97%), verify against filing. Note the scope differs: the $56M figure found in this section is specifically the OCI foreign-exchange gain on permanently-invested intercompany loans (nine months ended Sept 30, 2025), not a comprehensive net FX transaction gain/loss; the $1,904M prior value's derivation is unclear from this section and may itself reflect a different/broader measure or a prior extraction defect.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
 [NEW_FIELD] total_derivative_asset: appeared for first time ($1,904M)
 [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $2,178M, now missing

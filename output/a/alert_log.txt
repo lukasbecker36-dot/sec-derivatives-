@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-07-31 | Processed 2026-09-10 ===
+[NUMERIC] fx_derivatives_notional: $665M → $832M (+25.1%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $549M → $692M (+26.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $116M → $140M (+20.7%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] net_derivative_position: $2M → $0M
+[NUMERIC] expected_12mo_reclass_from_aoci: $-1M → $-3M (-200.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $3M, now missing
+[LLM_FLAG] net_derivative_position moved from $2M to $0M (asset and liability both now $9M) — a -100% change; dollar magnitude is small but flagged per the >50% threshold rule.
+[LLM_FLAG] expected_12mo_reclass_from_aoci moved from -$1M to -$3M (+200%); verify against filing, though both figures are small in absolute terms.
+
 === 10-Q | Period ending 2026-04-30 | Processed 2026-06-11 ===
 [HISTORICAL] [NUMERIC] total_derivative_liability: $14M → $9M (-35.7%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] net_derivative_position: $-3M → $2M (+166.7%) — exceeds 20% threshold

@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-09-10 ===
+[NUMERIC] fx_derivatives_notional: $19,735M → $13,000M (-34.1%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $10,435M → $3,800M (-63.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $155M → $279M (+80.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-183M → $-5M (+97.3%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $24M → $68M (+183.3%) — exceeds 20% threshold
+[LLM_FLAG] fx_designated_notional fell from $10435M to $3800M (-63.6%), verify against filing -- this schema field is strictly 'FX forwards designated as cash flow hedges,' and the filing text separately discloses a much larger net-investment-hedge FX forward book (EUR 6.7B, SEK 1.4B, CAD 800M, CHF 80M) plus EUR 3.1B of net-investment-hedge notes that are not FX forwards; the prior period's figure may have combined cash-flow-hedge and net-investment-hedge FX forwards into one bucket, which this extraction does not do
+[LLM_FLAG] fx_derivatives_notional fell from $19735M to $13000M (-34.1%) -- within tolerance but driven by the same definitional issue as above (schema defines this field as designated+not-designated cash-flow/non-designated buckets only, excluding the sizeable net-investment-hedge FX forward book)
+[LLM_FLAG] total_derivative_asset rose from $155M to $279M (+80%), verify against filing
+[LLM_FLAG] net_derivative_position moved from -$183M to -$5M (a ~97% reduction in magnitude, essentially balanced), verify against filing
+[LLM_FLAG] expected_12mo_reclass_from_aoci rose from $24M to $68M (+183%), verify against filing
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] fx_derivatives_notional: $19,735M → $13,000M (-34.1%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $10,435M → $3,800M (-63.6%) — exceeds 20% threshold
