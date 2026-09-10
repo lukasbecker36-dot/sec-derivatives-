@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-09-10 ===
+[NUMERIC] natural_gas_derivatives_fair_value: $122M → $-6M (-104.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $124M, now missing
+[NUMERIC] total_derivative_liability: $122M → $6M (-95.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-122M → $-6M (+95.1%) — exceeds 20% threshold
+[NUMERIC] fx_derivatives_notional: $108M → $72M (-33.3%) — exceeds 20% threshold
+[NUMERIC] fx_forwards_outstanding: $108M → $72M (-33.3%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $6M → $-9M (-250.0%) — exceeds 20% threshold
+[LLM_FLAG] natural_gas_derivatives_fair_value / total_derivative_liability fell from $122M (prior_values) to $6M this quarter, a roughly -95% change (net_derivative_position moved from -$122M to -$6M) — verify against the full Note 4 derivatives table in the filing; this section text only excerpts the Item 3 commodity-risk summary and does not reproduce the complete derivatives fair-value table.
+[LLM_FLAG] Sign-convention note: prior_values recorded natural_gas_derivatives_fair_value as +122 despite the position being described as a liability in both periods; this extraction follows the schema's stated convention (positive = net asset, negative = net liability) and reports -6, which is not directly comparable in sign to the prior figure — treat the >50% flag above as a magnitude comparison only.
+[LLM_FLAG] fx_sensitivity_10pct: the filing gives two directional figures — a $4M gain from a 10% GBP strengthening and a $9M loss from a 10% GBP weakening — versus prior_values of $6.0M (single figure, direction unspecified). We report -9 (the 'weakening'/loss scenario) as the adverse case; this is a sign/scenario change from the prior single positive figure and should be checked against how the pipeline defines 'adverse move' for this field historically.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fi_total_derivative_liability: was $124M, now missing
 [DISAPPEARED_FIELD] fx_derivatives_notional: was $108M, now missing

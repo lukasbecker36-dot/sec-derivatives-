@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-09-10 ===
+[NUMERIC] total_cash_equivalents_fv: $38,063M → $55,911M (+46.9%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $88,777M → $186,563M (+110.1%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $6,044M → $87,063M (+1340.5%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $21,763M → $26,157M (+20.2%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $505M → $317M (-37.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $89,444M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $37,468M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $51,976M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $1,610M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $890M, now missing
+[NUMERIC] equity_derivatives_notional: $30,000M → $20,000M (-33.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $890M → $1,958M (+120.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $720M → $-256M (-135.6%) — exceeds 20% threshold
+[LLM_FLAG] total_marketable_securities_fv rose from $88,777M (prior) to $186,563M (+110%). Filing footnote (1) attributes this mainly to reclassifying $80.0 billion of Space Exploration Technologies Corp. (SpaceX) shares (short-term restricted) into Level 1 marketable equity securities this quarter -- a real, disclosed event, not an extraction error.
+[LLM_FLAG] marketable_equity_securities_fv rose from $6,044M (prior) to $87,063M (+1,341%) for the same SpaceX-reclassification reason. An additional $14,126M of SpaceX shares subject to longer-term restrictions is reported separately under 'Other non-current assets' (footnote 2) and is NOT included in the $87,063M figure above.
+[LLM_FLAG] fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset, and fi_total_derivative_liability all returned null even though prior-period values existed for several of them (e.g. fi_fx_derivatives_notional=89,444) -- this 'financial_instruments' section (fair value measurements of cash/securities) does not contain the derivative notional/fair-value tables this period; that data is covered in the separate 'derivatives_note' section of this filing.
+[LLM_FLAG] total_derivative_liability rose from $890M (prior) to $1,958M (+120%). Filing text shows this is driven by a new $457M equity-derivative liability (paired with a newly disclosed $20,000M non-designated equity derivative notional) and a jump in credit-derivative liability to $815M from $69M -- both figures stated directly in the fair-value table, not an apparent extraction error.
+[LLM_FLAG] net_derivative_position swung from a net asset of $720M (prior) to a net liability of $(256)M this period, consistent with the total_derivative_liability increase noted above.
+[LLM_FLAG] fx_derivatives_notional and fx_designated_notional are approximate: the notional table groups designated hedges under a combined 'Foreign exchange and other derivatives' line ($27,493M cash flow + $11,520M net investment = $39,013M) that is not further split between pure-FX and other instrument types within the designated category; only the non-designated $54,387M line is unambiguously FX-only.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] total_marketable_securities_fv: $88,777M → $186,563M (+110.1%) — exceeds 20% threshold
 [NUMERIC] marketable_equity_securities_fv: $6,044M → $87,063M (+1340.5%) — exceeds 20% threshold

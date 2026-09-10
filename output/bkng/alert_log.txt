@@ -1,3 +1,25 @@
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-09-10 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($15,400M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($15,400M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $14,300M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $14,300M, now missing
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($0M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($0M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,200M)
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-55M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($1,200M)
+[DISAPPEARED_FIELD] fx_impact_on_bookings: was $1,200M, now missing
+[DISAPPEARED_FIELD] derivative_policies: was $45M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, fixed_rate_notes_billion, fx_impact_on_bookings...)
+[LLM_FLAG] prior_values.equity_derivatives_notional = 'Yes' is not numeric and is not comparable; appears to be a data-quality defect from a prior extraction. Current value returned as null (not found in this text).
+[LLM_FLAG] prior_values.total_derivative_asset = $14,300M is inconsistent with the magnitude of FX derivative activity disclosed in this filing (quarterly income-statement effects of the FX derivative program range from -$77M to +$54M, and notional -- not fair value -- tops out at $10B for FX purchases); $14.3B as a derivative *fair value* is implausible for a company of this profile and likely reflects a magnitude-class error in a prior extraction (e.g., a notional or unrelated balance-sheet total misfiled as a fair value). This section's text does not restate a derivative balance-sheet fair-value total, so total_derivative_asset/liability/net_derivative_position are returned as null rather than repeating the suspect prior figures.
+[LLM_FLAG] prior_values.fx_impact_on_bookings = 1200.0 matches this quarter's interest-rate sensitivity figure ($1.2 billion) rather than any gross-bookings FX metric -- likely a field-mapping/misaligned-row error in a prior extraction. Current extraction assigns 1200 to interest_rate_sensitivity/ir_sensitivity_100bp instead, and fx_impact_on_bookings is populated with the actual reported-vs-constant-currency bookings growth comparison from this filing.
+[LLM_FLAG] prior_values.fixed_rate_notes_billion = 0.0 looks incorrect: this filing's derivatives_note (Note 9) shows roughly $18.6B of outstanding debt, almost entirely fixed-coupon senior notes; a prior value of 0.0 is not plausible for this issuer. This section's text does not restate a fixed-vs-floating split, so null is returned rather than repeating the likely-wrong prior.
+[LLM_FLAG] prior_values.derivative_policies = 45.0 is a bare number for what should be a qualitative policy-description field -- likely a prior extraction defect. No comparable text is present in this section, so the field is returned as null.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($14,300M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

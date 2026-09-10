@@ -1,3 +1,26 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-09-10 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,133M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,133M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $1,052M, now missing
+[NEW_FIELD] net_derivative_position: appeared for first time ($-17M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($1,133M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-3M)
+[NUMERIC] fx_sensitivity_10pct: $-14M → $6M (+142.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $1,052M, now missing
+[DISAPPEARED_FIELD] fx_forward_exchange_rates: was $-3M, now missing
+[NUMERIC] fx_forward_fair_value: $-12M → $-17M (-45.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_usd_decrease: appeared for first time ($6M)
+[NEW_FIELD] fx_sensitivity_usd_increase: appeared for first time ($0M)
+[NEW_FIELD] debt_securities_fair_value: appeared for first time ($80M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-3M)
+[NEW_FIELD] credit_facility_rate_sensitivity: appeared for first time ($4M)
+[VALIDATION] Likely extraction failure: 3/5 previously-populated fields are now null (total_derivative_asset, equity_sensitivity_10pct, fx_forward_exchange_rates)
+[LLM_FLAG] prior_values.total_derivative_asset (1051.5) is inconsistent with this filing's disclosed net fair value of $(17.4)M for FX forwards -- this section discloses only a single net 'Estimated fair value' for the forward book, not a separate asset/liability breakdown, so the prior figure looks stale or cross-contaminated from an unrelated field rather than comparable; no percentage-swing could be computed against it.
+[LLM_FLAG] prior_values.equity_derivatives_notional stores the string 'Yes' rather than a notional dollar figure -- a data-quality issue in the prior extraction, unrelated to this period's result (no equity derivatives are disclosed in this section).
+[LLM_FLAG] prior_values.equity_sensitivity_10pct (1051.5) is implausible for a 10% equity-price sensitivity and numerically matches the unrelated 'total_derivative_asset' prior value from the companion derivatives_note request -- looks like cross-field corruption in an earlier extraction; this period's section discloses no equity sensitivity figure at all, so no comparison was made.
+[LLM_FLAG] prior_values.interest_rate_sensitivity and prior_values.credit_facility_rate_sensitivity both store per-currency dictionaries (resembling an FX notional/rate breakdown) rather than the single scalar dollar figures these fields describe -- these look like stale/misaligned data from a different field and were not used for comparison; this period's scalar values ($-3.3M and $4.4M) were read directly from the current filing text.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,133M)
 [DISAPPEARED_FIELD] total_derivative_asset: was $3,258M, now missing
