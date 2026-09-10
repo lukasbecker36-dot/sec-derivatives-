@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-09-10 ===
+[NUMERIC] total_cash_equivalents_fv: $3,401M → $4,188M (+23.1%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $1M → $2M (+100.0%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $1,220M → $6M (-99.5%) — exceeds 20% threshold
+[NUMERIC] fi_fx_not_designated_notional: $1,600M → $1,200M (-25.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $1,600M → $1,200M (-25.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] marketable_equity_value: was $1,200M, now missing
+[VALIDATION] Likely units mismatch: marketable_equity_securities_fv changed from 1,220 to 6 (0x)
+[LLM_FLAG] marketable_equity_securities_fv is $6M this quarter vs. prior_values of $1220M (-99.5%). Note the filing's own comparative column for Dec 27, 2025 shows this same line as blank/zero ("Marketable equity securities 6 — — 6 ... — — — —"), i.e. the filing itself implies the prior period value was ~$0, not $1220M. This suggests the $1220M figure in prior_values may itself be a corrupted/misattributed value rather than this quarter's $6M being wrong — flag for verification against the actual prior 10-K/10-Q filing rather than assuming this period's extraction is in error.
+[LLM_FLAG] gross_unrealized_gains_debt rose from $1M to $2M (+100%); dollar amount is immaterial but flagged per the >50% threshold rule.
+
 === 10-Q | Period ending 2026-06-27 | Processed 2026-08-06 ===
 [NUMERIC] marketable_equity_securities_fv: $6M → $1,220M (+20233.3%) — exceeds 20% threshold
 [NUMERIC] corporate_debt_securities_fv: $4,446M → $5,354M (+20.4%) — exceeds 20% threshold

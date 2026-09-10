@@ -1,3 +1,8 @@
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-09-10 ===
+[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $4M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (ir_swap_notional, cash_flow_hedge_aoci)
+
 === 10-K | Period ending 2026-06-30 | Processed 2026-08-06 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
 [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($4M)

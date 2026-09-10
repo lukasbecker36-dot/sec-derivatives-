@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-07-31 | Processed 2026-09-10 ===
+[NUMERIC] fx_derivatives_notional: $586M → $341M (-41.8%) — exceeds 20% threshold
+[NEW_FIELD] fx_designated_notional: appeared for first time ($131M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($13M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-13M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-4M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-4M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-45M, now missing
+[DISAPPEARED_FIELD] currency_derivatives_notional_current: was $586M, now missing
+[DISAPPEARED_FIELD] currency_derivatives_notional_prior: was $463M, now missing
+[DISAPPEARED_FIELD] hypothetical_fx_sensitivity: was $-45M, now missing
+[DISAPPEARED_FIELD] cash_equivalents_balance: was $308M, now missing
+[DISAPPEARED_FIELD] commercial_paper_balance: was $68M, now missing
+[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (fx_sensitivity_10pct, currency_derivatives_notional_current, currency_derivatives_notional_prior, hypothetical_fx_sensitivity, cash_equivalents_balance...)
+[VALIDATION] Reconciliation failure: fx_derivatives_notional=341 but fx_designated_notional=131 = 131 (diff 61.6%) — extraction likely read the wrong table
+[LLM_FLAG] This section_text begins and ends mid-sentence (starts '1 At April 30, 2026, includes £299 million...' and cuts off mid-table in Note 13); a fuller derivatives notional summary (e.g., total outstanding forward/swap notional across all currencies) likely appears earlier in Note 12 and is not captured here, so fx_derivatives_notional may understate the company's full FX derivative notional (prior value was $586M vs. $341M visible here, a -41.8% change that is under the 50% auto-flag threshold but plausibly reflects incomplete section capture rather than an actual decline.
+
 === 10-K | Period ending 2026-04-30 | Processed 2026-07-05 ===
 [HISTORICAL] [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $383M, now missing
 [HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $1M, now missing
