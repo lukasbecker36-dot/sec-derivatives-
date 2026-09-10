@@ -260,7 +260,7 @@ class TestCheckAgainstBaseline:
     def test_total_growth_fails(self):
         report = self._report({'empty_row': 190, 'reconciliation': 31})
         failures = check_against_baseline(report, self.BASE, [])
-        assert any('total defects rose' in f for f in failures)
+        assert any('total gating defects rose' in f for f in failures)
 
     def test_single_type_growth_fails(self):
         """A type worsening must fail even when the total does not grow."""
@@ -286,6 +286,53 @@ class TestCheckAgainstBaseline:
         failures = check_against_baseline(report, self.BASE,
                                          ['misaligned_row', 'stale_null'])
         assert failures == []
+
+
+class TestAdvisoryDefects:
+    """implausible_swing is a warning, not a blocker. It's still detected
+    and surfaced through the manifest's per-row audit_flags so the digest
+    can lead with 'verify against the filing before quoting', but it
+    doesn't block a push to master — a legitimate mark-to-market swing
+    on a smaller book can look wrong-column-shaped, and blocking on it
+    forced the pipeline to hold clean extractions for days waiting for a
+    resolution."""
+
+    BASE = {'defect_count': 200,
+            'defects_by_type': {'empty_row': 186, 'reconciliation': 14}}
+
+    def _report(self, by_type):
+        return {'defect_count': sum(by_type.values()),
+                'defects_by_type': by_type}
+
+    def test_new_implausible_swing_does_not_gate(self):
+        report = self._report({'empty_row': 186, 'reconciliation': 14,
+                               'implausible_swing': 8})
+        assert check_against_baseline(report, self.BASE, []) == []
+
+    def test_growing_implausible_swing_does_not_gate(self):
+        base = {'defect_count': 205,
+                'defects_by_type': {'empty_row': 186, 'reconciliation': 14,
+                                    'implausible_swing': 5}}
+        report = self._report({'empty_row': 186, 'reconciliation': 14,
+                               'implausible_swing': 20})
+        assert check_against_baseline(report, base, []) == []
+
+    def test_gating_defect_still_blocks_alongside_swings(self):
+        """Real regressions still block even when a growing swing count
+        would have masked them under a naive total-only rule."""
+        report = self._report({'empty_row': 189, 'reconciliation': 14,
+                               'implausible_swing': 100})
+        failures = check_against_baseline(report, self.BASE, [])
+        assert any('empty_row rose 186 -> 189' in f for f in failures)
+
+    def test_zero_tolerance_still_wins_for_advisory_types(self):
+        """A user who explicitly lists implausible_swing in zero_tolerance
+        means it — advisory status is the default, not an override."""
+        report = self._report({'empty_row': 186, 'reconciliation': 14,
+                               'implausible_swing': 1})
+        failures = check_against_baseline(report, self.BASE,
+                                         ['implausible_swing'])
+        assert any('must stay at zero' in f for f in failures)
 
 
 class TestChronologicalPriorFix:
