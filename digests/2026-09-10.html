@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>SEC Derivatives — Daily Digest — 2026-09-10 (content held for review)</title>
+<title>SEC Derivatives — Daily Digest — 2026-09-10</title>
 <style>
   body { font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif; color: #1a1a1a; max-width: 780px; margin: 0 auto; padding: 24px; line-height: 1.5; }
   h1 { font-size: 20px; margin-bottom: 4px; }
@@ -13,46 +13,138 @@
   th { background: #f4f4f4; }
   code { background: #f4f4f4; padding: 1px 4px; border-radius: 3px; font-size: 12px; }
   .note { background: #fff8e6; border: 1px solid #f0e0a0; padding: 10px 14px; border-radius: 4px; font-size: 13px; }
+  .caveat { color: #777; font-size: 12px; }
   .footer { margin-top: 28px; font-size: 12px; color: #777; border-top: 1px solid #ddd; padding-top: 10px; }
 </style>
 </head>
 <body>
-<h1>SEC Derivatives — Daily Digest — 2026-09-10 (content held for review)</h1>
+<h1>SEC Derivatives — Daily Digest — 2026-09-10</h1>
 
-<p class="summary">The scheduler processed filings overnight but the audit gate blocked the push to master.
-One review branch holds ticker-level content not yet on master (preview capped at 10 tickers per branch;
-the branch diff may contain additional rows beyond what's shown here):</p>
+<p class="summary">14 new filings extracted overnight, 5 filings held for review.</p>
+
+<h2>Foreign exchange</h2>
+
+<p><strong>AAPL</strong> (10-K, period ended 2025-09-27, vs. period ended 2025-06-28): FX derivatives
+notional rose to $171,726M from $141,861M (+21.05%). Non-designated notional drove the increase,
+up to $109,079M from $78,649M (+38.69%), while designated notional was roughly flat at $62,647M
+versus $63,212M (-0.89%). The filing also newly reports a foreign-currency value-at-risk figure of
+$590M (no prior-period figure on record); per the filing, this is a 95%-confidence one-day loss
+estimate on the company's FX derivative positions.</p>
+
+<p><strong>GOOGL</strong> (10-Q, period ended 2026-06-30, vs. 2026-03-31): FX derivatives notional
+$93,400M versus $89,444M (+4.42%); designated notional $39,013M versus $37,468M (+4.12%);
+non-designated notional $54,387M versus $51,976M (+4.64%).</p>
+
+<p><strong>BMY</strong> (10-Q, period ended 2025-06-30, vs. 2026-06-30 on record): FX derivatives
+notional $14,144M versus $11,826M (+19.6%); designated notional $8,212M versus $7,111M (+15.48%);
+non-designated notional $5,932M versus $4,715M (+25.81%).</p>
+
+<p>Other FX moves in the run:</p>
+<table>
+<tr><th>Ticker</th><th>Period end (prior)</th><th>Form</th><th>Field</th><th>Current</th><th>Prior</th><th>Δ%</th></tr>
+<tr><td>A</td><td>2026-07-31 (2026-04-30)</td><td>10-Q</td><td>fx_derivatives_notional</td><td>$832M</td><td>$665M</td><td>+25.11%</td></tr>
+<tr><td>AAPL</td><td>2025-03-29 (2026-06-27<span class="caveat">*</span>)</td><td>10-Q</td><td>fx_derivatives_notional</td><td>$136,921M</td><td>$125,366M</td><td>+9.22%</td></tr>
+<tr><td>AAPL</td><td>2025-06-28 (2025-03-29)</td><td>10-Q</td><td>fx_derivatives_notional</td><td>$141,861M</td><td>$136,921M</td><td>+3.61%</td></tr>
+<tr><td>ABT</td><td>2025-12-31 (2025-09-30)</td><td>10-K</td><td>fx_derivatives_notional</td><td>$20,495M</td><td>$19,900M</td><td>+2.99%</td></tr>
+<tr><td>ABT</td><td>2026-03-31 (2025-12-31)</td><td>10-Q</td><td>fx_derivatives_notional</td><td>$20,200M</td><td>$20,495M</td><td>-1.44%</td></tr>
+<tr><td>ABT</td><td>2026-06-30 (2026-03-31)</td><td>10-Q</td><td>fx_derivatives_notional</td><td>$21,500M</td><td>$20,200M</td><td>+6.44%</td></tr>
+<tr><td>APA</td><td>2026-06-30 (2026-03-31)</td><td>10-Q</td><td>fx_forwards_outstanding</td><td>$72M</td><td>$108M</td><td>-33.33%</td></tr>
+<tr><td>APA</td><td>2026-06-30 (2026-03-31)</td><td>10-Q</td><td>fx_sensitivity_10pct</td><td>-$9M</td><td>$6M</td><td>-250%</td></tr>
+<tr><td>BBY</td><td>2026-08-01 (2026-05-02)</td><td>10-Q</td><td>fx_derivatives_notional</td><td>$165M</td><td>$150M</td><td>+10.0%</td></tr>
+<tr><td>BG</td><td>2025-09-30 (2026-06-30<span class="caveat">*</span>)</td><td>10-Q</td><td>fx_transaction_gain_loss</td><td>$56M</td><td>$1,904M</td><td>-97.06%</td></tr>
+<tr><td>BKNG</td><td>2025-06-30 (2026-06-30<span class="caveat">*</span>)</td><td>10-Q</td><td>fx_derivatives_notional</td><td>$15,400M</td><td>none on record</td><td>—</td></tr>
+</table>
+<p class="caveat">* The corpus's recorded "prior" period for this row is dated later than the filing's own
+period end — a backfill-ordering artifact in tracking.csv, not a claim about chronology. Treat this
+specific comparison with caution; the period-end dates are cited verbatim as recorded.</p>
+<p>BKNG's newly-disclosed FX book is entirely non-designated: $15,400M non-designated versus $0M designated.</p>
+
+<h2>Interest rate</h2>
+
+<p><strong>ABT</strong> (10-Q, period ended 2026-03-31, vs. 2025-12-31): interest rate swap notional
+$4,200M versus $1,200M (+250%). Per the filing: "The increase from December 31, 2025, was due to
+additional interest rate hedge contracts associated with fixed-rate debt issued as part of the
+Exact Sciences acquisition."</p>
+
+<p><strong>AAPL</strong> (10-Q, period ended 2025-03-29, vs. 2026-06-27<span class="caveat">*</span>):
+interest rate swap notional $14,575M versus $10,625M (+37.18%). Following quarter (period ended
+2025-06-28, vs. 2025-03-29): $12,875M versus $14,575M (-11.66%). The 2025-09-27 10-K (vs. 2025-06-28)
+also newly reports a 100bp interest-rate-sensitivity figure of $2,416M on the investment portfolio,
+and a $129M sensitivity figure on term debt (no prior-period figures on record for either).</p>
+
+<p><strong>APA</strong> (10-Q, period ended 2026-06-30, vs. 2026-03-31): fixed-rate notes outstanding
+$3.7bn versus $4.4bn (-15.91%).</p>
+
+<p><strong>BMY</strong> (10-Q, period ended 2025-06-30, vs. 2026-06-30 on record): interest rate swap
+notional $4,555M versus $4,855M (-6.18%).</p>
+
+<p><strong>BKNG</strong> (10-Q, period ended 2025-06-30): newly reports a 100bp interest-rate-sensitivity
+figure of $1,200M (no prior-period figure on record).</p>
+
+<h2>Commodity / energy</h2>
+
+<p><strong>APA</strong> (10-Q, period ended 2026-06-30, vs. 2026-03-31): natural gas derivatives fair
+value swung to -$6M from $122M (-104.92%) — from a net asset to a net liability position.</p>
+
+<h2>Equity</h2>
+
+<p><strong>GOOGL</strong> (10-Q, period ended 2026-06-30, vs. 2026-03-31): marketable equity securities
+fair value $87,063M versus $6,044M (+1,340.49%). Per the filing: "the carrying value of our
+non-marketable equity securities accounted for under the measurement alternative was $124.3 billion,
+of which $87.9 billion was remeasured at fair value during the three months ended June 30, 2026 and
+was primarily classified within Level 2." Equity derivatives notional fell to $20,000M from $30,000M
+(-33.33%).</p>
+
+<p><strong>BMY</strong> (10-Q, period ended 2025-06-30, vs. 2026-06-30 on record): marketable equity
+securities fair value $277M versus $434M (-36.18%); equity derivatives notional $452M versus $486M
+(-7.0%).</p>
+
+<p><strong>ABT</strong> (10-K, period ended 2025-12-31, vs. 2025-09-30): marketable equity value $323M
+versus $352M (-8.24%).</p>
+
+<p><strong>BKNG</strong> (10-Q, period ended 2025-06-30): newly reports a 10%-equity-sensitivity figure
+of -$55M (no prior-period figure on record).</p>
+
+<h2>Cross-cutting</h2>
+
+<ul>
+<li><strong>ABT</strong> — the +250% jump in interest rate swap notional (see Interest rate section)
+is explicitly tied by the filing to fixed-rate debt issued for the Exact Sciences acquisition — an
+M&amp;A-linked hedge.</li>
+<li><strong>GOOGL</strong> — notes disclose new-to-this-filing backstop arrangements: "we have
+entered into agreements with certain third parties to backstop certain payment obligations relating
+to data centers, which we account for as credit derivatives," with a termination-payment provision:
+"we may elect to extinguish the backstop obligation by making a termination payment."</li>
+<li><strong>BKNG</strong> — notes describe a bifurcated embedded conversion-option derivative liability
+on convertible notes, fair-valued at $1.2 billion at June 30, 2025 versus $1.3 billion at December 31,
+2024, following an election that caused the conversion option to "no longer qualify for the
+exception" and be "deemed to be an embedded derivative which required bifurcation from the debt
+contract."</li>
+<li><strong>BG</strong> (Bunge) — notes newly describe use of "other derivatives, including credit
+default swaps, carbon emission derivatives, and equity derivatives, to manage our exposure to credit
+risk and broader macroeconomic risks."</li>
+</ul>
 
 <h2>Held for review</h2>
 
-<p>
-<strong>Branch:</strong> <code>review/2026-09-10-scheduler-gate-failed</code><br>
+<p><strong>Branch:</strong> <code>review/2026-09-10-scheduler-gate-failed</code><br>
 <strong>Committed at:</strong> 2026-09-10T02:17:41+00:00<br>
-<strong>Commit subject:</strong> chore(scheduler): 28 filings processed, 0 activated (3 failed_activation)
-</p>
+<strong>Commit subject:</strong> chore(scheduler): 28 filings processed, 0 activated (3 failed_activation)</p>
 
 <table>
 <tr><th>Ticker</th><th>Period end</th><th>Form</th><th>Key values</th></tr>
-<tr><td>A</td><td>2026-07-31</td><td>10-Q</td><td>fx_derivatives_notional=832; ir_swap_notional=0; total_derivative_asset=9; total_derivative_liability=9; net_derivative_position=0; fx_designated_notional=692; fx_not_designated_notional=140; cash_flow_hedge_aoci=12</td></tr>
-<tr><td>AAPL</td><td>2025-03-29</td><td>10-Q</td><td>fx_derivatives_notional=136,921; ir_swap_notional=14,575; fx_designated_notional=68,533; fx_not_designated_notional=68,388</td></tr>
 <tr><td>ABBV</td><td>2026-06-30</td><td>10-Q</td><td>fx_derivatives_notional=13,000; ir_swap_notional=4,050; total_derivative_asset=279; total_derivative_liability=284; net_derivative_position=-5; fx_designated_notional=3,800; fx_not_designated_notional=9,200</td></tr>
-<tr><td>ABT</td><td>2025-12-31</td><td>10-K</td><td>fx_derivatives_notional=20,495; ir_swap_notional=1,200; fx_designated_notional=7,400; fx_not_designated_notional=13,100</td></tr>
 <tr><td>ACN</td><td>2025-05-31</td><td>10-Q</td><td>fx_derivatives_notional=15,733.459; total_derivative_asset=127.496; total_derivative_liability=126.496; net_derivative_position=1.0</td></tr>
 <tr><td>AMD</td><td>2026-03-28</td><td>10-Q</td><td>fx_derivatives_notional=4,100; fx_designated_notional=2,900; fx_not_designated_notional=1,200</td></tr>
-<tr><td>APA</td><td>2026-06-30</td><td>10-Q</td><td>fx_derivatives_notional=72; total_derivative_liability=6; net_derivative_position=-6</td></tr>
-<tr><td>BBY</td><td>2026-08-01</td><td>10-Q</td><td>fx_derivatives_notional=165; ir_swap_notional=500; fx_designated_notional=119; fx_not_designated_notional=46</td></tr>
 <tr><td>BF.B</td><td>2026-07-31</td><td>10-Q</td><td>fx_derivatives_notional=341; total_derivative_asset=0; total_derivative_liability=13; net_derivative_position=-13; fx_designated_notional=131; cash_flow_hedge_aoci=-4</td></tr>
-<tr><td>BG</td><td>2025-09-30</td><td>10-Q</td><td>total_derivative_asset=2,183</td></tr>
+<tr><td>CDNS</td><td>2026-03-31</td><td>10-Q</td><td>fx_derivatives_notional=1,133.0; net_derivative_position=-17.4; fx_designated_notional=0; fx_not_designated_notional=1,133.0</td></tr>
 </table>
-
-<p class="note">The content is preserved on the review branch but not usable for publication until reviewed.
-Investigate whether the extraction errors flagged by the audit are real or triage-friendly.</p>
 
 <h2>Extraction regressions</h2>
 <p>No regressions.</p>
 
 <div class="footer">
-Verified: 44 figures, all traced to digest_manifest.json entries (held_for_review[0].content_preview). 0 extraction regressions and 1 held-for-review branch listed.
+Verified: 125 figures, all traced to digest_manifest.json entries (new_filings[].moves, new_filings[].notes_categories quotes, and held_for_review[0].content_preview). 0 extraction regressions and 5 held-for-review filings (1 branch) listed.
 </div>
 
 </body>
