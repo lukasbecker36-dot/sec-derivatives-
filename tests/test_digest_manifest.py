@@ -183,6 +183,32 @@ class TestExtractionGapsHaveIsRegression:
     burying them under the corpus-wide historical blank list. Without
     this flag the daily email showed 186 rows of noise every day."""
 
+    def test_filing_age_days_helper(self):
+        """The freshness helper drives the split. A missing filing_date
+        must not be classified as fresh — a genuinely-new filing always
+        carries an EDGAR filing_date."""
+        from datetime import datetime, timezone
+        from src.digest_manifest import _filing_age_days
+        as_of = datetime(2026, 9, 10, tzinfo=timezone.utc)
+        assert _filing_age_days('2026-09-09', as_of) == 1
+        assert _filing_age_days('2026-09-03', as_of) == 7
+        assert _filing_age_days('2025-03-29', as_of) == 530
+        assert _filing_age_days('', as_of) is None
+        assert _filing_age_days(None or '', as_of) is None
+        assert _filing_age_days('not-a-date', as_of) is None
+
+    def test_backfill_split_documented(self):
+        """Snapshot the contract that keeps historical periods out of
+        the reader's daily inbox — a legitimate new filing to a small
+        alphabetically-early ticker is worth an email; a corpus
+        backfill of AAPL's 2025-03 quarter is not."""
+        import inspect
+        from src import digest_manifest
+        src = inspect.getsource(digest_manifest.build_manifest)
+        assert 'backfill_filings' in src
+        assert 'age_days' in src
+        assert 'recent_days' in src
+
     def test_gap_entry_shape_documented(self):
         """Snapshot the contract: every extraction_gap row must expose
         ticker, period_end_date, form_type, attempts, and is_regression.

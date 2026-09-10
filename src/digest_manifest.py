@@ -61,6 +61,15 @@ META = {
 }
 NUM_RE = re.compile(r'^-?\d+(?:\.\d+)?$')
 
+# A "fresh" filing is one whose filing_date (as recorded by SEC EDGAR)
+# is within this many days of the digest run. Older extractions are
+# backfills — the reader has already had (or missed) the news on those
+# and does not want them re-surfaced in the daily email. Kept in
+# `backfill_filings` for auditability and so the routine can show a
+# single-line "N historical periods were backfilled overnight" note if
+# it wants to, but never in `new_filings`.
+DEFAULT_RECENT_DAYS = 7
+
 # Asset-class classification of extraction fields. Order matters: credit
 # patterns come BEFORE ir so credit_default_swap goes to credit, not ir
 # (both match "swap"). Anything not matched lands in 'other' so the routine
@@ -295,12 +304,32 @@ def _row_moves(prior: dict, curr: dict) -> dict[str, list[dict]]:
     return {k: v for k, v in out.items() if v}
 
 
-def build_manifest(since_iso: str) -> dict:
+def _filing_age_days(filing_date_str: str, as_of: datetime) -> int | None:
+    """Days between filing_date (as recorded in tracking.csv) and as_of.
+    Returns None when the field is blank or unparseable — the caller
+    must decide how to treat unknown-age filings (currently: treat as
+    NOT fresh, since a genuinely-new filing always carries a date)."""
+    if not filing_date_str:
+        return None
+    s = filing_date_str.strip()
+    if not s:
+        return None
+    try:
+        # tracking.csv stores YYYY-MM-DD from EDGAR
+        d = datetime.fromisoformat(s).replace(tzinfo=timezone.utc)
+    except ValueError:
+        return None
+    return (as_of - d).days
+
+
+def build_manifest(since_iso: str,
+                   recent_days: int = DEFAULT_RECENT_DAYS) -> dict:
     baseline_sha = _first_commit_at_or_after(since_iso)
     if not baseline_sha:
         # No commit before that time — treat as "everything is new".
         baseline_sha = None
-    as_of = datetime.now(timezone.utc).isoformat()
+    as_of_dt = datetime.now(timezone.utc)
+    as_of = as_of_dt.isoformat()
 
     # Snapshot audit for the counts block
     report = run_audit(OUTPUT_DIR)
@@ -311,6 +340,7 @@ def build_manifest(since_iso: str) -> dict:
         ).append(d['type'])
 
     new_filings: list[dict] = []
+    backfill_filings: list[dict] = []
     extraction_gaps: list[dict] = []
 
     for csv_path in sorted(OUTPUT_DIR.glob('*/tracking.csv')):
@@ -370,11 +400,15 @@ def build_manifest(since_iso: str) -> dict:
                 if any(flat(v).strip() for k, v in current_rows[j].items() if k not in META):
                     prior_row = current_rows[j]
                     break
+            filing_date = flat(row.get('filing_date'))
+            age_days = _filing_age_days(filing_date, as_of_dt)
             entry = {
                 'ticker': ticker,
                 'period_end_date': key[0],
                 'form_type': key[1],
                 'accession_number': flat(row.get('accession_number')),
+                'filing_date': filing_date,
+                'filing_date_age_days': age_days,
                 'prior_period_end_date': (flat(prior_row.get('period_end_date'))
                                            if prior_row else None),
                 'audit_flags': defects_lookup.get((ticker, key[0]), []),
@@ -382,7 +416,14 @@ def build_manifest(since_iso: str) -> dict:
                 'notes_categories': _notes_categories_for_period(
                     ticker, key[0], key[1]),
             }
-            new_filings.append(entry)
+            # Filings whose EDGAR filing_date is older than the freshness
+            # window (or missing) are treated as backfills, not news. The
+            # reader has already had the chance to see those; putting
+            # them in the daily email buries the actually-new content.
+            if age_days is None or age_days > recent_days:
+                backfill_filings.append(entry)
+            else:
+                new_filings.append(entry)
 
     held_branches = _held_review_branches(since_iso)
 
@@ -391,10 +432,13 @@ def build_manifest(since_iso: str) -> dict:
         'as_of': as_of,
         'baseline_sha': baseline_sha,
         'new_filings': new_filings,
+        'backfill_filings': backfill_filings,
+        'recent_days': recent_days,
         'extraction_gaps': extraction_gaps,
         'held_for_review': held_branches,
         'counts': {
             'total_new_rows': len(new_filings),
+            'backfill_rows': len(backfill_filings),
             'extraction_gaps': len(extraction_gaps),
             'held_review_branches': len(held_branches),
             'total_defects': report['defect_count'],
@@ -407,6 +451,10 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.strip().split('\n')[0])
     parser.add_argument('--since', help='ISO timestamp; default = 24h ago.')
     parser.add_argument('--out', type=Path, default=Path('digest_manifest.json'))
+    parser.add_argument('--recent-days', type=int, default=DEFAULT_RECENT_DAYS,
+                        help='Only surface filings whose EDGAR filing_date '
+                             'is within this many days as new_filings; older '
+                             'ones become backfill_filings.')
     args = parser.parse_args(argv)
 
     if args.since:
@@ -414,10 +462,11 @@ def main(argv: list[str] | None = None) -> int:
     else:
         since_iso = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat()
 
-    manifest = build_manifest(since_iso)
+    manifest = build_manifest(since_iso, recent_days=args.recent_days)
     args.out.write_text(json.dumps(manifest, indent=2, default=str),
                         encoding='utf-8')
     print(f'Wrote {args.out}: {manifest["counts"]["total_new_rows"]} new rows, '
+          f'{manifest["counts"]["backfill_rows"]} backfill rows, '
           f'{manifest["counts"]["extraction_gaps"]} extraction gaps, '
           f'baseline={manifest["baseline_sha"] or "none"}',
           file=sys.stderr)
