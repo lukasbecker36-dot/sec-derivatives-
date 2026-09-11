@@ -1,3 +1,28 @@
+=== 10-K | Period ending 2026-07-25 | Processed 2026-09-11 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $5,310M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $9,180M, now missing
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $377M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $2,758M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $6M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $90M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $86M, now missing
+[DISAPPEARED_FIELD] equity_derivatives_notional: was $1,253M, now missing
+[NEW_FIELD] total_derivative_asset: appeared for first time ($95M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($88M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($7M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($8,686M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-27M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($361M)
+[NEW_FIELD] fx_forward_notional_purchased: appeared for first time ($4,088M)
+[NEW_FIELD] fx_forward_notional_sold: appeared for first time ($4,598M)
+[NEW_FIELD] fx_forward_fair_value_purchased: appeared for first time ($-88M)
+[NEW_FIELD] fx_forward_fair_value_sold: appeared for first time ($95M)
+[NEW_FIELD] available_for_sale_debt_fair_value: appeared for first time ($8,339M)
+[NEW_FIELD] financing_receivables_carrying_value: appeared for first time ($8,300M)
+[NEW_FIELD] marketable_equity_fair_value: appeared for first time ($361M)
+[NEW_FIELD] privately_held_investments_carrying_amount: appeared for first time ($4,000M)
+[VALIDATION] Likely extraction failure: 8/11 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt...)
+
 === 10-Q | Period ending 2026-04-25 | Processed 2026-06-15 ===
 [HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $15M → $6M (-60.0%) — exceeds 20% threshold
 [HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $90M, now missing

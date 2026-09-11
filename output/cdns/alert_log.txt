@@ -1,3 +1,27 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-09-11 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,133M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $1,052M, now missing
+[NEW_FIELD] net_derivative_position: appeared for first time ($-17M)
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($1,133M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-3M)
+[NUMERIC] fx_sensitivity_10pct: $-14M → $6M (+142.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $1,052M, now missing
+[DISAPPEARED_FIELD] fx_forward_exchange_rates: was $-3M, now missing
+[NUMERIC] fx_forward_fair_value: $-12M → $-17M (-45.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_usd_decrease: appeared for first time ($6M)
+[NEW_FIELD] fx_sensitivity_usd_increase: appeared for first time ($0M)
+[NEW_FIELD] debt_securities_fair_value: appeared for first time ($80M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-3M)
+[NEW_FIELD] credit_facility_rate_sensitivity: appeared for first time ($4M)
+[VALIDATION] Likely extraction failure: 3/5 previously-populated fields are now null (total_derivative_asset, equity_sensitivity_10pct, fx_forward_exchange_rates)
+[LLM_FLAG] Data integrity concern (not a real swing): prior_values.total_derivative_asset = 1051.5, which is implausibly large for CDNS's FX forward book — this filing and the prior comparative period show a net derivative fair value of only $(17.4) million and $(26.0) million respectively. 1051.5 is roughly notional-magnitude, not fair-value-magnitude; it looks like a value from a wrong field in a prior extraction rather than a genuine total_derivative_asset figure. Current extraction returns null for this field since no asset/liability split is disclosed in this excerpt.
+[LLM_FLAG] Data integrity concern (not a real swing): prior_values.equity_derivatives_notional = "Yes", a Yes/No string that belongs to the has_derivatives field, not a notional amount. This appears to be a misaligned prior extraction rather than a genuine equity derivatives notional value.
+[LLM_FLAG] fx_sensitivity_10pct: prior value was -13.8, new value is 5.8 — sign flip plus large magnitude change. Note the prior figure also doesn't match either of this filing's disclosed Dec-31-2025 comparative sensitivities (-213.1 or +219.4), suggesting the prior value itself may be unreliable rather than reflecting a genuine 15x swing.
+[LLM_FLAG] Data integrity concern (not a real swing): prior_values.interest_rate_sensitivity was a dictionary of per-currency figures (japanese_yen, euro, chinese_renminbi, etc.) resembling an FX notional/rate breakdown, not a valid single interest-rate-sensitivity number. This looks like a misaligned prior extraction, not a comparable value.
+[LLM_FLAG] Data integrity concern (not a real swing): prior_values.credit_facility_rate_sensitivity was likewise a dictionary of per-currency figures, inconsistent with the single-number 'quarter point change' disclosure this field is meant to capture — likely a misaligned prior extraction.
+[LLM_FLAG] Data integrity concern (not a real swing): prior_values.equity_sensitivity_10pct = 1051.5 is implausibly large for CDNS's equity investment portfolio and matches the same anomalous 1051.5 figure seen mislabeled as total_derivative_asset in the prior derivatives_note extraction — strongly suggests a systemic misalignment bug rather than genuine prior data. Current extraction returns null since no equity price sensitivity is disclosed in this text.
+[LLM_FLAG] Data integrity concern (not a real swing): prior_values.fx_forward_exchange_rates = -3.3 is a single number, but this field should hold a per-currency rate breakdown (e.g. 0.84 for EUR, 155.80 for JPY). -3.3 instead matches the debt-securities interest-rate-sensitivity figure disclosed elsewhere in this same filing — likely a misaligned prior extraction.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-09-10 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,133M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

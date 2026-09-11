@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-09-11 ===
+[NUMERIC] total_cash_equivalents_fv: $3,401M → $4,188M (+23.1%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $1M → $2M (+100.0%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $1,220M → $6M (-99.5%) — exceeds 20% threshold
+[NUMERIC] fi_fx_not_designated_notional: $1,600M → $1,200M (-25.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $1,600M → $1,200M (-25.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] marketable_equity_value: was $1,200M, now missing
+[VALIDATION] Likely units mismatch: marketable_equity_securities_fv changed from 1,220 to 6 (0x)
+[LLM_FLAG] marketable_equity_securities_fv fell from prior 1220.0 to 6.0 (-99.5%) — large drop, worth verifying against the filing; the current filing's non-marketable equity securities disclosure (long-term investments in privately held companies of $1.8 billion) is a separate line item and was not used for this field
+[LLM_FLAG] gross_unrealized_gains_debt changed from prior 1.0 to 2.0 (+100%), though both figures are immaterial in dollar terms
+
 === 10-Q | Period ending 2026-03-28 | Processed 2026-09-10 ===
 [NUMERIC] total_cash_equivalents_fv: $3,401M → $4,188M (+23.1%) — exceeds 20% threshold
 [NUMERIC] gross_unrealized_gains_debt: $1M → $2M (+100.0%) — exceeds 20% threshold

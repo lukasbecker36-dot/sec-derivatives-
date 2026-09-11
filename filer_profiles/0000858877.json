@@ -17,7 +17,9 @@
   "idiosyncrasies": {
     "recurring_phrases": [
       "foreign exchange forward",
-      "notional amount"
+      "notional amount",
+      "unrealized gain",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -89,6 +91,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 16
+    },
+    {
+      "filing_date": "2026-07-25",
+      "form_type": "10-K",
+      "period_end": "2026-07-25",
+      "processed_at": "2026-09-11T02:12:55Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 19,
+      "fields_null": 10
     }
   ]
 }
