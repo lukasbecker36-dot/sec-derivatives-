@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2025-05-31 | Processed 2026-09-14 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $16,944M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $41M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $684M, now missing
+[NUMERIC] total_derivative_asset: $41M → $127M (+213.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $684M → $126M (-81.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-643M → $1M (+100.2%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 3/7 previously-populated fields are now null (fi_fx_derivatives_notional, fi_total_derivative_asset, fi_total_derivative_liability)
+[VALIDATION] Likely units mismatch: net_derivative_position changed from -643 to 1 (0x)
+[LLM_FLAG] total_derivative_asset rose from $40.7M (prior) to $127.5M (+213%), and total_derivative_liability fell from $684.1M (prior) to $126.5M (-82%); net_derivative_position swung from a $643.3M net liability to a near-breakeven $1.0M net asset. The current-period figures are internally consistent within this filing (Total assets - Total liabilities = stated 'Total fair value' of $1.0M, and match the separate netting disclosure of $107.1M net derivative assets vs $106.1M net derivative liabilities), so this reads as a genuine FX-hedge mark-to-market swing (e.g., USD rate movement) rather than an extraction error, but the magnitude is large enough to verify against the FY2025 10-K before quoting a percentage change.
+
 === 10-Q | Period ending 2025-05-31 | Processed 2026-09-10 ===
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $16,944M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $41M, now missing

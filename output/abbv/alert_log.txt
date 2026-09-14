@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-09-14 ===
+[NUMERIC] fx_derivatives_notional: $19,735M → $13,000M (-34.1%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $10,435M → $3,800M (-63.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $155M → $279M (+80.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-183M → $-5M (+97.3%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $24M → $68M (+183.3%) — exceeds 20% threshold
+[LLM_FLAG] fx_designated_notional ($3,800M) is 64% below prior_values ($10,435M): this filing's cash-flow-hedge-designated FX notional excludes the separate net-investment-hedge FX forward notionals disclosed in the same note (€6.7B, SEK1.4B, CAD800M, CHF80M at June 30 2026); prior extraction may have combined designated categories rather than isolating cash-flow hedges per the field's stated definition.
+[LLM_FLAG] total_derivative_asset ($279M) is 80% above prior_values ($155M), driven by a large swing in the FX forward asset position (Dec 31 2025 $91M to June 30 2026 $279M) - verify against filing.
+[LLM_FLAG] net_derivative_position (-$5M) differs substantially from prior_values (-$183M); both are small net differences of much larger gross asset/liability balances so percentage comparison is not very meaningful, but flagging per instructions.
+[LLM_FLAG] expected_12mo_reclass_from_aoci ($68M) is 183% above prior_values ($24M).
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-09-10 ===
 [NUMERIC] fx_derivatives_notional: $19,735M → $13,000M (-34.1%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $10,435M → $3,800M (-63.6%) — exceeds 20% threshold

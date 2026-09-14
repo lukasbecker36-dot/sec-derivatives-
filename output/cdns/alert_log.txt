@@ -1,3 +1,26 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-09-14 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,133M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $1,052M, now missing
+[NEW_FIELD] net_derivative_position: appeared for first time ($-17M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($3M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-14M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $1,052M, now missing
+[DISAPPEARED_FIELD] fx_forward_exchange_rates: was $-3M, now missing
+[NUMERIC] fx_forward_fair_value: $-12M → $-17M (-45.0%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_usd_decrease: appeared for first time ($6M)
+[NEW_FIELD] fx_sensitivity_usd_increase: appeared for first time ($0M)
+[NEW_FIELD] debt_securities_fair_value: appeared for first time ($80M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($3M)
+[NEW_FIELD] credit_facility_rate_sensitivity: appeared for first time ($4M)
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (total_derivative_asset, fx_sensitivity_10pct, equity_sensitivity_10pct, fx_forward_exchange_rates)
+[LLM_FLAG] prior_values.total_derivative_asset = $1,051.5M is implausible against this filing: total FX-forward notional is only $1,133.0M (down from $3.3B at 12/31/2025) and the aggregate net fair value is just $(17.4)M — a $1,051.5M asset would be ~93% of total notional, far outside the normal fair-value-to-notional ratio for FX forwards (typically low single digits percent). This looks like a prior-period extraction/column-misalignment error, not a real position; do not use it as a comparison base.
+[LLM_FLAG] prior_values.equity_derivatives_notional = 'Yes' (a string) for a field defined as a notional dollar amount — clear data-type corruption in the prior extraction; not usable for trend comparison.
+[LLM_FLAG] prior_values.interest_rate_sensitivity and prior_values.credit_facility_rate_sensitivity were both supplied as dicts keyed by currency (e.g. {'japanese_yen': 290.5, 'euro': 207.5, ...}) even though both fields are defined as single scalars (impact of a 1% rate move / a quarter-point move). These currency-keyed values closely resemble a prior period's fx_forward_notional_amounts-by-currency table landing in the wrong fields — a likely misalignment in the prior extraction, not a real prior value. No valid trend comparison was possible for these two fields this run.
+[LLM_FLAG] prior_values.fx_forward_exchange_rates = -3.3, a single negative scalar, though this field is defined as 'weighted average contract rates per currency' (a per-currency breakdown expected) — another apparent prior-extraction misalignment (the magnitude matches the sign-flipped debt-securities rate-sensitivity value of 3.3); not usable for comparison.
+[LLM_FLAG] prior_values.equity_sensitivity_10pct = 1051.5 is implausible for CDNS, which discloses no equity derivatives or equity price sensitivity in this filing; 1051.5 is identical to the prior_values.total_derivative_asset figure flagged as corrupted in the companion derivatives_note extraction, suggesting the same misaligned value was duplicated across unrelated fields upstream. Not used for comparison.
+[LLM_FLAG] fx_sensitivity_10pct left null: this quarter's text states a 10% USD decrease produces +$5.8M and a 10% USD increase produces +$0.2M — both directions show a fair-value gain, with no clear 'adverse'/loss scenario as there was in the prior period (-$13.8M). Rather than pick one and mislabel it 'adverse', both stated values are captured verbatim as fx_sensitivity_usd_decrease / fx_sensitivity_usd_increase instead.
+[LLM_FLAG] FX sensitivity fell sharply versus December 31, 2025 (per this filing's own comparative disclosure): a 10% USD decrease moved fair value by $(213.1)M at 12/31/2025 vs +$5.8M at 3/31/2026, and a 10% USD increase moved it by +$219.4M at 12/31/2025 vs +$0.2M at 3/31/2026 — roughly a 97% drop in sensitivity magnitude, larger than the ~66% drop in FX-forward notional ($3.3B to $1,133.0M) over the same period. Both endpoints are explicit in the filing text (not an extraction artifact), but the disproportionate size of the swing is worth verifying against the source filing before quoting in a digest.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-09-10 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,133M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

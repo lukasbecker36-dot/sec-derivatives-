@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-07-31 | Processed 2026-09-14 ===
+[NUMERIC] fx_derivatives_notional: $586M → $341M (-41.8%) — exceeds 20% threshold
+[NEW_FIELD] fx_designated_notional: appeared for first time ($131M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($13M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-13M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-4M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-45M, now missing
+[DISAPPEARED_FIELD] currency_derivatives_notional_current: was $586M, now missing
+[DISAPPEARED_FIELD] currency_derivatives_notional_prior: was $463M, now missing
+[DISAPPEARED_FIELD] hypothetical_fx_sensitivity: was $-45M, now missing
+[DISAPPEARED_FIELD] cash_equivalents_balance: was $308M, now missing
+[DISAPPEARED_FIELD] commercial_paper_balance: was $68M, now missing
+[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (fx_sensitivity_10pct, currency_derivatives_notional_current, currency_derivatives_notional_prior, hypothetical_fx_sensitivity, cash_equivalents_balance...)
+[VALIDATION] Reconciliation failure: fx_derivatives_notional=341 but fx_designated_notional=131 = 131 (diff 61.6%) — extraction likely read the wrong table
+[LLM_FLAG] fx_derivatives_notional ($341M) vs prior_values ($586M) is a 41.8% decline — under the 50% threshold, but flagging because the section_text opens mid-note (starts on footnote markers '1'/'2' referencing April 30, 2026 and July 31, 2026 debt/swap detail), suggesting an earlier notional summary table for this note was not captured in this excerpt. The euro-denominated debt net-investment hedge also matured in Q1 FY2027, which is a plausible real driver of some decline, but the $341M figure here reflects only the disclosed cross-currency swaps and should be treated as a possible lower bound rather than a certain 'total'.
+[LLM_FLAG] commodity_derivatives_notional set to 0 by design: the filing explicitly states its corn forward purchase contracts are accounted for as normal purchases (not derivatives) — a deliberate accounting scope exclusion, not a missing disclosure.
+
 === 10-Q | Period ending 2026-07-31 | Processed 2026-09-10 ===
 [NUMERIC] fx_derivatives_notional: $586M → $341M (-41.8%) — exceeds 20% threshold
 [NEW_FIELD] fx_designated_notional: appeared for first time ($131M)

@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-09-14 ===
+[NUMERIC] total_cash_equivalents_fv: $3,401M → $4,188M (+23.1%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $1M → $2M (+100.0%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $1,220M → $6M (-99.5%) — exceeds 20% threshold
+[NUMERIC] fi_fx_not_designated_notional: $1,600M → $1,200M (-25.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $1,600M → $1,200M (-25.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] marketable_equity_value: was $1,200M, now missing
+[VALIDATION] Likely units mismatch: marketable_equity_securities_fv changed from 1,220 to 6 (0x)
+[LLM_FLAG] marketable_equity_securities_fv: current $6M vs prior $1,220M (-99.5%). This filing's own comparative (Dec 27, 2025) column shows marketable equity securities fair value as a dash ($0), not $1,220M, so the previously recorded prior value appears to be a genuine extraction error in an earlier run -- likely confused with the separately disclosed non-marketable equity securities balance (~$1.1-1.8 billion, a distinct non-recurring fair-value item in this same note) -- rather than a real decline in marketable equity holdings this quarter.
+[LLM_FLAG] gross_unrealized_gains_debt: $2M vs prior $1M is a +100% change but only a $1M absolute move on an immaterial base -- not a meaningful swing.
+[LLM_FLAG] total_marketable_securities_fv is a computed subtotal (short-term investments category only, $6,762M) and excludes the $295M long-term investments bucket and cash equivalents; if the intended definition is broader, the figure would differ. Prior value $8,025M vs current $6,762M is a -15.7% change, within normal tolerance, but the definitional ambiguity is flagged for reviewer awareness.
+[LLM_FLAG] prior_values carries 1200.0 for marketable_equity_value, but this Item 3 section is boilerplate incorporating market risk disclosure by reference to the FY2025 10-K and states no dollar figure at all. Separately, this same filing's Financial Instruments note (Note 8) shows the actual marketable equity securities fair value at only $6M (March 28, 2026) and $0 (December 27, 2025), which strongly suggests the prior 1200.0 figure recorded for this field is a carried-over extraction error (likely confused with AMD's non-marketable equity securities balance, ~$1.1-1.8 billion) rather than a real value -- flagging rather than reusing it.
+
 === 10-Q | Period ending 2026-03-28 | Processed 2026-09-10 ===
 [NUMERIC] total_cash_equivalents_fv: $3,401M → $4,188M (+23.1%) — exceeds 20% threshold
 [NUMERIC] gross_unrealized_gains_debt: $1M → $2M (+100.0%) — exceeds 20% threshold
