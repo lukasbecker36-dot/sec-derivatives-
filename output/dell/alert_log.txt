@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-07-31 | Processed 2026-09-16 ===
+[NUMERIC] fx_designated_notional: $7,540M → $9,146M (+21.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $158M → $92M (-41.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-8M → $41M (+612.5%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position flipped from a net liability of $(19)M (prior) to a net asset of $41M — a sign change worth noting for review even though neither side individually crossed the 50% threshold.
+
+=== 10-Q | Period ending 2025-08-01 | Processed 2026-09-16 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $15,280M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $8,579M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $6,701M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $6,809M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $279M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $298M, now missing
+[NUMERIC] total_derivative_asset: $97M → $150M (+54.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $116M → $158M (+36.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-19M → $-8M (+57.9%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 6/13 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset...)
+[LLM_FLAG] total_derivative_asset rose from $97M (prior) to $150M (+54.6%), exceeding the 50% threshold.
+
 === 10-Q | Period ending 2026-05-01 | Processed 2026-06-16 ===
 [HISTORICAL] [NUMERIC] fi_total_derivative_asset: $492M → $279M (-43.3%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_total_derivative_liability: $458M → $298M (-34.9%) — exceeds 20% threshold

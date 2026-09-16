@@ -1,3 +1,11 @@
+=== 10-K | Period ending 2025-11-02 | Processed 2026-09-16 ===
+[NUMERIC] total_derivative_asset: $207M → $393M (+89.9%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $528M → $389M (-26.3%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-321M → $4M (+101.2%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-9M)
+[LLM_FLAG] total_derivative_asset rose from $207M (prior) to $393M (+89.9%), exceeding the 50% threshold.
+[LLM_FLAG] net_derivative_position swung from a net liability of $(321)M (prior) to a net asset of $4M — a sign change worth noting even though the liability side moved less than 50%.
+
 === 10-Q | Period ending 2026-08-02 | Processed 2026-09-01 ===
 [DISAPPEARED_FIELD] total_marketable_securities_fv: was $1,388M, now missing
 [DISAPPEARED_FIELD] corporate_debt_securities_fv: was $501M, now missing
