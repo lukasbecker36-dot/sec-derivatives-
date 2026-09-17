@@ -1,3 +1,41 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-09-17 ===
+[NUMERIC] total_cash_equivalents_fv: $265M → $100M (-62.3%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $134M → $52M (-61.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $1,060M, now missing
+[DISAPPEARED_FIELD] fx_designated_notional: was $1,000M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $60M, now missing
+[NUMERIC] ir_swap_notional: $3,505M → $774M (-77.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_asset: was $60M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $143M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-83M, now missing
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-35M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-163M)
+[NEW_FIELD] foreign_currency_sensitivity: appeared for first time ($-163M)
+[NEW_FIELD] net_investment_hedge_sensitivity: appeared for first time ($-100M)
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-35M)
+[VALIDATION] Likely extraction failure: 6/10 previously-populated fields are now null (fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional, total_derivative_asset, total_derivative_liability...)
+[LLM_FLAG] total_cash_equivalents_fv (100) is down ~86% from prior_value 721.0 - verify against filing; this table only shows the 'Cash equivalents' line ($100M at Dec 31, 2025 vs $314M at Dec 31, 2024 per the filing's own comparative column), not 'Total cash and restricted cash equivalents' (142), so a mismatch in which line the prior extraction used, or a real balance decline, is possible.
+[LLM_FLAG] ir_sensitivity_100bp is populated from a disclosed '10 percent appreciation in floating rates' scenario, not a literal 100bp move as the field name implies - the filer does not disclose a 100bp-specific figure. Value duplicates interest_rate_sensitivity.
+[LLM_FLAG] fx_sensitivity_10pct duplicates foreign_currency_sensitivity (same table row); the filing separately discloses a distinct net_investment_hedge_sensitivity (-100) that is not captured by this generic field - verify which figure the downstream schema intends.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-09-17 ===
+[NUMERIC] total_cash_equivalents_fv: $721M → $265M (-63.2%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_asset: $75M → $51M (-32.0%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $60M → $134M (+123.3%) — exceeds 20% threshold
+[NUMERIC] fx_derivatives_notional: $1,378M → $1,060M (-23.1%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $378M → $60M (-84.1%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $774M → $3,505M (+352.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $78M → $60M (-23.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $63M → $143M (+127.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $15M → $-83M (-653.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[LLM_FLAG] total_cash_equivalents_fv (265) is down ~63% from prior_value 721.0 - verify against filing; this table only shows the 'Cash equivalents' line, not 'Total cash and restricted cash equivalents' (2,132), so a mismatch in which line the prior extraction used is possible.
+[LLM_FLAG] fi_total_derivative_liability (134) is up ~123% from prior_value 60.0 - verify against filing; driven by an increase in the interest rate swap agreements loss position (126 vs prior quarter).
+[LLM_FLAG] fx_not_designated_notional (60) is down ~84% from prior_value 378.0 - the 'Foreign currency contracts' notional is presented net of contracts bought and sold per footnote 1, so this swing reflects netting of gross positions rather than a change in gross exposure; verify against filing before quoting.
+[LLM_FLAG] ir_swap_notional (3,505) is up ~353% from prior_value 774.0 - explained in text by the 2024 Swaps entered in June 2024 (aggregate ~$3.15B across two forward-starting swaps) adding to the pre-existing 2022 Swaps ($1B); also a partial settlement of ~30% of the 2048-notes swap occurred in September 2025.
+[LLM_FLAG] total_derivative_liability (143) is up ~127% from prior_value 63.0 - driven by the interest rate swap agreements liability fair value increasing to $126M (from Note 19) as the 2024 Swaps' mark-to-market moved further negative.
+[LLM_FLAG] net_derivative_position (-83) flipped sign from prior_value 15.0 - consistent with the total_derivative_liability increase above; verify against filing.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NUMERIC] total_cash_equivalents_fv: $86M → $721M (+738.4%) — exceeds 20% threshold
 [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing

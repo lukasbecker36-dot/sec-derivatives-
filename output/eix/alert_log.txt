@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-09-17 ===
+[NUMERIC] gross_derivative_liabilities: $46M → $35M (-23.9%) — exceeds 20% threshold
+[NUMERIC] cash_collateral_posted: $85M → $53M (-37.6%) — exceeds 20% threshold
+[NUMERIC] realized_gains_losses: $-12M → $-38M (-216.7%) — exceeds 20% threshold
+[NUMERIC] unrealized_gains_losses: $-14M → $-8M (+42.9%) — exceeds 20% threshold
+[NUMERIC] electricity_notional_gwh: $7,851M → $6,019M (-23.3%) — exceeds 20% threshold
+[NUMERIC] congestion_rights_notional_gwh: $720M → $1,232M (+71.1%) — exceeds 20% threshold
+[NUMERIC] fin_toll_notional_gwh: $315M → $236M (-25.1%) — exceeds 20% threshold
+[LLM_FLAG] realized_gains_losses (-38) is a ~217% increase in magnitude from prior_value -12.0 - both negative (realized losses), verify against filing before quoting.
+[LLM_FLAG] congestion_rights_notional_gwh (1,232) is up ~71% from prior_value 720.0 - CRR volumes are historically volatile quarter-to-quarter for SCE; verify against filing.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $18M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_liability: was $0M, now missing

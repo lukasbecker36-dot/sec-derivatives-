@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-09-17 ===
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $1,100M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $73M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $4M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $69M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct)
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($1,100M)
 [NEW_FIELD] total_derivative_liability: appeared for first time ($4M)
