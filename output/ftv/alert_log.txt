@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2025-06-27 | Processed 2026-09-18 ===
+[LLM_FLAG] prior_values for cross_reference_location cites the '2025 Annual Report on Form 10-K', but this filing (period end 2025-06-27, a Q2 10-Q) explicitly cross-references the 2024 Annual Report on Form 10-K, which is the correct prior fiscal year for this filing date; the discrepancy looks like a labeling/dating issue in the previously stored value rather than a real change and should be checked.
+
+=== 10-Q | Period ending 2025-03-28 | Processed 2026-09-18 ===
+[LLM_FLAG] prior_values for cross_reference_location cites the '2025 Annual Report on Form 10-K', but this filing (period end 2025-03-28, a Q1 10-Q) explicitly cross-references the 2024 Annual Report on Form 10-K, which is the correct prior fiscal year for this filing date; the discrepancy looks like a labeling/dating issue in the previously stored value rather than a real change and should be checked.
+
 === 10-Q | Period ending 2026-07-03 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] ir_swap_notional: was $125M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (ir_swap_notional)
