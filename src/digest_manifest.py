@@ -68,7 +68,13 @@ NUM_RE = re.compile(r'^-?\d+(?:\.\d+)?$')
 # `backfill_filings` for auditability and so the routine can show a
 # single-line "N historical periods were backfilled overnight" note if
 # it wants to, but never in `new_filings`.
-DEFAULT_RECENT_DAYS = 7
+#
+# 30 days matches how SEC disclosure actually arrives: 10-Q filings land
+# ~30-45 days after quarter-end, so the news cluster for a given
+# earnings season spans roughly a month. A 7-day window missed the tail
+# of every earnings cluster; 30 catches the whole wave without dragging
+# stale content across the next cluster.
+DEFAULT_RECENT_DAYS = 30
 
 # Asset-class classification of extraction fields. Order matters: credit
 # patterns come BEFORE ir so credit_default_swap goes to credit, not ir
