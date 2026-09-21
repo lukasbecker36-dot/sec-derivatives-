@@ -192,6 +192,13 @@ def prepare(since: str, max_activations: int, verbose: bool = False,
                         'period_end': filing_meta['period_end'],
                         'form_type': filing_meta['form_type'],
                         'accession_number': filing_meta['accession_number'],
+                        # filing_date is the EDGAR-recorded submission date.
+                        # Without it, finalize writes a blank filing_date to
+                        # tracking.csv and the digest manifest cannot tell a
+                        # freshly-filed 10-Q from a corpus backfill — every
+                        # row lands in backfill_filings and the daily email
+                        # looks empty even when it isn't.
+                        'filing_date': filing_meta.get('filing_date', ''),
                         'primary_document': filing_meta['primary_document'],
                         'section_name': section_name,
                         'section_text': section_text,
@@ -305,6 +312,7 @@ def prepare(since: str, max_activations: int, verbose: bool = False,
                 'period_end': new_filing['period_end'],
                 'form_type': new_filing['form_type'],
                 'accession_number': new_filing['accession_number'],
+                'filing_date': new_filing.get('filing_date', ''),
                 'primary_document': new_filing['primary_document'],
                 'prompt': prompt,
                 'archetype': archetype,
@@ -579,6 +587,7 @@ def finalize(since: str, max_activations: int, json_summary: str = '', verbose: 
                 'period_end': period_end,
                 'form_type': req_data.get('form_type', '10-Q'),
                 'accession_number': req_data.get('accession_number', ''),
+                'filing_date': req_data.get('filing_date', ''),
                 'primary_document': req_data.get('primary_document', ''),
             }
 
