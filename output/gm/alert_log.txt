@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-09-21 ===
+[NUMERIC] total_derivative_asset: $884M → $1,370M (+55.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-294M → $2M (+100.7%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: net_derivative_position changed from -294 to 2 (0x)
+[LLM_FLAG] total_derivative_asset rose 55% vs prior ($884M -> $1,370M), exceeding the 50% comparison threshold; the underlying total is explicitly stated in the filing's 'Total derivative financial instruments' row so the extraction is high-confidence, but the swing itself is worth flagging.
+[LLM_FLAG] net_derivative_position flipped from a net liability of -$294M (prior) to a near-zero net asset of +$2M; driven by the total_derivative_asset increase and a smaller (16%) decline in total_derivative_liability. Both endpoints are read directly from the same 'Total' row, so the swing appears to be a real change in position rather than an extraction error.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-22 ===
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
 [NUMERIC] ir_swap_notional: $38,905M → $153,391M (+294.3%) — exceeds 20% threshold

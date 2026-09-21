@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2025-03-30 | Processed 2026-09-21 ===
+[NUMERIC] fx_derivatives_notional: $8,200M → $5,900M (-28.0%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $8,200M → $5,900M (-28.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (expected_12mo_reclass_from_aoci)
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-06-09 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($8,500M)
 [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-483M)

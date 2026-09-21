@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2025-06-29 | Processed 2026-09-21 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $11M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $130M, now missing
+[NUMERIC] fx_designated_notional: $158M → $229M (+45.3%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $64M → $20M (-68.0%) — exceeds 20% threshold
+[NUMERIC] commodity_derivatives_notional: $925M → $212M (-77.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $11M → $21M (+95.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $130M → $6M (-95.6%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-119M → $15M (+112.7%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-3M → $-11M (-323.3%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity_variable_debt: $2M → $5M (+194.4%) — exceeds 20% threshold
+[LLM_FLAG] commodity_derivatives_notional fell 77% vs prior ($925.2M -> $212.0M); confirmed independently by the market_risk section of the same filing, which states the identical $212.0 million commodity notional, so this appears to be a real decline rather than an extraction error.
+[LLM_FLAG] fx_not_designated_notional fell 68% vs prior ($63.7M -> $20.4M).
+[LLM_FLAG] total_derivative_asset rose 96% vs prior ($10.7M -> $20.9M).
+[LLM_FLAG] total_derivative_liability fell 96% vs prior ($129.6M -> $5.7M), driven mainly by the non-designated commodities futures/options liability dropping from $514.6M to $1.4M as the underlying notional book shrank.
+[LLM_FLAG] net_derivative_position swung from -$118.9M (prior) to +$15.1M (current), consistent with the large liability-side decline noted above.
+[LLM_FLAG] expected_12mo_reclass_from_aoci moved from -$2.7M (prior) to -$11.4M (current), a >300% increase in magnitude.
+[LLM_FLAG] interest_rate_sensitivity_variable_debt nearly tripled vs prior ($1.8M -> $5.3M), consistent with the filing's own disclosure that Hershey moved from a net debt position to a net cash position period-over-period ($576M net debt at Dec 31, 2024 vs $747M net cash at June 29, 2025), which plausibly explains a larger swing in interest income sensitivity.
+
 === 10-Q | Period ending 2026-06-28 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $11M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_liability: was $130M, now missing
