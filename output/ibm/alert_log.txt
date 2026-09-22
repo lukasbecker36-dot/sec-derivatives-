@@ -1,3 +1,38 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-09-22 ===
+[NUMERIC] fx_not_designated_notional: $5,600M → $8,000M (+42.9%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $-292M → $326M (+211.6%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-303M → $249M (+182.2%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional is $35,900M vs prior_values of $9,000M (+299%), consistent with the same structural pattern seen across IBM's Q1/Q2/Q3 2025 filings: this sums all four disclosed FX hedge programs per the schema definition.
+[LLM_FLAG] fx_designated_notional is $27,900M vs prior_values of $7,100M (+293%), same reason.
+[LLM_FLAG] cash_flow_hedge_aoci is +$326M vs prior_values of +$180M (+81%), reflecting a full reversal from the loss position seen in the Q2/Q3 2025 filings back to a net gain (royalty/cost program moved from a $4M gain at Dec 31, 2025 to a $301M gain by June 30, 2026).
+[LLM_FLAG] expected_12mo_reclass_from_aoci is +$249M vs prior_values of +$145M (+72%), tracking the same AOCI improvement.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-09-22 ===
+[NUMERIC] cash_flow_hedge_aoci: $-397M → $-292M (+26.4%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-442M → $-303M (+31.4%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional is $30,400M vs prior_values of $9,000M (+238%), same structural reason as the Q1/Q2 2025 IBM extractions: this sums all four disclosed FX hedge programs per the schema definition, while the prior figure appears to reflect only a subset.
+[LLM_FLAG] fx_designated_notional is $24,800M vs prior_values of $7,100M (+249%), same reason.
+[LLM_FLAG] cash_flow_hedge_aoci is -$292M vs prior_values of +$180M, continuing the reversal seen in the Q2 2025 filing (from a $415M gain at Dec 31, 2024 to a $252M loss on the royalty/cost program by Sept 30, 2025, partially reversing from the -$380M seen at June 30, 2025).
+[LLM_FLAG] expected_12mo_reclass_from_aoci is -$303M vs prior_values of +$145M, tracking the same AOCI reversal.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-09-22 ===
+[NUMERIC] cash_flow_hedge_aoci: $110M → $-397M (-460.9%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $44M → $-442M (-1104.5%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional is $30,000M vs prior_values of $9,000M (+233%), for the same reason noted in the Q1 2025 extraction: IBM discloses FX notional across four hedge programs (net investment, royalty/cost cash flow, FX-debt cash flow, non-designated economic hedges) and this extraction sums all four per the schema definition.
+[LLM_FLAG] fx_designated_notional is $24,100M vs prior_values of $7,100M (+239%), same reason.
+[LLM_FLAG] cash_flow_hedge_aoci swung to -$397M from a prior_values baseline of +$180M -- a large reversal driven by a swing from a $415M unrealized gain to a $380M unrealized loss on the royalty/cost cash-flow-hedge program between December 31, 2024 and June 30, 2025, consistent with currency moves reflected elsewhere in this note (e.g. large FX-driven swings in 'Other (income) and expense').
+[LLM_FLAG] expected_12mo_reclass_from_aoci swung to -$442M from a prior_values baseline of +$145M, tracking the same AOCI reversal described above.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-09-22 ===
+[NUMERIC] fx_derivatives_notional: $9,000M → $30,900M (+243.3%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $7,100M → $24,600M (+246.5%) — exceeds 20% threshold
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($6,300M)
+[NUMERIC] cash_flow_hedge_aoci: $180M → $110M (-38.9%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $145M → $44M (-69.7%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional is $30,900M vs prior_values of $9,000M (+243%); IBM discloses FX notional across four separate hedge programs (net investment hedges $7.2B, cash-flow hedges of royalty/cost transactions $10.4B, cash-flow hedges of FX-denominated debt $7.0B, and non-designated economic hedges $6.3B) and this extraction sums all four per the schema definition ('forwards + options + cross-currency swaps combined'). The much lower prior figure suggests an earlier extraction may have captured only a subset of these programs.
+[LLM_FLAG] fx_designated_notional is $24,600M vs prior_values of $7,100M (+246%), for the same reason as above.
+[LLM_FLAG] expected_12mo_reclass_from_aoci fell 70% vs prior_values (145.0 -> 44); this reflects the smaller cash-flow-hedge AOCI balance this quarter ($100M gain on royalty/cost hedges at March 31, 2025 vs $415M at December 31, 2024).
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
 [NUMERIC] fx_derivatives_notional: $9,000M → $35,900M (+298.9%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $7,100M → $27,900M (+293.0%) — exceeds 20% threshold

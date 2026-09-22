@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-06-28 | Processed 2026-09-22 ===
+[NUMERIC] fx_derivatives_notional: $250M → $146M (-41.6%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $229M → $84M (-63.4%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $20M → $62M (+203.8%) — exceeds 20% threshold
+[NUMERIC] commodity_derivatives_notional: $212M → $504M (+137.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $21M → $13M (-38.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $6M → $16M (+182.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $15M → $-3M (-122.4%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-11M → $-8M (+29.6%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $-33M → $-24M (+27.1%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity_variable_debt: $5M → $3M (-49.1%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_sensitivity: $-33M → $-24M (+27.1%) — exceeds 20% threshold
+[LLM_FLAG] fx_designated_notional dropped 63% vs prior_values (229.325 -> 83.907)
+[LLM_FLAG] fx_not_designated_notional rose 204% vs prior_values (20.373 -> 61.888)
+[LLM_FLAG] commodity_derivatives_notional rose 138% vs prior_values (211.978 -> 504.114); note the filing's own comparative period (Dec 31, 2025) shows an even larger prior value of 973.083, suggesting typical seasonal swings in Hershey's commodity hedge book and/or that the stored prior_values may reflect a different quarter
+[LLM_FLAG] total_derivative_liability rose 182% vs prior_values (5.729 -> 16.163)
+[LLM_FLAG] net_derivative_position flipped from a net asset (15.126 prior) to a net liability (-3.39) this period
+
 === 10-Q | Period ending 2025-06-29 | Processed 2026-09-21 ===
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $11M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_liability: was $130M, now missing
