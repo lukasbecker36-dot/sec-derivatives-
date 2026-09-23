@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-09-23 ===
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $5,906M, now missing
+[NUMERIC] fx_designated_notional: $1,351M → $677M (-49.9%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $5,048M → $12,418M (+146.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $269M, now missing
+[NUMERIC] total_derivative_asset: $209M → $113M (-45.9%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $578M → $399M (-31.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-369M → $-286M (+22.5%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($10M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $73M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $5M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct_usd_weak: was $73M, now missing
+[DISAPPEARED_FIELD] fixed_rate_debt_face_value: was $4,506M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt: was $686M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_fair_value: was $25M, now missing
+[DISAPPEARED_FIELD] commodity_sensitivity_10pct: was $27M, now missing
+[VALIDATION] Likely extraction failure: 9/15 previously-populated fields are now null (fx_derivatives_notional, commodity_derivatives_notional, fx_sensitivity_10pct, fixed_rate_notes_billion, fx_sensitivity_10pct_usd_weak...)
+[LLM_FLAG] fx_not_designated_notional rose from a prior 5,048 to 12,418 (+146%), a genuine, filing-explained swing: footnote (1) states this line includes €10 billion of FX forward contracts entered into during Q3 2025 specifically for the planned JDE Peet's Acquisition, a one-time acquisition-related hedge rather than organic growth in the FX program.
+[LLM_FLAG] fx_designated_notional fell from a prior 1,351 to 677 (-49.9%), just under the 50% flag threshold but close enough to note — verify against the filing; no specific explanation for the decline is given in this excerpt.
+[LLM_FLAG] total_derivative_asset fell from a prior 209 to 113 (-45.9%), also just under the 50% threshold but a notable decline worth verifying.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-14 ===
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $6,548M, now missing
 [DISAPPEARED_FIELD] fi_fx_designated_notional: was $500M, now missing

@@ -1,3 +1,38 @@
+=== 10-Q | Period ending 2026-03-28 | Processed 2026-09-23 ===
+[NUMERIC] total_cash_equivalents_fv: $14M → $711M (+4978.6%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $997M → $783M (-21.5%) — exceeds 20% threshold
+[NUMERIC] fi_fx_derivatives_notional: $10,169M → $6,730M (-33.8%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_asset: $304M → $215M (-29.3%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $490M → $216M (-55.9%) — exceeds 20% threshold
+[NUMERIC] fx_derivatives_notional: $10,169M → $6,730M (-33.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $304M → $215M (-29.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $490M → $216M (-55.9%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-186M → $-1M (+99.5%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] expected_12mo_reclass_from_aoci: $-8M → $0M
+[VALIDATION] Likely units mismatch: net_derivative_position changed from -186 to -1 (0x)
+[LLM_FLAG] total_cash_equivalents_fv rose from a prior 104 to 711 (+583.7%) and total_marketable_securities_fv rose from a prior 262 to 783 (+198.9%), both far exceeding the 50% threshold. Both are read directly from the filing's own AFS balance-sheet classification table; the AFS portfolio itself grew from $1,281M to $1,494M total, but a much larger share is now classified as cash equivalents ($711M vs $221M prior period-end) rather than marketable securities ($783M vs $1,060M) — a classification shift plus portfolio growth, not obviously an extraction error, but worth verifying against the filing.
+[LLM_FLAG] corporate_debt_securities_fv rose from a prior 153 to 348 (+127.5%), exceeding the threshold — directly read from the AFS table's Estimated Fair Value column.
+[LLM_FLAG] net_derivative_position moved from a prior -88 to essentially breakeven at -1 (a ~99% reduction in net liability). Both total_derivative_asset (+25.7%) and total_derivative_liability (-16.6%) individually stayed under the 50% threshold, but their combination produces a large swing in the derived net figure — consistent with the book normalizing after last quarter's spike, not an extraction error.
+
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-09-23 ===
+[NUMERIC] total_cash_equivalents_fv: $104M → $14M (-86.5%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $262M → $997M (+280.5%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $153M → $292M (+90.8%) — exceeds 20% threshold
+[NUMERIC] fi_fx_derivatives_notional: $6,820M → $10,169M (+49.1%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_asset: $171M → $304M (+77.8%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $259M → $490M (+89.2%) — exceeds 20% threshold
+[NUMERIC] fx_derivatives_notional: $6,820M → $10,169M (+49.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $171M → $304M (+77.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $259M → $490M (+89.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-88M → $-186M (-111.4%) — exceeds 20% threshold
+[LLM_FLAG] total_cash_equivalents_fv fell from a prior 104 to 14 (-86.5%), exceeding the 50% threshold. This reflects the AFS-securities balance-sheet classification breakdown explicitly given in the filing ('Cash and cash equivalents $14'), not an aggregate cash balance, so likely reflects real portfolio reclassification rather than an error, but worth verifying against the filing.
+[LLM_FLAG] total_marketable_securities_fv rose from a prior 262 to 997 (+280.5%), exceeding the threshold — explicitly stated as 'Marketable securities $997' in the filing's own balance-sheet classification table.
+[LLM_FLAG] corporate_debt_securities_fv rose from a prior 153 to 292 (+90.8%), exceeding the threshold — directly read from the AFS securities table's Estimated Fair Value column.
+[LLM_FLAG] fi_total_derivative_asset rose from a prior 171 to 304 (+77.8%) and fi_total_derivative_liability rose from a prior 259 to 490 (+89.2%), both exceeding the threshold. Both are the filing's own explicit 'Total fair value' row and move in the same direction, consistent with a broader increase in derivative notional/positions this period (see fx_derivatives_notional below) rather than a one-sided data error.
+[LLM_FLAG] fi_fx_derivatives_notional (10,169, combining $3,808M FX contracts + $6,361M cross-currency contracts) is up 49.1% from a prior 6,820 — just under the 50% flag threshold but close enough to note.
+[LLM_FLAG] total_derivative_asset rose from a prior 171 to 304 (+77.8%) and total_derivative_liability rose from a prior 259 to 490 (+89.2%); net_derivative_position worsened from -88 to -186 (+111% larger net liability). All three are directly read from the filing's own 'Total fair value' row and are internally consistent with each other, so likely a genuine period move (consistent with the notional book growing — see fx_derivatives_notional), not an extraction error, but the magnitude warrants verification.
+[LLM_FLAG] expected_12mo_reclass_from_aoci moved from a prior 0.0 (effectively 'insignificant') to -8 this period. The percentage change is not meaningful from a near-zero base, but flagging the shift from negligible to an explicitly quantified $8 million expected loss reclass for visibility.
+
 === 10-Q | Period ending 2026-06-27 | Processed 2026-08-06 ===
 [NUMERIC] total_cash_equivalents_fv: $711M → $104M (-85.4%) — exceeds 20% threshold
 [NUMERIC] total_marketable_securities_fv: $783M → $262M (-66.5%) — exceeds 20% threshold

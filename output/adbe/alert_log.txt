@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-08-28 | Processed 2026-09-23 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $4,153M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $707M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $606M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $115M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $110M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $545M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $115M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $110M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $5M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $-26M → $15M (+157.7%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 9/13 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, corporate_debt_securities_fv, fi_total_derivative_asset, fi_total_derivative_liability...)
+[LLM_FLAG] expected_12mo_reclass_from_aoci flipped sign versus prior (-26 -> +15): prior filing expected a net loss reclassification, this filing expects a net gain. Both figures are explicitly stated in their respective filings so this is a real swing, not an extraction error, but worth verifying against the filing.
+[LLM_FLAG] fx_derivatives_notional is derived from the text's only stated FX figure, which is explicitly labeled as cash flow hedge (designated) notional; the filing text is truncated before any non-designated FX or fair-value-table content, so this total may understate a genuine combined total if Adobe also carries non-designated FX contracts this period (prior period reported fx_not_designated_notional=545).
+
 === 10-Q | Period ending 2026-05-29 | Processed 2026-06-16 ===
 [NUMERIC] fx_derivatives_notional: $27M → $6,160M (+22714.8%) — exceeds 20% threshold
 [NEW_FIELD] fx_designated_notional: appeared for first time ($6,160M)

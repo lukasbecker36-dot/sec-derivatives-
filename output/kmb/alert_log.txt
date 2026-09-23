@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-09-23 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $542M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $135M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $175M, now missing
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $8,700M, now missing
+[DISAPPEARED_FIELD] fx_designated_notional: was $4,100M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $135M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $175M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-40M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $-5M → $-2M (+60.0%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 8/11 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset, fi_total_derivative_liability, fx_derivatives_notional, fx_designated_notional...)
+[LLM_FLAG] expected_12mo_reclass_from_aoci moved from -5 (prior) to -2 (current), a 60% reduction in magnitude (same sign, both losses) — exceeds the 50% flag threshold. Both figures are explicit filing statements, so likely a real change in the hedge book's near-term roll-off, but worth verifying against the filing.
+[LLM_FLAG] fx_designated_notional and commodity_derivatives_notional are both null because the filing discloses them only as a single combined figure: 'the aggregate notional value of outstanding foreign exchange and commodity derivative contracts designated as cash flow hedges was $2.1 billion.' This cannot be reliably split between the two schema fields without further detail, so neither was populated rather than guessing an allocation.
+[LLM_FLAG] ir_swap_notional (325) matches the prior value exactly and reflects only the existing fixed-to-variable fair value hedge program. It excludes a new $4.3 billion of forward-starting interest rate swaps entered into in Q2 2026 in anticipation of fixed-rate debt issuance for the Kenvue Acquisition — a distinct, not-yet-issued-debt hedge program tracked separately in the filing from the $325M fair value hedge notional the pipeline has historically used for this field. Flagging this separately rather than merging it in, to avoid a misleading 13x jump in a field whose prior-period value was an exact match on the narrower definition.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $542M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $135M, now missing

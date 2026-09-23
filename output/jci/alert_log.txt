@@ -1,3 +1,20 @@
+=== 10-K | Period ending 2025-09-30 | Processed 2026-09-23 ===
+[NUMERIC] total_derivative_liability: $19M → $24M (+26.3%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-3M → $-9M (-200.0%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_liability (24) sums only the current-liability derivative fair-value lines ($9M designated FX + $1M designated commodity + $14M not-designated FX + $0M not-designated commodity). The note's 'Total liabilities' subtotal of $3,617M (designated) / $3,631M (combined, matching 'Gross amount recognized') includes a $3,607M 'Foreign currency denominated debt' long-term-debt line that is net-investment-hedge debt, not a derivative fair value, so it was excluded (same treatment as the two prior 2025 quarters for this issuer). A separate Note 11 fair-value-hierarchy table shows $43M of 'Total liabilities' at fair value, but that additionally bundles in a $19M contingent earn-out liability unrelated to derivatives — also excluded.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-09-23 ===
+[NUMERIC] total_derivative_asset: $26M → $16M (-38.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $36M → $19M (-47.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-10M → $-3M (+70.0%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_liability (19) is computed from only the current-liability derivative fair-value line items ($7M designated FX + $1M designated commodity + $11M not-designated FX + $0M not-designated commodity). The note's own 'Total liabilities' subtotal is $3,619M (designated) / $3,630M (combined), but that includes a $3,611M 'Foreign currency denominated debt' long-term-debt line (net investment hedge debt, not a derivative fair value), excluded here for the same reason as the prior quarter.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-09-23 ===
+[NEW_FIELD] total_derivative_asset: appeared for first time ($26M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($36M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-10M)
+[LLM_FLAG] total_derivative_liability (36) is computed by summing only the current-liability derivative fair-value line items ($10M designated FX + $0M designated commodity + $26M not-designated FX + $0M not-designated commodity). The note's own 'Total liabilities' subtotal is $3,352M (designated) / $3,378M (combined), but that figure folds in a $3,342M 'Foreign currency denominated debt' long-term-debt line — FX-denominated debt used as a net investment hedge, not a derivative contract's fair value. Including it would badly violate the field's expected fair-value magnitude (typically <$2B) and looks exactly like the wrong-column notional-sized number this schema warns against, so it was excluded.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)

@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-09-23 ===
+[NUMERIC] total_derivative_asset: $124M → $191M (+54.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $284M → $222M (-21.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-160M → $-31M (+80.6%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $6M → $37M (+516.7%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset rose from a prior 124 to 191 (+54%), exceeding the 50% threshold. This is directly and explicitly stated in the filing's own 'Total derivatives' summary row, so it is a genuine period-over-period increase (driven largely by energy commodity and FX derivative assets), not an extraction error, but worth flagging given the magnitude.
+[LLM_FLAG] expected_12mo_reclass_from_aoci rose from a prior 6 to 37 (+517%). Both are small-dollar, explicitly stated expected gains, so the percentage move looks large mainly because the base was small; still worth verifying against the filing.
+[LLM_FLAG] net_derivative_position improved from a prior -160 to -31 (net liability shrank ~81%), consistent with the asset-side increase noted above.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $543M, now missing
 [DISAPPEARED_FIELD] fi_fx_designated_notional: was $543M, now missing
