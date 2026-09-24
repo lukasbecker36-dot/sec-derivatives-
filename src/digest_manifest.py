@@ -69,12 +69,15 @@ NUM_RE = re.compile(r'^-?\d+(?:\.\d+)?$')
 # single-line "N historical periods were backfilled overnight" note if
 # it wants to, but never in `new_filings`.
 #
-# 30 days matches how SEC disclosure actually arrives: 10-Q filings land
-# ~30-45 days after quarter-end, so the news cluster for a given
-# earnings season spans roughly a month. A 7-day window missed the tail
-# of every earnings cluster; 30 catches the whole wave without dragging
-# stale content across the next cluster.
-DEFAULT_RECENT_DAYS = 30
+# 7 days matches how a reporter actually thinks about "news" — a
+# filing that landed with the SEC three weeks ago is not something to
+# lead a briefing with. An earlier iteration set this to 30 days
+# reasoning that 10-Qs cluster ~30-45 days after quarter-end, but real
+# reader feedback showed that dragged obviously-stale filings (LULU
+# filed 21 days ago, INTU filed 15 days ago) into the email as "new".
+# --recent-days on the CLI still overrides the default per-run for
+# catch-up scans.
+DEFAULT_RECENT_DAYS = 7
 
 # Asset-class classification of extraction fields. Order matters: credit
 # patterns come BEFORE ir so credit_default_swap goes to credit, not ir
