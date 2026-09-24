@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-09-24 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2,561M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] hedging_strategies: was $2,540M, now missing
+[DISAPPEARED_FIELD] risk_assessment: was $31M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (equity_sensitivity_10pct, hedging_strategies, risk_assessment)
+[LLM_FLAG] Newsworthy: net loss on commodity derivative positions widened sharply to $(909)M for Q1 2026 from $(65)M in Q1 2025 (realized loss $(390)M vs $(51)M; unrealized loss $(519)M vs $(14)M) — roughly 14x the prior-year loss. The filing gives no explanation for the swing beyond stating these are non-designated (no hedge accounting) commodity derivatives, so the loss is not shown net of the offsetting physical-position gain the company says mitigates it.
+[LLM_FLAG] current_derivative_positions differs from prior context implied by the schema description ('no financial derivatives for interest rate or FX hedging as of Dec 31, 2025') because this section simply does not repeat or update that statement for March 31, 2026 — returned null rather than assuming continuity.
+[LLM_FLAG] hedging_strategies and risk_assessment: prior_values holds numeric figures (2540.0 and 31.111 respectively) for what the schema defines as qualitative/text fields — those look like stray numbers from a prior misaligned extraction, not a real prior answer to these fields. Current extraction returns qualitative text instead; do not diff it as a percentage change against those numbers.
+[LLM_FLAG] fixed_rate_notes_billion: the only related number in this section is the Fair Value of fixed-rate long-term debt ($31,018M / $31.018B) in the interest-rate-sensitivity table, not the face/principal amount of notes outstanding — returned null rather than conflating fair value with outstanding notional/principal.
+[LLM_FLAG] ir_sensitivity_100bp ($2,561M) is the change in fair value of fixed-rate debt from a hypothetical 100bp *decrease* in yield-to-maturity (per footnote (b)), i.e. fair value would rise by $2,561M — confirm sign convention (increase vs decrease) before publishing since the schema example describes a 100bp increase.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($2,540M)

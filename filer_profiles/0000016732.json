@@ -15,7 +15,12 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "interest rate swap",
+      "foreign exchange forward",
+      "commodity contract",
+      "notional amount"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -56,6 +61,17 @@
       "sections_found": [],
       "fields_extracted": 0,
       "fields_null": 0
+    },
+    {
+      "filing_date": "2026-08-02",
+      "form_type": "10-K",
+      "period_end": "2026-08-02",
+      "processed_at": "2026-09-24T12:42:16Z",
+      "sections_found": [
+        "derivatives_note"
+      ],
+      "fields_extracted": 5,
+      "fields_null": 7
     }
   ]
 }
