@@ -26,7 +26,9 @@
       "mark-to-market",
       "unrealized gain",
       "designated as hedging",
-      "aoci"
+      "aoci",
+      "unrealized loss",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -102,6 +104,18 @@
       ],
       "fields_extracted": 17,
       "fields_null": 18
+    },
+    {
+      "filing_date": "2026-08-30",
+      "form_type": "10-Q",
+      "period_end": "2026-08-30",
+      "processed_at": "2026-09-24T02:16:31Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 2,
+      "fields_null": 22
     }
   ]
 }

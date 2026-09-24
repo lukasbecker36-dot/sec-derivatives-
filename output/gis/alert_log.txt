@@ -1,3 +1,28 @@
+=== 10-Q | Period ending 2026-08-30 | Processed 2026-09-24 ===
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $7M, now missing
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $5M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $2M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[DISAPPEARED_FIELD] has_derivatives: was $1,432M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $1,624M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional: was $53M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $38M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $1,432M, now missing
+[NUMERIC] cash_flow_hedge_aoci: $1,624M → $-3M (-100.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $227M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $53M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $38M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $15M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-13M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $-2M, now missing
+[VALIDATION] Likely extraction failure: 15/16 previously-populated fields are now null (total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt, has_derivatives...)
+[VALIDATION] Likely units mismatch: cash_flow_hedge_aoci changed from 1,624 to -3 (0x)
+[LLM_FLAG] prior_values for this request look cross-contaminated/misaligned from an earlier bug: has_derivatives=1432.1 and total_derivative_asset=1432.1 share an identical value though they are different kinds (a string field and a fair_value field); equity_derivatives_notional='Yes' is a string sitting in a notional-numeric field; fx_not_designated_notional=1624.4 and cash_flow_hedge_aoci=1624.4 also share an identical value. These are treated as unreliable artifacts, not genuine prior-period figures.
+[LLM_FLAG] cash_flow_hedge_aoci extracted as $(2.8)M vs prior_values 1624.4 (>50% difference), but the prior figure is almost certainly the corrupted artifact described above (it matches fx_not_designated_notional's prior value exactly) rather than a real prior AOCI balance for this field.
+[LLM_FLAG] total_derivative_asset returned null because the filing states derivative fair values 'were not material' with no dollar figure given, rather than reusing prior_values=1432.1 which appears to be a mis-shifted has_derivatives value, not a real fair-value figure.
+[LLM_FLAG] This Item 3 excerpt discloses only a Value-at-Risk table (one-day 'risk of loss' by category: interest rate $33M, foreign currency $39M, commodity $5M, equity $3M, each with a quarter-over-quarter change), which is a different risk metric than the 100bp/10%-move sensitivity figures this schema expects. Extracting the VaR numbers into ir_sensitivity_100bp / fx_sensitivity_10pct / equity_sensitivity_10pct would misrepresent one metric as another, so those fields are left not_found rather than guessed.
+[LLM_FLAG] prior_values (commodity_derivatives_notional=37.6, fx_forwards_outstanding=227.0, fx_transaction_gain_loss=52.8, ir_sensitivity_100bp=37.6, fx_sensitivity_10pct=15.2, fixed_rate_notes_billion=-13.2, marketable_equity_value=-1.5) cannot be reconciled against this quarter because none of those specific data points are repeated in this 10-Q's Item 3 (it incorporates the FY2026 Form 10-K by reference for full detail). Note fixed_rate_notes_billion prior value of -13.2 (negative billions of notes outstanding) is itself implausible and looks like a data-quality artifact from an earlier run, not a value to reproduce.
+
 === 10-K | Period ending 2026-05-31 | Processed 2026-07-02 ===
 [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($7M)
 [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($5M)

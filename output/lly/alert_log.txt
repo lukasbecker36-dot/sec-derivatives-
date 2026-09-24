@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-09-24 ===
+[NUMERIC] fx_designated_notional: $67M → $297M (+343.3%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $23,545M → $18,817M (-20.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $329M → $20M (-93.9%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-290M → $21M (+107.2%) — exceeds 20% threshold
+[LLM_FLAG] prior_values (fx_derivatives_notional=28238, fx_designated_notional=246, fx_not_designated_notional=27992) are identical to the prior_values supplied for the FY2025 10-K (period 2025-12-31) request in this same batch, which is itself suspicious for two different filing periods. Those figures do not match this filing's own comparative columns for either 3/31/2026 ($297 designated / $18,817 not designated / $19,114 total) or 12/31/2025 ($67 designated / $23,545 not designated / $23,612 total). Treated as a stale/non-representative prior; current values taken directly from this 10-Q's table.
+[LLM_FLAG] total_derivative_asset (41) vs total_derivative_liability (20) and the FX notional both moved meaningfully quarter-over-quarter (e.g., not-designated notional down from $23,545M to $18,817M, about -20%), consistent with the filing's own comparative column rather than an extraction artifact; no field individually exceeded the 50% swing threshold against the filing's own 12/31/2025 comparative column.
+
+=== 10-K | Period ending 2025-12-31 | Processed 2026-09-24 ===
+[NUMERIC] fx_designated_notional: $246M → $67M (-72.8%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_asset: appeared for first time ($39M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($329M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-290M)
+[LLM_FLAG] prior_values (fx_derivatives_notional=28238, fx_designated_notional=246, fx_not_designated_notional=27992) do not reconcile with either the FY2025 column ($67 designated / $23,545 not designated / $23,612 total) or the FY2024 comparative column ($8,909 designated / $17,603 not designated / $26,512 total) shown in this filing's own notional table. The prior extraction appears to be a stale/mismatched value from a different filing rather than a real prior-period figure; current values are read directly from this 10-K's table and are not derived from the prior.
+[LLM_FLAG] The FX-hedge-designated notes (carrying amount $6.0B at 12/31/2025 vs $5.3B at 12/31/2024, per text) are a separate debt-based hedge instrument, not a forward-contract notional, and were excluded from fx_derivatives_notional to avoid conflating notes payable with derivative notional.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $2,383M, now missing
 [DISAPPEARED_FIELD] total_marketable_securities_fv: was $146M, now missing

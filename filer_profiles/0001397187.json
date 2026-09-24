@@ -19,7 +19,9 @@
       "net investment hedge",
       "accumulated other comprehensive",
       "interest rate swap",
-      "unrealized gain"
+      "unrealized gain",
+      "notional amount",
+      "designated as hedging"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -80,6 +82,18 @@
       ],
       "fields_extracted": 6,
       "fields_null": 11
+    },
+    {
+      "filing_date": "2026-08-02",
+      "form_type": "10-Q",
+      "period_end": "2026-08-02",
+      "processed_at": "2026-09-24T02:16:41Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 10,
+      "fields_null": 19
     }
   ]
 }
