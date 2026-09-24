@@ -177,6 +177,87 @@ class TestPreviewFields:
         assert 'commodity_derivatives_notional' in _PREVIEW_FIELDS
 
 
+class TestLeadSignals:
+    """Filings only lead the news section when they carry an editorial
+    signal — a filing-quote-worthy notes category, a first-time
+    disclosure, or a material move explained by a filing quote. Without
+    this gate the routine defaulted to writing "X notional rose Y% to
+    Z" for every filing regardless of whether it contained a story,
+    burying real news under boilerplate."""
+
+    def test_no_signal_when_only_small_move(self):
+        from src.digest_manifest import _lead_signals
+        s = _lead_signals(
+            {'fx': [{'field': 'fx_derivatives_notional',
+                      'current': 105, 'prior': 100, 'pct': 5}]},
+            {},
+        )
+        assert s['is_lead'] is False
+
+    def test_signal_when_notes_carry_newsroom_category(self):
+        from src.digest_manifest import _lead_signals
+        s = _lead_signals(
+            {},
+            {'Newsroom signals': [
+                'In June 2026, the Company entered into cross currency '
+                'swaps designated as net investment hedges.',
+            ]},
+        )
+        assert s['is_lead'] is True
+        assert s['editorial_notes'][0][0] == 'Newsroom signals'
+
+    def test_signal_when_first_time_disclosure(self):
+        from src.digest_manifest import _lead_signals
+        s = _lead_signals(
+            {'fx': [{'field': 'value_at_risk_fx', 'current': 590,
+                      'prior': None}]},
+            {},
+        )
+        assert s['is_lead'] is True
+        assert s['first_time_moves'][0]['field'] == 'value_at_risk_fx'
+
+    def test_signal_when_material_move_has_quote_context(self):
+        """ABT's IR swap notional jumped 250% BECAUSE the filing said
+        'additional interest rate hedge contracts associated with
+        fixed-rate debt issued as part of the Exact Sciences
+        acquisition.' The quote plausibly explains the move (same
+        asset class) — that's a lead."""
+        from src.digest_manifest import _lead_signals
+        s = _lead_signals(
+            {'ir': [{'field': 'ir_swap_notional', 'current': 4200,
+                     'prior': 1200, 'pct': 250}]},
+            {'Interest rate risk': [
+                'The increase from December 31, 2025, was due to '
+                'additional interest rate hedge contracts associated '
+                'with fixed-rate debt issued as part of the Exact '
+                'Sciences acquisition.',
+            ]},
+        )
+        assert s['is_lead'] is True
+        assert len(s['material_moves_with_context']) == 1
+
+    def test_no_signal_when_material_move_has_no_quote(self):
+        """A 250% jump with nothing in the notes explaining it is not a
+        story — it's a number that needs a reporter to look at the
+        filing. It goes in the supplementary table, not the leads."""
+        from src.digest_manifest import _lead_signals
+        s = _lead_signals(
+            {'ir': [{'field': 'ir_swap_notional', 'current': 4200,
+                     'prior': 1200, 'pct': 250}]},
+            {'FX exposure': ['Some unrelated FX narrative.']},
+        )
+        assert s['is_lead'] is False
+        assert len(s['material_moves_without_context']) == 1
+
+    def test_lead_signal_is_a_top_level_field(self):
+        """Contract: each new_filings entry carries lead_signals so the
+        routine can partition without re-scanning notes."""
+        import inspect
+        from src import digest_manifest
+        src = inspect.getsource(digest_manifest.build_manifest)
+        assert "'lead_signals': signals" in src
+
+
 class TestExtractionGapsHaveIsRegression:
     """The extraction_gaps entries now carry an `is_regression` flag so
     the routine can lead the digest with genuine failures rather than

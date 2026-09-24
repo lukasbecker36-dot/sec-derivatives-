@@ -294,6 +294,33 @@ def _notes_categories_for_period(ticker: str, period: str,
     return result
 
 
+# Prose-friendly asset-class detectors used to decide whether a filing
+# note plausibly explains a numeric move. ASSET_PATTERNS above is
+# tailored to field-name shape (underscores, word boundaries at token
+# edges) — it will miss "interest rate", "fixed-rate debt" or "foreign
+# currency exchange" in filing prose. This second family matches how
+# the text actually reads.
+_PROSE_ASSET_PATTERNS = {
+    'fx': re.compile(
+        r'\b(?:foreign\s+currency|foreign\s+exchange|FX|currency\s+exchange|'
+        r'euro|yen|renminbi|CNH|CNY|RMB|pound|sterling|krona|krone|franc|peso|'
+        r'net\s+investment\s+hedg)\b', re.I),
+    'ir': re.compile(
+        r'\b(?:interest[\s-]?rate|rate[\s-]?lock|treasury[\s-]?lock|'
+        r'swap|swaption|fixed[\s-]?rate|floating[\s-]?rate|basis\s+point|'
+        r'senior\s+notes)\b', re.I),
+    'commodity': re.compile(
+        r'\b(?:commodit|natural\s+gas|crude\s+oil|electricit|fuel|diesel|'
+        r'copper|aluminum|aluminium|nickel|steel|coal|corn|wheat|coffee)\b',
+        re.I),
+    'credit': re.compile(
+        r'\b(?:credit\s+default|credit[\s-]?spread|CDS|CVA|DVA|XVA)\b', re.I),
+    'equity': re.compile(
+        r'\b(?:share\s+repurchase|stock\s+warrant|convertible|'
+        r'equity\s+derivative)\b', re.I),
+}
+
+
 def _row_moves(prior: dict, curr: dict) -> dict[str, list[dict]]:
     """Grouped by asset class, the fields whose values differ from prior."""
     out: dict[str, list[dict]] = {'fx': [], 'ir': [], 'commodity': [],
@@ -311,6 +338,96 @@ def _row_moves(prior: dict, curr: dict) -> dict[str, list[dict]]:
         cls = _classify(k)
         out[cls].append(entry)
     return {k: v for k, v in out.items() if v}
+
+
+# Notes categories that are inherently editorial. A filing whose notes
+# mention any of these is worth writing about even if the raw numbers
+# didn't move dramatically — a novation, a de-designation, a new
+# hedging programme is news regardless of what the notional line does.
+_LEAD_CATEGORIES = (
+    'Newsroom signals', 'Event-driven', 'Policy changes',
+    'New instruments', 'New developments',
+)
+
+# Percentage moves at or above this threshold are considered
+# "material" for lead-selection purposes. Smaller moves belong in the
+# supplementary table, not the narrative section.
+_MATERIAL_MOVE_PCT = 20.0
+
+
+def _lead_signals(moves: dict, notes_categories: dict) -> dict:
+    """Compute editorial-priority signals for a new_filings entry.
+
+    Returns a dict the routine reads to decide whether a filing belongs
+    in the narrative "Leads" section or the compact "Other movements"
+    table. Without this signal, the routine defaulted to writing a
+    boilerplate paragraph for every filing regardless of whether it
+    contained a story — "FX notional rose to $X from $Y (+Z%)" with
+    nothing else to say. This surfaces only filings that either
+      - carry a filing-quote-worthy notes_categories entry (a programme
+        change, novation, deal-contingent hedge, first-time
+        designation), OR
+      - reported a first-time disclosure with no prior period, OR
+      - had a material move (>=20% or a sign flip) AND at least one
+        note that plausibly explains it (same asset class or field
+        name mentioned).
+
+    Anything else stays in the manifest but the routine will list it as
+    supplementary data, not narrative.
+    """
+    editorial_notes = [(cat, notes_categories[cat])
+                       for cat in _LEAD_CATEGORIES
+                       if cat in notes_categories and notes_categories[cat]]
+
+    material_moves = []
+    first_time_moves = []
+    all_notes_text = ' '.join(
+        s for lst in notes_categories.values() for s in lst
+    ).lower()
+    for asset_class, entries in moves.items():
+        for e in entries:
+            if e.get('prior') is None and e.get('current') is not None:
+                first_time_moves.append({'asset_class': asset_class, **e})
+                continue
+            pct = e.get('pct')
+            if pct is None:
+                continue
+            if abs(pct) < _MATERIAL_MOVE_PCT:
+                continue
+            # A move gets narrative treatment only if a filing note
+            # plausibly explains it. The note must mention either the
+            # exact field name, or a prose token from the same asset
+            # class (via _PROSE_ASSET_PATTERNS — the field-name-shaped
+            # ASSET_PATTERNS misses "interest rate" or "fixed-rate
+            # debt" in filing prose).
+            field_l = e['field'].lower()
+            asset_pat = _PROSE_ASSET_PATTERNS.get(asset_class)
+            explains = (
+                field_l in all_notes_text
+                or (asset_pat is not None
+                    and asset_pat.search(all_notes_text) is not None)
+            )
+            material_moves.append({
+                'asset_class': asset_class, **e,
+                'has_context_quote': explains,
+            })
+
+    has_lead = bool(
+        editorial_notes
+        or first_time_moves
+        or any(m['has_context_quote'] for m in material_moves)
+    )
+    return {
+        'is_lead': has_lead,
+        'editorial_notes': editorial_notes,
+        'first_time_moves': first_time_moves,
+        'material_moves_with_context': [
+            m for m in material_moves if m['has_context_quote']
+        ],
+        'material_moves_without_context': [
+            m for m in material_moves if not m['has_context_quote']
+        ],
+    }
 
 
 def _filing_age_days(filing_date_str: str, as_of: datetime) -> int | None:
@@ -411,6 +528,10 @@ def build_manifest(since_iso: str,
                     break
             filing_date = flat(row.get('filing_date'))
             age_days = _filing_age_days(filing_date, as_of_dt)
+            moves = _row_moves(prior_row or {}, row)
+            notes_categories = _notes_categories_for_period(
+                ticker, key[0], key[1])
+            signals = _lead_signals(moves, notes_categories)
             entry = {
                 'ticker': ticker,
                 'period_end_date': key[0],
@@ -421,9 +542,9 @@ def build_manifest(since_iso: str,
                 'prior_period_end_date': (flat(prior_row.get('period_end_date'))
                                            if prior_row else None),
                 'audit_flags': defects_lookup.get((ticker, key[0]), []),
-                'moves': _row_moves(prior_row or {}, row),
-                'notes_categories': _notes_categories_for_period(
-                    ticker, key[0], key[1]),
+                'moves': moves,
+                'notes_categories': notes_categories,
+                'lead_signals': signals,
             }
             # Filings whose EDGAR filing_date is older than the freshness
             # window (or missing) are treated as backfills, not news. The
