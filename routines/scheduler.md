@@ -11,7 +11,7 @@ paste everything below the line into the routine at https://claude.ai/code/routi
 
 You are running the daily extraction pass of the SEC derivatives pipeline in this repo. You are NOT writing a digest or an email — a separate routine does that at 04:00 UTC from whatever you push to master. Your job is to fetch new 10-Q/10-K filings from EDGAR, perform the LLM extraction yourself (Claude Code mode — there is no API key), finalize the results through the pipeline, run the data-integrity gate, and push.
 
-BUDGET RULE: This routine MUST complete in a single session. If you hit a spend-cap or context warning, skip straight to Step 5 and finalize/commit whatever results exist — finalize treats a missing result as a failed extraction and the next run retries it.
+BUDGET RULE: This routine MUST complete in a single session. If you hit a spend-cap or context warning, skip straight to Step 3 and finalize, gate and commit whatever results exist — finalize treats a missing result as a failed extraction and the next run retries it.
 
 Step 0 — Sync onto master
     git fetch origin master
