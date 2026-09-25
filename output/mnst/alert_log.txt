@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-09-25 ===
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $412M, now missing
+[DISAPPEARED_FIELD] fx_designated_notional: was $26M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $386M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $141M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $3M, now missing
+[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional, commodity_derivatives_notional, expected_12mo_reclass_from_aoci)
+[LLM_FLAG] Section is a cross-reference only: 'There have been no material changes in our market risks during the three-months ended June 30, 2025 compared with the disclosures in Part II, Item 7A of our Form 10-K.' No notional, sensitivity, fair-value, or exposure figures are stated in this section_text.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-09-25 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($412M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($26M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($386M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($141M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($3M)
+[LLM_FLAG] New net-investment hedge notional: the table of 'Notional Values' for derivatives designated as net investment hedges shows foreign currency exchange contracts of $25,940 (thousand, i.e. $25.94M) as of March 31, 2025 versus $— as of December 31, 2024 — this program appears to have been newly established in Q1 2025. Filing text: 'The Company uses forward contracts to protect the value of our net investments in a number of foreign operations.'
+[LLM_FLAG] Non-designated FX economic hedge P&L flipped sign quarter-over-quarter: 'Foreign currency exchange contracts ... Interest and other income, net ... $ ( 3,833 ) ... $ 5,343' — a $3.8 million loss in Q1 2025 versus a $5.3 million gain in Q1 2024, on contracts the filing says are 'largely offset by the changes in the fair value of the underlying economically hedged item.'
+[LLM_FLAG] Collateral posting disclosed for the first time in this excerpt: 'Certain of the Company’s counterparty agreements contain provisions that require the Company to post collateral on derivative instruments in a net liability position. As of March 31, 2025, $ 4.7 million was held as collateral and $ 0.1 million was posted as collateral.'
+[LLM_FLAG] fx_derivatives_notional (411.54) is a derived sum of the designated net-investment-hedge FX notional ($25.94M) and the non-designated economic-hedge FX notional ($385.6M); no single combined FX total is stated verbatim in the text.
+[LLM_FLAG] Section is a cross-reference only: 'There have been no material changes in our market risks during the three-months ended March 31, 2025 compared with the disclosures in Part II, Item 7A of our Form 10-K.' No notional, sensitivity, fair-value, or exposure figures are stated in this section_text.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
