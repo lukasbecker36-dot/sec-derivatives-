@@ -1,3 +1,29 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-09-28 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $3,903M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $3,600M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $303M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $151M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $29M, now missing
+[NUMERIC] fx_not_designated_notional: $303M → $447M (+47.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $151M → $66M (-56.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $29M → $61M (+112.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $122M → $5M (-96.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-479M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $87M, now missing
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($33M)
+[NUMERIC] fuel_sensitivity_10pct: $81M → $40M (-51.1%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 7/22 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_total_derivative_asset, fi_total_derivative_liability...)
+[LLM_FLAG] total_derivative_asset fell ~56% from prior $151.243M to $66.092M; the section does not explicitly explain the decline in derivative asset fair value quarter-over-quarter.
+[LLM_FLAG] total_derivative_liability rose ~112% from prior $28.913M to $61.426M; the section does not explicitly explain the increase, though the underlying table shows FX-contract liabilities in 'Accrued expenses and other liabilities' rising to $36,642 thousand from $2,434 thousand at Dec 31, 2025.
+[LLM_FLAG] net_derivative_position swung from a prior net asset of $122.33M to $4.666M (~96% decline); this is a computed figure (total assets minus total liabilities), not stated as a single number in the filing, and reflects the asset/liability moves flagged above.
+[LLM_FLAG] Newsworthy: $5,096 thousand (three months) and $5,801 thousand (six months) of fuel-contract amounts were reclassified from AOCI into income 'as a result that a forecasted transaction is no longer probable of occurring' -- indicating de-designation/discontinuation of some fuel cash flow hedges tied to reduced or altered forecasted fuel purchases.
+[LLM_FLAG] Newsworthy: NCLH runs both a designated fuel-swap programme (~611 thousand metric tons, maturing through Dec 31, 2027) and a non-designated fuel-swap programme (~30 thousand metric tons, maturing through Oct 31, 2027) concurrently.
+[LLM_FLAG] Newsworthy: non-designated FX forwards hedging euro debt principal/interest grew to €391.4 million / $447.1 million notional. No cash collateral is required on any derivative instrument ('We are not required to post cash collateral related to our derivative instruments'), and all derivatives remain Level 2 in the fair value hierarchy with none at Level 1 or 3.
+[LLM_FLAG] fuel_sensitivity_10pct fell ~51% from prior $81.2M to $39.7M; the text does not explicitly explain the decline, though it is directionally consistent with fewer remaining months of unhedged 2026 fuel exposure and a higher hedged ratio for 2026 (52%, up from 51%) -- inference, not stated in the filing. Note: the offsetting fuel-swap fair-value gain also fell, from an implied prior figure to $18.5 million currently.
+[LLM_FLAG] Newsworthy: unhedged euro ship-construction payments fell from €16.4bn/$19.3bn (Dec 31, 2025) to €13.3bn/$15.2bn (Jun 30, 2026); filing states the change was 'primarily due to the addition of foreign currency derivatives' -- an expansion of the FX hedging programme for newbuild capex.
+[LLM_FLAG] Newsworthy: unhedged euro-denominated debt rose from €1.7bn/$2.0bn (Dec 31, 2025) to €2.1bn/$2.4bn (Jun 30, 2026); filing attributes this 'primarily due to the delivery of Norwegian Luna, partially offset by additional foreign exchange forwards' -- a new ship delivery drew euro-denominated debt that was only partly hedged.
+[LLM_FLAG] Newsworthy: fuel hedging ratio for 2027 nearly doubled year-to-date, from 22% to 38% of projected purchases, which the filing attributes to 'additional fuel swaps' entered during the period.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $3,903M, now missing
 [DISAPPEARED_FIELD] fi_fx_designated_notional: was $3,600M, now missing

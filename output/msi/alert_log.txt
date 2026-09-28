@@ -1,3 +1,27 @@
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-09-28 ===
+[NUMERIC] total_derivative_asset: $10M → $1M (-90.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-11M → $-22M (-100.0%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset moved from 5 (prior) to 1 (-80%); total_derivative_liability moved from 10 (prior) to 23 (+130%); net_derivative_position moved from -5 to -22 (a widening of over 300%). Text shows both designated and non-designated FX contract asset positions fell to $0, leaving only the $1M equity swap as an asset, while designated FX liability held at $20M and non-designated FX liability rose to $3M.
+[LLM_FLAG] Newsworthy: aggregate counterparty credit risk exposure fell sharply to $1 million (from $10 million in Q2 2025 and $7 million in Q1 2025), tracking the near-total disappearance of derivative assets; the filing gives no explanation beyond the fair-value tables.
+[LLM_FLAG] Newsworthy: non-designated FX contracts swung to a $(6) million loss in Q3 2025 (Other income/expense) versus a $22 million gain in Q3 2024, though the nine-month figure remains a $41 million gain versus $7 million a year earlier — notable within-year P&L volatility on the non-designated FX book.
+[LLM_FLAG] Designated FX hedge liability held flat at $20 million versus Q2 2025, with a smaller quarterly AOCI loss of $(1) million versus $(17) million in Q2 — the net investment hedge mark-to-market loss appears to have stabilized after the larger Q2 move.
+
+=== 10-Q | Period ending 2025-06-28 | Processed 2026-09-28 ===
+[NUMERIC] total_derivative_asset: $7M → $10M (+42.9%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $9M → $21M (+133.3%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-2M → $-11M (-450.0%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset moved from 5 (prior) to 10 (+100%); total_derivative_liability moved from 10 (prior) to 21 (+110%); net_derivative_position moved from -5 to -11 (+120%). Text attributes the liability side mainly to designated foreign exchange contracts sitting at a $20 million accrued liability (up from $0 at Dec 31, 2024), alongside an AOCI loss of $(17) million for the quarter / $(23) million for six months on those same designated FX contracts.
+[LLM_FLAG] Newsworthy: designated FX hedges (net investment hedges) swung to a $20 million fair-value liability from breakeven at year-end 2024, coinciding with $(17)M / $(23)M AOCI losses for Q2/H1 2025 — consistent with USD weakness against the company's €160M and £50M net investment hedge notionals.
+[LLM_FLAG] Newsworthy: non-designated FX contracts booked a $34 million gain in Q2 2025 (vs $(5) million in Q2 2024) and $48 million for six months (vs $(15) million prior year) in Other income (expense) — a large swing in the non-designated FX book's P&L.
+
+=== 10-Q | Period ending 2025-03-29 | Processed 2026-09-28 ===
+[NUMERIC] fx_derivatives_notional: $1,400M → $1,100M (-21.4%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $5M → $7M (+40.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-5M → $-2M (+60.0%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position moved from -5 (prior) to -2, a 60% swing; the only support in the text is the fair-value table itself ($7 asset / $9 liability) — no narrative reason for the change is given.
+[LLM_FLAG] Newsworthy: net investment hedges of €140 million and £50 million (Euro and British pound functional subsidiaries) were outstanding as of March 29, 2025, with forward points/option time value excluded from hedge-effectiveness assessment and amortized through interest expense.
+[LLM_FLAG] Newsworthy (carried forward, not new this quarter): the 2023 treasury rate lock hedging $200 million of future debt issuance was terminated in 2024 upon issuance of $900 million 5.4% senior notes due 2034, with an $8 million net settlement loss being amortized to interest expense over the notes' 10-year term.
+
 === 10-Q | Period ending 2026-04-04 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] ir_swap_notional: was $150M, now missing
 [NUMERIC] total_derivative_asset: $4M → $5M (+25.0%) — exceeds 20% threshold
