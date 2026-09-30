@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-08-31 | Processed 2026-09-30 ===
+[LLM_FLAG] section_text contains only a cross-reference sentence to the FY2026 Form 10-K's Item 7A and no substantive market-risk disclosure; all schema fields genuinely absent from this filing's Item 3, not an extraction failure.
+
+=== 10-Q | Period ending 2026-02-28 | Processed 2026-09-30 ===
+[LLM_FLAG] section_text contains only a cross-reference sentence to the FY2025 Form 10-K's Item 7A and no substantive market-risk disclosure; all schema fields genuinely absent from this filing's Item 3, not an extraction failure.
+
+=== 10-Q | Period ending 2025-11-30 | Processed 2026-09-30 ===
+[LLM_FLAG] section_text contains only a cross-reference sentence to the FY2025 Form 10-K's Item 7A and no substantive market-risk disclosure; all schema fields genuinely absent from this filing's Item 3, not an extraction failure.
+
+=== 10-Q | Period ending 2025-08-31 | Processed 2026-09-30 ===
+[LLM_FLAG] section_text contains only a cross-reference sentence to the FY2025 Form 10-K's Item 7A and no substantive market-risk disclosure; all schema fields genuinely absent from this filing's Item 3, not an extraction failure.
+
+=== 10-Q | Period ending 2025-02-28 | Processed 2026-09-30 ===
+[LLM_FLAG] section_text contains only a cross-reference sentence to the FY2024 Form 10-K's Item 7A and no substantive market-risk disclosure; all schema fields genuinely absent from this filing's Item 3, not an extraction failure.
+
 === 10-Q | Period ending 2026-08-31 | Processed 2026-09-29 ===
 [LLM_FLAG] section_text for this filing (period_end 2026-08-31) contains only the boilerplate incorporation-by-reference sentence ('...for a more complete discussion of the market risks we encounter.') with no accompanying tables or narrative -- this indicates a section-extraction boundary failure, not a genuine absence of disclosure. prior_values show Oracle maintains an active FX forward hedging program and publishes FX/IR/equity sensitivity tables each period, so the substantive Item 3 content almost certainly exists elsewhere in the filing but was not captured by section_extract.py. All fields are returned null/not_found rather than fabricated or carried forward from prior_values; this row should be treated like an empty_row defect and queued for re-extraction with corrected section boundaries rather than coded as a genuine non-discloser.
 

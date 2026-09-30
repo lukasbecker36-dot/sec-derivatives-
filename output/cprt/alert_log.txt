@@ -1,3 +1,10 @@
+=== 10-K | Period ending 2026-07-31 | Processed 2026-09-30 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $2,672M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $1M, now missing
+[NEW_FIELD] translation_loss_amount: appeared for first time ($-110M)
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (total_cash_equivalents_fv, gross_unrealized_gains_debt)
+[LLM_FLAG] foreign_operations_currencies: Finland appears as a new country of operation versus the prior filing's list (UK, Canada, Brazil, EU/Germany/Spain/Ireland, UAE, Oman, Bahrain) — the filing text does not explain this addition.
+
 === 10-Q | Period ending 2026-04-30 | Processed 2026-06-14 ===
 [HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $4,395M → $2,672M (-39.2%) — exceeds 20% threshold
 [HISTORICAL] [LLM_FLAG] Copart holds no derivatives; all schema fields for derivatives are null.
