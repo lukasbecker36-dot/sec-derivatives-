@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-08-30 | Processed 2026-10-01 ===
+[NUMERIC] commodity_derivatives_notional: $78M → $146M (+88.0%) — exceeds 20% threshold
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
+[LLM_FLAG] commodity_derivatives_notional rose ~88% quarter-over-quarter, from $77.6M (May 31, 2026) to $145.9M (August 30, 2026); the filing gives no explanation for the increase in open commodity (purchase) contract notional.
+[LLM_FLAG] All disclosed derivatives (commodity and FX contracts) are categorized under 'Derivatives Not Designated as Hedging Instruments' in the gains/losses table ('Total gains (losses) from derivative instruments not designated as hedging instruments... $0.9 / $(0.6)'); no designated cash-flow or fair-value hedge accounting activity, AOCI balance, or hedge fair-value table is disclosed in this excerpt — no interest rate swap notional, no total derivative asset/liability fair values, and no cash-flow hedge AOCI roll-forward appear in the extracted section text.
+[LLM_FLAG] Agriculture commodities' 10% hypothetical fair-value sensitivity rose from $5.1M (prior baseline, FY2026 average) to $11.0M as of August 30, 2026 (+~116%), and is also up from the filing's own year-ago comparative of $7.5M (+~47%); the filing gives no explanation for the increase in commodity price exposure.
+[LLM_FLAG] fixed_rate_notes_billion was inferred from the carrying amount of total long-term debt ($7.73B) because the filing does not separately break out a 'fixed-rate notes' figure; the following sentences discuss interest-rate sensitivity of 'our fixed rate debt' using this same carrying-amount base, so the two are treated as the same population here, but this is an inference rather than an explicit label in the text.
+
 === 10-K | Period ending 2026-05-31 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $5M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_liability: was $4M, now missing
