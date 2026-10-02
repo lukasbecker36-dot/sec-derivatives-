@@ -1,3 +1,6 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-10-02 ===
+[LLM_FLAG] section_extraction_error: the supplied section_text is the generic forward-looking-statements / safe-harbor legal boilerplate preceding Item 3, not the actual 'Quantitative and Qualitative Disclosures About Market Risk' content. It contains no interest rate, FX, equity, or mortgage-loan sensitivity disclosures or figures, so every schema field is null/not_found. The section_extract.py regex for PHM's filing likely needs its heading/boundary pattern corrected to capture the substantive Item 3 text rather than stopping at or starting from the forward-looking-statements disclaimer.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] total_derivative_asset: was $23M, now missing
 [DISAPPEARED_FIELD] total_derivative_liability: was $50M, now missing
