@@ -1,3 +1,27 @@
+=== 10-Q | Period ending 2026-08-30 | Processed 2026-10-05 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($11M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($94M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[NEW_FIELD] net_derivative_position: appeared for first time ($-4M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $300M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $1M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $83M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $4M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $36M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-32M, now missing
+[NUMERIC] fixed_rate_notes_billion: $23M → $2M (-90.5%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 8/9 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_forwards_outstanding...)
+[LLM_FLAG] ir_swap_notional fell to $0 from a prior fair-value-hedge liability of $(36.0)M at May 31, 2026: 'On August 18, 2026, we settled our interest rate swap agreement previously designated as a fair value hedge for $38.6 million.' The swap was terminated mid-quarter, fully unwinding Darden's only interest rate derivative; the related cost basis adjustment will instead amortize to interest expense over the life of the senior notes.
+[LLM_FLAG] New hedging instruments entered into this quarter: 'During the three months ended August 30, 2026, we entered into equity forward contracts to hedge the risk of changes in future cash flows associated with Darden stock units and the non-qualified deferred compensation plan.'
+[LLM_FLAG] equity_derivatives_notional ($93.9M) is a computed sum of the designated ($41.1M) and not-designated ($52.8M) equity forward notional lines; the filing does not state a combined total directly, only the two components and the combined fair value.
+[LLM_FLAG] Foreign exchange forward contracts are named as a designated cash-flow-hedge instrument type in the opening sentence of Note 10 ('...foreign exchange forward contracts as cash flow hedging instruments'), but no FX forward line appears in the current notional/fair-value table (only Equity forwards, Commodity contracts, Interest rate related) -- suggesting no FX forwards were outstanding at August 30, 2026, despite being named as an active instrument type.
+[LLM_FLAG] total_derivative_asset/total_derivative_liability left null: the table presents net asset/(liability) per instrument line (e.g. equity forwards net to $(5.1)M even though it combines a designated and a not-designated book), with a footnote confirming amounts are 'included in receivables, net, and other current liabilities, as applicable' -- there is no disclosed gross asset total or gross liability total, only net-by-instrument figures and a net total of $(4.4)M.
+[LLM_FLAG] fixed_rate_notes_billion: prior_values recorded $22.7 billion for this field, but the filing text states the average fair value of Darden's long-term fixed-rate debt was $2.16 billion (high $2.18bn / low $2.14bn) -- a figure consistent with Darden's balance-sheet scale. The $22.7bn prior figure looks like a data error (roughly 10x too large), not a real decline; nothing in this filing explains a move of that size. Do not compute or publish a percentage change between these two numbers without first verifying the prior filing directly -- this is exactly the corrupted-endpoint failure mode the data integrity gate exists to catch.
+[LLM_FLAG] The quantified one-year VaR ($55.5 million) covers 'equity forwards, commodity instruments, floating-rate, and fixed-rate debt interest rate exposures' but excludes foreign currency exchange rate exposure even though FX is listed as a market risk in the opening sentence -- consistent with Note 10 (derivatives_note) showing no FX forward notional outstanding this quarter.
+[LLM_FLAG] Darden measures market risk via a variance/covariance VaR model at the 99% confidence level (one-week to one-year horizons) rather than standard 100bp/10% shock sensitivities, so ir_sensitivity_100bp and fx_sensitivity_10pct cannot be populated in the schema's expected form from this disclosure. The nearest comparable figures actually disclosed are: $55.5 million one-year VaR for equity forwards + commodity + floating/fixed-rate debt IR exposure combined, and $92.0 million one-year VaR for the fair value of fixed-rate debt alone.
+
 === 10-K | Period ending 2026-05-31 | Processed 2026-07-27 ===
 [DROPPED_TO_ZERO] fx_derivatives_notional: $31M → $0M
 [DROPPED_TO_ZERO] fx_designated_notional: $815M → $0M

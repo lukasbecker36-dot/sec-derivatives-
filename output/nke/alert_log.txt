@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-08-31 | Processed 2026-10-05 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($21,300M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($15,900M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($5,400M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-132M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-101M)
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $8M, now missing
+[DISAPPEARED_FIELD] fx_forward_var: was $66M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $2,400M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_fair_value: was $-4M, now missing
+[DISAPPEARED_FIELD] long_term_debt_principal: was $8,000M, now missing
+[DISAPPEARED_FIELD] long_term_debt_fair_value: was $6,805M, now missing
+[DISAPPEARED_FIELD] average_monthly_fx_derivative_change: was $199M, now missing
+[VALIDATION] Likely extraction failure: 7/8 previously-populated fields are now null (fixed_rate_notes_billion, fx_forward_var, interest_rate_swap_notional, interest_rate_swap_fair_value, long_term_debt_principal...)
+[LLM_FLAG] total_derivative_asset / total_derivative_liability / net_derivative_position: not found. The extracted section_text begins mid-table (first visible fragment is 'ues $ (4) $ (7)'), so the fair-value balance-sheet table for derivative assets/liabilities appears to precede this excerpt and was not captured. These fields should not be treated as genuinely blank disclosures.
+[LLM_FLAG] fx_derivatives_notional ($21,300M) is a derived sum of the separately-stated designated cash flow hedge notional ($15,900M) and undesignated derivative notional ($5,400M); the filing does not state a single combined FX total, and the undesignated figure's heading does not explicitly say 'foreign currency' (inferred from NKE's minimal_hedger profile and the adjacent non-designated gain/loss table, which lists only 'Foreign exchange forwards and options').
+[LLM_FLAG] This quarter's Item 7A is a one-line incorporation-by-reference statement ('no material changes') with no standalone quantitative disclosure. None of this schema's fields can be independently confirmed for the current period from this text — do not carry forward prior-period figures (e.g. fixed_rate_notes_billion $8.0B, fx_forward_var $66M, interest_rate_swap_notional $2.4B, interest_rate_swap_fair_value $(4)M, long_term_debt_fair_value $6,805M) as if restated here.
+
 === 10-K | Period ending 2026-05-31 | Processed 2026-07-16 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($2,400M)
 [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
