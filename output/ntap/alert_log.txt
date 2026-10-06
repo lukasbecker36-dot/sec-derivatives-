@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-07-31 | Processed 2026-09-28 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $2,070M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $1,514M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $10M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $1M, now missing
+[NUMERIC] fx_derivatives_notional: $1,083M → $1,471M (+35.8%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $75M → $133M (+77.3%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $1,008M → $1,338M (+32.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-4M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
+[DISAPPEARED_FIELD] fx_forwards_cf_hedge_notional: was $75M, now missing
+[DISAPPEARED_FIELD] fx_forwards_non_designated_long: was $13M, now missing
+[DISAPPEARED_FIELD] fx_forwards_non_designated_short: was $995M, now missing
+[DISAPPEARED_FIELD] fixed_income_investments: was $2,186M, now missing
+[DISAPPEARED_FIELD] senior_notes_principal: was $2,500M, now missing
+[DISAPPEARED_FIELD] fx_forward_gain_loss: was $-15M, now missing
+[VALIDATION] Likely extraction failure: 12/15 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, fi_total_derivative_asset, fi_total_derivative_liability, ir_sensitivity_100bp...)
+[LLM_FLAG] fx_designated_notional rose from $75M to $133M (+77%) quarter-over-quarter; the filing gives only the notional table and does not explain the increase in cash flow hedge notional.
+[LLM_FLAG] Gain/(loss) on non-designated (balance sheet) FX forward contracts recognized in other expense, net swung from a $18M gain (Q1 FY26, quote: 'Foreign currency exchange contracts\t\t$\t18') to a $(24)M loss (Q1 FY27, quote: 'Foreign currency exchange contracts\t\t$\t( 24\t)'); no explanation given in this section beyond the standard 'gain (loss) recognized into income' table caption.
+
 === 10-K | Period ending 2026-04-24 | Processed 2026-06-23 ===
 [HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $1,629M → $2,070M (+27.1%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_total_derivative_asset: $6M → $10M (+66.7%) — exceeds 20% threshold

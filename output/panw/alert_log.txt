@@ -1,3 +1,25 @@
+=== 10-K | Period ending 2026-07-31 | Processed 2026-09-29 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,556M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $4,344M, now missing
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $944M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $3,531M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $24M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $65M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $6M, now missing
+[NUMERIC] fx_derivatives_notional: $1,233M → $2,200M (+78.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_designated_notional: was $821M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $412M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $19M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $19M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $96M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $96M, now missing
+[VALIDATION] Likely extraction failure: 13/14 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt...)
+[LLM_FLAG] fx_derivatives_notional rose from $1,233M (prior period) to $2,200M, a +78% increase exceeding the 50% threshold; section_text gives no reason for the increase this period, only forward-looking boilerplate ('Increased international sales in the future may result in greater foreign currency denominated sales, increasing our foreign currency risk') that is not tied to the actual period-over-period change.
+[LLM_FLAG] Section mismatch: section_name is 'derivatives_note' but section_text is Item 1A Risk Factors language (Israel/CyberArk operations, GDPR/privacy, tax risk) referencing Note 6, not the Note 6 Derivative Instruments footnote itself — no fair value, AOCI, or designated/non-designated notional split is present in this excerpt to extract.
+[LLM_FLAG] CyberArk acquisition is cited as having 'meaningfully expanded' Palo Alto Networks' Israel operations; worth checking the actual Note 6 text (not present in this excerpt) for any acquisition-related or newly designated hedges tied to the enlarged Israel footprint.
+[LLM_FLAG] ir_sensitivity_100bp / interest_rate_sensitivity not found: this section_text excerpt covers only 'Foreign Currency Exchange Risk' and is truncated at 'Refer to Note 6. Derivative Instruments in Part II,' before any Interest Rate Risk subsection appears; prior_values shows $96M for this field but no current-period interest-rate text is present here to confirm, update, or contradict it.
+[LLM_FLAG] fx_sensitivity_10pct / fx_sensitivity not quantified: the filing states a hypothetical 10% FX rate move on monetary assets/liabilities 'would not be material to our financial condition or results of operations' but supplies no dollar figure in this excerpt, so no number could be extracted despite the field expecting one.
+
 === 10-Q | Period ending 2026-04-30 | Processed 2026-07-05 ===
 [HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $3,223M → $1,556M (-51.7%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] marketable_equity_securities_fv: $1,395M → $944M (-32.3%) — exceeds 20% threshold

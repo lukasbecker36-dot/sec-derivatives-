@@ -1,3 +1,29 @@
+=== 10-Q | Period ending 2026-08-31 | Processed 2026-10-05 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,060M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($976M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($84M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($327M)
+[NUMERIC] total_derivative_asset: $1,953M → $57M (-97.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $1,884M → $55M (-97.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $69M → $2M (-97.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $500M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $302M → $-49M (-116.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $82M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $65M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $17M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $49M, now missing
+[VALIDATION] Likely extraction failure: 5/9 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, marketable_equity_value)
+[LLM_FLAG] net_derivative_position: computed current net asset of $1.9M ($56.9M total derivative assets minus $55.0M total derivative liabilities, both read from the fair-value table's 'Total' row) versus a prior_values figure of $69.4M -- a decline of over 95%. Nothing in section_text explains a change of this size for this period.
+[LLM_FLAG] total_derivative_asset ($56.9M) and total_derivative_liability ($55.0M) both differ from prior_values by roughly -97% (prior: $1,952.9M / $1,883.5M). Those prior figures are in notional-magnitude territory (comparable to the ~$1,060.5M FX notional total in this same note), not fair-value magnitude, suggesting the PRIOR extraction placed a notional figure into these fair_value fields rather than reflecting a genuine swing this period. Current values are taken directly from the fair-value table's 'Total' row ('Total ... $ 56.9 ... $ 55.0').
+[LLM_FLAG] expected_12mo_reclass_from_aoci: section_text states a $49.3 million DECREASE to earnings expected to be reclassified in the next 12 months (-49.3), versus a prior_values figure of +301.8 -- a sign flip and >50% swing. Section_text gives only the current single figure with no comparative number or stated reason for the change.
+[LLM_FLAG] cash_flow_hedge_aoci: no standalone AOCI balance for cash-flow hedges is stated in section_text (only the $49.3M expected 12-month reclassification portion is disclosed), so this is returned as not_found rather than carrying forward the prior_values figure of 500.0, which coincides suspiciously with the unrelated $500.0 million interest-rate-swap notional disclosed in the same note and looks like a prior misextraction rather than a real AOCI balance.
+[LLM_FLAG] fx_designated_notional and commodity_derivatives_notional are computed sums of explicitly disclosed sub-components (fair value hedges + cash flow hedges for FX; asset-side + liability-side notional for commodity), since section_text gives no single stated total for either breakdown.
+[LLM_FLAG] Newsworthy: commodity (soybean oil) cash flow hedges recorded a nine-month 2026 OCI gain of $64.7M versus $0 in the prior-year nine months ('Commodity contracts ... 64.7 ... --'), the largest single swing in the OCI table, consistent with McCormick's stated near-exclusive use of derivatives for soybean oil price risk ('With the exception of soybean oil, we generally do not use derivatives to manage price volatility.').
+[LLM_FLAG] Newsworthy: net investment hedge currency volatility eased sharply -- the nine-month OCI loss on cross-currency contracts narrowed to $(0.9)M in 2026 from $(51.6)M in 2025 ('Cross currency contracts ... ( 0.9 ) ... ( 51.6 )'), implying much calmer USD cross-currency moves versus a year ago.
+[LLM_FLAG] note_reference: the schema description's example says 'Note 7', but section_text actually cites 'Note 4' ('Note 4 of notes to our accompanying condensed consolidated financial statements'); extracted the actual filing reference rather than the schema description's example number.
+[LLM_FLAG] All quantitative market-risk fields (FX/IR/equity sensitivities, fixed-rate notes, marketable equity value, FX forward notional) are not_found: this Item 3 excerpt is a pure cross-reference stating 'there have been no significant changes in our financial instrument portfolio or market risk exposures since our November 30, 2025 fiscal year end,' and points the reader to the MD&A Market Risk Sensitivity section and Note 4 instead of repeating figures. prior_values for fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct and marketable_equity_value could not be confirmed, updated, or contradicted from this text.
+
 === 10-Q | Period ending 2026-05-31 | Processed 2026-06-26 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,953M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($1,884M)

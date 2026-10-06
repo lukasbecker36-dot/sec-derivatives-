@@ -1,3 +1,24 @@
+=== 10-K | Period ending 2026-08-02 | Processed 2026-09-24 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $322M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $223M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $99M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $600M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $34M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $18M, now missing
+[DISAPPEARED_FIELD] fx_designated_notional: was $223M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $99M, now missing
+[NUMERIC] commodity_derivatives_notional: $148M → $189M (+27.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_asset: was $34M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $18M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $16M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-11M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-5M, now missing
+[VALIDATION] Likely extraction failure: 13/17 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset...)
+[LLM_FLAG] New hedging instrument: Campbell's entered into a fixed-to-floating interest rate swap program (fair-value hedge) for the first time this period, notional $600 million against a portion of its $800 million 4.75% Notes due March 23, 2035. Filing states: 'There were no fixed-to-floating interest rate swaps outstanding as of August 3, 2025.' The swaps carried a fair value loss of $26 million as of August 2, 2026, and a hypothetical 100bp rate increase would decrease their fair value by ~$42 million with an offsetting change on the hedged debt.
+[LLM_FLAG] New FX exposure tied to M&A: 'We acquired our 49% ownership interests in La Regina on May 4, 2026,' introducing Euro exposure alongside the existing Canadian dollar intercompany exposure that FX forwards/options are used to hedge.
+[LLM_FLAG] FX derivatives notional fell sharply on the filing's own year-over-year comparison ('$325 million and $596 million, respectively' as of August 2, 2026 vs. August 3, 2025), a ~45% decline, though this does not exceed the 50% threshold against the pipeline's tracked prior_values (322).
+[LLM_FLAG] Legacy settled forward-starting swaps referenced in the note (notional $700 million settled at a gain of less than $1 million tied to October 2024 notes issuance, and $1.1 billion settled at an $11 million loss in March 2024) are historical/already-settled items carried in OCI amortization, not new activity this period, but included here for context since they appear in the current note.
+
 === 10-Q | Period ending 2026-05-03 | Processed 2026-06-14 ===
 [HISTORICAL] [NUMERIC] fi_fx_not_designated_notional: $167M → $99M (-40.7%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_total_derivative_asset: $28M → $34M (+21.4%) — exceeds 20% threshold

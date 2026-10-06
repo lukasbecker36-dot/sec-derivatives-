@@ -20,7 +20,11 @@
       "interest rate swap",
       "notional amount",
       "notional value",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "net investment hedge",
+      "fair value hedge",
+      "foreign exchange forward",
+      "designated as hedging"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -93,6 +97,18 @@
       ],
       "fields_extracted": 11,
       "fields_null": 16
+    },
+    {
+      "filing_date": "2026-08-31",
+      "form_type": "10-Q",
+      "period_end": "2026-08-31",
+      "processed_at": "2026-10-05T02:24:54Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 7,
+      "fields_null": 20
     }
   ]
 }

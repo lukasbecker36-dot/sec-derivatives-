@@ -1,3 +1,36 @@
+=== 10-Q | Period ending 2026-08-31 | Processed 2026-10-06 ===
+[LLM_FLAG] section_extraction_issue: the provided section_text is Item 3's cross-reference boilerplate ("provided under the caption 'Market Risk Factors' under Item 2 ... and is incorporated herein by reference") plus Item 4 controls-and-procedures language and a Part II share-repurchase table. None of the actual market risk content (FX, interest rate, equity sensitivities, AFS portfolio detail) is present in this excerpt -- it lives in Item 2 MD&A and was not captured by the section slicer. All fields below are null because the data is simply absent from this text, not because Paychex has no such disclosures.
+[LLM_FLAG] newsworthy: new $1.0 billion share repurchase authorization approved by the Board on January 16, 2026, with no expiration date, replacing/supplementing the prior $400.0M program -- this is a capital-allocation item, not a derivatives item, but notable context (quote: "On January 16, 2026, our Board approved a program to repurchase up to an additional $1.0 billion of our common stock with no expiration date.")
+
+=== 10-Q | Period ending 2025-11-30 | Processed 2026-10-06 ===
+[LLM_FLAG] section_extraction_issue: the provided section_text is Item 3's cross-reference boilerplate ("provided under the caption 'Market Risk Factors' under Item 2 ... and is incorporated herein by reference") plus Item 4 controls-and-procedures language and a Part II share-repurchase table. None of the actual market risk content (FX, interest rate, equity sensitivities, AFS portfolio detail) is present in this excerpt -- it lives in Item 2 MD&A and was not captured by the section slicer. All fields below are null because the data is simply absent from this text, not because Paychex has no such disclosures.
+
+=== 10-Q | Period ending 2025-08-31 | Processed 2026-10-06 ===
+[LLM_FLAG] section_extraction_issue: the provided section_text is Item 3's cross-reference boilerplate ("provided under the caption 'Market Risk Factors' under Item 2 ... and is incorporated herein by reference") plus Item 4 controls-and-procedures language and a Part II share-repurchase table. None of the actual market risk content (FX, interest rate, equity sensitivities, AFS portfolio detail) is present in this excerpt -- it lives in Item 2 MD&A and was not captured by the section slicer. All fields below are null because the data is simply absent from this text, not because Paychex has no such disclosures.
+
+=== 10-Q | Period ending 2026-08-31 | Processed 2026-10-05 ===
+[LLM_FLAG] section_extract mismatch: section_text contains only Item 4 (Controls and Procedures), the Part II share-repurchase table, and Item 5 boilerplate — the actual market-risk content is stated to be 'incorporated herein by reference' to the 'Market Risk Factors' caption under Item 2 MD&A, which is not present in this slice. No schema field can be populated from this text; this is an extraction-pipeline gap (wrong section boundary), not a genuine non-disclosure by the issuer.
+
+=== 10-Q | Period ending 2025-11-30 | Processed 2026-10-05 ===
+[LLM_FLAG] section_extract mismatch: section_text contains only Item 4 (Controls and Procedures), the Part II share-repurchase table, and Item 5 boilerplate — the actual market-risk content is stated to be 'incorporated herein by reference' to the 'Market Risk Factors' caption under Item 2 MD&A, which is not present in this slice. No schema field can be populated from this text; this is an extraction-pipeline gap (wrong section boundary), not a genuine non-disclosure by the issuer.
+
+=== 10-Q | Period ending 2025-08-31 | Processed 2026-10-05 ===
+[LLM_FLAG] section_extract mismatch: section_text contains only Item 4 (Controls and Procedures), the Part II share-repurchase table, and Item 5 boilerplate — the actual market-risk content is stated to be 'incorporated herein by reference' to the 'Market Risk Factors' caption under Item 2 MD&A, which is not present in this slice. No schema field can be populated from this text; this is an extraction-pipeline gap (wrong section boundary), not a genuine non-disclosure by the issuer.
+
+=== 10-Q | Period ending 2026-08-31 | Processed 2026-10-01 ===
+[LLM_FLAG] section_extraction: section_text for this filing contains only the Item 3 cross-reference boilerplate ('The information called for by this item is provided under the caption "Market Risk Factors" under Item 2 ... and is incorporated herein by reference.'), followed by Item 4 (Controls and Procedures) and Part II Item 2/Item 5 content (share repurchase table, Rule 10b5-1 disclosures). The actual 'Market Risk Factors' narrative lives in Item 2 MD&A and was not captured by this section slice, so none of the 15 schema fields can be populated from this text. Same recurring section-boundary issue as the two prior PAYX quarters in this batch -- recommend re-slicing from the MD&A 'Market Risk Factors' heading instead of Item 3.
+
+=== 10-Q | Period ending 2025-11-30 | Processed 2026-10-01 ===
+[LLM_FLAG] section_extraction: section_text for this filing contains only the Item 3 cross-reference boilerplate ('The information called for by this item is provided under the caption "Market Risk Factors" under Item 2 ... and is incorporated herein by reference.'), followed by Item 4 (Controls and Procedures) and Part II Item 2/Item 5 content (share repurchase table, Rule 10b5-1 disclosures). The actual 'Market Risk Factors' narrative lives in Item 2 MD&A and was not captured by this section slice, so none of the 15 schema fields can be populated from this text. Same section-boundary issue as the prior-quarter (2025-08-31) request -- recommend re-slicing from the MD&A 'Market Risk Factors' heading instead of Item 3.
+
+=== 10-Q | Period ending 2025-08-31 | Processed 2026-10-01 ===
+[DISAPPEARED_FIELD] average_interest_rate: was $4M, now missing
+[DISAPPEARED_FIELD] afs_duration: was $3M, now missing
+[DISAPPEARED_FIELD] unrealized_losses: was $52M, now missing
+[DISAPPEARED_FIELD] total_portfolio_value: was $7,400M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (average_interest_rate, afs_duration, unrealized_losses, total_portfolio_value)
+[LLM_FLAG] section_extraction: section_text for this filing contains only the Item 3 cross-reference boilerplate ('The information called for by this item is provided under the caption "Market Risk Factors" under Item 2 ... and is incorporated herein by reference.'), followed by Item 4 (Controls and Procedures) and Part II Item 2/Item 5 content (share repurchase table, Rule 10b5-1 disclosures). The actual 'Market Risk Factors' narrative lives in Item 2 MD&A and was not captured by this section slice, so none of the 15 schema fields (FX, IR sensitivity, AFS portfolio, etc.) can be populated from this text. This looks like a section-boundary bug in section_extract.py for PAYX rather than a genuine non-disclosure -- recommend re-slicing from the MD&A 'Market Risk Factors' heading instead of Item 3.
+
 === 10-K | Period ending 2026-05-31 | Processed 2026-07-20 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
 [NEW_FIELD] total_derivative_asset: appeared for first time ($0M)

@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-10-01 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($100M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($35M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($-41M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-6M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $570M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $19M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $250M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-231M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct)
+[LLM_FLAG] ir_swap_notional fell from $2,290M (Dec 31, 2024) to $100M (June 30, 2025), a ~96% decline. The corresponding Interest Rate Derivatives fair-value asset ($32M at Dec 31, 2024) disappears from PSEG's June 30, 2025 asset table entirely, leaving only a $(1)M liability. The filing text provided does not explain the cause (maturity, termination, or restructuring of the IR hedge book) — worth confirming with PSEG before reporting.
+[LLM_FLAG] Counterparty concentration: 'As of June 30, 2025, 98% of the net credit exposure for PSEG Power's wholesale operations was with investment grade counterparties. There were three counterparties with credit exposure greater than 10% of the total,' one of which is affiliate PSE&G (eliminated in consolidation).
+[LLM_FLAG] Large netting activity: PSEG's Level 2 energy-related derivative assets/liabilities before netting run into the billions ($1,461M gross asset offset by $(1,429)M netting; $(1,548)M gross liability offset by $1,510M netting) while net recognized fair values are only $35M asset / $(41)M liability combined — reflects substantial use of master netting agreements with counterparties, not a shrinking commodity hedge book.
+[LLM_FLAG] equity_derivatives_notional prior_value supplied to this extraction request is the string 'Yes' rather than a dollar figure — appears to be a data-integrity issue in the pipeline's cached prior values, unrelated to this period's filing (no equity derivatives notional is disclosed in this section at all).
+[LLM_FLAG] This quarter's Item 3 excerpt contains only a commodity MTM Value-at-Risk table; it discloses no standalone IR sensitivity (100bp), FX sensitivity (10%), FX forward notional, fixed-rate notes outstanding, marketable equity value, or equity sensitivity figures — even though prior periods carried values for ir_sensitivity_100bp ($250M), fx_sensitivity_10pct ($(231)M), and fx_transaction_gain_loss ($19M) per the pipeline's prior_values cache. Worth checking whether PSEG shortened/restructured its Item 3 disclosure this quarter or whether these items appear elsewhere in the filing outside this excerpt.
+[LLM_FLAG] 95% confidence-level VaR High fell from $152M (year ended Dec 31, 2024) to $61M (three months ended June 30, 2025); 99.5% confidence-level High fell from $238M to $95M over the same comparison. Note the comparison is a full year vs. a single quarter, so it is not strictly like-for-like. The filing states only generally: 'The range of VaR was narrower for the three months ended June 30, 2025 as compared with the year ended December 31, 2024,' without further explanation of the driver.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($570M)
 [NEW_FIELD] total_derivative_asset: appeared for first time ($19M)
