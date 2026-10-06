@@ -321,8 +321,37 @@ _PROSE_ASSET_PATTERNS = {
 }
 
 
-def _row_moves(prior: dict, curr: dict) -> dict[str, list[dict]]:
-    """Grouped by asset class, the fields whose values differ from prior."""
+def _field_priors(earlier_rows: list[dict]) -> tuple[dict, dict]:
+    """For each field, the most recent earlier value that is actually numeric,
+    and the period_end_date it came from.
+
+    Comparing against a single prior row breaks when that row is blank for a
+    field it doesn't cover. Nike's 10-K extraction captured market-risk fields
+    only, so against the 10-K every FX notional in the next 10-Q looked like a
+    first-time disclosure and the digest led with it, although five earlier
+    quarters held the same fields. Walking back field by field finds the real
+    prior endpoint.
+    """
+    values: dict = {}
+    periods: dict = {}
+    for row in reversed(earlier_rows):
+        for k, v in row.items():
+            if k in META or k is None or k in values:
+                continue
+            if numeric(v) is not None:
+                values[k] = v
+                periods[k] = flat(row.get('period_end_date'))
+    return values, periods
+
+
+def _row_moves(prior: dict, curr: dict,
+               prior_periods: dict | None = None) -> dict[str, list[dict]]:
+    """Grouped by asset class, the fields whose values differ from prior.
+
+    `prior_periods` (field -> period_end_date) is attached to each entry as
+    `prior_period_end_date` so a digest can cite both endpoints even when the
+    prior value comes from an older period than the row immediately before.
+    """
     out: dict[str, list[dict]] = {'fx': [], 'ir': [], 'commodity': [],
                                    'equity': [], 'credit': [], 'other': []}
     for k, v in curr.items():
@@ -333,6 +362,8 @@ def _row_moves(prior: dict, curr: dict) -> dict[str, list[dict]]:
         if cv is None:
             continue
         entry = {'field': k, 'current': cv, 'prior': pv}
+        if pv is not None and prior_periods and k in prior_periods:
+            entry['prior_period_end_date'] = prior_periods[k]
         if pv is not None and pv != 0:
             entry['pct'] = round((cv - pv) / abs(pv) * 100, 2)
         cls = _classify(k)
@@ -367,7 +398,7 @@ def _lead_signals(moves: dict, notes_categories: dict) -> dict:
       - carry a filing-quote-worthy notes_categories entry (a programme
         change, novation, deal-contingent hedge, first-time
         designation), OR
-      - reported a first-time disclosure with no prior period, OR
+      - reported a field with no value in any earlier period, OR
       - had a material move (>=20% or a sign flip) AND at least one
         note that plausibly explains it (same asset class or field
         name mentioned).
@@ -519,8 +550,10 @@ def build_manifest(since_iso: str,
                     'is_regression': bool(populated_before),
                 })
                 continue
-            # Prior row for delta computation is the one immediately before
-            # the new row chronologically, populated or not.
+            # prior_row is the nearest earlier populated row and only labels
+            # the entry (prior_period_end_date). Deltas are computed per field
+            # against the nearest earlier row that has that field — see
+            # _field_priors.
             prior_row = None
             for j in range(i - 1, -1, -1):
                 if any(flat(v).strip() for k, v in current_rows[j].items() if k not in META):
@@ -528,7 +561,15 @@ def build_manifest(since_iso: str,
                     break
             filing_date = flat(row.get('filing_date'))
             age_days = _filing_age_days(filing_date, as_of_dt)
-            moves = _row_moves(prior_row or {}, row)
+            # Earlier by period, not by file position: backfilled rows are
+            # not always appended in period order.
+            earlier = sorted(
+                (r for r in current_rows
+                 if flat(r.get('period_end_date')) and
+                 flat(r.get('period_end_date')) < key[0]),
+                key=lambda r: flat(r.get('period_end_date')))
+            field_prior, field_prior_periods = _field_priors(earlier)
+            moves = _row_moves(field_prior, row, field_prior_periods)
             notes_categories = _notes_categories_for_period(
                 ticker, key[0], key[1])
             signals = _lead_signals(moves, notes_categories)
