@@ -5,6 +5,24 @@ archetype: minimal_hedger
 sector: TODO  # e.g., technology, industrials, financials
 extraction_mode: llm
 
+# Nike titles its derivatives footnote "NOTE 12 — RISK MANAGEMENT AND
+# DERIVATIVES" (NOTE 7 in 10-Qs). The minimal_hedger heading expects
+# "Derivative"/"Hedging" straight after the note number, so it never matched
+# and the content fallback grabbed the first "notional" mention instead —
+# in a 10-K that is the Note 1 accounting policy, so every 10-K row came back
+# with no notionals or AOCI. Match the real heading. NOTE is case-sensitive
+# (all caps in Nike's headings) so in-text references such as "refer to
+# Note 4 — Fair Value Measurements" don't end the section early. The slice
+# deliberately runs on through the next note (ACCUMULATED OTHER COMPREHENSIVE
+# INCOME), which follows directly in both forms and holds the cash flow hedge
+# AOCI balance. Together they run to ~15,000 characters in the 10-K, with the
+# notional paragraphs near the end, so the default 10,000 cap would cut them.
+sections:
+  derivatives_note:
+    heading: '(?-i:NOTE)\s+\d+\s*[—–-]\s*RISK\s+MANAGEMENT\s+AND\s+DERIVATIVES'
+    end_boundary: '(?-i:NOTE)\s+\d+\s*[—–-]\s*(?!\s|RISK\s+MANAGEMENT|ACCUMULATED\s+OTHER)'
+    max_length: 16000
+
 # Additional fields identified by LLM analysis (review and adjust)
 fields:
   fx_forward_var:

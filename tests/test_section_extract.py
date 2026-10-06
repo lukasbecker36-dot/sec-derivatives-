@@ -149,3 +149,37 @@ class TestDerivativesContentFallback:
         sections = extract_all_sections(text, config)
         assert sections['derivatives_note']
         assert '9,500' in sections['derivatives_note']
+
+
+def test_nke_profile_slices_risk_management_note_not_policy_note():
+    """Nike's derivatives note is headed 'RISK MANAGEMENT AND DERIVATIVES'.
+
+    Without the profile override the content fallback latched onto the first
+    'notional' mention — the Note 1 accounting policy — and every 10-K row lost
+    its notionals and AOCI.
+    """
+    from pathlib import Path
+    from src.config import load_config
+    from src.section_extract import extract_all_sections
+
+    cfg = load_config(Path(__file__).resolve().parent.parent / 'profiles' / 'nke.yaml')
+    text = (
+        'NOTE 1 — SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES Derivatives are '
+        'recorded at fair value; the notional amount of hedging instruments '
+        'is disclosed in Note 12 — Risk Management and Derivatives. '
+        'NOTE 11 — BENEFIT PLANS Pension text. '
+        'NOTE 12 — RISK MANAGEMENT AND DERIVATIVES The Company is exposed to '
+        'global market risks, including the effect of changes in foreign '
+        'currency exchange rates and interest rates, and uses derivatives. '
+        'For fair values refer to Note 4 — Fair Value Measurements. The total '
+        'notional amount of outstanding foreign currency derivatives '
+        'designated as cash flow hedges was $ 16.4 billion. '
+        'NOTE 13 — ACCUMULATED OTHER COMPREHENSIVE INCOME (LOSS) CASH FLOW '
+        'HEDGES Balance at May 31, 2026 $ ( 213 ) '
+        'NOTE 14 — REVENUES Revenue text.'
+    )
+    section = extract_all_sections(text, cfg)['derivatives_note']
+    assert section.startswith('NOTE 12 — RISK MANAGEMENT AND DERIVATIVES')
+    assert 'designated as cash flow hedges was $ 16.4' in section
+    assert 'Balance at May 31, 2026 $ ( 213 )' in section   # AOCI note kept
+    assert 'NOTE 14' not in section and 'SIGNIFICANT ACCOUNTING' not in section
