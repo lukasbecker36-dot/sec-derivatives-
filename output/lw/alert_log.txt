@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-08-30 | Processed 2026-10-07 ===
+[DISAPPEARED_FIELD] commodity_sensitivity_prior: was $10M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_current: was $-67M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_prior: was $3M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity_current: was $9M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (commodity_sensitivity_prior, fx_sensitivity_current, fx_sensitivity_prior, interest_rate_sensitivity_current)
+[LLM_FLAG] section_extraction_incomplete: section_text for this filing is only a one-sentence cross-reference ("Quantitative and Qualitative Disclosures about Market Risk", in the Form 10-K.) with no quantitative disclosure content; no schema field can be populated from it. All prior_values (commodity_sensitivity_prior=10.0, fx_sensitivity_current=-67.3, fx_sensitivity_prior=2.94, interest_rate_sensitivity_current=8.8) are left blank rather than carried forward, per instructions.
+
 === 10-K | Period ending 2026-05-31 | Processed 2026-07-27 ===
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($10M)
 [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-67M)
