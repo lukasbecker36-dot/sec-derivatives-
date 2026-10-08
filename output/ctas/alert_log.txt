@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-08-31 | Processed 2026-10-08 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($121M)
+[NUMERIC] cash_flow_hedge_aoci: $500M → $115M (-77.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $110M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $110M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $6M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] foreign_currency_exposure: was $1M, now missing
+[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, marketable_equity_value, equity_sensitivity_10pct...)
+[LLM_FLAG] cash_flow_hedge_aoci: current value ($114.669M) differs from prior_values entry (500.0) by more than 50%, but the prior figure of 500.0 exactly matches this filing's cash-flow-hedge NOTIONAL ($500.0 million), not an AOCI balance -- it looks like a prior extraction put the notional into the aoci field (a kind mismatch). Nothing in the text supports a genuine AOCI swing to 500; the current $114.669M read directly off the Note 9 AOCI rollforward ('Unrealized Income on Interest Rate Locks') is the correct field value.
+[LLM_FLAG] equity_derivatives_notional: prior_values carries the string 'Yes' for this field, which is inconsistent with its 'notional' kind (expects a number or null) -- likely a prior extraction/schema-mapping error (possibly a has_derivatives-style answer landing in this field). Current filing section discloses no equity derivatives at all, so value is correctly null here.
+[LLM_FLAG] Only derivative instrument disclosed in this note is interest rate locks for forecasted debt issuances (cash flow hedges tied to past senior note issuances in fiscal 2007/2017/2022); no FX, commodity or equity derivatives mentioned, consistent with total_derivative_asset being the full population, not a partial total.
+[LLM_FLAG] Segment footnote in the same filing excerpt references 'UniFirst transaction expenses' of $14,412 thousand for the quarter -- indicates an active M&A transaction (the UniFirst deal). Worth checking the rest of the filing for any deal-contingent interest rate or FX hedges tied to financing that acquisition, which were not disclosed in this derivatives note excerpt.
+[LLM_FLAG] This market_risk section_text is extremely short (one paragraph) and reads as a truncated extract of Item 3 -- it incorporates the detailed quantitative market-risk disclosure 'by reference' to the FY2026 Form 10-K ('...in our Annual Report on Form 10-K for the fiscal year ended May 31, 2026') rather than restating sensitivity figures. Every field therefore returns not_found; this is almost certainly a section-extraction/boundary issue (the slice stopped before any numeric content), not a real disclosure change.
+[LLM_FLAG] prior_values for this issuer carry concrete numbers for fx_transaction_gain_loss (109.5), fx_sensitivity_10pct (109.5), marketable_equity_value (6.1) and foreign_currency_exposure (0.8) -- all now null. Given the section_text contains no numeric content whatsoever, this looks like missing/truncated input rather than a genuine 100% drop in disclosure, and should not be read as the company having removed these disclosures. Recommend re-pulling the full Item 3 section from the filing before treating this period as a gap.
+
 === 10-K | Period ending 2026-05-31 | Processed 2026-07-30 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
 [NEW_FIELD] total_derivative_asset: appeared for first time ($110M)

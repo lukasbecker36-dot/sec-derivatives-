@@ -1,3 +1,9 @@
+=== 10-K | Period ending 2026-08-30 | Processed 2026-10-08 ===
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $1M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $10M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (fi_total_derivative_asset, fi_total_derivative_liability)
+[LLM_FLAG] section_text appears truncated mid-sentence ('...as defined in Note 1 to the consolidated financial statements included in ') — the extracted market_risk section cuts off before any quantitative data (interest rate sensitivity, FX sensitivity, equity sensitivity, fixed-rate notes outstanding) appears. All numeric fields returned null/not_found because the source text does not contain them, not because Costco lacks the disclosure. Recommend re-running section_extract.py for this filing/accession (0000909832-26-000093) to capture the full Quantitative and Qualitative Disclosures About Market Risk item, which in prior Costco 10-Ks includes fixed-rate note totals and a hypothetical-rate-change sensitivity table.
+
 === 10-Q | Period ending 2026-05-10 | Processed 2026-06-14 ===
 [HISTORICAL] [NUMERIC] fi_total_derivative_asset: $2M → $1M (-50.0%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_total_derivative_liability: $18M → $10M (-44.4%) — exceeds 20% threshold

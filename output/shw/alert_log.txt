@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-10-08 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,713M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,713M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $1,863M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $1,863M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (total_derivative_asset, total_derivative_liability)
+[LLM_FLAG] total_derivative_asset / total_derivative_liability: extracted section text is truncated at 'See ' before the balance-sheet-location table, so these could not be verified this period; prior_values shows both at an identical $1,862.7M, which is itself suspicious (asset exactly equal to liability) and worth checking against the full filing rather than assumed correct.
+[LLM_FLAG] equity_derivatives_notional: prior_values holds the string 'Yes' for a field whose schema kind is 'notional' — a pre-existing type/data-quality defect in the corpus, not something this section confirms or refutes (equity derivatives are not mentioned in this excerpt).
+[LLM_FLAG] Newsworthy: all five cross-currency swap tranches ($687.7M, $100.0M, $200.0M, $525.0M, $200.0M = $1,712.7M total) are designated net investment hedges of European operations, structured to pay fixed EUR / receive fixed USD — effectively synthetically converting USD fixed-rate debt to EUR fixed-rate debt. No de-designation, termination, or new programme language appears in this excerpt.
+[LLM_FLAG] This Item 3 disclosure is purely qualitative boilerplate this quarter — the company states there were 'no material changes in the Company’s exposure to market risk' since the FY2025 10-K and incorporates that MD&A disclosure by reference, so no quantitative sensitivity, notional, or fair-value figures are stated in this section at all.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,863M)
 [NUMERIC] fx_designated_notional: $26M → $1,863M (+6982.5%) — exceeds 20% threshold

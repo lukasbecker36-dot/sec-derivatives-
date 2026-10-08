@@ -17,7 +17,8 @@
   "idiosyncrasies": {
     "recurring_phrases": [
       "cash flow hedge",
-      "notional value"
+      "notional value",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -90,6 +91,18 @@
       ],
       "fields_extracted": 11,
       "fields_null": 11
+    },
+    {
+      "filing_date": "2026-08-31",
+      "form_type": "10-Q",
+      "period_end": "2026-08-31",
+      "processed_at": "2026-10-08T02:30:22Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 4,
+      "fields_null": 18
     }
   ]
 }

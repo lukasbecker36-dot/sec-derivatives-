@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-08-31 | Processed 2026-10-08 ===
+[NUMERIC] fx_not_designated_notional: $669M → $533M (-20.3%) — exceeds 20% threshold
+[NUMERIC] variable_debt_sensitivity: $1M → $1M (+83.3%) — exceeds 20% threshold
+[LLM_FLAG] Pre-issuance hedge contracts notional fell to $0 as of August 31, 2026 from $50.0 million at February 28, 2026 ('Pre-issuance hedge contracts $ — ... $ 50.0'), and the related OCI reclass line shows no current-period cash flow effect -- the program appears to have been fully settled, consistent with the fixed-rate debt issuance referenced elsewhere in the filing. Not a plausibility flag against prior_values (ir_swap_notional prior was already 0.0) but newsworthy as a wind-down.
+[LLM_FLAG] total_derivative_asset and total_derivative_liability are computed by summing the individual balance-sheet line items across designated/not-designated FX, net investment hedge, and commodity derivatives, since no single aggregate total is stated in the text -- treat as derived, not directly quoted, figures.
+[LLM_FLAG] Non-designated commodity derivative gains recognized in cost of product sold rose to $52.7 million for the six months ended August 31, 2026 from a $4.7 million loss in the prior-year period ('Commodity derivative contracts	Cost of product sold	$	52.7' vs '$	( 4.7 )'); the note gives no explanation for the swing beyond the mark-to-market table.
+[LLM_FLAG] variable_debt_sensitivity rose from $0.6mn (prior extracted period) to $1.1mn (six months ended August 31, 2026) -- an 83% increase, above the 50% threshold. The filing itself only compares to the prior-year comparative period ($2.0 million for the six months ended August 31, 2025, which is actually higher than the current figure and would imply a decrease year-over-year); it gives no explanation for the sequential change versus the pipeline's prior stored value, and the text does not disclose the underlying variable-rate debt balance driving the calculation.
+
 === 10-Q | Period ending 2026-05-31 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $2,603M, now missing
 [NUMERIC] fx_derivatives_notional: $2,603M → $3,331M (+27.9%) — exceeds 20% threshold
