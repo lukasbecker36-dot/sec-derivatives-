@@ -305,3 +305,41 @@ class TestExtractionGapsHaveIsRegression:
         src = inspect.getsource(digest_manifest.build_manifest)
         assert "'is_regression'" in src
         assert 'populated_before' in src
+
+
+class TestFieldPriors:
+    """A blank intervening period must not make a field look first-time."""
+
+    ROWS = [
+        {'period_end_date': '2026-02-28', 'form_type': '10-Q',
+         'fx_derivatives_notional': '22500', 'ir_swap_notional': '2400'},
+        # 10-K extracted market-risk fields only: FX notional blank.
+        {'period_end_date': '2026-05-31', 'form_type': '10-K',
+         'fx_derivatives_notional': '', 'ir_swap_notional': '2400'},
+    ]
+
+    def test_walks_back_past_blank_period(self):
+        from src.digest_manifest import _field_priors
+        values, periods = _field_priors(self.ROWS)
+        assert values['fx_derivatives_notional'] == '22500'
+        assert periods['fx_derivatives_notional'] == '2026-02-28'
+        assert periods['ir_swap_notional'] == '2026-05-31'
+
+    def test_not_first_time_and_cites_true_prior_period(self):
+        from src.digest_manifest import _field_priors, _lead_signals
+        values, periods = _field_priors(self.ROWS)
+        curr = {'period_end_date': '2026-08-31',
+                'fx_derivatives_notional': '21300', 'ir_swap_notional': '2400'}
+        moves = _row_moves(values, curr, periods)
+        fx = moves['fx'][0]
+        assert fx['prior'] == 22500
+        assert fx['prior_period_end_date'] == '2026-02-28'
+        assert _lead_signals(moves, {})['first_time_moves'] == []
+
+    def test_genuinely_new_field_still_first_time(self):
+        from src.digest_manifest import _field_priors, _lead_signals
+        values, periods = _field_priors(self.ROWS)
+        moves = _row_moves(values, {'commodity_derivatives_notional': '500'},
+                           periods)
+        firsts = _lead_signals(moves, {})['first_time_moves']
+        assert [m['field'] for m in firsts] == ['commodity_derivatives_notional']

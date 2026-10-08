@@ -97,9 +97,16 @@ python -m src.monitor --issuer META --since 2025-01-01
 
 ## Scheduled Execution
 
-Runs as a **Claude Code scheduled routine** (remote, in Anthropic's cloud), weekdays at 09:00 UTC (10am BST). The routine clones the repo, runs the three-phase Claude Code extraction pipeline, and commits/pushes results. No API key needed — Claude Code performs the LLM extraction using subscription tokens.
+Two **Claude Code scheduled routines** (remote, in Anthropic's cloud) drive the daily cycle. Their prompts are version-controlled in `routines/` — edit the file there first, then paste it into the routine. Never edit a routine prompt only in the web UI.
 
-Routine ID: `trig_01CP3oDgK5HKdthxWqGAeppG`
+| Time (UTC, weekdays) | Routine | Prompt | Does |
+|---|---|---|---|
+| 02:00 | `sec-derivatives-scheduler` (`trig_01CP3oDgK5HKdthxWqGAeppG`) | `routines/scheduler.md` | Three-phase Claude Code extraction, integrity gate, push to master (or `review/` on gate failure) |
+| 04:00 | `sec-derivatives-weekly-digest` (`trig_01S1kwiLBhJHiCmVZXuiVBph`) — misnamed, it is the daily digest | `routines/daily-digest.md` | Builds `digest_manifest.json`, writes `digests/{date}.html`, pushes to master |
+| 05:00 | GitHub Actions `daily-digest.yml` | — | Integrity gate, then emails the digest |
+| Fri 15:00 | GitHub Actions `weekly-digest.yml` | — | Emails the weekly rollup of the dailies |
+
+No API key needed — Claude Code performs the LLM extraction using subscription tokens.
 Manage at: https://claude.ai/code/routines
 
 A `run_scheduler.ps1` script also exists for local API-mode runs (requires `ANTHROPIC_API_KEY` as a user environment variable).
