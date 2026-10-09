@@ -1,3 +1,42 @@
+=== 10-K | Period ending 2026-05-31 | Processed 2026-10-09 ===
+[NUMERIC] fx_not_designated_notional: $4,000M → $5,000M (+25.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $131M → $190M (+45.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-240M → $-153M (+36.2%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-24M → $-149M (-520.8%) — exceeds 20% threshold
+[NUMERIC] fx_forward_var: $107M → $66M (-38.3%) — exceeds 20% threshold
+[NUMERIC] interest_rate_swap_fair_value: $21M → $-4M (-119.0%) — exceeds 20% threshold
+[LLM_FLAG] DATA INTEGRITY: the prior_values supplied with this FY2026 request (fx_derivatives_notional=21300, fx_designated_notional=15900, fx_not_designated_notional=5400, ir_swap_notional=2400, cash_flow_hedge_aoci=-132, expected_12mo_reclass_from_aoci=-101) are identical to the prior_values supplied with the FY2025 request for this same issuer/note -- they are NOT the FY2025 values this same filing actually discloses as its comparative column (fx_designated=$18,400M, fx_not_designated=$4,000M, cash_flow_hedge_aoci=-$207M, expected_12mo_reclass=-$24M, all confirmed in Note 12/13 above). prior_values appears stale by a full period; any percentage change computed against it will be wrong. Use the FY2025 figures from the 2025-05-31 extraction as the true prior-period endpoint, not the prior_values field attached to this request.
+[LLM_FLAG] cash_flow_hedge_aoci: true period-over-period change is -$207M (FY2025) to -$213M (FY2026), about +3%. The stale prior_values baseline of -$132M would incorrectly imply a ~61% jump. Note 13's AOCI balance table in each year's own filing is the source of truth.
+[LLM_FLAG] expected_12mo_reclass_from_aoci: true period-over-period change is -$24M (FY2025) to -$149M (FY2026), roughly +521% -- a large real swing that the stale prior_values baseline of -$101M would mask (implying only a ~48% change, which falls under most automated review thresholds). The filing gives no explanation for why the pool of deferred FX losses expected to hit earnings in the next 12 months grew roughly sixfold; this is worth a direct question to IR before publishing any percentage built on this field.
+[LLM_FLAG] fx_designated_notional fell from $18.4B (FY2025) to $16.4B (FY2026), about -11%; fx_not_designated_notional rose from $4.0B to $5.0B, about +25%. The filing gives no explicit reason for this mix shift toward undesignated instruments.
+[LLM_FLAG] Newsworthy: maximum hedge tenor extended to 35 months (FY2026) from 30 months (per the FY2025 filing) -- Nike is now hedging further out the forward curve than in the prior year.
+[LLM_FLAG] Newsworthy: derivatives not designated as hedging instruments recognized a $(35)M loss in FY2026 (within Other (income) expense, net) versus a $2M gain in FY2025 -- a swing attributable to mark-to-market on undesignated FX forwards/embedded derivatives, per the 'AMOUNT OF GAIN (LOSS) RECOGNIZED IN INCOME ON DERIVATIVES' table.
+[LLM_FLAG] fx_forward_var fell ~38% year over year ($107M FY2025 → $66M FY2026); filing attributes this to 'a decrease in foreign currency volatilities as of May 31, 2026.'
+[LLM_FLAG] Newsworthy: interest rate swap fair value flipped from +$21M (FY2025) to -$4M (FY2026) -- the swap book moved from a net asset to a net liability position even though notional is unchanged at $2.4B; the filing gives no explanation for the swing.
+[LLM_FLAG] Average variable rate on the fixed-to-variable swaps compressed to 3.6% (from 3.8% in FY2025), converging with the 3.6% average fixed rate -- directionally consistent with the swap's fair-value decline.
+[LLM_FLAG] prior_values for this section were not supplied (empty); comparisons above use the filing's own stated prior-year comparatives rather than a pipeline baseline.
+
+=== 10-K | Period ending 2025-05-31 | Processed 2026-10-09 ===
+[NUMERIC] fx_not_designated_notional: $5,400M → $4,000M (-25.9%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_asset: appeared for first time ($131M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($371M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-240M)
+[NUMERIC] cash_flow_hedge_aoci: $-132M → $-207M (-56.8%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-101M → $-24M (+76.2%) — exceeds 20% threshold
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($8M)
+[NEW_FIELD] fx_forward_var: appeared for first time ($107M)
+[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($2,400M)
+[NEW_FIELD] interest_rate_swap_fair_value: appeared for first time ($21M)
+[NEW_FIELD] long_term_debt_principal: appeared for first time ($8,000M)
+[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($6,673M)
+[NEW_FIELD] average_monthly_fx_derivative_change: appeared for first time ($200M)
+[LLM_FLAG] cash_flow_hedge_aoci: the supplied prior_values figure (-132) matches neither this filing's FY2025 AOCI balance (-$207M) nor its FY2024 comparative balance (+$247M) in Note 13's roll-forward table -- it corresponds instead to the FY2025 'other comprehensive gains (losses) before reclassifications' line for cash flow hedges, not an AOCI balance. Treat prior_values for this field as unreliable.
+[LLM_FLAG] expected_12mo_reclass_from_aoci fell from -$101M (prior_values) to -$24M (FY2025, this filing), a 76% change; the filing gives no stated reason for the lower expected reclassification amount.
+[LLM_FLAG] Newsworthy: a designated-hedge interest rate swap asset of $24M appeared in FY2025 where FY2024 showed '—' (zero), while the designated IR swap liability fell from $31M to $3M -- a roughly $52M favorable net swing in Nike's receive-fixed/pay-variable swap book, with notional held flat at $2.4B designated for fair value hedges.
+[LLM_FLAG] Newsworthy: total derivative liabilities grew to $371M (from $151M) while total derivative assets fell to $131M (from $343M), flipping the net position from +$192M a year ago to -$240M; cash flow hedge OCI moved to a $(127)M loss for FY2025 from a $270M gain in FY2024, consistent with adverse FX moves against the hedge book, though the filing does not explicitly link the two.
+[LLM_FLAG] fx_forward_var rose ~88% year over year ($57M FY2024 → $107M FY2025); filing attributes this explicitly to 'an increase in foreign currency volatilities as well as increased trade volumes as of May 31, 2025.'
+[LLM_FLAG] prior_values for this section were not supplied (empty), so no automated period comparison was possible beyond the filing's own stated prior-year comparatives used above.
+
 === 10-Q | Period ending 2026-08-31 | Processed 2026-10-05 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($21,300M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($15,900M)

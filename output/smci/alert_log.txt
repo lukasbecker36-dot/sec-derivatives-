@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-10-09 ===
+[NUMERIC] total_cash_equivalents_fv: $60M → $0M (-100.0%) — exceeds 20% threshold
+[NUMERIC] marketable_equity_securities_fv: $23M → $15M (-36.4%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: total_cash_equivalents_fv changed from 60 to 0 (0x)
+[LLM_FLAG] total_cash_equivalents_fv fell from a prior reported 60.454 to 0.019 (money market funds measured at fair value were only $19 thousand as of March 31, 2026, vs $44 thousand at June 30, 2025) — a >99% drop. The text does not explicitly reconcile this against the prior period's total; the only visible offset is certificates of deposit rising to $47,494 thousand from $519 thousand (June 30, 2025 comparative), consistent with a shift out of money-market cash equivalents into certificates of deposit, but this is not stated as the reason.
+[LLM_FLAG] Newsworthy: this Financial Instruments note contains no derivatives disclosure at all this quarter — no FX forwards/options, cross-currency swaps, or interest rate swaps are mentioned, so every notional and derivative fair-value schema field is not_found. Worth checking whether SMCI has simply stopped hedging or whether derivatives are disclosed elsewhere in the filing.
+[LLM_FLAG] Newsworthy: 'As of March 31, 2026 and June 30, 2025, our total lines of credit and term loans of $4,113.7 million and $112.5 million, respectively, are reported at amortized cost' — a roughly 36x increase in drawn credit facility/term loan balances period-over-period, a major leverage change worth a line in coverage even though it's not a derivative.
+[LLM_FLAG] The estimated fair values of all three convertible note series fell sharply vs June 30, 2025: 2029 Notes $1,381.7M (from $1,801.9M), 2028 Notes $601.9M (from $818.5M), 2030 Notes $1,684.3M (from $2,576.6M, a ~35% decline) — flagged per the >50%-change rule is not triggered for any single note but the pattern across all three is notable for a debt/credit story.
+
 === 10-K | Period ending 2026-06-30 | Processed 2026-09-01 ===
 [NEW_FIELD] total_cash_equivalents_fv: appeared for first time ($60M)
 [NUMERIC] marketable_equity_securities_fv: $15M → $23M (+57.1%) — exceeds 20% threshold

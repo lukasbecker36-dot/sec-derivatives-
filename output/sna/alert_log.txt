@@ -1,3 +1,7 @@
+=== 10-Q | Period ending 2026-07-04 | Processed 2026-10-09 ===
+[LLM_FLAG] Disclosure format mismatch: Snap-on uses a Value-at-Risk (VAR) model rather than the standard 100bp IR / 10% FX / 10% equity hypothetical sensitivity tables the schema expects, so none of the sensitivity fields can be populated from this text. The filing instead states a one-day 95% VAR loss of $6.9 million total, $6.5 million from interest rate-sensitive instruments and $0.4 million from foreign currency-sensitive instruments -- these are not directly comparable to the schema's 100bp/10%-move sensitivity figures and were left null rather than mismapped.
+[LLM_FLAG] No notional, fair value, or balance-sheet derivative amounts are disclosed in this market-risk section (interest rate swaps and treasury lock agreements are referenced only qualitatively, with detail deferred to Note 9); fx_forwards_outstanding, fixed_rate_notes_billion, and marketable_equity_value were left null rather than inferred.
+
 === 10-Q | Period ending 2026-07-04 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-0M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_transaction_gain_loss)

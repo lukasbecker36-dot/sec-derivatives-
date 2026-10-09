@@ -1,3 +1,23 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-10-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $137M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $263M, now missing
+[NUMERIC] net_derivative_position: $-126M → $-67M (+46.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $43M, now missing
+[NUMERIC] ir_sensitivity_100bp: $10M → $2M (-84.8%) — exceeds 20% threshold
+[NEW_FIELD] commodity_hedge_gain_loss: appeared for first time ($-160M)
+[NUMERIC] interest_rate_variable_exposure: $1,051M → $161M (-84.7%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, expected_12mo_reclass_from_aoci)
+[LLM_FLAG] net_derivative_position: the filing's own comparative text says the 12/31/2024 position was a net liability of $172.2 million ('moved from a net liability position of $172.2 million at December 31, 2024 to a net liability position of $66.9 million at December 31, 2025'), but this pipeline's prior_values record total_derivative_asset=137.1 / total_derivative_liability=262.7 (net=-125.6) for that same prior period -- a ~$46.6M mismatch against what the filing itself states. Flag for reconciliation before quoting a year-over-year change.
+[LLM_FLAG] ir_swap_notional: TRGP states it 'do[es] not have any interest rate hedges' as of 12/31/2025, leaving its $161.0 million of variable-rate borrowings (TRGP Revolver, Commercial Paper Program, Securitization Facility) unhedged -- notable given it previously carried IR sensitivity exposure.
+[LLM_FLAG] Newsworthy -- counterparty concentration quantified: 'master netting provisions ... reduce our maximum loss due to counterparty credit risk by $6.2 million as of December 31, 2025. The range of losses attributable to our individual counterparties as of December 31, 2025 would be between $0.1 million and $14.9 million, depending on the counterparty in default.'
+[LLM_FLAG] Allowance for credit losses fell from $2.5 million (2024) to $0.7 million (2025): 'Our allowance for credit losses was $0.7 million and $2.5 million as of December 31, 2025 and 2024, respectively.'
+[LLM_FLAG] interest_rate_variable_exposure: fell from $1,051.3 million (prior_values) to $161.0 million, an ~84.7% decrease. The filing states the current balance ('we had $161.0 million in outstanding variable rate borrowings') but gives no reason (no mention of debt repayment, refinancing to fixed rate, or facility amendment) -- verify against the debt footnote before citing a cause.
+[LLM_FLAG] ir_sensitivity_100bp: dropped from $10.5 million (prior) to $1.6 million. This is directionally consistent with the large reduction in variable-rate debt exposure noted above, though the filing does not explicitly tie the two figures together.
+[LLM_FLAG] commodity_hedge_gain_loss ($(160.3)M) is drawn from a revenue-impact sentence covering 'transactions accounted for as derivatives' broadly; the filing does not separately break out designated vs. non-designated impact in this section, so the figure may combine both -- treat as approximate.
+[LLM_FLAG] Newsworthy -- no interest rate hedges in place ('As of December 31, 2025, we do not have any interest rate hedges') despite $161.0 million of variable-rate exposure across the TRGP Revolver, Commercial Paper Program and Securitization Facility.
+[LLM_FLAG] Newsworthy -- counterparty concentration quantified: master netting provisions reduce maximum loss by $6.2 million; per-counterparty default loss range disclosed as $0.1 million to $14.9 million.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $100M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $138M, now missing
