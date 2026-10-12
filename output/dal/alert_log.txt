@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-12 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $3,010M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $29M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (total_cash_equivalents_fv, fi_total_derivative_asset)
+[LLM_FLAG] section_text contains only an incorporation-by-reference pointer ("Quantitative and Qualitative Disclosures About Market Risk" in our Form 10-K.) with no actual quantitative disclosure — the section extractor appears to have captured the cross-reference sentence rather than the substantive Item 3 content. All fields returned null/not_found rather than fabricated or carried forward from prior periods.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-16 ===
 [NEW_FIELD] fi_total_derivative_asset: appeared for first time ($29M)
 [DISAPPEARED_FIELD] fi_total_derivative_liability: was $48M, now missing

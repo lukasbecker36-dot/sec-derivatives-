@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2025-09-27 | Processed 2026-10-12 ===
+[NUMERIC] fx_derivatives_notional: $14,396M → $9,612M (-33.2%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $12,900M → $8,150M (-36.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $268M → $415M (+54.9%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $667M → $409M (-38.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-399M → $6M (+101.5%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position swung from a prior-recorded -399 (net liability) to +6 this period (essentially breakeven) — driven by the designated cross-currency interest rate swap liability jumping from $57M (Dec 31, 2024) to $408M (Sept 27, 2025) while the matching asset eased only slightly from $458M to $413M; the filing ties this to FX translation, showing 'Included in cumulative translation adjustment within other comprehensive income/(loss)' for cross-currency interest rate swaps of $(395) for the nine months ended Sept 27, 2025 versus $171 in the prior-year period — a reversal in direction.
+[LLM_FLAG] total_derivative_asset of $415M is ~55% above a prior extraction of $268M; the filing does not single out a specific driver for this field beyond the general FX-translation effects described for the net investment hedge swaps.
+[LLM_FLAG] Newsworthy: non-designated currency exchange contract gains in other income/(expense) rose to $43M for the nine months ended Sept 27, 2025 from $5M a year earlier (about 8.6x) per 'Included in other income/(expense)		30			15			43			5'.
+[LLM_FLAG] Newsworthy: net investment hedge translation losses widened sharply — 'Included in cumulative translation adjustment within other comprehensive income/(loss)' for the foreign currency-denominated debt and other payables leg shows $(1,225) million for the nine months ended Sept 27, 2025 versus $(127) million in the prior-year period, consistent with a much larger adverse USD move against the euro, yen and Swiss franc this year.
+[LLM_FLAG] Newsworthy: the designated cross-currency interest rate swap liability roughly septupled year-over-year, from $57M (Dec 31, 2024) to $408M (Sept 27, 2025), while the asset side barely moved ($458M to $413M) — worth watching for ineffectiveness or counterparty concentration commentary in future filings, though none is given here.
+[LLM_FLAG] Item 3 (Quantitative and Qualitative Disclosures About Market Risk) is pure boilerplate this quarter: the company states its market risk exposure 'has not changed materially from its exposure discussed in the company's Annual Report on Form 10-K for the year ended December 31, 2024' and gives no updated sensitivity analyses, notionals, or fair values in this section — all substantive derivative numbers for this period live in Note 10 (Derivatives), not here.
+
 === 10-Q | Period ending 2026-06-27 | Processed 2026-08-03 ===
 [NUMERIC] fx_derivatives_notional: $2,248M → $14,396M (+540.4%) — exceeds 20% threshold
 [NEW_FIELD] fx_designated_notional: appeared for first time ($12,900M)
