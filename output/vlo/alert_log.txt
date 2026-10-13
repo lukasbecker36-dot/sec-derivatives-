@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-10-13 ===
+[NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $5,018M → $2,141M (-57.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $5,088M → $2,301M (-54.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-70M → $-160M (-128.6%) — exceeds 20% threshold
+[NUMERIC] floating_rate_debt_outstanding: $110M → $2M (-98.2%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset fell from prior $5,018M to $2,141M (-57%); the filing gives no explanation for the decline versus the prior extraction (the table's own comparative, Dec 31, 2025, is $460M, which is unrelated to the pipeline's prior_values baseline).
+[LLM_FLAG] total_derivative_liability fell from prior $5,088M to $2,301M (-55%); no explanation given in the text.
+[LLM_FLAG] net_derivative_position moved from -$70M to -$160M, consistent with the asset/liability declines above; no textual explanation for the magnitude of the move.
+[LLM_FLAG] Newsworthy: cash flow hedge OCI swung from $0 to $(153)M for the six months ended June 30, 2026 ('Gain (loss) recognized in other comprehensive income (loss) ... $ ( 153 ) ... $ —'); filing states these cash flow hedges 'primarily related to forecasted sales of renewable diesel.'
+[LLM_FLAG] Newsworthy: non-designated commodity contract P&L swung sharply — the Revenues line moved from $(4)M to $39M (three months) and $(4)M to $(129)M (six months); the Cost of materials and other line moved from $(32)M to $(175)M (three months) and $(50)M to $(1)M (six months).
+[LLM_FLAG] Newsworthy: Renewable/Low-Carbon Fuel Program compliance credit (RIN) cost rose to $731M (Q2 2026) from $408M (Q2 2025), and to $1.4 billion from $740 million for the six-month period — not a fair-valued derivative (normal purchase exception elected) but a material, sharply rising cost.
+[LLM_FLAG] Standard disclosure worth noting: 'We do not require any collateral or other security to support derivative instruments into which we enter,' and no derivatives carry minimum investment-grade credit-rating triggers.
+[LLM_FLAG] floating_rate_debt_outstanding fell from prior $110M to $2M (-98%); the filing gives no explanation for the decline (likely repayment or reclassification of floating-rate borrowings), worth confirming before citing.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] total_derivative_asset: $5,018M → $2,141M (-57.3%) — exceeds 20% threshold
 [NUMERIC] total_derivative_liability: $5,088M → $2,301M (-54.8%) — exceeds 20% threshold

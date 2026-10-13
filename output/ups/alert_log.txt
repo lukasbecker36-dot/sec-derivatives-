@@ -1,3 +1,35 @@
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-10-13 ===
+[NUMERIC] total_derivative_asset: $75M → $16M (-78.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $77M → $292M (+279.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-2M → $-276M (-13700.0%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-10M → $-112M (-1020.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_hedge_eur_notional: was $2,947M, now missing
+[DISAPPEARED_FIELD] fx_hedge_gbp_notional: was $441M, now missing
+[DISAPPEARED_FIELD] fx_hedge_cad_notional: was $1,377M, now missing
+[DISAPPEARED_FIELD] fx_hedge_hkd_notional: was $5,217M, now missing
+[DISAPPEARED_FIELD] fx_hedge_cnh_notional: was $7,678M, now missing
+[DISAPPEARED_FIELD] fx_asset_derivatives_current_fv: was $33M, now missing
+[DISAPPEARED_FIELD] fx_asset_derivatives_noncurrent_fv: was $42M, now missing
+[DISAPPEARED_FIELD] fx_liability_derivatives_current_fv: was $37M, now missing
+[DISAPPEARED_FIELD] fx_liability_derivatives_noncurrent_fv: was $40M, now missing
+[DISAPPEARED_FIELD] fx_cash_flow_hedge_revenue_gain_loss: was $-40M, now missing
+[DISAPPEARED_FIELD] fair_value_hedge_carrying_amount: was $279M, now missing
+[DISAPPEARED_FIELD] fair_value_hedge_basis_adjustment: was $3M, now missing
+[VALIDATION] Likely extraction failure: 12/17 previously-populated fields are now null (fx_hedge_eur_notional, fx_hedge_gbp_notional, fx_hedge_cad_notional, fx_hedge_hkd_notional, fx_hedge_cnh_notional...)
+[VALIDATION] Likely units mismatch: net_derivative_position changed from -2 to -276 (138x)
+[LLM_FLAG] total_derivative_asset fell from prior $75M to $16M (-78.7%). This note's own comparative column shows Dec 31, 2024 at $291M (not $75M), so the prior figure fed to this extraction may reference a different period; the note itself gives no narrative explanation for the decline.
+[LLM_FLAG] total_derivative_liability rose from prior $77M to $292M (+279%). No explanation appears in this note (the market-risk section separately attributes fair-value changes to FX rate fluctuations, but that sentence is not in this section's text).
+[LLM_FLAG] net_derivative_position swung from -$2M to -$276M, consistent with the asset/liability moves above; this note contains no explicit explanation for the magnitude.
+[LLM_FLAG] expected_12mo_reclass_from_aoci moved from -$10M to -$112M (>10x). No explanation is given in this section for the size of the increase.
+[LLM_FLAG] Newsworthy: AOCI losses on FX cash flow hedges widened sharply — '$( 379 )' million in Q2 2025 vs '$49' million in Q2 2024, and '$( 505 )' million for six months 2025 vs '$185' million in six months 2024 — indicating significant dollar-weakness impact on UPS's FX hedge book this year.
+[LLM_FLAG] Newsworthy: Net investment hedge AOCI on foreign-currency-denominated debt also swung negative — '$( 189 )' million (Q2) and '$( 270 )' million (six months), versus '$18' million and '$84' million a year earlier — same FX driver as the cash flow hedge AOCI swing.
+[LLM_FLAG] Hedge de-designation process disclosed as standard practice: 'We may periodically terminate interest rate swaps and foreign currency exchange forward contracts or enter into offsetting swap and foreign currency positions with different counterparties. As part of this process, we de-designate our original hedge relationship.' No specific new de-designation event is identified this quarter.
+[LLM_FLAG] A small new $1 million foreign currency exchange contract liability appears for derivatives NOT designated as hedges in the current period (zero in the Dec 31, 2024 comparative) — a marginal, newly-disclosed non-designated position worth a line if space allows.
+[LLM_FLAG] Management explicitly attributes the fair-value swing in the derivative table between Dec 31, 2024 and June 30, 2025 to currency moves: 'The fair value changes between December 31, 2024 and June 30, 2025 in the preceding table are primarily due to foreign currency exchange rate fluctuations between those dates.' This corroborates the large asset/liability/AOCI swings flagged in the derivatives note (Note 15) as FX-driven rather than new hedging activity or strategy change.
+[LLM_FLAG] Qualitative language states market risks 'have not materially changed' from the FY2024 Form 10-K, even though the quantitative derivative fair values and AOCI balances in Note 15 moved sharply this quarter — worth flagging for readers as a case where the narrative downplays what the numbers show.
+[LLM_FLAG] Routine hedge-book activity: 'In the second quarter of 2025, we entered into foreign currency exchange forward contracts on the Euro, British Pound Sterling, Canadian Dollar, Hong Kong Dollar, and Chinese Renminbi and had forward contracts expire' — continuation of the existing FX hedging programme, not a new instrument type.
+[LLM_FLAG] Counterparty risk/collateral terms unchanged: bilateral collateral triggers when exposure to a counterparty 'exceed[s] $250 million,' and 'As of June 30, 2025, we held no cash collateral and were not required to post any collateral with our counterparties' — consistent with prior periods, no new concentration or margin event disclosed.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
 [NUMERIC] total_derivative_asset: $44M → $75M (+70.5%) — exceeds 20% threshold
 [NUMERIC] total_derivative_liability: $102M → $77M (-24.5%) — exceeds 20% threshold
