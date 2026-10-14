@@ -1,3 +1,6 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-14 ===
+[LLM_FLAG] Section extraction yielded only a cross-reference sentence ("...'Quantitative and Qualitative Disclosures About Market Risk' in our Form 10-K."), not the actual market risk disclosure text. This indicates Delta's 10-Q for the period ended 2026-09-30 incorporates the quantitative market risk disclosures by reference to the FY2025 Form 10-K rather than restating them in the 10-Q, OR the section_extract.py slicer failed to capture the real content (its boundary regex may have cut the section short). Either way, no field values can be read from this text — recommend checking the raw filing HTML/boundary pattern for dal-20260930.htm before concluding this is a genuine non-disclosure quarter.
+
 === 10-Q | Period ending 2026-09-30 | Processed 2026-10-12 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $3,010M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $29M, now missing

@@ -1,3 +1,30 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-10-14 ===
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($570M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($23,700M)
+[DISAPPEARED_FIELD] equity_derivatives_notional: was $422M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $82M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($570M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-8,215M)
+[NEW_FIELD] fixed_rate_debt_pct: appeared for first time ($79M)
+[NEW_FIELD] ir_swap_fair_value_liability: appeared for first time ($5,100M)
+[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($36,100M)
+[NEW_FIELD] cross_currency_swap_fair_value_asset: appeared for first time ($1,400M)
+[NEW_FIELD] cross_currency_swap_fair_value_liability: appeared for first time ($1,200M)
+[NEW_FIELD] fx_forward_notional: appeared for first time ($570M)
+[NEW_FIELD] interest_rate_sensitivity_100bp: appeared for first time ($340M)
+[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($158,955M)
+[NEW_FIELD] collateral_posted: appeared for first time ($1,100M)
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (equity_derivatives_notional, expected_12mo_reclass_from_aoci)
+[VALIDATION] Reconciliation failure: fx_derivatives_notional=36,670 but fx_not_designated_notional=570 = 570 (diff 98.4%) — extraction likely read the wrong table
+[LLM_FLAG] No consolidated 'total derivative asset' or 'total derivative liability' figure appears in this excerpt — only instrument-level fair values are disclosed (IR swap liability $5.1bn, cross-currency swap asset $1.4bn/liability $1.2bn, FX forwards 'insignificant'), so total_derivative_asset/liability and net_derivative_position are left null rather than summed from partial figures.
+[LLM_FLAG] Cross currency swap notional rose to $36.1 billion from $32.1 billion year-over-year ('the total notional amount of the cross currency swaps was $36.1 billion and $32.1 billion, respectively') — a +12.5% increase in FX swap notional with no stated driver in this excerpt; worth asking Verizon what drove the build-up.
+[LLM_FLAG] equity_derivatives_notional was null in this excerpt versus a prior extracted value of $422 million — the section_text provided contains no equity derivative discussion at all, so this may simply be outside the sliced text rather than a discontinued programme; flagging for review rather than asserting the programme ended.
+[LLM_FLAG] Collateral posted under derivative CSA agreements nearly halved to $1.1 billion from $2.1 billion ('we posted $1.1 billion and $2.1 billion, respectively, of collateral related to derivative contracts under collateral exchange agreements') — the filing gives no explanation for the drop; worth asking whether it reflects reduced mark-to-market liability, renegotiated CSA thresholds, or a ratings change.
+[LLM_FLAG] Cross currency swap notional increased to $36.1 billion from $32.1 billion ('the total notional amount of the cross currency swaps was $36.1 billion and $32.1 billion, respectively') — a +12.5% rise in FX hedging notional with no stated driver in this excerpt.
+[LLM_FLAG] cross_currency_swap_fair_value_asset more than tripled to $1.4 billion from $500 million ('The fair value of the asset of these contracts was $1.4 billion and $500 million ... respectively') while the liability side fell from $2.7 billion to $1.2 billion — a large swing in net cross-currency swap valuation; the filing attributes this to no specific cause in the text provided, likely driven by FX rate moves against the hedged currencies (GBP, EUR, CHF, CAD, AUD).
+[LLM_FLAG] fx_forwards_outstanding and fx_forward_notional are the same $570 million figure (foreign exchange forwards notional) — the schema defines fx_forwards_outstanding as a fallback 'use only if derivatives_note fields above are empty', so this is likely redundant with the derivatives_note extraction rather than a distinct disclosure.
+[LLM_FLAG] Verizon states it does not offset derivative fair values against collateral rights/obligations and held no collateral from counterparties at either year-end, while posting its own collateral — a one-sided collateral posture worth noting given counterparty concentration is described only as 'major financial institutions' with no further breakdown.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($40,773M)
 [NEW_FIELD] equity_derivatives_notional: appeared for first time ($422M)

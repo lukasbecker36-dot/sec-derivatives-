@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-09-06 | Processed 2026-10-14 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-24M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] interest_rate_risk: was $16M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, interest_rate_risk)
+[LLM_FLAG] fx_sensitivity_10pct: text frames the $24.2M figure as a hypothetical 10% adverse-FX impact on international franchise royalty REVENUE for the three fiscal quarters of 2026, not a change in fair value of a financial instrument -- flagging the unit mismatch with the schema's 'change in fair value' framing before this is quoted as a derivatives sensitivity.
+[LLM_FLAG] fixed_rate_notes_billion: the only dollar figure tied to fixed-rate notes in this section is 'approximately $1.32 billion of debt classified as current associated with our 2018 9.25-Year Notes and the 2017 Ten-Year Notes' -- that is the CURRENT portion of two specific note series, not total fixed-rate notes outstanding, so it was left null rather than mapped to this field.
+[LLM_FLAG] interest_rate_risk: prior_values recorded 16.0 for this field, but nothing in this section quantifies an interest-rate effect on consumer spending/credit environment (the only IR discussion here is about the company's own borrowing costs and refinancing risk on its Variable Funding Notes and fixed-rate notes) -- returned null rather than carrying forward or repurposing the prior number; worth a human check on whether a different (non-market-risk) section previously supplied that 16.0.
+[LLM_FLAG] equity_sensitivity_10pct: prior_values recorded 0.0; this section contains no equity-price-risk disclosure at all (no marketable equity securities mentioned), consistent with a true non-discloser rather than a missed extraction.
+
 === 10-Q | Period ending 2026-06-14 | Processed 2026-07-21 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NUMERIC] fx_sensitivity_10pct: $10M → $16M (+60.0%) — exceeds 20% threshold
