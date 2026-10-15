@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-09-06 | Processed 2026-10-15 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-24M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] interest_rate_risk: was $16M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, interest_rate_risk)
+[LLM_FLAG] fixed_rate_notes_billion: section text discloses only $1.32 billion of debt "classified as current" for the 2018 9.25-Year Notes and 2017 Ten-Year Notes specifically -- not a total fixed-rate notes outstanding figure. Prior quarters carried ~$4.77-4.91B in this field, so returning null rather than substituting the partial current-portion number, which would understate total fixed-rate debt by roughly 70%.
+[LLM_FLAG] prior_values supplied for this request (equity_sensitivity_10pct=0.0, interest_rate_risk=16.0) look like they come from the 2026-06-14 tracking.csv row, which is internally inconsistent with every other quarter: all prior rows carry interest_rate_risk as a qualitative 'yes'/'yes'/'yes' flag alongside empty equity_sensitivity_10pct, while that one row instead has equity_sensitivity_10pct='0' and interest_rate_risk='16.0' -- values appear shifted out of their intended columns (misaligned_row). This extraction returns the qualitative 'yes' for interest_rate_risk and null for equity_sensitivity_10pct consistent with the rest of the series and with what this filing's text actually supports; recommend the 2026-06-14 row be checked/re-extracted.
+[LLM_FLAG] No FX or commodity hedging program, despite quantified exposure: 'We may periodically enter into financial instruments to manage [foreign currency / commodity price] risk, although we have not done so historically' -- Domino's remains structurally unhedged on both its ~7% international franchise revenue (quantified at a $24.2M hit from a 10% adverse FX move over nine months) and its cheese/food-commodity cost base.
+[LLM_FLAG] Refinancing risk flagged in filing's own words: 'we expect, based on current benchmark rates, to refinance [$1.32 billion of] the 2018 9.25-Year Notes and the 2017 Ten-Year Notes at higher interest rates' ahead of the July 2027 anticipated repayment date.
+[LLM_FLAG] 2025 Variable Funding Notes had zero outstanding borrowings at period end ('As of September 6, 2026, we had no outstanding borrowings under our 2025 Variable Funding Notes'), so floating-rate interest expense on that facility is currently nil despite the qualitative IR-risk disclosure.
+
 === 10-Q | Period ending 2026-06-14 | Processed 2026-07-21 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NUMERIC] fx_sensitivity_10pct: $10M → $16M (+60.0%) — exceeds 20% threshold

@@ -1,3 +1,29 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-10-15 ===
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($570M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($23,700M)
+[DISAPPEARED_FIELD] equity_derivatives_notional: was $422M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $82M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($570M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-8,215M)
+[NEW_FIELD] fixed_rate_debt_pct: appeared for first time ($79M)
+[NEW_FIELD] ir_swap_fair_value_liability: appeared for first time ($5,100M)
+[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($36,100M)
+[NEW_FIELD] cross_currency_swap_fair_value_asset: appeared for first time ($1,400M)
+[NEW_FIELD] cross_currency_swap_fair_value_liability: appeared for first time ($1,200M)
+[NEW_FIELD] fx_forward_notional: appeared for first time ($570M)
+[NEW_FIELD] interest_rate_sensitivity_100bp: appeared for first time ($340M)
+[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($158,955M)
+[NEW_FIELD] collateral_posted: appeared for first time ($1,100M)
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (equity_derivatives_notional, expected_12mo_reclass_from_aoci)
+[VALIDATION] Reconciliation failure: fx_derivatives_notional=36,670 but fx_not_designated_notional=570 = 570 (diff 98.4%) — extraction likely read the wrong table
+[LLM_FLAG] Cross currency swap fair value swung sharply YoY: asset position nearly tripled to $1.4 billion (from $500 million) while the liability fell to $1.2 billion (from $2.7 billion) at Dec 31 2025 vs 2024 — text gives no explanation for the swing beyond the standing hedge description; worth confirming the FX/rate driver before quoting net exposure change.
+[LLM_FLAG] Cross currency swap notional grew to $36.1 billion (from $32.1 billion) and now references five currencies (British Pound Sterling, Euro, Swiss Franc, Canadian Dollar, Australian Dollar) versus the four currencies (British Pound Sterling, Euro, Australian Dollar, Swedish Krona) cited as 'primary translation exposure' — the swap book's currency mix does not map cleanly onto the disclosed translation exposure (Swiss Franc/Canadian Dollar swaps vs. no matching translation exposure; Swedish Krona exposure with no matching swap).
+[LLM_FLAG] No fair-value-hierarchy 'Total derivative asset/liability' line appears in the supplied excerpt (likely cut off from a preceding table), so aggregate derivative asset/liability and net position fields could not be extracted — flagging as a gap rather than estimating from partial components.
+[LLM_FLAG] Collateral posted under CSA agreements nearly halved YoY to $1.1 billion (from $2.1 billion) — filing explains the CSA mechanism ('fixed cap amounts or rating based thresholds') but not the specific driver of this period's decline.
+[LLM_FLAG] Cross currency swap fair value flipped sharply: asset position nearly tripled to $1.4 billion (from $500 million) while the liability fell to $1.2 billion (from $2.7 billion) — worth confirming the FX/rate driver before quoting the net swing.
+[LLM_FLAG] Rating-linked margin risk disclosed: 'CSA agreements contain fixed cap amounts or rating based thresholds such that we or our counterparties may be required to hold or post collateral based upon changes in outstanding positions as compared to established thresholds or caps and changes in credit ratings' — a VZ credit rating downgrade could directly increase collateral posting requirements.
+[LLM_FLAG] Filing states 'We do not hold derivatives for trading purposes' and 'At both December 31, 2025 and 2024, we did not hold any collateral' (one-way collateral flow, VZ posts but holds none) — notable asymmetry in the collateral arrangement.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($40,773M)
 [NEW_FIELD] equity_derivatives_notional: appeared for first time ($422M)
