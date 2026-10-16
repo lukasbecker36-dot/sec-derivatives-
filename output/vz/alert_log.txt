@@ -1,3 +1,27 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-10-16 ===
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($570M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($23,700M)
+[DISAPPEARED_FIELD] equity_derivatives_notional: was $422M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $82M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($570M)
+[NEW_FIELD] fixed_rate_debt_pct: appeared for first time ($79M)
+[NEW_FIELD] ir_swap_fair_value_liability: appeared for first time ($5,100M)
+[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($36,100M)
+[NEW_FIELD] cross_currency_swap_fair_value_asset: appeared for first time ($1,400M)
+[NEW_FIELD] cross_currency_swap_fair_value_liability: appeared for first time ($1,200M)
+[NEW_FIELD] fx_forward_notional: appeared for first time ($570M)
+[NEW_FIELD] interest_rate_sensitivity_100bp: appeared for first time ($340M)
+[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($158,955M)
+[NEW_FIELD] collateral_posted: appeared for first time ($1,100M)
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (equity_derivatives_notional, expected_12mo_reclass_from_aoci)
+[VALIDATION] Reconciliation failure: fx_derivatives_notional=36,670 but fx_not_designated_notional=570 = 570 (diff 98.4%) — extraction likely read the wrong table
+[LLM_FLAG] fx_derivatives_notional was computed by summing cross-currency swap notional ($36.1bn) and FX forward notional ($570m) = $36.67bn, down ~10% from the prior_values figure of $40.773bn. The text does not explain the decline and the components of the prior $40.773bn figure are not visible in this excerpt, so the comparison may not be apples-to-apples (e.g. prior figure could have included instruments not present in this period's text).
+[LLM_FLAG] Cross-currency swap fair values moved sharply period over period per the text itself: the asset position grew from $500m to $1.4bn (+180%) while the liability fell from $2.7bn to $1.2bn (-56%) — a combined roughly $2.8bn favorable swing. No field in this schema captures CCS fair values directly (that lives in the market_risk section), but this is worth checking against FY2025 FX moves (GBP, EUR, CHF, CAD, AUD) before quoting.
+[LLM_FLAG] Foreign exchange forwards remain explicitly non-designated: 'we have elected not to apply hedge accounting' — an economic hedge only. Notional dipped slightly to $570m from $620m.
+[LLM_FLAG] Cross-currency swap fair value asset nearly tripled to $1.4bn from $500m (+180%) while the liability fell to $1.2bn from $2.7bn (-56%) — a large favorable mark-to-market swing. The filing gives no explanation beyond the general purpose of the programme (converting GBP/EUR/CHF/CAD/AUD cash flows to USD); worth checking against FY2025 currency moves before quoting.
+[LLM_FLAG] Collateral posted under CSA agreements roughly halved, from $2.1bn to $1.1bn, while Verizon continues to hold no collateral from counterparties — a notable margin/collateral change, in a filing that separately emphasizes counterparty concentration is mitigated by a 'diversified pool of counterparties.'
+[LLM_FLAG] The long-term-debt-and-derivatives fair value table implies an asymmetric, convex sensitivity: a +100bp shift moves fair value from $158,955m to $150,740m (-$8,215m) while a -100bp shift moves it to $168,104m (+$9,149m). This is a distinct, debt-fair-value-based measure from the $340m 'change in annual interest expense' figure the text states explicitly as its 100bp sensitivity — ir_sensitivity_100bp was left not_found rather than assigning one of these table-derived deltas, since the text does not label either as 'the' interest rate sensitivity; do not conflate the $8,215m/$9,149m fair-value deltas with the explicit $340m interest-expense figure if citing a single number.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($40,773M)
 [NEW_FIELD] equity_derivatives_notional: appeared for first time ($422M)
