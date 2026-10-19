@@ -219,3 +219,26 @@ class TestIsReferenceOnly:
         from src.section_extract import is_reference_only
         assert not is_reference_only(
             {'market_risk': 'A 10% change in rates would change fair value by $12 million.'})
+
+
+def test_dal_profile_slices_fair_value_note_for_fuel_hedges():
+    """Delta has no derivatives note; fuel hedges live in NOTE 3. FAIR VALUE
+    MEASUREMENTS, which the archetype's 'Financial Instruments' heading missed."""
+    from pathlib import Path
+    from src.config import load_config
+    from src.section_extract import extract_all_sections
+
+    cfg = load_config(Path(__file__).resolve().parent.parent / 'profiles' / 'dal.yaml')
+    text = (
+        'NOTE 2. REVENUE RECOGNITION Passenger revenue text. '
+        'NOTE 3. FAIR VALUE MEASUREMENTS Assets/(Liabilities) Measured at Fair '
+        'Value on a Recurring Basis Cash equivalents $ 2,142 Fuel hedge '
+        'contracts ( 2 ) See Note 4, "Investments," for further information. '
+        'Fuel Hedge Contracts. We recognized losses of $ 416 million on our fuel '
+        'hedge contracts. '
+        'NOTE 4. INVESTMENTS Equity investments text.'
+    )
+    section = extract_all_sections(text, cfg)['financial_instruments']
+    assert section.startswith('NOTE 3. FAIR VALUE MEASUREMENTS')
+    assert 'losses of $ 416 million' in section
+    assert 'NOTE 4. INVESTMENTS' not in section
