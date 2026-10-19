@@ -242,3 +242,26 @@ def test_dal_profile_slices_fair_value_note_for_fuel_hedges():
     assert section.startswith('NOTE 3. FAIR VALUE MEASUREMENTS')
     assert 'losses of $ 416 million' in section
     assert 'NOTE 4. INVESTMENTS' not in section
+
+
+def test_vz_profile_slices_fair_value_and_financial_instruments_note():
+    """Verizon's notional table is in 'Note 9. Fair Value Measurements and
+    Financial Instruments'; the content fallback sliced a debt table instead."""
+    from pathlib import Path
+    from src.config import load_config
+    from src.section_extract import extract_all_sections
+
+    cfg = load_config(Path(__file__).resolve().parent.parent / 'profiles' / 'vz.yaml')
+    text = (
+        'Note 7. Debt Total debt notional amount text $ 150,740. '
+        'Note 9. Fair Value Measurements and Financial Instruments Recurring '
+        'fair value measurements. The following table sets forth the notional '
+        'amounts of our outstanding derivative instruments: Interest rate swaps '
+        '$ 23,674 Cross currency swaps 36,074 Foreign exchange forwards 570 '
+        'Counterparty risk text. '
+        'Note 10. Stock-Based Compensation text.'
+    )
+    section = extract_all_sections(text, cfg)['derivatives_note']
+    assert section.startswith('Note 9. Fair Value Measurements')
+    assert 'Cross currency swaps 36,074' in section
+    assert 'Note 10.' not in section and '150,740' not in section
