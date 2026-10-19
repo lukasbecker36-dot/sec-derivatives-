@@ -5,6 +5,22 @@ archetype: minimal_hedger
 sector: TODO  # e.g., technology, industrials, financials
 extraction_mode: llm
 
+# Ecolab numbers its notes without the word "Note": "8. DERIVATIVES AND
+# HEDGING TRANSACTIONS" in both the 10-K and 10-Qs. The minimal_hedger heading
+# requires "Note <n>", so it never matched and the content fallback sliced
+# from the first "notional" mention -- in the 10-K that is MD&A, so the
+# notional-values table (FX forwards / IR swaps / cross-currency swaps) was
+# missed. Heading text is case-sensitive caps so in-text references such as
+# 'Note 8, "Derivatives and Hedging Transactions,"' don't match. Ends at the
+# next numbered caps heading (9. OTHER COMPREHENSIVE INCOME (LOSS)
+# INFORMATION); ~13,600 chars in both forms.
+sections:
+  derivatives_note:
+    heading: '(?<![\d.,$])\b\d{1,2}\.\s+(?-i:DERIVATIVES\s+AND\s+HEDGING\s+TRANSACTIONS)'
+    match_strategy: last
+    end_boundary: '(?<![\d.,$])\b\d{1,2}\.\s+(?!\s|DERIVATIVES)(?-i:[A-Z]{4,}\b)'
+    max_length: 16000
+
 # Additional fields identified by LLM analysis (review and adjust)
 fields:
   reference_location:

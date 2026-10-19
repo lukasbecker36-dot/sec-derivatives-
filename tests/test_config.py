@@ -58,3 +58,17 @@ class TestListIssuers:
         issuers = list_issuers(profiles)
         for p in issuers:
             assert not p.name.startswith('_')
+
+
+def test_every_profile_section_regex_compiles():
+    """Per-issuer heading/end_boundary overrides are hand-written regexes;
+    a typo would only surface at 02:00 as a silently empty section."""
+    import re
+    from pathlib import Path
+    from src.config import load_config
+    for path in sorted((Path(__file__).resolve().parent.parent / 'profiles').glob('*.yaml')):
+        cfg = load_config(path)
+        for name, sec in cfg.sections.items():
+            for pat in (sec.heading, sec.end_boundary):
+                if pat:
+                    re.compile(re.sub(r' +', r'\\s+', pat), re.IGNORECASE)
