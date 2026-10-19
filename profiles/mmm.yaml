@@ -5,6 +5,20 @@ archetype: minimal_hedger
 sector: TODO  # e.g., technology, industrials, financials
 extraction_mode: llm
 
+# 3M's derivatives footnote is "Note 15. Derivatives" (10-K) / "Note 13.
+# Derivatives" (10-Q). The archetype heading matches it, but the archetype
+# end_boundary stops at any "Note N." -- and the note's second paragraph
+# cross-references "Note 8", "Note 16" and "Note 12", so the slice ended after
+# ~800 chars with no notionals and the content fallback took the first
+# "notional" mention instead (MD&A in the 10-K). End only at the next real
+# note, "Note N. Fair Value Measurements", which follows in both forms
+# (10-K note ~14,500 chars, 10-Q ~8,500).
+sections:
+  derivatives_note:
+    heading: '(?-i:Note)\s+\d+\.\s+(?-i:Derivatives)(?!\s+and\s)(?!\s*\d)'
+    end_boundary: '(?-i:Note)\s+\d+\.\s+(?-i:Fair\s+Value\s+Measurements)'
+    max_length: 16000
+
 # Additional fields identified by LLM analysis (review and adjust)
 fields:
   derivative_types:

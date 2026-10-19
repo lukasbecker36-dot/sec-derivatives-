@@ -5,6 +5,21 @@ archetype: minimal_hedger
 sector: TODO  # e.g., technology, industrials, financials
 extraction_mode: llm
 
+# GE HealthCare's derivatives disclosure sits inside "NOTE 13. FINANCIAL
+# INSTRUMENTS AND FAIR VALUE MEASUREMENTS" (NOTE 12 in 10-Qs), under the
+# sub-heading "DERIVATIVES AND HEDGING". The archetype heading expects
+# "Note N. Derivative/Hedging" straight after the number, so it never matched
+# and the content fallback grabbed the first "notional" mention -- in the
+# 10-K that is Item 7A, so the Gross Notional table was missed. Match the
+# all-caps note heading (case-sensitive, so the mixed-case table-of-contents
+# entry is skipped) and end at the next all-caps NOTE heading. The 10-K note
+# runs ~17,000 chars, the 10-Q note ~14,300.
+sections:
+  derivatives_note:
+    heading: '(?-i:NOTE)\s+\d+\.\s+(?-i:FINANCIAL\s+INSTRUMENTS\s+AND\s+FAIR\s+VALUE)'
+    end_boundary: '(?-i:NOTE\s+\d+\.\s+(?!FINANCIAL\s+INSTRUMENTS)[A-Z]{3,})'
+    max_length: 18000
+
 # Additional fields identified by LLM analysis (review and adjust)
 fields:
   gross_notional_amounts:
