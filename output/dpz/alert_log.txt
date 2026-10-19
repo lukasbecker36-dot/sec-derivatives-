@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-09-06 | Processed 2026-10-19 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-24M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] interest_rate_risk: was $16M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, interest_rate_risk)
+[LLM_FLAG] fixed_rate_notes_billion: text only gives '$1.32 billion of debt classified as current associated with our 2018 9.25-Year Notes and the 2017 Ten-Year Notes' — that is the current-classification portion of two specific note series, not a total fixed-rate notes outstanding figure (prior periods recorded ~$4.77B total). Returning not_found rather than the partial $1.32B figure to avoid substituting a subset for the total.
+[LLM_FLAG] interest_rate_risk prior_values entry (16.0) looks like a misaligned/corrupted carryover — this field has always held a qualitative 'yes'/'no' value historically (see tracking.csv), not a dollar figure, so the numeric 16.0 likely belongs to a different column from a prior malformed row. Current 'yes' extraction is not comparable to that number and is not a >50% swing against a genuine prior value.
+[LLM_FLAG] Newsworthy: DPZ explicitly states it does not hedge its FX or commodity exposure — 'We may periodically enter into financial instruments to manage foreign currency exchange risk, although we have not done so historically' and the identical disclaimer for commodity price risk — despite ~7% of revenue coming from international franchise royalties and ongoing cheese/commodity cost exposure.
+[LLM_FLAG] Newsworthy: no outstanding borrowings under the 2025 Variable Funding Notes as of period end, so the floating-rate facility currently carries zero rate exposure even though it is identified as the company's interest-rate risk driver.
+[LLM_FLAG] Newsworthy/refinancing: ~$1.32B of fixed-rate debt (2018 9.25-Year Notes and 2017 Ten-Year Notes, anticipated repayment July 2027) is now classified as current; management states it expects to refinance both series 'prior to the anticipated repayment date' and, based on current benchmark rates, 'to refinance those notes at higher interest rates' — explicit management commentary on rising future interest expense.
+
 === 10-Q | Period ending 2026-06-14 | Processed 2026-07-21 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NUMERIC] fx_sensitivity_10pct: $10M → $16M (+60.0%) — exceeds 20% threshold

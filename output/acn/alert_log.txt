@@ -1,3 +1,11 @@
+=== 10-K | Period ending 2026-08-31 | Processed 2026-10-19 ===
+[NUMERIC] total_derivative_asset: $127M → $50M (-60.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $126M → $515M (+306.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $1M → $-465M (-46554.9%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: net_derivative_position changed from 1 to -465 (465x)
+[LLM_FLAG] total_derivative_liability rose from prior $126.496M to $514.596M (+307%); total_derivative_asset fell from prior $127.496M to $50.047M (-61%); net_derivative_position swung from +$1.0M to -$464.549M. The note gives no stated reason for this fair-value swing (netting/master-agreement language is boilerplate, not an explanation).
+[LLM_FLAG] Newsworthy: escalating realized/unrealized losses on the short-term FX derivatives hedging intercompany loans — filing states 'Realized gains or losses and changes in the estimated fair value of these derivatives were net losses of $152,866, $147,220 and $48,840 for fiscal 2026, 2025 and 2024, respectively,' a rising trend worth flagging even though these amounts aren't schema fields.
+
 === 10-Q | Period ending 2025-05-31 | Processed 2026-09-15 ===
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $16,944M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $41M, now missing
