@@ -33,6 +33,7 @@ from .registry import (
     append_activation_event, append_review_item,
 )
 from .section_extract import extract_all_sections
+from . import no_sections
 
 logger = logging.getLogger(__name__)
 
@@ -122,6 +123,9 @@ def prepare(since: str, max_activations: int, verbose: bool = False,
     if max_filings > 0:
         logger.info(f'Filings cap this run: {max_filings}')
 
+    no_section_rows = no_sections.load()
+    no_sections_recorded = 0
+
     for row in active_rows:
         ticker = row.get('ticker', '')
         cik = row.get('cik', '')
@@ -149,6 +153,19 @@ def prepare(since: str, max_activations: int, verbose: bool = False,
             logger.error(f'{ticker}: EDGAR fetch failed: {e}')
             continue
 
+        # Filings already known to have no sliceable section under this
+        # exact config would only burn a cap slot again. A profile change
+        # alters the hash and makes them eligible (see src/no_sections.py).
+        chash = no_sections.config_hash(config)
+        skip = no_sections.skip_keys(config.ticker, chash, no_section_rows)
+        if skip:
+            before = len(unprocessed)
+            unprocessed = [f for f in unprocessed
+                           if f.get('accession_number') not in skip]
+            if len(unprocessed) < before:
+                logger.debug(f'{ticker}: skipping {before - len(unprocessed)} '
+                             f'filing(s) with no sliceable section')
+
         if not unprocessed:
             logger.debug(f'{ticker}: no unprocessed filings')
             continue
@@ -175,6 +192,7 @@ def prepare(since: str, max_activations: int, verbose: bool = False,
                 )
 
                 sections = extract_all_sections(filing_text, config)
+                filing_requests = 0
 
                 for section_name, section_text in sections.items():
                     if not section_text:
@@ -183,6 +201,7 @@ def prepare(since: str, max_activations: int, verbose: bool = False,
                     if not schema:
                         continue
                     prior_vals = _prior_values_for_section(prior_row, config, section_name)
+                    filing_requests += 1
 
                     filename = _safe_filename(ticker, section_name, filing_meta['period_end'], request_idx)
                     request_data = {
@@ -224,6 +243,18 @@ def prepare(since: str, max_activations: int, verbose: bool = False,
                     })
                     request_idx += 1
 
+                if filing_requests == 0:
+                    # Nothing to extract: no request, so finalize writes no
+                    # row and the filing would come back every night. Record
+                    # it instead, and don't let it take a cap slot.
+                    no_sections.record(config, filing_meta, chash)
+                    no_sections_recorded += 1
+                    logger.warning(
+                        f'  {ticker} {filing_meta["form_type"]} '
+                        f'{filing_meta["period_end"]}: no section found; recorded '
+                        f'in registry/no_sections.csv, not counted against the cap')
+                    continue
+
                 filings_queued += 1
 
             except Exception as e:
@@ -235,6 +266,10 @@ def prepare(since: str, max_activations: int, verbose: bool = False,
                 f'at {filings_queued} filings queued.'
             )
             break
+
+    if no_sections_recorded:
+        logger.info(f'{no_sections_recorded} filing(s) with no sliceable section '
+                    f'recorded in registry/no_sections.csv')
 
     # === Pass 2: Registered / failed issuers ===
     registered_rows = get_registered(universe)

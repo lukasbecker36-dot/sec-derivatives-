@@ -620,6 +620,17 @@ def build_manifest(since_iso: str,
 
     held_branches = _held_review_branches(since_iso)
 
+    # Filings the scheduler fetched but could not slice any section from
+    # (src/no_sections.py). They write no tracking.csv row, so without this
+    # they would be invisible gaps. Only those first recorded in the window.
+    from . import no_sections
+    no_section_filings = [
+        {k: r.get(k, '') for k in ('ticker', 'period_end', 'form_type',
+                                   'filing_date', 'recorded_at')}
+        for r in no_sections.load()
+        if r.get('recorded_at', '') >= since_iso[:19]
+    ]
+
     return {
         'since': since_iso,
         'as_of': as_of,
@@ -629,11 +640,13 @@ def build_manifest(since_iso: str,
         'recent_days': recent_days,
         'extraction_gaps': extraction_gaps,
         'held_for_review': held_branches,
+        'no_section_filings': no_section_filings,
         'counts': {
             'total_new_rows': len(new_filings),
             'backfill_rows': len(backfill_filings),
             'extraction_gaps': len(extraction_gaps),
             'held_review_branches': len(held_branches),
+            'no_section_filings': len(no_section_filings),
             'total_defects': report['defect_count'],
             'defects_by_type': report['defects_by_type'],
         },

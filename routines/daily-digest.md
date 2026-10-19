@@ -91,6 +91,8 @@ Extraction regressions — one line per extraction_gaps entry where is_regressio
 
 New-blank filings — one line per extraction_gaps entry where is_regression is false. Append "(10-Q refers to the 10-K; nothing to extract)" when reference_only is true. Omit the section entirely if empty.
 
+No section found — one line per no_section_filings entry (ticker, period_end, form_type, filing_date): the scheduler fetched the filing but its profile matched no section, so nothing was extracted. These need a profile fix, not a retry. Omit the section entirely if empty.
+
 State B — gate held today's work (counts.total_new_rows == 0 && counts.held_review_branches > 0):
 
 Title: "SEC Derivatives — Daily Digest — YYYY-MM-DD (content held for review)"
