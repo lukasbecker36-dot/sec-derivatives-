@@ -403,3 +403,26 @@ class TestChronologicalPriorFix:
         # The prior in the message should be Q1 (2025-03-31), skipping
         # the blank Q2.
         assert '2025-03-31' in swings[0]['detail']
+
+
+class TestPartialComponents:
+    """A missing component is a gap, not a contradiction."""
+
+    def test_partial_components_below_total_not_flagged(self, tmp_path):
+        # Verizon FY2025 10-K: designated figure not extracted.
+        path = tmp_path / 'vz' / 'tracking.csv'
+        _write(path, [{
+            'period_end_date': '2025-12-31', 'form_type': '10-K',
+            'fx_derivatives_notional': '36670',
+            'fx_not_designated_notional': '570',
+        }])
+        assert audit_issuer('vz', path) == []
+
+    def test_partial_components_above_total_still_flagged(self, tmp_path):
+        path = tmp_path / 'vz' / 'tracking.csv'
+        _write(path, [{
+            'period_end_date': '2025-12-31', 'form_type': '10-K',
+            'fx_derivatives_notional': '570',
+            'fx_not_designated_notional': '36670',
+        }])
+        assert [d['type'] for d in audit_issuer('vz', path)] == ['reconciliation']

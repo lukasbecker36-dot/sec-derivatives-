@@ -89,7 +89,7 @@ Held for review — for each held_for_review entry, list branch name, committed_
 
 Extraction regressions — one line per extraction_gaps entry where is_regression is true (ticker, period, form, attempts). Lead this list. If none, write "no regressions."
 
-New-blank filings — one line per extraction_gaps entry where is_regression is false. Omit the section entirely if empty.
+New-blank filings — one line per extraction_gaps entry where is_regression is false. Append "(10-Q refers to the 10-K; nothing to extract)" when reference_only is true. Omit the section entirely if empty.
 
 State B — gate held today's work (counts.total_new_rows == 0 && counts.held_review_branches > 0):
 

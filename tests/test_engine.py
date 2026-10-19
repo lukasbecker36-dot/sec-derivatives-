@@ -186,3 +186,42 @@ class TestAppendCsvRowUpsert:
                                   'form_type': '10-K/A', 'notional': 105}, cfg)
         rows = list(csv.DictReader(open(csv_path)))
         assert len(rows) == 2
+
+
+class TestReferenceOnlyRows:
+    def _cfg(self, tmp_path):
+        from src.config import IssuerConfig
+        return IssuerConfig(issuer='X', ticker='X', cik='1', archetype='',
+                            fields={'fx_derivatives_notional': {}})
+
+    def test_reference_only_blank_row_goes_straight_to_retry_cap(self, tmp_path):
+        import csv
+        from src.engine import append_csv_row, mark_if_reference_only
+        from src.filing_fetcher import MAX_BLANK_RETRIES
+        row = {'period_end_date': '2026-09-30', 'form_type': '10-Q',
+               'fx_derivatives_notional': None}
+        alerts = []
+        assert mark_if_reference_only(
+            row, {'market_risk': 'see Item 7A in our Form 10-K.'}, alerts)
+        assert alerts and alerts[0].startswith('[REFERENCE_ONLY]')
+        path = tmp_path / 'tracking.csv'
+        append_csv_row(path, row, self._cfg(tmp_path))
+        written = list(csv.DictReader(open(path)))[0]
+        assert int(written['extraction_attempts']) == MAX_BLANK_RETRIES
+        assert '_final' not in written
+
+    def test_populated_row_is_never_marked(self):
+        from src.engine import mark_if_reference_only
+        row = {'period_end_date': '2026-09-30', 'fx_derivatives_notional': '500'}
+        alerts = []
+        assert not mark_if_reference_only(
+            row, {'market_risk': 'see Item 7A in our Form 10-K.'}, alerts)
+        assert alerts == [] and '_final' not in row
+
+    def test_ordinary_blank_row_still_counts_one_attempt(self, tmp_path):
+        import csv
+        from src.engine import append_csv_row
+        row = {'period_end_date': '2026-09-30', 'form_type': '10-Q'}
+        path = tmp_path / 'tracking.csv'
+        append_csv_row(path, row, self._cfg(tmp_path))
+        assert list(csv.DictReader(open(path)))[0]['extraction_attempts'] == '1'

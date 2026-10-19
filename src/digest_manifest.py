@@ -294,6 +294,24 @@ def _notes_categories_for_period(ticker: str, period: str,
     return result
 
 
+def _latest_alert_block(ticker: str, period: str, form_type: str) -> str:
+    """The most recent alert_log.txt block for a period (newest is first)."""
+    path = OUTPUT_DIR / ticker.lower() / 'alert_log.txt'
+    if not path.exists():
+        return ''
+    header = f'=== {form_type} | Period ending {period} | Processed '
+    block, inside = [], False
+    for line in path.read_text(encoding='utf-8', errors='replace').split('\n'):
+        if line.startswith('=== '):
+            if inside:
+                break
+            inside = line.startswith(header)
+            continue
+        if inside:
+            block.append(line)
+    return '\n'.join(block)
+
+
 # Prose-friendly asset-class detectors used to decide whether a filing
 # note plausibly explains a numeric move. ASSET_PATTERNS above is
 # tailored to field-name shape (underscores, word boundaries at token
@@ -548,6 +566,10 @@ def build_manifest(since_iso: str,
                     'form_type': key[1],
                     'attempts': attempts,
                     'is_regression': bool(populated_before),
+                    # The filing only points at the 10-K: an explained gap,
+                    # not an extraction failure, and not retried.
+                    'reference_only': '[REFERENCE_ONLY]' in _latest_alert_block(
+                        ticker, key[0], key[1]),
                 })
                 continue
             # prior_row is the nearest earlier populated row and only labels

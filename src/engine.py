@@ -7,8 +7,9 @@ from datetime import datetime, timezone
 
 from .config import IssuerConfig, load_config
 from .filer_profile import get_or_create_profile, update_profile_after_extraction, save_profile, build_prompt_context
-from .filing_fetcher import fetch_filing_text, get_unprocessed_filings
-from .section_extract import extract_all_sections
+from .filing_fetcher import (fetch_filing_text, get_unprocessed_filings,
+                             MAX_BLANK_RETRIES, _row_has_extracted_data)
+from .section_extract import extract_all_sections, is_reference_only
 from .llm_extract import extract_fields_llm
 from .qualitative import extract_qualitative
 from .change_detect import detect_changes
@@ -187,6 +188,21 @@ def _sync_text_files_to_db(ticker: str, issuer_dir: Path):
         logger.debug(f'Qualitative DB sync skipped for {ticker}: {e}')
 
 
+def mark_if_reference_only(row: dict, sections: dict[str, str],
+                           alerts: list[str]) -> bool:
+    """If a blank row came from sections that only point at the 10-K, stop
+    retrying it: the next attempt would see the same pointer. Records why in
+    the alert log so the gap is explained rather than silent.
+    """
+    if _row_has_extracted_data(row) or not is_reference_only(sections):
+        return False
+    row['_final'] = True
+    alerts.append('[REFERENCE_ONLY] Every section found only refers to the '
+                  'annual report (e.g. "see Item 7A in our Form 10-K"); '
+                  'nothing to extract. Not retried.')
+    return True
+
+
 def append_csv_row(csv_path: Path, row: dict, config: IssuerConfig):
     """Upsert a row into the tracking CSV, keyed on (period_end_date, form_type).
 
@@ -223,6 +239,11 @@ def append_csv_row(csv_path: Path, row: dict, config: IssuerConfig):
     # to whatever the previous write recorded, so a third-time blank retry
     # will hit extraction_attempts=3 and get filtered by the fetcher.
     row['extraction_attempts'] = prior_attempts + 1
+    # A reference-only filing is final on its first attempt (see
+    # mark_if_reference_only); jump straight to the fetcher's retry cap.
+    if row.pop('_final', False):
+        row['extraction_attempts'] = max(row['extraction_attempts'],
+                                         MAX_BLANK_RETRIES)
 
     tmp = csv_path.with_suffix('.csv.tmp')
     with open(tmp, 'w', newline='', encoding='utf-8') as f:
@@ -328,6 +349,8 @@ def run_issuer(config: IssuerConfig, output_dir: Path = OUTPUT_DIR, client=None,
             result['row']['processed_at'] = datetime.now(timezone.utc).isoformat()
             result['row']['extraction_version'] = 1
 
+            mark_if_reference_only(result['row'], result.get('sections', {}),
+                                   result['alerts'])
             append_csv_row(csv_path, result['row'], config)
             _write_to_db(result['row'], config)
             append_notes(notes_path, filing_meta['period_end'], filing_meta['form_type'], result['notes'])

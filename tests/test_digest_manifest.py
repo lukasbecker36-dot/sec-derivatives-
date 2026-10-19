@@ -343,3 +343,19 @@ class TestFieldPriors:
                            periods)
         firsts = _lead_signals(moves, {})['first_time_moves']
         assert [m['field'] for m in firsts] == ['commodity_derivatives_notional']
+
+
+class TestReferenceOnlyGapFlag:
+    def test_latest_block_for_period_is_read(self, tmp_path, monkeypatch):
+        import src.digest_manifest as dm
+        monkeypatch.setattr(dm, 'OUTPUT_DIR', tmp_path)
+        (tmp_path / 'dal').mkdir()
+        (tmp_path / 'dal' / 'alert_log.txt').write_text(
+            '=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-20 ===\n'
+            '[REFERENCE_ONLY] Every section found only refers to the annual report\n'
+            '\n'
+            '=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-19 ===\n'
+            '[LLM_FLAG] older attempt\n', encoding='utf-8')
+        block = dm._latest_alert_block('DAL', '2026-09-30', '10-Q')
+        assert '[REFERENCE_ONLY]' in block and 'older attempt' not in block
+        assert dm._latest_alert_block('DAL', '2026-06-30', '10-Q') == ''
