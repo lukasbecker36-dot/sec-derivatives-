@@ -5,8 +5,35 @@ archetype: minimal_hedger
 sector: TODO  # e.g., technology, industrials, financials
 extraction_mode: llm
 
+# Delta has no derivatives note. Its only derivatives are fuel hedges at the
+# Monroe refinery, disclosed inside "NOTE 3. FAIR VALUE MEASUREMENTS" (fair
+# value table plus a "Fuel Hedge Contracts" paragraph with the P&L). The
+# minimal_hedger headings look for "Financial Instruments" / "Derivative", so
+# nothing matched and the 2026-09-30 10-Q came back blank three times. Item 3
+# in its 10-Qs is a one-line pointer to the 10-K, so this note is the only
+# source in a quarter. NOTE is case-sensitive so in-text references such as
+# 'See Note 4, "Investments,"' don't end the slice.
+sections:
+  financial_instruments:
+    heading: '(?-i:NOTE)\s+\d+\s*\.\s*FAIR\s+VALUE\s+MEASUREMENTS'
+    end_boundary: '(?-i:NOTE)\s+\d+\s*\.\s*(?!\s|FAIR\s+VALUE)'
+    match_strategy: last
+    max_length: 10000
+
 # Additional fields identified by LLM analysis (review and adjust)
 fields:
+  fuel_hedge_fair_value:
+    description: "Net fair value of fuel hedge contracts at period end from the fair value table (negative = liability), in millions"
+    section: financial_instruments
+  fuel_hedge_gain_loss_quarter:
+    description: "Gain (loss) recognized on fuel hedge contracts for the three months ended at period end, in millions (negative = loss). null in a 10-K."
+    section: financial_instruments
+  fuel_hedge_gain_loss_ytd:
+    description: "Gain (loss) recognized on fuel hedge contracts year to date (nine/six months, or full year in a 10-K), in millions (negative = loss)"
+    section: financial_instruments
+  fuel_hedge_settlement_gain_loss_ytd:
+    description: "Settlement gains (losses) on fuel hedge contracts year to date, in millions (negative = loss), as distinct from mark-to-market"
+    section: financial_instruments
   fuel_price_sensitivity:
     description: "fuel price impact per gallon change"
     section: market_risk
