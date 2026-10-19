@@ -5,6 +5,25 @@ archetype: minimal_hedger
 sector: TODO  # e.g., technology, industrials, financials
 extraction_mode: llm
 
+# General Dynamics uses lettered notes in ALL CAPS: "Q. DERIVATIVE FINANCIAL
+# INSTRUMENTS AND HEDGING ACTIVITIES" in the 10-K, "N. ..." in 10-Qs. The
+# minimal_hedger heading expects "Note <number>", so it never matched and the
+# content fallback sliced from the first "notional" mention -- in the 10-K
+# that is Item 7A (MD&A), not the footnote. The slice starts one note earlier,
+# at "FAIR VALUE" (directly preceding in both forms), because that note's
+# table holds the only derivative fair values (cash flow hedge assets /
+# liabilities); the derivatives note itself carries the forward-contract
+# notional under "Hedging Activities." Ends at the next lettered caps heading
+# (R. EQUITY COMPENSATION PLANS / O. RETIREMENT PLANS); ~8,000 chars.
+# Letters are case-sensitive and must not follow a "." (so "U.S. GAAP" etc.
+# never end the slice).
+sections:
+  derivatives_note:
+    heading: '(?<![.\w])(?-i:[A-Z])\.\s+(?-i:FAIR\s+VALUE)\s+(?=Fair\s+value\s+is\s+defined)'
+    match_strategy: last
+    end_boundary: '(?<![.\w])(?-i:[A-Z])\.\s+(?!\s|DERIVATIVE)(?-i:[A-Z]{4,}\b)'
+    max_length: 16000
+
 # Additional fields identified by LLM analysis (review and adjust)
 fields:
   fx_forward_notional:

@@ -5,6 +5,21 @@ archetype: minimal_hedger
 sector: TODO  # e.g., technology, industrials, financials
 extraction_mode: llm
 
+# Corning numbers its notes without the word "Note": the derivatives footnote
+# is "13. Financial Instruments" in the 10-K and "9. Financial Instruments" in
+# 10-Qs, opening with the notional/fair value table. The archetype heading
+# expects "Note N. Derivative/Hedging", so it never matched and the content
+# fallback sliced from the first "notional" mention -- in the 10-K that is
+# MD&A/Item 7A, so 10-K rows came back without notionals. "Financial
+# Instruments" is case-sensitive so in-text references such as "Note 13
+# (Financial Instruments)" don't match. The next note is Share-Based
+# Compensation in both forms (~6,000 chars later).
+sections:
+  derivatives_note:
+    heading: '\d{1,2}\.\s+(?-i:Financial\s+Instruments)\s+(?-i:The\s+following)'
+    end_boundary: '\d{1,2}\.\s+(?-i:Share-Based\s+Compensation)'
+    max_length: 12000
+
 # Additional fields identified by LLM analysis (review and adjust)
 fields:
   primary_currencies:

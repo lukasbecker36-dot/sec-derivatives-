@@ -5,6 +5,23 @@ archetype: minimal_hedger
 sector: TODO  # e.g., technology, industrials, financials
 extraction_mode: llm
 
+# Estee Lauder's derivatives footnote is "NOTE 12 – DERIVATIVE FINANCIAL
+# INSTRUMENTS" (10-K) / "NOTE 4 – ..." (10-Q), headings in ALL CAPS. Its many
+# mixed-case in-text references ("Note 12 – Derivative Financial Instruments")
+# matched the archetype heading too, and in the 10-K the slice landed in the
+# debt note's treasury-lock paragraphs instead of the footnote, so FX
+# designated/total notionals and fair values came back blank. NOTE and the
+# title are case-sensitive here so only the real heading matches; the slice
+# ends at the next caps NOTE heading (NOTE 13/NOTE 5 – FAIR VALUE
+# MEASUREMENTS). ~16,100 chars in the 10-K, ~19,100 in the 10-Q (long
+# effect-on-income tables); notionals and AOCI reclass sit near the start.
+sections:
+  derivatives_note:
+    heading: '(?-i:NOTE)\s+\d+\s*[–—-]\s*(?-i:DERIVATIVE\s+FINANCIAL\s+INSTRUMENTS)'
+    match_strategy: last
+    end_boundary: '(?-i:NOTE)\s+\d+\s*[–—-]\s*(?!\s|DERIVATIVE)(?-i:[A-Z]{2})'
+    max_length: 20000
+
 # Additional fields identified by LLM analysis (review and adjust)
 fields:
   net_investment_hedge_gains_losses:

@@ -5,6 +5,24 @@ archetype: minimal_hedger
 sector: TODO  # e.g., technology, industrials, financials
 extraction_mode: llm
 
+# Expedia has no standalone derivatives footnote: the FX forward notional,
+# cross-currency swap notional and (from 2026) the cash flow hedge AOCI /
+# 12-month reclassification figures sit inside "NOTE 3 — Fair Value
+# Measurements" (10-K) / "Note 3 – Fair Value Measurements" (10-Q). The
+# minimal_hedger heading looks for "Derivative"/"Hedging" after the note
+# number, so it never matched and the content fallback sliced from the first
+# "notional" mention -- in the 10-K that is Item 7A, missing the footnote.
+# Match the Fair Value Measurements heading, skipping in-text references
+# ("NOTE 3 — Fair Value Measurements), ..." / "... Measurements. Additionally"),
+# and end at the next note heading, ignoring "See NOTE 7 — Debt for ..."
+# references inside the note. The note is ~11,600 chars in the 10-K.
+sections:
+  derivatives_note:
+    heading: 'Note\s+\d+\s*[—–-]\s*Fair\s+Value\s+Measurements(?!\s*[).,;])'
+    match_strategy: first
+    end_boundary: '(?<!See\s)Note\s+\d+\s*[—–-]\s*(?!\s|Fair\s+Value)'
+    max_length: 16000
+
 # Additional fields identified by LLM analysis (review and adjust)
 fields:
   debt_fair_value:
