@@ -5,6 +5,22 @@ archetype: minimal_hedger
 sector: TODO  # e.g., technology, industrials, financials
 extraction_mode: llm
 
+# Verizon's derivatives disclosure (the notional table: interest rate swaps,
+# cross currency swaps, FX forwards, plus hedge activity) sits inside
+# "Note 9. Fair Value Measurements and Financial Instruments" in the 10-K
+# (Note 7 in 10-Qs). The minimal_hedger heading never matched it, so the
+# content fallback sliced from the first "notional" mention, partway through
+# a debt table, and the notional table was not in the text the model saw.
+# The FY2025 10-K then came back with an FX total ($36,670m) that is not in
+# the filing (36,074 + 570 = 36,644) and no designated figure. The note runs
+# to ~15,000 characters with the table about a third of the way in.
+sections:
+  derivatives_note:
+    heading: 'Note\s+\d+\.\s+Fair\s+Value\s+Measurements\s+and\s+Financial\s+Instruments'
+    end_boundary: 'Note\s+\d+\.\s+(?!Fair\s+Value)[A-Z][a-z]+'
+    match_strategy: last
+    max_length: 16000
+
 # Additional fields identified by LLM analysis (review and adjust)
 fields:
   fixed_rate_debt_pct:
