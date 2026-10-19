@@ -1,3 +1,30 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-10-19 ===
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($570M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($23,700M)
+[DISAPPEARED_FIELD] equity_derivatives_notional: was $422M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $82M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($570M)
+[NEW_FIELD] fixed_rate_debt_pct: appeared for first time ($79M)
+[NEW_FIELD] ir_swap_fair_value_liability: appeared for first time ($5,100M)
+[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($36,100M)
+[NEW_FIELD] cross_currency_swap_fair_value_asset: appeared for first time ($1,400M)
+[NEW_FIELD] cross_currency_swap_fair_value_liability: appeared for first time ($1,200M)
+[NEW_FIELD] fx_forward_notional: appeared for first time ($570M)
+[NEW_FIELD] interest_rate_sensitivity_100bp: appeared for first time ($340M)
+[NEW_FIELD] long_term_debt_fair_value: appeared for first time ($158,955M)
+[NEW_FIELD] collateral_posted: appeared for first time ($1,100M)
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (equity_derivatives_notional, expected_12mo_reclass_from_aoci)
+[LLM_FLAG] fx_derivatives_notional ($36,670m) is a computed sum of the cross-currency swap notional ($36.1bn, 'the total notional amount of the cross currency swaps was $36.1 billion and $32.1 billion, respectively') plus the FX forward notional ($570m, 'the total notional amount of the foreign exchange forwards was $570 million and $620 million, respectively'). The excerpt does not state a single combined FX notional figure, so this is a derived total, not a disclosed one.
+[LLM_FLAG] Newsworthy: cross-currency swap fair value swung sharply year over year -- the asset position nearly tripled ('The fair value of the asset of these contracts was $1.4 billion and $500 million at December 31, 2025 and 2024, respectively', +180%) while the liability fell by more than half ('the fair value of the liability of these contracts was $1.2 billion and $2.7 billion, respectively', -55.6%). The notional itself grew only modestly ($32.1bn to $36.1bn, +12.5%), so the swing looks driven by rates/FX marks rather than new notional; the filing gives no explanation for the move.
+[LLM_FLAG] Newsworthy: the foreign exchange forwards are explicitly NOT hedge-accounted -- 'We also have foreign exchange forwards which we use as an economic hedge but for which we have elected not to apply hedge accounting' -- an economic-only overlay, notional roughly flat ($620m to $570m).
+[LLM_FLAG] The schema's equity_derivatives_notional (prior run reported $422m) and expected_12mo_reclass_from_aoci (prior run reported $82m) are not mentioned anywhere in this excerpt. This looks like a section-boundary/slicing gap rather than a confirmed program change -- the 10-K likely discusses these elsewhere (AOCI rollforward tables, equity-method investment notes) outside the ~10,000-character slice provided here.
+[LLM_FLAG] Note: the cross-currency swap currency mix in this note ('British Pound Sterling, Euro, Swiss Franc, Canadian Dollar and Australian Dollar') includes Swiss Franc and Canadian Dollar, which do not appear in the separate FX translation-exposure sentence ('British Pound Sterling, Euro, Australian Dollar and Swedish Krona') -- worth checking the prior-year note for whether CHF/CAD legs are new additions to the CCS book.
+[LLM_FLAG] Newsworthy / collateral: collateral posted under CSA agreements nearly halved year over year -- 'At December 31, 2025 and 2024, we posted $1.1 billion and $2.1 billion, respectively, of collateral related to derivative contracts under collateral exchange agreements' (-47.6%). Verizon also states 'At both December 31, 2025 and 2024, we did not hold any collateral,' so this is a one-sided, uncollateralized-by-counterparties posture. Worth checking against the CCS/IR swap net liability move for what drove the lower posting requirement.
+[LLM_FLAG] Newsworthy: cross-currency swap fair value swung sharply -- asset position nearly tripled ($500m to $1.4bn, +180%) while the liability fell by more than half ($2.7bn to $1.2bn, -55.6%), even though notional grew only 12.5% ($32.1bn to $36.1bn). The filing attributes no specific driver to this.
+[LLM_FLAG] ir_sensitivity_100bp left as not_found: the long-term-debt-and-derivatives table gives scenario fair values ($158,955m base; $150,740m at +100bp; $168,104m at -100bp) but does not state a single 'change' figure, and the +100bp/-100bp deltas are of different magnitude and sign (-$8,215m vs +$9,149m) so no single number can be read off without choosing a direction -- flagging for a journalist to pull the delta they want directly from the table rather than trusting an inferred figure.
+[LLM_FLAG] fixed_rate_notes_billion left null: the filing states fixed-rate debt as a percentage (79% of total debt portfolio) rather than a dollar amount in billions, so no like-for-like figure exists in this excerpt.
+[LLM_FLAG] Governance detail, not a number but relevant to risk reporting: 'Counterparties to our derivative contracts are major financial institutions with whom we have negotiated... ISDA master agreements and credit support annex (CSA) agreements... The CSA agreements contain fixed cap amounts or rating-based thresholds' -- standard disclosure, unchanged in substance from the derivatives note, included here for the collateral-posted figure's context.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($40,773M)
 [NEW_FIELD] equity_derivatives_notional: appeared for first time ($422M)

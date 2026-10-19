@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-10-19 ===
+[REFERENCE_ONLY] Every section found only refers to the annual report (e.g. "see Item 7A in our Form 10-K"); nothing to extract. Not retried.
+
+=== 10-Q | Period ending 2025-09-30 | Processed 2026-10-19 ===
+[LLM_FLAG] A second unhedged fixed-rate JPY term loan was added: 'In September 2025, MonotaRO entered into an additional ¥4 billion term loan agreement... bears a fixed interest rate of 1.33 %.' No interest rate swap or cross-currency hedge is disclosed against either the June or September MonotaRO JPY term loans.
+[LLM_FLAG] KMCO litigation resolved this quarter ('As of September 30, 2025, the Company has settled or resolved all remaining lawsuits pending against the Company') — not a derivatives item but a notable change from prior quarters' contingencies language.
+[LLM_FLAG] Section-extraction caveat: the text supplied for this 'derivatives_note' request is the debt/Senior Notes and JPY term loan footnote, segment information, contingencies and MD&A overview — not a dedicated derivatives/hedging note with notional or fair-value tables. Consistent with GWW's minimal_hedger profile; nulls below reflect 'not stated in the text provided,' not confirmed zero exposure.
+
+=== 10-Q | Period ending 2025-06-30 | Processed 2026-10-19 ===
+[LLM_FLAG] No new hedging instrument introduced alongside the new debt: MonotaRO's new Japanese Yen term loans ('In June 2025, MonotaRO entered into ¥9 billion term loan agreements... bear a weighted average interest rate of 1.24%') are fixed-rate and carry no associated interest rate swap or cross-currency hedge disclosed in this text.
+[LLM_FLAG] Section-extraction caveat: the text supplied for this 'derivatives_note' request is the debt/Senior Notes and new Japanese Yen term loan footnote, segment information, contingencies and MD&A overview — not a dedicated derivatives/hedging note with notional or fair-value tables. Consistent with GWW's minimal_hedger profile (no derivative instruments currently used), but nulls below should be read as 'not stated in the text provided,' not as confirmed zero exposure.
+
+=== 10-Q | Period ending 2025-03-31 | Processed 2026-10-19 ===
+[LLM_FLAG] Hedging programme wound down: the only derivative instrument mentioned in this section is an interest rate swap with a $450 million notional that hedged the 1.85% senior notes due 2025; both the notes and the swap are now gone — notes repaid in full February 18, 2025 and the swap 'expired on February 15, 2025.' No replacement hedge is disclosed.
+[LLM_FLAG] Section-extraction caveat: the text supplied for this 'derivatives_note' request is actually the debt/Senior Notes footnote, segment information, contingencies and MD&A overview — it contains no dedicated derivatives/hedging note with notional or fair-value tables. This is consistent with GWW's minimal_hedger profile (no FX/commodity/equity derivative instruments used; commodity risk managed operationally, not with derivatives), but editors should not read the nulls below as confirmation of zero FX/commodity exposure — only as 'not disclosed in the text provided.'
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)

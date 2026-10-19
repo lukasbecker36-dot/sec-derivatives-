@@ -1,4 +1,43 @@
 === 10-Q | Period ending 2026-09-30 | Processed 2026-10-19 ===
+[NUMERIC] total_cash_equivalents_fv: $3,010M → $2,142M (-28.8%) — exceeds 20% threshold
+[NUMERIC] fuel_hedge_fair_value: $29M → $-2M (-106.9%) — exceeds 20% threshold
+[NUMERIC] fuel_hedge_gain_loss_quarter: $166M → $-416M (-350.6%) — exceeds 20% threshold
+[NUMERIC] fuel_hedge_gain_loss_ytd: $-303M → $-719M (-137.3%) — exceeds 20% threshold
+[NUMERIC] fuel_hedge_settlement_gain_loss_ytd: $-331M → $-716M (-116.3%) — exceeds 20% threshold
+[LLM_FLAG] Only the fuel hedge program is reported in this note; FX/IR derivative notional and total-derivative fair value fields remain not_found as the text has no such disclosure.
+[LLM_FLAG] fuel_hedge_gain_loss_ytd went from a $12M gain in the comparable nine months of 2025 to a $719M loss in 2026 -- the filing attributes this to settlement losses ($716M of the $719M), not a one-off mark-to-market event ($3M only).
+
+=== 10-Q | Period ending 2026-06-30 | Processed 2026-10-19 ===
+[NUMERIC] fuel_hedge_fair_value: $-48M → $29M (+160.4%) — exceeds 20% threshold
+[NUMERIC] fuel_hedge_gain_loss_quarter: $-468M → $166M (+135.5%) — exceeds 20% threshold
+[NUMERIC] fuel_hedge_gain_loss_ytd: $-468M → $-303M (+35.3%) — exceeds 20% threshold
+[NUMERIC] fuel_hedge_settlement_gain_loss_ytd: $-419M → $-331M (+21.0%) — exceeds 20% threshold
+[LLM_FLAG] Only the fuel hedge program is reported in this note; FX/IR derivative notional and total-derivative fair value fields remain not_found as the text has no such disclosure.
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-10-19 ===
+[NUMERIC] total_cash_equivalents_fv: $2,868M → $3,468M (+20.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $1M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-470M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $290M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $13M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $360M, now missing
+[NEW_FIELD] fuel_hedge_fair_value: appeared for first time ($-48M)
+[NEW_FIELD] fuel_hedge_gain_loss_quarter: appeared for first time ($-468M)
+[NEW_FIELD] fuel_hedge_gain_loss_ytd: appeared for first time ($-468M)
+[NEW_FIELD] fuel_hedge_settlement_gain_loss_ytd: appeared for first time ($-419M)
+[DISAPPEARED_FIELD] fuel_price_sensitivity: was $40M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity_fair_value: was $-470M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity_expense: was $11M, now missing
+[DISAPPEARED_FIELD] foreign_currency_investment_exposure: was $2,900M, now missing
+[DISAPPEARED_FIELD] foreign_currency_sensitivity: was $290M, now missing
+[DISAPPEARED_FIELD] equity_investment_fair_value: was $3,600M, now missing
+[DISAPPEARED_FIELD] equity_investment_sensitivity: was $360M, now missing
+[VALIDATION] Likely extraction failure: 13/14 previously-populated fields are now null (fi_total_derivative_asset, fx_forwards_outstanding, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion...)
+[LLM_FLAG] Only the fuel hedge program (Monroe Energy refinery) is disclosed in this fair value note; no FX or interest-rate derivative notional/fair-value figures are given, so those fields are not_found rather than zero.
+[LLM_FLAG] No 'total derivative asset/liability' line is reported separately from the single fuel hedge contracts line, so fi_total_derivative_asset/fi_total_derivative_liability were left null to avoid conflating them with fuel_hedge_fair_value.
+
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-19 ===
 [LLM_FLAG] section_text for this filing is only a fragment ("Quantitative and Qualitative Disclosures About Market Risk\" in our Form 10-K. ") -- the 10-Q appears to incorporate its market risk disclosure by reference to the prior Form 10-K rather than restating it, so no substantive figures are present in the extracted section to extract from.
 
 === 10-Q | Period ending 2026-09-30 | Processed 2026-10-12 ===
