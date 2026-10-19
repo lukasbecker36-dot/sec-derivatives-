@@ -184,7 +184,7 @@ it, not after a reader queries the number.
 | Type | Meaning |
 |---|---|
 | `empty_row` | Every extracted field blank — extraction failed. Not the same as a genuine non-discloser, which records `has_derivatives=No`. Nothing to write about. |
-| `reconciliation` | A notional total doesn't equal the sum of its components. The values contradict each other, so at least one is wrong. |
+| `reconciliation` | A notional total doesn't equal the sum of its components. The values contradict each other, so at least one is wrong. When a component is missing, the ones present are a lower bound: only an excess over the total counts. |
 | `misaligned_row` | More values than header columns; values sat in the wrong fields. Zero tolerance. |
 | `stale_null` | Blank here but populated on another git ref — correct data exists and is being ignored. Zero tolerance. |
 | `implausible_swing` | A single numeric field moved ≥10x between adjacent periods with a prior magnitude ≥$100M. Almost always a real number from the filing landing in the wrong column — a notional (10-100x larger than fair values) extracted into a `total_derivative_asset` slot. The reconciliation check catches this when the offending field is a total-of-components; `implausible_swing` catches the standalone fields it misses. **Advisory only** — surfaced in the audit report and in the manifest's per-row `audit_flags` so the digest can lead with "verify against the filing before quoting", but does NOT block a push. Blocking on it forced the pipeline to hold every clean extraction on a review branch whenever one legitimate mark-to-market swing on a smaller book looked wrong-column-shaped. |

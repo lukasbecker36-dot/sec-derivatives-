@@ -18,6 +18,7 @@ from .config import load_config, IssuerConfig
 from .engine import (
     _build_schema_for_section, _get_prior_row, _prior_values_for_section,
     process_filing, append_csv_row, append_notes, append_alerts, OUTPUT_DIR,
+    mark_if_reference_only,
 )
 from .filer_profile import (
     get_or_create_profile, build_prompt_context, create_initial_profile,
@@ -475,6 +476,7 @@ def finalize(since: str, max_activations: int, json_summary: str = '', verbose: 
             row['extraction_version'] = 1
 
             # Write outputs
+            mark_if_reference_only(row, sections, alerts)
             append_csv_row(csv_path, row, config)
             from .engine import _write_to_db, _sync_text_files_to_db
             _write_to_db(row, config)

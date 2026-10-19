@@ -183,3 +183,39 @@ def test_nke_profile_slices_risk_management_note_not_policy_note():
     assert 'designated as cash flow hedges was $ 16.4' in section
     assert 'Balance at May 31, 2026 $ ( 213 )' in section   # AOCI note kept
     assert 'NOTE 14' not in section and 'SIGNIFICANT ACCOUNTING' not in section
+
+
+class TestIsReferenceOnly:
+    # Real Item 3 slices from October 2026 runs that came back blank 3 times.
+    STUBS = [
+        'Quantitative and Qualitative Disclosures About Market Risk" in our Form 10-K. ',
+        'Quantitative and Qualitative Disclosures About Market Risk previously '
+        'disclosed in our 2024 Annual Report on Form 10-K. ',
+        'Quantitative and Qualitative Disclosures about Market Risk” set forth '
+        'in the 2024 Annual Report. ',
+        'Quantitative and Qualitative Disclosures About Market Risk Market risks '
+        'at June 30, 2025 have not materially changed from those discussed under '
+        'Item 7A in our annual report on Form 10-K.',
+    ]
+
+    @pytest.mark.parametrize('stub', STUBS)
+    def test_pointer_stub_alone_is_reference_only(self, stub):
+        from src.section_extract import is_reference_only
+        assert is_reference_only({'market_risk': stub, 'derivatives_note': ''})
+
+    def test_any_substantive_section_is_not_reference_only(self):
+        from src.section_extract import is_reference_only
+        assert not is_reference_only({
+            'market_risk': self.STUBS[0],
+            'derivatives_note': 'The notional amount of our fuel hedges was '
+                                '$1.2 billion. ' * 60,
+        })
+
+    def test_nothing_found_is_not_reference_only(self):
+        from src.section_extract import is_reference_only
+        assert not is_reference_only({'market_risk': '', 'derivatives_note': ''})
+
+    def test_short_section_without_pointer_is_not_reference_only(self):
+        from src.section_extract import is_reference_only
+        assert not is_reference_only(
+            {'market_risk': 'A 10% change in rates would change fair value by $12 million.'})

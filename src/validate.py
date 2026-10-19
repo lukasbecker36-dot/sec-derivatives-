@@ -114,6 +114,14 @@ def check_reconciliations(row: dict,
 
     Only fires when the total and at least one component are populated, so
     partially-disclosed filings don't generate noise.
+
+    When some components are missing, the ones present are only a lower
+    bound on the total: a shortfall means a component wasn't extracted, not
+    that the figures contradict each other. Verizon's FY2025 10-K had
+    fx_derivatives_notional=36,670 and only fx_not_designated_notional=570
+    (the designated figure wasn't captured); flagging that as "read the wrong
+    table" held three days of every issuer's extractions off master. So with
+    components missing, only an excess over the total is a contradiction.
     """
     results = []
     for total_field, component_fields in RECONCILIATION_RULES:
@@ -129,6 +137,9 @@ def check_reconciliations(row: dict,
             continue
         component_sum = sum(components.values())
         diff_pct = abs(abs(total_val) - abs(component_sum)) / abs(total_val)
+        partial = len(components) < len(component_fields)
+        if partial and abs(component_sum) <= abs(total_val):
+            continue
         if diff_pct > tolerance:
             detail = ' + '.join(f'{f}={v:,.0f}' for f, v in components.items())
             results.append({

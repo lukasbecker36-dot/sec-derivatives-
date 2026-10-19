@@ -25,6 +25,33 @@ def is_likely_cross_reference(text: str, min_length: int = 300) -> bool:
     return bool(XREF_PATTERN.search(text))
 
 
+# A section that only points the reader at the annual report. 10-Qs often
+# replace Item 3 with one sentence ("...see Item 7A in our 2025 Form 10-K"),
+# and the extractor dutifully slices it.
+_REFERENCE_ONLY = re.compile(
+    r'Form\s+10-K|Annual\s+Report|incorporated\s+(?:herein\s+)?by\s+reference'
+    r'|not\s+(?:materially\s+)?changed|no\s+material\s+change',
+    re.IGNORECASE,
+)
+REFERENCE_ONLY_MAX_CHARS = 600
+
+
+def is_reference_only(sections: dict[str, str]) -> bool:
+    """True when nothing extractable was sliced: at least one section was
+    found, and every section found is a short pointer to another document.
+
+    Such a filing comes back blank every time, because the input is the same
+    every time. Retrying it only burns the daily filings cap: in October,
+    DAL, TPL, UNP, UHS, VRSK and TSCO 10-Qs took most of each run's slots on
+    their second and third blank attempts.
+    """
+    found = [t.strip() for t in sections.values() if t and t.strip()]
+    if not found:
+        return False
+    return all(len(t) <= REFERENCE_ONLY_MAX_CHARS and _REFERENCE_ONLY.search(t)
+               for t in found)
+
+
 def extract_section(text: str, section_cfg: SectionConfig,
                     reject_stubs: bool = False) -> str:
     """Extract a single section from filing text using heading regex.
