@@ -1,3 +1,18 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-10-20 ===
+[NUMERIC] fx_designated_notional: $884M → $1,116M (+26.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $1,070M → $805M (-24.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $801M → $466M (-41.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $269M → $339M (+26.0%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $68M → $37M (-45.6%) — exceeds 20% threshold
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-1,000M)
+[LLM_FLAG] cash_flow_hedge_aoci ($37M) is a COMBINED accumulated-OCI figure covering cash flow, net investment, AND fair value hedges together ('The accumulated gain or loss included in accumulated other comprehensive loss ... is a gain $37 million and a loss of $11 million, respectively.') — the filing does not break out a cash-flow-only AOCI balance, so this value may not represent pure cash-flow-hedge AOCI.
+[LLM_FLAG] Cross currency swap notional nearly doubled to $798M from $439M (+82%), tied to a stated strategy of locking in unrealized FX gains on yen debt: 'In 2025 and 2024, to economically lock in unrealized foreign exchange gains, the Company entered into the cross currency swap contracts relating to a portion of the Company's Japanese yen-denominated debt.'
+[LLM_FLAG] Non-cash pretax realized losses on expired option-contract premiums jumped to $295M from $85M (+247%): 'amount includes non-cash pre-tax realized losses of $295 million, $85 million and $53 million, respectively, related to the premiums of expired option contracts.'
+[LLM_FLAG] Deferred payments on purchased (translated-earnings) option contracts, classified as non-derivative liabilities, rose to $229M from $141M recorded in other accrued liabilities: 'the Company has $229 million and $141 million, respectively, recorded in other accrued liabilities.'
+[LLM_FLAG] fx_not_designated_notional and net_derivative_position are computed by summing/netting disclosed line items rather than quoting a single stated subtotal — flagged for editorial verification against the table.
+[LLM_FLAG] No collateral/margin posted by either Corning or its derivative counterparties: 'Neither we nor our counterparties are required to post collateral for these financial instruments.' Worth noting given rising cross-currency swap notional and the general tightening of margin practices elsewhere in the market.
+[LLM_FLAG] Cross-currency swaps against JPY-denominated debt are explicitly framed as a gain-locking strategy rather than a pure risk-reduction hedge: 'to economically lock in unrealized foreign exchange gains' — an opportunistic, P&L-driven use of derivatives rather than defensive hedging, worth distinguishing editorially from the designated cash-flow/net-investment programme.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $18,478M, now missing
 [DISAPPEARED_FIELD] fi_fx_designated_notional: was $993M, now missing

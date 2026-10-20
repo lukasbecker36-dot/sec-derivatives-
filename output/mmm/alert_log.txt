@@ -1,3 +1,15 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-10-20 ===
+[NUMERIC] fx_derivatives_notional: $16,955M → $12,224M (-27.9%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $14,561M → $10,036M (-31.1%) — exceeds 20% threshold
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NUMERIC] net_derivative_position: $-90M → $-138M (-53.3%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position moved from -$90M (prior) to -$138M (current), a ~53% increase in net liability position, exceeding the 50% change threshold. The text explains part of this: during 2025, 3M terminated fixed-to-floating interest rate swaps entered into in 2021 (notional fell from $800M to $0 — "during 2025, 3M terminated fixed-to-floating interest rate swaps that were entered into in 2021, returning $800 million of notes due in 2049 and 2050 to fixed-rate debt"), while designated FX/cross-currency swap liabilities grew (total designated liabilities rose to $324M from $152M).
+[LLM_FLAG] Newsworthy — interest rate swap unwind: "3M terminated fixed-to-floating interest rate swaps that were entered into in 2021, returning $800 million of notes due in 2049 and 2050 to fixed-rate debt," eliminating the entire $800M designated IR swap notional.
+[LLM_FLAG] Newsworthy — new/expanded net investment hedge programme: "During 2025, 3M entered into foreign currency forward contracts, collared foreign currency forward contracts and cross-currency swaps with a gross notional value at inception of $3.7 billion designated in hedges of portions of its net investment in international subsidiaries," alongside a stated €1.8 billion of long-term debt also designated in net investment hedges — notable growth in the FX/cross-currency swap book (combined designated notional rose from $6.1B to $10.0B year over year) and use of collared forwards, a less common structure.
+[LLM_FLAG] De-designation disclosure (standing policy, not necessarily a current-period event): "Derivatives not designated as hedging instruments include de-designated foreign currency forward and option contracts that formerly were designated in cash flow hedging relationships."
+[LLM_FLAG] No collateral posted: "For the periods presented, 3M has not received cash collateral from derivative counterparties," despite master netting arrangements with counterparties.
+[LLM_FLAG] The provided section_text for Item 7A appears truncated: it ends mid-cross-reference ("...within ") before reaching the actual quantitative sensitivity-analysis tables (IR 100bp impact, FX 10% impact, equity 10% impact, fixed-rate notes outstanding) that 3M's Item 7A typically presents. None of the numeric market-risk fields could be populated from this excerpt; they are not fabricated here and should not be inferred from prior-period values.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-22 ===
 [NUMERIC] fx_derivatives_notional: $6,410M → $16,955M (+164.5%) — exceeds 20% threshold
 [DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing

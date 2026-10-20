@@ -1,3 +1,36 @@
+=== 10-K | Period ending 2026-06-30 | Processed 2026-10-20 ===
+[NUMERIC] ir_swap_notional: $1,000M → $1,600M (+60.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $216M → $166M (-23.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-134M → $-92M (+31.3%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $-13M → $25M (+292.3%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-29M → $-5M (+82.8%) — exceeds 20% threshold
+[LLM_FLAG] Data-integrity note: the prior_values supplied with this 2026-06-30 request are identical to the prior_values supplied with the 2025-06-30 request in this same batch (e.g. total_derivative_asset=164, net_derivative_position=11, cash_flow_hedge_aoci=26, expected_12mo_reclass_from_aoci=-7). These look like stale FY2024 figures rather than the issuer's actual FY2025 results — the FY2025 10-K (this batch's other filing) itself shows total_derivative_asset=$82M, net_derivative_position=$(134)M, and cash_flow_hedge_aoci=$(13)M. Percentage-change flags below are computed against the supplied prior_values as instructed, but a reader comparing this filing year-over-year should use the FY2025 actuals, not the numbers in prior_values.
+[LLM_FLAG] total_derivative_asset is $74M vs a supplied prior of $164M (a 55% decline), but against the filing's own true prior-year comparative of $82M this is only a 9.8% decline — see data-integrity note above.
+[LLM_FLAG] net_derivative_position is $(92)M vs a supplied prior of $11M, but the filing's own comparative netting table shows the true prior-year (June 30, 2025) net position was already $(134)M, i.e. the net liability position actually narrowed year-over-year (from $(134)M to $(92)M) — see data-integrity note above.
+[LLM_FLAG] New interest rate swap disclosed: a third fixed-to-floating interest rate swap with $600 million notional was added against the Company's 2034 Senior Notes, alongside the pre-existing $700M (2030 Notes) and $300M (2031 Notes) swaps — 'the Company has interest rate swap contracts, with notional amounts totaling $700 million, $300 million and $600 million to effectively convert the fixed rate interest on its 2030 Senior Notes, 2031 Senior Notes and 2034 Senior Notes, respectively, to variable interest rates based on the Secured Overnight Financing Rate ("SOFR") plus a margin.'
+[LLM_FLAG] Cash flow hedge AOCI flipped from a $(13) million net loss position to a $25 million net gain position year-over-year, consistent with the cash flow hedging relationships table showing an $11 million OCI gain on FX forward contracts in fiscal 2026 versus a $(52) million OCI loss in fiscal 2025 ('Derivatives in Cash Flow Hedging Relationships: Foreign currency forward contracts $ 11 ... $ ( 52 )').
+
+=== 10-K | Period ending 2025-06-30 | Processed 2026-10-20 ===
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $6,691M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $3,356M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $3,335M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $1,600M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_asset: was $164M, now missing
+[DISAPPEARED_FIELD] fi_total_derivative_liability: was $153M, now missing
+[NUMERIC] ir_swap_notional: $1,600M → $1,000M (-37.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $164M → $82M (-50.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $153M → $216M (+41.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $11M → $-134M (-1318.2%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $26M → $-13M (-150.0%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-7M → $-29M (-314.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $77M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $205M, now missing
+[VALIDATION] Likely extraction failure: 8/17 previously-populated fields are now null (fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional, fi_total_derivative_asset...)
+[LLM_FLAG] total_derivative_asset fell from $164M (prior) to $82M, a ~50% decline. Filing shows designated FX forward contract asset fair value dropped from $49M to $7M (the main driver), while interest rate contract liabilities eased from $145M to $104M; no narrative explanation is given for the swing.
+[LLM_FLAG] net_derivative_position swung from a net asset of $11M (prior) to a net liability of $(134)M, a reversal of more than 12x. The filing's own netting table independently confirms Total derivatives of $(134) million at June 30, 2025 vs $(18) million at June 30, 2024.
+[LLM_FLAG] cash_flow_hedge_aoci reversed from a $26M gain (prior) to a $(13)M loss position. The filing states the accumulated net loss on cash flow hedge AOCI was $(13) million vs a $75 million gain at June 30, 2024, consistent with a $(52) million OCI loss recognized on FX forward cash flow hedges during fiscal 2025; no further qualitative driver (e.g. specific currency move) is cited.
+[LLM_FLAG] expected_12mo_reclass_from_aoci grew in magnitude from -$7M (prior) to -$29M, a >300% increase. The filing attributes this only to an 'estimated net loss on...derivative instruments designated as cash flow hedges' of $29 million expected to reclassify within twelve months, with no further stated driver.
+
 === 10-K | Period ending 2026-06-30 | Processed 2026-08-20 ===
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $6,691M, now missing
 [DISAPPEARED_FIELD] fi_fx_designated_notional: was $3,356M, now missing

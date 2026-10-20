@@ -1,3 +1,37 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-10-20 ===
+[NUMERIC] fx_derivatives_notional: $8,500M → $5,620M (-33.9%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $960M → $220M (-77.1%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $7,540M → $5,400M (-28.4%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] total_derivative_asset: $66M → $0M
+[NUMERIC] total_derivative_liability: $5M → $150M (+2900.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $61M → $-150M (-345.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $39M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $39M, now missing
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-46M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-35M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($5M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($577M)
+[NEW_FIELD] equity_sensitivity_10pct: appeared for first time ($-83M)
+[NEW_FIELD] debt_fair_value: appeared for first time ($5,200M)
+[NEW_FIELD] debt_sensitivity: appeared for first time ($85M)
+[NEW_FIELD] forward_contract_liability: appeared for first time ($13M)
+[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($220M)
+[NEW_FIELD] cross_currency_swap_fair_value: appeared for first time ($-11M)
+[NEW_FIELD] fx_sensitivity_scenario: appeared for first time ($-35M)
+[NEW_FIELD] revolving_credit_outstanding: appeared for first time ($0M)
+[LLM_FLAG] fx_designated_notional fell from $960M (prior) to €220M (-77%): explained by text -- the 2022 cross-currency swaps (€300M aggregate notional) were de-designated and closed out in August 2025, replaced by a single smaller €220M swap designated as a net investment hedge ('we de-designated the 2022 swaps and discontinued hedge accounting... we entered into a new fixed-to-fixed cross-currency interest rate swap with a notional amount of € 220 million').
+[LLM_FLAG] fx_derivatives_notional is a mixed-currency sum ($5.4B USD forward notional + €220M swap notional, not converted) because the filing states the swap notional only in euros with no USD-equivalent given in this section -- treat the combined figure as approximate.
+[LLM_FLAG] total_derivative_asset fell from $66M (prior) to $0 (-100%): the Dec 31, 2025 fair value table lists no derivative line items under Assets (only cash equivalents and investments); all derivative fair values (forward contracts, the cross-currency swap, and the embedded derivative) are liabilities this period.
+[LLM_FLAG] total_derivative_liability rose from $5M (prior) to $150M (+2900%): driven mainly by a new $126M 'embedded derivative liability related to the convertible notes due in February 2026 measured at fair value using a lattice model' plus the $11M cross-currency swap liability and $13M forward liability -- not a single reconciling driver, flag for verification against the filing before quoting.
+[LLM_FLAG] Newsworthy: hedge de-designation and restructuring -- 'In August 2025, the 2022 swaps were effectively closed out by entering into a swap with offsetting terms, and we de-designated the 2022 swaps and discontinued hedge accounting,' simultaneously replaced with a new, smaller (€220M vs €300M) net investment hedge swap maturing February 2028.
+[LLM_FLAG] Newsworthy: a $126M bifurcated embedded derivative liability tied to the convertible notes (due Feb 2026) is newly significant in the fair value table and is valued with a lattice model using stock price, volatility and credit spread inputs -- worth watching into the notes' February 2026 maturity.
+[LLM_FLAG] ir_sensitivity_100bp left null: the filing only discloses a 50 basis point debt-fair-value sensitivity ('A 50 basis point increase or decrease in interest rates would decrease or increase the fair value of our debt by approximately $85 million'); no 100bp figure is stated, and 2x-scaling it would be an estimate, not an extracted value -- use debt_sensitivity (85, at 50bp) instead.
+[LLM_FLAG] fixed_rate_notes_billion ($5.25B) sums only the six issues the filing collectively labels 'Senior Notes' (5.0%, 4.625%, 3.8%, 3.25%, 2.95%, 5.4%); the $1B 0%-coupon Convertible Notes are excluded because the filing treats them as a distinct instrument ('more sensitive to the equity market price volatility of our shares... than changes in interest rates'), not as part of 'Senior Notes'. Sum plus convertible notes ($6.25B) is close to the disclosed $6.3B aggregate principal.
+[LLM_FLAG] fx_sensitivity_10pct and fx_sensitivity_scenario are the same disclosed $35 million 10%-currency-move scenario (duplicate schema fields) -- do not double count as two separate hedges or exposures.
+[LLM_FLAG] cross_currency_swap_notional (€220M) is euro-denominated; no USD-equivalent is given in this section.
+[LLM_FLAG] Newsworthy: two prior cross-currency interest rate swaps were 'effectively closed out during 2025' (per the $25M 2024 comparative asset reference), replaced by a single new €220M swap -- consistent with the restructuring described in the derivatives note (de-designation of the 2022 swaps).
+[LLM_FLAG] Newsworthy / risk factor: two of the Senior Notes tranches (4.625% and 2.95%) carry coupon step-up provisions tied to credit ratings -- 'subject to interest rate adjustments should our credit ratings be adjusted downwards, which would result in increased interest expense in the future.'
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $369M, now missing
 [DISAPPEARED_FIELD] total_marketable_securities_fv: was $998M, now missing

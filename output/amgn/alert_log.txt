@@ -1,3 +1,27 @@
+=== 10-K | Period ending 2025-12-31 | Processed 2026-10-20 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($10,731M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($240M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($244M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($827M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-583M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $-57M → $-120M (-110.5%) — exceeds 20% threshold
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($7,800M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($4,400M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($53M)
+[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($6,700M)
+[NEW_FIELD] cross_currency_swap_notional: appeared for first time ($2,700M)
+[NEW_FIELD] foreign_currency_debt_carrying_value: appeared for first time ($2,500M)
+[NEW_FIELD] sensitivity_analysis_100bp: appeared for first time ($-240M)
+[LLM_FLAG] expected_12mo_reclass_from_aoci moved from -$57M (prior) to -$120M (current), a ~111% increase, exceeding the 50% threshold. The text gives no explanation beyond identifying the source instruments: "the amount of net losses on our foreign currency forward and cross-currency swap contracts expected to be reclassified out of AOCI and recognized into earnings during the next 12 months was $ 120 million."
+[LLM_FLAG] Interest rate swap book was rolled, not expanded: "In 2025, interest rate swap contracts with an aggregate notional amount of $ 1.0 billion matured in connection with the repayment of the 3.125 % 2025 Notes. Also in 2025, we entered into $ 1.0 billion of new interest rate swap contracts to hedge a portion of our 5.25 % 2033 Notes" — net aggregate notional unchanged at $6,650 million year over year.
+[LLM_FLAG] New hedging instrument: "In 2025, we entered into forward interest rate contracts with an aggregate notional amount of $ 500 million" ahead of anticipated fixed-rate debt issuance; amounts recognized were "not material," but this is a programme not evident in the prior-period extraction.
+[LLM_FLAG] Large swing in designated FX forward fair values: liability leg rose from $8 million (2024) to $213 million (2025) — "Foreign currency forward contracts ... Other current assets/ Other noncurrent assets		$	195 ... Accrued liabilities/ Other noncurrent liabilities		$	213" vs "$	420 ... $	8" in 2024 — roughly 26x; verify against the filing before quoting given the size of the move.
+[LLM_FLAG] No master netting / contingent termination provisions: "our derivative contracts are not subject to any type of master netting arrangement" and liability-position derivatives carry credit-risk-related contingent provisions triggered by a change in control plus a below-investment-grade (or materially weaker) creditworthiness determination, giving counterparties a right (not obligation) to demand early termination at then-current fair value — relevant counterparty/collateral risk context.
+[LLM_FLAG] fx_sensitivity_10pct and equity_sensitivity_10pct left null: the filing discloses FX and equity price sensitivities using a 20% hypothetical move, not 10% ("we also assumed a hypothetical 20% change in foreign currency exchange rates"; "A 20% decrease in the aggregate value of our equity investment portfolio"). Rescaling a disclosed 20% shock to a 10% figure would be an estimate rather than an extracted value. As disclosed: a 20% adverse FX move would cut FX forward fair values by ~$1.5 billion and cross-currency swap fair values by ~$500 million (2025); a 20% equity-portfolio decline would cost ~$1.4 billion (2025) vs ~$950 million (2024).
+[LLM_FLAG] Large swing in designated FX forward fair values: "As of December 31, 2025, the fair values of these contracts were a $195 million asset and a $213 million liability. As of December 31, 2024, the fair values of these contracts were a $420 million asset and an $8 million liability" — the liability leg rose roughly 26x; verify against the filing before quoting given the size of the move.
+[LLM_FLAG] Equity price risk names a specific strategic holding: "These investments include our investment in BeOne, as well as other publicly and privately held small-capitalization stocks and limited partnerships that invest in early-stage biotechnology companies" — the sensitivity rose from ~$950 million (2024) to ~$1.4 billion (2025) worth of hypothetical loss on a 20% decline, consistent with portfolio growth and/or valuation gains.
+[LLM_FLAG] Counterparty credit risk policy: derivative transactions limited to counterparties with minimum credit ratings of A- (or equivalent) from S&P, Moody's or Fitch, with exposure limits per counterparty — standing risk-management language included for completeness, not a change.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
 [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $6,008M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $249M, now missing
