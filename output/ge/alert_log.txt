@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-21 ===
+[NUMERIC] total_derivative_asset: $70M → $29M (-58.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $89M → $108M (+21.3%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-19M → $-79M (-315.8%) — exceeds 20% threshold
+[LLM_FLAG] section_text is truncated immediately after the table header row ('Assets\tCommercial and residential mortgage loans (') and before any numeric values are given; nothing in this excerpt supports any schema field.
+[LLM_FLAG] total_derivative_asset fell from $70M (prior) to $29M, a -58.6% change, and net_derivative_position moved from -$19M to -$79M (also >50%); the text explains period P&L impact of non-qualifying contracts ('driven by hedges of foreign currency exchange and deferred employee compensation') but does not directly explain the balance-sheet fair-value asset decline.
+[LLM_FLAG] New hedging instrument: 'Qualifying interest rate swaps' (non-current) shows $1,300 million notional and a $90 million fair-value liability at September 30, 2026, versus '—' (zero) at December 31, 2025 -- a new interest-rate swap hedging programme not present in the prior period.
+[LLM_FLAG] Non-qualifying currency exchange contracts and other: Statement of Operations impact swung from a $194 million gain (nine months ended September 30, 2025) to a $(17) million loss (nine months ended September 30, 2026): 'Gains (losses) included in our Statement of Operations were $( 22 ) million and $( 22 ) million for the three months ended September 30, 2026 and 2025, and $( 17 ) million and $ 194 million for nine months ended September 30, 2026 and 2025, respectively, primarily in Selling, general and administrative expenses and Other income (loss), driven by hedges of foreign currency exchange and deferred employee compensation.'
+[LLM_FLAG] Net investment hedge OCI swing: nine-month 2026 gain of $214 million versus a $(760) million loss in the prior-year nine-month period: 'Net investment hedges	( 37 )		( 68 )		214		( 760 )'.
+[LLM_FLAG] Counterparty credit risk exposure mirrors the derivative asset/liability decline: 'Our exposures to counterparties (including accrued interest) were $ 29 million and $ 187 million as of September 30, 2026 and December 31, 2025... Counterparties' exposures to our derivative liability... were $ 108 million and $ 71 million.'
+[LLM_FLAG] section_text for this request is only a table-of-contents index line ('Quantitative and Qualitative Disclosures About Market Risk\t\t10, 29-30'), pointing to pages 10 and 29-30 of the filing rather than containing the actual Item 3 market-risk disclosure. No content is available here to extract.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] ir_swap_notional: $500M → $1,150M (+130.0%) — exceeds 20% threshold
 [NUMERIC] total_derivative_asset: $177M → $70M (-60.5%) — exceeds 20% threshold

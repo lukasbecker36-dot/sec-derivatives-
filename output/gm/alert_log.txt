@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-21 ===
+[NUMERIC] total_derivative_liability: $1,368M → $2,097M (+53.3%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $2M → $-957M (-47950.0%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: net_derivative_position changed from 2 to -957 (478x)
+[LLM_FLAG] total_derivative_liability rose 53% to $2,097M from the prior extraction's $1,368M; the filing gives no narrative cause but the increase is concentrated in not-designated interest rate contracts (liability fair value $637M -> $1,030M) and fair-value-hedge interest rate swaps ($457M -> $923M).
+[LLM_FLAG] net_derivative_position flipped from a near-zero net asset (+$2M, prior extraction) to a net liability of -$957M this quarter, driven by the liability increase above.
+[LLM_FLAG] New disclosure: 'Foreign currency contracts' not designated as hedges shows $211 million notional versus zero in the December 31, 2025 comparative column, with no narrative explaining the new non-designated FX exposure -- went from 0 to 211 (prior fx_not_designated_notional was 0.0).
+[LLM_FLAG] Hedge de-designation: filing states cumulative fair value hedging adjustments 'Includes $362 million and $428 million of unamortized losses remaining on hedged items for which hedge accounting has been discontinued at September 30, 2026 and December 31, 2025' -- a still-material legacy de-designation balance.
+[LLM_FLAG] Collateral posted to counterparties nearly doubled: 'posted $1.2 billion and $615 million of collateral to counterparties available for netting against GM Financial's liability positions at September 30, 2026 and December 31, 2025', consistent with the larger net derivative liability position.
+[LLM_FLAG] Collateral held from counterparties rose from an insignificant amount to $137 million: 'GM Financial held $137 million and an insignificant amount of collateral from counterparties available for netting against GM Financial's asset positions'.
+[LLM_FLAG] FX cash flow hedge OCI effect swung from a $578 million gain (nine months ended September 30, 2025) to a $200 million loss (nine months ended September 30, 2026): 'losses of $200 million and gains of $578 million for the nine months ended September 30, 2026 and 2025' -- roughly a $778 million swing.
+[LLM_FLAG] Amount expected to be reclassified from AOCI in the next 12 months is disclosed only qualitatively as an 'insignificant amount of losses', with no dollar figure, so expected_12mo_reclass_from_aoci could not be populated numerically.
+[LLM_FLAG] Item 7A is boilerplate incorporation by reference with no quantitative content this quarter: 'There have been no significant changes in our exposure to market risk since December 31, 2025. For further discussion on market risk, refer to Part II, Item 7A. of our 2025 Form 10-K.' Nothing in this section can be extracted; all quantitative market-risk and derivatives detail for the period lives in the Note 10 derivatives_note section instead.
+
 === 10-Q | Period ending 2025-06-30 | Processed 2026-09-21 ===
 [NUMERIC] total_derivative_asset: $884M → $1,370M (+55.0%) — exceeds 20% threshold
 [NUMERIC] net_derivative_position: $-294M → $2M (+100.7%) — exceeds 20% threshold

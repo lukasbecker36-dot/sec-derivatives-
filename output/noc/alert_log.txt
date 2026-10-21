@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-21 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($291M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($147M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $280M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $129M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $151M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $1M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $2M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-1M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, fx_transaction_gain_loss, ir_sensitivity_100bp...)
+[LLM_FLAG] total_derivative_asset / total_derivative_liability: prior_values show $280M asset and $129M liability, but this filing only states fair values 'were not material' with no dollar figure — cannot confirm continuity, returning null rather than carrying forward or estimating.
+[LLM_FLAG] equity_derivatives_notional: prior_values holds the non-numeric string 'Yes' for a field defined as a notional dollar amount, which looks like a data-quality defect from an earlier extraction run rather than a real prior figure; current filing text contains no equity-derivative disclosure at all.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-22 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($280M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($129M)

@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-21 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,767M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,767M)
+[NUMERIC] total_derivative_asset: $1,766M → $23M (-98.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $1,766M → $19M (-98.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $22M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $26M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-4M, now missing
+[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct)
+[LLM_FLAG] total_derivative_asset moved from prior 1766.5 to 23.447 (-98.7%); the prior figure matches the sum of the two forward-contract NOTIONAL amounts in this table ($787,001K + $979,525K = $1,766,526K), indicating the prior extraction placed notional into the fair-value field rather than the 'Balance' column ($23,447K / $18,812K). Not a real swing in the business, but a correction of a prior extraction error.
+[LLM_FLAG] total_derivative_liability moved from prior 1766.5 to 18.812 (-98.9%) for the same reason as total_derivative_asset above.
+[LLM_FLAG] Prior value for equity_derivatives_notional was the string 'Yes', an implausible value for a notional-amount field; equity derivatives are not mentioned anywhere in this section, so this also looks like a prior data-integrity defect rather than a real figure.
+[LLM_FLAG] Material repositioning of FX forward hedges: the asset-side forward contract notional rose from $245,960K (Dec 31, 2025) to $787,001K (Sep 30, 2026), a +220% increase, while the liability-side forward notional fell from $1,633,396K to $979,525K, a -40% decrease — quote: 'Forward contracts\t\tPrepaid expenses and other current assets\t\t$\t787,001...Forward contracts\t\tOther current liabilities\t\t$\t979,525...$\t1,633,396'.
+[LLM_FLAG] Large swing in net investment hedge AOCL gains: nine-month pre-tax gain of $61,708K in 2026 versus a $(207,671)K loss in the prior-year period — quote: 'Gain (Loss) Recognized in AOCL before Reclassifications...Nine Months Ended September 30,...Total\t\t$\t61,708\t\t\t$\t( 207,671 )'. Consistent with euro movements against the dollar given the euro-denominated debt and forward contracts used as net investment hedges.
+[LLM_FLAG] This quarter's Item 3 market-risk disclosure is a single incorporation-by-reference sentence with no quantitative figures: 'Our exposure to market risk has not changed materially since December 31, 2025.' All schema fields are therefore not_found for this period; none should be inferred or carried forward from the prior quarter's extracted values (e.g. fx_transaction_gain_loss=22.273, ir_sensitivity_100bp=25.85, fx_sensitivity_10pct=-3.577).
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-22 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,766M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($1,766M)
