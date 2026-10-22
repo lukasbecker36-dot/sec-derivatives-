@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-22 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,300M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing
+[NEW_FIELD] total_derivative_liability: appeared for first time ($128M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $1,300M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $13M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $94M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-81M, now missing
+[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (total_derivative_asset, cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct)
+[LLM_FLAG] equity_derivatives_notional: prior_values lists "Yes" (a non-numeric string) for this notional field — that looks like stale/misaligned data from a prior run, not a real notional amount. This filing's derivatives_note section contains no equity-derivative disclosure at all, so this period is not_found rather than a numeric comparison.
+[LLM_FLAG] cash_flow_hedge_aoci: prior_values of 1300.0 is identical to the $1,300 million "Notional Value of Hedged Notes" figure in this filing's fair-value-hedge table, suggesting an earlier extraction mis-mapped the hedged-notes notional into the AOCI field. The section_text given here states only that the settled cash-flow-hedge gain sits in AOCI — it gives no dollar balance — so not_found is returned instead of repeating the suspect prior value.
+[LLM_FLAG] total_derivative_liability rose from $87M (Dec 31, 2025) to $128M (Sep 30, 2026), a ~47% increase, and the Fair Value Liability Adjustment to Hedged Notes moved from $(87)M to $(144)M over the same period; the text attributes no cause beyond the swaps' normal fair-value response to rate moves ("no gain or loss recognized due to hedge ineffectiveness").
+[LLM_FLAG] The section_text supplied for this request is only a 17-word fragment — "Quantitative and Qualitative Disclosures about Market Risk) of CSX's most recent annual report on Form 10-K." — which reads as the tail end of a standard 10-Q boilerplate sentence incorporating Item 7A by reference to the 10-K, with no actual market-risk content included. Every field is therefore not_found; none of them should be treated as a genuine zero or 'no change'.
+[LLM_FLAG] Data-integrity concern for the pipeline: this request's schema/schema_enriched field *descriptions* contain specific, filing-sounding figures (e.g. 'cumulative notional amounts ($250M, $250M, $800M)', 'maturity dates ... (2055, 2033, 2036-2040)', '10 years of interest rate risk hedged', 'SOFR as the floating rate benchmark', '$757M potential decrease from 43 bps Treasury rate increase'). None of these numbers appear anywhere in section_text. They look like answer-key text embedded in the schema rather than a genuine field description, and copying them into the output would fabricate data exactly as warned against in CLAUDE.md's integrity-gate example (the MSFT +352% incident). They were not used for extraction and should not be trusted if they resurface elsewhere in the pipeline.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-23 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
 [NEW_FIELD] ir_swap_notional: appeared for first time ($1,300M)

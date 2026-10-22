@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-22 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($10,600M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($56,700M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $9,600M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $55,100M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (total_derivative_asset, cash_flow_hedge_aoci)
+[LLM_FLAG] commodity_derivatives_notional: the section only gives net notional VOLUMES in physical units (power in MWh, natural gas in MMBtu, oil in barrels) for NEE and FPL commodity contracts, not a dollar notional amount, so no millions-of-USD figure could be extracted — returning null rather than converting or estimating a dollar value from physical volumes.
+[LLM_FLAG] total_derivative_asset / total_derivative_liability: the excerpt opens mid-table ('Total $2,871 / $202 / $3,414 / $(492)') with no visible column headers; the surrounding footnote (a) discusses FPL gains/losses on commodity contracts for 3- and 9-month 2026/2025 periods, suggesting this is an income-statement gain/loss table, not the derivative fair-value asset/liability table — too ambiguous to assign to either field, so both are left null rather than guessing.
+[LLM_FLAG] prior_values given for this request look corrupted and were NOT used: equity_derivatives_notional prior value is the string 'Yes' (a Yes/No value, not a notional figure — looks like a field-mislabeling from has_derivatives bleeding into this field), and cash_flow_hedge_aoci prior value of $55.1 billion is implausibly large for a single utility's cash-flow-hedge AOCI balance. Neither is corroborated by anything in this section_text; flagging for audit rather than carrying forward.
+[LLM_FLAG] fx_derivatives_notional rose from $6.0 billion (Dec 31, 2025) to $10.6 billion (Sep 30, 2026), a ~77% increase stated directly in the comparative table; the filing gives no explanation for the increase beyond the standard hedging boilerplate.
+[LLM_FLAG] Newsworthy — collateral/counterparty risk: 'If FPL's and NEECH's credit ratings were downgraded to below investment grade, applicable NEE subsidiaries would be required to post additional collateral such that the total posted collateral would be approximately $ 3.4 billion ($ 140 million at FPL)', up from $3.2 billion a year-end 2025; aggregate fair value of derivatives with credit-risk-related contingent features in a liability position was 'approximately $ 4.2 billion ($ 17 million for FPL)', up from $4.0 billion at year-end 2025.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-27 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($9,600M)
 [NEW_FIELD] ir_swap_notional: appeared for first time ($55,100M)

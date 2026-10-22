@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-22 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,163M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($729M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($434M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $1,105M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $639M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $466M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position)
+[LLM_FLAG] total_derivative_asset / total_derivative_liability / net_derivative_position: prior cached values were $1,105M / $639M / $466M (net asset), but this filing no longer quantifies them at all — 'The related assets and liabilities at both September 30, 2026 and December 31, 2025 were not significant.' That is a drop from disclosed dollar figures to a qualitative statement, not just a magnitude change; verify against the filing before reporting a '$0' or omission as a real decline.
+[LLM_FLAG] Deal-contingent / M&A-linked FX hedges: 'During 2025, in connection with the acquisitions of Frauscher and Dellner Couplers, the Company entered into foreign exchange contracts for a notional value of € 1,290 million to mitigate foreign currency exposure of the purchase prices' — split into €690 million (Frauscher, Q4 2025) and €600 million (Dellner Couplers, Q1 2026).
+[LLM_FLAG] Non-designated hedge accounting: 'The contracts are not designated as accounting hedges under Topic 815 of ASC, and as such, the gains and losses are recorded as a component of Other income (expense), net.'
+[LLM_FLAG] Large shift in notional mix vs. the comparative period disclosed in the text itself: 'At December 31, 2025, the Company had a total gross notional amount of designated and non-designated derivatives of $ 467 million and $ 1.355 billion, respectively' — non-designated notional fell from $1.355B to $434M (about -68%) while designated notional rose from $467M to $729M, consistent with the acquisition-related non-designated FX hedges rolling off as the Frauscher/Dellner deals closed.
+[LLM_FLAG] P&L swing on the non-designated acquisition hedges: 'For the nine months ended September 30, 2026, these contracts resulted in a net gain of $ 2 million. For the three and nine months ended September 30, 2025, these contracts resulted in a net loss of $( 2 ) million and a net gain of $ 30 million, respectively.'
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-23 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,105M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($639M)

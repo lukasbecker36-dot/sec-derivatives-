@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-22 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($4,500M)
+[NEW_FIELD] variable_rate_sensitivity: appeared for first time ($-34M)
+[NEW_FIELD] fixed_rate_debt_outstanding: appeared for first time ($10,200M)
+[NUMERIC] fixed_rate_fair_value_sensitivity: $10M → $3M (-70.6%) — exceeds 20% threshold
+[NEW_FIELD] foreign_revenue: appeared for first time ($1,150M)
+[NEW_FIELD] foreign_revenue_pct: appeared for first time ($9M)
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (equity_sensitivity_10pct)
+[LLM_FLAG] fixed_rate_fair_value_sensitivity moved from a prior value of 10.2 to 3 (a ~71% drop) — the filing text gives no explanation for the change; likely reflects a shift in fixed-rate debt duration/maturity mix rather than a disclosed cause, so verify against note 5 before quoting.
+[LLM_FLAG] fx_forwards_outstanding set to 0 only on the inference that 'we do not engage in purchasing forward exchange contracts for speculative purposes' means no FX forwards outstanding at all — this statement explicitly addresses speculative use only and does not rule out non-speculative/hedging forward contracts disclosed elsewhere (e.g., a derivatives note not included in this market-risk section); treat as low-confidence.
+[LLM_FLAG] fx_sensitivity_10pct not quantified — company states only a qualitative conclusion ('we do not believe...would have a material impact') with no dollar figure, unusual for a company with $1.15B of foreign revenue.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-23 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($10M)

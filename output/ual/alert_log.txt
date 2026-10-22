@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-22 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $10,166M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $6,470M, now missing
+[DISAPPEARED_FIELD] marketable_equity_securities_fv: was $170M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $3,550M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, marketable_equity_securities_fv, corporate_debt_securities_fv)
+[REFERENCE_ONLY] Every section found only refers to the annual report (e.g. "see Item 7A in our Form 10-K"); nothing to extract. Not retried.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-18 ===
 [NUMERIC] total_cash_equivalents_fv: $7,869M → $10,166M (+29.2%) — exceeds 20% threshold
 [NUMERIC] marketable_equity_securities_fv: $123M → $170M (+38.2%) — exceeds 20% threshold

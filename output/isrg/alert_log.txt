@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-22 ===
+[NUMERIC] total_marketable_securities_fv: $5,865M → $3,822M (-34.8%) — exceeds 20% threshold
+[NUMERIC] gross_unrealized_gains_debt: $6M → $0M (-95.2%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_asset: $38M → $23M (-39.9%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $5M → $15M (+219.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $38M → $23M (-39.9%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $5M → $15M (+219.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $33M → $8M (-76.3%) — exceeds 20% threshold
+[LLM_FLAG] gross_unrealized_gains_debt fell from 6.3 (prior) to 0.3 (-95%); the filing attributes unrealized LOSSES broadly to 'interest rate increases' but gives no statement tied specifically to the drop in unrealized GAINS — verify before quoting.
+[LLM_FLAG] fi_total_derivative_liability rose from 4.7 (prior) to 15.0 (+219%), driven by higher 'Other accrued liabilities' fair value on both designated ($4.1->$8.9) and non-designated ($6.6->$6.1 is flat, so designated side is the mover) forward contracts; the filing gives no stated reason for the increase.
+[LLM_FLAG] total_derivative_liability rose from 4.7 (prior) to 15.0 (+219%); no explanation is given in the text for the increase in gross derivative liability fair value.
+[LLM_FLAG] net_derivative_position fell from 33.4 (prior) to 7.9 (-76%), driven by the liability increase above; the filing gives no stated reason for the swing.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] total_cash_equivalents_fv: $2,006M → $2,760M (+37.6%) — exceeds 20% threshold
 [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($0M)

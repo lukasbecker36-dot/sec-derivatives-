@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-22 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($2,400M)
+[NUMERIC] total_derivative_asset: $531M → $681M (+28.4%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $64M → $152M (+136.4%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $23M → $193M (+739.1%) — exceeds 20% threshold
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($24M)
+[NUMERIC] constant_currency_impact: $-408M → $-506M (-24.0%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_monetary_items: $-32M → $-76M (-137.5%) — exceeds 20% threshold
+[LLM_FLAG] expected_12mo_reclass_from_aoci rose from $23M (prior) to $193M (+739%); the text states the amount but gives no explanation for the increase.
+[LLM_FLAG] net_derivative_position swung from $64.5M (prior) to $152.4M (+136%), driven mainly by higher FX designated-hedge asset fair values ($372.3M vs $192.8M prior) and the new interest-rate-swap liability ($145.2M); the filing text does not explicitly discuss the net change.
+[LLM_FLAG] NEWSWORTHY: Netflix designated interest rate swaps as fair value hedges for the first time this quarter — $2,400 million notional, versus zero a year earlier: 'No Senior Notes were designated as the hedged items in fair value hedges of interest rate risk as of December 31, 2025.' The swaps convert fixed-rate Senior Notes to SOFR-based floating exposure and already carry a $145,158 thousand liability fair value (vs. a $1,123 thousand asset) and a $(145) million cumulative fair value hedging adjustment on the hedged notes — 'The related cumulative fair value hedging adjustments included in the carrying amount of the hedged Senior Notes was approximately $( 145 ) million.'
+[LLM_FLAG] fx_sensitivity_monetary_items moved from -$32M (prior quarter) to -$76M (+138%); the filing's own comparative figure for Dec 31, 2025 is only -$1M ('approximately $76 million and $1 million lower, respectively'), underscoring that this exposure swings sharply period to period — nothing in the text explains the increase.
+[LLM_FLAG] ir_sensitivity_100bp is populated from the SOFR interest-expense sensitivity ('would increase our annual interest expense by approximately $24 million'), which is a cash/earnings impact, not a balance-sheet fair-value change as the field description asks — no fair-value-based 100bp sensitivity is disclosed in this section.
+[LLM_FLAG] fx_sensitivity_10pct left null/not_found: the filing discloses three separate 10% FX sensitivities (revenue hedges, content hedges, monetary items) with no single aggregate figure, so each is captured in its own field instead.
+[LLM_FLAG] NEWSWORTHY: corroborates the derivatives note — Netflix's first interest rate swap programme, $2,400 million notional, 'designated as fair value hedges of specifically identified tranches of our fixed-rate Senior Notes,' paying floating SOFR and receiving fixed, 'effectively converting $2,400 million of fixed-rate debt to floating-rate debt.'
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-09-28 ===
 [DISAPPEARED_FIELD] ir_swap_notional: was $1,400M, now missing
 [NUMERIC] net_derivative_position: $199M → $64M (-67.6%) — exceeds 20% threshold
