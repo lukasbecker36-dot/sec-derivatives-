@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-23 ===
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $0M, now missing
+[DISAPPEARED_FIELD] equity_derivatives_notional: was $0M, now missing
+[NUMERIC] total_derivative_asset: $13M → $6M (-53.8%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset fell from the stored prior value of $13M to $6M, a decline of about 54% (>50% threshold). The filing's own comparative column for Dec 31, 2025 shows $17M (not $13M as stored, so the two prior figures already disagree). Within the table itself, the drop is explained by the interest rate swap: its fair-value asset went from $14M (12/31/25) to $0 (9/30/26) while its fair-value liability widened from $(93)M to $(111)M ('Interest rate swap agreements\t$\t2,071\t\t\t$\t4,068\t\t\t$\t—\t\t\t$\t14\t\t\t$\t( 111 )\t\t\t$\t( 93 )'), consistent with falling/hedged interest rates moving the swap from a small asset to a larger liability.
+[LLM_FLAG] Newsworthy: a previously unseen instrument, 'Reverse treasury lock contracts', appears for the first time in the nine-months income-statement-impact table with a $(26)M hit to Other Income (Expense) ('Reverse treasury lock contracts\t—\t\t\t—\t\t\t—\t\t\t—\t\t\t( 26 )\t\t\t—'). It does not appear in the balance-sheet notional/fair-value table, the prior-year comparative P&L table, or the filer's recurring-terms list, suggesting a new debt-issuance-related hedge executed and settled/de-designated during the period — worth asking Honeywell about the underlying debt transaction.
+[LLM_FLAG] Newsworthy: carrying value of debt designated as net investment hedges fell sharply, from $6,962 million (12/31/25) to $2,220 million (9/30/26), a ~68% reduction: 'The carrying value of those debt instruments designated as net investment hedges...was $ 2,220 million and $ 6,962 million as of September 30, 2026 and December 31, 2025, respectively.' This could reflect maturity/repayment of euro-denominated debt or de-designation of net investment hedges; the text gives no explanation, so it is worth confirming with the company before describing it as a strategy change.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
 [NUMERIC] fx_derivatives_notional: $13,128M → $19,326M (+47.2%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $385M → $6,422M (+1568.1%) — exceeds 20% threshold

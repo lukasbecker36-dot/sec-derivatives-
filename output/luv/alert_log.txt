@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-23 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($750M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($66M)
+[NUMERIC] cash_flow_hedge_aoci: $750M → $-50M (-106.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $0M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $28M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-28M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-79M, now missing
+[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion)
+[LLM_FLAG] cash_flow_hedge_aoci: prior cached value was 750.0; current extraction from the text is -50 (fuel-derivatives AOCI balance at 9/30/2026), a swing far beyond 50%. Nothing in this filing's text supports a 750 figure for the cash-flow-hedge AOCI balance -- the rollforward shows AOCI-fuel-derivatives moving from $(137)M at 12/31/2025 to $(50)M at 9/30/2026. 750 matches the notional of the $750 million notes referenced elsewhere in this note, suggesting the prior cached value may itself be a mis-extracted notional rather than a real AOCI figure.
+[LLM_FLAG] Fuel hedging program fully wound down: 'The Company terminated its remaining portfolio of fuel hedging contracts during second quarter 2025, which were scheduled to settle through 2027, to effectively close its fuel hedging portfolio and program.' The company now carries no open commodity/fuel derivatives; this quarter's AOCI and income-statement fuel-derivative amounts are purely runoff reclassification of legacy terminated contracts ($29M reclassified to Aircraft fuel and related taxes expense in Q3 2026, $86M for the nine months).
+[LLM_FLAG] Interest-rate swap fair-value hedge liability roughly quadrupled year-to-date: the designated fair-value hedge on the $750M 5.25% unsecured notes due 2035 shows a liability of $66M at 9/30/2026 versus $16M at 12/31/2025 -- 'Interest rate derivative contracts … Other noncurrent liabilities … 66 … 16'. Worth checking the move against the SOFR path over the period before quoting as a standalone swing since no explanatory commentary is given in this section.
+[LLM_FLAG] No collateral posted: 'The Company had no cash collateral posted or received as of September 30, 2026.' -- notable given the swap liability growth noted above; no bilateral CSA/margin trigger appears to have been hit.
+[LLM_FLAG] This Item 3 'market risk' section is pure cross-reference boilerplate -- it contains no tables, notional amounts, sensitivity figures or fair values of its own, only a pointer to the FY2025 Form 10-K's Item 7A and to Note 3 of this 10-Q. Every schema field is correctly not_found rather than a genuine zero/non-disclosure; do not treat these nulls as 'no market risk' or backfill them from a prior period.
+[LLM_FLAG] Prior cached value for fixed_rate_notes_billion was -79.0, a negative figure for 'notes outstanding in billions,' which is implausible on its face; this filing's market-risk section gives no notes balance to confirm or refute it, but the figure is worth checking for a prior extraction error (e.g. an AOCI or balance-sheet value landing in this field) before it is reused anywhere.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($750M)
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)

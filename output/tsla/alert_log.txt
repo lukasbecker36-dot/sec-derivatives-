@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-23 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1,650M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+[LLM_FLAG] No explicit FX forwards notional disclosed; 0 inferred from Tesla's own statement that it 'does not typically hedge foreign currency risk' rather than a stated contract balance.
+[LLM_FLAG] This section_text excerpt contains only the Foreign Currency Risk subsection — no Interest Rate Risk or Equity Price Risk disclosure text was present to extract ir_sensitivity_100bp, fixed_rate_notes_billion, marketable_equity_value or equity_sensitivity_10pct from; these are not_found rather than confirmed absent from the filing.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($1,640M)

@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-09-27 | Processed 2026-10-23 ===
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-37M, now missing
+[VALIDATION] Likely extraction failure: 1/3 previously-populated fields are now null (cash_flow_hedge_aoci)
+[LLM_FLAG] Fair values of interest rate swaps and FX hedges described only qualitatively as "not significant" — no dollar figure disclosed, so total_derivative_asset/liability/net_derivative_position cannot be populated this period.
+[LLM_FLAG] M&A context (not a hedge-accounting disclosure in this note, but adjacent and newsworthy): "In July 2026, we entered into a definitive agreement to acquire Ultra Maritime Solutions (Ultra Maritime)... for $ 3.45 billion... We expect to fund the acquisition with cash on hand." No deal-contingent FX/IR hedge is disclosed for this transaction — worth watching in the 10-K for whether any hedge is layered on before the Q4 2026 close.
+
 === 10-Q | Period ending 2026-06-28 | Processed 2026-07-24 ===
 [NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-37M)
 [DISAPPEARED_FIELD] fx_forwards_outstanding: was $7,200M, now missing

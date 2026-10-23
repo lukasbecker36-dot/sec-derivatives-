@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-23 ===
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] revolving_credit_rate: appeared for first time ($5M)
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+[LLM_FLAG] revolving_credit_rate: the only rate disclosed (approximately 5.0%) is dated 'as of December 31, 2025', not the current period end (September 30, 2026) — there were zero borrowings outstanding on the revolver at quarter-end, so no current-period rate is stated in the text.
+[LLM_FLAG] equity_sensitivity_10pct: prior_values shows 0.0 but this filing contains no equity price risk or marketable equity securities disclosure at all — returned null/not_found rather than carrying forward the prior value.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing

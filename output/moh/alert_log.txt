@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-23 ===
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-122M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-122M)
+[DISAPPEARED_FIELD] variable_rate_debt_reference: was $-120M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, variable_rate_debt_reference)
+[LLM_FLAG] variable_rate_debt_reference: prior period recorded a value of -120.0, but this quarter's market-risk section only describes the Credit Agreement qualitatively ("Borrowings under the Credit Agreement bear interest based, at our election, on a base rate or other defined rate, plus in each case, the applicable margin.") with no dollar amount outstanding stated, so no new value could be extracted — flagging the gap rather than carrying forward the prior figure.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-120M)

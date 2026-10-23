@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-23 ===
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($351M)
+[DISAPPEARED_FIELD] has_derivatives: was $341M, now missing
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($351M)
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $0M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $341M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (gross_unrealized_gains_debt, has_derivatives, commodity_derivatives_notional, total_derivative_asset, ir_sensitivity_100bp)
+[LLM_FLAG] Newsworthy: in Q2 2026 Allegion entered new cross-currency swaps with gross notional of $100.0 million maturing July 2032, designated as a net investment hedge of a Euro functional-currency subsidiary — 'In the second quarter of 2026, the Company entered into cross-currency swaps with gross notional amounts totaling $ 100.0 million maturing in July 2032. These instruments were designated as a net investment hedge of a Euro functional currency denominated subsidiary.'
+[LLM_FLAG] Section text is truncated (cuts off mid-sentence at 'Level 2 inputs under the fair value hierarchy described in…') before the fair value and AOCI tables, so fi_total_derivative_asset/liability, cash/marketable-securities fair values and the FX designated/not-designated notional split could not be confirmed from this excerpt even though they may exist elsewhere in Note 8 or Note 11.
+[LLM_FLAG] prior_values supplied for this field set look misaligned/invalid: has_derivatives (a Yes/No field) carries a prior value of 341.4, and equity_derivatives_notional (a notional-amount field) carries a prior value of 'Yes'. These look swapped with a total_derivative_asset-type figure and a Yes/No flag from another field, i.e. the kind of wrong-column misalignment the pipeline's audit checks for. Not carried forward here; flagging for data-integrity review rather than suppressing.
+[LLM_FLAG] Newsworthy: new $100.0 million cross-currency swap entered in Q2 2026, designated as a net investment hedge of a Euro functional-currency subsidiary, maturing July 2032 — 'In the second quarter of 2026, the Company entered into cross-currency swaps with gross notional amounts totaling $ 100.0 million maturing in July 2032.'
+[LLM_FLAG] Filing states fair values of currency derivatives and related AOCI balances were immaterial, and the 12-month expected reclassification from AOCI is also expected to be immaterial — 'Neither the fair values of currency derivatives, … nor the balances included in Accumulated other comprehensive loss were material as of September 30, 2026 or December 31, 2025. … nor is the amount to be reclassified into Net earnings over the next 12 months expected to be material.' No dollar figure is given for any of these, hence null/not_found rather than zero.
+[LLM_FLAG] Counterparty concentration: counterparties to the forward contracts and cross-currency swaps are described only as 'several investment grade major international financial institutions,' with the Company stating this presents 'no significant credit risk' — no numeric concentration disclosed.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
 [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($341M)
 [NEW_FIELD] fi_total_derivative_liability: appeared for first time ($0M)

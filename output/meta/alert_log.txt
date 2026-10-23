@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-23 ===
+[NUMERIC] total_cash_equivalents_fv: $12,133M → $7,216M (-40.5%) — exceeds 20% threshold
+[LLM_FLAG] This excerpt of Note 4 contains only the fair-value hierarchy table and a restricted cash equivalents discussion; no FX/IR derivative notional or fair-value table appears in the provided section_text, so all derivative fields are not_found (the note may continue beyond the provided excerpt, which is truncated at 'See ').
+[LLM_FLAG] Restricted cash equivalents rose from $2,539M (Dec 31, 2025) to $12,826M (Sept 30, 2026) -- the filing explains this: '$10.80 billion of money market funds related to escrow requirements under certain multi-year infrastructure purchase agreements... restricted from general corporate use and are expected to be released between 2028 and 2030 upon satisfying the underlying purchase obligations.'
+[LLM_FLAG] The entire section_text is a one-sentence cross-reference: 'Quantitative and Qualitative Disclosures About Market Risk, from our Annual Report on Form 10-K for the year ended December 31, 2025.' Meta is incorporating its market risk disclosures by reference to the FY2025 10-K rather than restating them in this 10-Q, so no quantitative content is present to extract.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NUMERIC] total_cash_equivalents_fv: $19,280M → $12,133M (-37.1%) — exceeds 20% threshold
 [NUMERIC] total_marketable_securities_fv: $57,754M → $74,798M (+29.5%) — exceeds 15% threshold

@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-23 ===
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $0M, now missing
+[NUMERIC] total_derivative_asset: $176M → $223M (+26.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[LLM_FLAG] Net investment hedging notional roll-off: designated FX notional fell from $13,587M to $12,219M and total designated derivatives fell from $18,828M to $17,442M. Filing explains: "The decrease in the notional balance of derivative instruments and debt designated in net investment hedging relationships was primarily driven by maturities, consistent with the Company's ongoing management of its hedge portfolio."
+[LLM_FLAG] Counterparty credit-risk collateral trigger: "If the Company's credit rating were to fall below the levels stipulated in the agreements, the counterparties could demand either collateralization or termination of the arrangements." Aggregate fair value of instruments in a liability position subject to these netting/collateral agreements rose to $279M (Sept 30, 2026) from $260M (Jun 30, 2026); company states it "has not been required to post collateral as a result of these contractual features."
+[LLM_FLAG] Fair value hedge P&L swing: loss on interest rate contracts in fair value hedging relationships recognized in earnings widened to $(94)M for Q1 vs a $6M gain a year earlier ("fully offset by the mark-to-market impact of the related exposure" per the filing).
+[LLM_FLAG] cross_reference_md_and_a: prior period's cross-reference text named 'Other Information in the MD&A and Note 9 to the Consolidated Financial Statements'; this quarter's Item 3 text cites only Note 9 of the FY2026 10-K, with no MD&A 'Other Information' reference present in section_text. This is a wording/cross-reference change, not a market-risk substance change — the filing explicitly states no material change occurred.
+
 === 10-K | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NUMERIC] fx_derivatives_notional: $4,211M → $17,733M (+321.1%) — exceeds 20% threshold
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)

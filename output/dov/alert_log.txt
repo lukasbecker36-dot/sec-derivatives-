@@ -1,3 +1,30 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-23 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($256M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($149M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($107M)
+[NUMERIC] total_derivative_asset: $255M → $1M (-99.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $150M → $1M (-99.6%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $105M → $0M (-99.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $2M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $1M, now missing
+[VALIDATION] Likely extraction failure: 6/9 previously-populated fields are now null (cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_forwards_outstanding, fx_transaction_gain_loss, ir_sensitivity_100bp...)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 255 to 1 (0x)
+[VALIDATION] Likely units mismatch: total_derivative_liability changed from 150 to 1 (0x)
+[VALIDATION] Likely units mismatch: net_derivative_position changed from 105 to 0 (0x)
+[LLM_FLAG] total_derivative_asset fell from prior $255.055M to $0.885M (-99.7%) and total_derivative_liability from $150.105M to $0.546M (-99.6%); nothing in this filing explains a swing of that size. The note header states amounts are 'in thousands', so the designated cash-flow-hedge fair values of $885K/$546K convert to $0.885M/$0.546M in millions — verify whether the prior-period extraction mis-scaled these fields (e.g. read thousands as already-millions) rather than this being a real decline.
+[LLM_FLAG] net_derivative_position swung from prior $104.95M to $0.339M, consistent with the same apparent unit/scale discrepancy flagged above.
+[LLM_FLAG] equity_derivatives_notional: prior_values held the non-numeric string 'Yes' for this field, which looks like a mapping error from a prior run (likely belongs under has_derivatives) rather than a real prior equity-derivatives figure; no equity derivatives are disclosed in the current text.
+[LLM_FLAG] Newsworthy — net investment hedge programme expanded: Dover designated a new €550,000 (thousand; i.e. €550 million) euro-denominated note issued November 12, 2025 as a net investment hedge, alongside the existing €600,000 (2016) and €500,000 (2019) notes: 'the € 600,000 , € 500,000 , and € 550,000 of euro-denominated notes issued November 9, 2016, November 4, 2019, and November 12, 2025, respectively, as hedges of its net investment in euro-denominated operations.'
+[LLM_FLAG] Newsworthy — hedge wind-down: a €550,000 (thousand) currency forward designated as a net investment hedge, entered in May 2025, matured and is no longer outstanding: 'In May of 2025, the Company entered into a € 550,000 currency forward contract designated as a net investment hedge for the duration of the contract. The forward contract settled in December of 2025.'
+[LLM_FLAG] Material FX-driven net investment hedge swing (non-derivative debt leg): nine-month 2026 gain on euro-denominated debt of $66,434K versus a $(138,656)K loss in the prior-year nine months — 'Net (loss) gain on net investment hedges, net of tax $ ( 2,808 ) $ 1,995 $ 51,460 $ ( 117,142 )' — a large period-over-period reversal tied to euro FX moves on hedge-designated debt, not derivatives themselves.
+[LLM_FLAG] Non-designated FX notional grew from $74,403K to $107,361K (+44%), used to hedge operating receivables/payables; below the 50% threshold but a notable increase in undesignated hedging activity.
+[LLM_FLAG] Company states derivative counterparty credit risk is not significant and no amounts are excluded from hedge-effectiveness assessment — standard boilerplate, no change flagged.
+[LLM_FLAG] This Item 3 section is a bare cross-reference to the prior 10-K and contains no standalone quantitative market-risk disclosure this quarter: "Quantitative and Qualitative Disclosures about Market Risk," contained in our Annual Report on Form 10-K for the fiscal year ended December 31, 2025.  All fields are not_found by design (incorporation by reference), not an extraction failure.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($255M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($150M)

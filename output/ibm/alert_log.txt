@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-23 ===
+[NUMERIC] fx_not_designated_notional: $8,000M → $6,200M (-22.5%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $326M → $258M (-20.9%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $249M → $166M (-33.3%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional and fx_designated_notional are not single stated totals -- they are sums of three/two separately disclosed program notionals (net investment hedges $7.7B + cash flow hedges of royalty/cost $11.1B + cash flow hedges of FX-denominated debt $9.2B = $28.0B designated; plus economic/non-designated $6.2B = $34.2B total). No aggregate FX figure appears verbatim in the text.
+[LLM_FLAG] cash_flow_hedge_aoci is a sum of two separately disclosed deferred-in-AOCI balances for different cash-flow-hedge programs: royalty/cost transactions ($220 million gain) and FX-denominated debt forward contracts ($38 million gain) = $258 million. No single combined cash-flow-hedge AOCI total is stated in the text.
+[LLM_FLAG] New fair-value hedge designation on short-term debt: the cumulative-basis-adjustment table shows short-term debt carrying amount of the hedged item moving from '$—' at December 31, 2025 to '$( 1,226 )' at September 30, 2026, with a cumulative hedging adjustment of '( 2 )' -- worth confirming with the company whether this reflects a new short-term fair-value hedge program.
+[LLM_FLAG] Discontinued hedging relationships: filing states long-term debt cumulative hedging adjustments 'Includes $( 93 ) million and $( 114 ) million of hedging adjustments on discontinued hedging relationships at September 30, 2026 and December 31, 2025, respectively' -- indicates de-designated fair value hedges still being amortized.
+[LLM_FLAG] Amounts excluded from hedge-effectiveness testing: 'Approximately $ 120 million of losses (before taxes) related to the initial forward points excluded from the assessment of hedge effectiveness is expected to be amortized to other (income) and expense in the Consolidated Income Statement within the next 12 months' -- a material forward-points cost being pushed through earnings outside the effectiveness test.
+[LLM_FLAG] Large swing in total hedge income-statement effect: the nine-month 'Other (income) and expense' line of total hedge activity moved from $( 881 ) million (a net gain) in the nine months ended September 30, 2025 to $560 million (a net loss) in the nine months ended September 30, 2026 -- a roughly $1.44 billion swing, consistent with FX-rate movements on hedged foreign-currency debt/investments; the three-month figures also moved from $162 million to $21 million.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-09-22 ===
 [NUMERIC] fx_not_designated_notional: $5,600M → $8,000M (+42.9%) — exceeds 20% threshold
 [NUMERIC] cash_flow_hedge_aoci: $-292M → $326M (+211.6%) — exceeds 20% threshold
