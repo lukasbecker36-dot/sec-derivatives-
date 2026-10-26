@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-26 ===
+[NUMERIC] total_derivative_asset: $191M → $78M (-59.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $222M → $563M (+153.6%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-31M → $-485M (-1464.5%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $37M → $-101M (-373.0%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset fell from $191M (prior) to $78M (current), a ~59% drop; the text gives no single stated cause — it reflects the combined roll-off/mark-to-market of the commodity, interest rate and FX books shown in the fair-value table, with no management commentary attributing the move.
+[LLM_FLAG] total_derivative_liability rose from $222M (prior) to $563M (current), a ~154% increase; driven mainly by the interest rate contracts liability growing from $136M to $324M and a new $165M energy-commodity designated-hedge liability (vs. $0 prior, previously a $92M asset). Consistent with the filing's statement that 'the cumulative amount of fair value hedging adjustments resulted in a decrease of $322 million in the carrying value of our hedged fixed rate debt' — i.e. the swap book moved further in-the-money against KMI as rates/commodity prices moved.
+[LLM_FLAG] net_derivative_position swung from -$31M (prior) to -$485M (current), a large deterioration driven by the same interest-rate and commodity moves described above; not separately explained in the text beyond the component tables.
+[LLM_FLAG] expected_12mo_reclass_from_aoci flipped from a prior +$37M (expected gain) to -$101M (expected loss): 'we expect to reclassify an approximate $101 million loss associated with cash flow hedge price risk management activities ... into earnings during the next twelve months.' This tracks the swing in OCI on energy commodity derivatives from a $122M gain (nine months 2025) to a $378M loss (nine months 2026) — i.e. commodity prices moved against KMI's cash-flow hedges this year, not a change in hedging strategy.
+
 === 10-Q | Period ending 2025-06-30 | Processed 2026-09-23 ===
 [NUMERIC] total_derivative_asset: $124M → $191M (+54.0%) — exceeds 20% threshold
 [NUMERIC] total_derivative_liability: $284M → $222M (-21.8%) — exceeds 20% threshold

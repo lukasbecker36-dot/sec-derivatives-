@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-26 ===
+[NUMERIC] ir_swap_notional: $1,445M → $1,048M (-27.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $2M, now missing
+[NUMERIC] total_derivative_asset: $478M → $188M (-60.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $450M → $159M (-64.7%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $6M → $54M (+800.0%) — exceeds 20% threshold
+[LLM_FLAG] expected_12mo_reclass_from_aoci: computed total of $54M (sum of all listed cash flow hedge and net foreign investment hedge lines in the 'Expected Reclassifications from AOCL within the next 12 months' table) is well above the prior tracked value of $6M (+~800%); the filing gives no narrative explanation for the increase — the largest single driver is 'Commodity contracts $29'.
+[LLM_FLAG] fx_not_designated_notional: within this filing's own comparative columns, foreign currency contracts not designated as hedges rose to '16,950' ($M) from '10,560' ($M) at Dec 31, 2025 (+60%); no explanation is given in the text.
+[LLM_FLAG] ir_swap_notional (designated component): interest rate contracts designated as hedging instruments rose to '950' ($M) from '600' ($M) at Dec 31, 2025 (+58%); the Maximum Maturity Dates table shows these extending to 2027, but the text gives no reason for the increase.
+[LLM_FLAG] Newsworthy / exotic instrument: a 'Total return swap' appears among derivatives not designated as hedging instruments; its income-statement effect swung from a $26M gain (three months ended Sep 30, 2025) to a $(10) million loss (three months ended Sep 30, 2026) per the row 'Total return swap 6', with no narrative explanation offered.
+[LLM_FLAG] Newsworthy / collateral: cash collateral posted by Dow fell to '$10 million' at September 30, 2026 from '$20 million' at December 31, 2025, and the filing notes 'No cash collateral was posted by counterparties with the Company at September 30, 2026 and December 31, 2025.'
+[LLM_FLAG] commodity_derivatives_notional left null: the filing discloses commodity derivative notionals only as a physical volume ('million barrels of oil equivalent': 2.2 designated / 0.1 not designated at Sep 30, 2026, vs 9.5 / 1.4 at Dec 31, 2025) under the heading 'Commodity Notionals', not as a USD notional amount, so no dollar figure matching the schema's expected magnitude is available.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-27 ===
 [NUMERIC] fx_designated_notional: $5,888M → $4,568M (-22.4%) — exceeds 20% threshold
 [NUMERIC] fx_not_designated_notional: $12,986M → $15,829M (+21.9%) — exceeds 20% threshold

@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-26 ===
+[NUMERIC] commodity_designated_notional: $3M → $2M (-33.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] commodity_not_designated_notional: was $0M, now missing
+[NUMERIC] net_asset: $47M → $185M (+293.6%) — exceeds 20% threshold
+[NUMERIC] net_liability: $-29M → $-1M (+96.6%) — exceeds 20% threshold
+[NUMERIC] fx_oci_gain_loss: $148M → $-36M (-124.3%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] commodity_oci_gain_loss: $1M → $0M
+[NUMERIC] expected_12mo_reclass_from_aoci: $171M → $129M (-24.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] hedge_ineffectiveness: was $0M, now missing
+[NEW_FIELD] collateral_posted: appeared for first time ($325M)
+[LLM_FLAG] net_asset jumped from $47M (prior) to $185M (+293%); the filing does not explain the swing beyond the standard quarter-end fair-value re-measurement of the FX/IR book, and the masked amounts of offsetting financial instruments and cash collateral changed materially (collateral received against assets rose from $183M to $432M).
+[LLM_FLAG] net_liability moved from -$29M (prior) to -$1M, a near-elimination of the net derivative liability position; no explanatory text in the note.
+[LLM_FLAG] fx_oci_gain_loss: three-months-ended Sept 30, 2026 FX cash-flow-hedge OCI figure is $(36)M vs. a prior tracked value of $148M. This may reflect a quarter (3-month) vs. cumulative (6- or 9-month) period-convention mismatch between this extraction and the prior one rather than a true swing -- verify which period length the prior figure used before reporting a change.
+[LLM_FLAG] commodity_oci_gain_loss moved from $1M (prior) to $0 (dash/immaterial) this quarter; magnitude is immaterial (<$100M) so not economically significant despite the percentage change.
+[LLM_FLAG] Newsworthy: of the $6,004M carrying amount of fixed-rate debt hedged under fair-value interest-rate swaps, $1,397M relates to 'discontinued hedges' -- i.e. roughly 23% of the hedged debt balance sits under terminated/de-designated fair-value hedge relationships whose cumulative basis adjustment is still being amortized. Quote: 'The carrying amount of the debt hedged ... as of September 30, 2026 was $ 6,004 million, including $ 1,397 million related to discontinued hedges.'
+[LLM_FLAG] commodity_not_designated_notional is not stated as a distinct line item in the notional table (only a 'Foreign exchange contracts' row appears under the not-designated heading); the designated + not-designated components as disclosed already sum exactly to the reported $52,505M total, so no commodity-not-designated amount is implied as outstanding. Returned null per the 'never carry forward prior value' rule rather than inferring $0.
+[LLM_FLAG] The extracted market_risk section is a short boilerplate paragraph that only cross-references Note 6 ('See Note 6. Financial Instruments to our condensed consolidated financial statements for further details') and a contingencies note; it contains no quantitative sensitivity analysis (no 10% FX move, no 10% commodity move, no 100bp rate move figures). This looks like a truncated/incomplete section extraction of Item 3 (Quantitative and Qualitative Disclosures About Market Risk) rather than the complete item -- the full Item 3 text likely precedes this excerpt with the actual sensitivity disclosure. Recommend re-checking the section_extract boundary pattern for PM's Item 3.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-14 ===
 [NUMERIC] commodity_designated_notional: $5M → $3M (-40.0%) — exceeds 20% threshold
 [NEW_FIELD] commodity_not_designated_notional: appeared for first time ($0M)

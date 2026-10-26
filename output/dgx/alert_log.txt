@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-26 ===
+[NEW_FIELD] total_derivative_liability: appeared for first time ($112M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-112M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($4M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $0M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $21M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-21M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $4M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion)
+[LLM_FLAG] total_derivative_liability / net position swung from a net asset of $14M (Dec 31, 2025) to a net liability of $112M (Sept 30, 2026) -- the fixed-to-variable interest rate swap book flipped sides of the balance sheet within nine months, from 'Other assets' $14 to 'Other liabilities' $112. The filing gives no qualitative explanation for the move; it is consistent with the hedge-accounting basis adjustment on the hedged debt swinging from +$15M to -$112M over the same period, which tracks the fair-value-hedge gain/loss table (hedged debt items: +$91M Q3 / +$126M nine-month; swap derivatives: -$91M Q3 / -$126M nine-month).
+[LLM_FLAG] equity_derivatives_notional: prior_values carries a non-numeric placeholder ('Yes') for this field rather than a notional figure, suggesting a prior extraction defect; current filing text contains no equity derivative disclosure at all, so returned not_found rather than attempting to reconcile against that prior value.
+[LLM_FLAG] No FX, commodity, or equity derivatives are disclosed anywhere in this note -- Quest Diagnostics' derivatives programme this quarter consists entirely of interest-rate instruments (fixed-to-variable swaps designated as fair value hedges on $1,800M of senior notes notional, per the notional table), a narrow single-asset-class hedging profile for a company this size.
+[LLM_FLAG] Item 3 (Quantitative and Qualitative Disclosures About Market Risk) contains no standalone quantitative content this quarter -- it is a single sentence pointing entirely to Item 2 MD&A ('See Item 2. "Management's Discussion and Analysis of Financial Condition and Results of Operations."'). Every field in this schema that had a prior value (ir_sensitivity_100bp: 21.0, fx_sensitivity_10pct: -21.0, fixed_rate_notes_billion: 4.0, fx_transaction_gain_loss: 0.0) returned not_found this period, not because the disclosures were withdrawn but because the filing restructured where that content lives -- nothing in the supplied section_text explains or confirms this, since the content was not present to read. These figures may still exist in the MD&A body of this filing, which is outside this section's slice and was not searched.
+[LLM_FLAG] Because Item 3 was boilerplate-only, this result should not be read as Quest Diagnostics eliminating its interest-rate or FX sensitivity disclosures -- it is a section-extraction gap: the market_risk section as sliced for this request did not contain the MD&A text where those figures likely now live.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
 [NEW_FIELD] total_derivative_asset: appeared for first time ($0M)
 [NEW_FIELD] total_derivative_liability: appeared for first time ($21M)

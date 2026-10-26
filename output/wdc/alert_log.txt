@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-10-02 | Processed 2026-10-26 ===
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $1,310M, now missing
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($7M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-81M)
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_derivatives_notional)
+[LLM_FLAG] section_text does not contain the company's actual derivative instrument disclosure (no FX forward/IR swap/commodity notional or fair-value tables, no AOCI hedge roll-forward). It appears to be the tail of Note 5 (Convertible Notes / Capped Calls), followed by Note 6 (Leases and Other Commitments) and Note 7 (Income Taxes) — suggests a section-extraction boundary problem where the real 'Derivative Instruments' note was skipped.
+[LLM_FLAG] fx_derivatives_notional: prior_values recorded $1,310M but this extract has no notional table at all, so the field is correctly null here — not a real change, a missing section. Needs re-extraction with corrected section boundaries before this can be compared to the prior period.
+[LLM_FLAG] The $1.19 billion Capped Calls notional mentioned in this text is explicitly NOT a derivative per the company's own accounting treatment ("not accounted for as derivatives") — it must not be used to populate fx_derivatives_notional, equity_derivatives_notional, or any other derivative notional field.
+[LLM_FLAG] ir_sensitivity_100bp: the schema expects a change in FAIR VALUE from a 100bp move, but the filing only discloses an interest-EXPENSE sensitivity for variable-rate debt ('increase annual interest expense by $7 million') — there is no fixed-rate-debt fair-value sensitivity in this section. Reported the $7M expense figure since it's the only 100bp interest-rate sensitivity in the text, but it is a cash-flow/earnings sensitivity, not a fair-value one; flagging the definitional mismatch rather than fabricating a fair-value number.
+[LLM_FLAG] fx_forward_max_maturity: prior_values recorded '12 months or less' but this section's text does not restate a maturity for FX forwards at all — correctly left null/not_found rather than carried forward from the prior period.
+
 === 10-K | Period ending 2026-07-03 | Processed 2026-08-17 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $93M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $5M, now missing

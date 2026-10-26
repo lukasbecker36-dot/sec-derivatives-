@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-09-27 | Processed 2026-10-26 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,177M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($545M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($631M)
+[NUMERIC] total_derivative_asset: $1,308M → $8M (-99.4%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $578M → $40M (-93.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $729M → $-32M (-104.4%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-1M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $8M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $47M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-39M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-1M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $-1M, now missing
+[VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 1,308 to 8 (0x)
+[LLM_FLAG] total_derivative_asset fell from a prior extracted value of $1,307.9M to $7.9M this period (>99% decrease). Nothing in the filing text narratively explains a swing of this magnitude; the filing's own comparative column shows the Dec 28, 2025 fair value asset as only $22.0M, which itself does not reconcile with the $1,307.9M prior figure -- suggesting the prior extraction may have captured a notional amount into this fair-value field. Verify against the filing before quoting a period-over-period change.
+[LLM_FLAG] total_derivative_liability fell from a prior extracted value of $578.5M to $39.8M this period. Same reconciliation concern as total_derivative_asset above: the filing's own Dec 28, 2025 comparative is $41.8M, not $578.5M.
+[LLM_FLAG] net_derivative_position swung from a prior net asset of +$729.4M to a net liability of $(31.9)M this period; this reversal is not addressed narratively in the filing and is driven by the same unreconciled prior figures flagged above.
+[LLM_FLAG] equity_derivatives_notional carried a prior value of the string "Yes" -- not a numeric notional. This filing's derivatives note does not disclose any equity derivatives at all, so the field is correctly null here, but the prior row looks like a data-quality defect worth flagging for audit.
+[LLM_FLAG] Newsworthy: cross-currency swaps designated as net investment hedges, notional €450.0 million, used to hedge euro-denominated net investments against FX translation, maturing between September 30, 2026 and September 30, 2030 -- a materially sized currency-translation hedging programme ($512.1M USD notional on balance sheet) relative to the company's other FX hedging.
+
 === 10-Q | Period ending 2026-06-28 | Processed 2026-07-27 ===
 [NUMERIC] fx_derivatives_notional: $2,026M → $1,308M (-35.4%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $2,025M → $578M (-71.4%) — exceeds 20% threshold

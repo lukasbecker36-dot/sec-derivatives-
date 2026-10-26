@@ -1,3 +1,6 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-26 ===
+[LLM_FLAG] Item 3 Market Risk section is pure boilerplate for this period: it states 'No material change has occurred in our market risks since the disclosure contained in our 2025 10-K' and defers all quantitative detail (notionals, cross-currency swap amounts, fair values) to 'Note 15 to the unaudited consolidated financial statements.' None of the schema's numeric fields are stated in this section_text; they would need to be extracted from Note 15 (derivatives note) rather than this market-risk section.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-09-30 ===
 [LLM_FLAG] Section text is Item 3's qualitative market-risk boilerplate only; it contains no numeric tables and explicitly defers all figures to Note 15 of the financial statements, which is not included in section_text. Every schema field is therefore not_found rather than genuinely zero or absent from the filing -- this row should not be read as 'no derivatives activity.'
 

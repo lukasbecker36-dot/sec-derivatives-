@@ -1,3 +1,6 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-26 ===
+[LLM_FLAG] section_text appears to be the Private Securities Litigation Reform Act / forward-looking-statements boilerplate that precedes Item 3 ("Quantitative and Qualitative Disclosures About Market Risk , and elsewhere in this report are ‘forward-looking’ statements..."), not the actual Item 3 market risk disclosure content. No quantitative or descriptive market-risk data (interest rate sensitivity, FX, mortgage loan exposure, fixed-rate notes, equity holdings) appears anywhere in the provided text. Section extraction/slicing boundary likely needs correction for this filing (phm-20260930.htm) so the actual Item 3 body is captured.
+
 === 10-Q | Period ending 2026-09-30 | Processed 2026-10-23 ===
 [LLM_FLAG] section_text contains only the Item 3 forward-looking-statements safe-harbor boilerplate; no quantitative market risk or derivatives disclosure (notional tables, sensitivity figures, fixed-rate debt, or mortgage loan data) is present in the supplied text to extract any schema field from.
 

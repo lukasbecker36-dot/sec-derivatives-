@@ -19,7 +19,9 @@
       "unrealized loss"
     ],
     "non_gaap_metrics": [],
-    "unusual_disclosure_patterns": [],
+    "unusual_disclosure_patterns": [
+      "market_risk: Steel Dynamics' market risk section is almost entirely qualitative (commodity risk strategy for metallic raw materials, energy inputs, and base metal financial contracts used to protect margins on fix"
+    ],
     "known_issues": []
   },
   "history": [
@@ -83,6 +85,17 @@
       "form_type": "10-Q",
       "period_end": "2026-06-30",
       "processed_at": "2026-08-10T02:32:29Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 0,
+      "fields_null": 12
+    },
+    {
+      "filing_date": "2026-09-30",
+      "form_type": "10-Q",
+      "period_end": "2026-09-30",
+      "processed_at": "2026-10-26T02:39:32Z",
       "sections_found": [
         "market_risk"
       ],

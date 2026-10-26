@@ -1,3 +1,23 @@
+=== 10-K | Period ending 2026-08-31 | Processed 2026-10-26 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $341M, now missing
+[DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $4,392M, now missing
+[DISAPPEARED_FIELD] fi_fx_designated_notional: was $892M, now missing
+[DISAPPEARED_FIELD] fi_fx_not_designated_notional: was $3,500M, now missing
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $0M, now missing
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $4,392M, now missing
+[DISAPPEARED_FIELD] fx_designated_notional: was $892M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $3,500M, now missing
+[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] variable_rate_debt_outstanding: appeared for first time ($0M)
+[VALIDATION] Likely extraction failure: 8/9 previously-populated fields are now null (total_cash_equivalents_fv, fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional, fi_ir_swap_notional...)
+[LLM_FLAG] Section extraction issue: the text supplied for 'derivatives_note' does not contain Note 11 ("Derivative Financial Instruments and Hedging Activities") itself — it opens mid-word ("lidated Financial Statements") and consists of MD&A/Item 9/Item 9A/Item 10-15 boilerplate plus a single interest-rate-swap paragraph that duplicates the market_risk section. No notional table, fair-value table, or AOCI balance for derivatives is present in this excerpt, so fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional, commodity_derivatives_notional, equity_derivatives_notional, total_derivative_asset, total_derivative_liability, net_derivative_position, cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci are 'not_found' here for lack of source text, not because the values are zero or unchanged — do not assume continuity with prior_values (e.g. fx_derivatives_notional=4392, fx_designated_notional=892, fx_not_designated_notional=3500). The actual Note 11 content needs to be re-sliced from the filing.
+[LLM_FLAG] Newsworthy: 'Contemporaneously with the issuance of the 4.750% Senior Notes in January 2026, the Company settled cash flow hedges with an aggregate notional amount of $400 million, with various effective dates from March 2025 through December 2025.' — a treasury rate-lock programme tied to a bond issuance, settled for an immaterial cash amount.
+[LLM_FLAG] Newsworthy: interest rate swap book fully wound down — 'As of August 31, 2026, there were no outstanding interest rate swaps.'
+[LLM_FLAG] Newsworthy: 'Contemporaneously with the issuance of the 4.750% Senior Notes in January 2026, the Company settled cash flow hedges with an aggregate notional amount of $400 million, with various effective dates from March 2025 through December 2025. The cash received for the cash flow hedges at settlement was immaterial.' A bond-issuance-linked rate-lock programme, settled and amortized to interest expense via AOCI.
+[LLM_FLAG] Newsworthy: interest rate swap book fully unwound — 'As of August 31, 2026, there were no outstanding interest rate swaps' — and no variable-rate debt outstanding either ('There were no borrowings outstanding under debt facilities with variable interest rates'), so Jabil currently carries essentially no floating-rate interest rate exposure.
+[LLM_FLAG] FX and interest-rate sensitivities are disclosed only qualitatively ('would not have a material effect') with no dollar figure quantified in this section, so ir_sensitivity_100bp and fx_sensitivity_10pct are not_found rather than zero — do not treat as $0 impact.
+[LLM_FLAG] FX forwards are described as economic hedges only ('economically hedge transactional exposure'), with no designated hedge-accounting notional disclosed in this section; fx_forwards_outstanding is not_found here, consistent with the derivatives_note section also lacking a notional table.
+
 === 10-Q | Period ending 2026-05-31 | Processed 2026-07-17 ===
 [HISTORICAL] [NUMERIC] total_cash_equivalents_fv: $627M → $341M (-45.6%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] fi_fx_derivatives_notional: $3,585M → $4,392M (+22.5%) — exceeds 20% threshold

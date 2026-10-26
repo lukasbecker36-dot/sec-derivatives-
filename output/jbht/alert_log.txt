@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-26 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] interest_rate_sensitivity: appeared for first time ($-4M)
+[DISAPPEARED_FIELD] variable_rate_debt_level: was $-4M, now missing
+[NEW_FIELD] average_variable_rate: appeared for first time ($5M)
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, variable_rate_debt_level)
+[LLM_FLAG] No FX or fuel derivatives in use: filing states 'we had no foreign currency forward exchange contracts or other derivative financial instruments' and 'we had no derivative financial instruments to reduce our exposure to fuel price fluctuations' — JBHT continues to run both its FX and fuel-price exposure unhedged, relying on fuel surcharges rather than derivative instruments.
+[LLM_FLAG] ir_sensitivity_100bp and fx_sensitivity_10pct left null: the filing gives only an earnings-impact figure for a 100bp rate move ($3.8M reduction in annual pretax earnings, captured under interest_rate_sensitivity), not a fair-value change, and gives no quantified FX sensitivity at all — so no number was available of the specific kind these fields call for.
+[LLM_FLAG] variable_rate_debt_level left null: text references 'our current level of borrowing' without stating a dollar amount, so no value could be extracted (prior_values had -4.0, which does not appear supportable from this section's text either).
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-27 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($-4M)

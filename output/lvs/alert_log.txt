@@ -1,3 +1,28 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-26 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,737M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($5,737M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $5,866M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $5,866M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $0M, now missing
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-5M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($239M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-41M)
+[DISAPPEARED_FIELD] notional_values: was $-4M, now missing
+[DISAPPEARED_FIELD] hedge_designations: was $261M, now missing
+[DISAPPEARED_FIELD] expiration_dates: was $-21M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, notional_values, hedge_designations...)
+[LLM_FLAG] fx_derivatives_notional / fx_designated_notional are computed by summing three separately disclosed notional figures (SCL Swaps $3.41bn + MBS Net Investment Hedges $1.80bn + SCL Forwards $527mm = $5,737mm) since the text states each individually but never gives a single combined FX total — treat as derived, not a literal filing figure.
+[LLM_FLAG] total_derivative_asset and total_derivative_liability could not be extracted: the section_text is truncated mid-sentence ('Refer to “') before the fair value table it points to, so no fair-value data is present in this excerpt even though the prior run recorded $5,866M for both fields. This is a coverage gap in the sectioning, not a disclosed change, and should not be read as a swing.
+[LLM_FLAG] equity_derivatives_notional: prior_values carries the string 'Yes' for this numeric notional field, which is inconsistent with its schema kind and looks like a mapping error from a prior run (possibly the has_derivatives answer leaking into this field). Current text has no equity derivatives, so null stands regardless.
+[LLM_FLAG] Newsworthy — hedging programme wound down: 'During the nine months ended September 30, 2026, all remaining SCL Net Investment Hedges expired,' per the text an HKD/USD forward programme hedging the net investment in Sands China Ltd (SCL).
+[LLM_FLAG] Newsworthy — new hedging programme: 'During the nine months ended September 30, 2026, the Company executed additional HKD/USD forwards, designated as hedges of portions of the cash flows related to the SCL senior notes due 2028 through 2031 (the “SCL Forwards”),' with a total notional of $527 million as of September 30, 2026 — a new cash-flow hedge layered onto the existing SCL Swaps programme.
+[LLM_FLAG] notional_values, hedge_designations and expiration_dates are not_found in this section_text (this is a qualitative market-risk narrative, not a notional/maturity table). Note that prior_values carries numeric figures for all three (-4.0, 261.0, -21.0) that look implausible for these descriptive fields — likely a mapping error from a prior run rather than genuine prior disclosure; not comparable to this run's nulls.
+[LLM_FLAG] debt_fair_value ($15,160M) is far above the 'typically under $2B' expected magnitude noted for fair_value-kind fields in this schema, but that guidance is written for a derivatives book — this field is explicitly defined as total company debt fair value vs. contractual value, so the large figure is correct and should not be treated as a notional-in-the-wrong-field error.
+[LLM_FLAG] ir_sensitivity_100bp quotes the $239M debt fair-value sensitivity per the schema's 'change in fair value' wording; a second, distinct rate sensitivity is also disclosed ($58M annual interest-cost change from a 100bp HIBOR/SORA move) and is captured only in sensitivity_analysis/notes since the schema field asks for the fair-value metric specifically.
+[LLM_FLAG] Newsworthy: FX transaction losses of $5 million for the nine months ended September 30, 2026 were 'primarily due to U.S. dollar denominated debt issued by SCL' -- a specific, named driver worth citing.
+[LLM_FLAG] Newsworthy: both FX sensitivity figures ($41M on USD/SGD, $5M on USD/pataca) are stated 'net of the impact from the foreign currency swap agreements and forward contracts,' i.e. LVS explicitly reports its hedge programme (detailed in the derivatives note) as already reducing these disclosed exposures.
+[LLM_FLAG] Standard disclosure worth noting: 'We do not hold or issue financial instruments for trading purposes and do not enter into derivative transactions that would be considered speculative positions.'
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-27 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,866M)
 [NUMERIC] fx_designated_notional: $31M → $5,866M (+18822.6%) — exceeds 20% threshold
