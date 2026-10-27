@@ -1,3 +1,6 @@
+=== 10-Q | Period ending 2026-10-03 | Processed 2026-10-27 ===
+[LLM_FLAG] All schema fields return not_found: this section quantifies market risk exclusively via a Value-at-Risk (VAR) model ('the estimated maximum potential net one-day loss in fair value, calculated using the VAR model was $7.4 million'), not via a notional table, a defined-shock sensitivity (e.g. 100bp or 10%), fixed-rate debt balance, or marketable equity securities disclosure. The schema's expected metrics are not present in this text in any form; do not substitute the VAR figures for ir_sensitivity_100bp or fx_sensitivity_10pct since the methodology (95% confidence one-day VAR vs. a defined parallel shock) is not equivalent.
+
 === 10-Q | Period ending 2026-10-03 | Processed 2026-10-26 ===
 [LLM_FLAG] Snap-on discloses market risk via a Value-at-Risk (VAR) model rather than the standard hypothetical 100bp rate shock / 10% FX move sensitivity analysis. The $7.4M total, $7.2M interest-rate, and $0.2M FX one-day potential loss figures are a 95%-confidence, one-day VAR estimate based on the trailing quarter's variance/co-variance relationships -- not a defined-shock sensitivity -- so they were not mapped to ir_sensitivity_100bp or fx_sensitivity_10pct to avoid conflating two different risk methodologies.
 

@@ -1,3 +1,18 @@
+=== 10-K | Period ending 2026-08-29 | Processed 2026-10-27 ===
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $141M, now missing
+[DISAPPEARED_FIELD] corporate_debt_securities_fv: was $29M, now missing
+[DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $1M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-117M)
+[NUMERIC] variable_rate_debt: $1,400M → $1,000M (-28.6%) — exceeds 20% threshold
+[NEW_FIELD] mexican_net_assets: appeared for first time ($1,300M)
+[NEW_FIELD] fx_rate_change: appeared for first time ($9M)
+[NEW_FIELD] fx_sensitivity: appeared for first time ($-117M)
+[VALIDATION] Likely extraction failure: 3/9 previously-populated fields are now null (total_marketable_securities_fv, corporate_debt_securities_fv, gross_unrealized_gains_debt)
+[LLM_FLAG] outstanding_derivatives_status: filing states 'As of August 29, 2026, and August 30, 2025, no such interest rate swaps were outstanding' - AutoZone's interest rate hedge book is currently empty at both period ends despite its stated historical use of interest rate swaps, treasury locks and forward-starting swaps; the ir_sensitivity_100bp figure therefore reflects a hypothetical on unhedged fixed-rate debt, not an active hedge position.
+[LLM_FLAG] ir_sensitivity_100bp / interest_rate_sensitivity: the filing text gives the hypothetical sensitivity date as 'August 29, 2029' rather than the fiscal year-end of August 29, 2026 used everywhere else in the section - appears to be a drafting error in the filing itself and should be verified against the as-filed document before quoting the date.
+[LLM_FLAG] debt_fair_value: the fair-value-to-carrying-value relationship flipped sign year over year - fair value is now $71.1 million BELOW carrying value at August 29, 2026, versus $94.4 million ABOVE carrying value a year earlier ('Such fair value is less than the carrying value of debt by $71.1 million at August 29, 2026, and greater than the carrying value of debt by $94.4 million at August 30, 2025') - consistent with a rate environment move, not a derivatives item but worth noting for context.
+
 === 10-Q | Period ending 2026-05-09 | Processed 2026-07-05 ===
 [HISTORICAL] [NUMERIC] gross_unrealized_gains_debt: $2M → $1M (-70.0%) — exceeds 20% threshold
 [HISTORICAL] [NUMERIC] variable_rate_debt: $851M → $1,400M (+64.5%) — exceeds 20% threshold
