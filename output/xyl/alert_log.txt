@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-28 ===
+[DISAPPEARED_FIELD] fx_designated_notional: was $4,665M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $0M, now missing
+[NEW_FIELD] ir_swap_notional: appeared for first time ($600M)
+[DROPPED_TO_ZERO] total_derivative_asset: $6M → $0M
+[NUMERIC] total_derivative_liability: $241M → $294M (+22.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-235M → $-294M (-25.1%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-8M → $8M (+200.0%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset fell from $6M (prior) to $0M this quarter -- a 100% decrease. All three asset line items (cash flow hedge, net investment hedge, fair value hedge) read $0/'—' in the fair value table; the note does not explain the drop, though it is consistent with cash flow hedge FX forward notional falling from $759M to $138M.
+[LLM_FLAG] expected_12mo_reclass_from_aoci flipped sign, from -$8M (prior, an expected net loss) to +$8M (this quarter, an expected net gain) -- a >100% swing. The filing states the $8M figure directly but gives no narrative explanation for the reversal.
+[LLM_FLAG] fx_designated_notional/fx_not_designated_notional: prior extraction carried split values ($4,665M designated / $0 not designated), but this quarter's Note 10 does not give a notional split by designation status (only the fair value table is split by hedge type, and it shows only designated categories with no 'not designated' bucket) -- marked not_found rather than carried forward or inferred.
+[LLM_FLAG] Newsworthy -- new hedging programme: during Q3 2026 the company entered into $600M notional of interest rate swaps designated as fair value hedges of fixed-rate senior notes due 2036 and 2046, accounted for under the shortcut method ('assumed to be perfectly effective'). Quote: 'the Company entered into interest rate swap agreements with an aggregate notional amount of $ 600 million and designated the swaps as fair value hedges of benchmark interest rate risk... The Company accounts for these interest rate swap agreements as fair value hedges using the shortcut method of accounting under which the hedges are assumed to be perfectly effective.'
+[LLM_FLAG] Newsworthy -- hedging composition shift: net investment hedge (cross-currency swap) notional rose from $3,171M to $4,404M (+38.9%) while cash flow hedge FX forward notional fell from $759M to $138M (-81.8%) over the same two balance-sheet dates, per the filing's own comparative columns. Quote: 'The total notional amount of derivative instruments designated as net investment hedges was $ 4,404 million and $ 3,171 million as of September 30, 2026 and December 31, 2025, respectively' and 'We had foreign exchange contracts with purchased notional amounts totaling $ 138 million and $ 759 million as of September 30, 2026 and December 31, 2025, respectively.'
+[LLM_FLAG] Net investment hedge liability of $(261)M dominates the derivative book versus $(28)M for the new IR fair value hedges and $(5)M for cash flow hedges -- concentration worth noting for an editorial piece on where the mark-to-market risk sits.
+[LLM_FLAG] Item 3 (Quantitative and Qualitative Disclosures About Market Risk) is pure boilerplate this quarter: 'There has been no material change in the information concerning market risk as stated in our 2025 Annual Report.' No standalone figures, tables, or sensitivities appear in this section -- it is a cross-reference, not a disclosure of new data.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
 [NUMERIC] expected_12mo_reclass_from_aoci: $3M → $-8M (-366.7%) — exceeds 20% threshold

@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-28 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,030M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($200M)
+[NUMERIC] total_derivative_asset: $1,057M → $7M (-99.3%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($-49M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-42M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $200M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $6M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $50M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-44M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-51M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion...)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 1,057 to 7 (0x)
+[LLM_FLAG] total_derivative_asset: prior value was $1,057.4M; current-period fair value table shows only $0.7M interest rate contract assets + $6.2M foreign currency contract assets = $6.9M, a >99% drop. Pentair's balance sheet and notional amounts (largest notional is the $1.0B cross-currency swap book) do not support a ~$1B derivative ASSET fair value, so the $1,057.4M prior figure looks like a notional-vs-fair-value mix-up from an earlier extraction rather than a real swing. Current $6.9M figure is directly tied to the Level 1/2/3 fair value table and is consistent with the magnitude of Pentair's derivative book.
+[LLM_FLAG] Interest rate hedging programme wound down: 'The $ 300.0 million aggregate notional amount of interest rate swaps, previously designated as cash flow hedges, expired on April 15, 2026.' Only the $200.0 million interest rate collar remains outstanding at September 30, 2026 -- a reduction in IR hedge notional versus earlier in the year.
+[LLM_FLAG] equity_derivatives_notional: prior value on file was the string 'Yes' for what should be a numeric notional field, and this filing's derivatives note contains no mention of equity derivatives at all. Likely a data-quality issue in a prior extraction rather than a real disclosure change -- worth a sanity check on the stored prior value.
+[LLM_FLAG] cash_flow_hedge_aoci returned not_found rather than a number: the $49.5 million of deferred FX losses tied to the cross-currency swaps is explicitly a blend of cash-flow-hedge AND net-investment-hedge accounting ('accounted for as either cash flow hedges ... or as net investment hedges'), and the $0.7 million IR swap/collar AOCI is reported separately. The filing does not give a single combined cash-flow-hedge-only AOCI total, so a number here would be a fabricated split.
+[LLM_FLAG] Not a derivative, but adjacent and newsworthy: the G&F Manufacturing contingent earn-out liability fair value was cut in half, from $8.0 million to $4.0 million, 'During the second quarter of 2026, we made the first earn-out period payment' -- quoted for context on Level 3 fair value movement.
+[LLM_FLAG] This quarter's Item 7A is a one-line boilerplate cross-reference -- 'There have been no material changes in our market risk during the quarter ended September 30, 2026. For additional information refer to Item 7A of our Annual Report on Form 10-K for the year ended December 31, 2025.' -- with none of the usual sensitivity figures restated. Prior-period values on file (e.g. ir_sensitivity_100bp 49.5, fx_sensitivity_10pct -43.9, fixed_rate_notes_billion -50.9) are NOT reaffirmed by this text and must not be carried forward as current; they are left not_found here rather than assumed unchanged.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,057M)
 [NEW_FIELD] ir_swap_notional: appeared for first time ($200M)

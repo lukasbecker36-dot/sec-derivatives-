@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-28 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($209M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($12M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $209M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (cash_flow_hedge_aoci, ir_sensitivity_100bp)
+[LLM_FLAG] cash_flow_hedge_aoci: prior value was $209M but this section does not restate any AOCI balance for cash flow hedges. The only derivatives discussed (NorthStar Clean Energy's floating-to-fixed IR swaps) are described as economic hedges only -- "Gains on these swaps are reported in other income, while losses are reported in other expense on CMS Energy's consolidated statements of income" -- i.e. gains/losses flow through earnings, not OCI, which is inconsistent with cash-flow hedge accounting. Worth confirming in the full note whether these swaps (or any other book) are still designated, or whether the AOCI balance has been running off/de-designated.
+[LLM_FLAG] total_derivative_asset / total_derivative_liability: the IR swap book flipped from a $3 million liability (other liabilities) at December 31, 2025 to a $12 million asset (other assets) at September 30, 2026 -- a sign reversal in fair value, consistent with the $15 million nine-month gain recognized on the swaps versus a $4 million loss in the prior-year period. Note this $12M figure covers only the NorthStar IR swap book, not a company-wide derivative-asset total (no total derivative liability figure is given in this excerpt).
+[LLM_FLAG] Newsworthy: FTRs held by Consumers (Level 3) continue to be valued using Consumers' own historical average settlements due to lack of quoted pricing -- "There was no material activity within the Level 3 category of derivatives during the periods presented."
+[LLM_FLAG] Newsworthy (non-derivative but same note): NorthStar Clean Energy wrote down long-lived assets held for sale to a $789 million Level 3 fair value and impaired equity-method investments to $18 million as part of a renewable-energy divestment -- "NorthStar Clean Energy committed to plans to sell certain consolidated renewable energy projects... wrote down the long-lived assets to their fair value of $ 789 million."
+[LLM_FLAG] This 10-Q's Item 3 market risk disclosure is a bare incorporation-by-reference stub -- the full section_text is: "Quantitative and Qualitative Disclosures About Market Risk, in the 2025 Form 10‑11K." -- with no quantitative sensitivity tables or figures of its own. All fields are legitimately not_found; the underlying numbers (if unchanged from year-end) would need to be sourced from the FY2025 Form 10-K rather than inferred or carried forward here.
+[LLM_FLAG] prior_values lists ir_sensitivity_100bp = 0.0; this quarter's filing gives no basis to confirm or update that figure since it is incorporated by reference rather than restated.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-14 ===
 [HISTORICAL] [NUMERIC] ir_swap_notional: $109M → $209M (+91.7%) — exceeds 20% threshold
 [HISTORICAL] [DISAPPEARED_FIELD] total_derivative_asset: was $2M, now missing

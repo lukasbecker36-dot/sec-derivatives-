@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-28 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $0M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_forward_contracts: was $0M, now missing
+[DISAPPEARED_FIELD] primary_rate_exposure: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/7 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct, fx_forward_contracts...)
+[LLM_FLAG] cash_flow_hedge_aoci rose from a prior value of $0.0M to $3M (>50% change); the only explanation in the text is the standard rollforward (+$8M other comprehensive income before reclassifications, -$6M reclassified to earnings), with no narrative explaining an unusual cash-flow-hedge event.
+[LLM_FLAG] Hedging programme wound down: 'In March 2026, our interest rate swap with a notional amount of $ 1.6 billion matured. As such, the Company does not have any interest rate swaps outstanding as of September 30, 2026.' Hilton's only disclosed interest rate derivative has not been renewed or replaced.
+[LLM_FLAG] Hedging programme wound down: 'In March 2026, our interest rate swap with a notional amount of $1.6 billion matured. As such, the Company does not have any interest rate swaps outstanding to hedge its variable-rate indebtedness as of September 30, 2026.' Hilton is now carrying its variable-rate debt unhedged, consistent with the same disclosure in the derivatives note (Note 5).
+[LLM_FLAG] primary_rate_exposure's prior_values entry is the placeholder 0.0 for what should be a text field (benchmark name), suggesting a prior extraction/schema mismatch rather than a real change to flag here.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-07-16 ===
 [HISTORICAL] [DISAPPEARED_FIELD] fi_total_derivative_asset: was $7M, now missing
 [HISTORICAL] [NEW_FIELD] ir_swap_notional: appeared for first time ($0M)

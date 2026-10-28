@@ -15,7 +15,12 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "economic hedge",
+      "commodity derivative",
+      "notional amount",
+      "mark-to-market"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -76,6 +81,18 @@
       ],
       "fields_extracted": 1,
       "fields_null": 22
+    },
+    {
+      "filing_date": "2026-09-30",
+      "form_type": "10-Q",
+      "period_end": "2026-09-30",
+      "processed_at": "2026-10-28T02:40:05Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 11,
+      "fields_null": 12
     }
   ]
 }

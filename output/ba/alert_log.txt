@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-28 ===
+[NUMERIC] fx_not_designated_notional: $325M → $593M (+82.5%) — exceeds 20% threshold
+[NUMERIC] net_liability: $-45M → $-23M (+48.9%) — exceeds 20% threshold
+[NUMERIC] fx_oci_gain_loss: $4M → $12M (+200.0%) — exceeds 20% threshold
+[NUMERIC] commodity_oci_gain_loss: $12M → $17M (+41.7%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $36M → $60M (+66.7%) — exceeds 20% threshold
+[NUMERIC] credit_contingent_liability_fv: $4M → $3M (-25.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_asset: $5M → $10M (+100.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_reclass_revenue: was $1M, now missing
+[NUMERIC] fx_reclass_ga: $19M → $2M (-89.5%) — exceeds 20% threshold
+[NUMERIC] commodity_reclass_cost: $4M → $10M (+150.0%) — exceeds 20% threshold
+[NUMERIC] commodity_reclass_ga: $3M → $2M (-33.3%) — exceeds 20% threshold
+[LLM_FLAG] fx_not_designated_notional rose from $325M to $593M (+82%) quarter-over-quarter; the filing gives no explanation for the increase in non-designated FX forward notional.
+[LLM_FLAG] fx_oci_gain_loss rose from $4M to $12M (+200%) quarter-over-quarter; the filing discloses only the amount, with no commentary explaining the swing.
+[LLM_FLAG] expected_12mo_reclass_from_aoci rose from $36M to $60M (+67%) versus the prior quarter's disclosure ('we expect to reclassify gains of $60 (pre-tax) out of AOCI into earnings during the next 12 months'); no reason is given for the increase.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-04-23 ===
 [DROPPED_TO_ZERO] commodity_not_designated_notional: $129M → $0M
 [NUMERIC] total_derivative_liability: $-88M → $-127M (-44.3%) — exceeds 20% threshold

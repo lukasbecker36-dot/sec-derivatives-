@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-28 ===
+[NUMERIC] fx_designated_notional: $4,900M → $6,300M (+28.6%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional left null rather than summed: the section only gives a designated-ex-remeasurement figure ($6.3bn, point-in-time) and a non-designated figure that is a quarterly average ($1.4bn), not a comparable period-end balance, so combining them would misrepresent a single total.
+[LLM_FLAG] fx_designated_notional: the filing's own comparatives show this more than tripling from $2.0bn (Dec 31, 2025) to $6.3bn (Sep 30, 2026): 'the aggregate... was $6.3 billion and $2.0 billion respectively.' Note this also differs from this pipeline's prior extraction (4900) by only +29%, below the 50% flag threshold, but the filing-stated comparative move is far larger and worth verifying against the source table.
+[LLM_FLAG] No interest rate swaps now hedge fixed-rate debt, a change in hedging posture worth noting: 'At September 30, 2026, there were no interest rate swap agreements for fixed-rate debt instruments.'
+[LLM_FLAG] Euro exposure on newbuild ship costs fell sharply, from 64.1% to 49.9% of aggregate cost under construction: 'At September 30, 2026 and December 31, 2025, approximately 49.9% and 64.1%, respectively, of the aggregate cost of the ships under construction was exposed to fluctuations in the Euro exchange rate.'
+[LLM_FLAG] Non-designated FX instruments include cross-currency swaps and collar options used 'from time to time' to minimize remeasurement volatility, in addition to forwards: 'we utilize cross-currency swap agreements and collar options to minimize the volatility resulting from the remeasurement of net monetary assets and liabilities.' No separate notional was disclosed for these instrument types.
+[LLM_FLAG] No fair-value, AOCI, or commodity/fuel derivative notional figures appear in the visible portion of this section (text is truncated mid-sentence at '...functional c'); a fair value table may exist later in the note and was not captured here.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $512M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $326M, now missing

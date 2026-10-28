@@ -1,3 +1,25 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-28 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($260M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($5,500M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($935M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($-14M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($921M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $818M, now missing
+[NUMERIC] ir_sensitivity_100bp: $104M → $15M (-85.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $714M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] counterparty_risk_mitigation: was $0M, now missing
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (fx_transaction_gain_loss, fx_sensitivity_10pct, equity_sensitivity_10pct, counterparty_risk_mitigation)
+[LLM_FLAG] equity_derivatives_notional: prior_values records this field as the string 'Yes', not a number — a likely type/extraction error upstream. The current filing shows no equity derivatives at all; value returned as null, not carried forward from the bad prior value.
+[LLM_FLAG] Counterparty concentration: 'As of September 30, 2026, our commodity contracts derivative instruments were spread among 33 counterparties.'
+[LLM_FLAG] Collateral/credit-facility overlap: 'we had $ 42 million of letters of credit posted as collateral related to certain Twin Eagle commodity derivatives,' and hedging counterparties are also Credit Facility lenders ('Certain of our hedging arrangements are with counterparties that are also Lenders (or affiliates of Lenders) under our Credit Facility').
+[LLM_FLAG] New/expanded hedging activity: FX and interest-rate derivatives each show $4 million of gains for Q3 2026 vs. $0 in Q3 2025 ('Foreign exchange derivatives 4 — ... Interest rate derivatives 4 —'), and the $5.5 billion IR and $260 million FX notional books are newly disclosed at this size.
+[LLM_FLAG] total_derivative_asset and total_derivative_liability are not stated as single line items in the filing; they are derived by summing the individual short-/long-term asset and liability lines in the net fair value table (commodity + FX + interest rate contracts), which sum to the disclosed 'Total derivatives' net figure of $921 million.
+[LLM_FLAG] ir_sensitivity_100bp fell from $104 million (prior) to $15 million this period — a drop of more than 85%. The filing gives no explanation for the change. Note the filing separately discloses a $5 million/year interest-expense sensitivity to a 1% move on variable-rate Credit Facility borrowings ('A 1.0% increase in interest rates based on the variable borrowings as of September 30, 2026 would result in an increase in our interest expense of approximately $5 million per year') — that is a different metric (cash interest expense, not derivative fair value) and should not be confused with the $15 million derivative-valuation sensitivity reported here.
+[LLM_FLAG] fx_sensitivity_10pct: prior period reported $714 million; this filing no longer quantifies FX sensitivity at all, stating only 'our exposure is not material to our condensed consolidated financial statements.' Worth checking whether this reflects a genuinely reduced FX book/hedge or simply a change in disclosure practice before reporting a percentage change.
+[LLM_FLAG] Novel hedge purpose: interest rate derivatives are used to hedge discount-rate risk on the internally-calculated (non-GAAP-fair-value) economic value of certain commodity contracts, not just floating-rate debt — 'we are...exposed to interest rate risk associated with the valuation of certain commodity contracts...We use interest rate derivatives to reduce a portion of this economic exposure.'
+[LLM_FLAG] Cross-check (not an anomaly): commodity derivative net fair value stated here as $911 million is consistent with the derivatives note's commodity-only net asset figure (885 + 40 − 2 − 12 = 911).
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-09 ===
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($2,723M)
 [NEW_FIELD] total_derivative_asset: appeared for first time ($556M)

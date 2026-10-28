@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-28 ===
+[NUMERIC] fx_derivatives_notional: $1,713M → $2,363M (+38.0%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $1,713M → $2,363M (+38.0%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional / fx_designated_notional rose from $1,712.7M (prior) to $2,362.7M (current), a 38% increase — fully explained by four new cross-currency swaps entered during the period: "On September 22, 2026, the Company entered into a new cross currency swap with a notional value of $250 million... On August 27, 2026... $150 million... On July 29, 2026... $100 million... On April 17, 2026... $150.0 million" (totaling $650M, matching the increase exactly).
+[LLM_FLAG] Net investment hedge programme expansion: four new U.S. dollar/euro cross-currency swaps added in 2026 (Apr, Jul, Aug, Sep), extending maturities out to 2031 and continuing the pay-fixed-EUR/receive-fixed-USD structure that synthetically converts USD fixed-rate debt to EUR fixed-rate debt.
+[LLM_FLAG] Balance-sheet fair value and AOCI figures for these net investment hedges are not available in this excerpt — the section text is truncated immediately before the balance sheet location table ("The following table summarizes the location of the net investment hedges on the Consolidated Balance Sheets. See"); total_derivative_asset, total_derivative_liability, net_derivative_position, cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci could not be extracted from this section and should not be treated as non-disclosures.
+[LLM_FLAG] This Item 3 market risk section is pure boilerplate for the quarter and incorporates the FY2025 Form 10-K market risk disclosure by reference: "There were no material changes in the Company’s exposure to market risk since the disclosure included in Management’s Discussion and Analysis of Financial Condition and Results of Operations in the Company’s Annual Report on Form 10-K for the year ended December 31, 2025." No quantitative sensitivities, notionals, or fair values are given anywhere in this section.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-10-08 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,713M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($1,713M)

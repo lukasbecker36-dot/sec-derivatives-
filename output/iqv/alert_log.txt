@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-28 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,837M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($2,837M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,459M)
+[NUMERIC] total_derivative_asset: $2,847M → $35M (-98.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $2,847M → $249M (-91.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $1,463M, now missing
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-4M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $0M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $284M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-284M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $-9M, now missing
+[VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, marketable_equity_value)
+[LLM_FLAG] total_derivative_asset: prior value $2,847M is implausible for a fair-value field (notional-sized) and is not supported by this filing's fair value table, which shows total derivative assets of $35M at Sept 30, 2026 (and $0 at Dec 31, 2025). Likely a prior extraction that placed a notional figure into this field rather than a genuine ~99% decline.
+[LLM_FLAG] total_derivative_liability: same issue as total_derivative_asset — prior $2,847M looks like a stale/misextracted notional-sized number; the filing's actual total derivative liabilities are $249M at Sept 30, 2026 versus $367M at Dec 31, 2025 (both disclosed in this note's comparative column).
+[LLM_FLAG] cash_flow_hedge_aoci: prior value $1,463M could not be located anywhere in this filing's derivatives note or OCI discussion; no standalone cumulative cash-flow-hedge AOCI balance is disclosed here (only a $4M expected 12-month reclassification and period hedge effects on OCI/earnings), so the field is returned as null rather than carried forward.
+[LLM_FLAG] Net investment hedging programme (newsworthy): cross-currency swaps (notional $2,709M) designated as a hedge of net investment in foreign subsidiaries produced a $76M AOCI gain for the nine months ended Sept 30, 2026, versus a $379M AOCI loss in the same 2025 period — a large swing driven by FX moves. Quote: 'the Company recorded a $21 million gain and $76 million gain, respectively, within AOCI as a result of these cross-currency swaps.' The company also designates €3,125 million ($3,545 million) of foreign-currency debt as a net investment hedge: 'the portion of the Company's foreign currency denominated debt balance (net of original issue discount) designated as a hedge of its net investment in certain foreign subsidiaries totaled € 3,125 million ($ 3,545 million).'
+[LLM_FLAG] Interest rate swaps (newsworthy): notional roughly flat ($1,459M vs $1,470M at Dec 31, 2025) but the position flipped from a $45M liability to a $35M asset, and the cash flow hedge effect on OCI was an $80M gain for the nine months ended Sept 30, 2026 versus a $45M loss in the same 2025 period — consistent with rate movements; the filing states no change in hedging strategy or de-designation.
+[LLM_FLAG] Item 3 (market risk) in this 10-Q is a single-sentence incorporation by reference — 'quantitative and qualitative disclosures about market risk described in our 2025 Form 10-K' — with no sensitivity figures, FX/IR notionals, or marketable securities values given for this quarter. Prior-period values on record (ir_sensitivity_100bp $284M, fx_sensitivity_10pct -$284M, marketable_equity_value -$9M) cannot be confirmed or updated from this section's text; all fields are returned null/not_found rather than carried forward from the prior filing.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-20 ===
 [HISTORICAL] [DISAPPEARED_FIELD] total_marketable_securities_fv: was $203M, now missing
 [HISTORICAL] [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $203M, now missing
