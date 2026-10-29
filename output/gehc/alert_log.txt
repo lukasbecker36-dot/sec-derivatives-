@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-29 ===
+[NUMERIC] total_derivative_asset: $256M → $183M (-28.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $207M → $285M (+37.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $49M → $-102M (-308.2%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $7M → $29M (+314.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $32M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $111M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $10M, now missing
+[DISAPPEARED_FIELD] currency_sensitivity: was $111M, now missing
+[VALIDATION] Likely extraction failure: 4/13 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, currency_sensitivity)
+[LLM_FLAG] net_derivative_position swung from a net asset of +$49M (prior/Dec 31 2025) to a net liability of -$102M (Sep 30 2026) -- a sign flip of more than 50%. Nothing in the filing narrates the move; the table shows total derivative fair value assets falling from $256M to $183M while liabilities rose from $207M to $285M ('Total derivatives $ 16,554 $ 183 $ 285 ... $ 15,986 $ 256 $ 207'), driven largely by the interest rate swap fair value hedge flipping from a $28M asset to a $147M liability ('Interest rate swaps 2,700 — 147 ... 2,700 28 —').
+[LLM_FLAG] expected_12mo_reclass_from_aoci rose from $7M (prior) to $29M, a >300% increase: 'we expect to reclassify $ 29 million of pre-tax net deferred gains associated with designated cash flow hedges to earnings in the next 12 months.' The filing gives no narrative reason for the change in expected reclassification.
+[LLM_FLAG] Exotic instrument: the not-designated book now explicitly includes equity-linked total return swaps alongside FX forwards -- 'We also execute derivative instruments, such as foreign currency forward contracts and equity-linked total return swaps, which are not designated as qualifying hedges.'
+[LLM_FLAG] Bifurcated embedded derivatives: 'we also identify and record foreign currency-related features in our purchase or sales contracts where the currency is not the local or functional currency of any substantive party to the contract as embedded derivatives.' These are combined with equity derivatives in the 'Other derivatives' line ($310M notional), so equity_derivatives_notional above is a mixed figure, not pure equity exposure.
+[LLM_FLAG] Fair value hedge basis adjustment flipped sign: 'Long-term borrowings designated as fair value hedges $ 2,548 $ ( 147 ) ... $ 2,722 $ 27' -- cumulative basis adjustment moved from +$27M (Dec 2025) to -$147M (Sep 2026), consistent with the interest rate swap fair value swing above; a sizeable single-quarter move worth verifying against the filing before quoting, though it appears to be a rate-driven mark-to-market change rather than a hedge failure.
+[LLM_FLAG] Netting/collateral: company continues to present derivatives gross despite master netting arrangements; potential offset amount basically flat -- 'the potential effect of rights of offset associated with the derivative contracts would be an offset to both assets and liabilities by $ 95 million and $ 107 million, respectively' (Sep 2026 vs Dec 2025).
+[LLM_FLAG] Item 3 (Quantitative and Qualitative Disclosures About Market Risk) in this 10-Q incorporates the prior Form 10-K by reference rather than restating the sensitivity tables: 'Quantitative and Qualitative Disclosures About Market Risk" in our Annual Report on Form 10-K for the fiscal year ended December 31, 2025.' No standalone market-risk figures (IR/FX/equity sensitivities, fixed-rate notes) are stated for this period, so none of the prior_values (ir_sensitivity_100bp=32.0, fx_sensitivity_10pct=111.0, fixed_rate_notes_billion=9.5, currency_sensitivity=111.0) can be confirmed or updated from this section; they should not be carried forward.
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-10-20 ===
 [NUMERIC] total_derivative_liability: $167M → $207M (+24.0%) — exceeds 20% threshold
 [NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($7M)

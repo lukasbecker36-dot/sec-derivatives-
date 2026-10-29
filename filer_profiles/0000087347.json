@@ -22,7 +22,9 @@
     "non_gaap_metrics": [
       "free cash flow"
     ],
-    "unusual_disclosure_patterns": [],
+    "unusual_disclosure_patterns": [
+      "market_risk: This 10-Q's Item 3 market risk section contains no quantitative disclosures. It incorporates by reference the market risk discussion from SLB's FY2025 Form 10-K and states that market risk exposure ha"
+    ],
     "known_issues": []
   },
   "history": [
@@ -84,6 +86,17 @@
       "form_type": "10-Q",
       "period_end": "2026-06-30",
       "processed_at": "2026-07-30T09:22:36Z",
+      "sections_found": [
+        "market_risk"
+      ],
+      "fields_extracted": 0,
+      "fields_null": 18
+    },
+    {
+      "filing_date": "2026-09-30",
+      "form_type": "10-Q",
+      "period_end": "2026-09-30",
+      "processed_at": "2026-10-29T03:03:17Z",
       "sections_found": [
         "market_risk"
       ],

@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-29 ===
+[NUMERIC] corporate_debt_securities_fv: $32M → $25M (-21.9%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_asset: $14M → $22M (+57.1%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $26M → $34M (+30.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $14M → $22M (+57.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $26M → $34M (+30.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-91M, now missing
+[LLM_FLAG] fi_total_derivative_asset rose from $14M to $22M (+57% vs prior), fi_total_derivative_liability rose from $26M to $34M (+31%); the text gives no company-specific explanation for either move beyond the generic recurring fair-value remeasurement, attributing fair-value changes only to 'market movements and changes in the Company's positions.'
+[LLM_FLAG] corporate_debt_securities_fv mapped from the filing's 'Non-U.S. debt securities' line (no 'corporate debt securities' category is disclosed this quarter) — flagging the label mismatch for review.
+[LLM_FLAG] This excerpt of Note 14 contains no FX or interest-rate notional figures (those appear in the separate derivatives note), so fi_fx_derivatives_notional, fi_fx_designated_notional, fi_fx_not_designated_notional and fi_ir_swap_notional are not_found from this section.
+[LLM_FLAG] Deal-contingent hedge terminated: 'In March 2026, the interest rate swap contracts designated as cash flow hedges with a notional amount of $ 2.5 billion hedging a portion of the Company's expected exposure in connection with future debt financing activities related to the acquisition of Chart, were terminated with the completion of the debt financing. A loss of $ 91 million was recorded in AOCI... As of September 30, 2026, there are no active cash flow hedges.' No period-end AOCI balance is disclosed, so cash_flow_hedge_aoci is not_found despite this known $91M charge.
+[LLM_FLAG] Net investment hedge de-designation tied to M&A financing: 'In July 2026, the Company de-designated € 3.0 billion (approximately $ 3.5 billion, equivalent) of notes previously designated as a non-derivative net investment hedge as part of the financing strategy for the Chart acquisition. The resulting amount recorded in AOCI was a gain of $ 64 million.'
+[LLM_FLAG] Exotic/credit instrument wound down: company-issued CDS notional on Mexican customer receivables financing fell to nil — 'The total notional amount remaining on the issued CDS was nil and $ 287 million as of September 30, 2026 and December 31, 2025, respectively.'
+[LLM_FLAG] Aggregate gross derivative notional fell from $7.1B (Dec 2025) to $4.5B (Sept 2026), a ~37% drop, per 'the outstanding notional amount of $ 4.5 billion and $ 7.1 billion at September 30, 2026 and December 31, 2025, respectively' — this blended figure spans FX, commodity, interest-rate and embedded-derivative exposure together and isn't broken out by instrument type in this text, hence fx/commodity/equity notional fields above are not_found.
+[LLM_FLAG] Item 3 is incorporated entirely by reference this quarter: 'Quantitative and Qualitative Disclosures about Market Risk," in our 2025 Annual Report. Our exposure to market risk has not changed materially since December 31, 2025.' No sensitivities, notionals or fair values are restated in the Q3 2026 10-Q text itself, so every schema field here is not_found — this is a disclosure-format choice, not evidence that exposures are unchanged in substance (the derivatives_note section for this same filing shows material hedging activity tied to the Chart acquisition this quarter).
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-10 ===
 [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($1,198M)
 [NEW_FIELD] marketable_equity_securities_fv: appeared for first time ($1,170M)

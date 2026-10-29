@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-29 ===
+[DISAPPEARED_FIELD] commodity_designated_notional: was $0M, now missing
+[NUMERIC] total_derivative_asset: $939M → $674M (-28.2%) — exceeds 25% threshold
+[NUMERIC] net_asset: $446M → $300M (-32.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_oci_gain_loss: was $-11M, now missing
+[DISAPPEARED_FIELD] commodity_oci_gain_loss: was $0M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $5M → $-21M (-520.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] hedge_ineffectiveness: was $0M, now missing
+[DISAPPEARED_FIELD] credit_contingent_liability_fv: was $0M, now missing
+[DISAPPEARED_FIELD] collateral_posted: was $0M, now missing
+[NUMERIC] cash_flow_hedge_aoci_balance: $19M → $-51M (-368.4%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 6/16 previously-populated fields are now null (commodity_designated_notional, fx_oci_gain_loss, commodity_oci_gain_loss, hedge_ineffectiveness, credit_contingent_liability_fv...)
+[LLM_FLAG] expected_12mo_reclass_from_aoci flipped from a prior $5M (expected net gain reclass) to -$21M this quarter (sign flip, >50% change): 'We expect to reclassify $21 million of pre-tax net losses associated with designated cash flow hedges to earnings in the next 12 months, contemporaneously with the earnings effects of the related forecasted transactions.' No driver is narrated.
+[LLM_FLAG] cash_flow_hedge_aoci_balance swung from a prior $19M to -$51M this quarter (sign flip, >50% change): 'The total amount in AOCI related to cash flow hedges was a net $51 million loss and a net $100 million gain as of September 30, 2026 and December 31, 2025, respectively' -- a roughly $151M nine-month swing from net gain to net loss position, with no cited driver.
+[LLM_FLAG] commodity_designated_notional not found: the gross fair value table lists 'Commodity and other contracts' only once, grouped under the 'Derivatives not accounted for as hedges' subtotal ($33,873M = $33,328M FX + $545M commodity), implying GE Vernova has no designated commodity hedges this quarter, consistent with the prior period's reported $0.
+[LLM_FLAG] FX hedge mix shifted toward designated accounting: designated FX notional rose from a prior $7,593M to $8,605M (+13.3%) while not-designated FX notional fell from $38,061M to $33,328M (-12.4%); neither move exceeds the 50% flag threshold but the direction is notable.
+[LLM_FLAG] Counterparty netting disclosure: 'When foreign currency exchange contracts with the same currency pair and maturity date are netted across different counterparties, the notional amount reduces to approximately $22,047 million and $24,740 million as of September 30, 2026 and December 31, 2025, respectively' -- gross FX notional of ~$42.5B compresses to ~$22.0B on a counterparty-netted basis.
+[LLM_FLAG] Net investment hedge AOCI reported as an identical net $31 million gain at both September 30, 2026 and December 31, 2025 ('The total amount in AOCI related to net investment hedges was a net gain of $31 million as of September 30, 2026 and December 31, 2025') -- worth confirming against the filing before quoting as a current-period figure.
+[LLM_FLAG] No quantitative 10% hypothetical sensitivity analysis is provided in this 10-Q for either FX or commodity risk; the filing incorporates it by reference instead: 'See Item 7A. "Quantitative and Qualitative Disclosures About Market Risk" in our Annual Report on Form 10-K for the fiscal year ended December 31, 2025 for more information about foreign exchange risk, interest rate risk, and commodity risk.'
+[LLM_FLAG] The section instead discloses the actual (not hypothetical) FX earnings effect: 'The effects of foreign currency fluctuations on earnings were less than $(0.1) billion for both the three months ended September 30, 2026 and 2025, and $(0.1) billion and less than $0.1 billion for the nine months ended September 30, 2026 and 2025, respectively.' This does not satisfy the 10%-sensitivity schema fields and is not a substitute figure.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-23 ===
 [NUMERIC] commodity_not_designated_notional: $439M → $570M (+29.8%) — exceeds 20% threshold
 [NUMERIC] total_derivative_liability: $617M → $747M (+21.1%) — exceeds 20% threshold

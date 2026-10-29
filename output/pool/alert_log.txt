@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-29 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($300M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $300M, now missing
+[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($300M)
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (cash_flow_hedge_aoci)
+[LLM_FLAG] cash_flow_hedge_aoci: prior run recorded 300.0 but this section text states no specific AOCI dollar balance for the swaps (only qualitative policy language) — returned null rather than carrying forward the prior figure; needs sourcing from the balance sheet/equity statement, not this note.
+[LLM_FLAG] equity_derivatives_notional: prior run recorded a non-numeric value "Yes" for this notional field, which is itself a likely prior extraction error (a Yes/No value in a notional slot); this section text contains no equity derivatives of any kind — only a deferred compensation plan asset (mutual funds) and an equal offsetting liability, which are not equity derivatives.
+[LLM_FLAG] Master netting: "Our interest rate swap contracts are subject to master netting arrangements. According to our accounting policy, we do not offset the fair values of assets with the fair values of liabilities related to these contracts" — company has netting rights in place but presents derivative fair values gross on the balance sheet.
+[LLM_FLAG] Item 7A content is incorporated by reference to the 2025 Form 10-K rather than restated in this 10-Q — the extracted section_text contains only the cross-reference sentence, with no quantitative market-risk disclosure to extract this period.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($300M)
 [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $300M, now missing

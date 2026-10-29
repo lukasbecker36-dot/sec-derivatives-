@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-10-02 | Processed 2026-10-29 ===
+[NUMERIC] ir_swap_notional: $14,955M → $769M (-94.9%) — exceeds 20% threshold
+[NUMERIC] commodity_derivatives_notional: $65M → $48M (-26.2%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-339M → $71M (+120.9%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional: prior extraction recorded $14,955M; this quarter's explicit interest-rate cash-flow-hedge notional is only $769M (itself down 56.9% from $1,786M at Dec 31, 2025 per the comparative column). The filing separately discloses a $11,875M notional for 'fair value hedges of this type' (vs $13,674M prior), which combines interest rate swap agreements AND cross-currency interest rate swaps without a split between them -- likely the source of the larger prior combined figure. The two amounts cannot be cleanly reconciled from this text; flagging the field-definition mismatch for review rather than guessing a combined total.
+[LLM_FLAG] expected_12mo_reclass_from_aoci swung from -$339M (prior extraction) to +$71M this quarter ('net gains of $ 71 million'); the filing gives no narrative explanation for the swing from net loss to net gain.
+[LLM_FLAG] Newsworthy: net investment hedge effectiveness methodology changed in 2025 -- 'In 2025, the Company changed its method for assessing the effectiveness of derivative financial instruments designated as net investment hedges to include only the changes in fair value attributable to changes in foreign currency spot rates.'
+[LLM_FLAG] Newsworthy/exotic structure: cross-currency interest rate swaps are used both as designated cash-flow hedges of FX-denominated debt ($557M notional, flat both periods) and folded into the $11,875M fair-value-hedge notional bucket -- a cross-currency hedging structure spanning both FX and rate risk that Risk.net readers would want flagged rather than assumed to be a pure IR number.
+[LLM_FLAG] Item 3 (Quantitative and Qualitative Disclosures About Market Risk) contains no quantitative data this quarter -- it is a pure incorporation-by-reference statement pointing to the FY2025 Form 10-K. No sensitivities, notionals, or fair values can be extracted from this section; all 20 schema fields are not_found by design, not extraction failure.
+
 === 10-Q | Period ending 2025-06-27 | Processed 2026-09-15 ===
 [NUMERIC] commodity_derivatives_notional: $33M → $65M (+97.0%) — exceeds 20% threshold
 [NUMERIC] expected_12mo_reclass_from_aoci: $-97M → $-339M (-249.5%) — exceeds 20% threshold

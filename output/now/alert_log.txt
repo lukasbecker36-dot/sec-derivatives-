@@ -1,3 +1,29 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-29 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,600M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($2,200M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($3,400M)
+[NUMERIC] total_derivative_asset: $5,800M → $51M (-99.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $2,300M → $14M (-99.4%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $3,500M → $37M (-98.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $47M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $22M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $25M, now missing
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($6M)
+[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
+[VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, marketable_equity_value)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 5,800 to 51 (0x)
+[VALIDATION] Likely units mismatch: total_derivative_liability changed from 2,300 to 14 (0x)
+[LLM_FLAG] total_derivative_asset moved from a prior value of $5,800M to $51M (sum of the $37M + $14M designated-hedge fair-value asset lines in this filing); nothing in the filing accounts for a swing of this size — the prior figure looks like a notional amount that was recorded in this fair-value field in an earlier extraction, not a real change.
+[LLM_FLAG] total_derivative_liability moved from a prior value of $2,300M to $14M (sum of the $12M + $2M designated-hedge fair-value liability lines); same apparent prior-extraction error as total_derivative_asset — the filing gives no explanation for a change of this magnitude.
+[LLM_FLAG] net_derivative_position moved from a prior value of $3,500M to $37M, consistent with (and a downstream consequence of) the asset/liability discrepancies above rather than an independent finding.
+[LLM_FLAG] Newsworthy: beginning in Q4 2025 ServiceNow expanded its FX cash flow hedging program from revenues only to also cover forecasted FX-denominated expenses: "beginning in the fourth quarter of 2025, we also entered into forward contracts to hedge a portion of our forecasted foreign currency denominated expenses."
+[LLM_FLAG] Newsworthy: notional of non-designated FX forwards (used to hedge monetary assets/liabilities in non-functional currencies) rose from $2.5B at year-end 2025 to $3.4B at Q3 2026, a ~36% increase.
+[LLM_FLAG] Newsworthy: no hedge ineffectiveness — "There was no ineffectiveness in the Company’s cash flow hedging program for each of the three and nine months ended September 30, 2026 and 2025."
+[LLM_FLAG] Newsworthy: $4.0 billion of new fixed-rate senior notes issued in May 2026 across five tranches (2028–2056), with net proceeds used to repay the Term Loan — relevant context for the market-risk note on debt, though these are not derivatives.
+[LLM_FLAG] This Item 3 market-risk section explicitly limits itself to changes since the FY2025 10-K: "Except for the fixed-rate senior notes and unsecured revolving credit facility entered into during the three months ended June 30, 2026, there have been no other changes in our market risk compared to the disclosures in Part II, Item 7A in our Annual Report on Form 10-K... which was filed with the SEC on January 29, 2026." It contains no FX, interest-rate, or equity sensitivity figures, so most schema fields are genuinely not_found here rather than missed — the quantified figures (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, marketable_equity_value) all carry prior values from the FY2025 10-K/earlier 10-Q that this filing does not restate.
+[LLM_FLAG] Newsworthy: $4.0 billion of new fixed-rate senior notes issued in May 2026 across five tranches due 2028–2056; net proceeds of $3.9 billion (after $57M of discount/issuance costs) were used to repay outstanding Term Loan borrowings.
+[LLM_FLAG] Newsworthy: new $3.0 billion unsecured revolving Credit Facility entered into in April 2026, bearing a variable rate (benchmark + 0.60%–1.00% spread tied to credit rating); as of September 30, 2026 nothing was drawn, so it currently carries no interest-rate P&L exposure but is a new source of variable-rate risk if drawn.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,800M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($2,300M)

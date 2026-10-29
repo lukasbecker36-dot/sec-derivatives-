@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-29 ===
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $0M, now missing
+[NUMERIC] total_derivative_asset: $2,176M → $710M (-67.4%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $1,430M → $594M (-58.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $746M → $116M (-84.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-42M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[NUMERIC] fx_sensitivity_10pct: $-5M → $-8M (-60.0%) — exceeds 20% threshold
+[NUMERIC] fx_investment_sensitivity: $-5M → $-8M (-60.0%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset fell 67% q/q, from $2,176M at June 30, 2026 to $710M at September 30, 2026 (gross amounts of derivatives); the section text gives no narrative explanation for the magnitude of the move.
+[LLM_FLAG] total_derivative_liability fell 58% q/q, from $1,430M at June 30, 2026 to $594M at September 30, 2026 (gross amounts of derivatives); no explanation given in the text.
+[LLM_FLAG] net_derivative_position (gross asset minus gross liability) fell 84% q/q, from $746M to $116M. The swing is concentrated in non-designated FX contracts, whose fair value fell from assets of $1,742M/liabilities of $(1,175)M at June 30, 2026 to assets of $331M/liabilities of $(379)M at September 30, 2026 -- consistent with FX rate movement rather than a change in notional (FX non-designated notional only fell ~2%, from $63,465M to $61,996M), but the filing states no cause.
+[LLM_FLAG] Newsworthy for context: non-designated equity contracts recognized a $1,579M gain in the prior-year comparative quarter (three months ended September 30, 2025) versus just $5M in the current quarter -- the filing quotes this swing in the gains/losses table but does not explain it.
+[LLM_FLAG] Master netting offset amounts moved in step with the fair-value decline: gross derivative assets/liabilities subject to legally enforceable master netting agreements were "$696 million and $578 million" at September 30, 2026 versus "$2.2 billion and $1.4 billion" at June 30, 2026. No collateral was required to be posted ("our long-term unsecured debt rating was AAA, and cash investments were in excess of $1.0 billion").
+[LLM_FLAG] fx_sensitivity_10pct / fx_investment_sensitivity (the FX-on-investments fair-value sensitivity) moved from $(5)M to $(8)M, a 60% increase that crosses the 50% threshold, though the absolute dollar change is only $3M and the filing gives no explanation. By contrast, the much larger fx_revenue_sensitivity figure (earnings impact from a 10% FX move on revenue) only moved from $(13,653)M to $(14,451)M, ~6%.
+
 <<<<<<< HEAD
 === 10-Q | Period ending 2026-03-31 | Processed 2026-06-11 ===
 [HISTORICAL] [NUMERIC] total_derivative_asset: $320M → $1,080M (+237.5%) — exceeds 20% threshold

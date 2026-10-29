@@ -21,7 +21,13 @@
       "interest rate swap",
       "notional amount",
       "mark-to-market",
-      "unrealized gain"
+      "unrealized gain",
+      "net investment hedge",
+      "cash flow hedge",
+      "fair value hedge",
+      "de-designated",
+      "aoci",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -87,6 +93,19 @@
       ],
       "fields_extracted": 0,
       "fields_null": 20
+    },
+    {
+      "filing_date": "2026-09-30",
+      "form_type": "10-Q",
+      "period_end": "2026-09-30",
+      "processed_at": "2026-10-29T03:03:05Z",
+      "sections_found": [
+        "financial_instruments",
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 11,
+      "fields_null": 27
     }
   ]
 }

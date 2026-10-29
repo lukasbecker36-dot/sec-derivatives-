@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-29 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($1,660M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($17M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($17M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($7M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($17M)
+[LLM_FLAG] New hedging programme: Carvana entered a new interest rate swap (notional $1.660B, 4.055% fixed vs. one-month Term SOFR) designated as a cash flow hedge of Term Loan B floating-rate interest payments — 'the Company has designated the swap as a cash flow hedge of the variability in cash flows attributable to changes in one-month Term SOFR on the forecasted interest payments on the Term Loan B.'
+[LLM_FLAG] Partial-term hedge: the swap terminates July 31, 2028, before the Term Loan B matures, so only interest payments through that date are hedged — 'Because the swap terminates prior to the maturity of the Term Loan B, the hedging relationship is a partial-term hedge, and the Company has designated as hedged only those interest payments occurring through July 31, 2028.'
+[LLM_FLAG] Counterparty concentration: the swap was transacted with a single counterparty — 'The Company transacted the swap with a single counterparty, a major financial institution, and is therefore exposed to a concentration of credit risk with respect to that counterparty.'
+[LLM_FLAG] Interest rate swap substantially mutes IR sensitivity: a 100bp move in Term SOFR would swing annual interest expense by ~$17M before the swap, but per the filing, 'After giving effect to the interest rate swap, which had a notional amount of $1.660 billion as of September 30, 2026, a one percentage point increase or decrease in Term SOFR would not have a material impact on annual interest expense during the term of the swap.'
+[LLM_FLAG] Counterparty concentration repeated in market-risk section: 'The Company transacted the swap with a single counterparty, a major financial institution, and is therefore exposed to a concentration of credit risk with respect to that counterparty.'
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,265M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $15M, now missing

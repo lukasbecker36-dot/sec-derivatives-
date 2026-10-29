@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-29 ===
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $75M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (cash_flow_hedge_aoci)
+[LLM_FLAG] No outstanding IR swap/derivative notional table appears in this excerpt — only a sequence of 2026 treasury-lock TERMINATIONS (already-closed hedges), so ir_swap_notional is left null rather than populated with a terminated contract's notional.
+[LLM_FLAG] No AOCI balance total is stated for cash flow hedges (prior_values had 75.0); only incremental termination gains are disclosed ($5M, <$1M, $3M into AOCI), so cash_flow_hedge_aoci is left null rather than carried forward or summed.
+[LLM_FLAG] Newsworthy: four rounds of treasury-lock terminations in 2026, each timed to a debt issuance — Sept 2026 ($400M, 7yr, notes issued Sept 16, 2026, $5M gain to AOCI), May 2026 ($400M, 3yr, notes issued May 20, 2026, <$1M gain to AOCI), and March 2026 ($600M, 10yr, notes issued April 1, 2026, $3M gain to AOCI) — classic anticipated-debt-issuance interest rate hedging, amortized through Interest expense over the matching tenor.
+[LLM_FLAG] Newsworthy/anomalous: the May 2026 termination of five treasury locks ($175M aggregate notional, 30yr term, 'previously designated as cash flow hedges') realized a $7M pre-tax gain recorded in 'Other, net' in the Statements of Operations rather than in AOCI like the other three terminations — inconsistent treatment suggesting dedesignation or that the hedged forecasted transaction was no longer probable; worth verifying against the filing.
+[LLM_FLAG] Text states: 'No ineffectiveness was recognized on hedging instruments for the three and nine months ended September 30, 2026 or 2025.'
+[LLM_FLAG] Item 3 is boilerplate: the full section_text is 'Quantitative and Qualitative Disclosures about Market Risk in the Company’s Form 10-K. There have been no significant changes to the Company’s exposure to market risk since December 31, 2025.' It incorporates the 10-K's market risk disclosure by reference and contains no numeric fields to extract.
+[LLM_FLAG] Note for the digest: despite this section's 'no significant changes' language, the separately-extracted derivatives_note section for the same filing reports four treasury-lock terminations in 2026 totaling $1,575M aggregate notional tied to debt issuances — that activity lives in the notes, not Item 3, so it will not appear from this section alone.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($75M)
 [DISAPPEARED_FIELD] total_derivative_asset: was $0M, now missing

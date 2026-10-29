@@ -21,7 +21,8 @@
       "accumulated other comprehensive",
       "interest rate swap",
       "notional amount",
-      "unrealized gain"
+      "unrealized gain",
+      "hedge ineffectiveness"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -94,6 +95,18 @@
       ],
       "fields_extracted": 16,
       "fields_null": 8
+    },
+    {
+      "filing_date": "2026-09-30",
+      "form_type": "10-Q",
+      "period_end": "2026-09-30",
+      "processed_at": "2026-10-29T03:03:09Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 7,
+      "fields_null": 17
     }
   ]
 }

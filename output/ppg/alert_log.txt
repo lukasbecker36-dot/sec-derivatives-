@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-29 ===
+[NUMERIC] fx_designated_notional: $375M → $660M (+76.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_swap_notional: was $375M, now missing
+[NUMERIC] total_derivative_liability: $23M → $92M (+300.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $15M → $-53M (-453.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $0M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($3,400M)
+[LLM_FLAG] fx_designated_notional rose from $375M to $660M (+76% vs prior_values), because PPG newly designated $285M of FX forward contracts as net investment hedges this quarter: 'At September 30, 2026, PPG had foreign currency forward contracts with total notional amounts of $ 285 million that were designated as hedges of the Company's net investment in its European operations.' The text confirms none were designated a year-end 2025: 'No foreign currency forward contracts were designated as net investment hedges at December 31, 2025.'
+[LLM_FLAG] total_derivative_liability rose from $23M to $92M (+300% vs prior_values). The driver is the non-designated FX forward book (Note 12 'Other Financial Instruments') swinging from a near-zero net position to a $66M net liability: 'The fair values of these contracts were net liabilities of $ 66 million and net assets of $ 1 million as of September 30, 2026 and December 31, 2025, respectively.' This is a disclosed fair-value swing, not an extraction artifact (asset-side Level 2 for that line moved $5M -> $14M while liability-side moved $4M -> $80M in the fair-value hierarchy table).
+[LLM_FLAG] net_derivative_position swung from a net asset of $15M (prior) to a net liability of $53M, tracking the same non-designated FX forward fair-value move noted above.
+[LLM_FLAG] ir_sensitivity_100bp is not disclosed in 100bp-parallel-shift terms. PPG instead discloses a blended relative-rate-shock sensitivity: 'a 10% increase in interest rates in the U.S., Canada, Mexico and Europe and a 20% increase in interest rates in Asia and South America would have increased annual interest expense associated with PPG's variable rate debt obligations by $4 million and $3 million for the periods ended September 30, 2026 and December 31, 2025, respectively.' Returning null rather than substituting this differently-scaled figure to avoid misrepresenting the methodology.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($3,400M)
 [NUMERIC] total_derivative_asset: $17M → $38M (+123.5%) — exceeds 20% threshold

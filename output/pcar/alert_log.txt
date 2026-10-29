@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-29 ===
+[NUMERIC] total_derivative_asset: $44M → $62M (+38.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[LLM_FLAG] Fair value hedges: cumulative basis adjustment on the hedged Financial Services term notes flipped from an increase of $3.9M (Dec 31, 2025) to a decrease of $(31.5)M (Sept 30, 2026) — text: "Cumulative basis adjustment (decrease) increase included in the carrying amount ... ( 31.5 ) ... 3.9". No explanation given for the swing.
+[LLM_FLAG] Discontinued hedge relationships: "The above table excludes the cumulative basis adjustments on discontinued hedge relationships of $ ( .6 ) and nil as of September 30, 2026 and December 31, 2025, respectively" — indicates at least one fair value hedge was de-designated/discontinued during the period; no further detail given in this excerpt on which instrument or why.
+[LLM_FLAG] Carrying amount of hedged liabilities under fair value hedges nearly doubled: $753.7M (Dec 31, 2025) to $1,300.8M (Sept 30, 2026), a 72.6% increase — text: "Carrying amount of the hedged liabilities ... $ 1,300.8 ... $ 753.7". Likely reflects new fixed-rate debt issuance swapped to floating, but the filing excerpt does not state a cause.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
 [NUMERIC] commodity_derivatives_notional: $26M → $32M (+20.6%) — exceeds 20% threshold
 [NUMERIC] total_derivative_asset: $59M → $44M (-24.4%) — exceeds 20% threshold

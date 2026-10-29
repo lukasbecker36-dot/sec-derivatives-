@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-29 ===
+[NEW_FIELD] total_derivative_liability: appeared for first time ($-444M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-195M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-159M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-141M)
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $192M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $155M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $37M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $17M, now missing
+[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (fx_forwards_outstanding, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion)
+[LLM_FLAG] total_derivative_asset: prior value was 0.0, current is 249 — a jump from essentially no net derivative asset position to $249M. The section text gives no narrative explanation for this change (no discussion tying it to the ONEOK Holdings Transaction or commodity price moves); verify against the full fair-value table before quoting as a trend.
+[LLM_FLAG] Large negative swing in cash flow hedge AOCI: the filing states the Dec 31, 2025 balance was a positive $19 million while the Sept 30, 2026 balance is $(159) million, with the nine-month change in fair value of cash flow hedges in OCI for commodity contracts at $(647) million ('the change in fair value of cash flow hedges in other comprehensive income (loss) related to commodity contracts was $( 276 ) million and $( 647 ) million' for the three/nine months). This is a materially newsworthy deterioration in OKE's commodity hedge book worth flagging for commentary.
+[LLM_FLAG] Notional quantities this quarter are disclosed only in physical units (Bcf, MMBbl) for commodity cash-flow and non-designated hedges — no dollar notional is given in this excerpt, so commodity_derivatives_notional, ir_swap_notional and the FX notional fields are not_found rather than estimated from volumes.
+[LLM_FLAG] equity_derivatives_notional prior_value was recorded as the string 'Yes', which is inconsistent with a notional (dollar) field — flagging as a likely pipeline/schema data-quality issue unrelated to this quarter's filing text, which contains no mention of equity derivatives at all.
+[LLM_FLAG] Item 3 (Quantitative and Qualitative Disclosures about Market Risk) is entirely incorporated by cross-reference this quarter — the section text is just 'See Note D of the Notes to Consolidated Financial Statements in this Quarterly Report for more information on our hedging activities,' pointing back to the Annual Report and the derivatives note. No standalone sensitivity figures (IR 100bp, FX 10%, equity 10%, fixed-rate notes outstanding) are stated in this excerpt, even though prior_values show this issuer has historically reported them (e.g. ir_sensitivity_100bp=155, fx_sensitivity_10pct=37, fixed_rate_notes_billion=17, fx_transaction_gain_loss=192). This is a disclosure gap this period, not a confirmed change in those metrics — do not carry forward the prior figures.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
 [NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)

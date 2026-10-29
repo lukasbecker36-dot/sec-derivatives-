@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-29 ===
+[DISAPPEARED_FIELD] total_derivative_asset: was $8,210M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $8,210M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $0M, now missing
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-619M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-290M)
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-671M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $285M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, fixed_rate_notes_billion, marketable_equity_value...)
+[LLM_FLAG] fx_derivatives_notional / fx_designated_notional: the only notional disclosed for the cross-currency swap book is €7.3 billion (EUR), not USD; the section gives no EUR/USD exchange rate, so no millions-USD figure is reported rather than fabricating a conversion. A USD carrying value for 'Senior Notes to third parties (EUR-denominated)' of $8,183 million appears in the debt fair-value table but is a different measure (carrying amount of outstanding EUR bonds, not swap notional at issuance) and should not be substituted.
+[LLM_FLAG] prior_values data-quality concern: prior_values for this field set carries 'equity_derivatives_notional': 'Yes' (a Yes/No string in a notional field) and identical total_derivative_asset/total_derivative_liability of 8210.0 (implying a net position of exactly 0.0) — both patterns are consistent with values extracted into the wrong schema field in a prior run; this section_text contains no derivative asset/liability fair-value table to confirm or refute either figure.
+[LLM_FLAG] cash_flow_hedge_aoci is inferred from the terminated interest-rate-lock-derivative AOCI balance (own hedge program); the section does not label this balance as 'cash flow hedge AOCI' explicitly, so confidence is medium rather than high.
+[LLM_FLAG] currency_swaps_notional: the section only discloses the EUR-denominated debt balance hedged (€7.3 billion), not a USD notional and not a standalone swap fair value; no exchange rate is given in this text, so no millions-USD figure is reported rather than guessing a conversion. (Mirrors the same €7.3 billion figure and the same limitation flagged in the companion derivatives_note extraction for this period.)
+[LLM_FLAG] prior_values data-quality concern: prior fixed_rate_notes_billion of -671.0 is implausible for a 'notes outstanding, in billions' field (negative and far outside TMUS's actual debt scale of ~$70-85 billion); this section gives no current figure to replace it, so the field is left null rather than carrying the suspect prior value forward.
+[LLM_FLAG] No quantified interest-rate or FX sensitivity (e.g., a 100bp or 10% stress figure) is given anywhere in this market-risk excerpt — management states only qualitative policy ('We do not foresee significant changes in the strategies used to manage market risk in the near future'), so none of the sensitivity fields can be populated from this text.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($8,210M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($8,210M)

@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-29 ===
+[NUMERIC] total_derivative_asset: $29M → $39M (+33.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $3M → $12M (+332.1%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $8M → $17M (+103.5%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-2M → $11M (+764.7%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position moved from $2.8M to $12.1M (+332%). This is a derived figure (total assets minus total liabilities across the two fair-value tables); nothing in the filing text explains the net move specifically, though it follows from the asset side rising to $39.0M from $29.3M while liabilities were roughly flat ($26.9M vs $26.5M).
+[LLM_FLAG] cash_flow_hedge_aoci moved from $8.5M to $17.3M (+104%). The filing shows the components -- unrealized gains of $22.5M (vs $0 prior) and unrealized losses of $(5.2)M (vs $(73.3)M prior) -- but does not explain in prose why the loss position improved so sharply.
+[LLM_FLAG] expected_12mo_reclass_from_aoci moved from $(1.7)M to $11.3M, flipping from an expected net reclassification loss to a net gain. No explanatory language is given beyond the underlying AOCI balance shift noted above.
+[LLM_FLAG] hedge_horizon changed from "next 18 months" (prior) to "next 15 months": "the majority of our forward contracts and options used to hedge certain forecasted revenue and operating expense transactions denominated in foreign currencies in the next 15 months." Nothing in the filing explains the shortened hedging horizon.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $2,513M, now missing
 [DISAPPEARED_FIELD] total_marketable_securities_fv: was $1,503M, now missing
