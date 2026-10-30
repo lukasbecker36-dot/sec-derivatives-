@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SEC Derivatives — Daily Digest — 2026-10-30 (content held for review)</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; max-width: 860px; margin: 0 auto; padding: 24px 20px 60px; color: #1a1a1a; line-height: 1.5; }
+  h1 { font-size: 1.4em; border-bottom: 2px solid #1a1a1a; padding-bottom: 8px; }
+  h2 { font-size: 1.15em; margin-top: 2em; border-bottom: 1px solid #ccc; padding-bottom: 4px; }
+  .summary { background: #f4f4f0; border-left: 4px solid #555; padding: 10px 16px; margin: 1em 0; font-size: 0.97em; }
+  .lead { margin-bottom: 1.3em; }
+  .lead .ticker { font-weight: bold; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.88em; margin: 0.8em 0; }
+  th, td { border: 1px solid #ccc; padding: 5px 8px; text-align: left; vertical-align: top; }
+  th { background: #eee; }
+  .flag { color: #a33; font-weight: bold; }
+  .note { font-size: 0.85em; color: #555; }
+  .footer { margin-top: 2.5em; padding-top: 10px; border-top: 1px solid #999; font-size: 0.85em; color: #444; }
+  code { background: #f0f0f0; padding: 1px 4px; font-size: 0.92em; }
+</style>
+</head>
+<body>
+
+<h1>SEC Derivatives — Daily Digest — 2026-10-30 (content held for review)</h1>
+
+<div class="summary">
+The scheduler processed filings overnight but the audit gate blocked the push to master. 30 filings sit on the following review branch(es):
+</div>
+
+<h2>Held for review</h2>
+
+<p>
+<strong>Branch:</strong> <code>review/2026-10-30-scheduler-gate-failed</code><br>
+<strong>Committed:</strong> 2026-10-30T03:09:55+00:00<br>
+<strong>Commit subject:</strong> "chore(scheduler): update derivatives.duckdb cache from audit run"<br>
+<span class="note">(This branch's prior commit — c8b45eb2, 2026-10-30T03:09:22+00:00 — is the one the gate held: "chore(scheduler): 30 filings processed across 30 issuers (AOS, GOOGL, MO, BAX, BMY, BLDR, BG, CARR, CMG, CTSH, GLW, DVA, DECK, DXCM, EBAY, ECL, EIX, FSLR, FE, F, GEN, HAS, HCA, HSY, HWM, HII, INCY, KLAC, LHX, LLY), 1 failed [GATE FAILED — held on review/2026-10-30-scheduler-gate-failed]".)</span>
+</p>
+
+<p class="note">Content preview (first 10 of 30 tickers on the branch; values are millions unless noted):</p>
+<table>
+<tr><th>Ticker</th><th>Period end</th><th>Form</th><th>Key values</th></tr>
+<tr><td>AOS</td><td>2026-09-30</td><td>10-Q</td><td>ir_swap_notional: 37.1; cash_flow_hedge_aoci: 1.2</td></tr>
+<tr><td>BAX</td><td>2026-09-30</td><td>10-Q</td><td>fx_derivatives_notional: 151; ir_swap_notional: 0; total_derivative_asset: 0; total_derivative_liability: 797; net_derivative_position: -797; fx_designated_notional: 0; fx_not_designated_notional: 151</td></tr>
+<tr><td>BG</td><td>2026-09-30</td><td>10-Q</td><td>total_derivative_asset: 2587</td></tr>
+<tr><td>BMY</td><td>2026-09-30</td><td>10-Q</td><td>fx_derivatives_notional: 12508; ir_swap_notional: 6055; equity_derivatives_notional: 480; total_derivative_asset: 353; total_derivative_liability: 324; net_derivative_position: 29; fx_designated_notional: 6735; fx_not_designated_notional: 5773</td></tr>
+<tr><td>CARR</td><td>2026-09-30</td><td>10-Q</td><td>fx_derivatives_notional: 3700; total_derivative_asset: 133; total_derivative_liability: 171; net_derivative_position: -38; fx_designated_notional: 3700</td></tr>
+<tr><td>CTSH</td><td>2026-09-30</td><td>10-Q</td><td>fx_derivatives_notional: 3025; total_derivative_asset: 6; total_derivative_liability: 116; net_derivative_position: -110; fx_designated_notional: 3025</td></tr>
+<tr><td>DECK</td><td>2026-09-30</td><td>10-Q</td><td>fx_derivatives_notional: 267.975; total_derivative_asset: 9.493; net_derivative_position: 9.493; fx_designated_notional: 235.297; fx_not_designated_notional: 32.678</td></tr>
+<tr><td>DXCM</td><td>2026-09-30</td><td>10-Q</td><td>fx_derivatives_notional: 273.3; fx_not_designated_notional: 273.3</td></tr>
+<tr><td>EBAY</td><td>2026-09-30</td><td>10-Q</td><td>fx_derivatives_notional: 3086; ir_swap_notional: 400; total_derivative_asset: 48; total_derivative_liability: 28; net_derivative_position: 20; fx_designated_notional: 1429; fx_not_designated_notional: 1657</td></tr>
+<tr><td>ECL</td><td>2026-09-30</td><td>10-Q</td><td>fx_derivatives_notional: 7246; ir_swap_notional: 1250; total_derivative_asset: 5.6; total_derivative_liability: 246.8; net_derivative_position: -241.2</td></tr>
+</table>
+<p class="note">The remaining 20 tickers on the branch (BLDR, CMG, GLW, DVA, EIX, FSLR, FE, F, GEN, HAS, HCA, HSY, HWM, HII, INCY, KLAC, LHX, LLY, GOOGL, MO) are not shown in the manifest's content preview, which caps at 10.</p>
+
+<p>The content is preserved on the review branch but not usable for publication until reviewed.</p>
+
+<h2>Extraction regressions</h2>
+<p>no regressions.</p>
+
+<div class="footer">
+Verified: 0 leads with narrative context, 0 total figures traced to digest_manifest.json new_filings entries. 0 extraction regressions and 1 held-for-review branches listed. 0 backfill rows summarised in the header count only. Window: 2026-10-29T04:26:21+00:00 onwards; 0 scheduler runs.
+</div>
+
+</body>
+</html>
