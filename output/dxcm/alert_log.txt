@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-30 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($273M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($273M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $257M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $0M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $257M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position)
+[LLM_FLAG] total_derivative_asset / total_derivative_liability / net_derivative_position: no fair-value table for derivative instruments appears in this excerpt (prior extraction had total_derivative_asset=257.1, total_derivative_liability=0.0). Cannot confirm whether this reflects a disclosure change, immateriality, or a section-extraction boundary issue -- verify against the full note before reporting a change.
+[LLM_FLAG] fx_derivatives_notional rose from $229.3 million (Dec 31, 2025) to $273.3 million (Sept 30, 2026), a ~19% increase; filing attributes no specific cause beyond ongoing hedging of intercompany loans and non-functional-currency monetary assets/liabilities.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($257M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

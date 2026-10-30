@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-30 ===
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($0M)
+[DISAPPEARED_FIELD] has_derivatives: was $0M, now missing
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $0M, now missing
+[DISAPPEARED_FIELD] fx_designated_notional: was $0M, now missing
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($1,500M)
+[NEW_FIELD] fair_value_debt: appeared for first time ($21M)
+[NEW_FIELD] rate_sensitivity_decrease: appeared for first time ($1,700M)
+[VALIDATION] Likely extraction failure: 3/4 previously-populated fields are now null (has_derivatives, fx_derivatives_notional, fx_designated_notional)
+[LLM_FLAG] No outstanding foreign currency contracts at either September 30, 2026 or December 31, 2025 ('we had no outstanding foreign currency contracts'), despite the note describing an active net investment hedging programme (cross-currency swaps and forward contracts) for the ABI equity stake. Worth confirming with the issuer whether this programme has been formally wound down or is simply between hedge placements, since net investment hedge P&L is still being recognized.
+[LLM_FLAG] Net investment hedge pre-tax result swung from a $391 million LOSS (nine months ended Sept 30, 2025) to a $93 million GAIN (nine months ended Sept 30, 2026) even with zero foreign-currency contracts outstanding — the entire move is coming through the Euro-denominated debt leg, not derivatives, consistent with the contracts being absent.
+[LLM_FLAG] New customer financing: in Q3 2026 Altria entered a line-of-credit arrangement allowing a contract-manufacturing customer to borrow up to $300 million (fixed rate, matures December 2029); no amounts drawn as of September 30, 2026. Not a derivative, but a new credit-risk exposure worth noting for context on counterparty activity.
+[LLM_FLAG] This excerpt of Item 3 contains only an Interest Rate Risk subsection — no foreign currency / equity price risk discussion is present in the provided section_text, even though Altria holds a large Euro-denominated equity stake in ABI (discussed elsewhere in the filing) and has historically disclosed FX sensitivity in Item 3. If the live filing's Item 3 genuinely omits an FX risk subsection this quarter, that is itself notable; more likely this is a section-extraction boundary issue cutting off before the FX portion — worth checking the full filing before concluding FX market-risk disclosure was dropped.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
 [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($0M)

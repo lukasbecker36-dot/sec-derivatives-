@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-30 ===
+[NUMERIC] gross_derivative_assets: $19M → $60M (+215.8%) — exceeds 20% threshold
+[NUMERIC] gross_derivative_liabilities: $35M → $8M (-77.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_assets: $18M → $52M (+188.9%) — exceeds 20% threshold
+[NUMERIC] cash_collateral_posted: $53M → $95M (+79.2%) — exceeds 20% threshold
+[NUMERIC] realized_gains_losses: $-38M → $26M (+168.4%) — exceeds 20% threshold
+[NUMERIC] unrealized_gains_losses: $-8M → $81M (+1112.5%) — exceeds 20% threshold
+[NUMERIC] natural_gas_notional_bcf: $2M → $1M (-50.0%) — exceeds 20% threshold
+[NUMERIC] congestion_rights_notional_gwh: $1,232M → $331M (-73.1%) — exceeds 20% threshold
+[NUMERIC] fin_toll_notional_gwh: $236M → $383M (+62.3%) — exceeds 20% threshold
+[LLM_FLAG] commodity_derivatives_notional not found: the only notional disclosure in this excerpt is a 'Notional Volumes of Derivative Instruments' table reported in physical units (gigawatt hours, billion cubic feet), not dollar notional amounts, so no USD commodity notional figure was extracted to avoid misclassifying a volume as a dollar notional.
+[LLM_FLAG] Congestion revenue rights notional volume fell from 5,566 GWh (Dec 31, 2025) to 331 GWh (Sept 30, 2026) and Fin Toll arrangement volume rose from 228 to 383 GWh over the same comparison, while electricity options/swaps/forwards volume nearly doubled (3,249 to 6,318 GWh); the text gives no explanation for these shifts in SCE's economic hedging mix.
+[LLM_FLAG] Economic hedging unrealized result swung from a $(122) million loss to an $81 million gain quarter-over-quarter (Q3 2025 vs Q3 2026); text states these gains/losses 'are expected to be recovered from customers and therefore do not affect earnings' -- i.e. this is regulatory pass-through hedging, not earnings-affecting hedge accounting, worth flagging editorially so a swing here is not mistaken for an earnings-moving derivative result.
+[LLM_FLAG] gross_derivative_assets rose from $19M (prior) to $60M and net_derivative_assets rose from $18M to $52M -- consistent with the $81M unrealized gain and $38M Level 3 realized/unrealized gain SCE reports for the quarter, but the text does not separately reconcile the balance-sheet fair-value change to those gain figures.
+[LLM_FLAG] gross_derivative_liabilities fell from $35M (prior) to $8M; the filing does not explain the drop, only the comparative fair-value table entries.
+[LLM_FLAG] cash_collateral_posted (collateral SCE posted under credit-risk-related contingent features) rose from $53M (prior) to $95M -- more than 50% higher -- while the filing states the related derivative liabilities' fair value was 'immaterial' both periods; the text does not explain why posted collateral increased despite immaterial liability fair value.
+[LLM_FLAG] realized_gains_losses flipped from $(38)M (prior) to +$26M and unrealized_gains_losses flipped from $(8)M (prior) to +$81M on SCE's economic hedging book; no explanation is given in the text beyond the comparative figures (commodity/power price moves are implied but not stated).
+[LLM_FLAG] congestion_rights_notional_gwh fell 73% (1,232 GWh prior to 331 GWh) and fin_toll_notional_gwh rose 62% (236 GWh prior to 383 GWh); text gives no stated reason for either shift in SCE's economic hedging portfolio composition.
+[LLM_FLAG] Newsworthy: SCE discloses a credit-rating downgrade collateral trigger -- 'If the credit-risk-related contingent features underlying these contracts were triggered on September 30, 2026, ... SCE would have been required to post $9 million of additional collateral' -- a below-investment-grade downgrade clause on its commodity derivative book.
+[LLM_FLAG] Newsworthy: Level 3 CRR (congestion revenue rights) fair-value inputs show an extremely wide valuation range -- 'CAISO CRR auction prices $( 5.28 ) - $ 13,577.80' per MWh -- versus a far narrower prior-period range ($(5.28)-$14,484.70 vs a materially different weighted average, $69.91 now vs $8.39 prior), indicating unusually volatile/illiquid CRR auction pricing this quarter.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-09-17 ===
 [NUMERIC] gross_derivative_liabilities: $46M → $35M (-23.9%) — exceeds 20% threshold
 [NUMERIC] cash_collateral_posted: $85M → $53M (-37.6%) — exceeds 20% threshold

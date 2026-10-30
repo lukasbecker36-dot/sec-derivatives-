@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-30 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($268M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($235M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($33M)
+[NUMERIC] total_derivative_asset: $376M → $9M (-97.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_liability: was $376M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $11M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $11M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $8M, now missing
+[VALIDATION] Likely extraction failure: 4/6 previously-populated fields are now null (total_derivative_liability, fx_transaction_gain_loss, fx_sensitivity_10pct, fixed_rate_notes_billion)
+[LLM_FLAG] total_derivative_asset moved from a prior value of $376.451M to $9.493M (-97.5%), more than the 50% threshold. Nothing in this filing's text explains a drop of that size, and the prior value looks suspect on its face: prior_values shows total_derivative_asset and total_derivative_liability both equal to 376.451 with net_derivative_position of exactly 0.0, and a separate prior_values entry puts the string 'Yes' in a notional field (equity_derivatives_notional) -- all consistent with a pipeline data-quality defect rather than a real comparative figure. This swing should be checked against the actual filed data before being quoted as a real move.
+[LLM_FLAG] Notional of non-designated (intercompany-balance) FX contracts rose to $32.678M from $18.343M at FY-end March 31, 2026 (+78.2%), while designated cash-flow-hedge notional fell to $235.297M from $337.183M (-30.2%) over the same period -- a shift in mix toward non-designated FX risk management relative to designated hedging of forecasted sales, per the note's own comparative table.
+[LLM_FLAG] No derivative liability figure is disclosed anywhere in this note -- only a single 'fair value recorded in other current assets' line is given for both designated and non-designated contracts, and the credit-risk sentence describes exposure only to 'contracts in asset positions.' net_derivative_position above is inferred from that (asset = net, liability assumed nil), not independently stated in the text -- flag for verification rather than treating as a stated net figure.
+[LLM_FLAG] section_text for this market_risk request is only a cross-reference stub -- 'Quantitative and Qualitative Disclosures About Market Risk," within our 2026 Annual Report . Table of Contents 36' -- with no substantive quantitative disclosure present. This 10-Q's Item 3 appears to incorporate market-risk disclosure by reference to the FY2026 Annual Report rather than restating it, so none of the schema fields can be populated from the text provided. Nothing here contradicts prior_values (fx_transaction_gain_loss, fx_sensitivity_10pct, fixed_rate_notes_billion); those simply cannot be confirmed or updated from this excerpt and are left null rather than carried forward.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($376M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($376M)

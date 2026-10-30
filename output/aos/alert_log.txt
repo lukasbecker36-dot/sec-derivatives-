@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-30 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($37M)
+[NUMERIC] cash_flow_hedge_aoci: $38M → $1M (-96.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $1M, now missing
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (ir_sensitivity_100bp, fixed_rate_notes_billion)
+[LLM_FLAG] cash_flow_hedge_aoci: current ending balance is $1.2M vs prior_values of $37.7M (>95% decline). Nothing in this note's own AOCI roll-forward corroborates a $37.7M prior figure — the table shows nine-month beginning balance of $(0.2)M and three-month beginning balance of $1.3M, both far below $37.7M, so the prior reference value itself looks suspect and should be checked against the source filing rather than treated as confirmed.
+[LLM_FLAG] Net investment hedge newsworthy detail: the NIH is executed via foreign-currency-denominated intercompany debt, not a derivative contract — 'The contractual amount of the Company's foreign currency denominated intercompany debt that is designated as a net investment hedge was ¥ 1.5 billion RMB, approximately $ 217.7 million and $ 208.8 million, as of September 30, 2026 and December 31, 2025' — paired separately with 'third-party foreign currency forward contracts' for the same NIH program; fair value of the debt-based NIH is stated as zero in both periods.
+[LLM_FLAG] Interest rate swap is denominated in Indian rupees (unusual currency for a U.S. industrial issuer) at an 8.25% effective rate, hedging floating-rate INR borrowings: 'The interest rate swap had an aggregate notional amount of 3.6 billion rupees (approximately $ 37.1 million) ... The aggregate effective interest rate of the swap as of September 30, 2026 was 8.25 %.' Notional declined from 4.2 billion rupees (~$46.6M) at year-end 2025, consistent with amortization rather than a new program.
+[LLM_FLAG] This Item 3 section is pure boilerplate incorporation-by-reference with no quantitative figures: 'quantitative and qualitative disclosures about market risk have not materially changed since that report was filed.' No sensitivity percentages, notional amounts, or dollar figures appear anywhere in the supplied text, so every schema field here is not_found rather than carried forward from prior_values (prior ir_sensitivity_100bp of $0.5M and prior fixed_rate_notes_billion of $1.3B are NOT reconfirmed by this quarter's text and should not be reused).
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($38M)
 [NEW_FIELD] total_derivative_liability: appeared for first time ($0M)

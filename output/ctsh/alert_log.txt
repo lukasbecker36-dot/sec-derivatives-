@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-30 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($3,025M)
+[NUMERIC] total_derivative_asset: $10M → $6M (-40.0%) — exceeds 20% threshold
+[LLM_FLAG] fx_designated_notional/fx_not_designated_notional: the notional-by-maturity table is labeled only 'Total notional value of contracts outstanding' and appears directly under the 'Cash Flow Hedges' heading discussing the Indian rupee program; the filing does not explicitly state whether this total includes the small non-designated FX book as well. Attributed to designated notional by inference (consistent with prior-period extraction of 3060), but this is not stated outright in the text — treat fx_designated_notional/fx_derivatives_notional split with caution.
+[LLM_FLAG] Liability on designated cash flow hedges booked in 'Accrued expenses and other current liabilities' rose to $95 million from $63 million a year earlier (+51%), a near-term loss concentration on the Indian rupee hedge book; no explanatory text accompanies the table.
+[LLM_FLAG] All designated hedges are concentrated in a single currency pair: 'a series of foreign exchange derivative contracts that are designated as cash flow hedges of Indian rupee denominated payments in India' — single-currency concentration risk, no other currencies or instrument types (no IR, commodity or equity derivatives) disclosed in this filing.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $4,051M, now missing
 [DISAPPEARED_FIELD] fi_fx_designated_notional: was $3,270M, now missing

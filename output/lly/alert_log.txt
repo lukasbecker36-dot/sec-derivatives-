@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-30 ===
+[NUMERIC] fx_derivatives_notional: $19,114M → $25,119M (+31.4%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $297M → $5,712M (+1823.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_asset: was $41M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $20M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $21M, now missing
+[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position)
+[LLM_FLAG] fx_designated_notional rose from $297M (prior extraction) to $5,712M this quarter (~19x). The comparative column in the filing's own table shows designated notional of only $67M at Dec 31, 2025 ('Designated as accounting hedges $ 5,712 ... $ 67'), so the increase is real per the filing, but nothing in the section text explains why the designated-hedge forward book grew so sharply this quarter -- verify before quoting the percentage.
+[LLM_FLAG] Newsworthy: FX forward notional designated as accounting hedges jumped to $5,712M (Sep 30, 2026) from $67M (Dec 31, 2025) per 'Designated as accounting hedges $ 5,712 ... $ 67' -- looks like a materially expanded or new designated FX hedging programme. The section opens mid-sentence with 'primarily related to our acquisition of Kelonia. See Note 4 for additional information.' immediately before the Hedging discussion, raising the possibility of M&A-related FX hedging, but Note 4 is not included in this excerpt so the link cannot be confirmed from this text alone.
+[LLM_FLAG] Foreign currency-denominated notes designated as accounting hedges (debt used as a net-investment hedge, not a derivative) declined to $5.0 billion from $6.0 billion: 'Our foreign currency-denominated notes designated as accounting hedges had carrying amounts of $ 5.0 billion and $ 6.0 billion as of September 30, 2026 and December 31, 2025, respectively.'
+[LLM_FLAG] Large nine-month P&L swing not explained in the text: 'Foreign currency forward contracts not designated as accounting hedges' recognized in other-net moved from $(468) million (nine months ended Sep 30, 2025) to $13 million (nine months ended Sep 30, 2026).
+[LLM_FLAG] Large nine-month OCI swing not explained in the text: 'Foreign currency forward contracts: Designated as accounting hedges' recognized in OCI moved from $(1,292) million (nine months 2025) to $(16) million (nine months 2026).
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-09-24 ===
 [NUMERIC] fx_designated_notional: $67M → $297M (+343.3%) — exceeds 20% threshold
 [NUMERIC] fx_not_designated_notional: $23,545M → $18,817M (-20.1%) — exceeds 20% threshold

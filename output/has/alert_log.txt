@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-09-27 | Processed 2026-10-30 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($569M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($328M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($241M)
+[NUMERIC] total_derivative_asset: $585M → $6M (-99.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $333M → $8M (-97.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $252M → $-2M (-100.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $3M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $5M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-2M, now missing
+[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 585 to 6 (0x)
+[VALIDATION] Likely units mismatch: net_derivative_position changed from 252 to -2 (0x)
+[LLM_FLAG] total_derivative_asset: this period's figure (~$5.5M, summed from the gross 'Unrealized gains' lines across the designated cash-flow-hedge and undesignated balance-sheet classification tables) is roughly 99% below the prior_values figure of $585.1M. Nothing in the section text explains a swing of that size for a company this scale; the prior figure's magnitude (hundreds of millions) looks inconsistent with Hasbro's disclosed notional book ($328.0M designated + $240.9M undesignated) and more plausibly reflects a historical extraction error (e.g. a notional or unrelated balance-sheet total landing in this field) than an actual change.
+[LLM_FLAG] total_derivative_liability: this period's figure (~$7.6M, summed from the gross 'Unrealized losses' lines) is roughly 98% below the prior_values figure of $333.1M, with no explanation in the text. Same likely-prior-error caveat as total_derivative_asset.
+[LLM_FLAG] net_derivative_position: computed at -$2.1M this period vs. +$252.0M in prior_values -- both the sign and the magnitude flip are unexplained by the filing text and should be verified against the source document before being reported, given the likely prior-extraction error noted above.
+[LLM_FLAG] equity_derivatives_notional: prior_values records this field as the string "Yes" rather than a number, which is itself a pre-existing data/schema mismatch unrelated to this filing. No equity derivatives are mentioned anywhere in this section, so the field is null here.
+[LLM_FLAG] Newsworthy: Hasbro's undesignated FX hedges (used to offset intercompany-loan revaluation, not for speculation) swung from net gains of $4.2M (Q3) / $13.4M (nine months) in the prior-year period to net losses of $1.7M (Q3) / $5.0M (nine months) this period -- quote: "the Company recorded a net loss of $ 1.7 million and $ 5.0 million on its undesignated financial instruments for the three and nine months ended September 27, 2026, respectively, and a net gain of $ 4.2 million and $ 13.4 million for the three and nine months ended September 28, 2025, respectively". The filing attributes this to offsetting FX moves on intercompany loans, not a hedging-strategy or programme change.
+[LLM_FLAG] This Item 3 section is a pure cross-reference (boilerplate for a 10-Q) pointing to Part I, Item 2 MD&A rather than Part II, Item 7 -- note the schema description assumes 10-K structure (Part II, Item 7), but this is a 10-Q, so the actual incorporation is into Part I, Item 2. No sensitivity, notional or other market-risk figures are restated in this section itself, so all other fields are not_found here; any such figures would need to be pulled from the referenced MD&A text, which is outside this section_text.
+
 === 10-Q | Period ending 2026-06-28 | Processed 2026-07-31 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($585M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($333M)
