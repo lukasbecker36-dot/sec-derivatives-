@@ -1,3 +1,26 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-30 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($61M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($61M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $148M → $1M (-99.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $148M → $0M (-99.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $0M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $4M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-4M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $0M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
+[VALIDATION] Likely extraction failure: 6/9 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion...)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 148 to 1 (0x)
+[VALIDATION] Likely units mismatch: net_derivative_position changed from 148 to 0 (0x)
+[LLM_FLAG] total_derivative_asset fell from $147.8M (prior period) to $1.14M this quarter ('Derivative assets 1,140' in thousands, Level 2 fair value table) — a >99% decline; nothing in the text explains it, worth verifying against the filing before quoting.
+[LLM_FLAG] total_derivative_liability moved from $0.0M (prior) to $0.839M ('Derivative liabilities $839' in thousands) with no explanation given in the text.
+[LLM_FLAG] net_derivative_position fell from $147.8M to roughly $0.301M, tracking the total_derivative_asset swing above.
+[LLM_FLAG] FX non-designated hedge notional fell from $446.0 million (Dec 31, 2025) to $61.0 million (Sept 30, 2026): 'the U.S. dollar equivalent notional values of our foreign exchange forward contracts that do not qualify for hedge accounting were $ 61.0 million and $ 446.0 million, respectively' — a >85% reduction in the economic (non-hedge-accounted) FX book.
+[LLM_FLAG] Commodity hedging programme wound down: the 2024 steel commodity swaps (cash flow hedges under ASC 815) are no longer outstanding — 'As of September 30, 2026 and December 31, 2025, we had no outstanding cash flow hedges' — and no replacement commodity hedges are disclosed.
+[LLM_FLAG] Data-quality note: prior_values for equity_derivatives_notional (a notional field) was recorded as the string 'Yes', not a number — a likely mis-extraction in an earlier period. This filing's section_text makes no mention of equity derivatives at all, so the current value is not_found.
+[LLM_FLAG] Item 7A is incorporated entirely by reference to the FY2025 Form 10-K this quarter — 'There have been no material changes to the information previously provided under Item 7A. of our Annual Report on Form 10-K for the year ended December 31, 2025.' No quantitative sensitivities (FX, IR, equity) are restated here, so none of this section's numeric fields can be sourced from this filing.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($148M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

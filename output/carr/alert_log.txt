@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-30 ===
+[NUMERIC] total_derivative_liability: $140M → $171M (+22.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-7M → $-38M (-442.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $47M, now missing
+[LLM_FLAG] net_derivative_position: swung from a prior -7 to -38 this period (a >400% move) — derivative liabilities rose to $171M from a prior $140M while derivative assets held flat at $133M. The filing gives no commentary explaining the increase in the liability side.
+[LLM_FLAG] fx_derivatives_notional / fx_designated_notional: cross-currency swap notional grew to $3.7B from a prior $3.2B (+15.6%); the filing does not explain the increase in swap notional, only restating the designation as a partial net-investment hedge.
+[LLM_FLAG] Exotic instrument flag for editorial interest: the FX hedge book is cross-currency swaps (not plain forwards), notional $3.7B, designated as a partial hedge of net investment in foreign subsidiaries, with fair value changes booked directly to Equity rather than earnings — "the Company designates the cross currency swaps as a partial hedge of its investment in certain subsidiaries whose functional currency is not the U.S. Dollar."
+[LLM_FLAG] cash_flow_hedge_aoci could not be confirmed: the AOCI rollforward table in the supplied section_text is cut off before the September 30, 2026 'Unrealized Hedging Gains (Losses)' balance row is reached (last complete balance shown is $47M at June 30, 2026, followed by a Q3 reclassification of $(1)M with no closing balance stated), so the field is left not_found rather than computed.
+[LLM_FLAG] ir_swap_notional reported not_found: the only interest rate swap activity described ($1.5 billion notional, entered 2023) was a forecasted-debt-issuance hedge that was already settled in November 2023 upon issuance of the underlying notes — "In November 2023, the contracts were settled upon the issuance of the underlying debt" — so there is no currently outstanding IR swap notional; only the residual deferred gain amortization (see expected_12mo_reclass_from_aoci) continues.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $3,200M, now missing
 [DISAPPEARED_FIELD] fi_fx_designated_notional: was $3,200M, now missing

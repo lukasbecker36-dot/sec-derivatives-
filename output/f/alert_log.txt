@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-30 ===
+[NUMERIC] total_derivative_liability: $1,247M → $2,235M (+79.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] net_asset: was $352M, now missing
+[NEW_FIELD] net_liability: appeared for first time ($-547M)
+[NUMERIC] collateral_posted: $90M → $139M (+54.4%) — exceeds 20% threshold
+[NUMERIC] collateral_held: $4M → $50M (+1150.0%) — exceeds 20% threshold
+[NUMERIC] ir_sensitivity_100bp: $-67M → $-49M (+26.9%) — exceeds 20% threshold
+[VALIDATION] Reconciliation failure: total_notional=160,675 but fx_designated_notional=20,328 + fx_not_designated_notional=29,857 + commodity_designated_notional=1,066 + commodity_not_designated_notional=967 = 52,218 (diff 67.5%) — extraction likely read the wrong table
+[LLM_FLAG] total_derivative_liability rose from $1,247M (prior extraction) to $2,235M this period (+79%); within this filing's own comparative columns the increase is dominated by the Interest rate contracts fair value hedge liability (Dec 31, 2025 $220M to Sept 30, 2026 $879M) and the Cross-currency interest rate swap fair value hedge liability ($5M to $217M) -- the text states the figures but gives no narrative explanation for the move.
+[LLM_FLAG] Net derivative position flipped from a net asset of $352M (prior extraction) to an implied net liability of $547M this period (computed as total derivative assets $1,688M minus total derivative liabilities $2,235M); the filing does not comment on this swing.
+[LLM_FLAG] collateral_held rose roughly 10x, from $4M (prior extraction) to $50M disclosed this period ('we held collateral of $5 million and $50 million, respectively'); collateral_posted rose from $90M (prior extraction) to $139M disclosed this period (+54%, 'we posted collateral of $102 million and $139 million, respectively'). No explanation given in the text.
+[LLM_FLAG] Newsworthy: in Q1 2026 Ford designated a foreign-denominated debt issuance as a new net investment hedge of FX risk on an investment in a foreign subsidiary, with a $828 million designated balance at September 30, 2026 ('In the first quarter of 2026, we designated a foreign-denominated debt issuance as a net investment hedge to manage the foreign currency risk of a portion of our investment in a foreign subsidiary with a non-U.S. dollar functional currency') -- a newly established nonderivative hedging programme this fiscal year, with $3M (Q3) and $39M (9-month) gains recognized in foreign currency translation.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-14 ===
 [NUMERIC] fx_designated_notional: $16,384M → $20,713M (+26.4%) — exceeds 15% threshold
 [NUMERIC] net_asset: $868M → $352M (-59.4%) — exceeds 20% threshold

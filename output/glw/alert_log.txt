@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-30 ===
+[NUMERIC] fx_derivatives_notional: $17,063M → $23,429M (+37.3%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $1,116M → $769M (-31.1%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $15,947M → $22,660M (+42.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $805M → $1,103M (+37.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $466M → $-802M (-272.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-1,000M, now missing
+[LLM_FLAG] total_derivative_liability rose 72% from $466M (Dec 31, 2025) to $802M (Sept 30, 2026); the filing gives no explicit cause beyond the per-line fair value changes — the translated earnings contracts liability grew from $(224) million to $(543) million and the cross currency swap liability grew from $(194) million to $(238) million, both in the undesignated book, consistent with FX-rate marks rather than a stated programme change.
+[LLM_FLAG] New translated-earnings OPTION contracts appear this quarter with no Dec 31, 2025 comparative figure: 'Mexican peso-denominated\t99' (prior blank), 'Chinese yuan-denominated\t150' (prior blank), 'South Korean won-denominated\t23' (prior blank) — suggests the undesignated FX options hedging programme was expanded into three new currencies.
+[LLM_FLAG] The Dec 31, 2025 precious-metals-lease fair value hedge disclosed in footnote (3) ('fair value hedges of leased precious metals with a gross notional amount of 4,090 troy ounces' and 'Fair value liabilities include designated derivatives pertaining to precious metals lease contracts in the amount of $16 million as of December 31, 2025') is not repeated for September 30, 2026, where footnote (3) describes the $769 million designated notional as only 'foreign exchange cash flow hedges and net investment hedges' — suggests the precious-metals lease hedge programme may have been wound down or settled during the period.
+[LLM_FLAG] Non-cash pre-tax realized losses on expired option-contract premiums embedded in the translated earnings contract line moved from '$94 million' (Q3 2025) to '$74 million' (Q3 2026) but from '$202 million' (9-mo 2025) to '$239 million' (9-mo 2026) — a divergent quarter-vs-year-to-date trend worth checking against FY guidance.
+[LLM_FLAG] Total undesignated derivative gain/loss swung from a loss of $(13) million (Q3 2025) to a gain of $176 million (Q3 2026), driven largely by 'Translated earnings contracts (1)	138' vs prior-year 33 — a material swing in a book the company itself does not treat as a formal hedge.
+[LLM_FLAG] This quarter's Item 3 section is a pure incorporation-by-reference: 'There have been no material changes in our market risk exposure since the disclosures in our 2025 Form 10-K.' No quantitative figures (sensitivities, notionals, currency list, hedge-type description) are restated in this filing's text, so every field is left null rather than carried forward from the prior (FY2025) disclosure — carrying forward unstated prior values would misrepresent what this filing actually says.
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-10-20 ===
 [NUMERIC] fx_designated_notional: $884M → $1,116M (+26.2%) — exceeds 20% threshold
 [NUMERIC] total_derivative_asset: $1,070M → $805M (-24.8%) — exceeds 20% threshold

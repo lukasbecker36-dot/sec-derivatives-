@@ -1,3 +1,28 @@
+=== 10-Q | Period ending 2026-09-27 | Processed 2026-10-30 ===
+[NUMERIC] fx_derivatives_notional: $146M → $255M (+74.9%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $84M → $168M (+100.2%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $62M → $87M (+40.7%) — exceeds 20% threshold
+[NUMERIC] commodity_derivatives_notional: $504M → $646M (+28.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $13M → $15M (+20.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $16M → $3M (-79.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-3M → $12M (+455.9%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-8M → $-5M (+34.0%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $-24M → $-32M (-31.8%) — exceeds 20% threshold
+[NUMERIC] interest_rate_sensitivity_variable_debt: $3M → $3M (+22.2%) — exceeds 20% threshold
+[NUMERIC] foreign_currency_sensitivity: $-24M → $-32M (-31.8%) — exceeds 20% threshold
+[LLM_FLAG] fx_designated_notional rose from $83.9M to $167.956M (+100%); the text only states the current and prior cash-flow-hedge notional amounts, with no stated reason for the increase.
+[LLM_FLAG] fx_derivatives_notional (designated + not designated, computed) rose from $145.8M to $255.1M (+75%); no explanation given in the text for the scale-up of the FX hedging programme.
+[LLM_FLAG] total_derivative_liability fell from $16.163M to $3.289M (-80%); not explained in the text beyond the normal mark-to-market table.
+[LLM_FLAG] net_derivative_position swung from a net liability of $(3.39)M to a net asset of $12.064M; driven mainly by the commodities futures and options line (assets $12,341K vs. liabilities $1,182K at 9/27/26, versus assets $465K vs. liabilities $20,829K at 12/31/25) -- consistent with the ~43% decline in average cocoa futures prices discussed in the market-risk section, but the note itself does not state this link.
+[LLM_FLAG] Income-statement impact of commodities futures and options swung from a $(52.657)M loss for the first nine months of 2025 to a $138.825M gain for the first nine months of 2026 -- a large swing worth verifying against the cocoa price move noted elsewhere in the filing.
+[LLM_FLAG] Counterparty risk management language is boilerplate ('diverse portfolio of qualified counterparties... do not expect any significant losses from counterparty defaults') with no concentration disclosure.
+[LLM_FLAG] No notional amount is disclosed for the interest rate swap programme (swaps used only episodically ahead of forecasted debt issuance and settled upon issuance) -- left null rather than estimated.
+[LLM_FLAG] ir_swap_notional and cash_flow_hedge_aoci are not stated anywhere in this section and were left null per instructions rather than carried forward from prior periods.
+[LLM_FLAG] No field moved more than 50% versus prior_values: ir_sensitivity_100bp -233.0 -> -210 (-10%), fx_sensitivity_10pct/foreign_currency_sensitivity -23.9 -> -31.5 (+32%), interest_rate_sensitivity_variable_debt 2.7 -> 3.3 (+22%), interest_rate_sensitivity_fixed_debt -233.0 -> -210 (-10%).
+[LLM_FLAG] Commodity commentary is newsworthy: average cocoa futures price for the first nine months of 2026 was $2.08/lb, a ~43% decline from the 2025 annual average of $3.65/lb ('This average cocoa futures contract price represents a decline of approximately 43% compared to the 2025 annual average of $3.65 per pound'), and management describes the 2025-2026 cocoa season as ending in 'a historically large surplus,' with futures trading volumes recovering after declines in 2024-2025.
+[LLM_FLAG] The text states a 10% decrease in commodity prices 'would have decreased our net unrealized losses by $51.0 million' -- implying a net unrealized loss position on commodity derivatives -- while the companion derivatives-note fair value table shows commodities futures and options as net asset-heavy ($12,341K assets vs. $1,182K liabilities at 9/27/26); worth reconciling before quoting either figure.
+[LLM_FLAG] No equity price risk / marketable equity securities subsection appears in this excerpt of Item 3, unlike the Equity Price Risk discussion in the derivatives note -- equity_sensitivity_10pct and marketable_equity_value are not addressed here.
+
 === 10-Q | Period ending 2026-06-28 | Processed 2026-09-22 ===
 [NUMERIC] fx_derivatives_notional: $250M → $146M (-41.6%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $229M → $84M (-63.4%) — exceeds 20% threshold

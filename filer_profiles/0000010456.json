@@ -25,7 +25,9 @@
       "aoci"
     ],
     "non_gaap_metrics": [],
-    "unusual_disclosure_patterns": [],
+    "unusual_disclosure_patterns": [
+      "derivatives_note: Baxter's current derivatives footprint is unusually thin for this filer: no designated cash-flow or fair-value hedges (FX or IR) are outstanding, leaving a single active net investment hedge (embedded"
+    ],
     "known_issues": []
   },
   "history": [
@@ -95,6 +97,18 @@
       ],
       "fields_extracted": 13,
       "fields_null": 7
+    },
+    {
+      "filing_date": "2026-09-30",
+      "form_type": "10-Q",
+      "period_end": "2026-09-30",
+      "processed_at": "2026-10-30T03:08:14Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 11,
+      "fields_null": 9
     }
   ]
 }

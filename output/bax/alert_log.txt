@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-30 ===
+[NUMERIC] fx_derivatives_notional: $204M → $151M (-26.0%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $204M → $151M (-26.0%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] total_derivative_asset: $1M → $0M
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $-4M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[LLM_FLAG] total_derivative_asset fell from $1M (prior) to $0M (current), a -100% change, but the magnitude is immaterial (under $1M) and the text gives no specific explanation beyond the undesignated FX forward asset position rounding to zero.
+[LLM_FLAG] cash_flow_hedge_aoci was tracked at -$4M in the prior extraction but is not separately disclosed as a standalone balance in this filing (only the $4M expected-12-month-reclassification figure is given) -- flagged as a possible disclosure gap rather than a real change, since no designated cash flow hedges are outstanding this period.
+[LLM_FLAG] Newsworthy: no designated hedges of any kind (FX or IR, cash flow or fair value) are currently outstanding -- 'There were no foreign exchange contracts designated as cash flow hedges outstanding as of September 30, 2026... There were no outstanding interest rate contracts designated as cash flow hedges... There were no outstanding interest rate contracts designated as fair value hedges as of September 30, 2026 and December 31, 2025.' Baxter's only designated hedge is the net investment hedge embedded in its Euro-denominated senior notes.
+[LLM_FLAG] Newsworthy (historical context repeated in this filing): 'In March 2025, we dedesignated this previously designated net investment hedge and concurrently entered into forward contracts to manage foreign exchange risk in earnings relating to these outstanding debt balances. These forward contracts matured in May 2025.' No new dedesignations or terminations occurred this quarter: 'There were no net investment hedges terminated during the first nine months of 2026.'
+[LLM_FLAG] Undesignated FX forward notional nearly halved since fiscal year-end: 'The total notional amount of undesignated derivative instruments was $ 151 million as of September 30, 2026 and $ 323 million as of December 31, 2025.'
+[LLM_FLAG] The remaining active net investment hedge (€750 million 1.3% senior notes due May 2029) carries an embedded fair-value liability of $795M (in Long-term debt), down from $834M at FY2025-end, with an accumulated pre-tax unrealized translation gain in AOCI of $25 million: 'As of September 30, 2026, we had an accumulated pre-tax unrealized translation gain in AOCI of $ 25 million related to the Euro-denominated senior notes.'
+[LLM_FLAG] No collateral is posted and no credit-contingent features exist on any outstanding derivatives, despite master netting arrangements being in place: 'we are not required to post collateral for any of our outstanding derivatives' and 'none of our outstanding derivative instruments contain credit-risk-related contingent features.'
+[LLM_FLAG] ir_sensitivity_100bp is not quantified in this section -- the filing incorporates interest rate risk by reference to the 2025 Annual Report and states only that 'There were no significant changes during the quarter ended September 30, 2026,' so no current-period IR sensitivity figure exists in this text.
+[LLM_FLAG] fx_forwards_outstanding is not separately stated as a notional figure in this section (only a sensitivity dollar impact is given); the actual FX forward/undesignated notional ($151M) is disclosed in the derivatives note, consistent with this field's instruction to use it only as a fallback.
+[LLM_FLAG] fx_sensitivity_10pct eased slightly from $7M (prior) to $6M (current), a -14% change broadly consistent with the smaller undesignated FX notional base this quarter; not large enough to flag as anomalous.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
 [DISAPPEARED_FIELD] commodity_derivatives_notional: was $0M, now missing

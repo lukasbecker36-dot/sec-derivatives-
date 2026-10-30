@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-30 ===
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $2,525M, now missing
+[DISAPPEARED_FIELD] fx_designated_notional: was $938M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $1,587M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $51M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $-23M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $29M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $67M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $17M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-30M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $6M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $47M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $-30M, now missing
+[DISAPPEARED_FIELD] fixed_income_portfolio_value: was $2,840M, now missing
+[DISAPPEARED_FIELD] equity_security_sensitivity: was $-23M, now missing
+[VALIDATION] Likely extraction failure: 14/15 previously-populated fields are now null (fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional, total_derivative_asset, total_derivative_liability...)
+[LLM_FLAG] ir_swap_notional ($2,000M) is unchanged from the prior period value of $2,000.0M -- consistent, no new interest rate swap activity disclosed.
+[LLM_FLAG] Section text is truncated before the notional/fair-value tables ('For additional details, refer to ...'), so fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional, total_derivative_asset, total_derivative_liability, net_derivative_position, cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci could not be verified this quarter even though they were populated in prior periods -- likely a section-extraction cutoff rather than a disclosure change; re-extraction against the full note tables is recommended.
+[LLM_FLAG] Rate Lock Agreements: 'the aggregate unamortized portion of the fair value of the forward contracts for the Rate Lock Agreements was a $40.6 million net gain' as of 9/30/2026. This is a narrower, Rate-Lock-only figure (recorded within AOCI) and is NOT the same metric as the broader cash_flow_hedge_aoci field (prior value $67.182M, which likely also includes FX cash flow hedge components) -- left out of cash_flow_hedge_aoci to avoid conflating the two, flagged for editorial awareness.
+[LLM_FLAG] Entire section_text is a single cross-reference sentence ('...contained in Part II, Item 7A of our Annual Report on Form 10-K for our fiscal year ended June 30, 2026 for a complete description of our market risk.') with no quantitative content -- Item 7A of this 10-Q incorporates the 10-K's market risk disclosure by reference rather than restating figures. Every field is legitimately not_found for this quarter; none of the prior_values (e.g. ir_sensitivity_100bp -29.7, fixed_rate_notes_billion 5.89, marketable_equity_value 46.8, fixed_income_portfolio_value 2840.0, equity_security_sensitivity -23.0) should be carried forward.
+
 === 10-K | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,432M, now missing
 [DISAPPEARED_FIELD] total_marketable_securities_fv: was $2,795M, now missing

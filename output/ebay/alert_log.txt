@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-10-30 ===
+[NUMERIC] fx_not_designated_notional: $2,231M → $1,657M (-25.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $67M → $48M (-28.4%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $36M → $20M (-44.4%) — exceeds 20% threshold
+[NUMERIC] non_hedge_fair_values: $4M → $1M (-75.0%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position fell from $36M (prior) to $20M (current), a 44% decline, driven mostly by the derivative asset balance dropping from $67M to $48M (-28%); the text gives no explanation for the decline beyond normal mark-to-market movement.
+[LLM_FLAG] Total outstanding derivative notional declined from $3,991M to $3,486M (-12.7%) with both the designated cash flow hedge notional ($1,677M to $1,429M) and the non-designated notional ($1,914M to $1,657M) falling roughly in tandem; no commentary in the text attributes this to a change in hedging strategy.
+[LLM_FLAG] Fair value hierarchy table shows the Level 3 derivative asset present at December 31, 2025 ($10M) is gone by September 30, 2026 (Level 3 derivatives = $0), even though the filing states: 'We did not have any transfers of financial instruments between valuation levels for the nine months ended September 30, 2026.' This implies the Level 3 position was settled/matured rather than reclassified — worth confirming with the company before writing about it as a 'transfer'.
+[LLM_FLAG] non_hedge_fair_values fell from $4M (prior quarter) to $1M (current), a 75% decline; the filing gives no explanation for the drop.
+[LLM_FLAG] Within fair_value_sensitivity_analysis, the non-designated FX contracts' sensitivity rose in magnitude from $(39)M to $(60)M (+54%) even as the underlying fair value asset shrank from $4M to $1M — the hedge book composition likely shifted (larger/longer notional non-designated positions) but the text does not explain it; worth asking before quoting as a trend.
+[LLM_FLAG] fx_sensitivity_10pct left null rather than populated with the disclosed figure: the filing's FX shock assumption is 20% adverse change, not 10% as the field specifies, so no matching value exists in the text.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] total_derivative_asset: $45M → $67M (+48.9%) — exceeds 20% threshold
 [NUMERIC] total_derivative_liability: $18M → $31M (+72.2%) — exceeds 20% threshold
