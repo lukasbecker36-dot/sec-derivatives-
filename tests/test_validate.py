@@ -101,6 +101,40 @@ class TestCheckReconciliations:
                'fx_not_designated_notional': '52594'}
         assert check_reconciliations(row) == []
 
+    def test_total_notional_includes_interest_rate_components(self):
+        """Ford Q3 2026: total_notional includes Ford Credit's IR swaps.
+
+        FX + commodity alone come to 52,218 against a 160,675 total; with the
+        IR fields the row reconciles exactly.
+        """
+        row = {
+            'total_notional': '160675',
+            'fx_designated_notional': '20328',
+            'fx_not_designated_notional': '29857',
+            'commodity_designated_notional': '1066',
+            'commodity_not_designated_notional': '967',
+            'ir_cash_flow_hedge_notional': '0',
+            'ir_fair_value_hedge_notional': '22167',
+            'ir_not_designated_notional': '86290',
+        }
+        assert check_reconciliations(row) == []
+
+    def test_absent_optional_components_keep_check_strict(self):
+        """No IR fields extracted: FX + commodity must still match the total."""
+        row = {
+            'total_notional': '10000',
+            'fx_designated_notional': '2000',
+            'fx_not_designated_notional': '2000',
+            'commodity_designated_notional': '500',
+            'commodity_not_designated_notional': '500',
+        }
+        results = check_reconciliations(row)
+        assert any('Reconciliation failure' in r['message'] for r in results)
+
+    def test_optional_components_alone_do_not_trigger_check(self):
+        row = {'total_notional': '1000', 'ir_not_designated_notional': '400'}
+        assert check_reconciliations(row) == []
+
     def test_surfaces_through_validate_row(self):
         config = _make_config({
             'fx_derivatives_notional': 'Total FX notional',

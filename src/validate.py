@@ -90,14 +90,24 @@ def validate_source_quotes(llm_result: dict, schema: dict[str, str]) -> list[str
 # no-opped for every minimal_hedger issuer (whose total is
 # 'fx_derivatives_notional'). That is how MSFT shipped five quarters where
 # designated + not-designated came to a fifth of the reported total.
-RECONCILIATION_RULES: list[tuple[str, list[str]]] = [
+#
+# Each rule is (total, required components, optional components). Optional
+# components are added to the sum when extracted, but their absence does not
+# make the row "partial": most issuers reporting total_notional have no
+# interest-rate fields, and must still be checked strictly on FX + commodity.
+# Ford's total_notional includes Ford Credit's interest-rate swaps (~$108B);
+# without them every Ford quarter failed by ~67%, and each new Ford filing
+# raised the reconciliation count and held a whole night's batch off master.
+RECONCILIATION_RULES: list[tuple[str, list[str], list[str]]] = [
     ('fx_derivatives_notional',
-     ['fx_designated_notional', 'fx_not_designated_notional']),
+     ['fx_designated_notional', 'fx_not_designated_notional'], []),
     ('fi_fx_derivatives_notional',
-     ['fi_fx_designated_notional', 'fi_fx_not_designated_notional']),
+     ['fi_fx_designated_notional', 'fi_fx_not_designated_notional'], []),
     ('total_notional',
      ['fx_designated_notional', 'fx_not_designated_notional',
-      'commodity_designated_notional', 'commodity_not_designated_notional']),
+      'commodity_designated_notional', 'commodity_not_designated_notional'],
+     ['ir_cash_flow_hedge_notional', 'ir_fair_value_hedge_notional',
+      'ir_not_designated_notional']),
 ]
 
 # Relative gap above which a total/component mismatch is reported.
@@ -124,20 +134,20 @@ def check_reconciliations(row: dict,
     components missing, only an excess over the total is a contradiction.
     """
     results = []
-    for total_field, component_fields in RECONCILIATION_RULES:
+    for total_field, required_fields, optional_fields in RECONCILIATION_RULES:
         total_val = _parse_numeric(row.get(total_field))
         if total_val is None or total_val == 0:
             continue
         components = {
             f: _parse_numeric(row.get(f))
-            for f in component_fields
+            for f in required_fields + optional_fields
             if _parse_numeric(row.get(f)) is not None
         }
-        if not components:
+        if not any(f in components for f in required_fields):
             continue
         component_sum = sum(components.values())
         diff_pct = abs(abs(total_val) - abs(component_sum)) / abs(total_val)
-        partial = len(components) < len(component_fields)
+        partial = any(f not in components for f in required_fields)
         if partial and abs(component_sum) <= abs(total_val):
             continue
         if diff_pct > tolerance:
