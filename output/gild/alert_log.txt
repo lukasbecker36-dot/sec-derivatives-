@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-02 ===
+[NUMERIC] total_derivative_liability: $18M → $30M (+66.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $64M → $36M (-43.8%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $35M → $53M (+51.4%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_liability rose from $18M (prior extracted value) to $30M (+67%) this period; the filing's own fair-value table shows the gross liability moving from $72M to $30M (comparative Dec 31, 2025 to Sept 30, 2026) but nothing in the section text narrates why the liability changed quarter over quarter — verify against the filing before quoting.
+[LLM_FLAG] expected_12mo_reclass_from_aoci rose from $35M (prior extracted value) to $53M (+51%); the text states the $53M figure plainly but gives no explanation for the increase from the prior period.
+[LLM_FLAG] Quote worth flagging for editorial: 'There were no discontinuances of cash flow hedges for the three and nine months ended September 30, 2026 and 2025' — confirms hedge programme continuity, no de-designation activity this quarter.
+[LLM_FLAG] This Item 3 section is a boilerplate incorporation-by-reference: it states market risk is covered in Item 7A of the FY2025 10-K and that there were 'no material changes' this quarter. No quantitative sensitivities, notionals or fair values appear in the Q3 2026 text itself, so every field above is a genuine not_found rather than an extraction failure.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] total_derivative_liability: $30M → $18M (-40.0%) — exceeds 20% threshold
 [NUMERIC] net_derivative_position: $43M → $64M (+48.8%) — exceeds 20% threshold

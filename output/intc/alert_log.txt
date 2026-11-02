@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-09-26 | Processed 2026-11-02 ===
+[NUMERIC] ir_swap_notional: $22,920M → $26,582M (+16.0%) — exceeds 15% threshold
+[NUMERIC] fx_forward_notional: $18,583M → $30,950M (+66.6%) — exceeds 15% threshold
+[NUMERIC] total_derivative_asset: $652M → $914M (+40.2%) — exceeds 25% threshold
+[LLM_FLAG] fx_forward_notional rose from 18,583 to 30,950 (+66.6%), a >50% move; the filing does not explain the increase in FX contract notional anywhere in this section.
+[LLM_FLAG] Escrowed Shares derivative liability jumped from $2,654M (Dec 27, 2025) to $13,705M (Sep 26, 2026) — quote: 'Escrowed Shares\t\t—\t\t\t13,705\t\t\t—\t\t\t2,654'. This single line drives nearly all of the $14,695M total derivative liability and is not a conventional hedge — it reads as an M&A/divestiture-linked equity escrow obligation marked through 'Interest and other, net' ($1,005M gain in Q3 2026 vs a $12,614M loss for the nine months), which is a material and unusual swing worth flagging to a reader before quoting total_derivative_liability as a hedging-book number.
+[LLM_FLAG] Ireland SCIP arrangement liability fell from $755M to $0 — quote: 'Ireland SCIP arrangement\t\t—\t\t\t—\t\t\t—\t\t\t755' — reads as a programme that was wound down or settled during the period; no narrative explanation given in this excerpt.
+[LLM_FLAG] Notional of pay-variable, receive-fixed interest rate contracts designated as fair value hedges rose from $9.7 billion to $14.7 billion (+51.5%) — quote: 'total notional amount of outstanding pay-variable, receive-fixed interest rate contracts designated as fair value hedges was $ 14.7 billion as of September 26, 2026 and $ 9.7 billion as of December 27, 2025.'
+[LLM_FLAG] section_text for market_risk contains only the table-of-contents reference 'Quantitative and Qualitative Disclosures About Market Risk\tPage 45' with no actual disclosure body — this looks like a section-extraction/boundary-detection miss (it captured the TOC entry rather than the Item 3 content on page 45), not a genuine absence of disclosure. Worth re-running section extraction for this filing rather than treating these fields as confirmed non-disclosures.
+
 === 10-Q | Period ending 2026-06-27 | Processed 2026-07-27 ===
 [NUMERIC] ir_swap_notional: $9,700M → $22,920M (+136.3%) — exceeds 15% threshold
 [NUMERIC] total_derivative_asset: $444M → $652M (+46.8%) — exceeds 25% threshold

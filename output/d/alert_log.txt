@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-02 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($8,500M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $108M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $9,400M, now missing
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-11M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $108M, now missing
+[DISAPPEARED_FIELD] notional_volumes: was $14M, now missing
+[NEW_FIELD] commodity_price_sensitivity: appeared for first time ($-47M)
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (total_derivative_asset, cash_flow_hedge_aoci, equity_sensitivity_10pct, notional_volumes)
+[LLM_FLAG] fx_derivatives_notional: only euro-denominated figures are disclosed (€0.1 billion at 9/30/26 vs €0.9 billion at 12/31/25); no USD notional total is stated, so the field was left null rather than applying an assumed FX conversion rate.
+[LLM_FLAG] Newsworthy: FX forward purchase agreement notional for the CVOW Commercial Project fell roughly 89% quarter-over-quarter (€0.9 billion to €0.1 billion) — 'Dominion Energy had €0.1 billion and €0.9 billion in aggregate notional amounts of these foreign currency forward purchase agreements outstanding, respectively.'
+[LLM_FLAG] Newsworthy: these FX swaps are described as used 'to economically hedge the foreign currency exchange risk associated with fixed price contracts related to the CVOW Commercial Project' — 'economically hedge' phrasing suggests they may not carry hedge-accounting designation; worth checking the full derivatives note for de-designation or non-designated treatment.
+[LLM_FLAG] total_derivative_asset, total_derivative_liability, net_derivative_position, cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, commodity_derivatives_notional and equity_derivatives_notional could not be located in this excerpt — the supplied section_text reads as the Item 3 market-risk sensitivity discussion, not the Note's fair-value/notional tables, so these fields are likely present elsewhere in the filing but outside this slice.
+[LLM_FLAG] ir_sensitivity_100bp: the filing only discloses 10% interest-rate-move sensitivities ($14M/$10M earnings impact from variable-rate debt; $408M/$459M fair-value impact from IR derivatives), not a 100bp-specific figure — left null rather than rescaling a 10% result into a 100bp-equivalent without a stated basis.
+[LLM_FLAG] equity_sensitivity_10pct: not disclosed in this excerpt even though a prior extraction recorded 108.0 for this field — this is a gap (field not addressed in the current filing text), not evidence of zero equity price exposure; should not be treated as unchanged from the prior value.
+[LLM_FLAG] Newsworthy: FX forward notional tied to the CVOW Commercial Project fell roughly 89% quarter-over-quarter (€0.9 billion to €0.1 billion) — 'Dominion Energy had €0.1 billion and €0.9 billion in aggregate notional amounts of these foreign currency forward purchase agreements outstanding, respectively.'
+[LLM_FLAG] Interest rate derivative notional (Dominion Energy consolidated) fell from $10.7 billion to $8.5 billion quarter-over-quarter — roughly 21% — alongside commodity-price sensitivity worsening modestly ($15M to $47M at Dominion Energy).
+[LLM_FLAG] Virginia Power (subsidiary, not the filer for this request) shows a notably larger commodity-price sensitivity move than its parent: a decrease of $96 million vs. $71 million prior, versus Dominion Energy consolidated's $47 million vs. $15 million — worth noting if Virginia Power is covered separately.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($108M)
 [DISAPPEARED_FIELD] fx_designated_notional: was $1M, now missing

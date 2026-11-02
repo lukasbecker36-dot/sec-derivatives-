@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-02 ===
+[NUMERIC] fx_not_designated_notional: $186M → $133M (-28.5%) — exceeds 20% threshold
+[LLM_FLAG] fx_not_designated_notional: the filing's own comparative column shows non-designated FX hedge notional falling from $295M (Dec 31, 2025) to $133M (Sep 30, 2026), a ~55% decline; no explanation for the reduction is given in this section.
+[LLM_FLAG] Newsworthy: in the nine-month rollforward, $(39)M was reclassified from AOCI to 'Loss on sale of business' for a foreign currency hedge -- quote: 'Foreign currency\t\u2014\t\u2014\t( 39 )\t\u2014\t\u2014\t\u2014\tLoss on sale of business'. This lines up with the Income Taxes note's reference to 'the largely nondeductible divestiture of select European assets and related businesses,' suggesting a hedge (likely a net investment hedge) was de-designated or terminated in connection with that divestiture.
+[LLM_FLAG] commodity_derivatives_notional could not be stated as a single USD figure: the commodity derivatives table reports notional in physical units (MMBtu, Bbls, MWhs) rather than dollars, so no consolidated millions-of-dollars notional is disclosed in this section.
+[LLM_FLAG] cash_flow_hedge_aoci: this section discloses nine-month and three-month AOCI *activity* (gains/losses recognized in and reclassified from AOCI) but not a cumulative AOCI balance attributable to cash flow hedges, so the requested balance is not stated here.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
 [NUMERIC] fx_derivatives_notional: $324M → $2,945M (+809.0%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $294M → $2,759M (+838.4%) — exceeds 20% threshold

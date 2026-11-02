@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-02 ===
+[NUMERIC] fx_not_designated_notional: $447M → $325M (-27.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $66M → $149M (+126.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $61M → $82M (+32.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $5M → $68M (+1352.0%) — exceeds 20% threshold
+[NUMERIC] fx_transaction_gain_loss: $33M → $20M (-39.4%) — exceeds 20% threshold
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($18M)
+[NUMERIC] fuel_sensitivity_10pct: $40M → $25M (-36.8%) — exceeds 20% threshold
+[NUMERIC] fx_remeasurement_gains_losses: $33M → $20M (-39.4%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset rose from $66.092M (prior) to $149.35M (current, +126%); this ties to large fuel-contract gains recognized in OCI this period ($152,759 thousand for the three months and $283,532 thousand for the nine months ended September 30, 2026), reflecting favorable fuel-price/curve moves rather than an extraction error.
+[LLM_FLAG] net_derivative_position swung from a $4.666M net asset (prior) to a $67.749M net asset (current, computed as $149.350M total assets less $81.601M total liabilities) -- same fuel-contract fair-value driver as above.
+[LLM_FLAG] Newsworthy: NCLH carries non-designated (non-hedge-accounted) positions -- fuel swaps on approximately 30 thousand metric tons of projected purchases, and FX forwards with $324.9M notional hedging interest/principal on euro-denominated debt -- whose mark-to-market moves flow directly through 'Other income (expense), net' rather than OCI.
+[LLM_FLAG] Newsworthy: the filing states 'We are not required to post cash collateral related to our derivative instruments' and that 'Our derivatives and financial instruments were categorized as Level 2 in the fair value hierarchy, and we had no derivatives or financial instruments categorized as Level 1 or Level 3' -- no exotic/illiquid structures or embedded derivatives in this book.
+[LLM_FLAG] Newsworthy: $47,477 thousand (Q3) / $86,178 thousand (9mo) of fuel-contract gains were reclassified from AOCI into the 'Fuel' expense line, plus a further $5,378 thousand (Q3) / $11,179 thousand (9mo) reclassified into 'Other income (expense), net' specifically '... as a result that a forecasted transaction is no longer probable of occurring' -- worth confirming with IR which forecasted fuel purchase(s) were deemed no longer probable.
+[LLM_FLAG] No field moved more than 50% against prior_values this period; the largest moves were fuel_sensitivity_10pct (-36.8%, $39.7M to $25.1M) and fx_transaction_gain_loss/fx_remeasurement_gains_losses (-39.4%, $32.7M to $19.8M), both below the reconciliation threshold.
+[LLM_FLAG] Newsworthy: the filing attributes the fixed/variable debt mix shift (90%/10% at Dec 31 2025 to 88%/12% at Sept 30 2026) explicitly to 'the addition of variable rate debt,' raising SOFR sensitivity to $18.2 million per 100bp from $15.3 million previously.
+[LLM_FLAG] Newsworthy: euro ship-construction payments not hedged fell from €16.4 billion/$19.3 billion (Dec 31, 2025) to €14.1 billion/$16.0 billion (Sept 30, 2026); the filing attributes the change 'primarily due to the addition of foreign currency derivatives, partially offset by newly effective ship construction contracts' -- i.e. NCLH increased FX hedge coverage on its newbuild program this period.
+[LLM_FLAG] Newsworthy: euro-denominated debt not hedged changed 'primarily due to the delivery of Norwegian Luna, partially offset by additional foreign exchange forwards' -- a specific ship-delivery event altering the hedged debt base.
+[LLM_FLAG] Newsworthy: fuel-hedge coverage for 2026 fell from 52% to 48% ('due to maturity of fuel swaps in 2026') while 2027 coverage rose from 38% to 39% ('and additional fuel swaps in 2027') -- a rolling hedge-ladder roll rather than a strategy change.
+[LLM_FLAG] Filing reiterates 'We do not hold or issue derivatives for trading or other speculative purposes' and that NCLH achieves its hedge effectiveness 'by closely matching the notional, term and conditions of the derivatives with the underlying risk being hedged' -- no new instrument types or structures introduced this quarter.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-09-28 ===
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $3,903M, now missing
 [DISAPPEARED_FIELD] fi_fx_designated_notional: was $3,600M, now missing

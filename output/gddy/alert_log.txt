@@ -1,3 +1,8 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-02 ===
+[NUMERIC] aoci_unrealized_losses: $1M → $-7M (-630.8%) — exceeds 20% threshold
+[LLM_FLAG] aoci_unrealized_losses: sign and magnitude flip vs prior quarter ($1.3M unrealized LOSS as of 6/30/26) to this quarter's $6.9M unrealized GAIN (+431% in magnitude, sign reversed) — text explicitly says 'unrealized gains ... $6.9 million', and the filing gives no explanation for the swing.
+[LLM_FLAG] ir_sensitivity_100bp / fx_sensitivity_10pct: filing only discloses a qualitative 'would not have had a material impact' statement for a hypothetical 10% rate/FX move — no dollar sensitivity figure is given this quarter (consistent with recent quarters), so these fields are boilerplate non-disclosures rather than extraction gaps.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
 [NUMERIC] aoci_realized_losses: $9M → $11M (+20.4%) — exceeds 20% threshold
 [NUMERIC] aoci_unrealized_losses: $6M → $1M (-78.0%) — exceeds 20% threshold

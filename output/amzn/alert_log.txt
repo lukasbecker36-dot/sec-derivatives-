@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-02 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $125,702M, now missing
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $122,988M, now missing
+[NUMERIC] gross_unrealized_gains_debt: $7M → $3M (-57.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-82M, now missing
+[NUMERIC] fx_sensitivity_10pct: $-2,795M → $-1,700M (+39.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $-740M, now missing
+[DISAPPEARED_FIELD] restricted_cash_amounts: was $2,714M, now missing
+[VALIDATION] Likely extraction failure: 6/11 previously-populated fields are now null (total_cash_equivalents_fv, total_marketable_securities_fv, fx_forwards_outstanding, fx_transaction_gain_loss, equity_sensitivity_10pct...)
+[LLM_FLAG] gross_unrealized_gains_debt fell from $7M (prior period) to $3M (Sep 30 2026) — a >50% decline, and the filing gives no explanation for the change.
+[LLM_FLAG] total_cash_equivalents_fv and total_marketable_securities_fv could not be determined: this note presents a single combined fair-value-hierarchy table for cash, cash equivalents, restricted cash and marketable securities by instrument type, with no separate 'total cash equivalents' or 'total marketable securities' subtotal stated in the text. Returning null rather than estimating a split that isn't given.
+[LLM_FLAG] Large equity-securities mark-to-market reversal disclosed in the footnote: 'The related unrealized gain (loss) recorded in “Other income (expense), net” was $153 million and $( 648 ) million in Q3 2025 and Q3 2026, and $341 million and $( 194 ) million for the nine months ended September 30, 2025 and 2026.' — a swing from gains to losses worth noting for an equity-price-risk angle, though this is not one of the schema's numeric fields.
+[LLM_FLAG] equity_sensitivity_10pct is no longer disclosed: the filing states 'As such, we believe that market sensitivities are not practicable,' versus a quantified $(740) million 10%-adverse-move sensitivity reported in the prior period — a disclosure change, plausibly driven by the growing share of hard-to-value private holdings (Anthropic, OpenAI) in the equity book.
+[LLM_FLAG] Recorded value of equity, equity warrant and convertible debt investments rose from $229.7 billion to $298.8 billion (+30%), quoting: 'our recorded value in equity, equity warrant, and convertible debt investments in public and private companies was $298.8 billion' — driven by private holdings including Anthropic and OpenAI, while only $6.7 billion of that total is publicly traded and marked via observable prices.
+[LLM_FLAG] $21.9 billion of Euro-, Canadian Dollar-, and Sterling-denominated notes are designated as net investment hedges this quarter ('we have designated approximately $21.9 billion of our Euro-, Canadian Dollar-, and Sterling-denominated Notes as net investment hedges') — Amazon continues to hedge FX translation exposure via foreign-currency debt rather than derivative instruments; no derivative notional appears in this section.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
 [NEW_FIELD] total_marketable_securities_fv: appeared for first time ($122,988M)
 [NUMERIC] marketable_equity_securities_fv: $2,801M → $4,687M (+67.3%) — exceeds 20% threshold

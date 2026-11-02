@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-02 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($300M)
+[DISAPPEARED_FIELD] commodity_contract_liabilities: was $-131M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (commodity_contract_liabilities)
+[LLM_FLAG] ir_swap_notional fell from $700M at Dec 31, 2025 to $300M at Sep 30, 2026 (~57% decrease, exceeds the 50% threshold); the text explains this: Exelon terminated $550 million notional of floating-to-fixed swaps upon issuing $775 million of debt, partly offset by $90 million of new 10-year floating-to-fixed swaps entered in Q3 2026.
+[LLM_FLAG] Swap termination linked to debt issuance, newsworthy: "Exelon terminated the previously issued floating-to-fixed swaps with a total notional of $ 550 million upon issuance of $ 775 million of debt ... The settlements resulted in a net cash payment of $ 6 million." Associated AOCI loss of $4 million (net of tax) is being amortized into interest expense over the 5- and 10-year original swap terms.
+[LLM_FLAG] New hedging activity: "During the third quarter of 2026, Exelon Corporate entered into $ 90 million notional of 10-year maturity floating-to-fixed swaps designated as cash flow hedges."
+[LLM_FLAG] Collateral/credit risk movement, not in schema but relevant: cash collateral held from external counterparties rose for Exelon from $223 million (Dec 31, 2025) to $312 million (Sep 30, 2026). Contingent collateral exposure also disclosed: "If PECO, BGE, or DPL lost their investment grade credit rating as of September 30, 2026, they could have been required to post collateral to their counterparties of $ 26 million, $ 14 million, and $ 10 million, respectively."
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-09-18 ===
 [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $210M, now missing
 [DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing

@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-02 ===
+[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[NUMERIC] total_derivative_liability: $218M → $285M (+31.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-213M → $-280M (-31.6%) — exceeds 20% threshold
+[LLM_FLAG] Net investment hedge derivative liability rose from $172,629K to $245,384K (+42%), the main driver of total derivative liabilities rising from $217,807K to $285,442K; filing states 'Gain (loss) recognized in cumulative translation adjustment within other comprehensive income (loss) $(72,755)' for Q1 FY27 vs. a $2,290K gain in the prior-year quarter — a sizable net investment hedge OCI swing worth verifying against USD/hedged-currency moves during the quarter.
+[LLM_FLAG] ir_swap_notional, commodity_derivatives_notional and equity_derivatives_notional are not disclosed anywhere in this section — ResMed's derivatives program as described here is FX-only (cross-currency swaps + non-designated FX forwards/options/collars).
+[LLM_FLAG] section_text supplied for market_risk contains no Item 3 Quantitative and Qualitative Disclosures About Market Risk content at all — it is a one-sentence fragment about gross margin/pricing that cuts off into the next Part/Item heading. This looks like a section-extraction boundary problem (heading/end-boundary regex likely matched the wrong span), not an actual absence of Item 3 disclosure.
+
 === 10-K | Period ending 2026-06-30 | Processed 2026-08-14 ===
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $4,749M, now missing
 [DISAPPEARED_FIELD] fi_fx_designated_notional: was $3,430M, now missing

@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-02 ===
+[NEW_FIELD] total_derivative_asset: appeared for first time ($78M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($74M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($4M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $121M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $71M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $50M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct)
+[LLM_FLAG] equity_derivatives_notional: prior_values recorded a non-numeric value ('Yes') for this notional field, but no equity derivatives are mentioned anywhere in this Note 10 excerpt; left as not_found rather than carrying forward what looks like a prior extraction error.
+[LLM_FLAG] commodity_derivatives_notional: the note discloses commodity derivative notional volumes only in physical units (electricity in MWhs, FTRs in MWhs, natural gas in Dths, coal in tons), not as a dollar notional amount, so this dollar-denominated field is left not_found to avoid misreporting a physical quantity as a dollar figure.
+[LLM_FLAG] total_derivative_liability: Alliant Energy's gross derivative liabilities rose from $51M (Dec 31, 2025) to $74M (Sept 30, 2026), a ~45% increase; the text attributes no specific cause, only noting commodity price/cost-recovery mechanics generically.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
 [NEW_FIELD] total_derivative_liability: appeared for first time ($71M)
 [NEW_FIELD] net_derivative_position: appeared for first time ($50M)

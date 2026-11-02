@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-02 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($347M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($342M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($5M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($12M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $384M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $377M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $7M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $12M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, fx_forwards_outstanding)
+[LLM_FLAG] total_derivative_asset / total_derivative_liability / net_derivative_position: prior run recorded 383.6 / 376.9 / 6.7, but this quarter's derivatives note (as excerpted) contains no fair-value table at all -- it only states that fair values and gain/loss impacts 'did not have a material impact on the Company's condensed consolidated financial statements', with no dollar figures given. This is a disclosure gap versus prior periods, not a confirmed zero or carried-forward value.
+[LLM_FLAG] Net Investment hedge wound down: notional fell from $25.0M (Dec 31, 2025) to $0.0 (Sep 30, 2026). Filing states: 'The Net Investment hedge matured during the second quarter of 2026 and resulted in a gain of $2.4 recorded in Accumulated Other Comprehensive Income.' Newsworthy -- a designated hedging programme has been closed out.
+[LLM_FLAG] commodity_derivatives_notional: cannot be expressed in millions of USD -- the filing discloses commodity hedge size only in physical units ('Diesel fuel contracts 1.1 gallons' vs. 4.5 gallons prior; 'Commodities contracts 11.4 pounds' vs. 43.6 pounds prior), a roughly 75% reduction in hedged volume for both diesel and other commodities quarter-over-quarter, with no explanation given in the text for the reduction.
+[LLM_FLAG] fx_designated_notional: declined about 22% from $438.2M (Dec 31, 2025) to $341.8M (Sep 30, 2026); the filing gives no explanation for the change.
+[LLM_FLAG] Item 3 (Market Risk) is pure incorporation-by-reference boilerplate this quarter: 'There have been no material changes in the Company's market-risk exposures since December 31, 2025.' No quantitative figures (notional, sensitivity, or otherwise) are disclosed in this section, so none of the schema fields can be populated from it -- including fx_forwards_outstanding, which had a prior value of 12.3 that must not be carried forward.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($384M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($377M)

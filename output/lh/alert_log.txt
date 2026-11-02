@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-02 ===
+[NUMERIC] fx_forwards_outstanding: $424M → $514M (+21.2%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $13M, now missing
+[NUMERIC] fx_sensitivity_10pct: $17M → $27M (+55.6%) — exceeds 20% threshold
+[LLM_FLAG] fx_not_designated_notional set to 0 by inference, not an explicit disclosure: the note describes only one FX derivative instrument (the USD/Swiss Franc cross currency swaps, $1,200.0 notional), and states it is fully designated as a net investment hedge, with no other FX instrument mentioned in this section.
+[LLM_FLAG] Net investment hedge OCI impact from the cross currency swaps swung from $(139.6) (nine months ended Sep 30, 2025) to $33.0 (nine months ended Sep 30, 2026) per the 'Amounts Included In Other Comprehensive Loss' table — a swing from a loss to a gain of over 100%, with no explanation given in the text beyond the table itself.
+[LLM_FLAG] No total derivative asset/liability fair value table, no commodity or equity derivatives, and no de-designations, terminations, novations or new hedging programmes are disclosed in this section; both the interest rate swaps (fair value hedge) and cross currency swaps (net investment hedge) are described as pre-existing, ongoing programmes.
+[LLM_FLAG] fx_sensitivity_10pct rose 55.6% from $17.1M (prior period) to $26.6M (nine months ended Sep 30, 2026); the filing states only the hypothetical 10% FX-move impact figure itself and gives no explanation (e.g. revenue mix shift, currency volatility) for the increase.
+[LLM_FLAG] ir_sensitivity_100bp left null rather than derived: this filing discloses interest rate sensitivity only as a quarter-point (25bp) step — 'approximately $3.3 per year' — instead of the 100bp figure given in prior periods ($13.2M); scaling 25bp to 100bp was not done since the relationship between variable-rate debt and a 100bp move is not stated as linear in the text, and doing so would be an estimate rather than an extracted figure.
+[LLM_FLAG] Cross currency swap ($1,200.0 notional, USD/Swiss Franc, designated net investment hedge) and interest rate swap ($500.0 notional, 2.70% notes due 2031, fair value hedge) programmes are both reiterated here consistent with the derivatives note — no new instruments, terminations or de-designations mentioned in this section.
+[LLM_FLAG] No commodity, equity, or marketable-securities market risk disclosed; equity_sensitivity_10pct and marketable_equity_value are not applicable per this filing.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $1,200M, now missing
 [DISAPPEARED_FIELD] fi_fx_designated_notional: was $1,200M, now missing

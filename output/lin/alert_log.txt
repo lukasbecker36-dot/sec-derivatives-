@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-02 ===
+[NUMERIC] fx_derivatives_notional: $13,879M → $17,202M (+23.9%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $3,993M → $5,551M (+39.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $191M → $262M (+37.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $85M → $156M (+83.5%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_liability rose from $85M (prior) to $156M (current), an ~84% increase; the filing text does not explain this increase. The nearest related detail is the 'Balance sheet items' currency-contract liability rising from $34M to $108M alongside notional growth from $9,509M to $11,437M on that same line.
+[LLM_FLAG] Net investment hedges now cover €17.7 billion ($20.1 billion) Euro-denominated notes/intercompany loans, ¥6.0 billion ($0.9 billion) CNY intercompany loans, and CHF 0.5 billion ($0.6 billion) CHF-denominated notes, 'designated as hedges of the net investment positions in certain foreign operations.'
+[LLM_FLAG] Interest rate swap disclosure is written entirely in the past tense — 'Linde has historically used interest rate swaps to hedge the exposure to changes in the fair value of financial assets and financial liabilities... When used, these interest rate swaps would effectively convert fixed-rate interest exposures to variable rates' — indicating no IR swap notional is currently outstanding; ir_swap_notional was left null rather than inferred.
+[LLM_FLAG] Pre-tax gain/loss on debt-related currency balance-sheet-item derivatives swung from a $(108) million loss (nine months ended Sept 30, 2025) to an $85 million gain (nine months ended Sept 30, 2026): 'Debt-related $ 40 ... $ 17 ... $ 85 ... $ ( 108 )'. The filing only notes these are offset by gains/losses on the underlying hedged debt, without further explanation for the swing.
+[LLM_FLAG] Commodity contract notional is disclosed as 'N/A' in the table even though fair value figures are given ($73M asset / $33M liability currently), so gross commodity derivative size cannot be extracted: 'Commodity contracts N/A N/A 73 5 33 10'.
+[LLM_FLAG] The entire Item 3 market-risk section is a cross-reference — 'Refer to Item 7A. to Part II of Linde's 2025 Annual Report on Form 10-K for discussion.' — with no standalone quantitative disclosure for this quarter, so none of the schema fields can be extracted from this section.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
 [NUMERIC] fx_designated_notional: $345M → $3,993M (+1057.4%) — exceeds 20% threshold
 [DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing

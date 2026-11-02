@@ -1,3 +1,23 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-02 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,600M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($12M)
+[NUMERIC] total_derivative_asset: $5,800M → $96M (-98.3%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($-25M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($71M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($11M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $10M → $7M (-30.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $105M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $30M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $75M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $8M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $5M, now missing
+[VALIDATION] Likely extraction failure: 5/7 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value)
+[LLM_FLAG] total_derivative_asset is $96M this period vs a prior_values figure of $5,800M — a >50% swing with nothing in section_text to explain it. The $96M reconciles across two independent tables (the designated + non-designated derivative fair-value table sums to $15M+$81M=$96M, and Note 13's recurring fair value table separately states 'Derivative assets 96'), so $96M is well-supported. The prior $5,800M looks like a stale/misextracted value from an earlier run — plausibly a notional (e.g. the $5.6 billion four-quarter-average FX notional) landing in this fair-value field rather than a real fair-value total. Recommend treating the prior value as suspect rather than this one.
+[LLM_FLAG] prior_values for equity_derivatives_notional is the string 'Yes', not a numeric notional — inconsistent with the field's kind and likely a carryover data-quality artifact; no equity derivatives are mentioned anywhere in this period's section_text.
+[LLM_FLAG] Newsworthy — de-designation: 'During the nine months ended September 30, 2026, we de-designated derivative and non-derivative instruments that qualified as net investment hedges in certain European and Asian businesses with notional amounts of € 169 million and ¥ 21.5 billion, respectively.'
+[LLM_FLAG] Newsworthy — active net investment hedge notionals by currency, maturities 2026-2028: 'As of September 30, 2026, we have derivative instruments that qualify as net investment hedges against our investments in certain European businesses (notional amount of € 130 million) and Asian businesses (notional amount of HK$ 2.2 billion and ¥ 16 billion).'
+[LLM_FLAG] This Item 3 section is a bare cross-reference — 'Quantitative and Qualitative Disclosures About Market Risk" in our 2025 Form 10-K' — not an actual market risk disclosure for this quarter; no sensitivity or notional figures are stated in section_text, so every field is correctly null/not_found rather than extracted or carried forward. This is standard 10-Q incorporation-by-reference practice, not a disclosure change worth flagging editorially.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,800M)
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($10M)

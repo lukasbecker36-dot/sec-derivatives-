@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-02 ===
+[NUMERIC] fx_derivatives_notional: $1,614M → $2,172M (+34.6%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $1,333M → $1,833M (+37.5%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $282M → $340M (+20.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $11M → $18M (+61.4%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $102M → $128M (+25.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-91M → $-110M (-21.0%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset rose from $11.4M (prior) to $18.4M (+61%), exceeding the 50% threshold; the filing does not explicitly explain the fair-value move, though it coincides with the growth of the cross-currency swap book (notional up from $1,332.7M to $1,832.7M) which carries a $16.9M asset mark, the largest single asset-side line.
+[LLM_FLAG] Newsworthy — new net investment hedge programme additions: 'In August 2026, the Company entered into two cross-currency interest rate swap contracts that replace a fixed rate of 5.2 % on a total of $ 250.0 million with a fixed rate of 3.8 % on a total of € 217.2 million' and a second pair at 5.3%/4.0% on another $250.0 million — together these drove the net-investment cross-currency swap notional up 37.5% quarter-over-quarter ($1,332.7M → $1,832.7M), effectively swapping higher-coupon USD fixed debt into lower-coupon EUR fixed debt while maintaining net investment hedge designation.
+[LLM_FLAG] Newsworthy — legacy terminated cash flow hedges: forward-starting IR swaps with $750.0M and $500.0M notional (for the 2034 and 2054 Notes) were terminated back in May 2024 but the unrecognized loss ($3.7M remaining in AOCI) continues to amortize into interest expense; this is a decaying legacy item, not new activity this quarter.
+[LLM_FLAG] No commodity or equity derivatives disclosed; company states derivatives are not used 'for trading or speculative purposes.'
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] total_derivative_asset: $30M → $11M (-61.9%) — exceeds 20% threshold
 [DISAPPEARED_FIELD] fx_transaction_gain_loss: was $-2M, now missing

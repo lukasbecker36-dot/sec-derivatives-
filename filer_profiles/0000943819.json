@@ -19,7 +19,9 @@
       "cross-currency",
       "notional amount",
       "net investment hedge",
-      "notional value"
+      "notional value",
+      "fair value hedge",
+      "designated as hedging"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -80,6 +82,18 @@
       ],
       "fields_extracted": 8,
       "fields_null": 4
+    },
+    {
+      "filing_date": "2026-09-30",
+      "form_type": "10-Q",
+      "period_end": "2026-09-30",
+      "processed_at": "2026-11-02T03:00:06Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 7,
+      "fields_null": 12
     }
   ]
 }

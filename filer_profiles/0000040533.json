@@ -15,7 +15,10 @@
     "market_risk_in_10k_only": false
   },
   "idiosyncrasies": {
-    "recurring_phrases": [],
+    "recurring_phrases": [
+      "net investment hedge",
+      "cash flow hedge"
+    ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -75,6 +78,18 @@
       ],
       "fields_extracted": 2,
       "fields_null": 10
+    },
+    {
+      "filing_date": "2026-10-04",
+      "form_type": "10-Q",
+      "period_end": "2026-10-04",
+      "processed_at": "2026-11-02T02:59:56Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 7,
+      "fields_null": 17
     }
   ]
 }

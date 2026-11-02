@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-02 ===
+[NUMERIC] ir_sensitivity_100bp: $18M → $23M (+27.8%) — exceeds 20% threshold
+[NUMERIC] variable_rate_debt_outstanding: $1,800M → $2,300M (+27.8%) — exceeds 20% threshold
+[LLM_FLAG] Fuel hedging program wound down: "As of September 30, 2026, we had no fuel hedges in place." The filing otherwise describes an active hedging capability ("we may enter into new fuel hedges, renew contracts"), implying the company is currently running unhedged on diesel exposure.
+[LLM_FLAG] Recycling commodity hedging program also wound down: "In prior periods, we have entered into derivative instruments such as swaps and costless collars designated as cash flow hedges to manage our exposure to changes in prices of these commodities. As of September 30, 2026, we had no recycling commodity hedges in place." Two separate commodity hedging programs (fuel and recycled commodities) are both currently empty despite established capability/history — worth confirming whether this is a deliberate strategy shift or a timing gap between hedge expirations and new placements.
+[LLM_FLAG] variable_rate_debt_outstanding and ir_sensitivity_100bp both rose ~28% vs. prior period ($1.8B→$2.3B; $18M→$23M) — under the 50% flag threshold, but the two moves are consistent with each other (more floating-rate debt outstanding, not a rate-environment change), so the correlation looks internally consistent rather than suspicious.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
 [NUMERIC] ir_sensitivity_100bp: $28M → $18M (-35.7%) — exceeds 20% threshold

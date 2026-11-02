@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-10-04 | Processed 2026-11-02 ===
+[NUMERIC] total_derivative_liability: $49M → $123M (+151.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $26M → $-60M (-330.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $8,500M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $8M, now missing
+[DISAPPEARED_FIELD] fx_forward_notional: was $8,500M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_recognized: was $-68M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_unrecognized: was $-498M, now missing
+[DISAPPEARED_FIELD] fixed_rate_debt_principal: was $8,000M, now missing
+[VALIDATION] Likely extraction failure: 6/12 previously-populated fields are now null (fx_forwards_outstanding, fixed_rate_notes_billion, fx_forward_notional, fx_sensitivity_recognized, fx_sensitivity_unrecognized...)
+[LLM_FLAG] total_derivative_liability moved from $49M (prior period) to $123M (current), a +151% increase; the text does not explain why the cash flow hedge liability fair value rose — verify against the filing before quoting.
+[LLM_FLAG] net_derivative_position swung from a net asset of +$26M to a net liability of -$60M; the only nearby commentary is that gains/losses on non-qualifying derivatives and AOCL reclassifications were 'not material,' which does not explain a fair-value swing of this size.
+[LLM_FLAG] fx_derivatives_notional rose modestly from $8.5B to $9.1B (+7%), within normal range, consistent with the two-year average-maturity forward book described in the note.
+[LLM_FLAG] No interest rate swaps, commodity hedges, or equity derivatives are disclosed — GD states it has not entered into material commodity hedging contracts and the note contains no IR swap or equity derivative language at all.
+[LLM_FLAG] Company reiterates it had 'no material derivative financial instruments designated as fair value or net investment hedges' — unchanged hedge-accounting mix (FX forwards as cash flow hedges only).
+[LLM_FLAG] Item 3 (Quantitative and Qualitative Disclosures About Market Risk) contains no figures this quarter — it only incorporates the FY2025 10-K by reference ('There have been no material changes with respect to this item from the disclosure included in our Annual Report on Form 10-K for the year ended December 31, 2025'). All notional, sensitivity, and fixed-rate figures normally sourced from this item are therefore unavailable here; the FX forward notional and cash flow hedge fair values for this period are instead reported in Note N (Derivative Financial Instruments) of the same filing.
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-10-20 ===
 [NUMERIC] fx_derivatives_notional: $5,600M → $8,500M (+51.8%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $5,600M → $8,500M (+51.8%) — exceeds 20% threshold
