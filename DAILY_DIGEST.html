@@ -2,400 +2,147 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SEC Derivatives — Daily Digest — 2026-11-02</title>
+<title>SEC Derivatives — Daily Digest — 2026-11-03</title>
 <style>
-  body { font-family: Georgia, 'Times New Roman', serif; max-width: 860px; margin: 0 auto; padding: 24px 20px 60px; color: #1a1a1a; line-height: 1.5; }
-  h1 { font-size: 1.4em; border-bottom: 2px solid #1a1a1a; padding-bottom: 8px; }
-  h2 { font-size: 1.15em; margin-top: 2em; border-bottom: 1px solid #ccc; padding-bottom: 4px; }
-  .summary { background: #f4f4f0; border-left: 4px solid #555; padding: 10px 16px; margin: 1em 0; font-size: 0.97em; }
-  .lead { margin-bottom: 1.3em; }
-  .lead .ticker { font-weight: bold; }
-  table { border-collapse: collapse; width: 100%; font-size: 0.88em; margin: 0.8em 0; }
-  th, td { border: 1px solid #ccc; padding: 5px 8px; text-align: left; vertical-align: top; }
+  body { font-family: Georgia, 'Times New Roman', serif; max-width: 820px; margin: 0 auto; padding: 24px; color: #1a1a1a; line-height: 1.5; }
+  h1 { font-size: 1.4em; border-bottom: 2px solid #222; padding-bottom: 8px; }
+  h2 { font-size: 1.15em; margin-top: 2em; border-bottom: 1px solid #999; padding-bottom: 4px; }
+  .summary { font-size: 1.05em; background: #f4f4f0; padding: 12px 16px; border-left: 4px solid #555; margin: 1em 0; }
+  .lead { margin-bottom: 1.1em; }
+  .ticker { font-weight: bold; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.92em; margin: 0.8em 0; }
+  th, td { border: 1px solid #ccc; padding: 4px 8px; text-align: left; }
   th { background: #eee; }
-  .flag { color: #a33; font-weight: bold; }
-  .note { font-size: 0.85em; color: #555; }
-  .footer { margin-top: 2.5em; padding-top: 10px; border-top: 1px solid #999; font-size: 0.85em; color: #444; }
-  code { background: #f0f0f0; padding: 1px 4px; font-size: 0.92em; }
+  .flag { color: #b03a2e; font-weight: bold; }
+  .num { text-align: right; }
+  .verify { font-size: 0.85em; color: #555; margin-top: 2em; border-top: 1px solid #ccc; padding-top: 10px; }
+  .meta { color: #555; font-size: 0.9em; }
 </style>
 </head>
 <body>
 
-<h1>SEC Derivatives — Daily Digest — 2026-11-02</h1>
+<h1>SEC Derivatives — Daily Digest — 2026-11-03</h1>
+<p class="meta">Window: 2026-11-02T04:15:40+00:00 to 2026-11-03T04:02:05Z · Baseline: cb86641</p>
 
 <div class="summary">
-49 new filings extracted overnight (filed in the last 7 days), 0 filings held for review.
+21 new filings extracted overnight (filed in the last 7 days), 0 filings held for review.
 </div>
 
 <h2>Leads</h2>
 
-<div class="lead">
-<span class="ticker">EIX (Edison International)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. Edison International Parent issued $550 million of 4.80% senior notes due 2031 in February 2026 and $500 million of 5.00% senior notes due 2028 in May 2026, while subsidiary SCE entered into a $1.5 billion term loan in February 2026 priced at SOFR plus 1.00%. Separately, the filing discloses that "an inverse condemnation bench trial in the Saddle Ridge Fire litigation commenced in October 2026 for the only remaining plaintiff alleging inverse condemnation," and that Edison International and SCE became subject to the IRA's corporate alternative minimum tax (CAMT) beginning in 2026.
-</div>
+<div class="lead"><span class="ticker">EL</span> (10-Q, period ended 2026-09-30, filed 2026-11-02) — Estée Lauder's notes disclose an active cross-currency swap programme used to manage intercompany FX debt: "The Company enters into cross-currency swap contracts to manage the exposure of foreign exchange rate fluctuations on its intercompany foreign currency denominated debt." As of the period end, "the Company has cross-currency swap contracts with notional amounts totaling $406 million, to hedge the impact of foreign currency changes on certain intercompany foreign currency denominated debt." The filing separately details a netting-arrangement policy table for asset/liability offsetting.</div>
 
-<div class="lead">
-<span class="ticker">BG (Bunge Global)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. Bunge disclosed that "a hypothetical 100 basis point increase or decrease in the applicable reference rate, such as SOFR, would result in a change of approximately $148 million in interest expense on our variable rate debt at September 30, 2026" — matching the pipeline's recorded 100bp interest-rate sensitivity, which rose to $148 million as of September 30, 2026 from $99 million as of March 31, 2026 (+49%). Separately, Bunge's trade-receivables securitization "Program will terminate in May 2031; however, each committed purchaser's commitment to purchase trade receivables under the Program will terminate earlier in December 2026, with a feature that permits Bunge to request 364-day extensions."
-</div>
+<div class="lead"><span class="ticker">ON</span> (ON Semiconductor, 10-Q, period ended 2026-10-02, filed 2026-11-02) — On Semiconductor's FX hedging book went to zero this quarter: "As of October 2, 2026, the Company had no net outstanding foreign exchange contracts." That matches the manifest's move on <em>fx_not_designated_notional</em> (from $165.3M at 2026-04-03 to $0.0, -100%) and the broader <em>fx_derivatives_notional</em> decline (from $627.6M to $444.1M, -29.2%). Separately, the filing discloses a pending acquisition: "On November 2, 2026, the Company entered into a definitive agreement to acquire Ferric, Inc. ('Ferric') which is expected to expand the Company's power management portfolio with advanced integrated voltage regulator technology," and notes the deal's purchase accounting is not yet complete. <span class="flag">The corpus flags this filing's total-derivative-asset/liability swing as an implausible swing — verify against the filing before quoting.</span></div>
 
-<div class="lead">
-<span class="ticker">OTIS (Otis Worldwide)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. Otis disclosed that "during the nine months ended September 30, 2026, we de-designated derivative and non-derivative instruments that qualified as net investment hedges in certain European and Asian businesses with notional amounts of €169 million and ¥21.5 billion, respectively," adding that "these de-designated instruments were deemed to be effective until de-designation." <span class="flag">Flag:</span> separately, the pipeline's reported total derivative asset fell to $96 million as of September 30, 2026 from $5,800 million as of June 30, 2026, but the corpus flags this move as an implausible swing — verify against the filing before quoting.
-</div>
+<div class="lead"><span class="ticker">WST</span> (West Pharmaceutical Services, 10-Q, period ended 2026-09-30, filed 2026-10-29) — West discloses a yen-denominated cross-currency swap: "As of September 30, 2026, the notional amount of the cross-currency swap is ¥17.0 billion ($130.0 million), and the swap termination date is July 2, 2027." The filing adds that "under the cross-currency swap, we receive fixed USD interest rate payments in return for paying fixed JPY interest rate payments."</div>
 
-<div class="lead">
-<span class="ticker">IR (Ingersoll Rand)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-30. Ingersoll Rand's notes describe cash flow hedges entered into and terminated in the same quarter: "during the second quarter of 2024, the Company entered into and terminated cash flow hedges with notional value of $750.0 million in connection with the 2034 Notes and $500.0 million in connection with the 2054 Notes," with the unrecognized loss from termination still being amortized into earnings. FX derivatives notional rose to $2,172.5 million as of September 30, 2026 from $1,614.5 million as of June 30, 2026 (+34.6%), of which $1,832.7 million was designated as hedges, up from $1,332.7 million (+37.5%).
-</div>
+<div class="lead"><span class="ticker">TER</span> (Teradyne, 10-Q, period ended 2026-09-27, filed 2026-10-30) — Teradyne refinanced its revolver this quarter: "The 2026 Credit Agreement replaced Teradyne's prior six-year, $750.0 million revolving credit facility entered into in May 2020 ... which, prior to Teradyne's voluntary early termination, was set to e[xpire]." Separately the filing notes a quarterly qualitative effectiveness assessment continues under the critical-terms-match method. <span class="flag">The corpus flags this filing's derivative-asset swing as an implausible swing — verify against the filing before quoting.</span></div>
 
-<div class="lead">
-<span class="ticker">BAX (Baxter International)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. Baxter's notes describe a March 2025 de-designation: "In March 2025, we dedesignated this previously designated net investment hedge and concurrently entered into forward contracts... with a notional amount of $655 million to hedge the repayment of our Euro-denominated senior notes due May 2025," leaving an accumulated pre-tax unrealized translation gain in AOCI of $25 million tied to the remaining Euro-denominated notes. FX derivatives notional fell to $151 million as of September 30, 2026 from $204 million as of June 30, 2026 (-26%), all of it non-designated.
-</div>
+<div class="lead"><span class="ticker">VLTO</span> (Veralto, 10-Q, period ended 2026-10-02, filed 2026-10-30) — Veralto's notes restate its cross-currency swap hedge of non-U.S. net investments: "On July 29, 2025, the Company entered into cross-currency swap derivative contracts with a total notional amount of $410 million to partially hedge its net investments in non-U.S. operations against adverse movements in exchange rates between the U.S. dollar [and other currencies]." Note the origination date is from 2025 — this is a continuing disclosure, not a new transaction this quarter.</div>
 
-<div class="lead">
-<span class="ticker">ECL (Ecolab)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. Ecolab disclosed that "during the nine months ended September 30, 2026, the Company entered into forward-starting interest rate lock contracts to hedge the interest rate risk related to anticipated debt issuances for a total notional amount of $800 million," which "were settled upon issuance of the $5.0 billion of public notes in May 2026." The company's existing interest-rate swap book, which converts $1,250 million of fixed-rate debt to floating, is down from $1,500 million as of June 30, 2026 (-16.7%).
-</div>
+<div class="lead"><span class="ticker">BSX</span> (Boston Scientific, 10-Q, period ended 2026-09-30, filed 2026-11-02) — Boston Scientific's notes flag ongoing hedge reclassification: "A portion of this notional is subject to de-designation and re-designation based on changes in the underlying hedged item." That activity lines up with the quarter's moves: <em>fx_not_designated_notional</em> rose to $6,339M from $4,231M at 2026-06-30 (+49.8%), while <em>fx_sensitivity_depreciation_current</em> flipped from +$1,042M to -$1,097M over the same period. <span class="flag">The corpus flags this filing as an implausible swing — verify against the filing before quoting.</span></div>
 
-<div class="lead">
-<span class="ticker">RMD (ResMed)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-30. ResMed disclosed that "the notional value of outstanding foreign cross-currency swaps was $3,436 million and $3,412 million at September 30, 2026 and June 30, 2026, respectively," under its purchased-option, collar and forward-contract hedging programme. Separately, the filing notes $19 million of restructuring charges in the quarter, comprised of severance and software-asset impairments, with $12 million of restructuring liabilities remaining on the balance sheet.
-</div>
+<div class="lead"><span class="ticker">IDXX</span> (IDEXX Laboratories, 10-Q, period ended 2026-09-30, filed 2026-11-02) — IDEXX's notes describe an active de-designation policy: "We de-designate hedging instruments from hedge accounting when the likelihood of the hedged transaction occurring becomes less than probable," with gains/losses on de-designated instruments recognized in earnings through maturity. The quarter's FX-impact figures swung sharply under that framework: <em>fx_transaction_gain_loss</em> fell to $0.812M from $19.4M at 2026-06-30 (-95.8%), and <em>revenue_fx_impact</em> moved to -$2.371M from $31.171M at 2026-03-31 (-107.6%).</div>
 
-<div class="lead">
-<span class="ticker">GDDY (GoDaddy)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-30. GoDaddy's cross-currency swaps, used to hedge a Euro-denominated intercompany loan, "had an aggregate amortizing notional amount of €1.1 billion at September 30, 2026 (approximately $1.3 billion)," and its interest-rate swaps on the 2029 and 2031 term loans carried notional amounts of $1.2 billion and $703.1 million, respectively.
-</div>
+<div class="lead"><span class="ticker">VZ</span> (Verizon, 10-Q, period ended 2026-09-30, filed 2026-10-29) — Verizon's notes disclose a net investment hedge redesignation this fiscal year: "In January 2026, we de-designated the existing net investment hedge and re-designated the same Euro-denominated note in a new net investment hedge including additional foreign subsidiaries." This follows an earlier, separately disclosed 2022 swap re-designation from cash flow to fair value hedge accounting.</div>
 
-<div class="lead">
-<span class="ticker">D (Dominion Energy)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-30. Dominion's own sensitivity table shows "a hypothetical 10% increase in the U.S. dollar to Euro exchange rate would have resulted in a decrease of $11 million and $35 million in the fair value of Dominion Energy's foreign currency swaps at September 30, 2026 and December 31, 2025, respectively" — consistent in direction with the pipeline's recorded FX sensitivity move, which fell in magnitude to $11 million as of September 30, 2026 from $10 million as of March 31, 2026. The pipeline shows no prior value for Dominion's $8.5 billion interest-rate-derivative notional or its $47 million commodity-price sensitivity this quarter, but the filing's own comparisons — "$10.7 billion and $8.1 billion" of interest-rate derivatives at Dominion Energy and Virginia Power as of December 31, 2025, and a $15 million commodity sensitivity at the same date — show both positions existed last year too; this looks like a pipeline reporting gap rather than new hedging activity and should be verified against the prior filing before being written up as new.
-</div>
+<div class="lead"><span class="ticker">TXT</span> (Textron, 10-Q, period ended 2026-10-03, filed 2026-10-29) — Textron's Finance group wound down part of its interest-rate hedge book: "At October 3, 2026 and January 3, 2026, our Finance group had interest rate swap agreements related to our Floating Rate Junior Subordinated Notes for an aggregate notional amount of $209 million and $264 million, respectively" — matching the manifest's <em>ir_swap_notional</em> move (264→209, -20.8%, vs. prior period 2026-04-04). <span class="flag">The corpus flags this filing's derivative-asset swing as an implausible swing — verify against the filing before quoting.</span></div>
 
-<div class="lead">
-<span class="ticker">NCLH (Norwegian Cruise Line Holdings)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. NCLH disclosed it "had foreign currency forwards and collars designated as hedges, which were used to mitigate the financial impact of volatility in foreign currency exchange rates related to our ship construction contracts denominated in euros," and that the change in its fixed-rate debt percentage "from December 31, 2025 to September 30, 2026 was primarily due to the addition of variable rate debt" — consistent with the pipeline's recorded variable-rate-debt share rising to 12% from 10% (+20%) over the same window. FX non-designated notional fell to $324.9 million as of September 30, 2026 from $447.1 million as of June 30, 2026 (-27.3%), and the 10% fuel-price sensitivity fell to $25.1 million from $39.7 million (-36.8%).
-</div>
+<div class="lead"><span class="ticker">STX</span> (Seagate, 10-Q, period ended 2026-10-02, filed 2026-10-29) — Seagate discloses a new instrument this quarter: "We entered into a Total Return Swap ('TRS') in order to manage the equity market risks associated with the SDCP liabilities."</div>
 
-<div class="lead">
-<span class="ticker">LH (Labcorp)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-30. Labcorp "limits its foreign currency transaction risk through exchange rate fluctuation provisions stated in some of its contracts with customers, or it may hedge transaction risk with foreign currency forward contracts," and separately is "party to fixed-to-variable interest rate swap agreements for its 2.70% senior notes due 2031 with an aggregate notional amount of $500.0" (millions, per the filing's units). FX forwards outstanding rose to $514.1 million as of September 30, 2026 from $424.1 million as of June 30, 2026 (+21.2%), and the 10% FX sensitivity rose to $26.6 million from $17.1 million (+55.6%).
-</div>
+<div class="lead"><span class="ticker">WMB</span> (Williams Companies, 10-Q, period ended 2026-09-30, filed 2026-11-02) — Williams' notes restate a credit-rating trigger on its hedge counterparty agreements: "These credit rating requirements typically give counterparties the right to suspend or terminate credit if Williams' credit ratings are downgraded to non-investment grade status." (The quarter's commodity and VaR moves lacked notes-based context and appear in the supplementary table below.)</div>
 
-<div class="lead">
-<span class="ticker">EXC (Exelon)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-30. Exelon disclosed that "Exelon terminated the previously issued floating-to-fixed swaps with a total notional of $550 million upon issuance of $775 million of debt" in early 2026. The pipeline's recorded interest-rate swap notional, a separate position, rose to $300 million as of September 30, 2026 from $180 million as of March 31, 2026 (+66.7%).
-</div>
+<div class="lead"><span class="ticker">CLX</span> (Clorox, 10-Q, period ended 2026-09-30, filed 2026-11-02) — Clorox's interest-rate hedge book is empty again: "The Company held no interest rate contracts as of both September 30, 2026 and June 30, 2026," consistent with the manifest's <em>ir_swap_notional</em> move to $0 from $200M at 2026-03-31 (-100%).</div>
 
-<div class="lead">
-<span class="ticker">AOS (A. O. Smith)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. A. O. Smith's filing states "the interest rate swap had an aggregate notional amount of 3.6 billion rupees (approximately $37.1 million) and 4.2 billion rupees (approximately $46.6 million) as of September 30, 2026 and December 31, 2025, respectively" — the swap existed at both dates, so the pipeline's blank prior-period value for this field looks like a reporting gap rather than a new position; this should be verified against the prior filing before being written up as new. Separately, A. O. Smith "terminated the arrangement with the Provider" as of December 31, 2025, per the filing's tax-accounting note.
-</div>
+<div class="lead"><span class="ticker">TMO</span> (Thermo Fisher, 10-Q, period ended 2026-09-26, filed 2026-10-30) — Thermo Fisher's notes show its euro-denominated cross-currency interest-rate swap designated as a net investment hedge rolled off to zero notional this period ("Cross-currency interest rate swaps designated as net investment hedge - euro $— [vs.] $1,000" at December 31, 2025), while the manifest separately records <em>fx_not_designated_notional</em> rising to $1,836M from $1,496M at 2026-06-27 (+22.7%) — consistent with hedge notional migrating out of designated status.</div>
 
-<div class="lead">
-<span class="ticker">GOOGL (Alphabet)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. Alphabet's notes state that "under specific conditions or following a predetermined period, we may elect to extinguish the backstop obligation by making a termination payment," without quantifying the obligation. The pipeline shows no prior value for a $7.0 billion interest-rate swap notional this quarter; absent a note confirming new hedging activity, this should be treated as first reported by the pipeline this period — verify against the prior filing before quoting as new.
-</div>
+<div class="lead"><span class="ticker">VLO</span> (Valero Energy, 10-Q, period ended 2026-09-30, filed 2026-10-28) — Valero's FX book, described in the filing as "not designated as hedging instruments for accounting purposes and therefore classified as economic hedges," grew this quarter: <em>fx_derivatives_notional</em> (= <em>fx_not_designated_notional</em>) rose to $675M from $445M at 2026-06-30 (+51.7%).</div>
 
-<div class="lead">
-<span class="ticker">HSY (Hershey Company)</span> — 10-Q, period ended 2026-09-27, filed 2026-10-29. Hershey's own disclosures tie directly to several of the quarter's moves: "a 100 basis point increase in market interest rates would decrease the fair value of our fixed-rate long-term debt at September 27, 2026 and December 31, 2025 by approximately $210 million and $236 million, respectively," and "a hypothetical 100 basis point increase in interest rates applied to this variable-rate short-term debt as of September 27, 2026 would have changed interest expense by approximately $3.3 million for the first nine months of 2026 and $7.7 million for 2025" — consistent with the pipeline's recorded variable-rate sensitivity rising to $3.3 million from $2.7 million (+22.2%) versus the prior quarter. FX derivatives notional rose to $255.1 million as of September 27, 2026 from $145.8 million as of June 28, 2026 (+75.0%), with the designated portion roughly doubling to $168.0 million from $83.9 million.
-</div>
+<div class="lead"><span class="ticker">ETR</span> (Entergy, 10-Q, period ended 2026-09-30, filed 2026-11-02) — The pipeline recorded an interest-rate swap notional of $1,100M for Entergy this period with no prior-period value on file. This is first reported by the pipeline this period — verify against the prior filing before quoting; it is not necessarily a new disclosure by the company.</div>
 
-<div class="lead">
-<span class="ticker">APH (Amphenol)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-30. Amphenol's notes confirm that "the treasury locks were settled in the fourth quarter of 2025 upon the issuance of the 4.625% Senior Notes and the 5.300% Senior Notes, respectively, for a cumulative loss of $88.0 ($67.4 after-tax)" — figures in millions per the filing's own units. The pipeline's recorded swing in the treasury-lock settlement-loss field, from +$88.0 million to -$88.0 million between quarters, reflects a sign-convention change on the same Q4 2025 event rather than a new loss. Separately, Amphenol disclosed it anticipates up to $30.5 million of unrecognized tax benefits could be resolved over the next 12 months, and that it received tax payment notices totaling $230.0 million following unfavorable determinations.
-</div>
+<div class="lead"><span class="ticker">WM</span> (Waste Management, 10-Q, period ended 2026-09-30, filed 2026-10-28) — The pipeline recorded an interest-rate swap notional of $750M and a total derivative liability of $42M for Waste Management this period with no prior-period values on file. These are first reported by the pipeline this period — verify against the prior filing before quoting.</div>
 
-<div class="lead">
-<span class="ticker">GLW (Corning)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. Corning's notes disclose hedges excluded from its headline notional table: "the amounts as of September 30, 2026 and December 31, 2025 do not include total notional amounts of €550 million ($622 million equivalent) and €750 million ($881 million equivalent)" held separately, alongside $1,116 million of FX cash-flow and net-investment hedges and a 4,090-troy-ounce precious-metals fair-value hedge as of December 31, 2025. The pipeline's recorded FX non-designated notional rose to $22,660 million as of September 30, 2026 from $18,668 million as of June 30, 2026 (+21.4%).
-</div>
-
-<div class="lead">
-<span class="ticker">LIN (Linde)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. Linde's notes describe its forward-contract cash flow hedges: "for forecasted transactions that are designated as cash flow hedges, fair value adjustments are recorded to accumulated other comprehensive income (loss) with deferred amounts reclassified to earnings over the same time period as the income statement impact of the associated purchase." FX derivatives notional rose to $17,202 million as of September 30, 2026 from $13,879 million as of June 30, 2026 (+23.9%), with the designated portion up to $5,551 million from $3,993 million (+39.0%).
-</div>
-
-<div class="lead">
-<span class="ticker">BMY (Bristol Myers Squibb)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. BMY's notes state "cash flow hedge accounting is discontinued when the forecasted transaction is no longer probable of occurring within 60 days after the originally forecasted date or when the hedge is no longer effective," and separately disclose "the notional amount of outstanding foreign currency exchange contracts was primarily $3.6 billion for the euro contracts and $892 million for the Japanese yen contracts as of September 30, 2026." The pipeline's recorded non-designated FX notional rose to $5,773 million as of September 30, 2026 from $4,715 million as of June 30, 2026 (+22.4%), and interest-rate swap notional rose to $6,055 million from $4,855 million (+24.7%).
-</div>
-
-<div class="lead">
-<span class="ticker">HAS (Hasbro)</span> — 10-Q, period ended 2026-09-27, filed 2026-10-29. Hasbro disclosed that "the total notional amounts of the Company's undesignated derivative financial instruments were $240.9 million, $242.7 million, and $191.5 million" as of September 27, 2026, September 28, 2025 and December 28, 2025, respectively — consistent with the pipeline's recorded move to $240.9 million from $173.6 million as of March 29, 2026 (+38.8%). <span class="flag">Flag:</span> the pipeline's reported total derivative asset, liability and net derivative position each fell by roughly 97-100% versus the prior quarter; the corpus flags all three as implausible swings — verify against the filing before quoting.
-</div>
-
-<div class="lead">
-<span class="ticker">MDLZ (Mondelez International)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. Mondelez disclosed that "as of September 30, 2026, our longest dated cash flow hedge was a cross-currency swap that hedges currency exchange risk on certain debt denominated in a different currency than the functional currency of the borrowing entity over the next 18 years, 6 months." No single field move at Mondelez carried an explaining quote this quarter; its total derivative liability fell to $1,352 million as of September 30, 2026 from $1,767 million as of June 30, 2026 (-23.5%), detailed in the supplementary table below.
-</div>
-
-<div class="lead">
-<span class="ticker">CHD (Church & Dwight)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-30. Church & Dwight disclosed it "paid $656.0, net of cash acquired, at closing and entered into an agreement to pay an additional amount based on 2025 net sales thresholds which resulted in a cash payment of $158.7 in April 2026" (figures in millions per the filing's units) for an acquisition. Separately, FX non-designated notional fell to $5.1 million as of September 30, 2026 from $9.1 million as of March 31, 2026 (-44.0%).
-</div>
-
-<div class="lead">
-<span class="ticker">MO (Altria)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. Altria's notes describe its use of "Euro denominated unsecured long-term notes ('foreign currency denominated debt') and certain foreign exchange contracts, including cross-currency swap contracts and forward contracts... as net investment hedges." The pipeline recorded first-time, zero-value entries for Altria's designated and non-designated FX notional fields this quarter — likely a reporting artifact rather than new activity, and not confirmed as new by any note in the filing.
-</div>
-
-<div class="lead">
-<span class="ticker">CTSH (Cognizant)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. Cognizant's notes state that its foreign-exchange derivative contracts are "subject to master netting arrangements, such as the International Swaps and Derivatives Association Master Agreement... which generally provide for net settlement of all outstanding contracts with the counterparty in the case of an event of default or a termination event." FX derivatives notional fell to $3,025 million as of September 30, 2026 from $4,051 million as of March 31, 2026 (-25.3%).
-</div>
-
-<div class="lead">
-<span class="ticker">F (Ford Motor Company)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. Ford disclosed that "in the first quarter of 2026, we designated a foreign-denominated debt issuance as a net investment hedge to manage the foreign currency risk of a portion of our investment in a foreign subsidiary." Ford Credit's own disclosure — that a hypothetical 100bp decrease in interest rates "would decrease its pre-tax cash flow by $49 million over the next 12 months, compared with a decrease of $38 million at December 31, 2025" — lines up with the pipeline's recorded interest-rate sensitivity moving to -$49 million as of September 30, 2026 from -$67 million as of June 30, 2026 (a narrowing of 26.9%).
-</div>
-
-<div class="lead">
-<span class="ticker">RSG (Republic Services)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-30. Republic Services' notes state that "in prior periods, we have entered into derivative instruments such as swaps and costless collars designated as cash flow hedges to manage our exposure to changes in prices of these commodities." The pipeline's recorded 100bp interest-rate sensitivity rose to $23 million as of September 30, 2026 from $18 million as of June 30, 2026 (+27.8%), alongside a rise in variable-rate debt outstanding to $2.3 billion from $1.8 billion over the same window.
-</div>
-
-<div class="lead">
-<span class="ticker">CARR (Carrier Global)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. Carrier's notes disclose that its interest-rate swaps "have an aggregate notional amount of $3.7 billion," used to hedge the issuance of long-term debt, though the filing discloses no new activity this quarter beyond a routine pension-contribution table. The pipeline's recorded total derivative liability rose to $171 million as of September 30, 2026 from $140 million as of June 30, 2026 (+22.1%), and the net derivative position widened to -$38 million from -$7 million.
-</div>
-
-<div class="lead">
-<span class="ticker">GD (General Dynamics)</span> — 10-Q, period ended 2026-10-04, filed 2026-10-30. General Dynamics' notes state only that "all gains and losses from derivative financial instruments recognized in the Consolidated Statement of Earnings are presented in the same line item as the underlying transaction, generally operating costs and expenses" — standard hedge-accounting language, with no company-specific event or new programme disclosed this quarter. The pipeline's recorded total derivative liability rose to $123 million as of October 4, 2026 from $49 million as of December 31, 2025 (+151.0%), detailed in the supplementary table below.
-</div>
-
-<div class="lead">
-<span class="ticker">KLAC (KLA Corporation)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. KLA disclosed that "since fiscal 2015, we have entered into five sets of forward contracts, generally to hedge the benchmark interest rate on portions of our Senior Notes prior to issuance," and that "as of September 30, 2026, the aggregate unamortized portion of the fair value of the forward contracts for the Rate Lock Agreements was a $40.6 million net gain." The company also uses fixed-to-floating interest rate swaps on a $2.00 billion notional portion of its 2022 Senior Notes; no material move was recorded by the pipeline this quarter.
-</div>
-
-<div class="lead">
-<span class="ticker">KVUE (Kenvue)</span> — 10-Q, period ended 2026-09-27, filed 2026-10-30. Kenvue's notes describe its existing programme — forward foreign exchange contracts hedging forecasted cash flows, and cross-currency swap contracts entered into "beginning in the fiscal three months ended December 31, 2023" to hedge foreign-subsidiary net investments — without disclosing any new activity or notional figures this quarter, and no material move was recorded.
-</div>
-
-<div class="lead">
-<span class="ticker">DXCM (Dexcom)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. Dexcom's notes state that charges tied to "the planned discontinuation of G6 manufacturing" and ongoing quality-control reserves were recorded in cost of sales — a product-line note rather than a derivatives development. Separately, the filing discloses outstanding foreign-currency forward contract notional, not designated as hedges, of $273.3 million as of September 30, 2026 versus $229.3 million as of December 31, 2025; no material move was recorded by the pipeline this quarter.
-</div>
-
-<div class="lead">
-<span class="ticker">AMZN (Amazon)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-30. Amazon's own sensitivity table shows that "based on the balance of foreign funds as of September 30, 2026, of $16.5 billion, an assumed 5%, 10%, and 20% adverse change to foreign exchange rates would result in declines of $825 million, $1.7 billion, and $3.3 billion" — consistent with the pipeline's recorded 10% FX sensitivity narrowing to -$1.7 billion as of September 30, 2026 from -$2.795 billion as of June 30, 2026 (a 39.2% reduction in magnitude).
-</div>
-
-<div class="lead">
-<span class="ticker">EBAY (eBay)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. eBay's notes state it "use[s] foreign exchange derivative contracts to help protect our forecasted U.S. dollar-equivalent earnings from adverse changes in foreign currency exchange rates," with sensitivity "based on a 20% adverse change in foreign exchange rates." The pipeline's recorded non-designated FX notional fell to $1,657 million as of September 30, 2026 from $2,231 million as of June 30, 2026 (-25.7%).
-</div>
-
-<div class="lead">
-<span class="ticker">LLY (Eli Lilly)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. Lilly's notes state its "foreign currency-denominated notes designated as accounting hedges had carrying amounts of $5.0 billion and $6.0 billion as of September 30, 2026 and December 31, 2025, respectively." <span class="flag">Flag:</span> separately, the pipeline's recorded FX-designated notional jumped to $5,712 million as of September 30, 2026 from $246 million as of June 30, 2026 (+2,222%); the corpus flags this move as an implausible swing, and it does not match the scale of the notes-carrying-amount figures quoted above — verify against the filing before quoting.
-</div>
-
-<div class="lead">
-<span class="ticker">FSLR (First Solar)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. First Solar's notes state that "the U.S. dollar equivalent notional values of our foreign exchange forward contracts that do not qualify for hedge accounting were $61.0 million and $446.0 million" as of September 30, 2026 and December 31, 2025, respectively — consistent in direction with the pipeline's recorded move to $61.0 million as of September 30, 2026 from $414.5 million as of March 31, 2026 (-85.3%). <span class="flag">Flag:</span> the pipeline also flags First Solar's total derivative asset and net derivative position as implausible swings (both fell roughly 99% versus the prior quarter) — verify against the filing before quoting.
-</div>
-
-<div class="lead">
-<span class="ticker">DECK (Deckers Brands)</span> — 10-Q, period ended 2026-09-30, filed 2026-10-29. Deckers' notes describe only its standing programme — foreign currency forward or option contracts, "certain of these derivative contracts are designated as cash flow hedges of forecasted sales" — with no new activity or company-specific event disclosed. FX derivatives notional fell to $268.0 million as of September 30, 2026 from $355.5 million as of March 31, 2026 (-24.6%). <span class="flag">Flag:</span> the pipeline also flags Deckers' total derivative asset as an implausible swing (down 97% versus the prior quarter) — verify against the filing before quoting.
-</div>
-
-<div class="lead">
-<span class="ticker">GEN (Gen Digital)</span> — 10-Q, period ended 2026-10-02, filed 2026-10-29. Gen Digital's notes contain no derivatives-specific disclosure this quarter; the only matched text is generic macroeconomic and litigation risk-factor language (e.g., "macroeconomic factors, such as fluctuating tariffs, trade wars, high inflation, high interest rates, and volatility in foreign currency exchange rates and capital markets could negatively influence our future acquisition opportunities"), and no material derivative move was recorded by the pipeline this quarter.
-</div>
-
-<p class="note">ADP (Automatic Data Processing), BLDR (Builders FirstSource), CL (Colgate-Palmolive), HCA (HCA Healthcare), HII (Huntington Ingalls Industries), HWM (Howmet Aerospace) and INCY (Incyte) also filed new 10-Qs this window, but carry no editorially significant notes and no material moves — numbers-only, and not material enough even for the supplementary table below.</p>
+<p><em>No lead for PEG, SYK, VMC, WEC, or XEL this period — their only moves lacked notes-based context and sit in the supplementary table below.</em></p>
 
 <h2>Supplementary movements</h2>
-<p class="note">Covers every new filing with at least one move of 20% or more (including filings already narrated as leads above); fields moving less than 5% are omitted. DASH (DoorDash), GILD (Gilead Sciences), INTC (Intel), LNT (Alliant Energy) and LYB (LyondellBasell) appear here only — their filings carried material numeric moves but no editorially significant notes, so they were not written up as leads.</p>
+<p>All new_filings moves of ≥5% magnitude, including those already narrated above. Flagged rows carry an audit <span class="flag">⚠</span>.</p>
 <table>
-<tr><th>Ticker</th><th>Period end (filed)</th><th>Field</th><th>Current</th><th>Prior</th><th>%</th></tr>
-<tr><td>AMZN</td><td>2026-09-30 (2026-10-30)</td><td>fx_sensitivity_10pct</td><td>-1,700</td><td>-2,795 (2026-06-30)</td><td>+39.18%</td></tr>
-<tr><td>AMZN</td><td>2026-09-30 (2026-10-30)</td><td>marketable_equity_securities_fv</td><td>4,096</td><td>4,687 (2026-06-30)</td><td>-12.61%</td></tr>
-<tr><td>AMZN</td><td>2026-09-30 (2026-10-30)</td><td>marketable_equity_value</td><td>6,700</td><td>7,400 (2026-06-30)</td><td>-9.46%</td></tr>
-<tr><td>AMZN</td><td>2026-09-30 (2026-10-30)</td><td>corporate_debt_securities_fv</td><td>67,586</td><td>59,431 (2026-06-30)</td><td>+13.72%</td></tr>
-<tr><td>AMZN</td><td>2026-09-30 (2026-10-30)</td><td>gross_unrealized_gains_debt</td><td>3</td><td>7 (2026-06-30)</td><td>-57.14%</td></tr>
-<tr><td>AOS</td><td>2026-09-30 (2026-10-29)</td><td>cash_flow_hedge_aoci</td><td>1.2</td><td>37.7 (2026-06-30)</td><td>-96.82%</td></tr>
-<tr><td>APH</td><td>2026-09-30 (2026-10-30)</td><td>treasury_lock_settlement_loss</td><td>-88</td><td>88 (2026-03-31)</td><td>-200.00%</td></tr>
-<tr><td>BAX</td><td>2026-09-30 (2026-10-29)</td><td>fx_derivatives_notional</td><td>151</td><td>204 (2026-06-30)</td><td>-25.98%</td></tr>
-<tr><td>BAX</td><td>2026-09-30 (2026-10-29)</td><td>fx_not_designated_notional</td><td>151</td><td>204 (2026-06-30)</td><td>-25.98%</td></tr>
-<tr><td>BAX</td><td>2026-09-30 (2026-10-29)</td><td>fx_sensitivity_10pct</td><td>6</td><td>7 (2026-06-30)</td><td>-14.29%</td></tr>
-<tr><td>BAX</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_asset</td><td>0</td><td>1 (2026-06-30)</td><td>-100.00%</td></tr>
-<tr><td>BG</td><td>2026-09-30 (2026-10-29)</td><td>ir_sensitivity_100bp</td><td>148</td><td>99 (2026-03-31)</td><td>+49.49%</td></tr>
-<tr><td>BG</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_asset</td><td>2,587</td><td>2,181 (2026-03-31)</td><td>+18.62%</td></tr>
-<tr><td>BMY</td><td>2026-09-30 (2026-10-29)</td><td>fx_derivatives_notional</td><td>12,508</td><td>11,826 (2026-06-30)</td><td>+5.77%</td></tr>
-<tr><td>BMY</td><td>2026-09-30 (2026-10-29)</td><td>fx_designated_notional</td><td>6,735</td><td>7,111 (2026-06-30)</td><td>-5.29%</td></tr>
-<tr><td>BMY</td><td>2026-09-30 (2026-10-29)</td><td>fx_not_designated_notional</td><td>5,773</td><td>4,715 (2026-06-30)</td><td>+22.44%</td></tr>
-<tr><td>BMY</td><td>2026-09-30 (2026-10-29)</td><td>ir_swap_notional</td><td>6,055</td><td>4,855 (2026-06-30)</td><td>+24.72%</td></tr>
-<tr><td>BMY</td><td>2026-09-30 (2026-10-29)</td><td>total_cash_equivalents_fv</td><td>6,947</td><td>6,175 (2026-06-30)</td><td>+12.50%</td></tr>
-<tr><td>BMY</td><td>2026-09-30 (2026-10-29)</td><td>total_marketable_securities_fv</td><td>3,385</td><td>2,742 (2026-06-30)</td><td>+23.45%</td></tr>
-<tr><td>BMY</td><td>2026-09-30 (2026-10-29)</td><td>fi_total_derivative_asset</td><td>353</td><td>394 (2026-06-30)</td><td>-10.41%</td></tr>
-<tr><td>BMY</td><td>2026-09-30 (2026-10-29)</td><td>fi_total_derivative_liability</td><td>323</td><td>123 (2026-06-30)</td><td>+162.60%</td></tr>
-<tr><td>BMY</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_asset</td><td>353</td><td>395 (2026-06-30)</td><td>-10.63%</td></tr>
-<tr><td>BMY</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_liability</td><td>324</td><td>122 (2026-06-30)</td><td>+165.57%</td></tr>
-<tr><td>BMY</td><td>2026-09-30 (2026-10-29)</td><td>net_derivative_position</td><td>29</td><td>273 (2026-06-30)</td><td>-89.38%</td></tr>
-<tr><td>BMY</td><td>2026-09-30 (2026-10-29)</td><td>expected_12mo_reclass_from_aoci</td><td>18</td><td>11 (2026-06-30)</td><td>+63.64%</td></tr>
-<tr><td>CARR</td><td>2026-09-30 (2026-10-29)</td><td>fx_derivatives_notional</td><td>3,700</td><td>3,200 (2026-06-30)</td><td>+15.62%</td></tr>
-<tr><td>CARR</td><td>2026-09-30 (2026-10-29)</td><td>fx_designated_notional</td><td>3,700</td><td>3,200 (2026-06-30)</td><td>+15.62%</td></tr>
-<tr><td>CARR</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_liability</td><td>171</td><td>140 (2026-06-30)</td><td>+22.14%</td></tr>
-<tr><td>CARR</td><td>2026-09-30 (2026-10-29)</td><td>net_derivative_position</td><td>-38</td><td>-7 (2026-06-30)</td><td>-442.86%</td></tr>
-<tr><td>CHD</td><td>2026-09-30 (2026-10-30)</td><td>fx_derivatives_notional</td><td>346.9</td><td>425.3 (2026-03-31)</td><td>-18.43%</td></tr>
-<tr><td>CHD</td><td>2026-09-30 (2026-10-30)</td><td>fx_designated_notional</td><td>341.8</td><td>416.2 (2026-03-31)</td><td>-17.88%</td></tr>
-<tr><td>CHD</td><td>2026-09-30 (2026-10-30)</td><td>fx_not_designated_notional</td><td>5.1</td><td>9.1 (2026-03-31)</td><td>-43.96%</td></tr>
-<tr><td>CHD</td><td>2026-09-30 (2026-10-30)</td><td>equity_derivatives_notional</td><td>12.2</td><td>13 (2026-03-31)</td><td>-6.15%</td></tr>
-<tr><td>CTSH</td><td>2026-09-30 (2026-10-29)</td><td>fx_derivatives_notional</td><td>3,025</td><td>4,051 (2026-03-31)</td><td>-25.33%</td></tr>
-<tr><td>CTSH</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_asset</td><td>6</td><td>10 (2026-06-30)</td><td>-40.00%</td></tr>
-<tr><td>D</td><td>2026-09-30 (2026-10-30)</td><td>fx_sensitivity_10pct</td><td>-11</td><td>10 (2026-03-31)</td><td>-210.00%</td></tr>
-<tr><td>DASH</td><td>2026-09-30 (2026-10-30)</td><td>non_marketable_equity_investments</td><td>264</td><td>124 (2026-06-30)</td><td>+112.90%</td></tr>
-<tr><td>DECK</td><td>2026-09-30 (2026-10-29)</td><td>fx_derivatives_notional</td><td>267.975</td><td>355.526 (2026-03-31)</td><td>-24.63%</td></tr>
-<tr><td>DECK</td><td>2026-09-30 (2026-10-29)</td><td>fx_designated_notional</td><td>235.297</td><td>337.183 (2026-03-31)</td><td>-30.22%</td></tr>
-<tr><td>DECK</td><td>2026-09-30 (2026-10-29)</td><td>fx_not_designated_notional</td><td>32.678</td><td>18.343 (2026-03-31)</td><td>+78.15%</td></tr>
-<tr><td>DECK</td><td>2026-09-30 (2026-10-29)</td><td class="flag">total_derivative_asset †</td><td>9.493</td><td>376.451 (2026-06-30)</td><td>-97.48%</td></tr>
-<tr><td>EBAY</td><td>2026-09-30 (2026-10-29)</td><td>fx_derivatives_notional</td><td>3,086</td><td>3,781 (2026-06-30)</td><td>-18.38%</td></tr>
-<tr><td>EBAY</td><td>2026-09-30 (2026-10-29)</td><td>fx_designated_notional</td><td>1,429</td><td>1,550 (2026-06-30)</td><td>-7.81%</td></tr>
-<tr><td>EBAY</td><td>2026-09-30 (2026-10-29)</td><td>fx_not_designated_notional</td><td>1,657</td><td>2,231 (2026-06-30)</td><td>-25.73%</td></tr>
-<tr><td>EBAY</td><td>2026-09-30 (2026-10-29)</td><td>ir_sensitivity_100bp</td><td>-34</td><td>-37 (2026-06-30)</td><td>+8.11%</td></tr>
-<tr><td>EBAY</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_asset</td><td>48</td><td>67 (2026-06-30)</td><td>-28.36%</td></tr>
-<tr><td>EBAY</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_liability</td><td>28</td><td>31 (2026-06-30)</td><td>-9.68%</td></tr>
-<tr><td>EBAY</td><td>2026-09-30 (2026-10-29)</td><td>net_derivative_position</td><td>20</td><td>36 (2026-06-30)</td><td>-44.44%</td></tr>
-<tr><td>EBAY</td><td>2026-09-30 (2026-10-29)</td><td>cash_flow_hedge_fair_values</td><td>35</td><td>37 (2026-06-30)</td><td>-5.41%</td></tr>
-<tr><td>EBAY</td><td>2026-09-30 (2026-10-29)</td><td>non_hedge_fair_values</td><td>1</td><td>4 (2026-06-30)</td><td>-75.00%</td></tr>
-<tr><td>ECL</td><td>2026-09-30 (2026-10-29)</td><td>ir_swap_notional</td><td>1,250</td><td>1,500 (2026-06-30)</td><td>-16.67%</td></tr>
-<tr><td>ECL</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_asset</td><td>5.6</td><td>10.8 (2026-06-30)</td><td>-48.15%</td></tr>
-<tr><td>ECL</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_liability</td><td>246.8</td><td>231.4 (2026-06-30)</td><td>+6.66%</td></tr>
-<tr><td>ECL</td><td>2026-09-30 (2026-10-29)</td><td>net_derivative_position</td><td>-241.2</td><td>-220.6 (2026-06-30)</td><td>-9.34%</td></tr>
-<tr><td>EIX</td><td>2026-09-30 (2026-10-29)</td><td>electricity_notional_gwh</td><td>6,318</td><td>7,851 (2026-06-30)</td><td>-19.53%</td></tr>
-<tr><td>EIX</td><td>2026-09-30 (2026-10-29)</td><td>natural_gas_notional_bcf</td><td>1</td><td>2 (2026-06-30)</td><td>-50.00%</td></tr>
-<tr><td>EIX</td><td>2026-09-30 (2026-10-29)</td><td>gross_derivative_assets</td><td>60</td><td>16 (2026-06-30)</td><td>+275.00%</td></tr>
-<tr><td>EIX</td><td>2026-09-30 (2026-10-29)</td><td>gross_derivative_liabilities</td><td>8</td><td>46 (2026-06-30)</td><td>-82.61%</td></tr>
-<tr><td>EIX</td><td>2026-09-30 (2026-10-29)</td><td>net_derivative_assets</td><td>52</td><td>15 (2026-06-30)</td><td>+246.67%</td></tr>
-<tr><td>EIX</td><td>2026-09-30 (2026-10-29)</td><td>cash_collateral_posted</td><td>95</td><td>85 (2026-06-30)</td><td>+11.76%</td></tr>
-<tr><td>EIX</td><td>2026-09-30 (2026-10-29)</td><td>realized_gains_losses</td><td>26</td><td>-12 (2026-06-30)</td><td>+316.67%</td></tr>
-<tr><td>EIX</td><td>2026-09-30 (2026-10-29)</td><td>unrealized_gains_losses</td><td>81</td><td>-14 (2026-06-30)</td><td>+678.57%</td></tr>
-<tr><td>EIX</td><td>2026-09-30 (2026-10-29)</td><td>congestion_rights_notional_gwh</td><td>331</td><td>720 (2026-06-30)</td><td>-54.03%</td></tr>
-<tr><td>EIX</td><td>2026-09-30 (2026-10-29)</td><td>fin_toll_notional_gwh</td><td>383</td><td>315 (2026-06-30)</td><td>+21.59%</td></tr>
-<tr><td>EXC</td><td>2026-09-30 (2026-10-30)</td><td>ir_swap_notional</td><td>300</td><td>180 (2026-03-31)</td><td>+66.67%</td></tr>
-<tr><td>F</td><td>2026-09-30 (2026-10-29)</td><td>fx_not_designated_notional</td><td>29,857</td><td>27,261 (2026-06-30)</td><td>+9.52%</td></tr>
-<tr><td>F</td><td>2026-09-30 (2026-10-29)</td><td>ir_sensitivity_100bp</td><td>-49</td><td>-67 (2026-06-30)</td><td>+26.87%</td></tr>
-<tr><td>F</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_asset</td><td>1,688</td><td>1,599 (2026-06-30)</td><td>+5.57%</td></tr>
-<tr><td>F</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_liability</td><td>2,235</td><td>1,247 (2026-06-30)</td><td>+79.23%</td></tr>
-<tr><td>F</td><td>2026-09-30 (2026-10-29)</td><td>net_liability</td><td>-547</td><td>-304 (2026-03-31)</td><td>-79.93%</td></tr>
-<tr><td>F</td><td>2026-09-30 (2026-10-29)</td><td>collateral_posted</td><td>139</td><td>90 (2026-06-30)</td><td>+54.44%</td></tr>
-<tr><td>F</td><td>2026-09-30 (2026-10-29)</td><td>collateral_held</td><td>50</td><td>4 (2026-06-30)</td><td>+1150.00%</td></tr>
-<tr><td>FSLR</td><td>2026-09-30 (2026-10-29)</td><td>fx_derivatives_notional</td><td>61</td><td>414.5 (2026-03-31)</td><td>-85.28%</td></tr>
-<tr><td>FSLR</td><td>2026-09-30 (2026-10-29)</td><td>fx_not_designated_notional</td><td>61</td><td>414.5 (2026-03-31)</td><td>-85.28%</td></tr>
-<tr><td>FSLR</td><td>2026-09-30 (2026-10-29)</td><td class="flag">total_derivative_asset †</td><td>1.14</td><td>147.8 (2026-06-30)</td><td>-99.23%</td></tr>
-<tr><td>FSLR</td><td>2026-09-30 (2026-10-29)</td><td class="flag">net_derivative_position †</td><td>0.301</td><td>147.8 (2026-06-30)</td><td>-99.80%</td></tr>
-<tr><td>GD</td><td>2026-10-04 (2026-10-30)</td><td>fx_derivatives_notional</td><td>9,100</td><td>8,200 (2026-07-05)</td><td>+10.98%</td></tr>
-<tr><td>GD</td><td>2026-10-04 (2026-10-30)</td><td>fx_designated_notional</td><td>9,100</td><td>8,200 (2026-07-05)</td><td>+10.98%</td></tr>
-<tr><td>GD</td><td>2026-10-04 (2026-10-30)</td><td>total_derivative_asset</td><td>63</td><td>75 (2025-12-31)</td><td>-16.00%</td></tr>
-<tr><td>GD</td><td>2026-10-04 (2026-10-30)</td><td>total_derivative_liability</td><td>123</td><td>49 (2025-12-31)</td><td>+151.02%</td></tr>
-<tr><td>GD</td><td>2026-10-04 (2026-10-30)</td><td>net_derivative_position</td><td>-60</td><td>26 (2025-12-31)</td><td>-330.77%</td></tr>
-<tr><td>GDDY</td><td>2026-09-30 (2026-10-30)</td><td>fx_forward_notional</td><td>1,098.5</td><td>1,034.6 (2026-06-30)</td><td>+6.18%</td></tr>
-<tr><td>GDDY</td><td>2026-09-30 (2026-10-30)</td><td>total_derivative_liability</td><td>76.7</td><td>91.1 (2026-06-30)</td><td>-15.81%</td></tr>
-<tr><td>GDDY</td><td>2026-09-30 (2026-10-30)</td><td>aoci_realized_losses</td><td>12.3</td><td>11.2 (2026-06-30)</td><td>+9.82%</td></tr>
-<tr><td>GDDY</td><td>2026-09-30 (2026-10-30)</td><td>aoci_unrealized_losses</td><td>-6.9</td><td>1.3 (2026-06-30)</td><td>-630.77%</td></tr>
-<tr><td>GILD</td><td>2026-09-30 (2026-10-30)</td><td>fx_derivatives_notional</td><td>3,600</td><td>3,300 (2026-06-30)</td><td>+9.09%</td></tr>
-<tr><td>GILD</td><td>2026-09-30 (2026-10-30)</td><td>total_derivative_asset</td><td>66</td><td>82 (2026-06-30)</td><td>-19.51%</td></tr>
-<tr><td>GILD</td><td>2026-09-30 (2026-10-30)</td><td>total_derivative_liability</td><td>30</td><td>18 (2026-06-30)</td><td>+66.67%</td></tr>
-<tr><td>GILD</td><td>2026-09-30 (2026-10-30)</td><td>net_derivative_position</td><td>36</td><td>64 (2026-06-30)</td><td>-43.75%</td></tr>
-<tr><td>GILD</td><td>2026-09-30 (2026-10-30)</td><td>expected_12mo_reclass_from_aoci</td><td>53</td><td>35 (2026-06-30)</td><td>+51.43%</td></tr>
-<tr><td>GLW</td><td>2026-09-30 (2026-10-29)</td><td>fx_derivatives_notional</td><td>23,429</td><td>19,552 (2026-06-30)</td><td>+19.83%</td></tr>
-<tr><td>GLW</td><td>2026-09-30 (2026-10-29)</td><td>fx_designated_notional</td><td>769</td><td>884 (2026-06-30)</td><td>-13.01%</td></tr>
-<tr><td>GLW</td><td>2026-09-30 (2026-10-29)</td><td>fx_not_designated_notional</td><td>22,660</td><td>18,668 (2026-06-30)</td><td>+21.38%</td></tr>
-<tr><td>GLW</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_liability</td><td>-802</td><td>801 (2026-06-30)</td><td>-200.12%</td></tr>
-<tr><td>GLW</td><td>2026-09-30 (2026-10-29)</td><td>net_derivative_position</td><td>301</td><td>269 (2026-06-30)</td><td>+11.90%</td></tr>
-<tr><td>GLW</td><td>2026-09-30 (2026-10-29)</td><td>cash_flow_hedge_aoci</td><td>40</td><td>68 (2026-06-30)</td><td>-41.18%</td></tr>
-<tr><td>GOOGL</td><td>2026-09-30 (2026-10-29)</td><td>fx_derivatives_notional</td><td>86,212</td><td>93,400 (2026-06-30)</td><td>-7.70%</td></tr>
-<tr><td>GOOGL</td><td>2026-09-30 (2026-10-29)</td><td>fx_designated_notional</td><td>32,128</td><td>39,013 (2026-06-30)</td><td>-17.65%</td></tr>
-<tr><td>GOOGL</td><td>2026-09-30 (2026-10-29)</td><td>equity_derivatives_notional</td><td>21,091</td><td>20,000 (2026-06-30)</td><td>+5.46%</td></tr>
-<tr><td>GOOGL</td><td>2026-09-30 (2026-10-29)</td><td>total_marketable_securities_fv</td><td>208,764</td><td>186,563 (2026-06-30)</td><td>+11.90%</td></tr>
-<tr><td>GOOGL</td><td>2026-09-30 (2026-10-29)</td><td>gross_unrealized_gains_debt</td><td>34</td><td>317 (2026-06-30)</td><td>-89.27%</td></tr>
-<tr><td>GOOGL</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_asset</td><td>1,305</td><td>1,702 (2026-06-30)</td><td>-23.33%</td></tr>
-<tr><td>GOOGL</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_liability</td><td>1,636</td><td>1,958 (2026-06-30)</td><td>-16.45%</td></tr>
-<tr><td>GOOGL</td><td>2026-09-30 (2026-10-29)</td><td>net_derivative_position</td><td>-331</td><td>-256 (2026-06-30)</td><td>-29.30%</td></tr>
-<tr><td>HAS</td><td>2026-09-27 (2026-10-29)</td><td>fx_derivatives_notional</td><td>568.9</td><td>512.8 (2026-03-29)</td><td>+10.94%</td></tr>
-<tr><td>HAS</td><td>2026-09-27 (2026-10-29)</td><td>fx_not_designated_notional</td><td>240.9</td><td>173.6 (2026-03-29)</td><td>+38.77%</td></tr>
-<tr><td>HAS</td><td>2026-09-27 (2026-10-29)</td><td class="flag">total_derivative_asset †</td><td>5.5</td><td>585.1 (2026-06-28)</td><td>-99.06%</td></tr>
-<tr><td>HAS</td><td>2026-09-27 (2026-10-29)</td><td class="flag">total_derivative_liability †</td><td>7.6</td><td>333.1 (2026-06-28)</td><td>-97.72%</td></tr>
-<tr><td>HAS</td><td>2026-09-27 (2026-10-29)</td><td class="flag">net_derivative_position †</td><td>-2.1</td><td>252 (2026-06-28)</td><td>-100.83%</td></tr>
-<tr><td>HSY</td><td>2026-09-27 (2026-10-29)</td><td>fx_derivatives_notional</td><td>255.062</td><td>145.795 (2026-06-28)</td><td>+74.95%</td></tr>
-<tr><td>HSY</td><td>2026-09-27 (2026-10-29)</td><td>fx_designated_notional</td><td>167.956</td><td>83.907 (2026-06-28)</td><td>+100.17%</td></tr>
-<tr><td>HSY</td><td>2026-09-27 (2026-10-29)</td><td>fx_not_designated_notional</td><td>87.106</td><td>61.888 (2026-06-28)</td><td>+40.75%</td></tr>
-<tr><td>HSY</td><td>2026-09-27 (2026-10-29)</td><td>fx_sensitivity_10pct</td><td>-31.5</td><td>-23.9 (2026-06-28)</td><td>-31.80%</td></tr>
-<tr><td>HSY</td><td>2026-09-27 (2026-10-29)</td><td>foreign_currency_sensitivity</td><td>-31.5</td><td>-23.9 (2026-06-28)</td><td>-31.80%</td></tr>
-<tr><td>HSY</td><td>2026-09-27 (2026-10-29)</td><td>ir_sensitivity_100bp</td><td>-210</td><td>-233 (2026-06-28)</td><td>+9.87%</td></tr>
-<tr><td>HSY</td><td>2026-09-27 (2026-10-29)</td><td>interest_rate_sensitivity_variable_debt</td><td>3.3</td><td>2.7 (2026-06-28)</td><td>+22.22%</td></tr>
-<tr><td>HSY</td><td>2026-09-27 (2026-10-29)</td><td>interest_rate_sensitivity_fixed_debt</td><td>-210</td><td>-233 (2026-06-28)</td><td>+9.87%</td></tr>
-<tr><td>HSY</td><td>2026-09-27 (2026-10-29)</td><td>commodity_derivatives_notional</td><td>646.026</td><td>504.114 (2026-06-28)</td><td>+28.15%</td></tr>
-<tr><td>HSY</td><td>2026-09-27 (2026-10-29)</td><td>equity_derivatives_notional</td><td>40.61</td><td>34.251 (2026-06-28)</td><td>+18.57%</td></tr>
-<tr><td>HSY</td><td>2026-09-27 (2026-10-29)</td><td>total_derivative_asset</td><td>15.353</td><td>12.773 (2026-06-28)</td><td>+20.20%</td></tr>
-<tr><td>HSY</td><td>2026-09-27 (2026-10-29)</td><td>total_derivative_liability</td><td>3.289</td><td>16.163 (2026-06-28)</td><td>-79.65%</td></tr>
-<tr><td>HSY</td><td>2026-09-27 (2026-10-29)</td><td>net_derivative_position</td><td>12.064</td><td>-3.39 (2026-06-28)</td><td>+455.87%</td></tr>
-<tr><td>HSY</td><td>2026-09-27 (2026-10-29)</td><td>expected_12mo_reclass_from_aoci</td><td>-5.284</td><td>-8.001 (2026-06-28)</td><td>+33.96%</td></tr>
-<tr><td>INTC</td><td>2026-09-26 (2026-10-30)</td><td>fx_forward_notional</td><td>30,950</td><td>18,583 (2026-06-27)</td><td>+66.55%</td></tr>
-<tr><td>INTC</td><td>2026-09-26 (2026-10-30)</td><td>ir_swap_notional</td><td>26,582</td><td>22,920 (2026-06-27)</td><td>+15.98%</td></tr>
-<tr><td>INTC</td><td>2026-09-26 (2026-10-30)</td><td>total_derivative_asset</td><td>914</td><td>652 (2026-06-27)</td><td>+40.18%</td></tr>
-<tr><td>INTC</td><td>2026-09-26 (2026-10-30)</td><td>total_derivative_liability</td><td>14,695</td><td>16,220 (2026-06-27)</td><td>-9.40%</td></tr>
-<tr><td>IR</td><td>2026-09-30 (2026-10-30)</td><td>fx_derivatives_notional</td><td>2,172.5</td><td>1,614.5 (2026-06-30)</td><td>+34.56%</td></tr>
-<tr><td>IR</td><td>2026-09-30 (2026-10-30)</td><td>fx_designated_notional</td><td>1,832.7</td><td>1,332.7 (2026-06-30)</td><td>+37.52%</td></tr>
-<tr><td>IR</td><td>2026-09-30 (2026-10-30)</td><td>fx_not_designated_notional</td><td>339.8</td><td>281.8 (2026-06-30)</td><td>+20.58%</td></tr>
-<tr><td>IR</td><td>2026-09-30 (2026-10-30)</td><td>total_derivative_asset</td><td>18.4</td><td>11.4 (2026-06-30)</td><td>+61.40%</td></tr>
-<tr><td>IR</td><td>2026-09-30 (2026-10-30)</td><td>total_derivative_liability</td><td>128.5</td><td>102.4 (2026-06-30)</td><td>+25.49%</td></tr>
-<tr><td>IR</td><td>2026-09-30 (2026-10-30)</td><td>net_derivative_position</td><td>-110.1</td><td>-91 (2026-06-30)</td><td>-20.99%</td></tr>
-<tr><td>LH</td><td>2026-09-30 (2026-10-30)</td><td>fx_forwards_outstanding</td><td>514.1</td><td>424.1 (2026-06-30)</td><td>+21.22%</td></tr>
-<tr><td>LH</td><td>2026-09-30 (2026-10-30)</td><td>fx_sensitivity_10pct</td><td>26.6</td><td>17.1 (2026-06-30)</td><td>+55.56%</td></tr>
-<tr><td>LIN</td><td>2026-09-30 (2026-10-29)</td><td>fx_derivatives_notional</td><td>17,202</td><td>13,879 (2026-06-30)</td><td>+23.94%</td></tr>
-<tr><td>LIN</td><td>2026-09-30 (2026-10-29)</td><td>fx_designated_notional</td><td>5,551</td><td>3,993 (2026-06-30)</td><td>+39.02%</td></tr>
-<tr><td>LIN</td><td>2026-09-30 (2026-10-29)</td><td>fx_not_designated_notional</td><td>11,651</td><td>9,886 (2026-06-30)</td><td>+17.85%</td></tr>
-<tr><td>LIN</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_asset</td><td>262</td><td>191 (2026-06-30)</td><td>+37.17%</td></tr>
-<tr><td>LIN</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_liability</td><td>156</td><td>85 (2026-06-30)</td><td>+83.53%</td></tr>
-<tr><td>LLY</td><td>2026-09-30 (2026-10-29)</td><td>fx_derivatives_notional</td><td>25,119</td><td>28,238 (2026-06-30)</td><td>-11.05%</td></tr>
-<tr><td>LLY</td><td>2026-09-30 (2026-10-29)</td><td class="flag">fx_designated_notional †</td><td>5,712</td><td>246 (2026-06-30)</td><td>+2221.95%</td></tr>
-<tr><td>LLY</td><td>2026-09-30 (2026-10-29)</td><td>fx_not_designated_notional</td><td>19,407</td><td>27,992 (2026-06-30)</td><td>-30.67%</td></tr>
-<tr><td>LNT</td><td>2026-09-30 (2026-10-30)</td><td>total_derivative_asset</td><td>78</td><td>39 (2026-03-31)</td><td>+100.00%</td></tr>
-<tr><td>LNT</td><td>2026-09-30 (2026-10-30)</td><td>total_derivative_liability</td><td>74</td><td>61 (2026-03-31)</td><td>+21.31%</td></tr>
-<tr><td>LNT</td><td>2026-09-30 (2026-10-30)</td><td>net_derivative_position</td><td>4</td><td>-22 (2026-03-31)</td><td>+118.18%</td></tr>
-<tr><td>LYB</td><td>2026-09-30 (2026-10-30)</td><td>fx_not_designated_notional</td><td>133</td><td>186 (2026-06-30)</td><td>-28.49%</td></tr>
-<tr><td>LYB</td><td>2026-09-30 (2026-10-30)</td><td>ir_swap_notional</td><td>2,264</td><td>2,078 (2026-06-30)</td><td>+8.95%</td></tr>
-<tr><td>MDLZ</td><td>2026-09-30 (2026-10-29)</td><td>fx_derivatives_notional</td><td>25,052</td><td>26,626 (2026-06-30)</td><td>-5.91%</td></tr>
-<tr><td>MDLZ</td><td>2026-09-30 (2026-10-29)</td><td>cross_currency_swap_fair_value</td><td>-220</td><td>-189 (2026-06-30)</td><td>-16.40%</td></tr>
-<tr><td>MDLZ</td><td>2026-09-30 (2026-10-29)</td><td>ir_swap_notional</td><td>2,318</td><td>2,731 (2026-06-30)</td><td>-15.12%</td></tr>
-<tr><td>MDLZ</td><td>2026-09-30 (2026-10-29)</td><td>commodity_derivatives_notional</td><td>12,156</td><td>10,897 (2026-06-30)</td><td>+11.55%</td></tr>
-<tr><td>MDLZ</td><td>2026-09-30 (2026-10-29)</td><td>fi_total_derivative_asset</td><td>1,624</td><td>1,470 (2026-06-30)</td><td>+10.48%</td></tr>
-<tr><td>MDLZ</td><td>2026-09-30 (2026-10-29)</td><td>fi_total_derivative_liability</td><td>1,352</td><td>1,767 (2026-06-30)</td><td>-23.49%</td></tr>
-<tr><td>MDLZ</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_asset</td><td>1,624</td><td>1,470 (2026-06-30)</td><td>+10.48%</td></tr>
-<tr><td>MDLZ</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_liability</td><td>1,352</td><td>1,767 (2026-06-30)</td><td>-23.49%</td></tr>
-<tr><td>MDLZ</td><td>2026-09-30 (2026-10-29)</td><td>net_derivative_position</td><td>272</td><td>-297 (2026-06-30)</td><td>+191.58%</td></tr>
-<tr><td>MDLZ</td><td>2026-09-30 (2026-10-29)</td><td>expected_12mo_reclass_from_aoci</td><td>-9</td><td>1 (2026-06-30)</td><td>-1000.00%</td></tr>
-<tr><td>MDLZ</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_assets</td><td>1,624</td><td>1,470 (2026-06-30)</td><td>+10.48%</td></tr>
-<tr><td>MDLZ</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_liabilities</td><td>1,352</td><td>1,767 (2026-06-30)</td><td>-23.49%</td></tr>
-<tr><td>MDLZ</td><td>2026-09-30 (2026-10-29)</td><td>variation_margin_balance</td><td>-145</td><td>87 (2026-06-30)</td><td>-266.67%</td></tr>
-<tr><td>MDLZ</td><td>2026-09-30 (2026-10-29)</td><td>bs_location_other_current_assets</td><td>1,367</td><td>1,207 (2026-06-30)</td><td>+13.26%</td></tr>
-<tr><td>MDLZ</td><td>2026-09-30 (2026-10-29)</td><td>bs_location_other_current_liabilities</td><td>935</td><td>1,275 (2026-06-30)</td><td>-26.67%</td></tr>
-<tr><td>MDLZ</td><td>2026-09-30 (2026-10-29)</td><td>bs_location_other_liabilities</td><td>417</td><td>492 (2026-06-30)</td><td>-15.24%</td></tr>
-<tr><td>MO</td><td>2026-09-30 (2026-10-29)</td><td>ir_sensitivity_100bp</td><td>1,500</td><td>1,700 (2026-03-31)</td><td>-11.76%</td></tr>
-<tr><td>MO</td><td>2026-09-30 (2026-10-29)</td><td>fair_value_debt</td><td>21</td><td>22.7 (2026-03-31)</td><td>-7.49%</td></tr>
-<tr><td>MO</td><td>2026-09-30 (2026-10-29)</td><td>rate_sensitivity_increase</td><td>1,500</td><td>1,700 (2026-06-30)</td><td>-11.76%</td></tr>
-<tr><td>MO</td><td>2026-09-30 (2026-10-29)</td><td>rate_sensitivity_decrease</td><td>1,700</td><td>2 (2026-03-31)</td><td>+84900.00%</td></tr>
-<tr><td>NCLH</td><td>2026-09-30 (2026-10-29)</td><td>fx_not_designated_notional</td><td>324.9</td><td>447.1 (2026-06-30)</td><td>-27.33%</td></tr>
-<tr><td>NCLH</td><td>2026-09-30 (2026-10-29)</td><td>fx_transaction_gain_loss</td><td>19.8</td><td>32.7 (2026-06-30)</td><td>-39.45%</td></tr>
-<tr><td>NCLH</td><td>2026-09-30 (2026-10-29)</td><td>fx_sensitivity_10pct</td><td>1,600</td><td>1,500 (2026-06-30)</td><td>+6.67%</td></tr>
-<tr><td>NCLH</td><td>2026-09-30 (2026-10-29)</td><td>fx_unhedged_payments_eur</td><td>16,000</td><td>15,200 (2026-06-30)</td><td>+5.26%</td></tr>
-<tr><td>NCLH</td><td>2026-09-30 (2026-10-29)</td><td>fx_remeasurement_gains_losses</td><td>19.8</td><td>32.7 (2026-06-30)</td><td>-39.45%</td></tr>
-<tr><td>NCLH</td><td>2026-09-30 (2026-10-29)</td><td>interest_rate_sensitivity</td><td>18.2</td><td>15.3 (2026-06-30)</td><td>+18.95%</td></tr>
-<tr><td>NCLH</td><td>2026-09-30 (2026-10-29)</td><td>fuel_expense_pct_of_operating</td><td>11.7</td><td>13.8 (2026-06-30)</td><td>-15.22%</td></tr>
-<tr><td>NCLH</td><td>2026-09-30 (2026-10-29)</td><td>fuel_sensitivity_10pct</td><td>25.1</td><td>39.7 (2026-06-30)</td><td>-36.78%</td></tr>
-<tr><td>NCLH</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_asset</td><td>149.35</td><td>66.092 (2026-06-30)</td><td>+125.97%</td></tr>
-<tr><td>NCLH</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_liability</td><td>81.601</td><td>61.426 (2026-06-30)</td><td>+32.84%</td></tr>
-<tr><td>NCLH</td><td>2026-09-30 (2026-10-29)</td><td>net_derivative_position</td><td>67.749</td><td>4.666 (2026-06-30)</td><td>+1351.97%</td></tr>
-<tr><td>NCLH</td><td>2026-09-30 (2026-10-29)</td><td>variable_rate_debt_pct</td><td>12</td><td>10 (2026-06-30)</td><td>+20.00%</td></tr>
-<tr><td>OTIS</td><td>2026-09-30 (2026-10-29)</td><td>commodity_derivatives_notional</td><td>12</td><td>11 (2026-03-31)</td><td>+9.09%</td></tr>
-<tr><td>OTIS</td><td>2026-09-30 (2026-10-29)</td><td class="flag">total_derivative_asset †</td><td>96</td><td>5,800 (2026-06-30)</td><td>-98.34%</td></tr>
-<tr><td>OTIS</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_liability</td><td>-25</td><td>-40 (2026-03-31)</td><td>+37.50%</td></tr>
-<tr><td>OTIS</td><td>2026-09-30 (2026-10-29)</td><td>net_derivative_position</td><td>71</td><td>-9 (2026-03-31)</td><td>+888.89%</td></tr>
-<tr><td>OTIS</td><td>2026-09-30 (2026-10-29)</td><td>cash_flow_hedge_aoci</td><td>11</td><td>3 (2026-03-31)</td><td>+266.67%</td></tr>
-<tr><td>OTIS</td><td>2026-09-30 (2026-10-29)</td><td>expected_12mo_reclass_from_aoci</td><td>7</td><td>10 (2026-06-30)</td><td>-30.00%</td></tr>
-<tr><td>RMD</td><td>2026-09-30 (2026-10-30)</td><td>total_derivative_asset</td><td>5.607</td><td>5.08 (2026-06-30)</td><td>+10.37%</td></tr>
-<tr><td>RMD</td><td>2026-09-30 (2026-10-30)</td><td>total_derivative_liability</td><td>285.442</td><td>217.671 (2026-06-30)</td><td>+31.13%</td></tr>
-<tr><td>RMD</td><td>2026-09-30 (2026-10-30)</td><td>net_derivative_position</td><td>-279.835</td><td>-212.591 (2026-06-30)</td><td>-31.63%</td></tr>
-<tr><td>RSG</td><td>2026-09-30 (2026-10-30)</td><td>ir_sensitivity_100bp</td><td>23</td><td>18 (2026-06-30)</td><td>+27.78%</td></tr>
-<tr><td>RSG</td><td>2026-09-30 (2026-10-30)</td><td>variable_rate_debt_outstanding</td><td>2,300</td><td>1,800 (2026-06-30)</td><td>+27.78%</td></tr>
+<tr><th>Ticker</th><th>Period (filed)</th><th>Field</th><th class="num">Current</th><th class="num">Prior</th><th class="num">%</th><th>Flag</th></tr>
+<tr><td>BSX</td><td>2026-09-30 (2026-11-02)</td><td>fx_not_designated_notional</td><td class="num">6339.0</td><td class="num">4231.0</td><td class="num">+49.8%</td><td class="flag">⚠</td></tr>
+<tr><td>BSX</td><td>2026-09-30 (2026-11-02)</td><td>fx_sensitivity_depreciation_current</td><td class="num">-1097.0</td><td class="num">1042.0</td><td class="num">-205.3%</td><td class="flag">⚠</td></tr>
+<tr><td>BSX</td><td>2026-09-30 (2026-11-02)</td><td>fx_sensitivity_depreciation_prior</td><td class="num">-982.0</td><td class="num">982.0</td><td class="num">-200.0%</td><td class="flag">⚠</td></tr>
+<tr><td>BSX</td><td>2026-09-30 (2026-11-02)</td><td>total_derivative_liability</td><td class="num">228.0</td><td class="num">1198.0</td><td class="num">-81.0%</td><td class="flag">⚠</td></tr>
+<tr><td>BSX</td><td>2026-09-30 (2026-11-02)</td><td>net_derivative_position</td><td class="num">-5.0</td><td class="num">-943.0</td><td class="num">+99.5%</td><td class="flag">⚠</td></tr>
+<tr><td>BSX</td><td>2026-09-30 (2026-11-02)</td><td>expected_12mo_reclass_from_aoci</td><td class="num">35.0</td><td class="num">44.0</td><td class="num">-20.5%</td><td class="flag">⚠</td></tr>
+<tr><td>CLX</td><td>2026-09-30 (2026-11-02)</td><td>ir_swap_notional</td><td class="num">0.0</td><td class="num">200.0</td><td class="num">-100.0%</td><td></td></tr>
+<tr><td>CLX</td><td>2026-09-30 (2026-11-02)</td><td>total_derivative_asset</td><td class="num">10.0</td><td class="num">18.0</td><td class="num">-44.4%</td><td></td></tr>
+<tr><td>CLX</td><td>2026-09-30 (2026-11-02)</td><td>total_derivative_liability</td><td class="num">0.0</td><td class="num">1.0</td><td class="num">-100.0%</td><td></td></tr>
+<tr><td>CLX</td><td>2026-09-30 (2026-11-02)</td><td>net_derivative_position</td><td class="num">10.0</td><td class="num">17.0</td><td class="num">-41.2%</td><td></td></tr>
+<tr><td>EL</td><td>2026-09-30 (2026-11-02)</td><td>total_derivative_asset</td><td class="num">36.0</td><td class="num">74.0</td><td class="num">-51.4%</td><td></td></tr>
+<tr><td>EL</td><td>2026-09-30 (2026-11-02)</td><td>total_derivative_liability</td><td class="num">210.0</td><td class="num">166.0</td><td class="num">+26.5%</td><td></td></tr>
+<tr><td>EL</td><td>2026-09-30 (2026-11-02)</td><td>net_derivative_position</td><td class="num">-174.0</td><td class="num">-92.0</td><td class="num">-89.1%</td><td></td></tr>
+<tr><td>EL</td><td>2026-09-30 (2026-11-02)</td><td>expected_12mo_reclass_from_aoci</td><td class="num">-9.0</td><td class="num">-5.0</td><td class="num">-80.0%</td><td></td></tr>
+<tr><td>IDXX</td><td>2026-09-30 (2026-11-02)</td><td>fx_transaction_gain_loss</td><td class="num">0.812</td><td class="num">19.4</td><td class="num">-95.8%</td><td></td></tr>
+<tr><td>IDXX</td><td>2026-09-30 (2026-11-02)</td><td>foreign_currency_transaction_losses</td><td class="num">0.812</td><td class="num">-0.444</td><td class="num">+282.9%</td><td></td></tr>
+<tr><td>IDXX</td><td>2026-09-30 (2026-11-02)</td><td>revenue_fx_impact</td><td class="num">-2.371</td><td class="num">31.171</td><td class="num">-107.6%</td><td></td></tr>
+<tr><td>IDXX</td><td>2026-09-30 (2026-11-02)</td><td>operating_profit_fx_impact</td><td class="num">0.582</td><td class="num">0.45</td><td class="num">+29.3%</td><td></td></tr>
+<tr><td>IDXX</td><td>2026-09-30 (2026-11-02)</td><td>eps_fx_impact</td><td class="num">0.04</td><td class="num">0.14</td><td class="num">-71.4%</td><td></td></tr>
+<tr><td>IDXX</td><td>2026-09-30 (2026-11-02)</td><td>total_derivative_asset</td><td class="num">23.523</td><td class="num">13.035</td><td class="num">+80.5%</td><td></td></tr>
+<tr><td>IDXX</td><td>2026-09-30 (2026-11-02)</td><td>total_derivative_liability</td><td class="num">9.43</td><td class="num">13.669</td><td class="num">-31.0%</td><td></td></tr>
+<tr><td>IDXX</td><td>2026-09-30 (2026-11-02)</td><td>net_derivative_position</td><td class="num">14.093</td><td class="num">-0.634</td><td class="num">+2322.9%</td><td></td></tr>
+<tr><td>IDXX</td><td>2026-09-30 (2026-11-02)</td><td>hedge_gain_losses_current</td><td class="num">0.798</td><td class="num">-0.69</td><td class="num">+215.7%</td><td></td></tr>
+<tr><td>ON</td><td>2026-10-02 (2026-11-02)</td><td>fx_derivatives_notional</td><td class="num">444.1</td><td class="num">627.6</td><td class="num">-29.2%</td><td class="flag">⚠</td></tr>
+<tr><td>ON</td><td>2026-10-02 (2026-11-02)</td><td>fx_not_designated_notional</td><td class="num">0.0</td><td class="num">165.3</td><td class="num">-100.0%</td><td class="flag">⚠</td></tr>
+<tr><td>ON</td><td>2026-10-02 (2026-11-02)</td><td>total_derivative_asset</td><td class="num">8.4</td><td class="num">617.9</td><td class="num">-98.6%</td><td class="flag">⚠</td></tr>
+<tr><td>ON</td><td>2026-10-02 (2026-11-02)</td><td>total_derivative_liability</td><td class="num">6.1</td><td class="num">470.3</td><td class="num">-98.7%</td><td class="flag">⚠</td></tr>
+<tr><td>ON</td><td>2026-10-02 (2026-11-02)</td><td>net_derivative_position</td><td class="num">2.3</td><td class="num">147.6</td><td class="num">-98.4%</td><td class="flag">⚠</td></tr>
+<tr><td>ON</td><td>2026-10-02 (2026-11-02)</td><td>cash_flow_hedge_aoci</td><td class="num">-1.7</td><td class="num">-5.9</td><td class="num">+71.2%</td><td class="flag">⚠</td></tr>
+<tr><td>PEG</td><td>2026-09-30 (2026-11-02)</td><td>ir_swap_notional</td><td class="num">350.0</td><td class="num">1050.0</td><td class="num">-66.7%</td><td></td></tr>
+<tr><td>PEG</td><td>2026-09-30 (2026-11-02)</td><td>total_derivative_asset</td><td class="num">7.0</td><td class="num">15.0</td><td class="num">-53.3%</td><td></td></tr>
+<tr><td>PEG</td><td>2026-09-30 (2026-11-02)</td><td>total_derivative_liability</td><td class="num">-298.0</td><td class="num">128.0</td><td class="num">-332.8%</td><td></td></tr>
+<tr><td>PEG</td><td>2026-09-30 (2026-11-02)</td><td>net_derivative_position</td><td class="num">-291.0</td><td class="num">-113.0</td><td class="num">-157.5%</td><td></td></tr>
+<tr><td>STX</td><td>2026-10-02 (2026-10-29)</td><td>total_derivative_asset</td><td class="num">0.0</td><td class="num">230.0</td><td class="num">-100.0%</td><td></td></tr>
+<tr><td>STX</td><td>2026-10-02 (2026-10-29)</td><td>total_derivative_liability</td><td class="num">0.0</td><td class="num">-4.0</td><td class="num">+100.0%</td><td></td></tr>
+<tr><td>STX</td><td>2026-10-02 (2026-10-29)</td><td>net_derivative_position</td><td class="num">0.0</td><td class="num">230.0</td><td class="num">-100.0%</td><td></td></tr>
+<tr><td>SYK</td><td>2026-09-30 (2026-10-30)</td><td>expected_12mo_reclass_from_aoci</td><td class="num">16.0</td><td class="num">44.0</td><td class="num">-63.6%</td><td></td></tr>
+<tr><td>TER</td><td>2026-09-27 (2026-10-30)</td><td>total_derivative_asset</td><td class="num">0.724</td><td class="num">133.6</td><td class="num">-99.5%</td><td class="flag">⚠</td></tr>
+<tr><td>TER</td><td>2026-09-27 (2026-10-30)</td><td>net_derivative_position</td><td class="num">-1.008</td><td class="num">133.6</td><td class="num">-100.8%</td><td class="flag">⚠</td></tr>
+<tr><td>TMO</td><td>2026-09-26 (2026-10-30)</td><td>fx_not_designated_notional</td><td class="num">1836.0</td><td class="num">1496.0</td><td class="num">+22.7%</td><td></td></tr>
+<tr><td>TXT</td><td>2026-10-03 (2026-10-29)</td><td>ir_swap_notional</td><td class="num">209.0</td><td class="num">264.0</td><td class="num">-20.8%</td><td class="flag">⚠</td></tr>
+<tr><td>TXT</td><td>2026-10-03 (2026-10-29)</td><td>total_derivative_asset</td><td class="num">8.0</td><td class="num">574.0</td><td class="num">-98.6%</td><td class="flag">⚠</td></tr>
+<tr><td>TXT</td><td>2026-10-03 (2026-10-29)</td><td>total_derivative_liability</td><td class="num">14.0</td><td class="num">574.0</td><td class="num">-97.6%</td><td class="flag">⚠</td></tr>
+<tr><td>VLO</td><td>2026-09-30 (2026-10-28)</td><td>fx_derivatives_notional</td><td class="num">675.0</td><td class="num">445.0</td><td class="num">+51.7%</td><td></td></tr>
+<tr><td>VLO</td><td>2026-09-30 (2026-10-28)</td><td>fx_not_designated_notional</td><td class="num">675.0</td><td class="num">445.0</td><td class="num">+51.7%</td><td></td></tr>
+<tr><td>VLO</td><td>2026-09-30 (2026-10-28)</td><td>floating_rate_debt_outstanding</td><td class="num">3.0</td><td class="num">2.0</td><td class="num">+50.0%</td><td></td></tr>
+<tr><td>VLO</td><td>2026-09-30 (2026-10-28)</td><td>total_derivative_asset</td><td class="num">2611.0</td><td class="num">2141.0</td><td class="num">+22.0%</td><td></td></tr>
+<tr><td>VLO</td><td>2026-09-30 (2026-10-28)</td><td>total_derivative_liability</td><td class="num">2918.0</td><td class="num">2301.0</td><td class="num">+26.8%</td><td></td></tr>
+<tr><td>VLO</td><td>2026-09-30 (2026-10-28)</td><td>net_derivative_position</td><td class="num">-307.0</td><td class="num">-160.0</td><td class="num">-91.9%</td><td></td></tr>
+<tr><td>VZ</td><td>2026-09-30 (2026-10-29)</td><td>total_derivative_asset</td><td class="num">1069.0</td><td class="num">2158.0</td><td class="num">-50.5%</td><td></td></tr>
+<tr><td>VZ</td><td>2026-09-30 (2026-10-29)</td><td>net_derivative_position</td><td class="num">-6835.0</td><td class="num">-4921.0</td><td class="num">-38.9%</td><td></td></tr>
+<tr><td>WEC</td><td>2026-09-30 (2026-10-30)</td><td>total_derivative_asset</td><td class="num">34.2</td><td class="num">9.8</td><td class="num">+249.0%</td><td></td></tr>
+<tr><td>WEC</td><td>2026-09-30 (2026-10-30)</td><td>total_derivative_liability</td><td class="num">57.2</td><td class="num">36.1</td><td class="num">+58.5%</td><td></td></tr>
+<tr><td>WMB</td><td>2026-09-30 (2026-11-02)</td><td>commodity_derivative_fair_value_total</td><td class="num">-259.0</td><td class="num">-437.0</td><td class="num">+40.7%</td><td></td></tr>
+<tr><td>WMB</td><td>2026-09-30 (2026-11-02)</td><td>total_derivative_liability</td><td class="num">-898.0</td><td class="num">-1125.0</td><td class="num">+20.2%</td><td></td></tr>
+<tr><td>WMB</td><td>2026-09-30 (2026-11-02)</td><td>net_derivative_position</td><td class="num">-259.0</td><td class="num">-437.0</td><td class="num">+40.7%</td><td></td></tr>
+<tr><td>WMB</td><td>2026-09-30 (2026-11-02)</td><td>var_one_day_95pct</td><td class="num">3.0</td><td class="num">12.0</td><td class="num">-75.0%</td><td></td></tr>
+<tr><td>WMB</td><td>2026-09-30 (2026-11-02)</td><td>cash_collateral_level1</td><td class="num">220.0</td><td class="num">327.0</td><td class="num">-32.7%</td><td></td></tr>
+<tr><td>XEL</td><td>2026-09-30 (2026-10-29)</td><td>expected_12mo_reclass_from_aoci</td><td class="num">-2.0</td><td class="num">-3.0</td><td class="num">+33.3%</td><td></td></tr>
 </table>
-<p class="note">† The corpus flags these fields as <code>implausible_swing</code> defects (DECK total_derivative_asset, FSLR total_derivative_asset and net_derivative_position, HAS total_derivative_asset/total_derivative_liability/net_derivative_position, LLY fx_designated_notional, OTIS total_derivative_asset) — each moved 10x-130x versus the prior period, the classic pattern of a notional landing in the wrong column. Verify against the filing before quoting any of these.</p>
 
 <h2>Held for review</h2>
-<p>None — no <code>review/YYYY-MM-DD-scheduler-gate-failed</code> branches were created since the window start. (The only such branch touching this window, <code>review/2026-10-30-scheduler-gate-failed</code>, was created at 03:09 UTC on 2026-10-30 — before this window opened — and has already been fully merged into master.)</p>
+<p>None — no review/* branches were created in this window.</p>
 
 <h2>Extraction regressions</h2>
 <p>No regressions.</p>
 
 <h2>New-blank filings</h2>
-<p>
-CMG (Chipotle Mexican Grill) — 10-Q for period 2026-09-30, 2 attempts, came back blank.<br>
-DVA (DaVita) — 10-Q for period 2026-09-30, 3 attempts, came back blank (10-Q refers to the 10-K; nothing to extract).<br>
-FTNT (Fortinet) — 10-Q for period 2026-09-30, 3 attempts, came back blank (10-Q refers to the 10-K; nothing to extract).<br>
-LHX (L3Harris) — 10-Q for period 2026-10-02, 3 attempts, came back blank (10-Q refers to the 10-K; nothing to extract).<br>
-PWR (Quanta Services) — 10-Q for period 2026-09-30, 3 attempts, came back blank (10-Q refers to the 10-K; nothing to extract).<br>
-REGN (Regeneron Pharmaceuticals) — 10-Q for period 2026-09-30, 3 attempts, came back blank (10-Q refers to the 10-K; nothing to extract).
-</p>
+<ul>
+<li>FOXA — 10-Q, period ended 2026-09-30 (3 attempts) (10-Q refers to the 10-K; nothing to extract)</li>
+<li>MAR — 10-Q, period ended 2026-09-30 (3 attempts) (10-Q refers to the 10-K; nothing to extract)</li>
+<li>ROP — 10-Q, period ended 2026-09-30 (3 attempts) (10-Q refers to the 10-K; nothing to extract)</li>
+</ul>
 
-<div class="footer">
-Verified: 37 leads with narrative context, 359 total figures traced to digest_manifest.json new_filings entries. 0 extraction regressions and 0 held-for-review branches listed. 0 backfill rows summarised in the header count only. Window: 2026-10-30T04:03:23+00:00 onwards; 2 scheduler runs.
-</div>
+<p class="verify">Verified: 16 leads with narrative context, 66 total figures traced to digest_manifest.json new_filings entries. 0 extraction regressions and 0 held-for-review branches listed. 0 backfill rows summarised in the header count only. Window: 2026-11-02T04:15:40+00:00 onwards; 2 scheduler runs.</p>
 
 </body>
 </html>
