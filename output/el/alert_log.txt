@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-03 ===
+[NUMERIC] total_derivative_asset: $74M → $36M (-51.4%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $166M → $210M (+26.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-92M → $-174M (-89.1%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-5M → $-9M (-80.0%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset dropped from $74M (Jun 30, 2026) to $36M (Sep 30, 2026), a 51% decline; the text gives no explicit reason, but the components show it is driven by lower fair values on the cross-currency swap asset ('14' vs '34') and the designated foreign currency forward asset ('10' vs '29').
+[LLM_FLAG] net_derivative_position moved from $(92)M to $(174)M (89% more negative, more than 50% change); partially explained by the interest rate swap fair-value hedge loss this quarter: 'Gain (loss) on fair value hedge relationships – interest rate contracts: Hedged item ... 57 ... Derivatives designated as hedging instruments ... ( 57 )', consistent with the interest rate contract liability rising from $118 million to $175 million.
+[LLM_FLAG] expected_12mo_reclass_from_aoci moved from $(5)M to $(9)M (80% change, more than 50%); the filing states the $9 million figure but gives no explanation for the size of the move from the prior period.
+[LLM_FLAG] Newsworthy: quarter-over-quarter interest rate swap mark-to-market swing is large — 'Interest rate contracts (2) Interest expense ... $ ( 57 ) ... $ 4' — a roughly 14x jump in the fair-value hedge loss/gain on the $1.6 billion notional interest rate swap book versus the prior-year quarter, consistent with continued SOFR moves.
+[LLM_FLAG] Newsworthy / worth verifying: oddly worded cash flow hedge discontinuance footnote — 'There was no amount reclassified into the accompanying consolidated statements of earnings as a result of the discontinuance of cash flow hedges because it is probable that forecasted transactions will not occur by the end of the original time period.' This pairs a 'no reclassification' statement with language about forecasted transactions being probable not to occur, which is the condition that normally triggers reclassification — worth checking against the filing for an undisclosed hedge discontinuance.
+
 === 10-K | Period ending 2026-06-30 | Processed 2026-10-20 ===
 [NUMERIC] ir_swap_notional: $1,000M → $1,600M (+60.0%) — exceeds 20% threshold
 [NUMERIC] total_derivative_liability: $216M → $166M (-23.1%) — exceeds 20% threshold

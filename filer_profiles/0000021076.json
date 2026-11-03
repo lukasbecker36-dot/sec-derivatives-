@@ -18,7 +18,9 @@
     "recurring_phrases": [
       "commodity derivative",
       "notional amount",
-      "cash flow hedge"
+      "cash flow hedge",
+      "designated as hedging",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -93,6 +95,19 @@
       ],
       "fields_extracted": 1,
       "fields_null": 7
+    },
+    {
+      "filing_date": "2026-09-30",
+      "form_type": "10-Q",
+      "period_end": "2026-09-30",
+      "processed_at": "2026-11-03T02:58:30Z",
+      "sections_found": [
+        "financial_instruments",
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 11,
+      "fields_null": 20
     }
   ]
 }

@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-03 ===
+[NUMERIC] fx_not_designated_notional: $4,231M → $6,339M (+49.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $1,198M → $228M (-81.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-943M → $-5M (+99.5%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $44M → $35M (-20.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $1,042M, now missing
+[NUMERIC] fx_sensitivity_depreciation_current: $1,042M → $-1,097M (-205.3%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_depreciation_prior: $982M → $-982M (-200.0%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: net_derivative_position changed from -943 to -5 (0x)
+[LLM_FLAG] total_derivative_liability computed here as $228M (forward-currency-contract liabilities only: $72M + $109M designated + $47M non-designated) versus a prior run's $1,198M, a >50% swing. The filing's own 'Total Derivative and Nonderivative Liabilities' line is $1,250M, which includes $1,022M of foreign-currency-denominated debt principal (a nonderivative net investment hedge, not a derivative) carried in 'Long-term debt'. We excluded the debt to keep this field apples-to-apples with the fair-value kind (pure derivative mark-to-market); nothing in the filing text indicates an actual ~80% reduction in hedging liabilities, so treat the prior comparison as a methodology artifact, not a real move. Verify against the filing before quoting a change.
+[LLM_FLAG] net_derivative_position similarly swings from a prior -943 to -5 here, driven by the same debt-inclusion/exclusion question above rather than a disclosed change in hedging activity.
+[LLM_FLAG] De-designation disclosed: 'A portion of this notional is subject to de-designation and re-designation based on changes in the underlying hedged item' regarding the euro-denominated debt net investment hedge -- worth watching for ineffectiveness in future quarters.
+[LLM_FLAG] fx_not_designated_notional rose from $4,163M to $6,339M (+52%, i.e. +49.8% on the $4,231M prior-run comparator), a large jump in non-designated (economic, non-hedge-accounted) FX hedging; the filing gives no narrative explanation for the increase.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-04 ===
 [NUMERIC] fx_designated_notional: $1,596M → $10,154M (+536.2%) — exceeds 20% threshold
 [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $6M, now missing

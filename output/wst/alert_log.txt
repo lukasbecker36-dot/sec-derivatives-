@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-03 ===
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $19M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (expected_12mo_reclass_from_aoci)
+[LLM_FLAG] No reliable USD-aggregated FX notional total can be extracted: the note gives separate notional tables by hedge designation and currency (SGD 209.1 / SGD 421.9 cross-currency intercompany loans; EUR 23.5 intercompany demand notes; cash-flow-hedge purchase/sell amounts in EUR 30.3, JPY 4,943.4, SGD 66.2 with partial USD-equivalent columns; a $130.0 million cross-currency swap) but no single consolidated USD total line, so fx_derivatives_notional/fx_designated_notional/fx_not_designated_notional are left null rather than computed by summing mismatched currencies.
+[LLM_FLAG] commodity_derivatives_notional left null: the filing states quantity and strike (227,960 barrels of crude oil at a weighted-average strike price of $83.16/barrel) but never states a dollar notional figure; computing barrels x strike (~$19.0 million) would be a derived estimate, not an extracted value.
+[LLM_FLAG] Prior value supplied for equity_derivatives_notional is the string "Yes", which is not a valid value for a notional (dollar) field -- looks like a data-quality defect from a prior extraction (likely bled over from a has_derivatives-style field). Current section_text contains no mention of equity derivatives, so the field is correctly null here regardless.
+[LLM_FLAG] total_derivative_asset/total_derivative_liability/net_derivative_position are null because this section explicitly defers the actual fair-value figures to Note 10, Fair Value Measurements, whose numeric table falls outside the provided section_text (text is truncated mid fair-value-hierarchy discussion before the table appears).
+[LLM_FLAG] expected_12mo_reclass_from_aoci is null even though a prior value (19.2) exists; the current section_text does not restate this figure -- not carried forward per instructions.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-24 ===
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($19M)
 [DISAPPEARED_FIELD] total_derivative_asset: was $378M, now missing

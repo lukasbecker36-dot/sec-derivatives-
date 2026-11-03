@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-03 ===
+[NUMERIC] fx_derivatives_notional: $445M → $675M (+51.7%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $445M → $675M (+51.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $2,141M → $2,611M (+22.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $2,301M → $2,918M (+26.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-160M → $-307M (-91.9%) — exceeds 20% threshold
+[NUMERIC] floating_rate_debt_outstanding: $2M → $3M (+50.0%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position swung from -160 (prior) to -307 (current), a 92% change. The filing does not give an explicit cause, but the gross commodity-contract fair values (not designated as hedges) grew sharply versus year-end 2025 -- asset $2,587M vs $459M, liability $2,913M vs $446M -- consistent with commodity price volatility widening both sides of the book rather than any disclosed strategy change.
+[LLM_FLAG] Newsworthy: cash flow hedge losses recognized in OCI widened materially -- $(265)M in Q3 2026 vs $(15)M in Q3 2025, and $(418)M for the nine months vs $(15)M a year earlier. Filing attributes these hedges to 'forecasted sales of renewable diesel and neat SAF.'
+[LLM_FLAG] Newsworthy: non-designated (economic) commodity hedge losses also widened -- $(253)M recognized in Revenues for Q3 2026 vs $(3)M in Q3 2025; $(382)M for nine months 2026 vs $(7)M a year earlier.
+[LLM_FLAG] Newsworthy, not a derivative mark: RFS/Renewable and Low-Carbon Fuel Programs compliance-credit costs rose to $658 million (Q3) and $2.0 billion (nine months) from $431 million and $1.2 billion a year earlier; Valero elects the normal purchase exception so these RIN contracts are not recorded at fair value.
+[LLM_FLAG] No collateral/credit-rating triggers disclosed: 'We do not require any collateral or other security to support derivative instruments into which we enter. We also do not have any derivative instruments that require us to maintain a minimum investment-grade credit rating.'
+[LLM_FLAG] fixed_rate_notes_billion is 8.632 vs prior extraction's 9.158 (-5.7%) -- within tolerance, no reconciliation concern, but note the in-filing comparative shows total fixed-rate debt actually grew from $8,308M at Dec 31, 2025 to $8,632M at Sept 30, 2026 (new issuance), while the longer 'Thereafter' bucket grew from $4,736M to $5,586M.
+[LLM_FLAG] floating_rate_debt_outstanding is 3 vs prior extraction's 2.0 (+50%), right at the flag threshold; both figures are immaterial in absolute size ($2-3M) relative to the company's debt stack.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-10-13 ===
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
 [NUMERIC] total_derivative_asset: $5,018M → $2,141M (-57.3%) — exceeds 20% threshold

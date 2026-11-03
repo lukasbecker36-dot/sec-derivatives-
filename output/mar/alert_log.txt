@@ -1,3 +1,7 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-03 ===
+[LLM_FLAG] Section contains no quantitative or qualitative market risk data — it incorporates the disclosure by cross-reference to the 2025 Form 10-K ("Our exposure to market risk has not materially changed since December 31, 2025. See Part II, Item 7A..."). All fields are correctly null; this is an extraction-input limitation, not a non-discloser (has_derivatives should not be inferred as No from this section alone).
+[REFERENCE_ONLY] Every section found only refers to the annual report (e.g. "see Item 7A in our Form 10-K"); nothing to extract. Not retried.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-09-25 ===
 [LLM_FLAG] Section is a cross-reference only: filing states exposure to market risk has not materially changed since December 31, 2025 and directs readers to the 2025 Form 10-K Item 7A for quantitative detail. No notional, sensitivity, fair-value or rate figures are stated in this section_text, so no comparison to prior_values is possible.
 

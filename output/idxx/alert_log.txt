@@ -1,3 +1,29 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-03 ===
+[NEW_FIELD] total_derivative_asset: appeared for first time ($24M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($9M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($14M)
+[NUMERIC] fx_transaction_gain_loss: $19M → $1M (-95.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $12M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $8M, now missing
+[NUMERIC] hedge_gain_losses_current: $-1M → $1M (+215.7%) — exceeds 20% threshold
+[NEW_FIELD] foreign_currency_transaction_losses: appeared for first time ($1M)
+[NEW_FIELD] revenue_fx_impact: appeared for first time ($-2M)
+[NUMERIC] operating_profit_fx_impact: $0M → $1M (+29.3%) — exceeds 20% threshold
+[NEW_FIELD] eps_fx_impact: appeared for first time ($0M)
+[DISAPPEARED_FIELD] hedge_duration: was $-0M, now missing
+[DISAPPEARED_FIELD] sensitivity_analysis: was $-0M, now missing
+[VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (ir_sensitivity_100bp, fx_sensitivity_10pct, hedge_duration, sensitivity_analysis)
+[LLM_FLAG] total_derivative_asset ($23.523M) and total_derivative_liability ($9.43M) are not stated as single line items in the text — they are sums of the individual FX forward, cross-currency swap, and interest rate swap fair-value rows in the Level 2 fair-value hierarchy table (contingent consideration excluded as non-derivative). Verify against the filing's full table before quoting a 'total derivatives' figure.
+[LLM_FLAG] cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci are not disclosed in this excerpt; the filing points to 'Note 14. Accumulated Other Comprehensive Income' for AOCI hedge detail, which falls outside this section's text.
+[LLM_FLAG] Interest rate swap fair value swung from a $0.446M liability at Dec 31, 2025 to a $6.652M asset at Sep 30, 2026 — a sign reversal. Plausible given the swap was entered into around November 2025 fixing the $250.0M Term Loan rate at 3.4%, but worth confirming against the filing rather than assuming.
+[LLM_FLAG] Newsworthy, non-derivative: IDXX acquired CoVet in Q3 2026 and recorded $20.2 million of Level 3 contingent consideration (undiscounted max $47.5 million tied to 2027-2029 revenue targets) in the same fair-value note — flagged for awareness, not a hedging instrument.
+[LLM_FLAG] prior_values flags 'equity_derivatives_notional' with a prior value of the string "Yes" rather than a number — this looks like a corrupted/misaligned prior data point, not something this extraction can reconcile; current-period text has no equity derivatives disclosure (null/not_found).
+[LLM_FLAG] fx_transaction_gain_loss: prior value was $19.4M; this quarter's hedge-impact table only shows $0.812M (three months) / $0.122M (nine months) of foreign currency transaction gains, a >95% drop. The text gives no explanation for a change of this scale — the prior figure may reflect a different scope/period (e.g., full-year or a different line item) rather than a genuine swing. Verify against the filing before quoting either number.
+[LLM_FLAG] hedge_gain_losses_current: prior value was -$0.69M; this quarter's three-month hedge gain is +$0.798M, a sign reversal. No explanatory text is given for the swing beyond routine mark-to-market on FX hedge contracts.
+[LLM_FLAG] ir_sensitivity_100bp: no quantitative interest-rate sensitivity figure is given this quarter (prior was $11.9M) — the filing states there have been 'no material changes to the market risks described in our 2025 Annual Report, except for the impact of foreign exchange rates,' so the IR sensitivity is incorporated by reference to the FY2025 10-K rather than restated here.
+[LLM_FLAG] fx_sensitivity_10pct: the filing discloses only a 1% USD-move sensitivity ($4M revenue / $2M operating income impact, net of hedges), not a 10% figure. Returning null rather than scaling the 1% figure by 10x, since that would be an estimate, not an extracted value.
+[LLM_FLAG] Newsworthy: a new interest rate swap (entered around November 2025) fixes the $250.0 million Term Loan at an effective 3.4% through November 12, 2028 and is designated as a cash flow hedge — a programme not previously in place. Separately, $474.0 million drawn on the Credit Facility remains unhedged/floating-rate.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NUMERIC] total_derivative_asset: $115M → $19M (-83.1%) — exceeds 20% threshold
 [NUMERIC] total_derivative_liability: $115M → $12M (-89.7%) — exceeds 20% threshold

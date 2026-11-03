@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-09-26 | Processed 2026-11-03 ===
+[NUMERIC] fx_derivatives_notional: $9,612M → $14,736M (+53.3%) — exceeds 20% threshold
+[NUMERIC] fx_designated_notional: $8,150M → $12,900M (+58.3%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $1,462M → $1,836M (+25.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $415M → $231M (-44.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $409M → $590M (+44.3%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $6M → $-359M (-6083.3%) — exceeds 20% threshold
+[LLM_FLAG] fx_derivatives_notional rose 53% vs prior_values (9,612 -> 14,736); text shows the move is driven by the Swiss franc cross-currency swap notional more than doubling ($5,000M -> $11,800M) while the euro program was eliminated ($1,000M -> $0) and the yen program cut by ~76% ($4,650M -> $1,100M) -- the filing gives no narrative explanation for this currency-mix shift.
+[LLM_FLAG] fx_designated_notional rose 58% vs prior_values (8,150 -> 12,900), same CHF/EUR/JPY net-investment-hedge mix shift noted above; nothing in the text explains the restructuring.
+[LLM_FLAG] net_derivative_position flipped sign, from a net asset of 6 (prior_values) to a net liability of -359 this period; the filing does not explain the swing, though FX-driven mark-to-market moves on the enlarged CHF cross-currency swap book ($589M fair-value liability vs $229M fair-value asset for the designated swaps) are the likely mechanical cause.
+[LLM_FLAG] Newsworthy: the net investment hedge programme was restructured across currencies this quarter -- CHF notional +136% to $11.8B, EUR notional eliminated entirely, JPY notional down ~76% -- worth asking IR about the rationale.
+[LLM_FLAG] Newsworthy: cross-currency swap interest expense impact rose materially -- 'Included in interest expense $103' (Q3 2026) vs $67 (Q3 2025); $299 vs $201 for the nine-month period.
+[LLM_FLAG] Newsworthy: company has ~$201M of gross derivative assets and liabilities subject to master netting arrangements but states 'the company does not offset derivative assets and liabilities within the balance sheet.'
+
 === 10-Q | Period ending 2025-09-27 | Processed 2026-10-12 ===
 [NUMERIC] fx_derivatives_notional: $14,396M → $9,612M (-33.2%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $12,900M → $8,150M (-36.8%) — exceeds 20% threshold

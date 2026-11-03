@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-03 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($130M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $130M, now missing
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-2M)
+[DISAPPEARED_FIELD] marketable_equity_value: was $-3M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (cash_flow_hedge_aoci, marketable_equity_value)
+[LLM_FLAG] cash_flow_hedge_aoci: prior cached value was $130M, but this excerpt never states the total interest-rate-hedge AOCI balance -- only the $2 million expected to be reclassified in the next 12 months is quantified ('accumulated other comprehensive loss related to interest rate derivatives included $ 2 million of net losses expected to be reclassified into earnings during the next 12 months'). The full roll-forward is in Note 11, which is referenced but not included in this section excerpt, so this is a gap, not necessarily a change -- do not report a decline from $130M without checking Note 11.
+[LLM_FLAG] equity_derivatives_notional: prior cached value for this field was the string 'Yes' rather than a number, which looks like a prior extraction/schema-mapping error. This filing's derivatives note contains no equity derivatives at all, so current value is not_found.
+[LLM_FLAG] commodity_derivatives_notional could not be extracted as a dollar figure: the filing's 'Gross notional amounts of commodity forwards, options and FTRs' table reports volumes in MWh (39) and MMBtu (76), not a monetary notional, so no comparable $-millions value exists in this excerpt.
+[LLM_FLAG] Counterparty concentration: 'two of Xcel Energy’s nine most significant counterparties for these activities, comprising $ 25 million, or 20 %, of this credit exposure, had investment grade credit ratings' while 'Seven of the nine ... comprising $ 75 million, or 62 %, of this credit exposure, were not rated by these external ratings agencies' -- nearly two-thirds of credit exposure sits with internally-assessed, externally-unrated counterparties.
+[LLM_FLAG] Credit-contingent collateral triggers shrank year-over-year: 'there were $ 3 million and $ 7 million of derivative liabilities with such underlying contract provisions' (credit-downgrade clauses) and 'approximately $ 48 million and $ 62 million of derivative liabilities with such underlying contract provisions, respectively' (cross-default clauses).
+[LLM_FLAG] 'As of Sept. 30, 2026 , Xcel Energy had no commodity contracts designated as cash flow hedges' -- commodity (FTR/forward) price risk remains undesignated, with gains/losses flowing to regulatory assets/liabilities rather than AOCI.
+[LLM_FLAG] 'Xcel Energy had no derivative instruments designated as fair value hedges during the nine months ended Sept. 30, 2026 and 2025.'
+[LLM_FLAG] Item 3 is a pure incorporation-by-reference statement -- 'There have been no material changes to the market risk disclosure included in our Annual Report on Form 10-K for the year ended Dec. 31, 2025 under “Derivatives, Risk Management and Market Risk.”' No standalone quantitative figures (sensitivities, FX/equity exposure, fixed-rate note balances) appear in this quarter's filing, so every schema field here is not_found rather than 0 or unchanged-from-prior. marketable_equity_value (prior cached value -3.0) cannot be compared since the current period states nothing numerically; do not carry forward the prior figure.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($130M)
 [DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $130M, now missing

@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-03 ===
+[NUMERIC] ir_swap_notional: $100M → $350M (+250.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $35M → $7M (-80.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $-41M → $-298M (-626.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-6M → $-291M (-4750.0%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional: $350M (Sept 30, 2026) vs prior extraction value of $100M — a >50% change (+250%). The filing's own table shows a sequential decline from $970M at Dec 31, 2025 to $350M at Sept 30, 2026, but nothing in the text explains either move; likely reflects routine notional roll-off/replacement of existing swaps, not disclosed.
+[LLM_FLAG] total_derivative_asset: $7M vs prior extraction value of $35M — an 80% decrease. Nothing in the text explains the drop; it falls out of the fair-value hierarchy table (Energy-Related Contracts $4M + Interest Rate Derivatives $3M), computed rather than a single reported line.
+[LLM_FLAG] total_derivative_liability: $(298)M vs prior extraction value of $(41)M — more than a 7x increase in magnitude. Text gives no explicit narrative reason, though it coincides with a large pre-tax mark-to-market loss on non-designated energy contracts this period.
+[LLM_FLAG] net_derivative_position: $(291)M vs prior extraction value of $(6)M — a large swing from near-flat to a sizeable net liability; consistent with the asset/liability moves above but not separately explained in the text.
+[LLM_FLAG] Large non-designated derivative loss: nine-month pre-tax loss of $(805) million on energy-related contracts not designated as hedges, versus a $25 million gain in the prior-year nine-month period — 'Total $( 805 )' vs '$25' — a swing worth noting even though PEG does not explain the commodity-price driver in this excerpt.
+[LLM_FLAG] Counterparty concentration: 'There were two counterparties with credit exposure greater than 10% of the total. These credit exposures were with PSE&G and one non-affiliated counterparty.' (The PSE&G exposure is eliminated in consolidation, leaving one non-affiliated counterparty >10%.)
+[LLM_FLAG] Unsecured credit exposure to suppliers: 'PSE&G had $275 million in unsecured mark-to-market credit exposure with its suppliers' as of September 30, 2026 — worth tracking quarter to quarter as a counterparty-risk indicator.
+[LLM_FLAG] No schema field captures it, but the disclosed commodity MTM VaR range widened materially: at 95% confidence, the quarterly High rose to $116 million (from $71 million for full-year 2025) and the Low rose to $49 million (from $17 million) — 'From July through September 2026, MTM VaR varied between a low of $49 million and a high of $116 million at the 95% confidence level. The range of VaR was wider for the three months ended September 30, 2026 as compared with the year ended December 31, 2025.' Worth flagging as rising commodity price-risk exposure even though it doesn't map to an FX/IR/equity schema field.
+
 === 10-Q | Period ending 2025-06-30 | Processed 2026-10-01 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($100M)
 [NEW_FIELD] total_derivative_asset: appeared for first time ($35M)

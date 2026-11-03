@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-10-02 | Processed 2026-11-03 ===
+[LLM_FLAG] This note covers only net investment hedges (a $410M cross-currency swap and $560M of Euro-denominated debt); no cash flow hedge, fair value table, or balance-sheet derivative asset/liability data appears in this section, so those fields are not_found rather than zero.
+[LLM_FLAG] The $560M foreign currency denominated debt is explicitly described as a nonderivative hedging instrument ("designated and qualifies as a nonderivative hedging instrument"), so it is excluded from fx_derivatives_notional/fx_designated_notional even though it sits in the same notional-amount table as the cross-currency swap.
+[LLM_FLAG] fx_derivatives_notional and fx_designated_notional are unchanged from the prior value (410 vs 410) — no swing to flag.
+[LLM_FLAG] This Item 3 section contains no quantitative figures at all — it incorporates market-risk disclosure by reference to the 2025 Form 10-K and states there were no material changes, so every field is not_found rather than zero or carried forward.
+
 === 10-Q | Period ending 2026-04-03 | Processed 2026-08-10 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($410M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($410M)

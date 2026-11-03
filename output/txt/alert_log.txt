@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-10-03 | Processed 2026-11-03 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($559M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($209M)
+[NUMERIC] total_derivative_asset: $574M → $8M (-98.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $574M → $14M (-97.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $264M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $5M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $15M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-10M, now missing
+[VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct)
+[LLM_FLAG] total_derivative_asset/total_derivative_liability: prior values were both 574.0 (implying net_derivative_position of 0.0), while this filing's disclosed component fair values (FX: $1M asset/$14M liability; IR swap: $7M asset, no liability) sum to only $8M asset / $14M liability, a swing of >50% in both directions. Nothing in the filing explains a drop of this magnitude, and the prior pair (identical $574M asset and liability giving an exact net of $0) looks like a stale/corrupted extraction rather than a real prior-period value -- worth checking the prior filing/tracking.csv row before using either figure.
+[LLM_FLAG] cash_flow_hedge_aoci: prior value was 264.0 but this filing discloses no AOCI dollar balance for cash flow hedges, only that 'net gains and losses ... were not significant in the periods presented' -- that sentence describes P&L/OCI activity, not the AOCI balance, so it does not confirm or explain the prior 264.0 figure. Flagging the gap rather than carrying forward the prior value.
+[LLM_FLAG] equity_derivatives_notional: the prior_values entry for this field is the string "Yes" rather than a number, which is inconsistent with the field's numeric/notional definition -- looks like a misaligned or corrupted prior extraction (possibly confused with a has_derivatives-style field) and should be checked upstream.
+[LLM_FLAG] Newsworthy: IR swap notional on the Floating Rate Junior Subordinated Notes hedge declined from $264M to $209M while the weighted-average fixed rate ticked down from 5.16% to 5.15% ('At October 3, 2026 and January 3, 2026, our Finance group had interest rate swap agreements ... for an aggregate notional amount of $ 209 million and $ 264 million, respectively, that effectively converts the variable-rate interest for these Notes to a weighted-average fixed rate of 5.15 % and 5.16 %, respectively'), consistent with partial unwind/amortization of that swap book rather than a new program.
+[LLM_FLAG] Newsworthy: FX cash-flow-hedge notional grew from $477M to $559M while the fair value flipped from a net $6M asset/$10M liability (Jan 3, 2026) to a $1M asset/$14M liability (Oct 3, 2026) -- a modestly larger hedge book moving further into a net liability position, consistent with FX rate movement against the hedged exposure rather than any disclosed programme change.
+[LLM_FLAG] This Item 3 (Quantitative and Qualitative Disclosures About Market Risk) section contains no quantitative content of its own -- it is a one-line incorporation by reference to the prior-year 10-K, so none of the schema fields can be populated from this section_text.
+
 === 10-Q | Period ending 2026-07-04 | Processed 2026-07-30 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($574M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($574M)

@@ -1,3 +1,26 @@
+=== 10-Q | Period ending 2026-10-02 | Processed 2026-11-03 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($444M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($444M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($0M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
+[NEW_FIELD] equity_derivatives_notional: appeared for first time ($0M)
+[NUMERIC] total_derivative_asset: $618M → $8M (-98.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $470M → $6M (-98.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $148M → $2M (-98.4%) — exceeds 20% threshold
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-2M)
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $2M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $14M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-12M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-10M, now missing
+[VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion)
+[LLM_FLAG] total_derivative_asset fell from a prior value of $617.9M to $8.4M this quarter (-98.6%); nothing in the section text explains a swing of this size. $617.9M of fair-value assets would be larger than ON's entire disclosed FX notional book (~$444M) and is not plausible for a simple FX forward/cash-flow-hedge program -- the prior figure looks like a misextraction (possibly a notional or an unrelated balance-sheet total landing in this field), not a real decline this quarter.
+[LLM_FLAG] total_derivative_liability fell from a prior value of $470.3M to $6.1M this quarter (-98.7%); same concern as total_derivative_asset -- the prior figure is implausible relative to the ~$444M FX notional disclosed and nothing in the text explains a decline of this magnitude.
+[LLM_FLAG] net_derivative_position fell from a prior value of $147.6M to $2.3M this quarter (-98.4%), driven by the same apparently-implausible prior asset/liability figures noted above.
+[LLM_FLAG] Newsworthy: the undesignated FX hedging program appears to have been wound down -- at December 31, 2025 the company carried $190.5M notional of non-designated currency derivatives, but as of October 2, 2026 'the Company had no net outstanding foreign exchange contracts.'
+[LLM_FLAG] Newsworthy: convertible note hedges remain outstanding, entered into 'in connection with the issuance of the 0% Notes, the 2031 0% Notes, and 0.50% Notes' (equity-linked overlay tied to the company's convertible debt stack).
+[LLM_FLAG] The entire market_risk section_text for this filing is a single cross-reference sentence -- '...Quantitative and Qualitative Disclosures About Market Risk" in the 2025 Form 10-K.' -- with no quantitative Item 3 disclosure of its own this quarter. This looks like a section-boundary extraction issue (the slicer likely captured only the tail of a sentence incorporating Item 3 by reference) rather than the company genuinely omitting all market-risk disclosure; worth checking section_extract.py's boundary pattern for ON's Item 3 heading before treating these nulls as a true non-disclosure.
+
 === 10-Q | Period ending 2026-07-03 | Processed 2026-08-04 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($618M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($470M)

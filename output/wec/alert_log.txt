@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-03 ===
+[NEW_FIELD] total_derivative_asset: appeared for first time ($34M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($57M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-23M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $45M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $42M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $3M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $0M, now missing
+[VALIDATION] Likely extraction failure: 5/5 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, marketable_equity_value)
+[LLM_FLAG] equity_derivatives_notional: prior_values carried 'Yes' for this field, which is not a valid notional figure (looks like a boolean/has-derivatives value mistakenly stored in the notional slot by a prior extraction). Section text contains no mention of equity derivatives at all this quarter, so this extraction returns null rather than perpetuating the bad prior value.
+[LLM_FLAG] net_derivative_position (-22.9) is a derived figure (total_derivative_asset 34.2 minus total_derivative_liability 57.2), not a number stated verbatim as a single line in the filing -- flagging so it is not mistaken for a directly-quoted figure.
+[LLM_FLAG] All derivatives currently on the balance sheet are undesignated: 'None of the derivatives shown below were designated as hedging instruments.' The only designated hedges on the books are legacy, already-settled 2015 interest-rate swaps from the Integrys acquisition financing that are merely amortizing out of AOCI (both AOCI balance and the 12-month reclass are described as 'not significant,' with no dollar figure given).
+[LLM_FLAG] Collateral posted jumped from $41.4 million (Dec 31, 2025) to $92.2 million (Sep 30, 2026), a ~123% increase, and WEC newly discloses $2.0 million of cash collateral *received* from a counterparty at Sep 30, 2026 (no prior-period received-collateral figure given). Quote: 'we had posted cash collateral of $ 92.2 million and $ 41.4 million, respectively ... we had also received cash collateral of $ 2.0 million.'
+[LLM_FLAG] Programme wind-down: 'During the first six months of 2026, all remaining FTRs used in our non-utility operations were settled.' Combined with TCRs having been fully settled during 2025, WEC's non-utility FTR/TCR hedging activity is now fully discontinued; only the regulated-utility FTR/TCR book remains active.
+[LLM_FLAG] Natural-gas hedge realized losses widened year over year: $(23.0) million in Q3 2026 vs $(13.6) million in Q3 2025, and $(10.2) million for the nine months of 2026 vs $(9.0) million for the nine months of 2025, on slightly higher hedged volumes (39.5 Dth vs 37.6 Dth for the quarter).
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [DISAPPEARED_FIELD] fx_designated_notional: was $31M, now missing
 [DROPPED_TO_ZERO] ir_swap_notional: $2,015M → $0M

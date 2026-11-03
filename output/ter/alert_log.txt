@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-09-27 | Processed 2026-11-03 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($193M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($5M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($188M)
+[NUMERIC] total_derivative_asset: $134M → $1M (-99.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $134M → $-1M (-100.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $1M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $2M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-1M, now missing
+[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct)
+[VALIDATION] Likely units mismatch: total_derivative_asset changed from 134 to 1 (0x)
+[VALIDATION] Likely units mismatch: net_derivative_position changed from 134 to -1 (0x)
+[LLM_FLAG] total_derivative_asset: prior value 133.6 vs current 0.724 — a >99% drop. Nothing in the filing text explains a change of this size; the current figure is tied directly to the fair-value table (Prepayments line, $724 thousand) and is consistent with the small size of Teradyne's FX book. The prior 133.6 figure looks implausible for a fair-value field on this book and is more consistent in magnitude with a notional amount (e.g. the ~$139.0M prior-period notional total) than a fair value — suggests the earlier extraction put a notional figure into the fair_value slot.
+[LLM_FLAG] total_derivative_liability: prior value 0.0 vs current 1.732 — the filing shows two liability lines, 'Foreign exchange forward contracts Other accrued liabilities ( 1,674 )' (not designated) and 'Foreign exchange forward contracts Other accrued liabilities ( 58 )' (designated), summing to $1,732 thousand. Nothing in the text explains a prior value of exactly 0.0.
+[LLM_FLAG] net_derivative_position: prior value 133.6 vs current -1.008 — a swing from a large net asset to a small net liability. Text states only 'Total derivatives $ ( 1,008 ) $ 247' (current vs. prior-period-comparative in the same table, i.e. Dec 31, 2025 was $247 thousand net asset, not $133.6 million); nothing in the filing explains a $134.6M swing, reinforcing the suspicion above that the prior 133.6 figure was a mis-extracted notional.
+[LLM_FLAG] New designated cash-flow hedge programme initiated in 2026: 'At September 27, 2026, and December 31, 2025, Teradyne had the following cash flow hedge contracts to buy and sell non-U.S. currencies for U.S. dollars with the following notional amounts ... U.S. dollar/Japanese yen $4.7 ... Total $4.7 ... $—' — Teradyne had no cash-flow-hedge-designated FX contracts at December 31, 2025, so this is a newly designated hedging relationship (USD/JPY, $4.7M notional) put on in the first nine months of 2026.
+[LLM_FLAG] Revolving credit facility refinanced during the quarter (not a derivative, but relevant market-risk/IR context): 'On August 7, 2026, Teradyne entered into a credit agreement (the "2026 Credit Agreement") providing for a five-year, $1.0 billion senior secured revolving credit facility ... The 2026 Credit Agreement replaced Teradyne's prior six-year, $750.0 million revolving credit facility ... Borrowings under the credit facility bear interest at variable rates based on SOFR.' As of September 27, 2026 the facility was undrawn ('Teradyne had no outstanding borrowings under the 2026 Credit Facility').
+[LLM_FLAG] This Item 3 section is pure incorporation-by-reference boilerplate: 'There were no material changes in our exposure to market risk from those set forth in our Annual Report on Form 10-K for the fiscal year ended December 31, 2025.' It contains no quantitative sensitivity, notional, or gain/loss figures at all, so every schema field is null/not_found rather than carried forward from prior_values (fx_transaction_gain_loss 0.823, ir_sensitivity_100bp 2.045, fx_sensitivity_10pct -1.222) — those prior figures came from a different disclosure (likely the FY2025 10-K itself or an earlier quarter's Item 3) and should not be treated as restated or reconfirmed this quarter.
+
 === 10-Q | Period ending 2026-06-28 | Processed 2026-08-03 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($134M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

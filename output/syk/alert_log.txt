@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-03 ===
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $8M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $44M → $16M (-63.6%) — exceeds 20% threshold
+[LLM_FLAG] expected_12mo_reclass_from_aoci: prior value was 44, current computed value is 16 (a -64% change). The filing does not state one combined figure; it itemizes three separate pretax amounts expected to reclassify from AOCI within 12 months — cash flow hedges ($18) loss, net investment hedges $28 gain, interest rate hedges $6 gain — which net to $16. Verify against the filing before quoting a single number.
+[LLM_FLAG] cash_flow_hedge_aoci went from a disclosed 8 last period to not disclosed this period — the filing only gives the pretax amount expected to reclassify within 12 months ($(18)), not a cumulative AOCI balance, so this field is null rather than carried forward.
+[LLM_FLAG] Newsworthy: non-designated FX notional fell to $3,256M at Sept 30, 2026 from $4,391M at Dec 31, 2025 (per the filing's own comparative column), while designated (cash flow + net investment) notional rose slightly to $4,519M from $4,385M — a shift in mix toward designated hedging that a journalist may want to ask about.
+[LLM_FLAG] Newsworthy: 'Pretax gains of $6 recorded in AOCI related to interest rate hedges closed in conjunction with debt issuances are expected to be reclassified to interest expense in earnings within 12 months' — indicates a recent or upcoming debt issuance with an associated rate-lock/IR hedge unwind.
+[LLM_FLAG] Newsworthy: net investment hedging combines derivative forward currency contracts (€2.3 billion, 8.0-year max term) with €5.0 billion of Euro-denominated senior unsecured notes (a non-derivative instrument) both designated as net investment hedges of international subsidiaries — a dual derivative/non-derivative hedging structure.
+[LLM_FLAG] Management states explicitly: 'We have not changed our hedging strategies, accounting practices or objectives from those disclosed in our Annual Report on Form 10-K for 2025' — no strategy change this quarter.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
 [NUMERIC] fx_designated_notional: $2,583M → $4,491M (+73.9%) — exceeds 20% threshold
 [NUMERIC] fx_not_designated_notional: $4,741M → $3,268M (-31.1%) — exceeds 20% threshold
