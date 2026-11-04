@@ -1,3 +1,28 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-04 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($880M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($880M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($4M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($35M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-32M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $500M, now missing
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-1M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $0M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $3M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-3M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_percentage: was $11M, now missing
+[DISAPPEARED_FIELD] non_us_revenue_percentage: was $2M, now missing
+[DISAPPEARED_FIELD] hedge_designation: was $1,022M, now missing
+[DISAPPEARED_FIELD] foreign_currencies: was $31M, now missing
+[VALIDATION] Likely extraction failure: 9/9 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct...)
+[LLM_FLAG] equity_derivatives_notional: prior_values holds the string "Yes" for a field defined as a numeric notional in millions — that looks like a pre-existing data-quality defect (categorical value in a numeric slot), unrelated to this quarter's text, which does not mention equity derivatives at all. Returned null rather than propagate either the bad prior or a guess.
+[LLM_FLAG] cash_flow_hedge_aoci: prior_values shows 500.0, but nothing in this period's note supports that figure — the only cash-flow-hedge amounts disclosed are the original $11.0 million pre-tax settlement loss (May 2021) and the $1.1 million expected to be reclassified into earnings in the next twelve months. No standalone AOCI balance is stated, so returned null rather than carry the unverified prior forward.
+[LLM_FLAG] fx_derivatives_notional / fx_designated_notional: the only FX-related notional in this note (the net investment hedge cross-currency swap) is denominated in EUR (€880.0 million), not USD, and the text gives no exchange rate. Reported as 880.0 as stated in the filing — flagging that it is EUR, not directly comparable to USD-denominated notional figures without conversion.
+[LLM_FLAG] total_derivative_liability newsworthy: the Fair Value Hedge liability jumped from $2.9 million (June 30, 2026) to $35.2 million (September 30, 2026) — driven by interest rate swap agreements the company says it "executed" in May 2026 to swap fixed-for-variable on the Fiscal 2026 Senior Notes. This is a new hedging program initiated this fiscal year, and the >10x mark-to-market liability swing on it within the quarter is worth verifying against the filing before quoting.
+[LLM_FLAG] Newsworthy: cross-currency swaps entered January 2022 (net investment hedges, EUR 880.0mm, maturing May 2031) continue alongside the new May 2026 fixed-to-floating interest rate swap program — no de-designations, terminations, or ineffectiveness disclosed in this note.
+[LLM_FLAG] This Item 3 market-risk section is incorporated entirely by reference to Item 7A of the FY2026 Annual Report ("quantitative and qualitative disclosures about market risk previously disclosed in Item 7A. of our 2026 Annual Report.") and contains zero standalone quantitative content this quarter — every schema field is not_found. All derivatives-note fields (notionals, fair values) that could be fabricated by carrying forward prior_values were deliberately left null; the real data for this quarter lives in the companion derivatives_note section, not here.
+
 === 10-K | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
 [NUMERIC] total_derivative_asset: $880M → $0M (-100.0%) — exceeds 20% threshold

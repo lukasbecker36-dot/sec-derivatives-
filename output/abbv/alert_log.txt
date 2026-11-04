@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-04 ===
+[NUMERIC] fx_designated_notional: $3,800M → $4,600M (+21.1%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $4,050M → $8,550M (+111.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $284M → $640M (+125.4%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-5M → $-350M (-6900.0%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $68M → $95M (+39.7%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional rose from $4,050M to $8,550M (+111% vs prior_values), a change >50%. Explained by text: the fair-value-hedge interest rate swap notional rose to '$7.8 billion at September 30, 2026' from '$1.8 billion at December 31, 2025,' and a new cash-flow-hedge swap program of '$750 million at September 30, 2026' is disclosed with no comparative prior value, i.e. it appears new this quarter.
+[LLM_FLAG] total_derivative_liability rose from $284M to $640M (+125% vs prior_values), a change >50%. Explained by the fair value table: interest rate swap contracts designated as fair value hedges moved to a $410 million 'Other long-term liabilities' position at September 30, 2026 from $0 at December 31, 2025 (and the fair-value hierarchy table shows the IR swap liability rising from $21 million to $414 million), consistent with the swap notional increase above and a $(423) million nine-month pre-tax loss on the fair-value-hedge swaps recognized in interest expense, net.
+[LLM_FLAG] net_derivative_position swung from -$5M to -$350M (far more than 50%), driven by the same interest-rate-swap fair-value-hedge liability increase described above.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-09-15 ===
 [NUMERIC] fx_derivatives_notional: $19,735M → $13,000M (-34.1%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $10,435M → $3,800M (-63.6%) — exceeds 20% threshold

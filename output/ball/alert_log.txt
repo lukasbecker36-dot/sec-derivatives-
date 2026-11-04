@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-04 ===
+[NEW_FIELD] total_derivative_asset: appeared for first time ($121M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($98M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($23M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $187M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $120M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $67M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct)
+[LLM_FLAG] equity_derivatives_notional: prior_values recorded a non-numeric placeholder ("Yes") for this notional field, which is itself a data-quality defect from an earlier extraction. The current filing only discloses a share count for the deferred-compensation total return swaps ("combined notional value of 0.7 million shares"), not a dollar notional, so this field is correctly left null rather than fabricating a $ figure from a share count.
+[LLM_FLAG] total_derivative_liability fell from $193M at Dec 31, 2025 ($94M current + $99M noncurrent) to $98M at Sept 30, 2026 ($50M current + $48M noncurrent), a ~49% decline, driven mainly by the noncurrent net investment hedge liability narrowing from $98M to $47M. Nothing in the text explains the move; likely an FX mark-to-market effect on cross-currency swaps.
+[LLM_FLAG] New line item: a $19M current net investment hedge liability appears at Sept 30, 2026 that was not present in the Dec 31, 2025 current-liabilities table (only a noncurrent net investment hedge liability of $98M was disclosed then) — consistent with a shift in the mark-to-market timing/magnitude of the net investment hedging program rather than a new program.
+[LLM_FLAG] Nine-month commodity hedge reclassifications into earnings swung sign year-over-year: "Commodity contracts - manage exposure to customer pricing" reclassified $(114) million for the nine months ended Sept 30, 2026 vs. $18 million in the prior-year period (into Net sales), while "Commodity contracts - manage exposure to supplier pricing" reclassified $112 million in 2026 vs. $(12) million in 2025 (into Cost of sales) — a large, partially offsetting swing worth noting for a piece on commodity hedge P&L volatility.
+[LLM_FLAG] This 10-Q's Item 3 (Quantitative and Qualitative Disclosures About Market Risk) is a short qualitative paragraph only — none of the quantitative sensitivities that were populated in prior_values (fx_transaction_gain_loss $187M, ir_sensitivity_100bp $120M, fx_sensitivity_10pct $67M) are restated here. The filing explicitly defers to Item 7A of the FY2025 Form 10-K (filed Feb 19, 2026) and to Note 20 (the derivatives note) for quantitative detail. Treat these nulls as 'not repeated in this section,' not as a disclosure gap or a decline to zero — do not compute a % change against the prior-period numbers.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NUMERIC] total_derivative_asset: $28M → $187M (+567.9%) — exceeds 20% threshold
 [NEW_FIELD] total_derivative_liability: appeared for first time ($120M)

@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-04 ===
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[NEW_FIELD] equity_price_sensitivity: appeared for first time ($-45M)
+[LLM_FLAG] FX derivative notional mix shifted materially within the combined book: sales notional fell from $6.0B to $4.1B (-32%) while purchases notional rose from $8.9B to $9.3B (+4%); combined notional fell from $14.9B to $13.4B (-10%). The filing gives no explanation for the change in purchase/sale balance.
+[LLM_FLAG] No fair value table (total derivative asset/liability) is given in this excerpt despite the company stating it 'reports the fair values of its derivative assets and liabilities on a gross basis' on the balance sheet -- those totals may appear in a table elsewhere in the note that was not captured in this section.
+
 === 10-Q | Period ending 2025-06-30 | Processed 2026-09-10 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($15,400M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)

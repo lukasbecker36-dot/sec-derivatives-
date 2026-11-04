@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-04 ===
+[NEW_FIELD] total_derivative_asset: appeared for first time ($1M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($59M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-58M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $2M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $81M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-79M, now missing
+[VALIDATION] Likely extraction failure: 3/3 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct)
+[LLM_FLAG] prior_values anomaly: equity_derivatives_notional prior value is given as the string 'Yes', which is not a valid notional figure -- looks like a mis-mapped value from a prior extraction run (possibly belongs under has_derivatives). Current filing discloses no equity derivatives at all, so this field is null here.
+[LLM_FLAG] Power commodity derivative notional volume (quantity) fell to zero as of September 30, 2026 from 542 gigawatt-hours at December 31, 2025, while gas notional volume rose to 260 Bcf from 211 Bcf: 'Power\t\tGigawatt-hour\t\tSeptember 30, 2026\t\tDecember 31, 2025\nPower\t\t...\t\t\u2014\t\t\t542' -- the power hedging book appears to have been wound down to nil.
+[LLM_FLAG] Counterparty concentration: 'we have two counterparties with positive exposure greater than 35 % of Pinnacle West’s $ 1.4 million of net risk management assets.' Two counterparties each exceed a third of a very small net asset base.
+[LLM_FLAG] Credit-contingent collateral risk: 'Aggregate fair value of derivative instruments in a net liability position $56,809' and 'Additional collateral in the event credit-risk related contingent features were fully triggered (a) 51,052' (thousands) -- a downgrade below investment grade could require ~$51.052M of extra collateral on derivatives, plus 'energy related non-derivative instrument contracts ... could also require us to post additional collateral of approximately $ 711 million if our debt credit ratings were to fall below investment grade.'
+[LLM_FLAG] Large swing, no stated cause in this excerpt: nine-month net loss recognized in income from non-designated energy derivatives roughly tripled year over year -- 'Net Loss Recognized in Income ... Fuel and purchased power (a) ... $( 86,163 )' for the nine months ended September 30, 2026 vs '$( 26,598 )' for the same 2025 period -- while the three-month loss actually narrowed ('$( 29,411 )' in Q3 2026 vs '$( 67,368 )' in Q3 2025). Verify against the filing before quoting a YoY comparison.
+[LLM_FLAG] No designated hedge accounting: 'APS had no energy derivative instruments in designated accounting hedging relationships' for either the three- or nine-month periods in 2026 or 2025 -- consistent with cash_flow_hedge_aoci / expected_12mo_reclass_from_aoci being not_found.
+[LLM_FLAG] section_text for this request is only the Item 3 heading ('quantitative and qualitative disclosures about market risks.') with no body content -- the market-risk section extraction did not capture any actual disclosure text, so every field is not_found rather than a genuine absence of disclosure.
+[LLM_FLAG] prior_values for this issuer show populated figures for fx_transaction_gain_loss (2.012), ir_sensitivity_100bp (80.843), and fx_sensitivity_10pct (-78.831) in an earlier period, indicating PNW normally does report a quantitative Item 3 market-risk section. This filing should be re-extracted with a corrected section boundary rather than treated as a quiet quarter.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] total_derivative_asset: appeared for first time ($2M)
 [NEW_FIELD] total_derivative_liability: appeared for first time ($81M)

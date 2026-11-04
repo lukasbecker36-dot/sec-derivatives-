@@ -1,3 +1,27 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-04 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,932M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($2,932M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
+[NUMERIC] total_derivative_asset: $2,935M → $1,518M (-48.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $2,935M → $1,211M (-58.7%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($307M)
+[NUMERIC] cash_flow_hedge_aoci: $500M → $26M (-94.8%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($26M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $1,213M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $1,134M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $79M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-22M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $-22M, now missing
+[VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value)
+[LLM_FLAG] total_derivative_liability: moved from a prior value of $2,935M to $1,211M (a ~59% decrease). Nothing in this filing explains a swing of that size, and the prior figure of $2,935M is identical to the prior total_derivative_asset value ($2,935M), which is itself suspicious (assets and liabilities equal to the dollar is implausible) — the prior extraction for these two fields appears to have been a data-integrity defect rather than this period representing a genuine collapse in derivative liabilities. Current figures are computed as the sum of the 'not designated' fair value table (assets $1,475M / liabilities $1,197M) and the 'designated' fair value table (assets $43M / liabilities $14M); recommend verifying against the filed tables before publishing a period-over-period comparison.
+[LLM_FLAG] cash_flow_hedge_aoci: moved from a prior value of $500M to $26M (a ~95% decrease). The filing states after-tax AOCI gains from the cash flow hedge programs (corn, soybean crush, natural gas) of $26 million at September 30, 2026 vs. $13 million at December 31, 2025 — the text itself shows only a modest prior-year-end comparison, not a collapse from $500M, so the $500M prior value likely reflects a prior misextraction (e.g., a notional or a different AOCI line mistakenly captured) rather than a real swing this quarter.
+[LLM_FLAG] Newsworthy: the Company's previously designated net investment hedge of its investment in a foreign subsidiary — €650 million of long-term debt and commercial paper — was retired: "This long-term debt matured in September 2025 and was paid in full." A related after-tax AOCI gain of $176 million from that discontinued net investment hedge remains deferred in AOCI until the underlying investment is divested or substantially liquidated.
+[LLM_FLAG] Newsworthy: large swing in non-designated commodity derivative mark-to-market P&L — pre-tax losses of $(453) million in Cost of products sold for Q3 2026 vs. a $115 million gain in Q3 2025, and $(753) million vs. $513 million for the nine-month periods, all run through earnings immediately as non-designated derivatives rather than hedge accounting.
+[LLM_FLAG] Newsworthy: fair value hedge interest rate swaps flipped to a pre-tax loss of $(11) million at September 30, 2026 from a $17 million gain at December 31, 2025, against an unchanged $500 million notional ('The terms of the interest rate swaps match the terms of the underlying debt' — fully offset by the hedged debt, no net earnings impact).
+[LLM_FLAG] Newsworthy: non-designated Foreign Currency Contracts fair value grew materially quarter-over-quarter — assets $174M (from $108M) and liabilities $94M (from $54M) — roughly 60-75% increases, alongside non-designated Commodity Contracts assets of $1,301M (from $822M) and liabilities of $1,103M (from $613M).
+[LLM_FLAG] This Item 3 section contains no standalone quantitative market-risk disclosure this quarter — it only incorporates the prior Form 10-K by reference ('...included in the Company's Annual Report on Form 10-K for the year ended December 31, 2025.'). All fields in this schema are legitimately not_found for this filing; do not carry forward prior_values (fx_transaction_gain_loss 1213.0, ir_sensitivity_100bp 1134.0, fx_sensitivity_10pct 79.0, fixed_rate_notes_billion -22.0, marketable_equity_value -22.0) as if restated this period, since the text does not restate them.
+[LLM_FLAG] The notional/fair-value/hedge-ratio/AOCI detail that would otherwise live in this section is instead fully disclosed in Note 5 (derivatives_note) for this filing, consistent with the schema instruction to prefer derivatives_note when this section is empty.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NUMERIC] fx_derivatives_notional: $31M → $2,935M (+9367.7%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $31M → $2,935M (+9367.7%) — exceeds 20% threshold

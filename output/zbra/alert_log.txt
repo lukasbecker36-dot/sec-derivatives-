@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-10-03 | Processed 2026-11-04 ===
+[NEW_FIELD] fx_designated_notional: appeared for first time ($648M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($32M)
+[DROPPED_TO_ZERO] total_derivative_liability: $637M → $0M
+[NEW_FIELD] net_derivative_position: appeared for first time ($32M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $19M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $19M, now missing
+[VALIDATION] Likely extraction failure: 4/5 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct)
+[LLM_FLAG] total_derivative_liability: prior_values shows $637M but the filing text records $0 this period (both 'Accrued liabilities' lines read '—' for the current column). A $637M-to-$0 move has no explanation in this filing and is inconsistent with ZBRA's scale here (total derivative assets are only $32M) — this looks like a prior extraction error (e.g. a notional or unrelated figure landing in the fair-value field), not a real event this quarter. Verify before using either number.
+[LLM_FLAG] fx_designated_notional is denominated in EUR (€648 million), not USD — no dollar-equivalent figure is given anywhere in this section, so do not quote it as a USD amount without converting.
+[LLM_FLAG] equity_derivatives_notional prior_values is the string "Yes" rather than a number — a pre-existing data-quality defect unrelated to this filing; current text makes no mention of equity derivatives at all.
+[LLM_FLAG] Newsworthy: "The Company had no active interest rate swap agreements during the nine months ended October 3, 2026 or the year ended December 31, 2025" — Zebra continues to run zero IR swap hedges, relying solely on its fixed/variable borrowing mix for rate exposure.
+[LLM_FLAG] Newsworthy: net derivative position flipped from a $(7)M net liability at Dec 31, 2025 to a $32M net asset at Oct 3, 2026, driven by designated FX hedges moving from $(5)M to $24M.
+[LLM_FLAG] Newsworthy: realized cash-flow-hedge results swung sharply YoY — "Realized amounts reclassified to Net sales were $6 million of gains and $20 million of losses for the three months ended October 3, 2026 and September 27, 2025, respectively" and nine-month reclassifications were $1 million of gains vs $24 million of losses in the prior-year period.
+[LLM_FLAG] This filing's Item 3 Market Risk section is only a one-line cross-reference — "Quantitative and Qualitative Disclosures About Market Risk" in the Annual Report on Form 10-K for the year ended December 31, 2025. — with no standalone sensitivity or exposure figures for the current quarter. Every schema field is correctly null/not_found rather than carried forward from prior_values (fx_transaction_gain_loss=19.0, ir_sensitivity_100bp=0.0, fx_sensitivity_10pct=19.0) or from the FY2025 10-K; none of those prior numbers should be reused as if they were restated this period.
+
 === 10-Q | Period ending 2026-07-04 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_designated_notional: appeared for first time ($637M)
 [NEW_FIELD] ir_swap_notional: appeared for first time ($0M)

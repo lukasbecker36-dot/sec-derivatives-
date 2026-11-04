@@ -1,3 +1,21 @@
+=== 10-K | Period ending 2026-09-26 | Processed 2026-11-04 ===
+[NUMERIC] gross_unrealized_gains_debt: $559M → $60M (-89.3%) — exceeds 20% threshold
+[NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($203,839M)
+[NEW_FIELD] fi_fx_designated_notional: appeared for first time ($91,774M)
+[NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($112,065M)
+[NEW_FIELD] fi_ir_swap_notional: appeared for first time ($9,500M)
+[NUMERIC] fx_designated_notional: $62,647M → $91,774M (+46.5%) — exceeds 20% threshold
+[NUMERIC] ir_swap_notional: $12,875M → $9,500M (-26.2%) — exceeds 20% threshold
+[NUMERIC] term_debt_interest_rate_risk: $129M → $95M (-26.4%) — exceeds 20% threshold
+[LLM_FLAG] gross_unrealized_gains_debt fell from $559M (FY2025) to $60M (FY2026), an ~89% decline exceeding the 50% threshold; the note gives no specific explanation for the drop (it does not comment on why unrealized gains compressed), though a large unrealized-loss position on the debt book (-$4,334M vs -$3,027M prior year) suggests broader rate-driven mark-to-market deterioration.
+[LLM_FLAG] Newsworthy: the note states the maximum length of time the Company is hedging variability in future cash flows for term debt-related foreign currency transactions is 16 years ('the maximum length of time over which the Company is hedging its exposure to the variability in future cash flows for term debt–related foreign currency transactions is 16 years') — an unusually long-dated hedge horizon, implying long-tenor cross-currency swaps against foreign-currency term debt.
+[LLM_FLAG] Newsworthy: FX notional designated as accounting hedges rose from $62,647M to $91,774M (+46.5%) while FX not-designated notional grew only modestly from $109,079M to $112,065M (+2.7%); interest rate contract notional fell from $12,875M to $9,500M (-26.2%). No explanation is given in the text for these shifts.
+[LLM_FLAG] Newsworthy: carrying amount of current and non-current term debt subject to fair value hedges declined from $12.6 billion to $9.2 billion year-over-year.
+[LLM_FLAG] Newsworthy: 'the maximum length of time over which the Company is hedging its exposure to the variability in future cash flows for term debt–related foreign currency transactions is 16 years' — an unusually long hedge duration, consistent with long-dated cross-currency swaps against foreign-currency term debt.
+[LLM_FLAG] Newsworthy: FX designated notional rose from $62,647M to $91,774M (+46.5% YoY) while FX not-designated notional was roughly flat ($109,079M to $112,065M, +2.7%); interest rate contract notional fell from $12,875M to $9,500M (-26.2%). None of these shifts are explained in the text.
+[LLM_FLAG] Newsworthy: carrying amount of term debt subject to fair value hedges declined from $12.6 billion to $9.2 billion.
+[LLM_FLAG] No fair value table for derivative assets/liabilities, no AOCI cash-flow-hedge balance, and no commodity or equity derivatives appear in this section of the note — fields left null rather than estimated.
+
 === 10-K | Period ending 2025-09-27 | Processed 2026-09-10 ===
 [NUMERIC] gross_unrealized_gains_debt: $391M → $559M (+43.0%) — exceeds 20% threshold
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $141,861M, now missing

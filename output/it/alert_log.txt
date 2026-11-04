@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-04 ===
+[NUMERIC] fx_derivatives_notional: $90M → $47M (-47.5%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $90M → $47M (-47.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[NUMERIC] total_derivative_asset: $0M → $0M (-87.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $0M → $0M (-49.8%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-0M → $-0M (+39.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[LLM_FLAG] total_derivative_asset fell from $0.063M to $0.008M (-87%), tracking the FX forward notional decline from $427.5M to $47.1M as the prior book of 104 contracts rolled off to 22 contracts — nothing in the text suggests an error, just a much smaller outstanding book at period end.
+[LLM_FLAG] FX forward notional roughly halved period-over-period ($89.8M prior-period figure per prior_values vs $47.1M here, -47.6%), consistent with 'All of the outstanding foreign currency forward exchange contracts at September 30, 2026 matured before October 31, 2026' — a very short-dated, rolling hedge book rather than a programme change.
+[LLM_FLAG] 2025 comparative period included 'a gain on a de-designated interest rate swap' in other expense (income), net — no interest rate swap notional or activity appears for the current 2026 period, consistent with ir_swap_notional showing null/0 going back to the prior extraction.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NEW_FIELD] fx_designated_notional: appeared for first time ($0M)
 [NUMERIC] total_derivative_asset: $0M → $0M (-70.4%) — exceeds 20% threshold

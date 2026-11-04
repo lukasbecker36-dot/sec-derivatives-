@@ -1,3 +1,25 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-04 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($880M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($880M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($240M)
+[NUMERIC] total_derivative_asset: $1,000M → $48M (-95.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $1,000M → $12M (-98.8%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($36M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($40M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $215M → $39M (-81.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $61M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $8M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $53M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $56M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $48M, now missing
+[VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value)
+[LLM_FLAG] total_derivative_asset dropped from prior $1000M to $48M and total_derivative_liability dropped from prior $1000M to $12M (>95% change each); nothing in this filing explains a swing of that size, and the identical prior asset/liability value of exactly $1000M looks like a placeholder or corrupted prior figure rather than a genuine comparative balance -- verify the prior-period source before treating it as a real deterioration.
+[LLM_FLAG] expected_12mo_reclass_from_aoci dropped from prior $215M to $39M (>80% decrease); the filing states only the current-period figure and gives no narrative explanation for a change of this magnitude.
+[LLM_FLAG] prior_values lists equity_derivatives_notional as the string 'Yes' rather than a number -- a type mismatch suggesting a misaligned prior extraction. Current filing text contains no equity-derivative notional disclosure, so this field is correctly not_found here regardless.
+[LLM_FLAG] Newsworthy -- corporate separation / novation: 'Certain derivative instruments that were entered into prior to the Separation to hedge the Electrical Distribution Systems business's exposures were novated to Versigent prior to the Distribution.'
+[LLM_FLAG] Newsworthy -- new hedge instrument: 'In June 2026, the Company entered into forward contracts with a total notional amount of 700 million RMB (approximately $ 100 million, using foreign currency rates on the trade date), which mature in December 2026.' This RMB net-investment-hedge forward is separate from, and not included in, the $880M cash-flow-hedge FX notional table above.
+[LLM_FLAG] This section states no material changes from the FY2025 10-K and restates none of the prior numeric disclosures (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value, etc.). Do not carry forward this run's prior_values as current -- they are last-known figures from an earlier period, not confirmed unchanged amounts for this quarter.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,000M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($1,000M)

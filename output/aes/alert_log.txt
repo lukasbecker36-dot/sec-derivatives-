@@ -1,3 +1,27 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-04 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($574M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($8,863M)
+[NUMERIC] total_derivative_asset: $477M → $885M (+85.5%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_liability: appeared for first time ($194M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($691M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $10,266M, now missing
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($64M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $467M, now missing
+[NUMERIC] ir_sensitivity_100bp: $221M → $5M (-97.7%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $246M → $10M (-95.9%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] marketable_equity_value: was $30M, now missing
+[DISAPPEARED_FIELD] nonperformance_risk_adjustments: was $10M, now missing
+[DISAPPEARED_FIELD] hedging_strategies: was $10M, now missing
+[VALIDATION] Likely extraction failure: 5/8 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, marketable_equity_value, nonperformance_risk_adjustments, hedging_strategies)
+[LLM_FLAG] total_derivative_asset rose 85.5% from the prior value ($477M to $885M), exceeding the 50% threshold. The filing attributes much of the move to interest rate derivatives: designated fair value rose from $279M (12/31/25) to $716M total (9/30/26), with the earnings/OCI table showing $541M (three months) and $618M (nine months) of pre-tax gains 'recognized in AOCL' on interest rate derivatives, versus a $(183)M loss in the prior-year nine-month period.
+[LLM_FLAG] prior_values for equity_derivatives_notional is the non-numeric string 'Yes' rather than a number -- looks like a data-integrity artifact in the pipeline (a Yes/No field value landing in a notional slot) rather than a comparable prior figure. No equity derivatives notional is disclosed in this section, so the field is left null.
+[LLM_FLAG] Commodity derivative volumes in this note are disclosed only in physical units -- Natural Gas in MMBtu (53) and Power in MWhs (34) -- not a USD notional, so commodity_derivatives_notional cannot be populated with a dollar figure without misrepresenting units; left null rather than reporting a volumetric number as millions of dollars.
+[LLM_FLAG] Newsworthy: AOCL reclassifications into earnings are forecast to add $64M to pre-tax income over the twelve months ended 9/30/27, 'primarily related to Interest rate derivatives' -- a company-flagged forward earnings tailwind from the hedge book.
+[LLM_FLAG] Newsworthy: interest rate derivative liabilities fell sharply from $59M (designated, 12/31/25) to $1M (designated, 9/30/26) while interest rate derivative assets roughly doubled over the same window -- consistent with a large rate-driven mark-to-market swing concentrated in the IR swap book; worth verifying against the filing before quoting given the size of the move.
+[LLM_FLAG] ir_sensitivity_100bp fell from a prior value of $221M to 'less than $5 million' -- a decrease far exceeding the 50% threshold. The section gives no explanation for the change and does not state whether the measurement basis changed (e.g., fair-value-of-debt impact vs. the pre-tax interest-expense impact disclosed here); worth checking against the prior filing's methodology before treating as a real de-risking.
+[LLM_FLAG] fx_sensitivity_10pct fell from a prior value of $246M to 'less than $10 million' -- also far exceeding the 50% threshold, with no stated reason in the text. Note the current disclosure measures a hypothetical USD appreciation's effect on forecasted cash distributions net of hedges (Colombian peso/Euro/Argentine peso), which may not be the same basis as the prior figure -- flagging for verification rather than assuming a genuine risk reduction.
+[LLM_FLAG] Newsworthy: 'AES has unhedged forward-looking earnings exposure to the Argentine peso, which could increase earnings volatility, particularly in times of adverse exchange-rate movement' -- an explicit disclosure of a currency exposure the company has chosen not to hedge.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($477M)
 [NEW_FIELD] ir_swap_notional: appeared for first time ($10,266M)

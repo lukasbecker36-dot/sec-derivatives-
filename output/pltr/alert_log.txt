@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-04 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] marketable_equity_value: appeared for first time ($185M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[NEW_FIELD] publicly_traded_equity_securities: appeared for first time ($185M)
+[NEW_FIELD] privately_held_equity_securities: appeared for first time ($217M)
+[DISAPPEARED_FIELD] no_hedging_statement: was $351M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, no_hedging_statement)
+[LLM_FLAG] no_hedging_statement: prior_values records this field as 351.0 (a number), but it is a qualitative statement field. This period's value is correctly a text statement with no associated numeric figure in the filing — the prior 351.0 looks like a historical misalignment/extraction error unrelated to anything in this filing and is flagged for data-quality review, not as a change explained by the text.
+[LLM_FLAG] marketable_equity_value has no dedicated label in the filing; mapped to the publicly-traded equity securities figure ($185M) since that is the only 'marketable' (exchange-tradeable) equity position disclosed — flagging the mapping choice for reviewer awareness.
+[LLM_FLAG] No quantified sensitivity analysis (IR, FX, or equity) is given anywhere in this section — all three sensitivity fields are qualitative-only disclosures this quarter, consistent with the rest of the filing which contains no derivatives note.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [NEW_FIELD] marketable_equity_value: appeared for first time ($351M)

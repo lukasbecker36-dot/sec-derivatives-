@@ -1,3 +1,25 @@
+=== 10-Q | Period ending 2026-09-27 | Processed 2026-11-04 ===
+[DISAPPEARED_FIELD] total_marketable_securities_fv: was $9,462M, now missing
+[NUMERIC] corporate_debt_securities_fv: $1,384M → $2,068M (+49.4%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $1,281M → $1,629M (+27.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $1,281M → $1,629M (+27.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-625M → $-992M (-58.7%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $72M → $53M (-26.4%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] derivative_assets_noncurrent_ir: $21M → $0M
+[DROPPED_TO_ZERO] derivative_liabilities_current_ir: $9M → $0M
+[NUMERIC] derivative_liabilities_noncurrent_ir: $277M → $737M (+166.1%) — exceeds 20% threshold
+[NUMERIC] available_for_sale_debt_securities: $7,281M → $9,118M (+25.2%) — exceeds 20% threshold
+[LLM_FLAG] derivative_liabilities_noncurrent_ir rose from $277M (prior extraction) to $737M (+166%); this table gives no explanation (the companion derivatives_note section shows a fair-value-hedge interest-rate-swap program and a larger IR swap notional that likely drive this).
+[LLM_FLAG] derivative_assets_noncurrent_ir fell from $21M to $0 (-100%) and derivative_liabilities_current_ir fell from $9M to $0 (-100%); both now show '—' in the table with no explanation in this section.
+[LLM_FLAG] total_marketable_securities_fv returned null: this fair-value table has no line item literally labeled 'marketable securities' -- only 'Total short-term investments' ($10,768M, which bundles equity securities + AFS debt) and 'Total long-term investments' ($484M). Declined to guess which aggregation the schema intends rather than fabricate.
+[LLM_FLAG] Newsworthy: noncurrent Level 3 contingent consideration liabilities (acquisition-related milestones/CVRs) rose to $2,308M from $1,695M at Dec 31, 2025 (+36%), pushing total Level 3 liabilities to $2,381M from $1,790M.
+[LLM_FLAG] net_derivative_position deepened from -$625M to -$992M (+58.7% in magnitude vs prior extraction); the OID/OCI activity tables show offsetting fair-value-hedge and net-investment-hedge entries but no single stated cause for the net liability growth.
+[LLM_FLAG] Newsworthy: interest rate swap notional rose to $9,245M from $6,750M at Dec 31, 2025 (+37%), and the cumulative fair-value-hedging adjustment to long-term debt grew to -$737M (active hedges) from -$163M -- 'Long-term debt $9,839 ... Active Hedging Relationships $(737)' vs '$7,110 ... $(163)' -- indicating Pfizer meaningfully expanded fixed-to-floating interest-rate-swap hedging of its debt during 2026.
+[LLM_FLAG] Newsworthy: collateral disclosure shows the net payable derivative position ($1.4 billion fair value) is collateralized dollar-for-dollar ('posted collateral of $1.4 billion'), while the much smaller net receivable position ($37 million fair value) is over-collateralized nearly 2x ('received collateral of $70 million') under zero-threshold ISDA/CSA agreements.
+[LLM_FLAG] Newsworthy: net-investment-hedge FX contracts recognized a $422M OCI gain for the first nine months of 2026 versus a $1,273M OCI loss in the same period of 2025 -- a roughly $1.7B swing attributable to currency moves on hedged foreign operations, not a change in hedging strategy per the text.
+[LLM_FLAG] Long-dated hedge noted in filing: 'The maximum length of time over which we are hedging our exposure to the variability in future foreign exchange cash flows is approximately 17 years and relates to foreign currency debt.'
+[LLM_FLAG] Item 3 for this 10-Q is a bare incorporation-by-reference to the 2025 Form 10-K MD&A and contains no quantitative sensitivity, notional, or fair-value figures for the current period -- nothing in this section can be extracted.
+
 === 10-Q | Period ending 2026-06-28 | Processed 2026-08-05 ===
 [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
 [NUMERIC] fi_total_derivative_asset: $116M → $656M (+465.5%) — exceeds 20% threshold

@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-04 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,607M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($2,607M)
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($4M)
+[NUMERIC] total_derivative_asset: $2,630M → $28M (-98.9%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $2,630M → $47M (-98.2%) — exceeds 20% threshold
+[NEW_FIELD] net_derivative_position: appeared for first time ($-19M)
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $4M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $37M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $54M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-17M, now missing
+[VALIDATION] Likely extraction failure: 4/6 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct)
+[LLM_FLAG] total_derivative_asset and total_derivative_liability: prior values were both 2630.5 (identical for asset and liability), versus 27.7 and 46.9 this period -- drops of roughly 99% and 98%. Nothing in this filing's derivative table supports a $2.6 billion fair-value figure (the largest single line item in the current table is $41.1 million, Other Current Liabilities for designated hedges). The identical prior asset/liability value strongly suggests the prior extraction put a notional or an unrelated total into the fair-value fields rather than reflecting a real swing.
+[LLM_FLAG] Fair value hedge P&L reversed sign: 'Foreign currency forward contracts - Marketing, general and administrative expense $(5.2) ... $(2.5) ... $(39.2) ... $63.8' -- nine months ended September 30, 2026 shows a $(39.2) million loss versus a $63.8 million gain in the same nine-month period of 2025, a swing well over 50% including a sign flip, tied to the euro-denominated debt fair value hedges.
+[LLM_FLAG] New instrument layered on in 2026: 'Cross-currency swap contracts with collars' (notional $75.8 million, Net investment hedge, maturing February 2036 and February 2027 respectively) appears in the September 30, 2026 table but has no corresponding line in the December 31, 2025 comparative table -- a newly designated net investment hedge combining cross-currency swaps with zero-cost collars.
+[LLM_FLAG] Net investment hedge translation impact flipped sign year over year: 'We recognized gains in translation for the net investment hedges of approximately $1 million and $22 million for the three and nine months ended September 30, 2026, respectively, and losses in translation of approximately $6 million and $41 million for the three and nine months ended September 27, 2025, respectively.'
+[LLM_FLAG] Item 7A contains no quantitative disclosure this quarter: 'There have been no material changes to the information provided in Part II, Item 7A of our Annual Report on Form 10-K for the fiscal year ended December 31, 2025 that have not been disclosed in our periodic filings with the SEC.' Do not carry forward numbers from a prior period into this quarter's row -- none are stated here.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [DISAPPEARED_FIELD] gross_unrealized_gains_debt: was $0M, now missing
 [DISAPPEARED_FIELD] has_derivatives: was $1,147M, now missing

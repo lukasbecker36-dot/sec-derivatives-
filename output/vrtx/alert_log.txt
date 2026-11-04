@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-04 ===
+[NUMERIC] fx_not_designated_notional: $868M → $1,200M (+38.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $76M → $130M (+72.6%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $-78M → $-33M (+57.4%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-3M → $97M (+3692.6%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-14M, now missing
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($45M)
+[NEW_FIELD] revolving_credit_outstanding: appeared for first time ($0M)
+[LLM_FLAG] total_derivative_asset rose from $75.5M (prior extraction) to $130.3M this quarter (+72.6%, >50% threshold); the text gives no narrative explanation beyond the fair value table itself.
+[LLM_FLAG] total_derivative_liability fell in magnitude from -$78.2M (prior) to -$33.3M (-57.4%, >50% threshold); no explanation given in the text.
+[LLM_FLAG] net_derivative_position flipped sign, from a net liability of -$2.7M (prior) to a net asset of +$97.0M; not discussed narratively in the filing.
+[LLM_FLAG] expected_12mo_reclass_from_aoci: text states amounts in 'Prepaid expenses and other current assets' and 'Other current liabilities' will be reclassified to earnings within twelve months but gives no dollar figure this quarter (prior extraction had -$14.0M) — recorded null/not_found rather than carried forward.
+[LLM_FLAG] fx_not_designated_notional nearly doubled from the filing's own Dec 31, 2025 comparative ($612.6 million) to $1.2 billion at Sept 30, 2026. Text: 'the notional amount of our outstanding foreign currency forward contracts where hedge accounting under U.S. GAAP was not applied was $1.2 billion and $612.6 million, respectively.' These are described only as hedges of 'monetary assets and liabilities, including intercompany balances' with ~one-month maturities; the filing does not explicitly tie the increase to the Crinetics Acquisition disclosed elsewhere in the same note (Note C), though the timing (acquisition closed Q3 2026) is notable context for a derivatives journalist.
+[LLM_FLAG] No de-designations, terminations or ineffectiveness disclosed: 'As of September 30, 2026, all hedges were determined to be highly effective.' Counterparty credit risk also had no fair-value impact: 'credit risk did not change the fair value of our foreign currency forward contracts.'
+[LLM_FLAG] ir_sensitivity_100bp ($45.0M) is labeled in the schema as a change-in-fair-value measure, but the filing actually states an interest-EXPENSE impact on a floating-rate loan ('a $45.0 million increase in our interest expense for the first year'), not a fair-value sensitivity. Floating-rate debt's fair value does not move materially with rates — flagging the mismatch rather than silently treating it as a fair-value figure.
+[LLM_FLAG] Newsworthy: Vertex drew a new $4.5 billion 2026 Term Loan on September 1, 2026 (SOFR-based floating rate) and states explicitly it does 'not currently use hedge instruments to manage our exposure to these interest rate changes' — a large, newly created, unhedged floating-rate exposure this quarter. A 100bp adverse move adds $45.0 million to year-one interest expense, declining thereafter.
+[LLM_FLAG] The companion 2026 Revolver (new this quarter per Note M, Commitments and Contingencies) was undrawn at period end: 'no principal or interest outstanding under the 2026 Revolver.'
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-10-19 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($6,190M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($5,322M)
