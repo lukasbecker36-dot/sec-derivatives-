@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-05 ===
+[NUMERIC] ir_swap_notional: $400M → $500M (+25.0%) — exceeds 20% threshold
+[LLM_FLAG] New hedging programme / instrument switch: the $400 million interest rate collar agreements (cash flow hedges) "matured on September 30, 2026" and "there are no outstanding interest rate collar agreements on the Consolidated Balance Sheet as of September 30, 2026." In their place, "[d]uring the third quarter of 2026, the Company entered into interest rate swap agreements with an aggregate notional amount of $500 million associated with a portion of the September 2029 Notes" -- a shift from cash-flow-hedge collars on floating-rate debt to fair-value-hedge swaps on fixed-rate debt.
+[LLM_FLAG] The new swaps are designated as fair value hedges and "qualify for the shortcut method," with the filing stating changes in swap fair value "offset changes in the fair value of the hedged debt attributable to changes in benchmark interest rates, with no net impact to net income" -- noteworthy accounting treatment (shortcut method) for a derivatives-focused reader.
+[LLM_FLAG] ir_swap_notional rose from the prior period's 400 (collars) to 500 (swaps) -- a ~25% increase, but note this is not a continuation of the same instrument: the $400M collar notional matured/rolled off and is replaced by a different $500M swap instrument tied to different debt (September 2029 Notes) for a different hedge purpose (fair value vs. cash flow hedge).
+[LLM_FLAG] No numeric fair value was disclosed for either the matured collars or the new swaps -- both described only as "not material" -- so total_derivative_asset, total_derivative_liability, net_derivative_position, cash_flow_hedge_aoci, and expected_12mo_reclass_from_aoci could not be populated from this section.
+[LLM_FLAG] Section contains no FX, commodity, or equity derivative disclosure; CDW's derivative activity here is limited to interest-rate instruments.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
 [DISAPPEARED_FIELD] fi_ir_swap_notional: was $400M, now missing
 [VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fi_ir_swap_notional)

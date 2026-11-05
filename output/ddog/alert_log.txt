@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-05 ===
+[NUMERIC] cash_equivalents_amount: $337M → $747M (+122.0%) — exceeds 20% threshold
+[LLM_FLAG] cash_equivalents_amount: schema field description says '$0.3 billion cash equivalents' but section_text states 'we had $747.1 million in cash equivalents' — the description appears to be a stale/prior-period value; extracted value trusts section_text ($747.1M). This is also a >50% swing vs. prior_values (336.6), i.e. +122%, and nothing in this section explains the increase (no commentary on the cash build).
+[LLM_FLAG] marketable_securities_amount: schema field description says '$4.1 billion marketable securities' but section_text states '$4.4 billion in marketable securities' — description mismatch; extracted $4,400M per section_text. Change vs. prior_values (4600.0) is a modest -4.3%, below the flag threshold.
+[LLM_FLAG] convertible_notes_amount: schema field description asserts '$1.0 billion 2029 Notes issued December 2024' but section_text (this Item 3 excerpt) contains no mention of convertible notes or the 2029 Notes at all — returned null per section_text rather than carrying forward the description's figure.
+[LLM_FLAG] hedging_status: schema field description says 'no hedging arrangements entered into for fiscal 2025,' but section_text clearly describes an active, continuing FX forward cash-flow-hedge program ('we enter into foreign currency forward contracts to hedge certain forecasted cash flows...designated as cash flow hedges'). The description is incorrect/stale — trust section_text. This is corroborated by the separate derivatives note (Note 16), which reports $188.7M notional of FX forwards designated as cash flow hedges for the same period.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $389M, now missing
 [DISAPPEARED_FIELD] total_marketable_securities_fv: was $4,332M, now missing

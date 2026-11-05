@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-05 ===
+[NUMERIC] total_derivative_asset: $569M → $420M (-26.2%) — exceeds 25% threshold
+[NUMERIC] total_derivative_liability: $252M → $414M (+64.3%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $152M → $102M (-32.9%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_liability rose from $252M (Dec 31, 2025) to $414M (Sept 30, 2026), a ~64% increase (>50% threshold). The filing does not narrate this directly, but it is consistent with interest rate swaps flipping from a $71M asset position in 'Other Assets' at Dec 31, 2025 to a $126M liability position in 'Other Noncurrent Liabilities' at Sept 30, 2026, and with the cumulative fair-value-hedging basis adjustment on long-term debt flipping from +$70M to $(127)M -- both consistent with a SOFR swap-rate move, per the text: 'Cumulative Amount of Fair Value Hedging Adjustment ... Long-Term Debt ... ( 127 ) ... 70'.
+[LLM_FLAG] fx_designated_notional ($11,994M) is the full 'Derivatives Designated as Hedging Instruments' FX subtotal from the Sept 30, 2026 fair-value table; the note's quantitative table does not break this out separately into cash-flow-hedge (revenue hedging) notional vs. net-investment-hedge notional, so this figure likely blends both programs, not just cash flow hedges as the schema field's label implies.
+[LLM_FLAG] Newsworthy - new non-designated hedging programme using an exotic instrument: 'In the second quarter of 2026, the Company implemented a non-qualified deferred compensation hedging program to reduce earnings volatility associated with certain deferred compensation obligations. The Company utilizes total return swap contracts, which are not designated as hedges, to economically offset changes in the fair value of the related liabilities and the associated compensation expense.' Total return swap notional stands at $574M ($21M + $553M) at Sept 30, 2026 with no prior-period comparative shown in the table (introduced this fiscal year).
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] ir_swap_notional: $3,000M → $2,500M (-16.7%) — exceeds 15% threshold
 [NUMERIC] fx_forward_notional: $42,106M → $34,226M (-18.7%) — exceeds 15% threshold

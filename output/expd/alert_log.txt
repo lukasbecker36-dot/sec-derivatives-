@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-05 ===
+[NUMERIC] fx_sensitivity_10pct: $-30M → $-49M (-63.3%) — exceeds 20% threshold
+[LLM_FLAG] fx_sensitivity_10pct moved from -30M (prior) to -49M, a ~63% increase in magnitude; the filing explains the underlying 10%-strengthening assumption ('An average 10% strengthening of the U.S. dollar, for the same period, would have the effect of reducing operating income by approximately $49 million') but gives no reason for why the sensitivity itself widened versus the prior period.
+[LLM_FLAG] fx_transaction_gain_loss extracted as the three-month figure (-$5 million); the filing also discloses a nine-month figure of -$10 million ('net foreign currency transactional losses were approximately $5 million and $10 million') — flagging in case the schema intends the cumulative YTD number instead.
+[LLM_FLAG] ir_sensitivity_100bp: schema expects a 100bp scenario, but the filing only discloses a 10bp scenario with no quantified dollar impact ('A hypothetical change in the interest rate of 10 basis points at September 30, 2026 would not have a significant impact on our earnings.') — left null rather than guessing a 100bp-equivalent figure.
+[LLM_FLAG] No derivative instruments used for FX risk management at all: 'Historically, derivative financial instruments have not been used to manage foreign currency risk... In lieu of the use of foreign currency derivatives, we instead follow a policy of accelerating international currency settlements to manage foreign exchange risk relative to intercompany billings.' Company carried approximately $244 million of net unsettled intercompany transactions as of September 30, 2026.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,317M, now missing
 [NUMERIC] fx_transaction_gain_loss: $2M → $-6M (-400.0%) — exceeds 20% threshold

@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-05 ===
+[DISAPPEARED_FIELD] fi_ir_swap_notional: was $4,200M, now missing
+[NUMERIC] total_derivative_liability: $310M → $461M (+48.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-68M → $-246M (-261.8%) — exceeds 20% threshold
+[LLM_FLAG] fi_fx_derivatives_notional ($21,000M) is not a figure stated directly in this section — it is the sum of the designated cash-flow-hedge FX notional ($8,200M) and the non-designated FX notional ($12,800M), since this excerpt does not include a single combined total line.
+[LLM_FLAG] fi_ir_swap_notional is not disclosed in this excerpt of the Financial Instruments note — the interest rate hedge paragraph (notional $4.2 billion at 9/30/26) falls in a later continuation of Note 11 not included in this section_text; do not infer a value here.
+[LLM_FLAG] total_derivative_liability: the fair-value table's own printed grand total is $1,045 million, but that row sums both derivative instruments AND the $584 million yen term loan carried as a net-investment hedge, per the table's own caption ('amounts and location of certain derivative and NON-derivative financial instruments'). The $584M is debt principal, not a derivative mark-to-market value, so it is excluded here; derivative-only liability = $267 (non-current IR swap) + $12 (current IR swap) + $94 (FX hedging instruments) + $88 (FX not designated) = $461 million. Using the raw table total instead would overstate the derivative book by including non-derivative debt.
+[LLM_FLAG] net_derivative_position swung to -$246 million from -$68 million last period (total_derivative_asset $215M vs total_derivative_liability $461M) — driven almost entirely by the new non-current interest rate swap liability of $267 million (up from $0 at 12/31/25), which the filing ties to new fixed-rate-debt hedges from the Exact Sciences acquisition financing.
+[LLM_FLAG] ir_swap_notional: 'The increase from December 31, 2025, was due to additional interest rate hedge contracts associated with fixed-rate debt issued as part of the Exact Sciences acquisition' — deal-contingent/M&A-linked hedging activity (notional rose to $4.2 billion at 9/30/26 from $1.2 billion at 12/31/25, within the same filing's comparative columns).
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-09-10 ===
 [NEW_FIELD] fi_fx_derivatives_notional: appeared for first time ($21,500M)
 [NEW_FIELD] fi_fx_not_designated_notional: appeared for first time ($13,600M)

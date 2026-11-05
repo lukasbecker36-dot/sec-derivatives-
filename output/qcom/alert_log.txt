@@ -1,3 +1,16 @@
+=== 10-K | Period ending 2026-09-27 | Processed 2026-11-05 ===
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-271M)
+[NUMERIC] marketable_equity_value: $926M → $679M (-26.7%) — exceeds 20% threshold
+[NEW_FIELD] interest_rate_swap_notional: appeared for first time ($5,000M)
+[NEW_FIELD] fx_sensitivity_korean_won: appeared for first time ($-271M)
+[NEW_FIELD] non_marketable_equity_investments: appeared for first time ($2,000M)
+[LLM_FLAG] ir_swap_notional: this filing's own FY2025 comparative figure is $3.6 billion, but prior_values supplied to this extraction records 5000 (i.e. $5.0B) for the prior period - that does not match the $3.6B comparative stated here, suggesting a possible prior-period extraction error (the FY2025 row may have been mis-captured at $5.0B instead of $3.6B). The current-period (FY2026, Sept 27 2026) value extracted here is $5.0 billion / 5000, taken directly from this filing's text and is correct for the current period regardless of that prior-period discrepancy.
+[LLM_FLAG] No notional table for FX, commodity or equity derivatives appears in the supplied section_text - fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional, commodity_derivatives_notional, equity_derivatives_notional, total_derivative_asset, total_derivative_liability, net_derivative_position, cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci are not disclosed in this excerpt (likely in a separate derivatives fair-value table elsewhere in the filing, outside the provided text) and are left null rather than guessed.
+[LLM_FLAG] non_marketable_equity_investments: schema description states this should be ~$1.4B, but section_text explicitly gives $2.0 billion ('an aggregate carrying value included in other assets of $2.0 billion'). Trusted section_text and recorded 2000, not the description's figure.
+[LLM_FLAG] interest_rate_swap_designation: this field is typed as a fair_value (dollar) field, but the text only provides a qualitative hedge designation ('designated as fair value hedges to effectively convert certain fixed-rate interest payments into floating-rate payments'), not a separate dollar fair-value figure for the swaps. Returning null rather than substituting the $5.0B notional (interest_rate_swap_notional) or fabricating a number.
+[LLM_FLAG] ir_sensitivity_100bp / interest_rate_sensitivity / equity_sensitivity_10pct: text describes these impacts only qualitatively ('immaterial decrease', 'would not cause a material loss in earnings') with no dollar figure given for either period, so left null rather than inferring a number from 'immaterial'.
+[LLM_FLAG] fx_sensitivity_10pct / fx_sensitivity_korean_won: filing figure rose from $223 million (FY2025) to $271 million (FY2026), about a 22% increase, driven by growth in the underlying Korean withholding tax receivable to $2.7 billion - 'We have experienced fluctuations in our effective tax rate as a result of foreign currency gains or losses related to our Korean withholding tax receivable (which was $2.7 billion as of September 27, 2026)'.
+
 === 10-Q | Period ending 2026-06-28 | Processed 2026-07-30 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($5,000M)
 [NEW_FIELD] marketable_equity_value: appeared for first time ($926M)

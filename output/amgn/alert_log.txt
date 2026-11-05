@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-05 ===
+[NUMERIC] fx_not_designated_notional: $240M → $546M (+127.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-583M → $-714M (-22.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-120M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $7,800M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $4,400M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $53M, now missing
+[DISAPPEARED_FIELD] interest_rate_swap_notional: was $6,700M, now missing
+[DISAPPEARED_FIELD] cross_currency_swap_notional: was $2,700M, now missing
+[DISAPPEARED_FIELD] foreign_currency_debt_carrying_value: was $2,500M, now missing
+[DISAPPEARED_FIELD] sensitivity_analysis_100bp: was $-240M, now missing
+[VALIDATION] Likely extraction failure: 8/15 previously-populated fields are now null (expected_12mo_reclass_from_aoci, fx_forwards_outstanding, ir_sensitivity_100bp, fixed_rate_notes_billion, interest_rate_swap_notional...)
+[LLM_FLAG] fx_not_designated_notional rose from $240M (prior period) to $546M, a ~127% increase -- supported by the text: 'the total notional amounts of these foreign currency forward contracts were $546 million and $240 million, respectively.'
+[LLM_FLAG] Newsworthy -- interest rate swap termination tied to debt repayment: '$1.25 billion of our interest rate swaps were terminated in connection with the repayment of the 2.60 % 2026 Notes.'
+[LLM_FLAG] Newsworthy -- new hedging activity: 'During the nine months ended September 30, 2026, we entered into $ 2.0 billion of interest rate swap contracts to hedge portions of our 4.85 % 2036 Notes and 5.60 % 2043 Notes.'
+[LLM_FLAG] Newsworthy -- hedge wind-down on debt maturity: 'During the first quarter of 2026, our 2.00 % 2026 euro Notes matured and the related cross-currency swaps were settled.'
+[LLM_FLAG] expected_12mo_reclass_from_aoci cannot be quantified this period -- filing only says the expected reclassification 'was not material,' whereas the prior-period cached value was a specific -$120 million; treat as a disclosure downgrade, not a data point, and do not carry forward the old figure.
+[LLM_FLAG] Counterparty/credit risk -- liability-position derivatives carry change-in-control contingent provisions and are explicitly not covered by any master netting arrangement: 'our derivative contracts are not subject to any type of master netting arrangement.'
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-10-20 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($10,731M)
 [NEW_FIELD] fx_not_designated_notional: appeared for first time ($240M)

@@ -1,3 +1,25 @@
+=== 10-Q | Period ending 2026-09-26 | Processed 2026-11-05 ===
+[NUMERIC] total_cash_equivalents_fv: $711M → $250M (-64.8%) — exceeds 20% threshold
+[NUMERIC] total_marketable_securities_fv: $783M → $16M (-98.0%) — exceeds 20% threshold
+[NUMERIC] corporate_debt_securities_fv: $348M → $2M (-99.4%) — exceeds 20% threshold
+[NUMERIC] fi_total_derivative_liability: $216M → $280M (+29.6%) — exceeds 20% threshold
+[NUMERIC] commodity_derivatives_notional: $980M → $1,187M (+21.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $216M → $280M (+29.6%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-1M → $-75M (-7400.0%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: corporate_debt_securities_fv changed from 348 to 2 (0x)
+[LLM_FLAG] total_marketable_securities_fv fell from a prior 783 to 16 (-98%); the filing explains this: 'The decrease in the available-for-sale debt securities was primarily related to the funding of the repayment of the $1.9 billion senior notes that matured in June 2026.'
+[LLM_FLAG] corporate_debt_securities_fv fell from a prior 348 to 2 (-99%); same repayment explanation applies ('funding of the repayment of the $1.9 billion senior notes that matured in June 2026').
+[LLM_FLAG] total_cash_equivalents_fv fell from a prior 711 to 250 (-65%); the filing's only explanation for the AFS portfolio decline is the senior-notes repayment, which does not specifically address the cash-equivalents (money market fund) component.
+[LLM_FLAG] fi_fx_derivatives_notional (6,812) is a sum of the 'Foreign exchange contracts' ($3,729M) and 'Cross-currency contracts' ($3,083M) notional lines per the schema's combined definition; the filing does not itself report a single combined FX total.
+[LLM_FLAG] Newsworthy: commodity derivative margin collateral posted fell from $52 million (Dec 27, 2025) to $16 million (Sept 26, 2026): 'We had posted collateral related to commodity derivative margin requirements of $16 million at September 26, 2026 ... and posted collateral related to commodity derivative margin requirements of $52 million at December 27, 2025.'
+[LLM_FLAG] Newsworthy: net investment hedging uses cross-currency contracts (EUR 954mn/$1.0bn, C$1.3bn/$900mn, JPY 9.6bn/$68mn) and FX contracts (CNY 4.0bn/$596mn) against €3.4 billion of non-derivative foreign-currency debt — a multi-currency net investment hedge programme.
+[LLM_FLAG] net_derivative_position moved from a prior -$1M to -$75M net liability (assets $205M minus liabilities $280M). The filing's narrative that 'the increase in the fair value of the Company's net derivative position from December 27, 2025 to September 26, 2026 was primarily due to favorable energy and dairy contract prices' compares to the Dec 27, 2025 column (-$246M net), not to the prior pipeline extraction value, so the apparent deterioration versus the last processed period has no matching textual explanation.
+[LLM_FLAG] expected_12mo_reclass_from_aoci is reported only qualitatively as 'insignificant' for both loss and gain components in the filing text, not as a specific dollar figure; recorded as 0 to match the qualitative description, consistent with the prior extraction, but this is an approximation of 'insignificant,' not a stated number.
+[LLM_FLAG] Newsworthy: 'Interest rate contracts' appear in the derivative income-statement-impact tables for the nine months ended September 26, 2026 (-$12M reclassified to interest expense as a cash flow hedge; -$37M to other expense/(income) as a non-designated contract) with no corresponding interest rate contract figures in the prior-year nine-month columns, and no interest rate swap notional is disclosed in the notional table itself — suggesting a newly active interest-rate hedging/exposure item not previously visible in this issuer's derivative volume table.
+[LLM_FLAG] Newsworthy: commodity derivative margin collateral posted fell from $52 million (Dec 27, 2025) to $16 million (Sept 26, 2026).
+[LLM_FLAG] Newsworthy: Fair Value Hedge Coverage section describes FX contracts (£400 million/$530 million) and cross-currency contracts (£683 million/$864 million and MXN 4.8 billion/$251 million) hedging foreign-currency exposure on both intercompany and external loans, with hedged-item carrying values of $530 million and $1.2 billion respectively.
+[LLM_FLAG] Newsworthy: Net Investment Hedging combines non-derivative EUR-denominated debt (€3.4 billion principal) with cross-currency contracts (EUR 954mn/$1.0bn, C$1.3bn/$900mn, JPY 9.6bn/$68mn) and FX contracts (CNY 4.0bn/$596mn) — a layered hedge of foreign operations across five currencies.
+
 === 10-Q | Period ending 2026-03-28 | Processed 2026-09-23 ===
 [NUMERIC] total_cash_equivalents_fv: $14M → $711M (+4978.6%) — exceeds 20% threshold
 [NUMERIC] total_marketable_securities_fv: $997M → $783M (-21.5%) — exceeds 20% threshold

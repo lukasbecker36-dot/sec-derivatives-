@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-10-03 | Processed 2026-11-05 ===
+[NUMERIC] total_derivative_asset: $1M → $8M (+700.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $23M → $11M (-52.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-22M → $-3M (+86.4%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset moved from $1M (prior reported value) to $8M this period, a >50% change; the filing text gives no narrative explanation for the move.
+[LLM_FLAG] total_derivative_liability moved from $23M (prior reported value) to $11M this period, a decline of roughly 52%; the filing text gives no narrative explanation for the move.
+[LLM_FLAG] net_derivative_position moved from $(22)M (prior reported value) to $(3)M this period; consistent with the asset/liability fair-value swings above, but the filing supplies no commentary on why.
+[LLM_FLAG] Newsworthy: treasury rate lock unwind tied to new debt issuance -- 'The treasury rate agreements were terminated during the three months ended October 3, 2026, upon the Company's issuance of $ 600 million of 5.65 % senior notes due 2036, for a net settlement gain of $ 3 million.' The locks had hedged $300 million of planned issuance and were designated cash flow hedges; the gain amortizes to interest expense over the notes' 10-year term.
+[LLM_FLAG] Newsworthy: counterparty concentration/credit quality commentary -- 'As of October 3, 2026, all of the counterparties had investment grade credit ratings' and 'the Company had $ 8 million of exposure to aggregate credit risk with all counterparties.'
+[LLM_FLAG] Newsworthy: net investment hedge program on European operations -- 'As of October 3, 2026, the Company had € 175 million of net investment hedges in certain Euro functional subsidiaries,' hedging GBP and EUR translation exposure; forward points/option time value excluded from hedge effectiveness assessment and amortized through interest expense.
+[LLM_FLAG] Newsworthy (minor): equity swap contracts economically hedge deferred-compensation plan obligations but are not designated for hedge accounting; notional $24 million, marks run through SG&A.
+[LLM_FLAG] This 10-Q's Item 3 section is only a cross-reference -- 'Quantitative and Qualitative Disclosures About Market Risk' of the Form 10-K -- with no standalone sensitivity figures disclosed in the interim filing, so every schema field is not_found here. See the derivatives_note extraction for the period's FX notional and fair-value detail.
+
 === 10-Q | Period ending 2025-09-27 | Processed 2026-09-28 ===
 [NUMERIC] total_derivative_asset: $10M → $1M (-90.0%) — exceeds 20% threshold
 [NUMERIC] net_derivative_position: $-11M → $-22M (-100.0%) — exceeds 20% threshold

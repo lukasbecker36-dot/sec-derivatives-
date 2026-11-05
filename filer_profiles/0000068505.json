@@ -26,7 +26,9 @@
       "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [],
-    "unusual_disclosure_patterns": [],
+    "unusual_disclosure_patterns": [
+      "derivatives_note: FX hedging program is essentially flat in size (notional $1.4B at Oct 3 2026 vs $1.6B at Dec 31 2025) and remains dominated by GBP, EUR and CAD net buy positions. The only new instrument this quarter "
+    ],
     "known_issues": []
   },
   "history": [
@@ -96,6 +98,18 @@
       ],
       "fields_extracted": 7,
       "fields_null": 12
+    },
+    {
+      "filing_date": "2026-10-03",
+      "form_type": "10-Q",
+      "period_end": "2026-10-03",
+      "processed_at": "2026-11-05T03:05:49Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 6,
+      "fields_null": 13
     }
   ]
 }

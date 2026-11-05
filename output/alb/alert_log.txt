@@ -1,3 +1,30 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-05 ===
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $2,500M, now missing
+[DISAPPEARED_FIELD] fx_designated_notional: was $1,100M, now missing
+[NUMERIC] fx_not_designated_notional: $1,400M → $2,400M (+71.4%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $4M → $11M (+176.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $5M → $0M (-99.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-1M → $11M (+1257.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $1,400M, now missing
+[NUMERIC] fx_sensitivity_10pct: $-38M → $-117M (-211.7%) — exceeds 20% threshold
+[NUMERIC] fx_forward_notional: $1,400M → $2,400M (+71.4%) — exceeds 20% threshold
+[NUMERIC] fx_forward_fair_value: $-4M → $2M (+141.5%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_up: $38M → $112M (+196.0%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_down: $-38M → $-117M (-211.7%) — exceeds 20% threshold
+[VALIDATION] Likely units mismatch: total_derivative_liability changed from 5 to 0 (0x)
+[LLM_FLAG] total_derivative_asset moved from $3.909M (prior) to $10.801M (current), +176%, exceeding the 50% threshold. Explained by the new cross-currency swap: 'Total designated as hedging instruments $9,133' in Other assets, versus $0 for designated instruments in the prior comparative column.
+[LLM_FLAG] fx_not_designated_notional moved from $1.4B (prior) to $2.4B (current), +71%, exceeding the 50% threshold. The text states the new total ('outstanding non-designated derivative financial instruments with notional values totaling $ 2.4 billion') but gives no stated reason for the increase in book size.
+[LLM_FLAG] fx_designated_notional and fx_derivatives_notional are left null rather than estimated: the newly designated hedge is a cross-currency swap disclosed only in EUR ('an aggregate notional amount of € 1 billion'), with no USD-equivalent stated anywhere in the section. Converting it would require assuming an FX rate not given in the filing, so a true combined/designated USD notional cannot be stated without fabrication. For reference, the EUR 1 billion figure is in the same order of magnitude as the prior designated figure of $1.1B, but no exact USD value is disclosed.
+[LLM_FLAG] Newsworthy - new hedging programme: 'In June 2026, the Company entered into cross currency swaps with an aggregate notional amount of € 1 billion to minimize the financial impact of changes in foreign currency exchange rates between the U.S. Dollar and Euro... These cross currency swaps qualify and have been designated as an effective net investment hedge of the Company's foreign currency exchange rate exposure of the net investments in foreign subsidiaries where the Euro serves as the functional currency.' This is a new instrument/programme not present in the prior period.
+[LLM_FLAG] Newsworthy - large P&L and cash-flow swing on the non-designated book: nine-month 2026 '(Loss) gain recognized in Other income, net' of $( 20,665 ) thousand versus $145,243 thousand in the prior-year nine months; and 'we recorded net cash (settlements) receipts of ($ 24.5 ) million and $ 144.5 million, respectively' for the nine-month periods ended September 30, 2026 and 2025 - a swing from a large net cash inflow to a net cash outflow.
+[LLM_FLAG] Several schema field descriptions for this section (fx_forward_fair_value, fx_sensitivity_up, fx_sensitivity_down, variable_rate_debt_2025, kemerton_hedge_loss) contain figures that do NOT match section_text and were disregarded: the filing states a $1.7M net ASSET fair value (description suggested a $2.6M liability), sensitivities of +$111.6M/-$116.9M (description suggested +$105.4M/-$105.7M), variable-rate debt of $17.8M (description suggested $17.9M), and no 'Kemerton' dedesignation loss appears anywhere in this section.
+[LLM_FLAG] fx_sensitivity_down / fx_sensitivity_10pct moved from -$37.5M (prior) to -$116.9M (current), +212% in magnitude; fx_sensitivity_up moved from $37.7M (prior) to $111.6M (current), +196%. Text gives the new figures directly ('an increase of approximately $111.6 million...', 'a decrease of approximately $116.9 million...') but does not explain why sensitivity roughly tripled.
+[LLM_FLAG] fx_forward_notional moved from $1.4B (prior) to $2.4B (current), +71%, exceeding the 50% threshold; no explanation given in text for the larger forward book.
+[LLM_FLAG] fx_forward_fair_value flipped from a $4.1M net liability (prior) to a $1.7M net asset (current) - a sign reversal and a change exceeding the 50% threshold. No cause is stated in the text beyond normal mark-to-market movement.
+[LLM_FLAG] primary_currencies left null: this section names only 'Euro' explicitly (in connection with the new cross-currency swap, 'between the U.S. Dollar and Euro'), and does not enumerate the full currency mix hedged by the FX forward book the way the derivatives note section does.
+[LLM_FLAG] fx_forwards_outstanding left null per its own field instruction ('Use only if derivatives_note fields above are empty') - the equivalent $2.4B figure is already captured as fx_not_designated_notional in the paired derivatives_note request.
+[LLM_FLAG] Newsworthy: new net investment hedge disclosed - 'the Company entered into cross currency swaps with an aggregate notional amount of €1 billion to minimize the financial impact of changes in foreign currency exchange rates between the U.S. Dollar and Euro... designated as an effective net investment hedge...' with a fair value of 'a net asset position of $9.1 million at September 30, 2026'. This is a new instrument not present in the prior period.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
 [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $24M, now missing
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $1,600M, now missing

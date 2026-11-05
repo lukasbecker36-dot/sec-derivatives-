@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-05 ===
+[NUMERIC] fx_derivatives_notional: $342M → $426M (+24.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $2M → $1M (-59.1%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $2M → $0M (-86.7%) — exceeds 20% threshold
+[NUMERIC] fx_forwards_outstanding: $342M → $426M (+24.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] marketable_equity_value: was $1,755M, now missing
+[LLM_FLAG] total_derivative_asset fell from $2.2M (prior period) to $0.9M (current), a ~59% decline. Text partially explains this: 'the gross asset position of our commodity derivative instruments was zero as of September 30, 2026... and the gross liability position of our commodity instruments was zero and $0.4 million as of September 30, 2026 and December 31, 2025' — the FX gross asset also fell from $3.3M to $0.9M without further explanation given in this section.
+[LLM_FLAG] net_derivative_position (computed) fell from $1.5M (prior) to $0.2M (current), an ~87% decline, driven by the same asset-side contraction noted above.
+[LLM_FLAG] Newsworthy: Mosaic entered treasury lock agreements with an aggregate notional of $1.0 billion in Q3 2026 to hedge Treasury-rate exposure ahead of its 2026 Senior Notes issuance. Quote: 'we entered into treasury lock agreements, which are interest rate contracts, with an aggregate notional amount of $1.0 billion to manage our exposure to changes in Treasury rates prior to the issuance of the Senior Notes of 2026... These agreements were not designated as hedging instruments.' They were fully settled in August 2026 for a $2.9 million gain recognized in interest expense — a one-off, non-designated bond-issuance hedge rather than an ongoing programme.
+[LLM_FLAG] No fixed-to-floating interest rate swaps or other interest rate derivative positions outstanding as of September 30, 2026 ('We did not hold any interest rate derivative positions as of September 30, 2026.') — Mosaic currently runs no active IR hedge book.
+[LLM_FLAG] Minor collateral note: 'If the credit-risk-related contingent features underlying these agreements were triggered on September 30, 2026, we would have been required to post an additional $0.3 million of collateral assets' — immaterial amount, no cash collateral currently posted.
+[LLM_FLAG] fx_forwards_outstanding rose from $341.6M (prior) to $426.1M (current), a +24.7% change — under the 50% flag threshold but ties out exactly to the sum of this quarter's per-currency notional table; also matches the derivatives-note total (Note 12) of 426.1, a good cross-check.
+[LLM_FLAG] Newsworthy: Mosaic's Canadian dollar FX forward notional dropped to zero as of September 30, 2026, from $181.1 million at December 31, 2025 ('Notional (million US$) - long Canadian dollars ... $— ... $181.1'), i.e., the CAD hedge book was fully closed out this quarter.
+[LLM_FLAG] Newsworthy: Brazilian real hedging activity changed direction — at December 31, 2025 Mosaic held only a long BRL position ($95.0 million notional); as of September 30, 2026 it holds both a long position ($111.0 million) and a new short position ($172.0 million) via non-deliverable forwards, net short on the real for the first time in this disclosure.
+[LLM_FLAG] Natural gas swap notional fell to zero (from 0.9 million MMBtu long at December 31, 2025): 'Notional (million MMBtu) - long — ... 0.9' — no commodity hedges outstanding at period end, consistent with Note 12's derivatives note.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $282M, now missing
 [DISAPPEARED_FIELD] fx_not_designated_notional: was $338M, now missing

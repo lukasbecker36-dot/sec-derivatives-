@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-05 ===
+[NEW_FIELD] variable_rate_debt_ir_sensitivity: appeared for first time ($46M)
+[NEW_FIELD] fx_revenue_impact: appeared for first time ($-76M)
+[NEW_FIELD] fx_operating_income_impact: appeared for first time ($-11M)
+[LLM_FLAG] fx_sensitivity_10pct left null: the section gives this as two separate figures (revenue -$75.5M, operating income -$11.2M) already captured in fx_revenue_impact/fx_operating_income_impact; no single combined number exists in the text to assign to this field.
+[LLM_FLAG] fx_forwards_outstanding left null rather than 0: the section confirms TKO 'from time to time' uses FX forward contracts to hedge but discloses no notional amount, so 'none' cannot be assumed.
+[LLM_FLAG] ir_sensitivity_100bp left null: the only interest-rate figure given ($46M) is the annual interest-expense impact of a 1% rate increase on floating-rate Credit Facilities debt (captured in variable_rate_debt_ir_sensitivity), not a fair-value change, so it does not fit this field's 'change in fair value' definition.
+[LLM_FLAG] fx_revenue_impact (-$75.5M) and fx_operating_income_impact (-$11.2M) vs prior (-$51.5M / -$7.6M per prior_values) are up ~47% and ~47% respectively — both under the 50% flag threshold, but close to it; the filing gives no explanation for the increased FX sensitivity, only the updated hypothetical figures for the nine months ended September 30, 2026.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-04 ===
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
 [NUMERIC] fx_operating_income_impact: $-36M → $-8M (+78.7%) — exceeds 20% threshold

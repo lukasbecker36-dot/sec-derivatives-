@@ -22,7 +22,11 @@
       "notional value",
       "unrealized gain",
       "accumulated other comprehensive",
-      "mark-to-market"
+      "mark-to-market",
+      "net investment hedge",
+      "cash flow hedge",
+      "cross currency",
+      "designated as hedging"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [
@@ -97,6 +101,18 @@
       ],
       "fields_extracted": 7,
       "fields_null": 12
+    },
+    {
+      "filing_date": "2026-09-26",
+      "form_type": "10-Q",
+      "period_end": "2026-09-26",
+      "processed_at": "2026-11-05T03:05:51Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 8,
+      "fields_null": 11
     }
   ]
 }
