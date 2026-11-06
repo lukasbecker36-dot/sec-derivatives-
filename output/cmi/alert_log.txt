@@ -1,3 +1,15 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-06 ===
+[NUMERIC] fx_designated_notional: $1,600M → $2,100M (+31.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $70M → $52M (-25.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $122M → $218M (+78.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-52M → $-166M (-219.2%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position moved from -52 to -166 (a net liability increase of 219%), driven mainly by the designated-hedge 'Other liabilities' balance rising from $72M to $195M; the text gives no specific causal explanation for the swing beyond the usual mark-to-market tables (interest rate swap losses, FX forward AOCL losses).
+[LLM_FLAG] New/expanded hedging instrument: 'We also enter into cross-currency interest rate swaps designated as net investment hedges for certain of our investments... The notional amount of these hedges at September 30, 2026, was $ 500 million' -- cross-currency swaps are not broken out as a separate line in prior-period data provided, so this looks like a newly disclosed or materially grown program.
+[LLM_FLAG] Fair value hedge program expanded: 'In the fourth quarter of 2025 and the first nine months of 2026, we entered into $ 150 million and $ 550 million, respectively, of interest rate swaps' converting a portion of the 2054 notes from fixed 5.45% to floating SOFR+spread.
+[LLM_FLAG] Hedge ineffectiveness disclosed on the fair value (interest rate swap) hedges: swap loss of $(86) million vs. borrowing gain of $85 million for the nine months ($1M net), and swap loss of $(73) million vs. borrowing gain of $67 million for the quarter ($6M net) -- 'the difference between the (loss) gain on swaps and borrowings represents hedge ineffectiveness.'
+[LLM_FLAG] Large swing in non-designated derivative income: 'Gain (loss) recognized in income - Other income, net' moved from $(80) million in Q3 2025 to $8 million in Q3 2026, an ~$88M favorable swing on the non-designated (largely FX forward) book.
+[LLM_FLAG] On a net (counterparty-netted) presentation basis the company discloses its net liability position nearly tripled: 'derivatives in a net liability position of $ 177 million and $ 69 million at September 30, 2026 and December 31, 2025, respectively.'
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] fx_designated_notional: $1,300M → $1,600M (+23.1%) — exceeds 20% threshold
 [NUMERIC] ir_swap_notional: $980M → $1,180M (+20.4%) — exceeds 20% threshold

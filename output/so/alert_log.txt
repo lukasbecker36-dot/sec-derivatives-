@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-06 ===
+[NUMERIC] total_derivative_liability: $377M → $453M (+20.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-342M → $-415M (-21.3%) — exceeds 20% threshold
+[LLM_FLAG] FX derivatives moved from a net asset to a larger net liability position q/q: current FX derivative assets fell from $17M (Dec 31, 2025) to $0 (Sept 30, 2026) while current FX liabilities rose from $22M to $59M — filing text: 'Foreign currency derivatives:\nCurrent	—		59		17		22'.
+[LLM_FLAG] Interest rate derivative liabilities grew materially: non-current IR derivative liabilities rose from $139M (Dec 31, 2025) to $218M (Sept 30, 2026), ~57% — filing text: 'Interest rate derivatives:\nCurrent	3		57		8		48	
+Non-current	—		218		—		139'.
+[LLM_FLAG] Energy-related derivatives designated as hedging instruments for regulatory purposes liabilities rose from $99M to $153M (+54%) — filing text: 'Total derivatives designated as hedging instruments for regulatory purposes	54		153		55		99'.
+[LLM_FLAG] Cash collateral held on deposit in broker margin accounts fell from $33M to $24M q/q — filing text: '(a) Gross amounts offset includes cash collateral held on deposit in broker margin accounts of $24 million and $33 million at September 30, 2026 and December 31, 2025, respectively.'
+[LLM_FLAG] Southern Company elected to exclude the cross-currency basis spread from hedge-effectiveness testing on its FX fair value hedges of debt, routing the excluded-component difference through OCI — filing text: 'Southern Company has elected to exclude the cross-currency basis spread from the assessment of effectiveness in the fair value hedges of its foreign currency risk and record any difference between the change in the fair value of the excluded components and the amounts recognized in earnings as a component of OCI.'
+[LLM_FLAG] Immaterial weather-derivative premium/intrinsic value is excluded from reported net derivative amounts — an exotic instrument type worth flagging even though described as immaterial — filing text: 'Net amounts of derivative instruments outstanding exclude immaterial premium and intrinsic value associated with weather derivatives at September 30, 2026 and December 31, 2025.'
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-10-08 ===
 [NUMERIC] fx_derivatives_notional: $2,040M → $1,476M (-27.6%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $2,040M → $1,476M (-27.6%) — exceeds 20% threshold

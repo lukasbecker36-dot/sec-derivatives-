@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-06 ===
+[NUMERIC] fx_derivatives_notional: $2,416M → $1,843M (-23.7%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $878M → $353M (-59.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $0M, now missing
+[DISAPPEARED_FIELD] equity_derivatives_notional: was $0M, now missing
+[NUMERIC] total_derivative_asset: $13M → $16M (+23.1%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $3M → $4M (+33.3%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $1M → $2M (+100.0%) — exceeds 20% threshold
+[LLM_FLAG] fx_not_designated_notional fell from $878M (prior quarter) to $353M (current), a ~60% decrease; the text gives no explanation for the drop, only the bare table figure.
+[LLM_FLAG] expected_12mo_reclass_from_aoci doubled from $1M (prior) to $2M (current); no narrative explanation is given beyond the restated forecast amount.
+[LLM_FLAG] New fair value hedging programme: 'There were no derivative instruments designated in fair value hedging relationships for the three and nine months ended September 30, 2025,' but for the comparable 2026 periods the company reports a $12M/$19M loss on designated interest rate swaps and the related hedged-debt fair value change -- this is the first period with fair value hedges designated.
+[LLM_FLAG] New instruments: 'In January 2026, the Company entered into an additional $100 million notional fixed-to-floating interest rate swap with a maturity date of March 2031. In February 2026, the Company entered into an additional $100 million notional fixed-to-floating interest rate swap with a maturity date of March 2033,' bringing total fair-value-hedge IR swap notional to $300 million designated against Senior Notes.
+[LLM_FLAG] Net investment hedge (cross-currency swap) OCI impact swung sharply year over year: 'the Company recognized a pre-tax gain of $11 million and $35 million, respectively' for Q3/9mo 2026 versus 'a pre-tax gain of $4 million and a pre-tax loss of $74 million, respectively' for Q3/9mo 2025.
+[LLM_FLAG] The 'Derivatives not designated as hedging instruments' table appears to be truncated in the extracted section (it ends mid-row: 'Other current liabilities $3 $3' immediately followed by 'Fair Value Disclosure:' with no explicit not-designated subtotal shown) -- total_derivative_asset/total_derivative_liability above are summed only from the visible designated total plus the one visible not-designated FX forward row, so they are a lower bound if any additional not-designated line items exist beyond what was captured.
+[LLM_FLAG] This Item 3 market risk section is entirely qualitative for Solventum -- no dollar or percentage sensitivity figures appear anywhere in the text (no FX/IR sensitivity, no fixed-rate debt amount, no equity securities value), so every schema field here is not_found; the only quantitative derivatives figures for this filing live in the derivatives note (NOTE 11), not this section.
+[LLM_FLAG] Commodity: 'The Company does not participate in material commodity hedging activity,' consistent with the absence of any commodity derivatives in the derivatives note.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
 [NUMERIC] fx_not_designated_notional: $569M → $878M (+54.3%) — exceeds 20% threshold
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)

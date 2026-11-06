@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-06 ===
+[DISAPPEARED_FIELD] net_derivative_position: was $6M, now missing
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($5M)
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
+[DISAPPEARED_FIELD] sensitivity_adverse_10pct_interest_rate: was $0M, now missing
+[DISAPPEARED_FIELD] fixed_rate_debt_outstanding: was $1,500M, now missing
+[DISAPPEARED_FIELD] variable_rate_debt_outstanding: was $500M, now missing
+[VALIDATION] Likely extraction failure: 5/7 previously-populated fields are now null (net_derivative_position, fixed_rate_notes_billion, sensitivity_adverse_10pct_interest_rate, fixed_rate_debt_outstanding, variable_rate_debt_outstanding)
+[LLM_FLAG] section_text for Note 7 'Financial Instruments and Fair Value Measurements' as provided contains no fair value, cash equivalents, marketable securities, or derivatives notional/fair-value tables -- only narrative on the HarperCollins Equipment Lease, the REA Group 2026 Credit Facility, and covenant compliance. This looks like a section-extraction boundary issue (the quantitative tables that normally open this note were not captured) rather than a genuine absence of disclosure; all schema fields are returned not_found rather than guessed.
+[LLM_FLAG] Item 3 (Quantitative and Qualitative Disclosures About Market Risk) is incorporated entirely by reference to the 2026 Form 10-K rather than restated in this 10-Q -- the full section text is: 'Quantitative and Qualitative Disclosures About Market Risk,” in the Company’s 2026 Form 10-K.' This is a genuine incorporation-by-reference (no material change asserted), not an extraction failure, so none of the sensitivity/notional figures carried in prior_values (e.g. fixed_rate_debt_outstanding $1,500M, variable_rate_debt_outstanding $500M, fx_revenue_sensitivity commentary) can be reconfirmed from this quarter's filing text; they should not be carried forward as current-period facts.
+
 === 10-K | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] total_derivative_asset: $8M → $6M (-25.0%) — exceeds 20% threshold
 [NUMERIC] net_derivative_position: $8M → $6M (-25.0%) — exceeds 20% threshold

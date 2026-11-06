@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-06 ===
+[NUMERIC] commodity_derivatives_notional: $913M → $680M (-25.5%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_asset: was $78M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $17M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($133M)
+[NUMERIC] fixed_rate_notes_billion: $8M → $6M (-26.2%) — exceeds 20% threshold
+[LLM_FLAG] section_text is truncated mid-table (cuts off right after 'Commodity options') — total_derivative_asset and total_derivative_liability could not be confirmed, and commodity_derivatives_notional reported here ($679.9M) reflects commodity swaps only; the commodity options notional that would complete the total is not visible in this excerpt.
+[LLM_FLAG] Newsworthy: the company settled its $1.0 billion forward-starting interest rate swaps 'for a realized gain of $107.5 million' upon issuing the 2036 USD senior notes — a hedge-programme wind-down (not a new position). The fair value table confirms the forward-starting swap balance fell to $0 at Sept 30, 2026 from $83.7 million at Dec 31, 2025.
+[LLM_FLAG] Newsworthy: the filing states the company presents derivative positions on a gross (not net) balance-sheet basis because 'due to the nature of our counterparty agreements and the fact that we are not subject to master netting arrangements, we are not able to net positions with the same counterparty' — a counterparty/credit-risk structural disclosure worth noting.
+[LLM_FLAG] ir_sensitivity_100bp and fx_sensitivity_10pct are computed by summing the two line items in each risk table (USD-denominated + FX-denominated notes; FX-denominated notes + FX forwards) because the text gives no explicit 'Total' row — treat as a derived aggregate rather than a single stated figure.
+[LLM_FLAG] fixed_rate_notes_billion ($5.66B) is likewise a sum of the two notional lines in the Interest Rate Risk table ($4,400.0M + $1,257.7M); no single stated 'billion' figure appears in the text.
+[LLM_FLAG] Newsworthy: 'As of September 30, 2026, we had no outstanding forward starting interest rate swaps as they were settled in conjunction with the issuance of our 2036 USD senior notes' — confirms the IR hedge was unwound this period (see the derivatives note for the associated $107.5M realized gain).
+[LLM_FLAG] Newsworthy: commodity options notional jumped from $21.0 million (Dec 31, 2025) to $315.2 million (Sept 30, 2026), roughly a 15x increase in outstanding commodity option contracts. No field in this schema captures it, but it is a significant expansion of the commodity hedging book worth a derivatives reporter's attention.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DROPPED_TO_ZERO] ir_swap_notional: $1,000M → $0M
 [NUMERIC] total_derivative_asset: $248M → $78M (-68.4%) — exceeds 20% threshold

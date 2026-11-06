@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-06 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($445M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($500M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $735M, now missing
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $500M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (total_derivative_asset, cash_flow_hedge_aoci)
+[LLM_FLAG] Hedging programme wound down: the $500.0 million notional interest rate swap (cash flow hedge, capping floating-rate term loan B debt at 3.445%) 'expired in October 2026' — just one month after this quarter's September 30, 2026 period end. Quote: 'The swap agreement expired in October 2026, had a notional amount of $500.0 million and ensured that a portion of our floating-rate debt for our outstanding term loan B facility did not exceed 3.445%.'
+[LLM_FLAG] total_derivative_asset and cash_flow_hedge_aoci not found in this section (prior values were 735.0 and 500.0 respectively): this section_text is MD&A market-risk narrative (foreign currency risk / interest rate risk discussion), not the financial-statement derivatives note with the fair-value and AOCI roll-forward tables, so these fields could not be verified from the text provided and were left null rather than carried forward.
+[LLM_FLAG] Debt mix context (not a derivative, but relevant background): total debt of $9.8 billion as of September 30, 2026, of which approximately $7.8 billion fixed-rate and $2.0 billion floating-rate; a 25bp rate move would change annual interest expense by approximately $4.9 million.
+[LLM_FLAG] This Item 3 'Quantitative and Qualitative Disclosures About Market Risk' section contains no standalone data — it is a pure cross-reference stub: 'Required information is within Part I — Financial Information—Item 2.—Management's Discussion and Analysis of Financial Condition and Results of Operations—Market Risk.' All substantive market-risk figures (FX forward notional, interest rate swap terms, debt mix, rate sensitivity) are disclosed in the MD&A Item 2 section instead, which is captured separately in the derivatives_note extraction for this filing.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($735M)
 [NEW_FIELD] ir_swap_notional: appeared for first time ($500M)

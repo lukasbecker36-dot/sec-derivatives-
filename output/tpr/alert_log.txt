@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-09-26 | Processed 2026-11-06 ===
+[NUMERIC] ir_swap_notional: $375M → $500M (+33.3%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_asset: appeared for first time ($51M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($234M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-183M)
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $162M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $2M, now missing
+[DISAPPEARED_FIELD] fx_forward_cf_hedge_notional: was $869M, now missing
+[DISAPPEARED_FIELD] fx_forward_non_hedge_notional: was $222M, now missing
+[DISAPPEARED_FIELD] fx_forward_asset_fair_value: was $31M, now missing
+[DISAPPEARED_FIELD] fx_forward_liability_fair_value: was $11M, now missing
+[DISAPPEARED_FIELD] net_investment_hedge_notional: was $1,820M, now missing
+[DISAPPEARED_FIELD] net_investment_hedge_asset: was $71M, now missing
+[DISAPPEARED_FIELD] net_investment_hedge_liability: was $221M, now missing
+[VALIDATION] Likely extraction failure: 9/13 previously-populated fields are now null (fx_sensitivity_10pct, fixed_rate_notes_billion, fx_forward_cf_hedge_notional, fx_forward_non_hedge_notional, fx_forward_asset_fair_value...)
+[LLM_FLAG] ir_swap_notional rose from $375M to $500M (+33%), still shown as a single designated fair-value-hedge line; the text attaches $23M of 'Hedged Item' and $(23)M of 'Derivative designated as hedging instrument' interest income/expense this quarter versus $0/$0 in the prior-year comparative quarter ('Hedged Item Interest income (expense) 23 ... Derivative designated as hedging instrument Interest income (expense) (23)'), consistent with an expanded or newly active interest-rate fair value hedge rather than a pre-existing, unchanged position.
+[LLM_FLAG] Not a schema field, but newsworthy context for the above: the debt note's 'Fair value basis adjustment' on the senior notes jumped from $(2)M to $(25)M quarter-over-quarter, and footnote (1) explicitly ties it to 'the fair value hedge on a portion of the 5.500% Senior Note' — the same fair-value hedge program referenced in the derivatives table.
+
 === 10-K | Period ending 2026-06-27 | Processed 2026-08-14 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $211M, now missing
 [DISAPPEARED_FIELD] total_marketable_securities_fv: was $22M, now missing

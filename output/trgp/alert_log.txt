@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-06 ===
+[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[NEW_FIELD] total_derivative_asset: appeared for first time ($100M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($-373M)
+[NUMERIC] net_derivative_position: $-67M → $-272M (-307.3%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-98M)
+[NUMERIC] ir_sensitivity_100bp: $2M → $13M (+718.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] commodity_hedge_gain_loss: was $-160M, now missing
+[NUMERIC] interest_rate_variable_exposure: $161M → $1,311M (+714.3%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (ir_swap_notional, commodity_hedge_gain_loss)
+[LLM_FLAG] net_derivative_position: moved from prior -66.9 to -272.5 (a ~307% widening of the net liability). The filing attributes this to natural gas basis moves: "For the nine months ended September 30, 2026, we had net unrealized mark-to-market gains primarily related to the settlement of derivative liability positions, partially offset by losses resulting from unfavorable movements in natural gas forward basis prices on open positions."
+[LLM_FLAG] commodity_derivatives_notional could not be populated in dollar terms: TRGP discloses commodity notionals only as physical volumes by year (MMBtu/d, Bbl/d for natural gas, NGL, condensate swaps/futures/basis swaps through 2029), not a dollar notional total, so the schema field was left null rather than converting without a price assumption.
+[LLM_FLAG] Newsworthy - OCI swing on cash flow hedges: "Gain (Loss) Recognized in OCI on Derivatives (Effective Portion)... Commodity contracts $( 254.0 )" for Q3 2026 vs "$ 41.0" in Q3 2025 - a sharp swing from gain to large loss in hedge OCI.
+[LLM_FLAG] Newsworthy - credit-contingent features: "we have outstanding net derivative positions that contain credit-risk related contingent features that are in a net liability position of $ 200.2 million," with no collateral currently posted; company states that even a one-notch downgrade below investment grade by both Moody's and S&P would still not require posting collateral or trigger immediate settlement.
+[LLM_FLAG] interest_rate_variable_exposure: jumped from prior 161.0 to 1311.0 (more than 8x). The filing lists the facilities driving the balance ("variable-rate borrowings under the TRGP Revolver, the Commercial Paper Program and the Securitization Facility") but does not explain the size of the increase.
+[LLM_FLAG] ir_sensitivity_100bp: jumped from prior 1.6 to 13.1 (over 8x), consistent with - and apparently driven by - the much larger variable-rate debt balance: "would impact our consolidated annual interest expense by $13.1 million based on our September 30, 2026 debt balances."
+[LLM_FLAG] Newsworthy - unhedged rate risk: "As of September 30, 2026, we do not have any interest rate hedges," despite now carrying $1,311.0 million of variable-rate debt - the company remains fully exposed to rate moves on a materially larger floating-rate balance.
+[LLM_FLAG] Newsworthy - new customer concentration: "during both the three and nine months ended September 30, 2026, revenues from two customers each represented approximately 11% of our consolidated revenues," versus "No customer comprised 10% or greater of our consolidated revenues during the three and nine months ended September 30, 2025" - concentration that did not exist a year earlier.
+
 === 10-K | Period ending 2025-12-31 | Processed 2026-10-09 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($0M)
 [DISAPPEARED_FIELD] total_derivative_asset: was $137M, now missing

@@ -1,3 +1,24 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-06 ===
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $591M, now missing
+[DISAPPEARED_FIELD] fx_designated_notional: was $418M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $173M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional: was $2,200M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $0M, now missing
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-23M)
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $6M, now missing
+[DISAPPEARED_FIELD] transactional_var: was $15M, now missing
+[DISAPPEARED_FIELD] translational_var: was $2M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $14M, now missing
+[DISAPPEARED_FIELD] interest_income_sensitivity: was $19M, now missing
+[DISAPPEARED_FIELD] commodity_exposure: was $457M, now missing
+[DISAPPEARED_FIELD] commodity_sensitivity: was $46M, now missing
+[VALIDATION] Likely extraction failure: 12/12 previously-populated fields are now null (fx_derivatives_notional, fx_designated_notional, fx_not_designated_notional, ir_swap_notional, commodity_derivatives_notional...)
+[LLM_FLAG] expected_12mo_reclass_from_aoci: prior quarter reported $6 million; this quarter the filing states only that the amount is "immaterial" with no dollar figure given. Treated as not_found rather than carried forward or set to zero.
+[LLM_FLAG] ir_swap_notional: the text discloses only swap activity entered into during the quarter ("total notional amounts of $ 200 million"), not a total outstanding IR swap notional. Prior-quarter total was $2,200 million and cannot be confirmed, reconciled, or updated from this excerpt, so left not_found rather than guessed.
+[LLM_FLAG] Newsworthy - net investment hedge wound down with no stated replacement: "In September 2026, we terminated the ¥ 18 billion ($ 120 million) cross-currency swaps entered into in September 2025 and received settlement in cash of $ 6 million" - no new cross-currency swap is disclosed in this excerpt, so Cardinal Health may currently be without an active net investment hedge via cross-currency swap.
+[LLM_FLAG] Newsworthy - new fair-value hedge issuance: "During the three months ended September 30, 2026 ... we entered into pay-floating interest rate swaps with total notional amounts of $ 200 million ... These swaps were designated as fair value hedges of our fixed rate debt" - down from $300 million of equivalent swaps entered in the comparable prior-year quarter.
+[LLM_FLAG] All fourteen market-risk fields are not disclosed this quarter: Item 3 consists solely of "There have been no material changes in the quantitative and qualitative market risk disclosures included in the 2026 Form 10-K since the end of fiscal 2026 through September 30, 2026." No VAR, sensitivity, commodity exposure, notional, or foreign-currency figures are restated in this filing. Prior-quarter values (e.g. transactional VAR $15M, translational VAR $2M, interest rate sensitivity $14M, interest income sensitivity $19M, commodity exposure $457M, commodity sensitivity $46M) should be treated as stale/unconfirmed for this period, not as unchanged or still in effect, since the company did not restate them here.
+
 === 10-K | Period ending 2026-06-30 | Processed 2026-08-14 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($591M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($418M)

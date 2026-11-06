@@ -1,3 +1,22 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-06 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,997M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,997M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($6,952M)
+[NUMERIC] total_derivative_asset: $1,997M → $818M (-59.0%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $1,997M → $312M (-84.4%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $7,352M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $383M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $283M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $100M, now missing
+[VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct)
+[LLM_FLAG] total_derivative_asset fell from a prior value of $1,997M to $818M (-59%); the text gives no explanation for the swing and the two figures appear to describe different things (prior value matches this period's FX hedge notional, not a derivative-asset total), so the prior comparator itself looks suspect rather than the current extraction.
+[LLM_FLAG] total_derivative_liability fell from a prior value of $1,997M to $312M (-84%); same concern as above — the prior value coincides with the FX notional figure rather than a plausible prior derivative-liability total, suggesting the prior extraction may have been miscategorized.
+[LLM_FLAG] net_derivative_position moved from a prior value of $0.0M to a computed $506M net asset; no narrative in the text explains the change, and this field is a derived figure (818-312), not a number stated directly in the filing.
+[LLM_FLAG] Interest-rate-risk notional grew from $5,577M to $6,952M total (+25%) year-over-year, driven mainly by undesignated contracts ($3,852M to $4,927M); the filing gives no commentary on why undesignated IR notional increased.
+[LLM_FLAG] Cross-currency swaps hedging euro-denominated fixed-rate debt (fair value hedges) show large period-over-period swings in recognized fair value gain/loss, e.g. one tranche moved from a $104M nine-month gain in 2025 to a $(31)M loss in 2026 — a sign of currency-rate moves rather than a change in hedge strategy; worth noting as a swing in hedge mark-to-market performance.
+[LLM_FLAG] Duke Energy discloses it has elected to exclude the cross-currency basis spread from hedge-effectiveness assessment on its FX fair value hedges, recording the excluded-component difference through OCI — a hedge-accounting election worth flagging for readers tracking effectiveness treatment.
+[LLM_FLAG] Item 3 (Quantitative and Qualitative Disclosures about Market Risk) in this 10-Q is incorporated entirely by reference to the FY2025 10-K and contains no quantitative figures of its own; all sensitivity metrics (IR, FX, equity) that the prior period reported (e.g. ir_sensitivity_100bp $283M, fx_sensitivity_10pct $100M) are simply absent from this quarter's filing, not restated or withdrawn.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,997M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($1,997M)

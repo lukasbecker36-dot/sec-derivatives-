@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-09-26 | Processed 2026-11-06 ===
+[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $0M, now missing
+[DISAPPEARED_FIELD] equity_derivatives_notional: was $0M, now missing
+[NUMERIC] total_derivative_asset: $15M → $10M (-29.3%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-1M → $-5M (-315.4%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position swung from prior -1.3 to -5.4 (>300% change), driven by derivative assets falling to $10.4M (from prior $14.7M) against roughly flat derivative liabilities ($15.8M vs prior $16.0M); the filing text does not explain the decline in asset fair value.
+[LLM_FLAG] Counterparty concentration disclosed: master netting arrangements are 'spread across seven separate counterparties' for total gross derivatives of only $10.4M assets / $15.8M liabilities.
+[LLM_FLAG] No cash collateral required: 'The Company's master netting arrangements do not require cash collateral to be pledged by the Company or its counterparties.'
+
 === 10-Q | Period ending 2026-06-27 | Processed 2026-08-10 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,451M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($1,169M)

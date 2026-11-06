@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-06 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($4,100M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($1,412M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($491M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($921M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $3,800M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $1,294M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $466M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $828M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct)
+[LLM_FLAG] cash_flow_hedge_aoci: prior_values recorded ~$3,800M but this section_text contains no AOCI cash-flow-hedge disclosure at all (text covers derivatives note and fair value tables only) -- left null rather than carried forward; likely just outside this excerpt, not a real drop to zero.
+[LLM_FLAG] equity_derivatives_notional: prior_values holds the string "Yes" for this numeric notional field, which looks like a prior mismapping from has_derivatives-type data rather than an actual notional figure; current text only confirms existence ("The Company also has derivative instruments associated with certain equity securities") with no amount, so left null.
+[LLM_FLAG] ir_swap_notional: text explicitly states the increase from $3.2B (Dec 31, 2025) to $4.1B (Sep 30, 2026), a ~28% rise, attributed to hedging interest rate risk on long-term debt -- worth watching for a related debt issuance.
+[LLM_FLAG] Level 3 derivative assets (unobservable inputs) rose from $923M to $1,331M and Level 3 derivative liabilities from $354M to $483M within the fair value table -- a meaningful shift toward harder-to-value derivative positions worth asking about.
+[LLM_FLAG] This Item 3 section is a pure incorporation-by-reference pointer to the Item 2 MD&A "Market Risk" discussion; section_text contains no quantitative sensitivity, notional or transaction gain/loss figures. All numeric fields here (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value, equity_sensitivity_10pct, fx_forwards_outstanding) are left null for this reason, not because the underlying figures changed or disappeared -- prior_values of $1,294M / $466M / $828M for those three fields should NOT be treated as having dropped to zero; the actual current-period numbers likely live in the Item 2 MD&A text, which this section_text slice does not include.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-31 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($3,800M)
 [NEW_FIELD] total_derivative_asset: appeared for first time ($1,294M)

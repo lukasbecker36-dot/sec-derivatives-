@@ -1,3 +1,8 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-06 ===
+[LLM_FLAG] sensitivity_analysis_table: Environmental contracts sensitivity moved from $(4)/$4 to $(7)/$7, a ~75% increase versus the prior filing's comparable figure; the text gives no explanation for the change, it only states the sensitivity was computed by 'increasing and decreasing forward prices and rates at September 30, 2026 and 2025 by a hypothetical 10%.'
+[LLM_FLAG] floating_rate_debt_amount: prior value was 0.0 but this filing states 'DTE Energy had floating rate debt of $0.7 billion' -- a jump from zero with no commentary explaining the shift in capital structure.
+[LLM_FLAG] floating_rate_debt_ratio: prior value was 0.0 but this filing states a 'floating rate debt-to-total debt ratio of 2.6%' -- consistent with the $0.7 billion floating-rate debt figure appearing this quarter, but still a change from the prior 0% with no explanation in the text.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $302M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $204M, now missing

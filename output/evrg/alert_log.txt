@@ -1,3 +1,12 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-06 ===
+[NUMERIC] ir_swap_notional: $100M → $150M (+50.0%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $29M → $36M (+24.7%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional increased from $100.0M (Dec 31, 2025) to $150.0M (Sept 30, 2026), a 50% rise; the filing shows only the notional table and gives no explanation for the increase.
+[LLM_FLAG] total_derivative_asset ($163.4M) is a computed sum of Evergy's separately-reported non-hedging 'Total derivative assets' ($157.6M) and hedging 'Total derivative assets' ($5.8M, interest rate swaps) lines -- the filing never states one combined figure. net_derivative_position (35.8) is derived the same way (163.4 - 127.6).
+[LLM_FLAG] Non-hedging commodity notional volumes rose sharply versus Dec 31, 2025: Power (Evergy) from 63.0 to 102.6 million MWhs (+63%), natural gas from 54.6 to 143.7 million MMBtu (+163%): 'Power	MWhs	102.6			63.0' / 'Natural gas	MMBtu	143.7			54.6'. These are volumetric, not USD, notionals, so commodity_derivatives_notional is left null rather than reporting a volume figure as a dollar amount.
+[LLM_FLAG] Non-hedging derivative asset fair value nearly doubled versus Dec 31, 2025: 'Total derivative assets		$	157.6			$	82.3'.
+[LLM_FLAG] Credit-risk section: 'Additional collateral required if contingent features were triggered	32.2' (millions), concentrated in Evergy Kansas Central's non-regulated energy marketing book per 'Substantially all counterparty credit risk and derivative instruments containing credit-risk-related contingent features relate to Evergy Kansas Central's non-regulated energy marketing activities.'
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] total_derivative_asset: $86M → $145M (+68.6%) — exceeds 20% threshold
 [NUMERIC] total_derivative_liability: $78M → $116M (+47.8%) — exceeds 20% threshold

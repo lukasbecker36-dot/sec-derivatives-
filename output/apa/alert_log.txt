@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-06 ===
+[NUMERIC] natural_gas_derivatives_fair_value: $-6M → $15M (+350.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] total_derivative_liability: was $6M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-6M, now missing
+[NUMERIC] fx_derivatives_notional: $72M → $36M (-50.0%) — exceeds 20% threshold
+[NUMERIC] fx_forwards_outstanding: $72M → $36M (-50.0%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_10pct: $-9M → $-4M (+55.6%) — exceeds 20% threshold
+[NEW_FIELD] fixed_rate_debt: appeared for first time ($3,300M)
+[LLM_FLAG] natural_gas_derivatives_fair_value swung from a net liability of -$6 million (prior) to a net asset of $15 million this period, a sign reversal and >50% magnitude change; the text gives no explanation beyond 'volatility based on prevailing market parameters at September 30, 2026' -- a mark-to-market move, not a disclosed strategy change.
+[LLM_FLAG] fx_derivatives_notional: the filing states this notional in British pounds ('a total notional amount of £36 million'), not U.S. dollars -- the raw GBP figure is recorded here unconverted since no exchange rate is given in the section text. Treat as non-comparable to USD-denominated fields without an explicit FX rate. Also down from the prior GBP figure (72), a 50% decline.
+[LLM_FLAG] The natural gas derivatives are explicitly 'not designated as cash flow hedges' -- i.e. an undesignated/economic hedge book rather than hedge-accounted, which may be newsworthy if this is a change from prior hedge-accounting treatment.
+[LLM_FLAG] The outstanding FX forward contracts are specifically tied to hedging British-pound decommissioning obligations in the North Sea -- a narrow, purpose-specific programme worth noting rather than general corporate FX hedging.
+[LLM_FLAG] fx_forwards_outstanding: the filing states this notional in British pounds ('£36 million'), not U.S. dollars -- recorded unconverted since no exchange rate is given in the text. Down from the prior-period GBP figure (72), a 50% decline with no stated cause.
+[LLM_FLAG] fx_sensitivity_10pct: the disclosure is asymmetric -- a 10% GBP strengthening yields a $2 million NET GAIN while a 10% weakening yields a $4 million loss (not a symmetric +/- figure); the loss scenario (-4) was recorded here, a >50% change from the prior-period value (-9), but the two periods may not be measuring the same thing given the asymmetry.
+[LLM_FLAG] Natural gas derivatives are explicitly 'not designated as cash flow hedges' (undesignated/economic hedges) with a 10% price-move sensitivity of $9 million on a $15 million asset position -- notable for how large the sensitivity is relative to the fair value.
+[LLM_FLAG] FX forwards are specifically tied to hedging British-pound decommissioning obligations in the North Sea, not general corporate FX risk.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-09-10 ===
 [NUMERIC] natural_gas_derivatives_fair_value: $122M → $-6M (-104.9%) — exceeds 20% threshold
 [DISAPPEARED_FIELD] fi_total_derivative_liability: was $124M, now missing

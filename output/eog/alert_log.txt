@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-06 ===
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $210M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $0M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $210M, now missing
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, equity_sensitivity_10pct)
+[LLM_FLAG] Brent Linked Gas Sales Contract (a Level 3-valued financial asset) rose from $31 million at December 31, 2025 to $229 million at September 30, 2026, a >50% increase. The filing offers no explanation for the magnitude of the move beyond noting the valuation uses Level 3 inputs ('These Level 3 inputs are immaterial to the financial statements'); worth verifying against the filing before quoting as a standalone figure since the section text here is truncated before the full asset/liability derivatives table.
+[LLM_FLAG] prior_values for this issuer recorded equity_derivatives_notional as the string 'Yes' rather than a numeric notional -- that looks like a misaligned prior extraction. The section_text provided here contains no mention of equity derivatives for EOG (an oil & gas E&P with only commodity derivatives: natural gas swaps/collars, NGL swaps, and a Brent-linked gas sales contract), so equity_derivatives_notional is returned null/not_found rather than carried forward.
+[LLM_FLAG] Section text is truncated at the start (begins mid-sentence, 'tracts -') and cuts off mid-word at the end ('Encino's rev'), so the full Note 9 asset/liability derivatives table (including any stated totals) and the end of Note 12 are not fully visible in this excerpt; total_derivative_asset/liability could not be reliably extracted as a result.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NEW_FIELD] total_derivative_liability: appeared for first time ($0M)
 [NEW_FIELD] net_derivative_position: appeared for first time ($210M)

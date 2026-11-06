@@ -1,3 +1,8 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-06 ===
+[LLM_FLAG] This Item 7A section contains no standalone quantitative market-risk disclosures (no notionals, sensitivities, or fixed-rate debt figures) -- it incorporates market risk discussion entirely by reference to the 2025 Form 10-K and to Note 14, consistent with Chevron's usual 10-Q practice.
+[LLM_FLAG] Newsworthy: filing flags commodity-price volatility tied to the ongoing Middle East conflict, directing readers to Note 14 for impact -- quote: "Information about volatility in commodity prices associated with the ongoing conflict in the Middle East and its impact is discussed in Note 14. Financial and Derivative Instruments."
+[LLM_FLAG] derivative_instruments_reference points to Note 14 in this filing, not Note 10 as the schema field description assumes -- Chevron's note numbering for derivatives differs from the generic schema expectation; value extracted reflects the actual text.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (fx_forwards_outstanding)

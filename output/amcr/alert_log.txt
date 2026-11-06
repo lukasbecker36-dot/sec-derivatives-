@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-06 ===
+[NUMERIC] total_derivative_asset: $8M → $14M (+75.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $-20M, now missing
+[DISAPPEARED_FIELD] interest_rate_sensitivity: was $-20M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity: was $-49M, now missing
+[VALIDATION] Likely extraction failure: 3/8 previously-populated fields are now null (ir_sensitivity_100bp, interest_rate_sensitivity, fx_sensitivity)
+[LLM_FLAG] total_derivative_asset rose from $8M (prior, June 30 2026) to $14M (current, Sept 30 2026), a 75% increase; the text gives no explanation for the change.
+[LLM_FLAG] Commodity hedge volumes shifted notably quarter-over-quarter: Aluminum fell from 23,746 to 19,225 tons (-19%), Aluminum Premium fell from 7,334 to 4,308 tons (-41%), while PET resin volume rose from 560,000 lbs to 786,143 lbs (+40%) — no commentary in the text on the driver of the mix shift.
+[LLM_FLAG] Cross currency swaps serve three distinct purposes in this filing (fair value hedge of $500 million notes; net investment hedge of euro/pound sterling operations; economic hedge of intercompany loans) — worth noting for readers distinguishing hedge accounting treatment, though the company states no changes to any of these relationships this quarter.
+[LLM_FLAG] This 10-Q's Item 3 market risk section is entirely a cross-reference to the FY2026 Form 10-K (fiscal year ended June 30, 2026) and contains no standalone quantitative content — all fields are not_found. Prior-period values (e.g. ir_sensitivity_100bp -20, fx_sensitivity -49, Argentina peso exposure) should NOT be carried forward since the current filing states nothing new.
+
 === 10-K | Period ending 2026-06-30 | Processed 2026-08-17 ===
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $13M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_liability: was $467M, now missing
