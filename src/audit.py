@@ -34,7 +34,14 @@ This module scans the committed CSVs and reports three defects:
                  liability field, so the number itself is real but its label
                  is not. reconciliation only catches this when the offending
                  field is a total-of-components; this catches the standalone
-                 fields it misses.
+                 fields it misses. Symmetric: a 10x drop (KO ir_swap_notional
+                 14,216 -> 769) is flagged exactly like a 10x rise.
+
+  conflict_marker
+                 a file anywhere under output/ still carries git merge-conflict
+                 markers (<<<<<<<, =======, >>>>>>>). The scheduler commits
+                 output/ directly, so an unresolved merge would otherwise be
+                 read back by the digest as data. Zero tolerance.
 
 Run before generating any digest:
 
@@ -49,6 +56,7 @@ import csv
 import io
 import json
 import logging
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -106,6 +114,12 @@ _FAIR_VALUE_MARKERS = (
 _ADVISORY_DEFECT_TYPES = frozenset({'implausible_swing'})
 
 logger = logging.getLogger(__name__)
+
+# A git merge-conflict marker: 7 '<', '>' or '|' followed by a space or end of
+# line, or a line that is exactly 7 '='. Anchored to line start so the
+# '=== 10-Q | ...' block headers in alert_log.txt never match.
+_CONFLICT_MARKER_RE = re.compile(r'^(?:(?:<{7}|>{7}|\|{7})(?: .*)?|={7})\r?$',
+                                 re.MULTILINE)
 
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / 'output'
 
@@ -310,6 +324,35 @@ def audit_issuer(ticker: str, csv_path: Path,
     return defects
 
 
+def find_conflict_markers(root: Path, output_dir: Path) -> list[dict]:
+    """Report every file under root that contains a git conflict marker.
+
+    One defect per file (the first marker found), since a single unresolved
+    merge already makes the whole file untrustworthy.
+    """
+    defects = []
+    if not root.exists():
+        return defects
+    for path in sorted(p for p in root.rglob('*') if p.is_file()):
+        try:
+            text = path.read_text(encoding='utf-8', errors='replace')
+        except OSError:
+            continue
+        m = _CONFLICT_MARKER_RE.search(text)
+        if not m:
+            continue
+        rel = path.relative_to(output_dir)
+        lineno = text.count('\n', 0, m.start()) + 1
+        ticker = rel.parts[0] if len(rel.parts) > 1 else '-'
+        defects.append({
+            'ticker': ticker, 'type': 'conflict_marker', 'period': '',
+            'form_type': '',
+            'detail': (f'output/{rel.as_posix()}:{lineno} has unresolved git '
+                       f'merge-conflict marker {m.group(0).strip()[:20]!r}'),
+        })
+    return defects
+
+
 def run_audit(output_dir: Path = OUTPUT_DIR,
               tickers: list[str] | None = None,
               compare_ref: str | None = None) -> dict:
@@ -324,6 +367,12 @@ def run_audit(output_dir: Path = OUTPUT_DIR,
             continue
         issuers += 1
         defects.extend(audit_issuer(ticker, csv_path, compare_ref=compare_ref))
+
+    if wanted:
+        for ticker in sorted(wanted):
+            defects.extend(find_conflict_markers(output_dir / ticker, output_dir))
+    else:
+        defects.extend(find_conflict_markers(output_dir, output_dir))
 
     by_type: dict[str, int] = {}
     for d in defects:
@@ -424,7 +473,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument('--baseline', type=Path,
                         help='Baseline JSON to compare against. Fails only on '
                              'regression rather than on any defect at all.')
-    parser.add_argument('--zero-tolerance', default='misaligned_row,stale_null',
+    parser.add_argument('--zero-tolerance',
+                        default='misaligned_row,stale_null,conflict_marker',
                         help='Comma-separated defect types that must stay at '
                              'zero when --baseline is used')
     parser.add_argument('--write-baseline', type=Path,

@@ -83,8 +83,9 @@ def build_queue(defect_types: list[str] | None, since: str | None,
             continue
         if keep_tickers and d['ticker'].upper() not in keep_tickers:
             continue
-        # unreadable / misaligned rows aren't queueable by this path
-        if d['type'] in ('unreadable', 'misaligned_row'):
+        # unreadable / misaligned rows and conflict markers aren't queueable
+        # by this path — they need a manual fix, not an LLM re-extraction
+        if d['type'] in ('unreadable', 'misaligned_row', 'conflict_marker'):
             continue
         key = (d['ticker'].upper(), d['period'], d['form_type'])
         grouped.setdefault(key, set()).add(d['type'])

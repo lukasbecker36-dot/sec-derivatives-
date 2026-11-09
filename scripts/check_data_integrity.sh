@@ -10,11 +10,12 @@
 #
 # The corpus carries known defects that need re-extraction to clear, so this
 # gate fails on REGRESSION rather than demanding zero defects: the totals must
-# not grow, and misaligned_row / stale_null must stay at zero. Those two are
-# zero-tolerance because both were driven to zero and both silently corrupt
-# figures that otherwise look sound -- misaligned rows put values in the wrong
-# fields, stale_null means correct data exists on another branch and is being
-# ignored.
+# not grow, and misaligned_row / stale_null / conflict_marker must stay at
+# zero. Those are zero-tolerance because all were driven to zero and all
+# silently corrupt figures that otherwise look sound -- misaligned rows put
+# values in the wrong fields, stale_null means correct data exists on another
+# branch and is being ignored, and conflict_marker means a file under output/
+# still carries unresolved git merge markers (<<<<<<< / ======= / >>>>>>>).
 #
 # Usage:
 #   scripts/check_data_integrity.sh              # gate against the baseline

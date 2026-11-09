@@ -231,6 +231,52 @@ class TestCheckImplausibleSwings:
         curr = {'net_derivative_position': '-450'}
         assert check_implausible_swings(prior, curr) == []
 
+    def test_notional_drop_flagged_symmetrically(self):
+        """KO 2026-10-02 10-Q: ir_swap_notional went 14,216 -> 769, an ~18x
+        DROP (the filing states $11,875M). A collapse is as much a wrong-
+        column signal as a spike, so drops must trip the same threshold."""
+        prior = {'ir_swap_notional': '14216'}
+        curr = {'ir_swap_notional': '769'}
+        results = check_implausible_swings(prior, curr)
+        assert len(results) == 1
+        assert results[0]['field'] == 'ir_swap_notional'
+        assert results[0]['prev'] == 14216 and results[0]['curr'] == 769
+        assert 18 < results[0]['ratio'] < 19
+
+    def test_rise_and_drop_give_same_ratio(self):
+        """Swapping the endpoints must not change whether, or how hard, a
+        swing is flagged."""
+        for field, lo, hi in [('ir_swap_notional', '500', '6000'),
+                              ('total_derivative_asset', '150', '6000'),
+                              ('ir_sensitivity_100bp', '-120', '-3000')]:
+            up = check_implausible_swings({field: lo}, {field: hi})
+            down = check_implausible_swings({field: hi}, {field: lo})
+            assert len(up) == len(down) == 1, field
+            assert up[0]['ratio'] == down[0]['ratio']
+
+    def test_drop_just_below_threshold_not_flagged(self):
+        """A 9x notional drop is under the 10x notional threshold."""
+        assert check_implausible_swings({'ir_swap_notional': '9000'},
+                                        {'ir_swap_notional': '1000'}) == []
+
+    def test_drop_audited_end_to_end(self, tmp_path):
+        """audit_issuer reports the KO-shaped drop against the chronological
+        prior, even when the file is out of order."""
+        csv_path = tmp_path / 'ko' / 'tracking.csv'
+        csv_path.parent.mkdir(parents=True)
+        csv_path.write_text(
+            'period_end_date,form_type,ir_swap_notional\n'
+            '2026-07-03,10-Q,14216\n'
+            '2026-04-03,10-Q,14279\n'
+            '2026-10-02,10-Q,769\n',
+            encoding='utf-8')
+        swings = [d for d in audit_issuer('ko', csv_path)
+                  if d['type'] == 'implausible_swing']
+        assert len(swings) == 1
+        assert swings[0]['period'] == '2026-10-02'
+        assert '14,216 → 769' in swings[0]['detail']
+        assert 'from 2026-07-03' in swings[0]['detail']
+
     def test_excluded_fields_never_swing(self):
         """String fields like has_derivatives must never be checked."""
         prior = {'has_derivatives': 'Yes'}
@@ -426,3 +472,67 @@ class TestPartialComponents:
             'fx_not_designated_notional': '36670',
         }])
         assert [d['type'] for d in audit_issuer('vz', path)] == ['reconciliation']
+
+
+class TestConflictMarkers:
+    """Unresolved git merge markers anywhere under output/ (MSFT's
+    alert_log.txt once carried a full <<<<<<< HEAD ... >>>>>>> block) are a
+    zero-tolerance defect."""
+
+    def _setup(self, tmp_path, text, name='alert_log.txt', ticker='msft'):
+        _write(tmp_path / ticker / 'tracking.csv', [{
+            'period_end_date': '2025-06-30', 'form_type': '10-K',
+            'has_derivatives': 'Yes', 'fx_derivatives_notional': '100',
+        }])
+        (tmp_path / ticker / name).write_text(text, encoding='utf-8')
+
+    def test_conflict_block_detected(self, tmp_path):
+        self._setup(tmp_path, '=== 10-Q | Period ending 2026-09-30 ===\n'
+                              '[NUMERIC] a\n\n<<<<<<< HEAD\nx\n=======\ny\n'
+                              '>>>>>>> origin/master\n')
+        report = run_audit(tmp_path)
+        markers = [d for d in report['defects'] if d['type'] == 'conflict_marker']
+        assert len(markers) == 1  # one per file
+        assert markers[0]['ticker'] == 'msft'
+        assert 'output/msft/alert_log.txt:4' in markers[0]['detail']
+
+    def test_lone_closing_marker_detected(self, tmp_path):
+        """A half-resolved merge that left only the trailer still fails."""
+        self._setup(tmp_path, 'line\n>>>>>>> origin/master\n')
+        assert run_audit(tmp_path)['defects_by_type'].get('conflict_marker') == 1
+
+    def test_marker_in_tracking_csv_and_top_level_file(self, tmp_path):
+        self._setup(tmp_path, 'clean\n')
+        with open(tmp_path / 'msft' / 'tracking.csv', 'a', encoding='utf-8') as f:
+            f.write('<<<<<<< HEAD\n')
+        (tmp_path / 'llm_usage.log').write_text('=======\n', encoding='utf-8')
+        report = run_audit(tmp_path)
+        markers = [d for d in report['defects'] if d['type'] == 'conflict_marker']
+        assert {d['ticker'] for d in markers} == {'msft', '-'}
+
+    def test_alert_headers_and_lookalikes_not_flagged(self, tmp_path):
+        self._setup(tmp_path,
+                    '=== 10-K | Period ending 2026-06-30 | Processed 2026-07-30 ===\n'
+                    '[LLM_FLAG] value <<<<<<< in prose\n'
+                    '========\n'          # 8, not 7
+                    '<<<<<<<<<< arrows\n')
+        assert 'conflict_marker' not in run_audit(tmp_path)['defects_by_type']
+
+    def test_ticker_filter_scopes_scan(self, tmp_path):
+        self._setup(tmp_path, '>>>>>>> origin/master\n', ticker='msft')
+        self._setup(tmp_path, 'clean\n', ticker='ko')
+        assert 'conflict_marker' not in run_audit(
+            tmp_path, tickers=['KO'])['defects_by_type']
+        assert run_audit(tmp_path, tickers=['MSFT'])['defects_by_type'][
+            'conflict_marker'] == 1
+
+    def test_conflict_marker_is_zero_tolerance_by_default(self, tmp_path):
+        """The gate's default zero-tolerance list includes conflict_marker,
+        so it fails even when the baseline somehow recorded one."""
+        import json
+        from src.audit import main
+        self._setup(tmp_path, '<<<<<<< HEAD\n')
+        baseline = tmp_path / 'baseline.json'
+        baseline.write_text(json.dumps({
+            'defect_count': 5, 'defects_by_type': {'conflict_marker': 5}}))
+        assert main(['--output', str(tmp_path), '--baseline', str(baseline)]) == 1

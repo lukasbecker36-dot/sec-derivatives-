@@ -14,17 +14,6 @@
 [LLM_FLAG] Master netting offset amounts moved in step with the fair-value decline: gross derivative assets/liabilities subject to legally enforceable master netting agreements were "$696 million and $578 million" at September 30, 2026 versus "$2.2 billion and $1.4 billion" at June 30, 2026. No collateral was required to be posted ("our long-term unsecured debt rating was AAA, and cash investments were in excess of $1.0 billion").
 [LLM_FLAG] fx_sensitivity_10pct / fx_investment_sensitivity (the FX-on-investments fair-value sensitivity) moved from $(5)M to $(8)M, a 60% increase that crosses the 50% threshold, though the absolute dollar change is only $3M and the filing gives no explanation. By contrast, the much larger fx_revenue_sensitivity figure (earnings impact from a 10% FX move on revenue) only moved from $(13,653)M to $(14,451)M, ~6%.
 
-<<<<<<< HEAD
-=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-11 ===
-[HISTORICAL] [NUMERIC] total_derivative_asset: $320M → $1,080M (+237.5%) — exceeds 20% threshold
-[HISTORICAL] [NUMERIC] total_derivative_liability: $-907M → $-671M (+26.0%) — exceeds 20% threshold
-[HISTORICAL] [NUMERIC] net_derivative_position: $-587M → $409M (+169.7%) — exceeds 20% threshold
-[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-7M → $-5M (+28.6%) — exceeds 20% threshold
-[HISTORICAL] [NUMERIC] equity_sensitivity_10pct: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
-[HISTORICAL] [NUMERIC] fx_investment_sensitivity: $-7M → $-5M (+28.6%) — exceeds 20% threshold
-[HISTORICAL] [NUMERIC] equity_price_sensitivity: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
-[HISTORICAL] [LLM_FLAG] Located section is the Note 1 'Financial Instruments' accounting-policy text; the investments fair value and derivatives tables live in a separate Investments/Derivatives note not captured here
-=======
 === 10-K | Period ending 2026-06-30 | Processed 2026-07-30 ===
 [NUMERIC] fx_not_designated_notional: $14,050M → $63,465M (+351.7%) — exceeds 20% threshold
 [NEW_FIELD] commodity_derivatives_notional: appeared for first time ($0M)
@@ -58,7 +47,16 @@
 [LLM_FLAG] engaged in substantial use of equity derivatives with a net amount (purchased and sold) declining (7198 vs. 7364 in prior).
 [LLM_FLAG] interest_rate_sensitivity changed from -1462 to -1230, a reduction of more than 50%, indicating a potential change in interest rate risk management strategy.
 [LLM_FLAG] equity_sensitivity_10pct changed from -1847 to -2248, indicating an increase in sensitivity to equity market price changes.
->>>>>>> origin/master
+
+=== 10-Q | Period ending 2026-03-31 | Processed 2026-06-11 ===
+[HISTORICAL] [NUMERIC] total_derivative_asset: $320M → $1,080M (+237.5%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] total_derivative_liability: $-907M → $-671M (+26.0%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] net_derivative_position: $-587M → $409M (+169.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_sensitivity_10pct: $-7M → $-5M (+28.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] equity_sensitivity_10pct: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] fx_investment_sensitivity: $-7M → $-5M (+28.6%) — exceeds 20% threshold
+[HISTORICAL] [NUMERIC] equity_price_sensitivity: $-1,847M → $-2,248M (-21.7%) — exceeds 20% threshold
+[HISTORICAL] [LLM_FLAG] Located section is the Note 1 'Financial Instruments' accounting-policy text; the investments fair value and derivatives tables live in a separate Investments/Derivatives note not captured here
 
 === 10-Q | Period ending 2025-12-31 | Processed 2026-06-11 ===
 [HISTORICAL] [NUMERIC] total_derivative_asset: $1,575M → $320M (-79.7%) — exceeds 20% threshold
