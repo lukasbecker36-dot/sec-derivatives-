@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-09 ===
+[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $57M, now missing
+[DISAPPEARED_FIELD] foreign_currency_sales_percentage: was $33M, now missing
+[VALIDATION] Likely extraction failure: 4/6 previously-populated fields are now null (ir_swap_notional, fx_forwards_outstanding, fx_sensitivity_10pct, foreign_currency_sales_percentage)
+[LLM_FLAG] fx_derivatives_notional / fx_designated_notional fell from $130M (June 30, 2026) to $120M (Sept 30, 2026) — explained by the text: the cross-currency swap has scheduled interim settlement dates that 'reduce the notional on the hedging instrument by $10 million at each interim date, and will reduce the notional to $110 million at maturity,' so this is a planned amortization, not a new transaction or ineffectiveness.
+[LLM_FLAG] Forward-starting swap cash flow hedges, which reclassified $(1,921) thousand of losses into interest expense in the quarter ended Sept 30, 2025, show $0 gain/loss recognized and $0 reclassified in the quarter ended Sept 30, 2026 ('Forward starting swaps $ — / $ —'), and the Note 7 AOCI rollforward for the current quarter no longer carries a separate 'Unrealized Gains (Losses) on Derivative Instruments' column (only Foreign Currency Translation Adjustments / Total), unlike the Sept 30, 2025 comparative table which still shows that column with an $871 thousand balance — consistent with that interest-rate cash-flow-hedge program having fully rolled off between the two periods.
+[LLM_FLAG] No derivative fair-value (balance sheet) table is present in the supplied excerpt — only the notional table and the OCI gain/loss tables — so total_derivative_asset/liability and net_derivative_position could not be extracted from this section and should not be assumed zero.
+[LLM_FLAG] The entire Item 3 section is a single boilerplate sentence incorporating the prior 10-K by reference: "The Company's exposure to market risk from changes in interest rates and currency exchange rates has not changed materially from its exposure discussed in the Company's Annual Report on Form 10-K for the year ended June 30, 2026." No updated quantitative disclosures (FX sensitivity, exchange-rate table, equity sensitivity, hedging policy) are present in this 10-Q, so all schema fields are null/not_found per instructions rather than carried forward from prior_values (e.g. the FY2026 10-K's $57.04M FX sensitivity or 33% foreign-currency sales figure) — those older figures should not be re-quoted as current without checking the FY2026 10-K text itself.
+
 === 10-K | Period ending 2026-06-30 | Processed 2026-08-26 ===
 [DISAPPEARED_FIELD] marketable_equity_securities_fv: was $4M, now missing
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $130M, now missing

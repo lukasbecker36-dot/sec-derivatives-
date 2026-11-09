@@ -1,3 +1,18 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-09 ===
+[NUMERIC] total_derivative_asset: $16M → $106M (+562.5%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $292M → $66M (-77.4%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-276M → $40M (+114.5%) — exceeds 20% threshold
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($8M)
+[NUMERIC] expected_12mo_reclass_from_aoci: $-112M → $8M (+107.1%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_asset rose from $16M (prior) to $106M (current), +563%. The filing gives no explicit narrative explanation for this; the increase in asset fair value is consistent with the larger EUR/CNH/HKD hedge notional outstanding this period, but that linkage is not stated in the text.
+[LLM_FLAG] total_derivative_liability fell from $292M (prior) to $66M (current), -77%. No explicit explanation given in the text; consistent with FX rate moves but not stated.
+[LLM_FLAG] net_derivative_position swung from -$276M (prior, net liability) to +$40M (current, net asset). Driven by the asset/liability moves above; filing does not narrate the swing.
+[LLM_FLAG] expected_12mo_reclass_from_aoci flipped sign from -$112M (prior) to +$8M (current, described as pre-tax gains). Filing states the new figure directly but does not explain the shift from losses to gains deferred in AOCI.
+[LLM_FLAG] cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci are both sourced from a single sentence that describes the deferred AOCI balance and the 12-month reclass amount as the same $8 million figure (i.e. the entire deferred cash-flow-hedge AOCI balance appears to be expected to reclassify within 12 months) -- flagging in case the pipeline expects these as structurally distinct figures from separate disclosures.
+[LLM_FLAG] Net investment hedge AOCI (non-derivative, foreign-currency-denominated debt) swung from $(260)M (nine months 2025) to $53M (nine months 2026) -- a sign flip from a large loss to a modest gain. Not in schema but newsworthy for FX hedging coverage: quote -- 'Foreign currency denominated debt\t\t$\t53... Total\t\t$\t53' vs prior-year '$\t( 260 )'.
+[LLM_FLAG] FX cash-flow-hedge gain/loss reclassified to Revenue (nine months) flipped from a $44M gain (2025) to a $(45)M loss (2026) -- also a sign flip, not captured by any field in this schema but worth noting editorially: quote -- 'Amount of gain or (loss) reclassified from accumulated other comprehensive income\t\t$\t( 5 )\t\t\t$\t( 17 )\t\t\t$\t( 45 )\t\t\t$\t44'.
+[LLM_FLAG] This Item 3 Market Risk section contains no substantive disclosure -- the entire section_text is a cross-reference stub ('...in our Annual Report on Form 10-K.'), meaning UPS incorporated its quantitative/qualitative market-risk disclosure by reference to the 10-K rather than repeating or updating it in this 10-Q. Every schema field is genuinely not_found in this section, not a result of extraction failure -- the underlying derivative notional/fair-value data for this period does live in the companion derivatives_note section of the same filing (see that section's result), just not in this one.
+
 === 10-Q | Period ending 2025-06-30 | Processed 2026-10-13 ===
 [NUMERIC] total_derivative_asset: $75M → $16M (-78.7%) — exceeds 20% threshold
 [NUMERIC] total_derivative_liability: $77M → $292M (+279.2%) — exceeds 20% threshold

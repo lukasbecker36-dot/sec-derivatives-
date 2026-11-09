@@ -1,3 +1,15 @@
+=== 10-K | Period ending 2026-09-30 | Processed 2026-11-09 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($24M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $18M, now missing
+[DISAPPEARED_FIELD] revolving_credit_facility: was $3M, now missing
+[VALIDATION] Likely extraction failure: 2/2 previously-populated fields are now null (equity_sensitivity_10pct, revolving_credit_facility)
+[LLM_FLAG] equity_sensitivity_10pct: prior_values carried 18.007 for this field, but this period's market risk section contains no equity price risk / marketable equity securities disclosure at all — returned null/not_found. Verify whether FICO still holds the equity position or whether that line item was dropped from this filing's disclosure.
+[LLM_FLAG] revolving_credit_facility: prior_values shows 3.4 (likely $3.4B), while this period's combined revolver + term loan borrowings are only ~$1.9B ($700.0M revolving line + $1.2B term loan) — an apparent >50% decline. Note this period's total Senior Notes face value is coincidentally also $3,400,000K ($3.4B); flag that the prior extraction may have mixed the Senior Notes total into the credit-facility field rather than reflecting an actual paydown — verify against the filing.
+[LLM_FLAG] Newsworthy — debt refinancing: the 2018 Senior Notes were fully redeemed/matured between periods (face value $400,000K and fair value $399,500K at Sept 30, 2025, down to $0 at Sept 30, 2026) while a new 2026 Senior Notes tranche was issued ($1,000,000K face value, $887,500K fair value), lifting total Senior Notes face value to $3,400,000K from $2,800,000K year-over-year.
+[LLM_FLAG] Newsworthy — FX hedging is narrowly scoped and immaterial: the filing states FX forward contracts (EUR/GBP/SGD, all maturities under three months, used solely to hedge existing receivables/cash balances — 'We do not use derivative financial instruments for speculative or trading purposes') had exactly $0 fair value at both Sept 30, 2026 and Sept 30, 2025, 'entered into on [the balance sheet date] ... therefore, their fair value was $0 at each of these dates.'
+[LLM_FLAG] Newsworthy — elevated borrowing costs: revolving credit facility and term loan variable-rate borrowings carry weighted-average rates of 5.873% and 5.761% respectively as of Sept 30, 2026, per the credit agreement's SOFR-plus-margin structure tied to the company's consolidated leverage ratio.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($18M)
 [NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)

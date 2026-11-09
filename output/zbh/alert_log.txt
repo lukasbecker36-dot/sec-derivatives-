@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-09 ===
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $3,455M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $1,250M, now missing
+[NUMERIC] cash_flow_hedge_aoci: $54M → $22M (-59.1%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $22M → $35M (+55.1%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 2/5 previously-populated fields are now null (fx_derivatives_notional, fx_not_designated_notional)
+[LLM_FLAG] cash_flow_hedge_aoci: deferred net unrealized gain in AOCI fell to $22.2 million (pretax) from the prior extracted $54.3 million, a decline of roughly 59%; the filing gives no explanation for the change.
+[LLM_FLAG] expected_12mo_reclass_from_aoci: net expected 12-month reclassification is $34.9 million ($35.7M gain in cost of products sold less $0.8M loss in interest expense, net), up from the prior extracted $22.5 million (about +55%); no explanation given in the text.
+[LLM_FLAG] fx_not_designated_notional: the filing states only a general range ('generally in a range of $1.25 billion to $1.75 billion per quarter') for not-designated FX forward notionals rather than a specific period-end figure; returned null rather than estimating a midpoint or carrying forward the prior value of $1,250.0 million.
+[LLM_FLAG] fx_derivatives_notional: cannot be combined reliably — the cross-currency interest rate swap notionals used as net investment hedges are stated in foreign currency (Japanese Yen 54.1 billion and Swiss Franc 290 million), not USD millions, and no FX rate is given in this section to convert them; returned null rather than estimating a conversion.
+[LLM_FLAG] Newsworthy — net investment hedge unwind activity: 'In the nine-month period ended September 30, 2026, Swiss Franc 50 million of our cross-currency interest rate swaps matured at a loss of $8.9 million and Japanese Yen 24.1 billion of our cross-currency interest rate swaps matured at a gain of $26.2 million.'
+[LLM_FLAG] Newsworthy — multi-instrument net investment hedge program: Swiss Franc notes (issued September 2025) plus receive-fixed/pay-fixed cross-currency interest rate swaps (JPY 54.1bn and CHF 290mn notional) are both designated to hedge net investments in foreign subsidiaries with Swiss Franc and Japanese Yen functional currencies.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $2,095M, now missing
 [DISAPPEARED_FIELD] fi_fx_designated_notional: was $2,095M, now missing

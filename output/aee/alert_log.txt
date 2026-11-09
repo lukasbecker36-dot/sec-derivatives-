@@ -1,3 +1,19 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($490M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($107M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($100M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($7M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $940M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $45M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $126M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-81M, now missing
+[VALIDATION] Likely extraction failure: 4/4 previously-populated fields are now null (cash_flow_hedge_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct)
+[LLM_FLAG] ir_swap_notional fell from $820 million (12/31/2025) to $490 million (9/30/2026), a ~40% decline. The text explains these swaps hedge 'forecasted interest payments associated with debt issuances in 2026 and 2027' and are reclassified into earnings 'when the debt is issued' -- consistent with partial debt issuance/swap settlement during the quarter, but the filing does not state this explicitly, so it should be verified before writing that as the cause.
+[LLM_FLAG] cash_flow_hedge_aoci could not be extracted this quarter (prior value on file: $940M). The section only discloses the period's OCI activity on the interest rate swaps -- 'unrealized net gains (losses) ... of $ 34 million and $ 38 million for the three and nine months ended September 30, 2026' -- not the cumulative AOCI balance. Do not compute or imply a change in the AOCI balance from this figure; it is a flow, not the ending balance.
+[LLM_FLAG] Newsworthy: all commodity derivative contracts (fuel oil, natural gas, power) are explicitly undesignated for hedge accounting -- 'none of which were designated as hedging instruments because all qualify for regulatory deferral' -- so their mark-to-market moves bypass earnings entirely via regulatory assets/liabilities; the only designated (cash flow) hedges on the balance sheet are the parent-level interest rate swaps.
+[LLM_FLAG] equity_derivatives_notional has an odd prior value on file ('Yes', a string, for what should be a numeric notional field) -- likely an upstream data/schema issue unrelated to this filing, since no equity derivatives are mentioned in this section at all.
+[LLM_FLAG] This quarter's Item 3 text is pure incorporation-by-reference boilerplate: 'There have been no material changes to the quantitative and qualitative disclosures about interest rate risk, credit risk, commodity price risk, investment price risk, and commodity supplier risk included in the Form 10-K. See Item 7A under Part II of the Form 10-K for a more detailed discussion of our market risk.' It restates no sensitivity figures, notionals, or balances, so every field above is null/not_found by design, not evidence of a change from the prior-period figures on file (fx_transaction_gain_loss=45, ir_sensitivity_100bp=126, fx_sensitivity_10pct=-81). Those prior figures should be treated as last confirmed, not refreshed, this quarter.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-04 ===
 [DISAPPEARED_FIELD] fx_designated_notional: was $31M, now missing
 [NUMERIC] ir_swap_notional: $2,026M → $940M (-53.6%) — exceeds 20% threshold

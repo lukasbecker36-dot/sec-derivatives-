@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-09 ===
+[NEW_FIELD] ir_swap_notional: appeared for first time ($7,500M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($51M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $7,250M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $0M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $20M, now missing
+[NUMERIC] ir_sensitivity_100bp: $1,746M → $-803M (-146.0%) — exceeds 20% threshold
+[NUMERIC] investment_portfolio_duration: $-766M → $3M (+100.4%) — exceeds 20% threshold
+[NEW_FIELD] fair_value_sensitivity: appeared for first time ($-803M)
+[NEW_FIELD] unrealized_loss_position: appeared for first time ($-1,600M)
+[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (cash_flow_hedge_aoci, expected_12mo_reclass_from_aoci, fx_transaction_gain_loss)
+[VALIDATION] Likely units mismatch: investment_portfolio_duration changed from -766 to 3 (0x)
+[LLM_FLAG] total_derivative_asset: prior value was $0M; this filing shows $57M (swap asset fair value) with no explicit quantitative explanation in the text for the move from zero, beyond the routine remeasurement of the fixed-to-floating interest rate swaps.
+[LLM_FLAG] Confidence on total_derivative_asset is medium because the section_text is truncated at the start of that sentence (begins mid-word 'ap assets'); the preceding word is almost certainly 'Sw[ap]' given the parallel 'swap liabilities' reference immediately after, but the leading characters are not literally present in the supplied text.
+[LLM_FLAG] equity_derivatives_notional: prior_values shows a string 'Yes' in a notional (numeric) field, which looks like a pre-existing data integrity issue upstream of this extraction; current section_text contains no equity derivatives notional, so null/not_found was returned rather than carrying forward a non-numeric prior value.
+[LLM_FLAG] ir_sensitivity_100bp / fair_value_sensitivity: prior value was $1,746M but this filing states a 1% rate increase would decrease portfolio fair value by only $803M — more than a 50% drop in magnitude and an apparent sign convention change (text explicitly describes a decrease, so -803 was recorded; if the prior $1,746 also represented a decrease recorded as a positive number, the sign conventions between periods are inconsistent and should be reconciled before comparing).
+[LLM_FLAG] investment_portfolio_duration: prior_values holds -766.0 for this field, which is inconsistent with a duration-in-years quantity and looks like a value from a different field (e.g. a dollar sensitivity figure) landing in the wrong slot upstream. The current filing explicitly states duration of 3.2 years (vs. 3.6 years at December 31, 2025), which is what was recorded here; the prior value should be treated as suspect/corrupted rather than as evidence of a real swing.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-07-30 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($0M)
 [NEW_FIELD] ir_swap_notional: appeared for first time ($7,250M)

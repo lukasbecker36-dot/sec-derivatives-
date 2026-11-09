@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-09 ===
+[DISAPPEARED_FIELD] ir_swap_notional: was $1,500M, now missing
+[NUMERIC] expected_12mo_reclass_from_aoci: $9M → $15M (+66.7%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $75M, now missing
+[DISAPPEARED_FIELD] fx_forward_notional_net_investment_hedge: was $75M, now missing
+[DISAPPEARED_FIELD] ir_swap_gain_loss_oci: was $20M, now missing
+[DISAPPEARED_FIELD] ir_swap_reclassified_from_aoci: was $-3M, now missing
+[DISAPPEARED_FIELD] aoci_reclassification_next_12m: was $9M, now missing
+[DISAPPEARED_FIELD] total_return_swap_fair_value: was $0M, now missing
+[VALIDATION] Likely extraction failure: 7/10 previously-populated fields are now null (ir_swap_notional, fx_forwards_outstanding, fx_forward_notional_net_investment_hedge, ir_swap_gain_loss_oci, ir_swap_reclassified_from_aoci...)
+[LLM_FLAG] expected_12mo_reclass_from_aoci rose from $9M (prior period) to $15 million (+67%). The filing attributes the estimate only to "current Secured Overnight Financing (“SOFR”) interest rates" and gives no further quantitative explanation for the increase.
+[LLM_FLAG] Total return swap contracts used as an economic (non-designated) hedge of Executive Income Deferral (EID) plan liabilities — an exotic instrument type for this issuer: "We have entered into total return swap derivative contracts, with the objective of reducing our exposure to market-driven changes in certain of the liabilities associated with compensation deferrals into our Executive Income Deferral (“EID”) plan. While these total return swaps represent economic hedges, we have not designated them as hedges for accounting purposes." Fair value remains immaterial: "The fair value associated with the total return swaps as of both September 30, 2026 and December 31, 2025, was not significant."
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
 [NEW_FIELD] ir_swap_notional: appeared for first time ($1,500M)
 [NUMERIC] expected_12mo_reclass_from_aoci: $4M → $9M (+125.0%) — exceeds 20% threshold

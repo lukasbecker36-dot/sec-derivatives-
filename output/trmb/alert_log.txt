@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-10-02 | Processed 2026-11-09 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $461M, now missing
+[NUMERIC] fx_forward_purchased_notional: $-428M → $-318M (+25.6%) — exceeds 20% threshold
+[NUMERIC] fx_forward_purchased_fv: $-1M → $0M (+110.0%) — exceeds 20% threshold
+[NUMERIC] fx_revenue_impact: $9M → $1M (-93.6%) — exceeds 20% threshold
+[LLM_FLAG] fx_revenue_impact fell from prior 9.4 to 0.6 (current-quarter basis, -94%); text states only the dollar impact and gives no reason for the smaller effect this quarter (nine-month YTD impact was $33.6M, also disclosed).
+[LLM_FLAG] fx_forward_purchased_fv flipped sign from prior -1.0 to 0.1; filing gives no specific explanation beyond routine mark-to-market revaluation of the forward book.
+[LLM_FLAG] primary_fx_exposures changed composition versus prior filing: Norwegian Krone is no longer listed among hedged currencies and South African Rand has been added — 'primarily denominated in Euro, New Zealand Dollars, Indian Rupee, Canadian Dollars, and South African Rand.'
+[LLM_FLAG] Deal-contingent/M&A-linked hedging disclosed: 'We occasionally enter into foreign currency exchange contracts to hedge the purchase price of some of our larger business acquisitions.'
+
 === 10-Q | Period ending 2026-07-03 | Processed 2026-08-14 ===
 [NUMERIC] fx_forward_purchased_notional: $367M → $-428M (-216.6%) — exceeds 20% threshold
 [NUMERIC] fx_forward_sold_notional: $51M → $33M (-34.3%) — exceeds 20% threshold

@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-09 ===
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[VALIDATION] Likely extraction failure: 1/2 previously-populated fields are now null (fx_forwards_outstanding)
+[LLM_FLAG] Section extraction failure: section_text for derivatives_note is only the table-of-contents line 'Note 3 – Derivative Financial Instruments	15', not the actual note body. No notional, fair-value, or AOCI figures are present in the extracted text, so every quantitative field is not_found rather than genuinely absent from the filing. Needs re-extraction with corrected section boundaries (accession 0001193125-26-451216) before this row can be trusted.
+[LLM_FLAG] commodity sensitivity ($625 million per 10% forward-curve move) is up from $350 million in the prior quarter, a ~79% increase — text states: 'a 10% change in the forward curves associated with our commodity derivative instruments would have changed our net positions by approximately $625 million.' Nothing in this section explains the increase (no change in hedged volumes or strategy is described); likely driven by a larger/ longer hedge book (production now covered through 2027 and 2028, vs six months of 2026-2027 previously) and/or more volatile forward curves — verify against Note 3 before quoting.
+[LLM_FLAG] Total debt fell from $11.4 billion to $10.6 billion and the prior-quarter $750 million variable-rate Term Loan is no longer mentioned — this quarter's text describes total debt as entirely 'debentures and notes with fixed interest rates.' Possible retirement/refinancing of the variable-rate tranche; worth confirming in Note on debt before reporting as a full payoff, since this section may simply be omitting it rather than describing a payoff.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
 [DISAPPEARED_FIELD] total_derivative_asset: was $126M, now missing
 [DISAPPEARED_FIELD] total_derivative_liability: was $577M, now missing

@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-09 ===
+[LLM_FLAG] fx_derivatives_notional/fx_designated_notional is a computed sum of two separately disclosed designated FX notional amounts ($2.4bn cash flow hedge notional + $1.2bn net investment hedge notional, equivalent); the filing does not state a single combined total in this text -- verify against the filing before quoting a single '$3.6 billion FX notional' figure.
+[LLM_FLAG] Collateral/margin: 'the Company was required to post $ 8 million of collateral due to the negative fair value of certain derivative positions' as of September 30, 2026 -- worth noting for counterparty credit-risk coverage.
+[LLM_FLAG] No fair-value balance-sheet table (derivative assets/liabilities) is present in this section excerpt -- it begins mid-table on an effectiveness/gain-loss line ('Undesignated derivatives ... $(18) ... $1'), so total_derivative_asset, total_derivative_liability and net_derivative_position could not be extracted from this text.
+[LLM_FLAG] Market risk section is boilerplate: 'There were no material changes to the disclosures made in the Company's Annual Report on Form 10-K for the year ended December 31, 2025 regarding these matters.' No quantitative figures are reproduced in this quarter's section, so all fields are not_found by design, not extraction failure.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $4,200M, now missing
 [DISAPPEARED_FIELD] fi_fx_designated_notional: was $4,200M, now missing

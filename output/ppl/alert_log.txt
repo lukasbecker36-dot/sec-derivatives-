@@ -1,3 +1,10 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-09 ===
+[NUMERIC] total_derivative_asset: $2M → $3M (+50.0%) — exceeds 20% threshold
+[LLM_FLAG] commodity_derivatives_notional left null: RIE's gas book is disclosed only as a physical volume ('notional volumes of 52 Bcf'), not a dollar notional, so it cannot be populated as a USD-millions figure without fabricating a conversion.
+[LLM_FLAG] Section text truncates mid-sentence inside the Credit Risk-Related Contingent Features discussion ('...permit the counterparties to require the transfer of additional collateral upon a decrease in the cr'), so any rating-trigger / contingent-collateral detail is incomplete in this extract and nothing further should be inferred from it.
+[LLM_FLAG] Regulatory deferral accounting, not hedge-accounting designation, is what shields LG&E's interest rate swaps and RIE's gas derivatives from earnings: 'any subsequent changes in fair value of these derivatives are included in regulatory assets or liabilities until they are realized.' Worth flagging for readers unfamiliar with rate-regulated utility derivatives accounting, since it explains why economic (non-designated) hedges here don't hit P&L the way they would at an unregulated corporate.
+[LLM_FLAG] Item 3 market_risk section_text contains only a cross-reference ('Reference is made to "Risk Management" in ... Item 2. Combined Management's Discussion and Analysis') with no quantitative content in this extract, so every schema field is null/not_found rather than inferred from the referenced MD&A section, which was not included in section_text.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] ir_swap_notional: $84M → $64M (-23.8%) — exceeds 20% threshold
 [NUMERIC] total_derivative_asset: $5M → $2M (-60.0%) — exceeds 20% threshold

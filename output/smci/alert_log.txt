@@ -1,3 +1,9 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-09 ===
+[DROPPED_TO_ZERO] total_cash_equivalents_fv: $0M → $0M
+[LLM_FLAG] total_cash_equivalents_fv: all money market funds ($61.146M) moved out of cash-and-cash-equivalents into 'other assets' as of Sept 30, 2026, per footnote: 'All of the money market funds are included in other assets in the condensed consolidated balance sheet as of September 30, 2026, and in cash and cash equivalents and other assets as of June 30, 2026.' We extracted 0 (not the $61.146M money-market-fund line) because the filing explicitly states none of it sits in cash and cash equivalents this period; do not read the $61.146M total as cash-equivalents fair value.
+[LLM_FLAG] Unrealized mark-to-market reversal on the marketable equity security: 'an unrealized loss of $8.0 million was recorded in other expense, net' for Q1 FY2027 (three months ended September 30, 2026), versus 'an unrealized gain of $8.0 million' in the year-ago quarter -- a swing worth noting even though the underlying position (~$15.1M fair value) is small.
+[LLM_FLAG] No derivatives (FX, interest-rate, or otherwise) are disclosed anywhere in this note -- it covers only cash/MMF/CD/equity-security fair value and debt fair-value-for-disclosure-purposes; all notional and derivative-asset/liability schema fields are not_found for this filing.
+
 === 10-Q | Period ending 2026-03-31 | Processed 2026-10-09 ===
 [NUMERIC] total_cash_equivalents_fv: $60M → $0M (-100.0%) — exceeds 20% threshold
 [NUMERIC] marketable_equity_securities_fv: $23M → $15M (-36.4%) — exceeds 20% threshold

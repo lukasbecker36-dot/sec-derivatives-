@@ -1,3 +1,13 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-09 ===
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($95M)
+[NEW_FIELD] cross_currency_notional_amount: appeared for first time ($1,275M)
+[NEW_FIELD] cross_currency_fair_value_2025: appeared for first time ($406M)
+[LLM_FLAG] fixed_rate_notes_billion is read from the aggregate 'Fixed Rate' row total ($94,884M) in the interest-rate-risk debt table, not from a notes-only disclosure; this total likely blends fixed-rate credit facility debt with senior notes, so it may overstate notes specifically.
+[LLM_FLAG] cross_currency_notional_amount is denominated in British pounds (£1.275 billion), not USD; no exchange rate is given in this section so no conversion was applied — treat the 1275 value as GBP millions, not USD millions.
+[LLM_FLAG] cross_currency_fair_value_2024 ($504M expected per schema hint) is not stated anywhere in this section_text, which only gives September 30, 2026 ($387M) and December 31, 2025 ($406M) — correctly left null rather than carried forward from a prior period.
+[LLM_FLAG] Newsworthy: the cross-currency swaps hedging the £1.275bn Sterling Notes sit in 'other long-term liabilities' (a liability position) and their fair value moved from $406M (12/31/25) to $387M (9/30/26); the filing gives no explanation for the $19M move.
+[LLM_FLAG] Newsworthy: 87% of total debt is fixed-rate ($94,884M fixed vs $13,690M variable), with variable-rate debt pegged to forward SOFR plus bank spread — straightforward IR-risk disclosure, no derivatives overlay mentioned for the variable-rate book itself.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fx_derivatives_notional: was $1,275M, now missing
 [DISAPPEARED_FIELD] total_derivative_liability: was $483M, now missing
