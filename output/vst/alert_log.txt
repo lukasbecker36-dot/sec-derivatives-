@@ -1,3 +1,16 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-10 ===
+[DISAPPEARED_FIELD] ir_swap_notional: was $414M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $3,947M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $6,301M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-2,354M, now missing
+[VALIDATION] Likely extraction failure: 4/6 previously-populated fields are now null (ir_swap_notional, total_derivative_asset, total_derivative_liability, net_derivative_position)
+[LLM_FLAG] Section text appears to be sliced from Notes 1-3 (overview/subsequent events, acquisitions, revenue) and never reaches the actual derivatives/fair-value note (Note 13/14, referenced but not included in this excerpt) -- every notional, fair-value, and AOCI field returns not_found rather than being inferred from adjacent tables.
+[LLM_FLAG] Newsworthy: on October 26, 2026 (subsequent to the September 30, 2026 period end), Vistra Operations entered into $1.0 billion notional of interest rate swaps 'to reduce our interest rate exposure on $1.0 billion of expected future fixed rate debt issuances,' effective January 31, 2027 through January 31, 2037 -- a new pre-hedging programme not reflected in ir_swap_notional since it postdates the period and hedges debt not yet issued (prior period value was $414 million).
+[LLM_FLAG] The $417 million 'Commodity and other derivative contractual liabilities' line is the fair value of derivative liabilities assumed in the Lotus Acquisition purchase price allocation as of September 30, 2026 (final allocation, Level 1/2/3 per Note 14), not the company's total derivative book -- deliberately excluded from total_derivative_liability to avoid conflating an acquisition-date PPA fair value with the consolidated derivatives balance.
+[LLM_FLAG] Newsworthy credit concentration: 'Significant ( i.e. , 10% or greater) concentration of credit exposure exists with two counterparties, which represented an aggregate $252 million, or 37%, of our total net exposure of our wholesale segments as of September 30, 2026.'
+[LLM_FLAG] Newsworthy VaR trend: 95% confidence / 60-day holding period Average VaR rose to $384 million for the nine months ended September 30, 2026 from $224 million for full-year 2025, and High VaR rose to $491 million from $316 million -- a material increase in measured commodity-portfolio risk with no explanatory commentary given in this section.
+[LLM_FLAG] Cross-reference: this section states the period-end interest rate swap notional as 'net notional interest rate swaps that will hedge $411 million of our project-level debt through October 2045,' modestly below the $414 million prior-period value (no >50% move, no flag needed on that basis) -- but see the derivatives_note extraction for the same filing, which reports a new, unrelated $1.0 billion notional interest rate swap entered into as a subsequent event (Oct 26, 2026) to pre-hedge future fixed-rate debt issuance; that figure is not part of this period's $411 million balance.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-10-19 ===
 [NUMERIC] ir_swap_notional: $6,416M → $414M (-93.5%) — exceeds 20% threshold
 [NUMERIC] net_derivative_position: $-1,867M → $-2,354M (-26.1%) — exceeds 20% threshold

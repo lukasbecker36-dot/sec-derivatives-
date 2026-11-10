@@ -1,3 +1,25 @@
+=== 10-K | Period ending 2026-09-25 | Processed 2026-11-10 ===
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($876M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $5,755M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $5,755M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $770M, now missing
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $186M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $237M, now missing
+[NUMERIC] fx_sensitivity_10pct: $-51M → $594M (+1264.7%) — exceeds 20% threshold
+[NEW_FIELD] xccy_swap_unrealized_sensitivity: appeared for first time ($594M)
+[NEW_FIELD] commodity_hedge_fair_value: appeared for first time ($40M)
+[NEW_FIELD] commodity_hedge_notional: appeared for first time ($876M)
+[NEW_FIELD] commodity_sensitivity: appeared for first time ($92M)
+[VALIDATION] Likely extraction failure: 5/6 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, expected_12mo_reclass_from_aoci, fx_transaction_gain_loss, ir_sensitivity_100bp)
+[LLM_FLAG] section_text appears mis-extracted: it contains only the Item 7A commodity-hedging paragraph (the same paragraph also appears verbatim in the market_risk section), followed directly by Items 8-12 boilerplate (auditor report listing, controls and procedures, Rule 10b5-1 disclosures, equity compensation plan table). The actual derivatives/financial-instruments note (the filing itself says 'See Note 13 to the Consolidated Financial Statements for additional information regarding financial instruments') was not captured in this slice, so fair-value, AOCI, and most notional fields cannot be confirmed and are returned null rather than estimated -- re-extraction with a corrected section boundary is needed.
+[LLM_FLAG] prior_values shows total_derivative_asset and total_derivative_liability both at $5,755M (identical figures) -- cannot confirm from this text, but identical asset/liability totals is a pattern worth checking for a carry-forward or copy error in the prior extraction.
+[LLM_FLAG] prior_values for equity_derivatives_notional is the string 'Yes', not a dollar figure, which is inconsistent with this being a notional field -- likely a stray/misrouted value from a prior extraction (e.g. a has_derivatives answer landing in the wrong field); not confirmable from this text.
+[LLM_FLAG] commodity_derivatives_notional rose from $569 million (FY2025) to $876 million (FY2026, +54%) per this same text, while the hedges' net gain position fell from $80 million to $40 million (-50%) over the same period -- notional growth diverging sharply from the mark-to-market gain is worth noting to readers.
+[LLM_FLAG] ir_sensitivity_100bp: prior_values recorded $237M, but this filing states 'There were no such contracts and no floating debt outstanding at fiscal year end 2026 or 2025' -- i.e. TE Connectivity itself says no interest rate swap contracts existed in either fiscal year. That directly contradicts a nonzero prior IR sensitivity figure for FY2025; field is returned null/not_found here rather than carried forward, but the prior figure looks like a data-quality error, not a real wind-down this period.
+[LLM_FLAG] fx_sensitivity_10pct / xccy_swap_unrealized_sensitivity: current value is $594M vs prior_values of -$51M for fx_sensitivity_10pct (a >1000% difference). The filing's own FY2025 comparative, stated in the same sentence structure, is ALSO $594 million ('a 10% appreciation or depreciation ... from the fiscal year end 2025 market rates would have changed the unrealized value of our contracts by $594 million'), which contradicts the stored prior of -$51M. This reads as a prior-extraction error (wrong sign/wrong field) rather than a genuine swing -- nothing in this filing explains a move to -$51M.
+[LLM_FLAG] Commodity hedge notional grew from $569M to $876M (+54%) FY2025->FY2026 while the net gain position fell from $80M to $40M (-50%) over the same period, per figures stated directly in this filing -- notional growth diverging from mark-to-market value is worth flagging to readers.
+[LLM_FLAG] Counterparty concentration explicitly addressed: 'Substantially all counterparties to derivative financial instruments are limited to major financial institutions with at least an A/A2 credit rating. There is no significant concentration of exposures with any one counterparty.'
+
 === 10-Q | Period ending 2026-06-26 | Processed 2026-07-27 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($5,755M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($5,755M)

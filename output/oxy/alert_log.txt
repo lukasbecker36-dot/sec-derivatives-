@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-10 ===
+[NUMERIC] total_derivative_asset: $292M → $195M (-33.2%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $65M → $342M (+426.2%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $227M → $-147M (-164.8%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_liability rose from $65M (prior period) to $342M, a roughly 426% increase (>50% threshold). Partly explained by the new crude collar program: 'In February 2026, the Company entered into crude two-way collar derivative instruments...for the remainder of 2026 to manage its near-term exposure to cash flow variability from crude oil price risk', which moved to a $124M liability ('Crude Collars...Accrued liabilities ( 124 )...( 124 )'); the remainder is from a larger Marketing Derivatives liability position.
+[LLM_FLAG] net_derivative_position swung from a net asset of $227M (prior period) to a net liability of approximately $(147)M, a change of over 50%, driven by the same crude collar and marketing derivative liability growth noted above.
+[LLM_FLAG] Newsworthy: new crude oil two-way collar hedging programme initiated February 2026 ('the Company entered into crude two-way collar derivative instruments beginning in March for the remainder of 2026') covering 100 Mbbl/day with a $55.00 WTI floor and a weighted-average $75.89 WTI ceiling -- a hedge not present in prior-period filings.
+[LLM_FLAG] Newsworthy: crude collars recognized $(421)M of losses in net sales for the nine months ended September 30, 2026 versus $0 in the prior-year period ('Crude collars (included in net sales) $ ( 187 )...$ ( 421 )...$ —'), consistent with WTI trading above the $75.89 ceiling for a sustained period.
+[LLM_FLAG] Newsworthy: marketing derivative net short positions widened materially -- natural gas short position more than doubled from (189) Bcf to (407) Bcf, and oil short position widened from (59) MMbbl to (61) MMbbl ('Natural gas commodity contracts Volume (Bcf) ( 407 ) ( 189 )').
+[LLM_FLAG] This 10-Q's Item 3 market risk section is a bare incorporation-by-reference to the 2025 Form 10-K, with no quantitative sensitivities, VaR, debt figures, or commodity-price sensitivities restated this period: entire section_text is 'Quantitative and Qualitative Disclosures About Market Risk in the 2025 Form 10-K.' No figures can be extracted without fabricating or carrying forward prior-period data, which is disallowed.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-06 ===
 [NUMERIC] total_derivative_asset: $184M → $292M (+58.7%) — exceeds 20% threshold
 [NUMERIC] total_derivative_liability: $649M → $65M (-90.0%) — exceeds 20% threshold

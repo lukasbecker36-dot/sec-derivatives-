@@ -1,3 +1,20 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-10 ===
+[DROPPED_TO_ZERO] ir_swap_notional: $10,000M → $0M
+[NUMERIC] total_derivative_asset: $64M → $29M (-54.7%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-38M → $-60M (-57.9%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($16M)
+[NEW_FIELD] ir_sensitivity_100bp: appeared for first time ($145M)
+[LLM_FLAG] ir_swap_notional fell from $10,000M (prior) to $0: the filing explains this — the entire $10.0 billion of interest rate contracts (entered Q2 2026 ahead of WBD Merger debt issuance) was terminated on September 30, 2026, with $667M cash proceeds received in October 2026.
+[LLM_FLAG] total_derivative_asset fell from $64M (prior) to $29M (-54.7%), a >50% move; the filing gives the new fair-value table figure (foreign exchange contracts only) but does not narrate any explanation for the decline in FX contract asset fair value.
+[LLM_FLAG] net_derivative_position moved from -$38M (prior) to -$60M (-57.9%), a >50% move, driven by the same unexplained decline in FX contract asset fair value noted above; total_derivative_liability only moved modestly ($102M to $89M).
+[LLM_FLAG] Deal-contingent/merger-linked hedging: the $10.0 billion interest rate contracts were entered 'in connection with anticipated debt issuances associated with the WBD Merger and future debt refinancing' — a classic rate-lock program — and were terminated the same day the related debt priced, generating a $165M cash-flow-hedge gain (deferred to AOCI, amortized over 5- and 10-year tranches) plus a $502M non-designated gain for the nine months (quarter alone: $514M non-designated gain on IR contracts).
+[LLM_FLAG] New hedging instrument tied to bond pricing: 'we entered into fixed-for-fixed cross-currency swaps with a notional amount of $1.00 billion' designated as fair value hedges of the FX exposure on the newly priced €885 million (~$1.00 billion) 7.000% Euro Second Lien Senior Secured Notes due 2031 (issued October 5, 2026) — hedge put on before the notes were even issued, hedging both the firm commitment and the issued notes.
+[LLM_FLAG] Subsequent-event net investment hedge, WBD-Merger-linked: 'On October 6, 2026, concurrent with the borrowing of the €850 million Euro Term B-1 Loans..., we designated the principal amount of these loans as a hedge of our net investment in certain euro functional currency subsidiaries.'
+[LLM_FLAG] total_derivative_liability of $368M shown in the fair-value table is a blended total that includes $279M of deferred compensation liabilities (not a derivative) plus $89M of FX contracts; only the $89M FX-contract figure was used for total_derivative_liability to avoid conflating a non-derivative liability with the derivatives total.
+[LLM_FLAG] fx_forwards_outstanding left null per instructions: the derivatives_note section already reports FX notional figures, so this field is not used.
+[LLM_FLAG] ir_sensitivity_100bp ($145M) is a new, materially larger interest-rate exposure disclosure driven by the WBD Merger: as a subsequent event (Oct 6, 2026) the company borrowed $5.0B of Term A Loans and $8.5B plus €850 million of Term B-1 Loans, bringing aggregate variable-rate borrowings to approximately $14.5 billion — a sharp step-up in floating-rate debt load that the $145M/100bp sensitivity now reflects.
+[LLM_FLAG] The section notes fixed-for-fixed cross-currency swaps hedge the euro-denominated second lien notes (designated as fair value hedges) and the Euro Term B-1 Loans are designated as a net-investment hedge of euro functional-currency subsidiaries — consistent with, and cross-referenced to, Note 9's derivatives disclosures; see that section's flags for the underlying notional and gain/loss detail.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-09-30 ===
 [NUMERIC] fx_derivatives_notional: $2,920M → $6,840M (+134.2%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $2,500M → $6,280M (+151.2%) — exceeds 20% threshold

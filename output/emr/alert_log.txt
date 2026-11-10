@@ -1,3 +1,13 @@
+=== 10-K | Period ending 2026-09-30 | Processed 2026-11-10 ===
+[NUMERIC] fx_derivatives_notional: $3,900M → $2,900M (-25.6%) — exceeds 20% threshold
+[NEW_FIELD] total_derivative_asset: appeared for first time ($46M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($47M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-1M)
+[DISAPPEARED_FIELD] cash_flow_hedge_aoci: was $27M, now missing
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $0M, now missing
+[VALIDATION] Likely extraction failure: 2/3 previously-populated fields are now null (cash_flow_hedge_aoci, fx_forwards_outstanding)
+[LLM_FLAG] fx_derivatives_notional: declined from $3,900M (prior) to $2,900M, about a 26% drop; the filing does not state a reason for the lower notional (below the 50% mandatory-flag threshold but noted for context).
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-05 ===
 [NUMERIC] cash_flow_hedge_aoci: $20M → $27M (+35.0%) — exceeds 20% threshold
 [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $6M, now missing

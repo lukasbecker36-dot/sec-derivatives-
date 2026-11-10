@@ -1,3 +1,14 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-10 ===
+[NUMERIC] equity_sensitivity_10pct: $1,129M → $-1,155M (-202.3%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional: filing's own comparative shows notional moving from $1.4 billion (Dec 31, 2025) to $4.3 billion (Sept 30, 2026) -- roughly a 3x increase within the note -- with no stated driver for this specific line (unlike the commodity notional move, which is explicitly tied to Calpine).
+[LLM_FLAG] Commodity notional positions (disclosed only in volumetric units -- MWh/MMBtu/Short Ton, not a dollar notional, hence commodity_derivatives_notional=not_found) grew/shifted materially and is explicitly explained: "The increase in our net notional position as of September 30, 2026 compared to December 31, 2025 is primarily driven by derivatives acquired from Calpine."
+[LLM_FLAG] Credit-downgrade contingent collateral requirement rose from $2,670 million to $3,649 million (+37%): "Additional collateral required in the event of a credit downgrade below investment grade (at BB+/Ba1)... 3,649 ... 2,670".
+[LLM_FLAG] total_derivative_asset could not be extracted -- the 'Derivative assets' line items are cut off at the start of the provided section text; only the liability-side rows and the net total are visible, so the asset figure should not be derived or guessed.
+[LLM_FLAG] ir_sensitivity_100bp: filing discloses a 50 basis point (not 100bp) rate-move scenario, and gives no dollar figure -- only 'not material' -- so this does not literally match the requested 100bp sensitivity; reported as the closest available disclosure.
+[LLM_FLAG] equity_sensitivity_10pct: the $1,155 million figure is a combined scenario -- a 25bp interest-rate increase plus a 10% equity-price decrease applied together to NDT trust assets -- not an isolated 10%-equity-only sensitivity. Compare cautiously to prior_values (1,129), which likely reflects the same combined-scenario convention.
+[LLM_FLAG] fair_value_maturity_profile: the 2026 maturity bucket fell from $905M (prior-quarter comparator, per prior_values) to $196M (-78%) while 2027 rose from $642M to $1,130M (+76%) -- both swings exceed 50%. The filing text does not explain this directly; it is consistent with normal temporal roll-off as the year progresses (less of 2026 remains, so less fair value matures within it), but should be verified against the filing before quoting as unusual.
+[LLM_FLAG] Commodity derivative net asset position grew from $504M to $2,429M over the nine months, with $1,403M of that increase explicitly attributed to contracts acquired in the Calpine acquisition (closed January 2026): "Contracts acquired at acquisition date (b) 1,403 ... (b) Includes amounts related to contracts acquired as part of the Calpine acquisition in January 2026."
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] collateral_amounts: $1,683M → $2,283M (+35.7%) — exceeds 20% threshold
 

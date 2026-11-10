@@ -1,3 +1,32 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-10 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($6,077M)
+[NUMERIC] fx_designated_notional: $677M → $1,294M (+91.1%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $12,418M → $4,766M (-61.6%) — exceeds 20% threshold
+[NEW_FIELD] commodity_derivatives_notional: appeared for first time ($192M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $113M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $399M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $-286M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $10M, now missing
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-62M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($4M)
+[NEW_FIELD] fixed_rate_debt_face_value: appeared for first time ($4,492M)
+[NEW_FIELD] variable_rate_debt: appeared for first time ($682M)
+[NEW_FIELD] commodity_derivatives_fair_value: appeared for first time ($22M)
+[NEW_FIELD] commodity_sensitivity_10pct: appeared for first time ($20M)
+[VALIDATION] Likely extraction failure: 4/7 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, expected_12mo_reclass_from_aoci)
+[LLM_FLAG] fx_designated_notional rose from $677M (prior) to $1,294M (+91%). The note ties growth in designated FX hedging to ongoing cash-flow hedges of forecasted inventory purchases and the expanded Euro exposure from the JDE Peet's Acquisition financing, but gives no single reconciling figure for the increase.
+[LLM_FLAG] fx_not_designated_notional fell from $12,418M (prior) to $4,766M (-62%). Filing explains: 'we entered into FX forward contracts in 2025 and 2026 to reduce our exposure to exchange rate fluctuations associated with the [JDE Peet's] acquisition consideration and related financing... As of September 30, 2026, all of these contracts were settled' -- the large acquisition-related FX notional has rolled off.
+[LLM_FLAG] total_derivative_asset, total_derivative_liability and net_derivative_position are reported as not_found because this filing gives fair values only by balance-sheet caption across two tables (designated / not designated), with no single 'Total derivatives' line. For editorial reference only -- NOT a filing-stated figure, do not use for a percentage comparison -- summing the itemized captions yields assets ~$296M (18+11+141+20+101+5), liabilities ~$677M (37+8+35+503+66+1+27), i.e. net ~-$381M, versus prior extracted values of $113M / $399M / -$286M.
+[LLM_FLAG] M&A-linked hedges (newsworthy): 'in order to complete the JDE Peet's Acquisition on April 1, 2026, we had significant Euro-denominated cash outflows... We entered into FX forward contracts in 2025 and 2026 to reduce our exposure to exchange rate fluctuations associated with the acquisition consideration and related financing. As of September 30, 2026, all of these contracts were settled.'
+[LLM_FLAG] Programme terminated/restructured (newsworthy): 'In the fourth quarter of 2025 and the first quarter of 2026, we entered into forward starting swaps with an aggregate notional of approximately $3.5 billion and designated them as cash flow hedges. In March 2026, we terminated these contracts and issued the related Maple Notes... Upon termination, we received approximately $70 million to settle the contracts... We had no designated interest rate contracts outstanding as of September 30, 2026.'
+[LLM_FLAG] New hedging programme (newsworthy): 'During the second quarter of 2026, we designated certain of our Euro-denominated Maple Notes... as well as borrowings under our Delayed Draw Term Loan Agreement, as net investment hedges... the notional amount of our Euro-denominated debt designated as net investment hedges was $6,605 million. We recognized $4 million and $65 million of gains in other comprehensive income related to our net investment hedges during the third quarter and first nine months of 2026, respectively.'
+[LLM_FLAG] New instrument type (newsworthy): cross-currency contracts appear for the first time this period -- $978M notional (not designated), $11M asset, $66M liability -- versus zero/dash in the comparative period, tied to the JDE Peet's financing structure.
+[LLM_FLAG] Earnings swing on non-designated IR swaps (newsworthy): 'Interest rate contracts	Interest expense, net	$147...$143' for Q3/first nine months 2026 versus '$(1)...$(35)' a year earlier -- the new pay-variable swap book (not hedge-designated, $2,014M notional) swung from small gains to a $143-147M loss.
+[LLM_FLAG] fx_forwards_outstanding left not_found per schema instruction ('use only if derivatives_note fields above are empty') -- the companion derivatives_note extraction populated fx_designated_notional ($1,294M) and fx_not_designated_notional ($4,766M), so this fallback field was not used.
+[LLM_FLAG] No prior_values were supplied for this section (empty), so no period-over-period percentage comparisons were possible; all figures below are first-time disclosures in this filing.
+[LLM_FLAG] Newsworthy: this entire market-risk block is new -- added because 'our market risk exposure has changed as a result of the JDE Peet's Acquisition,' quantifying JDE Peet's standalone FX ($6,077M notional / -$62M per 10% Euro move) and commodity (coffee beans, $192M notional / $22M net asset / ±$20M per 10% move) derivative exposure and its $4,492M fixed- / $682M variable-rate debt mix for the first time.
+[LLM_FLAG] No equity price risk, FX transaction gain/loss, or quantified 100bp interest-rate sensitivity figure appears in this excerpt -- reported not_found rather than inferred.
+
 === 10-Q | Period ending 2025-09-30 | Processed 2026-09-23 ===
 [DISAPPEARED_FIELD] fx_derivatives_notional: was $5,906M, now missing
 [NUMERIC] fx_designated_notional: $1,351M → $677M (-49.9%) — exceeds 20% threshold
