@@ -1,3 +1,10 @@
+=== 10-K | Period ending 2026-10-02 | Processed 2026-11-11 ===
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
+[NEW_FIELD] fx_transaction_gain_loss: appeared for first time ($-1M)
+[DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
+[VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)
+[LLM_FLAG] fx_forwards_outstanding: filing states Skyworks had no outstanding FX forward or options contracts in fiscal 2026, 2025, or 2024 ('we had not entered into any outstanding foreign currency forward or options contracts with financial institutions') -- no active FX hedging programme despite disclosed FX exposure; company cites 'the prohibitive economic cost of hedging particular exposures' as a reason it may choose not to hedge.
+
 === 10-Q | Period ending 2026-07-03 | Processed 2026-07-30 ===
 [NEW_FIELD] fx_forwards_outstanding: appeared for first time ($0M)
 [DISAPPEARED_FIELD] ir_sensitivity_100bp: was $100M, now missing

@@ -1,3 +1,37 @@
+=== 10-K | Period ending 2026-09-30 | Processed 2026-11-11 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($128M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($128M)
+[NEW_FIELD] ir_swap_notional: appeared for first time ($2,750M)
+[NUMERIC] total_derivative_asset: $30M → $136M (+353.3%) — exceeds 20% threshold
+[DROPPED_TO_ZERO] total_derivative_liability: $30M → $0M
+[NEW_FIELD] net_derivative_position: appeared for first time ($136M)
+[NUMERIC] cash_flow_hedge_aoci: $2,750M → $97M (-96.5%) — exceeds 20% threshold
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($11M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $51M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $51M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $-3M, now missing
+[NEW_FIELD] variable_rate_debt_term_loans: appeared for first time ($12,803M)
+[NEW_FIELD] securitization_facility_balance: appeared for first time ($875M)
+[NEW_FIELD] fixed_rate_pct: appeared for first time ($75M)
+[NEW_FIELD] ir_sensitivity_1pct: appeared for first time ($95M)
+[NEW_FIELD] weighted_avg_interest_rate: appeared for first time ($6M)
+[NEW_FIELD] ir_collar_notional: appeared for first time ($6,438M)
+[NEW_FIELD] fx_forward_notional: appeared for first time ($128M)
+[NEW_FIELD] ir_swap_fair_value: appeared for first time ($73M)
+[NEW_FIELD] fx_forward_gain_loss: appeared for first time ($-3M)
+[VALIDATION] Likely extraction failure: 3/7 previously-populated fields are now null (fx_transaction_gain_loss, fx_sensitivity_10pct, marketable_equity_value)
+[LLM_FLAG] total_derivative_asset moved from 30.0 to 136 (+353%); text attributes this to rate moves: "The increase in the fair value of the interest rate swap and collar agreements is primarily attributable to increases in forward Term SOFR rates compared to September 30, 2025."
+[LLM_FLAG] total_derivative_liability moved from 30.0 to 0; same rate-move explanation applies (collars/swaps both show $— liability at 9/30/2026 vs $3 at 9/30/2025).
+[LLM_FLAG] cash_flow_hedge_aoci: prior pipeline value was 2750.0, which is suspiciously identical to the sum of the four interest rate swap tranche notionals in this filing (700+125+1025+900=2750) -- looks like a prior extraction miscoded a notional total into the AOCI field rather than reflecting an actual prior AOCI balance. The filing's own prior-period comparative for this line is $(4) million (9/30/2025) and $97 million (9/30/2026), not 2750. Treat the 2750 prior value as a known data-quality defect, not a real swing.
+[LLM_FLAG] equity_derivatives_notional: prior pipeline value is the string "Yes", not a numeric notional -- another apparent miscoding in the prior run (this filing discloses no equity derivatives at all).
+[LLM_FLAG] fx_sensitivity-adjacent note: nothing to flag here, but see market_risk request for related FX disclosure change.
+[LLM_FLAG] Newsworthy: new hedging activity -- "During the third quarter of fiscal 2026, the Company entered into new interest rate collar agreements aggregating to a notional amount of $ 800 million with an effective date of June 30, 2026 and maturity date of September 30, 2030. The rate floor is 2.50 % and cap is 4.50 %." This increases aggregate collar notional to $6,438 million across five tranches.
+[LLM_FLAG] Newsworthy: master netting / balance-sheet offsetting disclosed -- "Certain derivative asset and liability balances are offset where master netting agreements provide for the legal right of setoff," with the filing explicitly showing gross-vs-net asset/liability presentation by instrument type.
+[LLM_FLAG] ir_sensitivity_100bp / ir_sensitivity_1pct: prior pipeline value was 0.0, versus $95 million stated explicitly in this filing. The prior 0.0 looks like an extraction failure (this type of sensitivity disclosure is a standing, recurring item TransDigm discloses every period) rather than a genuine prior-period figure of zero.
+[LLM_FLAG] fx_sensitivity_10pct: prior pipeline value was a quantified $51 million; this period's filing gives only a qualitative statement -- "A 10% change in foreign currency exchange rates would not have resulted in a material impact to net income for the fiscal year ended September 30, 2026" -- with no dollar figure. Flagging the disclosure-form change (quantified -> qualitative "not material") rather than fabricating a number.
+[LLM_FLAG] fx_transaction_gain_loss: prior pipeline value was $51 million; this market_risk section contains no FX transaction gain/loss figure this period (may be disclosed elsewhere in the filing, e.g. an MD&A results-of-operations section, not captured in this excerpt).
+[LLM_FLAG] marketable_equity_value: prior pipeline value was $(3) million; this period's Item 7A text contains no equity price risk / marketable securities discussion at all -- worth checking whether TransDigm dropped an equity holding or the disclosure was simply omitted this period.
+
 === 10-Q | Period ending 2026-06-27 | Processed 2026-08-05 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($30M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($30M)

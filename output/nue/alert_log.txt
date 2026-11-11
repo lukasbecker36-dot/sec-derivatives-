@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-10-03 | Processed 2026-11-11 ===
+[NUMERIC] commodity_sensitivity_10pct: $31M → $46M (+48.4%) — exceeds 20% threshold
+[NUMERIC] commodity_sensitivity_25pct: $74M → $115M (+55.4%) — exceeds 20% threshold
+[NUMERIC] aoci_unrealized_losses: $2M → $12M (+500.0%) — exceeds 20% threshold
+[LLM_FLAG] aoci_unrealized_losses: $2M (prior, July 4, 2026) -> $12M (current), a 6x increase; the filing states the $12M figure but gives no explanation for the jump in unrealized net-of-tax hedge losses.
+[LLM_FLAG] other_commodity_derivative_sensitivity: 10%/25% impacts rose from $18M/$43M to $29M/$73M (+61%/+70%); text does not explain the increase in hedged exposure to steel, scrap, aluminum and copper.
+[LLM_FLAG] commodity_sensitivity_25pct (combined natural gas + other commodities): $74M -> $115M (+55%); driven by the other-commodities leg above, with no stated cause in the filing.
+
 === 10-Q | Period ending 2026-07-04 | Processed 2026-08-14 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,557M, now missing
 [DISAPPEARED_FIELD] total_marketable_securities_fv: was $255M, now missing

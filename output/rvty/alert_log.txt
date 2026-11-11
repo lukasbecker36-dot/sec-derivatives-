@@ -1,3 +1,17 @@
+=== 10-Q | Period ending 2026-10-04 | Processed 2026-11-11 ===
+[NUMERIC] fx_derivatives_notional: $233M → $284M (+21.8%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $233M → $284M (+21.8%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_swap_notional: was $0M, now missing
+[NUMERIC] total_derivative_asset: $1M → $0M (-38.7%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $1M → $1M (+86.3%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $0M → $-1M (-724.1%) — exceeds 20% threshold
+[LLM_FLAG] total_derivative_liability rose from $0.614M (prior extraction) to $1.144M (+86%); the filing characterizes these FX forward fair values only as 'insignificant' and gives no specific explanation for the quarter-over-quarter move.
+[LLM_FLAG] net_derivative_position flipped from a net asset (+$0.112M prior) to a net liability (-$0.699M) this period; same unexplained fair-value move as the liability flag above.
+[LLM_FLAG] Newsworthy: net-investment-hedge program wound down — 'In July 2026, the Company repaid upon maturity all of the outstanding 2026 Notes,' ending the net investment hedge designation that had been in place since fiscal 2018.
+[LLM_FLAG] Newsworthy: large AOCI swing tied to the net investment hedge — 'The unrealized foreign exchange losses (gains) recorded in AOCI related to the net investment hedge were $ 1.0 million and $( 16.2 ) million for the three and nine months ended October 4, 2026, and $( 1.2 ) million and $ 62.7 million for the three and nine months ended September 28, 2025' — a swing from a $62.7M nine-month gain a year ago to a $16.2M nine-month loss this year, plausibly linked to the notes' mid-year retirement.
+[LLM_FLAG] Master netting arrangements for FX derivatives involve no collateral as of both period ends — 'none of the master netting arrangements involved collateral' — worth noting for counterparty-risk context.
+[LLM_FLAG] No interest rate derivative instruments are outstanding at period end — 'However, no such instruments are outstanding at October 4, 2026' — despite the company's stated policy of periodically entering into derivatives to hedge known or forecasted interest rate exposures; no notional or sensitivity figure is given to quantify the (believed immaterial) exposure.
+
 === 10-Q | Period ending 2026-07-05 | Processed 2026-08-14 ===
 [DISAPPEARED_FIELD] total_marketable_securities_fv: was $23M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_asset: was $1M, now missing

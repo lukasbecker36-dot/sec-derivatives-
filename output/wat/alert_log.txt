@@ -1,3 +1,31 @@
+=== 10-Q | Period ending 2026-10-03 | Processed 2026-11-11 ===
+[DISAPPEARED_FIELD] fx_designated_notional: was $1,280M, now missing
+[DISAPPEARED_FIELD] fx_not_designated_notional: was $52M, now missing
+[NUMERIC] ir_swap_notional: $150M → $100M (-33.3%) — exceeds 20% threshold
+[NUMERIC] total_derivative_asset: $18M → $32M (+77.8%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $23M → $16M (-30.4%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-5M → $16M (+420.0%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $4M, now missing
+[DISAPPEARED_FIELD] fx_contract_notional_asset: was $43M, now missing
+[DISAPPEARED_FIELD] fx_contract_fair_value_asset: was $1M, now missing
+[DISAPPEARED_FIELD] fx_contract_notional_liability: was $9M, now missing
+[DISAPPEARED_FIELD] fx_contract_fair_value_liability: was $0M, now missing
+[DISAPPEARED_FIELD] cross_currency_swap_notional: was $1,280M, now missing
+[DISAPPEARED_FIELD] cross_currency_swap_fair_value_asset: was $17M, now missing
+[DISAPPEARED_FIELD] cross_currency_swap_fair_value_liability: was $22M, now missing
+[DISAPPEARED_FIELD] cross_currency_swap_aoci: was $-22M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional_asset: was $50M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional_liability: was $100M, now missing
+[DISAPPEARED_FIELD] ir_swap_aoci: was $-1M, now missing
+[DISAPPEARED_FIELD] cross_currency_swap_interest_earned: was $4M, now missing
+[VALIDATION] Likely extraction failure: 15/22 previously-populated fields are now null (fx_designated_notional, fx_not_designated_notional, fx_sensitivity_10pct, fx_contract_notional_asset, fx_contract_fair_value_asset...)
+[LLM_FLAG] total_derivative_asset rose from $18M (prior) to $32M (+78%) and net_derivative_position flipped from -$5M to +$16M (prior); text attributes swap fair-value swings to FX moves: "Unrealized gains (losses) on contracts from interest rate cross-currency swap agreements fluctuated year over year primarily due to changes in foreign exchange rates, which resulted in period-to-period variability."
+[LLM_FLAG] Cross-currency swap book flipped from a large net liability to a large net asset position within the same $1.3B aggregate notional: Dec 31, 2025 was $20M (Other assets notional) / $880M (Other liabilities notional); Oct 3, 2026 is $940M (Other assets notional) / $340M (Other liabilities notional) -- consistent with the FX-driven revaluation explanation above, but the magnitude of the swing (effectively ~$600M of notional moving from the liability side to the asset side) is worth a sentence for readers tracking FX moves.
+[LLM_FLAG] ir_swap_notional declined to $100M (all on the liability side) from $150M reported previously; the Dec 31, 2025 comparative in this table shows $50M asset-side / $100M liability-side notional, so the $50M asset-side swap tranche appears to have matured or unwound by Oct 3, 2026.
+[LLM_FLAG] No cash flow hedge ineffectiveness reported: "For the nine months ended October 3, 2026, the Company did not have any cash flow hedges that were deemed ineffective."
+[LLM_FLAG] fx_sensitivity_10pct: this section states only that a 10% adverse FX move on FX exchange contracts "would not have a material effect on pre-tax earnings" with no dollar figure given, whereas the prior extraction carried a quantified $4M for this field. Nothing here contradicts that prior figure -- the filing simply moved to qualitative language this quarter -- but the field cannot be quantified from this text and should not carry forward the old $4M.
+[LLM_FLAG] Newsworthy, not a schema field: foreign-held cash concentration rose materially -- "$557 million out of $593 million ... of the Company's total cash and cash equivalents were held by foreign subsidiaries" (94%) at Oct 3, 2026, versus "$372 million out of $588 million" (63%) at Dec 31, 2025; non-USD-denominated cash rose to $380M of $593M (64%) from $306M of $588M (52%). A 10% adverse FX move on that non-USD cash "would decrease by approximately $38 million."
+
 === 10-Q | Period ending 2026-07-04 | Processed 2026-08-14 ===
 [DISAPPEARED_FIELD] fi_fx_derivatives_notional: was $1,200M, now missing
 [DISAPPEARED_FIELD] fi_fx_designated_notional: was $1,200M, now missing
