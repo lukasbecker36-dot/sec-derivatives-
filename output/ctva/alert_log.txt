@@ -1,3 +1,31 @@
+=== 10-Q | Period ending 2026-09-30 | Processed 2026-11-17 ===
+[NUMERIC] total_cash_equivalents_fv: $1,356M → $1,910M (+40.9%) — exceeds 20% threshold
+[NEW_FIELD] fi_total_derivative_asset: appeared for first time ($5M)
+[NEW_FIELD] fi_total_derivative_liability: appeared for first time ($93M)
+[DISAPPEARED_FIELD] ir_swap_notional: was $39M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $97M, now missing
+[NEW_FIELD] total_derivative_asset: appeared for first time ($5M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($93M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-88M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($19M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($13M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $39M, now missing
+[DISAPPEARED_FIELD] ir_sensitivity_100bp: was $97M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-58M, now missing
+[DISAPPEARED_FIELD] fixed_rate_notes_billion: was $-21M, now missing
+[DISAPPEARED_FIELD] marketable_equity_value: was $-18M, now missing
+[VALIDATION] Likely extraction failure: 7/9 previously-populated fields are now null (ir_swap_notional, commodity_derivatives_notional, fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct...)
+[LLM_FLAG] fi_ir_swap_notional: not disclosed in this filing at all (no mention of interest rate swaps or interest rate derivatives); prior_values from a related request show $39M — cannot confirm whether the program ended, fell below a disclosure threshold, or is simply not broken out this quarter.
+[LLM_FLAG] Net investment hedge program now fully unwound: 'In March 2025, the company designated €1.7 billion of forward contracts to exchange Euro as net investment hedges. Of these hedges, €1.2 billion expired and were settled in May 2025, while the remaining €500 million expired and were settled in December 2025.' No new net investment hedge activity is disclosed for the current quarter.
+[LLM_FLAG] Aggregate notional for all derivative instruments (net buy position, FX+commodity combined) fell to $883 million at September 30, 2026 from $1,280 million at December 31, 2025 and $1,724 million at September 30, 2025 — roughly a 31% year-over-year decline; the filing gives no explanation for the reduction.
+[LLM_FLAG] ir_swap_notional: no mention of interest rate swaps anywhere in this section; prior_values show $39M — either the program ended or disclosure was simply folded into the aggregate notional figure.
+[LLM_FLAG] commodity_derivatives_notional: notional is disclosed only as part of an aggregate (FX+commodity combined, $883 million net buy position at 9/30/26); no commodity-only breakout exists this quarter, though prior_values show $97M from an earlier period.
+[LLM_FLAG] equity_derivatives_notional: prior_values flag this as 'Yes' (previously disclosed) but no equity derivatives of any kind are mentioned in this filing's derivatives note.
+[LLM_FLAG] cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci are derived by summing the commodity-contract and foreign-currency-contract components stated separately in the filing; the filing does not state a single combined cash-flow-hedge AOCI figure.
+[LLM_FLAG] Net investment hedge program (€1.7bn EUR, designated March 2025) is now fully expired and settled as of December 2025: '€1.2 billion expired and were settled in May 2025, while the remaining €500 million expired and were settled in December 2025.' No new net investment hedges are disclosed.
+[LLM_FLAG] Company uses collateral support annex (CSA) agreements with certain counterparties to limit credit exposure — a collateral/margin-relevant disclosure worth noting for coverage of counterparty risk management.
+[LLM_FLAG] Every prior_values entry for this section (fx_transaction_gain_loss, ir_sensitivity_100bp, fx_sensitivity_10pct, fixed_rate_notes_billion, marketable_equity_value) is now null/not_found because this quarter's Item 3 contains no quantitative data at all — it is purely an incorporation-by-reference statement pointing to the FY2025 Annual Report. This is a disclosure-format change (or simply standard interim-period practice), not a change in the underlying exposures, and should not be read as the figures having moved.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
 [NUMERIC] total_cash_equivalents_fv: $1,113M → $1,356M (+21.8%) — exceeds 20% threshold
 [DROPPED_TO_ZERO] total_marketable_securities_fv: $1M → $0M

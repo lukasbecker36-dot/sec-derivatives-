@@ -16,10 +16,19 @@
   },
   "idiosyncrasies": {
     "recurring_phrases": [
-      "cross-currency"
+      "cross-currency",
+      "net investment hedge",
+      "cash flow hedge",
+      "notional amount",
+      "unrealized loss",
+      "designated as hedging",
+      "de-designated",
+      "accumulated other comprehensive"
     ],
     "non_gaap_metrics": [],
-    "unusual_disclosure_patterns": [],
+    "unusual_disclosure_patterns": [
+      "derivatives_note: The main story in this note is the CHF and CNY cross-currency swap amendments: Rockwell increased the gross notional and extended maturities, which triggered a de-designation and immediate re-designat"
+    ],
     "known_issues": []
   },
   "history": [
@@ -88,6 +97,18 @@
       ],
       "fields_extracted": 0,
       "fields_null": 7
+    },
+    {
+      "filing_date": "2026-09-30",
+      "form_type": "10-K",
+      "period_end": "2026-09-30",
+      "processed_at": "2026-11-17T02:25:16Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 11,
+      "fields_null": 8
     }
   ]
 }

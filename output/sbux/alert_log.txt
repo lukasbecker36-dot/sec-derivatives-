@@ -1,3 +1,15 @@
+=== 10-K | Period ending 2026-09-27 | Processed 2026-11-17 ===
+[DISAPPEARED_FIELD] fx_derivatives_notional: was $2,783M, now missing
+[DISAPPEARED_FIELD] ir_swap_notional: was $350M, now missing
+[DISAPPEARED_FIELD] commodity_derivatives_notional: was $291M, now missing
+[DISAPPEARED_FIELD] total_derivative_asset: was $452M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $20M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $432M, now missing
+[VALIDATION] Likely extraction failure: 6/6 previously-populated fields are now null (fx_derivatives_notional, ir_swap_notional, commodity_derivatives_notional, total_derivative_asset, total_derivative_liability...)
+[LLM_FLAG] section_text contains only the narrative accounting-policy portion of Note 3 (hedge designation types, netting, collateral) and cuts off before any notional/fair-value table appears, so all notional and fair-value fields are not_found here despite prior_values showing populated figures (fx_derivatives_notional 2783.0, ir_swap_notional 350.0, commodity_derivatives_notional 291.0, total_derivative_asset 452.5, total_derivative_liability 20.1, net_derivative_position 432.4) — do not carry these forward; re-extract once the quantitative table text is available.
+[LLM_FLAG] Collateral/margin change: cash collateral pledged for commodity derivative margin requirements fell from $37.9 million (Sep 28, 2025) to $22.0 million (Sep 27, 2026), a decrease of about 42%; text: 'cash collateral pledged as part of our commodity derivative margin requirements was $22.0 million and $37.9 million, respectively'.
+[LLM_FLAG] Collateral/margin change: cash collateral received under collateral security arrangements rose from $187.0 million to $390.9 million, more than doubling (+109%); text: 'cash collateral received under collateral security arrangements was $390.9 million and $187.0 million, respectively'. No explanation given in this excerpt for the increase in counterparty collateral posted to Starbucks.
+
 === 10-Q | Period ending 2026-06-28 | Processed 2026-07-30 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,783M)
 [NEW_FIELD] ir_swap_notional: appeared for first time ($350M)

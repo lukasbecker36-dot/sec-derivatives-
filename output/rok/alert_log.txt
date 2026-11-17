@@ -1,3 +1,23 @@
+=== 10-K | Period ending 2026-09-30 | Processed 2026-11-17 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($2,242M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($1,711M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($531M)
+[NEW_FIELD] total_derivative_asset: appeared for first time ($18M)
+[NEW_FIELD] total_derivative_liability: appeared for first time ($77M)
+[NEW_FIELD] net_derivative_position: appeared for first time ($-59M)
+[NEW_FIELD] cash_flow_hedge_aoci: appeared for first time ($-29M)
+[NEW_FIELD] expected_12mo_reclass_from_aoci: appeared for first time ($-3M)
+[NEW_FIELD] fx_sensitivity_10pct: appeared for first time ($-53M)
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($3M)
+[LLM_FLAG] fx_derivatives_notional/fx_designated_notional are computed fields: forward-exchange-contract notional ($861M designated + $531M not designated = $1,392M, as stated directly in the text) plus cross-currency swap notional ($850M, all designated as net investment hedges) = $2,242M combined / $1,711M designated. No single sentence states the combined total.
+[LLM_FLAG] total_derivative_asset ($18M = $10M+$3M+$5M) and total_derivative_liability ($77M = $9M+$1M+$61M+$6M) are summed from the individual balance-sheet line items in the fair value table (two sub-tables: designated and not-designated); no single 'total assets' or 'total liabilities' line is given across both tables, only a net total per sub-table ($(58)M and $(1)M).
+[LLM_FLAG] Cross-currency swap restructuring, newsworthy: 'During 2026, we amended the CHF and CNY cross currency swaps to increase the gross notional amounts and extend their maturity dates. At the effective date of the amendments, the existing cross-currency swaps were de-designated from previous hedge accounting, and then designated as an after-tax net investment hedge of certain CHF and CNY functional currency denominated subsidiaries.' This is a de-designation/re-designation event, not merely a rollover.
+[LLM_FLAG] Net investment hedge AOCI (currency translation component) jumped from $17M to $47M year over year: 'Accumulated other comprehensive loss from changes in the spot rates of these instruments was $47 million and $17 million, respectively' -- nearly tripled, consistent with the increased cross-currency swap notional noted above.
+[LLM_FLAG] fx_forwards_outstanding left null per schema instruction ('use only if derivatives_note fields above are empty') -- the derivatives_note section for this filing already discloses forward-contract notional of $1,392M total ($861M designated + $531M not designated), so this field is redundant here.
+[LLM_FLAG] ir_sensitivity_100bp left null: the filing only quantifies a 50 basis point scenario, not 100bp, and even that is qualitative -- 'A hypothetical 50 basis point increase in average market interest rates related to our short-term debt would not be significant to our results of operations or financial condition' and the same 'not be significant' language is used for a 50bp decrease on fixed-rate debt fair value. No dollar figure is given for any interest-rate scenario.
+[LLM_FLAG] Newsworthy: cross-currency swap FX sensitivity is disclosed separately from the forward-contract sensitivity used above -- 'A hypothetical 10 percent adverse change in the cross-currency swaps’ underlying spot rates would result in an additional cash outflow at maturity of $85 million.' This is a cash-outflow-at-maturity exposure distinct from the $53 million pre-tax income sensitivity captured in fx_sensitivity_10pct, and ties to the cross-currency swap notional increase flagged in the derivatives note.
+[LLM_FLAG] Newsworthy, non-derivative but relevant counterparty/debt context: the Sensia joint venture was dissolved in the period -- 'In December 2025, the credit line matured and was closed... Upon dissolution of the Sensia joint venture, interest-bearing loans from SLB to Sensia were assumed by SLB.'
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $-6M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (expected_12mo_reclass_from_aoci)
