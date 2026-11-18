@@ -19,7 +19,10 @@
       "foreign exchange forward",
       "notional amount",
       "unrealized gain",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "cash flow hedge",
+      "designated as hedging",
+      "aoci"
     ],
     "non_gaap_metrics": [],
     "unusual_disclosure_patterns": [],
@@ -103,6 +106,18 @@
       ],
       "fields_extracted": 16,
       "fields_null": 13
+    },
+    {
+      "filing_date": "2026-10-24",
+      "form_type": "10-Q",
+      "period_end": "2026-10-24",
+      "processed_at": "2026-11-18T02:24:26Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 5,
+      "fields_null": 24
     }
   ]
 }

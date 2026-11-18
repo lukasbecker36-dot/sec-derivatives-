@@ -1,3 +1,16 @@
+=== 10-K | Period ending 2026-10-03 | Processed 2026-11-18 ===
+[NUMERIC] fx_designated_notional: $10,200M → $12,900M (+26.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $-219M → $-69M (+68.5%) — exceeds 20% threshold
+[NUMERIC] expected_12mo_reclass_from_aoci: $-254M → $100M (+139.4%) — exceeds 20% threshold
+[LLM_FLAG] net_derivative_position moved from -$219M (prior) to -$69M (current), a 68% reduction in the net liability. The filing does not narrate this change; it is attributable to the gross fair-value, counterparty-netting and cash-collateral lines in the derivatives table, which it tabulates but does not explain in prose.
+[LLM_FLAG] expected_12mo_reclass_from_aoci flips sign: prior value was -$254M (net loss expected to be reclassified), current text states 'Net deferred gains recorded in AOCI for contracts that will mature ... in the next twelve months total $ 0.1 billion' (+$100M). The filing gives the current gain figure but offers no explanation for the swing from a loss position to a gain position.
+[LLM_FLAG] Newsworthy: pay-floating interest rate swap P&L swung to a loss — 'Gain (loss) on: Pay-floating swaps $ ( 214 ) ... $ 182 ... $ 799' for fiscal 2026, 2025 and 2024 respectively — a reversal from two consecutive years of large gains to a $214M loss, perfectly offset by the mirrored 'Borrowings hedged with pay-floating swaps' line as expected under fair-value hedge accounting.
+[LLM_FLAG] Newsworthy: FX cash-flow-hedge notional grew ~29% to $12.0B from $9.3B, while designated cross-currency swap notional (Canadian $1.3B / $0.9B USD-equivalent) was unchanged — 'As of both October 3, 2026 and September 27, 2025, the total notional amount of the Company’s designated cross-currency swaps was Canadian $ 1.3 billion ($ 0.9 billion).'
+[LLM_FLAG] Newsworthy: total return swap programme (not designated as hedges, used to offset other economic exposures) grew to $0.7B notional from $0.6B — 'These contracts, which include certain total return swap contracts, are intended to offset economic exposures of the Company and are carried at market value with any changes in value recorded in earnings.'
+[LLM_FLAG] Counterparty credit-contingent feature exposure: 'The aggregate fair values of derivative instruments with credit-risk-related contingent features in a net liability position by counterparty were $ 0.8 billion and $ 0.9 billion at October 3, 2026 and September 27, 2025, respectively' — modest improvement, no new disclosure of a ratings-trigger event.
+[LLM_FLAG] Newsworthy, with explicit management explanation: combined VAR fell to $168M at October 3, 2026 from $201M at September 27, 2025 — 'VAR on a combined basis decreased to $168 million at October 3, 2026 from $201 million at September 27, 2025 due to reduced interest rate volatility.' The decline is concentrated in the interest-rate component ($142M vs $164M year-end) and the currency component ($58M vs $57M, roughly flat).
+[LLM_FLAG] New disclosure item: 'The VAR for Asia Theme Parks is immaterial as of October 3, 2026 and has been excluded from the above table' — a scope carve-out not previously flagged.
+
 === 10-K | Period ending 2025-09-27 | Processed 2026-10-20 ===
 [NUMERIC] total_derivative_asset: $753M → $910M (+20.8%) — exceeds 20% threshold
 [NUMERIC] net_derivative_position: $-779M → $-219M (+71.9%) — exceeds 20% threshold
