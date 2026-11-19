@@ -1,3 +1,15 @@
+=== 10-K | Period ending 2026-09-30 | Processed 2026-11-19 ===
+[NUMERIC] ir_swap_notional: $3,000M → $4,000M (+33.3%) — exceeds 20% threshold
+[NUMERIC] uncommitted_irlcs_notional: $3,000M → $2,200M (-26.7%) — exceeds 20% threshold
+[NUMERIC] mbs_balance: $1,000M → $785M (-21.5%) — exceeds 20% threshold
+[LLM_FLAG] ir_swap_notional ($4.0B) is mapped from DHI's mortgage-pipeline hedging instruments (forward sales of MBS hedging uncommitted IRLCs and uncommitted mortgage loans held for sale), not from literal interest-rate swaps -- the filing never uses the word 'swap'. Treat as an economic-hedge notional for the mortgage origination book, not a corporate IR swap book.
+[LLM_FLAG] No consolidated derivative asset/liability fair-value table is present in this excerpt, so total_derivative_asset/total_derivative_liability/net_derivative_position/cash_flow_hedge_aoci/expected_12mo_reclass_from_aoci are not_found here -- they may appear elsewhere in the notes outside this section slice.
+[LLM_FLAG] Newsworthy: 'We also use hedging instruments as part of a program to offer below market interest rate financing to our homebuyers' -- a consumer-incentive-linked hedging program tied to mortgage rate buydowns, distinct from the IRLC/pipeline hedge.
+[LLM_FLAG] Newsworthy/plausibility: the fair value recorded for the un-IRLC'd MBS position jumped from $1.9 million to $18.3 million (~9.6x) while the underlying MBS notional grew only $785.4M vs $677.5M (~16%) -- the fair-value move far outpaces the notional move; worth verifying against the filing before quoting as a hedging-performance story rather than a rate-move artifact.
+[LLM_FLAG] Structural note, not a genuine swing: variable-rate debt total fell from a prior $3,133.2M to $2,032.0M and the prior debt schedule included a 'stub' quarter column (this filing is the FY2026 10-K, so the schedule starts at FY2027 with no stub) -- the apparent decline is mostly a change in table structure between a quarterly 10-Q and the annual 10-K, not a repayment event; the filing itself gives no explanation for the change, so do not attribute it to any stated cause.
+[LLM_FLAG] Newsworthy: 'We also use hedging instruments as part of a program to offer below market interest rate financing to our homebuyers' -- a consumer-incentive-linked hedging program tied to mortgage-rate buydowns, separate from the IRLC/mortgage-pipeline hedge program.
+[LLM_FLAG] Newsworthy/plausibility: fair value recorded for the un-IRLC'd MBS position rose from $1.9 million to $18.3 million (~9.6x) while the underlying MBS balance grew only 16% ($677.5M to $785.4M) -- flag for verification before quoting as a rate-driven mark-to-market move.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] fi_total_derivative_liability: was $0M, now missing
 [NEW_FIELD] ir_swap_notional: appeared for first time ($3,000M)
