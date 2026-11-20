@@ -23,9 +23,12 @@
       "notional value",
       "unrealized loss",
       "de-designated",
-      "accumulated other comprehensive"
+      "accumulated other comprehensive",
+      "unrealized gain"
     ],
-    "non_gaap_metrics": [],
+    "non_gaap_metrics": [
+      "non-gaap"
+    ],
     "unusual_disclosure_patterns": [],
     "known_issues": []
   },
@@ -96,6 +99,18 @@
       ],
       "fields_extracted": 9,
       "fields_null": 19
+    },
+    {
+      "filing_date": "2026-09-30",
+      "form_type": "10-K",
+      "period_end": "2026-09-30",
+      "processed_at": "2026-11-20T02:19:47Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 12,
+      "fields_null": 16
     }
   ]
 }
