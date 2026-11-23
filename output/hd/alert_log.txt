@@ -1,3 +1,8 @@
+=== 10-Q | Period ending 2026-11-01 | Processed 2026-11-23 ===
+[LLM_FLAG] Cash collateral posted by HD rose from $459M (Feb 1, 2026) to $542M (Nov 1, 2026), ~18% increase: "The cash collateral posted by the Company related to derivative instruments under our collateral security arrangements was $ 542 million and $ 459 million as of November 1, 2026 and February 1, 2026, respectively" — below the 50% flag threshold but worth noting as a collateral-posting increase.
+[LLM_FLAG] total_derivative_liability of $638M vs. prior tracked value of $623M is a ~2.4% increase, within normal fair-value-hedge mark-to-market movement given unchanged $5.4B swap notional; no explanation needed per filing ("no new material hedging activity or material change to any other hedging arrangement").
+[LLM_FLAG] Item 3 this quarter is pure incorporation-by-reference boilerplate ("During the first nine months of fiscal 2026, there were no material changes to our market risks from those disclosed in the 2025 Form 10-K.") with no restated sensitivity figures, swap fair values, or explicit materiality/usage statements for FX or commodity hedging. Prior tracked values (foreign_currency_hedge_materiality='not material', commodity_derivative_usage='none') are NOT restated in this section's text, so per extraction rules they are returned null/not_found rather than carried forward — this is a disclosure-style gap, not a change in substance.
+
 === 10-Q | Period ending 2026-08-02 | Processed 2026-08-26 ===
 [DISAPPEARED_FIELD] fi_ir_swap_notional: was $5,400M, now missing
 [DISAPPEARED_FIELD] fi_total_derivative_liability: was $574M, now missing

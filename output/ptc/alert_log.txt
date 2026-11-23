@@ -1,3 +1,25 @@
+=== 10-K | Period ending 2026-09-30 | Processed 2026-11-23 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,051M)
+[NEW_FIELD] fx_not_designated_notional: appeared for first time ($1,051M)
+[DISAPPEARED_FIELD] total_derivative_asset: was $1,468M, now missing
+[DISAPPEARED_FIELD] total_derivative_liability: was $527M, now missing
+[DISAPPEARED_FIELD] net_derivative_position: was $941M, now missing
+[NEW_FIELD] fx_forwards_outstanding: appeared for first time ($1,051M)
+[DISAPPEARED_FIELD] fx_transaction_gain_loss: was $5M, now missing
+[NUMERIC] ir_sensitivity_100bp: $8M → $11M (+45.3%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-3M, now missing
+[NEW_FIELD] fixed_rate_notes_billion: appeared for first time ($0M)
+[DISAPPEARED_FIELD] fx_forward_notional: was $-2M, now missing
+[NUMERIC] fx_sensitivity_eur: $854M → $47M (-94.5%) — exceeds 20% threshold
+[NUMERIC] fx_sensitivity_jpy: $87M → $8M (-90.8%) — exceeds 20% threshold
+[VALIDATION] Likely extraction failure: 6/9 previously-populated fields are now null (total_derivative_asset, total_derivative_liability, net_derivative_position, fx_transaction_gain_loss, fx_sensitivity_10pct...)
+[LLM_FLAG] FX option sub-programs appear wound down in FY26: EUR option notional fell from ~$367.4M (FY25) to $0 ('As of September 30, 2026, all the Euro to U.S. Dollar outstanding notional amounts relate to forward contracts'), and JPY option notional fell from ~$89.4M (FY25) to $0 ('As of September 30, 2026, all the Japanese Yen to U.S. Dollar outstanding notional amounts relate to forward contracts'). Both currencies are now 100% forward-contract hedged.
+[LLM_FLAG] Total non-designated FX notional declined ~30.8% YoY ($1,050.521M vs $1,518.086M), driven largely by the option-book runoff above plus an 86.5% contraction in total JPY notional ($131,284K to $17,735K) and a 29.3% contraction in EUR notional ($1,202,830K to $850,666K).
+[LLM_FLAG] No designated hedge-accounting program, cash-flow-hedge AOCI, or derivative fair-value table appears in this excerpt; all disclosed FX forward/option contracts are explicitly 'not designated as hedging instruments' (pure economic hedges), consistent with prior periods for this issuer.
+[LLM_FLAG] fx_sensitivity_eur ($47M) is down ~94.5% from prior_values ($853.83M). The current figure is a direct, unambiguous quote ('impact operating income by approximately $47 million'); nothing in the filing explains an operating-income sensitivity swing of that size, and $853.83M is implausibly large for a $0.10 FX-rate sensitivity at this issuer's revenue scale — the prior figure looks like an extraction error (e.g. a notional or cumulative amount landing in this field) rather than a real YoY change.
+[LLM_FLAG] fx_sensitivity_jpy ($8M) is down ~90.8% from prior_values ($87.2M), from the same quoted sentence as fx_sensitivity_eur above. Given the EUR sensitivity shows the same pattern, this is more likely a shared upstream data-quality issue in the prior extraction than a genuine change in JPY sensitivity.
+[LLM_FLAG] Underlying FX hedging notional also contracted sharply this period (total non-designated FX notional -30.8% YoY, with EUR and JPY option sub-programs apparently eliminated entirely) — see the derivatives_note extraction for the same filing.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-03 ===
 [NEW_FIELD] fx_derivatives_notional: appeared for first time ($1,468M)
 [NEW_FIELD] fx_designated_notional: appeared for first time ($527M)
