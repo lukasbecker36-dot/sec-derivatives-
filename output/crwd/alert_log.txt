@@ -1,3 +1,11 @@
+=== 10-Q | Period ending 2026-10-31 | Processed 2026-11-24 ===
+[NEW_FIELD] fx_derivatives_notional: appeared for first time ($88M)
+[NEW_FIELD] fx_designated_notional: appeared for first time ($88M)
+[LLM_FLAG] cash_flow_hedge_aoci and expected_12mo_reclass_from_aoci: filing describes the AOCI balance related to cash flow hedges only qualitatively as 'immaterial' and does not disclose a dollar figure in this excerpt, so no number could be extracted despite the item being discussed.
+[LLM_FLAG] prior_values was empty for this issuer/period, so no period-over-period comparison was possible for any field.
+[LLM_FLAG] This Item 3 excerpt gives no quantified FX or IR sensitivity figures, no specific currency names, and no cash/fixed-rate-debt balances - it states only that a hypothetical 10% USD appreciation 'would not have a material impact,' so most schema fields are genuinely not stated in this section (detail is deferred to Note 4).
+[LLM_FLAG] prior_values was empty for this issuer/period, so no period-over-period comparison was possible for any field.
+
 === 10-Q | Period ending 2025-04-30 | Processed 2026-09-15 ===
 [DISAPPEARED_FIELD] fx_derivatives_notional: was $58M, now missing
 [DISAPPEARED_FIELD] fx_designated_notional: was $58M, now missing
