@@ -1,63 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>SEC Derivatives — Daily Digest — 2026-11-24</title>
+<title>SEC Derivatives — Daily Digest — 2026-11-25</title>
 <style>
-  body { font-family: Georgia, 'Times New Roman', serif; max-width: 760px; margin: 0 auto; padding: 24px; color: #1a1a1a; line-height: 1.5; }
-  h1 { font-size: 1.4em; border-bottom: 2px solid #1a1a1a; padding-bottom: 8px; }
-  h2 { font-size: 1.1em; margin-top: 2em; border-bottom: 1px solid #ccc; padding-bottom: 4px; }
-  .summary { font-weight: bold; background: #f4f4f4; padding: 10px 14px; border-left: 4px solid #333; margin: 1em 0; }
-  table { border-collapse: collapse; width: 100%; font-size: 0.92em; margin: 1em 0; }
-  th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
-  th { background: #eee; }
-  .lead { margin-bottom: 1.2em; }
-  .flag { color: #a33; font-style: italic; }
-  .footer-verify { margin-top: 2.5em; padding-top: 1em; border-top: 1px solid #ccc; font-size: 0.85em; color: #444; }
-  code { background: #f4f4f4; padding: 1px 4px; }
+  body { font-family: Georgia, 'Times New Roman', serif; max-width: 760px; margin: 2rem auto; padding: 0 1.25rem; color: #1a1a1a; line-height: 1.5; }
+  h1 { font-size: 1.3rem; border-bottom: 2px solid #1a1a1a; padding-bottom: 0.5rem; }
+  h2 { font-size: 1.05rem; margin-top: 2rem; border-bottom: 1px solid #ccc; padding-bottom: 0.25rem; }
+  .summary { font-size: 0.95rem; background: #f4f4f4; padding: 0.75rem 1rem; border-left: 4px solid #555; }
+  .lead { margin-bottom: 1.1rem; }
+  .ticker { font-weight: bold; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.85rem; margin-top: 0.5rem; }
+  th, td { border: 1px solid #ccc; padding: 4px 8px; text-align: right; }
+  th:first-child, td:first-child, th:nth-child(2), td:nth-child(2), th:nth-child(3), td:nth-child(3) { text-align: left; }
+  .neg { color: #a00; }
+  .pos { color: #065; }
+  .flag { color: #a00; font-style: italic; }
+  .verified { font-size: 0.8rem; color: #555; margin-top: 2rem; border-top: 1px solid #ccc; padding-top: 0.5rem; }
 </style>
 </head>
 <body>
 
-<h1>SEC Derivatives — Daily Digest — 2026-11-24</h1>
+<h1>SEC Derivatives — Daily Digest — 2026-11-25</h1>
 
-<div class="summary">
-2 new filings extracted overnight (filed in the last 7 days), 0 filings held for review.
-</div>
+<p class="summary">5 new filings extracted overnight (filed in the last 7 days), 0 filings held for review.</p>
 
 <h2>Leads</h2>
 
 <div class="lead">
-<strong>J (Jacobs Solutions)</strong> — 10-K, period ended October 2, 2026, filed November 23, 2026.
-In connection with the PA Consulting Transaction, the filing discloses that the company "entered into a foreign exchange contract with a notional value of $1.31 billion" on January 5, 2026, "with an offsetting hedge entered into on March 12, 2026 with a notional value of $60.1 million." Separately, the filing's own disclosure states: "If floating interest rates had increased by 1.00%, our interest expense for the year ended October 2, 2026 would have increased by approximately $12.7 million" — up from $9.7 million in the prior filing's equivalent disclosure (period ended June 26, 2026), a 30.9% increase. The pipeline also recorded a separate <code>ir_sensitivity_100bp</code> field at $12.7 million with no prior-period value on file — first reported by the pipeline this period, verify against the prior filing before quoting.
+<span class="ticker">SJM</span> (The J.M. Smucker Company), 10-Q for the period ended October 31, 2026 —
+the filing discloses the termination of interest-rate contracts tied to its Senior Notes: "The reclassification
+includes terminated contracts which were designated as cash flow hedges." The company reports deferred net
+pre-tax losses of $98.6 million in AOCI as of October 31, 2026, versus $104.9 million at April 30, 2026 (per the
+filing's own comparison), and notes "Approximately $12.5 of the net pre-tax loss will be recognized over the
+next 12 months related to the terminated interest rate contracts." Separately, FX derivative notional not
+designated as hedges fell to $47.1 million from $74.2 million (prior period ended July 31, 2026), a 36.5% decline.
 </div>
 
 <div class="lead">
-<strong>CRWD (CrowdStrike)</strong> — 10-Q, period ended October 31, 2026, filed November 23, 2026.
-The filing states that "the notional amount of the Company's outstanding foreign currency forward contracts designated as cash flow hedges was $88.2 million," up from $57.9 million as of July 31, 2026 — a 52.3% increase, per the filing's FX hedging-policy disclosure.
+<span class="ticker">BDX</span> (Becton, Dickinson and Company), 10-K for the period ended September 30, 2026 —
+the filing flags a new-instruments disclosure on hedging its investments in foreign subsidiaries: "the Company has
+hedged the currency risk associated with those investments with certain instruments such as foreign
+currency-denominated debt and cross-currency swaps, which are designated …" Total FX derivative notional rose to
+$8,506 million from $6,584 million (prior period ended June 30, 2026, +29.2%), driven largely by non-designated
+notional, which climbed to $6,116 million from $3,996 million (+53.1%).
+</div>
+
+<div class="lead">
+<span class="ticker">ADI</span> (Analog Devices), 10-K for the period ended October 31, 2026 — interest-rate swap
+notional nearly tripled year over year: "As of October 31, 2026 we had $3.0 billion notional of fixed for floating
+interest rate swaps outstanding, with the swaps having a combined net payable fair value of $42.3 million,"
+up from $1.0 billion notional and a $12.6 million fair value at November 1, 2025. The filing adds that "a
+hypothetical 100-basis point increase in interest rates would increase the combined swap payable balance by
+approximately $163.2 million," up from $45.9 million a year earlier. Outstanding senior notes also grew: "As of
+October 31, 2026, we had $11.2 billion in principal amount of senior unsecured notes outstanding, with a fair
+value of $10.2 billion," versus $8.2 billion a year earlier.
+</div>
+
+<div class="lead">
+<span class="ticker">WDAY</span> (Workday), 10-Q for the period ended October 31, 2026 — the filing reiterates its
+foreign-currency hedging programme, noting it "enter[s] into foreign currency forward contracts to hedge a portion
+of our forecasted revenue and expense transactions ('cash flow hedges')," with resulting gains and losses booked to
+AOCI and reclassified into earnings as the hedged transactions settle. The filing's notes do not explain this
+quarter's derivative-asset and net-position movements — see the supplementary table below.
 </div>
 
 <h2>Supplementary movements</h2>
-<p>Every new-filing field move of at least 5%, including those already narrated above.</p>
+<p style="font-size:0.85rem;">All filings below were filed 2026-11-24. Figures in millions unless noted. Only
+moves ≥5% shown.</p>
 <table>
-<tr><th>Ticker</th><th>Period (filing date)</th><th>Field</th><th>Current</th><th>Prior</th><th>%</th></tr>
-<tr><td>CRWD</td><td>2026-11-23</td><td>fx_derivatives_notional</td><td>88.2</td><td>57.9</td><td>+52.33%</td></tr>
-<tr><td>CRWD</td><td>2026-11-23</td><td>fx_designated_notional</td><td>88.2</td><td>57.9</td><td>+52.33%</td></tr>
-<tr><td>J</td><td>2026-11-23</td><td>fx_derivatives_notional</td><td>2170.0</td><td>2450.0</td><td>-11.43%</td></tr>
-<tr><td>J</td><td>2026-11-23</td><td>fx_contracts_notional</td><td>2170.0</td><td>2450.0</td><td>-11.43%</td></tr>
-<tr><td>J</td><td>2026-11-23</td><td>interest_rate_sensitivity</td><td>12.7</td><td>9.7</td><td>+30.93%</td></tr>
-<tr><td>J</td><td>2026-11-23</td><td>weighted_average_floating_borrowings</td><td>1200.0</td><td>1290.0</td><td>-6.98%</td></tr>
+<thead>
+<tr><th>Ticker</th><th>Period end</th><th>Field</th><th>Current</th><th>Prior</th><th>%</th></tr>
+</thead>
+<tbody>
+<tr><td>ADI</td><td>2026-10-31</td><td>ir_swap_notional</td><td>3,000.0</td><td>1,000.0</td><td class="pos">+200.00%</td></tr>
+<tr><td>ADI</td><td>2026-10-31</td><td>swap_notional_amount</td><td>3,000.0</td><td>1,000.0</td><td class="pos">+200.00%</td></tr>
+<tr><td>ADI</td><td>2026-10-31</td><td>swap_fair_value</td><td>42.3</td><td>12.6</td><td class="pos">+235.71%</td></tr>
+<tr><td>ADI</td><td>2026-10-31</td><td>swap_sensitivity</td><td>163.2</td><td>45.9</td><td class="pos">+255.56%</td></tr>
+<tr><td>ADI</td><td>2026-10-31</td><td>fixed_rate_notes_billion</td><td>11.2</td><td>8.2</td><td class="pos">+36.59%</td></tr>
+<tr><td>ADI</td><td>2026-10-31</td><td>floating_rate_debt_sensitivity</td><td>33.4</td><td>14.5</td><td class="pos">+130.34%</td></tr>
+<tr><td>ADI</td><td>2026-10-31</td><td>cash_marketable_securities_sensitivity</td><td>45.0</td><td>36.5</td><td class="pos">+23.29%</td></tr>
+<tr><td>BDX</td><td>2026-09-30</td><td>fx_derivatives_notional</td><td>8,506.0</td><td>6,584.0</td><td class="pos">+29.19%</td></tr>
+<tr><td>BDX</td><td>2026-09-30</td><td>fx_not_designated_notional</td><td>6,116.0</td><td>3,996.0</td><td class="pos">+53.05%</td></tr>
+<tr><td>SJM</td><td>2026-10-31</td><td>fx_derivatives_notional</td><td>47.1</td><td>74.2</td><td class="neg">-36.52%</td></tr>
+<tr><td>SJM</td><td>2026-10-31</td><td>fx_not_designated_notional</td><td>47.1</td><td>74.2</td><td class="neg">-36.52%</td></tr>
+<tr><td>SJM</td><td>2026-10-31</td><td>commodity_derivatives_notional</td><td>1,012.3</td><td>562.0</td><td class="pos">+80.12%</td></tr>
+<tr><td>SJM</td><td>2026-10-31</td><td>commodity_derivative_notional</td><td>1,012.3</td><td>562.0</td><td class="pos">+80.12%</td></tr>
+<tr><td>SJM</td><td>2026-10-31</td><td>commodity_sensitivity_high</td><td>34.0</td><td>28.1</td><td class="pos">+21.00%</td></tr>
+<tr><td>SJM</td><td>2026-10-31</td><td>commodity_sensitivity_low</td><td>-3.5</td><td>-35.8</td><td class="pos">+90.22%</td></tr>
+<tr><td>SJM</td><td>2026-10-31</td><td>commodity_sensitivity_avg</td><td>16.0</td><td>2.2</td><td class="pos">+627.27%</td></tr>
+<tr><td>SJM</td><td>2026-10-31</td><td>total_derivative_liability</td><td>44.1</td><td>5.9</td><td class="pos">+647.46%</td></tr>
+<tr><td>SJM</td><td>2026-10-31</td><td>net_derivative_position</td><td>-17.8</td><td>25.6</td><td class="neg">-169.53%</td></tr>
+<tr><td>SJM</td><td>2026-10-31</td><td>revenue_pct_international</td><td>4.0%</td><td>3.0%</td><td class="pos">+33.33%</td></tr>
+<tr><td>WDAY</td><td>2026-10-31</td><td>total_derivative_asset</td><td>77.0</td><td>44.0</td><td class="pos">+75.00%</td></tr>
+<tr><td>WDAY</td><td>2026-10-31</td><td>net_derivative_position</td><td>0.0</td><td>-50.0</td><td class="pos">+100.00%</td></tr>
+<tr><td>WDAY</td><td>2026-10-31</td><td>expected_12mo_reclass_from_aoci</td><td>-23.0</td><td>-40.0</td><td class="pos">+42.50%</td></tr>
+</tbody>
 </table>
+<p style="font-size:0.8rem; color:#555;">DLTR (10-Q, period 2026-10-31) was extracted this window but had no
+material moves and is not a lead — see notes.txt for its interest-rate/diesel-fuel risk disclosure.</p>
 
 <h2>Held for review</h2>
-<p>None — no review branches created in this window.</p>
+<p>No filings held for review this cycle — no review/* branch was created since the window start.</p>
 
 <h2>Extraction regressions</h2>
 <p>No regressions.</p>
 
-<div class="footer-verify">
-Verified: 2 leads with narrative context, 15 total figures traced to digest_manifest.json new_filings entries. 0 extraction regressions and 0 held-for-review branches listed. 0 backfill rows summarised in the header count only. Window: 2026-11-23T04:03:03+00:00 onwards; 2 scheduler runs.
-</div>
+<h2>New-blank filings</h2>
+<p>COR — 10-K, period ended 2026-09-30, 3 attempts (10-Q refers to the 10-K; nothing to extract).</p>
+
+<p class="verified">Verified: 4 leads with narrative context, 20 total figures traced to digest_manifest.json
+new_filings entries. 0 extraction regressions and 0 held-for-review branches listed. 0 backfill rows summarised
+in the header count only. Window: 2026-11-24T04:02:56+00:00 onwards; 1 scheduler run.</p>
 
 </body>
 </html>
