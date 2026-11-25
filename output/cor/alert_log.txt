@@ -1,3 +1,7 @@
+=== 10-K | Period ending 2026-09-30 | Processed 2026-11-25 ===
+[LLM_FLAG] Section text is only a pointer: the Item 7A market risk section states that the discussion is 'incorporated by reference' from a 'Market Risk' heading elsewhere in the filing (likely within MD&A), and contains no actual figures. No numeric or qualitative data could be extracted from this section_text alone.
+[REFERENCE_ONLY] Every section found only refers to the annual report (e.g. "see Item 7A in our Form 10-K"); nothing to extract. Not retried.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [DISAPPEARED_FIELD] equity_sensitivity_10pct: was $0M, now missing
 [VALIDATION] Likely extraction failure: 1/1 previously-populated fields are now null (equity_sensitivity_10pct)

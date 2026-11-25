@@ -1,3 +1,21 @@
+=== 10-Q | Period ending 2026-10-31 | Processed 2026-11-25 ===
+[NUMERIC] fx_derivatives_notional: $74M → $47M (-36.5%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $74M → $47M (-36.5%) — exceeds 20% threshold
+[NUMERIC] commodity_derivatives_notional: $562M → $1,012M (+80.1%) — exceeds 20% threshold
+[NUMERIC] total_derivative_liability: $6M → $44M (+647.5%) — exceeds 20% threshold
+[NUMERIC] net_derivative_position: $26M → $-18M (-169.5%) — exceeds 20% threshold
+[NUMERIC] commodity_sensitivity_high: $28M → $34M (+21.0%) — exceeds 20% threshold
+[NUMERIC] commodity_sensitivity_low: $-36M → $-4M (+90.2%) — exceeds 20% threshold
+[NUMERIC] commodity_sensitivity_avg: $2M → $16M (+627.3%) — exceeds 20% threshold
+[NUMERIC] revenue_pct_international: $3M → $4M (+33.3%) — exceeds 20% threshold
+[NUMERIC] commodity_derivative_notional: $562M → $1,012M (+80.1%) — exceeds 20% threshold
+[LLM_FLAG] commodity_derivatives_notional / commodity_derivative_notional rose from $562.0M (prior) to $1,012.3M (+80%); the text gives no stated reason for the increase in gross commodity notional.
+[LLM_FLAG] total_derivative_liability rose from $5.9M (prior) to $44.1M, and net_derivative_position flipped from a net asset of $25.6M to a net liability of $(17.8)M (>50% change on both); this is consistent with the quarter's commodity derivative losses reported in the same section: 'Derivative gains (losses) on commodity contracts $ ( 28.4 ) ... $ 59.8' (current quarter loss vs prior-year quarter gain), though the filing itself does not explicitly link the balance-sheet swing to that P&L move.
+[LLM_FLAG] Net cumulative unallocated derivative position swung from a $22.2M gain (April 30, 2026) to a $7.1M loss (October 31, 2026): 'the net cumulative unallocated derivative losses were $ 7.1 , and at April 30, 2026, the net cumulative unallocated derivative gains were $ 22.2' -- newsworthy swing in the economic-hedge book.
+[LLM_FLAG] Cash margin / collateral: 'Our cash margin accounts represented collateral pledged of $ 49.6 and collateral received of $ 7.4 at October 31, 2026, and April 30, 2026, respectively' -- a large pledged-collateral figure worth noting for a margin/collateral angle.
+[LLM_FLAG] commodity_sensitivity_low moved from -$35.8M (prior) to -$3.5M, and commodity_sensitivity_avg moved from $2.2M (prior) to $16.0M (both >50% change); the text attributes the sensitivity only to a quarter-over-quarter recalculation 'based on our net derivative position by commodity for the previous four quarters' and names no specific commodity driver.
+[LLM_FLAG] The schema hint for ir_cash_flow_hedge_aoci cites a $239.8M pre-tax loss, but that figure does not appear anywhere in this market-risk section_text; the companion derivatives_note section for this same filing discloses a materially different $98.6M deferred pre-tax loss at October 31, 2026 -- flagging the mismatch for review rather than extracting the stale $239.8M figure, since it is not supported by this section's text.
+
 === 10-Q | Period ending 2026-07-31 | Processed 2026-08-27 ===
 [NUMERIC] total_derivative_liability: $11M → $6M (-48.2%) — exceeds 20% threshold
 [NUMERIC] net_derivative_position: $21M → $26M (+23.1%) — exceeds 20% threshold

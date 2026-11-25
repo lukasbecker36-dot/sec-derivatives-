@@ -1,3 +1,15 @@
+=== 10-K | Period ending 2026-09-30 | Processed 2026-11-25 ===
+[DISAPPEARED_FIELD] total_cash_equivalents_fv: was $18M, now missing
+[NUMERIC] fx_derivatives_notional: $6,584M → $8,506M (+29.2%) — exceeds 20% threshold
+[NUMERIC] fx_not_designated_notional: $3,996M → $6,116M (+53.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] ir_swap_notional: was $700M, now missing
+[DISAPPEARED_FIELD] expected_12mo_reclass_from_aoci: was $39M, now missing
+[VALIDATION] Likely extraction failure: 3/6 previously-populated fields are now null (total_cash_equivalents_fv, ir_swap_notional, expected_12mo_reclass_from_aoci)
+[LLM_FLAG] fx_not_designated_notional rose from $3,996M (prior) to $6,116M (+53%), crossing the 50% threshold; the provided section_text gives no explanation for the jump in undesignated FX forward/option notional, only that these hedge 'transactional foreign currency exposures' via forward and option contracts -- verify against the full note before quoting the increase.
+[LLM_FLAG] total_derivative_asset / total_derivative_liability could not be extracted as numbers: the filing states only that 'the fair values of the derivatives outstanding at September 30, 2026 and 2025 were not material,' with no dollar figure given in this excerpt.
+[LLM_FLAG] Notable for a derivatives beat but not unusual: net investment hedges continue to combine foreign-currency-denominated debt ($2,546M, excluded from fx_derivatives_notional here because it is debt, not a derivative) with $1,054M of cross-currency swaps (unchanged from prior year); no de-designation, termination, novation, or new-programme language appears in the provided text.
+[LLM_FLAG] Item 7A (Quantitative and Qualitative Disclosures About Market Risk) is a bare cross-reference -- 'The information required by this item is included in Item 7 ... and in Notes 1, 14 and 15' -- with no quantitative content of its own in this filing. Consistent with the filer_context note that BDX uses cross-references for some sections. Use the financial_instruments (Note 15) and derivatives_note (Note 14) extractions as the source of record for notional, fair value, and sensitivity fields instead of this section.
+
 === 10-Q | Period ending 2026-06-30 | Processed 2026-08-10 ===
 [NUMERIC] total_cash_equivalents_fv: $5M → $18M (+260.0%) — exceeds 20% threshold
 [NUMERIC] fx_designated_notional: $1,843M → $2,588M (+40.4%) — exceeds 20% threshold
