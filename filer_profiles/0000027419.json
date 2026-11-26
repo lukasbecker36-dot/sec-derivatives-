@@ -24,7 +24,8 @@
     ],
     "non_gaap_metrics": [
       "adjusted eps",
-      "non-gaap"
+      "non-gaap",
+      "adjusted operating income"
     ],
     "unusual_disclosure_patterns": [],
     "known_issues": []
@@ -101,6 +102,18 @@
       "form_type": "10-Q",
       "period_end": "2026-08-01",
       "processed_at": "2026-09-01T02:17:17Z",
+      "sections_found": [
+        "derivatives_note",
+        "market_risk"
+      ],
+      "fields_extracted": 2,
+      "fields_null": 23
+    },
+    {
+      "filing_date": "2026-10-31",
+      "form_type": "10-Q",
+      "period_end": "2026-10-31",
+      "processed_at": "2026-11-26T02:19:13Z",
       "sections_found": [
         "derivatives_note",
         "market_risk"

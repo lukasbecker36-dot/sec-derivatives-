@@ -1,3 +1,25 @@
+=== 10-Q | Period ending 2026-10-31 | Processed 2026-11-26 ===
+[NUMERIC] fx_not_designated_notional: $126M → $430M (+241.3%) — exceeds 20% threshold
+[NUMERIC] cash_flow_hedge_aoci: $7M → $18M (+157.1%) — exceeds 20% threshold
+[DISAPPEARED_FIELD] fx_forwards_outstanding: was $3,383M, now missing
+[DISAPPEARED_FIELD] fx_sensitivity_10pct: was $-68M, now missing
+[NUMERIC] forward_contracts_purchased_fair_value: $-16M → $-22M (-37.5%) — exceeds 20% threshold
+[NUMERIC] forward_contracts_sold_notional: $1,577M → $2,268M (+43.8%) — exceeds 20% threshold
+[NUMERIC] forward_contracts_sold_fair_value: $1M → $5M (+400.0%) — exceeds 20% threshold
+[NUMERIC] option_contracts_purchased_fair_value: $21M → $36M (+71.4%) — exceeds 20% threshold
+[NUMERIC] option_contracts_sold_fair_value: $-4M → $-6M (-50.0%) — exceeds 20% threshold
+[NUMERIC] usd_appreciation_sensitivity: $180M → $256M (+42.2%) — exceeds 20% threshold
+[NUMERIC] usd_depreciation_sensitivity: $-68M → $-120M (-76.5%) — exceeds 20% threshold
+[NUMERIC] cash_equivalents_marketable_securities: $782M → $1,090M (+39.4%) — exceeds 20% threshold
+[LLM_FLAG] fx_not_designated_notional rose from $126M (prior extraction) to $430M (+241%); the note gives the current and January 31, 2026 comparative ($858M) but states no reason for the change in non-designated balance-sheet-hedge notional.
+[LLM_FLAG] cash_flow_hedge_aoci rose from $7M to $18M net gain (+157%); the note only says the majority is expected to reclass into earnings 'within the next 24 months' and gives no explanation for the increase in the balance itself.
+[LLM_FLAG] expected_12mo_reclass_from_aoci could not be populated: the filing discloses a 24-month reclassification horizon for 'the majority' of the $18M AOCI gain, not a discrete 12-month figure, so no 12-month number can be extracted without estimating.
+[LLM_FLAG] fx_forwards_outstanding left null: the derivatives_note section already provides designated/non-designated FX notional, and the schema says to use this fallback field only when those are empty.
+[LLM_FLAG] forward_contracts_sold_fair_value rose from $1M to $5M (+400%); text gives only the current mark-to-market figure with no explanation.
+[LLM_FLAG] option_contracts_purchased_fair_value rose from $21M to $36M (+71%); no explanation given in text.
+[LLM_FLAG] usd_depreciation_sensitivity increased in magnitude from -$68M to -$120M (+76%); text attributes this only implicitly to the larger notional book (sold forwards notional up from $1,577M to $2,268M, +44%), not an explicit statement.
+[LLM_FLAG] fx_sensitivity_10pct left null: the filing discloses two directional sensitivities (10% USD appreciation: +$256M; 10% USD depreciation: -$120M) rather than a single 'adverse move' figure, so populating a generic field risked picking the wrong direction.
+
 === 10-Q | Period ending 2026-07-31 | Processed 2026-09-01 ===
 [DISAPPEARED_FIELD] total_cash_equivalents_fv: was $1,775M, now missing
 [DISAPPEARED_FIELD] total_marketable_securities_fv: was $638M, now missing
